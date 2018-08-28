@@ -14,13 +14,13 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b7418258c6b79e5cbc9f8af254fb849e06140b33
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561108"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083331"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39561108"
 
 -   您可以使用下列其中一種工具，透過單一步驟將資料直接從 Excel 匯入至 SQL：
     -   [SQL Server 匯入和匯出精靈](#wiz)
-    -   ]SQL Server Integration Services (SSIS)](#ssis)
+    -   [SQL Server Integration Services (SSIS)](#ssis)
     -   [OPENROWSET](#openrowset) 函式
 -   您可以將資料從 Excel 匯出為文字，然後使用下列其中一種工具來匯入文字檔，透過這兩個步驟來匯入資料：
     -   [匯入一般檔案精靈](#import-wiz)

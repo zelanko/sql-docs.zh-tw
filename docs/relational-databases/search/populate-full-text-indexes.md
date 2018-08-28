@@ -29,13 +29,13 @@ caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5d1c1d149f89cbbd34365531b56885a84a5d89ae
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39bf03a7fb7244e357c156798ae78e927dab12f4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533418"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066921"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ ALTER FULLTEXT INDEX ON Production.Document
          這樣就會開啟 [新增全文檢索索引資料表排程] 對話方塊，可讓您修改排程。  
   
         > [!NOTE]  
-        >  如需修改 SQL Server Agent 作業的資訊，請參閱[修改作業](http://msdn.microsoft.com/library/dd5e5f20-20c4-4ab9-a19a-db87577dcd43)。  
+        >  如需修改 SQL Server Agent 作業的資訊，請參閱[修改作業](../../ssms/agent/modify-a-job.md)。  
   
     -   若要**移除**現有排程，請選取現有排程，然後按一下 [刪除]。  
   

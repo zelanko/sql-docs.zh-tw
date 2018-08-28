@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: ff6b258409ce91e160fb62f6656c2ecd6a18641e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 433ec06c740c900c04ac99478304d05846e30038
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38067195"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42782692"
 ---
-![是](media/yes.png)SharePoint
+ ![是](media/yes.png)SharePoint

@@ -25,16 +25,16 @@ caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84ba7cea614adc50ad3f3d94aa978fa3fa0deb2a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 621a49f9cc30b254390c50c00d3879912900fc58
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453672"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058958"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   在資料庫角色中加入或移除成員，或變更使用者定義資料庫角色的名稱。  
   
@@ -124,7 +124,7 @@ WITH NAME = *new_name*
 ### <a name="a-change-the-name-of-a-database-role"></a>A. 變更資料庫角色的名稱  
  **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2008 起)，[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 下列範例會將角色 `buyers` 的名稱改成 `purchasing`。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ 下列範例會將角色 `buyers` 的名稱改成 `purchasing`。   這個範例可以在 [AdventureWorks (英文)](http://msftdbprodsamples.codeplex.com/) 範例資料庫中執行。
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -133,7 +133,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. 新增或移除角色成員  
  **適用於：**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 2012 起)，[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 這個範例會建立名為 `Sales` 的新資料庫。 它會將名稱為 Barry 的資料庫使用者加入至成員資格中，然後顯示如何移除成員 Barry。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ 這個範例會建立名為 `Sales` 的新資料庫。 它會將名稱為 Barry 的資料庫使用者加入至成員資格中，然後顯示如何移除成員 Barry。   這個範例可以在 [AdventureWorks (英文)](http://msftdbprodsamples.codeplex.com/) 範例資料庫中執行。
   
 ```sql  
 CREATE ROLE Sales;  

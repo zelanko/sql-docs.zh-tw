@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870803"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410989"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "32870803"
 ## <a name="testing-a-local-connection"></a>測試本機連線
 
 疑難排解從另一部電腦連線的問題之前，請先測試從執行 SQL Server 之電腦上安裝的用戶端應用程式進行連線的能力。 (這會避開防火牆問題。)此程序使用 SQL Server Management Studio。 如未安裝 Management Studio，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。 (如果無法安裝 Management Studio，您可以使用隨 Database Engine 安裝的 `sqlcmd.exe` 公用程式來測試連接。 如需 `sqlcmd.exe`的相關資訊，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。)
-1.  登入已安裝 SQL Server 的電腦，使用有 SQL Server 存取權的登入。 (在安裝期間，SQL Server 至少需要一個有 SQL Server 系統管理員身分的登入。 如果不認識系統管理員，請參閱[當系統管理員遭到鎖定時連接到 SQL Server](http://msdn.microsoft.com/library/dd207004.aspx)。)
+1.  登入已安裝 SQL Server 的電腦，使用有 SQL Server 存取權的登入。 (在安裝期間，SQL Server 至少需要一個有 SQL Server 系統管理員身分的登入。 如果不認識系統管理員，請參閱[當系統管理員遭到鎖定時連接到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)。)
 2.   在 [開始] 頁面中輸入 **SQL Server Management Studio**，或在舊版的 Windows [開始] 功能表上，依序指向 [所有程式] 和 [Microsoft SQL Server]，然後按一下 [SQL Server Management Studio]。
 3.  在 [連接到伺服器] 對話方塊的 [伺服器] 類型方塊中，選取 [Database Engine]。 選取 [驗證] 方塊中的 [Windows 驗證]。 在 [伺服器名稱] 方塊中輸入下列其中之一︰
 
@@ -107,7 +107,7 @@ ms.locfileid: "32870803"
 如果此時遇到錯誤，您必須先解決問題才能繼續。 問題的發生有很多可能的原因。 登入可能沒有連接的授權。 可能遺漏了預設資料庫。
 
 >    [!NOTE] 
->    某些刻意傳遞至用戶端的錯誤訊息，未提供疑難排解問題的足夠資訊。 這是為免向攻擊者提供 SQL Server 相關資訊的安全性功能。 若要檢視有關錯誤的完整資訊，請查看 SQL Server 錯誤記錄檔。 裡面會提供詳細資料。 如果您收到錯誤： **18456 使用者登入失敗**，請參閱《線上叢書》主題 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) 有關於錯誤碼的其他資訊。 Aaron Bertrand 的部落格有內容豐富的錯誤碼清單，請參閱 [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)。 如果可以連接，請使用 SSMS 在物件總管的 [管理] 區段中檢視錯誤記錄檔。 否則，請使用 Windows 記事本程式來檢視錯誤記錄檔。 預設位置會隨著您的版本而不同，並且可以在安裝期間變更。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
+>    某些刻意傳遞至用戶端的錯誤訊息，未提供疑難排解問題的足夠資訊。 這是為免向攻擊者提供 SQL Server 相關資訊的安全性功能。 若要檢視有關錯誤的完整資訊，請查看 SQL Server 錯誤記錄檔。 裡面會提供詳細資料。 如果您收到錯誤： **18456 使用者登入失敗**，請參閱《線上叢書》主題 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 有關於錯誤碼的其他資訊。 Aaron Bertrand 的部落格有內容豐富的錯誤碼清單，請參閱 [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)。 如果可以連接，請使用 SSMS 在物件總管的 [管理] 區段中檢視錯誤記錄檔。 否則，請使用 Windows 記事本程式來檢視錯誤記錄檔。 預設位置會隨著您的版本而不同，並且可以在安裝期間變更。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
 
 4.   如果可以使用共用記憶體連接，請使用 TCP 測試連接。 名稱前面可以指定 **tcp:** 以強制 TCP 連線。 例如：
 
@@ -123,7 +123,7 @@ ms.locfileid: "32870803"
 ## <a name="opening-a-port-in-the-firewall"></a>在防火牆中開啟連接埠
 
 Windows XP Service Pack 2 從多年前就開始這麼做：Windows 防火牆已開啟，並將封鎖來自其他電腦的連線。 若要從另一部電腦使用 TCP/IP 連接，您必須在 SQL Server 電腦上設定防火牆允許連接到 Database Engine 所使用的 TCP 連接埠。 如前所述，預設執行個體通常會接聽 TCP 通訊埠 1433。 如果您已命名執行個體，或變更預設值， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP 連接埠可能會接聽另一個連接埠。 請參閱收集資訊來判斷連接埠的開始小節。  
-如果您要連接到具名執行個體或 TCP 連接埠 1433 以外的連接埠，您也必須為 SQL Server Browser 服務開啟 UDP 連接埠 1434 。 如需在 Windows 防火牆中開啟連接埠的逐步指示，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](https://msdn.microsoft.com/library/ms175043)。
+如果您要連接到具名執行個體或 TCP 連接埠 1433 以外的連接埠，您也必須為 SQL Server Browser 服務開啟 UDP 連接埠 1434 。 如需在 Windows 防火牆中開啟連接埠的逐步指示，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](configure-a-windows-firewall-for-database-engine-access.md)。
 
 ## <a name="testing-the-connection"></a>測試連線
 

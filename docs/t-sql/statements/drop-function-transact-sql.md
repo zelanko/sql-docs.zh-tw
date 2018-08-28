@@ -25,16 +25,16 @@ caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1654d9d81598edb09c3fafe09b808ecbabe8c812
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a38d368b5bde18c438fd4100b3e6d56218def228
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458252"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063825"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   從目前資料庫移除一或多個使用者自訂函數。 使用者定義函數是使用 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 建立的，並使用 [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) 加以修改。  
   
@@ -61,7 +61,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## <a name="arguments"></a>引數  
  *IF EXISTS*    
- 只有在函數已存在時，才能有條件地將其卸除。 從 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 和 [!INCLUDE[sssds_md](../../includes/sssds_md.md)] 開始可用。
+ 只有在函數已存在時，才能有條件地將其卸除。 從 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 和 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 開始可用。
   
  *schema_name*  
  這是使用者定義函數所屬的結構描述名稱。  

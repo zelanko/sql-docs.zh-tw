@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948393"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410003"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948393"
      顯示 [報表與記錄] 對話方塊。 如需有關此對話方塊的詳細資訊，請參閱下文。  
   
      **伺服器**  
-     顯示 [伺服器] 對話方塊，用來選取將執行子計畫工作的伺服器。 只有多伺服器環境中的主要伺服器才會啟用這個選項。 如需詳細資訊，請參閱[建立多伺服器環境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)和[維護計畫 &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)。  
+     顯示 [伺服器] 對話方塊，用來選取將執行子計畫工作的伺服器。 只有多伺服器環境中的主要伺服器才會啟用這個選項。 如需詳細資訊，請參閱[建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)和[維護計畫 &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)。  
   
      **名稱**  
      顯示維護計畫名稱。 針對新的維護計畫，名稱會在維護計畫設計師開啟之前，於對話方塊中指定。 若要重新命名維護計畫，請以滑鼠右鍵按一下物件總管中的計畫，然後按一下 [重新命名]。  

@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edf6967221d0aa938b675bbba116a35cc8bf2402
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39563532"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43059351"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -537,7 +537,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  
-    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"  
+    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"/>  
   </RECORD>  
   <ROW>  
     <COLUMN SOURCE="1" NAME="C1" xsi:type="SQLINT" />  
