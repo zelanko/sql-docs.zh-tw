@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a9b661c2f4529ed3e6731dc5c38d05953ec43f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030997"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774547"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作業步驟屬性 - 新增作業步驟 (一般頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "38030997"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
+使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
   
-若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent，以滑鼠右鍵按一下 [作業]，按一下 [新增作業]，選取 [步驟] 頁面，然後按一下 [新增]。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]、選取 [步驟] 頁面，然後按一下 [新增]、[插入] 或 [編輯]，以導覽至此頁面。  
+若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以滑鼠右鍵按一下 [作業]，按一下 [新增作業]，選取 [步驟] 頁面，然後按一下 [新增]。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]、選取 [步驟] 頁面，然後按一下 [新增]、[插入] 或 [編輯]，以導覽至此頁面。  
   
 ## <a name="options"></a>選項。  
 **步驟名稱**  
@@ -70,7 +70,7 @@ ms.locfileid: "38030997"
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 指令碼作業步驟的選項  
   
 > [!IMPORTANT]  
-> 將從未來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Agent 中移除 ActiveX Scripting 子系統。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。  
+> 將從未來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 中移除 ActiveX Scripting 子系統。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。  
   
 **VBScript**  
 指定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition 做為作業步驟的語言。  
@@ -213,12 +213,12 @@ ms.locfileid: "38030997"
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services 封裝執行作業步驟的選項  
   
 ### <a name="general-tab"></a>General Tab  
-指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) 封裝所在的位置，以及要使用何種驗證方法。 當您選取這個索引標籤時，可以使用下列選項。  
+指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) 封裝所在的位置，以及要使用何種驗證方法。 當您選取這個索引標籤時，可以使用下列選項。  
   
 **封裝來源**  
 指定儲存 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的位置。 選擇下列其中之一：  
   
--   **[SQL Server]**  
+-   **SQL Server**  
   
 -   **檔案系統**  
   
@@ -228,19 +228,19 @@ ms.locfileid: "38030997"
 輸入儲存 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的伺服器名稱。 唯有當 [套件來源] 指定 [SQL Server] 或 [SSIS 套件存放區] 時，才能使用此選項。  
   
 **[使用 Windows 驗證]**  
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 驗證登入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 驗證登入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
   
 **[使用 SQL Server 驗證]**  
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱] 和 [密碼]。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果選取這種驗證方法，請輸入適當的 [使用者名稱] 和 [密碼]。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供驗證的目的在提供回溯相容性。 為了提升安全性，如果可能的話請使用 Windows 驗證。  
   
 **封裝**  
 輸入封裝的位置。  
   
 > [!IMPORTANT]  
-> 對於受密碼保護的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 套件，按一下 [組態] 索引標籤，在 [套件密碼] 對話方塊中輸入密碼。 否則，執行受密碼保護之封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業將會失敗。  
+> 對於受密碼保護的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 套件，按一下 [組態] 索引標籤，在 [套件密碼] 對話方塊中輸入密碼。 否則，執行受密碼保護之封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業將會失敗。  
   
 ### <a name="configurations-tab"></a>組態索引標籤  
 指定 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 封裝的組態選項。 當選取這個索引標籤時，可以使用下列選項。  
@@ -379,6 +379,6 @@ ms.locfileid: "38030997"
   
 ## <a name="see-also"></a>另請參閱  
 [管理作業步驟](../../ssms/agent/manage-job-steps.md)  
-[封裝的 SQL Server Agent 作業](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[管理複寫代理程式](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[封裝的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[管理複寫代理程式](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b88a2d50bd748da3e56d43367706715fa4739f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f136453aadd5562a5d6263752af7413abed86c1c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043865"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773959"
 ---
 # <a name="handle-multiple-job-steps"></a>處理多個作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,25 +39,25 @@ ms.locfileid: "33043865"
   
 ![SQL Server Agent 作業步驟流程控制](../../ssms/agent/media/dbflow01.gif "SQL Server Agent 作業步驟流程控制")  
   
-第一個步驟是「備份資料庫」。 如果這個步驟失敗了， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會向定義為接收通知的操作員報告失敗。 如果「備份資料庫」步驟成功，則作業會繼續進行下一個步驟：「刪除客戶資料」。 如果此步驟失敗，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會跳過，並進行「還原資料庫」。 如果「刪除客戶資料」成功，該作業會繼續下一個步驟「更新統計資料」等，直到最後一個步驟的結果為「報告成功」或「報告失敗」。  
+第一個步驟是「備份資料庫」。 如果這個步驟失敗了， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會向定義為接收通知的操作員報告失敗。 如果「備份資料庫」步驟成功，則作業會繼續進行下一個步驟：「刪除客戶資料」。 如果此步驟失敗，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會跳過，並進行「還原資料庫」。 如果「刪除客戶資料」成功，該作業會繼續下一個步驟「更新統計資料」等，直到最後一個步驟的結果為「報告成功」或「報告失敗」。  
   
 您為每個作業步驟的成功與失敗定義一個流程控制動作。 您必須指定當作業步驟成功時所要執行的動作，以及作業步驟失敗時所要執行的動作。 您也可以定義作業步驟失敗時的重試次數和重試間隔。  
   
 > [!NOTE]  
-> 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 圖形化使用者介面 (GUI)，並從多個步驟作業中刪除一或多個步驟時，GUI 會先移除所有作業步驟，然後再使用正確的 on-success 或 on-failure 參考，重新加入剩餘的步驟。 例如，假設您有一項包含五個步驟的作業，其中第一個步驟設定為若順利完成便跳到步驟 4。 如果您刪除步驟 3，GUI 便會移除此作業的所有步驟，並以更正過的參考加入剩餘的四個步驟 (步驟 1、2、4、5)。 在這個案例下，步驟 1 中的參考將會重新設定為如果步驟 1 順利完成便跳到步驟 3。  
+> 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 圖形化使用者介面 (GUI)，並從多個步驟作業中刪除一或多個步驟時，GUI 會先移除所有作業步驟，然後再使用正確的 on-success 或 on-failure 參考，重新加入剩餘的步驟。 例如，假設您有一項包含五個步驟的作業，其中第一個步驟設定為若順利完成便跳到步驟 4。 如果您刪除步驟 3，GUI 便會移除此作業的所有步驟，並以更正過的參考加入剩餘的四個步驟 (步驟 1、2、4、5)。 在這個案例下，步驟 1 中的參考將會重新設定為如果步驟 1 順利完成便跳到步驟 3。  
   
-作業步驟必須是各自獨立的。 也就是說，作業不能在作業步驟之間傳遞布林值、資料或數值。 但是，您可以使用永久性資料表或全域暫存資料表，將值從一個 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟傳遞至另一個作業步驟。 您也可以使用檔案，將執行可執行程式之作業步驟中的值，從一個作業步驟傳遞到另一個作業步驟。 例如，由一個作業步驟所執行的可執行檔寫入檔案，再由後續作業步驟所執行的可執行檔來讀取檔案。  
+作業步驟必須是各自獨立的。 也就是說，作業不能在作業步驟之間傳遞布林值、資料或數值。 但是，您可以使用永久性資料表或全域暫存資料表，將值從一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟傳遞至另一個作業步驟。 您也可以使用檔案，將執行可執行程式之作業步驟中的值，從一個作業步驟傳遞到另一個作業步驟。 例如，由一個作業步驟所執行的可執行檔寫入檔案，再由後續作業步驟所執行的可執行檔來讀取檔案。  
   
 > [!NOTE]  
-> 如果您建立迴圈作業步驟 (作業步驟 1 之後接著作業步驟 2，然後作業步驟 2 再回到作業步驟 1)，當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]來建立作業時，會出現警告訊息。  
+> 如果您建立迴圈作業步驟 (作業步驟 1 之後接著作業步驟 2，然後作業步驟 2 再回到作業步驟 1)，當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來建立作業時，會出現警告訊息。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會將作業及作業步驟資訊記錄在作業記錄中。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會將作業及作業步驟資訊記錄在作業記錄中。  
   
 ## <a name="see-also"></a>另請參閱  
-[sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
-[sysjobsteps](http://msdn.microsoft.com/en-us/978b8205-535b-461c-91f3-af9b08eca467)  
+[sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [實作作業](../../ssms/agent/implement-jobs.md)  
 [管理作業步驟](../../ssms/agent/manage-job-steps.md)  
   

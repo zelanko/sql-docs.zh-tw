@@ -28,12 +28,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7320b1f4d91d94b4e53da3640458030057a45f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 399b756b0530079c6f38732da4ebf1ef94755e73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044585"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776610"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,5 +58,5 @@ ms.locfileid: "33044585"
 描述窗格會在 [屬性] 視窗的底部顯示，並且會顯示屬性類型以及屬性的簡短描述。 您可以使用快速鍵功能表上的 [描述] 命令，來關閉和開啟屬性的描述。  
   
 ## <a name="see-also"></a>另請參閱  
-[SQL Server Management Studio 中的屬性視窗](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[SQL Server Management Studio 中的屬性視窗](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

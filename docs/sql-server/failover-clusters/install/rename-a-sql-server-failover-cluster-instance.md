@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e77e2f11cef4859412c0805d6dd1e082274b82ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 567b2bf3e75de80ca32ec22f4efb8b353bda173c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772234"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776603"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重新命名 SQL Server 容錯移轉叢集執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "34772234"
   
 -   當電腦/叢集網路名稱已重新命名時，請修正主要伺服器 (MSX) 和目標伺服器 (TSX) 執行個體名稱。 如需詳細資訊，請參閱下列主題：  
   
-    -   [從主要伺服器脫離多個目標伺服器](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
+    -   [從主要伺服器脫離多個目標伺服器](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [建立多伺服器環境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
+    -   [建立多伺服器環境](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   重新設定記錄傳送，以便使用更新的伺服器名稱來備份和還原記錄。 如需詳細資訊，請參閱下列主題：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34772234"
   
     -   [移除記錄傳送 &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   更新相依於伺服器名稱的作業步驟。 如需詳細資訊，請參閱 [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)。  
+-   更新相依於伺服器名稱的作業步驟。 如需詳細資訊，請參閱 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [重新命名主控 SQL Server 獨立執行個體的電腦](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

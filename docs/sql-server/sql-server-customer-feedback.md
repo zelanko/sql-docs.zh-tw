@@ -1,8 +1,8 @@
 ---
 title: 設定 SQL Server 以將意見反應傳送給 Microsoft | Microsoft Docs
 description: ''
-author: annashres
-ms.author: anshrest
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 755a2351aae2917fb7ef745fa1f14342492ee892
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995419"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017776"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ SSMS 不會收集自己的損毀傾印。 與 SSMS 相關的任何損毀傾印�
     [在您的組織中設定 Windows 遙測](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 與 Windows 7
 
-    [WER 設定](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx) \(英文\)
+    [WER 設定](/windows/desktop/wer/wer-settings) \(英文\)
  
 ## <a name="feedback-for-analysis-services"></a>針對 Analysis Services 的意見反應
 

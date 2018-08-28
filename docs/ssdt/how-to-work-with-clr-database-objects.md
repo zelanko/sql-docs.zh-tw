@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083810"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774875"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>如何：使用 CLR 資料庫物件
-除了使用 Transact\-SQL 程式語言以外，還可以使用 .NET Framework 語言來建立擷取及更新資料的資料庫物件。 以受控碼撰寫的資料庫物件稱為 SQL Server Common Language Runtime (CLR) 資料庫物件。 如需使用 SQL Server 中裝載的 CLR 資料庫物件之優點的說明，以及如何在 Transact\-SQL 與 CLR 之間擇一使用，請參閱 [CLR 整合的優點](http://msdn.microsoft.com/en-us/library/ms131045.aspx)和[使用受控碼來建立資料庫物件的優點](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx) \(機器翻譯\)。  
+除了使用 Transact\-SQL 程式語言以外，還可以使用 .NET Framework 語言來建立擷取及更新資料的資料庫物件。 以受控碼撰寫的資料庫物件稱為 SQL Server Common Language Runtime (CLR) 資料庫物件。 如需使用 SQL Server 中裝載的 CLR 資料庫物件之優點的說明，以及如何在 Transact\-SQL 與 CLR 之間擇一使用，請參閱 [CLR 整合的優點](../relational-databases/clr-integration/clr-integration-overview.md)和[使用受控碼來建立資料庫物件的優點](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx) \(機器翻譯\)。  
   
 若要使用 SQL Server Data Tools 建立 CLR 資料庫物件，您可以建立一個資料庫專案，然後在其中加入 CLR 資料庫物件。 不同於舊版 Visual Studio，您不必建立個別的 CLR 專案，再從資料庫專案加入其參考。 建置和發行資料庫專案時，會同時自動發行專案中的 CLR 物件。 這些 CLR 物件發行後，它們可以被呼叫和執行，就像任何其他資料庫物件一樣。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "39083810"
   
 1.  在 [SQL Server 物件總管] 中，巡覽至專案部署目標位置的本機資料庫。  
   
-2.  預設會關閉 SQL Server 中的 CLR 整合功能。 您必須啟用 CLR 整合，才能使用 CLR 資料庫物件。 若要這麼做，請使用 sp_configure 預存程序的 "clr enabled" 選項。 如需詳細資訊，請參閱 [clr enabled 選項主題](http://msdn.microsoft.com/en-us/library/ms131048.aspx)。  
+2.  預設會關閉 SQL Server 中的 CLR 整合功能。 您必須啟用 CLR 整合，才能使用 CLR 資料庫物件。 若要這麼做，請使用 sp_configure 預存程序的 "clr enabled" 選項。 如需詳細資訊，請參閱 [clr enabled 選項主題](../relational-databases/clr-integration/clr-integration-enabling.md)。  
   
     以滑鼠右鍵按一下資料庫，再選取 [新增查詢]。 在查詢窗格中，貼上下列程式碼，再按 [執行查詢] 按鈕。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "39083810"
 5.  將輸入變更為 **425 312 1222**，再按 TAB 鍵離開。 請注意，這一次的輸入被接受。  
   
 ## <a name="see-also"></a>另請參閱  
-[CLR 整合的優點](http://msdn.microsoft.com/en-us/library/ms131045.aspx) \(機器翻譯\)  
+[CLR 整合的優點](../relational-databases/clr-integration/clr-integration-overview.md) \(機器翻譯\)  
 [使用受控碼來建立資料庫物件的優點](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx) \(機器翻譯\)  
 [利用 Common Language Runtime (CLR) 整合組建資料庫物件](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

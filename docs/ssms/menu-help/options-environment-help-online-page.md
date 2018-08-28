@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042595"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774644"
 ---
 # <a name="options-environment---help---online-page"></a>選項 (環境 - 說明 - 線上頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[選項] 對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具] 功能表上，按一下 [選項]、展開 [環境] 資料夾、選取 [說明]，然後按一下 [線上]。 如果 [線上] 頁面未出現在清單中，請在 [選項] 對話方塊中選取 [顯示所有設定] 核取方塊。  
+[選項] 對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具] 功能表上，按一下 [選項]、展開 [環境] 資料夾、選取 [說明]，然後按一下 [線上]。 如果 [線上] 頁面未出現在清單中，請在 [選項] 對話方塊中選取 [顯示所有設定] 核取方塊。  
   
 **載入說明內容時**  
 設定說明來源在 F1 說明中的使用順序，並指定要使用哪些說明來源。  

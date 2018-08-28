@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6687b8dd57301ae62f6b5fbe6d11a70aad18c141
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 420fdd127b50a21dda67b681976462e553d9882e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045595"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774391"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "33045595"
 **連接到資料庫**  
 從清單中選取要連接的資料庫。 如果您選取 **<default>**，就會連線到伺服器的預設資料庫。 如果您選取 **<Browse server>**，您就可以瀏覽伺服器來尋找您要連接的資料庫。  
   
-當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
+當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
-根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會連接到 **master**。 連線到 [!INCLUDE[ssSDS](../../includes/sssds_md.md)] 時，如果您指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
+根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 連線到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時，如果您指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)。  
   
 **網路通訊協定**  
 從清單中選取通訊協定。 可用的用戶端通訊協定會使用 [電腦管理] 中的 [用戶端網路組態] 進行設定。  

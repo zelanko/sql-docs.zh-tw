@@ -19,16 +19,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83752eac337db70ea2aa382cc426c7eb1859d096
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979866"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774277"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-請利用 [外部工具] 對話方塊，將 SQLCMD 或 [記事本] 之類的外部工具新增至 [工具] 功能表。 新增外部工具可讓您在 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 環境中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 此外，某些工具的輸出可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊可以透過 [工具] 功能表使用。  
+請利用 [外部工具] 對話方塊，將 SQLCMD 或 [記事本] 之類的外部工具新增至 [工具] 功能表。 新增外部工具可讓您在 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 此外，某些工具的輸出可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊可以透過 [工具] 功能表使用。  
   
 ## <a name="options"></a>選項。  
 **功能表內容**  
@@ -56,7 +56,7 @@ ms.locfileid: "38979866"
 在功能表上選取工具時，指定會傳遞至該工具的變數。 啟動工具或命令時，引數可以指定會傳遞至該工具或命令的值。 例如，值可以指定檔案名稱或目錄。 請利用箭頭按鈕，從預先定義的引數清單中選取。 您可以加入一個以上。 如需預先定義的引數及其定義的完整清單，請參閱 [外部工具的引數](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 您也可以視所使用的命令或工具來輸入自訂引數 (例如，命令列參數)。  
   
 **使用輸出視窗**  
-開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 的 [輸出] 視窗以顯示執行命令的輸出。 並非所有的工具都能以 [輸出] 視窗中所顯示的格式來輸出。 如需詳細資訊，請參閱 [輸出視窗](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747)。  
+開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的 [輸出] 視窗以顯示執行命令的輸出。 並非所有的工具都能以 [輸出] 視窗中所顯示的格式來輸出。 如需詳細資訊，請參閱 [輸出視窗](../relational-databases/scripting/transact-sql-debugger-output-window.md)。  
   
 **將輸出視為 Unicode**  
 將輸出解譯為 Unicode。  
@@ -76,7 +76,7 @@ ms.locfileid: "38979866"
 |方塊|ReplTest1|  
 |-------|---------|  
 |**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**引數**|-A|  
   
 ## <a name="see-also"></a>另請參閱  

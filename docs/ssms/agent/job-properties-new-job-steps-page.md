@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987820"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774155"
 ---
 # <a name="job-properties---new-job-steps-page"></a>作業屬性 - 新增作業 (步驟頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37987820"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此頁面來檢視和組織 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的作業步驟。  
+使用此頁面來檢視和組織 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的作業步驟。  
   
 ## <a name="options"></a>選項。  
 **作業步驟清單**  
@@ -41,7 +41,7 @@ ms.locfileid: "37987820"
 在清單中向上或向下移動一個作業步驟。  
   
 **起始步驟**  
-選取作業開始時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的第一個步驟。  
+選取作業開始時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的第一個步驟。  
   
 **新增**  
 在選取的作業步驟之下，建立新的作業步驟。  

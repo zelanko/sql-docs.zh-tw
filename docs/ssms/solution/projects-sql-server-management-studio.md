@@ -15,18 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775695"
 ---
 # <a name="projects-sql-server-management-studio"></a>專案 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 專案是邏輯關聯之指令碼和檔案的集合，它們可以儲存在一起，以便進行資料庫的管理和開發。  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 專案是邏輯關聯之指令碼和檔案的集合，它們可以儲存在一起，以便進行資料庫的管理和開發。  
   
 ## <a name="script-project-overview"></a>指令碼專案概觀  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 指令碼專案會顯示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]的方案總管元件中。 指令碼專案可以包含零或多個專案檔。 您可以將專案加入方案中，或在方案內組合多個專案。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案會顯示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的方案總管元件中。 指令碼專案可以包含零或多個專案檔。 您可以將專案加入方案中，或在方案內組合多個專案。  
   
 專案可以包含下列各項：  
   
@@ -41,11 +42,11 @@ ms.lasthandoff: 05/03/2018
 專案也可以整合為一個原始程式碼控制系統。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>從指令碼專案連接到 SQL Server 的執行個體  
-指令碼專案可包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體的連接。 按一下該連接，就可以連接到專案中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體。 此時會開啟一個 [SQL 指令碼] 視窗，這個視窗會連接到您選取的連接所定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體。 如果您利用採取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證的連接來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 MDX 指令碼，在啟動編輯器及載入指令碼之後，系統會利用 [連接到 SQL Server] 對話方塊來提示您輸入密碼。  
+指令碼專案可包含指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接。 按一下該連接，就可以連接到專案中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 此時會開啟一個 [SQL 指令碼] 視窗，這個視窗會連接到您選取的連接所定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果您利用採取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的連接來開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 指令碼，在啟動編輯器及載入指令碼之後，系統會利用 [連接到 SQL Server] 對話方塊來提示您輸入密碼。  
   
 對應視窗關閉之後，連接也會關閉。  
   
-若要修改有關連接的資訊，請使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中的屬性視窗。  
+若要修改有關連接的資訊，請使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的屬性視窗。  
   
 ## <a name="project-tasks"></a>專案工作  
   

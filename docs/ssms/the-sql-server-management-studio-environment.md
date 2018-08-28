@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 31f3a7f0efa120cae62d2390d2d4bf5b571ee6f0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981311"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775228"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 提供一個非常豐富的環境，供您管理和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]中的查詢。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供一個非常豐富的環境，供您管理和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的查詢。  
   
 ## <a name="in-this-section"></a>本節內容  
 [一般使用者介面元素](../ssms/general-user-interface-elements.md)  
@@ -36,5 +36,5 @@ ms.locfileid: "38981311"
 介紹方案總管，方案總管會提供專案及其檔案之組織好的檢視，您隨時可以存取用來合併它們的命令。  
   
 [方案總管原始檔控制](https://msdn.microsoft.com/library/ms173879.aspx)  
-描述 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 如何與原始檔控制產品整合為一。  
+描述 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何與原始檔控制產品整合為一。  
   

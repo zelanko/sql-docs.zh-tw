@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fd0d50155ff76ef5860913e071fc35350fb71f88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981870"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774392"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用 [空間索引] 對話方塊來建立 **geometry** 或 **geography** 資料類型之資料行 (「空間資料行」(Spatial Column)) 的索引，該資料行無法使用 [索引/索引鍵] 對話方塊來建立索引。 每一個空間資料行都可以有一個以上的空間索引，但是一次只能建立一個。  
   
-如需有關空間索引建立之限制的詳細資訊，請參閱 [空間索引概觀](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)。  
+如需有關空間索引建立之限制的詳細資訊，請參閱 [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
 ## <a name="options"></a>選項。  
 **選取的空間索引**  
@@ -122,5 +122,5 @@ ms.locfileid: "38981870"
 指定是否在此索引中允許資料列層級的鎖定。 允許或不允許資料列層級的鎖定會影響資料庫效能。  
   
 ## <a name="see-also"></a>另請參閱  
-[空間索引概觀](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

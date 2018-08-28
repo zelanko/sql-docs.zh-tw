@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997320"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775846"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "37997320"
   
      用這種方式來復原錯誤的作業系統會需要一些時間。 如果可以輕易復原作業系統錯誤，請避免使用這項技術。  
   
-     如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 和[如何：從狀況 2 中的容錯移轉叢集失敗進行還原](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx)。  
+     如需詳細資訊，請參閱[建立新的 SQL Server 容錯移轉叢集 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) 和[如何：從狀況 2 中的容錯移轉叢集失敗進行還原](recover-from-failover-cluster-instance-failure.md)。  
   
 ## <a name="resolving-common-problems"></a>解決一般問題  
  下列清單描述常見的使用狀況問題，並說明如何解決。  

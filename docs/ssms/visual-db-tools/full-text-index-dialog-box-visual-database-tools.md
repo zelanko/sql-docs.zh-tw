@@ -17,22 +17,22 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddafa3150bff469209eff2f8166da0b831787506
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 52ba9962b6192ce6ba6a403d35e3ff9559786c1f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984260"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774039"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這個對話方塊可讓您建立全文檢索索引，以便在資料庫資料表的文字資料行上進行全文檢索搜尋。 全文檢索索引必須藉助一般索引，因此您必須先建立一般索引。 您必須在單一、非 Null 的資料行上建立一般索引，而且最好選擇值較小的資料行，而不要選擇包含大數值的資料行。  
   
 > [!NOTE]  
-> 若要建立全文檢索索引，您必須先對使用外部工具的資料庫建立全文檢索，例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 Enterprise Manager。  
+> 若要建立全文檢索索引，您必須先對使用外部工具的資料庫建立全文檢索，例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Enterprise Manager。  
   
 > [!NOTE]  
-> 並非每個 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]版本都可使用全文檢索索引功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)。  
+> 並非每個 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)。  
   
 ## <a name="options"></a>選項。  
 **選取的全文檢索索引**  
@@ -54,7 +54,7 @@ ms.locfileid: "38984260"
 顯示全文檢索索引儲存位置的全文檢索資料庫目錄名稱。 若要將索引儲存到不同的目錄，請按目錄名稱，然後從下拉式清單選擇另外一個目錄名稱。  
   
 > [!NOTE]  
-> 目錄必須先在外部工具建立，例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 Enterprise Manager。  
+> 目錄必須先在外部工具建立，例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Enterprise Manager。  
   
 **識別類別目錄**  
 展開時會顯示這個索引的名稱欄位。  

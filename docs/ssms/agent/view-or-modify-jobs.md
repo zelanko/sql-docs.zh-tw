@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c9677ba386ceda02136eb3eb67052e4eff0362d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ddbf1591320678c75f74d6953229343bb457ced
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984130"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774159"
 ---
 # <a name="view-or-modify-jobs"></a>檢視或修改作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,12 +71,12 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |||  
 |-|-|  
 |**說明**|**主題**|  
-|說明如何檢視 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業。|[View a Job](../../ssms/agent/view-a-job.md)|  
-|說明如何檢視 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業的歷程記錄。|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
-|說明如何刪除 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業的歷程記錄內容。|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  
-|說明如何設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業的記錄大小限制。|[Resize the Job History Log](../../ssms/agent/resize-the-job-history-log.md)|  
-|說明如何變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業的屬性。|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
+|說明如何檢視 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。|[View a Job](../../ssms/agent/view-a-job.md)|  
+|說明如何檢視 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的歷程記錄。|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
+|說明如何刪除 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的歷程記錄內容。|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  
+|說明如何設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的記錄大小限制。|[Resize the Job History Log](../../ssms/agent/resize-the-job-history-log.md)|  
+|說明如何變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的屬性。|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
   
 ## <a name="see-also"></a>另請參閱  
-[sysjobhistory](http://msdn.microsoft.com/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   

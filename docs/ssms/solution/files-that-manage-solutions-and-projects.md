@@ -23,31 +23,31 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24d05859d16542935a86d58871a9d226d0474ed6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79527171ea9daf72374bd0e3dbfd30c5379b28b9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045735"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775693"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>管理方案和專案的檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- 此主題描述 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]專用的檔案類型。 依預設，所有方案及其專案都建立在 \My Documents\SQL Server Management Studio Projects 中。  
+ 此主題描述 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]專用的檔案類型。 依預設，所有方案及其專案都建立在 \My Documents\SQL Server Management Studio Projects 中。  
 
 
 ## <a name="management-studio-solution-files"></a>Management Studio 方案檔  
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 所用的檔案類型與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 不同。 這代表您無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 Visual Studio 中開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 方案檔可讓方案總管顯示一個用以管理檔案的圖形介面。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所用的檔案類型與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 不同。 這代表您無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Visual Studio 中開啟 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案檔可讓方案總管顯示一個用以管理檔案的圖形介面。  
    
-|延伸模組|檔案類型|描述|建立者|  
+|延伸模組|檔案類型|Description|建立者|  
 |-------------|-------------|---------------|--------------|  
-|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 方案物件|提供參考 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 專案、專案項目和方案之磁碟位置的環境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]|  
+|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案物件|提供參考 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專案、專案項目和方案之磁碟位置的環境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
 ## <a name="management-studio-project-files"></a>Management Studio 專案檔  
-專案依照方案包含方案檔 (用來管理方案中的物件) 的相同方式來包含專案檔。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 針對專案所建立之專案檔的類型，會隨著用來建立專案的範本而不同。 下表說明針對每個專案所建立之檔案的類型。  
+專案依照方案包含方案檔 (用來管理方案中的物件) 的相同方式來包含專案檔。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 針對專案所建立之專案檔的類型，會隨著用來建立專案的範本而不同。 下表說明針對每個專案所建立之檔案的類型。  
    
 |延伸模組|專案範本|  
 |-------------|--------------------|  
-|.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 指令碼專案|  
+|.ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案|  
 |.ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] 指令碼專案|  
    
 ## <a name="location-of-solution-level-files"></a>方案層級檔案的位置  

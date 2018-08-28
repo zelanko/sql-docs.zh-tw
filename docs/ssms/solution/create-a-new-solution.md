@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043165"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42773917"
 ---
 # <a name="create-a-new-solution"></a>建立新方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-當您建立專案時，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 會建立一個包含它的方案。 您一次只能開啟一個方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允許您在專案內建立資料夾。 若要組織您的工作，請建立多個專案。  
+當您建立專案時，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會建立一個包含它的方案。 您一次只能開啟一個方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允許您在專案內建立資料夾。 若要組織您的工作，請建立多個專案。  
   
 若要存取方案總管，請按一下 [檢視] 功能表中的 [方案總管]。  
   

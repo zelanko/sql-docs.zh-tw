@@ -6,20 +6,19 @@ ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0bd9b3fe2a650fcf396f6dde8ba124bca181e14b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 331eec843268b0de341f23f8f391f379bb3fc48a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066456"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038498"
 ---
 # <a name="planning-a-sql-server-installation"></a>規劃 SQL Server 安裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

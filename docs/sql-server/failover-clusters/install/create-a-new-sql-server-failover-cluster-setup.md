@@ -20,12 +20,12 @@ caps.latest.revision: 77
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0890c77c50af48ce34cdcb21cf7784ae69616a52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89eb39275b25147ca062c7b4e05ac3f4fae78967
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772034"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773960"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "34772034"
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會依據您選取的功能執行一組額外的規則，以驗證您的組態。  
   
-11. 在 [執行個體組態] 頁面上，請指定要安裝預設或具名執行個體。 如需詳細資訊，請參閱＜ [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5)＞。  
+11. 在 [執行個體組態] 頁面上，請指定要安裝預設或具名執行個體。 如需詳細資訊，請參閱＜ [Instance Configuration](../../install/instance-configuration.md)＞。  
   
      **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 網路名稱** — 針對新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體指定網路名稱。 這是在網路上用來識別容錯移轉叢集的名稱。  
   

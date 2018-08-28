@@ -21,12 +21,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54714f5d4c1cd0db5c9117e3812107caf039676e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dfa43eb6ced096a5ae4facd215cf06a87a97976f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997660"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774649"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>設定資料庫圖表設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "37997660"
 3.  如果您要設定資料庫圖表化，可在提示出現時選取 [是]。  
   
     > [!NOTE]  
-    > 這會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中建立資料庫圖表資料表、系統預存程序和系統函數。  
+    > 這會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立資料庫圖表資料表、系統預存程序和系統函數。  
   
-4.  Visual Studio 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體上建立下列物件：  
+4.  Visual Studio 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立下列物件：  
   
     1.  sysdiagrams 資料表  
   

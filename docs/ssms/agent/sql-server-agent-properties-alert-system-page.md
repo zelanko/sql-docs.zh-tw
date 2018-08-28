@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 493e81d1d245920b391374ef146d6b4dfb0586a9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9a27740fe2aaa85a4341baf44dcb8b8e99e1fd2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035940"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776223"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "38035940"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 警示所傳送的訊息設定。  
+使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所傳送的訊息設定。  
   
 ## <a name="options"></a>選項。  
 **郵件工作階段**  
-此章節中的選項會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 郵件。  
+此章節中的選項會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 郵件。  
   
 **啟用郵件設定檔**  
-啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 郵件。 依預設，未啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 郵件。  
+啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 郵件。 依預設，未啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 郵件。  
   
 **郵件系統**  
-設定郵件系統供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 使用。 Database Mail  
+設定郵件系統供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 Database Mail  
   
 > [!NOTE]  
-> 在變更電子郵件系統之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務，才能使變更生效。  
+> 在變更電子郵件系統之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，才能使變更生效。  
   
 **郵件設定檔**  
-設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 使用。 您也可以選取 [\<新增 Database Mail 設定檔>]，以建立新的設定檔。  
+設定設定檔供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 您也可以選取 [\<新增 Database Mail 設定檔>]，以建立新的設定檔。  
   
 **呼叫器電子郵件**  
 本節中的選項可以讓您設定傳送到呼叫器號碼的電子郵件訊息，以搭配呼叫系統使用。  
@@ -104,18 +104,18 @@ ms.locfileid: "38035940"
 設定通知保全操作員的方法。  
   
 **Token 取代**  
-此章節可讓您啟動作業步驟 Token，這些 Token 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 警示所執行的作業中使用。 如需有關作業步驟 Token 的詳細資訊，請參閱 [在作業步驟中使用 Token](../../ssms/agent/use-tokens-in-job-steps.md)。  
+此章節可讓您啟動作業步驟 Token，這些 Token 可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所執行的作業中使用。 如需有關作業步驟 Token 的詳細資訊，請參閱 [在作業步驟中使用 Token](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
-> 在 Windows 事件記錄檔上具有寫入權限的任何 Windows 使用者，可以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 警示所啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent Token。 這些 Token 包括： **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)** 和 **$(A-MSG)**。  
+> 在 Windows 事件記錄檔上具有寫入權限的任何 Windows 使用者，可以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括： **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)** 和 **$(A-MSG)**。  
 >   
-> 如果您需要使用這些 Token，在啟用之前，請確定只有信任的 Windows 安全性群組的成員，例如 Administrators 群組，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 所在的電腦的事件記錄檔上才具有寫入權限。  
+> 如果您需要使用這些 Token，在啟用之前，請確定只有信任的 Windows 安全性群組的成員，例如 Administrators 群組，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的電腦的事件記錄檔上才具有寫入權限。  
   
 **取代回應警示之所有作業的 Token**  
-選取此核取方塊，以允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 警示所啟動的作業上取代 Token。  
+選取此核取方塊，以允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 警示所啟動的作業上取代 Token。  
   
 ## <a name="see-also"></a>另請參閱  
 [運算子](../../ssms/agent/operators.md)  
-[設定 SQL Server Agent Mail 使用 Database Mail](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
-[Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[設定 SQL Server Agent Mail 使用 Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

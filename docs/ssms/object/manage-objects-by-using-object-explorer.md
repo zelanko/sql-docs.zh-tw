@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75d7f222b5fb12856a1248020142a11600df803e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f3af3160f5d6774921faa6de14b2bff0a47ac5c0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983970"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775942"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "38983970"
 當物件總管連接到伺服器時，您可以利用 [物件總管] 的連接設定來開啟新的 [程式碼編輯器] 視窗。 若要開啟新的 [程式碼編輯器] 視窗，請在物件總管中，以滑鼠右鍵按一下伺服器名稱，再按一下 [新增查詢]。 若要利用特定資料庫來開啟 [程式碼編輯器] 視窗，請以滑鼠右鍵按一下資料庫名稱，再按一下 [新增查詢]。 當開啟 Analysis Services 伺服器的新查詢時，您可以選取 DMX、MDX 或 XMLA 查詢。  
   
 ### <a name="start-powershell"></a>啟動 PowerShell  
-您可以啟動 PowerShell 工作階段，其方式是以滑鼠右鍵按一下物件總管樹狀結構中的大多數資料夾和物件，然後選取 [啟動 PowerShell]。 這樣會啟動 PowerShell 工作階段，此工作階段已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell 支援，而且路徑會設定為您在 [物件總管] 中以滑鼠右鍵按一下的物件。 然後您可以在互動式 PowerShell 環境中輸入 PowerShell 命令。 如需詳細資訊，請參閱 [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+您可以啟動 PowerShell 工作階段，其方式是以滑鼠右鍵按一下物件總管樹狀結構中的大多數資料夾和物件，然後選取 [啟動 PowerShell]。 這樣會啟動 PowerShell 工作階段，此工作階段已啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支援，而且路徑會設定為您在 [物件總管] 中以滑鼠右鍵按一下的物件。 然後您可以在互動式 PowerShell 環境中輸入 PowerShell 命令。 如需詳細資訊，請參閱 [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
   
 ## <a name="see-also"></a>另請參閱  
 [物件總管](../../ssms/object/object-explorer.md)  

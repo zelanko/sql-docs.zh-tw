@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6bfa613c28084510ccdbadf3e0e8ec39b43cab50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f59cb9d63a0739f13ddc2c80b1e08bb843714cf
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038365"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775935"
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>操作員節點 (SQL Server Agent F1 說明)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,5 +29,5 @@ ms.locfileid: "33038365"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中物件總管之 [操作員] 節點的 F1 說明。  
+此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中物件總管之 [操作員] 節點的 F1 說明。  
   

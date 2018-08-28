@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08c4c10b613f39e428a24d37e0e6f4e94e0148c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984990"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776608"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>索引 - 索引鍵對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]。  
   
 > [!NOTE]  
-> 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
+> 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
 ## <a name="options"></a>選項。  
 **選取的主/唯一索引鍵或索引**  
@@ -67,7 +67,7 @@ ms.locfileid: "38984990"
 展開時會顯示 [建立成 CLUSTERED] 的資訊。  
   
 **建立成 CLUSTERED**  
-使索引鍵或索引成為叢集。 資料表中只能有一個叢集索引。 資料表中的資料會依照叢集索引的順序儲存。 如需詳細資訊，請參閱 [建立叢集索引](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 和 [建立非叢集索引](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943)。  
+使索引鍵或索引成為叢集。 資料表中只能有一個叢集索引。 資料表中的資料會依照叢集索引的順序儲存。 如需詳細資訊，請參閱 [建立叢集索引](../../relational-databases/indexes/create-clustered-indexes.md) 和 [建立非叢集索引](../../relational-databases/indexes/create-nonclustered-indexes.md)。  
   
 **資料空間規格**  
 展開時會顯示 [(資料空間類型)]、[檔案群組或資料分割配置名稱] 和 [資料分割資料行清單] 的資訊。  
@@ -97,9 +97,9 @@ ms.locfileid: "38984990"
 **忽略重複的索引鍵**  
 指定在資料列的索引鍵值等於大量插入作業期間插入的現有索引鍵值時，會發生哪些狀況。 如果您選擇：  
   
--   [是]：[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會發出警告，忽略違規的連入資料列，並嘗試插入其餘的資料列。  
+-   [是]：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會發出警告，忽略違規的連入資料列，並嘗試插入其餘的資料列。  
   
--   [否]：[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會發出錯誤訊息，並復原整個大量插入作業。  
+-   [否]：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會發出錯誤訊息，並復原整個大量插入作業。  
   
 **包含的資料行**  
 顯示構成索引鍵之所有資料行的逗號分隔之名稱清單。 子索引鍵資料行只能在非叢集索引中指定。 如果是 XML 索引，這個屬性就會隱藏。  

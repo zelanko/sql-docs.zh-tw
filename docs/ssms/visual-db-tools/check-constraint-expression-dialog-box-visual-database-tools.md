@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26112fd5fa3052e6aa5f873a436aafce7430d498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76ca616057ba53fa60fb9d53bd7ff79ff2598864
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047305"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774191"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ NOT (payment_method = 'credit card') OR
   
 SQL 語法是由下列參數組成：  
   
-|參數|描述|  
+|參數|Description|  
 |-------------|---------------|  
 |常數|常值，例如數值或字元資料。 字元資料必須使用單引號 (') 括起來。|  
 |column_name|指定資料行。|  
@@ -71,6 +71,6 @@ SQL 語法是由下列參數組成：
 |NOT|否定任何布林運算式 (可以包括關鍵字，例如 LIKE、NULL、BETWEEN、IN 和 EXISTS)。<br /><br />當在陳述式中使用一個以上的邏輯運算子時，會首先處理 NOT。 您可以使用括號來變更執行的順序。|  
   
 ## <a name="see-also"></a>另請參閱  
-[唯一條件約束與檢查條件約束](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[建立唯一的條件約束](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[唯一條件約束與檢查條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[建立唯一的條件約束](../../relational-databases/tables/create-unique-constraints.md)  
   

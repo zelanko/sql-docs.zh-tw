@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ba89c1f12638f4a9ed4698d82dca0f97d3d931a0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 771869ddfa25e6b19fe0545e638a7b305441e2fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987830"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775694"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作業步驟屬性 - 新增作業步驟 (進階頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,20 +31,20 @@ ms.locfileid: "37987830"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業步驟的屬性。  
+使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的屬性。  
   
 ## <a name="options"></a>選項。  
 **成功時的動作**  
-設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 在作業步驟成功時要執行的動作。  
+設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業步驟成功時要執行的動作。  
   
 **重試次數**  
-設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 嘗試重試失敗之作業步驟的次數。  
+設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 嘗試重試失敗之作業步驟的次數。  
   
 **重試間隔 (分鐘)**  
-設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 嘗試重試之間要等候的時間。  
+設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 嘗試重試之間要等候的時間。  
   
 **失敗時的動作**  
-設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 在作業步驟失敗時要執行的動作。  
+設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業步驟失敗時要執行的動作。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 作業步驟的選項  
 **輸出檔案**  
@@ -54,7 +54,7 @@ ms.locfileid: "37987830"
 瀏覽作業步驟輸出所用的檔案。  
   
 **[檢視]**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 將輸出附加至現有的檔案內容。 否則，每次執行作業步驟時會覆寫先前的檔案內容。  
@@ -82,7 +82,7 @@ ms.locfileid: "37987830"
 瀏覽作業步驟輸出所用的檔案。  
   
 **[檢視]**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  
@@ -107,7 +107,7 @@ ms.locfileid: "37987830"
 瀏覽作業步驟輸出所用的檔案。  
   
 **[檢視]**  
-在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 每次執行作業步驟時，將作業步驟輸出附加至先前的檔案內容。  
@@ -139,7 +139,7 @@ ms.locfileid: "37987830"
 瀏覽作業步驟輸出所用的檔案。  
   
 **檢視**  
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
+在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，會停用檢視輸出檔的這個按鈕。 而改用 [記事本] 來檢視作業步驟輸出檔。  
   
 **將輸出附加至現有檔案**  
 將輸出附加至現有的檔案內容。 否則，每次執行作業步驟時會覆寫先前的檔案內容。  

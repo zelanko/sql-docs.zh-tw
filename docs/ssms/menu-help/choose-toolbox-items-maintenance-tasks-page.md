@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9126d758d0b51948072a924da34a5f8674ce2f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7b168a0164ac2acc212344e898d04c07913ae29
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041835"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775223"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>選擇工具箱項目 (維護工作頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33041835"
 [維護工作] 索引標籤包含下列資料行資訊。  
   
 **名稱**  
-顯示可用元件的名稱。 每個名稱前面都有個核取方塊。 如果選取此選項，核取方塊就會指出 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 已經在電腦登錄中找到之元件的項目。 元件若不是已經顯示在使用中的 [工具箱] 索引標籤，就是在按一下 [確定] 時新增。 如果取消選取此選項，核取方塊就會指出元件目前並未顯示在 [工具箱] 中，或者在按一下 [確定] 時會將它從 [工具箱] 中移除。  
+顯示可用元件的名稱。 每個名稱前面都有個核取方塊。 如果選取此選項，核取方塊就會指出 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 已經在電腦登錄中找到之元件的項目。 元件若不是已經顯示在使用中的 [工具箱] 索引標籤，就是在按一下 [確定] 時新增。 如果取消選取此選項，核取方塊就會指出元件目前並未顯示在 [工具箱] 中，或者在按一下 [確定] 時會將它從 [工具箱] 中移除。  
   
 **路徑**  
 顯示元件的完整路徑。 若要識別隨附於產品的預設元件，請在此資料行上排序，然後尋找儲存在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 安裝路徑中的元件。  

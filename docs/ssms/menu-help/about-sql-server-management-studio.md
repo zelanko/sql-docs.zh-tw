@@ -19,20 +19,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8784beb120a0d9bdfbe9e558984ff01fa3054a59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf1609438ec0306fa6b374db2d5ed6b921121062
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040665"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774507"
 ---
 # <a name="about-sql-server-management-studio"></a>關於 SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此對話方塊來檢視或複製有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]的安裝資訊。 評估版本會列出產品過期的剩餘天數。  
+使用此對話方塊來檢視或複製有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的安裝資訊。 評估版本會列出產品過期的剩餘天數。  
   
 ## <a name="options"></a>選項。  
 **元件名稱**  
-顯示列出 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 之已安裝元件的名稱與作業系統的方格：  
+顯示列出 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 之已安裝元件的名稱與作業系統的方格：  
   
 -   **Microsoft SQL Server Management Studio**  
   

@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046425"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775840"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>選項 (SQL Server 物件總管 - 指令碼頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33046425"
   
 ### <a name="general-scripting-options"></a>一般指令碼選項  
 **分隔個別陳述式**  
-使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql_md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 工具/選項/查詢執行/SQL Server/一般/批次分隔符號。 預設值是 False。 如需詳細資訊，請參閱 [GO (TRANSACT-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
+使用批次分隔符號來分隔個別 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 若要變更**查詢編輯器**的預設批次分隔符號，請選取 工具/選項/查詢執行/SQL Server/一般/批次分隔符號。 預設值是 False。 如需詳細資訊，請參閱 [GO (TRANSACT-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)。  
   
 **包含描述性標頭**  
 透過將每個物件的指令碼分隔成區段，在指令碼中加入描述性註解。 預設值是 True。 如需詳細資訊，請參閱 [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)。  
@@ -70,7 +70,7 @@ ms.locfileid: "33046425"
 針對執行選取物件之指令碼時所需的其他物件，產生指令碼。 預設值是 False。  
   
 **結構描述會限定物件名稱**  
-使用物件結構描述來限定物件名稱。 預設值是 False。 如需詳細資訊，請參閱 [建立資料庫結構描述](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739)。  
+使用物件結構描述來限定物件名稱。 預設值是 False。 如需詳細資訊，請參閱 [建立資料庫結構描述](../../relational-databases/security/authentication-access/create-a-database-schema.md)。  
 
 **編寫資料壓縮選項的指令碼**：在指令碼中包含資料壓縮選項。 預設值是 False。
 
@@ -81,7 +81,7 @@ ms.locfileid: "33046425"
 將擁有者包括在產生的指令碼中。 預設值是 False。  
   
 **編寫權限的指令碼**  
-在指令碼中加入資料庫物件的權限。 預設值是 True。 如需詳細資訊，請參閱 [權限](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9)。  
+在指令碼中加入資料庫物件的權限。 預設值是 True。 如需詳細資訊，請參閱 [權限](../../relational-databases/security/permissions-database-engine.md)。  
   
 ### <a name="tableview-options"></a>資料表/檢視選項  
 下列選項只適用於資料表或檢視的指令碼。  
@@ -93,7 +93,7 @@ ms.locfileid: "33046425"
 在每個 CREATE TABLE 陳述式前後加入 SET ANSI_PADDING 陳述式。 預設值是 True。 如需詳細資訊，請參閱 [SET ANSI_PADDING (TRANSACT-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0)。  
   
 **包含定序**  
-在資料行定義中加入定序。 預設值是 True。 如需詳細資訊，請參閱 [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb)。  
+在資料行定義中加入定序。 預設值是 True。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
 **包含 IDENTITY 屬性**  
 加入 IDENTITY 種子和 IDENTITY 遞增的定義。 預設值是 True。 如需詳細資訊，請參閱 [IDENTITY (屬性) (TRANSACT-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c)。  
@@ -105,7 +105,7 @@ ms.locfileid: "33046425"
 加入 **sp_bindefault** 及 **sp_bindrule** 繫結預存程序呼叫。 預設值是 True。 如需詳細資訊，請參閱 [sp_bindefault (TRANSACT-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) 及 [sp_bindrule (TRANSACT-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67)。  
   
 **編寫 CHECK 條件約束的指令碼**  
-將 [CHECK 條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) 指令碼。 預設值是 True。  
+將 [CHECK 條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md) 指令碼。 預設值是 True。  
   
 **編寫預設值的指令碼**  
 在指令碼中加入資料行預設值。 預設值是 False。 如需詳細資訊，請參閱 [CREATE DEFAULT (TRANSACT-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41)。  
@@ -114,7 +114,7 @@ ms.locfileid: "33046425"
 在資料表定義的 ON 子句中指定檔案群組。 預設值是 False。 如需詳細資訊，請參閱 [CREATE TABLE (TRANSACT-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b)。  
   
 **編寫外部索引鍵的指令碼**  
-將 [FOREIGN KEY 條件約束](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) 加入指令碼。 預設值是 False。  
+將 [FOREIGN KEY 條件約束](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 加入指令碼。 預設值是 False。  
   
 **編寫全文檢索索引的指令碼**  
 在指令碼中加入全文檢索索引。 預設值是 False。 如需詳細資訊，請參閱 [CREATE FULLTEXT CATALOG (TRANSACT-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)。  
@@ -126,7 +126,7 @@ ms.locfileid: "33046425"
 在指令碼中加入資料表分割區結構描述。 預設值是 False。 如需詳細資訊，請參閱 [CREATE PARTITION SCHEME (TRANSACT-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4)。  
   
 **編寫主索引鍵的指令碼**  
-將 [主要及外部索引鍵條件約束](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) 加入指令碼。 預設值是 True。  
+將 [主要及外部索引鍵條件約束](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 加入指令碼。 預設值是 True。  
   
 **編寫統計資料的指令碼**  
 在指令碼中加入使用者自訂統計資料。 預設值是 False。 如需詳細資訊，請參閱 [CREATE STATISTICS (TRANSACT-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2)。  
@@ -135,7 +135,7 @@ ms.locfileid: "33046425"
 在指令碼中加入觸發程序。 預設值是 False。 如需詳細資訊，請參閱 [CREATE TRIGGER (TRANSACT-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7)。  
   
 **編寫唯一索引鍵的指令碼**  
-將 [Unique 條件約束及 Check 條件約束](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) 加入指令碼。 預設值是 False。  
+將 [Unique 條件約束及 Check 條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md) 加入指令碼。 預設值是 False。  
   
 **編寫檢視資料行的指令碼**  
 在檢視標頭中宣告檢視資料行。 預設值是 False。 如需詳細資訊，請參閱 [CREATE VIEW (TRANSACT-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9)。  
@@ -152,7 +152,7 @@ ms.locfileid: "33046425"
 **資料庫引擎類型的指令碼**：所指定的[資料庫引擎類型](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx)將會以所產生的指令碼為目標。
 
 **針對伺服器版本編寫指令碼**  
-所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 版本將會以所產生的指令碼為目標。 無法針對較舊的版本編寫 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 新增功能的指令碼。 有一些為 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 所建立的指令碼，無法在執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的伺服器上執行，也無法在 [資料庫相容性層級設定](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)資料庫上執行。  
+所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會以所產生的指令碼為目標。 無法針對較舊的版本編寫 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 新增功能的指令碼。 有一些為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所建立的指令碼，無法在執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的伺服器上執行，也無法在 [資料庫相容性層級設定](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)資料庫上執行。  
 
 ## <a name="see-also"></a>另請參閱  
 [產生指令碼 (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

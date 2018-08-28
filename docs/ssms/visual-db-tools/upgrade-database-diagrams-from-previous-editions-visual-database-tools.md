@@ -23,16 +23,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 637a674bcbbc22e0a10ac2e49c7ea0c875b85c44
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60450ac29e788921557a76bde211775fecbc4734
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774386"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 上設定資料庫圖表化時，會自動升級在舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]資料庫上所建立的資料庫圖表。 如需設定圖表化的詳細步驟，請參閱 [設定資料庫圖表設計工具 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上設定資料庫圖表化時，會自動升級在舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫上所建立的資料庫圖表。 如需設定圖表化的詳細步驟，請參閱 [設定資料庫圖表設計工具 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>升級舊版資料庫圖表  
   

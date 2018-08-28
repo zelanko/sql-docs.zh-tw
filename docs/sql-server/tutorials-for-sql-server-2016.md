@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d03b293418329fe6eeeba532778acca45ec9c860
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063626"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774393"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38063626"
      
 -   如果教學課程使用其中一個 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 資料庫，那麼您應該從 CodePlex 下載最新版本並加以使用。 如需詳細資訊，請參閱 [AdventureWorks 資料庫與 SQL Server 2016 CTP3 的指令碼](https://www.microsoft.com/download/details.aspx?id=49502)。    
 -   若要下載 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表搭配 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 教學課程使用，請前往 [SQL Server 2012 的 Power View 範例](http://go.microsoft.com/fwlink/?LinkId=220734)。  
-- 查看 [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 存放庫上提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 範例。 
+- 查看 [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub 存放庫上提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 範例。 
 
  
 ## <a name="current-tutorials"></a>目前的教學課程  

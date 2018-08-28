@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054965"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775735"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33054965"
 ## <a name="prerequisites"></a>Prerequisites  
 為了完成這個逐步解說，您需要：  
   
--   存取含有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]  
+-   存取含有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
 -   具有資料庫擁有者 **dbo** 權限的帳戶  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33054965"
   
 1.  在 [檢視] 功能表上，按一下 [物件總管]。  
   
-2.  開啟 [資料庫] 節點，然後開啟 [[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]] 節點。  
+2.  開啟 [資料庫] 節點，然後開啟 [[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]] 節點。  
   
 3.  以滑鼠右鍵按一下 [資料庫圖表] 節點，再選擇 [新增資料庫圖表]。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "33054965"
 [設定資料庫圖表設計工具 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [將資料表新增至圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [在圖表上建立資料表之間的關聯性 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[建立 XML 索引](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[建立 XML 索引](../../relational-databases/xml/create-xml-indexes.md)  
 [複製資料庫圖表的影像到剪貼簿 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [使用圖表配置 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

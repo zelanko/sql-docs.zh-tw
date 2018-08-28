@@ -21,16 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87ad2f292481d44c10dba92fe6e122ac71560f91
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc8b19a65fa85972915774d14315ac67ef85391b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988884"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775804"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在查詢和檢視表設計工具中執行查詢之後，您可以清除 [結果] 窗格。 此程序可套用至使用物件總管的 [開啟檢視] 或 [開啟資料表] 選項所建立的查詢。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中，於 [查詢編輯器] 中執行查詢後，除非關閉 [查詢編輯器] 視窗或執行另一個查詢，否則無法清除 [結果] 窗格。  
+在查詢和檢視表設計工具中執行查詢之後，您可以清除 [結果] 窗格。 此程序可套用至使用物件總管的 [開啟檢視] 或 [開啟資料表] 選項所建立的查詢。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，於 [查詢編輯器] 中執行查詢後，除非關閉 [查詢編輯器] 視窗或執行另一個查詢，否則無法清除 [結果] 窗格。  
   
 > [!NOTE]  
 > 這不會恢復您對資料庫所做的變更。 如需有關 [結果] 窗格如何運作，請參閱 [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)。  

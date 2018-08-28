@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981800"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775691"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-有兩個集合的資料行屬性：您可以在資料表設計工具的 [資料行屬性] 索引標籤中看到的完整集合 (僅適用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫)，以及使用伺服器總管可以在 [屬性] 視窗中看到的子集。  
+有兩個集合的資料行屬性：您可以在資料表設計工具的 [資料行屬性] 索引標籤中看到的完整集合 (僅適用於 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫)，以及使用伺服器總管可以在 [屬性] 視窗中看到的子集。  
   
 > [!NOTE]  
 > 此主題中的屬性，是依類別目錄的順序排列，而非依字母排列。  
@@ -42,7 +42,7 @@ ms.locfileid: "38981800"
 當您在伺服器總管中選取資料行時，這些屬性會出現在 [屬性] 視窗中。  
   
 > [!NOTE]  
-> 這些屬性可使用 [伺服器總管] 來存取，而且都是唯讀的。 若要編輯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫的資料行屬性，請在 [資料表設計工具] 中選取資料行。 本主題稍後將描述這些屬性。  
+> 這些屬性可使用 [伺服器總管] 來存取，而且都是唯讀的。 若要編輯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料行屬性，請在 [資料表設計工具] 中選取資料行。 本主題稍後將描述這些屬性。  
   
 **識別類別目錄**  
 展開以顯示 [名稱] 和 [資料庫] 屬性。  
@@ -60,13 +60,13 @@ ms.locfileid: "38981800"
 顯示選取之資料行的資料類型。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
   
 **識別值增量**  
-針對識別欄位之每個後續的資料列，顯示將加到 [識別值種子] 的遞增量。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)])。  
+針對識別欄位之每個後續的資料列，顯示將加到 [識別值種子] 的遞增量。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
   
 **識別種子**  
-顯示針對識別欄位，指派給資料表中之第一個資料列的種子值。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)])。  
+顯示針對識別欄位，指派給資料表中之第一個資料列的種子值。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
   
 **為識別**  
-顯示選取的資料行是否為資料表的識別欄位。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)])。  
+顯示選取的資料行是否為資料表的識別欄位。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
   
 **長度**  
 顯示以字元為基礎的資料類型所允許的字元數。  
@@ -84,7 +84,7 @@ ms.locfileid: "38981800"
 若要存取這些屬性，請在伺服器總管中，以滑鼠右鍵按一下資料行所屬的資料表，選擇 [開啟資料表定義]，然後在資料表設計工具裡選取資料表方格中的資料列。  
   
 > [!NOTE]  
-> 這些屬性只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+> 這些屬性只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 **一般類別目錄**  
 展開以顯示 [名稱]、[允許 Null]、[資料類型]、[預設值或繫結]、[長度]、[有效位數] 和 [小數位數]。  
@@ -185,11 +185,11 @@ ms.locfileid: "38981800"
 顯示此資料行是否在其他位置已複寫。  
   
 **為 RowGuid**  
-指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 是否會使用資料行當做 ROWGUID。 您只可以針對資料類型為 **uniqueidentifier** 的資料行，將此值設定為 [是]。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
+指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否會使用資料行當做 ROWGUID。 您只可以針對資料類型為 **uniqueidentifier** 的資料行，將此值設定為 [是]。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
   
 **大小**  
 以位元組為單位，顯示資料行之資料類型所允許的大小。 例如， **nchar** 資料類型的長度可能是 10 (字元數)，但是針對 Unicode 字元集，大小就會是 20。  
   
 > [!NOTE]  
-> 每個資料列的 **varchar(max)** 資料類型長度都會不同。 sp_help 會傳回 (-1) 當作 **varchar(max)** 資料行的長度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 會顯示 -1 當作資料行大小。  
+> 每個資料列的 **varchar(max)** 資料類型長度都會不同。 sp_help 會傳回 (-1) 當作 **varchar(max)** 資料行的長度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會顯示 -1 當作資料行大小。  
   

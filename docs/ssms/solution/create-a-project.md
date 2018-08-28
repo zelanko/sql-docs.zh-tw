@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 617e0bb42882883a51f5da0bb22ae59eb18dae88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b9549bfce672b3ddf5c67ddb8a6a4968e87a5b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064648"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775473"
 ---
 # <a name="create-a-project"></a>建立專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38064648"
     在 [範本] 方塊中，請選取一個範本。 選取的專案範本的簡短描述會出現在 [範本] 方塊以下。  
   
     **名稱**  
-    請輸入您想要建立的指令碼專案名稱。 和專案具有相同名稱的資料夾也會建立於顯示在 [位置] 欄位中的位置。 針對某些專案，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 會建立來源以及其他支援檔案，並將它們加入新專案資料夾。  
+    請輸入您想要建立的指令碼專案名稱。 和專案具有相同名稱的資料夾也會建立於顯示在 [位置] 欄位中的位置。 針對某些專案，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會建立來源以及其他支援檔案，並將它們加入新專案資料夾。  
   
     > [!NOTE]  
     > 針對某些專案類型，[名稱] 文字方塊無法使用，因為指定位置會設定名稱。 例如，Web 應用程式和 Web 服務位於 Web 伺服器上，並且從該伺服器上指定的虛擬目錄衍生出它們的名稱。  
@@ -100,7 +100,7 @@ ms.locfileid: "38064648"
   
 4.  按一下 [確定] 。  
   
-您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 建立，無法變更。 您可以使用 [新增專案] 對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管中，以滑鼠右鍵按一下方案，然後按一下 [新增]。 指令碼專案資料夾的預設位置是 C:\Documents and Settings\\<使用者名>\My Documents\SQL Server Management Studio\Projects\\。  
+您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 建立，無法變更。 您可以使用 [新增專案] 對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管中，以滑鼠右鍵按一下方案，然後按一下 [新增]。 指令碼專案資料夾的預設位置是 C:\Documents and Settings\\<使用者名>\My Documents\SQL Server Management Studio\Projects\\。  
   
 ## <a name="see-also"></a>另請參閱  
 [方案總管](../../ssms/solution/solution-explorer.md)  

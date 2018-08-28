@@ -18,16 +18,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e29b71abbcba7e5b37ff1547321b6bd6d27d339c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c103c7149b26a1d87be4436a91ba4ae211440aff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047165"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775965"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>定序對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-這個對話方塊讓您指定資料行的定序序列 (Collation Sequence)。 在將資料行的值與另一個資料行的值或常數值進行比較的任何作業中，會使用資料行的定序序列。 它也會影響某些字串函數的行為，例如 SUBSTRING 和 CHARINDEX。 如需資料行定序設定作用的完整清單，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 文件。  
+這個對話方塊讓您指定資料行的定序序列 (Collation Sequence)。 在將資料行的值與另一個資料行的值或常數值進行比較的任何作業中，會使用資料行的定序序列。 它也會影響某些字串函數的行為，例如 SUBSTRING 和 CHARINDEX。 如需資料行定序設定作用的完整清單，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件。  
   
 下列情況會出現這個對話方塊：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33047165"
   
 ## <a name="options"></a>選項。  
 **SQL 定序**  
-從下拉式清單中選擇 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 所定義的定序序列。  
+從下拉式清單中選擇 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所定義的定序序列。  
   
 **Windows 定序**  
 從下拉式清單中選擇 Windows 所定義的定序序列。  

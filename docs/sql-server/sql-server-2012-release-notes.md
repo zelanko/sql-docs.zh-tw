@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926199"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774684"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed act
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**因應措施** ：當 SQL Server 引擎或 Analysis Services 無法安裝時，就可能會發生這種情況。 若要修正此問題，請參閱 SQL Server 安裝程式記錄檔，然後疑難排解 SQL Server 引擎和 Analysis Services 失敗。 如需詳細資訊，請參閱＜檢視與讀取 SQL Server 安裝程式記錄檔＞。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx)＞。  
+**因應措施** ：當 SQL Server 引擎或 Analysis Services 無法安裝時，就可能會發生這種情況。 若要修正此問題，請參閱 SQL Server 安裝程式記錄檔，然後疑難排解 SQL Server 引擎和 Analysis Services 失敗。 如需詳細資訊，請參閱＜檢視與讀取 SQL Server 安裝程式記錄檔＞。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 在重新命名網路名稱之後，SQL Server 2008、2008 R2 Analysis Services 容錯移轉叢集升級到 SQL Server 2012 可能會失敗  
 **問題** ：在您使用 Windows 叢集系統管理員工具來變更 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 容錯移轉叢集執行個體的網路名稱之後，升級作業可能會失敗。  
@@ -225,7 +225,7 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
   
 8.  [修復進度]  頁面會顯示修復作業的狀態。 [完成]  頁面會指出作業已完成。  
   
-如需有關如何修復 SQL Server 執行個體的詳細資訊，請參閱 [修復失敗的 SQL Server 2012 安裝](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx)。  
+如需有關如何修復 SQL Server 執行個體的詳細資訊，請參閱 [修復失敗的 SQL Server 2012 安裝](../database-engine/install-windows/repair-a-failed-sql-server-installation.md)。  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 SQL Server 2012 的執行個體可能會在作業系統升級之後失敗  
 **問題** ：當您將作業系統從 Windows Vista 升級為 Windows 7 SP1 之後，SQL Server 2012 的執行個體可能會失敗並出現下列錯誤。  
@@ -237,7 +237,7 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server 版本升級需要重新啟動  
 **問題**：當您針對 SQL Server 2012 執行個體進行版本升級時，與新版本相關聯的某些功能可能無法立即啟動。  
   
-**因應措施**：在 SQL Server 2012 執行個體的版本升級完成之後重新啟動電腦。 如需有關 SQL Server 2012 支援之升級方式的詳細資訊，請參閱 [支援的版本與版本升級](http://msdn.microsoft.com/library/ms143393.aspx)。  
+**因應措施**：在 SQL Server 2012 執行個體的版本升級完成之後重新啟動電腦。 如需有關 SQL Server 2012 支援之升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 無法升級具有唯讀檔案群組或檔案的資料庫  
 **問題**：如果資料庫或其檔案/檔案群組設定為唯讀，您就無法透過附加資料庫或從備份還原資料庫，升級資料庫。  此時，系統會傳回錯誤 3415。  當您執行 SQL Server 執行個體的就地升級時，也會發生這個問題。 也就是說，您嘗試透過安裝 SQL Server 2012 來取代現有的 SQL Server 執行個體，而且一個或多個現有的資料庫設定為唯讀。  
@@ -247,7 +247,7 @@ Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 如果您使用相同的 IP 位址，重新安裝 SQL Server 容錯移轉叢集的執行個體會失敗  
 **問題：** 如果您在安裝 SQL Server 容錯移轉叢集執行個體期間指定不正確的 IP 位址，安裝就會失敗。 解除安裝失敗的執行個體之後，如果您嘗試使用相同的執行個體名稱和正確的 IP 位址來重新安裝 SQL Server 容錯移轉叢集執行個體，安裝仍會失敗。 發生失敗的原因是先前的安裝遺留了重複的資源群組。  
   
-**因應措施** ：若要解決此問題，請在重新安裝期間使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](http://msdn.microsoft.com/library/ms191545)。  
+**因應措施** ：若要解決此問題，請在重新安裝期間使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
