@@ -7,20 +7,21 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0040de0416cdb07ba7ba84c754c2614c52f8e295
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 1da63f1a57a31a8b1bfed548a8f01e53f958a966
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770954"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032165"
 ---
 # <a name="upgrade-sql-server"></a>升級 SQL Server
 

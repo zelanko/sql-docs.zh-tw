@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f618cba40081adfe9b38d8a8f89043a627cf5a40
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: be4b3f5d1be443d83cda98e063a0fd1adcb61926
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769804"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410476"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>未同步處理某些同步複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "34769804"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性群組|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  這項原則會積存所有可用性複本的資料同步處理狀態，並檢查是否有任何可用性複本未處於預期的同步處理狀態。 當任何非同步複本不是處於 SYNCHRONIZING 狀態，而且任何同步複本不是處於 SYNCHRONIZED 狀態時，原則為狀況不良。 否則原則狀態良好。  
   
 > [!NOTE]  
 >  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [未同步處理某些同步複本](http://go.microsoft.com/fwlink/p/?LinkId=220853) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
- 在這個可用性群組中，至少有一個可用性複本目前並未同步處理。 複本同步處理狀態可能是 SYNCHONIZING 或 NOT SYNCHRONIZING。  
+ 在這個可用性群組中，至少有一個可用性複本目前並未同步處理。 複本同步處理狀態可能是 SYNCHRONIZING 或 NOT SYNCHRONIZING。  
   
 ## <a name="possible-solution"></a>可能的解決方案  
  使用可用性複本原則狀態，尋找同步處理狀態不正確的可用性複本，然後解決可用性複本上的問題。  

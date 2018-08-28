@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1117eaebd9e4ed5c44077966bc9b3d2874548248
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e3e8c2ce2a936b17b018722ae118ea142773723
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921008"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437628"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>停用 SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,8 +125,7 @@ GO
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  
-                    @database_name = 'TestDB'   
-                    ,@enable_backup = 0;  
+                    @enable_backup = 0;  
     GO  
   
     ```  

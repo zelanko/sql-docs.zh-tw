@@ -7,7 +7,7 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: polybase
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 f1_keywords:
 - PolyBase
 - PolyBase, guide
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b94cc6a8a906721c43f1da66867d954fa8f9b50b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8377448f235a627bae95d757539efcb3077a83f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970570"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036220"
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

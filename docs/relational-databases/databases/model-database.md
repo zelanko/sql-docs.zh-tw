@@ -20,12 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08498dcec9823006babd265e79945d1273953a57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931503"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410005"
 ---
 # <a name="model-database"></a>Model 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "32931503"
 |主要資料|modeldev|model.mdf|自動成長 64 KB，直到磁碟滿了為止。|  
 |Log|modellog|modellog.ldf|自動成長 64 KB，最多到 2 TB。|  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以前的版本，請參閱 [Model 資料庫](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)以取得預設檔案成長值。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以前的版本，請參閱 [Model 資料庫](model-database.md)以取得預設檔案成長值。  
   
  若要移動 **Model** 資料庫或記錄檔，請參閱 [移動系統資料庫](../../relational-databases/databases/move-system-databases.md)。  
   
