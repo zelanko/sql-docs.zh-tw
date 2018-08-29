@@ -18,12 +18,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 574677284e2614f665fb1cf663d78b898dcdafe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ceeadd0f4608d241b9609bf050bc97de264e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932984"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410002"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>記錄傳送交易記錄備份設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "32932984"
 |**不要壓縮備份**|不論目前的伺服器層級預設值為何，按一下即可建立未壓縮備份。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定使用者可建立及管理 SQL Server Agent 作業](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
+ [設定使用者可建立及管理 SQL Server Agent 作業](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

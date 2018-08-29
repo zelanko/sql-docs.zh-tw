@@ -12,13 +12,14 @@ ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 33f919424752b26d49fb44a7136cd60e38eb1437
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 1ec47f629e7cbe490a34c827e871260a40549603
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771554"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410313"
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>執行 Data Migration Assistant 準備進行升級
 

@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3be991897702d63aa505c3c18b4a86fed5f9840c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403120"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409493"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
@@ -139,7 +139,7 @@ ms.locfileid: "35403120"
   
  此報表會顯示下列資訊區段。  
   
-|章節|描述|  
+|章節|Description|  
 |-------------|-----------------|  
 |**執行資訊**|顯示在過去 24 小時內，處於不同狀態 (失敗、執行中、成功、其他) 的執行數目。|  
 |**封裝資訊**|顯示在過去 24 小時內已經執行之封裝的總數。|  
@@ -153,7 +153,7 @@ ms.locfileid: "35403120"
   
  此報表會顯示下列資訊區段。  
   
-|章節|描述|  
+|章節|Description|  
 |-------------|-----------------|  
 |篩選|顯示目前套用至報表的篩選，例如 [開始時間範圍]。|  
 |執行資訊|顯示每個封裝執行的開始時間、結束時間和期間。您可以檢視封裝執行使用的參數值清單，例如使用 [執行封裝] 工作傳遞至子封裝的值。 若要檢視參數清單，請按一下 [概觀]。|  
@@ -167,7 +167,7 @@ ms.locfileid: "35403120"
   
  此報表會顯示下列資訊區段。  
   
-|章節|描述|  
+|章節|Description|  
 |-------------|-----------------|  
 |篩選|顯示目前套用至報表的篩選，例如具有指定字串和 [上次失敗時間] 範圍的連接。<br /><br /> 設定 [上次失敗時間] 範圍，就可以只顯示某個日期範圍內發生的連接失敗。 範圍可以跨多天、數個月或數年。|  
 |詳細資料|顯示連接字串、發生連接失敗的執行數目，以及上一次連接失敗的日期。|  
@@ -184,7 +184,7 @@ ms.locfileid: "35403120"
 > [!NOTE]  
 >  當您將自訂報表加入 [資料庫] 節點底下的 [SSISDB] 節點時，不需要使用 SSISDB 前置詞。  
   
- 如需如何建立和加入自訂報表的指示，請參閱 [將自訂報表加入 Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)。  
+ 如需如何建立和加入自訂報表的指示，請參閱[將自訂報表加入 Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>檢視 Integration Services 伺服器的報表
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中，於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](#reports)。  

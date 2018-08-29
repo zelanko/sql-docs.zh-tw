@@ -9,7 +9,7 @@ ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 keywords:
 - 學習 SQL
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
@@ -17,12 +17,12 @@ caps.latest.revision: 19
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fd72922ceee07a5e55e0d8e4edca881f81265669
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e3cf9fabdd05539d9deabb83395df4b90bd4adad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403980"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019854"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
 

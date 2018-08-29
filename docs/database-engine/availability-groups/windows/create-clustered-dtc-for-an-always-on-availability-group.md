@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13deb284a73027321bd0bd051dce91f642078c96
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 96a8a4e87167adc8243f8f313b9801966c1c32f0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509107"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406619"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>建立 AlwaysOn 可用性群組的叢集 DTC
 
@@ -29,7 +29,7 @@ ms.locfileid: "39509107"
 
 本逐步解說會配合[針對 SQL Server 可用性群組叢集化 DTC](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) 中的需求，來建立叢集 DTC 資源和 SQL Server 可用性群組。
 
-本逐步解說使用 PowerShell 和 Transact-SQL (T-SQL) 指令碼。  許多 T-SQL 指令碼必須啟用 **SQLCMD 模式** 。  如需 **SQLCMD 模式**的詳細資訊，請參閱 [在查詢編輯器中啟用 SQLCMD 指令碼](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1)。  您必須匯入 PowerShell 模組 **FailoverClusters** 。  如需匯入 PowerShell 模組的詳細資訊，請參閱 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)(匯入 PowerShell 模組)。  本逐步解說具有下列基本原則：
+本逐步解說使用 PowerShell 和 Transact-SQL (T-SQL) 指令碼。  許多 T-SQL 指令碼必須啟用 **SQLCMD 模式** 。  如需 **SQLCMD 模式**的詳細資訊，請參閱 [在查詢編輯器中啟用 SQLCMD 指令碼](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  您必須匯入 PowerShell 模組 **FailoverClusters** 。  如需匯入 PowerShell 模組的詳細資訊，請參閱 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)(匯入 PowerShell 模組)。  本逐步解說具有下列基本原則：
 - 已符合 [AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) 中的所有需求。  
 - 網域為 `contoso.lab`。
 - 使用者在即將建立 DTC 網路名稱資源的 OU 中具有建立電腦物件權限。

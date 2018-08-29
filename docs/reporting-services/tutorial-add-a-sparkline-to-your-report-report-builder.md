@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036395"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409465"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
 
-在這個 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]教學課程中，您會使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表來建立含有走勢圖的基本資料表。   
+在這個 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]教學課程中，您會使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表來建立含有走勢圖的基本資料表。   
   
 走勢圖和資料橫條是簡單的小圖表，可在極小空間中傳達大量資訊，通常用於 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 報表中的資料表與矩陣。 您將建立的報表應類似下圖。  
   

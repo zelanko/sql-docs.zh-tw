@@ -9,18 +9,18 @@ ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f26803afed7f38e00c87db06e1c3c6398d346b5e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 91fd1ea9058ff91912c0b652c1e9662ccb79e1ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980480"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025094"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 

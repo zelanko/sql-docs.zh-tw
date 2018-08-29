@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993950"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410312"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993950"
   
  **若要使用 SQL Server Management Studio 建立 WMI 警示**  
   
--   [建立 WMI 事件警示](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [建立 WMI 事件警示](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>鏡像資料庫如何使用事件通知  
  根據定義，若涉及鏡像資料庫時，跨資料庫傳送事件通知為遠端作業，因為鏡像資料庫可以容錯移轉。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會以 *「鏡像路由」*(Mirrored Route) 的形式，為鏡像資料庫提供特殊支援。 鏡像路由有兩個位址：一個是主體伺服器執行個體的位址，另一個是鏡像伺服器執行個體的位址。  
@@ -214,11 +214,11 @@ ms.locfileid: "37993950"
   
 -   作業使用的登入  
   
-     若要建立或執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您必須先將作業所需的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至目的地伺服器執行個體。 如需詳細資訊，請參閱 [設定使用者可建立及管理 SQL Server Agent 作業](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
+     若要建立或執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您必須先將作業所需的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至目的地伺服器執行個體。 如需詳細資訊，請參閱 [設定使用者可建立及管理 SQL Server Agent 作業](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶  
   
-     服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 Agent 服務的內容會影響作業及其執行環境的設定。 此帳戶必須具有作業所需之資源 (例如，網路共用) 的存取權。 如需如何選取和修改服務啟動帳戶的相關資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)。  
+     服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 Agent 服務的內容會影響作業及其執行環境的設定。 此帳戶必須具有作業所需之資源 (例如，網路共用) 的存取權。 如需如何選取和修改服務啟動帳戶的相關資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。  
   
      為了正確運作，服務啟動帳戶必須設定成具有正確的網域、檔案系統和登錄權限。 此外，作業可能會需要使用必須針對服務帳戶設定的共用網路資源。 如需相關資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993950"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 可定義指定之作業步驟的安全性內容。 為了讓作業在目的地伺服器執行個體上執行，您必須在該執行個體上手動重新建立此作業所需的所有 Proxy。 如需詳細資訊，請參閱 [建立 SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) 和 [疑難排解使用 Proxy 的多伺服器作業](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280)。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 可定義指定之作業步驟的安全性內容。 為了讓作業在目的地伺服器執行個體上執行，您必須在該執行個體上手動重新建立此作業所需的所有 Proxy。 如需詳細資訊，請參閱 [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md) 和 [疑難排解使用 Proxy 的多伺服器作業](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)。  
   
  如需詳細資訊，請參閱：  
   
--   [實作作業](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [實作作業](../../ssms/agent/implement-jobs.md)  
   
 -   [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (適用於資料庫鏡像)  
   
 -   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時)  
   
--   [設定 SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時)  
+-   [設定 SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md) (當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體時)  
   
--   [實作 SQL Server Agent 安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **若要檢視現有的作業及其屬性**  
   
--   [監視作業活動](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [監視作業活動](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [檢視作業步驟資訊](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [檢視作業步驟資訊](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **若要建立作業**  
   
--   [建立作業](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [建立作業](../../ssms/agent/create-a-job.md)  
   
--   [建立作業](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [建立作業](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>使用指令碼來重新建立作業的最佳作法  
  我們建議您先編寫簡單作業的指令碼、在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務上重新建立作業，然後執行該作業，看看是否如預期方式運作。 這項做法可讓您識別不相容性並嘗試加以解決。 如果以指令碼編寫的作業無法如預期方式在新環境中運作，建議您建立可在該環境下正確運作的對等作業。  

@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 041b08244a94ebb9a8ae8f377591e35ba5046819
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297364"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409345"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "36297364"
 5.  重新撰寫查詢來使用 `DISABLE_PARAMETER_SNIFFING` 提示。 除非使用 `OPTION(RECOMPILE)`、`WITH RECOMPILE` 或 `OPTIMIZE FOR <value>`，否則完全停用參數探查，其效果與使用區域變數技巧相同。
 
 > [!TIP] 
-> 運用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 計劃分析功能來快速確認這是否是問題。 詳細資訊可從[這裡](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)取得。
+> 運用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 計劃分析功能來快速確認這是否是問題。 詳細資訊可從[這裡](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)取得。
 
 ## <a name="MissingIndexes"></a> 遺漏索引
 

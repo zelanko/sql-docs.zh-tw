@@ -18,13 +18,14 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c92777754814f0c0dc9e49919bbffe068eed0899
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c80d68173537d667573def56992bb1d9255490af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770444"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410314"
 ---
 # <a name="install-sql-server-replication"></a>安裝 SQL Server 複寫
 

@@ -12,16 +12,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - TRUSTWORTHY database property
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
-caps.latest.revision: 22
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1281d9da4ee6dffb2030fc4899b2ac099c86dbfb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b94fe6d1e7e8442b51dab29c7ab0dbc6e3005261
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109180"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023546"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 資料庫屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

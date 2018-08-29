@@ -27,16 +27,16 @@ caps.latest.revision: 160
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c97ea19edfb53ddbf09316fa61f0ad6f97743cf6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4284526fac130ede0cf85ef0c02ca9d0487b2554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402140"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406710"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
 
- > 如需舊版 SQL Server 的相關內容，請參閱[執行 SQL Server 匯入和匯出精靈](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈是將資料從來源複製到目的地的簡單方式。 本概觀說明精靈可作為來源和目的地使用的資料來源，以及執行精靈所需的權限。
 

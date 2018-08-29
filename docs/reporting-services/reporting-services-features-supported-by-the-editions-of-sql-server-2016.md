@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7785f0ad361b88931123f2dd9eb229064a9ca953
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983120"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406158"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 版本支援的 Reporting Services 功能
 
@@ -96,13 +96,13 @@ ms.locfileid: "38983120"
   
 |工具名稱|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl 和 .rds)|是|是|||||是|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|是||||||是|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl 和 .rds)|是|是|||||是|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|是||||||是|  
 |Power BI 行動裝置應用程式 (iOS、Windows 10、Android) (.rsmobile)|是||||||是|  
   
 > [!NOTE]  
 > 1.  上表識別啟用這些用戶端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；不過，這些工具可以存取任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本上裝載的資料。  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] 是建立行動報表的單一點。 連接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器存取資料來源以及建立報表。 然後將它們發佈至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器，供組織中的其他人在伺服器或行動裝置上存取。 您也可以使用獨立 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] 與本機資料來源  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 是建立行動報表的單一點。 連接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器存取資料來源以及建立報表。 然後將它們發佈至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器，供組織中的其他人在伺服器或行動裝置上存取。 您也可以使用獨立 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 與本機資料來源  
 > 3.  無論您使用內部部署  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 、雲端 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，或兩個一起作為報表傳遞解決方案，您只需要一個行動裝置應用程式來存取行動裝置上的儀表板和行動報表。 您可從 Windows、iOS 或 Android 應用程式存放區下載 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 應用程式。  
 
 ## <a name="next-steps"></a>後續步驟

@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0c88c0e5710a85b8e29e3d0852ac608f5cfca30d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cd0de35d2bf5b18e1ccb9cdeadd8198f522c4135
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018063"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40406705"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>入口網站 (SSRS 原生模式)
 
@@ -61,7 +61,7 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 
 入口網站僅適用於以原生模式執行的報表伺服器。 不支援針對 SharePoint 整合模式設定的報表伺服器。
 
-部分入口網站功能只在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)] 版本中提供。 如需詳細資訊，請參閱 [SQL Server 2016 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+部分入口網站功能只在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中提供。 如需詳細資訊，請參閱 [SQL Server 2016 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
 在新的安裝上，只有本機管理員才有足夠的權限處理內容和設定。 若要授與權限給其他使用者，本機管理員必須建立角色指派，提供報表伺服器的存取權。 使用者在這之後可以存取的應用程式頁面和工作，會視該使用者的角色指派而定。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者](security/grant-user-access-to-a-report-server-report-manager.md)
 

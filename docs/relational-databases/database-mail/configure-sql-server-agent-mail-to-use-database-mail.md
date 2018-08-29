@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a49117cfe2bb24b4a5f47f22c9bff9e1afb9910
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbfb5af92127ab9d08d3bfabcb589250d748f1d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924833"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406035"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,11 +77,11 @@ ms.locfileid: "32924833"
 ##  <a name="Follow_Up"></a> 後續工作  
  需要進行下列工作，才能完成將 Agent 設定為傳送警示和通知的作業。  
   
--   [警示](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
+-   [警示](../../ssms/agent/alerts.md)  
   
      將警示設定為在發生特定資料庫事件或作業系統狀況時通知操作員。  
   
--   [運算子](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
+-   [運算子](../../ssms/agent/operators.md)  
   
      操作員是可接收電子通知之人員或群組使用的別名  
   

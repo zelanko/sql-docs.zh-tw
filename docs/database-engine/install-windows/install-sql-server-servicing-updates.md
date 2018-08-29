@@ -12,13 +12,14 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 35aa7987ff9cd94741ca1a35c9c81c5ed8ecf62b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 19bb3a7e552ca91a68e603a65df6100d9c73a31a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771280"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406164"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安裝 SQL Server 服務更新
 

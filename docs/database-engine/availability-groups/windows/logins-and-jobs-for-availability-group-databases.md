@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6d704c10a90bf079b436c4923c6b21fff92319c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3f4468a43837e1f140a8fef0b7a7144eb087ec67
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770242"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409498"
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>可用性群組資料庫的登入和作業
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ ms.locfileid: "34770242"
   
 -   [建立資料庫使用者](../../../relational-databases/security/authentication-access/create-a-database-user.md)。  
   
--   [建立作業](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [建立作業](../../../ssms/agent/create-a-job.md)  
   
 -   [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [自主資料庫](../../../relational-databases/databases/contained-databases.md)   
- [建立作業](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  
+ [建立作業](../../../ssms/agent/create-jobs.md)  
   
   

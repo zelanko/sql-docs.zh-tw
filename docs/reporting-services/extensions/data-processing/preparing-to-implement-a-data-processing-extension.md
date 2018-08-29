@@ -20,15 +20,15 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 457524a8fb05069961a80ccebbe719261b616bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05b2a471086e49bf6bf4acb73543144af79f76fb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016415"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406701"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>準備實作資料處理延伸模組
-  在您實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之前，應該定義要實作的介面。 您可能會想要提供整組介面的延伸模組特定實作，或者您可能會直接將實作的集點放在子集上，例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 與 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 介面，其中用戶端主要會與作為 **DataReader** 物件的結果集互動，而且將使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組作為結果集與資料來源之間的橋樑。  
+  在您實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之前，應該定義要實作的介面。 您可能會想要提供整組介面的延伸模組特定實作，或者您可能會直接將實作的集點放在子集上，例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 與 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 介面，其中用戶端主要會與作為 **DataReader** 物件的結果集互動，而且將使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組作為結果集與資料來源之間的橋樑。  
   
  您可以使用兩種方法之一來實作資料處理延伸模組：  
   
@@ -71,12 +71,12 @@ ms.locfileid: "33016415"
 ## <a name="available-extension-interfaces"></a>可用的延伸模組介面  
  下表描述可用的介面，以及實作是否為必要或為選擇性。  
   
-|介面|描述|實作|  
+|介面|Description|實作|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統的情況下，此工作階段可能相當於伺服器的網路連接。|必要項|  
-|IDbConnectionExtension|代表有關安全性與驗證之 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組所實作的其他連接屬性。|選擇性|  
+|IDbConnectionExtension|代表有關安全性與驗證之 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組所實作的其他連接屬性。|選擇性|  
 |IDbTransaction|表示本機交易。|必要項|  
-|IDbTransactionExtension|代表可由 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組所實作的其他交易屬性。|選擇性|  
+|IDbTransactionExtension|代表可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組所實作的其他交易屬性。|選擇性|  
 |IDbCommand|代表當連接到資料來源時所使用的查詢或命令。|必要項|  
 |IDbCommandAnalysis|代表分析查詢和傳回用於查詢的參數名稱清單的其他命令資訊。|選擇性|  
 |IDataParameter|代表傳遞到命令或查詢的參數或名稱/值組。|必要項|  

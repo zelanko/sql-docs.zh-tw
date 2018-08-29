@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769914"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410304"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769914"
   
 -   **SharePoint 模式** ：您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 組態頁面。  
   
--   **報表設計：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 。 如需詳細資訊，請參閱本主題的＜報表設計＞一節。  
+-   **報表設計：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 。 如需詳細資訊，請參閱本主題的＜報表設計＞一節。  
   
  **其他資源：**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769914"
  使用唯讀次要複本做為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源時，請務必確定資料更新延遲符合報表使用者的需求。  
   
 ##  <a name="bkmk_reportdesign"></a> 報表設計和可用性群組  
- 在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 中設計報表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中設計報表專案時，使用者可以將報表資料來源連接字串設定為包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]所提供的新連接屬性。 新連接屬性的支援主要取決於使用者預覽報表的位置。  
+ 在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中設計報表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中設計報表專案時，使用者可以將報表資料來源連接字串設定為包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]所提供的新連接屬性。 新連接屬性的支援主要取決於使用者預覽報表的位置。  
   
--   **本機預覽：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 會使用 .Net Framework 4.0 並且支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
+-   **本機預覽：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 會使用 .Net Framework 4.0 並且支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
--   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
+-   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
   
 > **錯誤訊息** ：「不支援關鍵字 ‘applicationintent’」  
   

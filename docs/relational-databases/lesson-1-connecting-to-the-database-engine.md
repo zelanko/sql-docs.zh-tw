@@ -10,23 +10,23 @@ ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd86be05457d2596d1b17e29bd093c050bef8822
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f22fc4b12c38b751eb3559d3a94071d0692d6531
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979820"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019757"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > 如需舊版 SQL Server 的相關內容，請參閱[第 1 課：連接到資料庫引擎](https://msdn.microsoft.com/library/ms345332(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[第 1 課：連接到資料庫引擎](lesson-1-connecting-to-the-database-engine.md)。
 
 當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
 

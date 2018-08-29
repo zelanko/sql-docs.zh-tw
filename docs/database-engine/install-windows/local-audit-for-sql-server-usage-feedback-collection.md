@@ -15,13 +15,14 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 983b5a1e1597aee61400b121d19aa8436512b06a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5f432f23edf8c7cffff880112e9c6d22031d83fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770764"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409384"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用意見收集的本機稽核
 
@@ -192,7 +193,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 下面所列的資料行代表本機稽核檔案輸出的順序。 使用 SHA 256 的單向雜湊用於底下許多資料行的匿名值。  
 
-| [屬性] | 描述 | 範例值
+| [屬性] | Description | 範例值
 |-------|--------| ----------|
 |instanceUniqueID| 匿名的執行個體識別碼 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP 結構描述版本 |  3 

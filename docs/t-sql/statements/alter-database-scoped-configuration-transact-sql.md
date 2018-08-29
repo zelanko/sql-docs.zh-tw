@@ -25,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041936"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406713"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -242,7 +242,7 @@ WHEN_SUPPORTED
   
 **DacFx**  
   
- 由於 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL Database 及從 SQL Server 2016 開始之 SQL Server 的新功能且會影響資料庫結構描述，因此無法將資料庫結構的匯出項目 (不論是否含有資料) 匯入至舊版 SQL Server，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的匯出項目，將無法匯入至舊版伺服器。  
+ 由於 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL Database 及從 SQL Server 2016 開始之 SQL Server 的新功能且會影響資料庫結構描述，因此無法將資料庫結構的匯出項目 (不論是否含有資料) 匯入至舊版 SQL Server，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 或 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 的匯出項目，將無法匯入至舊版伺服器。  
 
 **ELEVATE_ONLINE** 
 

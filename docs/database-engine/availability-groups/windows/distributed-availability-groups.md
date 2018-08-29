@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02f4cc65d9dd19a30904de9f1b76091fb4723c6d
-ms.sourcegitcommit: 0cda14b1151d9bce1253d96dea038c038484f07a
+ms.openlocfilehash: 09261368790624fcdd847cfc07a4928ab51e5506
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39616086"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406725"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -313,9 +313,10 @@ GO
  ```sql
  -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
  SELECT 
-    ag.name AS 'Distributed AG', 
-    ar.replica_server_name AS 'AG', 
-    dbs.name AS 'Database', 
+        ag.name AS 'AG Name', 
+        ag.is_distributed, 
+        ar.replica_server_name AS 'AG', 
+        dbs.name AS 'Database',
     ars.role_desc, 
     drs.synchronization_health_desc, 
     drs.log_send_queue_size, 

@@ -1,7 +1,7 @@
 ---
 title: 在資料區中排序資料 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 642d8f6d08c21daa478bbc159b2fe71461ba0391
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df797c994e76d7dd816cd041d3b59cb9d14af052
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026995"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406042"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>在資料區中排序資料 (報表產生器及 SSRS)
   若要在資料區域中變更報表第一次執行時資料的排序次序，您必須針對資料區域或群組設定排序運算式。 根據預設，群組的排序運算式會自動設定為與群組運算式相同的值。  
@@ -131,7 +131,6 @@ ms.locfileid: "33026995"
  如需如何在量測計中群組資料的詳細資訊，請參閱[量測計 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

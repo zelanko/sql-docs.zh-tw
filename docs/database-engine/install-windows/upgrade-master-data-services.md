@@ -12,13 +12,14 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3295485f0c5b660da4a9eb5efaea65fa67fdf28c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 562e8a4d02ba6e992cfa28851d8615b438a80db8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038466"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410000"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
 

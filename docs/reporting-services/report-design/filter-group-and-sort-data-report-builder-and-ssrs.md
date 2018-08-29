@@ -1,7 +1,7 @@
 ---
 title: 篩選、分組和排序資料 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -24,12 +24,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2173ba773d10cb443c3c8b973cd64cd453ce567
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11081d98ab0f182e81a499b9222c15f3cf979141
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027365"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406727"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
   在報表中，運算式可用於協助您控制、組織和排序報表資料。 依預設，在您建立資料集與設計報表配置時，報表項目的屬性會依據資料集欄位、參數和 [報表資料] 窗格中出現的其他項目，自動設定為運算式。 您也可以將互動式排序按鈕加入至資料表或矩陣資料格，讓使用者以互動方式變更群組或群組內資料列的資料列排序順序。  
@@ -119,7 +119,7 @@ ms.locfileid: "33027365"
 ### <a name="sorting-data-in-a-dataset-query"></a>排序資料集查詢中的資料  
  將資料集查詢中的排序次序加入到預先排序資料，然後再針對報表進行擷取。 透過排序查詢中的資料，排序工作將由資料來源而非報表處理器完成。  
   
- 若是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源類型，您可以將 ORDER BY 子句加入到資料集查詢。 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢會從 SalesOrders 資料表，以遞減的順序排序 Sales 和 Region by Sales 資料行： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=98335)》中的＜使用 ORDER BY 排序資料列＞。  
+ 若是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源類型，您可以將 ORDER BY 子句加入到資料集查詢。 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢會從 SalesOrders 資料表，以遞減的順序排序 Sales 和 Region by Sales 資料行： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。  
   
 > [!NOTE]  
 >  並非所有資料來源都支援在查詢中指定排序次序的能力。  

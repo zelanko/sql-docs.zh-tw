@@ -15,16 +15,16 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead61697c2db5bc574699ac460584225564e5774
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332702"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410310"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 建立專案和基本套件
 
- > 如需舊版 SQL Server 的相關內容，請參閱[課程 1：建立專案和基本套件](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[課程 1：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)。
 
 在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 封裝，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrency**事實資料表。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  
   
@@ -61,10 +61,10 @@ ms.locfileid: "35332702"
   
 |資料行名稱|資料類型|查閱資料表|查閱資料行|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|無|無|  
+|AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|無|無|  
+|EndOfDayRate|FLOAT|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>對應來源資料以便與目的地相容  
 來源和目的地資料格式的分析指出 **CurrencyKey** 和 **DateKey** 值可能需要查閱。 要執行這些查閱的轉換將使用 **DimCurrency** 和 **DimDate** 維度資料表的替代索引鍵來取得 **CurrencyKey** 和 **DateKey** 值。  
@@ -81,19 +81,19 @@ ms.locfileid: "35332702"
   
 -   [步驟 1：建立新的 Integration Services 專案](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [步驟 2：加入和設定一般檔案連接管理員](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [步驟 2：新增和設定一般檔案連線管理員](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [步驟 3：加入和設定 OLE DB 連接管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [步驟 3：新增和設定 OLE DB 連線管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [步驟 4：將資料流程工作加入至封裝中](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [步驟 4：將資料流程工作新增至套件中](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [步驟 5：加入和設定一般檔案來源](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [步驟 5：新增和設定一般檔案來源](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [步驟 6：加入及設定查閱轉換](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [步驟 6：新增及設定查閱轉換](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [步驟 7：加入及設定 OLE DB 目的地](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [步驟 7：新增及設定 OLE DB 目的地](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [步驟 8：使第 1 課的封裝更容易了解](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [步驟 8：使第 1 課的套件更容易了解](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [步驟 9：測試第 1 課的教學課程封裝](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   

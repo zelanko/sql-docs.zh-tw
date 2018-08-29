@@ -12,13 +12,14 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 11cbbd4c1dac33600330b504be11329051e371e6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: da469052df30187baf290965e0a76fda48ae8cc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770544"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410001"
 ---
 # <a name="install-sql-server-powershell"></a>安裝 SQL Server PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

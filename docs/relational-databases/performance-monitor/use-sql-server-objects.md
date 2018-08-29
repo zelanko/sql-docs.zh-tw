@@ -36,12 +36,12 @@ caps.latest.revision: 56
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbc182e6fc9298a262fe4efb9560fb5c0cc67109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61c911806f15dd6472299ff0f1f2531bddf3b0c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957433"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406624"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "32957433"
 ##  <a name="SQLServerAgentPOs"></a> SQL Server Agent 效能物件  
  下表列出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 提供的效能物件：  
   
-|效能物件|描述|  
+|效能物件|Description|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的資訊。|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的資訊。|  
@@ -87,7 +87,7 @@ ms.locfileid: "32957433"
 ##  <a name="ServiceBrokerPOs"></a> Service Broker 效能物件  
  下表列出針對 [!INCLUDE[ssSB](../../includes/sssb-md.md)]提供的效能物件。  
   
-|效能物件|描述|  
+|效能物件|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|提供 [!INCLUDE[ssSB](../../includes/sssb-md.md)]啟動工作的相關資訊。|  
 |[SQLServer:Broker 統計資料](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|提供 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的一般性資訊。|  
@@ -96,7 +96,7 @@ ms.locfileid: "32957433"
 ##  <a name="SQLServerPOs"></a> SQL Server 效能物件  
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件。  
   
-|效能物件|描述|  
+|效能物件|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|搜尋並測量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件的配置 (例如索引搜尋數或配置給索引和資料的頁數)。|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|提供備份和還原作業所使用的備份裝置相關資訊，例如備份裝置的輸送量。|  
@@ -135,7 +135,7 @@ ms.locfileid: "32957433"
 ##  <a name="SQLServerReplicationPOs"></a> SQL Server 複寫效能物件  
  下表列出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫提供的效能物件：  
   
-|效能物件|描述|  
+|效能物件|Description|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 如需詳細資訊，請參閱 [使用系統監視器監視複寫](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)。|提供複寫代理程式活動的相關資訊。|  
   
@@ -146,7 +146,7 @@ ms.locfileid: "32957433"
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時必須具備 Windows 權限，[SQLAgent:Alerts] 除外。 使用者必須是**系統管理員**固定伺服器角色的成員，才能使用 [SQLAgent:Alerts]。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用效能物件](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [使用效能物件](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   
   

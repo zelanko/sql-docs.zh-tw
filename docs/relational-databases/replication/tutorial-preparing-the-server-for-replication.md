@@ -9,7 +9,7 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb82ab351eac4a5add0e57ea61813a11a4cc64d1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 365393f3524d43c84bb174f80f5e74028485c62c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981700"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023865"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
