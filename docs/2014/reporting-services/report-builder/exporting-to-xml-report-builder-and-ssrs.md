@@ -84,7 +84,7 @@ ms.locfileid: "37223268"
   
  XML 命名空間定義與結構描述參考屬性也包含在報表元素中 變數會以粗體類型顯示：  
   
- \<**報表**xmlns =" **SchemaName** " xmlns:xsi=" http://www.w3.org/2001/xmlschema-instance " http://www.w3.org/2001/XMLSchema-instance "xsi: **schemaLocation** =" **SchemaNameReportURL** &amp;rc %3aschema =true 「 名稱 ="ReportName">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  變數的值如下：  
   
