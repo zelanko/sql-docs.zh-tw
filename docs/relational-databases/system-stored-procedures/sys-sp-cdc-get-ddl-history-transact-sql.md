@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252627"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036356"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>引數  
  [ @capture_instance =] '*capture_instance*'  
- 這是與來源資料表相關聯之擷取執行個體的名稱。 *capture_instance*是**sysname**不能是 NULL。  
+ 這是與來源資料表相關聯之擷取執行個體的名稱。 *capture_instance*已**sysname**不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|來源資料表結構描述的名稱。|  
 |source_table|**sysname**|來源資料表的名稱。|  
@@ -67,7 +66,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_time|**datetime**|與 DDL 變更相關聯的時間。|  
   
 ## <a name="remarks"></a>備註  
- 變更來源資料表資料行結構，例如加入或卸除資料行，或變更現有的資料行的資料類型的 DDL 修改來源資料表中維護[cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)資料表。 您可以使用這個預存程序來報告這些變更。 cdc.ddl_history 中的項目是在擷取處理序讀取記錄中的 DDL 交易時完成的。  
+ 來源資料表變更來源資料表資料行結構，例如加入或卸除資料行，或變更現有的資料行的資料類型的 DDL 修改會在維護[cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)資料表。 您可以使用這個預存程序來報告這些變更。 cdc.ddl_history 中的項目是在擷取處理序讀取記錄中的 DDL 交易時完成的。  
   
 ## <a name="permissions"></a>Permissions  
  需要 db_owner 固定資料庫角色中的成員資格，才能針對資料庫中的所有擷取執行個體傳回資料列。 若為所有其他使用者，則需要來源資料表中所有擷取資料行的 SELECT 權限，而且如果定義了擷取執行個體的控制角色，便需要該資料庫角色的成員資格。  
@@ -90,6 +89,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

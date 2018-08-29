@@ -1,5 +1,5 @@
 ---
-title: p (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropmergesubscription & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0fb4d9bcd2f72db252380fe3ee0d914645255b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d639b189f1b271f6563c32090992c376113ccfa2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990223"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027211"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,30 +51,30 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>引數  
  [  **@publication=** ] **'***發行集***'**  
- 這是發行集名稱。 *發行集*是**sysname**，預設值是 NULL。 發行集必須已存在，且符合識別碼的規則。  
+ 這是發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 發行集必須已存在，且符合識別碼的規則。  
   
  [  **@subscriber=**] **'***訂閱者***'**  
- 這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是 NULL。  
+ 這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
  [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 這是訂閱資料庫的名稱。 *subscription_database*是**sysname**，預設值是 NULL。  
+ 這是訂閱資料庫的名稱。 *subscription_database*已**sysname**，預設值是 NULL。  
   
  [  **@subscription_type=** ] **'***subscription_type***'**  
- 這是訂閱的類型。 *subscription_type*是**nvarchar （15)**，而且可以是下列值之一。  
+ 這是訂閱的類型。 *subscription_type*已**nvarchar(15)**，而且可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**所有**|發送、提取和匿名訂閱|  
 |**匿名**|匿名訂閱。|  
-|**推入**|發送訂閱。|  
+|**推播**|發送訂閱。|  
 |**提取**|提取訂閱。|  
-|**同時**（預設值）|發送和提取訂閱。|  
+|**兩者**（預設值）|發送和提取訂閱。|  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
- 指出是否在未連接到散發者的情況之下，執行這個預存程序。 *ignore_distributor*是**元**，預設值是**0**。 這個參數可在不執行散發者清除工作的情況下，用來卸除訂閱。 如果您必須重新安裝散發者，它也很有用。  
+ 指出是否在未連接到散發者的情況之下，執行這個預存程序。 *ignore_distributor*已**位元**，預設值是**0**。 這個參數可在不執行散發者清除工作的情況下，用來卸除訂閱。 如果您必須重新安裝散發者，它也很有用。  
   
  [  **@reserved=** ]*保留*  
- 保留供日後使用。 *保留*是**元**，預設值是**0**。  
+ 保留供日後使用。 *保留*已**位元**，預設值是**0**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -91,8 +91,8 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="see-also"></a>另請參閱  
  [刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)   
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

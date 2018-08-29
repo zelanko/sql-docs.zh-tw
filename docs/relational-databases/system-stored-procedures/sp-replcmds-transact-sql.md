@@ -1,5 +1,5 @@
 ---
-title: sp_replcmds (TRANSACT-SQL) |Microsoft 文件
+title: sp_replcmds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3690b3eaad187b341e4ad31fae1068aa56e45b05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 614b9ec8f418461ce8b42fcad09cd8729fba94d7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001425"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033553"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33001425"
   傳回含複寫標示之交易的命令。 這個預存程序執行於發行集資料庫的發行者端。  
   
 > [!IMPORTANT]  
->  **Sp_replcmds**應執行程序僅適用於疑難排解複寫的問題。  
+>  **Sp_replcmds**程序應該執行只有為了進行複寫問題的疑難排解。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,15 +49,15 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="arguments"></a>引數  
  [  **@maxtrans=**] *maxtrans*  
- 這是傳回相關資訊的交易數目。 *maxtrans*是**int**，預設值是**1**，指定下一個等待散發的交易。  
+ 這是傳回相關資訊的交易數目。 *maxtrans*已**int**，預設值是**1**，指定下一個等待散發的交易。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**發行項識別碼**|**int**|發行項的識別碼。|  
+|**文章識別碼**|**int**|發行項的識別碼。|  
 |**部分指令**|**bit**|指出這是否為部分命令。|  
-|**command**|**varbinary(1024)**|命令值。|  
+|命令|**varbinary(1024)**|命令值。|  
 |**xactid**|**binary(10)**|交易識別碼。|  
 |**xact_seqno**|**varbinary(16)**|交易序號。|  
 |**publication_id**|**int**|發行集的識別碼。|  
@@ -80,18 +80,18 @@ sp_replcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  由於來源資料庫中的資料表名稱是以擁有者名稱來限定的，因此，目標資料庫中之資料表的擁有者必須是相同的擁有者名稱。  
   
- 用戶端嘗試執行**sp_replcmds**相同資料庫內收到錯誤 18752，直到第一個用戶端中斷連接。 第一個用戶端中斷連接之後，可以執行另一個用戶端**sp_replcmds**，而且會變成新的記錄讀取器。  
+ 嘗試執行的用戶端**sp_replcmds**相同資料庫內收到錯誤 18752 第一個用戶端中斷連線。 第一個用戶端中斷連接之後，可以執行另一個用戶端**sp_replcmds**，並成為新的記錄讀取器。  
   
- 警告訊息編號 18759 會同時加入[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔，如果**sp_replcmds**無法複寫文字命令，因為不是文字指標在相同交易中擷取。  
+ 同時會加入警告訊息編號 18759 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔，如果**sp_replcmds**無法複寫文字命令，因為不是文字指標在相同交易中擷取。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_replcmds**。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤訊息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

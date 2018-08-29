@@ -1,5 +1,5 @@
 ---
-title: sp_helplogins (TRANSACT-SQL) |Microsoft 文件
+title: sp_helplogins (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40a25164c12e9a1c886a7cba6b8f9b0277daf0ed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d497fdd54fd0a8fce44282a2caa819fef60a76fb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253924"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028787"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,37 +53,37 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>結果集  
  第一份報表包含有關指定之每一項登入的資訊，如下表所示。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登入名稱。|  
 |**SID**|**varbinary(85)**|登入安全性識別碼 (SID)。|  
-|**DefDBName**|**sysname**|預設資料庫**LoginName**連接到的執行個體時，會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|**DefLangName**|**sysname**|所使用的預設語言**LoginName**。|  
+|**DefDBName**|**sysname**|預設資料庫**LoginName**執行個體的連接時所用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**DefLangName**|**sysname**|預設所使用的語言**LoginName**。|  
 |**Auser**|**char(5)**|Yes = **LoginName**資料庫中具有相關聯的使用者名稱。<br /><br /> 否 = **LoginName**沒有相關聯的使用者名稱。|  
 |**Xxxxx**|**char(7)**|Yes = **LoginName**具有相關聯的遠端登入。<br /><br /> 否 = **LoginName**沒有相關聯的登入。|  
   
  第二份報表包含有關對應到每一項登入的使用者以及登入的角色成員資格等資訊，如下表所示。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登入名稱。|  
-|**DBName**|**sysname**|預設資料庫**LoginName**連接到的執行個體時，會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|**UserName**|**sysname**|使用者帳戶**LoginName**對應到在**DBName**，和角色， **LoginName**是在屬於**DBName**。|  
-|**UserOrAlias**|**char （8)**|MemberOf = **UserName**是角色。<br /><br /> 使用者 = **UserName**是使用者帳戶。|  
+|**資料庫名稱**|**sysname**|預設資料庫**LoginName**執行個體的連接時所用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**UserName**|**sysname**|使用者帳戶**LoginName**會對應到在**DBName**，以及角色的**LoginName**中的成員**DBName**。|  
+|**UserOrAlias**|**char(8)**|MemberOf = **UserName**是一種角色。<br /><br /> 使用者 = **UserName**是使用者帳戶。|  
   
 ## <a name="remarks"></a>備註  
- 之前先移除登入，使用**sp_helplogins**識別對應至登入的使用者帳戶。  
+ 在之前移除登入，使用**sp_helplogins**識別對應至登入的使用者帳戶。  
   
 ## <a name="permissions"></a>Permissions  
  需要的成員資格**securityadmin**固定的伺服器角色。  
   
- 若要找出所有的使用者帳戶對應到給定的登入， **sp_helplogins**必須檢查伺服器內的所有資料庫。 因此，對於伺服器上的每一個資料庫，至少下列其中一個條件必須為真：  
+ 若要找出所有與指定的登入，對應的使用者帳戶**sp_helplogins**必須檢查伺服器內的所有資料庫。 因此，對於伺服器上的每一個資料庫，至少下列其中一個條件必須為真：  
   
--   使用者執行**sp_helplogins**有權存取資料庫。  
+-   正在執行的使用者**sp_helplogins**有權存取資料庫。  
   
--   **客體**資料庫中啟用使用者帳戶。  
+-   **客體**使用者帳戶已啟用資料庫中。  
   
- 如果**sp_helplogins**無法存取資料庫， **sp_helplogins**會傳回資訊及顯示錯誤訊息 15622。  
+ 如果**sp_helplogins**無法存取資料庫時， **sp_helplogins**會傳回一樣多的資訊，以及它可以顯示錯誤訊息 15622。  
   
 ## <a name="examples"></a>範例  
  下列範例會報告有關登入者 `John` 的資訊。  
@@ -107,8 +107,8 @@ John        pubs     John       User
   
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_helpdb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpdb &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpuser &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

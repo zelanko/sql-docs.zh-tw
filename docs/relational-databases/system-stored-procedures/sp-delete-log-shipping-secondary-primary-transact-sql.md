@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft 文件
+title: sp_delete_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_secondary_primary
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
-caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ceff759315f5536bfd86589c6a12400583d37423
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53bc06a2a2ccb7b4f4a05c6e24521fd851114995
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242400"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031772"
 ---
 # <a name="spdeletelogshippingsecondaryprimary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_delete_log_shipping_secondary_primary
   
 ## <a name="arguments"></a>引數  
  [ **@primary_server** =] '*primary_server*'  
- 主要執行個體的名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*是**sysname**不能是 NULL。  
+ 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
   
- [ **@primary_database** =] '*primary_database*'  
- 這是主要伺服器的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
+ [ **@primary_database** =] '*primary_database&lt*'  
+ 這是主要伺服器的資料庫名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -63,7 +62,7 @@ sp_delete_log_shipping_secondary_primary
   
 1.  刪除次要識別碼的複製和還原作業。  
   
-2.  刪除的項目中**log_shipping_secondary**。  
+2.  刪除中的項目**log_shipping_secondary**。  
   
 3.  呼叫**sp_delete_log_shipping_alert_job**監視伺服器上。  
   
@@ -71,7 +70,7 @@ sp_delete_log_shipping_secondary_primary
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

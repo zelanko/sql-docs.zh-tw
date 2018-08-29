@@ -1,5 +1,5 @@
 ---
-title: sp_setnetname (TRANSACT-SQL) |Microsoft 文件
+title: sp_setnetname (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251624"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024882"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_setnetname
   
 ## <a name="arguments"></a>引數  
  **@server = '** *伺服器* **'**  
- 這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 中的只有一個資料列**sys.servers**必須存在才能使用此*伺服器*。 *server* 是 **sysname**，沒有預設值。  
+ 這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 中的一個資料列**sys.servers**必須有使用此*server*。 *server* 是 **sysname**，沒有預設值。  
   
  **@netname ='** *network_name* **'**  
- 這是遠端預存程序呼叫的目標電腦網路名稱。 *network_name*是**sysname**，沒有預設值。  
+ 這是遠端預存程序呼叫的目標電腦網路名稱。 *network_name*已**sysname**，沒有預設值。  
   
  這個名稱必須符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 電腦名稱，且這個名稱可以包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼不允許使用的字元。  
   
@@ -58,12 +58,12 @@ sp_setnetname
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  如果電腦名稱包含無效的識別碼，有些對 Windows 電腦的遠端預存程序呼叫可能會發生問題。  
   
- 由於連結伺服器和遠端伺服器在相同命名空間中，因此，它們的名稱不能相同。 不過，您可以定義連結的伺服器和遠端伺服器對指定的伺服器指定不同的名稱，以及使用**sp_setnetname**至其中一個網路名稱設定為基礎的伺服器的網路名稱。  
+ 由於連結伺服器和遠端伺服器在相同命名空間中，因此，它們的名稱不能相同。 不過，您可以定義連結的伺服器和遠端伺服器針對指定的伺服器指派不同的名稱，並利用**sp_setnetname**其中一個網路名稱設定為基礎的伺服器網路名稱。  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -76,10 +76,10 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  使用**sp_setnetname**指回到本機伺服器的連結的伺服器不支援。 這個方式所參考的伺服器無法參與分散式交易。  
+>  使用**sp_setnetname**指回到本機伺服器的 連結的伺服器不支援。 這個方式所參考的伺服器無法參與分散式交易。  
   
 ## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**和**setupadmin**固定伺服器角色。  
+ 需要的成員資格**sysadmin**並**setupadmin**固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上，用來發出遠端預存程序呼叫的一般管理順序。  
@@ -95,7 +95,7 @@ EXEC Win_1.master.dbo.sp_who;
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

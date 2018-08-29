@@ -1,5 +1,5 @@
 ---
-title: sp_setsubscriptionxactseqno (TRANSACT-SQL) |Microsoft 文件
+title: sp_setsubscriptionxactseqno (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f59325c709b8d16d5e120a135d5d9f9697692b1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96592ae1f8f2b1de9e2d294c27d68598d2718ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000465"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037975"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,23 +52,23 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引數  
  [  **@publisher=** ] **'***發行者***'**  
- 這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
+ 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。 針對非 SQL Server 發行者， *publisher_db*是散發資料庫的名稱。  
+ 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 針對非 SQL Server 發行者， *publisher_db*是散發資料庫的名稱。  
   
  [  **@publication=** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。 當一個以上的發行集所共用散發代理程式時，您必須指定 ALL 值*發行集*。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。 當一個以上的發行集共用散發代理程式時，您必須指定 ALL 值*發行集*。  
   
  [  **@xact_seqno=** ] *xact_seqno*  
- 這是訂閱者端所要套用的散發者端之下一項交易的 LSN。 *xact_seqno*是**varbinary （16)**，沒有預設值。  
+ 這是訂閱者端所要套用的散發者端之下一項交易的 LSN。 *xact_seqno*已**varbinary(16)**，沒有預設值。  
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**原始 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的原始 LSN。|  
-|**更新的 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的更新 LSN。|  
+|**原始的 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的原始 LSN。|  
+|**已更新的 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的更新 LSN。|  
 |**訂用帳戶資料流計數**|**int**|在上一次同步處理期間所用的訂閱資料流數目。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -77,13 +77,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>備註  
  **sp_setsubscriptionxactseqno**用於異動複寫中。  
   
- **sp_setsubscriptionxactseqno**不能在對等的異動複寫拓撲。  
+ **sp_setsubscriptionxactseqno**無法用於對等項目-異動複寫拓撲中。  
   
- **sp_setsubscriptionxactseqno**可用來略過導致錯誤的特定交易時在訂閱者端套用。 失敗時之後停止散發代理程式,，請連絡[sp_helpsubscriptionerrors &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) ，擷取失敗的交易的 xact_seqno 值，然後再呼叫散發者」端**sp_setsubscriptionxactseqno**，傳遞此值，以進行*xact_seqno*。 這可以確保只會處理在這個 LSN 之後的命令。  
+ **sp_setsubscriptionxactseqno**可以用來略過特定的交易，會導致錯誤發生時套用在訂閱者。 失敗時及之後停止散發代理程式，請呼叫[sp_helpsubscriptionerrors &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md)散發者端擷取失敗的交易的 xact_seqno 值，然後呼叫**sp_setsubscriptionxactseqno**，將此值傳遞*xact_seqno*。 這可以確保只會處理在這個 LSN 之後的命令。  
   
- 指定的值為**0**如*xact_seqno*散發資料庫中的所有暫止命令傳遞給訂閱者。  
+ 指定的值為**0** for *xact_seqno*散發資料庫中的所有暫止命令傳遞給訂閱者。  
   
- **sp_setsubscriptionxactseqno**如果散發代理程式會使用多個訂閱資料流可能會失敗。  
+ **sp_setsubscriptionxactseqno**如果 「 散發代理程式會使用多個訂閱資料流可能會失敗。  
   
  當發生這個錯誤時，您必須利用單一訂閱資料流來執行散發代理程式。 如需詳細資訊，請參閱 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)。  
   

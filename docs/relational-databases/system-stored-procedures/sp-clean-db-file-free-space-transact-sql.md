@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_file_free_space (TRANSACT-SQL) |Microsoft 文件
+title: sp_clean_db_file_free_space (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 52f5fb5b32a49ef6bcb4922069dc7f5250c771c9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcd6c21404593244104bc58cc9beab4164c4283a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689126"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036660"
 ---
 # <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_clean_db_file_free_space
   
 ## <a name="arguments"></a>引數  
  [ @dbname=] '*database_name*'  
- 這是要清除的資料庫名稱。 *dbname*是**sysname**不能是 NULL。  
+ 這是要清除的資料庫名稱。 *dbname*已**sysname**不能是 NULL。  
   
  [ @fileid=] '*file_number*'  
- 這是要清除的資料檔案識別碼。 *file_number*是**int**不能是 NULL。  
+ 這是要清除的資料檔案識別碼。 *file_number*已**int**不能是 NULL。  
   
  [ @cleaning_delay=] '*delay_in_seconds*'  
- 指定頁面清除之間的延遲間隔。 如此有助於減少對 I/O 系統的影響。 *delay_in_seconds*是**int**預設值是 0。  
+ 指定頁面清除之間的延遲間隔。 如此有助於減少對 I/O 系統的影響。 *delay_in_seconds*已**int**預設值是 0。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

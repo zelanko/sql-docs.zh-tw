@@ -1,5 +1,5 @@
 ---
-title: sp_helpdbfixedrole (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpdbfixedrole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1ca726e6770fd4a36e34651a83c55ab1e5475b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 387ea35ed6e2c6be10eb738e0c53f26bbbbf60da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252769"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022090"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>引數  
  [  **@rolename =** ] **'***角色***'**  
- 這是固定資料庫角色的名稱。 *角色*是**sysname**，預設值是 NULL。 如果*角色*已指定，只有該角色的相關資訊傳回; 否則傳回的清單和所有固定的資料庫角色的描述。  
+ 這是固定資料庫角色的名稱。 *角色*已**sysname**，預設值是 NULL。 如果*角色*已指定，只有該角色的相關資訊會傳回; 否則傳回的清單和所有固定的資料庫角色的描述。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定資料庫角色的名稱。|  
-|**說明**|**nvarchar （70)**|描述**DbFixedRole。**|  
+|**說明**|**nvarchar(70)**|描述**DbFixedRole。**|  
   
 ## <a name="remarks"></a>備註  
  固定資料庫角色 (如下表所示) 是在資料庫層級定義的，且擁有執行特定資料庫層級管理活動的權限。 您無法加入或移除固定資料庫角色， 且無法變更對固定資料庫角色授與的權限。  
   
-|固定資料庫角色|Description|  
+|固定資料庫角色|描述|  
 |-------------------------|-----------------|  
 |**db_owner**|資料庫擁有者|  
 |**db_accessadmin**|資料庫存取管理員|  
@@ -81,7 +81,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**sp_droprolemember**|從固定資料庫角色中移除成員。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
  傳回的資訊受限於中繼資料存取限制。 主體對其沒有權限的實體不會出現。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -96,10 +96,10 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_dbfixedrolepermission &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_dbfixedrolepermission &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helprole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_check_dynamic_filters (TRANSACT-SQL) |Microsoft 文件
+title: sp_check_dynamic_filters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 248a5234a0620ce18122723db7bce88c61201758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f63c62f5aa36fe85b38922c68d5daf90f919642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990043"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023438"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,18 +57,18 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [ **@publication**=] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|是發行集是否使用預先計算的資料分割;其中**1**預先計算的資料分割可以使用，表示和**0**表示，無法使用。|  
-|**has_dynamic_filters**|**bit**|是在發行集; 如果已定義至少一個參數化資料列篩選器其中**1**表示一或多個參數化資料列篩選器存在，及**0**表示沒有動態篩選。|  
+|**can_use_partition_groups**|**bit**|是如果發行集符合使用預先計算的資料分割;其中**1**表示可以使用資料分割，預先計算並**0**表示，無法使用。|  
+|**has_dynamic_filters**|**bit**|會在發行集中; 是否已定義至少一個參數化資料列篩選器其中**1**意謂著一或多個參數化資料列篩選器存在，以及**0**表示沒有動態篩選。|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|用來篩選發行集中的發行項之函數清單，每個函數都用分號來分開。|  
 |**validate_subscriber_info**|**nvarchar(500)**|用來篩選發行集中的發行項之函數清單，每個函數都用加號 (+) 來分開。|  
-|**uses_host_name**|**bit**|如果[host_name （)](../../t-sql/functions/host-name-transact-sql.md)函式是否用於參數化資料列篩選器，其中**1**表示，此函式來進行動態篩選。|  
-|**uses_suser_sname**|**bit**|如果[suser_sname （)](../../t-sql/functions/suser-sname-transact-sql.md)函式是否用於參數化資料列篩選器，其中**1**表示，此函式來進行動態篩選。|  
+|**uses_host_name**|**bit**|如果[host_name （)](../../t-sql/functions/host-name-transact-sql.md)函式是否用於參數化資料列篩選器，其中**1**表示此函式，來進行動態篩選。|  
+|**uses_suser_sname**|**bit**|如果[suser_sname （)](../../t-sql/functions/suser-sname-transact-sql.md)函式是否用於參數化資料列篩選器，其中**1**表示此函式，來進行動態篩選。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -76,7 +76,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_check_dynamic_filters**用於合併式複寫中。  
   
- 如果發行集已定義為使用預先計算的資料分割， **sp_check_dynamic_filters**會檢查是否有任何違規的預先計算資料分割的限制。 如果找到任何違反限制的情況，便會傳回錯誤。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
+ 如果發行集已定義為使用預先計算的資料分割**sp_check_dynamic_filters**會檢查是否有任何違規，預先計算資料分割的限制。 如果找到任何違反限制的情況，便會傳回錯誤。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
  如果已將發行集定義為有參數化資料列篩選器，但找不到參數化資料列篩選器，便會傳回錯誤。  
   
@@ -84,8 +84,8 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_check_dynamic_filters**。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理合併式發行集使用參數化篩選的資料分割](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
- [sp_check_subset_filter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
+ [合併式發行集使用參數化篩選管理資料分割](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
+ [sp_check_join_filter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_subset_filter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

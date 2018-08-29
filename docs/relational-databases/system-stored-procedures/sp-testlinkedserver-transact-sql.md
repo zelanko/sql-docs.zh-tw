@@ -1,5 +1,5 @@
 ---
-title: sp_testlinkedserver (TRANSACT-SQL) |Microsoft 文件
+title: sp_testlinkedserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_testlinkedserver
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 059f4056b418122c3ee8b89c17dea99909677ce2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b03253014b198a83d2c9516fd7fa3e09ce16fbab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243512"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032798"
 ---
 # <a name="sptestlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_testlinkedserver [ @servername ] = servername
   
 ## <a name="arguments"></a>引數  
  [  **@servername =** ]*servername*  
- 這是連結伺服器的名稱。 *servername*是**sysname**，沒有預設值。  
+ 這是連結伺服器的名稱。 *servername*已**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="permissions"></a>Permissions  
  沒有檢查任何權限；不過，呼叫端必須具備適當的登入對應才行。  

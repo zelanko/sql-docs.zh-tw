@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_set_config_enabled (TRANSACT-SQL) |Microsoft 文件
+title: sp_syspolicy_set_config_enabled (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_set_config_enabled
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0edbae112ffb67834c26dceede75e4e6aa58a60a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1bbf37f36157e462c11bf1300d78e8b8057710a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259348"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019467"
 ---
 # <a name="spsyspolicysetconfigenabled-transact-sql"></a>sp_syspolicy_set_config_enabled (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
   
 ## <a name="arguments"></a>引數  
  [  **@value=** ]*值*  
- 判斷是否啟用以原則為基礎的管理。 *值*是**sqlvariant**，而且可以是下列值之一：  
+ 判斷是否啟用以原則為基礎的管理。 *值*已**sqlvariant**，而且可以是下列值之一：  
   
 -   0 (或 'false') = 停用  
   
@@ -73,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原則式管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_configure &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_configure &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

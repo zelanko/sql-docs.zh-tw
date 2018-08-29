@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergealternatepublisher (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpmergealternatepublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f51c69c6034963dff80377570120dcd65027b762
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8cba4d17060e32ef24b8e5b07e689992982ca94
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035251"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +46,17 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="arguments"></a>引數  
  [ **@publisher=**] **'***publisher***'**  
- 這是替代發行者的名稱。*發行者*是**sysname**，沒有預設值。  
+ 是替代發行者的名稱。*發行者*是**sysname**，沒有預設值。  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。*publisher_db*是**sysname**，沒有預設值。  
+ 是發行集資料庫的名稱。*publisher_db*是**sysname**，沒有預設值。  
   
  [ **@publication=**] **'***publication***'**  
- 是發行集名稱。*發行集*是**sysname**，沒有預設值。  
+ 是發行集名稱。*出版物*是**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**alternate_publisher**|**sysname**|替代發行者的名稱。|  
 |**alternate_publisher_db**|**sysname**|發行集資料庫的名稱。|  
@@ -73,7 +74,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
  在每個合併工作階段期間，系統會查詢發行者和訂閱者來分別找出它們的替代發行者清單。 合併處理序會加入或卸除替代發行者清單中的項目，結果是在訂閱者端和發行者端都相符的替代發行者清單。  
   
 ## <a name="permissions"></a>Permissions  
- 只有發行集之發行集存取清單成員可以執行**sp_helpmergealternatepublisher**。  
+ 只有發行集之發行集存取清單的成員可以執行**sp_helpmergealternatepublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

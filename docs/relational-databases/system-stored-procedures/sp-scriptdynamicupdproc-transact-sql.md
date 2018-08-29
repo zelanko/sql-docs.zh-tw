@@ -1,5 +1,5 @@
 ---
-title: sp_scriptdynamicupdproc (TRANSACT-SQL) |Microsoft 文件
+title: sp_scriptdynamicupdproc (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 707a4262c6d4ae31596d01c0194c7bc438af26ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9158cc2bfb9a482a126a199fb7cbec801007ebe5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998919"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034666"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@artid=**] *artid*  
- 這是發行項識別碼。 *artid*是**int**，沒有預設值。  
+ [  **@artid=**] *artid&lt*  
+ 這是發行項識別碼。 *artid&lt*已**int**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
- 傳回的結果集包含單一**nvarchar （4000)** 資料行。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
+ 傳回結果集，其中包含單一**nvarchar(4000)** 資料行。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
   
 ## <a name="remarks"></a>備註  
  **sp_scriptdynamicupdproc**用於異動複寫中。 預設 MCALL 指令碼邏輯包括 UPDATE 陳述式內的所有資料行，且利用點陣圖來判斷已變更的資料行。 如果資料行並未變更，資料行會重設為其本身，這通常不會有問題。 如果資料行已建立索引，就會進行額外的處理。 動態方法只包括已變更的資料行，這會提供最佳的 UPDATE 字串。 不過，當建立動態 UPDATE 陳述式時，會在執行階段進行額外的處理。 我們建議您測試動態和靜態方法，然後再選擇最佳方案。  
@@ -58,7 +58,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_scriptdynamicupdproc**。  
   
 ## <a name="examples"></a>範例  
- 這個範例會建立一個發行項 (與*artid*設**1**) 上**作者**資料表中**pubs**資料庫，並指定更新陳述式是執行的自訂程序：  
+ 這個範例會建立一篇文章 (使用*artid&lt*設為**1**) 上**作者**資料表中**pubs**資料庫，並指定更新陳述式是執行的自訂程序：  
   
 ```  
 'MCALL sp_mupd_authors'  

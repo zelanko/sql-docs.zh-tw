@@ -1,5 +1,5 @@
 ---
-title: sp_mergemetadataretentioncleanup (TRANSACT-SQL) |Microsoft 文件
+title: sp_mergemetadataretentioncleanup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ac0c7820ab4f336057a3d747409b0e1af09248d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00f34d410b8ada86f93fe92d59415d5f0ea5ff8e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996085"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025807"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  執行中的中繼資料的手動清除[MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)， [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)， [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)， [MSmerge_past_partition_對應](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)，和[MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md)系統資料表。 這個預存程序執行於拓撲中的每個發行者和訂閱者。  
+  執行手動清除中繼資料[MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)， [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)， [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)， [MSmerge_past_partition_對應](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)，並[MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md)系統資料表。 這個預存程序執行於拓撲中的每個發行者和訂閱者。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
   
 ## <a name="arguments"></a>引數  
  [  **@num_genhistory_rows=** ] *num_genhistory_rows*輸出  
- 傳回清除的資料列數目[MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)資料表。 *num_genhistory_rows*是**int**，預設值是**0**。  
+ 傳回的資料列清除的數目[MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)資料表。 *num_genhistory_rows*已**int**，預設值是**0**。  
   
  [  **@num_contents_rows=** ] *num_contents_rows*輸出  
- 傳回清除的資料列數目[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表。 *num_contents_rows*是**int**，預設值是**0**。  
+ 傳回的資料列清除的數目[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表。 *num_contents_rows*已**int**，預設值是**0**。  
   
  [  **@num_tombstone_rows=** ] *num_tombstone_rows*輸出  
- 傳回清除的資料列數目[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表。 *num_tombstone_rows*是**int**，預設值是**0**。  
+ 傳回的資料列清除的數目[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表。 *num_tombstone_rows*已**int**，預設值是**0**。  
   
  [  **@aggressive_cleanup_only=** ] *aggressive_cleanup_only*  
  僅供內部使用。  
@@ -66,10 +66,10 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  如果有多個發行集的資料庫上，而任何一個發行集都會使用無限期的發行保留期限，執行**sp_mergemetadataretentioncleanup**並不會清除合併式複寫變更追蹤資料庫的中繼資料。 因此，在使用無限期的發行期限時，一定要特別小心。 若要判斷發行集是否有無限保留週期，請執行[sp_helpmergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)結果中的任何發行集設定其值為 「 發行者 」 和附註**0**如**保留**。  
+>  如果有多個發行集資料庫上，而且任何一個發行集都會使用無限期的發行保留期限，執行**sp_mergemetadataretentioncleanup**就不會清除合併式複寫變更追蹤資料庫的中繼資料。 因此，在使用無限期的發行期限時，一定要特別小心。 若要判斷發行集是否有無限的保留期限，請執行[sp_helpmergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)結果中的任何發行集設定的值在 「 發行者 」 和附註**0** for**保留**。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**db_owner**固定資料庫角色或發行集存取清單中的使用者，已發行的資料庫能夠執行**sp_mergemetadataretentioncleanup**。  
+ 只有成員**db_owner**固定資料庫角色或發行集存取清單中的使用者可以執行已發行的資料庫**sp_mergemetadataretentioncleanup**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

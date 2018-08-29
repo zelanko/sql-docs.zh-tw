@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_category_subscriptions (TRANSACT-SQL) |Microsoft 文件
+title: syspolicy_policy_category_subscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,23 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_group_subscriptions view
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
-caps.latest.revision: 16
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3092a2977a35d7ab42cfaafe07611ddd51b9bc5b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0d08a739b2fe0d56a263cf2cd77890232592148
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221639"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026345"
 ---
 # <a name="syspolicypolicycategorysubscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，針對每一個以原則為基礎的管理訂閱各顯示一個資料列。 每個資料列描述目標和原則類別目錄配對。 下表描述 syspolicy_policy_group_subscriptions 檢視表中的資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |policy_category_subscription_id|**int**|這筆記錄的識別碼。|  
 |target_type|**sysname**|此描述之目標的資料庫物件類型。|  

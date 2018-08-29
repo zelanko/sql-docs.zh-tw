@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030814"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +48,17 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
- 這是發行項的名稱。 *發行項*是**sysname**，預設值是**%**，它會傳回所有發行項的名稱。  
+ 這是發行項的名稱。 *發行項*已**sysname**，預設值是**%**，它會傳回所有發行項的名稱。  
   
  [  **@filtername=**] **'***filtername***'**  
- 這是要傳回資訊的篩選名稱。 *filtername*是**sysname**，預設值是**%**，傳回所有發行集的發行項上定義的篩選條件的相關資訊。  
+ 這是要傳回資訊的篩選名稱。 *filtername*已**sysname**，預設值是**%**，傳回所有發行集的發行項上定義的篩選條件的相關資訊。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|聯結篩選的識別碼。|  
 |**filtername**|**sysname**|篩選的名稱。|  
@@ -66,7 +67,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**int**|聯結是否基於唯一索引鍵。|  
 |**基底資料表的擁有者**|**sysname**|基底資料表的擁有者名稱。|  
 |**基底資料表名稱**|**sysname**|基底資料表的名稱。|  
-|**聯結資料表擁有者**|**sysname**|聯結到基底資料表中之資料表的擁有者名稱。|  
+|**聯結資料表的擁有者**|**sysname**|聯結到基底資料表中之資料表的擁有者名稱。|  
 |**聯結資料表名稱**|**sysname**|聯結到基底資料表中的資料表名稱。|  
 |**發行項名稱**|**sysname**|聯結到基底資料表中的資料表發行項名稱。|  
 |**filter_type**|**tinyint**|合併篩選的類型，它可以是下列項目之一：<br /><br /> **1** = 僅聯結篩選<br /><br /> **2** = 邏輯記錄關聯性<br /><br /> **3** = 兩者|  
@@ -78,7 +79,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
  **sp_helpmergefilter**用於合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色和**db_owner**固定的資料庫角色可以執行**sp_helpmergefilter**。  
+ 只有成員**sysadmin**固定的伺服器角色並**db_owner**固定的資料庫角色可以執行**sp_helpmergefilter**。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

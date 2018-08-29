@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproperty (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropextendedproperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 750b1df6bff427c2e5c4931ad3007a66ddbb1917
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9652fbb73cb3efc8d2ddd562593e2c2b457ab0e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258427"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023183"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,30 +56,30 @@ sp_dropextendedproperty
   
 ## <a name="arguments"></a>引數  
  [ @name=] {'*property_name*'}  
- 這是要卸除的屬性名稱。 *property_name*是**sysname**不能是 NULL。  
+ 這是要卸除的屬性名稱。 *property_name*已**sysname**不能是 NULL。  
   
- [ @level0type=] {'*level0_object_type*'}  
- 這是所指定之層級 0 物件類型的名稱。 *level0_object_type*是**varchar （128)**，預設值是 NULL。  
+ [ @level0type=] {'*level0_object_type&lt*'}  
+ 這是所指定之層級 0 物件類型的名稱。 *level0_object_type&lt*已**varchar(128)**，預設值是 NULL。  
   
  有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 NULL。  
   
 > [!IMPORTANT]  
 >  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，會移除層級 0 類型的 USER 和 TYPE。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。 請改用 SCHEMA 來當做層級 0 類型，而不是使用 USER。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
- [ @level0name=] {'*level0_object_name*'}  
- 這是所指定之層級 0 物件類型的名稱。 *level0_object_name*是**sysname**預設值是 NULL。  
+ [ @level0name=] {'*level0_object_name&lt*'}  
+ 這是所指定之層級 0 物件類型的名稱。 *level0_object_name&lt*已**sysname**預設值是 NULL。  
   
- [ @level1type=] {'*level1_object_type*'}  
- 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ [ @level1type=] {'*level1_object_type&lt*'}  
+ 這是層級 1 物件的類型。 *level1_object_type&lt*已**varchar(128)** 預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
- [ @level1name=] {'*level1_object_name*'}  
- 這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname**預設值是 NULL。  
+ [ @level1name=] {'*level1_object_name&lt*'}  
+ 這是所指定之層級 1 物件類型的名稱。 *level1_object_name&lt*已**sysname**預設值是 NULL。  
   
- [ @level2type=] {'*level2_object_type*'}  
- 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ [ @level2type=] {'*level2_object_type&lt*'}  
+ 這是層級 2 物件的類型。 *level2_object_type&lt*已**varchar(128)** 預設值是 NULL。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- [ @level2name=] {'*level2_object_name*'}  
- 這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**預設值是 NULL。  
+ [ @level2name=] {'*level2_object_name&lt*'}  
+ 這是所指定之層級 2 物件類型的名稱。 *level2_object_name&lt*已**sysname**預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -87,7 +87,7 @@ sp_dropextendedproperty
 ## <a name="remarks"></a>備註  
  為了指定擴充屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的物件會分類成 3 個層級 (0、1 和 2)。 層級 0 是最高層級，定義為資料庫範圍所包含的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。 參考一個層級中的物件時，必須以所有較高層級物件的類型和名稱來限定。  
   
- 給定有效*property_name*會刪除此屬性之後，如果所有物件類型和名稱都都是 null，且有屬性存在於目前資料庫。 請參閱本主題稍後的範例 B。  
+ 指定的有效*property_name*，如果所有物件類型和名稱都是 null，且有屬性存在於目前的資料庫，會刪除此屬性。 請參閱本主題稍後的範例 B。  
   
 ## <a name="permissions"></a>Permissions  
  db_owner 和 db_ddladmin 固定資料庫角色的成員可卸除任何物件的擴充屬性，但下列為例外狀況：db_ddladmin 不能將屬性加入至資料庫本身或加入至使用者或角色。  
@@ -138,9 +138,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.fn_listextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

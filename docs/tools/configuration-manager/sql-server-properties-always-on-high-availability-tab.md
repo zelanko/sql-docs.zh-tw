@@ -13,13 +13,14 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: cb889dfae1625cdf5f07175fe72ce679f0f477ae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cfa08dbf9b1fd632c15ede1776055af0e06f8834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064053"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785459"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_showpendingchanges (TRANSACT-SQL) |Microsoft 文件
+title: sp_showpendingchanges & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b59856ba83d3118a9246bb5cd93a8d63e7745f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229136548d40e985869bd1f01685cb0c3dad6f4f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000735"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030699"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +51,21 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @destination_server **=** ] **'***destination_server***'**  
- 這是套用所複寫之變更的伺服器名稱。 *destination_server*是**sysname**，預設值是 NULL。  
+ [ @destination_server **=** ] **'***destination_server&lt***'**  
+ 這是套用所複寫之變更的伺服器名稱。 *destination_server&lt*已**sysname**，預設值是 NULL。  
   
- [ @publication **=** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 NULL。 當*發行集*指定，則結果只限於指定的發行集。  
+ [ @publication **=** ] **'***出版物***'**  
+ 這是發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。 當*發行集*指定，則結果只限於指定的發行集。  
   
  [ @article **=** ] **'***文章***'**  
- 這是發行項的名稱。 *發行項*是**sysname**，預設值是 NULL。 當*文章*指定，則結果只限於指定的發行項。  
+ 這是發行項的名稱。 *發行項*已**sysname**，預設值是 NULL。 當*文章*指定，則結果只限於指定的發行項。  
   
  [ @show_rows **=** ] *show_rows*  
- 指定結果集是否包含更具體的資訊關於暫止的變更，預設值是**0**。 如果值為**1**指定，結果集包含資料行 is_delete 和 rowguid。  
+ 指定結果集是否包含更多特定資訊關於暫止的變更，預設值是**0**。 如果值為**1**指定，結果集包含資料行 is_delete 和 rowguid。  
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|正要複寫變更所在的伺服器名稱。|  
 |pub_name|**sysname**|發行集的名稱。|  
@@ -87,7 +87,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  sp_showpendingchanges 的結果並不包含層代 0 的資料列。  
   
- 針對指定的發行項*文章*不屬於指定的發行集*發行集，* 對 pending_deletes 和 pending_ins_and_upd 傳回計數 0。  
+ 當指定的發行項*發行項*不屬於指定的發行集*發行集，* 對 pending_deletes 和 pending_ins_and_upd 傳回計數 0。  
   
 ## <a name="permissions"></a>Permissions  
  只有系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色的成員，才能夠執行 sp_showpendingchanges。  

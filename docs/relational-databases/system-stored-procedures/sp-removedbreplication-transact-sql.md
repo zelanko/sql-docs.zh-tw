@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (TRANSACT-SQL) |Microsoft 文件
+title: sp_removedbreplication & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee6f832fda56d69e064ef49c669ab2d945c5140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeda476ae204ce33c44dd858f90e19a677e74e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998002"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026574"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
  這是資料庫的名稱。 *dbname* 是 **sysname**，預設值為 NULL。 如果是 NULL，則會使用目前資料庫。  
   
  [ **@type** =]*類型*  
- 這是要移除資料庫物件的複寫類型。 *型別*是**nvarchar （5)** 而且可以是下列值之一。  
+ 這是要移除資料庫物件的複寫類型。 *型別*已**nvarchar(5)** 而且可以是下列值之一。  
   
 |||  
 |-|-|  
 |**tran**|移除異動複寫發行物件。|  
 |**合併式**|移除合併式複寫發行物件。|  
-|**同時**（預設值）|移除所有的複寫發行物件。|  
+|**兩者**（預設值）|移除所有的複寫發行物件。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_removedbreplication**用於所有複寫類型。  
+ **sp_removedbreplication**用於所有類型的複寫。  
   
  **sp_removedbreplication**還原複寫的資料庫不必還原沒有複寫物件時很有用。  
   

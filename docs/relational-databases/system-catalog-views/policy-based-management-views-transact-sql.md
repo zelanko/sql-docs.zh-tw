@@ -1,5 +1,5 @@
 ---
-title: 原則式管理檢視 (TRANSACT-SQL) |Microsoft 文件
+title: 原則式管理檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Policy-Based Management, system views
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
-caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 85b10ef00bac49c9ba5668b3ab8bb91e37f14c6c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 08104bf500c3ad57c92264ccf5e2f4dd66801367
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177311"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025257"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>以原則為基礎的管理檢視 (Transact - SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

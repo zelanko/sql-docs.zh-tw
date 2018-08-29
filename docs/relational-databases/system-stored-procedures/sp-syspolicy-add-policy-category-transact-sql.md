@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category (TRANSACT-SQL) |Microsoft 文件
+title: sp_syspolicy_add_policy_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 134777b90dcb5213d1f8a747de4bd34151afcca2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 20bf30b2f0ad96ce46f6990d3d4efeab1a1fe398
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254723"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033312"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
   
 ## <a name="arguments"></a>引數  
  [ **@name=** ] **'***name***'**  
- 這是原則類別目錄的名稱。 *名稱*是**sysname**，而且需要。 *名稱*不可為 NULL 或空字串。  
+ 這是原則類別目錄的名稱。 *名稱*已**sysname**，而且需要。 *名稱*不可為 NULL 或空字串。  
   
  [ **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- 判斷是否針對原則類別目錄託管資料庫訂閱。 *mandate_database_subscriptions*是**元**值，預設值是 1 （已啟用）。  
+ 判斷是否針對原則類別目錄託管資料庫訂閱。 *mandate_database_subscriptions*已**元**值，預設值是 1 （已啟用）。  
   
  [ **@policy_category_id=** ] *policy_category_id*  
- 這是原則類別目錄的識別碼。 *policy_category_id*是**int**，而且會當做 OUTPUT 傳回。  
+ 這是原則類別目錄的識別碼。 *policy_category_id&lt*已**int**，而且會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -82,8 +81,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原則式管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_add_policy_category_subscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

@@ -13,16 +13,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12cb91c23c87e32d25d73f551d7aa6b76fa66288
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd88ab54a8ab87be0601565c73e4e84a87790357
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036206"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032787"
 ---
 # <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

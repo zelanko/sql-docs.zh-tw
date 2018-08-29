@@ -1,5 +1,5 @@
 ---
-title: p (TRANSACT-SQL) |Microsoft 文件
+title: sp_changearticlecolumndatatype (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04da16aadb8caf05ee28882c11658e81bf5bbfe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 017131fd7bda406fdee178d8e36ab5443c487d4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989643"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026624"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "32989643"
   變更 Oracle 發行集的發行項資料行資料類型對應。 這個預存程序執行於任何資料庫中的散發者端。  
   
 > [!NOTE]  
->  依預設，會提供支援的發行者類型之間的資料類型對應。 使用**sp_changearticlecolumndatatype**才覆寫這些預設設定。  
+>  依預設，會提供支援的發行者類型之間的資料類型對應。 使用**sp_changearticlecolumndatatype**覆寫這些預設設定時，才。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,25 +55,25 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [  **@publication=** ] **'***發行集***'**  
- 這是 Oracle 發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是 Oracle 發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@article =** ] **'***文章***'**  
- 這是發行項的名稱。 *發行項*是**sysname**，沒有預設值。  
+ 這是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
  [ **@column**=] **'***資料行***'**  
- 這是要變更資料類型對應的資料行名稱。 *資料行*是**sysname**，沒有預設值。  
+ 這是要變更資料類型對應的資料行名稱。 *資料行*已**sysname**，沒有預設值。  
   
- [ **@type** =] **'***類型***'**  
- 名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地資料行中的資料類型。 *型別*是**sysname**，預設值是 NULL。  
+ [ **@type** =] **'***型別***'**  
+ 是的名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地資料行中的資料類型。 *型別*已**sysname**，預設值是 NULL。  
   
  [ **@length** =]*長度*  
- 是目的地資料行中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的長度。 *長度*是**bigint**，預設值是 NULL。  
+ 是目的地資料行中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的長度。 *長度*已**bigint**，預設值是 NULL。  
   
  [ **@precision**=]*有效位數*  
- 是目的地資料行中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的有效位數。 *有效位數*是**bigint**，預設值是 NULL。  
+ 是目的地資料行中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的有效位數。 *有效位數*已**bigint**，預設值是 NULL。  
   
  [ **@publisher**=] **'***發行者***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是**sysname**，預設值是 NULL。  
+ 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

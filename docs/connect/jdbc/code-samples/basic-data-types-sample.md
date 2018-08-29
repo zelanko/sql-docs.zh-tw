@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: bec8d747e193f54b1f706a911f3a78a3442e81b4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662410"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785441"
 ---
 # <a name="basic-data-types-sample"></a>基本資料類型範例
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用結果集 getter 方法擷取基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型值，以及如何使用結果集 update 方法來更新那些值。  
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用結果集 getter 方法擷取基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型值，以及如何使用結果集 update 方法來更新那些值。  
   
 此範例的程式碼檔案名稱為 BasicDataTypes.java，可以在下列位置找到：  
 

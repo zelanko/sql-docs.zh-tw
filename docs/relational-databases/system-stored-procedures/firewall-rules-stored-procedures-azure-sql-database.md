@@ -19,17 +19,16 @@ helpviewer_keywords:
 - firewall_rules, Azure SQL Database
 - firewall systems, Azure SQL Database
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6de7f6cc9166b63cf53b7cae71b172b43651e09e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3f674fc2ac0bd2f6c79a00add16bf5e02a8a0d8c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023790"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038351"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>防火牆規則預存程序 (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

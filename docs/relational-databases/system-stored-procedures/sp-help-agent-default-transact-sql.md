@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_default (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_agent_default (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ea2d817e869f7ff66ddf70243e01b2f334fb14b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a835b1bafa037e249450118cb08f3d886bb6283b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994655"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017814"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 ## <a name="arguments"></a>引數  
  [  **@profile_id=**] *profile_id * * * 輸出**  
- 這是代理程式類型的預設組態識別碼。 *profile_id*是**int**，沒有預設值。*profile_id*也是輸出參數和傳回的代理程式類型的預設組態的識別碼。  
+ 這是代理程式類型的預設組態識別碼。 *profile_id*已**int**，沒有預設值。*profile_id*也是一個 OUTPUT 參數，並傳回的代理程式類型的預設組態識別碼。  
   
  [  **@agent_type=**] **'***agent_type***'**  
- 這是代理程式的類型。 *agent_type*是**int**，沒有預設值，它可以是下列值之一。  
+ 這是代理程式的類型。 *agent_type*已**int**，沒有預設值，它可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|快照集代理程式。|  
 |**2**|記錄讀取器代理程式。|  
@@ -64,7 +64,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_help_agent_default**用於所有複寫類型。  
+ **sp_help_agent_default**用於所有類型的複寫。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**replmonitor**固定的資料庫角色可以執行**sp_help_agent_default**。  

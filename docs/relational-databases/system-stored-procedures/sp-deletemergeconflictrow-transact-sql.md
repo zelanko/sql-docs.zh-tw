@@ -1,5 +1,5 @@
 ---
-title: sp_deletemergeconflictrow (TRANSACT-SQL) |Microsoft 文件
+title: sp_deletemergeconflictrow (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 971d7dcce23ed908e5bd880da1f96681be6ad88c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4290c07ddb9e7f352c6fe6177205ce6add03ead
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989545"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017391"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
   
 ## <a name="arguments"></a>引數  
  [  **@conflict_table=**] **'***conflict_table***'**  
- 這是衝突資料表的名稱。 *conflict_table*是**sysname**，預設值是**%**。 如果*conflict_table*指定為 NULL 或**%**，就會假設衝突是一項刪除衝突，而且資料列比對*rowguid*和*origin_datasource*和*source_object*刪除從[MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)資料表。  
+ 這是衝突資料表的名稱。 *conflict_table*已**sysname**，預設值是**%**。 如果*conflict_table*指定為 NULL 或**%**，就會假設衝突是刪除衝突，而且資料列比對*rowguid*並*origin_datasource*並*source_object*從刪除[MSmerge_conflicts_info &#40;-&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)資料表。  
   
  [  **@source_object=**] **'***source_object***'**  
- 這是來源資料表的名稱。 *source_object*是**nvarchar （386)**，預設值是 NULL。  
+ 這是來源資料表的名稱。 *source_object*已**nvarchar(386)**，預設值是 NULL。  
   
  [  **@rowguid =**] **'***rowguid***'**  
- 這是刪除衝突的資料列識別碼。 *rowguid*是**uniqueidentifier**，沒有預設值。  
+ 這是刪除衝突的資料列識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
   
  [  **@origin_datasource=**] **'***origin_datasource***'**  
- 這是衝突的來源。 *origin_datasource*是**varchar （255)**，沒有預設值。  
+ 這是衝突的來源。 *origin_datasource*已**varchar(255)**，沒有預設值。  
   
  [  **@drop_table_if_empty=**] **'***drop_table_if_empty***'**  
- 指出此問題的旗標*conflict_table*是要卸除，如果是空的。 *drop_table_if_empty*是**varchar （10)**，預設值是 FALSE。  
+ 是旗標，表示*conflict_table*是要卸除，如果是空的。 *drop_table_if_empty*已**varchar(10)**，預設值是 FALSE。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -70,7 +70,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="remarks"></a>備註  
  **sp_deletemergeconflictrow**用於合併式複寫中。  
   
- [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)資料表是系統資料表，不刪除從資料庫中，即使它是空白。  
+ [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)資料表是系統資料表而且不會刪除從資料庫中，即使是空的。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_deletemergeconflictrow**。  

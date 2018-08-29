@@ -1,5 +1,5 @@
 ---
-title: sp_helpqreader_agent (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpqreader_agent & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be49f8a6303096487ef2c36593280fcc72e38a91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d240d66768ee4b812542f959108ebea6baec4d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995945"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022706"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,17 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="arguments"></a>引數  
  [  **@frompublisher=** ] *frompublisher*  
- 指定預存程序是在發行者端或散發者端呼叫。 *frompublisher* bit，預設值為 0。 **1**表示預存程序從發行者呼叫和**0**表示預存程序從散發者端呼叫。  
+ 指定預存程序是在發行者端或散發者端呼叫。 *frompublisher* bit，預設值為 0。 **1**表示預存程序從 「 發行者 」，呼叫並**0**表示預存程序從散發者端呼叫。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理程式的識別碼。|  
 |**name**|**nvarchar(100)**|代理程式的名稱。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
-|**job_login**|**nvarchar(512)**|Windows 帳戶的散發代理程式執行，這傳回的格式如下*網域*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \*** 一律是傳回。|  
+|**job_login**|**nvarchar(512)**|是 Windows 帳戶散發代理程式執行，這傳回的格式如下*網域*\\*username*。|  
+|**job_password**|**sysname**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \*** 一律為傳回此項目。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -65,7 +65,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
  **sp_helpqreader_agent**用於異動複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 當值*frompublisher*是**1**，只有的成員**sysadmin** 「 發行者 」 或成員的固定的伺服器角色**db_owner**發行集資料庫上的固定的資料庫角色可以執行**sp_helpqreader_agent**。 否則，只有**sysadmin**固定的伺服器角色的成員的散發者**db_owner**散發資料庫上的固定的資料庫角色可以執行**sp_helpqreader_代理程式**。  
+ 時的值*frompublisher*是**1**，只有成員**sysadmin**固定的伺服器角色，在發行者端的成員**db_owner**發行集資料庫的固定的資料庫角色可以執行**sp_helpqreader_agent**。 否則，只有成員**sysadmin**固定的伺服器角色的成員的散發者端**db_owner**散發資料庫的固定的資料庫角色可以執行**sp_helpqreader_代理程式**。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟用交易式發行集的更新訂閱](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  

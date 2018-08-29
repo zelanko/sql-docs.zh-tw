@@ -1,5 +1,5 @@
 ---
-title: p (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropmergefilter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergefilter
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e44ef9e0fe6dec28143a1d017da37732491d4441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72df83ad770e380136a954f6f8abaf9726bee650
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990063"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036084"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,23 +48,23 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
- 這是發行項的名稱。 *發行項*是**sysname**，沒有預設值。  
+ 這是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
  [  **@filtername=**] **'***filtername***'**  
- 這是要卸除的篩選名稱。 *filtername*是**sysname**，沒有預設值。  
+ 這是要卸除的篩選名稱。 *filtername*已**sysname**，沒有預設值。  
   
  [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*是**元**，預設值**0**。  
+ 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
   
  **0**指定合併發行項的變更不會使快照集失效。  
   
  **1**表示合併發行項的變更可能使快照集失效。 如果這種情況下，值為**1**提供將出現新的快照集的權限。  
   
  [ **@force_reinit_subscription**=] *force_reinit_subscription*  
- 啟用或停用將快照集標示為無效的能力。 *force_reinit_subscription*是**元**，預設值**0**。  
+ 啟用或停用將快照集標示為無效的能力。 *force_reinit_subscription*已**位元**，預設值**0**。  
   
  **0**指定合併發行項篩選的變更不會使訂閱失效。  
   
@@ -83,7 +83,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

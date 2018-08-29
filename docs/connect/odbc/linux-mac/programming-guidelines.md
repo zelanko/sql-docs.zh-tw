@@ -12,40 +12,40 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd77c85b089c0167306aeaad5c6d65a313e77624
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983434"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785925"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-macOS 和 Linux 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的程式設計功能以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client 中 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 的 ODBC 為基礎。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client 以 Windows Data Access Components ([ODBC 程式設計人員的參考](http://go.microsoft.com/fwlink/?LinkID=45250)) 中的 ODBC 為基礎。  
+macOS 和 Linux 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式設計功能以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 的 ODBC 為基礎。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以 Windows Data Access Components ([ODBC 程式設計人員的參考](http://go.microsoft.com/fwlink/?LinkID=45250)) 中的 ODBC 為基礎。  
 
-ODBC 應用程式可以使用多個作用中結果集 (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定的功能，加`/usr/local/include/msodbcsql.h`之後 unixODBC 標頭 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 接著，請針對您要在 Windows ODBC 應用程式中使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 專屬項目，使用相同的符號名稱。
+ODBC 應用程式可以使用多個作用中結果集 (MARS) 和其他[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定的功能，加`/usr/local/include/msodbcsql.h`之後 unixODBC 標頭 (`sql.h`， `sqlext.h`， `sqltypes.h`，和`sqlucode.h`)。 接著，請針對您要在 Windows ODBC 應用程式中使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬項目，使用相同的符號名稱。
 
 ## <a name="available-features"></a>可用的功能  
-在 macOS 和 Linux 上使用 ODBC 驅動程序時，您可參考 ODBC 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client 文件 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 內的下列章節：  
+在 macOS 和 Linux 上使用 ODBC 驅動程序時，您可參考 ODBC 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 文件 ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) 內的下列章節：  
 
 -   [與 SQL Server 進行通訊 (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
--   [連線和查詢逾時支援](http://msdn.microsoft.com/library/ms130822.aspx)  
--   [資料指標](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
+-   [連線和查詢逾時支援](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [資料指標](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
 -   [日期/時間改善 (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [執行查詢 (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [處理錯誤與訊息](http://msdn.microsoft.com/library/ms131289.aspx)  
--   [Kerberos 驗證](http://msdn.microsoft.com/library/cc280459.aspx)  
+-   [處理錯誤與訊息](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+-   [Kerberos 驗證](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
 -   [大型 CLR 使用者定義型別 (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [執行交易 (ODBC) (分散式交易除外)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [處理結果 (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [執行預存程序](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [執行預存程序](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [疏鬆資料行支援 (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
--   [SSL 加密](http://msdn.microsoft.com/library/ms131691.aspx)
+-   [SSL 加密](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [資料表值參數](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [命令和資料 API 的 UTF-8 和 UTF-16](http://msdn.microsoft.com/library/ff878241.aspx)
--   [使用目錄函式](http://msdn.microsoft.com/library/ms131490.aspx)  
+-   [使用目錄函式](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>不支援的功能
 
@@ -110,7 +110,7 @@ ODBC Driver 17，支援其中一種下列字元的集合/編碼的 SQLCHAR 資�
 
 SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 
-在窄字元 SQL 類型，例如 SQL_VARCHAR 已指定，繫結與 SQLBindParameter 等的輸入的參數，驅動程式會將所提供的資料轉換為預設值 （通常為字碼頁 1252年） 編碼的用戶端從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]編碼方式。 當做輸出參數，驅動程式會從與要編碼的用戶端的資料相關聯的定序資訊中指定的編碼方式轉換。 不過，可能會遺失資料---無法顯示目標編碼中的 來源編碼字元會將轉換成問號 ('？ ')。
+在窄字元 SQL 類型，例如 SQL_VARCHAR 已指定，繫結與 SQLBindParameter 等的輸入的參數，驅動程式會將所提供的資料轉換為預設值 （通常為字碼頁 1252年） 編碼的用戶端從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]編碼方式。 當做輸出參數，驅動程式會從與要編碼的用戶端的資料相關聯的定序資訊中指定的編碼方式轉換。 不過，可能會遺失資料---無法顯示目標編碼中的 來源編碼字元會將轉換成問號 ('？ ')。
 
 若要避免這種資料遺失，繫結輸入的參數時，指定 Unicode SQL 字元類型，例如 SQL_NVARCHAR。 在此情況下，驅動程式會從用戶端的編碼為 utf-16，可以代表所有的 Unicode 字元轉換。 此外，目標資料行或參數在伺服器上的也必須是 Unicode 類型 (**nchar**， **nvarchar**， **ntext**) 或其中一個使用定序/編碼方式，可以代表原始來源資料的所有的字元。 避免資料遺失與輸出參數，指定 Unicode SQL 型別和 Unicode C 類型 (SQL_C_WCHAR)，造成驅動程式傳回為 utf-16; 的資料或窄的 C 類型，並確保用戶端的編碼方式可表示來源資料 （這是永遠使用 utf-8。） 的所有字元
 
@@ -122,14 +122,14 @@ SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 
 ## <a name="additional-notes"></a>其他注意事項  
 
-1.  您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證和 **host,port** 建立專用管理員連接 (DAC)。 Sysadmin 角色的成員首先必須探索 DAC 通訊埠。 請參閱[適用於資料庫管理員的診斷連線](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)來探索如何。 例如，如果 DAC 連接埠是 33000，您可透過下列方式以 `sqlcmd` 與其連線：  
+1.  您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證和 **host,port** 建立專用管理員連接 (DAC)。 Sysadmin 角色的成員首先必須探索 DAC 通訊埠。 請參閱[適用於資料庫管理員的診斷連線](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)來探索如何。 例如，如果 DAC 連接埠是 33000，您可透過下列方式以 `sqlcmd` 與其連線：  
 
     ```
     sqlcmd –U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  
-    > DAC 連線必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證。  
+    > DAC 連線必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。  
     
 2.  如果陳述式屬性是透過 SQLSetConnectAttr 來傳遞的，則 UnixODBC 驅動程式對於所有的陳述式屬性都會傳回「無效的屬性/選項識別碼」。 在 Windows 上，當 SQLSetConnectAttr 收到陳述式屬性值時，會導致驅動程式在屬於連線控制代碼子系的所有作用中陳述式上設定值。  
 

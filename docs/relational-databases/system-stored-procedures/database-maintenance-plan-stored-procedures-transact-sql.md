@@ -18,15 +18,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], stored procedures
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43ba326369983800065b6ae23cfa83e35ad034f3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 96fd66726f900130bd9fe4e6300a660a0d2d6302
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023836"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027102"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>資料庫維護計畫預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

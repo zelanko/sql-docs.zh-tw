@@ -1,5 +1,5 @@
 ---
-title: 步驟 3： 連接到使用 Ruby SQL 的概念證明 |Microsoft 文件
+title: 步驟 3︰使用 Java 連線到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f490f0145eb4be0349cef4defdcc8b5fbce265ad
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b79d404bfc2dc19dc2028f5001a92ec5b9293b55
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310077"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42783874"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3： 連接到使用 Ruby SQL 的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3︰使用 Ruby 連線到 SQL 的概念證明
 
-此範例中，應該考量只概念證明。  範例程式碼為了清楚起見，已簡化，並不一定代表由 Microsoft 所建議的最佳作法。  
+此範例應該考慮只概念證明。  範例程式碼為了清楚起見，已簡化，並不一定代表 Microsoft 建議的最佳作法。  
   
-## <a name="step-1--connect"></a>步驟 1： 連接  
+## <a name="step-1--connect"></a>步驟 1： 連線  
   
-[TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds)函數用來連接到 SQL Database。  
+[Tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds)函數用來連接到 SQL Database。  
   
 ``` ruby
     require 'tiny_tds'  
@@ -36,13 +36,13 @@ ms.locfileid: "35310077"
     database: 'AdventureWorks', azure:true  
 ```  
   
-## <a name="step-2--execute-a-query"></a>步驟 2： 執行查詢  
+## <a name="step-2--execute-a-query"></a>步驟 2：執行查詢  
   
-複製並貼入下列程式碼中的空檔案。 呼叫 test.rb。 然後執行命令提示字元輸入下列命令：  
+複製並貼上下列程式碼中的空白檔案。 稱它為 test.rb。 然後執行方法是從命令提示字元中輸入下列命令：  
   
     ruby test.rb  
   
-在程式碼範例中， [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds)函式用來擷取結果集從查詢中，針對 SQL 資料庫。 此函式接受查詢，並傳回結果集。 逐一查看結果集使用[result.each 執行 | 資料列 |](https://github.com/rails-sqlserver/tiny_tds)。  
+在程式碼範例中， [tinytds:: Result](https://github.com/rails-sqlserver/tiny_tds)函式用來擷取結果集從查詢中，對 SQL Database。 此函數會接受查詢，並傳回結果集。 結果集會使用在逐一查看[result.each 執行 | 資料列 |](https://github.com/rails-sqlserver/tiny_tds)。  
   
 ``` ruby 
     require 'tiny_tds'    
@@ -58,11 +58,11 @@ ms.locfileid: "35310077"
   
 ## <a name="step-3--insert-a-row"></a>步驟 3： 插入資料列  
   
-在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式安全地傳遞可保護您的應用程式的參數[SQL 插入式攻擊](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
-若要搭配 Azure 使用 TinyTDS，建議您執行多個`SET`陳述式來變更目前工作階段處理的特定資訊的方式。 建議`SET`陳述式所提供的程式碼範例。 例如，`SET ANSI_NULL_DFLT_ON`會允許新的資料行允許 null 值，即使未明確指定資料行的 null 屬性狀態建立。  
+若要搭配使用 TinyTDS 和 Azure，建議您執行多個`SET`陳述式來變更目前工作階段處理的特定資訊的方式。 建議`SET`陳述式所提供的程式碼範例。 比方說，`SET ANSI_NULL_DFLT_ON`可建立允許 null 值，即使未明確指定資料行的 null 屬性狀態的新資料行。  
   
-若要配合 Microsoft SQL Server [datetime](http://msdn.microsoft.com/library/ms187819.aspx)格式化，請使用[strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)轉換成對應的日期時間格式的函式。  
+Microsoft SQL Server 與對齊[datetime](../../t-sql/data-types/datetime-transact-sql.md)格式，請使用[strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)函式來轉換成對應的日期時間格式。  
   
 ``` ruby
     require 'tiny_tds'  

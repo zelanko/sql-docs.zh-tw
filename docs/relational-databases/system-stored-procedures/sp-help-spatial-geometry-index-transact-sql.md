@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_index (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_spatial_geometry_index (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_help_spatial_geometry_index procedure
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2cd47f224f3e2d225fd58094ab11e4b64e78ec90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40eff48fed7d9ba3a687d32858ad2a3f3cdbf154
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242029"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033451"
 ---
 # <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  名稱和指定的屬性集的值會傳回有關**幾何**空間索引。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
+  傳回有關的名稱和值的一組指定的屬性**幾何**空間索引。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  包含 NULL 值的屬性不會包含在傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geometry_index`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**該索引是針對**的給定的查詢範例 **@qs**. 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用`sp_help_spatial_geometry_index`來調查空間索引**SIndx_SpatialTable_geometry_col2**資料表上定義**geometry_col&lt**給定的查詢範例 **@qs**. 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geometry  

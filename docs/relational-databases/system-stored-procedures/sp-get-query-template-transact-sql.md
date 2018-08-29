@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (TRANSACT-SQL) |Microsoft 文件
+title: sp_get_query_template (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253504"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027744"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +51,17 @@ sp_get_query_template
  這是要產生參數化版本的查詢。 '*query_text*' 必須括在單引號中，且前面必須有 N Unicode 規範。 N'*query_text*' 的值指派給@querytext參數。 這屬於類型**nvarchar （max)**。  
   
  @templatetext  
- 這是輸出參數的型別**nvarchar （max)** 指示，以接收的參數化的形式提供*query_text*字串常值。  
+ 是輸出參數的型別**nvarchar （max)** 指示，以接收的參數化的格式提供*query_text*字串常值。  
   
  @parameters  
- 這是輸出參數的型別**nvarchar （max)** 指示，以接收中已參數化之參數名稱和資料類型的字串常值提供@templatetext。  
+ 是輸出參數的型別**nvarchar （max)** 指示，以接收中已參數化之參數名稱和資料類型的字串常值提供@templatetext。  
   
 ## <a name="remarks"></a>備註  
  當發生下列情況時，sp_get_query_template 會傳回錯誤：  
   
--   不參數化中的任何常數常值*query_text*。  
+-   它不會參數化中的任何常數常值*query_text*。  
   
--   *query_text*是 NULL，不是 Unicode 字串，其語法無效或無法編譯。  
+-   *query_text*是 NULL，不是 Unicode 字串，語法無效或無法編譯。  
   
  如果 sp_get_query_template 傳回錯誤，它不會修改的值@templatetext和@parameters輸出參數。  
   

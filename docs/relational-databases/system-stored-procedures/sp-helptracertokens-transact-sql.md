@@ -1,5 +1,5 @@
 ---
-title: sp_helptracertokens (TRANSACT-SQL) |Microsoft 文件
+title: sp_helptracertokens & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helptracertokens
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 635a49188cd4c109bf194353e038f5666e033bf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeead4e1604030851ef1e9a3474a83adb6cb06b2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995315"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022836"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sp_helptracertokens [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [  **@publication=** ] **'***發行集***'**  
- 這是插入追蹤 Token 的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是插入追蹤 Token 的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@publisher=** ] **'***發行者***'**  
- 發行者的名稱。 *發行者*是**sysname**，預設值是 NULL。  
+ 發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個參數應該只能指定為非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- 發行集資料庫的名稱。 *publisher_db*是**sysname**，預設值是 NULL。 如果預存程序執行於發行者端，則會忽略這個參數。  
+ 發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果預存程序執行於發行者端，則會忽略這個參數。  
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**tracer_id**|**int**|識別追蹤 Token 記錄。|  
 |**publisher_commit**|**datetime**|在發行集資料庫的發行者端認可 Token 記錄的日期和時間。|  
@@ -78,10 +78,10 @@ sp_helptracertokens [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定伺服器角色、 **db_owner**在發行集資料庫中，固定資料庫角色或**db_owner**固定的資料庫或**replmonitor**散發資料庫中的角色可以執行**sp_helptracertokenhistory**。  
+ 只有成員**sysadmin**固定伺服器角色**db_owner**固定資料庫角色，在發行集資料庫中，或**db_owner**固定的資料庫或**replmonitor**散發資料庫中的角色可以執行**sp_helptracertokenhistory**。  
   
 ## <a name="see-also"></a>另請參閱  
  [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

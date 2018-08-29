@@ -14,18 +14,18 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661790"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787156"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本節針對使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 建立與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫的簡易連線，提供快速入門指示。 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫之前，您必須先在本機電腦或伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，而且必須在本機電腦上安裝 JDBC 驅動程式。  
+本節針對使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 建立與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的簡易連線，提供快速入門指示。 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之前，您必須先在本機電腦或伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且必須在本機電腦上安裝 JDBC 驅動程式。  
   
 ## <a name="choosing-the-right-jar-file"></a>選擇正確的 JAR 檔案
 

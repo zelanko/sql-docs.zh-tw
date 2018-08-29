@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributor_password (TRANSACT-SQL) |Microsoft 文件
+title: sp_changedistributor_password (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributor_password
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75b32e5782001a4babdad370bd02e559dbc72022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbdfc415fcc6e141dfc6adb035b6fa1bfd496d0a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987716"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037001"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_changedistributor_password [ @password= ] 'password'
   
 ## <a name="arguments"></a>引數  
  [  **@password=**] **'***密碼***'**  
- 這是新密碼。 *密碼*是**sysname**，沒有預設值。 如果 「 散發者 」 是本機電腦，密碼**distributor_admin**變更系統登入。  
+ 這是新密碼。 *密碼*已**sysname**，沒有預設值。 如果 「 散發者 」 已本機的密碼**distributor_admin**變更系統登入。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_changedistributor_password**用於所有複寫類型。  
+ **sp_changedistributor_password**用於所有類型的複寫。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
@@ -63,7 +63,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [保護散發者](../../relational-databases/replication/security/secure-the-distributor.md)   
- [sp_adddistributor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_adddistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

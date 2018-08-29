@@ -1,5 +1,5 @@
 ---
-title: sp_MShasdbaccess (TRANSACT-SQL) |Microsoft 文件
+title: sp_MShasdbaccess (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_MShasdbaccess
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cfaa25b0595a809e6c505f6c0a487a501562b0a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: be21ad6f70e49f2c89c0903bde127d9d23413edc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253914"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020546"
 ---
 # <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_MShasdbaccess
  0 (成功) 或 1 (失敗)  
   
 ## <a name="permissions"></a>Permissions  
- 執行權限授與**公用**角色。  
+ 執行權限授與**公開**角色。  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  

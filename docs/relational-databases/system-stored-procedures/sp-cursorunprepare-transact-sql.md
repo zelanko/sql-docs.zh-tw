@@ -1,5 +1,5 @@
 ---
-title: sp_cursorunprepare (TRANSACT-SQL) |Microsoft 文件
+title: sp_cursorunprepare (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursorunprepare
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e20d5669a7879584cd0c7dc1c26726a6ba12643
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5ebf585b201613210089bbfd395a7aea9421cb73
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235229"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030487"
 ---
 # <a name="spcursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_cursorunprepare handle
   
 ## <a name="arguments"></a>引數  
  *控制代碼*  
- 是*處理*備妥的陳述式時，sp_cursorprepare 會傳回的值。  
+ 已*處理*備妥的陳述式時，sp_cursorprepare 會傳回的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursorprepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorprepare &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

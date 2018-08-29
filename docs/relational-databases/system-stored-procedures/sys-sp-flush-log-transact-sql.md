@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_flush_log
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
-caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 010870b0364cd302928fd9e0cc8491133f2283b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2dad71f88311c8a44a03ab48ae4ad2daab1c3709
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060235"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031530"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

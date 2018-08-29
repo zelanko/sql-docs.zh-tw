@@ -1,5 +1,5 @@
 ---
-title: sp_adjustpublisheridentityrange (TRANSACT-SQL) |Microsoft 文件
+title: sp_adjustpublisheridentityrange & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8d39485c2ed9519353a2175fa4e127a5900b0e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb3d39fd2c1f4369af598af1c593ea530150d2ab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987183"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032776"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,29 +47,29 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是重新配置新識別範圍的發行集名稱。 *發行集*是**sysname**，預設值是 NULL。  
+ 這是重新配置新識別範圍的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
  [ **@table_name=**] **'***table_name***'**  
- 這是重新配置新識別範圍的資料表名稱。 *table_name*是**sysname**，預設值是 NULL。  
+ 這是重新配置新識別範圍的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
   
  [ **@table_owner=**] **'***table_owner***'**  
- 這是在發行者端的資料表擁有者。 *table_owner*是**sysname**，預設值是 NULL。 如果*table_owner*未指定，會使用目前使用者的名稱。  
+ 這是在發行者端的資料表擁有者。 *table_owner*已**sysname**，預設值是 NULL。 如果*table_owner*未指定，會使用目前使用者的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_adjustpublisheridentityrange**用於所有複寫類型。  
+ **sp_adjustpublisheridentityrange**用於所有類型的複寫。  
   
- 如果是啟用了自動識別範圍的發行集，散發代理程式或合併代理程式便能夠針對基於臨界值的發行集識別範圍的自動調整來進行回應。 不過，如果基於某些原因散發代理程式或合併代理程式尚未執行的一段時間，而且識別範圍資源已嚴重耗用到臨界值的點，使用者可以呼叫**sp_adjustpublisheridentityrange**「 發行者 」 配置新的值範圍。  
+ 如果是啟用了自動識別範圍的發行集，散發代理程式或合併代理程式便能夠針對基於臨界值的發行集識別範圍的自動調整來進行回應。 不過，如果基於某些原因的散發代理程式 」 或 「 合併代理程式尚未執行的一段時間，並識別範圍資源已嚴重耗用到臨界值的點，使用者可以呼叫**sp_adjustpublisheridentityrange**若要配置發行者新的值範圍。  
   
- 執行時**sp_adjustpublisheridentityrange**，*發行集*或*table_name*必須指定。 如果同時指定這兩者，或兩者都未指定，就會傳回錯誤。  
+ 執行時**sp_adjustpublisheridentityrange**，可以是*發行集*或是*table_name*必須指定。 如果同時指定這兩者，或兩者都未指定，就會傳回錯誤。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_adjustpublisheridentityrange**。  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫識別欄位](../../relational-databases/replication/publish/replicate-identity-columns.md)   
+ [複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

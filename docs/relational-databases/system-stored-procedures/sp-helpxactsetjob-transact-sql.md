@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef643efb849a0f178ac98bf439360fca87d21983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58ebd1b5592a7a4b17f665555689b32e8456d714
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997205"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027514"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引數  
  [**@publisher** =] **'***發行者***'**  
- 這是作業所屬的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者名稱。 *發行者*是**sysname**，沒有預設值。  
+ 這是作業所屬的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者名稱。 *發行者*已**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Oracle 作業編號。|  
 |**lastdate**|**varchar(22)**|上次作業執行的日期。|  
@@ -60,7 +60,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**間隔**|**varchar(200)**|作業的間隔時間。|  
 |**失敗**|**int**|作業的失敗次數。|  
 |**xactsetjobwhat**|**varchar(200)**|作業所執行的程序名稱。|  
-|**xactsetjob**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -作業已啟用。<br /><br /> **0** -作業已停用。|  
+|**propertyname**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -作業已啟用。<br /><br /> **0** -作業已停用。|  
 |**xactsetlonginterval**|**int**|作業的長間隔時間。|  
 |**xactsetlongthreshold**|**int**|作業的長臨界值。|  
 |**xactsetshortinterval**|**int**|作業的短間隔時間。|  
@@ -70,7 +70,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_helpxactsetjob**用於快照式複寫和異動複寫，Oracle 發行者。  
+ **sp_helpxactsetjob**用於快照式複寫和異動複寫用於 Oracle 發行者。  
   
  **sp_helpxactsetjob**一律會傳回在發行者端的 Xactset 作業 (HREPL_XactSetJob) 的目前設定。 如果 Xactset 作業目前在作業佇列中，還會另外從以 Oracle 發行者管理員帳戶建立的 USER_JOB 資料字典檢視，傳回作業屬性。  
   
@@ -79,6 +79,6 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者的交易集作業 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [sp_publisherproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

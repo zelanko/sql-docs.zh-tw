@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_maintenance_plan_job
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 200638dc2e227ad2b8428f668deb424ab3a277c2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b426d48d7b586670a8d6e890e67f5abbdc647497
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041086"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032248"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

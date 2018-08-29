@@ -1,5 +1,5 @@
 ---
-title: sp_monitor (TRANSACT-SQL) |Microsoft 文件
+title: sp_monitor & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 277062160e01f0111eeade2dc4a05b3c6a3ab59d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259628"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024053"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ sp_monitor
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**last_run**|時間**sp_monitor**上次執行。|  
 |**current_run**|時間**sp_monitor**正在執行。|  
-|**seconds**|後經過的秒數**sp_monitor**執行。|  
+|**seconds**|之後經過的秒數字**sp_monitor**執行。|  
 |**cpu_busy**|伺服器電腦的 CPU 已執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作的秒數。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已花在處理輸入和輸出作業的秒數。|  
 |**閒置**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已閒置的秒數。|  
@@ -65,9 +65,9 @@ sp_monitor
 |**連線**|登入或嘗試登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的次數。|  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會透過一系列的函數來持續追蹤它已完成的工作量。 執行**sp_monitor**顯示這些函式所傳回的目前值，並顯示多少自上次執行此程序後已經變更。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會透過一系列的函數來持續追蹤它已完成的工作量。 執行**sp_monitor**會顯示這些函式所傳回的目前值，並顯示多少上次執行此程序以來已經變更。  
   
- 每個資料行，在表單中列印統計資料*數目*(*數目*)-*數目*%或*數目*(*數目*). 第一個*數目*指的秒數 (如**cpu_busy**， **io_busy**，和**閒置**) 或總數 （針對其他變數） 因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已重新啟動。 *數目*括號括住參考的秒數或總數自從上次**sp_monitor**執行。 百分比是以來的時間百分比**sp_monitor**上次執行。 例如，如果此報表會顯示**cpu_busy**是 4250 （215)-68 %cpu 已忙碌 4250 秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向上 215 秒，從上次啟動**sp_monitor**是上次執行 和 68%總時間，因為**sp_monitor**上次執行。  
+ 每個資料行，在表單中列印統計資料*數字*(*數目*)-*號碼*%或*數目*(*數目*). 第一個*數字*指的秒數 (如**cpu_busy**， **io_busy**，和**閒置**) 或總數 （針對其他變數） 因為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已重新啟動。 *數字*括號括住參考的秒數或總數自從上次**sp_monitor**執行。 百分比是開始的時間百分比**sp_monitor**上次執行。 例如，如果此報表會顯示**cpu_busy**是 4250 （215)-68%，CPU 已忙碌 4250 秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上次啟動，215 秒**sp_monitor**是上次執行 和 68%總時間，因為**sp_monitor**上次執行。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  

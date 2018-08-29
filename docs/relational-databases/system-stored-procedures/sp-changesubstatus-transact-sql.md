@@ -1,5 +1,5 @@
 ---
-title: sp_changesubstatus (TRANSACT-SQL) |Microsoft 文件
+title: sp_changesubstatus (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94c26330636d4e13fe84a2776a72315a418d3d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 269b2eab987560b2c043c887d7a90c2c4ddc1a95
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993465"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019435"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,39 +73,39 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是**%**。 如果*發行集*未指定，會影響所有發行集。  
+ 這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**。 如果*發行集*未指定，會影響所有發行集。  
   
  [  **@article=**] **'***文章***'**  
- 這是發行項的名稱。 對發行集而言，它必須是唯一的。 *發行項*是**sysname**，預設值是**%**。 如果*文章*未指定，所有發行項會受到影響。  
+ 這是發行項的名稱。 對發行集而言，它必須是唯一的。 *發行項*已**sysname**，預設值是**%**。 如果*文章*未指定，所有發行項會受到影響。  
   
  [  **@subscriber=**] **'***訂閱者***'**  
- 這是要變更狀態的訂閱者名稱。 *訂閱者*是**sysname**，預設值是**%**。 如果*訂閱者*未指定，狀態為所有訂閱者變更為指定的發行項。  
+ 這是要變更狀態的訂閱者名稱。 *訂閱者*已**sysname**，預設值是**%**。 如果*訂閱者*未指定，狀態時，都會變更為 所有訂閱者上，指定的發行項。  
   
  [  **@status =**] **'***狀態***'**  
- 中的訂閱狀態**syssubscriptions**資料表。 *狀態*是**sysname**，沒有預設值，它可以是下列值之一。  
+ 這是在訂用帳戶狀態**syssubscriptions**資料表。 *狀態*已**sysname**，沒有預設值，它可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**使用中**|已同步處理訂閱者，正在接收資料。|  
 |**非使用中**|訂閱者項目存在，但不含訂閱。|  
 |**訂閱**|訂閱者在要求資料，但尚未同步處理。|  
   
  [  **@previous_status=**] **'***previous_status***'**  
- 這是訂閱先前的狀態。 *previous_status*是**sysname**，預設值是 NULL。 這個參數可讓您變更任何訂用帳戶目前具有該狀態，因此讓一組特定的訂用帳戶中的 群組函式 (例如，將所有作用中訂閱重設為**訂閱**)。  
+ 這是訂閱先前的狀態。 *previous_status*已**sysname**，預設值是 NULL。 此參數可讓您變更目前是這個狀態，因此允許一組特定的訂用帳戶中的 群組函式的任何訂用帳戶 (例如，將設定所有作用中訂用帳戶將會回到**訂閱**)。  
   
  [  **@destination_db=**] **'***destination_db***'**  
- 這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是**%**。  
+ 這是目的地資料庫的名稱。 *destination_db*已**sysname**，預設值是**%**。  
   
  [  **@frequency_type=**] *frequency_type*  
- 這是散發工作的排程頻率。 *frequency_type*是**int**，預設值是 NULL。  
+ 這是散發工作的排程頻率。 *frequency_type*已**int**，預設值是 NULL。  
   
  [  **@frequency_interval=**] *frequency_interval*  
- 若要設定的頻率所套用的值*frequency_type*。 *frequency_interval*是**int**，預設值是 NULL。  
+ 要套用至所設定之頻率的值*frequency_type*。 *frequency_interval*已**int**，預設值是 NULL。  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- 這是散發工作的日期。 使用這個參數時*frequency_type*設為 32 （每月相對）。 *frequency_relative_interval*是**int**，而且可以是下列值之一。  
+ 這是散發工作的日期。 使用這個參數時*frequency_type*設定為 32 （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|第一個|  
 |**2**|第二個|  
@@ -114,13 +114,13 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**16**|最後一個|  
 |NULL (預設值)||  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*是**int**，預設值是 NULL。  
+ [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor&lt*  
+ 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
   
  [  **@frequency_subday=**] *frequency_subday*  
- 這是在定義的期間內，重新排程的頻率 (以分鐘為單位)。 *frequency_subday*是**int**，而且可以是下列值之一。  
+ 這是在定義的期間內，重新排程的頻率 (以分鐘為單位)。 *frequency_subday*已**int**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -129,25 +129,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |NULL (預設值)||  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔*frequency_subday*。 *frequency_subday_interval*是**int**，預設值是 NULL。  
+ 間隔*frequency_subday*。 *frequency_subday_interval*已**int**，預設值是 NULL。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- 這是第一次排程散發工作的當日時間，格式為 HHMMSS。 *active_start_time_of_day*是**int**，預設值是 NULL。  
+ 這是第一次排程散發工作的當日時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- 這是排程停止散發工作的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 NULL。  
+ 這是排程停止散發工作的當日時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
  [  **@active_start_date=**] *active_start_date*  
- 這是第一次排程散發工作的日期，格式為 YYYYMMDD。 *active_start_date*是**int**，預設值是 NULL。  
+ 這是第一次排程散發工作的日期，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
   
  [  **@active_end_date=**] *active_end_date*  
- 這是排程停止散發工作的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是 NULL。  
+ 這是排程停止散發工作的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
  [  **@optional_command_line=**] **'***optional_command_line***'**  
- 這是一個選擇性的命令提示字元。 *optional_command_line*是**nvarchar （4000)**，預設值是 NULL。  
+ 這是一個選擇性的命令提示字元。 *optional_command_line*已**nvarchar(4000)**，預設值是 NULL。  
   
  [  **@distribution_jobid=**] *distribution_jobid*  
- 這是將訂閱狀態從非使用中改成使用中時，在散發者端之散發代理程式的作業識別碼。 在其他情況下，不會加以定義。 如果對這個預存程序的單一呼叫涉及多個散發代理程式，就不會定義結果。 *distribution_jobid*是**binary （16)**，預設值是 NULL。  
+ 這是將訂閱狀態從非使用中改成使用中時，在散發者端之散發代理程式的作業識別碼。 在其他情況下，不會加以定義。 如果對這個預存程序的單一呼叫涉及多個散發代理程式，就不會定義結果。 *distribution_jobid*已**二進位 （16)**，預設值是 NULL。  
   
  [  **@from_auto_sync=**] *from_auto_sync*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -155,34 +155,34 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@ignore_distributor=**] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@offloadagent=** ] *remote_agent_activation*  
+ [  **@offloadagent=** ] *remote_agent_activation&lt*  
  > [!NOTE]  
->  遠端代理程式啟用已被取代，不再受到支援。 支援這個參數的目的，只是為了與舊版的指令碼相容。 設定*remote_agent_activation*以外的值來**0**會產生錯誤。  
+>  遠端代理程式啟用已被取代，不再受到支援。 支援這個參數的目的，只是為了與舊版的指令碼相容。 設定*remote_agent_activation&lt*以外的值來**0**會產生錯誤。  
   
  [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
 >  遠端代理程式啟用已被取代，不再受到支援。 支援這個參數的目的，只是為了與舊版的指令碼相容。 設定*remote_agent_server_name*為任何非 NULL 值會產生錯誤。  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
- 指定 Data Transformation Services (DTS) 封裝的名稱。 *dts_package_name*是**sysname**，預設值是 NULL。 例如，針對名為套件**DTSPub_Package**您會指定`@dts_package_name = N'DTSPub_Package'`。  
+ 指定 Data Transformation Services (DTS) 封裝的名稱。 *dts_package_name*已**sysname**，預設值是 NULL。 例如，對於名為的套件**DTSPub_Package**您可以指定`@dts_package_name = N'DTSPub_Package'`。  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- 指定封裝的密碼。 *dts_package_password*是**sysname**預設值是 NULL，其指定密碼屬性維持不變。  
+ 指定封裝的密碼。 *dts_package_password*已**sysname**預設值是 NULL，它指定密碼屬性維持不變。  
   
 > [!NOTE]  
 >  DTS 封裝必須有密碼。  
   
  [ **@dts_package_location**=] *dts_package_location*  
- 指定封裝的位置。 *dts_package_location*是**int**，預設值是**0**。 如果**0**，封裝位置是在散發者。 如果**1**，封裝位置是在 「 訂閱者 」。 封裝位置可以是**散發者**或**訂閱者**。  
+ 指定封裝的位置。 *dts_package_location*已**int**，預設值是**0**。 如果**0**，封裝位置是在散發者。 如果**1**，封裝位置是在 「 訂閱者 」。 封裝位置可以是**散發者端**或是**訂閱者**。  
   
  [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@distribution_job_name=** ] **'***distribution_job_name***'**  
- 這是散發代理程式工作的名稱。 *distribution_job_name*是**sysname**，預設值是 NULL。  
+ 這是散發代理程式工作的名稱。 *distribution_job_name*已**sysname**，預設值是 NULL。  
   
  [ **@publisher**=] **'***發行者***'**  
- 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是**sysname**，預設值是 NULL。  
+ 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應該不在上變更發行項屬性時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -193,16 +193,16 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>備註  
  **sp_changesubstatus**用於快照式複寫和異動複寫。  
   
- **sp_changesubstatus**的訂閱者端的狀態變更**syssubscriptions**資料表已變更的狀態。 必要時，它會更新中的發行項狀態**sysarticles**資料表，以指出作用中或非使用中。 必要時，將複寫旗標開啟或關閉**sysobjects**複寫資料表的資料表。  
+ **sp_changesubstatus**中的訂閱者的狀態變更**syssubscriptions**資料表具有已變更的狀態。 如有需要，它會更新中的發行項狀態**sysarticles**資料表，以指出作用中或非使用中。 如有需要，它會設定複寫旗標開啟或關閉**sysobjects**在複寫資料表的資料表。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定伺服器角色、 **db_owner**固定的資料庫角色或訂閱的建立者可以執行**sp_changesubstatus**。  
+ 只有成員**sysadmin**固定伺服器角色**db_owner**固定的資料庫角色或訂用帳戶的建立者能夠執行**sp_changesubstatus**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

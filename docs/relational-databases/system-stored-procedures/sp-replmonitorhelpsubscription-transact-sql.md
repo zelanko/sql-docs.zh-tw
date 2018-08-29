@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpsubscription (TRANSACT-SQL) |Microsoft 文件
+title: sp_replmonitorhelpsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805b06a5346f10b2fb312828906ca2c923777022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5029a4e0a903e2487941201e077888960c0a8d56
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003335"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030949"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,18 +53,18 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引數  
  [ **@publisher** = ] **'***publisher***'**  
- 這是要監視其狀態的發行者名稱。 *發行者*是**sysname**，預設值是 NULL。 如果**null**，傳回所有使用散發者之發行者的資訊。  
+ 這是要監視其狀態的發行者名稱。 *發行者*已**sysname**，預設值是 NULL。 如果**null**，傳回所有使用散發者之發行者的資訊。  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
- 這是發行的資料庫名稱。 *publisher_db*是**sysname**，預設值是 NULL。 如果是 NULL，就會傳回發行者端所有已發行資料庫的資訊。  
+ 這是發行的資料庫名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果是 NULL，就會傳回發行者端所有已發行資料庫的資訊。  
   
  [ **@publication** = ] **'***publication***'**  
- 這是要監視的發行集名稱。 *發行集*是**sysname**，預設值是 NULL。  
+ 這是要監視的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
  [ **@publication_type** =] *publication_type*  
- 若是發行集的類型。 *publication_type*是**int**，而且可以是下列值之一。  
+ 若是發行集的類型。 *publication_type*已**int**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|交易式發行集。|  
 |**1**|快照式發行集。|  
@@ -72,9 +72,9 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |NULL (預設值)|複寫會嘗試判斷發行集的類型。|  
   
  [ **@mode** =]*模式*  
- 這是傳回訂閱監視資訊時使用的篩選模式。 *模式*是**int**，而且可以是下列值之一。  
+ 這是傳回訂閱監視資訊時使用的篩選模式。 *模式*已**int**，而且可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**0** (預設)|傳回所有訂閱。|  
 |**1**|僅傳回有錯誤的訂閱。|  
@@ -86,20 +86,20 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**7**|僅傳回目前不在同步處理中的訂閱。|  
   
  [ **@topnum** =] *topnum*  
- 限制結果集只包含傳回資料頂端指定數目的訂閱。 *topnum*是**int**，沒有預設值。  
+ 限制結果集只包含傳回資料頂端指定數目的訂閱。 *topnum*已**int**，沒有預設值。  
   
  [ **@exclude_anonymous** =] *exclude_anonymous*  
- 指出是否要從結果集中排除匿名提取訂閱。 *exclude_anonymous*是**元**，預設值是**0**; 值**1**表示排除匿名訂閱，而值為**0**表示會包含。  
+ 指出是否要從結果集中排除匿名提取訂閱。 *exclude_anonymous*已**位元**，預設值是**0**; 的值**1**表示排除匿名訂閱，而值為**0**表示包含。  
   
  [  **@refreshpolicy=** ] *refreshpolicy*  
  僅供內部使用。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|檢查與發行集相關聯之所有複寫代理程式的狀態，而且會以下列順序傳回所找到的最高狀態：<br /><br /> **6** = 失敗<br /><br /> **5** = 正在重試<br /><br /> **2** = 已停止<br /><br /> **4** = 閒置<br /><br /> **3** = 進行中<br /><br /> **1** = 啟動|  
-|**警告**|**int**|屬於發行集之訂閱所產生的臨界值警告最大值，可能是其中一個或多個這些值的邏輯 OR 結果。<br /><br /> **1** = expiration – 交易式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **2** = latency-將交易式發行者的資料複寫到訂閱者所花費的時間超過臨界值，以秒為單位。<br /><br /> **4** = mergeexpiration-合併式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **8** = mergefastrunduration-完成合併訂閱的同步處理所花的時間超出臨界值，以秒為單位，快速網路連接。<br /><br /> **16** = mergeslowrunduration-完成合併訂閱的同步處理所花的時間超出臨界值，以秒為單位，慢速或撥號網路連線。<br /><br /> **32** = mergefastrunspeed – 利用的傳遞速率無法維持臨界速率，以每秒資料列，透過快速網路連接合併訂閱同步處理期間，資料列。<br /><br /> **64** = mergeslowrunspeed – 傳遞速率合併訂閱同步處理期間，資料列無法維持臨界速率，以每秒資料列，透過慢速或撥號網路連線。|  
+|**警告**|**int**|屬於發行集之訂閱所產生的臨界值警告最大值，可能是其中一個或多個這些值的邏輯 OR 結果。<br /><br /> **1** = expiration – 交易式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **2** = latency-將交易式發行者資料複寫到訂閱者所花的時間超出臨界值，以秒為單位。<br /><br /> **4** = mergeexpiration-合併式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **8** = mergefastrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，快速網路連接。<br /><br /> **16** = mergeslowrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，慢速或撥號網路連線。<br /><br /> **32** = mergefastrunspeed – 傳遞速率無法維持臨界速率，以每秒的資料列快速網路連接合併訂閱同步處理期間，資料列。<br /><br /> **64** = mergeslowrunspeed – 傳遞速率的合併訂閱同步處理期間，資料列無法維持臨界速率，以每秒的資料列，透過慢速或撥號網路連線。|  
 |**訂閱者**|**sysname**|這是訂閱者的名稱。|  
 |**subscriber_db**|**sysname**|這是訂閱所用資料庫的名稱。|  
 |**publisher_db**|**sysname**|這是發行集資料庫的名稱。|  
@@ -117,7 +117,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergeagentname**|**sysname**|這是訂閱合併式發行集之合併代理程式作業的名稱。|  
 |**mergesubscriptionfriendlyname**|**sysname**|這是提供給訂閱的易記名稱。|  
 |**mergeagentlocation**|**sysname**|這是執行合併代理程式所在伺服器的名稱。|  
-|**mergeconnectiontype**|**int**|同步處理訂閱合併式發行集時所用的連接，可以是下列其中一個值：<br /><br /> **1** = 區域網路 (LAN)<br /><br /> **2** = 撥號網路連線<br /><br /> **3** = web 同步處理。|  
+|**mergeconnectiontype**|**int**|同步處理訂閱合併式發行集時所用的連接，可以是下列其中一個值：<br /><br /> **1** = 區域網路 (LAN)<br /><br /> **2** = 撥號網路連接<br /><br /> **3** = web 同步處理。|  
 |**mergePerformance**|**int**|以上一次同步處理的傳遞速率除以先前所有傳遞速率的平均值為基礎，上一次同步處理相對於訂閱之所有同步處理的效能。|  
 |**mergerunspeed**|**float**|這是訂閱上一次同步處理的傳遞速率。|  
 |**mergerunduration**|**int**|這是完成上一次訂閱同步處理的時間長度。|  
@@ -133,12 +133,12 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_replmonitorhelpsubscription**用於所有複寫類型。  
+ **sp_replmonitorhelpsubscription**搭配所有類型的複寫。  
   
- **sp_replmonitorhelpsubscription**根據的值由在訂閱狀態嚴重性對結果集*monitorranking*。 例如，所有錯誤狀態中的訂閱資料列會排在警告狀態中的訂閱資料列上面。  
+ **sp_replmonitorhelpsubscription**排序結果集為基礎的訂用帳戶，是由值決定狀態的嚴重性*monitorranking*。 例如，所有錯誤狀態中的訂閱資料列會排在警告狀態中的訂閱資料列上面。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**db_owner**或**replmonitor**散發資料庫上的固定的資料庫角色可以執行**sp_replmonitorhelpsubscription**。  
+ 只有成員**db_owner**或是**replmonitor**散發資料庫的固定的資料庫角色可以執行**sp_replmonitorhelpsubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

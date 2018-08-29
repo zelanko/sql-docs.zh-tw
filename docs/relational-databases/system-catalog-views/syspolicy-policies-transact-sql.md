@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policies (TRANSACT-SQL) |Microsoft 文件
+title: syspolicy_policies & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,26 +18,25 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policies view
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
-caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c05a24d94ba5b65eff8c3aec2791c9993b99589
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5eb4c6d9586b2e7b6e946b461e9d6c200042223c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221499"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031249"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，針對每一個以原則為基礎的管理原則各顯示一個資料列。 syspolicy_policies 屬於 msdb 資料庫內的 dbo 結構描述。 下表描述 syspolicy_policies 檢視表中的資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|原則的識別碼。|  
-|name|**sysname**|此原則的名稱。|  
+|NAME|**sysname**|此原則的名稱。|  
 |condition_id|**int**|這個原則所強制施行或測試之條件的識別碼。|  
 |root_condition_id|**int**|僅供內部使用。|  
 |date_created|**datetime**|建立此原則的日期和時間。|  
@@ -55,7 +54,7 @@ ms.locfileid: "33221499"
 |date_modified|**datetime**|建立此原則的日期和時間。 如果從未修改過，則為 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 當您疑難排解原則式管理時，查詢[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)檢視表來判斷是否已啟用原則。 此檢視表也會顯示建立此原則或上次變更此原則的人。  
+ 當您在疑難排解以原則為基礎的管理時，請查詢[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)檢視表來判斷是否已啟用的原則。 此檢視表也會顯示建立此原則或上次變更此原則的人。  
   
 ## <a name="permissions"></a>Permissions  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  

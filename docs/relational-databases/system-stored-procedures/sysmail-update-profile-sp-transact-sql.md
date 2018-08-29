@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profile_sp (TRANSACT-SQL) |Microsoft 文件
+title: sysmail_update_profile_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a1b6d810355590ddc69c0b57fa0fc3e24e461696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4cbd14af00e8a2c4858c611b051cc0bc03a1993
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259648"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030640"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 ## <a name="arguments"></a>引數  
  [ **@profile_id** =] *profile_id*  
- 要更新的設定檔識別碼。 *profile_id*是**int**，預設值是 NULL。 至少其中*profile_id*或*profile_name*必須指定。 如果同時指定這兩者，程序會變更設定檔的名稱。  
+ 要更新的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 至少其中一個*profile_id*或是*profile_name*必須指定。 如果同時指定這兩者，程序會變更設定檔的名稱。  
   
  [ **@profile_name** = ] **'***profile_name***'**  
- 要更新之設定檔的名稱，或設定檔的新名稱。 *profile_name*是**sysname**，預設值是 NULL。 至少其中*profile_id*或*profile_name*必須指定。 如果同時指定這兩者，程序會變更設定檔的名稱。  
+ 要更新之設定檔的名稱，或設定檔的新名稱。 *profile_name*已**sysname**，預設值是 NULL。 至少其中一個*profile_id*或是*profile_name*必須指定。 如果同時指定這兩者，程序會變更設定檔的名稱。  
   
  [ **@description** = ] **'***description***'**  
- 設定檔的新描述。 *描述*是**nvarchar （256)**，預設值是 NULL。  
+ 設定檔的新描述。 *描述*已**nvarchar(256)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -60,7 +59,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="remarks"></a>備註  
  當同時指定設定檔識別碼和設定檔名稱時，程序會將設定檔名稱改成所提供的名稱，且會更新設定檔的描述。 當只提供了這些引數的其中一個時，程序會更新設定檔的描述。  
   
- 預存程序**sysmail_update_profile_sp**處於**msdb**資料庫，擁有者是**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程序**sysmail_update_profile_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
   
 ## <a name="permissions"></a>Permissions  
  執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  

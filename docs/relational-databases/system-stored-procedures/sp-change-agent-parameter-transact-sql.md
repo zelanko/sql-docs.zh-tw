@@ -1,5 +1,5 @@
 ---
-title: sp_change_agent_parameter (TRANSACT-SQL) |Microsoft 文件
+title: sp_change_agent_parameter & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d01a06f119a0c1d7669f0c811e8bee03e5eeb912
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 764bce06a3efe9d4ae2c4fbae1fa2cac6305c3bf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992525"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027373"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 ## <a name="arguments"></a>引數  
  [  **@profile_id=**] *profile_id*，  
- 這是設定檔的識別碼。 *profile_id*是**int**，沒有預設值。  
+ 這是設定檔的識別碼。 *profile_id*已**int**，沒有預設值。  
   
  [  **@parameter_name=**] **'***parameter_name***'**  
- 這是參數的名稱。 *parameter_name*是**sysname**，沒有預設值。 系統設定檔可以變更的參數會隨著代理程式的類型而不同。 若要找出哪種類型的代理程式這*profile_id*表示，找出*profile_id*中的資料行**Msagent_profiles**資料表，並記下*agent_type*值。  
+ 這是參數的名稱。 *parameter_name*已**sysname**，沒有預設值。 系統設定檔可以變更的參數會隨著代理程式的類型而不同。 若要找出何種代理程式這*profile_id*表示，找出*profile_id*中的資料行**Msagent_profiles**資料表，並記下*agent_type*值。  
   
 > [!NOTE]  
->  如果支援參數指定*agent_type*，但尚未定義代理程式設定檔中，則會傳回錯誤。 若要將參數加入代理程式設定檔必須執行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
+>  如果支援參數指定*agent_type*，但尚未定義在代理程式設定檔中，則會傳回錯誤。 若要將參數加入至您必須執行代理程式設定檔[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
- 快照集代理程式 (*agent_type*=**1**)，如果在設定檔中定義，可以變更下列屬性：  
+ 快照集代理程式 (*agent_type*=**1**)，如果定義設定檔中，可以變更下列屬性：  
   
 -   **70Subscribers**  
   
@@ -80,7 +79,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- 記錄讀取器代理程式 (*agent_type*=**2**)，如果在設定檔中定義，可以變更下列屬性：  
+ 記錄讀取器代理程式 (*agent_type*=**2**)，如果定義設定檔中，可以變更下列屬性：  
   
 -   **HistoryVerboseLevel**  
   
@@ -102,7 +101,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- 散發代理程式 」 (*agent_type*=**3**)，如果在設定檔中定義，可以變更下列屬性：  
+ 散發代理程式 (*agent_type*=**3**)，如果定義設定檔中，可以變更下列屬性：  
   
 -   **BcpBatchSize**  
   
@@ -140,7 +139,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- 合併代理程式 」 (*agent_type*=**4**)，如果在設定檔中定義，可以變更下列屬性：  
+ 合併代理程式 (*agent_type*=**4**)，如果定義設定檔中，可以變更下列屬性：  
   
 -   **AltSnapshotFolder**  
   
@@ -230,7 +229,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ValidateInterval**  
   
- 佇列讀取器代理程式 (*agent_type*=**9**)，如果在設定檔中定義，可以變更下列屬性：  
+ 佇列讀取器代理程式 (*agent_type*=**9**)，如果定義設定檔中，可以變更下列屬性：  
   
 -   **HistoryVerboseLevel**  
   
@@ -248,16 +247,16 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- 若要查看已為給定的設定檔定義的參數，執行**sp_help_agent_profile**並記下*profile_name*聯*profile_id*。 以適當*profile_id*，接下來執行**sp_help_agent_parameters**使用該*profile_id*若要查看與設定檔相關聯的參數。 可以在設定檔中加入參數，藉由執行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
+ 若要查看已針對給定的設定檔定義哪些參數，執行**sp_help_agent_profile** ，並記下*profile_name*相關聯*profile_id*。 以適當*profile_id*，接下來執行**sp_help_agent_parameters**使用該*profile_id*查看設定檔相關聯的參數。 可以在設定檔中加入參數，藉由執行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
  [  **@parameter_value=**] **'***parameter_value***'**  
- 這是參數的新值。 *parameter_value*是**nvarchar （255)**，沒有預設值。  
+ 這是參數的新值。 *parameter_value*已**nvarchar(255)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_change_agent_parameter**用於所有複寫類型。  
+ **sp_change_agent_parameter**用於所有類型的複寫。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_change_agent_parameter**。  
@@ -269,9 +268,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_resetsnapshotdeliveryprogress (TRANSACT-SQL) |Microsoft 文件
+title: sp_resetsnapshotdeliveryprogress (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_resetsnapshotdeliveryprogress
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b83b9acee402345a355439fdb0059dfadc3aeb3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 899a590bb2c634568399aca6f5520b52d26a52b4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995565"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022734"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
   
 ## <a name="arguments"></a>引數  
  [ **@verbose_level**=] *verbose_level*  
- 指定傳回的資訊量。 *verbose_level*是**int**，預設值是**1**。 值為**1**表示錯誤是傳回如果無法取得必要的鎖定上**MSsnapshotdeliveryprogress**資料表，和**0**表示不會傳回錯誤。  
+ 指定傳回的資訊量。 *verbose_level*已**int**，預設值是**1**。 值**1**表示錯誤是傳回如果無法取得必要的鎖定上**MSsnapshotdeliveryprogress**資料表，並**0**表示會傳回任何錯誤。  
   
  [ **@drop_table**=] **'***drop_table***'**  
- 要卸除或截斷資料表包含進度資訊的快照集。*drop_table*是**nvarchar （5)**，預設值是**FALSE**。 False 表示截斷資料表，而 True 表示卸除資料表。  
+ 要卸除或截斷資料表包含有關進度的快照集。*drop_table*是**nvarchar(5)**，預設值是**FALSE**。 False 表示截斷資料表，而 True 表示卸除資料表。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_resetsnapshotdeliveryprogress**移除所有資料列中的**MSsnapshotdeliveryprogress**資料表。 它可以有效移除所有被先前在快照集傳遞處理序所製作的任何進度留在訂閱資料庫的中繼資料。  
+ **sp_resetsnapshotdeliveryprogress**中的所有資料列會移除**MSsnapshotdeliveryprogress**資料表。 它可以有效移除所有被先前在快照集傳遞處理序所製作的任何進度留在訂閱資料庫的中繼資料。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_resetsnapshotdeliveryprogress**。  

@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepublication (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropmergepublication & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a360ce767a80dd9f77f35a22d92b65d3a52777c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8876bc0e1007d942bde42a9a5a2472b58f6fa1f5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030786"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +49,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是要卸除的發行集名稱。 *發行集*是**sysname**，沒有預設值。 如果**所有**，移除所有現有的合併式發行集以及與其相關聯的快照集代理程式作業。 如果您指定的特定值*發行集*，卸除這個發行集與它相關聯的快照集代理程式作業。  
+ 這是要卸除的發行集名稱。 *發行集*已**sysname**，沒有預設值。 如果**所有**，移除所有現有的合併式發行集以及與其相關聯的快照集代理程式作業。 如果您指定特定值如*發行集*，會卸除這個發行集和其相關聯的快照集代理程式作業。  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
- 用來卸除發行集，且不在散發者端執行清除作業。 *ignore_distributor*是**元**，預設值是**0**。 當重新安裝散發者時，也會使用這個參數。  
+ 用來卸除發行集，且不在散發者端執行清除作業。 *ignore_distributor*已**位元**，預設值是**0**。 當重新安裝散發者時，也會使用這個參數。  
   
  [  **@reserved=**]*保留*  
- 保留供日後使用。 *保留*是**元**，預設值是**0**。  
+ 保留供日後使用。 *保留*已**位元**，預設值是**0**。  
   
  [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
  僅供內部使用。  
@@ -65,9 +66,9 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_dropmergepublication**用於合併式複寫中。  
   
- **sp_dropmergepublication**遞迴卸除發行集相關聯的所有發行項，然後再卸除發行集本身。 如果發行集有一或多項訂閱，便不能移除它。 如需如何移除訂用帳戶資訊，請參閱[Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)和[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
+ **sp_dropmergepublication**遞迴卸除發行集相關聯的所有發行項，然後再卸除發行集本身。 如果發行集有一或多項訂閱，便不能移除它。 如需有關如何移除訂用帳戶的資訊，請參閱 < [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)並[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
- 執行**sp_dropmergepublication**卸除發行集不會移除已發行的物件發行集資料庫或從訂閱資料庫對應的物件。 請使用 DROP\<物件 > 來手動移除這些物件，如有必要。  
+ 執行**sp_dropmergepublication**卸除發行集不會移除已發行的物件從發行集資料庫或從訂閱資料庫對應的物件。 請使用 DROP\<物件 > 來手動移除這些物件，如有必要。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
@@ -77,7 +78,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [刪除發行集](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_schemafilter (TRANSACT-SQL) |Microsoft 文件
+title: sp_schemafilter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce33fa1ffb73f3ba663eb9ec7fedf0e13d5ec8e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da23d87736d7ad9af4c00c5f4704e9cbbdd5160
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997515"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027032"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +48,15 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引數  
  [**@publisher** =] **'***發行者***'**  
- 名稱非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是**sysname**，沒有預設值。  
+ 名稱的非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，沒有預設值。  
   
  [**@schema** =] **'***結構描述***'**  
- 這是結構描述的名稱。 *結構描述*是**sysname**，預設值是 NULL。  
+ 這是結構描述的名稱。 *結構描述*已**sysname**，預設值是 NULL。  
   
  [**@operation** =] **'***作業***'**  
- 這是在此結構描述上所要採取的動作。 *作業*是**nvarchar （4)**，而且可以是下列值之一。  
+ 這是在此結構描述上所要採取的動作。 *作業*已**nvarchar(4)**，而且可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**add**|將指定的結構描述加入不適合發行的結構描述清單中。|  
 |**卸除**|從不適合發行的結構描述清單中，卸除指定的結構描述。|  
@@ -64,7 +64,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**schemaname**|**sysname**|這是不適合發行的結構描述名稱。|  
   

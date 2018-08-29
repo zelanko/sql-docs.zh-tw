@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_help_change_data_capture (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_cdc_help_change_data_capture (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263214"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027244"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,26 +49,26 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @source_schema =] '*source_schema*'  
- 這是來源資料表所屬的結構描述名稱。 *source_schema*是**sysname**，預設值是 NULL。 當*source_schema*指定，則*source_name*也必須指定。  
+ [ @source_schema =] '*source_schema&lt*'  
+ 這是來源資料表所屬的結構描述名稱。 *source_schema&lt*已**sysname**，預設值是 NULL。 當*source_schema&lt*指定，則*source_name*也必須指定。  
   
- 如果不是 NULL， *source_schema*必須存在於目前的資料庫。  
+ 如果不是 NULL， *source_schema&lt*必須存在於目前的資料庫。  
   
- 如果*source_schema*為非 NULL *source_name*也必須為非 NULL。  
+ 如果*source_schema&lt*為非 NULL *source_name*也必須為非 NULL。  
   
  [ @source_name =] '*source_name*'  
- 這是來源資料表的名稱。 *source_name*是**sysname**，預設值是 NULL。 當*source_name*指定，則*source_schema*也必須指定。  
+ 這是來源資料表的名稱。 *source_name*已**sysname**，預設值是 NULL。 當*source_name*指定，則*source_schema&lt*也必須指定。  
   
  如果不是 NULL， *source_name*必須存在於目前的資料庫。  
   
- 如果*source_name*為非 NULL *source_schema*也必須為非 NULL。  
+ 如果*source_name*為非 NULL *source_schema&lt*也必須為非 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|來源資料表結構描述的名稱。|  
 |source_table|**sysname**|來源資料表的名稱。|  
@@ -88,10 +87,10 @@ sys.sp_cdc_help_change_data_capture
 |captured_column_list|**nvarchar(max)**|擷取的來源資料行清單。|  
   
 ## <a name="remarks"></a>備註  
- 當同時*source_schema*和*source_name*預設為 NULL，或者都明確設定為 NULL 時，此預存程序會傳回所有資料庫的資訊已選取呼叫端的擷取執行個體存取權。 當*source_schema*和*source_name*為非 NULL 時，會傳回特定具名之啟用資料表上的唯一資訊。  
+ 當兩者*source_schema&lt*並*source_name*預設為 NULL，或明確設定為 NULL 時，此預存程序就會傳回所有資料庫的資訊，呼叫端已選取的擷取執行個體存取權。 當*source_schema&lt*並*source_name*為非 NULL 時，傳回特定具名之啟用資料表的唯一資訊。  
   
 ## <a name="permissions"></a>Permissions  
- 當*source_schema*和*source_name*為 NULL 時，呼叫者的授權就會決定結果集中所包含的已啟用的資料表。 呼叫端必須擁有擷取執行個體之所有擷取資料行的 SELECT 權限，以及要包含之資料表資訊的任何已定義控制角色中的成員資格。 db_owner 資料庫角色的成員可以檢視所有已定義之擷取執行個體的相關資訊。 要求特定啟用資料表的資訊時，就會針對具名資料表套用相同的 SELECT 和成員資格準則。  
+ 當*source_schema&lt*並*source_name*為 NULL 時，呼叫端的授權可讓您判斷哪些啟用的資料表會包含在結果集中。 呼叫端必須擁有擷取執行個體之所有擷取資料行的 SELECT 權限，以及要包含之資料表資訊的任何已定義控制角色中的成員資格。 db_owner 資料庫角色的成員可以檢視所有已定義之擷取執行個體的相關資訊。 要求特定啟用資料表的資訊時，就會針對具名資料表套用相同的 SELECT 和成員資格準則。  
   
 ## <a name="examples"></a>範例  
   

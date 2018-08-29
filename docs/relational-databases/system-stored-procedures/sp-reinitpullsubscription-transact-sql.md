@@ -1,5 +1,5 @@
 ---
-title: sp_reinitpullsubscription (TRANSACT-SQL) |Microsoft 文件
+title: sp_reinitpullsubscription & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997075"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018251"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引數  
  [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
+ 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+ 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
  [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 all，將標示為重新初始化所有訂閱。  
+ 這是發行集的名稱。 *發行集*已**sysname**，預設值是 all，將標示為重新初始化所有訂閱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -62,13 +62,13 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>備註  
  **sp_reinitpullsubscription**用於異動複寫中。  
   
- **sp_reinitpullsubscription**至點對點異動複寫不支援。  
+ **sp_reinitpullsubscription**的對等項目-異動複寫不支援。  
   
- **sp_reinitpullsubscription**可以從 「 訂閱者 」 重新初始化訂閱，散發代理程式下次執行時呼叫。  
+ **sp_reinitpullsubscription**可以從 「 訂閱者 」 重新初始化訂閱，散發代理程式下一次執行期間呼叫。  
   
- 值建立的發行集的訂閱**false**如**@immediate_sync**無法從訂閱者重新初始化。  
+ 值建立的發行集的訂閱**false** for **@immediate_sync**無法從訂閱者重新初始化。  
   
- 您可以執行重新初始化提取訂閱**sp_reinitpullsubscription**訂閱者端或**sp_reinitsubscription**在發行者端。  
+ 您可以執行重新初始化提取訂閱**sp_reinitpullsubscription**訂閱者端或**sp_reinitsubscription**在 「 發行者 」。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  

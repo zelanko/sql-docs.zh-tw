@@ -1,5 +1,5 @@
 ---
-title: sp_getagentparameterlist (TRANSACT-SQL) |Microsoft 文件
+title: sp_getagentparameterlist (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getagentparameterlist
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eb58b1f831c1eaec76189b55c8758b0aa6485f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d313f0445183366735e9c1fe2b65a8eb823fcc3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994115"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021238"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
   
 ## <a name="arguments"></a>引數  
  [  **@agent_type =** ] **'***agent_type***'**  
- 這是要加入參數的複寫代理程式。 *agent_type*是**int**，而且可以是下列值之一：  
+ 這是要加入參數的複寫代理程式。 *agent_type*已**int**，而且可以是下列其中一個值：  
   
-|Value|代理程式|  
+|值|Agent|  
 |-----------|-----------|  
-|**1**|快照集|  
+|**1**|快照式|  
 |**2**|記錄讀取器|  
 |**3**|Distribution|  
 |**4**|合併式|  
@@ -65,10 +65,10 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_getagentparameter**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_add_agent_profile &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_add_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [複寫代理程式設定檔](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

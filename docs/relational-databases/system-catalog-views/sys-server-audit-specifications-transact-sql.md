@@ -1,5 +1,5 @@
 ---
-title: sys.server_audit_specifications (TRANSACT-SQL) |Microsoft 文件
+title: sys.server_audit_specifications (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.server_audit_specifications catalog view
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8f6eba2b4cd9d41c00fa48434f72bee8d093559
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e00fc4993b4afcc559b11ec8e057349aa8bee310
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219629"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038329"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有關伺服器執行個體上 SQL Server 稽核內之伺服器稽核規格的資訊。 如需 SQL Server Audit 的詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|伺服器規格的名稱。|  
 |**server_specification_id**|**整數**|識別碼**server_specification**。|  
@@ -46,7 +46,7 @@ ms.locfileid: "33219629"
 |**audit_GUID**|**uniqueidentifier**|包含這個規格之稽核的 GUID。 用在伺服器啟動期間列舉成員伺服器稽核規格時。|  
   
 ## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，主體必須不應遭到拒絕**VIEW ANY DEFINITION**權限。  
+ 具有主體**ALTER ANY SERVER AUDIT**或是**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，不應拒絕主體**VIEW ANY DEFINITION**權限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

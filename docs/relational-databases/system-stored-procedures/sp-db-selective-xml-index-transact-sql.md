@@ -1,5 +1,5 @@
 ---
-title: sp_db_selective_xml_index (TRANSACT-SQL) |Microsoft 文件
+title: sp_db_selective_xml_index (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af5f2cd7f027c583c8eeb262834ce90700b37ae0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7cbf1ef48a7cdc66a7e895c371a83e2648c6a602
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237035"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022168"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33237035"
   啟用和停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上的選擇性 XML 索引功能。 如果呼叫時未使用任何參數，則預存程序會在特定資料庫上啟用選擇性 XML 索引時傳回 1。  
   
 > [!NOTE]  
->  若要停用選擇性 XML 索引使用此預存程序，資料庫必須放在簡單復原模式中使用[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令。  
+>  若要停用選擇性 XML 索引使用這個預存程序，資料庫必須放在簡單復原模式中使用[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)命令。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33237035"
   
 ## <a name="arguments"></a>引數  
  [ **@ db_name =** ] **'***db_name***'**  
- 要啟用或停用選擇性 XML 索引所在的資料庫名稱。 如果*db_name*是 NULL 時，會假設目前的資料庫。  
+ 要啟用或停用選擇性 XML 索引所在的資料庫名稱。 如果*db_name*是 NULL，會假設目前的資料庫。  
   
  [  **@action =** ] **'***動作***'**  
  判斷要啟用或停用索引。 如果傳遞 'on'、'true'、'off' 或 'false' 以外的值，則會引發錯誤。  

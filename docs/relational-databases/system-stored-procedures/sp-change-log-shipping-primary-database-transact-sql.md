@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_primary_database (TRANSACT-SQL) |Microsoft 文件
+title: sp_change_log_shipping_primary_database & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fd020ff499dfb230478434e70cee94edb45ba92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b064cf2e2005a495f077682404fb7569f683d245
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238778"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033461"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
 ## <a name="arguments"></a>引數  
  [  **@database =** ] '*資料庫*'  
- 這是主要伺服器的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
+ 這是主要伺服器的資料庫名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
   
  [ **@backup_directory =** ] '*backup_directory*'  
- 這是主要伺服器上備份資料夾的路徑。 *backup_directory*是**nvarchar （500)**，沒有預設值，不能是 NULL。  
+ 這是主要伺服器上備份資料夾的路徑。 *backup_directory*已**nvarchar(500)**，沒有預設值，不能是 NULL。  
   
  [  **@backup_share =** ] '*backup_share*'  
- 這是主要伺服器上備份目錄的網路路徑。 *backup_share*是**nvarchar （500)**，沒有預設值，不能是 NULL。  
+ 這是主要伺服器上備份目錄的網路路徑。 *backup_share*已**nvarchar(500)**，沒有預設值，不能是 NULL。  
   
  [ **@backup_retention_period =** ] '*backup_retention_period*'  
- 這是將記錄備份檔儲存在主要伺服器備份目錄中的時間長度 (以分鐘為單位)。 *backup_retention_period*是**int**，沒有預設值，不能是 NULL。  
+ 這是將記錄備份檔儲存在主要伺服器備份目錄中的時間長度 (以分鐘為單位)。 *backup_retention_period*已**int**，沒有預設值，不能是 NULL。  
   
  [ **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
  用於連接到監視伺服器的安全性模式。  
@@ -74,7 +73,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  0 = SQL Server 驗證。  
   
- *monitor_server_security_mode*是**元**不能是 NULL。  
+ *monitor_server_security_mode&lt*已**元**不能是 NULL。  
   
  [ **@monitor_server_login =** ] '*monitor_server_login*'  
  這是用來存取監視伺服器之帳戶的使用者名稱。  
@@ -83,10 +82,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  這是用於存取監視伺服器之帳戶的密碼。  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
- 這是之前的最後一個備份之後的分鐘的時間長度*threshold_alert*就會引發錯誤。 *backup_threshold*是**int**，預設值是 60 分鐘的時間。  
+ 是一段時間，以分鐘為單位，在之前的最後一個備份之後*threshold_alert*就會引發錯誤。 *backup_threshold*已**int**，預設值是 60 分鐘的時間。  
   
  [  **@threshold_alert =** ] '*threshold_alert*'  
- 當超出備份臨界值時，所產生的警示。 *threshold_alert*是**int**不能是 NULL。  
+ 當超出備份臨界值時，所產生的警示。 *threshold_alert*已**int**不能是 NULL。  
   
  [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
  指定是否產生警示時*backup_threshold*超過。  
@@ -95,10 +94,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  0 = 已停用。  
   
- *threshold_alert_enabled*是**元**不能是 NULL。  
+ *threshold_alert_enabled*已**元**不能是 NULL。  
   
  [ **@history_retention_period =** ] '*history_retention_period*'  
- 這是保留記錄的時間長度 (以分鐘為單位)。 *history_retention_period*是**int**。若未指定，則使用 14420。  
+ 這是保留記錄的時間長度 (以分鐘為單位)。 *history_retention_period*已**int**。若未指定，則使用 14420。  
   
  [ **@backup_compression**= ] *backup_compression_option*  
  指定是否要使用記錄傳送組態[備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有在 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (或更新版本) 中才支援這個參數。  
@@ -113,16 +112,16 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  **sp_change_log_shipping_primary_database**必須從執行**主要**主要伺服器上的資料庫。 這個預存程序會執行下列動作：  
   
-1.  變更在設定**log_shipping_primary_database**記錄，如有必要。  
+1.  在設定的變更**log_shipping_primary_database**記錄，如有必要。  
   
-2.  變更中的之本機記錄**log_shipping_monitor_primary**主要伺服器上使用提供的引數，如有必要。  
+2.  變更在本機的資料錄**log_shipping_monitor_primary**主要伺服器上使用提供的引數，如有必要。  
   
-3.  如果監視伺服器不是從主要伺服器，變更就會記錄在**log_shipping_monitor_primary**監視伺服器使用提供的引數，如有必要。  
+3.  如果監視伺服器不是從主要伺服器，變更會記錄在**log_shipping_monitor_primary**監視伺服器使用提供的引數，如有必要。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
@@ -145,8 +144,8 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40;Transact SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

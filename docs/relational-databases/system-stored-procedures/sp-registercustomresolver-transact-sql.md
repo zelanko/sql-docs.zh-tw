@@ -1,5 +1,5 @@
 ---
-title: sp_registercustomresolver (TRANSACT-SQL) |Microsoft 文件
+title: sp_registercustomresolver & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56bc885e9c149b736bee5f5662816fdb90a144eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d891a458c6f150a72d5c04393825e49b5a0dabe2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998955"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027145"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 ## <a name="arguments"></a>引數  
  [  **@article_resolver =** ] **'***article_resolver***'**  
- 指定要登錄的自訂商務邏輯的易記名稱。 *article_resolver*是**nvarchar （255)**，沒有預設值。  
+ 指定要登錄的自訂商務邏輯的易記名稱。 *article_resolver*已**nvarchar(255)**，沒有預設值。  
   
  [  **@resolver_clsid=** ] **'***resolver_clsid***'**  
- 指定所登錄的 COM 物件之 CLSID 值。 自訂商務邏輯*resolver_clsid*是**nvarchar （50)**，預設值是 NULL。 當登錄商務邏輯處理常式組件時，這個參數必須設為有效的 CLSID 或設為 NULL。  
+ 指定所登錄的 COM 物件之 CLSID 值。 自訂商務邏輯*resolver_clsid*是**nvarchar(50)**，預設值是 NULL。 當登錄商務邏輯處理常式組件時，這個參數必須設為有效的 CLSID 或設為 NULL。  
   
  [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'**  
- 指定要登錄之自訂商務邏輯的類型。 *is_dotnet_assembly*是**nvarchar （50)**，預設值是 FALSE。 **true**表示要登錄的自訂商務邏輯是商務邏輯處理常式組件。**false**表示它是 COM 元件。  
+ 指定要登錄之自訂商務邏輯的類型。 *is_dotnet_assembly*已**nvarchar(50)**，預設值是 FALSE。 **true**表示要登錄的自訂商務邏輯是商務邏輯處理常式組件。**false**表示它是 COM 元件。  
   
  [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'**  
- 這是實作商務邏輯處理常式的組件名稱。 *dotnet_assembly_name*是**nvarchar （255)**，預設值是 NULL。 如果組件未部署在合併代理程式可執行檔的相同目錄、同步啟動合併代理程式之應用程式的相同目錄，或全域組件快取 (GAC) 中，您就必須指定組件的完整路徑。  
+ 這是實作商務邏輯處理常式的組件名稱。 *dotnet_assembly_name*已**nvarchar(255)**，預設值是 NULL。 如果組件未部署在合併代理程式可執行檔的相同目錄、同步啟動合併代理程式之應用程式的相同目錄，或全域組件快取 (GAC) 中，您就必須指定組件的完整路徑。  
   
  [  **@dotnet_class_name=** ] **'***dotnet_class_name***'**  
- 這是覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 來實作商務邏輯處理常式的類別名稱。 這個名稱應該指定格式**Namespace.Classname**。 *dotnet_class_name*是**nvarchar （255)**，預設值是 NULL。  
+ 這是覆寫 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 來實作商務邏輯處理常式的類別名稱。 應在表單中指定的名稱**Namespace.Classname**。 *dotnet_class_name*已**nvarchar(255)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -76,8 +76,8 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="see-also"></a>另請參閱  
  [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [針對合併發行項實作自訂衝突解析程式](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [sp_lookupcustomresolver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

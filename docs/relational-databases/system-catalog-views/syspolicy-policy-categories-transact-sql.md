@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_categories (TRANSACT-SQL) |Microsoft 文件
+title: syspolicy_policy_categories (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,27 +18,26 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_groups view
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
-caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4ae8c81343cf5792e591e42814feb7c7d9f3d5d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dde80a20278fc49532e1bbb083a75c0b590d7a39
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219949"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024689"
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，針對每一個以原則為基礎的管理原則類別目錄各顯示一個資料列。 原則類別目錄可協助您組織原則，當您有許多原則時。 下表描述 syspolicy_policy_groups 檢視表中的資料行。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，針對每一個以原則為基礎的管理原則類別目錄各顯示一個資料列。 原則類別目錄可協助您組織原則，當您有多個原則。 下表描述 syspolicy_policy_groups 檢視表中的資料行。  
  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |policy_category_id|**int**|原則類別目錄的識別碼。|  
-|name|**sysname**|原則類別目錄的名稱。|  
+|NAME|**sysname**|原則類別目錄的名稱。|  
 |mandate_database_subscriptions|**bit**|指出原則類別目錄是否會套用到執行個體內的所有資料庫而不需要明確訂閱 (1)，或是原則類別目錄是否必須使用明確訂閱 (0) 套用到資料庫。|  
   
 ## <a name="remarks"></a>備註  

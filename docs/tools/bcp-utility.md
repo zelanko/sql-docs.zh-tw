@@ -34,17 +34,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e0bf785a4e7738b569a72cc4e30c7e94cbe233ac
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 80ada2fdcdcb4f8515515e2205e57b4b008a1a08
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456052"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785145"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 如需舊版 SQL Server 的相關內容，請參閱 [bcp 公用程式](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱 [bcp 公用程式](bcp-utility.md)。
 
  > Bcp 公用程式的最新版本，請參閱[適用於 SQL Server 的 Microsoft 命令列公用程式 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 

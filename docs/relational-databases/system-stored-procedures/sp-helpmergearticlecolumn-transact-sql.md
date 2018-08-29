@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticlecolumn (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpmergearticlecolumn (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eea23a02bca21cdb714c3437bdcbb3c5ea10042f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82240c6d24f6387e8d1a9e6e105e8fdc9e0ee9e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025237"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +47,14 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 是發行集名稱。*發行集*是**sysname**，沒有預設值。  
+ 是發行集名稱。*出版物*是**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
- 這是資料表或檢視所要擷取資訊的發行項的名稱。*文章*是**sysname**，沒有預設值。  
+ 是資料表或檢視所要擷取相關資訊的發行項的名稱。*一文*是**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|識別欄位。|  
 |**column_name**|**sysname**|這是資料表或檢視的資料行名稱。|  
@@ -66,7 +67,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
  **sp_helpmergearticlecolumn**用於合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**replmonitor**散發資料庫或發行集的發行集存取清單中的固定的資料庫角色可以執行**sp_helpmergearticlecolumn**。  
+ 只有成員**replmonitor**散發資料庫或發行集之發行集存取清單中的固定的資料庫角色可以執行**sp_helpmergearticlecolumn**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

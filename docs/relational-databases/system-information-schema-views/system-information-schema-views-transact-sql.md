@@ -1,5 +1,5 @@
 ---
-title: 系統資訊結構描述檢視 (TRANSACT-SQL) |Microsoft 文件
+title: 系統資訊結構描述檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a3c0ef6d8a3c4c774b441e807c4ca513b214f26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 155073a76c84f7f90af44386f63a2b90a2144bb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240188"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022593"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>系統資訊結構描述檢視 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "33240188"
   
 |SQL Server 名稱|對應至這個相等的 SQL 標準名稱|  
 |---------------------|-----------------------------------------------|  
-|資料庫|目錄|  
+|[資料庫]|目錄|  
 |結構描述|結構描述|  
-|物件|物件|  
+|Object|Object|  
 |使用者自訂資料類型|網域|  
   
  這個名稱對應慣例適用於下列與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 相容的檢視。  

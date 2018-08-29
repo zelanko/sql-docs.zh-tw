@@ -1,5 +1,5 @@
 ---
-title: sp_dropanonymousagent (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropanonymousagent & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10b75c7c2e083a09dbebfc720487511397a1af90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6440ede3f3fe645946cfc1bfc01fe65fb20c6e55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988503"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025951"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +44,16 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
   
 ## <a name="arguments"></a>引數  
  [  **@subid=**] *sub_id*  
- 這是匿名訂閱的全域識別碼。 *sub_id*是**uniqueidentifier**，沒有預設值。 此識別碼可以擷取訂閱者端使用**sp_helppullsubscription**。 中的值**subid**傳回的結果集欄位是這個全域識別碼。  
+ 這是匿名訂閱的全域識別碼。 *sub_id*已**uniqueidentifier**，沒有預設值。 此識別碼可以擷取 「 訂閱者 」 使用**sp_helppullsubscription**。 中的值**subid**傳回的結果集的欄位是這個全域識別碼。  
   
  [  **@type=**]*類型*  
- 這是訂閱的類型。 *型別*是**int**，沒有預設值。 有效值為**1**或**2**。 指定**1**，如果快照式複寫或異動複寫使用 「 散發代理程式。 指定**2**，如果合併式複寫使用 「 合併代理程式。  
+ 這是訂閱的類型。 *型別*已**int**，沒有預設值。 有效值**1**或是**2**。 指定**1**，如果快照式複寫或異動複寫使用 「 散發代理程式。 指定**2**，如果合併式複寫使用 「 合併代理程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_dropanonymousagent**用於所有複寫類型。  
+ **sp_dropanonymousagent**用於所有類型的複寫。  
   
  這個預存程序只能用來卸除匿名訂閱代理程式，無法用來卸除已知的訂閱。  
   

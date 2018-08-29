@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_revokelogin
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 723e3bc186df4617559a15915448a4f9d87091ab
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: d983e3d8dba96bf7527254e28f63b7fedebd4fb9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103106"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036209"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ## <a name="remarks"></a>備註  
  請改用 DROP LOGIN。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要伺服器的 ALTER ANY LOGIN 權限。  
   
 ## <a name="see-also"></a>另請參閱  

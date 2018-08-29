@@ -1,5 +1,5 @@
 ---
-title: sp_dbcmptlevel (TRANSACT-SQL) |Microsoft 文件
+title: sp_dbcmptlevel (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 416842d369700f0ac7e0ecd18f84fc0b546a49f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acd4d6a2d87d97bd31b35779a9bc605dde41db04
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236847"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031941"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33236847"
   設定要相容於指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的資料庫行為。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,10 +49,10 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
 ## <a name="arguments"></a>引數  
  [  **@dbname=** ]*名稱*  
- 這是將要變更相容性層級的資料庫名稱。 資料庫名稱必須符合識別碼的規則。 *名稱*是**sysname**，預設值是 NULL。  
+ 這是將要變更相容性層級的資料庫名稱。 資料庫名稱必須符合識別碼的規則。 *名稱*已**sysname**，預設值是 NULL。  
   
  [  **@new_cmptlevel=** ]*版本*  
- 資料庫所要相容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 *版本*是**tinyint**，預設值是 NULL。 此值必須是下列其中之一：  
+ 資料庫所要相容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 *版本*已**tinyint**，預設值是 NULL。 此值必須是下列其中之一：  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -70,13 +70,13 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>結果集  
  如果未不指定任何參數，或如果*名稱*未指定參數， **sp_dbcmptlevel**會傳回錯誤。  
   
- 如果*名稱*指定不含*版本*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]傳回訊息，顯示指定之資料庫的目前相容性層級。  
+ 如果*名稱*指定不含*版本*，則[!INCLUDE[ssDE](../../includes/ssde-md.md)]傳回訊息，顯示指定之資料庫的目前的相容性層級。  
   
 ## <a name="remarks"></a>備註  
- 如需相容性層級的說明，請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+ 如需相容性層級的描述，請參閱 < [ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 只有資料庫擁有者、 成員的**sysadmin**固定伺服器角色和**db_owner**固定的資料庫角色 （如果您要變更目前的資料庫） 可以執行此程序。  
+ 只有資料庫擁有者、 隸屬**sysadmin**固定伺服器角色，而**db_owner**固定的資料庫角色 （如果您要變更目前的資料庫） 可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

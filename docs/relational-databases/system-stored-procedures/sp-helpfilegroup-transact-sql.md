@@ -1,5 +1,5 @@
 ---
-title: sp_helpfilegroup (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpfilegroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61e297999776254e85372c4b6ce25927396fdff6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 085425bd8d50c31fb894268ebce416c23c285b6b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260784"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028016"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,32 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="arguments"></a>引數  
  [ **@filegroupname =** ] **'***name***'**  
- 這是目前資料庫中任何檔案群組的邏輯名稱。 *名稱*是**sysname**，預設值是 NULL。 如果*名稱*未指定，會列出目前資料庫中的所有檔案群組，並顯示只有第一個顯示的結果集的結果集一節。  
+ 這是目前資料庫中任何檔案群組的邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*未指定，則列出目前資料庫中的所有檔案群組，並顯示只有第一個結果集的結果集一節所示。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|檔案群組的名稱。|  
 |**groupid**|**smallint**|數值檔案群組識別碼。|  
 |**filecount**|**int**|檔案群組中的檔案數目。|  
   
- 如果*名稱*已指定，會傳回一個資料列群組中每個檔案。  
+ 如果*名稱*已指定，會傳回一個資料列群組中的每個檔案。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|檔案群組中該檔案的邏輯名稱。|  
 |**fileid**|**smallint**|數值檔案識別碼。|  
 |**filename**|**nchar(260)**|檔案的實體名稱 (包含目錄路徑在內)。|  
 |**size**|**nvarchar(15)**|檔案大小 (以 KB 為單位)。|  
-|**maxsize**|**nvarchar(15)**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**大小上限**|**nvarchar(15)**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**成長**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
   

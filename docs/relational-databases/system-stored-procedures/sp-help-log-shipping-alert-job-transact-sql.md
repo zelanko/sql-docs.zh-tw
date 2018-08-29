@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_alert_job (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_log_shipping_alert_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_alert_job
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc50fac70f531643cb39f584426e245fd0c232b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59245cd3df3054fd8143bc4bf9f8a893b19852a5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241137"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032900"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_help_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引數  
- 無  
+ None  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 這個預存程序傳回[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式的記錄傳送警示作業的作業識別碼。 如果沒有任何記錄傳送警示作業存在，它會傳回空的結果集。  
+ 這個預存程序會傳回[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄傳送警示作業的代理程式作業識別碼。 如果沒有任何記錄傳送警示作業存在，它會傳回空的結果集。  
   
 ## <a name="remarks"></a>備註  
  **sp_help_log_shipping_alert_job**必須從執行**主要**監視伺服器上的資料庫。  
@@ -60,7 +59,7 @@ sp_help_log_shipping_alert_job
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

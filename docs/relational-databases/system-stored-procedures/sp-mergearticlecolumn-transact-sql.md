@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (TRANSACT-SQL) |Microsoft 文件
+title: sp_mergearticlecolumn & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999555"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023926"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,36 +52,36 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [  **@publication =**] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@article =**] **'***文章***'**  
- 這是發行集的發行項名稱。 *發行項*是**sysname**，沒有預設值。  
+ 這是發行集的發行項名稱。 *發行項*已**sysname**，沒有預設值。  
   
  [  **@column =**] **'***資料行***'**  
- 識別用來建立垂直資料分割的資料行。 *資料行*是**sysname**，預設值是 NULL。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 *資料行*不能為 NULL 時*作業*設**卸除**。 若要從發行項排除資料行，請執行**sp_mergearticlecolumn**並指定*資料行*和`@operation = N'drop'`要移除的每一個資料行從指定*文章*.  
+ 識別用來建立垂直資料分割的資料行。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 *資料行*不能是 NULL 時*操作*設定為**卸除**。 若要從發行項排除資料行，請執行**sp_mergearticlecolumn**並指定*資料行*並`@operation = N'drop'`要移除的每一個資料行從指定*文章*.  
   
  [  **@operation =**] **'***作業***'**  
- 這是訂閱狀態。 *作業*是**nvarchar （4)**，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
+ 這是訂閱狀態。 *作業*已**nvarchar(4)**，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
   
  [  **@schema_replication=**] **'***schema_replication***'**  
- 指定當執行合併代理程式時，將傳播結構描述變更。 *schema_replication*是**nvarchar （5)**，預設值是 FALSE。  
+ 指定當執行合併代理程式時，將傳播結構描述變更。 *schema_replication*已**nvarchar(5)**，預設值是 FALSE。  
   
 > [!NOTE]  
->  只有**FALSE**支援*schema_replication*。  
+>  只有**假**支援*schema_replication*。  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*是**元**，預設值是**0**。  
+ 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
   
  **0**指定合併發行項的變更不會使快照集失效。  
   
- **1**指定合併發行項的變更可能使快照集失效，如果這種情況下，值為和**1**提供將出現新的快照集的權限。  
+ **1**指定合併發行項的變更可能使快照集失效，如果這種情況下，值為**1**提供將出現新的快照集的權限。  
   
  [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
  啟用或停用重新初始化訂閱的能力。 *force_reinit_subscription*是 bit，預設值是**0**。  
   
  **0**指定合併發行項的變更不會使訂閱重新初始化。  
   
- **1**指定合併發行項的變更可能使訂閱重新初始化，以及如果這種情況下，值為**1**提供發生訂閱重新初始化的權限。  
+ **1**指定合併發行項的變更可能使訂閱重新初始化時，如果這種情況下，值為**1**提供發生之訂閱重新初始化的權限。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -102,7 +102,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_mergearticlecolumn**。  
   
 ## <a name="see-also"></a>另請參閱  
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [針對合併發行項定義及修改參數化資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [篩選發行的資料](../../relational-databases/replication/publish/filter-published-data.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

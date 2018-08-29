@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_event_bindings catalog view
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 287f5cb11acb3ddf23b0a1f77f4039a97b9da9ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c8f24a16d10b1e22324ec5ce7477e1953cffa077
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981430"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025334"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

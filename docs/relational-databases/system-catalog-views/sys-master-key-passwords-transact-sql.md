@@ -1,5 +1,5 @@
 ---
-title: sys.master_key_passwords (TRANSACT-SQL) |Microsoft 文件
+title: sys.master_key_passwords (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,27 +21,27 @@ helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5753296ea9c8b5fb90b92d1c612b4966e89b6db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8a0aa45dc4ee0e54e7880837e289b2331b5ff11e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181444"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017718"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回一個資料列加入每個資料庫主要金鑰密碼使用**sp_control_dbmasterkey_password**預存程序。 保護主要金鑰所用的密碼，是儲存在認證存放區中。 認證名稱遵照的格式如下：##DBMKEY_<database_family_guid>_<random_password_guid>##。 密碼會儲存為認證秘密。 使用新增的每個密碼**sp_control_dbmasterkey_password**中的資料列**sys.credentials**。  
+  傳回一個資料列，使用新增的每個資料庫主要金鑰密碼**sp_control_dbmasterkey_password**預存程序。 保護主要金鑰所用的密碼，是儲存在認證存放區中。 認證名稱遵照的格式如下：##DBMKEY_<database_family_guid>_<random_password_guid>##。 密碼會儲存為認證秘密。 使用新增的每個密碼**sp_control_dbmasterkey_password**，在一個資料列**sys.credentials**。  
   
- 在此檢視中的每個資料列會顯示**credential_id**和**family_guid**的資料庫主要金鑰受到該認證相關聯的密碼。 與聯結**sys.credentials**上**credential_id**會傳回有用的欄位，例如**create_date**和認證名稱。  
+ 在此檢視中的每個資料列會顯示**credential_id**並**family_guid**的資料庫主要金鑰受到與該認證相關聯的密碼。 結合**sys.credentials**上**credential_id**會傳回有用的欄位，例如**create_date**和認證名稱。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|密碼所屬的認證識別碼。 這個識別碼在伺服器執行個體中是唯一的。|  
-|**family_guid**|**uniqueidentifier**|建立時原始資料庫的唯一識別碼。 當資料庫還原或附加之後，這個 GUID 仍然不變，即使資料庫名稱改變了也是如此。<br /><br /> 如果由服務主要金鑰的自動解密失敗，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**family_guid**來識別可能會包含用來保護資料庫主要金鑰密碼的認證。|  
+|**family_guid**|**uniqueidentifier**|建立時原始資料庫的唯一識別碼。 當資料庫還原或附加之後，這個 GUID 仍然不變，即使資料庫名稱改變了也是如此。<br /><br /> 如果由服務主要金鑰自動解密失敗，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用**family_guid**來識別可能包含用來保護資料庫主要金鑰密碼的認證。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

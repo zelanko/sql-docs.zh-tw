@@ -1,5 +1,5 @@
 ---
-title: (transact-sql) |Microsoft 文件
+title: sp_server_diagnostics & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 181b5ba51d87db43392af280d8fc4178da54dcc4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263297"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028167"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
  [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
  表示預存程序會重複執行以傳送健全狀況資訊的時間間隔。  
   
- *repeat_interval_in_seconds*是**int**與預設值是 0。 有效的參數值是 0，或等於或大於 5 的任何值。 預存程序必須至少執行 5 秒，才能傳回完整資料。 預存程序以重複模式執行的最小值為 5 秒。  
+ *repeat_interval_in_seconds*已**int**與預設值是 0。 有效的參數值是 0，或等於或大於 5 的任何值。 預存程序必須至少執行 5 秒，才能傳回完整資料。 預存程序以重複模式執行的最小值為 5 秒。  
   
  如果沒有指定這個參數，或指定的值是 0，預存程序就會傳回資料一次並結束。  
   
@@ -60,30 +60,30 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
-**sp_server_diagnostics**會傳回下列資訊  
+**sp_server_diagnostics**傳回下列資訊  
   
-|資料行|資料類型|Description|  
+|「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|表示資料列建立的時間戳記。 單一資料列集的每個資料列都有相同的時間戳記。|  
 |**component_type**|**sysname**|指出資料列是否包含資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體層級元件或 Alwayson 可用性群組：<br /><br /> 執行個體<br /><br /> Alwayson: AvailabilityGroup|  
 |**元件 _ 名稱**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性群組的名稱 >*|  
-|**狀態**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0： 未知<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
+|**state**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0： 不明<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
 |**data**|**varchar (max)**|指定元件的相關資料。|  
   
  以下是五種元件的說明：  
   
--   **系統**： 從系統觀點來收集有關單一執行緒存取鎖、 嚴重處理條件、 沒有產量的工作、 分頁錯誤及 CPU 使用量資料。 這項資訊產生整體的健全狀態建議。  
+-   **系統**： 從系統觀點來收集有關單一執行緒存取鎖、 嚴重處理條件、 沒有產量的工作、 分頁錯誤和 CPU 使用量資料。 這項資訊產生整體的健全狀態建議。  
   
 -   **資源**： 從資源觀點來收集有關實體和虛擬記憶體，緩衝集區、 頁面、 快取和其他記憶體物件資料。 這項資訊產生整體的健全狀態建議。  
   
--   **query_processing**： 收集資料，從查詢處理觀點來看，在背景工作執行緒、 工作、 等候類型、 CPU 密集工作階段和封鎖的工作。 這項資訊產生整體的健全狀態建議。  
+-   **query_processing**： 收集資料，而背景工作執行緒，而工作，以查詢處理觀點等候類型、 CPU 密集工作階段和封鎖的工作。 這項資訊產生整體的健全狀態建議。  
   
 -   **io_subsystem**： 在 IO 上收集資料。 除了診斷資料之外，這個元件只產生 IO 子系統的乾淨良好或警告的健全狀態。  
   
--   **事件**： 收集資料並透過預存程序的介面上的錯誤和伺服器，包括有關信號緩衝區例外狀況詳細資料所記錄的感興趣的事件的信號緩衝區事件，以及有關記憶體 broker、 排程器監視器、 記憶體不足緩衝集區中，單一執行緒存取鎖、 安全性和連接。 事件永遠會顯示狀態 0。  
+-   **事件**： 收集資料並透過預存程序的介面上的錯誤和伺服器，包括有關信號緩衝區例外狀況，詳細資料所記錄的感興趣的事件的信號緩衝區事件，以及有關記憶體 broker，因為記憶體不足、 排程器監視器緩衝集區、 單一執行緒存取鎖、 安全性和連線能力。 事件永遠會顯示狀態 0。  
   
--   **\<可用性群組的名稱 >**： 收集指定的可用性群組的資料 (如果 component_type ="永遠上： AvailabilityGroup")。  
+-   **\<可用性群組的名稱 >**： 收集指定的可用性群組的資料 (如果 component_type ="Alwayson 上： AvailabilityGroup")。  
   
 ## <a name="remarks"></a>備註  
 從失敗觀點來看，系統、資源和 query_processing 元件將會用於失敗偵測，而 io_subsystem 和事件元件只供診斷之用。  
@@ -101,7 +101,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 每個資料列中的 (x) 表示元件的有效健全狀態。 例如，io_subsystem 會顯示為乾淨或警告。 它不會顯示錯誤狀態。  
  
 > [!NOTE]
-> Sp_server_diagnostics 內部程序的執行是高優先順序的先佔式執行緒上實作。
+> Sp_server_diagnostics 內部程序的執行是以高優先權的先佔式執行緒上實作。
   
 ## <a name="permissions"></a>Permissions  
 需要伺服器的 VIEW SERVER STATE 權限。  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e2a943234d835d1f78cf57c096fd8492849bfa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259598"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033624"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,20 +48,20 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="arguments"></a>引數  
  [  **@secondary_database =** ] '*secondary_database*'  
- 這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
+ 這是次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
   
  [ **@secondary_id =** ] '*secondary_id*'  
- 記錄傳送組態中之次要伺服器的識別碼。 *secondary_id*是**uniqueidentifier**不能是 NULL。  
+ 記錄傳送組態中之次要伺服器的識別碼。 *secondary_id*已**uniqueidentifier**不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**secondary_id**|記錄傳送組態中之次要伺服器的識別碼。|  
-|**primary_server**|主要執行個體的名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。|  
+|**primary_server**|主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。|  
 |**primary_database**|記錄傳送組態中之主要資料庫的名稱。|  
 |**backup_source_directory**|用於儲存主要伺服器之交易記錄備份檔的目錄。|  
 |**backup_destination_directory**|備份檔要複製到其中的次要伺服器目錄。|  
@@ -92,7 +91,7 @@ sp_help_log_shipping_secondary_database
 |**last_restored_latency**|在主要資料庫中建立記錄備份和在次要資料庫中還原這個記錄備份，其間所經歷的時間 (以分鐘為單位)。<br /><br /> 初始值是 NULL。|  
   
 ## <a name="remarks"></a>備註  
- 如果您包含*secondary_database*參數，結果集包含的相關資訊的次要資料庫; 如果您包含*secondary_id*結果集將包含參數，具有該次要識別碼相關聯的所有次要資料庫的相關資訊  
+ 如果您納入*secondary_database*參數，如果您包含在結果集將包含次要資料庫; 的相關資訊*secondary_id*結果集將包含參數，該次要識別碼相關聯的所有次要資料庫的相關資訊  
   
  **sp_help_log_shipping_secondary_database**必須從執行**主要**次要伺服器上的資料庫。  
   
@@ -100,8 +99,8 @@ sp_help_log_shipping_secondary_database
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_log_shipping_secondary_primary &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_help_log_shipping_secondary_primary &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

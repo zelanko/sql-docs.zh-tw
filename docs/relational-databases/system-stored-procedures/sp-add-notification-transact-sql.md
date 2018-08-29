@@ -1,5 +1,5 @@
 ---
-title: sp_add_notification (TRANSACT-SQL) |Microsoft 文件
+title: sp_add_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238405"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038288"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 ## <a name="arguments"></a>引數  
  [ **@alert_name=** ] **'***alert***'**  
- 這項通知的警示。 *警示*是**sysname**，沒有預設值。  
+ 這項通知的警示。 *警示*已**sysname**，沒有預設值。  
   
  [ **@operator_name=** ] **'***operator***'**  
- 發生警示時所要通知的操作員。 *運算子*是**sysname**，沒有預設值。  
+ 發生警示時所要通知的操作員。 *運算子*已**sysname**，沒有預設值。  
   
  [  **@notification_method=** ] *notification_method*  
- 用來通知操作員的方法。 *notification_method*是**tinyint**，沒有預設值。 *notification_method*可以是下列一或多個這些值結合**OR**邏輯運算子。  
+ 用來通知操作員的方法。 *notification_method*已**tinyint**，沒有預設值。 *notification_method*可以是下列一個或多個這些值結合**OR**邏輯運算子。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|電子郵件|  
 |**2**|呼叫器|  
@@ -64,7 +63,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  **sp_add_notification**必須從執行**msdb**資料庫。  
@@ -81,7 +80,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>範例  
  下列範例會加入指定警示 (`Test Alert`) 的電子郵件通知。  
   
-> **注意：** 這個範例假設`Test Alert`已經存在而且`François Ajenstat`是有效的運算子名稱。  
+> **注意︰** 這個範例假設`Test Alert`已經存在而且`François Ajenstat`是有效的運算子名稱。  
   
 ```  
 USE msdb ;  
@@ -95,10 +94,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
- [sp_add_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_update_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

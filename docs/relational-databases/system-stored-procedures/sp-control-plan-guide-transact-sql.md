@@ -1,5 +1,5 @@
 ---
-title: sp_control_plan_guide (TRANSACT-SQL) |Microsoft 文件
+title: sp_control_plan_guide (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f7514e07f4a363072dc527827a858becab8dc0d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd0be5eaefe85082de07b9d815e836016407ee00
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238375"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038418"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  停用目前資料庫中的所有計畫指南。 **N' * * * plan_guide_name*不能指定當指定 DISABLE ALL。  
   
  ENABLE  
- 啟用所指定的計畫指南*plan_guide_name*。 計畫指南在啟用之後，可以符合適合的查詢。 依預設，在建立計畫指南時，會啟用計畫指南。  
+ 可讓所指定的計畫指南*plan_guide_name*。 計畫指南在啟用之後，可以符合適合的查詢。 依預設，在建立計畫指南時，會啟用計畫指南。  
   
  ENABLE ALL  
  啟用目前資料庫中的所有計畫指南。 **N'***plan_guide_name***'** 不能指定當指定 ENABLE ALL。  
@@ -81,10 +81,10 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  停用已停用的計畫指南，或啟用已啟用的計畫指南，都沒有作用，執行時也不會發生錯誤。  
   
- 並非每個版本都可使用計畫指南[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不過，您可以執行**sp_control_plan_guide**使用 DROP 或 DROP ALL 選項，在任何版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 不是每個版本都可使用計劃指南[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 不過，您可以執行**sp_control_plan_guide** DROP 或 DROP ALL 選項，在任何版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="permissions"></a>Permissions  
- 若要執行**sp_control_plan_guide**上類型為 OBJECT 的計畫指南 (建立指定 **@type ='** 物件 **'** ) 需要 ALTER 權限的物件，計畫指南所參考。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
+ 若要執行**sp_control_plan_guide**上的類型 OBJECT 的計畫指南 (建立指定 **@type ='** 物件 **'** ) 需要在物件上的 ALTER 權限，計畫指南所參考。 所有其他計畫指南都需要 ALTER DATABASE 權限。  
   
 ## <a name="examples"></a>範例  
   

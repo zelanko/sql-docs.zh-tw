@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesessiondetail (TRANSACT-SQL) |Microsoft 文件
+title: sp_replmonitorhelpmergesessiondetail (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d76b4c7001f946ad01836c36982d81f90df397c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3f7c7a2ac9ea4230ca286dce90eda3d48458d41
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999035"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027724"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="arguments"></a>引數  
  [ **@session_id** = ] *session_id*  
- 指定代理程式工作階段。 *session_id*是**int**沒有預設值。  
+ 指定代理程式工作階段。 *session_id*已**int**沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|這是同步處理工作階段的階段，它可以是下列其中一項：<br /><br /> **0** = 初始化或摘要資料列<br /><br /> **1** = 上傳<br /><br /> **2** = 下載|  
 |**ArticleName**|**sysname**|這是正在同步處理的發行項名稱。 **ArticleName**也包含在結果集中不代表發行項詳細資料的資料列的摘要資訊。|  
@@ -72,10 +72,10 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="remarks"></a>備註  
  **sp_replmonitorhelpmergesessiondetail**用來監視合併式複寫。  
   
- 在 「 訂閱者 」 上執行時**sp_replmonitorhelpmergesessiondetail**只會傳回有關最後 5 的合併代理程式工作階段的詳細的資訊。  
+ 在 「 訂閱者 」 上執行時**sp_replmonitorhelpmergesessiondetail**只會傳回有關最後 5 個合併代理程式工作階段的詳細的資訊。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**db_owner**或**replmonitor**訂閱者端的訂閱資料庫或散發者端的散發資料庫上的固定的資料庫角色可以執行**sp_replmonitorhelpmergesessiondetail**。  
+ 只有成員**db_owner**或是**replmonitor**固定的資料庫角色在散發者端之散發資料庫或訂閱者端之訂閱資料庫上可以執行**sp_replmonitorhelpmergesessiondetail**。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式監視複寫](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

@@ -1,5 +1,5 @@
 ---
-title: Database Engine 預存程序 (TRANSACT-SQL) |Microsoft 文件
+title: Database Engine 預存程序 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2015
 ms.prod: sql
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], Database Engine
 - stored procedures [SQL Server], Database Engine
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b0880d72afbdd4d3c89cc5c42c399fde40bcc96d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f0be64ae2bd03c6ff79bfe52363b612a242f575
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240608"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027692"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Database Engine 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

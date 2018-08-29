@@ -17,16 +17,15 @@ helpviewer_keywords:
 - characters [SQL Server], password policies
 - strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083010"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025925"
 ---
 # <a name="strong-passwords"></a>增強式密碼
   密碼會是伺服器安全性部署中最薄弱的連結。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  
@@ -53,7 +52,7 @@ ms.locfileid: "39083010"
   
 -   包含空白字元，或以空白字元開始。  
   
--   以 $ 開頭或\@字元。  
+-   以 $ 或 \@ 字元開始。  
   
  如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! \@。 這些字元是用來初始化連接或分隔連接值。  
   

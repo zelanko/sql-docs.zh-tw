@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_logreader_agent_properties (TRANSACT-SQL) |Microsoft 文件
+title: sp_MSchange_logreader_agent_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_MSchange_logreader_agent_properties
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a9e1e011e762002a227db93146cc8350eea88ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: daf6a59d9d9a07393516de37868069b547690ff1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001825"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038028"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,49 +53,49 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引數  
  [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
+ 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+ 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- 這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*是**smallint**，沒有預設值。  
+ 這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*已**smallint**，沒有預設值。  
   
  **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
   
  **1**指定 Windows 驗證。  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- 這是連接到發行者時所用的登入。 *publisher_login*是**sysname**，沒有預設值。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*是 NULL 和*publisher_security_mode*是**1**，則在指定的 Windows 帳戶*job_login*將使用當連接到發行者。  
+ 這是連接到發行者時所用的登入。 *publisher_login*已**sysname**，沒有預設值。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*為 NULL 並*publisher_security_mode*是**1**，在指定的 Windows 帳戶*job_login*將使用當連接到發行者。  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
- 這是連接到發行者時所用的密碼。 *publisher_password*是**sysname**，沒有預設值。  
+ 這是連接到發行者時所用的密碼。 *publisher_password*已**sysname**，沒有預設值。  
   
  [ **@job_login**=] **'***job_login***'**  
- 這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**nvarchar （257)**，沒有預設值。 *無法變更非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
+ 這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 *無法變更為非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
   
  [ **@job_password**=] **'***job_password***'**  
- 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，沒有預設值。  
+ 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
   
  [ **@publisher_type**=] **'***publisher_type***'**  
- 指定當發行者不是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中執行時的發行者類型。 *publisher_type*是**sysname**，而且可以是下列值之一。  
+ 指定當發行者不是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中執行時的發行者類型。 *publisher_type*已**sysname**，而且可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。|  
 |**ORACLE**|指定標準 Oracle 發行者。|  
 |**ORACLE GATEWAY**|指定 Oracle Gateway 發行者。|  
   
- 如需有關 Oracle 發行者和 Oracle Gateway 發行者之間的差異的詳細資訊，請參閱[Oracle 發行概觀](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
+ 如需有關 Oracle 發行者 」 與 「 Oracle Gateway 發行者之間的差異的詳細資訊，請參閱 < [Oracle 發行概觀](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
   
 ## <a name="remarks"></a>備註  
  **sp_MSchange_logreader_agent_properties**用於異動複寫中。  
   
- 執行時，您必須指定所有參數**sp_MSchange_logreader_agent_properties**。 執行[sp_helplogreader_agent &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)傳回記錄讀取器代理程式作業的目前屬性。  
+ 執行時，您必須指定所有參數**sp_MSchange_logreader_agent_properties**。 執行[sp_helplogreader_agent &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)若要傳回之記錄讀取器代理程式作業目前的屬性。  
   
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
- 當發行者執行個體上執行時[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本時，您應該使用[sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)變更記錄讀取器代理程式的屬性。  
+ 當 「 發行者 」 端執行的執行個體上[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本，您應該使用[sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)來變更記錄讀取器代理程式的屬性。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**散發者端的固定的伺服器角色可以執行**sp_MSchange_logreader_agent_properties**。  

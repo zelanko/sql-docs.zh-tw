@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: bcb5b6636fcabab8d6cb5eb3709f632f9968c3a7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279259"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42785248"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "39279259"
   
  下表將描述公用記錄類別目錄的每個可用記錄層級。  
   
-|名稱|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |SEVERE|表示嚴重失敗，這是最高的記錄層級。 在 JDBC 驅動程式中，這個層次用於報告錯誤和例外狀況。|  
 |WARNING|表示潛在問題。|  
@@ -96,7 +96,7 @@ ms.locfileid: "39279259"
 |TDS.Channel|這個類別目錄會追蹤與 SQL Server 進行 TCP 通訊通道的動作。 記錄的訊息包括通訊端開啟和關閉，以及讀取和寫入。 此外，它也會追蹤有關與 SQL Server 建立安全通訊端層 (SSL) 連接的訊息。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINE、FINER 或 FINEST 而啟用。|  
 |TDS.Writer|這個類別目錄會追蹤 TDS 通道的寫入作業。 請注意，系統只會追蹤寫入的長度，而非內容。 當注意訊號傳送至伺服器以取消陳述式的執行時，這個類別目錄也會追蹤問題。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
 |TDS.Reader|這個類別目錄會在 FINEST 層級中追蹤來自 TDS 通道的特定讀取作業。 在 FINEST 層級中，追蹤可能會很詳細。 在 WARNING 和 SEVERE 層級中，這個類別目錄會追蹤此驅動程式關閉連接之前，從 SQL Server 收到無效 TDS 通訊協定的時間。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINER 和 FINEST 而啟用。|  
-|TDS.Command|這個類別目錄會追蹤低層級的狀態轉換以及與執行 TDS 命令建立關聯的其他資訊，例如 [!INCLUDE[tsql](../../includes/tsql_md.md)] 陳述式執行、ResultSet 資料指標擷取、認可等等。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
+|TDS.Command|這個類別目錄會追蹤低層級的狀態轉換以及與執行 TDS 命令建立關聯的其他資訊，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式執行、ResultSet 資料指標擷取、認可等等。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
 |TDS.TOKEN|這個類別目錄只會記錄 TDS 封包中的 Token，跟 TDS.DATA 類別目錄比起來較不詳細。 它只能透過將記錄層級設定為 FINEST 而啟用。<br /><br /> 在 FINEST 層級中，這個類別目錄會在回應中處理 TDS Token 時追蹤它們。 在 SEVERE 層級中，這個類別目錄會追蹤遇到無效 TDS Token 的時間。|  
 |SQLServerDatabaseMetaData|記錄 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE。|  
 |SQLServerResultSetMetaData|記錄 [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE。|  

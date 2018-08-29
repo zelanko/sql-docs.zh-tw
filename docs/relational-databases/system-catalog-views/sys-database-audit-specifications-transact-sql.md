@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specifications (TRANSACT-SQL) |Microsoft 文件
+title: sys.database_audit_specifications (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91195df8c736b15429d4ac7e339ff19217c91bfd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181644"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027296"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |名稱|**sysname**|稽核規格的名稱。|  
 |database_specification_id|**int**|資料庫規格的識別碼。|  
@@ -49,7 +49,7 @@ ms.locfileid: "33181644"
  如果資料庫為唯讀模式，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能無法加入資料庫稽核規格。  
   
 ## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY DATABASE AUDIT**或**VIEW DEFINITION**權限、 dbo 角色以及 db_owners 固定的資料庫角色的成員具有存取此目錄檢視。 此外，主體必須不應遭到拒絕**VIEW DEFINITION**權限。  
+ 具有主體**ALTER ANY DATABASE AUDIT**或是**VIEW DEFINITION**權限、 dbo 角色以及 db_owners 固定的資料庫角色的成員具有存取此目錄檢視。 此外，不應拒絕主體**VIEW DEFINITION**權限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

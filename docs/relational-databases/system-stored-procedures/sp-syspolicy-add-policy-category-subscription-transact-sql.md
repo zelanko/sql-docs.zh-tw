@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category_subscription (TRANSACT-SQL) |Microsoft 文件
+title: sp_syspolicy_add_policy_category_subscription & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c3e5f4079a75fca4112da1185a941b3a77e6b85
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6006c4cbcbd33b4881faf4399cee082a4891ceda
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253117"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030909"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +47,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
 ## <a name="arguments"></a>引數  
  [ **@target_type=** ] **'***target_type***'**  
- 這是類別目錄訂閱的目標類型。 *target_type*是**sysname**是必要的且必須設定為 'DATABASE'。  
+ 這是類別目錄訂閱的目標類型。 *target_type*已**sysname**是必要的且必須設定為 'DATABASE'。  
   
  [ **@target_object=** ] **'***target_object***'**  
- 會將訂閱類別目錄資料庫的名稱。 *target_object*是**sysname**，而且需要。  
+ 會將訂閱類別目錄資料庫的名稱。 *target_object*已**sysname**，而且需要。  
   
  [ **@policy_category=** ] **'***policy_category***'**  
- 是要訂閱的原則類別目錄的名稱。 *policy_category*是**sysname**，而且需要。  
+ 是要訂閱的原則類別目錄的名稱。 *policy_category&lt*已**sysname**，而且需要。  
   
- 若要取得的值*policy_category*，查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
+ 若要取得值，如*policy_category&lt*，查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
   
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 這是類別目錄訂閱的識別碼。 *policy_category_subscription_id*是**int**，而且會當做 OUTPUT 傳回。  
+ 這是類別目錄訂閱的識別碼。 *policy_category_subscription_id&lt*已**int**，而且會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -84,8 +83,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原則式管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

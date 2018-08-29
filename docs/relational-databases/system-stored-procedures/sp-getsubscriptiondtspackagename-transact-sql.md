@@ -1,5 +1,5 @@
 ---
-title: sp_getsubscriptiondtspackagename (TRANSACT-SQL) |Microsoft 文件
+title: sp_getsubscriptiondtspackagename (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getsubscriptiondtspackagename
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 755cd58c1e67ad0136e030cc63ae5d03437b76da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d3dd962761890021c5e5af2375489b8ef2d4d7b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994265"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031381"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [ **@publication**=] **'***發行集***'**  
- 這是發行集的名稱。 **'***發行集***'** 是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 **'***出版物***'** 是**sysname**，沒有預設值。  
   
  [  **@subscriber=**] **'***訂閱者***'**  
  這是訂閱者的名稱。 *訂閱者*是 sysname，預設值是 NULL。  
@@ -57,7 +57,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|DTS 封裝的名稱。|  
   

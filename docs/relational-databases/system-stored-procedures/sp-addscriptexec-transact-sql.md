@@ -1,5 +1,5 @@
 ---
-title: sp_addscriptexec (TRANSACT-SQL) |Microsoft 文件
+title: sp_addscriptexec & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e3122de37c27e8372c2aca77f4dde0b267a8d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50606c2b80e5aeae4cb68c453a130dc557111988
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989593"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035190"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,48 +48,48 @@ sp_addscriptexec [ @publication = ] publication
   
 ## <a name="arguments"></a>引數  
  [  **@publication=** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@scriptfile=** ] **'***scriptfile***'**  
- 這是 SQL 指令碼檔案的完整路徑。 *scriptfile*是**nvarchar （4000)**，沒有預設值。  
+ 這是 SQL 指令碼檔案的完整路徑。 *scriptfile*已**nvarchar(4000)**，沒有預設值。  
   
  [  **@skiperror=** ] **'***skiperror***'**  
- 表示在指令碼處理期間發生錯誤時，是否應該停止散發代理程式或合併代理程式。 *SkipError*是**元**，預設值是 0。  
+ 表示在指令碼處理期間發生錯誤時，是否應該停止散發代理程式或合併代理程式。 *SkipError*已**元**，預設值是 0。  
   
  **0** = 代理程式將會停止。  
   
- **1** = 代理程式會繼續指令碼，而且會忽略錯誤。  
+ **1** = 代理程式會繼續指令碼，並忽略錯誤。  
   
  [  **@publisher=** ] **'***發行者***'**  
- 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是**sysname**，預設值是 NULL。  
+ 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  *發行者*不應從發行時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+>  *發行者*不應從發佈時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_addscriptexec**異動複寫和合併式複寫中使用。  
+ **sp_addscriptexec**使用異動複寫與合併式複寫中。  
   
  **sp_addscriptexec**不適用於快照式複寫。  
   
- 若要使用**sp_addscriptexec**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶必須具有讀取和寫入權限的快照集位置與讀取權限的任何指令碼的位置會儲存。  
+ 若要使用**sp_addscriptexec**，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶必須具有讀取和寫入權限的任何指令碼的位置的快照集位置] 及 [讀取權限會儲存。  
   
- [Sqlcmd 公用程式](../../tools/sqlcmd-utility.md)用來執行指令碼，在訂閱者，並連接到訂閱資料庫時，散發代理程式或合併代理程式所使用的安全性內容中執行指令碼。 代理程式的舊版本上執行時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [osql 公用程式](../../tools/osql-utility.md)而非[sqlcmd](../../tools/sqlcmd-utility.md)。  
+ [Sqlcmd 公用程式](../../tools/sqlcmd-utility.md)用來執行在訂閱者，指令碼，並連接到訂閱資料庫時，散發代理程式或合併代理程式所使用的安全性內容中執行指令碼。 在舊版上執行代理程式時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則[osql 公用程式](../../tools/osql-utility.md)而非[sqlcmd](../../tools/sqlcmd-utility.md)。  
   
- **sp_addscriptexec**適用於將指令碼套用至訂閱者，並使用[sqlcmd](../../tools/sqlcmd-utility.md)来套用到訂閱者的指令碼內容。 不過，由於訂閱者組態可能會不同，因此，在公佈到發行者之前測試的指令碼仍可能在訂閱者中造成錯誤。 *skiperror*可讓您將散發代理程式或合併代理程式忽略錯誤並繼續。 使用[sqlcmd](../../tools/sqlcmd-utility.md)測試指令碼，再執行**sp_addscriptexec**。  
+ **sp_addscriptexec**可用於將指令碼套用至訂閱者，並使用[sqlcmd](../../tools/sqlcmd-utility.md)来套用到訂閱者的指令碼的內容。 不過，由於訂閱者組態可能會不同，因此，在公佈到發行者之前測試的指令碼仍可能在訂閱者中造成錯誤。 *skiperror*讓您能夠有散發代理程式或合併代理程式忽略錯誤並繼續。 使用[sqlcmd](../../tools/sqlcmd-utility.md)測試之前執行的指令碼**sp_addscriptexec**。  
   
 > [!NOTE]  
 >  略過的錯誤會繼續記錄到代理程式記錄中，以便參考。  
   
- 使用**sp_addscriptexec**公佈快照集傳遞只支援使用 FTP 的發行集的指令碼檔案[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「 訂閱者 」。  
+ 使用**sp_addscriptexec**公佈以 FTP 傳遞快照集才支援的發行集的指令碼檔案[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addscriptexec**。  
   
 ## <a name="see-also"></a>另請參閱  
- [Execute Scripts During Synchronization&#40;複寫 TRANSACT-SQL 程式設計&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+ [同步處理期間執行指令碼&#40;複寫 TRANSACT-SQL 程式設計&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [同步處理資料](../../relational-databases/replication/synchronize-data.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

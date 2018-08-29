@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_rename_condition (TRANSACT-SQL) |Microsoft 文件
+title: sp_syspolicy_rename_condition (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c44a683e247b8de88c1223f1320683486611d9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09cfb601bbe73d202fcc478edf0160f4c31bd110
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257497"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033710"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
   
 ## <a name="arguments"></a>引數  
  [ **@name=** ] **'***name***'**  
- 這是您要重新命名的條件名稱。 *名稱*是**sysname**，而且必須指定如果*condition_id*是 NULL。  
+ 這是您要重新命名的條件名稱。 *名稱*已**sysname**，而且必須指定如果*condition_id&lt*是 NULL。  
   
  [ **@condition_id=** ] *condition_id*  
- 是您想要重新命名之條件的識別碼。 *condition_id*是**int**，而且必須指定如果*名稱*是 NULL。  
+ 是您想要重新命名之條件的識別碼。 *condition_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
   
  [ **@new_name=** ] **'***new_name***'**  
- 是新條件的名稱。 *new_name*是**sysname**，而且需要。 不得為 NULL 或空字串。  
+ 這是條件的新名稱。 *new_name*已**sysname**，而且需要。 不得為 NULL 或空字串。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -60,7 +59,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_rename_condition。  
   
- 您必須指定值，其中一個*名稱*或*condition_id*。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_conditions 系統檢視表。  
+ 您必須針對指定的值*名稱*或是*condition_id&lt*。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_conditions 系統檢視表。  
   
 ## <a name="permissions"></a>Permissions  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
@@ -79,6 +78,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原則式管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

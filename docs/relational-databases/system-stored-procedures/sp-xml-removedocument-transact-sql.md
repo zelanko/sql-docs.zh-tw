@@ -1,5 +1,5 @@
 ---
-title: sp_xml_removedocument (TRANSACT-SQL) |Microsoft 文件
+title: sp_xml_removedocument (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_removedocument
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c0c3fd21797d0281001ed6f917908d4ea5d42c5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed76914663049816d7877e6fe4e3ad3709d2f3b4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255859"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027089"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_xml_removedocument hdoc
   
 ## <a name="arguments"></a>引數  
  *hdoc*  
- 這是新建立之文件的控制代碼。 無效的控制代碼會傳回錯誤。 *hdoc*是整數。  
+ 這是新建立之文件的控制代碼。 無效的控制代碼會傳回錯誤。 *hdoc*是一個整數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 >0 (失敗)  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除 XML 文件的內部表示法。 會提供文件的控制代碼作為輸入。  
@@ -65,9 +64,9 @@ EXEC sp_xml_removedocument @hdoc;
   
 ## <a name="see-also"></a>另請參閱      
  <br>[系統預存程序 (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
- <br>[XML 預存程序 (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[sys.dm_exec_xml_handles (TRANSACT-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[XML 預存程序 & Amp;#40;transact-SQL&AMP;#41](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles & Amp;#40;transact-SQL&AMP;#41;](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_preparedocument(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
- <br>[OPENXML (TRANSACT-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+ <br>[OPENXML & Amp;#40;transact-SQL&AMP;#41](../../t-sql/functions/openxml-transact-sql.md)
   
   

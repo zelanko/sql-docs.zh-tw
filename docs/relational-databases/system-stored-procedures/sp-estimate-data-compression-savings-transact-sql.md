@@ -1,5 +1,5 @@
 ---
-title: sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft 文件
+title: sp_estimate_data_compression_savings & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260581"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027537"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "33260581"
   傳回要求之物件目前的大小，並針對要求的壓縮狀態預估物件大小。 可以針對整個資料表或部分資料表評估壓縮， 這包括堆積、叢集索引、非叢集索引、索引檢視表以及資料表和索引資料分割。 您可以使用資料列壓縮或頁面壓縮來壓縮物件。 如果資料表、索引或資料分割已經壓縮，您可以使用此程序來估計已重新壓縮之資料表、索引或資料分割的大小。  
   
 > [!NOTE]  
->  壓縮和**sp_estimate_data_compression_savings**不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  壓縮並**sp_estimate_data_compression_savings**不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  若要預估使用要求壓縮設定之物件的大小，此預存程序會取樣來源物件，並將此資料載入 tempdb 內所建立的同等資料表和索引中。 然後會將 tempdb 內所建立的資料表或索引壓縮成要求的設定，並計算預估的壓縮節省程度。  
   
- 若要變更資料表、 索引或資料分割，使用的壓縮狀態[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)陳述式。 如需壓縮的一般資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
+ 若要變更資料表、 索引或分割區，使用的壓縮狀態[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或是[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)陳述式。 如需壓縮的一般資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 > [!NOTE]  
 >  如果現有的資料已分割，您或許能夠減少資料的大小，而不需要重建索引來使用壓縮。 如果是索引，將會在索引重建時套用填滿因數， 這樣可能會增加索引的大小。  
@@ -62,16 +62,16 @@ sp_estimate_data_compression_savings
   
 ## <a name="arguments"></a>引數  
  [ @schema_name=] '*schema_name*'  
- 這是包含資料表或索引檢視表的資料庫結構描述名稱。 *schema_name*是**sysname**。 如果*schema_name*為 NULL，就會使用目前使用者的預設結構描述。  
+ 這是包含資料表或索引檢視表的資料庫結構描述名稱。 *schema_name*已**sysname**。 如果*schema_name*是 NULL，會使用目前使用者的預設結構描述。  
   
  [ @object_name=] '*object_name*'  
  這是索引所在的資料表或索引檢視表名稱。 *object_name* 是 **sysname**.  
   
  [ @index_id=] '*index_id*'  
- 這是索引的識別碼。 *index_id*是**int**，而且可以是下列值之一： 索引、 NULL 或 0 的 ID 編號*object_id*是堆積。 若要傳回基底資料表或檢視表的所有索引相關資訊，請指定 NULL。 如果您指定 NULL，您也必須指定為 NULL 。  
+ 這是索引的識別碼。 *index_id*已**int**，而且可以是下列值之一： 索引、 NULL 或 0 的 ID 編號*object_id*是堆積。 若要傳回基底資料表或檢視表的所有索引相關資訊，請指定 NULL。 如果您指定 NULL，您也必須指定，則為 NULL *partition_number*。  
   
- [ @partition_number=] ''  
- 這是物件的分割區編號。 是**int**，而且可以是下列值之一： 索引或堆積、 NULL 或非資料分割索引或堆積的 1 的分割區編號。  
+ [ @partition_number=] '*partition_number*'  
+ 這是物件的分割區編號。 *partition_number*已**int**，而且可以是下列值之一： 索引或堆積、 NULL 或非資料分割索引或堆積的 1 的資料分割數目。  
   
  若要指定資料分割，您也可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函式。 若要傳回主控物件之所有資料分割的相關資訊，請指定 NULL。  
   
@@ -84,7 +84,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>結果集  
  系統會傳回下列結果集，以提供目前和估計之資料表、索引或資料分割的大小。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|資料表或索引檢視表的名稱。|  
 |schema_name|**sysname**|資料表或索引檢視表的結構描述。|  

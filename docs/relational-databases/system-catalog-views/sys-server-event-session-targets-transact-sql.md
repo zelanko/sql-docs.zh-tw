@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_targets (TRANSACT-SQL) |Microsoft 文件
+title: sys.server_event_session_targets (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54af7feefe5241df2af127a4e684f3dce2b3b7a8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9b38bfd00a699cb997f6cc73776daf6bed5f4cb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219859"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023997"
 ---
 # <a name="sysservereventsessiontargets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回事件工作階段中每一個事件目標的資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |target_id|**int**|目標的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|name|**sysname**|事件目標的名稱。 不可為 Null。|  
+|NAME|**sysname**|事件目標的名稱。 不可為 Null。|  
 |封裝|**sysname**|包含此事件目標之事件封裝的名稱。 不可為 Null。|  
 |module|**sysname**|包含此事件目標之模組的名稱。 不可為 Null。|  
   

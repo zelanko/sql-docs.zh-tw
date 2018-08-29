@@ -1,5 +1,5 @@
 ---
-title: sp_prepexec (TRANSACT-SQL) |Microsoft 文件
+title: sp_prepexec (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 caps.latest.revision: 6
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca8dd4639c4c2382ef17c4de89eee6fde1fdf9b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 863aa34286ba6ed55f27a32bd1862c5f7e5896ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250002"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025217"
 ---
 # <a name="spprepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>引數  
  *控制代碼*  
- 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-產生*處理*識別項。 *處理*是必要的參數與**int**傳回值。  
+ 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-產生*處理*識別項。 *處理*是必要的參數與**int**傳回值。  
   
  *params*  
  識別參數化的陳述式。 *Params*變數的定義會替代陳述式中的參數標記。 *params*是必要的參數呼叫**ntext**， **nchar**，或**nvarchar**輸入值。 如果陳述式未參數化，則輸入 NULL 值。  
   
  *stmt*  
- 定義資料指標結果集。 *Stmt*參數是必要而且會呼叫**ntext**， **nchar**或**nvarchar**輸入值。  
+ 定義資料指標結果集。 *Stmt*為必要參數，呼叫**ntext**， **nchar**或是**nvarchar**輸入值。  
   
  *bound_param*  
  指定選擇性使用其他參數。 *bound_param*呼叫的任何資料類型，來指定使用中的其他參數的輸入值。  
@@ -73,7 +73,7 @@ EXEC sp_unprepare @P1;
   
 ## <a name="see-also"></a>另請參閱  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
- [sp_execute &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
+ [sp_execute &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

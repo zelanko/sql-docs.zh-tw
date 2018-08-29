@@ -1,5 +1,5 @@
 ---
-title: sp_getmergedeletetype (TRANSACT-SQL) |Microsoft 文件
+title: sp_getmergedeletetype (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_getmergedeletetype
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04437ebf7d33c81a847fe8f17ca74a0cb68b4279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96258cb01e49c3d0b3fc2b83960e7d4aff6b64a1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027755"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +46,15 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 ## <a name="arguments"></a>引數  
  [  **@source_object =**] **'***source_object***'**  
- 這是來源物件的名稱。 *source_object*是**nvarchar （386)**，沒有預設值。  
+ 這是來源物件的名稱。 *source_object*已**nvarchar(386)**，沒有預設值。  
   
  [  **@rowguid=**] **'***rowguid***'**  
- 這是刪除類型的資料列識別碼。 *rowguid*是**uniqueidentifier**，沒有預設值。  
+ 這是刪除類型的資料列識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
   
  [  **@delete_type=**] *delete_type* **輸出**  
- 這是表示刪除類型的代碼。 *delete_type*是**int**，沒有預設值。 *delete_type*也是一個 OUTPUT 參數，而且可以是下列值之一。  
+ 這是表示刪除類型的代碼。 *delete_type*已**int**，沒有預設值。 *delete_type*也是一個 OUTPUT 參數，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|使用者刪除|  
 |**5**|部分刪除|  

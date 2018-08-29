@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278819"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785738"
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278819"
 > [!NOTE]  
 >  雖然先前的範例是在連接字串中使用使用者名稱及密碼，但是您應該使用整合式安全性，因為它更安全。 如需詳細資訊，請參閱本主題稍後的[使用整合式驗證連線](#Connectingintegrated)。  
   
- 下列連接字串示範如何從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援的任何作業系統上執行的應用程式，使用整合式驗證和 Kerberos 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫：  
+ 下列連接字串示範如何從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援的任何作業系統上執行的應用程式，使用整合式驗證和 Kerberos 連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫：  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>具名和多個 SQL Server 執行個體  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允許在每部伺服器上安裝多個資料庫執行個體。 並以特定的名稱識別每個執行個體。 若要連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的具名執行個體，您可以指定具名執行個體的連接埠號碼 (偏好選項)，或者將執行個體名稱指定為 JDBC URL 屬性或 **datasource** 屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許在每部伺服器上安裝多個資料庫執行個體。 並以特定的名稱識別每個執行個體。 若要連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，您可以指定具名執行個體的連接埠號碼 (偏好選項)，或者將執行個體名稱指定為 JDBC URL 屬性或 **datasource** 屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
   
  若要使用通訊埠號碼，請執行下列：  
   

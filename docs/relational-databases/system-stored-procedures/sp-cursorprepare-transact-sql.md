@@ -1,5 +1,5 @@
 ---
-title: sp_cursorprepare (TRANSACT-SQL) |Microsoft 文件
+title: sp_cursorprepare (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b616b58f13845c06dbc6510e2d4ca28dee744192
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 32e045fe8cc12a8419e94759176e2871db2d2422
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239838"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036524"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 ## <a name="arguments"></a>引數  
  *prepared_handle*  
- SQL Server 產生準備*處理*傳回整數值的識別項。  
+ SQL Server 產生備妥*處理*傳回整數值的識別碼。  
   
 > [!NOTE]  
 >  *prepared_handle*後續會提供給 sp_cursorexecute 程序以便開啟資料指標。 一旦建立控制代碼之後，在您登出或是透過 sp_cursorunprepare 程序明確將它移除之前，它都會存在。  
@@ -55,25 +55,25 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  識別參數化的陳述式。 *Params*變數的定義會替代陳述式中的參數標記。 *params*是必要的參數呼叫**ntext**， **nchar**，或**nvarchar**輸入值。 如果陳述式未參數化，則輸入 NULL 值。  
   
 > [!NOTE]  
->  使用**ntext**字串做為輸入值時*stmt*參數化和*scrollopt* PARAMETERIZED_STMT 值為 ON。  
+>  使用**ntext**字串做為輸入值時*stmt*已參數化而*scrollopt* PARAMETERIZED_STMT 值為 ON。  
   
  *stmt*  
- 定義資料指標結果集。 *Stmt*參數是必要而且會呼叫**ntext**， **nchar**或**nvarchar**輸入值。  
+ 定義資料指標結果集。 *Stmt*為必要參數，呼叫**ntext**， **nchar**或是**nvarchar**輸入值。  
   
 > [!NOTE]  
->  指定的規則*stmt*值會與 sp_cursoropen，發生例外狀況的相同， *stmt*字串資料類型必須是**ntext**。  
+>  指定的規則*stmt*都與 sp_cursoropen，發生例外狀況的相同的值， *stmt*字串資料類型必須是**ntext**。  
   
  *options*  
- 傳回資料指標結果集資料行描述的選擇性參數。 *選項*必須符合下列需求**int**輸入值。  
+ 傳回資料指標結果集資料行描述的選擇性參數。 *選項*需要下列**int**輸入值。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
- 捲動選項。 *scrollopt*是需要下列其中一個選擇性參數**int**輸入值。  
+ 捲動選項。 *scrollopt*是選擇性參數，它需要下列其中一項**int**輸入值。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,12 +90,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 因為要求的值可能不適合用於所定義的資料指標*stmt*，這個參數會當做輸入和輸出。 在這類情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派適合的值。  
+ 因為要求的值可能不適合所定義的資料指標*stmt*，此參數會當做輸入和輸出。 在這類情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會指派適合的值。  
   
  *ccopt*  
- 並行控制選項。 *ccopt*是需要下列其中一個選擇性參數**int**輸入值。  
+ 並行控制選項。 *ccopt*是選擇性參數，它需要下列其中一項**int**輸入值。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -114,21 +114,21 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>備註  
  RPC 狀態參數是下列其中一項：  
   
-|Value|설명|  
+|值|描述|  
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失敗|  
-|1FF6|無法傳回中繼資料。<br /><br /> 注意： 這是因為陳述式不會產生結果集;例如，它是 INSERT 或 DDL 陳述式。|  
+|1FF6|無法傳回中繼資料。<br /><br /> 注意： 這是因為該陳述式不會產生結果集;比方說，它是在 INSERT 或 DDL 陳述式。|  
   
 ## <a name="examples"></a>範例  
- 當*stmt*參數化和*scrollopt* PARAMETERIZED_STMT 值為 ON，字串的格式如下所示：  
+ 當*stmt*已參數化而*scrollopt* PARAMETERIZED_STMT 值是 ON，字串的格式如下所示：  
   
- { *\<本機變數名稱 > * *\<資料型別 >* } [，...*n* ]  
+ { *\<本機變數名稱 > * *\<資料類型 >* } [，...*n* ]  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursorexecute &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorexecute &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

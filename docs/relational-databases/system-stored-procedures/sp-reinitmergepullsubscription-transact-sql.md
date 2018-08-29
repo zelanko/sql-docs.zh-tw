@@ -1,5 +1,5 @@
 ---
-title: sp_reinitmergepullsubscription (TRANSACT-SQL) |Microsoft 文件
+title: sp_reinitmergepullsubscription & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20c701adf431f550f107a9cef08f1a3e49a9d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54245be4b829b4dc6bffe59d79c93d63576338f6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996945"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031190"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
   
 ## <a name="arguments"></a>引數  
  [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*是**sysname**，所有的預設值。  
+ 這是發行者的名稱。 *發行者*已**sysname**，所有的預設值。  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，所有的預設值。  
+ 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，所有的預設值。  
   
  [ **@publication** = ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，所有的預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，所有的預設值。  
   
  [ **@upload_first** =] **'***upload_first***'**  
- 這是指在訂閱重新初始化之前，是否上傳在訂閱者端的變更。 *upload_first*是**nvarchar （5)**，預設值是 FALSE。 如果**true**，訂閱重新初始化之前上傳變更。 如果**false**，不會上傳變更。  
+ 這是指在訂閱重新初始化之前，是否上傳在訂閱者端的變更。 *upload_first*已**nvarchar(5)**，預設值是 FALSE。 如果 **，則為 true**，訂用帳戶重新初始化之前上傳變更。 如果**false**，不會上傳變更。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

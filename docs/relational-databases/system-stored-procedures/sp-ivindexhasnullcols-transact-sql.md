@@ -1,5 +1,5 @@
 ---
-title: sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft 文件
+title: sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4431ae915c43d6ceb96200c3ebbf6aa976dd4ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7ca9be2e67f49a2881171dcfb4e0a99a6672bd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995055"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023728"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
   
 ## <a name="arguments"></a>引數  
  [ **@viewname**=] **'***view_name***'**  
- 這是要驗證的檢視名稱。 *view_name*是**sysname**，沒有預設值。  
+ 這是要驗證的檢視名稱。 *view_name*已**sysname**，沒有預設值。  
   
  [ **@fhasnullcols**=] *field_has_null_columns*輸出  
- 這是一個旗標，用來指示檢視索引是否有允許 NULL 的資料行。 *view_name*是**sysname**，沒有預設值。 傳回值的**1**檢視索引是否允許 NULL 的資料行。 傳回值的**0**如果檢視不包含允許 null 值的資料行。  
+ 這是一個旗標，用來指示檢視索引是否有允許 NULL 的資料行。 *view_name*已**sysname**，沒有預設值。 傳回值**1**檢視索引是否允許 NULL 的資料行。 傳回值**0**如果檢視並未包含允許 null 值的資料行。  
   
 > [!NOTE]  
->  如果預存程序本身傳回的傳回碼**1**，這表示預存程序執行失敗，這個值是**0** ，應予忽略。  
+>  如果預存程序本身會傳回傳回碼為**1**，這表示預存程序執行失敗，這個值是**0** ，應該予以忽略。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

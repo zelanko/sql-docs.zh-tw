@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpfile (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4de2e386d30c718177482cd50d38f169922f5d8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 74acb22b50ce918f070c817cb8954b46e47bb876
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245119"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023836"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,26 +45,26 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="arguments"></a>引數  
  [ **@filename =** ] **'***name***'**  
- 這是目前資料庫中任何檔案的邏輯名稱。 *名稱*是**sysname**，預設值是 NULL。 如果*名稱*是未指定，會傳回目前資料庫中的所有檔案的屬性。  
+ 這是目前資料庫中任何檔案的邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*是未指定，會傳回目前資料庫中的所有檔案的屬性。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|邏輯檔案名稱。|  
 |**fileid**|**smallint**|檔案的數值識別碼。 如果不會傳回*名稱*指定 *。*|  
 |**filename**|**nchar(260)**|實體檔案名稱。|  
 |**filegroup**|**sysname**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
 |**size**|**nvarchar(15)**|檔案大小 (以 KB 為單位)。|  
-|**maxsize**|**nvarchar(15)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**大小上限**|**nvarchar(15)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**成長**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
-|**使用方式**|**varchar(9)**|對於資料檔中，這個值是 **'僅限資料'** 和記錄檔的值是**僅限記錄'**。|  
+|**使用方式**|**varchar(9)**|對於資料檔，這個值是 **'僅限資料'** 的值是記錄檔**僅限記錄'**。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中之檔案的相關資訊。  

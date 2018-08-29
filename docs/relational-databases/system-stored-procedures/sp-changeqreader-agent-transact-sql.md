@@ -1,5 +1,5 @@
 ---
-title: sp_changeqreader_agent (TRANSACT-SQL) |Microsoft 文件
+title: sp_changeqreader_agent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 033d33a282c7359895aba95c0e8f9d4d03e02c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82b799ed8fab4a782a89f15dab779020d63a28f4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988173"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034593"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## <a name="arguments"></a>引數  
  [ **@job_login**=] **'***job_login***'**  
- 這是用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。 *job_login*是**nvarchar （257)**，預設值是 NULL。  
+ 這是用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，預設值是 NULL。  
   
  [ **@job_password**=] **'***job_password***'**  
- 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，預設值是 NULL。  
+ 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，預設值是 NULL。  
   
  [  **@frompublisher=** ] *frompublisher*  
- 指出程序是否正在發行者端執行。 *frompublisher* bit，預設值是**0**。 值為**1**表示程序，從發行集資料庫的發行者上執行。  
+ 指出程序是否正在發行者端執行。 *frompublisher* bit，預設值是**0**。 值為**1**表示，從發行集資料庫的發行者上執行此程序。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

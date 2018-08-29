@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history_details (TRANSACT-SQL) |Microsoft 文件
+title: syspolicy_policy_execution_history_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history_details view
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c3c5836dd2811e95db27392e9bd77cbe91f6e38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 252c61b6fbaf5635361df79f89a4f9ec7ec66e50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220869"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031834"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "33220869"
   顯示已執行的條件運算式、運算式的目標、每一次執行的結果，以及任何發生之錯誤的相關詳細資料。 下表描述 syspolicy_execution_history_details 檢視表中的資料行。  
   
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|這筆記錄的識別碼。 每一筆記錄都表示嘗試評估或強制施行原則中的某一個條件運算式。 如果套用到多個目標，每一個條件都將會有每一個目標的詳細記錄。|  
 |history_id|**bigint**|記錄事件的識別碼。 每一個記錄事件都表示執行原則的某個嘗試。 由於一個條件可以有數個條件運算式及數個目標，所以 history_id 可以建立幾筆詳細記錄。 使用 history_id 資料行來聯結此檢視來[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)檢視。|  

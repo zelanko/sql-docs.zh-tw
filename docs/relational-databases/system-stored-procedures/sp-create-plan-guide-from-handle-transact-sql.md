@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide_from_handle (TRANSACT-SQL) |Microsoft 文件
+title: sp_create_plan_guide_from_handle (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c57ad0976f2079fb1f5129b1cea59817157af01a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239378"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032968"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
 ## <a name="arguments"></a>引數  
  [ @name =] N'*plan_guide_name*'  
- 計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)而且開頭不能是數字符號 （#）。 最大長度*plan_guide_name*為 124 個字元。  
+ 計畫指南的名稱。 計畫指南名稱僅限於目前的資料庫。 *plan_guide_name*必須遵守的規則[識別碼](../../relational-databases/databases/database-identifiers.md)且開頭不能是數字符號 （#）。 最大長度*plan_guide_name*為 124 個字元。  
   
  [ @plan_handle =] *plan_handle*  
- 識別工作負載中的批次。 *plan_handle*是**varbinary(64)**。 *plan_handle*可以取自[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
+ 識別工作負載中的批次。 *plan_handle*已**varbinary(64)**。 *plan_handle*可以取自[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
   
  [ @statement_start_offset =] { *statement_start_offset* |NULL}]  
- 識別指定的批次內之陳述式的開始位置*plan_handle*。 *statement_start_offset*是**int**，預設值是 NULL。  
+ 識別指定的批次內的陳述式的開始位置*plan_handle*。 *statement_start_offset*已**int**，預設值是 NULL。  
   
- 陳述式位移會對應到中的 statement_start_offset 資料行[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
+ 陳述式位移會對應中的 statement_start_offset 資料行[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動態管理檢視。  
   
  指定 NULL 時，或者未指定陳述式位移時，系統會使用指定之計畫控制代碼的查詢計畫，在批次中建立每個陳述式的計畫指南。 所產生之計畫指南相當於使用 USE PLAN 查詢提示強制使用特定之計畫的計畫指南。  
   
@@ -63,7 +63,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  並非所有陳述式類型都可以建立計畫指南。 如果無法在批次中建立陳述式的計畫指南，預存程序會忽略該陳述式，並繼續批次中的下一個陳述式。 如果有陳述式在相同批次中多次發生，會啟用最後發生之陳述式的計畫，而且會停用該陳述式之前的計畫。 如果批次中沒有陳述式可用於計畫指南，則會發生錯誤 10532，而且陳述式將會失敗。 建議您一律從 sys.dm_exec_query_stats 動態管理檢視取得計畫控制代碼以防止發生這個錯誤的可能性。  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle 會根據出現在計畫快取中的計畫，建立計畫指南。 也就是說，批次文字、[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與 XML 執行程序表都是從計畫快取逐字元取得 (包括傳遞至查詢的任何常值)，並放入所產生的計畫指南中。 這些文字字串可能包含之後會儲存到資料庫之中繼資料中的機密資訊。 具有適當的權限的使用者可以使用 sys.plan_guides 目錄檢視，檢視這項資訊和**計畫指南屬性** 對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 為確保機密資訊不會透過計畫指南而遭到揭露，建議您檢閱從計畫快取建立的計畫指南。  
+>  sp_create_plan_guide_from_handle 會根據出現在計畫快取中的計畫，建立計畫指南。 也就是說，批次文字、[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與 XML 執行程序表都是從計畫快取逐字元取得 (包括傳遞至查詢的任何常值)，並放入所產生的計畫指南中。 這些文字字串可能包含之後會儲存到資料庫之中繼資料中的機密資訊。 具有適當權限的使用者可以使用 sys.plan_guides 目錄檢視中檢視此資訊並**計畫指南屬性** 對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 為確保機密資訊不會透過計畫指南而遭到揭露，建議您檢閱從計畫快取建立的計畫指南。  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>針對查詢計畫內的多個陳述式建立計畫指南  
  諸如 sp_create_plan_guide、sp_create_plan_guide_from_handle 等會從計畫快取移除目標批次或模組的快取計畫。 這個動作的目的在於確保所有使用者都開始使用新的計畫指南。 針對單一查詢計畫內的多個陳述式建立計畫指南時，您可以在明確交易中建立所有計畫指南，藉以延後移除快取中的計畫。 此方法可讓計畫保留在快取中，直到異動完成並建立每個指定陳述式的計畫指南為止。 請參閱範例 B。  
@@ -131,7 +131,7 @@ GO
  [計畫指南](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_text_query_plan &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

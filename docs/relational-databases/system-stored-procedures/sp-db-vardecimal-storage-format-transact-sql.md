@@ -1,5 +1,5 @@
 ---
-title: sp_db_vardecimal_storage_format (TRANSACT-SQL) |Microsoft 文件
+title: sp_db_vardecimal_storage_format (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 060f5e31593456168274507cb2abe789725c586d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6bd4332bcb13b306fb49b82dac2ed1c49ecc837b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239938"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024165"
 ---
 # <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 ## <a name="arguments"></a>引數  
  [ @dbname=] '*database_name*'  
- 這是即將變更儲存格式之資料庫的名稱。 *database_name*是**sysname**，沒有預設值。 如果省略資料庫名稱，就會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有資料庫的 Vardecimal 儲存格式狀態。  
+ 這是即將變更儲存格式之資料庫的名稱。 *database_name*已**sysname**，沒有預設值。 如果省略資料庫名稱，就會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有資料庫的 Vardecimal 儲存格式狀態。  
   
  [ @vardecimal_storage_format=] {'ON' |'關閉 '}  
  指定是否啟用 Vardecimal 儲存格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 參數是**varchar(3)**，沒有預設值。 如果提供了資料庫名稱，但省略 @vardecimal_storage_format，就會傳回指定之資料庫的目前設定。 這個引數對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本沒有任何作用。  
@@ -64,7 +64,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ## <a name="result-sets"></a>結果集  
  如果無法變更資料庫儲存格式，sp_db_vardecimal_storage_format 就會傳回錯誤。 如果資料庫已經處於指定的狀態，此預存程序就沒有任何作用。  
   
- 如果@vardecimal_storage_format未提供引數，會傳回資料庫名稱和 Vardecimal State 資料行。  
+ 如果@vardecimal_storage_format未提供引數，則會傳回資料庫名稱和 Vardecimal State 資料行。  
   
 ## <a name="remarks"></a>備註  
  sp_db_vardecimal_storage_format 會傳回 Vardecimal 狀態，但是無法變更 Vardecimal 狀態。  

@@ -1,5 +1,5 @@
 ---
-title: sp_changepublication_snapshot (TRANSACT-SQL) |Microsoft 文件
+title: sp_changepublication_snapshot & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changepublication_snapshot
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d83772784d2d0c67d76087013c13621e5ca7c906
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d06d3db840f9674f65de72a589e427945ba89a4c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992835"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027469"
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [  **@publication =**] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@frequency_type =**] *frequency_type*  
- 這是代理程式的排程頻率。 *frequency_type*是**int**，而且可以是下列值之一。  
+ 這是代理程式的排程頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|視需要|  
@@ -84,9 +84,9 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |NULL (預設值)||  
   
  [  **@frequency_interval =**] *frequency_interval*  
- 指定代理程式執行的天數。 *frequency_interval*是**int**，而且可以是下列值之一。  
+ 指定代理程式執行的天數。 *frequency_interval*已**int**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -101,9 +101,9 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |NULL (預設值)||  
   
  [  **@frequency_subday =**] *frequency_subday*  
- 單位*freq_subday_interval*。 *frequency_subday*是**int**，而且可以是下列值之一。  
+ 單位*freq_subday_interval*。 *frequency_subday*已**int**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -112,55 +112,55 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |NULL (預設值)||  
   
  [  **@frequency_subday_interval =**] *frequency_subday_interval*  
- 間隔*frequency_subday*。 *frequency_subday_interval*是**int**，預設值是 NULL。  
+ 間隔*frequency_subday*。 *frequency_subday_interval*已**int**，預設值是 NULL。  
   
  [  **@frequency_relative_interval =**] *frequency_relative_interval*  
- 這是快照集代理程式的執行日期。 *frequency_relative_interval*是**int**，預設值是 NULL。  
+ 這是快照集代理程式的執行日期。 *frequency_relative_interval*已**int**，預設值是 NULL。  
   
- [  **@frequency_recurrence_factor =**] *frequency_recurrence_factor*  
- 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*是**int**，預設值是 NULL。  
+ [  **@frequency_recurrence_factor =**] *frequency_recurrence_factor&lt*  
+ 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
   
  [  **@active_start_date =**] *active_start_date*  
- 這是第一次排程快照集代理程式的日期，格式為 YYYYMMDD。 *active_start_date*是**int**，預設值是 NULL。  
+ 這是第一次排程快照集代理程式的日期，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
   
  [  **@active_end_date =**] *active_end_date*  
- 這是排程停止快照集代理程式的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是 NULL。  
+ 這是排程停止快照集代理程式的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
  [  **@active_start_time_of_day =**] *active_start_time_of_day*  
- 這是第一次排程快照集代理程式的當日時間，格式為 HHMMSS。 *active_start_time_of_day*是**int**，預設值是 NULL。  
+ 這是第一次排程快照集代理程式的當日時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
   
  [  **@active_end_time_of_day =**] *active_end_time_of_day*  
- 這是排程停止快照集代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 NULL。  
+ 這是排程停止快照集代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- 這是在使用現有作業時，現有快照集代理程式作業的名稱。 *snapshot_agent_name*是**nvarchar （100)** 預設值是 NULL。  
+ 這是在使用現有作業時，現有快照集代理程式作業的名稱。 *snapshot_agent_name*已**nvarchar(100)** 預設值是 NULL。  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
- 這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*是**smallint**，預設值是 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，以及**1**指定 Windows 驗證。 值為**0**必須指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
+ 這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*已**smallint**，預設值是 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，並**1**指定 Windows 驗證。 值為**0**您必須指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [  **@publisher_login =** ] **'***publisher_login***'**  
- 這是連接到發行者時所用的登入。 *publisher_login*是**sysname**，預設值是 NULL。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*是 NULL 和*publisher_security_mode*是**1**，然後在指定的 Windows 帳戶*job_login*時使用連接到發行者。  
+ 這是連接到發行者時所用的登入。 *publisher_login*已**sysname**，預設值是 NULL。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*為 NULL 並*publisher_security_mode*是**1**，在指定的 Windows 帳戶*job_login*時使用連接到發行者。  
   
  [  **@publisher_password =** ] **'***publisher_password***'**  
- 這是連接到發行者時所用的密碼。 *publisher_password*是**sysname**，預設值是 NULL。  
+ 這是連接到發行者時所用的密碼。 *publisher_password*已**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
  [ **@job_login** =] **'***job_login***'**  
- 這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**nvarchar （257)**，預設值是 NULL。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。 您必須在建立新的快照集代理程式作業時，提供這個參數。 您無法針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者變更這個項目。  
+ 這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，預設值是 NULL。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。 您必須在建立新的快照集代理程式作業時，提供這個參數。 您無法針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者變更這個項目。  
   
  [  **@job_password =** ] **'***job_password***'**  
- 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，預設值是 NULL。 您必須在建立新的快照集代理程式作業時，提供這個參數。  
+ 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，預設值是 NULL。 您必須在建立新的快照集代理程式作業時，提供這個參數。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
  [  **@publisher =** ] **'***發行者***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是**sysname**，預設值是 NULL。  
+ 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應建立在快照集代理程式時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -177,7 +177,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication_snapshot &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_addpublication_snapshot &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

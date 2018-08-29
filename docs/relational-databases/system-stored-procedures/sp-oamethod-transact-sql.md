@@ -1,5 +1,5 @@
 ---
-title: sp_OAMethod (TRANSACT-SQL) |Microsoft 文件
+title: sp_OAMethod (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef5d79a14aaee0b8f23738c3e359e37032d80318
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28e14076113b89c980756d42ddc126f75792d1a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260804"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035098"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +47,23 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>引數  
  *objecttoken*  
- 使用先前建立的 OLE 物件的物件 token **sp_OACreate**。  
+ 使用先前建立之 OLE 物件的物件 token **sp_OACreate**。  
   
  *方法名稱*  
  這是要呼叫之 OLE 物件的方法名稱。  
   
- *returnvalue***輸出**  
+ *returnvalue***輸出**   
  這是 OLE 物件的方法傳回值。 如果指定的話，它必須是適當資料類型的本機變數。  
   
- 如果此方法傳回單一值，也可以指定一個本機變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，它會傳回方法會傳回做為單一資料行、 單一資料列結果集給用戶端的值。  
+ 如果此方法會傳回單一值，指定區域變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，就會傳回方法會傳回給用戶端的值，做為單一資料行、 單一資料列結果集。  
   
- 如果此方法傳回的值不是 OLE 物件， *returnvalue*必須是資料類型的本機變數**int**。物件 Token 儲存在本機變數中，這個物件 Token 可以搭配其他 OLE Automation 預存程序來使用。  
+ 如果方法傳回值是一個 OLE 物件， *returnvalue*必須是資料類型的區域變數**int**。物件 Token 儲存在本機變數中，這個物件 Token 可以搭配其他 OLE Automation 預存程序來使用。  
   
- 當方法傳回值是陣列，如果*returnvalue*指定，則設定為 NULL。  
+ 當此方法傳回值是陣列，如果*returnvalue*指定時，它會設定為 NULL。  
   
  當發生下列中的任何狀況時，都會產生錯誤：  
   
--   *returnvalue*指定，但方法不會傳回值。  
+-   *returnvalue*指定，但此方法不會傳回值。  
   
 -   方法傳回含有超出二維的陣列。  
   
@@ -72,9 +72,9 @@ sp_OAMethod objecttoken , methodname
  [  *@parametername* * * =**]*參數*[**輸出**]  
  這是一個方法參數。 如果指定，*參數*必須是適當的資料類型的值。  
   
- 若要取得輸出參數，傳回值*參數*必須是適當資料類型的本機變數和**輸出**必須指定。 如果指定常數參數，或如果**輸出**未指定，任何傳回輸出參數的值會被忽略。  
+ 若要取得輸出參數，傳回值*參數*必須是適當資料類型的本機變數並**輸出**必須指定。 如果指定常數參數，或如果**輸出**未指定，所有傳回的輸出參數的值會被忽略。  
   
- 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意，  **@** *parametername*不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。@ 記號 (**@ * *) 會移除和*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
+ 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意，  **@** *parametername*不是[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。At 符號 (**@ * *) 已移除，並*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
   
  *n*  
  這是一個預留位置，表示可以指定多個參數。  
@@ -94,11 +94,11 @@ sp_OAMethod objecttoken , methodname
   
 -   二維陣列會以多資料列結果集的方式傳回給用戶端，這個資料列中有多個資料行，資料行數目等於陣列的元素數目。資料行數目等於陣列第一維的元素數目，資料列數目等於陣列第二維的元素數目。 換言之，這個陣列是以 (columns, rows) 的方式傳回。  
   
- 當屬性傳回值或方法傳回值是否為陣列、 **sp_OAGetProperty**或**sp_OAMethod**結果集傳回給用戶端。 (方法輸出參數不能是陣列。)這些程序會掃描陣列中的所有資料值來判斷適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，以及結果集中每個資料行所用的資料長度。 對於特定資料行，這些程序會利用資料類型和長度來表示這個資料行中的所有資料值。  
+ 當屬性傳回值或方法傳回值是陣列， **sp_OAGetProperty**或是**sp_OAMethod**的結果集傳回給用戶端。 (方法輸出參數不能是陣列。)這些程序會掃描陣列中的所有資料值來判斷適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，以及結果集中每個資料行所用的資料長度。 對於特定資料行，這些程序會利用資料類型和長度來表示這個資料行中的所有資料值。  
   
  當資料行中的所有資料值都共用相同的資料類型時，整個資料行都會使用這個資料類型。 當資料行中的資料值是不同資料類型時，便會根據下表來選擇整個資料行的資料類型。  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -129,7 +129,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. 取得屬性  
- 下列範例會取得`HostName`屬性 (先前建立**SQLServer**物件) 並將它儲存在區域變數中。  
+ 下列範例會取得`HostName`屬性 (先前建立**SQLServer**物件) 並將它儲存在本機變數。  
   
 ```  
 DECLARE @property varchar(255);  

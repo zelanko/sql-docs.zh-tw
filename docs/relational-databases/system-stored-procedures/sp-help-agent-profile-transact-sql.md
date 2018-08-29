@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_agent_profile & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 724cec30c6790fb7bc8e56b7fd6fe7cc273fe301
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 551122d7e31d33f50c6c1c4e4f48f76716eaa7d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995305"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024063"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,43 +47,43 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="arguments"></a>引數  
  [  **@agent_type=**] *agent_type*  
- 這是代理程式的類型。 *agent_type*是**int**，預設值是**0**，而且可以是下列值之一。  
+ 這是代理程式的類型。 *agent_type*已**int**，預設值是**0**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|快照集代理程式|  
 |**2**|記錄讀取器代理程式|  
 |**3**|散發代理程式|  
-|**4**|合併代理程式|  
+|**4**|[合併代理程式]|  
 |**9**|佇列讀取器代理程式|  
   
  [  **@profile_id=**] *profile_id*  
- 這是要顯示的設定檔識別碼。 *profile_id*是**int**，預設值是 **-1**，它會傳回中的所有設定檔**MSagent_profiles**資料表。  
+ 這是要顯示的設定檔識別碼。 *profile_id*已**int**，預設值是 **-1**，它會傳回中的所有設定檔**MSagent_profiles**資料表。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|設定檔的識別碼。|  
 |**profile_name**|**sysname**|對代理程式類型而言是唯一的。|  
 |**agent_type**|**int**|**1** = 快照集代理程式<br /><br /> **2** = 記錄讀取器代理程式<br /><br /> **3** = 散發代理程式<br /><br /> **4** = 合併代理程式<br /><br /> **9** = 佇列讀取器代理程式|  
 |**型別**|**int**|**0** = 系統<br /><br /> **1** = 自訂|  
-|**描述**|**varchar(3000)**|設定檔的描述。|  
+|**description**|**varchar(3000)**|設定檔的描述。|  
 |**def_profile**|**bit**|指定這個設定檔是否為這個代理程式類型的預設值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_help_agent_profile**用於所有複寫類型。  
+ **sp_help_agent_profile**用於所有類型的複寫。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**replmonitor**固定的資料庫角色可以執行**sp_help_agent_profile**。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_add_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

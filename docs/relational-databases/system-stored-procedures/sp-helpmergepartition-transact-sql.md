@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergepartition (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpmergepartition & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21f209b61786b07bac4a9941073d3e75b282b846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ef6a1192ac2216ff335a98709520f10610cb373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996075"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027926"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,27 +48,27 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [  **@publication=** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@suser_sname=** ] **'***suser_sname***'**  
- 這是用來定義資料分割的 SUSER_SNAME 值。 *suser_sname*是**sysname**，預設值是 NULL。 請提供這個參數，將結果集限制於 SUSER_SNAME 解析成所提供的值之資料分割。  
+ 這是用來定義資料分割的 SUSER_SNAME 值。 *suser_sname*已**sysname**，預設值是 NULL。 請提供這個參數，將結果集限制於 SUSER_SNAME 解析成所提供的值之資料分割。  
   
 > [!NOTE]  
->  當*suser_sname*提供， *host_name*必須是 NULL  
+>  當*suser_sname*提供，則*host_name*必須是 NULL  
   
  [  **@host_name=** ] **'***host_name***'**  
- 這是用來定義資料分割的 HOST_NAME 值。 *host_name*是**sysname**，預設值是 NULL。 請提供這個參數，將結果集限制於 HOST_NAME 解析成所提供的值之資料分割。  
+ 這是用來定義資料分割的 HOST_NAME 值。 *host_name*已**sysname**，預設值是 NULL。 請提供這個參數，將結果集限制於 HOST_NAME 解析成所提供的值之資料分割。  
   
 > [!NOTE]  
->  當*suser_sname*提供， *host_name*必須是 NULL  
+>  當*suser_sname*提供，則*host_name*必須是 NULL  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**資料分割**|**int**|識別訂閱者資料分割。|  
-|**host_name**|**sysname**|建立訂用帳戶的資料分割可篩選的值時所用值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式在 「 訂閱者 」。|  
-|**suser_sname**|**sysname**|建立訂用帳戶的資料分割可篩選的值時所用值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函式在 「 訂閱者 」。|  
+|**host_name**|**sysname**|值，用於建立訂用帳戶的資料分割篩選的值時[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式，在訂閱者。|  
+|**suser_sname**|**sysname**|值，用於建立訂用帳戶的資料分割篩選的值時[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函式，在訂閱者。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|訂閱者的資料分割之篩選資料快照集的位置。|  
 |**date_refreshed**|**datetime**|上次執行快照集作業來產生資料分割的篩選資料快照集的日期。|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|識別建立資料分割之篩選資料快照集的作業。|  
@@ -80,10 +80,10 @@ sp_helpmergepartition [ @publication= ] 'publication'
  **sp_helpmergepartition**用於合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色和**db_owner**固定的資料庫角色可以執行**sp_helpmergepartition**。  
+ 只有成員**sysadmin**固定的伺服器角色並**db_owner**固定的資料庫角色可以執行**sp_helpmergepartition**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addmergepartition &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_dropmergepartition &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+ [sp_addmergepartition &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_dropmergepartition &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

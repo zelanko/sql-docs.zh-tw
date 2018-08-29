@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_db (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_cdc_disable_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_db
 - change data capture [SQL Server], disabling databases
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cd6a97984889be0c7a9e8b9d9aca0a0eaf4a4a2a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b9b2c437c356b5e956f5658d76064930cb6887a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255816"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023223"
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sys.sp_cdc_disable_db
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
- **sys.sp_cdc_disable_db**停用異動資料擷取目前已啟用資料庫中所有資料表。 與異動資料擷取相關的所有系統物件 (例如，變更資料表、作業、預存程序和函數) 都會一併卸除。 **Is_cdc_enabled**資料行中的資料庫項目[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視會設為 0。  
+ **sys.sp_cdc_disable_db**停用異動資料擷取目前已啟用資料庫中的所有資料表。 與異動資料擷取相關的所有系統物件 (例如，變更資料表、作業、預存程序和函數) 都會一併卸除。 **Is_cdc_enabled**資料行中的資料庫項目[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視會設為 0。  
   
 > [!NOTE]  
 >  如果停用異動資料擷取時，針對資料庫定義了許多擷取執行個體，長時間執行的交易可能會導致 sys.sp_cdc_disable_db 的執行失敗。 您可以在執行 sys.sp_cdc_disable_db 之前，使用 sys.sp_cdc_disable_table 來停用個別的擷取執行個體，藉以避免這個問題。  
@@ -74,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_enable_db &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
- [sys.sp_cdc_disable_table &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
+ [sys.sp_cdc_disable_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
   
   

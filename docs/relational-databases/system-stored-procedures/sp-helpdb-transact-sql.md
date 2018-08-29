@@ -1,5 +1,5 @@
 ---
-title: sp_helpdb (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpdb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7961664bce12a2f1b73e8ca90c6cca11e1075d27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09dc7e451e5122600b0ea32222f6fa913c2716f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255132"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027702"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="arguments"></a>引數  
  [ **@dbname=** ] **'***name***'**  
- 這是報告資訊所屬的資料庫名稱。 *名稱*是**sysname**，沒有預設值。 如果*名稱*未指定， **sp_helpdb**報告中的所有資料庫**sys.databases**目錄檢視。  
+ 這是報告資訊所屬的資料庫名稱。 *名稱*已**sysname**，沒有預設值。 如果*名稱*未指定，則**sp_helpdb**報告中的所有資料庫**sys.databases**目錄檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料庫名稱。|  
 |**db_size**|**nvarchar(13)**|資料庫的總大小。|  
@@ -62,26 +62,26 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**status**|**nvarchar(600)**|資料庫目前所設定的資料庫選項值清單 (以逗號分隔)。<br /><br /> 布林值選項必須已啟用，才會列出。 非布林值選項會列出與對應的值的形式*option_name*=*值*。<br /><br /> 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |**compatibility_level**|**tinyint**|資料庫相容性層級：60、65、70、80 或 90。|  
   
- 如果*名稱*指定，則會顯示指定之資料庫的檔案配置的其他結果集。  
+ 如果*名稱*指定，則會顯示指定的資料庫檔案配置的其他結果集。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nchar(128)**|邏輯檔案名稱。|  
 |**fileid**|**smallint**|檔案識別碼。|  
 |**filename**|**nchar(260)**|作業系統檔案名稱 (實體檔案名稱)。|  
 |**filegroup**|**nvarchar(128)**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
 |**size**|**nvarchar(18)**|檔案大小 (以 MB 為單位)。|  
-|**maxsize**|**nvarchar(18)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**大小上限**|**nvarchar(18)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
 |**成長**|**nvarchar(18)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。|  
-|**使用方式**|**varchar(9)**|檔案的使用方式。 對於資料檔中，這個值是 **'僅限資料'** 和記錄檔的值是**僅限記錄'**。|  
+|**使用方式**|**varchar(9)**|檔案的使用方式。 資料檔案中，這個值是 **'僅限資料'** 的值是記錄檔**僅限記錄'**。|  
   
 ## <a name="remarks"></a>備註  
- **狀態**結果中的資料行集的選項已設定為 ON 的資料庫中的報表。 所有資料庫選項不會都報告**狀態**資料行。 若要查看目前的資料庫選項設定的完整清單，請使用**sys.databases**目錄檢視。  
+ **狀態**結果中的資料行集的選項，已設定為 ON 的資料庫中的報表。 所有的資料庫選項不會報告**狀態**資料行。 若要查看目前的資料庫選項設定的完整清單，請使用**sys.databases**目錄檢視。  
   
 ## <a name="permissions"></a>Permissions  
- 指定單一資料庫時，成員資格**公用**所需的資料庫中的 role。 當未不指定任何資料庫時中的成員資格**公用**中的角色**主要**資料庫是必要元件。  
+ 指定單一資料庫時，成員資格**公開**須具備在資料庫中的角色。 當未不指定任何資料庫時，成員資格**公用**中的角色**主要**資料庫是必要項。  
   
- 如果無法存取資料庫， **sp_helpdb**可能會顯示錯誤訊息 15622 和許多資料庫的資訊。  
+ 如果無法存取資料庫， **sp_helpdb**會顯示錯誤訊息 15622 和許多資料庫的資訊。  
   
 ## <a name="examples"></a>範例  
   

@@ -15,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-caps.latest.revision: 12
-author: CarlRabeler
-ms.author: carlrab
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 927c07456401bf441e3ad6491111bad6c85e3c19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cffdf311abbac196b49a5174364d8f313275ad40
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037776"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038961"
 ---
 # <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

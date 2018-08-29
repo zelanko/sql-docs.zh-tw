@@ -1,5 +1,5 @@
 ---
-title: sp_unsetapprole (TRANSACT-SQL) |Microsoft 文件
+title: sp_unsetapprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unsetapprole
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad1bc32a3d1eb6b42ccd7c709217427d2926bac6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f57eb690c679218d9bd8f639e3f3215652351f5b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252333"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026937"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,26 +45,26 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>引數  
  **@cookie**  
- 指定在應用程式角色啟動時所建立的 Cookie。 Cookie 由[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary （8000)**。  
+ 指定在應用程式角色啟動時所建立的 Cookie。 Cookie 由[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary(8000)**。  
   
 > [!NOTE]  
->  **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)**。 應用程式應繼續保留**varbinary （8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加未來的版本。  
+>  **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)**。 應用程式應繼續保留**varbinary(8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加在未來的版本。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 和 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 應用程式後啟動角色使用**sp_setapprole**，角色會保持作用中直到使用者從伺服器中斷連接或執行**sp_unsetapprole**。  
+ 應用程式角色啟動之後使用**sp_setapprole**，直到使用者從伺服器中斷連接或執行的角色會保持作用**sp_unsetapprole**。  
   
- 如需應用程式角色的概觀，請參閱[應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)。  
+ 如需應用程式角色的概觀，請參閱 <<c0> [ 應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 需要的成員資格**公用**和知識，啟動應用程式角色時，儲存的 cookie。  
+ 需要的成員資格**公開**及儲存應用程式角色啟動時的 cookie 的知識。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>利用 Cookie 啟動應用程式角色，然後還原為先前的內容  
- 下列範例會啟動含有密碼 `Sales11` 的 `fdsd896#gfdbfdkjgh700mM` 應用程式角色，然後建立 Cookie。 範例會傳回目前使用者的名稱，然後執行還原為原始內容**sp_unsetapprole**。  
+ 下列範例會啟動含有密碼 `Sales11` 的 `fdsd896#gfdbfdkjgh700mM` 應用程式角色，然後建立 Cookie。 範例會傳回目前的使用者名稱，並接著執行還原為原始的內容**sp_unsetapprole**。  
   
 ```  
 DECLARE @cookie varbinary(8000);  

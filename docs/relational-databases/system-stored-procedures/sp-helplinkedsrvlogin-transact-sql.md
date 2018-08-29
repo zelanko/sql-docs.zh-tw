@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (TRANSACT-SQL) |Microsoft 文件
+title: sp_helplinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 74f2885b8b1226afbcd7f4aceb4d6f5835e20a0b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33253261"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036570"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rmtsrvname=**] **'***v***'**  
- 這是登入對應所套用的連結伺服器名稱。 *v*是**sysname**，預設值是 NULL。 如果是 NULL，會傳回對所有連結伺服器 (定義於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機電腦中) 定義的所有登入對應。  
+ [  **@rmtsrvname=**] **'***rmtsrvname&lt***'**  
+ 這是登入對應所套用的連結伺服器名稱。 *rmtsrvname&lt*已**sysname**，預設值是 NULL。 如果是 NULL，會傳回對所有連結伺服器 (定義於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機電腦中) 定義的所有登入對應。  
   
  [  **@locallogin=**] **'***locallogin***'**  
- 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是對應至連結伺服器的本機伺服器上的登入*v*。 *locallogin*是**sysname**，預設值是 NULL。 NULL 指定上定義的所有登入對應*v*會傳回。 如果不是 NULL，對應*locallogin*至*v*必須已經存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 使用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
+ 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是對應至連結伺服器的本機伺服器登入*rmtsrvname&lt*。 *locallogin*已**sysname**，預設值是 NULL。 NULL 可讓您指定在定義的所有登入對應*rmtsrvname&lt*會傳回。 如果不是 NULL 的對應*locallogin*要*rmtsrvname&lt*必須已經存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者。 必須以直接方式或透過其被授與存取權限之 Windows 群組的成員資格，來授與 Windows 使用者存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的權限。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -60,8 +60,8 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**連結的伺服器**|**sysname**|連結伺服器名稱。|  
 |**本機登入**|**sysname**|對應所套用的本機登入。|  
-|**自我對應**|**smallint**|0 =**本機登入**對應至**遠端登入**時連接到**連結伺服器**。<br /><br /> 1 =**本機登入**對應到相同的登入和密碼時，連線到**連結伺服器**。|  
-|**遠端登入**|**sysname**|登入名稱**LinkedServer** ，對應到**LocalLogin**時**IsSelfMapping**為 0。 如果**IsSelfMapping**為 1， **RemoteLogin**是 NULL。|  
+|**自我對應**|**smallint**|0 =**本機登入**對應至**遠端登入**當連接到**連結的伺服器**。<br /><br /> 1 =**本機登入**會對應至相同的登入和密碼連接到**連結的伺服器**。|  
+|**遠端登入**|**sysname**|在 登入名稱**LinkedServer**對應至**LocalLogin**時**IsSelfMapping**為 0。 如果**IsSelfMapping**為 1，這**RemoteLogin**是 NULL。|  
   
 ## <a name="remarks"></a>備註  
  刪除登入對應之前，請使用**sp_helplinkedsrvlogin**來判斷所涉及的連結的伺服器。  
@@ -133,7 +133,7 @@ Sales            Mary          0               sa
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

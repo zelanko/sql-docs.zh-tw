@@ -1,5 +1,5 @@
 ---
-title: sp_check_join_filter (TRANSACT-SQL) |Microsoft 文件
+title: sp_check_join_filter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83e25f05600cb1a9319b865c4f7e0340e139dec5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c1941e4aeec64d388f93dc6d6e026c08011786
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991105"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025690"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,23 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="arguments"></a>引數  
  [ **@filtered_table**=] **'***filtered_table***'**  
- 這是篩選的資料表名稱。 *filtered_table*是**nvarchar （400)**，沒有預設值。  
+ 這是篩選的資料表名稱。 *filtered_table*已**nvarchar(400)**，沒有預設值。  
   
  [ **@join_table**=] **'***join_table***'**  
- 針對聯結的資料表名稱*filtered_table*。 *join_table*是**nvarchar （400)**，沒有預設值。  
+ 聯結的資料表名稱*filtered_table*。 *join_table*已**nvarchar(400)**，沒有預設值。  
   
  [ **@join_filterclause** =] **'***join_filterclause***'**  
- 這是正在測試的聯結篩選子句。 *join_filterclause*是**nvarchar （1000)**，沒有預設值。  
+ 這是正在測試的聯結篩選子句。 *join_filterclause*已**nvarchar(1000)**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|是發行集是否為預先計算的資料分割;其中**1**表示可以使用指出資料分割，以及**0**表示，無法使用。|  
-|**has_dynamic_filters**|**bit**|提供的篩選子句包含至少一個參數化篩選函數。其中**1**表示會使用參數化篩選函數，以及**0**表示，不會使用這類函式。|  
+|**can_use_partition_groups**|**bit**|是如果發行集符合預先計算的資料分割;何處**1**表示可以使用指出資料分割，並**0**表示，無法使用。|  
+|**has_dynamic_filters**|**bit**|如果提供的篩選子句包含至少一個參數化篩選函數;何處**1**表示會使用參數化篩選函數，並**0**表示不會使用這類函式。|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|篩選子句中定義發行項參數化篩選的函數清單，其中每個函數皆以分號加以分隔。|  
-|**uses_host_name**|**bit**|如果[host_name （)](../../t-sql/functions/host-name-transact-sql.md)函數是否用於篩選子句中，其中**1**表示存在於此函式。|  
-|**uses_suser_sname**|**bit**|如果[suser_sname （)](../../t-sql/functions/suser-sname-transact-sql.md)函數是否用於篩選子句中，其中**1**表示存在於此函式。|  
+|**uses_host_name**|**bit**|如果[host_name （)](../../t-sql/functions/host-name-transact-sql.md)函式會在篩選子句中，其中**1**表示存在於此函式。|  
+|**uses_suser_sname**|**bit**|如果[suser_sname （)](../../t-sql/functions/suser-sname-transact-sql.md)函式會在篩選子句中，其中**1**表示存在於此函式。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -78,7 +78,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="remarks"></a>備註  
  **sp_check_join_filter**用於合併式複寫中。  
   
- **sp_check_join_filter**可以執行對任何相關資料表中，即使它們尚未發行。 在定義兩個發行項之間的聯結篩選之前，您可以使用這個預存程序，先驗證聯結篩選子句。  
+ **sp_check_join_filter**可以針對任何相關的資料表執行，即使它們尚未發行。 在定義兩個發行項之間的聯結篩選之前，您可以使用這個預存程序，先驗證聯結篩選子句。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_check_join_filter**。  

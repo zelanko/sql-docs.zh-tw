@@ -17,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], cursors
 - server cursors [SQL Server]
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29019fbc25394b0a61fba1fd31fb20225f173409
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d1ca5922d854f034ffa0c39c518b9e246fc83f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970422"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038488"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>資料指標預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

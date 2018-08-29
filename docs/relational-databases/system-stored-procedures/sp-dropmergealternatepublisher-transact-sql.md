@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergealternatepublisher (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropmergealternatepublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergealternatepublisher
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46c3e124cee4c4d8ff9190c063433ca97f19aa72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c259f83b37577425764d2d0ea2325c5cc275dec2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991795"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036851"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
   
 ## <a name="arguments"></a>引數  
  [ **@publisher=**] **'***publisher***'**  
- 這是目前發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
+ 這是目前發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 這是目前發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+ 這是目前發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
  [  **@publication =**] **'***發行集***'**  
- 這是目前發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是目前發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@alternate_publisher=**] **'***alternate_publisher***'**  
- 這是要做為替代同步處理夥伴來卸除的替代發行者名稱。 *alternate_publisher*是**sysname**，沒有預設值。  
+ 這是要做為替代同步處理夥伴來卸除的替代發行者名稱。 *alternate_publisher*已**sysname**，沒有預設值。  
   
  [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
- 這是要做為替代同步處理夥伴發行集資料庫來卸除的發行集資料庫名稱。 *alternate_publisher_db*是**sysname**，沒有預設值。  
+ 這是要做為替代同步處理夥伴發行集資料庫來卸除的發行集資料庫名稱。 *alternate_publisher_db*已**sysname**，沒有預設值。  
   
  [  **@alternate_publication=**] **'***alternate_publication***'**  
- 這是要做為替代同步處理夥伴發行集來卸除的發行集名稱。 *alternate_publication*是**sysname**，沒有預設值。  
+ 這是要做為替代同步處理夥伴發行集來卸除的發行集名稱。 *alternate_publication*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -73,6 +73,6 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_dropmergelternatepublisher**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addmergealternatepublisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
+ [sp_addmergealternatepublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
   
   

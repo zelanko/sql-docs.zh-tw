@@ -1,5 +1,5 @@
 ---
-title: sp_enumcustomresolvers (TRANSACT-SQL) |Microsoft 文件
+title: sp_enumcustomresolvers & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb49ae55f4bde2304713f4fd336076585a987904
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f0b23d39e365a27cc2734e7e051e431055a21f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993155"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032441"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="arguments"></a>引數  
  [  **@distributor =**] **'***散發者***'**  
- 這是自訂解析程式所在的散發者名稱。 *散發者*是**sysname**，預設值是 NULL。 *這個參數已被取代，未來版本將移除。*  
+ 這是自訂解析程式所在的散發者名稱。 *散發者*已**sysname**，預設值是 NULL。 *這個參數已被取代，將在未來版本中移除。*  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**article_resolver**|**nvarchar(255)**|商務邏輯處理常式或衝突解析程式的易記名稱。|  
 |**resolver_clsid**|**nvarchar(50)**|COM 型解析程式的類別識別碼 (CLSID)。 如果是商務邏輯處理常式，這個資料行會傳回零 CLSID 值。|  
@@ -65,13 +65,13 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
  **sp_enumcustomresolvers**用於合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色和**db_owner**固定的資料庫角色可以執行**sp_enumcustomresolvers**。  
+ 只有成員**sysadmin**固定的伺服器角色並**db_owner**固定的資料庫角色可以執行**sp_enumcustomresolvers**。  
   
 ## <a name="see-also"></a>另請參閱  
  [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [針對合併發行項實作自訂衝突解析程式](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [sp_lookupcustomresolver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

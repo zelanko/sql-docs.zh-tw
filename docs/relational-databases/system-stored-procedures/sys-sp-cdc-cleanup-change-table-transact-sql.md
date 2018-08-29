@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_cleanup_change_table (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_cdc_cleanup_change_table (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,20 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f0fc4f6a24143e23bb118a24f6061f5458eebe2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8dcfb1d487b3dd977b9837723c49e7fdf14b9ae5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261334"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035087"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  從變更資料表，根據指定的目前資料庫中移除資料列*l*值。 這個預存程序會提供給想要直接管理變更資料表清除程序的使用者。 不過，請謹慎使用，因為此程序會影響變更資料表中資料的所有取用者。  
+  根據指定的目前資料庫中的變更資料表中移除資料列*low_water_mark&lt*值。 這個預存程序會提供給想要直接管理變更資料表清除程序的使用者。 不過，請謹慎使用，因為此程序會影響變更資料表中資料的所有取用者。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,33 +50,33 @@ sys.sp_cdc_cleanup_change_table
   
 ## <a name="arguments"></a>引數  
  [ @capture_instance =] '*capture_instance*'  
- 是與變更資料表相關聯之擷取執行個體的名稱。 *capture_instance*是**sysname**，沒有預設值，不能是 NULL。  
+ 是與變更資料表相關聯之擷取執行個體的名稱。 *capture_instance*已**sysname**，沒有預設值，不能是 NULL。  
   
- *capture_instance*必須存在於目前資料庫中的擷取執行個體的名稱。  
+ *擷取執行個體*必須命名為存在於目前資料庫中的擷取執行個體。  
   
- [ @low_water_mark =] *l*  
- 記錄序號 (LSN) 所做的新下限標準*擷取執行個體*。 *l*是**binary （10)**，沒有預設值。  
+ [ @low_water_mark =] *low_water_mark&lt*  
+ 記錄序號 (LSN) 來作為新下限標準所*擷取執行個體*。 *low_water_mark&lt*已**binary(10)**，沒有預設值。  
   
  如果值為非 null，它必須顯示成中目前項目的 start_lsn 值[cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)資料表。 如果 cdc.lsn_time_mapping 中的其他項目與新下限標準所識別的項目共用相同的認可時間，系統就會選擇與該項目群組相關聯的最小 LSN 做為下限標準。  
   
- 如果此值明確設定為 NULL 時，目前*下限標準*如*擷取執行個體*用來定義清除作業的上限。  
+ 如果此值明確設定為 NULL，目前*低水位線*for*擷取執行個體*用來定義清除作業的上限。  
   
  [ @threshold=] '*刪除閾值*'  
- 是可以使用單一清除陳述式來刪除的最大刪除項目數。 *delete_threshold*是**bigint**，預設值為 5000。  
+ 是可以使用單一清除陳述式來刪除的最大刪除項目數。 *delete_threshold*已**bigint**，預設值是 5000。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  sys.sp_cdc_cleanup_change_table 會執行下列作業：  
   
-1.  如果@low_water_mark參數不是 NULL，它會將的 start_lsn 值*擷取執行個體*新*下限標準*。  
+1.  如果@low_water_mark參數不是 NULL，它會設定的 start_lsn 值*擷取執行個體*新*下限標準*。  
   
     > [!NOTE]  
-    >  新下限標準可能不是預存程序呼叫中指定的下限標準。 如果 cdc.lsn_time_mapping 資料表中的其他項目共用相同的認可時間，系統就會選取在項目群組中表示的最小 start_lsn 做為已調整的下限標準。 如果@low_water_mark參數為 NULL 或目前的下限標準大於新下限標準、 start_lsn 值擷取執行個體就會維持不變。  
+    >  新下限標準可能不是預存程序呼叫中指定的下限標準。 如果 cdc.lsn_time_mapping 資料表中的其他項目共用相同的認可時間，系統就會選取在項目群組中表示的最小 start_lsn 做為已調整的下限標準。 如果@low_water_mark參數為 NULL 或目前的下限標準大於新的下限標準、 start_lsn 值的擷取執行個體就會維持不變。  
   
 2.  然後，系統會刪除 __$start_lsn 值小於下限標準的變更資料表項目。 此 delete threshold 是用來限制在單一交易中刪除的資料列數目。 雖然系統會回報無法成功刪除項目，但是不會影響對擷取執行個體下限標準所做的任何變更，因為這些變更可能已經根據呼叫完成了。  
   
@@ -85,7 +84,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   清除代理程式作業回報刪除失敗。  
   
-     管理員可以明確執行這個預存程序來重試失敗的作業。 要重試清除針對給定的擷取執行個體，請執行 sys.sp_cdc_cleanup_change_table，並指定 NULL@low_water_mark參數。  
+     管理員可以明確執行這個預存程序來重試失敗的作業。 若要重試清除針對給定的擷取執行個體，請執行 sys.sp_cdc_cleanup_change_table，並指定 NULL@low_water_mark參數。  
   
 -   清除代理程式作業所使用的簡單保留性原則不足。  
   

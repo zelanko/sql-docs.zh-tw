@@ -16,14 +16,14 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979820"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785073"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：傳送和擷取 Linux 與 macOS 中的 ASCII 資料 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本文會假設已產生或安裝在您的 Linux 或 macOS 系統中的 ASCII (非-utf-8) 的地區設定。 
@@ -43,7 +43,7 @@ ms.locfileid: "37979820"
 ## <a name="example"></a>範例  
 下列範例示範如何傳送和擷取 ASCII 資料使用 PHP Drivers for SQL Server，藉由指定特定地區設定，再建立連線。 在各種 Linux 平台上的地區設定可能有不同的名稱從 macOS 中的相同地區設定。 例如，美國 ISO-8859-1 (Latin 1) 地區設定是`en_US.ISO-8859-1`在 Linux 中，而名稱是在 macOS 中`en_US.ISO8859-1`。
   
-範例假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]安裝在伺服器上。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
+範例假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝在伺服器上。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
   
 ```  
 <?php  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor_properties (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpdistributor_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f839d230097300eb08c0042854ed00f3b4dd951
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e9d7ab6a6ddb7bd2be819c4a688dce87a1f5945
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994465"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032377"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpdistributor_properties
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**heartbeat_interval**|**int**|在未記錄進度訊息的情況下，代理程式所能執行的最大分鐘數。|  
   
@@ -54,12 +54,12 @@ sp_helpdistributor_properties
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_helpdistributor_properties**用於所有複寫類型。  
+ **sp_helpdistributor_properties**搭配所有類型的複寫。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定的伺服器角色、 成員的**db_owner**或**replmonitor**固定的資料庫角色中的使用者與散發資料庫使用此散發者的發行集的發行集存取清單 (PAL) 能夠執行**sp_helpdistributor_properties**。  
+ 只有成員**sysadmin**固定的伺服器角色成員、 **db_owner**或是**replmonitor**固定的資料庫角色中的使用者與散發資料庫使用此散發者的發行集的發行集存取清單 (PAL) 可以執行**sp_helpdistributor_properties**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_changedistributor_property &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+ [sp_changedistributor_property &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_refreshview (TRANSACT-SQL) |Microsoft 文件
+title: sp_refreshview (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9871a4ce62ce2916a1cd27c3ca8735de28cfa1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed5f50b9b95f2f156632fb14c2cd471ef010bcac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249430"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031476"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_refreshview [ @viewname = ] 'viewname'
   
 ## <a name="arguments"></a>引數  
  [  **@viewname=** ] **'***viewname***'**  
- 這是檢視的名稱。 *viewname*是**nvarchar**，沒有預設值。 *viewname*可以是多組件的識別項，但只能參考目前資料庫中的檢視。  
+ 這是檢視的名稱。 *viewname*已**nvarchar**，沒有預設值。 *viewname*可以是多部分識別碼，但只能參考目前資料庫中的檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 如果未以 schemabinding 來建立檢視**sp_refreshview**變更會影響檢視定義的物件基礎的檢視時應執行。 否則，在查詢檢視時，可能會產生非預期的結果。  
+ 如果未以 schemabinding 來建立檢視**sp_refreshview**檢視會影響檢視定義的物件進行變更時，應該執行。 否則，在查詢檢視時，可能會產生非預期的結果。  
   
 ## <a name="permissions"></a>Permissions  
  必須對檢視具備 ALTER 權限，以及對檢視資料行所參考的 Common Language Runtime (CLR) 使用者自訂類型和 XML 結構描述集合，具備 REFERENCES 權限。  
@@ -84,6 +84,6 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sp_refreshsqlmodule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [sp_refreshsqlmodule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4eed56a7e9356ac7f42c5f1bf2a5d55e85111523
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 014bfe09f915814531c4a74cb9e128a1d5d7da6e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082410"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020406"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
  **sp_helpdistpublisher**將不會顯示發行者登入，或在結果中的密碼設為非**sysadmin**登入。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  成員**sysadmin**固定的伺服器角色可能會執行**sp_helpdistpublisher**任何使用本機伺服器為散發者的發行者。 成員**db_owner**固定的資料庫角色或**replmonitor**散發資料庫中的角色可能會執行**sp_helpdistpublisher**使用的任何發行者散發資料庫。 使用者在發行集存取清單指定發行集*發行者*可能會執行**sp_helpdistpublisher**。 如果*發行者*未指定，資訊會傳回所有發行者的使用者具有存取權限。  
   
 ## <a name="see-also"></a>另請參閱  

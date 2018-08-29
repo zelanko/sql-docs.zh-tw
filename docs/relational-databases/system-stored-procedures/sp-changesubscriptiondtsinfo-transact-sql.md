@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriptiondtsinfo (TRANSACT-SQL) |Microsoft 文件
+title: sp_changesubscriptiondtsinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55c43914d883ce5f704ad6c7648d473bd38611fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffbeb38fbdde20f3fdccd9be817c1111e3f651f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990983"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034088"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,28 +49,28 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
   
 ## <a name="arguments"></a>引數  
  [  **@job_id=**] *job_id*  
- 這是發送訂閱之散發代理程式的作業識別碼。 *job_id*是**varbinary （16)**，沒有預設值。 若要尋找散發作業識別碼，請執行**sp_helpsubscription**或**sp_helppullsubscription**。  
+ 這是發送訂閱之散發代理程式的作業識別碼。 *job_id*已**varbinary(16)**，沒有預設值。 若要尋找散發作業識別碼，請執行**sp_helpsubscription**或是**sp_helppullsubscription**。  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
- 指定 DTS 封裝的名稱。 *dts_package_name*是**sysname**，預設值是 NULL。 例如，若要指定封裝名**DTSPub_Package**，您會指定`@dts_package_name = N'DTSPub_Package'`。  
+ 指定 DTS 封裝的名稱。 *dts_package_name*已**sysname**，預設值是 NULL。 例如，若要指定封裝名為**DTSPub_Package**，您會指定`@dts_package_name = N'DTSPub_Package'`。  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- 指定封裝的密碼。 *dts_package_password*是**sysname**預設值是 NULL，其指定密碼屬性維持不變。  
+ 指定封裝的密碼。 *dts_package_password*已**sysname**預設值是 NULL，它指定密碼屬性維持不變。  
   
 > [!NOTE]  
 >  DTS 封裝必須有密碼。  
   
  [ **@dts_package_location**=] **'***dts_package_location***'**  
- 指定封裝的位置。 *dts_package_location*是**nvarchar （12)**，預設值是 NULL，指定封裝位置是維持不變。 封裝的位置可以變更為**散發者**或**訂閱者**。  
+ 指定封裝的位置。 *dts_package_location*已**nvarchar(12)**，預設值是 NULL，其中指定封裝位置維持不變。 封裝的位置可以變更為**散發者端**或是**訂閱者**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_changesubscriptiondtsinfo**用於快照式複寫和異動複寫是只有發送訂閱的。  
+ **sp_changesubscriptiondtsinfo**用於快照式複寫和異動複寫是只發送訂閱的。  
   
 ## <a name="permissions"></a>Permissions  
- 只有成員**sysadmin**固定伺服器角色、 **db_owner**固定的資料庫角色或訂閱的建立者可以執行**sp_changesubscriptiondtsinfo**。  
+ 只有成員**sysadmin**固定伺服器角色**db_owner**固定的資料庫角色或訂用帳戶的建立者能夠執行**sp_changesubscriptiondtsinfo**。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

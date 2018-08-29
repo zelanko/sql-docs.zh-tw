@@ -1,5 +1,5 @@
 ---
-title: sp_replrestart (TRANSACT-SQL) |Microsoft 文件
+title: sp_replrestart & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replrestart
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905726825618d1412528a0c3f543bd7886213e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482bd5a501544ca5bdc36250db0c30b8c18abb81
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996235"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038771"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32996235"
   在備份與還原期間，供異動複寫使用，以便同步處理散發者端的複寫資料和發行者端的資料。 這個預存程序執行於發行集資料庫的發行者端。  
   
 > [!IMPORTANT]  
->  **sp_replrestart**是一個內部複寫預存程序，應該只用於 > 主題中的指示，異動複寫拓撲中還原資料庫發行時[Backing Up and Restoring 的策略快照式和異動複寫](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
+>  **sp_replrestart**是一個內部複寫預存程序，並應該只在主題中所述，異動複寫拓撲中還原資料庫發行時才使用[Backing Up and Restoring 的策略快照式和異動複寫](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_replrestart
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_replrestart**可在散發者端的最高的記錄序號 (lsn) 值符合在 「 發行者 」 的最大 LSN 值。  
+ **sp_replrestart**可在散發者端最高的記錄序號 (lsn) 值符合在 「 發行者 」 的最大 LSN 值。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_replrestart**。  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sqlmaint
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-author: CarlRabeler
-ms.author: carlrab
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e93410713f9af8228fd757803792665c569b549a
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 5bd203a2d0d5d8eee4c73156bef42ff655978cee
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101906"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030179"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="remarks"></a>備註  
  如果使用 SQL Server 驗證，登入使用者呼叫此程序 **-U"***login_id***"** 並 **-P"***密碼***"** 參數前面會加上*switch_string*之前執行。 如果使用者使用 Windows 驗證登入時*switch_string*不會變更至傳遞**sqlmaint**。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

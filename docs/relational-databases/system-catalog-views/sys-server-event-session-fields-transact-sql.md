@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_fields (TRANSACT-SQL) |Microsoft 文件
+title: sys.server_event_session_fields (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - xe
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b9aae1c5666203ac57ccb3ca4f762226cdca151
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aed898936ab65dab5646dc12379a6eb9ba90bb6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220259"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020374"
 ---
 # <a name="sysservereventsessionfields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對事件和目標上明確設定的每一個可自訂資料行傳回資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |object_id|**int**|這個欄位相關聯之物件的識別碼。 不可為 Null。|  
-|name|**sysname**|欄位的名稱。 不可為 Null。|  
+|NAME|**sysname**|欄位的名稱。 不可為 Null。|  
 |value|**sql_variant**|此欄位的值。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  

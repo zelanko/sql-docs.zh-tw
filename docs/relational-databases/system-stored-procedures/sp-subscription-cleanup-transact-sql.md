@@ -1,5 +1,5 @@
 ---
-title: sp_subscription_cleanup (TRANSACT-SQL) |Microsoft 文件
+title: sp_subscription_cleanup & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_subscription_cleanup
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e17866eb6119d91a1859cc5fea70e49d8bae094c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0963089d011326c00cc0604b9f7455a5246d74ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997145"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028678"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>引數  
  [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
+ 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
+ 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
  [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 NULL。 如果是 NULL，就會刪除使用發行資料庫中之共用代理程式發行集的訂閱。  
+ 這是發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。 如果是 NULL，就會刪除使用發行資料庫中之共用代理程式發行集的訂閱。  
   
  [  **@reserved=**] **'***保留***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -64,14 +64,14 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_subscription_cleanup**用於交易式和快照式複寫中。  
+ **sp_subscription_cleanup**用於交易式與快照式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_subscription_cleanup**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_expired_subscription_cleanup &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
- [sp_mergesubscription_cleanup &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
+ [sp_expired_subscription_cleanup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
+ [sp_mergesubscription_cleanup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

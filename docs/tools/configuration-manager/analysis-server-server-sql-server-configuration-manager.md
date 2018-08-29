@@ -13,13 +13,14 @@ ms.assetid: 88e0f096-d746-4b7d-a5a4-73c5dc139f30
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0e272f54e60f1c7aa25afd414e9c9f40dbdf0631
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df1f793a11508c138a7392afbadf0e2f279d63c2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38026952"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785926"
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>Analysis Server &lt;伺服器&gt; (SQL Server 設定管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

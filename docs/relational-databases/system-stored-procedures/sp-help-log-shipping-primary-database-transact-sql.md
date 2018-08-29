@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_database (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_log_shipping_primary_database (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_primary_database
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56f3955c179e73d30172f0ed2126a600b1c1771a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f30e2e1bc5755875164ce5a0cb8019e28353fcd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255780"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025267"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +46,17 @@ sp_help_log_shipping_primary_database
   
 ## <a name="arguments"></a>引數  
  [  **@database =** ] '*資料庫*'  
- 這是記錄傳送主要資料庫的名稱。 *資料庫*是**sysname**，沒有預設值，不能是 NULL。  
+ 這是記錄傳送主要資料庫的名稱。 *資料庫*已**sysname**，沒有預設值，不能是 NULL。  
   
  [ **@primary_id =** ] '*primary_id*'  
- 記錄傳送組態之主要資料庫的識別碼。 *primary_id*是**uniqueidentifier**不能是 NULL。  
+ 記錄傳送組態之主要資料庫的識別碼。 *primary_id*已**uniqueidentifier**不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**primary_id**|記錄傳送組態之主要資料庫的識別碼。|  
 |**primary_database**|記錄傳送組態中之主要資料庫的名稱。|  
@@ -83,7 +82,7 @@ sp_help_log_shipping_primary_database
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="examples"></a>範例  
- 這個範例說明使用**sp_help_log_shipping_primary_database**擷取資料庫的主要資料庫設定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
+ 此範例說明如何利用**sp_help_log_shipping_primary_database**擷取資料庫的主要資料庫設定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  
@@ -91,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

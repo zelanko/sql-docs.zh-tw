@@ -17,17 +17,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a04e7c448161c22ca9a671e5fdbe706829bced
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5a22a5f4eb06e983f2bc4d81eeb786f32b78751
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982183"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785070"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>透過 Linux 和 macOS 上的 ODBC 驅動程式進行資料存取追蹤
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-在 macOS 和 Linux 的 unixODBC 驅動程式管理員支援的 ODBC API 呼叫項目追蹤和結束的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。
+在 macOS 和 Linux 的 unixODBC 驅動程式管理員支援的 ODBC API 呼叫項目追蹤和結束的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
 
 若要追蹤您的應用程式的 ODBC 行為，請編輯`odbcinst.ini`檔案的`[ODBC]`一節，以設定值`Trace=Yes`和`TraceFile`也就是包含輸出; 追蹤檔案的路徑，例如：
 

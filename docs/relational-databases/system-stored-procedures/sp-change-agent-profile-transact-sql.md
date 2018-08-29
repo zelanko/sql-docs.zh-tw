@@ -1,5 +1,5 @@
 ---
-title: sp_change_agent_profile (TRANSACT-SQL) |Microsoft 文件
+title: sp_change_agent_profile & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66d4bb93d94492b572b9653c0be6a458f38565b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 441877f6212af070da39b828e5aaaae40e6a3ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988933"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035180"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,33 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>引數  
  [  **@profile_id=** ] *profile_id*  
- 這是設定檔的識別碼。 *profile_id*是**int**，沒有預設值。  
+ 這是設定檔的識別碼。 *profile_id*已**int**，沒有預設值。  
   
  [  **@property=** ] **'***屬性***'**  
- 屬性的名稱。 *屬性*是**sysname**，沒有預設值。  
+ 屬性的名稱。 *屬性*已**sysname**，沒有預設值。  
   
  [ **@value=** ] **'***value***'**  
- 這是屬性的新值。 *值*是**nvarchar （3000)**，沒有預設值。  
+ 這是屬性的新值。 *值*已**nvarchar(3000)**，沒有預設值。  
   
  這份資料表描述可變更的設定檔屬性。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
-|**描述**|設定檔的描述。|  
+|**description**|設定檔的描述。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_change_agent_profile**用於所有複寫類型。  
+ **sp_change_agent_profile**用於所有類型的複寫。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_change_agent_profile**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_agent_profile &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

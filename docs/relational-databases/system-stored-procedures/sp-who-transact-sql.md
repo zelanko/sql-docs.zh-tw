@@ -1,5 +1,5 @@
 ---
-title: sp_who (TRANSACT-SQL) |Microsoft 文件
+title: sp_who & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f21ac270ac0f448291b5e6eb8874182598e933ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 17d178f1fdf5784ca1e9d9f7dc9042a70611137c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261917"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036938"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  提供有關目前使用者、 工作階段和處理程序的執行個體中的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 您可以篩選資訊，只傳回屬於特定使用者或屬於特定工作階段的非閒置處理序。  
+  提供目前的使用者、 工作階段和執行個體中的程序的相關資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 您可以篩選資訊，只傳回屬於特定使用者或屬於特定工作階段的非閒置處理序。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,11 +46,11 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
  [  **@loginame =** ] **'***登入***'** | *工作階段識別碼* | **'ACTIVE'**  
  這可用來篩選結果集。  
   
- *登入*是**sysname** ，識別屬於特定登入的處理序。  
+ *登入*已**sysname**識別屬於特定登入的處理序。  
   
- *工作階段識別碼*是屬於的工作階段識別碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 *工作階段識別碼*是**smallint**。  
+ *工作階段識別碼*是屬於工作階段識別碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 *工作階段識別碼*已**smallint**。  
   
- **ACTIVE**排除正在等候下一個命令從使用者的工作階段。  
+ **ACTIVE**排除正在等候下一個命令，從使用者的工作階段。  
   
  如果沒有提供任何值，程序會報告屬於執行個體的所有工作階段。  
   
@@ -61,19 +60,19 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>結果集  
  **sp_who**傳回的結果集包含下列資訊。  
   
-|資料行|資料類型|Description|  
+|「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|工作階段識別碼。|  
-|**ecid**|**smallint**|特定工作階段識別碼所關聯之給定執行緒的執行內容識別碼。<br /><br /> ECID = {0、 1、 2、 3、 …*n*}，其中 0 一律代表主要或父執行緒，以及 {1、 2、 3 …*n*} 代表子執行緒。|  
-|**status**|**nchar(30)**|處理序狀態。 可能的值為：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重設工作階段。<br /><br /> **running**。 工作階段正在執行一或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Set & #40;MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **背景**。 工作階段正在執行背景工作，例如死結偵測。<br /><br /> **復原**。 工作階段正在進行交易回復。<br /><br /> **pending**。 工作階段正在等候工作者執行緒變成可用狀態。<br /><br /> **runnable**。 在等候取得時間配量時，工作階段的工作位於排程器的可執行佇列中。<br /><br /> **spinloop**。 工作階段的工作正在等候單一執行緒存取鎖變成可用狀態。<br /><br /> **suspended**。 工作階段正在等候事件 (例如 I/O) 完成。|  
+|**ecid**|**smallint**|特定工作階段識別碼所關聯之給定執行緒的執行內容識別碼。<br /><br /> ECID = {0、 1、 2、 3、...*n*}，其中 0 一律代表主要或父執行緒，以及 {1，2，3，...*n*} 代表子執行緒。|  
+|**status**|**nchar(30)**|處理序狀態。 可能值為：<br /><br /> **休眠**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在重設工作階段。<br /><br /> **running**。 工作階段正在執行一或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**。 工作階段正在執行背景工作，例如死結偵測。<br /><br /> **回復**。 工作階段正在進行交易回復。<br /><br /> **pending**。 工作階段正在等候工作者執行緒變成可用狀態。<br /><br /> **runnable**。 在等候取得時間配量時，工作階段的工作位於排程器的可執行佇列中。<br /><br /> **spinloop**。 工作階段的工作正在等候單一執行緒存取鎖變成可用狀態。<br /><br /> **suspended**。 工作階段正在等候事件 (例如 I/O) 完成。|  
 |**loginame**|**nchar(128)**|特定處理序所關聯的登入名稱。|  
 |**主機名稱**|**nchar(128)**|每個處理序的主機或電腦名稱。|  
 |**blk**|**char(5)**|封鎖處理序的工作階段識別碼 (如果有)。 否則，這個資料行就是零。<br /><br /> 當被遺棄的分散式交易封鎖了與指定工作階段識別碼相關的交易時，這個資料行會針對進行封鎖的被遺棄交易傳回 '-2'。|  
-|**dbname**|**nchar(128)**|處理序所用的資料庫。|  
-|**Cmd 命令**|**nchar(16)**|針對處理序來執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命令 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、內部 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序等等)。|  
+|**資料庫名稱**|**nchar(128)**|處理序所用的資料庫。|  
+|**cmd**|**nchar(16)**|針對處理序來執行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 命令 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、內部 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序等等)。|  
 |**request_id**|**int**|在特定工作階段中執行的要求識別碼。|  
   
- 發生平行處理時，會針對特定的工作階段識別碼建立子執行緒。 主要執行緒會以 `spid = <xxx>` 和 `ecid =0` 的方式指出。 其他的子執行緒具有相同`spid = <xxx>`，但與**ecid** > 0。  
+ 發生平行處理時，會針對特定的工作階段識別碼建立子執行緒。 主要執行緒會以 `spid = <xxx>` 和 `ecid =0` 的方式指出。 其他的子執行緒具有相同`spid = <xxx>`，但**ecid** > 0。  
   
 ## <a name="remarks"></a>備註  
  進行封鎖的處理序 (可能擁有獨佔鎖定) 為持有另一處理序所需要之資源的處理序。  

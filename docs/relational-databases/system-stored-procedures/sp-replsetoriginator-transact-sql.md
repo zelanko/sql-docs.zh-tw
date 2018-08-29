@@ -1,5 +1,5 @@
 ---
-title: sp_replsetoriginator (TRANSACT-SQL) |Microsoft 文件
+title: sp_replsetoriginator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996135"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026817"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
   
 ## <a name="arguments"></a>引數  
  [  **@server_name=**] **'***server_name***'**  
- 這是套用交易的伺服器名稱。 *originating_server*是**sysname**，沒有預設值。  
+ 這是套用交易的伺服器名稱。 *originating_server*已**sysname**，沒有預設值。  
   
  [  **@database_name=**] **'***database_name***'**  
- 這是套用交易的資料庫名稱。 *originating_server*是**sysname**，沒有預設值。  
+ 這是套用交易的資料庫名稱。 *originating_server*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_replsetoriginator**執行散發代理程式記錄複寫所套用的交易的來源。 這項資訊用來叫用已設定回送屬性之雙向交易式訂閱的回送偵測。  
+ **sp_replsetoriginator**執行散發代理程式記錄的複寫所套用的交易來源。 這項資訊用來叫用已設定回送屬性之雙向交易式訂閱的回送偵測。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色，在 「 發行者 」 的成員**db_owner**固定的資料庫角色，發行集資料庫，或在發行集存取清單 (PAL) 中的使用者可以執行**sp_replsetoriginator**。  

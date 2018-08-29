@@ -1,5 +1,5 @@
 ---
-title: 查詢 SQL Server 系統目錄 FAQ |Microsoft 文件
+title: 查詢 SQL Server 系統目錄常見問題集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc310dc86a720dbf0bd2a833a6bedd63f1875b27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bf88696005c7ac3f743f23f1ee75fd362a3e5243
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181754"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030506"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查詢 SQL Server 系統目錄 FAQ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33181754"
   
 ### <a name="data-types"></a>資料型別  
   
--   [如何找到指定資料表的資料行的資料型別？](#_FAQ7)  
+-   [如何找到指定資料表的資料行的資料類型？](#_FAQ7)  
   
 -   [如何找到指定資料表的 LOB 資料類型？](#_FAQ14)  
   
@@ -66,31 +66,31 @@ ms.locfileid: "33181754"
   
 -   [如何找到所有具有識別欄位的資料表？](#_FAQ5)  
   
--   [如何找到所有資料表和索引進行分割區？](#_FAQ32)  
+-   [如何找到所有資料表和索引來進行資料分割？](#_FAQ32)  
   
 -   [如何找到資料庫中的所有檢視？](#_FAQ13)  
   
 -   [如何找到檢視的定義？](#_FAQ35)  
   
--   [如何找到在過去 N 天中修改過的所有實體？](#_FAQ6)  
+-   [如何找到過去 N 天內修改過的所有實體？](#_FAQ6)  
   
 -   [如何找到指定資料表的主索引鍵資料行？](#_FAQ16)  
   
--   [如何找到指定資料表的外部索引鍵的資料行？](#_FAQ17)  
+-   [如何找到指定資料表的外部索引鍵資料行？](#_FAQ17)  
   
--   [如何判斷資料行的計算資料行運算式用於？](#_FAQ20)  
+-   [如何判斷資料行用於計算資料行運算式？](#_FAQ20)  
   
--   [如何找到所使用的所有資料行中計算資料行運算式中？](#_FAQ21)  
+-   [我要如何找到所使用的所有資料行的計算資料行運算式中？](#_FAQ21)  
   
 -   [如何找到指定資料表的所有條件約束？](#_FAQ27)  
   
 -   [如何找到指定的資料表所有索引？](#_FAQ28)  
   
--   [如何找到所有具有指定之資料行名稱的資料表？](#_FAQ30)  
+-   [如何尋找具有指定的資料行名稱的所有資料表？](#_FAQ30)  
   
 -   [如何找到指定的物件上的所有統計資料？](#_FAQ33)  
   
--   [如何在指定的物件上找到的所有統計資料和統計資料資料行？](#_FAQ34)  
+-   [如何在指定的物件上找到所有的統計資料和統計資料資料行？](#_FAQ34)  
   
 ### <a name="modules-stored-procedures-user-defined-functions-and-triggers"></a>模組 (預存程序、使用者自訂函數及觸發程序)  
   
@@ -261,7 +261,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a> 如何找到指定資料表的資料行的資料型別？  
+###  <a name="_FAQ7"></a> 如何找到指定資料表的資料行的資料類型？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -386,7 +386,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a> 如何找到在過去 N 天中修改過的所有實體？  
+###  <a name="_FAQ6"></a> 如何找到過去 N 天內修改過的所有實體？  
  在您執行下列查詢之前，請使用有效的值取代 `<database_name>` 及 `<n_days>`。  
   
 ```  
@@ -513,7 +513,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a> 如何找到指定資料表的外部索引鍵的資料行？  
+###  <a name="_FAQ17"></a> 如何找到指定資料表的外部索引鍵資料行？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<schema_name.table_name>`。  
   
 ```  
@@ -620,7 +620,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a> 如何判斷資料行的計算資料行運算式用於？  
+###  <a name="_FAQ20"></a> 如何判斷資料行用於計算資料行運算式？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`、`<schema_name.table_name>` 及 `<column_name`>。  
   
 ```  
@@ -642,7 +642,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a> 如何找到所使用的所有資料行中計算資料行運算式中？  
+###  <a name="_FAQ21"></a> 我要如何找到所使用的所有資料行的計算資料行運算式中？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -665,7 +665,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ22"></a> 如何找到相依於指定的 CLR 使用者定義型別或別名類型的資料行？  
- 執行下列查詢之前，取代`<database_name>`具備有效的名稱和`<schema_name.data_type_name>`有效、 結構描述限定 CLR 使用者定義型別，或符合結構描述的別名類型名稱。 下列查詢需要的成員資格**db_owner**角色或權限，以查看所有相依資料行和計算資料行在資料庫中的中繼資料。  
+ 執行下列查詢之前，請取代`<database_name>`具備有效的名稱和`<schema_name.data_type_name>`有效且符合結構描述的 CLR 使用者定義型別或符合結構描述的別名類型名稱。 下列查詢需要的成員資格**db_owner**角色或權限，以查看所有的相依資料行和計算資料行在資料庫中的中繼資料。  
   
 ```  
 USE <database_name>;  
@@ -686,7 +686,7 @@ GO
   
 ```  
   
- 下列查詢會傳回資料行的受限的窄小檢視相依於 CLR 使用者定義型別或別名，但可以看見結果集**公用**角色。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
+ 下列查詢會傳回資料行的受限的窄小檢視相依於 CLR 使用者定義型別或別名，但結果集都可以看到**公開**角色。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
   
 ```  
 USE <database_name>;  
@@ -720,7 +720,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ24"></a> 如何找到相依於指定的 CLR 使用者定義型別或別名類型的參數？  
- 在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。 下列查詢需要的成員資格**db_owner**角色或權限，以查看所有相依資料行和計算資料行在資料庫中的中繼資料。  
+ 在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。 下列查詢需要的成員資格**db_owner**角色或權限，以查看所有的相依資料行和計算資料行在資料庫中的中繼資料。  
   
 ```  
 USE <database_name>;  
@@ -745,7 +745,7 @@ GO
   
 ```  
   
- 下列查詢會傳回相依於 CLR 使用者定義型別或別名，參數的受限的窄小檢視，但結果集可以看見**公用**角色。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
+ 下列查詢會傳回相依於 CLR 使用者定義型別或別名的參數的受限的窄小檢視，但結果集都可以看到**公開**角色。 如果您已將使用者定義型別的 REFERENCE 權限授與他人，卻沒有權限檢視使用該類型之人所建立物件的中繼資料，則可以使用這個查詢。  
   
 ```  
 USE <database_name>;  
@@ -762,7 +762,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ25"></a> 如何找到相依於指定 CLR 使用者定義類型的檢查條件約束？  
- 執行下列查詢之前，取代`<database_name>`具備有效的名稱和`<schema_name.data_type_name>`有效、 符合結構描述的 CLR 使用者定義型別名稱。  
+ 執行下列查詢之前，請取代`<database_name>`具備有效的名稱和`<schema_name.data_type_name>`有效且符合結構描述的 CLR 使用者定義型別名稱。  
   
 ```  
 USE <database_name>;  
@@ -784,7 +784,7 @@ GO
 ###  <a name="_FAQ26"></a> 如何找到檢視、 TRANSACT-SQL 函數和 TRANSACT-SQL 預存程序相依於指定的 CLR 使用者定義型別或別名類型？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`，並使用符合結構描述的有效 CLR 使用者定義型別、別名類型名稱來取代 `<schema_name.data_type_name>`。  
   
- 在函數或程序中定義的參數隱含結構描述繫結。 因此，可以檢視相依於 CLR 使用者定義型別或別名類型的參數使用[sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)目錄檢視。 程序和觸發程序不是結構描述繫結。 這表示任何定義於程序或觸發程序主體的運算式，與 CLR 使用者定義型別或別名資料型別之間的相依性不會保留。 結構描述繫結檢視和結構描述繫結使用者定義函數之運算式的相依於 CLR 使用者定義型別或別名類型保存在**sys.sql_dependencies**目錄檢視。 類型與 CLR 函數及 CLR 程序之間的相依性不會保留。  
+ 在函數或程序中定義的參數隱含結構描述繫結。 因此，可以檢視相依於 CLR 使用者定義型別或別名類型的參數使用[sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)目錄檢視。 程序和觸發程序不是結構描述繫結。 這表示任何定義於程序或觸發程序主體的運算式，與 CLR 使用者定義型別或別名資料型別之間的相依性不會保留。 結構描述繫結檢視和結構描述繫結使用者定義的函式之運算式的相依於 CLR 使用者定義型別或別名類型會保留在**sys.sql_dependencies**目錄檢視。 類型與 CLR 函數及 CLR 程序之間的相依性不會保留。  
   
  下列查詢會針對指定的 CLR 使用者定義型別或別名資料型別，傳回其檢視、[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序中的所有結構描述繫結相依性。  
   
@@ -862,7 +862,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a> 如何找到所有具有指定之資料行名稱的物件？  
+###  <a name="_FAQ30"></a> 如何尋找具有指定的資料行名稱的所有物件？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>` 及 `<column_name>`。  
   
 ```  
@@ -906,7 +906,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a> 如何找到所有資料表和索引進行分割區？  
+###  <a name="_FAQ32"></a> 如何找到所有資料表和索引來進行資料分割？  
  在您執行下列查詢之前，請使用有效的名稱取代 `<database_name>`。  
   
 ```  
@@ -947,7 +947,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a> 如何在指定的物件上找到的所有統計資料和統計資料資料行？  
+###  <a name="_FAQ34"></a> 如何在指定的物件上找到所有的統計資料和統計資料資料行？  
  在您執行以下查詢之前，請使用有效的名稱取代 `<database_name>`，並使用有效的資料表、索引檢視或資料表值函數名稱來取代 `<schema_name.object_name>`。  
   
 ```  

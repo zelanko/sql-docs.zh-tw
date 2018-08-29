@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_grantlogin
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dbae515dc518547145ecba94ebb2fca57f98f64b
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: fdf810b4039dd022d444cfc119e3b2d018395469
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102166"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023170"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="remarks"></a>備註  
  **xp_grantlogin**現在系統預存程序，而不是擴充預存程序。 **xp_grantlogin**呼叫**sp_grantlogin**並**sp_addsrvrolemember**。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要的成員資格**securityadmin**固定的伺服器角色。 變更時*logintype*，需要的成員資格**sysadmin**固定的伺服器角色。  
   
 ## <a name="see-also"></a>另請參閱  

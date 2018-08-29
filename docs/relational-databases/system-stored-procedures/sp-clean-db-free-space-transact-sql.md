@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_free_space (TRANSACT-SQL) |Microsoft 文件
+title: sp_clean_db_free_space (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e8f84f3539ea192a132282eee280f26ba80da5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c2870d2f88a3a984b4d8df958e6fac2afd6500c6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689256"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024354"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_clean_db_free_space
   
 ## <a name="arguments"></a>引數  
  [ @dbname=] '*database_name*'  
- 這是要清除的資料庫名稱。 *dbname*是**sysname**不能是 NULL。  
+ 這是要清除的資料庫名稱。 *dbname*已**sysname**不能是 NULL。  
   
  [ @cleaning_delay=] '*delay_in_seconds*'  
- 指定頁面清除之間的延遲間隔。 如此有助於減少對 I/O 系統的影響。 *delay_in_seconds*是**int**預設值是 0。  
+ 指定頁面清除之間的延遲間隔。 如此有助於減少對 I/O 系統的影響。 *delay_in_seconds*已**int**預設值是 0。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

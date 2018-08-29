@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 caps.latest.revision: 52
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 023f2b4a26a816ed31013aa20355593d0eda0faa
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 0ef44b01d4c0a5ca20d728c37240a2feb9a2a046
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216889"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028656"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "39216889"
 |**lob_data_space_id**|**int**|非零值是存放這份資料表的大型物件 (LOB) 之資料空間 (檔案群組或資料分割結構描述) 的識別碼。|  
 |**filestream_data_space_id**|**int**|保留供日後使用。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>備註  
