@@ -12,13 +12,14 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ed426ec2ed6ce94a3ae9c03eff6b567e318ab4aa
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 1dab7f53f3f323295ef08efb3b972a9d101ffaf4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312827"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409998"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>從命令提示字元安裝更新
 
@@ -77,7 +78,7 @@ ms.locfileid: "35312827"
 > [!IMPORTANT] 
 > 可能的話，請在執行階段提供安全性認證。 如果您將認證儲存在指令碼檔案中，必須保護該檔案免於未經授權的存取。 
  
-|參數|描述| 
+|參數|Description| 
 |------------|-----------------| 
 |**/?**|顯示自動安裝命令提示字元說明。| 
 |**/action=Patch 或 /action=RemovePatch**|指定安裝動作：Patch 或 RemovePatch。| 

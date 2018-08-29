@@ -21,17 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_set_session_context
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
-caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11c367628354ba0aadef7459fb602b2b44081bf9
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1d1e17d08d54187d374ceef4ddd9a85a645ef4e4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39536078"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43078438"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

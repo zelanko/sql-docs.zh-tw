@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - AdventureWorks sample database
 - installing SQL Server, preparing to install
@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 747584b0e23f3c187a5da48012ff4d1a4d60d625
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: aff3b9f7c8e3640ef0452f1d8a8439259e72f235
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175129"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021552"
 ---
 # <a name="install-sql-server"></a>安裝 SQL Server
 

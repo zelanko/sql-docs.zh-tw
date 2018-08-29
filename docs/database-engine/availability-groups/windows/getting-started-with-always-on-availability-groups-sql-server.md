@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
@@ -16,12 +16,12 @@ caps.latest.revision: 53
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d01cb1d1cef4236549b7875958c8f8cfe7ed68f7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9f47f3b711c14dec6a55caa8681ebd3afc2e584f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769594"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023797"
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>開始使用 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

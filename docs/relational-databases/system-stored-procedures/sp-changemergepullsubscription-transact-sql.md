@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepullsubscription (TRANSACT-SQL) |Microsoft 文件
+title: sp_changemergepullsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31e745e3ab75ae237a440db10c05b3ed4cd7d29e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81b03ee49bb3184490d8ba8182b70557e5b0d8a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992385"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018273"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,24 +50,24 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 %。  
+ 這是發行集的名稱。 *發行集*已**sysname**，預設值是 %。  
   
  [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*是**sysname**，預設值是 %。  
+ 這是發行者的名稱。 *發行者*已**sysname**，預設值是 %。  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 %。  
+ 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 %。  
   
  [  **@property=**] **'***屬性***'**  
- 這是要變更的屬性名稱。 *屬性*是**sysname**，而且可以是下列其中一個資料表中的值。  
+ 這是要變更的屬性名稱。 *屬性*已**sysname**，而且可以是下列其中一個資料表中的值。  
   
  [  **@value=**] **'***值***'**  
- 這是指定之屬性的新值。 *值*是**nvarchar （255)**，而且可以是下列其中一個資料表中的值。  
+ 這是指定之屬性的新值。 *值*已**nvarchar(255)**，而且可以是下列其中一個資料表中的值。  
   
-|屬性|Value|Description|  
+|屬性|值|描述|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||當位置不是預設位置，或在預設位置之外還有其他位置時，快照集資料夾的儲存位置。|  
-|**描述**||這個合併提取訂閱的描述。|  
+|**description**||這個合併提取訂閱的描述。|  
 |**散發者**||散發者的名稱。|  
 |**distributor_login**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼|  
 |**distributor_password**||用於散發者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
@@ -86,23 +86,23 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_timeout**||Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
 |**應**||代表 Web 同步處理之複寫接聽程式位置的 URL。|  
 |**merge_job_login**||用來執行代理程式之 Windows 帳戶的登入。|  
-|**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
-|**priority**||適用於回溯相容性。執行[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)在發行者端而是要修改的訂用帳戶的優先權。|  
+|**property**||用來執行代理程式之 Windows 帳戶的密碼。|  
+|**priority**||適用於回溯相容性;執行[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)在 「 發行者 」 改為修改訂閱的優先權。|  
 |**publisher_login**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**||用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
 |**publisher_security_mode**|**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 ||**1**|當連接到發行者時，使用 Windows 驗證。|  
-||**2**|同步處理觸發程序會利用靜態**sysservers**項目來執行遠端程序呼叫 (RPC) 和 「 發行者 」 必須定義在**sysservers**資料表做為遠端伺服器或連結的伺服器。|  
+||**2**|同步處理觸發程序會使用靜態**sysservers**項目來執行遠端程序呼叫 (RPC) 和 「 發行者 」 必須定義於**sysservers**資料表做為遠端伺服器或連結的伺服器。|  
 |**sync_type**|**自動**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
-||**無**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
+||**None**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
 |**use_ftp**|**true**|利用 FTP 而不是一般通訊協定來擷取快照集。|  
 ||**false**|利用一般通訊協定來擷取快照集。|  
-|**use_web_sync**|**true**|訂閱可以透過 HTTP 來同步處理。|  
+|**use_web_sync&lt**|**true**|訂閱可以透過 HTTP 來同步處理。|  
 ||**false**|訂閱不能透過 HTTP 來同步處理。|  
 |**use_interactive_resolver**|**true**|在協調期間，使用互動式解析程式。|  
 ||**false**|不使用互動式解析程式。|  
 |**working_directory**||當指定利用 FTP 來傳送快照集檔案的選項時，傳送快照集檔案之目錄的完整路徑。|  
-|NULL (預設值)||傳回支援的值清單*屬性*。|  
+|NULL (預設值)||傳回支援的值的清單*屬性*。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -119,9 +119,9 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

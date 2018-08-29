@@ -14,13 +14,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bf032b05c962c1dc9788e890c59491ef81ea16da
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 330ba9c9f8703a31b2686327e6ed1b36d80be331
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538298"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100081"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 輪替永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "39538298"
 
 | 工作 | 發行項 | 存取純文字金鑰/金鑰存放區| 存取資料庫
 |:---|:---|:---|:---
-|步驟 1： 在金鑰存放區中建立新的資料行主要金鑰。<br><br>**注意︰** SqlServer PowerShell 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區特有的工具。 | 建立及儲存資料行主要金鑰 (永遠加密)| 是 | 否
+|步驟 1： 在金鑰存放區中建立新的資料行主要金鑰。<br><br>**注意︰** SqlServer PowerShell 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區特有的工具。 | [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
 |步驟 2： 啟動 PowerShell 環境並匯入 SqlServer 模組 | [匯入 SqlServer 模組](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步驟 3： 連接到您的伺服器和資料庫。 | [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步驟 4： 建立 SqlColumnMasterKeySettings 物件，其中包含新資料行主要金鑰位置的相關資訊。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 若要建立它，您需要使用金鑰存放區特有的 Cmdlet。 |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | 否 | 否

@@ -23,17 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_encryption_key_values catalog view
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e89df0a5d451ce280bb884e49f29c189f89d6e1a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e546c08ad979dbb06dec5557d0f19be2e15c26f6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561548"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43107619"
 ---
 # <a name="syscolumnencryptionkeyvalues-transact-sql"></a>sys.column_encryption_key_values & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

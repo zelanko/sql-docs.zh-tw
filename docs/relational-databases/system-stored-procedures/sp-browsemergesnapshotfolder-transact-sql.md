@@ -1,5 +1,5 @@
 ---
-title: sp_browsemergesnapshotfolder (TRANSACT-SQL) |Microsoft 文件
+title: sp_browsemergesnapshotfolder (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsemergesnapshotfolder
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e69c698e36e850a76178a279f47a99407376585
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 153abe2a9466c6f0496dfe86b852571828111a43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987273"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020996"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +45,14 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(2000)**|快照集目錄的完整路徑。|  
   
@@ -62,7 +61,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
  如果將發行集設定成同時在發行者工作目錄和發行者快照集資料夾中產生快照集檔案，結果集會包含兩個資料列。第一個資料列包含發行集快照集資料夾，第二個資料列包含發行者工作目錄。  
   
- **sp_browsemergesnapshotfolder**判斷產生合併快照集檔案所在的目錄時很有用。 之後，就可以從替代快照集位置中，將這個資料夾/路徑及其內容複製到抽取式媒體，以及用來同步處理訂閱的快照集。  
+ **sp_browsemergesnapshotfolder**判斷產生合併快照集檔案的目錄時很有用。 之後，就可以從替代快照集位置中，將這個資料夾/路徑及其內容複製到抽取式媒體，以及用來同步處理訂閱的快照集。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_browsemergesnapshotfolder**。  

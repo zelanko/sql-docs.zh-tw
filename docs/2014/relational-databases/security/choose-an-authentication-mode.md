@@ -22,16 +22,15 @@ helpviewer_keywords:
 - mixed authentication mode
 - SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 513a28480fbcd3c664b090ddcd68ebc0aa9df308
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 226a36b90d14e6a24ca651bec5ffee0688e6aaa9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155919"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019527"
 ---
 # <a name="choose-an-authentication-mode"></a>選擇驗證模式
   在安裝期間，您必須選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的驗證模式。 有兩種可能的模式：Windows 驗證模式和混合模式。 Windows 驗證模式會啟用 Windows 驗證並停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 混合模式會啟用 Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 Windows 驗證一定可用而且無法停用。  

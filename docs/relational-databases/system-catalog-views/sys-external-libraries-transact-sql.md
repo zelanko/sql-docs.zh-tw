@@ -3,11 +3,9 @@ title: sys.external_libraries (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,16 +17,16 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.external_libraries catalog view
-author: jeannt
-ms.author: jeannt
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3f6d833488982da777d0f146d55f0a67fa945de5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1373849201dccbb36f7096549d63864a23330f14
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553258"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43075871"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries & Amp;#40;transact-SQL&AMP;#41;  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

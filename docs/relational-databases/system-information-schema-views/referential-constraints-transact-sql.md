@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS view
 - REFERENTIAL_CONSTRAINTS view
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1732ea37cf7a6f84ef2f3a09c9c94fba9413fdfc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2844927e05c33c38134432918027cd2902091374
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39555658"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43106276"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39555658"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|條件約束名稱。|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|UNIQUE 條件約束限定詞。|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含 UNIQUE 條件約束的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含 UNIQUE 條件約束的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|UNIQUE 條件約束。|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|參考條件約束相符狀況。 一律傳回 SIMPLE。 這表示未定義相符項目。 當符合下列條件之一時，狀況就視為相符：<br /><br /> 外部索引鍵資料行至少有一個值是 NULL。<br /><br /> 外部索引鍵資料行中的所有值都不是 NULL，且主索引鍵資料表中有一個含相同索引鍵的資料列。|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式違反這個條件約束所定義的參考完整性時，所採取的動作。 傳回下列項目之一： <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> 如果這個條件約束的 ON UPDATE 指定了 NO ACTION，就不會將條件約束所參考的主索引鍵之更新傳播到外部索引鍵。 如果這類的主索引鍵更新會因為至少有一個外部索引鍵包含相同的值，而造成參考完整性違規，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會變更父系和參考資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會引發錯誤。<br /><br /> 如果這個條件約束的 ON UPDATE 指定了 CASCADE，就會將主索引鍵值的變更傳播到外部索引鍵值。|  

@@ -3,10 +3,7 @@ title: sp_polybase_leave_group & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: polybase
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sp_polybase_leave_group
@@ -14,16 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ad3a202ff910d19ea70192eb9cc5e114a8a4cb9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43f155de0eb81918d5129d404e7cd2f236957152
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984207"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037901"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

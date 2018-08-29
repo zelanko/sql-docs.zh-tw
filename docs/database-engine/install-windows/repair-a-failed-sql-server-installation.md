@@ -12,13 +12,14 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4944e5949dc1febab41f36e5749c595a2f4dc01b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 007f055303de7093c4fe0b90bbfddde9d0173211
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771634"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409506"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修復失敗的 SQL Server 安裝
 

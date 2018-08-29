@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_generate_wrapper_function (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_cdc_generate_wrapper_function & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6ddf84aa517b7f7e21e605264e1efa7ca1977d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259258"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022938"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,23 +55,23 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="arguments"></a>引數  
  [ @capture_instance=] '*capture_instance*'  
- 這是即將產生指令碼的擷取執行個體。 *capture_instance*是**sysname**且具有預設值是 NULL。 如果您省略了此值或將它明確設定為 NULL，系統就會針對所有擷取執行個體產生包裝函數指令碼。  
+ 這是即將產生指令碼的擷取執行個體。 *capture_instance*已**sysname**且具有預設值是 NULL。 如果您省略了此值或將它明確設定為 NULL，系統就會針對所有擷取執行個體產生包裝函數指令碼。  
   
  [ @closed_high_end_point=] *high_end_pt_flag*  
- 這是旗標位元，它會指出認可時間等於高端點的變更是否要由產生的程序包含在擷取間隔中。 *high_end_pt_flag*是**元**且具有預設值是 1，表示應該包含端點。 值為 0 表示所有認可時間都將確實小於高端點。  
+ 這是旗標位元，它會指出認可時間等於高端點的變更是否要由產生的程序包含在擷取間隔中。 *high_end_pt_flag*已**元**和其預設值為 1，表示應該包含端點。 值為 0 表示所有認可時間都將確實小於高端點。  
   
  [ @column_list=] '*column_list*'  
- 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*是**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
+ 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*已**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
   
  [ @update_flag_list=] '*update_flag_list*'  
- 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*是**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就不會包含任何更新旗標。  
+ 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*已**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就不會包含任何更新旗標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料行類型|Description|  
+|資料行名稱|資料行類型|描述|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar(145)**|產生之函數的名稱。|  
 |**create_script**|**nvarchar(max)**|這是建立擷取執行個體包裝函數的指令碼。|  

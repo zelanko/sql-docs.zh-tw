@@ -15,16 +15,15 @@ helpviewer_keywords:
 - security [SQL Server], predicate based access control
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eefc0764be46d8356dc1ac8e04b8025bf6119afd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 344497fea67a2bfdadf66095056ac9e909d945a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311277"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017481"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
   資料列層級安全性可讓客戶能夠控制存取的使用者執行查詢 (例如，群組成員資格或執行內容) 的特性為基礎的資料庫資料表中的資料列。 資料列層級安全性現已推出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016年。 如需這項功能的目前描述，請參閱目前文件中的 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  

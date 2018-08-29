@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce38cf053b16ae43ab9a9c5cd617bace6d78e4db
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 42d4f622da4696f5dd053ce03a3ade1a03e52273
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085950"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038621"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>備註  
  **sp_changedistpublisher**用於所有類型的複寫。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_changedistpublisher**。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -12,13 +12,14 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: b8be1b9fb65dfc6744dc61562d6a903d9484bd3f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c6e9a137dfb3db4cc5a4a5611d96b2902e42a21a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770414"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409999"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>從 SQL Server 2005 升級嗎？
 

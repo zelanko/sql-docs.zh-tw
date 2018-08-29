@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINE_COLUMNS view
 - INFORMATION_SCHEMA.ROUTINE_COLUMNS view
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ca7c277ab96cfc12a44b6b650f5f28a1821c08b5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e976804e34e7074b23f89ba8c61eeb46a7d3d9e7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557658"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110461"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39557658"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG 排列**|**nvarchar(** 128 **)**|資料表值函式的目錄或資料庫名稱。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表值函式的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表值函式的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|資料表值函式的名稱。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|資料行名稱。|  
 |**ORDINAL_POSITION**|**int**|資料行識別碼。|  
@@ -60,7 +59,7 @@ ms.locfileid: "39557658"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|一律傳回 NULL。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|傳回排序順序的唯一名稱，如果資料行是字元資料或**文字**資料型別。 否則，便傳回 NULL。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|如果資料行是別名資料類型，這個資料行就是建立使用者自訂資料類型的資料庫名稱。 否則，便傳回 NULL。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行就是包含使用者自訂資料類型之結構描述的名稱。 否則，便傳回 NULL。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行就是包含使用者自訂資料類型之結構描述的名稱。 否則，便傳回 NULL。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**網域名稱**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行就是使用者自訂資料類型的名稱。 否則，便傳回 NULL。|  
   
 ## <a name="see-also"></a>另請參閱  

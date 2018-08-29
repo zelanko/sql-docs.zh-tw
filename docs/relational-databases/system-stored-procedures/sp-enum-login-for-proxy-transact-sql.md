@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (TRANSACT-SQL) |Microsoft 文件
+title: sp_enum_login_for_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249930"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036270"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +46,20 @@ sp_enum_login_for_proxy
   
 ## <a name="arguments"></a>引數  
  [ **@name**=] '*名稱*'  
- 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主體、 登入、 伺服器角色或**msdb**要列出 proxy 的資料庫角色。 名稱是**nvarchar （256)**，預設值是 NULL。  
+ 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主體、 登入、 伺服器角色或**msdb**要列出 proxy 的資料庫角色。 檔案名**nvarchar(256)**，預設值是 NULL。  
   
  [ **@proxy_id**= ] *id*  
- 要列出資訊的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
+ 要列出資訊的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
   
  [ **@proxy_name**= ] **'***proxy_name***'**  
- 要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
+ 要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**proxy_name**|**sysname**|Proxy 的名稱。|  
@@ -71,14 +69,14 @@ sp_enum_login_for_proxy
 ## <a name="remarks"></a>備註  
  當未不提供任何參數時， **sp_enum_login_for_proxy**列出每個 proxy 執行個體中的所有登入資訊。  
   
- 當提供 proxy 識別碼或 proxy 名稱時， **sp_enum_login_for_proxy**列出有權存取 proxy 的登入。 當提供登入名稱時， **sp_enum_login_for_proxy**登入的 proxy 存取權的清單。  
+ 當提供 proxy 識別碼或 proxy 名稱時， **sp_enum_login_for_proxy**列出有權存取 proxy 的登入。 提供登入名稱時， **sp_enum_login_for_proxy**登入具有 proxy 的存取權的清單。  
   
  當同時提供 Proxy 資訊和登入名稱時，如果指定的登入有權存取指定的 Proxy，結果集會傳回一個資料列。  
   
  這個預存程序位於**msdb**。  
   
 ## <a name="permissions"></a>Permissions  
- 這個成員的程序預設值的執行權限**sysadmin**固定的伺服器角色。  
+ 此程序預設值，成員的執行權限**sysadmin**固定的伺服器角色。  
   
 ## <a name="examples"></a>範例  
   
@@ -106,7 +104,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

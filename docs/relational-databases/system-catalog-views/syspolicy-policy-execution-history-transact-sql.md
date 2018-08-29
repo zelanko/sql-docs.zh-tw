@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history (TRANSACT-SQL) |Microsoft 文件
+title: syspolicy_policy_execution_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,23 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history view
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5d21894663f8ad36a44e825a1b0e8ced4966ee8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db5a20395ec6e0e41d70d6b2dbb04dee991a0c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220319"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021392"
 ---
 # <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示原則執行的時間、每一次執行的結果，以及任何發生之錯誤的相關詳細資料。 下表描述 syspolicy_policy_execution_history 檢視表中的資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |history_id|**bigint**|這筆記錄的識別碼。 每一筆記錄都會指示一個原則，以及此原則之前起始的一個時間。|  
 |policy_id|**int**|原則的識別碼。|  
@@ -45,7 +44,7 @@ ms.locfileid: "33220319"
 |exception|**nvarchar(max)**|發生之例外狀況的描述。|  
   
 ## <a name="remarks"></a>備註  
- [Syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)檢視包含有關原則與測試之條件運算式的目標的相關詳細資料。  
+ [Syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)檢視包含有關原則與受測試之條件運算式的目標的相關詳細資料。  
   
 ## <a name="permissions"></a>Permissions  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  

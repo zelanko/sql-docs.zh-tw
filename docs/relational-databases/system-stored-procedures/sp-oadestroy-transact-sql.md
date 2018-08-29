@@ -1,5 +1,5 @@
 ---
-title: sp_OADestroy (TRANSACT-SQL) |Microsoft 文件
+title: sp_OADestroy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OADestroy
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 745b9f47c6fded870a6a4453e868cebdc88eb2b3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 758f9be98c13f599fabcea77d1007c73a688d5e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251218"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037375"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>引數  
  *objecttoken*  
- 使用先前建立的 OLE 物件的物件 token **sp_OACreate**。  
+ 使用先前建立之 OLE 物件的物件 token **sp_OACreate**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
   
- 如需有關 HRESULT 傳回碼的詳細資訊，請參閱[OLE Automation 傳回碼與錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
+ 如需有關 HRESULT 傳回碼的詳細資訊，請參閱 < [OLE Automation 傳回碼與錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="remarks"></a>備註  
- 如果**sp_OADestroy**未呼叫 vspackage，建立 OLE 物件即會自動終結批次的結尾。  
+ 如果**sp_OADestroy**不呼叫時，建立批次的結尾會自動終結 OLE 物件。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會損毀先前建立**SQLServer**物件。  
+ 下列範例會終結之前建立**SQLServer**物件。  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  

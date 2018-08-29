@@ -22,12 +22,12 @@ caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2e508497f7429f596285717978cc6c2953c9c320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4388f157aba6ae590f2bc56109b18696e98ea49
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015925"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409509"
 ---
 # <a name="implementing-a-delivery-extension"></a>實作傳遞延伸模組
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可讓使用者建立和發行報表，一旦建立和發行，就可以傳遞給各個位置。 除此之外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括數個傳遞延伸模組以及一個傳遞 API，可讓開發人員建立其他的傳遞延伸模組，以進一步擴充在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的傳遞功能。  
@@ -53,17 +53,11 @@ ms.locfileid: "33015925"
  [使用傳遞延伸模組的設定類別](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
  描述 **Setting** 類別的屬性，以及如何在傳遞延伸模組實作中使用它。  
   
- [使用傳遞延伸模組的 IDeliveryReportServerInformation 介面](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- 描述 **IDeliveryReportServerInformation** 介面的屬性，以及如何在傳遞延伸模組實作中使用它。  
-  
  [使用傳遞延伸模組的報表類別](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
  描述 **Report** 類別的屬性，以及如何在傳遞延伸模組實作中使用它。  
   
  [使用傳遞延伸模組的 RenderedOutputFile 類別](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  描述 **RenderedOutputFile** 類別的屬性，以及如何在傳遞延伸模組實作中使用它。  
-  
- [實作傳遞延伸模組的 ISubscriptionBaseUIUserControl 介面](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
- 描述傳遞延伸模組使用者控制項的屬性，以及如何為訂閱實作自己的使用者介面。  
   
  [部署傳遞延伸模組](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
  描述如何部署您的傳遞延伸模組。  

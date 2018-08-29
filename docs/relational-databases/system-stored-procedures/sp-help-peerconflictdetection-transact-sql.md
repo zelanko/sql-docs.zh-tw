@@ -1,5 +1,5 @@
 ---
-title: e (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_peerconflictdetection (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10490c69dd5d278d7d298dc8ebd4b10ff8106be9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01ab569de510b115e0c2643192254366d5b41ebb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994675"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021059"
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [ @publication= ] '*publication*'  
- 這是要傳回資訊的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是要傳回資訊的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [ @timeout= ] *timeout*  
- 指定此程序等候拓撲中每個節點之回應的時間長度 (以秒為單位)，過了這段期間將會逾時。 如果拓撲中有唯讀訂閱者，指定逾時值是無效的。 唯讀訂閱者絕對不會回應來自這個程序的呼叫。 *逾時*是**int**，預設值是 60。  
+ 指定此程序等候拓撲中每個節點之回應的時間長度 (以秒為單位)，過了這段期間將會逾時。 如果拓撲中有唯讀訂閱者，指定逾時值是無效的。 唯讀訂閱者絕對不會回應來自這個程序的呼叫。 *逾時*已**int**，預設值是 60。  
   
 ## <a name="result-sets"></a>結果集  
  sp_help_peerconflictdetection 會傳回三個結果集， 這些結果記載於以下主題中：  
@@ -72,7 +72,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [點對點複寫中的衝突偵測](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [點對點異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

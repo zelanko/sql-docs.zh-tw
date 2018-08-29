@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042635"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774676"
 ---
 # <a name="options-environment---help---general-page"></a>選項 (環境 - 說明 - 一般頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
+使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
   
 > [!NOTE]  
 > 一直到重新啟動環境之後，在此頁面上對選項所做的變更才會生效。  
   
 ## <a name="settings"></a>[設定]  
 **顯示說明使用的工具**  
-指定說明顯示的方式。 從下拉式清單中選取 [外部說明檢視器]，即可在外部浮動視窗中顯示主題。 選取 [整合式說明檢視器]，即可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 內停駐的 Web 瀏覽器視窗中顯示說明主題。  
+指定說明顯示的方式。 從下拉式清單中選取 [外部說明檢視器]，即可在外部浮動視窗中顯示主題。 選取 [整合式說明檢視器]，即可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內停駐的 Web 瀏覽器視窗中顯示說明主題。  
   
 **每一頁的搜尋結果數目**  
 指定在單一 [搜尋結果] 頁面上要顯示主題的數目。  

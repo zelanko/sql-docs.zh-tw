@@ -1,5 +1,5 @@
 ---
-title: sp_get_distributor (TRANSACT-SQL) |Microsoft 文件
+title: sp_get_distributor & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 088b2d2c6e334d48fae3e9257f76c5fd8129c15d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994095"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021287"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**安裝**|**int**|**0** = 否;**1** = 是|  
+|**安裝**|**int**|**0** = 否;**1** = yes|  
 |**發佈伺服器**|**sysname**|散發者伺服器的名稱|  
-|**安裝的散發資料庫**|**int**|**0** = 否;**1** = 是|  
-|**為散發發行者**|**int**|**0** = 否;**1** = 是|  
-|**具有遠端散發發行者**|**int**|**0** = 否;**1** = 是|  
+|**安裝的散發資料庫**|**int**|**0** = 否;**1** = yes|  
+|**散發發行者**|**int**|**0** = 否;**1** = yes|  
+|**具有遠端散發發行者**|**int**|**0** = 否;**1** = yes|  
   
 ## <a name="remarks"></a>備註  
- **sp_get_distributor**主要供[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]快照式、 交易式和合併式複寫中。  
+ **sp_get_distributor**主要是供[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]快照、 交易式和合併式複寫中。  
   
 ## <a name="permissions"></a>Permissions  
- 任何使用者都可以執行**sp_get_distributor**。 非 NULL 會傳回結果集時，此預存程序執行的成員**db_owner**或**replmonitor**固定資料庫角色的成員的散發資料庫上**db_owner**至少一個已發行的資料庫上固定的資料庫角色。 非 NULL 結果集也會傳回此預存程序程式執行時的發行集存取清單 (PAL) 中的使用者至少一個已發行資料庫，還是也可以執行在散發資料庫的非 SQL Server 發行者的 PAL ﹜**預存程序_get_distributor**。  
+ 任何使用者都可以執行**sp_get_distributor**。 非 NULL 結果集時，會傳回此預存程序執行的成員**db_owner**或是**replmonitor**固定資料庫角色的成員的散發資料庫上**db_owner**固定的資料庫角色的至少一個已發行的資料庫。 非 NULL 結果集也會傳回此預存程序由使用者執行發行集存取清單 (PAL) 中的至少一個已發行資料庫，還是也可以執行在散發資料庫的非 SQL Server 發行者的 PAL ﹜**預存程序_get_distributor**。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   

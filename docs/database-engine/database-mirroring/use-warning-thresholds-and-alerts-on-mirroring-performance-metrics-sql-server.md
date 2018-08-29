@@ -21,12 +21,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31aa4d36f1b978cb50e99b9350e3d04b1c1564d4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 157842419692f2fbb70f7fc3d28c4cf920e8f228
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312447"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409499"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "35312447"
   
      下列系統預存程序集可讓管理員一次設定並管理一個夥伴之鏡像資料庫的警告臨界值。  
   
-    |程序|描述|  
+    |程序|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|加入或變更指定之鏡像效能標準的警告臨界值。|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|傳回有關其中一個或所有關鍵資料庫鏡像監視器效能標準之警告臨界值的資訊。|  
@@ -118,9 +118,9 @@ ms.locfileid: "35312447"
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要使用 SQL Server Management Studio 建立警示**  
   
--   [使用錯誤號碼建立警示](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [使用錯誤號碼建立警示](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [建立 WMI 事件警示](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [建立 WMI 事件警示](../../ssms/agent/create-a-wmi-event-alert.md)  
   
  **若要監控資料庫鏡像**  
   

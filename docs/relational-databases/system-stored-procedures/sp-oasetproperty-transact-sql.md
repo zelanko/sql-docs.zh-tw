@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (TRANSACT-SQL) |Microsoft 文件
+title: sp_OASetProperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aeadb381a7bb5c55d9a26e5e0e8b9e148f7b120
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 689549b2741e4b334f664cf7662204702686a93f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258610"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023738"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>引數  
  *objecttoken*  
- 先前所建立的 OLE 物件的物件 token **sp_OACreate**。  
+ 先前所建立之 OLE 物件的物件 token **sp_OACreate**。  
   
  *propertyname*  
  這是要設為新值的 OLE 物件屬性名稱。  
@@ -53,8 +53,8 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *newvalue*  
  這是屬性的新值，必須是適當資料類型的值。  
   
- *索引*  
- 這是一個索引參數。 如果指定，*索引*必須是適當的資料類型的值。  
+ *index*  
+ 這是一個索引參數。 如果指定， *index*必須是適當的資料類型的值。  
   
  部份屬性有參數。 這些屬性稱為索引屬性，參數稱為索引參數。 一個屬性可以有多個索引參數。  
   
@@ -64,13 +64,13 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
   
- 如需有關 HRESULT 傳回碼的詳細資訊，請參閱[OLE Automation 傳回碼與錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
+ 如需有關 HRESULT 傳回碼的詳細資訊，請參閱 < [OLE Automation 傳回碼與錯誤資訊](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會設定`HostName`屬性 (先前建立**SQLServer**物件) 至新的值。  
+ 下列範例會設定`HostName`屬性 (先前建立**SQLServer**物件) 為新值。  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  

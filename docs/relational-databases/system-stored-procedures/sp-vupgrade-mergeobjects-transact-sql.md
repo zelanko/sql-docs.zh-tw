@@ -1,5 +1,5 @@
 ---
-title: sp_vupgrade_mergeobjects (TRANSACT-SQL) |Microsoft 文件
+title: sp_vupgrade_mergeobjects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_vupgrade_mergeobjects
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 076eebfd551d24577c94f3a8092299cec8c9efd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eed7099384720e636553da489ed87440a4ca5d42
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998825"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019733"
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
   
 ## <a name="arguments"></a>引數  
  [  **@login=**] **'***登入***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果這個參數不需要*security_mode*設**1**，也就是 Windows 驗證。  
+ 這是在散發資料庫中建立新的系統物件時，所用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果這個參數不需要*security_mode*設為**1**，也就是 Windows 驗證。  
   
  [  **@password=**] **'***密碼***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的系統管理員密碼。 *密碼*是**sysname**，預設值是 **'** （空字串）。 如果這個參數不需要*security_mode*設**1**，也就是 Windows 驗證。  
+ 這是在散發資料庫中建立新的系統物件時，所用的系統管理員密碼。 *密碼*已**sysname**，預設值是 **'** （空字串）。 如果這個參數不需要*security_mode*設為**1**，也就是 Windows 驗證。  
   
  [  **@security_mode=**] **'***security_mode***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的登入安全性模式。 *security_mode*是**元**預設值是**1**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]則會使用驗證。 如果**1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ 這是在散發資料庫中建立新的系統物件時，所用的登入安全性模式。 *security_mode*已**位元**預設值是**1**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將用於驗證。 如果**1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

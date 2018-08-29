@@ -21,21 +21,21 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f77a34196a6299e07942fc5809b80cb81955cf08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 584087ad10018a0ba6f020c55256a8cb2d7486fe
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016345"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409463"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 Connection 類別
   **Connection** 物件代表資料庫連結或是類似的資源，而且是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之使用者的起點。 它代表資料庫伺服器的連接，不過任何具有類似行為的實體都可以公開成 **Connection**。  
   
  若要實作 **Connection** 物件，請建立實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 的類別，並選擇性地實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>。  
   
- 在您的實作中，您必須確保在執行命令之前先建立和開啟連接。 請確保實作要求用戶端明確地開啟和關閉連接，而不是讓您的實作隱含地為用戶端開啟和關閉連接。 在取得連接時執行您的安全性檢查。 在 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組中需要其他類別的現有連接，將可確保在與資料來源搭配使用時永遠執行安全性檢查。  
+ 在您的實作中，您必須確保在執行命令之前先建立和開啟連接。 請確保實作要求用戶端明確地開啟和關閉連接，而不是讓您的實作隱含地為用戶端開啟和關閉連接。 在取得連接時執行您的安全性檢查。 在 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組中需要其他類別的現有連接，將可確保在與資料來源搭配使用時永遠執行安全性檢查。  
   
- 所需連接的屬性是以連接字串來表示。 強烈建議 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理延伸模組使用由 OLE DB 定義的熟悉名稱/值組系統來支援 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> 屬性。  
+ 所需連接的屬性是以連接字串來表示。 強烈建議 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組使用由 OLE DB 定義的熟悉名稱/值組系統來支援 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> 屬性。  
   
 > [!NOTE]  
 >  **Connection** 物件通常需要大量資源才能取得，因此您可能會想要考慮共用連線或是其他技術來減輕這個問題。  

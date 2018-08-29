@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_grantlogin
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c0e5454e94024bf0cebe6d9b0b2702e1bcf989f6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 234c7122bf9d2356a15ac40f183c618ff687173d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054216"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019665"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

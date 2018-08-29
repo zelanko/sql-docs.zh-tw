@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64cf56df3d9e7ff4f2cb82bf157226b9a8f33993
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 307253f2bf44c24872a4ba90e6b6132819071250
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984770"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774270"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>自動化管理工作 (SQL Server Agent)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37984770"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 可讓您自動化管理工作。 若要將管理自動化，您必須定義可預測的管理工作，然後指定各項工作的發生條件。 使用自動化管理來處理例行性工作與事件，可讓您有更多時間執行其他管理功能。  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您自動化管理工作。 若要將管理自動化，您必須定義可預測的管理工作，然後指定各項工作的發生條件。 使用自動化管理來處理例行性工作與事件，可讓您有更多時間執行其他管理功能。  
   
 ## <a name="in-this-section"></a>本節內容  
 [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)  

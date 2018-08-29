@@ -1,5 +1,5 @@
 ---
-title: sys.server_file_audits (TRANSACT-SQL) |Microsoft 文件
+title: sys.server_file_audits (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222099"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035928"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含內之檔案稽核類型的擴充的資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稽核的伺服器執行個體。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|稽核的識別碼。|  
-|name|**sysname**|稽核的名稱。|  
+|NAME|**sysname**|稽核的名稱。|  
 |audit_guid|**uniqueidentifier**|稽核的 GUID。|  
 |create_date|**datetime**|建立檔案稽核時的 UTC 日期。|  
 |modify_date|**日期時間**|上次修改檔案稽核的 UTC 日期。|  
@@ -59,7 +59,7 @@ ms.locfileid: "33222099"
 |log_file_name|**nvarchar(260)**|CREATE AUDIT DDL 中提供之記錄檔的基底名稱。 會有一個累加數字加入 base_log_name 檔案當做後置詞，以建立記錄檔名稱。|  
   
 ## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，主體必須不應遭到拒絕**VIEW ANY DEFINITION**權限。  
+ 具有主體**ALTER ANY SERVER AUDIT**或是**VIEW ANY DEFINITION**權限可以存取這份目錄檢視。 此外，不應拒絕主體**VIEW ANY DEFINITION**權限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "33222099"
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_file_audits & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
  [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   

@@ -19,12 +19,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 777204c7192a9b74f8730f47898a3fb175b5c322
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2405449dad69e386aa267f683c672533b3c02276
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145559"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406163"
 ---
 # <a name="manage-data-collection"></a>管理資料收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "33145559"
   
 >**重要！！** 不同於一般預存程序，資料收集器的預存程序會使用嚴格類型的參數，而且不支援資料類型的自動轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
- 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立及執行所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)。 另一個替代方法是使用任何編輯器建立查詢，並將它儲存為 .sql 副檔名的文字檔。 您可以使用 **sqlcmd** 公用程式，從 Windows 命令提示字元執行查詢。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立及執行所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](../../ssms/object/object-explorer.md)。 另一個替代方法是使用任何編輯器建立查詢，並將它儲存為 .sql 副檔名的文字檔。 您可以使用 **sqlcmd** 公用程式，從 Windows 命令提示字元執行查詢。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../../relational-databases/scripting/sqlcmd-use-the-utility.md)。  
   
 ### <a name="stored-procedures-and-views"></a>預存程序和檢視表  
  **使用資料收集器**  
   
  下表描述的是您可以用來處理資料收集器的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|啟用資料收集器。|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|停用資料收集器。|  
@@ -84,7 +84,7 @@ ms.locfileid: "33145559"
   
  下表描述的是您可以用來處理收集組的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|視需要執行收集組。|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|啟動收集組。|  
@@ -98,7 +98,7 @@ ms.locfileid: "33145559"
   
  下表描述的是您可以用來處理收集項的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|建立收集項。|  
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|刪除收集項。|  
@@ -108,7 +108,7 @@ ms.locfileid: "33145559"
   
  下表描述的是您可以用來處理收集器型別的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|建立收集器型別。|  
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|更新收集器型別。|  
@@ -118,7 +118,7 @@ ms.locfileid: "33145559"
   
  下表描述您可用來取得組態資訊與執行記錄資料的檢視。  
   
-|檢視表名稱|描述|  
+|檢視表名稱|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|取得資料收集器組態。|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|取得收集項資訊。|  
@@ -132,7 +132,7 @@ ms.locfileid: "33145559"
   
  下表描述的是您可以用來設定對管理資料倉儲之存取的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|針對管理資料倉儲指定連接字串中所定義的資料庫名稱。|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|針對管理資料倉儲指定連接字串中所定義的執行個體。|  
@@ -141,7 +141,7 @@ ms.locfileid: "33145559"
   
  下表描述的是您可以用來處理管理資料倉儲組態的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|在管理資料倉儲中建立集合快照集。|  
 |[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|更新資料收集的資料來源。|  
@@ -153,7 +153,7 @@ ms.locfileid: "33145559"
   
  下表描述的是您可以用來處理上傳封裝的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|設定資料上傳的重試次數。|  
 |[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|指定上傳重試之間的資料暫存儲存位置。|  
@@ -162,14 +162,14 @@ ms.locfileid: "33145559"
   
  下表描述的是您可以用來處理資料收集執行記錄的預存程序。  
   
-|程序名稱|描述|  
+|程序名稱|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|從執行記錄中刪除收集組項目。|  
   
 ### <a name="functions"></a>函數  
  下表描述的是您可以用來取得執行和追蹤資訊的函數。  
   
-|函數名稱|描述|  
+|函數名稱|Description|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|取得特定封裝的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 執行記錄資料。|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|取得收集組或封裝的執行統計資料。 這些資訊包含所記錄的錯誤。|  

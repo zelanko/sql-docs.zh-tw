@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_update_policy_category (TRANSACT-SQL) |Microsoft 文件
+title: sp_syspolicy_update_policy_category & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_update_policy_category
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c90839aff5de8d9f1a93efc10321fe162394f51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 73e7eee22127c7b2e928004f997eac6b80dbddfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256137"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035331"
 ---
 # <a name="spsyspolicyupdatepolicycategory-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
   
 ## <a name="arguments"></a>引數  
  [ **@name=** ] **'***name***'**  
- 這是原則類別目錄的名稱。 *名稱*是**sysname**，而且必須指定如果*policy_category_id*是 NULL。  
+ 這是原則類別目錄的名稱。 *名稱*已**sysname**，而且必須指定如果*policy_category_id&lt*是 NULL。  
   
  [ **@policy_category_id=** ] *policy_category_id*  
- 這是原則類別目錄的識別碼。 *policy_category_id*是**int**，而且必須指定如果*名稱*是 NULL。  
+ 這是原則類別目錄的識別碼。 *policy_category_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
   
  [  **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
- 判斷是否針對原則類別目錄託管資料庫訂閱。 *mandate_database_subscriptions*是**元**值，預設值是 NULL。 您可以使用下列其中一個值：  
+ 判斷是否針對原則類別目錄託管資料庫訂閱。 *mandate_database_subscriptions*已**元**值，預設值是 NULL。 您可以使用下列其中一個值：  
   
 -   0 = 未託管  
   
@@ -64,7 +63,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="remarks"></a>備註  
  您必須在 msdb 系統資料庫的內容中執行 sp_syspolicy_update_policy_category。  
   
- 您必須指定值，其中一個*名稱*或*policy_category_id*。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
+ 您必須針對指定的值*名稱*若是*policy_category_id&lt*。 兩者不得同時為 NULL。 若要取得這些值，請查詢 msdb.dbo.syspolicy_policy_categories 系統檢視表。  
   
 ## <a name="permissions"></a>Permissions  
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
@@ -83,9 +82,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原則式管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
- [sp_syspolicy_delete_policy_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
  [sp_syspolicy_rename_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-category-transact-sql.md)  
   
   

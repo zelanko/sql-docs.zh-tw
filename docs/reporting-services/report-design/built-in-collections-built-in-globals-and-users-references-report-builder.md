@@ -1,7 +1,7 @@
 ---
 title: 內建的全域和使用者參考 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022065"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406496"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>內建集合 - 內建的全域和使用者參考 (報表產生器)
   內建欄位集合包含 **Globals** 和 **User** 集合，代表在處理報表時 Reporting Services 所提供的全域值。 **Globals** 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 **User** 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  
@@ -49,7 +49,7 @@ ms.locfileid: "33022065"
 ### <a name="renderformat"></a>RenderFormat  
  下表描述 **RenderFormat**的成員。  
   
-|成員|類型|描述|  
+|成員|類型|Description|  
 |------------|----------|-----------------|  
 |[屬性]|**String**|在 RSReportServer 組態檔中註冊之轉譯器的名稱。<br /><br /> 可在報表處理/呈現週期的特定部分使用。|  
 |IsInteractive|**布林**|目前的轉譯要求是否使用互動式轉譯格式。|  
@@ -81,9 +81,7 @@ ms.locfileid: "33022065"
 |----------------|--------------|---------------------|  
 |**語言**|**字串**|執行報表之使用者的語言。 例如， `en-US`。|  
 |**UserID**|**String**|執行報表之使用者的識別碼。 如果您是使用 Windows 驗證，此值為目前使用者的網域帳戶。 這個值是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全性延伸模組所決定，此延伸模組可使用 Windows 驗證或自訂驗證。|  
-  
- 如需在報表中支援多國語言的詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 線上叢書 [》中](http://go.microsoft.com/fwlink/?LinkId=120955)文件集的＜適用於多語言或全域部署的解決方案設計考量＞。  
-  
+ 
 ### <a name="using-locale-settings"></a>使用地區設定  
  若要決定對使用者顯示報表的方式，您可以利用運算式，透過 **User.Language** 值來參考用戶端電腦上的本機設定。 例如，您可以建立報表來使用以本機值為基礎的不同查詢運算式。 查詢可能會根據傳回的語言，從不同的資料行擷取當地語系化的資訊。 您也可以在報表的語言設定或根據此變數的報表項目中使用運算式。  
   

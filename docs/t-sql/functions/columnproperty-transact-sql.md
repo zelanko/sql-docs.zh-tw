@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782589"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410307"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ COLUMNPROPERTY ( id , column , property )
 *property*  
 針對 *id* 引數，*property* 引數會指定 `COLUMNPROPERTY` 函式所傳回的資訊類型。 *property* 引數可以具有下列任何一個值：
   
-|ReplTest1|描述|傳回的值|  
+|ReplTest1|Description|傳回的值|  
 |---|---|---|
 |**AllowsNull**|允許 Null 值|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**ColumnId**|對應於 **sys.columns.column_id** 的資料行識別碼值。|資料行識別碼<br /><br /> **注意：** 當查詢多個資料行時，資料行識別碼值順序可能會有間距。|  
@@ -64,7 +64,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsCursorType**|程序參數的類型是 CURSOR。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsDeterministic**|資料行具有決定性。 這個屬性只適用於計算資料行和檢視資料行。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。 不是計算資料行或檢視資料行。|  
 |**IsFulltextIndexed**|資料行已完成全文檢索索引的登錄。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
-|**IsHidden**|是系統產生的資料行值。 對應至 **sys.columns.is_hidden**|**適用於**： [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不隱藏<br /><br /> 1：隱藏|  
+|**IsHidden**|是系統產生的資料行值。 對應至 **sys.columns.is_hidden**|**適用於**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不隱藏<br /><br /> 1：隱藏|  
 |**IsIdentity**|資料行使用 IDENTITY 屬性。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsIdNotForRepl**|資料行會檢查 IDENTITY_INSERT 設定。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsIndexable**|資料行可以建立索引。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  

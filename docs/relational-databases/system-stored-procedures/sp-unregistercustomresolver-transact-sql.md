@@ -1,5 +1,5 @@
 ---
-title: sp_unregistercustomresolver (TRANSACT-SQL) |Microsoft 文件
+title: sp_unregistercustomresolver & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_unregistercustomresolver
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 92a6cfa9cf51ed0742e19d75abeb5baf7f343b16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c709afa1b0f60a64daabb85e0c796c2bb2e3b2ca
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998466"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038015"
 ---
 # <a name="spunregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
   
 ## <a name="arguments"></a>引數  
  [  **@article_resolver =** ] **'***article_resolver***'**  
- 指定要取消註冊之自訂商務邏輯的名稱。 *article_resolver*是**nvarchar （255)**，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 .NET Framework 組件，這個參數就是組件的名稱。  
+ 指定要取消註冊之自訂商務邏輯的名稱。 *article_resolver*已**nvarchar(255)**，沒有預設值。 如果移除的商務邏輯是 COM 元件，這個參數就是元件的易記名稱。 如果商務邏輯是一個 .NET Framework 組件，這個參數就是組件的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -54,14 +54,14 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="remarks"></a>備註  
  **sp_unregistercustomresolver**用於合併式複寫中。  
   
- 使用[sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)清單已註冊的自訂商務邏輯模組或 COM 解析程式返回拓撲的複寫拓撲中的任何伺服器。  
+ 使用[sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)在複寫拓撲，拓撲返回已註冊的自訂商務邏輯模組或 COM 解析程式的清單中的任何伺服器上。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_unregistercustomresolver**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_lookupcustomresolver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_registercustomresolver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

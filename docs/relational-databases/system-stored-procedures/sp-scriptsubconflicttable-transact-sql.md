@@ -1,5 +1,5 @@
 ---
-title: sp_scriptsubconflicttable (TRANSACT-SQL) |Microsoft 文件
+title: sp_scriptsubconflicttable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86a5b01b46aee8a08c0e490b0d59e3887211d51e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9eddd0192cff32db884f153a00b0f5526d16028
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997655"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020847"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,17 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
   
 ## <a name="arguments"></a>引數  
  [ **@publication=**] **'***publication***'**  
- 這是發行項所在的發行集名稱。 這個名稱在資料庫內必須是唯一的。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行項所在的發行集名稱。 這個名稱在資料庫內必須是唯一的。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
- 這是訂閱發行項的名稱。 *發行項*是**sysname**，沒有預設值。  
+ 這是訂閱發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|傳回針對給定的佇列訂閱發行項，在訂閱者上建立衝突資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 這份指令碼執行於訂閱資料庫的訂閱者端。|  
   

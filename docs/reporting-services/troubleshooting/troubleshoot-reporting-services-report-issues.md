@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb93c59cec663a99ebc0460d948f4c2bd0a78f94
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7566afc5761a094dfad1c27717cd6810415c9511
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055856"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406700"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>針對 Reporting Services 報表問題進行疑難排解
 本主題可協助您對下列問題進行疑難排解： [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 報表設計、預覽報表、以原生模式或 SharePoint 模式將報表發行至報表伺服器、在報表伺服器上檢視報表，或是將報表匯出為不同的檔案格式。  
@@ -65,6 +65,6 @@ ms.locfileid: "38055856"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 

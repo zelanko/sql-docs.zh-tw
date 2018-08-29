@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e4aaea407128642cb8ce9e8696eac0236cd60379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f1a83936f219fb95e03554383f6374b9f696f47
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015635"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406179"
 ---
 # <a name="implementing-a-data-processing-extension"></a>實作資料處理延伸模組
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的資料處理延伸模組，可讓您連接到資料來源並擷取資料。 它們也可當做資料來源與資料集之間的橋樑。 因為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組是依照 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面子集建立的。  
@@ -59,9 +59,6 @@ ms.locfileid: "33015635"
   
  [對資料處理延伸模組程式碼進行偵錯](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  描述如何在資料處理延伸模組中偵錯程式碼。  
-  
- [移除資料處理延伸模組](../../../reporting-services/extensions/data-processing/removing-a-data-processing-extension.md)  
- 描述如何從報表伺服器或是報表設計師移除資料處理延伸模組。  
   
  如需完全實作的資料處理延伸模組的範例，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   

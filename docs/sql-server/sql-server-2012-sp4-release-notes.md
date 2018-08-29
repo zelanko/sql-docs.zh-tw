@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023326"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774280"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 - **新增 DMF 以取代 DBCC INPUTBUFFER** - 引進以 session_id 作為參數的新動態管理函數 sys.dm_input_buffer 來取代 DBCC INPUTBUFFER
 - **針對可用性群組的讀取路由失敗增強 XEvent** - 目前，只有存在路由清單，但路由清單中沒有伺服器可供連接時，才會引發 read_only_rout_fail XEvent。 這項改善包含其他資訊以協助進行疑難排解，它也會在引發 XEvent 的字碼指標上展開。 
 - **已改善使用可用性群組容錯移轉處理 Service Broker 的功能** - 目前，在 AG 容錯移轉期間啟用可用性群組資料庫上的 Service Broker 時，所有來自主要複本的 Service Broker 連接都會保持開啟狀態。 這項改善會關閉所有在 AG 容錯移轉期間開啟的這類連接。
-- **自動軟體式 NUMA 資料分割** - 在 SQL 2014 SP2 中，於伺服器層級啟用追蹤旗標 8079 時會導入「自動[軟體式 NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx)」資料分割。 在啟動期間啟用追蹤旗標 8079 時，SQL Server 2014 SP2 會查閱硬體配置，並在系統報告每個 NUMA 節點上有 8 個或更多個 CPU 時自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。 建議先使用自動軟體式 NUMA 測試工作負載的效能，再於生產環境中將它開啟。
+- **自動軟體式 NUMA 資料分割** - 在 SQL 2014 SP2 中，於伺服器層級啟用追蹤旗標 8079 時會導入「自動[軟體式 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)」資料分割。 在啟動期間啟用追蹤旗標 8079 時，SQL Server 2014 SP2 會查閱硬體配置，並在系統報告每個 NUMA 節點上有 8 個或更多個 CPU 時自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。 建議先使用自動軟體式 NUMA 測試工作負載的效能，再於生產環境中將它開啟。
 
 ## <a name="service-pack-3-release-notes"></a>Service Pack 3 版本資訊
 
@@ -133,7 +133,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>如果您使用相同的 IP 位址，重新安裝 SQL Server 容錯移轉叢集的執行個體會失敗  
 **問題：** 如果您在安裝 SQL Server 容錯移轉叢集執行個體期間指定不正確的 IP 位址，安裝就會失敗。 解除安裝失敗的執行個體之後，如果您嘗試使用相同的執行個體名稱和正確的 IP 位址來重新安裝 SQL Server 容錯移轉叢集執行個體，安裝仍會失敗。 發生失敗的原因是先前的安裝遺留了重複的資源群組。  
   
-**因應措施** ：若要解決此問題，請在重新安裝期間使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](http://msdn.microsoft.com/library/ms191545)。 
+**因應措施** ：若要解決此問題，請在重新安裝期間使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services 和 PowerPivot  
   

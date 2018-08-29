@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbe9414a2cb1f2a9972143240ce4b474e1fa355e
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+ms.openlocfilehash: e8cffb2b503f092c264544b2b9adbffc2422396c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038085"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018894"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_helppublication](../../relational-databases/replication/codesnippet/tsql/sp-helppublication-trans_1.sql)]  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  只有發行者端的系統管理員 (sysadmin) 固定伺服器角色成員、發行集資料庫的 db_owner 固定資料庫角色成員，或發行集存取清單 (PAL) 中的使用者，才能夠執行 sp_helppublication。  
   
  如果是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，只有散發者端的系統管理員 (sysadmin) 固定伺服器角色成員、散發資料庫的 db_owner 固定資料庫角色成員，或 PAL 中的使用者，才能夠執行 sp_helppublication。  
