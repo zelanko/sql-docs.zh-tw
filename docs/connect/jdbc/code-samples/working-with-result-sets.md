@@ -14,33 +14,33 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b5c2df6c7c932e16394b91e76719756d9b959ff
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 394f449cc7ae49ca7bff992b4ecc5c314713201b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458462"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784009"
 ---
 # <a name="working-with-result-sets"></a>使用結果集
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-當您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫中包含的資料時，一種操作資料的方法就是使用結果集。 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 支援透過 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件來使用結果集。 藉由使用 SQLServerResultSet 物件，您可以擷取從 SQL 陳述式或預存程序傳回的資料、依需要更新資料，然後將該資料存回資料庫。  
+當您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中包含的資料時，一種操作資料的方法就是使用結果集。 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 支援透過 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件來使用結果集。 藉由使用 SQLServerResultSet 物件，您可以擷取從 SQL 陳述式或預存程序傳回的資料、依需要更新資料，然後將該資料存回資料庫。  
   
 此外，SQLServerResultSet 物件也提供數種方法，可用來瀏覽其資料列、取得或設定其包含的資料，以及對基礎資料庫中的變更建立各種敏感性層級。  
   
 > [!NOTE]  
 > 如需管理結果集，包括其變更的敏感性的詳細資訊，請參閱[JDBC driver 管理結果集](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
   
-本節的主題描述您可以使用結果集，操作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫中所包含資料的不同方法。  
+本節的主題描述您可以使用結果集，操作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中所包含資料的不同方法。  
   
 ## <a name="in-this-section"></a>本節內容  
   
 | 主題                                                                                           | Description                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [擷取結果集資料範例](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | 描述如何使用結果集，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫擷取資料並顯示資料。                                                         |
-| [修改結果集資料範例](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 描述如何使用結果集，插入、擷取及修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫中的資料。                                                      |
-| [快取結果集資料範例](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | 描述如何使用結果集，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫擷取大量資料，以及控制如何在用戶端上快取該資料。 |
+| [擷取結果集資料範例](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | 描述如何使用結果集，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫擷取資料並顯示資料。                                                         |
+| [修改結果集資料範例](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 描述如何使用結果集，插入、擷取及修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的資料。                                                      |
+| [快取結果集資料範例](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | 描述如何使用結果集，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫擷取大量資料，以及控制如何在用戶端上快取該資料。 |
   
 ## <a name="see-also"></a>另請參閱  
 

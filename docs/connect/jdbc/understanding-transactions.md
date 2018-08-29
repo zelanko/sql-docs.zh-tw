@@ -14,12 +14,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20ec695090a164fb0cb5509833db78bd6b38fe69
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: b6d923bce43ad2f9ed3fd0a7d33d456910125768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662110"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785905"
 ---
 # <a name="understanding-transactions"></a>了解交易
 
@@ -43,7 +43,7 @@ ms.locfileid: "39662110"
 
 分散式交易會在兩個或以上的網路資料庫上更新資料，並同時保留重要的不可部分完成、一致、獨立且持久的 (ACID) 交易處理屬性。 分散式交易支援已新增至 JDBC 2.0 Optional API 規格中的 JDBC API。 分散式交易的管理通常是由 Java EE 應用程式伺服器環境中的 Java Transaction Service (JTS) 交易管理員自動執行。 然而，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援任何符合 Java Transaction API (JTA) 規範之交易管理員下的分散式交易。
 
-JDBC 驅動程式與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 分散式交易協調器 (MS DTC) 密切整合，以提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 實際的分散式交易支援。 MS DTC 是一種由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 針對 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 系統所提供的分散式交易機制。 MS DTC 使用來自 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 經過驗證的交易處理技術以支援 XA 功能，例如完整的二階段分散式認可通訊協定，以及分散式交易的復原。
+JDBC 驅動程式與 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 分散式交易協調器 (MS DTC) 密切整合，以提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實際的分散式交易支援。 MS DTC 是一種由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 針對 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 系統所提供的分散式交易機制。 MS DTC 使用來自 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 經過驗證的交易處理技術以支援 XA 功能，例如完整的二階段分散式認可通訊協定，以及分散式交易的復原。
 
 如需如何使用分散式的交易的詳細資訊，請參閱[了解 XA 交易](../../connect/jdbc/understanding-xa-transactions.md)。
 

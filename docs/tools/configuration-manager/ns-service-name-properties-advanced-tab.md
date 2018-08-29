@@ -13,13 +13,14 @@ ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 6b1bb688bab227de0c3a9ba0b382e20c921224d6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf7b93a4cdb111c655f4b3c57211d53f79a6d8d1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968250"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784382"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([進階] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

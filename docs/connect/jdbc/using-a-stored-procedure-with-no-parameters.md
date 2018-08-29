@@ -14,18 +14,18 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 01ec347bd34786fe3dc9f8533972c212847b1faa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661830"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784369"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用沒有參數的預存程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-您可呼叫之最簡單的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 預存程序為不含任何參數並傳回單一結果集的預存程序。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，您可以使用此類別，呼叫此種類的預存程序並處理其傳回的資料。
+您可呼叫之最簡單的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序為不含任何參數並傳回單一結果集的預存程序。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，您可以使用此類別，呼叫此種類的預存程序並處理其傳回的資料。
 
 當使用 JDBC 驅動程式呼叫不含參數的預存程序時，您必須使用 `call` SQL 逸出序列。 不含參數之 `call` 逸出序列的語法如下：
 

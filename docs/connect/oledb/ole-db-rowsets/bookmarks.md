@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], bookmarks
 - OLE DB rowsets, bookmarks
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 478c9022300c717bda38de223664cd36d301774a
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b4f076bb22728aef50fd0a356c4c7e472585cfc5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108830"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033837"
 ---
 # <a name="bookmarks"></a>書籤
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

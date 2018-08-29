@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CHECK_CONSTRAINTS view
 - INFORMATION_SCHEMA.CHECK_CONSTRAINTS view
 ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bdaff0d468acf89b5ec429ad36244484a4804564
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6f5a9cdb939f9d093350c5dcbac75c82653d56f3
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564792"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082841"
 ---
 # <a name="checkconstraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39564792"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|條件約束所屬的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|條件約束所屬的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|條件約束名稱。|  
 |**CHECK_CLAUSE**|**nvarchar (** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義陳述式的實際內文。|  
   

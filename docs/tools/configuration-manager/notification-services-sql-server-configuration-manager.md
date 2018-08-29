@@ -13,13 +13,14 @@ ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
 caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ad978da8e0ac2f98c0bfc5bc48f9c8e8d1da48ce
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 890731223344bf464ea2928be8fb16b7bc025e95
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980950"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784384"
 ---
 # <a name="notification-services-sql-server-configuration-manager"></a>Notification Services (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services Adventure Works 教學課程 (1400) |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28aa401eb037fecadca17ededf041ab82a4bc498
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7abd968db3aacbb71ed238e3f6ae6b857c8b1d99
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042446"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084711"
 ---
-# <a name="tabular-modeling-1400-compatibility-level"></a>表格式模型 （1400年相容性層級）
+# <a name="tabular-modeling-1400-compatibility-level"></a>表格式模型 (1400 相容性層級)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -98,7 +98,7 @@ ms.locfileid: "38042446"
 |[不完全的階層](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)|20 分鐘| 
 
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 
 若要開始，請參閱[第 1 課： 建立新的表格式模型專案](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
   

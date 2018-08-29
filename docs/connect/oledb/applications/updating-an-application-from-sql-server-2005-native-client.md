@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 915b098a6807e4c81f74839a62d6e32d5ced08af
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 15d4f01dbf35385e1fba296e5d78e57fa35f16ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108800"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034890"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>從 SQL Server 2005 Native Client 更新應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,13 +13,14 @@ ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 51be8c2f6c1c93b16865224475b32ba94223881d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d87da559ea4256bfc48038e4b8aa60de5c5107ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33066895"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42783879"
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server Agent &lt;伺服器&gt; (SQL Server 設定管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 - large data, OLE objects
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: bfb0b9f17f533678d8ac2f1cd8713fa385682689
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107194"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035028"
 ---
 # <a name="setting-large-data"></a>設定大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "39107194"
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 元素設定為 DBTYPE_IUNKNOWN，並將 *pObject* 元素設定為指向您所建立的 DBOBJECT 結構。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 項目設定為 DBTYPE_IUNKNOWN，並將 *pObject* 項目設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   

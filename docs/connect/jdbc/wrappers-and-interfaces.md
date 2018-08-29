@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784172"
 ---
 # <a name="wrappers-and-interfaces"></a>包裝函式與介面
 
@@ -61,7 +61,7 @@ Java.sql.Wrapper 介面會定義兩個方法： **isWrapperFor**並**unwrap**。
 
 ## <a name="interfaces"></a>介面
 
-從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 開始，介面可供應用程式伺服器存取相關聯類別中的驅動程式特定方法。 應用程式伺服器可以透過建立 Proxy、公開介面中 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的功能來包裝類別。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援擁有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定方法與常數的介面，讓應用程式伺服器可以建立類別的 Proxy。
+從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 開始，介面可供應用程式伺服器存取相關聯類別中的驅動程式特定方法。 應用程式伺服器可以透過建立 Proxy、公開介面中 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的功能來包裝類別。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援擁有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定方法與常數的介面，讓應用程式伺服器可以建立類別的 Proxy。
 
 這些介面衍生自標準的 Java 介面，讓您在物件解除包裝之後，可以使用相同的物件存取驅動程式特定的功能或一般 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 功能。
 

@@ -23,14 +23,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], user-defined types
 - ISSCommandWithParameters interface
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 5bc34584a052dc916540966690e54aecf7716092
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a92307ff23b9e267c79a573e10d091290f98c463
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107084"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037131"
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

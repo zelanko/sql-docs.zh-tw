@@ -17,14 +17,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, bulk copy operations
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 55ee44220bd66308c20ea4aab0d1e650e5df9756
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 55c72303a53059cde4d05b48bcd53731f70ca97b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108910"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036798"
 ---
 # <a name="performing-bulk-copy-operations"></a>執行大量複製作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

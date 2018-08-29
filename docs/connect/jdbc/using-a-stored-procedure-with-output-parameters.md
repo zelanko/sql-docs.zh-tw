@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662170"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785910"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含有輸出參數的預存程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 預存程序是會傳回一或多個 OUT 參數的預存程序，預存程序會使用這些參數將資料傳回給呼叫端應用程式。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別，您可以使用此類別呼叫這類型的預存程序並處理其傳回的資料。
+您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序是會傳回一或多個 OUT 參數的預存程序，預存程序會使用這些參數將資料傳回給呼叫端應用程式。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別，您可以使用此類別呼叫這類型的預存程序並處理其傳回的資料。
 
 使用 JDBC 驅動程式呼叫這類型的預存程序時，必須搭配使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法。 含有 OUT 參數之 `call` 逸出序列的語法如下：
 
@@ -36,12 +36,12 @@ ms.locfileid: "39662170"
 
 建構 `call` 逸出序列時，請使用 ? (問號) 字元來指定 IN 參數。 此字元會充當預留位置，代表將從預存程序傳回的參數值。 若要指定 OUT 參數的值，在執行預存程序之前，您必須使用 SQLServerCallableStatement 類別的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法來指定每個參數的資料類型。
 
-您在 registerOutParameter 方法中指定給 OUT 參數的值，必須是 java.sql.Types 包含的其中一個 JDBC 資料類型，然後該資料類型會對應到其中一個原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型。 如需 JDBC 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型，請參閱[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
+您在 registerOutParameter 方法中指定給 OUT 參數的值，必須是 java.sql.Types 包含的其中一個 JDBC 資料類型，然後該資料類型會對應到其中一個原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需 JDBC 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型，請參閱[了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
 
 當您將值傳遞到 OUT 參數的 registerOutParameter 方法時，不只要指定用於參數的資料類型，還要指定參數在預存程序中的序數位置或名稱。 比方說，如果預存程序包含單一 OUT 參數，則其序數值為 1；如果預存程序包含兩個參數，則第一個序數值為 1，第二個序數值為 2。
 
 > [!NOTE]  
-> JDBC 驅動程式不支援使用 CURSOR、SQLVARIANT、TABLE 及 TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型作為 OUT 參數。
+> JDBC 驅動程式不支援使用 CURSOR、SQLVARIANT、TABLE 及 TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型作為 OUT 參數。
 
 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列預存程序：
 

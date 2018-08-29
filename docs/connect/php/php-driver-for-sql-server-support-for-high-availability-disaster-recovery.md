@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d75a0c4285bddc8d3c237be35a51f1904de6d60
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: eb0af342ac2ccbe916fba9edb497e8197b2fe7f5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367690"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785923"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性與災害復原的支援
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題討論高可用性和災害復原的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支援 (已新增於 3.0 版中) -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 中加入 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 支援。 如需有關 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 線上叢書》。  
+本主題討論高可用性和災害復原的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支援 (已新增於 3.0 版中) -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 中加入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援。 如需有關 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。  
   
 在 3.0 版的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，您可以在連線屬性中指定 (高可用性和災害復原) 可用性群組 (AG) 的可用性群組接聽程式。 如果 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "39367690"
 > 增加連接逾時並實作連接重試邏輯可提高應用程式連接到可用性群組的機率。 此外，因為連接可能會由於可用性群組容錯移轉而失敗，所以您應該實作連接重試邏輯，並重試失敗的連接，直到重新連接為止。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
-**MultiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體上的資料庫。 在為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
+**MultiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 在為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
 在連線到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover** 可讓 SQL Server 2012 中的所有可用性群組和容錯移轉叢集執行個體更快地容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會積極重試 TCP 連線。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "39367690"
   
 -   若要連接到可用性群組，在連接字串中指定可用性群組的可用性群組接聽程式做為伺服器。  
   
--   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體會導致連接失敗。  
+-   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   根據驗證的類型，使用 **MultiSubnetFailover** 連接屬性之應用程式的行為不會受到影響：[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
+-   根據驗證的類型，使用 **MultiSubnetFailover** 連接屬性之應用程式的行為不會受到影響：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
   
 -   提高 **loginTimeout** 的值來配合容錯移轉時間，並減少應用程式連線重試次數。  
   
@@ -96,7 +96,7 @@ try {
 ```
 
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>從資料庫鏡像升級到使用多子重網路叢集  
-如果連接字串中有 **MultiSubnetFailover** 和 **Failover_Partner** 連接關鍵字，則會發生連接錯誤。 如果使用 **MultiSubnetFailover** 而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 傳回容錯移轉夥伴回應，指出它是資料庫鏡像配對的一部分，也會發生錯誤。  
+如果連接字串中有 **MultiSubnetFailover** 和 **Failover_Partner** 連接關鍵字，則會發生連接錯誤。 如果使用 **MultiSubnetFailover** 而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回容錯移轉夥伴回應，指出它是資料庫鏡像配對的一部分，也會發生錯誤。  
   
 如果您將目前使用資料庫鏡像的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 應用程式升級為多重子網路案例，則應移除 **Failover_Partner** 連線屬性，並取代成設定為 **Yes** 的 **MultiSubnetFailover**，然後將連接字串中的伺服器名稱取代為可用性群組接聽程式。 如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=true**，驅動程式會產生錯誤。 不過，如果連接字串使用 **Failover_Partner** 和 **MultiSubnetFailover=false** (或 **ApplicationIntent=ReadWrite**)，應用程式會使用資料庫鏡像。  
   

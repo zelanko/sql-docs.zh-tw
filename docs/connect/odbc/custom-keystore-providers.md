@@ -14,12 +14,12 @@ caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047513"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785924"
 ---
 # <a name="custom-keystore-providers"></a>自訂金鑰儲存區提供者
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |`alg`|[輸入]值[演算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)指定 ECEK 的中繼資料屬性。 以 null 結尾寬-字元 * 字串。 這被要識別用來加密指定的 ECEK 的加密演算法。|
 |`ecek`|[輸入]要解密 ECEK 指標。|
 |`ecekLen`|[輸入]ECEK 的長度。|
-|`cekOut`|[輸出]應該為已解密的 ECEK 配置記憶體提供者，並將它寫入 cekOut 所指向的指標中的其位址。 您必須能夠釋放這個記憶體使用的區塊[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或可用 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該會將 * cekOut 為 null 指標。|
+|`cekOut`|[輸出]應該為已解密的 ECEK 配置記憶體提供者，並將它寫入 cekOut 所指向的指標中的其位址。 您必須能夠釋放這個記憶體使用的區塊[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 或可用 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該會將 * cekOut 為 null 指標。|
 |`cekLen`|[輸出]提供者應該寫入 cekLen 所指的位址長度的解密 ECEK 它寫入至 * * cekOut。|
 |`Return Value`|傳回非零值表示作業成功，或零表示失敗。|
 
@@ -164,7 +164,7 @@ int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |`alg`|[輸入]值[演算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)指定 ECEK 的中繼資料屬性。 以 null 結尾寬-字元 * 字串。 這被要識別用來加密指定的 ECEK 的加密演算法。|
 |`cek`|[輸入]加密 CEK 的指標。|
 |`cekLen`|[輸入]CEK 的長度。|
-|`ecekOut`|[輸出]提供者應該會配置記憶體給加密的 CEK 和 ecekOut 所指向的指標撰寫其位址。 您必須能夠釋放這個記憶體使用的區塊[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或可用 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該會將 * ecekOut 為 null 指標。|
+|`ecekOut`|[輸出]提供者應該會配置記憶體給加密的 CEK 和 ecekOut 所指向的指標撰寫其位址。 您必須能夠釋放這個記憶體使用的區塊[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 或可用 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該會將 * ecekOut 為 null 指標。|
 |`ecekLen`|[輸出]提供者應該寫入 ecekLen 所指的位址長度的加密 CEK 它寫入至 * * ecekOut。|
 |`Return Value`|傳回非零值表示作業成功，或零表示失敗。|
 
@@ -190,7 +190,7 @@ void (*Free)();
 |引數|Description|
 |:--|:--|
 |`ctx`|[輸入]要在報告錯誤的內容。|
-|`msg`|[輸入]報告錯誤訊息。 以 null 結尾的寬字元字串。 若要允許參數化的資訊，必須存在，這個字串可能包含插入格式化的序列所接受的格式[FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx)函式。 這個參數可能會指定擴充的功能，如下所述。|
+|`msg`|[輸入]報告錯誤訊息。 以 null 結尾的寬字元字串。 若要允許參數化的資訊，必須存在，這個字串可能包含插入格式化的序列所接受的格式[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)函式。 這個參數可能會指定擴充的功能，如下所述。|
 |...|[輸入]其他的 variadic 參數以符合訊息，視需要的格式規範。|
 
 若要回報發生錯誤時，提供者呼叫 onError，提供內容參數傳入提供者函式的驅動程式和其他選擇性參數的錯誤訊息中格式化。 提供者可能會呼叫此函式數次張貼一個提供者函式引動過程中的連續的多個錯誤訊息。 例如：

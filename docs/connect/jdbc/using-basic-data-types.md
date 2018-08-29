@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662350"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784716"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型和 Java 程式設計語言轉換成彼此理解的格式。 JDBC 驅動程式提供 JDBC 4.0 API，其中包含支援**SQLXML**資料類型和 National (Unicode) 資料類型，例如**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，並**NCLOB**。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型和 Java 程式設計語言轉換成彼此理解的格式。 JDBC 驅動程式提供 JDBC 4.0 API，其中包含支援**SQLXML**資料類型和 National (Unicode) 資料類型，例如**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，並**NCLOB**。  
   
 ## <a name="data-type-mappings"></a>資料類型對應
 
-下表列出基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、JDBC 及 Java 程式設計語言資料類型之間的預設對應：  
+下表列出基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC 及 Java 程式設計語言資料類型之間的預設對應：  
   
 | SQL Server 類型   | JDBC 類型 (java.sql.Types)                        | Java 語言類型          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ ms.locfileid: "39662350"
 | 幾何           | VARBINARY                                          | byte[]                       |
 | 地理位置          | VARBINARY                                          | byte[]                       |
   
-(1) 若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 類型 time 使用 java.sql.Time，您必須將 **sendTimeAsDatetime** 連線屬性設為 false。  
+(1) 若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型 time 使用 java.sql.Time，您必須將 **sendTimeAsDatetime** 連線屬性設為 false。  
   
 （2） 您可以程式設計方式存取的值**datetimeoffset**具有[DateTimeOffset 類別](../../connect/jdbc/reference/datetimeoffset-class.md)。  
   

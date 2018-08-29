@@ -27,13 +27,14 @@ ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 6917f16f1807d68b8a3124596fa1e19ddf56e692
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5e4449d8e8bc1006833d79c914a1208528a08893
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38043074"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784027"
 ---
 # <a name="monitoring-the-error-logs"></a>監視錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

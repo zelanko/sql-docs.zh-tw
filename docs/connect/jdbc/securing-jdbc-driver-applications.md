@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15ac2b868066efcf978fc92d17b381e08ce2932d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 091c7a2e7df6a073f7404af9b512a9b6404e6324
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454922"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783835"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC Driver 應用程式
 
@@ -36,7 +36,7 @@ ms.locfileid: "39454922"
 | [保護連接字串](../../connect/jdbc/securing-connection-strings.md) | 描述協助保護連接資料來源時所使用之資訊的技術。                                                                                    |
 | [驗證使用者輸入](../../connect/jdbc/validating-user-input.md)             | 描述驗證使用者輸入的技術。                                                                                                                          |
 | [應用程式安全性](../../connect/jdbc/application-security.md)               | 描述如何使用 Java 原則權限協助保護 JDBC 驅動程式應用程式。                                                                                |
-| [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用安全通訊端層 (SSL) 建立包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫的安全通訊通道。 |
+| [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用安全通訊端層 (SSL) 建立包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的安全通訊通道。 |
 | [FIPS 模式](../../connect/jdbc/fips-mode.md)                                     | 描述如何使用 JDBC 驅動程式以 FIPS 符合模式。                                                                                                              |
   
 ## <a name="see-also"></a>另請參閱  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 9be35b231d518d975c5b9fb7d5657a044fa81e06
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109150"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036483"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB Driver for SQL Server 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

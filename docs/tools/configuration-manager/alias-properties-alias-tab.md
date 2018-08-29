@@ -15,13 +15,14 @@ ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 5e2ed13706eb817c9603c354ee268ba188e7c3d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792f0e15bb3f2a21fc1457669868c2674cf660d6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999910"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784200"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 屬性 ([別名] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

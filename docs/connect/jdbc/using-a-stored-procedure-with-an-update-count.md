@@ -14,18 +14,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cebd655a20c49525585cb414cfd7409745391bdc
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d00ebf37c52e1b5dc88f4afe758aec7c8af287d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662120"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784368"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>使用預存程序與更新計數
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-為了使用預存程序來修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中的資料，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別。 使用 SQLServerCallableStatement 類別時，您可以呼叫會修改資料庫中所含資料的預存程序，並傳回受影響的資料列計數 (也稱為更新計數)。
+為了使用預存程序來修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別。 使用 SQLServerCallableStatement 類別時，您可以呼叫會修改資料庫中所含資料的預存程序，並傳回受影響的資料列計數 (也稱為更新計數)。
 
 使用 SQLServerCallableStatement 類別設定預存程序的呼叫之後，接著便可以使用 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 或 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法呼叫預存程序。 executeUpdate 方法會傳回 **int** 值，其中包含預存程序所影響的資料列數目，但是 execute 方法則不會傳回該值。 如果使用 execute 方法並想要取得受影響的資料列計數，則您可以在執行預存程序之後呼叫 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法。
 

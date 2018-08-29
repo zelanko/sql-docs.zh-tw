@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1c721a32936bf39d91042d6b7ac89a03a5fd85d6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042217"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42783832"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "38042217"
 本主題討論如何使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 屬性來指定直接陳述式執行，而不是預設值 ─ 已備妥的陳述式執行。 使用已備妥的陳述式可能導致較佳的效能，如果陳述式會執行一次使用 參數繫結。  
   
 ## <a name="remarks"></a>Remarks  
-如果您想要傳送[!INCLUDE[tsql](../../includes/tsql_md.md)]直接對伺服器而不需要由驅動程式的陳述式準備的陳述式，您可以設定的 pdo:: SQLSRV_ATTR_DIRECT_QUERY 屬性[pdo:: setattribute](../../connect/php/pdo-setattribute.md) （或驅動程式選項傳遞至[Pdo:: __construct](../../connect/php/pdo-construct.md)) 或當您呼叫[pdo:: prepare](../../connect/php/pdo-prepare.md)。 根據預設，pdo:: SQLSRV_ATTR_DIRECT_QUERY 的值為 False （使用備妥的陳述式執行）。  
+如果您想要傳送[!INCLUDE[tsql](../../includes/tsql-md.md)]直接對伺服器而不需要由驅動程式的陳述式準備的陳述式，您可以設定的 pdo:: SQLSRV_ATTR_DIRECT_QUERY 屬性[pdo:: setattribute](../../connect/php/pdo-setattribute.md) （或驅動程式選項傳遞至[Pdo:: __construct](../../connect/php/pdo-construct.md)) 或當您呼叫[pdo:: prepare](../../connect/php/pdo-prepare.md)。 根據預設，pdo:: SQLSRV_ATTR_DIRECT_QUERY 的值為 False （使用備妥的陳述式執行）。  
   
 如果您使用[pdo:: query](../../connect/php/pdo-query.md)，您可以直接執行。 然後再呼叫[pdo:: query](../../connect/php/pdo-query.md)，呼叫[pdo:: setattribute](../../connect/php/pdo-setattribute.md) pdo:: SQLSRV_ATTR_DIRECT_QUERY 設為 True。  每次呼叫[pdo:: query](../../connect/php/pdo-query.md) pdo:: SQLSRV_ATTR_DIRECT_QUERY 可以為執行不同的設定。  
   

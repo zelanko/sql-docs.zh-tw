@@ -13,13 +13,14 @@ ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0fd80dc99a6c473cf04646f17fc161475b8b2faf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f68cfa7b434f26d6c36c92f0f693ade02aec4230
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057616"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42783877"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>用戶端通訊協定 (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
