@@ -17,13 +17,13 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 39ceab09cb94d3d75348182a9ca55760ec3df5ab
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 98c730772ceb57bfeb30893d6e65913a73ef9cd5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39563012"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43081296"
 ---
 # <a name="implementing-full-text-search"></a>實作全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - sys.query_store_plan catalog view
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eb653ad68c76380625e03637f7315a0aa9800aba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e139f2e24a686940143c7a152c7e37563d5c8368
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537168"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062701"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

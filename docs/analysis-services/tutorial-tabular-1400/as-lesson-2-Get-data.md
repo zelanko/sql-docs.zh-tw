@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程第 2 課： 取得資料 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007199"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062209"
 ---
 # <a name="get-data"></a>取得資料
 
@@ -22,7 +22,7 @@ ms.locfileid: "38007199"
 
 在這一課，您可以使用**取得資料**若要連接到 AdventureWorksDW 範例資料庫，選取資料、 預覽和篩選條件，，然後匯入到您的模型工作區。  
   
-藉由使用 取得資料，您可以從各種來源匯入資料。 資料也可查詢使用 Power Query M 公式運算式或[原生 SQL 查詢運算式](../tabular-models/ssas-import-query.md)。
+在幕後，取得資料是 Power Query，提供各式各樣的工具來連線及重新整理資料模型化和分析。 若要進一步了解，請參閱[Power Query 文件](https://docs.microsoft.com/power-query/)。 
 
 > [!NOTE]
 > 工作和映像，在本教學課程會示範連接到內部部署伺服器上的 AdventureWorksDW2014 資料庫。 在某些情況下，Azure SQL 資料倉儲上的 AdventureWorksDW 資料庫可能會顯示不同的物件;不過，它們基本上都相同。

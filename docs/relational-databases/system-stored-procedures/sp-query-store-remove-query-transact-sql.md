@@ -22,16 +22,16 @@ helpviewer_keywords:
 - sp_query_store_remove_query
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f452f89e6bb7600d9322e11c25cc88c8102721b4
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c32f631c0e41e070dc700bcee57a984e01fe811
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558388"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43060660"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

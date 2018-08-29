@@ -17,17 +17,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], query store
 - query store [SQL Server], stored procedures
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
-caps.latest.revision: 6
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 40bbeb1644e667af1eefd3711b038bebee556ca1
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b40248c7c5575f3685eb84d52f7b2baa76b5e4c7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560758"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067810"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>查詢存放區預存程序 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

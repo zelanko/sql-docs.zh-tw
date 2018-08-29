@@ -13,13 +13,13 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 44a2776d7b059bfed136dc7deaac9411626be4cd
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 40247ddc15093f8510545f51113f77e2a0d0e51f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39565462"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43075851"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "39565462"
   
 - 指定 [隔離等級資料表提示](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) ，如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE。  
   
-- 將 [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT] [](../../t-sql/statements/alter-database-transact-sql-set-options.md) 資料庫選項設定為 [ON]。  
+- 將 [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) 資料庫選項設定為 [ON]。  
   
 在 [自動認可模式](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)下執行之查詢所存取的記憶體最佳化資料表不需要隔離等級資料表提示。  
   

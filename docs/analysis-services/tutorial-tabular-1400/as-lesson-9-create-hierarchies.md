@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程第 9 課： 建立階層 |Microsoft 文件
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: df99d05373d4d3087ef1d5fa5324ec645bf000b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37973017"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43071811"
 ---
 # <a name="create-hierarchies"></a>建立階層
 

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sys.all_objects catalog view
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ab10ab7fa14f8b5e888536a94553b6a1e3db61e2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fb0b116b7c2f9f6d241467381b248764a7954b2e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552818"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43080217"
 ---
 # <a name="sysallobjects-transact-sql"></a>sys.all_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - query_store_query_text catalog view
 ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f9bbeb2e2123e8e0f681a13d8e08f4092e7be27
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ea3ab45e7ba9e734a3f70662c4292057ac659188
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543728"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43065561"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

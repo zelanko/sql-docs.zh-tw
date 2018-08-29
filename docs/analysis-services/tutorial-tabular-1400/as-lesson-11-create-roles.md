@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程第 11 課： 建立角色 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 8e630d53aed8f722c2de4a21afea8391cefe8bd8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 90742e38b3948a0fc64df4908d6a0daadf0793e9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981070"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076969"
 ---
 # <a name="create-roles"></a>建立角色
 

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - PARAMETERS view
 - INFORMATION_SCHEMA.PARAMETERS view
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 62156897510a969bc0ed99de56b59ae3251067e1
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9289f3db5d046d3922340c33e79ef02c266b39d4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564802"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062321"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39564802"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(** 128 **)**|以這個項目為參數的常式之目錄名稱。|  
-|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|以這個項目為參數的常式之結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|以這個項目為參數的常式之結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**SPECIFIC_NAME 排列順序**|**nvarchar(** 128 **)**|以這個項目為參數的常式名稱。|  
 |**ORDINAL_POSITION**|**int**|參數的序數位置從 1 開始。 若為函數的傳回值，則是 0。|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|如果是輸入參數，便傳回 IN；如果是輸出參數，便傳回 OUT，如果是輸入/輸出參數，便傳回 INOUT。|  

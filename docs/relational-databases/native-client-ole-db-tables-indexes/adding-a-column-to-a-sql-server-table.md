@@ -18,13 +18,13 @@ ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1db5e1e6181c9c7ece64be68ff40f5c9f31113f5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 619a6b5a10c3c17cb89af49374fc78459a712a57
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39565882"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43068100"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>將資料行加入至 SQL Server 資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

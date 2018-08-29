@@ -24,17 +24,16 @@ helpviewer_keywords:
 - sys.security_policies catalog view
 - security_policies catalog view
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9131c0ea37ddbff456e5f14b441b89616ac462b0
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 47c2f4bd8dd55693f42f9a014c8074e4982d23f3
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561992"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43079211"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

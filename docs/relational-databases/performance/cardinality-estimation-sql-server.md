@@ -228,7 +228,7 @@ GO
   
 - 執行 **sp_query_store_force_plan**。  
   
-- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] (資源耗用量排名在前的節點)，然後按一下 [View Top Resource Consuming Nodes] (檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
+- 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，展開您的 [查詢存放區] 節點，以滑鼠右鍵按一下 [Top Resource Consuming Nodes] \(資源耗用量排名在前的節點)，然後按一下 [View Top Resource Consuming Nodes] \(檢視資源耗用量排名在前的節點)。 這會顯示標示為 **[強制執行計畫]** 和 **[取消強制執行計畫]** 的按鈕。  
   
 如需查詢存放區的詳細資訊，請參閱 [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。  
   

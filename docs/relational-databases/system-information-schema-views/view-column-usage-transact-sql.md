@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.VIEW_COLUMN_USAGE view
 - VIEW_COLUMN_USAGE view
 ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 886d8a3c27311833ddf34a3e58beb24bcee9ffdd
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 941e325bcf1dba22390744741a12eb49f5c8a97f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39534388"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43064041"
 ---
 # <a name="viewcolumnusage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39534388"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar(** 128 **)**|檢視限定詞。|  
-|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|包含檢視的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|包含檢視的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**VIEW_NAME**|**sysname**|檢視名稱。|  
 |**TABLE_CATALOG 排列**|**nvarchar(** 128 **)**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|基底資料表。|  
 |**COLUMN_NAME**|**sysname**|資料行名稱。|  
   
