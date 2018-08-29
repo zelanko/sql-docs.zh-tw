@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sys.database_credentials catalog view
 ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ed1a494823c661710d1a5c184ff72c9f5099565e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b79ac951995617676732d8c821153d7d95b60940
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533468"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093335"
 ---
 # <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

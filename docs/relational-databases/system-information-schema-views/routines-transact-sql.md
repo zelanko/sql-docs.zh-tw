@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b4404c25500d6732db6f2346b1fdedb34e9bed8f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548884"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102015"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "39548884"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|目錄的特定名稱。 這個名稱與 ROUTINE_CATALOG 相同。|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|結構描述的特定名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|結構描述的特定名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|目錄的特定名稱。 這個名稱與 ROUTINE_NAME 相同。|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|函數的目錄名稱。|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|包含這個函數的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|包含這個函數的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|函數的名稱。|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|傳回 PROCEDURE (預存程序) 和 FUNCTION (函數)。|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  

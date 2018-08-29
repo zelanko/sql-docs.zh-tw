@@ -1,105 +1,138 @@
 ---
-title: 什麼是 SQL Server 機器學習服務？ | Microsoft Docs
+title: 機器學習服務在 SQL Server |Microsoft Docs
+description: 概觀簡介 SQL Server 2017 Machine Learning 服務、 R 和 Python 支援在資料庫內分析
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/27/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: fa0197d15869197bf61021d077a57dac399b1e58
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585450"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118346"
 ---
-# <a name="what-is-sql-server-machine-learning-services"></a>什麼是 SQL Server 機器學習服務？
+# <a name="machine-learning-services-in-sql-server-2017"></a>機器學習服務中的 SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 機器學習服務是內嵌、 預測分析和資料科學引擎，為預存程序、 T-SQL 指令碼包含 R 或 Python 陳述式，或做為 R 或 Python 程式碼，其中包含可執行 SQL Server 資料庫中的 R，並將 Python 程式碼T-SQL。 
+SQL Server 2017 Machine Learning 服務是 database engine 執行個體，用於執行 SQL Server 上的 R 和 Python 程式碼的附加元件。 與核心引擎處理序隔離，但預存程序、 T-SQL 指令碼包含 R 或 Python 的陳述式，或包含 T-SQL 中的 R 或 Python 程式碼的關聯式資料完全可供使用的擴充性架構中，執行程式碼。 
 
-機器學習服務的索引鍵的價值主張是其專屬的套件的能力，提供進階的分析，在小數位數，並且能夠讓計算和處理資料所在的位置，因而不須透過提取資料網路。
+如果您先前使用 SQL Server 2016 R Services，SQL Server 2017 中的 Machine Learning 服務是新一代的 R 支援的基底 R、 RevoScaleR、 MicrosoftML 及 2016年中引進的其他程式庫的更新版本。
 
-有兩個 SQL Server 中使用機器學習功能的選項： 
+Machine Learning 服務的主要價值主張是其企業 R 和 Python 套件的乘冪，以提供進階的分析，在小數位數，並且能夠讓計算和處理資料的所在，不必在提取資料在網路中。
 
-+ [**SQL Server 機器學習服務 （資料庫）** ](r/sql-server-r-services.md) database engine 執行個體，計算引擎完全整合與 database engine 中運作。 大部分安裝都將此選項。
-+ [**SQL Server 機器學習伺服器 （獨立）** ](r/r-server-standalone.md)是機器學習 Server for Windows 的執行與 database engine 無關。 雖然您可以使用 SQL Server 安裝程式來安裝伺服器，此功能不是執行個體感知的。 在功能上，它相當於非 SQL-Server [Microsoft 機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。
+## <a name="components"></a>Components
 
-## <a name="r-and-python-packages"></a>R 和 Python 封裝
+SQL Server 2017 支援 R 和 Python。 下表描述的元件。
 
-每個語言的支援是透過用來建立及定型模型的計分資料，以及使用基礎的系統資源的平行處理的各種類型的專屬 Microsoft 套件。
+| 元件 | 描述 |
+|-----------|-------------|
+| SQL Server Launchpad 服務 | 管理外部 R 和 Python 執行階段和資料庫引擎執行個體之間的通訊服務。 |
+| R 套件 | [**RevoScaleR** ](r/revoscaler-overview.md)是主要的程式庫，此程式庫中的可調整 r 函數是使用最廣泛。 這些程式庫中找到資料轉換和操作、 統計摘要、 視覺化和模型化和分析的許多形式。 此外，這些程式庫中的函式會自動將工作負載分散到可用的核心進行平行處理，能夠協調及計算引擎所管理的資料區塊上運作。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。 <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)提供 helper 函式將 R 指令碼放入 T-SQL 預存程序、 註冊預存程序使用資料庫時，以及從 R 開發環境執行預存程序。<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md)適用於建置或執行 R 指令碼中的 MDX 查詢。|
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的開放原始碼散發套件的。會包含封裝和解譯器。 一律使用 MRO 安裝程式安裝的版本。 |
+| R 工具 | R 主控台視窗和命令提示字元是標準的工具，在 R 散發。  |
+| R 範例和指令碼 |  開放原始碼 R 和 RevoScaleR 套件包含內建的資料集，讓您可以建立並使用預先安裝的資料執行指令碼。 |
+| Python 套件 | [**revoscalepy** ](python/what-is-revoscalepy.md)可延展的 Python 與資料操作、 轉換、 視覺化和分析的函式中為主要媒體櫃。 <br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。  |
+| Python 工具 | 內建的 Python 命令列工具可用於臨機操作測試和工作項目。  |
+| Anaconda | Anaconda 是開放原始碼散發套件的 Python 和基本封裝。 |
+| Python 範例和指令碼 | 在使用 R、 Python 會包含內建的資料集與指令碼。  |
+| 預先定型的模型，在 R 和 Python | 預先定型的模型建立的特定使用案例，並由 Microsoft 的資料科學工程小組所維護。 您可以使用預先定型的模型，以-為評分正負面情感的文字，或在映像，使用您提供的新資料輸入中偵測功能。 模型會在機器學習服務中執行，但無法透過 SQL Server 安裝程式安裝。 如需詳細資訊，請參閱 <<c0> [ 安裝的預先定型的機器學習服務模型在 SQL Server 上的](install/sql-pretrained-models-install.md)。 |
 
-因為專屬的封裝會建立開放原始碼 R，並將 Python 發佈，指令碼或您在 SQL Server 中執行的程式碼可以同時也呼叫基底函式，並使用與 SQL Server 中提供的語言版本相容的第三方封裝 (Python 3.5 和最新版本的 R，目前 3.3.3）。
+## <a name="using-in-database-analytics"></a>使用資料庫內分析
 
-| R  | Python | 描述 |
-|-----------|----------------|-------------|
-| [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | 這些程式庫中的函式是最常使用。 這些程式庫中找到資料轉換和操作、 統計摘要、 視覺化和模型化和分析的許多種。 此外，這些程式庫中的函式自動工作負載分散到可用的核心進行平行處理，在協調，並計算引擎所管理的資料區塊上運作的能力。 |
-| [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 領先業界的機器學習演算法的映像功能，其潛在、 分類問題，以及更多。 |
-| [olapR](r/how-to-create-mdx-queries-using-olapr.md) | 無 | 建置或執行 R 指令碼中的 MDX 查詢。
-| [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | 無 | 讓 T-SQL 的 R 指令碼的函式預存程序，預存程序註冊資料庫，並從 R 開發環境中執行預存程序。
-| [mrsdeploy](operationalization-with-mrsdeploy.md) | 無 | 主要是用在非 SQL 安裝的機器學習 Server，例如[（獨立） 版本](r/r-server-standalone.md)。 使用此封裝來部署和裝載 web 服務、 建立向外延展拓撲與專用的 web 和計算節點、 本機和遠端工作階段，執行診斷，以及其他的之間切換。 （資料庫） 安裝，請使用此套件中用戶端容量： 例如，若要存取遠端伺服器上的 web 服務專用於執行只機器學習服務工作負載。 |
+開發人員和分析師通常會有在本機的 SQL Server 執行個體上執行的程式碼。 在資料庫內分析的最常見方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，傳遞做為輸入參數的 R 或 Python 指令碼。
 
-自訂 R，並將 Python 程式碼的可攜性是透過套件發佈和多項產品內建解譯器來定址。 隨附於 SQL Server 相同的封裝也會提供數個其他 Microsoft 產品和服務，包括呼叫非 SQL 版本中[Microsoft Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/)。 可用的用戶端，包括我們的 R，並將 Python 解譯器包括[Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)和[Python 程式庫](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
+典型主從式的互動都有另一個強制回應性。 從任何具有 IDE 的用戶端工作站，您可以安裝[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 程式庫](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然後撰寫推送執行的程式碼 (稱為*遠端計算內容*) 資料與遠端的 SQL Server 的作業。 
 
-封裝和解譯器也會提供數項[Azure 虛擬機器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)，Azure Machine Learning 中，與 Azure 的服務，像是[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)。 
+最後，如果您使用[獨立伺服器](r/r-server-standalone.md)和 Developer edition 中，您可以建置使用相同的程式庫和解譯器，在用戶端工作站上的解決方案，然後再部署 SQL Server Machine Learning 上的實際執行程式碼服務 （資料庫）。 
 
+## <a name="how-to-get-started"></a>如何開始使用
 
-## <a name="use-cases"></a>使用案例
+### <a name="step-1-install-the-software"></a>步驟 1： 安裝軟體
 
-**資料庫分析**
++ [SQL Server Machine Learning 服務 （資料庫）](install/sql-machine-learning-services-windows-install.md)
+ 
+### <a name="step-2-configure-a-development-tool"></a>步驟 2： 設定開發工具
 
-開發人員和分析師通常具有本機 SQL Server 執行個體上執行的程式碼。 如果您有 SQL Server 和 IDE 例如[Visual Studio 以 R](https://docs.microsoft.com/visualstudio/rtvs/)或[Visual Studio 使用 Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio)的相同電腦上，建置、 定型和測試模型在本機中任一語言。 本機存取可簡化管理套件： 身為系統管理員，您可以載入其他第三方封裝，該角色中使用內建權限。
+資料科學家通常使用 R 或 Python 自己的膝上型電腦或開發工作站上，瀏覽資料，以及建置和微調預測模型，直到達成良好的預測模型。 使用 SQL Server 中的資料庫內分析，還有不需要變更此程序。 安裝完成後，您可以執行 R 或 Python 程式碼，在 SQL Server 上本機和遠端即可。
 
-分析資料庫中的最常見的方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)執行 R 或 Python 指令碼。 教學課程中所列[後續步驟](#next-steps)可協助您開始。
+![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
-**用戶端-伺服器組態**
++ **使用您偏好的 IDE**。 您可以連結的 R 和 Python 程式庫至您所選的開發工具。 如需詳細資訊，請參閱 <<c0> [ 設定 R 工具](r/set-up-a-data-science-client.md)並[設定 Python 工具](python/setup-python-client-tools-sql.md)。  
 
-有一個 IDE 任何用戶端工作站，從安裝[Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 程式庫](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然後撰寫推入執行的程式碼 (稱為*遠端計算內容*)資料和遠端的 SQL Server 的作業。 
++ **使用遠端或本機**。 資料科學家可以連線到 SQL Server，並將資料帶給用戶端進行本機分析，如往常般。 不過，較好的解決方案是使用**RevoScaleR**或是**revoscalepy** Api，將計算推送到 SQL Server 電腦，避免成本高同時不安全的資料移動。
 
-同樣地，如果您使用 Developer edition，您可以建立使用相同的程式庫和解譯器，用戶端工作站上的方案，然後再部署 SQL Server 機器學習服務 （資料庫） 上的實際執行程式碼。 
++ **在 SQL Server 預存程序中內嵌 R 或 Python 指令碼**。 當您的程式碼完全最佳化時，請將它包裝在預存程序中，以避免不必要的資料移動，並最佳化資料處理工作。
+
+### <a name="step-3-write-your-first-script"></a>步驟 3： 撰寫您的第一個指令碼
+
+呼叫 R 或 Python 函式從 T-SQL 指令碼內：
+
++ [： 了解使用 R 的資料庫內分析](tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [為： 以 R 端對端逐步解說](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [Python：使用 T-SQL 執行 Python](tutorials/run-python-using-t-sql.md)
++ [Python： 了解使用 Python 的資料庫內分析](tutorials/sqldev-in-database-python-for-sql-developers.md)
+
+選擇工作的最佳語言。 R 是最適合使用 SQL 實作困難的統計計算。 資料的集合式作業，利用強大的 SQL Server，以達到最大效能。 使用記憶體中資料庫引擎進行非常快速的計算資料行。
+
+### <a name="step-4-optimize-your-solution"></a>步驟 4： 最佳化您的解決方案
+
+備妥可調整的企業資料模型時，資料科學家通常適用於 DBA 或 SQL 開發人員最佳化程序，例如︰
+
++ 特徵工程
++ 資料擷取和資料轉換
++ 計分
+
+傳統上，使用 R 的資料科學家有問題的效能和延展性，尤其是使用大型資料集。 這是因為通用執行階段實作是單一執行緒，而且可以容納放入本機電腦上的可用記憶體的資料集。 與 SQL Server Machine Learning 服務整合會提供多項功能，以提升效能、 更多資料：
+
++ **RevoScaleR**： 此 R 封裝包含一些最受歡迎的 R 函數，經過重新設計可提供平行處理與延展的實作。 此封裝也會包含進一步提升效能與延展性，藉由將計算推送到 SQL Server 電腦，它通常記憶體更大且運算能力的函式。
+
++ **revoscalepy**。 此 Python 程式庫實作 RevoScaleR，在遠端計算內容，例如最受歡迎的函式和許多支援的演算法分散式處理。
+
+如需有關效能的詳細資訊，請參閱此[效能案例研究](r/performance-case-study-r-services.md)並[R 和資料最佳化](r/r-and-data-optimization-r-services.md)。
+
+### <a name="step-5-deploy-and-consume"></a>步驟 5： 部署和取用
+
+指令碼或模型可供生產環境使用之後，資料庫開發人員可能會嵌入程式碼或模型的預存程序，以便可以從應用程式呼叫的已儲存的 R 或 Python 程式碼。 儲存並執行從 SQL Server 的 R 程式碼有許多優點： 您可以使用方便的 SQL Server 介面，而且在資料庫中，避免不必要的資料移動的所有計算都進行。
+
+![rsql_keyscenario1](r/media/rsql-keyscenario1.png)
+
++ **安全且可擴充**。 SQL Server 會使用新的擴充性架構，保持您資料庫引擎的安全，並隔離 R 和 Python 的工作階段。 您也可以控制可以執行指令碼的使用者，您可以指定可以存取的程式碼的資料庫。 您可以控制配置給執行階段，以避免大量計算危及整體伺服器效能的資源數量。
+
++ **排程和稽核**。 當 SQL Server 中執行外部指令碼工作時，您可以控制和稽核資料科學家所使用的資料。 您也可以排定工作並撰寫包含外部的 R 或 Python 指令碼，就像任何其他的 T-SQL 作業或預存程序，您會排程工作流程。
+
+若要利用的資源管理和安全性功能的 SQL Server 中，部署程序可能包括下列工作：
+
++ 將您的程式碼轉換成可以在預存程序中以最佳方式執行的函式
++ 設定安全性和鎖定在特定工作所使用的套件
++ 啟用資源控管 （需要 Enterprise edition）
+
+如需詳細資訊，請參閱 <<c0> [ 適用於 R 的資源控管](r/resource-governance-for-r-services.md)並[SQL Server 的 R 封裝管理](r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="version-history"></a>版本歷程記錄
 
-SQL Server 2017 機器學習服務是新一代的 SQL Server 2016 R 服務，加強可包含 Python。 下表是從開始到目前的版本中的所有版本的完整清單。 
+SQL Server 2017 Machine Learning 服務是新一代的 SQL Server 2016 R Services，加強可包含 Python。 下表是所有的產品版本，從開始到目前版本的完整清單。 
 
 | 產品名稱 | 引擎版本 | 發行日期 |
 |--------------|---------|--------------|
-| SQL Server 2017 機器學習服務 （資料庫） | R 伺服器 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2017 機器學習伺服器 （獨立） | R 伺服器 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2016 R 服務 （資料庫） | R 伺服器 9.1  | 2017 年 7 月  |
-| SQL Server 2016 R 伺服器 （獨立）  |  R 伺服器 9.1 | 2017 年 7 月 |
+| SQL Server 2017 Machine Learning 服務 （資料庫） | R Server 9.2.1 <br/> Python 伺服器 9.2 | 2017 年 10 月 |
+| SQL Server 2017 Machine Learning 伺服器 （獨立式） | R Server 9.2.1 <br/> Python 伺服器 9.2 | 2017 年 10 月 |
+| SQL Server 2016 R Services （資料庫） | R Server 9.1  | 2017 年 7 月  |
+| SQL Server 2016 R Server （獨立式）  |  R Server 9.1 | 2017 年 7 月 |
 
+如需版本的套件版本，請參閱對應中的版本[升級 R 和 Python 元件](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)。
 
+## <a name="portability-and-related-products"></a>可攜性及相關的產品
 
-## <a name="documentation-for-each-version"></a>每個版本的文件
+可攜性的自訂 R 和 Python 程式碼會處理透過套件發佈和多項產品內建的解譯器。 相同的套件隨附於 SQL Server 中也會有數個其他 Microsoft 產品和服務，包括非 SQL 版本，稱[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)。 
 
-SQL Server 文件的最新版本與版本無關。 SQL Server 機器學習服務 Python 才可用在 2017年和更新版本，在所有版本中支援 R 時。 除非另有說明否則您可以假設 R 文件適用於 2016年和 2017年版本。
+免費包含我們的 R 和 Python 解譯器的用戶端[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)並[Python 程式庫](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
 
+在 Azure 上 Microsoft R 和 Python 套件和解譯器也會提供在 Azure Machine Learning 和 Azure 服務，例如[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)，並[Azure 虛擬機器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)。 [資料科學虛擬機器](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)包括從多個供應商，以及程式庫的工具與 microsoft 的解譯器的配備完畢，可以的開發工作站。
 
-## <a name="related-machine-learning-products"></a>相關的機器學習的產品
+## <a name="see-also"></a>另請參閱
 
- +  [佈建 Azure 虛擬機器](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  Azure marketplace 包括包括機器學習 Server 或 R Server 的多個虛擬機器映像。 在 Microsoft Azure 中建立虛擬機器是最快速的方式來開發和部署的預測模型。 映像隨附於調整及共用已設定，使其更容易內嵌應用程式內的分析，以及與後端系統整合的功能。
-
-+ [資料科學虛擬機器](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
-
-  資料科學虛擬機器的最新版本包括機器學習伺服器、 SQL Server，加上最受歡迎的機器學習工具陣列所有預先安裝，並測試。 建立 Jupyter 筆記本，來開發方案 Julia，並使用如 MXNet、 CNTK，以及 TensorFlow GPU 啟用深入學習程式庫。
-
-<a name="next-steps"></a>
-
-## <a name="next-steps"></a>後續的步驟
-
-**步驟 1:** 安裝及設定軟體。 
-
-+ [安裝 SQL Server 2017 機器學習服務 （資料庫）](install/sql-machine-learning-services-windows-install.md)
-
-**步驟 2:** 開始使用這些教學課程的其中一個程式碼使用：
-
-+ [教學課程： 在 T-SQL 中執行 Python](tutorials/run-python-using-t-sql.md)
-+ [教學課程： 在 T-SQL 中執行 R](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-
-**步驟 3:** 加入您最愛的 R，並將 Python 封裝，並使用它們，以及 Microsoft 所提供的封裝
-
-+ [SQL Server 的 R 封裝管理](r/install-additional-r-packages-on-sql-server.md)
+[安裝 SQL Server Machine Learning 服務](install/sql-machine-learning-services-windows-install.md)

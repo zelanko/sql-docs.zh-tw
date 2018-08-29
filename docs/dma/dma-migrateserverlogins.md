@@ -2,7 +2,7 @@
 title: 移轉 SQL Server 登入，使用 Data Migration Assistant |Microsoft Docs
 description: 了解如何移轉 SQL Server 登入，使用 Data Migration Assistant
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: bb5dec6babc17ad8be5d0531b463f230e719c73d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 271cb804b63b7adc400f21e6ccbe8e95eb0de307
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783159"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152709"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>移轉 SQL Server 登入，使用 Data Migration Assistant
 

@@ -1,7 +1,7 @@
 ---
 title: 什麼是新 Data Migration Assistant (SQL Server) |Microsoft 文件
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,17 +15,25 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 620590f03bf429dbc1633a1f78bb921def5fd585
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 188c19f173e8c53995d84a74ecc04d1cac9eae92
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982150"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118326"
 ---
-# <a name="whats-new-in-data-migration-assistant"></a>在 Data Migration Assistant 中最新消息
-本主題列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
+# <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
+本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
+
+## <a name="dma-v40"></a>DMA v4.0
+DMA 的 v4.0 版本引進了 「 Azure SQL 資料庫 SKU 建議 」 功能，可讓使用者能夠識別建議從裝載資料庫的電腦收集效能計數器為基礎的 Azure SQL 資料庫 SKU 的最小。 這項功能提供定價層、 計算層級，和最大的資料大小，以及每月預估的成本的相關建議。 它也提供佈建所有資料庫到 Azure 中大量的能力。
+
+> [!NOTE]
+> 這項功能目前是只能透過命令列介面 (CLI)。 今年稍後時，會傳遞規劃支援這項功能透過 DMA 的使用者介面。
+
+如需詳細資料，請參閱文章[找出您的內部部署資料庫正確的 Azure SQL 資料庫 SKU](dma-sku-recommend-sql-db.md)。
 
 ## <a name="dma-v36"></a>DMA 3.6 版
 DMA 的 3.6 版版本導入了 「 自動修復 」 會受到最常見的移轉封鎖器的結構描述物件。
@@ -64,7 +72,7 @@ Linux 和 Windows 使用不同的路徑格式。 如此一來，移轉至 Linux 
 > 使用 'samba' 共用或 '/mnt' 命令的詳細資料已超出本文的範圍。
 
 ### <a name="migrating-windows-logins"></a>移轉的 Windows 登入
-雖然在 Linux 上的 SQL Server 2017 正式支援的 Active Directory (AD) 登入移轉，它會需要額外的設定，才能順利運作。 請參閱主題[在 Linux 上的 SQL server 的 Active Directory 驗證](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)上 SQL Server 2017 Linux 上的 Active Directory 登入所設定的詳細資訊。 在執行之後所需的設定，設定完成後，您可以如往常般移轉 Active Directory 登入。 如預期般運作，而不需要任何額外的設定，適用於標準的 SQL 驗證。
+雖然在 Linux 上的 SQL Server 2017 正式支援的 Active Directory (AD) 登入移轉，它會需要額外的設定，才能順利運作。 請參閱文章[在 Linux 上的 SQL server 的 Active Directory 驗證](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)上 SQL Server 2017 Linux 上的 Active Directory 登入所設定的詳細資訊。 在執行之後所需的設定，設定完成後，您可以如往常般移轉 Active Directory 登入。 如預期般運作，而不需要任何額外的設定，適用於標準的 SQL 驗證。
 
 ## <a name="dma-v32"></a>DMA v3.2
 DMA 的 v3.2 版本包含下列各項：
@@ -86,20 +94,20 @@ DMA v3.0 發行擴充 Azure SQL 資料庫評估，以提供完整的建議，可
 
 ## <a name="dma-v21"></a>DMA v2.1
 DMA 的 v2.1 版本包含下列各項：
-- 支援命令列以自動模式，以協助執行大規模的評定執行評定。 如需詳細資料，請參閱主題[執行 Data Migration Assistant 從命令列](dma-commandline.md)。
+- 支援命令列以自動模式，以協助執行大規模的評定執行評定。 如需詳細資料，請參閱文章[執行 Data Migration Assistant 從命令列](dma-commandline.md)。
 - 當使用者啟動，然後關閉 DMA 的效能改進。
-- 設定 SQL 連線逾時的功能。如需詳細資料，請參閱主題[組態設定，Data Migration assistant](dma-configurationsettings.md)。
+- 設定 SQL 連線逾時的功能。如需詳細資料，請參閱文章[組態設定，Data Migration assistant](dma-configurationsettings.md)。
 
 ## <a name="dma-v20"></a>DMA v2.0
 DMA 的 v2.0 發行版本包含改善的 Stretch database 功能建議，以提供最大化省下的儲存體的適當優先順序的資料表。
 
 ## <a name="dma-v10"></a>DMA v1.0
 DMA v1.0 發行時的初始版本，並提供：
-- 探索可能會影響升級至 SQL Server 的內部部署版本的問題。 任何所發現的錯誤會被稱為相容性問題，並分成下列領域：
+- 探索可能會影響升級至 SQL Server 的內部部署版本的問題。 任何所發現的錯誤會被稱為相容性問題，並加以分類成下列區域：
     - 重大變更
     - 行為變更
-    - 已被取代的功能
-- 探索的資料庫可以受益於升級的目標 SQL Server 平台的新功能。 任何所發現的錯誤會被稱為功能建議，並分成下列領域：
+    - 即將淘汰的功能
+- 探索的資料庫可以受益於升級的目標 SQL Server 平台的新功能。 任何所發現的錯誤會被稱為功能建議，並加以分類成下列區域：
     - 效能
     - Security
     - Storage

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - catalog views [SQL Server], query store
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8d4ac40f0d28e9986cb48f83c3fb69674f3801af
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c1130115be1c7fec16291fd21ad7c2a7177290b8
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554088"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099541"
 ---
 # <a name="query-store-catalog-views-transact-sql"></a>查詢存放區目錄檢視 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

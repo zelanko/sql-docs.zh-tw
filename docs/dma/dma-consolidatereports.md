@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0b17f375ddc6ad9bac5a3b5d3f9bf4df9c588a02
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
-ms.translationtype: HT
+ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118436"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152629"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -83,6 +83,8 @@ ms.locfileid: "43118436"
 - InstanceName
 - DatabaseName
 - AssessmentFlag
+
+![SQL Server 資料表的內容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
 
 如果此資料庫不在工具電腦上，請確定工具的電腦具有網路連線到此 SQL Server 執行個體。
 

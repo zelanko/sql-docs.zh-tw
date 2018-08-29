@@ -3,9 +3,6 @@ title: sys.sp_add_trusted_assembly (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
-ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
@@ -21,16 +18,16 @@ helpviewer_keywords:
 - sys.sp_add_trusted_assembly
 ms.assetid: ''
 caps.latest.revision: ''
-author: tmullaney
-ms.author: thmullan
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f2749313495c8aa76fb45cd9d9dfe8d5fc0bc90e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 04462f743de60857717e978c5b3f454b18994439
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548428"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43086781"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly & Amp;#40;transact-SQL&AMP;#41;  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

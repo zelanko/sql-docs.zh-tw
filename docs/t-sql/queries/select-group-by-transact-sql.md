@@ -34,13 +34,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1a8bd2df095f771866ca8cb96e25dfb1e4612b6a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455402"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43105909"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,19 +108,20 @@ GROUP BY {
   
 允許使用下列陳述式：  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 不允許使用下列陳述式：  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 資料行運算式不能包含：
 
 - SELECT 清單中定義的資料行別名。 它可用於 FROM 子句中定義之衍生資料表的資料行別名。
@@ -135,7 +136,7 @@ GROUP BY {
 
 例如，此查詢會建立一個有 Country、Region 和 Sales 資料行的 Sales 資料表。 查詢插入四個資料列，其中兩個資料列在 Country 和 Region 的值相同。  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -154,7 +155,7 @@ Sales 資料表包含以下資料列：
 
 下一個查詢群組 Country 和 Region，並傳回每個值組合的彙總總和。  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -183,7 +184,7 @@ GROUP BY Country, Region;
 
 此程式碼會使用先前範例的資料表，執行 GROUP BY ROLLUP 而不是簡單的 GROUP BY 作業。
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -206,7 +207,7 @@ GROUP BY CUBE 為所有可能的資料行組合建立群組。 如果是 GROUP B
 
 此程式碼使用先前範例的資料表，對 Country 和 Region 執行 GROUP BY CUBE 作業。 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -234,7 +235,7 @@ GROUPING SETS 選項可讓您將多個 GROUP BY 子句結合成一個 GROUP BY �
 
 當 GROUPING SETS 有兩個或多個元素時，結果是元素的聯集。 此範例傳回 Country 和 Region 之 ROLLUP 和 CUBE 結果的聯集。
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -242,15 +243,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 結果與此查詢 (傳回兩個 GROUP BY 陳述式的聯集) 相同。
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 SQL 不會合併針對 GROUPING SETS 清單所產生的重複群組。 例如，在 `GROUP BY ( (), CUBE (Country, Region) )` 中，兩個元素都傳回總計的資料列，但兩個資料列都會列在結果中。 
@@ -258,7 +258,7 @@ SQL 不會合併針對 GROUPING SETS 清單所產生的重複群組。 例如，
  ### <a name="group-by-"></a>GROUP BY ()  
 指定產生總計的空群組。 當其中一個元素是 GROUPING SET 時，這非常有用。 例如，此陳述式計算每個國家的銷售總額，然後計算所有國家的總計。
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -363,7 +363,7 @@ GROUP BY 子句支援 SQL-2006 標準內包含的所有 GROUP BY 功能，但是
 ### <a name="a-use-a-simple-group-by-clause"></a>A. 使用簡單的 GROUP BY 子句  
  下列範例會從 `SalesOrderID` 資料表中，擷取每個 `SalesOrderDetail` 的總計。 這個範例會使用 AdventureWorks。  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -373,7 +373,7 @@ ORDER BY SalesOrderID;
 ### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. 使用 GROUP BY 子句搭配多個資料表  
  下列範例會從聯結至 `City` 資料表的 `Address` 資料表中，擷取每個 `EmployeeAddress` 的員工人數。 這個範例會使用 AdventureWorks。 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -385,7 +385,7 @@ ORDER BY a.City;
 ### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. 使用 GROUP BY 子句搭配運算式  
  下列範例會使用 `DATEPART` 函數，擷取每年的銷售總額。 `SELECT` 清單和 `GROUP BY` 子句中必須出現相同的運算式。  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -396,7 +396,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. 使用 GROUP BY 子句搭配 HAVING 子句  
  下列範例會使用 `HAVING` 子句，指定 `GROUP BY` 子句中產生的哪一個群組要包含在結果集中。  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -410,7 +410,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 子句的基本使用  
  下列範例會尋找每天的所有銷售總額。 每天只會傳回一個包含所有銷售總和的資料列。  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -420,7 +420,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG 提示的基本使用  
  此範例使用 DISTRIBUTED_AGG 查詢提示在執行彙總之前，強制應用裝置輪換 `CustomerKey` 資料行上的資料表。  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -432,7 +432,7 @@ ORDER BY CustomerKey DESC;
 ### <a name="g-syntax-variations-for-group-by"></a>G. GROUP BY 的語法變化  
  當選取清單沒有彙總時，選取清單中的每個資料行都必須包含在 GROUP BY 清單內。 GROUP BY 清單中可以列出選取清單中的計算資料行，但是並非必要。 以下是句法有效的 SELECT 陳述式範例：  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -445,7 +445,7 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. 使用 GROUP BY 搭配多個 GROUP BY 運算式  
  下列範例使用多個 `GROUP BY` 準則群組結果。 如果在每個 `OrderDateKey` 群組內，有一些子群組可以由 `DueDateKey` 區分，將會針對結果集定義新的群組。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>I. 使用 GROUP BY 子句搭配 HAVING 子句  
  下列範例使用 `HAVING` 子句，指定 `GROUP BY` 子句中產生，應包含在結果集中的群組。 只有訂單日期在 2004 年或之後的群組才會包含在結果中。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

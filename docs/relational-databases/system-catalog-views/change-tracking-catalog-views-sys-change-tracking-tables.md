@@ -21,17 +21,16 @@ helpviewer_keywords:
 - change tracking [SQL Server], sys.change_tracking_tables
 - sys.change_tracking_tables
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ebea733f742efcc02d515eae685619820dbbfcd3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 111110ab8d091a5665a6245381ea3fb273198e8f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544678"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111883"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingtables"></a>變更追蹤目錄檢視-sys.change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437688"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118576"
 ---
-# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>安裝 SQL Server Machine Learning 服務 （資料庫），在 Windows 上 
+# <a name="install-sql-server-machine-learning-services"></a>安裝 SQL Server Machine Learning 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 從 SQL Server 2017 開始，SQL Server Machine Learning 服務，SQL Server 2016 中引進的 R Services 功能的後續版本中提供的資料庫內分析的 R 和 Python 支援。 函式程式庫適用於 R 和 Python，database engine 執行個體上執行外部指令碼。 
@@ -100,7 +100,7 @@ ms.locfileid: "40437688"
 
 7. 安裝程式完成，如果系統指示您重新啟動電腦之後, 請現在登出。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)＞。
 
-## <a name="bkmk_enableFeature"></a>啟用外部指令碼執行
+## <a name="bkmk_enableFeature"></a>啟用指令碼執行
 
 1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
