@@ -24,23 +24,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d6fadfa9b084a16f6464bbebf6d6a8e32b7cbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5f04afddbc388dba0e4efde00f4cd1096ce1bc0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015967"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775361"
 ---
 # <a name="template-explorer"></a>範本總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供各種範本。 範本為包含 SQL 指令碼的模板檔案，可協助您在資料庫中建立物件。 第一次開啟範本總管時，範本的複本是放置在 C:\Users 使用者資料夾的 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 底下。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供各種範本。 範本為包含 SQL 指令碼的模板檔案，可協助您在資料庫中建立物件。 第一次開啟範本總管時，範本的複本是放置在 C:\Users 使用者資料夾的 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 底下。  
   
 您可以在 [範本總管] 中瀏覽可用的範本，然後開啟範本以將程式碼併入程式碼編輯器視窗。 您還可以建立自訂範本。  
   
 ## <a name="benefits-of-templates"></a>範本的優點  
 方案、專案和各類型的程式碼編輯器都可以使用範本。 您可以利用範本來建立資料庫、資料表、檢視、索引、預存程序、觸發程序、統計資料和函數這類物件。 此外，還有一些範本可協助您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的擴充屬性、連結伺服器、登入、角色、使用者和範本來管理伺服器。  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 所提供的範本指令碼包含協助您自訂程式碼的參數。 開啟範本時，請使用 [取代範本參數] 對話方塊，在指令碼中插入值。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所提供的範本指令碼包含協助您自訂程式碼的參數。 開啟範本時，請使用 [取代範本參數] 對話方塊，在指令碼中插入值。  
   
 請建立您經常執行之工作的自訂範本。 請將您的自訂指令碼組織成現有的資料夾，或建立新的資料夾結構。  
   

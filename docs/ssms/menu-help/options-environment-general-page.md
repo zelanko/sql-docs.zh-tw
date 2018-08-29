@@ -19,20 +19,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7e8ba6dcb66fbf962e70cc5175b07095ffa2f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c24de46da06f069ce147907a18db1c7640713f5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043155"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775366"
 ---
 # <a name="options-environment---general-page"></a>選項 (環境 - 一般頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [選項] 對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後按一下 [一般]。  
+使用 [選項] 對話方塊，來設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的啟動動作、一般視窗管理選項，以及其他一般設定。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後按一下 [一般]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **啟動時**  
-選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 啟動時要執行的動作。 選項包括：  
+選取 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動時要執行的動作。 選項包括：  
   
 -   [開啟物件總管] 會提示進行連接，然後開啟物件總管。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "33043155"
   
 -   [開啟物件總管和新增查詢] 會提示進行連接，然後使用該連接開啟物件總管和 SQL 查詢編輯器。  
   
--   [開啟空白環境] 會開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]，但沒有 SQL 查詢編輯器視窗，且不會將物件總管連接到伺服器。  
+-   [開啟空白環境] 會開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，但沒有 SQL 查詢編輯器視窗，且不會將物件總管連接到伺服器。  
   
 **在 [物件總管] 中隱藏系統物件**  
-選取此核取方塊，即可從 [物件總管] 中的樹狀檢視裡，移除系統資料庫、系統資料表、系統檢視，以及系統預存程序。 系統函數與系統資料類型並未隱藏。 此選項僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的執行個體，且不會影響在 [物件總管] 中已經連接的伺服器。  
+選取此核取方塊，即可從 [物件總管] 中的樹狀檢視裡，移除系統資料庫、系統資料表、系統檢視，以及系統預存程序。 系統函數與系統資料類型並未隱藏。 此選項僅適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，且不會影響在 [物件總管] 中已經連接的伺服器。  
   
 ## <a name="environment-layout"></a>環境配置  
-您必須關閉再重新開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ，才能在索引標籤式文件與多重文件介面 (MDI) 環境模式之間變更。  
+您必須關閉再重新開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，才能在索引標籤式文件與多重文件介面 (MDI) 環境模式之間變更。  
   
 **索引標籤式文件**  
 選取此選項即可顯示在編輯器內，以索引標籤組合在一起的多個文件視窗。 索引標籤式文件視窗適用於組織多個開啟的文件以及在它們之間切換。  

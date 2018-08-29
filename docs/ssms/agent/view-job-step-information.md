@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01888485033e81c1fa625778f7bca987523af365
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2a69e8b536dcabc8500184413b19008bd6c910d0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974921"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775609"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "37974921"
 ### <a name="Restrictions"></a>限制事項  
 若作業步驟已設定為將輸出寫入資料表或檔案，且作業已至少執行一次，您就可以在 **[作業步驟屬性]** 對話方塊的 **[進階]** 頁面上檢視其輸出。 當作業或作業步驟被刪除後，輸出記錄檔也會自動刪除。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
 若您不是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，就只能檢視您所擁有的作業。 此角色的成員可檢視所有作業與作業步驟詳細資料。  
@@ -70,15 +70,15 @@ ms.locfileid: "37974921"
   
 5.  在 **[作業步驟屬性]** 對話方塊的 **[一般]** 頁面上，您可以檢視作業步驟的類型及其功能。  
   
-6.  按一下 **[進階]** 頁面，即可檢視下列項目： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 在作業步驟成功或失敗時所應採取的動作、作業步驟應嘗試多少次、寫入作業步驟輸出的位置，以及執行作業步驟的使用者身分。  
+6.  按一下 **[進階]** 頁面，即可檢視下列項目： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業步驟成功或失敗時所應採取的動作、作業步驟應嘗試多少次、寫入作業步驟輸出的位置，以及執行作業步驟的使用者身分。  
   
 #### <a name="to-view-job-step-output"></a>若要檢視作業步驟輸出  
   
 1.  在 **[作業步驟屬性]** 對話方塊中，按一下 **[進階]** 頁面。  
   
-2.  視您所連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 版本之不同，您可以如下所示檢視作業步驟輸出檔案或資料表：  
+2.  視您所連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之不同，您可以如下所示檢視作業步驟輸出檔案或資料表：  
   
-    -   連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或更新版本時，只有在已核取 **[記錄至資料表]** 時，才可以按一下 **[檢視]** 。 在這種情況下，作業步驟輸出會寫入 **msdb** 資料庫的 **sysjobstepslogs** 資料表。  
+    -   連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更新版本時，只有在已核取 **[記錄至資料表]** 時，才可以按一下 **[檢視]** 。 在這種情況下，作業步驟輸出會寫入 **msdb** 資料庫的 **sysjobstepslogs** 資料表。  
   
     -   若作業步驟輸出寫入檔案中， **[檢視]** 按鈕就會停用。 若要檢視作業步驟輸出檔，請使用 [記事本]。  
   

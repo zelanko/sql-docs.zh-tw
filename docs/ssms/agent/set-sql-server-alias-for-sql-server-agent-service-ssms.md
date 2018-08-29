@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 29febbe7c3160da5ed8d3a55b986b5ffca8bfcb7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 926a3e3850172acb653a9ea49b1876d204103d81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981040"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776218"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38981040"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 別名，以供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 用來連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務預設會使用不需要額外的用戶端組態之動態伺服器名稱，透過具名管道連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的執行個體。 只有未使用預設網路傳輸，或當您連接到正在接聽替代具名管道之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的執行個體時，才需要設定伺服器連接別名。  
+此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 別名，以供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務預設會使用不需要額外的用戶端組態之動態伺服器名稱，透過具名管道連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 只有未使用預設網路傳輸，或當您連接到正在接聽替代具名管道之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，才需要設定伺服器連接別名。  
   
 **本主題內容**  
   
@@ -48,14 +48,14 @@ ms.locfileid: "38981040"
   
 ### <a name="Restrictions"></a>限制事項  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 之本機執行個體的別名，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之本機執行個體的別名，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   只有當您擁有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 節點的權限時，[物件總管] 才會顯示該節點。  
+-   只有當您擁有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 節點的權限時，[物件總管] 才會顯示該節點。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
-若要執行功能，您必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 設定為使用帳戶認證，此帳戶必須是 **中** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](系統管理員) 固定伺服器角色的成員。 此帳戶必須擁有下列 Windows 權限：  
+若要執行功能，您必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定為使用帳戶認證，此帳戶必須是 **中** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](系統管理員) 固定伺服器角色的成員。 此帳戶必須擁有下列 Windows 權限：  
   
 -   以服務登入 (SeServiceLogonRight)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "38981040"
   
 -   調整處理序的記憶體配額 (SeIncreaseQuotaPrivilege)  
   
-如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務帳戶所需之 Windows 權限的詳細資訊，請參閱＜ [選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) ＞及＜ [設定 Windows 服務帳戶](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)＞。  
+如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶所需之 Windows 權限的詳細資訊，請參閱＜ [選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) ＞及＜ [設定 Windows 服務帳戶](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)＞。  
   
 ## <a name="SSMSProcedure"></a>使用 SQL Server Management Studio  
   
@@ -77,7 +77,7 @@ ms.locfileid: "38981040"
   
 3.  在 [SQL Server Agent 屬性 <伺服器名稱>] 對話方塊的 [選取頁面] 底下，選取 [連線]，然後  
   
-4.  在 **[別名本機主機伺服器]** 方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 要連接之伺服器的別名。  
+4.  在 **[別名本機主機伺服器]** 方塊中，輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要連接之伺服器的別名。  
   
 5.  按一下 [確定] 。  
   

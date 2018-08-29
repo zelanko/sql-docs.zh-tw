@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52f6f4c0406bd1aa90585723025ce5456c34c1e9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d661cde875e4bbec00f503c86d623279fa97622d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980130"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776210"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38980130"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中建立和定義執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Analysis Services 命令與查詢的 [!INCLUDE[tsql](../../includes/tsql_md.md)] Agent 作業步驟。  
+此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立和定義執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services 命令與查詢的 [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 作業步驟。  
   
 -   **開始之前：**  
   
@@ -51,17 +51,17 @@ ms.locfileid: "38980130"
   
 ### <a name="Restrictions"></a>限制事項  
   
--   如果作業步驟使用 Analysis Services 命令，命令陳述式必須是 XML for Analysis Services **Execute** 方法。 此陳述式可能不包含完整的簡易物件存取通訊協定 (SOAP) Envelope 或 XML for Analysis **Discover** 方法。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業步驟則不支援。 如需有關 XML for Analysis Services 的詳細資訊，請參閱 [XML for Analysis 概觀 (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)。  
+-   如果作業步驟使用 Analysis Services 命令，命令陳述式必須是 XML for Analysis Services **Execute** 方法。 此陳述式可能不包含完整的簡易物件存取通訊協定 (SOAP) Envelope 或 XML for Analysis **Discover** 方法。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。 如需有關 XML for Analysis Services 的詳細資訊，請參閱 [XML for Analysis 概觀 (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)。  
   
 -   如果作業步驟使用 Analysis Services 查詢，查詢陳述式必須是多維度運算式 (MDX) 查詢。 如需 MDX 的詳細資訊，請參閱 [MDX 陳述式基礎觀念 (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
   
--   若要執行使用 Analysis Services 子系統的作業步驟，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或具有已定義能使用此子系統之有效 Proxy 帳戶的存取權。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務帳戶或 Proxy 必須是 Analysis Services 管理員，且必須是有效的 Windows 網域帳戶。  
+-   若要執行使用 Analysis Services 子系統的作業步驟，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或具有已定義能使用此子系統之有效 Proxy 帳戶的存取權。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶或 Proxy 必須是 Analysis Services 管理員，且必須是有效的 Windows 網域帳戶。  
   
--   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以將作業步驟輸出寫入檔案。 若作業步驟是由屬於 **msdb** 資料庫之 **SQLAgentUserRole** 資料庫角色 的使用者執行，則輸出只能寫入一個資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會將作業步驟輸出寫入到 **msdb** 資料庫中的 **sysjobstepslog** 資料表。  
+-   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以將作業步驟輸出寫入檔案。 若作業步驟是由屬於 **msdb** 資料庫之 **SQLAgentUserRole** 資料庫角色 的使用者執行，則輸出只能寫入一個資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會將作業步驟輸出寫入到 **msdb** 資料庫中的 **sysjobstepslog** 資料表。  
   
 -   如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)＞。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "38980130"
   
 8.  在 **[命令]** 方塊中，輸入要執行的陳述式，或按一下 **[開啟]** 選取陳述式。  
   
-9. 按一下 **[進階]** 頁面以定義這個作業步驟的選項，例如在作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 所該採取的行動、應該嘗試作業步驟多少次，以及應該在何處寫入作業步驟輸出。  
+9. 按一下 **[進階]** 頁面以定義這個作業步驟的選項，例如在作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所該採取的行動、應該嘗試作業步驟多少次，以及應該在何處寫入作業步驟輸出。  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>若要建立 Analysis Services 查詢作業步驟  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38980130"
   
 8.  在 **[命令]** 方塊中，輸入要執行的陳述式，或按一下 **[開啟]** 選取陳述式。  
   
-9. 按一下 **[進階]** 頁面以定義這個作業步驟的選項，例如在作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 所該採取的行動、應該嘗試作業步驟多少次，以及應該在何處寫入作業步驟輸出。  
+9. 按一下 **[進階]** 頁面以定義這個作業步驟的選項，例如在作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所該採取的行動、應該嘗試作業步驟多少次，以及應該在何處寫入作業步驟輸出。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

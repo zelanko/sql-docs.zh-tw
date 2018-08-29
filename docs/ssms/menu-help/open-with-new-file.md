@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043795"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775238"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "33043795"
 若要移除程式，請選取程式然後按一下 [移除]。  
   
 **設定為預設值**  
-若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式] 清單中選擇程式，然後按一下 [設定為預設值]。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
+若要指定所選之檔案類型的預設編輯器 (如果適用的話，還有其語言編碼選項)，請從 [選取要開啟的程式] 清單中選擇程式，然後按一下 [設定為預設值]。 下次您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟此檔案類型時，就會在新的預設編輯器中開啟文件。  
   
 > [!NOTE]  
 > 在 [選取要開啟的程式] 的程式清單中，所選之檔案類型的預設編輯器名稱後面會接著 [(預設)]。  
   
 ## <a name="see-also"></a>另請參閱  
-[使副檔名與程式碼編輯器相關聯](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6ccdfa2a2592fab6157231823d321358120955f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79edc3ecdc1af47ffbdb9f263de30f29817961c3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039765"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775006"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>Proxy 節點 (SQL Server Agent F1 說明)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,5 +29,5 @@ ms.locfileid: "33039765"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中物件總管之 [Proxy] 節點的 F1 說明。  
+此章節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中物件總管之 [Proxy] 節點的 F1 說明。  
   

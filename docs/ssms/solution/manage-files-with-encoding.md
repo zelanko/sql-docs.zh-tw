@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f04e3569753aa9a2f73f2e1f12cb51c9b20bbe3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 547de2c618f1a05efa14337301f4a799dfc44fc2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044395"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775269"
 ---
 # <a name="manage-files-with-encoding"></a>利用編碼管理檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,5 +69,5 @@ ms.locfileid: "33044395"
   
 ## <a name="see-also"></a>另請參閱  
 [管理方案和專案的檔案](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[使副檔名與程式碼編輯器相關聯](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 083073616f445249e69b8d88e765a785ea4f1ad7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d472af54264fedf4a20909f58996fa259b9bb7b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776208"
 ---
 # <a name="job-activity-monitor"></a>作業活動監視器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33042705"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此頁面即可檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業的目前活動。 按一下 [篩選] 即可限制顯示的作業。 [代理程式作業活動] 方格是唯讀的。 按一下資料行標頭即可排序方格。 若要修改作業，請按兩下作業以開啟 [作業屬性] 對話方塊。 以滑鼠右鍵按一下方格中的作業，即可開始執行所有作業步驟、於特定作業步驟開始、停用或啟用作業、重新整理作業、刪除作業、檢視作業的記錄或檢視作業的屬性。 按一下 [重新整理]，以最新資訊更新方格。  
+使用此頁面即可檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的目前活動。 按一下 [篩選] 即可限制顯示的作業。 [代理程式作業活動] 方格是唯讀的。 按一下資料行標頭即可排序方格。 若要修改作業，請按兩下作業以開啟 [作業屬性] 對話方塊。 以滑鼠右鍵按一下方格中的作業，即可開始執行所有作業步驟、於特定作業步驟開始、停用或啟用作業、重新整理作業、刪除作業、檢視作業的記錄或檢視作業的屬性。 按一下 [重新整理]，以最新資訊更新方格。  
   
 ## <a name="options"></a>選項。  
 **名稱**  
@@ -62,7 +62,7 @@ ms.locfileid: "33042705"
 **已排程**  
 [是] 表示作業已指派給作業排程；[否] 表示作業沒有排程。  
   
-*只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 系統管理員 (sysadmin) 固定伺服器角色和伺服器管理員群組的成員可以看到此資料行中的值。 SQLAgentOperatorRole 角色的成員無法看到此資料行中的值。  
+*只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員 (sysadmin) 固定伺服器角色和伺服器管理員群組的成員可以看到此資料行中的值。 SQLAgentOperatorRole 角色的成員無法看到此資料行中的值。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>若要開啟作業活動監視器  
   

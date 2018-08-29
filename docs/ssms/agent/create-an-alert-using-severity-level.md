@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98355b237197ac6b2f52d9439fdb0fa1ebc2132a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 22e94828bc111318b3bdfbdfca71c863912b9064
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981171"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775808"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "38981171"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)]，建立一種在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中發生某特定嚴重性層級事件時，所引發的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 警示。  
+此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立一種在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中發生某特定嚴重性層級事件時，所引發的 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  
   
 **本主題內容**  
   
@@ -54,13 +54,13 @@ ms.locfileid: "38981171"
   
 ### <a name="Restrictions"></a>限制事項  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供了一種簡單的圖形方式供您管理整個警示系統，建議您利用這個方式來設定警示基礎結構。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理整個警示系統，建議您利用這個方式來設定警示基礎結構。  
   
 -   **xp_logevent** 產生的事件出現在 master 資料庫中。 因此，除非警示的 **xp_logevent** 是 **@database_name** 或 NULL，否則， **xp_logevent** 不會觸發警示。  
   
--   從 19 到 25 的嚴重性層級會傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 訊息到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄檔並觸發警示。 嚴重性層級小於 19 的事件，只有在使用 **sp_altermessage**、RAISERROR WITH LOG 或 **xp_logevent** 強制寫入 Windows 應用程式記錄檔時，才會觸發警示。  
+-   從 19 到 25 的嚴重性層級會傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄檔並觸發警示。 嚴重性層級小於 19 的事件，只有在使用 **sp_altermessage**、RAISERROR WITH LOG 或 **xp_logevent** 強制寫入 Windows 應用程式記錄檔時，才會觸發警示。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
 依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行 **sp_add_alert**。  

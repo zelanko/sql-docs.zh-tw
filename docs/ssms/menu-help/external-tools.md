@@ -19,16 +19,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb8d0838d7945324d9fcd7cc6b03069cef5a5c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cef05798c4df7415da957b0307c4d9e7b1c8086
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043455"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774505"
 ---
 # <a name="external-tools"></a>外部工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此對話方塊可將外部工具 (例如 SQL Server 組態管理員或記事本) 新增到 [工具] 功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊列在 [工具] 功能表中。  
+使用此對話方塊可將外部工具 (例如 SQL Server 組態管理員或記事本) 新增到 [工具] 功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊列在 [工具] 功能表中。  
   
 ## <a name="options"></a>選項。  
 **功能表內容**  
@@ -83,5 +83,5 @@ ms.locfileid: "33043455"
 4.  在 [引數] 方塊中，輸入 .msc 檔案的路徑，例如 **"C:\WINNT\system32\SQLServerManager.msc"**  
   
 > [!NOTE]  
-> 檢視 [開始][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**功能表上之**  捷徑的屬性，以確認這些檔案在您電腦上的位置。  
+> 檢視 [開始][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**功能表上之**  捷徑的屬性，以確認這些檔案在您電腦上的位置。  
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 361457778678c8edc08df87091174d0c5b65d31f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985310"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774511"
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "38985310"
   
 根據預設，系統會針對主要伺服器與目標伺服器之間的連接，啟用完整的安全通訊端層 (SSL) 加密和憑證驗證。 如需詳細資訊，請參閱 [在目標伺服器上設定加密選項](../../ssms/agent/set-encryption-options-on-target-servers.md)。  
   
-如果您有許多台目標伺服器，請避免在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 其他功能具有重大效能要求的實際伺服器上定義主要伺服器，因為目標伺服器可能會拖慢實際伺服器的效能。 如果也將事件轉寄到專用的主要伺服器，您就可以在一部伺服器上集中化管理。 如需詳細資訊，請參閱 [管理作業步驟](../../ssms/agent/manage-events.md)。  
+如果您有許多台目標伺服器，請避免在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其他功能具有重大效能要求的實際伺服器上定義主要伺服器，因為目標伺服器可能會拖慢實際伺服器的效能。 如果也將事件轉寄到專用的主要伺服器，您就可以在一部伺服器上集中化管理。 如需詳細資訊，請參閱 [管理作業步驟](../../ssms/agent/manage-events.md)。  
   
 > [!NOTE]  
-> 若要使用多伺服器作業處理， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務帳戶必須是主要伺服器上 **msdb** 資料庫角色 **TargetServersRole** 的成員。 [主要伺服器精靈] 會在編列處理序的過程中，自動將服務帳戶加入至此角色  
+> 若要使用多伺服器作業處理， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶必須是主要伺服器上 **msdb** 資料庫角色 **TargetServersRole** 的成員。 [主要伺服器精靈] 會在編列處理序的過程中，自動將服務帳戶加入至此角色  
   
 ## <a name="considerations-for-multiserver-environments"></a>多伺服器環境的考量事項  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1894d3542613398d50ba0fb998439ce9b57b1af
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c1d2c0f80d80a48005821038b2cb90367fef6cdd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806973"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776225"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "36806973"
  若要針對使用中央管理伺服器註冊的所有伺服器執行查詢，請展開中央管理伺服器，然後以滑鼠右鍵按一下伺服器群組，並指向 [連接]，再按一下 [新增查詢]。 在新的 [查詢編輯器] 視窗中執行查詢時，將會使用預存連接資訊及使用者的 Windows 驗證內容，針對此伺服器群組中的所有伺服器來執行。  
   
 ## <a name="see-also"></a>另請參閱  
- [在物件總管中隱藏系統物件](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
+ [在物件總管中隱藏系統物件](../object/hide-system-objects-in-object-explorer.md)   
  [匯出已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [匯入已註冊的伺服器資訊 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   

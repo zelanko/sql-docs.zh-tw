@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2e7ded81d62f01ec739cd02358410bbae299451
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 428b2e0c4dd2ac3657f209fbdc2e1bcacbc69f48
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981850"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775475"
 ---
 # <a name="poll-servers"></a>輪詢伺服器
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 如果使用下列項目，則不需要明確發佈作業：  
   
--   可控制多伺服器作業的 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 。  
+-   可控制多伺服器作業的 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 -   不會修改作業排程或作業步驟的作業預存程序。  
   
