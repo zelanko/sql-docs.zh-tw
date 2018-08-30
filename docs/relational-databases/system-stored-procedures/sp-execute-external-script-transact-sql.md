@@ -21,17 +21,19 @@ helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 5e866f5a9856fe1308bc5233432e053b18d207f7
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086170"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118316"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script & Amp;#40;transact-SQL&AMP;#41;
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   執行與位於外部位置引數提供的指令碼。 必須在支援的和已註冊的語言 （R 或 Python） 中撰寫指令碼。 若要執行**sp_execute_external_script**，您必須先啟用外部指令碼使用陳述式， `sp_configure 'external scripts enabled', 1;`。  
@@ -150,7 +152,7 @@ sp_execute_external_script
 
 浮點數的值 (例如`+Inf`， `-Inf`， `NaN`) 中不支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使這兩種語言使用 IEEE 754。 目前的行為只會將值傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]直接; 如此一來中的 SQL 用戶端[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]擲回錯誤。 因此，這些值會轉換成**NULL**。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>Permissions
 
 需要**EXECUTE ANY EXTERNAL SCRIPT**資料庫權限。  
 
