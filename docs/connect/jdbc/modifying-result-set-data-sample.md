@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: af7c20d6540cb5db098bc8f08c33930355253be2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453982"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786633"
 ---
 # <a name="modifying-result-set-data-sample"></a>修改結果集資料範例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫擷取可更新的資料集。 然後，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的方法，它會插入、修改，最後刪除資料集中的資料列。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫擷取可更新的資料集。 然後，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的方法，它會插入、修改，最後刪除資料集中的資料列。
 
 此範例的程式碼檔案名稱為 UpdateResultSet.java，可以在下列位置找到：
 
@@ -35,7 +35,7 @@ ms.locfileid: "39453982"
 
 ## <a name="requirements"></a>需求
 
-若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../connect/jdbc/using-the-jdbc-driver.md)。
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。

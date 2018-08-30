@@ -18,14 +18,14 @@ helpviewer_keywords:
 - encryption [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, encryption
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: bdb35bf030598f1a206a6d2529095f23068cc841
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: f8375c64f47a6ef7a46dcd27ad5ce60fe613eaa4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108890"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029930"
 ---
 # <a name="using-encryption-without-validation"></a>使用加密而不需驗證
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

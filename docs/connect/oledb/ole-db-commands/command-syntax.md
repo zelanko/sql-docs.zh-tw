@@ -17,14 +17,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 - stored procedures [OLE DB], command syntax
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8e7fab68cc4a945bc34c64b2b832b182c734d927
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 12658166ef66a05bfa18eb6c5c77809e548252ea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105934"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019224"
 ---
 # <a name="command-syntax"></a>命令語法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

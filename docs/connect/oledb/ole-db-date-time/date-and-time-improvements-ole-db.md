@@ -15,14 +15,14 @@ helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 1e70eeddce7a88fd81c0747d13692c567dcd1bb5
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 5bcfb89323051470dc307a8b4828ee6d8dc000a5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025777"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和時間改善 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982310"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786256"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本主題討論如何建立與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫之間的連線。  
+本主題討論如何建立與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫之間的連線。  
   
 ## <a name="connection-properties"></a>連接屬性  
 
@@ -67,7 +67,7 @@ Server = [protocol:]server[,port]
  - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>使用安全通訊端層 (SSL)  
-您可以使用安全通訊端層 (SSL) 加密與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的連線。 SSL 會保護網路上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 使用者名稱和密碼。 SSL 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  
+您可以使用安全通訊端層 (SSL) 加密與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的連線。 SSL 會保護網路上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼。 SSL 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  
 
 啟用加密可提高安全性，但會犧牲效能。
 
@@ -78,7 +78,7 @@ Server = [protocol:]server[,port]
 ||**TrustServerCertificate = 否**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|  
-|**Encrypt=yes**|會檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SSL 憑證內主體一般名稱 (CN) 或主體別名 (SAN) 中的名稱 (或 IP 位址) 應完全符合指定在連接字串中的伺服器名稱 (或 IP 位址)。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。|  
+|**Encrypt=yes**|會檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 憑證內主體一般名稱 (CN) 或主體別名 (SAN) 中的名稱 (或 IP 位址) 應完全符合指定在連接字串中的伺服器名稱 (或 IP 位址)。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。|  
 
 根據預設，加密的連接一律會驗證伺服器的憑證。 不過，如果您連接到已自我簽署的憑證的伺服器，也新增`TrustServerCertificate`略過檢查憑證的受信任的憑證授權單位清單進行比對的選項：  
 

@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109820"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028027"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  這篇文章描述之間執行的日期/時間轉換以 OLE DB Driver for SQL Server 用戶端應用程式和[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更新版本）。  
+  描述在使用 OLE DB Driver for SQL Server 和 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 撰寫之用戶端應用程式之間執行的日期/時間轉換。  
   
 ## <a name="conversions"></a>轉換  
  本文描述針對用戶端所進行的轉換。 如果用戶端針對參數所指定的小數秒有效位數與伺服器上所定義的小數秒有效位數不同，在伺服器允許作業成功的情況下，用戶端轉換可能會造成失敗。 特別是，用戶端會將任何截斷的小數秒視為錯誤，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將時間值捨去為最接近的整秒。  

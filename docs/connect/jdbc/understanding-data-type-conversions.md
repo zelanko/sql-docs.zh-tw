@@ -14,22 +14,22 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0164fdcfebdf0fb92aac1f37820495ad8e591a41
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662200"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787152"
 ---
 # <a name="understanding-data-type-conversions"></a>了解資料類型轉換
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-為了順利將 Java 程式設計語言資料類型轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 JDBC 規格所需的資料類型轉換。 增加更多彈性，所有的類型是來回**物件**，**字串**，並**byte []** 資料型別。
+為了順利將 Java 程式設計語言資料類型轉換為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 JDBC 規格所需的資料類型轉換。 增加更多彈性，所有的類型是來回**物件**，**字串**，並**byte []** 資料型別。
 
 ## <a name="getter-method-conversions"></a>Getter 方法轉換
 
-根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型，下列圖表包含 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別之 get\<類型>() 方法的 JDBC 驅動程式轉換對應，以及 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別之 get\<類型> 方法的支援轉換。
+根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，下列圖表包含 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別之 get\<類型>() 方法的 JDBC 驅動程式轉換對應，以及 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別之 get\<類型> 方法的支援轉換。
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -59,7 +59,7 @@ JDBC Driver 的 updater 方法所支援的轉換有三種類別：
 
 當上呼叫 updateString**二進位**， **varbinary**， **varbinary （max)**，或**映像**資料行資料類型，它會處理字串值做為十六進位字串值。
 
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料行資料類型是 **XML** 時，此資料值必須是有效的 **XML**。 在呼叫 updateBytes、 updateBinaryStream、 或 updateBlob 方法時，資料值應該是 XML 字元的十六進位字串表示。 例如：
+當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行資料類型是 **XML** 時，此資料值必須是有效的 **XML**。 在呼叫 updateBytes、 updateBinaryStream、 或 updateBlob 方法時，資料值應該是 XML 字元的十六進位字串表示。 例如：
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -81,13 +81,13 @@ JDBC Driver 的 setter 方法所支援的轉換有兩種類別：
 
 - **不失真 (x)**：轉換的數值情況為，setter 類型與基礎伺服器類型相同或更小。 例如，在基礎伺服器**十進位**資料行上呼叫 setBigDecimal 時，不需要轉換。 針對數值到字元的轉換，Java **numeric** 資料類型會轉換為 **String**。 例如，以值 "53" 在 varchar(50) 資料行上呼叫 setDouble，就會在該目的地資料行中產生字元值 "53"。
 
-- **轉換 (y)**：從 Java **numeric** 類型轉換到較小的基礎伺服器 **numeric** 類型。 這是一般轉換並遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 轉換慣例。 有效位數一律會截斷 (絕不進位)，而溢位則會擲回未支援的轉換錯誤。 例如，在基礎整數資料行上使用值為 "1.9999" 的 updateDecimal，會在目的地資料行中產生 "1"；但如果傳遞 "3000000000"，則驅動程式會擲回錯誤。
+- **轉換 (y)**：從 Java **numeric** 類型轉換到較小的基礎伺服器 **numeric** 類型。 這是一般轉換並遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轉換慣例。 有效位數一律會截斷 (絕不進位)，而溢位則會擲回未支援的轉換錯誤。 例如，在基礎整數資料行上使用值為 "1.9999" 的 updateDecimal，會在目的地資料行中產生 "1"；但如果傳遞 "3000000000"，則驅動程式會擲回錯誤。
 
-- **視資料而定 (z)**：從 Java **String** 類型轉換到基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型會依下列情況而定：此驅動程式將 **String** 值傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 視情況執行轉換。 如果 sendStringParametersAsUnicode 設定為 true 且底層 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不允許將 **nvarchar** 轉換為 **image** 而且會擲回 SQLServerException。 如果 sendStringParametersAsUnicode 設定為 false 且底層 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允許將 **varchar** 轉換為 **image** 且不會擲回例外狀況。
+- **視資料而定 (z)**：從 Java **String** 類型轉換到基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型會依下列情況而定：此驅動程式將 **String** 值傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 視情況執行轉換。 如果 sendStringParametersAsUnicode 設定為 true 且底層 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許將 **nvarchar** 轉換為 **image** 而且會擲回 SQLServerException。 如果 sendStringParametersAsUnicode 設定為 false 且基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許將 **varchar** 轉換為 **image** 且不會擲回例外狀況。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會執行這些轉換，並且在發生問題時將錯誤傳遞回 JDBC 驅動程式。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行這些轉換，並且在發生問題時將錯誤傳遞回 JDBC 驅動程式。
 
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料行資料類型是 **XML** 時，此資料值必須是有效的 **XML**。 在呼叫 updateBytes、 updateBinaryStream、 或 updateBlob 方法時，資料值應該是 XML 字元的十六進位字串表示。 例如：
+當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行資料類型是 **XML** 時，此資料值必須是有效的 **XML**。 在呼叫 updateBytes、 updateBinaryStream、 或 updateBlob 方法時，資料值應該是 XML 字元的十六進位字串表示。 例如：
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -110,13 +110,13 @@ JDBC Driver 的 setObject 方法所支援的轉換有三種類別：
 
 - **不失真 (x)**：轉換的數值情況為，setter 類型與基礎伺服器類型相同或更小。 例如，在基礎伺服器**十進位**資料行上呼叫 setBigDecimal 時，不需要轉換。 針對數值到字元的轉換，Java **numeric** 資料類型會轉換為 **String**。 例如，以值 "53" 在 varchar(50) 資料行上呼叫 setDouble，會在該目的地資料行中產生字元值 "53"。
 
-- **轉換 (y)**：從 Java **numeric** 類型轉換到較小的基礎伺服器 **numeric** 類型。 這是一般轉換並遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 轉換慣例。 有效位數一律會截斷 (絕不進位)，而溢位則會擲出未支援的轉換錯誤。 例如，在基礎整數資料行上使用值為 "1.9999" 的 updateDecimal，會在目的地資料行中產生 "1"；但如果傳遞 "3000000000"，則驅動程式會擲回錯誤。
+- **轉換 (y)**：從 Java **numeric** 類型轉換到較小的基礎伺服器 **numeric** 類型。 這是一般轉換並遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轉換慣例。 有效位數一律會截斷 (絕不進位)，而溢位則會擲出未支援的轉換錯誤。 例如，在基礎整數資料行上使用值為 "1.9999" 的 updateDecimal，會在目的地資料行中產生 "1"；但如果傳遞 "3000000000"，則驅動程式會擲回錯誤。
 
-- **視資料而定 (z)**：從 Java **String** 類型轉換到基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型會依下列情況而定：此驅動程式將 **String** 值傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 視情況執行轉換。 如果 sendStringParametersAsUnicode 連線屬性設定為 true 且底層 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不允許將 **nvarchar** 轉換為 **image** 而且會擲回 SQLServerException。 如果 sendStringParametersAsUnicode 設定為 false 且底層 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允許將 **varchar** 轉換為 **image** 且不會擲回例外狀況。
+- **視資料而定 (z)**：從 Java **String** 類型轉換到基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型會依下列情況而定：此驅動程式將 **String** 值傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 視情況執行轉換。 如果 sendStringParametersAsUnicode 連線屬性設定為 true 而且基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許將 **nvarchar** 轉換為 **image** 而且會擲回 SQLServerException。 如果 sendStringParametersAsUnicode 設定為 false 且基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許將 **varchar** 轉換為 **image** 且不會擲回例外狀況。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會執行大量 set 轉換，並且在發生問題時將錯誤傳遞回 JDBC 驅動程式。 用戶端轉換是例外狀況，而且只是不會執行**日期**，**時間**，**時間戳記**，**布林**，以及**字串**值。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行大量 set 轉換，並且在發生問題時將錯誤傳遞回 JDBC 驅動程式。 用戶端轉換是例外狀況，而且只是不會執行**日期**，**時間**，**時間戳記**，**布林**，以及**字串**值。
 
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料行資料類型是 **XML** 時，此資料值必須是有效的 **XML**。 呼叫 setObject(byte[], SQLXML)、setObject(inputStream, SQLXML) 或 setObject(Blob, SQLXML) 方法時，此資料值應該是 XML 字元的十六進位字串表示法。 例如：
+當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行資料類型是 **XML** 時，此資料值必須是有效的 **XML**。 呼叫 setObject(byte[], SQLXML)、setObject(inputStream, SQLXML) 或 setObject(Blob, SQLXML) 方法時，此資料值應該是 XML 字元的十六進位字串表示法。 例如：
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E

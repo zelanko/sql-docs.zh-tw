@@ -14,26 +14,26 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661660"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787368"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC Driver 資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 當作其資料庫的 Java 應用程式中，使用 JDBC 基本和進階資料類型。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當作其資料庫的 Java 應用程式中，使用 JDBC 基本和進階資料類型。  
   
-JDBC 類型系統會調解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型和 Java 語言類型與物件之間的轉換。 JDBC 類型的模型是以 SQL-92 和 SQL-99 類型建立的。 JDBC 驅動程式遵守 JDBC 規格，其設計在於提供可預測性與彈性之間的正確平衡。  
+JDBC 類型系統會調解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型和 Java 語言類型與物件之間的轉換。 JDBC 類型的模型是以 SQL-92 和 SQL-99 類型建立的。 JDBC 驅動程式遵守 JDBC 規格，其設計在於提供可預測性與彈性之間的正確平衡。  
   
 本節中的主題描述如何使用基本和進階資料類型，以及如何將資料類型轉換為其他資料類型。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-| 主題                                                                                                                                            | 說明                                                                                                                                                                                                                                                          |
+| 主題                                                                                                                                            | Description                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [使用基本資料類型](../../connect/jdbc/using-basic-data-types.md)                                                                           | 描述 JDBC 基本資料類型。 包括如何透過結果集、參數化查詢以及預存程序來使用資料類型的範例。                                                                                                        |
 | [設定 java.sql.Time 值如何傳送給伺服器](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | 描述 JDBC 驅動程式產生日期的方式。                                                                                                                                                                                                                       |

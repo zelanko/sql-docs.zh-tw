@@ -17,14 +17,14 @@ helpviewer_keywords:
 - next fetch position
 - rowsets [OLE DB], fetching
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ec1149b615c64f2113afc007c0ea04e4c4665698
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 9e73572d72cb178d254c7bea1318c7fc7c68ab56
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106104"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019885"
 ---
 # <a name="fetching-rows---next-fetch-position"></a>擷取資料列 - 下一個擷取位置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

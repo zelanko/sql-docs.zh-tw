@@ -13,14 +13,14 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: da249467e9eeca92009266eec5190f20b488f9e3
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b3c2afa21f2fab5dfd499418e9a23af89fa8a851
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031006"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

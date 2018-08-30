@@ -16,14 +16,14 @@ helpviewer_keywords:
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 98d04b56c6e1709e629be46ad00fd3f7b8007a5b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: e13ec74572e04e210b312e19d1e04aa1423d26db
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105994"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028835"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 訊息結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

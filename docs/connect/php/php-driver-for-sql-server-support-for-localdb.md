@@ -13,22 +13,22 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f408cb1f6cb82610cfa74a4d59a3ce15e4307e64
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992910"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786444"
 ---
 # <a name="support-for-localdb"></a>LocalDB 的支援
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB 是輕量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]它已經在[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 本主題將討論如何連接到 LocalDB 執行個體中的資料庫。
+LocalDB 是輕量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]它已經在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 本主題將討論如何連接到 LocalDB 執行個體中的資料庫。
 
 ## <a name="remarks"></a>Remarks
 
-如需有關 LocalDB，包括如何安裝 LocalDB 和設定您的 LocalDB 執行個體，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》 主題[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express LocalDB。
+如需有關 LocalDB，包括如何安裝 LocalDB 和設定您的 LocalDB 執行個體，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》 主題[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Express LocalDB。
 
 簡單地說，LocalDB 可讓您：
 

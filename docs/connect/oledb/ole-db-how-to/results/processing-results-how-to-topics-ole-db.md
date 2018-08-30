@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 61c759c37343b8c795e6b2f71449db664e8c3a63
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a798c2795ef19ad8c3823889b0e2d269ca8ec4ee
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108690"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022487"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

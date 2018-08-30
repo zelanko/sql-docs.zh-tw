@@ -32,14 +32,14 @@ helpviewer_keywords:
 - XML [SQL Server], OLE DB Driver for SQL Server
 - COLUMNS rowset
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 94a0dbc9e60711f61a5ba4ad86e7914b7327e75d
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: fa67c09d301c5932ccd128129b3beccf57c1a1e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107064"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025227"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

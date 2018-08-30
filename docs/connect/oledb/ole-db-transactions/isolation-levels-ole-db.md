@@ -17,14 +17,14 @@ helpviewer_keywords:
 - transactions [OLE DB]
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: bc4b60a56b5c12ac040c1b1481660175154c880f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 4bcb9de1cc0d09875dbe283b6ac8fe3cf46e883f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109670"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024774"
 ---
 # <a name="isolation-levels-ole-db"></a>隔離等級 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

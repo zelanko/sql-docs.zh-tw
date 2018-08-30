@@ -16,17 +16,17 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041399"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787367"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 上使用。 本頁記載的 Windows 版本的差異`bcp`。
+[Bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 本頁記載的 Windows 版本的差異`bcp`。
   
 - 欄位結束字元是定位字元 ("\t")。  
   
@@ -82,7 +82,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。  
   
 - -l  
-指定登入逾時。 –l 選項會指定您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 逾時之前的秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
+指定登入逾時。 –l 選項會指定您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 逾時之前的秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
   
 - -L *last_row*  
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。  
@@ -97,25 +97,25 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定登入識別碼的密碼。  
   
 - -Q  
-在 `bcp` 公用程式與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 執行個體之間的連接中，執行 SET QUOTED_IDENTIFIERS ON 陳述式。  
+在 `bcp` 公用程式與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間的連接中，執行 SET QUOTED_IDENTIFIERS ON 陳述式。  
   
 - -r *row_terminator*  
 指定資料列結束字元。  
   
 - -r  
-指定要使用定義給用戶端電腦地區設定的區域格式，將貨幣、日期和時間資料大量複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中。  
+指定要使用定義給用戶端電腦地區設定的區域格式，將貨幣、日期和時間資料大量複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 - -S *server*  
-指定的名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]連接的執行個體如果-D 是使用或，DSN。  
+指定的名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連接的執行個體如果-D 是使用或，DSN。  
   
 - -t *field_terminator*  
 指定欄位結束字元。  
   
 - -T  
-指定 `bcp` 公用程式使用信任連線 (整合式安全性) 連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+指定 `bcp` 公用程式使用信任連線 (整合式安全性) 連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 - -U *login_id*  
-指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的登入識別碼。  
+指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入識別碼。  
   
 - -V  
 報告 `bcp` 公用程式版本號碼和著作權。  
@@ -144,7 +144,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定接收來自命令提示字元重新導向之輸出的檔案名稱。  
   
 - -V (80 | 90 | 100)  
-使用舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的資料類型。  
+使用舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料類型。  
   
 - -X  
 與 format 和 -f format_file 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。  

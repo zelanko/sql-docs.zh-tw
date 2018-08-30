@@ -13,13 +13,14 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: dfa92b5c4cd0a3183bcf1004ca1a5be581f1306e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 53676012536391319eb75d69ffe084130df1d75c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968540"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785619"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>SQL Server 屬性 (FILESTREAM 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver for SQL Server 元件 |Microsoft Docs
+title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
 description: OLE DB Driver for SQL Server 的元件
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - components [OLE DB Driver for SQL Server]
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b1b46e57b3be42fa93f8a246db528a5f85709d9e
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 2836438e6dc5eb501d67e724397acbdf1a0a956a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109830"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020667"
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

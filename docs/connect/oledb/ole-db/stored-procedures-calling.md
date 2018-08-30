@@ -20,14 +20,14 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 964831d28c7b0bc761b740489d1c528099e53e93
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: df25145c876548139bd166d2aa3e767ddcb5b168
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106764"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032710"
 ---
 # <a name="stored-procedures---calling"></a>預存程序 - 呼叫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

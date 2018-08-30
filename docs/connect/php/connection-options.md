@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367640"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784012"
 ---
 # <a name="connection-options"></a>連線選項
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "39367640"
 |keyStoreSecret|String|想要存取 Azure Key Vault 的帳戶的認證密碼。 <br /><br />如果 KeyStoreAuthentication **KeyVaultPassword**，這必須是 Azure Active Directory 密碼。 <br /><br />如果 KeyStoreAuthentication **KeyVaultClientSecret**，這必須是應用程式用戶端祕密。|未設定。|
 |LoginTimeout|整數 (SQLSRV 驅動程式)<br /><br />字串 (PDO_SQLSRV 驅動程式)|指定將連接嘗試認定為失敗之前所等候的秒數。|不會逾時。|  
 |MultipleActiveResultSets|1 或 **true** 會使用 Multiple Active Result Sets。<br /><br />0 或 **false** 會停用 Multiple Active Result Sets。|停用或明確啟用 Multiple Active Result Sets (MARS) 的支援。<br /><br />如需詳細資訊，請參閱[如何：停用 Multiple Active Result Set &#40;MARS&#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。|true (1)|  
-|MultiSubnetFailover|String|在連接到 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 容錯移轉叢集執行個體時，一律指定 **multiSubnetFailover=yes**。 **multiSubnetFailover=yes** 會設定 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，以提供對 (目前) 動態伺服器更快速的偵測與連接。 可能的值為 [是] 和 [否]。<br /><br />如需詳細資訊[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|否|  
+|MultiSubnetFailover|String|在連接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **multiSubnetFailover=yes**。 **multiSubnetFailover=yes** 會設定 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，以提供對 (目前) 動態伺服器更快速的偵測與連接。 可能的值為 [是] 和 [否]。<br /><br />如需詳細資訊[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|否|  
 |PWD<br /><br />(PDO_SQLSRV 驅動程式不支援)|String|指定在使用 SQL Server 驗證進行連接時所要使用之使用者識別碼的相關密碼<sup>4</sup>。|未設定值。|  
 |QuotedId|1 或 **true** 會使用 SQL-92 規則。<br /><br />0 或 **false** 會使用傳統規則。|指定是對引號識別項使用 SQL-92 規則 (1 或 **true**)，還是使用傳統的 Transact-SQL 規則 (0 或 **false**)。|**true** (1)|  
 |ReturnDatesAsStrings<br /><br />(PDO_SQLSRV 驅動程式不支援)|1 或 **true** 會以字串的形式傳回日期和時間類型。<br /><br />0 或 **false** 會以 PHP **DateTime** 類型的形式傳回日期和時間類型。|以字串或 PHP 類型的形式擷取日期和時間類型 (datetime、date、time、datetime2 和 datetimeoffset)。 使用 PDO_SQLSRV 驅動程式時，會以字串的形式傳回日期。 PDO_SQLSRV 驅動程式沒有 **datetime** 類型。<br /><br />如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式，以字串的形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。|**false**|  
 |可捲動|String|「緩衝處理」表示您需要用戶端 (緩衝) 資料指標，它可讓您快取記憶體中的整個結果集。 如需詳細資訊，請參閱[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。|順向資料指標|  
-|[伺服器]<br /><br />(SQLSRV 驅動程式不支援)|String|要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體。<br /><br />您也可以指定虛擬網路名稱，以連接到 AlwaysOn 可用性群組。 如需詳細資訊[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|伺服器是必要的關鍵字 (雖然它不一定是連接字串中的第一個關鍵字)。 如果未將伺服器名稱傳遞至關鍵字，會嘗試連接到本機執行個體。<br /><br />傳遞至伺服器的值可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體的名稱，或是執行個體的 IP 位址。 您可以選擇性地指定連接埠號碼 (例如 `sqlsrv:server=(local),1033`)。<br /><br />從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.0 版開始，您也可以透過 `server=(localdb)\instancename`指定 LocalDB 執行個體。 如需詳細資訊，請參閱 < [LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。|  
+|[伺服器]<br /><br />(SQLSRV 驅動程式不支援)|String|要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。<br /><br />您也可以指定虛擬網路名稱，以連接到 AlwaysOn 可用性群組。 如需詳細資訊[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|伺服器是必要的關鍵字 (雖然它不一定是連接字串中的第一個關鍵字)。 如果未將伺服器名稱傳遞至關鍵字，會嘗試連接到本機執行個體。<br /><br />傳遞至伺服器的值可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱，或是執行個體的 IP 位址。 您可以選擇性地指定連接埠號碼 (例如 `sqlsrv:server=(local),1033`)。<br /><br />從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.0 版開始，您也可以透過 `server=(localdb)\instancename`指定 LocalDB 執行個體。 如需詳細資訊，請參閱 < [LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。|  
 |TraceFile|String|為用於追蹤資料的檔案指定路徑。|未設定值。|  
 |TraceOn|1 或 **true** 會啟用追蹤。<br /><br />0 或 **false** 會停用追蹤。|指定對於要建立的連接是要啟用 ODBC 追蹤 (1 或 **true**)，還是加以停用 (0 或 **false**)。|**false** (0)|  
 |TransactionIsolation|SQLSRV 驅動程式會使用下列值：<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV 驅動程式會使用下列值：<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|指定交易隔離等級。<br /><br />如需交易隔離的詳細資訊，請參閱 SQL Server 文件中的[設定交易隔離等級](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。|SQLSRV_TXN_READ_COMMITTED<br /><br />中的多個<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
@@ -67,7 +67,7 @@ ms.locfileid: "39367640"
 
 3. 啟用 [加密]  後可能會影響某些應用程式的效能，因為加密資料需要額外的計算負荷。  
 
-4. 要連接的 *UID* 驗證進行連接時， *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 屬性都必須設定。  
+4. 要連接的 *UID* 驗證進行連接時， *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性都必須設定。  
 
 許多支援的索引鍵都是 ODBC 連接字串屬性。 如需 ODBC 連接字串的資訊，請參閱[搭配 SQL Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 

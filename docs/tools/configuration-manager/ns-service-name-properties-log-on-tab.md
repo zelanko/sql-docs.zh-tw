@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;服務名稱&gt;屬性 （登入索引標籤） |Microsoft 文件
+title: NS$&lt;服務名稱&gt;屬性 （登入索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e47c5ed585e0db82c930111d84319f80366d6c00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 565240a59fc38cadec5addf42d047b89eb73047a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067815"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786816"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([登入] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

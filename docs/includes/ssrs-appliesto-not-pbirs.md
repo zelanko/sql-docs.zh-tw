@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 889770bd1a57dc56cbfdafe6a6afba8dd78cea05
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: e8cbf4d07fccb7e13de3ad91796347de674bde0b
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30268590"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790743"
 ---
-![否](media/no.png)Power BI 報表伺服器
+ ![否](media/no.png)Power BI 報表伺服器

@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c3f420269314667729836d0f6f536935ebe6ec5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467776"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786800"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-這[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]範例應用程式示範如何使用結果集 getter 方法來擷取[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]「 SQL 資料探索與分類資訊 」 保留這類資訊的資料表。
+這[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]範例應用程式示範如何使用結果集 getter 方法來擷取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「 SQL 資料探索與分類資訊 」 保留這類資訊的資料表。
   
 此範例的程式碼檔名為 DataDiscoveryAndClassification.java，並可以在下列位置找到它：  
 
@@ -34,7 +34,7 @@ ms.locfileid: "39467776"
 
 ## <a name="requirements"></a>需求  
 
-若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../connect/jdbc/using-the-jdbc-driver.md)。
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。
 
 ```java
 import java.sql.Connection;

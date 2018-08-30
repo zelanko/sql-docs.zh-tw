@@ -22,14 +22,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, password expiration
 - modifying passwords
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0bdb0c998c10b0b33b6640877c918f7a40971043
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a37f5a10f6b594a00c068fd61be1b7903bd097cc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108010"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024567"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

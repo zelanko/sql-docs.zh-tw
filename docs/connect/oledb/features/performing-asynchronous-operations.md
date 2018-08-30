@@ -21,14 +21,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, asynchronous operations
 - OLE DB Driver for SQL Server, asynchronous operations
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e42374d2d3abc982dc8c2d2defddf724ee72c9d1
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a6413c21dd80c96c57a0c4f7e5e60cb12683adc2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108040"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025159"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "39108040"
 ## <a name="opening-and-closing-a-database-connection"></a>開啟及關閉資料庫連接  
  當使用 OLE DB Driver for SQL Server 時，設計為非同步初始化資料來源物件的應用程式可以在呼叫 **IDBInitialize::Initialize** 前，於 DBPROP_INIT_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位元。 設定此屬性時，如果作業已經立即完成，提供者會使用 S_OK 立即從 **Initialize** 的呼叫傳回；如果初始化是以非同步方式繼續，則會使用 DB_S_ASYNCHRONOUS 從此呼叫傳回。 應用程式可以在資料來源物件上查詢 **IDBAsynchStatus** 或 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 介面，然後呼叫 **IDBAsynchStatus::GetStatus** 或 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 來取得初始化的狀態。  
   
- 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 **ISSAsynchStatus** 介面的提供者必須利用 VARIANT_TRUE 的值實作此屬性。  
+ 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 **ISSAsynchStatus** 介面的提供者必須使用 VARIANT_TRUE 的值實作此屬性。  
   
  呼叫 **IDBAsynchStatus::Abort** 或 [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) 可以取消非同步的 **Initialize** 呼叫。 取用者必須明確地要求非同步資料來源初始化。 否則，要等到資料來源物件完全初始化之後，**IDBInitialize::Initialize** 才會傳回。  
   

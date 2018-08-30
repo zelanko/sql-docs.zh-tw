@@ -13,13 +13,14 @@ ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 8576723b9b7205bf63a21b5f4106bf5366f8a8fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eac7718c62c5aa8ea29c0add045b9a02933207ca
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999080"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786095"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>SQL Server Agent 屬性 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

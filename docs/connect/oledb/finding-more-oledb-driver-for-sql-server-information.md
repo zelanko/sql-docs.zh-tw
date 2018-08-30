@@ -15,14 +15,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, additional resources
 - OLE DB Driver for SQL Server, additional resources
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0b0131f2b2bce3af1eb4d0c7550d77b4089385af
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c57b11a444c0546c60cdab557d6122c7d65a6ec6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106274"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025935"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>尋找詳細的 OLE DB Driver for SQL Server 資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

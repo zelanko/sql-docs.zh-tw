@@ -17,14 +17,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, rowsets
 - OLE DB rowsets, creating
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 53a9b42461fd9c7ba194af62f86d8670b8539ddf
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 08ed7ed1d56ccd5ef6887387ea9ba53eed2c5df9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105944"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032078"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>以 IOpenRowset 建立資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

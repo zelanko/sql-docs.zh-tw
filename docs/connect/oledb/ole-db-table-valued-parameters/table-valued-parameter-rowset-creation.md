@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9a809f4469f46a94053612a64119d88f581930fb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 2ef87cb742619f163c25bed31b031b85e0e26066
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108030"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028187"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>建立資料表值參數資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

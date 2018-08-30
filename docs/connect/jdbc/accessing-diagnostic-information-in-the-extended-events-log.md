@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278709"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786789"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  如需詳細資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。 這個追蹤旗標會搭配對應的 JDBC 物件記錄器使用，以便決定是否要在 JDBC 驅動程式中追蹤和傳送 ActivityId。 除了更新 Logging.Properties 檔案以外，您也必須將記錄器 com.microsoft.sqlserver.jdbc 啟用成 FINER 或更高設定。 如果您想要針對特定類別所提出的要求，將 ActivityId 傳送至伺服器，就必須將對應的類別記錄器啟用成 FINER 或 FINEST。 例如，如果類別是 SQLServerStatement，請啟用記錄器 com.microsoft.sqlserver.jdbc.SQLServerStatement。  
   
- 下列範例會使用 [!INCLUDE[tsql](../../includes/tsql_md.md)] 來啟動擴充事件工作階段，此工作階段將儲存在通道緩衝區中，並且針對 RPC 和批次作業記錄用戶端所傳送的活動識別碼：  
+ 下列範例會使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來啟動擴充事件工作階段，此工作階段將儲存在通道緩衝區中，並且針對 RPC 和批次作業記錄用戶端所傳送的活動識別碼：  
   
 ```sql
 create event session MySession on server  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - GetColumns method
 - BLOBs, fetching
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 76c909ed28744576c24fadb4ec841a2049f2f0da
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 33a2481801b3c5ce7aa731a66ae8cb311a1c93ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106084"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025894"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

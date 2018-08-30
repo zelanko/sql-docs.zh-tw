@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e455225592c6f8ddd4964f9df80c2159543aade
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979721"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786257"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ mixed PDO::getAttribute ( $attribute )
 |attribute|處理者|支援的值|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|指定資料行名稱是否應為特定的大小寫。 PDO::CASE_LOWER 會強制使用小寫的資料行名稱、PDO::CASE_NATURAL 會保留資料庫所傳回的資料行名稱，而 PDO::CASE_UPPER 會強制使用大寫的資料行名稱。<br /><br />預設值是 PDO::CASE_NATURAL。<br /><br />也可以使用 PDO::setAttribute 設定此屬性。|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|字串陣列|描述驅動程式和相關程式庫的版本。 傳回具有下列項目的陣列：ODBC 版本 (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client DLL 名稱和版本、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|字串陣列|描述驅動程式和相關程式庫的版本。 傳回具有下列項目的陣列：ODBC 版本 (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL 名稱和版本、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_DRIVER_NAME|PDO|String|一律傳回 "sqlsrv"。|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|指出 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|指定驅動程式處理失敗的方式。<br /><br />PDO::ERRMODE_SILENT (預設值) 會設定錯誤碼和資訊。<br /><br />PDO::ERRMODE_WARNING 會引發 E_WARNING。<br /><br />PDO::ERRMODE_EXCEPTION 會引發例外狀況。<br /><br />也可以使用 PDO::setAttribute 設定此屬性。|  

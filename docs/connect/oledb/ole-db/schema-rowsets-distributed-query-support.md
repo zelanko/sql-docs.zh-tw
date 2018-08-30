@@ -19,14 +19,14 @@ helpviewer_keywords:
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 085a4424272e4d620c4b36fe9ecf44894cb1a33f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 77960d1a5b38ef9ae66fe2705f38f10a739daa2a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105824"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031728"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>結構描述資料列集 - 分散式查詢支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

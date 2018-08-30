@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 63b60b4f6ab23c4a88d60cf2e87f411f67205cba
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 851b4925efc683444ff7cbd1c83e97c37623fb8a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109070"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025963"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>將資料插入至資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

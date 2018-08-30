@@ -18,14 +18,14 @@ helpviewer_keywords:
 - OLE DB error handling, about error handling
 - OLE DB error handling
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 477c89e8d058d2f2971dc295c3bf8e1449c5a3d9
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 84c20e744dc69c18d3c46a26f49ed78bf63ce40c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105854"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021987"
 ---
 # <a name="errors"></a>錯誤
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

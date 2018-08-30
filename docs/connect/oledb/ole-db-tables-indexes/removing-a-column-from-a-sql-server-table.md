@@ -17,14 +17,14 @@ helpviewer_keywords:
 - DropColumn function
 - OLE DB Driver for SQL Server, columns
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 007f4a21096dfc2e933ed7777c5bd407a6d40eb1
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 4ff9e5872f74b86f6ac5dafb34bd8cfc4d322b74
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109738"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033327"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>從 SQL Server 資料表中移除資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "39109738"
 
   OLE DB Driver for SQL Server 會公開**itabledefinition:: Dropcolumn**函式。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中移除資料行。  
   
- 取用者會在 pTableID *參數中，將資料表名稱指定為 uName* 聯集之 pwszName *成員中的 Unicode 字元字串。 pTableID *的 eKind* 成員必須是 DBKIND_NAME。  
+ 取用者會在 *pTableID* 參數中，將資料表名稱指定為 *uName* 聯集之 *pwszName* 成員中的 Unicode 字元字串。 *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
- 取用者表示中的資料行名稱*pwszName*隸屬*uName*聯集*Ekind*參數。 資料行名稱是一個 Unicode 字元字串。 pTableID *的 eKind* 成員必須是 DBKIND_NAME。  
+ 取用者表示中的資料行名稱*pwszName*隸屬*uName*聯集*Ekind*參數。 資料行名稱是一個 Unicode 字元字串。 *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
 ## <a name="example"></a>範例  
   

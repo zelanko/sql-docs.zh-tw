@@ -17,14 +17,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, system requirements
 - MSOLEDBSQL, system requirements
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d7b390f385f94dbe65d667440d27e748a84bcb86
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 718f9d7f7739fde0577420e03137ef6caeab4747
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106574"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024129"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的系統需求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

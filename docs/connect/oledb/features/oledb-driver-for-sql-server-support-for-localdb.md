@@ -12,16 +12,16 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 669d221ada6ff693194266618952d53c17bb6d87
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: d57890c5f0eae3a18d68d904dd34ba20d41cce00
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107680"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020647"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>OLE DB Driver for SQL Server 對 LocalDB 的支援
+# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>OLE DB Driver for SQL Server 的 LocalDB 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

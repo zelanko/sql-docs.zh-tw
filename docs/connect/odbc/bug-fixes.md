@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946902"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786790"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的 bug 的清單
 
-此頁面包含在每個版本中，從已修正的 bug 清單[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+此頁面包含在每個版本中，從已修正的 bug 清單[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 已修正有關 Azure Active Directory 驗證的錯誤訊息
 - 已修正編碼偵測時以不同的方式設定地區設定環境變數
@@ -40,7 +40,7 @@ ms.locfileid: "37946902"
 - Windows 上使用 ADAL 驗證時，已修正快取問題
 - 修正會被鎖定的問題，並在 Windows 上覆寫追蹤記錄
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 呼叫啟用 mars 的 SQLFreeHandle 和連接屬性時，已修正 1 秒延遲 「 Encrypt = yes"
 - 修正錯誤 22003 損毀，在 SQLGetData 時傳入緩衝區的大小較小，則所擷取的資料 (Windows)
@@ -50,7 +50,7 @@ ms.locfileid: "37946902"
 - 修正 MacOS 安裝程式警告
 - 已修正不正確的狀態時傳送給 SQL Server 工作階段復原嘗試期間連線恢復功能和連接共用這兩個已啟用，導致工作階段卸除的伺服器
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 修正了在使用 Kerberos 驗證時，大量插入可能會失敗，發生 「 拒絕存取 」 錯誤
 - 已移除的因應措施，針對出現在版本低於 2.3.1 unixODBC bug （驅動程式會加倍傳遞至 unixODBC 特定緩衝區的大小）

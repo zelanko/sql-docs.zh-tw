@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60adf00e05d190f72229b252a3877b417be7f260
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c5b69cb8fac0d91728e9cef945e83159e3151bc5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109430"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024416"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>從伺服器到用戶端執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  這篇文章描述之間執行的日期/時間轉換[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更新版本） 和寫入與 OLE DB Driver for SQL Server 用戶端應用程式。  
+  描述在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 和使用 OLE DB Driver for SQL Server 撰寫之用戶端應用程式之間執行的日期/時間轉換。  
   
 ## <a name="conversions"></a>轉換  
  下表描述傳回用戶端之類行與繫結中之類型之間的轉換。 對於輸出參數，如果已呼叫 icommandwithparameters:: Setparameterinfo，並在指定的型別*pwszDataSourceType*不的符合伺服器將會執行實際的型別，在伺服器上，隱含的轉換並傳回給用戶端的類型會比對 icommandwithparameters:: Setparameterinfo 透過指定的型別。 當伺服器的轉換規則與本文中描述的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非 1899-12-30。  

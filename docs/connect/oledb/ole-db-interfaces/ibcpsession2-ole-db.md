@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - IBCPSession2 interface
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 80ea9ad5c4e2d4f2726b659a1880451f24e2e5bf
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 3be1e6c24e5e8e63f1505a4572e829a089eb647f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108180"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029674"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

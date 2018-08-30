@@ -15,13 +15,14 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0fddfb5c99e4e47873a362fe0e7990b1afc57f78
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cc5205a0d81685ebea4f2ea131a5b32c26e0f271
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988290"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787175"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

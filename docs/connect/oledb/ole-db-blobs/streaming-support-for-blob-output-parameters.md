@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 0f948a401faade8624976d23d304e3f157633854
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106864"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031711"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 輸出參數的串流支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9957a3273f2e33fea59560c4af30ec0315eea92
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 000d33df0320333e688051f1888659d152f62dde
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458022"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786974"
 ---
 # <a name="setting-the-data-source-properties"></a>設定資料來源屬性
 
@@ -29,7 +29,7 @@ ms.locfileid: "39458022"
 
 Java EE 產品 (例如應用程式伺服器及 servlet/JSP 引擎) 通常會讓您設定資料庫存取的資料來源。 只要設定能讓您將屬性輸入成 property=value 組，即可指定在[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)主題中所列的任一屬性。
 
-如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料來源的詳細資訊，請參閱 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別。 如需如何連接到使用 SQLServerDataSource 類別的範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫，請參閱[資料來源範例](../../connect/jdbc/data-source-sample.md)。
+如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的詳細資訊，請參閱 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別。 如需如何連接到使用 SQLServerDataSource 類別的範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，請參閱[資料來源範例](../../connect/jdbc/data-source-sample.md)。
 
 ## <a name="see-also"></a>另請參閱
 

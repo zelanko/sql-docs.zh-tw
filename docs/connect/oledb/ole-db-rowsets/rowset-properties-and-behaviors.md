@@ -17,14 +17,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 11b4361f43ff05ff009f70a2baeb627656443f9b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108650"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037431"
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39108650"
 |DBPROP_ACCESSORDER|R/W：讀取/寫入<br /><br /> 預設值：DBPROPVAL_AO_RANDOM<br /><br /> 描述：存取順序 必須在資料列集上存取資料行的順序。<br /><br /> DBPROPVAL_AO_RANDOM：資料行可以依任何順序進行存取。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS：當做儲存物件繫結的資料行僅能以資料行序數決定的循序順序進行存取。<br /><br /> DBPROPVAL_AO_SEQUENTIAL：所有資料行都必須以資料行序數決定的循序順序進行存取。|  
 |DBPROP_APPENDONLY|這個資料列集屬性未實作的 OLE DB Driver for SQL Server。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： OLE DB Driver for SQL Server 儲存體物件封鎖使用其他資料列集的方法。|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：當 DBPROP_BOOKMARKS 或 DBPROP_LITERALBOOKMARKS 為 VARIANT_TRUE 時，OLE DB Driver for SQL Server 支援資料列集資料列識別的書籤。<br /><br /> 將任一個屬性設定為 VARIANT_TRUE 不會依書籤啟用資料列集定位。 將 DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 設定為 VARIANT_TRUE 來建立支援依書籤進行資料列集定位的資料列集。<br /><br /> 使用 OLE DB Driver for SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標來支援包含書籤的資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 注意： 設定其他 OLE DB Driver for SQL Server 資料指標定義屬性衝突的這些屬性會導致錯誤。 例如，當 DBPROP_OTHERINSERT 也為 VARIANT_TRUE 時，將 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE 會在取用者嘗試開啟資料列集時產生錯誤。|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：當 DBPROP_BOOKMARKS 或 DBPROP_LITERALBOOKMARKS 為 VARIANT_TRUE 時，OLE DB Driver for SQL Server 支援資料列集資料列識別的書籤。<br /><br /> 將任一個屬性設定為 VARIANT_TRUE 不會依書籤啟用資料列集定位。 將 DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 設定為 VARIANT_TRUE 來建立支援依書籤進行資料列集定位的資料列集。<br /><br /> 使用 OLE DB Driver for SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標來支援包含書籤的資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 設定與其他 OLE DB Driver for SQL Server　資料指標定義之屬性衝突的這些屬性會造成錯誤。 例如，當 DBPROP_OTHERINSERT 也為 VARIANT_TRUE 時，將 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE 會在取用者嘗試開啟資料列集時產生錯誤。|  
 |DBPROP_BOOKMARKSKIPPED|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：如果取用者在定位或搜尋加上書籤的資料列集時指出無效的書籤，OLE DB Driver for SQL Server 會傳回 DB_E_BADBOOKMARK。|  
 |DBPROP_BOOKMARKTYPE|R/W：唯讀<br /><br /> 預設值：DBPROPVAL_BMK_NUMERIC<br /><br /> 描述： OLE DB Driver for SQL Server 會實作數值書籤。 OLE DB Driver for SQL Server 的書籤為 32 位元不帶正負號的整數，類型為 DBTYPE_UI4。|  
 |DBPROP_CACHEDEFERRED|這個資料列集屬性未實作的 OLE DB Driver for SQL Server。 嘗試讀取或寫入屬性值會產生錯誤。|  

@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9c755a658b0a63966a2db4be4e55b09b1004a0a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 88ce3b6db5911aa881907c1b4d80dd59d0f416b2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982510"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786625"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>updateCharacterStream 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>參數  
  *columnLabel*  
   
- 包含資料行標籤的 **String**。  
+ **String**，包含資料行標籤。  
   
  *reader*  
   
@@ -51,7 +51,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  這個方法會透過 Reader 物件將 Unicode 字元傳遞到選取的文字和二進位資料行。 這包括所有的文字資料行，以及 **binary**、**varbinary**、**varbinary(max)**、**image** 和 **xml** 等資料行，但是不包含 **udt** 資料行。  
   
- 使用這個方法來**映像**，**文字**，並**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料型別可能會影響效能。  
+ 使用這個方法來**映像**，**文字**，並**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別可能會影響效能。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

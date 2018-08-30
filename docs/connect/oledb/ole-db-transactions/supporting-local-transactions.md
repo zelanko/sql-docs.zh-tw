@@ -19,14 +19,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 - local transactions [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bf157a5f5bdbea93c9361edc4903c5cd6c41302
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: bf5ac300b37f42c3d995e81d69bb0befc60ed372
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109720"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020817"
 ---
 # <a name="supporting-local-transactions"></a>支援本機交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

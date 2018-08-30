@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a253f000a31b939308b17e408f177ce721ef76c0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: f39566af4b5fce341e37f991cfb1a67507dd0c7a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661630"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786441"
 ---
 # <a name="using-auto-generated-keys"></a>使用自動產生的金鑰
 
@@ -27,7 +27,7 @@ ms.locfileid: "39661630"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援使用選用的 JDBC 3.0 API 來擷取自動產生的資料列識別碼。 此功能的主要價值是提供一個方法，使 IDENTITY 值可供正在更新資料庫資料表的應用程式使用，而不需要查詢和第二次往返於伺服器。
 
-因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不支援對識別碼使用虛擬資料行；所以，若更新時必須使用自動產生的金鑰功能，則必須是對包含 IDENTITY 資料行的資料表操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 只允許每個資料表有一個 IDENTITY 資料行。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 方法所傳回的結果集只會有一個資料行，且傳回的資料行名稱為 GENERATED_KEYS。 如果對不含 IDENTITY 資料行的資料表要求產生的金鑰，則 JDBC 驅動程式將傳回 Null 結果集。
+因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援對識別碼使用虛擬資料行；所以，若更新時必須使用自動產生的金鑰功能，則必須是對包含 IDENTITY 資料行的資料表操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只允許每個資料表有一個 IDENTITY 資料行。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 方法所傳回的結果集只會有一個資料行，且傳回的資料行名稱為 GENERATED_KEYS。 如果對不含 IDENTITY 資料行的資料表要求產生的金鑰，則 JDBC 驅動程式將傳回 Null 結果集。
 
 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列資料表：
 

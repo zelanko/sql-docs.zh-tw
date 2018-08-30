@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661770"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785735"
 ---
 # <a name="using-adaptive-buffering"></a>使用適應性緩衝
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-適應性緩衝是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 應用程式可以使用自適性緩衝功能搭配此驅動程式所支援的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 版本。
+適應性緩衝是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 應用程式可以使用自適性緩衝功能搭配此驅動程式所支援的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
 
-一般而言，當 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 執行查詢時，驅動程式會將伺服器中的所有結果擷取到應用程式記憶體中。 雖然這個方法會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的資源耗用量降到最低，但是它會針對產生非常龐大結果的查詢，在 JDBC 應用程式中擲回 OutOfMemoryError。
+一般而言，當 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 執行查詢時，驅動程式會將伺服器中的所有結果擷取到應用程式記憶體中。 雖然這個方法會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資源耗用量降到最低，但是它會針對產生非常龐大結果的查詢，在 JDBC 應用程式中擲回 OutOfMemoryError。
 
-為了允許應用程式處理非常龐大的結果，因此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供自適性緩衝。 使用自適性緩衝，此驅動程式會在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是適應性緩衝可能有用的部分範例：
+為了允許應用程式處理非常龐大的結果，因此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供自適性緩衝。 使用自適性緩衝，此驅動程式會在應用程式需要時，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中擷取陳述式執行結果，而非一次擷取所有結果。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是適應性緩衝可能有用的部分範例：
 
 - **查詢會產生非常龐大的結果集：** 應用程式可以執行 SELECT 陳述式，該陳述式會產生比應用程式可以儲存在記憶體中還要多的資料列。 在舊版中，應用程式必須使用伺服器資料指標來避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。
 
-- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 適應性緩衝可讓用戶端應用程式使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法來擷取資料流中，這類值。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中的值。
+- **此查詢會產生非常龐大的** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **資料行或** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT 參數值：** 應用程式可以擷取因為過大而無法完整納入應用程式記憶體中的單一值 (資料行或 OUT 參數)。 適應性緩衝可讓用戶端應用程式使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法來擷取資料流中，這類值。 應用程式會在從資料流讀取時，擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的值。
 
 > [!NOTE]  
 > 透過適應性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。
@@ -56,7 +56,7 @@ ms.locfileid: "39661770"
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>利用適應性緩衝擷取大型資料
 
-使用 get\<類型>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用適應性緩衝時：
+使用 get\<類型>Stream 方法讀取大數值一次，而且以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回的順序存取 ResultSet 資料行和 CallableStatement OUT 參數時，自適性緩衝會將處理結果時的應用程式記憶體使用量降到最低。 使用適應性緩衝時：
 
 - 雖然資料流透過應用程式標示時可以重設，但是在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別中定義的 get\<類型>Stream 方法預設還是會傳回讀取一次的資料流。 如果應用程式想要 `reset` 資料流，必須先在該資料流上呼叫 `mark` 方法。
 
@@ -83,7 +83,7 @@ ms.locfileid: "39661770"
 
 - 有某些情況下，使用**selectMethod = cursor**而不是**responseBuffering = adaptive**會更有效率，例如：
 
-  - 如果您的應用程式處理順向、 唯讀結果集速度緩慢，例如在使用某些使用者輸入之後讀取每個資料列**selectMethod = cursor**而不是**responseBuffering = adaptive**可能減少所使用的資源[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。
+  - 如果您的應用程式處理順向、 唯讀結果集速度緩慢，例如在使用某些使用者輸入之後讀取每個資料列**selectMethod = cursor**而不是**responseBuffering = adaptive**可能減少所使用的資源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
   - 如果您的應用程式針對相同的連線同時處理兩個以上的順向唯讀結果集，請使用 **selectMethod=cursor** 而非 **responseBuffering=adaptive** 可能會有助於減少驅動程式在處理這些結果集時所需的記憶體。
 

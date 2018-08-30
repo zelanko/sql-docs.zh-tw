@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90858a9e62cd49f560013f2f0bcff8a84a0d5127
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: da5ba7d9bf066586eb5a5afaca56862247f7cc61
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106794"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019310"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661860"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786809"
 ---
 # <a name="using-savepoints"></a>使用儲存點
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-儲存點提供了復原部份交易的機制。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 內，您可以使用 SAVE TRANSACTION savepoint_name 陳述式來建立儲存點。 稍後，您可以執行 ROLLBACK TRANSACTION savepoint_name 陳述式來回復到儲存點，而不是回復到交易開始。
+儲存點提供了復原部份交易的機制。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內，您可以使用 SAVE TRANSACTION savepoint_name 陳述式來建立儲存點。 稍後，您可以執行 ROLLBACK TRANSACTION savepoint_name 陳述式來回復到儲存點，而不是回復到交易開始。
 
 如果所處環境不太可能發生錯誤，儲存點會很有幫助。 不常發生錯誤時，使用儲存點來回復交易的一部份，會比在進行更新之前，需測試每筆交易以查看更新是否有效來得更有效率。 更新與回復都是高成本的作業，因此儲存點只有在遇到錯誤的可能性不高，且事前檢查更新可用性的成本相當高的情形下才有效率。
 

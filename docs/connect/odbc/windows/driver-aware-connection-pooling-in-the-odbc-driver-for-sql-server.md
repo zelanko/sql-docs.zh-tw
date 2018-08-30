@@ -14,20 +14,20 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cc9428f84db56675dbf58c977078fa4dcca6ae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b5bbe5489392ec9fbce5e55e1ad72d90416b5242
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060006"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786991"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中可感知驅動程式的連接共用
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 支援[可感知驅動程式的連線共用](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主題描述 Windows 版 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中的「可感知驅動程式的連線共用」有哪些增強功能：  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[可感知驅動程式的連線共用](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主題描述 Windows 版 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的「可感知驅動程式的連線共用」有哪些增強功能：  
   
 -   無論連線屬性為何，使用 `SQLDriverConnect` 的連線都會進入與使用 `SQLConnect` 的連線不同的個別集區。
-- 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證和可感知驅動程式的連線共用時，驅動程式並不會使用目前執行緒的 Windows 使用者安全性內容，來區隔集區中的連線。 也就是說，如果連接對於具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證的 Windows 模擬案例使用了相同的參數，並且使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證認證連接到後端，則不同的 Windows 使用者將可能使用相同的連接集區。 在使用 Windows 驗證和可感知驅動程式的連接共用時，驅動程式會使用目前 Windows 使用者的安全性內容來區隔集區中的連接。 也就是說，在 Windows 模擬案例中，即使連接使用相同的參數，不同的 Windows 使用者也不會共用連接。
+- 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證和可感知驅動程式的連線共用時，驅動程式並不會使用目前執行緒的 Windows 使用者安全性內容，來區隔集區中的連線。 也就是說，如果連接對於具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的 Windows 模擬案例使用了相同的參數，並且使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證認證連接到後端，則不同的 Windows 使用者將可能使用相同的連接集區。 在使用 Windows 驗證和可感知驅動程式的連接共用時，驅動程式會使用目前 Windows 使用者的安全性內容來區隔集區中的連接。 也就是說，在 Windows 模擬案例中，即使連接使用相同的參數，不同的 Windows 使用者也不會共用連接。
 - 使用 Azure Active Directory 和可感知驅動程式的連接共用時，驅動程式也使用的驗證值來判斷連接集區中的成員資格。
   
 -   可感知驅動程式的連接共用可防止從集區傳回錯誤的連接。  

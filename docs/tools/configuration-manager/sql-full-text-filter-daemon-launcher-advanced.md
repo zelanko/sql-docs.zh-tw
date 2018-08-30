@@ -13,13 +13,14 @@ ms.assetid: d0be29c2-19df-4882-9832-2efdbefb4b89
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2e044a9600bfc2fc7d4173a84c7a861d849b1eb3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fc29b895196e69f3e444bfa1f8032e34654a7977
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045697"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786996"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-advanced"></a>SQL 全文檢索篩選背景程式啟動器 (進階)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

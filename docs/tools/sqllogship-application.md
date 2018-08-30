@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0dbdc7e2ccfdd2afc3e674100605a39d727bf5ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969084"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785927"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ## <a name="remarks"></a>Remarks  
  建議您盡可能使用備份、複製和還原作業來執行備份、複製和還原。 若要從批次作業或其他應用程式執行這些作業，請呼叫 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 預存程序。  
   
- **sqllogship** 所建立的記錄傳送記錄會穿插記錄傳送備份、複製和還原作業所建立的記錄。 如果您要重複使用 **sqllogship** 對記錄傳送組態執行備份、複製或還原作業，請考慮停用對應的一或多個記錄傳送作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)。  
+ **sqllogship** 所建立的記錄傳送記錄會穿插記錄傳送備份、複製和還原作業所建立的記錄。 如果您要重複使用 **sqllogship** 對記錄傳送組態執行備份、複製或還原作業，請考慮停用對應的一或多個記錄傳送作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
   
  **sqllogship** 應用程式 (SqlLogShip.exe) 安裝在 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 目錄中。  
   

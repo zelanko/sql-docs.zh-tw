@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0406fd40ebb8a1bcc13f883b6ffe1735d5c07012
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: e2d6df92bf4ddc101e1df0607ca745c7ec232485
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108820"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022337"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

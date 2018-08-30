@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], large value types
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b8b0e413eabbcf52e98d778ba309e9a2ca45f68f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: ab5f27dd37e50bc4a2fb01e2e4477c6e02af398c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107950"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019267"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

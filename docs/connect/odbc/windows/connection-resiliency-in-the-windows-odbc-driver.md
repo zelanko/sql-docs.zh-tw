@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1acbbfea1c1ce1a477644b64938b3e5c98ff7429
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060329"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787821"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38060329"
   
  如需閒置連線恢復功能的詳細資訊，請參閱[技術文章 – 閒置連線恢復功能](http://go.microsoft.com/fwlink/?LinkId=393996)。  
   
- 為了控制重新連接的行為，ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows 有兩個選項：  
+ 為了控制重新連接的行為，ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows 有兩個選項：  
   
 -   連接重試計數。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "38060329"
   
      您可以在執行下列作業時修改連接重試次數：  
   
-    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 連接重試計數 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
+    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接重試計數 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
   
     -   使用 **ConnectRetryCount** 連接字串關鍵字。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "38060329"
   
      您可以在執行下列作業時修改連接重試間隔：  
   
-    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 連接重試間隔 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
+    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接重試間隔 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
   
     -   使用 **ConnectRetryInterval** 連接字串關鍵字。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "38060329"
 |IMC06|連接中斷，且無法復原。 用戶端驅動程式將連接標示為無法復原。 未嘗試還原連接。|  
   
 ## <a name="example"></a>範例  
- 下列範例包含兩個函數。 **func1** 說明如何連接使用 Windows 版 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的資料來源名稱 (DSN)。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 驗證，而且它會指定使用者識別碼。 **func1**接著會擷取與連接重試次數**SQL_COPT_SS_CONNECT_RETRY_COUNT**。  
+ 下列範例包含兩個函數。 **func1** 說明如何連接使用 Windows 版 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源名稱 (DSN)。 DSN 會使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，而且它會指定使用者識別碼。 **func1**接著會擷取與連接重試次數**SQL_COPT_SS_CONNECT_RETRY_COUNT**。  
   
  **func2** 會使用 **SQLDriverConnect**、 **ConnectRetryCount** 連接字串關鍵字和連接屬性來擷取連接重試與重試間隔的設定。  
   

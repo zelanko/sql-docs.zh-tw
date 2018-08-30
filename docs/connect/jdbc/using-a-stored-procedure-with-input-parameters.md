@@ -14,18 +14,18 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f3198c1d8308ea2142683562a4c0d15a173504
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: b1662275280f97dcba0c02a21747738e1984b34f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661760"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787351"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>使用含有輸入參數的預存程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 預存程序包含一或多個 IN 參數，這些是可以用來傳遞資料給預存程序的參數。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別，您可以使用此類別，呼叫此種預存程序並處理其傳回的資料。
+您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序包含一或多個 IN 參數，這些是可以用來傳遞資料給預存程序的參數。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別，您可以使用此類別，呼叫此種預存程序並處理其傳回的資料。
 
 當您使用 JDBC 驅動程式呼叫含有 IN 參數的預存程序時，必須使用 `call` SQL 逸出序列與 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法搭配。 含有 IN 參數之 `call` 逸出序列的語法如下：
 

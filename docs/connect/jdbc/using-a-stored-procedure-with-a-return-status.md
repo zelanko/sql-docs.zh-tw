@@ -14,18 +14,18 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0ae22a9fac4333271d564fb242803e4cc8eb0b4
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2fd75507ca7c1615b0282a9f56a1e8f4b33bc22b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661820"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787161"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>使用含傳回狀態的預存程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 預存程序是會傳回狀態或結果參數的預存程序。 這通常用來指出預存程序的成功或失敗。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別，您可以使用此類別，呼叫此種類的預存程序並處理其傳回的資料。
+您可以呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序是會傳回狀態或結果參數的預存程序。 這通常用來指出預存程序的成功或失敗。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別，您可以使用此類別，呼叫此種類的預存程序並處理其傳回的資料。
 
 當您使用 JDBC 驅動程式來呼叫此種預存程序時，您必須使用 `call` SQL 逸出序列來搭配 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法。 含有傳回狀態參數之 `call` 逸出序列的語法如下：
 

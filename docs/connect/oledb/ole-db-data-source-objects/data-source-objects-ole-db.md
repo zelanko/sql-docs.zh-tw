@@ -20,14 +20,14 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - CLSID
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 58007040bc4f96749172644b229dba4769929d66
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 07fbc1d5c0a1001326e3cf114fbb6f0b756553a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106074"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032001"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

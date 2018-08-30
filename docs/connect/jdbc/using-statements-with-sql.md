@@ -14,25 +14,25 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d044c1747b13f94c6f7feb902144d51b50af870
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 743616c9a18704bdd91a0d44259d3c980dcc2c9d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662220"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786080"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 及內嵌 SQL 陳述式來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中的資料時，有不同的類別可供您使用。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
+使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 及內嵌 SQL 陳述式來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料時，有不同的類別可供您使用。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
   
 如果您的 SQL 陳述式不含任何 IN 參數，請使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，但如果它確實含有 IN 參數，則請使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別。  
   
 > [!NOTE]  
 > 如果您需要使用同時包含 IN 與 OUT 參數的 SQL 陳述式，您必須將它們實作為預存程序，並使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別呼叫它們。 如需使用預存程序的詳細資訊，請參閱 <<c0> [ 預存程序使用的 Using 陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
   
-下列各節描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中使用 SQL 陳述式來處理資料的不同狀況。  
+下列各節描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中使用 SQL 陳述式來處理資料的不同狀況。  
 
 ## <a name="in-this-section"></a>本節內容  
 

@@ -1,5 +1,5 @@
 ---
-title: 基本資料類型範例 |Microsoft Docs
+title: 基本資料類型範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6548433059e4537f58b70681b1958e40af0bb7f5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6f67563ccf884c47b7fc3b86d32cd2b09fa393c9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456732"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786636"
 ---
 # <a name="basic-data-types-sample"></a>基本資料類型範例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用結果集 getter 方法擷取基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型值，以及如何使用結果集 update 方法來更新那些值。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用結果集 getter 方法擷取基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型值，以及如何使用結果集 update 方法來更新那些值。
 
 此範例的程式碼檔案名稱為 BasicDT.java，可在下列位置找到：
 
@@ -35,7 +35,7 @@ ms.locfileid: "39456732"
 
 ## <a name="requirements"></a>需求
 
-若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../connect/jdbc/using-the-jdbc-driver.md)。
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../connect/jdbc/using-the-jdbc-driver.md)。
 
 此範例會建立必要的資料表並插入範例資料中的[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫：
 

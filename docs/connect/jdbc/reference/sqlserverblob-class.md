@@ -1,5 +1,5 @@
 ---
-title: SQLServerBlob 類別 |Microsoft 文件
+title: SQLServerBlob 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83662d032d762eb4109576ab2f2aa253aaabb6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845503"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786445"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   代表二進位大型物件 (BLOB)。  
   
- **封裝：** com.microsoft.sqlserver.jdbc  
+ **套件：** com.microsoft.sqlserver.jdbc  
   
  **擴充：** java.lang.Object  
   
- **實作：** java.sql.Blob、 java.io.Serializable  
+ 實作：** java.sql.Blob、java.io.Serializable  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,8 +44,8 @@ ms.locfileid: "32845503"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>備註  
- BLOB 會儲存在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]為影像資料類型。  
+## <a name="remarks"></a>Remarks  
+ BLOB 會當做 IMAGE 資料型別儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)   

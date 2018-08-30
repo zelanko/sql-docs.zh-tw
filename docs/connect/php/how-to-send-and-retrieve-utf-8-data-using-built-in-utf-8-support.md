@@ -1,5 +1,5 @@
 ---
-title: 如何： 傳送及接收 utf-8 資料使用內建的 utf-8 支援 |Microsoft 文件
+title: 如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01baad352386b88b54412b4390df7cce40df6996
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307757"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787350"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "35307757"
   
     當您將字元集指定為連接選項的一部分時，驅動程式會假設其他連接選項字串使用這個相同的字元集。 此外也會假設伺服器名稱和查詢字串使用相同的字元集。  
   
-您可以傳遞 utf-8 或 sqlsrv_enc_char 傳遞至**CharacterSet**，但您無法傳遞 SQLSRV_ENC_BINARY。 預設編碼為 SQLSRV_ENC_CHAR。  
+請注意，您可以將 UTF-8 或 SQLSRV_ENC_CHAR 傳遞至 CharacterSet** (您無法傳遞 SQLSRV_ENC_BINARY)。 預設編碼為 SQLSRV_ENC_CHAR。  
   
 ## <a name="example"></a>範例  
-下列範例在建立連接時，如何藉由指定 UTF-8 字元集來傳送及擷取 UTF-8 編碼資料。 此範例會更新 Production.ProductReview 資料表中指定的檢閱識別碼的「註解」資料行。 此範例也會擷取新的更新資料，並加以顯示。 請注意，註解的資料行是類型**nvarchar （3850)。** 也請注意，資料會傳送到伺服器之前將它轉換成 utf-8 編碼使用 PHP **utf8_encode**函式。 此作業僅供示範使用。 在實際的應用程式案例中，您會從 utf-8 編碼資料。  
+下列範例在建立連接時，如何藉由指定 UTF-8 字元集來傳送及擷取 UTF-8 編碼資料。 此範例會更新 Production.ProductReview 資料表中指定的檢閱識別碼的「註解」資料行。 此範例也會擷取新的更新資料，並加以顯示。 請注意，「註解」資料行屬於 nvarcahr(3850)** 類型。 同時請注意，資料在傳送到伺服器之前，會使用 PHP utf8_encode** 函數轉換成 UTF-8 編碼。 此作業僅供示範使用。 在實際的應用程式案例中，您會從 UTF-8 編碼資料著手。  
   
-此範例假設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
+此範例假設本機電腦上已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
   
 ```  
 <?php  
@@ -129,7 +129,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-如需儲存 Unicode 資料的相關資訊，請參閱[使用 Unicode 資料](https://msdn.microsoft.com/library/ms175180.aspx)。  
+如需儲存 Unicode 資料的相關資訊，請參閱 [使用 Unicode 資料](https://msdn.microsoft.com/library/ms175180.aspx)。  
   
 ## <a name="example"></a>範例  
 下列範例類似於第一個範例，但此範例不會在連接上指定 UTF-8 字元集，而會說明如何在資料行上指定 UTF-8 字元集。  
@@ -225,7 +225,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)
 
-[在非 Windows 中使用的 ASCII 資料](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[使用 在非 Windows 的 ASCII 資料](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 
 [更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 

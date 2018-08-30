@@ -17,14 +17,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, persisted data source objects
 - persisted data source objects
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 021cba6607080b2c212265ec7dd71ffc52cc7317
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106944"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031847"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

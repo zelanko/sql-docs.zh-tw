@@ -17,14 +17,14 @@ helpviewer_keywords:
 - applications [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, building applications
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 19166f1c665ac2b4c90e636adcffdd9d20fcfc47
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 0c0681e29b20fae70efa4383226593bbc7696492
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106244"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024075"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>使用 OLE DB Driver for SQL Server 建置應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

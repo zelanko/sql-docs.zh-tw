@@ -1,5 +1,5 @@
 ---
-title: 系統需求 (ODBC Driver for SQL Server) |Microsoft Docs
+title: OLE DB Driver for SQL Server 的系統需求 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -18,17 +18,17 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bab69d8a2ebf405e99cc9cff7e4cdadb94d79f98
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fcac85e31f20d84377a2788e373892e05e8fddfa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047481"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786258"
 ---
 # <a name="system-requirements"></a>系統需求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本主題列出使用 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的需求。
+本主題列出使用 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的需求。
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13、13.1 和 17 for SQL Server
@@ -52,7 +52,7 @@ ms.locfileid: "38047481"
 |Ubuntu Linux 16.10|13、13.1|
 |Ubuntu Linux 17.10|17|
 
-安裝套件[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13，13.1，17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 和 macOS 上解決中所述使用您的散發套件的套件管理系統的安裝時，自動的驅動程式的相依性[安裝驅動程式](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
+安裝套件[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13，13.1，17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux 和 macOS 上解決中所述使用您的散發套件的套件管理系統的安裝時，自動的驅動程式的相依性[安裝驅動程式](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
   

@@ -1,6 +1,6 @@
 ---
-title: 搭配使用 ADO 與 OLE DB Driver for SQL Server |Microsoft Docs
-description: 搭配使用 ADO 與 OLE DB Driver for SQL Server
+title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+description: 利用 OLE DB Driver for SQL Server 使用 ADO
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ADO [OLE DB Driver for SQL Server]
 - MSOLEDBSQL, ADO
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e1fdea857c21b66fd4e72f541f9a6a653aeb44c6
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 08872859a41b77dfe0ed972a4e43b689adfc83f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108080"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026054"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>搭配使用 ADO 與 OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

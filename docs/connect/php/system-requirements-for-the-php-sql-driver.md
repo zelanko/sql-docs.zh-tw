@@ -1,5 +1,5 @@
 ---
-title: 系統需求的 Microsoft Drivers for PHP for SQL Server |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 的系統需求
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfb813b857557a3a30bd89d9c96346ee261bc89
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174945"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785251"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的系統需求
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,10 +64,10 @@ PHP 執行所在電腦上需要 Microsoft ODBC Driver for SQL Server 的正確�
 |---|---|---|---|---|---|---|
 |ODBC 驅動程式 17+ |Y|Y| | | | |
 |ODBC 驅動程式 13.1|Y|Y|Y|Y| | |
-|ODBC 驅動程式 13  | | | |Y| | |
-|ODBC 驅動程式 11  |Y|Y|Y|Y|Y|Y|
+|ODBC Driver 13  | | | |Y| | |
+|ODBC Driver 11  |Y|Y|Y|Y|Y|Y|
 
-如果您使用 SQLSRV 驅動程式時， [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md)傳回的版本資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]正在使用 Microsoft ODBC Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 如果您使用 PDO_SQLSRV 驅動程式，您可以使用 [PDO::getAttribute](../../connect/php/pdo-getattribute.md) 來探索版本。  
+如果您使用 SQLSRV 驅動程式時， [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md)傳回的版本資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在使用 Microsoft ODBC Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 如果您使用 PDO_SQLSRV 驅動程式，您可以使用 [PDO::getAttribute](../../connect/php/pdo-getattribute.md) 來探索版本。  
 
 ## <a name="sql-server"></a>[SQL Server]
 

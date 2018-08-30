@@ -1,5 +1,5 @@
 ---
-title: 報表伺服器屬性 （登入 索引標籤） |Microsoft Docs
+title: SQL Server 屬性 (登入索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 76d103ceecf643d7a7039317a18a7d3cb151538b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 72236cc050ac5a6371a4730e396db14332ad06c2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38048656"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787174"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Report Server 屬性 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

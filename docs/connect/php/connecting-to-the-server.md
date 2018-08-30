@@ -1,5 +1,5 @@
 ---
-title: 連接到伺服器 |Microsoft Docs
+title: 連線到 SQL Server │ Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03f3e44683ab329e67360be3992fb942c3799165
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36a147c4231d9c2c90f0f2151d4e69bebd5eefb1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38062471"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784883"
 ---
 # <a name="connecting-to-the-server"></a>連接到伺服器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本節的主題描述使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 連接到 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的選項和程序。  
+本節的主題描述使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接到 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的選項和程序。  
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 驗證或使用 SQL Server 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 根據預設， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會嘗試使用 Windows 驗證連接到伺服器。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 驗證或使用 SQL Server 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 根據預設， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會嘗試使用 Windows 驗證連接到伺服器。  
 
 ## <a name="in-this-section"></a>本節內容  
 
@@ -39,8 +39,8 @@ ms.locfileid: "38062471"
 |[連接共用](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|提供有關驅動程式中連接共用的資訊。|  
 |[如何：停用 Multiple Active Result Set (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|描述如何在進行連接時停用 MARS 功能。|  
 |[連線選項](../../connect/php/connection-options.md)|列出包含連接屬性的關聯陣列中允許的選項。|  
-|[LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|描述 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 對 LocalDB 功能的支援 (已加入 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]中)。|  
-|[高可用性與災害復原的支援](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|討論如何設定應用程式以利用 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 中加入的高可用性災害復原功能。|  
+|[LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|描述 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 對 LocalDB 功能的支援 (已加入 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中)。|  
+|[高可用性與災害復原的支援](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|討論如何設定應用程式以利用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中新增的高可用性災害復原功能。|  
 |[連線到 Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|請參閱＜如何連接到 Azure SQL 資料庫＞|  
 |[連線恢復功能](../../connect/php/connection-resiliency.md)|討論將重新建立連線中斷連接恢復功能。|  
 

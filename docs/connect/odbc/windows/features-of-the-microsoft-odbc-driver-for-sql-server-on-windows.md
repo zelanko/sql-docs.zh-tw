@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd787ee638e570419362fd62a4844ff856e8dbf1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3287815e6622d2d44693b401e2829275d22a2785
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982350"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42787374"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows 的功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,28 +35,28 @@ Azure Active Directory 可讓使用者、 DBA 和應用程式設計人員做為 
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver 11 for SQL Server  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 包含隨附於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]Native Client ODBC 驅動程式的所有功能。 如需詳細資訊，請參閱 [SQL Server Native Client 程式設計](http://msdn.microsoft.com/library/ms130892.aspx)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ODBC 驅動程式以 Windows 作業系統中隨附的 ODBC 驅動程式作為基礎。 如需詳細資訊，請參閱 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含隨附於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native Client ODBC 驅動程式的所有功能。 如需詳細資訊，請參閱 [SQL Server Native Client 程式設計](../../../relational-databases/native-client/sql-server-native-client-programming.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式以 Windows 作業系統中隨附的 ODBC 驅動程式作為基礎。 如需詳細資訊，請參閱 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)。  
   
-此版本的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 包含下列新功能：  
+此版本的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含下列新功能：  
   
 ### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>bcp.exe – l 選項，指定登入逾時
  
-–l 選項會指定在您嘗試連線到伺服器時，`bcp.exe` 登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的逾時秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 和 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp.exe` 就會產生錯誤訊息。 值為 0 會指定無限逾時。 小於 (約) 10 秒的登入逾時不可靠。  
+–l 選項會指定在您嘗試連線到伺服器時，`bcp.exe` 登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的逾時秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp.exe` 就會產生錯誤訊息。 值為 0 會指定無限逾時。 小於 (約) 10 秒的登入逾時不可靠。  
   
 ### <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]支援[可感知驅動程式的連線共用](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 如需詳細資訊，請參閱 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[可感知驅動程式的連線共用](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 如需詳細資訊，請參閱 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)。  
   
 ### <a name="asynchronous-execution-notification-method"></a>非同步執行 (通知方法)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]支援[非同步執行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)。 如需使用範例，請參閱[非同步執行 &#40;通知方法&#41; 範例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[非同步執行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)。 如需使用範例，請參閱[非同步執行 &#40;通知方法&#41; 範例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)。  
   
 ### <a name="connection-resiliency"></a>連接恢復功能
 若要確保應用程式仍然連接到 Microsoft Azure SQL Database，Windows 上的 ODBC 驅動程式可以還原閒置的連接。 如需詳細資訊，請參閱 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。  
   
 ## <a name="behavior-changes"></a>行為變更
 
-在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]原生用戶端`-y0`選項`sqlcmd.exe`造成的輸出顯示 width 為 0,sqlcmd.exe 如果，在 1 MB 處截斷。
+在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端`-y0`選項`sqlcmd.exe`造成的輸出顯示 width 為 0,sqlcmd.exe 如果，在 1 MB 處截斷。
   
-從 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 開始，在已指定 `–y0` 的情況下，單一資料行中已沒有可擷取資料量的限制。 `sqlcmd.exe` 現在會串流多達 2 GB 的資料行 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 最大資料類型)。  
+從 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開始，在已指定 `–y0` 的情況下，單一資料行中已沒有可擷取資料量的限制。 `sqlcmd.exe` 現在會串流多達 2 GB 的資料行 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 最大資料類型)。  
   
 另一個差異是指定這兩者`-h`和`-y0`現在會產生錯誤報告的選項不相容。 `-h` 會指定要在欄位標題間列印的資料列數目，且從不與 `-y0` 相容，該項目雖然不會列印標題，但是遭到忽略。
   

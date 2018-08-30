@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33dcb1a7e9b00968b4b02aa2d32b2ab0cc769d10
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5e8a0435a606152852c39450801497cd100fe90d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455205"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786989"
 ---
 # <a name="caching-result-set-data-sample"></a>快取結果集資料範例
 
@@ -30,7 +30,7 @@ ms.locfileid: "39455205"
 > [!NOTE]  
 > 限制在用戶端上快取的列數不同於限制結果集可以包含的總列數。 若要控制結果集中包含的總資料列數，請使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法，[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件兩者也繼承此方法。  
   
-若要對用戶端上快取的資料列數設定限制，您必須先在建立其中一個 Statement 物件時使用伺服器端資料指標，方法為特別陳述要在建立 Statement 物件時使用的資料指標類型。 例如，JDBC 驅動程式提供 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標類型，這是與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫搭配使用之快速順向且唯讀的伺服器端資料指標。  
+若要對用戶端上快取的資料列數設定限制，您必須先在建立其中一個 Statement 物件時使用伺服器端資料指標，方法為特別陳述要在建立 Statement 物件時使用的資料指標類型。 例如，JDBC 驅動程式提供 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標類型，這是與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫搭配使用之快速順向且唯讀的伺服器端資料指標。  
   
 > [!NOTE]  
 > 除了使用 SQL Server 特定資料指標類型，另一種方法是使用 selectMethod 連接字串屬性，並將其值設為 "cursor"。 如需 JDBC 驅動程式支援的資料指標類型的詳細資訊，請參閱[了解資料指標類型](../../../connect/jdbc/understanding-cursor-types.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "39455205"
 
 ## <a name="requirements"></a>需求  
 
-若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../../connect/jdbc/using-the-jdbc-driver.md)。  
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  

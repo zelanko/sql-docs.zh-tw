@@ -14,23 +14,23 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d787ffe76f2f1d97c486bd4c789ab5de5632b45
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: cfbf0ef8a02695a2bc3a1870a2660cf2bff23b7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107114"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785322"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系統需求、安裝和驅動程式檔案
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 支援連接到 SQL Server 2014、SQL Server 2012 R2、 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro_md.md)]、 [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]。  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援連接到 SQL Server 2014、SQL Server 2012 R2、 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
-Windows 上的 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 可以安裝在也有一或多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client 版本的電腦上。  
+Windows 上的 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以安裝在也有一或多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 版本的電腦上。  
   
-ODBC Driver 13 和 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，除此之外，支援 SQL Server 2016。 
+ODBC Driver 13 和 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，除此之外，支援 SQL Server 2016。 
 
-ODBC Driver 17 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]支援上述所有項目，以及 SQL Server 2017。
+ODBC Driver 17 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援上述所有項目，以及 SQL Server 2017。
   
 您在連接字串中指定的驅動程式名稱是`ODBC Driver 11 for SQL Server`或是`ODBC Driver 13 for SQL Server`（適用於 13 和 13.1） 或`ODBC Driver 17 for SQL Server`。
   
@@ -59,7 +59,7 @@ ODBC Driver 17 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]�
 [!NOTE]
 對於使用者而言有 17.1.0.1 安裝的驅動程式，建議，它會解除安裝手動安裝驅動程式 17.2.0.1 前或更新版本
 
-它可以與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client 並存安裝。  
+它可以與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 並存安裝。  
 
 當您叫用 `msodbcsql.msi` 時，預設會安裝用戶端元件。 用戶端元件是支援應用程式執行的檔案 (應用程式則是利用驅動程式所開發)。 如果要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=ALL`。 例如：  
   
@@ -95,7 +95,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 比方說，當您編譯的 ODBC 應用程式`msodbcsql11.lib`和`msodbcsql.h`，使用 「 驅動程式 = {ODBC Driver 11 for SQL Server}"的連接字串中。
 
-## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的元件 
+## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的元件 
  Windows 上的 ODBC 驅動程式包含下列元件：
  
 |元件|Description|  
@@ -104,7 +104,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 |msodbcdiag17.dll 或 <br> msodbcdiag13.dll 或 <br> msodbcdiag11.dll|動態連結程式庫 (DLL) 檔案，其中包含驅動程式的診斷 （追蹤） 介面。 此檔案會安裝在 %systemroot%\system32 中。|
 |msodbcsqlr17.rll 或 <br> msodbcsqlr13.rll 或 <br> msodbcsqlr11.rll|隨附驅動程式程式庫的資源檔。 此檔案會安裝在 %systemroot%\system32\1033 中。| 
 |s13ch_msodbcsql.chm 或 <br> s11ch_msodbcsql.chm |資料來源精靈說明檔，其中記載如何建立驅動程式的資料來源。 這個檔案會安裝在 %SYSTEMROOT%\System32\1033 <br /> <br /> **注意：** 沒有 ODBC Driver 17 for chm 檔案。 |  
-|msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> ODBC Driver 17 或 13 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK。 <br /> ODBC Driver 11 的 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。| 
+|msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> ODBC Driver 11 的 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。 <br /> ODBC Driver 11 的 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。| 
 |msodbcsql17.lib 或 <br> msodbcsql13.lib 或 <br> msodbcsql11.lib|呼叫 **bcp** 公用程式函式 (屬於驅動程式的一部分) 所需的程式庫檔案。<br /><br /> **注意**：如果您在程式中參考這個程式庫檔，請確定它在您的系統路徑以及使用此應用程式之系統的系統路徑中。<br /><br /> msodbcsql17.lib 或 msodbcsql13.lib 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK 中。<br /> msodbcsql11.lib 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。|
 
   

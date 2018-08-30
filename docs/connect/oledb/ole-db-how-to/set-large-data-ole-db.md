@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 1a55907e46e65a115dd5be40b1c616dd8cc3ab9a
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 8c3fc1c60b54bb4de97947ba07f1c673e05fed2e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106354"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019278"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

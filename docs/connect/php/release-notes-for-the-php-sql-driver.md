@@ -1,5 +1,5 @@
 ---
-title: 版本資訊 Microsoft Drivers for PHP for SQL Server |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 的版本資訊
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ef89936cb49105690795cd6c0312f7d81ed0b86
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: d06042b61e96da8e003cf893f86dac905832743b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174955"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784694"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的版本資訊
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "39174955"
 
 - PHP 5.4 的支援  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]第 3 版不支援 PHP 5.2。  
 - 已加入 AttachDBFileName 連接選項。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
-- LocalDB 的支援，已在 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]中加入。 如需詳細資訊，請參閱 < [LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。
+- LocalDB 的支援，已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中加入。 如需詳細資訊，請參閱 < [LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。
 - 已加入 AttachDBFileName 連接選項。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。  
 - 高可用性與災害復原功能的支援。 如需詳細資訊，請參閱 <<c0> [ 支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。
 - 用戶端資料指標的支援 (快取記憶體中的結果集)。 如需詳細資訊，請參閱[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) 和[資料指標類型 &#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。

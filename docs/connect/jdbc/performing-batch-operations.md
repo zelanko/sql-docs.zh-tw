@@ -14,24 +14,24 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 39596d1bc481005606a7442d755b3cc9a1ec668b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279012"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786968"
 ---
 # <a name="performing-batch-operations"></a>執行批次作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  在對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫執行多重更新時，為了改善效能，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供以單一工作單位提交多重更新的功能，這也稱為批次。  
+  在對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行多重更新時，為了改善效能，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供以單一工作單位提交多重更新的功能，這也稱為批次。  
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別都可以用來提交批次更新。 [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 方法用來新增命令。 [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 方法用來清除命令清單。 [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 方法用來提交所有命令以供處理。 只有傳回簡單更新計數的資料定義語言 (DDL) 和資料操作語言 (DML) 陳述式可以當作批次的一部份來執行。  
   
  executeBatch 方法會傳回對應到每個命令之更新計數的 **int** 值陣列。 如果其中一個命令失敗，就會擲回 BatchUpdateException，和您應該使用 getUpdateCounts BatchUpdateException 類別方法來擷取更新計數陣列。 如果某命令失敗，驅動程式會繼續處理其餘命令。 不過，如果命令有語法錯誤，批次中的陳述式會失敗。  
   
 > [!NOTE]  
->  如果不必使用更新計數，可以先對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 發出 SET NOCOUNT ON 陳述式。 這將會減少網路流量，而且還會加強應用程式的效能。  
+>  如果不必使用更新計數，可以先對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發出 SET NOCOUNT ON 陳述式。 這將會減少網路流量，而且還會加強應用程式的效能。  
   
  例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列資料表：  
   

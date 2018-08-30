@@ -17,14 +17,14 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 - Execute method
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6ba2a6a19507aada6ea7fd522b003d351c70809d
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: f9ecb5f02f114883a7d32f848dfe3d96f00290ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107440"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027347"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>使用 ICommand:: Execute 建立資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
