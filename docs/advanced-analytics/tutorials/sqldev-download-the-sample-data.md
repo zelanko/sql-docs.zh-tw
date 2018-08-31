@@ -1,24 +1,24 @@
 ---
-title: 下載適用於內嵌 R (SQL Server Machine Learning) 的 NYC 計程車示範資料和指令碼 |Microsoft Docs
-description: 指示下載紐約市計程車資料的範例，並建立資料庫。 在 SQL Server 教學課程示範如何內嵌 R 在 SQL Server 預存程序和 T-SQL 函式會使用資料。
+title: 下載 NYC 計程車示範資料和指令碼內嵌 R 和 Python （SQL Server 機器學習服務） |Microsoft Docs
+description: 指示下載紐約市計程車資料的範例，並建立資料庫。 資料會在 SQL Server 教學課程示範如何內嵌 R 和 Python 中 SQL Server 預存程序和 T-SQL 函數。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aca4450bdc152449fd30e974305d14a4ccbf77c5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395065"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703601"
 ---
-# <a name="load-nyc-taxi-demo-data-for-sql-server-tutorials"></a>NYC 計程車示範資料載入 SQL Server 教學課程
+# <a name="nyc-taxi-demo-data-for-sql-server"></a>適用於 SQL Server 的 NYC 計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章會準備您的系統，如需如何使用 SQL Server 中的資料庫內分析的 R 教學課程。
+這篇文章會準備您的系統，如需有關如何使用 R 和 Python 的 SQL Server 中的資料庫內分析的教學課程。
 
 在此練習中，您將會下載範例資料，準備環境，所需的 PowerShell 指令碼和[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼在數個教學課程中使用的檔案。 當您完成時， **NYCTaxi_Sample**資料庫位於本機執行個體，提供示範資料以進行實際操作學習。 
 
@@ -30,9 +30,9 @@ ms.locfileid: "40395065"
 
 1.  開啟 Windows PowerShell 命令主控台。
   
-    如果需要系統管理權限來建立目的地目錄，或將檔案寫入指定的目的地，請使用 [以系統管理員​​身分執行] 選項。
+    使用**系統管理員身分執行**選項來建立目的地目錄，或將檔案寫入到指定的目的地。
   
-2.  執行下列 PowerShell 命令，將參數 *DestDir* 的值變更為任何本機目錄。  我們在此處使用的預設值是 **TempRSQL**。
+2.  執行下列 PowerShell 命令，將參數 *DestDir* 的值變更為任何本機目錄。 我們在此處使用的預設值是 **TempRSQL**。
   
     ```ps
     $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
@@ -45,7 +45,7 @@ ms.locfileid: "40395065"
     如果您在 *DestDir* 中指定的資料夾不存在，PowerShell 指令碼就會加以建立。
   
     > [!TIP]
-    > 如果您收到錯誤，可藉由使用略過引數，並訂出目前工作階段變更的範圍，以僅針對這個逐步解說，將執行 PowerShell 指令碼的原則暫時設為 **不受限制** 。
+    > 如果您收到錯誤，您可以暫時設定 PowerShell 指令碼的執行原則**不受限制**僅針對這個逐步解說中使用略過引數，並設定所做的變更目前工作階段的範圍。
     >   
     >````
     > Set\-ExecutionPolicy Bypass \-Scope Process
@@ -54,7 +54,7 @@ ms.locfileid: "40395065"
   
     按照網際網路的連線速度，下載可能需要一些時間。
   
-3.  當所有檔案皆已下載時，PowerShell 指令碼會開啟  *DestDir*所指定的資料夾。 在 PowerShell 命令提示字元中，執行下列命令，並檢閱已下載的檔案。
+3.  當所有的檔案已下載時，PowerShell 指令碼會開啟*DestDir*資料夾。 在 PowerShell 命令提示字元中，執行下列命令，並檢閱已下載的檔案。
   
     ```
     ls
@@ -93,7 +93,7 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 - 伺服器執行個體[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]已安裝。 在預設執行個體，這可以是簡單，只要電腦名稱。
 
-- 資料庫名稱。 本教學課程中，指令碼假設`TaxiNYC_Sample`。
+- 資料庫名稱。 本教學課程中，指令碼假設`NYCTaxi_Sample`。
 
 - 使用者名稱和使用者密碼。 輸入這些值的 SQL Server 資料庫登入。 或者，如果您修改要接受信任的 Windows 身分識別的指令碼，按 Enter，以將這些值保留為空白。 您的 Windows 身分識別用於連接。
 

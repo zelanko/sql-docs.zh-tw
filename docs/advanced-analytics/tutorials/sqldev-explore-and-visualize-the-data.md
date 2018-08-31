@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392276"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703621"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 課： 瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "40392276"
 
 若要建立繪圖，請使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，其中一個增強型 R 函數中提供[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。 此步驟中繪製的長條圖，根據資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 您可以將此函式包裝在預存程序中， **PlotHistogram**。
 
-1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管 中以滑鼠右鍵按一下**TaxiNYC_Sample**資料庫中，展開**可程式性**，然後展開**預存程序**檢視在第 2 課建立的程序。
+1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管 中以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫中，展開**可程式性**，然後展開**預存程序**檢視在第 2 課建立的程序。
 
 2. 以滑鼠右鍵按一下**PlotHistogram** ，然後選取**修改**檢視的來源。 您可以執行此程序來呼叫**rxHistogram** nyctaxi_sample 資料表已支付小費資料行中包含的資料。
 
@@ -126,7 +126,9 @@ ms.locfileid: "40392276"
     > [!NOTE]
     > 如果是 bcp 命令參數會區分大小寫。
   
-3.  如果連接成功，系統會提示您輸入圖形檔格式的詳細資訊。 在每個提示字元下，按 ENTER 接受預設值，但不包括這些變更：
+3.  如果連接成功，系統會提示您輸入圖形檔格式的詳細資訊。 
+
+   在每個提示字元下，按 ENTER 接受預設值，但不包括這些變更：
     
     -   在 **prefix-length of field plot**中，輸入 0。
   

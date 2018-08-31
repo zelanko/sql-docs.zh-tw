@@ -1,6 +1,6 @@
 ---
-title: 第 8 課： 建立關鍵效能指標 |Microsoft Docs
-ms.date: 05/08/2018
+title: 第 7 課： 建立關鍵效能指標 |Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: multidimensional-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033406"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790099"
 ---
-# <a name="lesson-7-create-key-performance-indicators"></a>第 7 課： 建立關鍵效能指標
+# <a name="lesson-7-create-key-performance-indicators"></a>第 7 課：建立關鍵效能指標
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將建立關鍵效能指標 (KPI)。 KPI 會對照量值或絕對值所定義的「目標」值，量測由「基底」量值所定義之值的效能。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 若要進一步了解，請參閱[Kpi](../analysis-services/tabular-models/kpis-ssas-tabular.md)。  

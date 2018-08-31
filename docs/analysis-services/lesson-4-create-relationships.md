@@ -1,6 +1,6 @@
 ---
-title: 第 5 課： 建立關聯性 |Microsoft Docs
-ms.date: 05/08/2018
+title: 第 4 課： 建立關聯性 |Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 36993a468a6997ff8de40da542deac00b25b18b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034766"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792028"
 ---
 # <a name="lesson-4-create-relationships"></a>第 4 課： 建立關聯性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在這一課，您將會驗證匯入資料時自動建立的關聯性，並新增新不同資料表之間的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，DimProduct 資料表和 DimProductSubcategory 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 若要進一步了解，請參閱[關聯性](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
+在這一課，您將驗證匯入資料時自動建立的關聯性，以及在不同資料表之間加入新的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，DimProduct 資料表和 DimProductSubcategory 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 若要進一步了解，請參閱[關聯性](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
   
 完成本課程的估計時間： **10 分鐘**  
   
@@ -37,11 +37,11 @@ ms.locfileid: "38034766"
     
     ![做為表格式-lesson4-圖表](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
-    使用模型設計師右下方的 [迷你地圖] 控制項即可調整檢視，以便包含更多資料表。 您也可以按一下並拖曳資料表至不同位置、讓資料表彼此更靠近，或是以特定次序排列資料表。 移動資料表不會影響資料表之間已存在的關聯性。 若要檢視特定資料表中的所有資料行，可按一下並拖曳資料表邊緣，將它展開或縮小。  
+    使用模型設計師右下方的 [迷你地圖] 控制項即可調整檢視，以便包含更多資料表。 您也可以按一下，並將資料表拖曳到不同的位置，將資料表彼此更靠近結合在一起，或依照特定順序排列。 移動資料表不會影響資料表之間已存在的關聯性。 若要檢視特定資料表中的所有資料行，按一下，並拖曳資料表邊緣，將展開或縮小。  
   
 2.  按一下 之間的實線**DimCustomer**資料表並**DimGeography**資料表。 這兩個資料表之間的實線說明這個關聯性為作用中狀態，也就是說，這是在計算 DAX 公式時預設使用的關聯性。  
   
-    請注意**GeographyKey**中的資料行**DimCustomer**資料表， **GeographyKey**中的資料行**DimGeography**資料表現在都每個出現在方塊內。 這表示這兩個是關聯性中使用的資料行。 現在關聯性的屬性也會出現在 [屬性] 視窗中。  
+    請注意**GeographyKey**中的資料行**DimCustomer**資料表， **GeographyKey**中的資料行**DimGeography**資料表現在都每個出現在方塊內。 此節目這些是使用關聯性中的資料行。 現在關聯性的屬性也會出現在 [屬性] 視窗中。  
   
     > [!TIP]  
     > 除了使用模型設計師圖表檢視 中，您也可以使用 管理關聯性 對話方塊中顯示的資料表中的所有資料表之間的關聯性。 以滑鼠右鍵按一下**關聯性**在表格式模型總管 中，然後按一下**管理關聯性**。 [管理關聯性] 對話方塊會顯示您匯入資料時自動建立的關聯性。  
@@ -63,7 +63,7 @@ ms.locfileid: "38034766"
 
 ![為表格式-lesson4-行](../analysis-services/media/as-tabular-lesson4-line.png)
 
-箭號顯示篩選方向，星號顯示此資料表是關聯性的基數的多數邊，1 顯示此資料表是關聯性的一端。 如果您要編輯關聯性;比方說，變更關聯性的篩選方向或基數，按兩下 圖表檢視，開啟 編輯關聯性 對話方塊中的關聯線。
+箭號顯示篩選方向，星號顯示此資料表是關聯性的基數的多數邊，1 顯示此資料表是關聯性的一端。 如果您要編輯關聯性;比方說，變更關聯性的篩選方向或基數，連按兩下以開啟 [編輯關聯性] 對話方塊的 [圖表] 檢視中的關聯線。
 
 ![為表格式-lesson4-編輯](../analysis-services/media/as-tabular-lesson4-edit.png)
 
@@ -73,7 +73,7 @@ ms.locfileid: "38034766"
   
 #### <a name="to-add-new-relationships-between-tables"></a>若要在資料表之間加入新的關聯性  
   
-1.  在模型設計師中，在**FactInternetSales**資料表中，按一下並按住**OrderDate**資料行，然後拖曳游標以**日期**中的資料行**DimDate**資料表，然後再放開。  
+1.  在模型設計師中，在**FactInternetSales**資料表中，按一下，並保留**OrderDate**資料行，然後拖曳游標以**日期**中的資料行**DimDate**資料表，然後再放開。  
 
     一條實線會出現並顯示您已建立作用中的關聯**OrderDate**中的資料行**Internet Sales**資料表的**日期**中的資料行**日期**資料表。 
   
@@ -82,11 +82,11 @@ ms.locfileid: "38034766"
     > [!NOTE]  
     > 在建立關聯性時，會自動選取之間主資料表] 和 [相關的查閱資料表的基數和篩選方向。  
   
-2.  在  **FactInternetSales**資料表中，按一下並按住**DueDate**資料行，然後拖曳游標以**日期**中的資料行**DimDate**資料表，然後放開。  
+2.  在**FactInternetSales**資料表中，按一下，並保留**DueDate**資料行，然後拖曳游標以**日期**中的資料行**DimDate**資料表，然後放開。  
   
     點線會出現並顯示您已建立非作用中的關聯**DueDate**中的資料行**FactInternetSales**資料表的**日期**中的資料行**DimDate**資料表。 資料表之間可以擁有多項關聯性，但是一次只能有一項使用中的關聯性。  
   
-3.  最後，建立一個關聯性;在**FactInternetSales**資料表中，按一下並按住**ShipDate**資料行，然後拖曳游標以**日期**中的資料行**DimDate**資料表，然後放開。  
+3.  最後，建立一個關聯性;在**FactInternetSales**資料表中，按一下，並保留**ShipDate**資料行，然後拖曳游標以**日期**中的資料行**DimDate**資料表，然後再放開。  
     
      ![做為表格式-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
