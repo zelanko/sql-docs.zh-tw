@@ -22,12 +22,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e90ba79e8677cd0f61a60f5132a6d4ed827e6c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0999bcc6594de503ef1f0d9494ff6a9bb35ad89
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048485"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775976"
 ---
 # <a name="create-and-update-database-tables"></a>建立及更新資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "33048485"
 
 ## <a name="see-also"></a>另請參閱
 
-[資料表](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
+[資料表](../../relational-databases/tables/tables.md)  
 [資料表屬性 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
 [資料行屬性](column-properties-visual-database-tools.md)  
 [在資料表新增資料行](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  

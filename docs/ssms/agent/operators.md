@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980430"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776354"
 ---
 # <a name="operators"></a>操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38980430"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的通知和監視功能。  
+操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的通知和監視功能。  
   
 ## <a name="operator-attributes-and-concepts"></a>操作員屬性和概念  
 操作員的主要屬性如下：  
@@ -52,13 +52,13 @@ ms.locfileid: "38980430"
 -   連絡資訊  
   
 ### <a name="naming-an-operator"></a>為操作員命名  
-每個操作員都必須要有一個名稱。 操作員名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體中唯一的名稱，而且不可長於 **128** 個字元。  
+每個操作員都必須要有一個名稱。 操作員名稱必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中唯一的名稱，而且不可長於 **128** 個字元。  
   
 ### <a name="contact-information"></a>連絡資訊  
 操作員的連絡資訊會定義如何通知操作員。 您可以透過電子郵件、呼叫器或 **net send** 命令來通知操作員：  
   
 > [!IMPORTANT]  
-> 呼叫器和 **net send** 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 未來版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
+> 呼叫器和 **net send** 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 -   **電子郵件通知**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "38980430"
   
         這個軟體是呼叫器服務供應商的專利。 這個軟體的作用像是電子郵件用戶端，可將所有或部分電子郵件地址資訊解譯成呼叫器號碼，或是將電子郵件名稱對應到轉換表中的呼叫器號碼，以定期處理其收件匣。  
   
-        如果所有的操作員共用同一個呼叫器供應商，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 來指定呼叫器轉電子郵件系統所需的任何特殊電子郵件格式。 此特殊格式可以是前置詞或後置詞，並可包含在下列的電子郵件字行中：  
+        如果所有的操作員共用同一個呼叫器供應商，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來指定呼叫器轉電子郵件系統所需的任何特殊電子郵件格式。 此特殊格式可以是前置詞或後置詞，並可包含在下列的電子郵件字行中：  
   
         **主旨：**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38980430"
     這是利用 **net send** 命令來將訊息傳送給操作員。 若是使用 **net send**，請指定網路訊息的收件者 (電腦或使用者)。  
   
     > [!NOTE]  
-    > **Net send** 命令會使用 Microsoft Windows Messenger。 為了順利傳送警示，執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的電腦和操作員所使用的電腦上，都必須執行此服務。  
+    > **Net send** 命令會使用 Microsoft Windows Messenger。 為了順利傳送警示，執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦和操作員所使用的電腦上，都必須執行此服務。  
   
 ## <a name="alerting-and-fail-safe-operators"></a>警示及保全操作員  
 您可以選擇要告知的操作員來回應警示。 例如，您可以排定警示，來指派操作員通知的輪替責任區分。 例如，發生於星期一、星期三或星期五的警示會告知「人員 A」，而發生於星期二、星期四或星期六的警示則會告知「人員 B」。  
@@ -109,7 +109,7 @@ ms.locfileid: "38980430"
   
     連絡主要操作員會失敗的原因，包括：呼叫器號碼錯誤，以及操作員已下班。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 無法存取 **msdb** 資料庫中的系統資料表。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 無法存取 **msdb** 資料庫中的系統資料表。  
   
     **sysnotifications** 系統資料表指定負責警示的操作員。  
   
@@ -133,5 +133,5 @@ ms.locfileid: "38980430"
 |與指派警示相關的工作|[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定義對警示的回應 &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[指派警示給操作員](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另請參閱  
-[Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

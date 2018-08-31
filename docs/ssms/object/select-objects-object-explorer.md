@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041875"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776472"
 ---
 # <a name="select-objects-object-explorer"></a>選取物件 (物件總管)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33041875"
   
 ## <a name="options"></a>選項。  
 **選取下列物件類型**  
-顯示要選取之物件所屬類型的清單。 這些類型包括 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 層級和資料庫層級的主體，以及安全性實體。 這個方塊是從 [選取物件類型] 對話方塊中的選取項目擴展而來，對話方塊可以從 [物件類型] 按鈕進行存取。  
+顯示要選取之物件所屬類型的清單。 這些類型包括 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 層級和資料庫層級的主體，以及安全性實體。 這個方塊是從 [選取物件類型] 對話方塊中的選取項目擴展而來，對話方塊可以從 [物件類型] 按鈕進行存取。  
   
 **輸入要選取的物件名稱**  
 以分號分隔，輸入要選取之物件的名稱清單。 要選取之物件的類型，必須是 [選取下列物件類型] 方塊中所列出的類型。 按一下 [瀏覽] 按鈕，即可從出現的清單中選取物件。  

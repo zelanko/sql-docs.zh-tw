@@ -19,16 +19,16 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa17a9e29159e4e4a16fdc23421b9b546c09177
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aef7a76aaf7fceacf912741e6872cc74f61194c4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708977"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776351"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) 是用於管理任何 SQL 基礎結構的整合式環境。 使用 SSMS 來存取、設定、管理、掌管和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]、Azure SQL Database 和 SQL 資料倉儲的所有元件。 SSMS 能提供單一的完整公用程式，結合了廣泛的圖形工具和豐富的指令碼編輯器，使開發人員和資料庫管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]。
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用於管理任何 SQL 基礎結構的整合式環境。 使用 SSMS 來存取、設定、管理、掌管和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL Database 和 SQL 資料倉儲的所有元件。 SSMS 能提供單一的完整公用程式，結合了廣泛的圖形工具和豐富的指令碼編輯器，使開發人員和資料庫管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 
 
@@ -40,15 +40,15 @@ ms.locfileid: "34708977"
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   
-|描述|元件|  
+|Description|元件|  
 |---------------|---------|  
-|使用 **物件總管** 檢視及管理一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]執行個體中的所有物件。|[物件總管](../ssms/object/object-explorer.md)|  
+|使用 **物件總管** 檢視及管理一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體中的所有物件。|[物件總管](../ssms/object/object-explorer.md)|  
 |如何使用 **範本總管** 建立及管理模板文字檔案，以加快查詢與指令碼的開發速度。|[範本總管](../ssms/template/template-explorer.md)|  
 |如何使用即將淘汰的 **方案總管** 建立專案，以管理管理項目 (例如指令碼與查詢)。|[方案總管](../ssms/solution/solution-explorer.md)|  
-|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]隨附的視覺化設計工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 語言編輯器以互動的方式建立查詢與指令碼，以及對其執行偵錯。|[查詢與文字編輯器 (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]隨附的視覺化設計工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
+|如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 語言編輯器以互動的方式建立查詢與指令碼，以及對其執行偵錯。|[查詢與文字編輯器 (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
 
 ## <a name="next-steps"></a>後續步驟  
-[教學課程：SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
+[教學課程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  

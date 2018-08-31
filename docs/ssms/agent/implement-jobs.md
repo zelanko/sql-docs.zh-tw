@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ffd23e554ce16f10afdca59224cafee4c86f800
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9c8497b6056aa19b0c413cad29fd090012fdf616
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064608"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776345"
 ---
 # <a name="implement-jobs"></a>實作作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "38064608"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業，使例行性管理工作自動化，並重複執行它們，使管理更有效率。  
+您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，使例行性管理工作自動化，並重複執行它們，使管理更有效率。  
   
-作業是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 循序執行的一系列指定作業。 作業可執行各式各樣的活動，包括執行 [!INCLUDE[tsql](../../includes/tsql_md.md)] 指令碼、命令列應用程式、Microsoft ActiveX Script、Integration Services 封裝、Analysis Services 命令和查詢，或複寫工作。 作業可執行重複性工作或可排程的工作，而且可產生警示，將作業狀態自動通知使用者，藉此大幅簡化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的管理。  
+作業是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 循序執行的一系列指定作業。 作業可執行各式各樣的活動，包括執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、命令列應用程式、Microsoft ActiveX Script、Integration Services 封裝、Analysis Services 命令和查詢，或複寫工作。 作業可執行重複性工作或可排程的工作，而且可產生警示，將作業狀態自動通知使用者，藉此大幅簡化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的管理。  
   
 您可以手動執行作業，或將作業設定為根據排程或為了回應警示而執行。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "38064608"
 |包含關於您可以建立的不同種類作業步驟及如何管理它們的資訊。|[管理作業步驟](../../ssms/agent/manage-job-steps.md)|  
 |包含關於如何定義作業何時開始執行及作業執行頻率等資訊。|[建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)|  
 |包含關於手動執行作業 (沒有排程) 的資訊。|[執行作業](../../ssms/agent/run-jobs.md)|  
-|包含關於如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 回應作業的資訊。 例如，您可以設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 在作業完成時通知管理者。|[指定作業回應](../../ssms/agent/specify-job-responses.md)|  
+|包含關於如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 回應作業的資訊。 例如，您可以設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業完成時通知管理者。|[指定作業回應](../../ssms/agent/specify-job-responses.md)|  
 |包含關於如何檢視現有的作業、其執行的記錄及如何修改它們等資訊。|[檢視或修改作業](../../ssms/agent/view-or-modify-jobs.md)|  
 |包含如何刪除作業的相關資訊。|[刪除作業](../../ssms/agent/delete-jobs.md)|  
   

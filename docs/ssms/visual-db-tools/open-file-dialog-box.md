@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997920"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776464"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37997920"
 若要存取這個對話方塊，請從 [檔案] 功能表選取 [開啟]，然後再選擇 [檔案]。 從其他元素 (例如 [外部工具] 對話方塊) 開啟檔案時，也會出現這個對話方塊。 從 [檔案] 功能表選取 [開啟]，然後選擇 [專案/方案] 以開啟相同的 [開啟專案] 對話方塊。  
   
 > [!NOTE]  
-> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中開啟專案或元件之前，請判斷其程式碼的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中開啟專案或元件的動作可能會在本機電腦的信任處理序中執行它的程式碼。  
+> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件之前，請判斷其程式碼的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟專案或元件的動作可能會在本機電腦的信任處理序中執行它的程式碼。  
   
 ## <a name="option"></a>選項  
 **查詢**  

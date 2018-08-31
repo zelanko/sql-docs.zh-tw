@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a2035ca0780e873f5d3cee8d9b649faa4f6ee8a9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981900"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776090"
 ---
 # <a name="manage-events"></a>管理事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "38981900"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的執行個體。 這稱為「事件轉送」。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
+您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 這稱為「事件轉送」。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
   
 當某伺服器接收到其他伺服器群組的事件時，接收事件的伺服器稱為「警示管理伺服器」。 在多伺服器的環境中，您可以將主要伺服器指定為警示管理伺服器。  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>使用警示管理伺服器的優點  
 設定警示管理伺服器的優點包括：  
   
--   **集中化**。 可從單一伺服器集中控制和合併檢視多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體的事件。  
+-   **集中化**。 可從單一伺服器集中控制和合併檢視多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的事件。  
   
 -   **延展性**。 能以一個邏輯伺服器的方式管理很多實體的伺服器。 您可以依照需要對這個實體的伺服器群組新增或移除伺服器。  
   
@@ -68,15 +68,15 @@ ms.locfileid: "38981900"
   
 -   小心規劃網路傳輸量，包括設定許多伺服器來共用相同的警示管理伺服器。 如果發生阻塞，請減少使用某一特別警示管理伺服器的伺服器數量。  
   
-    在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 內註冊的伺服器構成一份清單，其中就是可供該伺服器用來選擇作為警示轉送伺服器的伺服器。  
+    在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內註冊的伺服器構成一份清單，其中就是可供該伺服器用來選擇作為警示轉送伺服器的伺服器。  
   
--   在需要伺服器特定回應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 本機執行個體上定義警示，而不要將警示轉送到警示管理伺服器。  
+-   在需要伺服器特定回應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上定義警示，而不要將警示轉送到警示管理伺服器。  
   
     警示管理伺服器會將轉送來的所有伺服器視為一個邏輯整體。 例如，警示管理伺服器會以相同的方式，回應來自伺服器 A 的 605 事件和來自伺服器 B 的 605 事件。  
   
--   請在設定警示系統後，定期檢查 Microsoft Windows 應用程式記錄檔中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 事件。  
+-   請在設定警示系統後，定期檢查 Microsoft Windows 應用程式記錄檔中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 事件。  
   
-    警示引擎所遇到的失敗狀況，會以來源名稱 "SQL Server Agent" 寫入本機 Windows 應用程式記錄檔中。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 無法傳送已定義的電子郵件通知，則會在應用程式記錄檔中記錄一個事件。  
+    警示引擎所遇到的失敗狀況，會以來源名稱 "SQL Server Agent" 寫入本機 Windows 應用程式記錄檔中。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 無法傳送已定義的電子郵件通知，則會在應用程式記錄檔中記錄一個事件。  
   
 如果本機定義的警示未啟動，卻發生了會引發警示的事件，則會將事件轉送至警示管理伺服器 (如果它符合警示轉送條件的話)。 轉送時可依據本機站台的使用者需求，來關閉或開啟本機覆寫 (本機定義的警示，也定義於警示管理伺服器上)。 即使事件也是由本機警示所處理的，您仍舊可以要求一律轉送事件。  
   

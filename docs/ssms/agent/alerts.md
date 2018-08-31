@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc18be0111569885414ab861a8b7f978e1bd128c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 27ac7d69367739e074a7d5c94ced4cdd9325097d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985680"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776590"
 ---
 # <a name="alerts"></a>警示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38985680"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-事件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 產生，並輸入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄檔中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會讀取應用程式記錄檔，然後比較寫入其中的事件與您所定義的警示。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 找到相符項目時，即會發出警示，這是對事件的自動回應。 除了監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 還可以監視效能條件與 Windows Management Instrumentation (WMI) 事件。  
+事件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生，並輸入 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 應用程式記錄檔中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會讀取應用程式記錄檔，然後比較寫入其中的事件與您所定義的警示。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 找到相符項目時，即會發出警示，這是對事件的自動回應。 除了監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 還可以監視效能條件與 Windows Management Instrumentation (WMI) 事件。  
   
 若要定義警示，您必須指定：  
   
@@ -49,17 +49,17 @@ ms.locfileid: "38985680"
   
 -   觸發警示的事件或效能條件。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 為回應事件或效能條件所採取的動作。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 為回應事件或效能條件所採取的動作。  
   
 ## <a name="naming-an-alert"></a>為警示命名  
-每個警示必須有一個名稱。 警示名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的執行個體中必須是唯一的，而且不可超過 **128** 個字元。  
+每個警示必須有一個名稱。 警示名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中必須是唯一的，而且不可超過 **128** 個字元。  
   
 ## <a name="selecting-an-event-type"></a>選取事件類型  
 警示會回應特定的事件類型。 警示會回應下列事件類型：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 效能條件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能條件  
   
 -   WMI 事件  
   
@@ -70,22 +70,22 @@ ms.locfileid: "38985680"
   
 -   **錯誤號碼**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會在特定錯誤發生時發出警示。 例如，您可以指定錯誤號碼 2571 來回應對「資料庫主控命令 (DBCC)」的未經授權叫用嘗試。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在特定錯誤發生時發出警示。 例如，您可以指定錯誤號碼 2571 來回應對「資料庫主控命令 (DBCC)」的未經授權叫用嘗試。  
   
 -   **嚴重性層級**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會在特定嚴重性的任何錯誤發生時發出警示。 例如，您可以指定嚴重性層級 15 來回應 Transact-SQL 陳述式中的語法錯誤。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在特定嚴重性的任何錯誤發生時發出警示。 例如，您可以指定嚴重性層級 15 來回應 Transact-SQL 陳述式中的語法錯誤。  
   
 -   **[資料庫備份]**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 只有在特定資料庫中發生事件時，才會發出警示。 您可以在錯誤號碼或嚴重性層級以外搭配套用此選項。 例如，若某個執行個體中含有一個實際執行用的資料庫和一個報告用的資料庫，您就可以定義一個只會針對實際資料庫回應語法錯誤的警示。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 只有在特定資料庫中發生事件時，才會發出警示。 您可以在錯誤號碼或嚴重性層級以外搭配套用此選項。 例如，若某個執行個體中含有一個實際執行用的資料庫和一個報告用的資料庫，您就可以定義一個只會針對實際資料庫回應語法錯誤的警示。  
   
 -   **事件文字**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會在指定事件的事件訊息中含有特定的文字字串時發出警示。 例如，您可以定義警示來回應含有特定資料表名稱或特定條件約束名稱的訊息。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會在指定事件的事件訊息中含有特定的文字字串時發出警示。 例如，您可以定義警示來回應含有特定資料表名稱或特定條件約束名稱的訊息。  
   
 ## <a name="selecting-a-performance-condition"></a>選取效能條件  
-您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
+您可以指定一個為回應特定效能條件而產生的警示。 此時您必須指定所要監視的效能計數器、警示的臨界值以及計數器在警示產生時必須顯示的行為。 若要設定效能條件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
   
 -   **物件**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "38985680"
   
 -   **執行個體**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體可為要監視的屬性定義特定的執行個體 (如果有的話)。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可為要監視的屬性定義特定的執行個體 (如果有的話)。  
   
 -   **如果是計數器和值則發出警示**  
   
@@ -109,15 +109,15 @@ ms.locfileid: "38985680"
     > 效能資料是定期取樣的，因此在到達臨界值與發出效能警示之間可能會有一點延遲 (幾秒鐘)。  
   
 ## <a name="selecting-a-wmi-event"></a>選取 WMI 事件  
-您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
+您可以指定一個為回應特定 WMI 事件而產生的警示。 若要選取 WMI 事件，您必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 [一般] 頁面上定義 [新增警示] 或 [警示屬性] 對話方塊中的下列項目：  
   
 -   **Namespace**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會對可用的 WMI 命名空間註冊為 WMI 用戶端，以進行事件查詢。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會對可用的 WMI 命名空間註冊為 WMI 用戶端，以進行事件查詢。  
   
 -   **查詢**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會使用可用的 Windows Management Instrumentation 查詢語言 (WQL) 陳述式來識別特定的事件。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用可用的 Windows Management Instrumentation 查詢語言 (WQL) 陳述式來識別特定的事件。  
   
 以下是一般工作的連結：  
   

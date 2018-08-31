@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee8da38abc3b4725530abaf812381d0197812fe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e74ee9c4579071b14072dcccbab493126d69a0cb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049535"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776566"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33049535"
   
 ## <a name="printer"></a>印表機  
 **名稱**  
-指定印表機。 從清單中選取印表機。 您所選取的印表機會變成預設印表機，直到您關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或選取另一個不同的印表機為止。 在清單下的欄位中出現的資訊會套用到選取的印表機中。  
+指定印表機。 從清單中選取印表機。 您所選取的印表機會變成預設印表機，直到您關閉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或選取另一個不同的印表機為止。 在清單下的欄位中出現的資訊會套用到選取的印表機中。  
   
 **狀態**  
 描述選定印表機的狀態，例如，忙碌或就緒。  

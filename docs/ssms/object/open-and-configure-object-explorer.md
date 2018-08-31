@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041795"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776567"
 ---
 # <a name="open-and-configure-object-explorer"></a>開啟和設定物件總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具] 功能表上的 [選項] 來設定物件總管選項。  
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具] 功能表上的 [選項] 來設定物件總管選項。  
   
 ## <a name="viewing-object-explorer"></a>檢視物件總管  
-依預設，您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中看到物件總管。 如果您看不到物件總管，請在 [檢視] 功能表上，按一下 [物件總管]。  
+依預設，您可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中看到物件總管。 如果您看不到物件總管，請在 [檢視] 功能表上，按一下 [物件總管]。  
   
 ## <a name="configuring-object-explorer-options"></a>設定物件總管選項  
 若要設定物件總管設定值，請在 [工具] 功能表上按一下 [選項]，然後按一下 [SQL Server 物件總管]。  

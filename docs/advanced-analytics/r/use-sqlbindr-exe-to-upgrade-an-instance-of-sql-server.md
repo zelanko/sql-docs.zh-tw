@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e781ee8330400a7b6e40ed249ce072cc8f9f83e6
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174795"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795657"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的 機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-針對繫結至 Machine Learning Server 9.3 SQL Server 2016 R Services，R 基底套件能 3.4.1、 RevoScaleR 應為 9.3，而且您也應該 MicrosoftML 9.3。 
+針對繫結至 Machine Learning Server 9.3 SQL Server 2016 R Services，R 基底套件能 3.4.3、 RevoScaleR 應為 9.3，而且您也應該 MicrosoftML 9.3。 
 
 如果您新增預先定型的模型，模型會內嵌 MicrosoftML 文件庫中，而且您可以透過 MicrosoftML 函式呼叫它們。 如需詳細資訊，請參閱 < [MicrosoftML 的 R 範例](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)。
 

@@ -25,11 +25,12 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13258b6c570aa0e40c5cca7cbde7b583abd5f297
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce5c4f7872003f3d2f74dddd31cf93929202185
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409997"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
 
@@ -137,43 +138,43 @@ ms.lasthandoff: 05/03/2018
   
  若要著手建立第一份報表，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。 若要深入了解可在報表設計師中使用的查詢設計工具，請參閱 [查詢設計工具 &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)的技巧。  
   
-##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 是獨立的應用程式，可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外建立分頁報表。 不論報表是使用報表設計師還是舊版 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]所建立，您都可以自訂與更新所有現有的報表。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
+##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 是獨立的應用程式，可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外建立分頁報表。 不論報表是使用報表設計師還是舊版 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]所建立，您都可以自訂與更新所有現有的報表。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
   
  從 Microsoft 下載中心[下載報表產生器](http://go.microsoft.com/fwlink/?LinkID=219138) 。  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd"></a>啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站的 [新增] 功能表上，選取 [分頁報表]。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  如果這部電腦尚未安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]，請選取 [取得 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]]。  
+2.  如果這部電腦尚未安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，請選取 [取得 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]]。  
   
      或  
   
      從 Microsoft 下載中心[下載報表產生器](http://go.microsoft.com/fwlink/?LinkID=219138) 。  
   
-3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 隨即開啟，您可以建立或開啟分頁報表。  
+3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 隨即開啟，您可以建立或開啟分頁報表。  
   
-##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]  
+##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
  使用 [SQL Server 行動報表發行工具](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) ，建立您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站及行動裝置 (例如 iPad 和 iPhone) 上檢視的行動報表。   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
   
  從 Microsoft 下載中心[下載 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkID=733527) 。  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-short-mdmd"></a>啟動 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
+### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>啟動 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站的 [新增] 功能表上，選取 [行動報表]。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  如果這部電腦尚未安裝 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]，請選取 [取得 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]]。  
+2.  如果這部電腦尚未安裝 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，請選取 [取得 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]]。  
   
      或  
   
      從 Microsoft 下載中心[下載 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkID=733527) 。  
   
-3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] 隨即開啟，您可以建立或開啟行動報表。  
+3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 隨即開啟，您可以建立或開啟行動報表。  
 
 ## <a name="next-steps"></a>後續步驟
 

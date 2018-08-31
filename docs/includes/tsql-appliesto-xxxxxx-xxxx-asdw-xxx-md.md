@@ -1,2 +1,2 @@
-<Token>**本主題適用於：**![否](media/no.png)SQL Server (從 2008 開始)![否](media/no.png)Azure SQL Database![是](media/yes.png)Azure SQL 資料倉儲 ![否](media/no.png)平行處理資料倉儲 </Token>
+<Token>**適用於：** ![沒有](media/no.png)（從 2008年開始） 的 SQL Server![沒有](media/no.png)Azure SQL Database![是](media/yes.png)Azure SQL 資料倉儲![沒有](media/no.png)平行處理資料倉儲 </Token>
 

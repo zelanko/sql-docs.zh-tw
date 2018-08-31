@@ -14,12 +14,12 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 7f588174ea80677066628cb3e756d7c38bd42fba
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890979"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42784908"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步驟 1︰設定 pyodbc Python 開發的開發環境
 
@@ -29,7 +29,7 @@ ms.locfileid: "37890979"
 1. **下載 Python 安裝程式**。  
   如果您的電腦並沒有 Python，請安裝它。 移至[的 Python 下載頁面](https://www.python.org/downloads/windows/)及下載適當的安裝程式。 例如，如果您是在 64 位元電腦上，下載 Python 2.7] 或 [3.7 (x64) 安裝程式。  
   
-2. **安裝 Python**。  安裝程式下載後，執行下列步驟：。 按兩下檔案以啟動安裝程式。 B. 選取您的語言，並同意條款。 c. 遵循螢幕上的指示，並應該在電腦上安裝 Python。 d. 您可以確認要安裝 Python`C:\Python27`或是`C:\Python37`並執行`python -v`或`py -v`（適用於 3.x) 
+2. **安裝 Python**。  安裝程式下載後，執行下列步驟：。 按兩下檔案以啟動安裝程式。 B. 選取您的語言，並同意條款。 c. 遵循螢幕上的指示，並應該在電腦上安裝 Python。 d. 您可以確認要安裝 Python`C:\Python27`或是`C:\Python37`並執行`python -V`或`py -V`（適用於 3.x) 
       
 3. [**安裝 Windows 上的 Microsoft ODBC Driver for SQL Server**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   
