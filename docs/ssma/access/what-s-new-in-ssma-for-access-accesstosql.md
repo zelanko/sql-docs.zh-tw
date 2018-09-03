@@ -179,7 +179,7 @@ SSMA for Access 的 2008 年 6 月版本包含下列變更：
   
 -   Access 2007 資料庫所新增的支援。  
   
-## <a name="may-2007"></a>2007 年  
+## <a name="may-2007"></a>2007 年 5 月  
 SSMA for Access 2007 年版本包含下列變更：  
   
 -   已新增的支援使用群組原則的 Access 資料庫。  

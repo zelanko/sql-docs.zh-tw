@@ -18,17 +18,17 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5bea9587b92e1452891e24475cc33a8baeec437b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e005a07716b0912526b11cf3100244a93dcc275
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049116"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348519"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- > 如需舊版 SQL Server 的相關內容，請參閱[解除安裝現有的 SQL Server 執行個體 (安裝程式)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[解除安裝現有的 SQL Server 執行個體 (安裝程式)](uninstall-an-existing-instance-of-sql-server-setup.md)。
 
   本文描述如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。 遵循本文中的步驟時，您也可以讓系統做好重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的準備。  
   
