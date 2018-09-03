@@ -1,14 +1,10 @@
 ---
 title: 使用 ReportViewer 控制項整合 Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: bf99e8bbb0286c66ca0b16cea0ccb8ff8a1817cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f121984a363a75ee22a25e515d486b4c99872983
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014135"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265872"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls"></a>使用 ReportViewer 控制項整合 Reporting Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 提供兩個 ReportViewer 控制項，可將報表檢視功能整合到應用程式。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 兩個控制項都可以處理已經部署到報表伺服器的報表 (遠端處理模式)，或是已經複製到尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦上的報表 (本機處理模式)。  

@@ -1,29 +1,23 @@
 ---
 title: PDF 裝置資訊設定 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0f0ec8d6bfe88182f84078aa8155afed9f149828
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a88a746e5a7f882897a05426a682d6ffd78e2b1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019077"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267670"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 裝置資訊設定
   下表列出以 PDF 格式轉譯報表的裝置資訊設定。  

@@ -1,29 +1,23 @@
 ---
 title: 報表、報表組件和報表定義 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 918cf42c76038411777628c200f0ed71fe3e8788
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a931367813e3fb474bba65648d5d93fbc02af10a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550469"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265682"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>報表、報表組件和報表定義 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用各種詞彙來描述不同狀態的分頁報表，這些狀態包括初始定義、已發行的報表以及使用者檢視的報表。  

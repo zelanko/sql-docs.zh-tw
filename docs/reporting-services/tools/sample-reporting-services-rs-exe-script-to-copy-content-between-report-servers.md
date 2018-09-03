@@ -1,26 +1,20 @@
 ---
 title: 在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9927a7cdf05e82f48fb43bd954534c04f9a32dad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbdf7ee66f59738c0874c6bfc21b6ad4b33b1091
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036845"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267680"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼
 
@@ -38,8 +32,7 @@ ms.locfileid: "33036845"
   
 -   在伺服器 A **上** 執行 RS.exe 和指令碼。  
   
--   
-              **從** 伺服器 B 複製內容  
+-   **從** 伺服器 B 複製內容  
   
 -   **到** 到伺服器 C  
   
@@ -54,7 +47,7 @@ ms.locfileid: "33036845"
 ###  <a name="bkmk_what_is_migrated"></a> 指令碼移轉的項目及資源  
  這個指令碼不會覆寫相同名稱的現有內容項目。  如果指令碼偵測到來源伺服器與目的地伺服器上有相同名稱的項目，則個別項目將會產生「失敗」訊息，但指令碼會繼續。 下表列出指令碼可移轉至目標報表伺服器模式的內容和資源類型。  
   
-|項目|已移轉|SharePoint|描述|  
+|項目|已移轉|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |密碼|**否**|**否**|密碼 **不會** 移轉。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。 例如，具有預存認證的資料來源。|  
 |我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **–u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上 [我的報表] 資料夾中的報表項目。<br /><br /> 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列步驟：<br /><br /> 1.在報表管理員中建立新資料夾。 或者，您可以為每位使用者建立資料夾或子資料夾。<br />2.以其中一位具有 [我的報表] 內容的使用者身分登入。<br />3.在 [報表管理員] 中，按一下 [我的報表] 資料夾。<br />4.按一下資料夾的 [詳細資料] 檢視。<br />5.選取要複製的每個報表。<br />6.在 [報表管理員] 工具列中，按一下 [移動]。<br />7.選取所需的目的地資料夾。<br />8.對每位使用者重複步驟 2-7。<br />9.執行指令碼。|  
@@ -207,7 +200,7 @@ ms.locfileid: "33036845"
   
 ##  <a name="bkmk_parameter_description"></a> 參數描述  
   
-|參數|描述|必要項|  
+|參數|Description|必要項|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|來源報表伺服器的 URL|是|  
 |**-u** Domain\password **–p** password|來源伺服器的認證。|(選擇性) 如果遺失則使用預設認證|  

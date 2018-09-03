@@ -1,28 +1,22 @@
 ---
 title: rrRenderingError - Reporting Services 錯誤 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 099e0669f8c68dea2cde8b59098917bd0dc3ef60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc1b00ccffec31918e663e765165e5618c87ff46
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030845"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267806"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤
     

@@ -1,14 +1,10 @@
 ---
 title: DeleteEncryptedInformation 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DeleteEncryptedInformation method
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b65d255f4c142d51ee16fff0210a87222ebf163f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df820bbdb7e1dd485fa8f0d5542d0a810a281f2f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031295"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267819"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>ConfigurationSetting 方法 - DeleteEncryptedInformation
   從報表伺服器資料庫中刪除加密的資訊。  
