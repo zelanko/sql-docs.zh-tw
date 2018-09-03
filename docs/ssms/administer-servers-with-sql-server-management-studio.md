@@ -18,31 +18,31 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0cabc48571c7b3656086d918b649bb5bb305e23
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 288a7070614838b5af462bd22788f72d3034f99b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985370"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775807"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>利用 SQL Server Management Studio 管理伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 是一個非常豐富的整合式管理用戶端，專為了符合 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 管理員的伺服器管理需求而設計。 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)]中可以使用 [物件總管] 來完成管理工作，其中可以讓您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 系列的任何伺服器，並以圖形方式瀏覽其內容。 伺服器可以是 [!INCLUDE[ssDE](../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] 或 Azure SQL Database 的執行個體。  
+[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一個非常豐富的整合式管理用戶端，專為了符合 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理員的伺服器管理需求而設計。 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中可以使用 [物件總管] 來完成管理工作，其中可以讓您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系列的任何伺服器，並以圖形方式瀏覽其內容。 伺服器可以是 [!INCLUDE[ssDE](../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或 Azure SQL Database 的執行個體。  
   
-[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 的工具元件包括已註冊的伺服器、物件總管、方案總管、範本總管、物件總管詳細資料頁面，以及文件視窗。 若要顯示工具，請在 [檢視] 功能表上按一下工具名稱。 若要顯示查詢編輯器工具，請在工具列上按一下 [新增查詢] 按鈕。  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的工具元件包括已註冊的伺服器、物件總管、方案總管、範本總管、物件總管詳細資料頁面，以及文件視窗。 若要顯示工具，請在 [檢視] 功能表上按一下工具名稱。 若要顯示查詢編輯器工具，請在工具列上按一下 [新增查詢] 按鈕。  
   
 > [!IMPORTANT]  
-> 依預設，不會加密 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 之間的網路傳輸。 除非您已建立加密連接，否則，請勿在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中使用機密資料 (包括密碼)。 如需詳細資訊，請參閱 [如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)。  
+> 依預設，不會加密 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之間的網路傳輸。 除非您已建立加密連接，否則，請勿在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中使用機密資料 (包括密碼)。 如需詳細資訊，請參閱 [如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)。  
   
-請利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 來執行下列動作：  
+請利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 來執行下列動作：  
   
 -   註冊伺服器。  
   
--   連接到 [!INCLUDE[ssDE](../includes/ssde_md.md)]、 [!INCLUDE[ssAS](../includes/ssas_md.md)]、 [!INCLUDE[ssRS](../includes/ssrs_md.md)]、  [!INCLUDE[ssIS](../includes/ssis_md.md)] 或 Azure SQL Database 的執行個體。  
+-   連線到 [!INCLUDE[ssDE](../includes/ssde_md.md)]、SSAS、[!INCLUDE[ssRS](../includes/ssrs.md)]、[!INCLUDE[ssIS](../includes/ssis_md.md)] 或 Azure SQL Database 的執行個體。  
   
 -   設定伺服器屬性。  
   
--   管理資料庫和 [!INCLUDE[ssAS](../includes/ssas_md.md)] 物件，如 Cube、維度和組件。  
+-   管理資料庫和 SSAS 物件，如 Cube、維度和組件。  
   
 -   建立物件，如資料庫、資料表、Cube、資料庫使用者和登入。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "38985370"
   
 -   管理全文檢索索引。  
   
-若要啟動和停止 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] Agent，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 組態管理員。  
+若要啟動和停止 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  

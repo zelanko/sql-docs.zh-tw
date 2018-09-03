@@ -15,12 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957721"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899498"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ Always Encrypted：
 組建編號：14.0.17254.0<br>
 發行日期：2018 年 5 月 9 日
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>新功能
@@ -174,7 +174,7 @@ SSMS 使用者設定：
 組建編號：14.0.17230.0<br>
 發行日期：2018 年 3 月 20 日
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>新功能
 
@@ -257,7 +257,7 @@ Database Mail：
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![下載](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 正式運作 | 組建編號：14.0.17224.0
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 ### <a name="whats-new"></a>新功能
 
@@ -322,7 +322,7 @@ SMO：
 ## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![下載](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 正式運作 | 組建編號：14.0.17213.0
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>新功能
@@ -418,7 +418,7 @@ XE 分析工具：
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![下載](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 正式運作 | 組建編號：14.0.17199.0
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
 
 ### <a name="enhancements"></a>功能增強
@@ -512,7 +512,7 @@ XE 分析工具：
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![下載](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 正式運作 | 組建編號：14.0.17177.0
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### <a name="enhancements"></a>功能增強
 
@@ -642,7 +642,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![下載](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 正式推出 |組建編號： 14.0.17119.0
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 ### <a name="enhancements"></a>功能增強
 
@@ -669,7 +669,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![下載](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
 正式運作 | 組建編號：14.0.17099.0
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
 
 ### <a name="enhancements"></a>功能增強 
 
@@ -836,7 +836,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![下載](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 正式運作 | 組建編號：13.0.16106.4
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 這個版本已修正下列問題：
 
@@ -879,7 +879,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 公開上市 |組建編號︰ 13.0.16000.28
 
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
 
 * 修正了當按一下名稱包含 ";:" 資料庫資料表時會發生當機的問題。
 * 修正了在 AS表格式資料庫之 [屬性] 視窗的 [模型] 頁面中執行變更時，會寫出原始定義的問題。 
@@ -905,7 +905,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![下載](../ssdt/media/download.png) [SSMS 16.4.1 (2016 年 9 月)](http://go.microsoft.com/fwlink/?LinkID=828615)
 正式運作 | 組建編號：13.0.15900.1
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
 
 *  修正了嘗試變更/修改預存程序失敗的問題︰  
 [Microsoft Connect 項目 #3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -970,7 +970,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 正式推出 | 版本號碼：13.0.15700.28
 
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
 
 * SSMS 的每月版本現在將以數值標註。
 
@@ -1027,7 +1027,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![下載](../ssdt/media/download.png) [SSMS 2016 年 7 月 Hotfix 更新](http://go.microsoft.com/fwlink/?LinkID=822301)
 正式推出 | 版本號碼：13.0.15600.2
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
 
 * 修正 SSMS 中的錯誤，以啟用遺失的右鍵功能表項目。  
 *連結的客戶 Bug 要求：*  
@@ -1097,7 +1097,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![下載](../ssdt/media/download.png) [SSMS 2016 年 6 月](http://go.microsoft.com/fwlink/?LinkID=799832)
 正式推出 | 版本號碼：13.0.15000.23
 
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * SSMS 從 2016 年 6 月版本後將為正式推出。
 

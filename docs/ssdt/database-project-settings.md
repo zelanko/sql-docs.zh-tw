@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087190"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774043"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
 您可以使用資料庫專案設定，控制資料庫、偵錯與組建組態的各個部分。 這些設定可分類如下：  
@@ -108,7 +108,7 @@ ms.locfileid: "39087190"
 擴充的 Transact-SQL 驗證是資料庫專案系統中的一項功能，可讓開發人員在建置階段將其資料庫專案提交至 Transact-SQL Compiler Service，以便根據 SQL Server 引擎的剖析器和解譯器驗證程式碼。  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Transact-SQL 編譯器服務是以 Microsoft SQL Server 2012 資料庫引擎為基礎的元件。 這項服務可以驗證 DDL 陳述式的語法和語意，而且其精確度與 Microsoft SQL Server 2012 資料庫引擎相同。 這也就表示編譯器服務不支援 Microsoft SQL Server 2012 中已淘汰的語法或功能。 如需已被取代之功能的詳細資訊，請參閱 [SQL Server 2012 中已停止的 Database Engine 功能](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx)。  
+Transact-SQL 編譯器服務是以 Microsoft SQL Server 2012 資料庫引擎為基礎的元件。 這項服務可以驗證 DDL 陳述式的語法和語意，而且其精確度與 Microsoft SQL Server 2012 資料庫引擎相同。 這也就表示編譯器服務不支援 Microsoft SQL Server 2012 中已淘汰的語法或功能。 如需已取代功能的詳細資訊，請參閱 [SQL Server 2012 中已中止的資料庫引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。  
   
 為了驗證資料庫專案，Compiler Service 會建立部分自主資料庫並且根據該資料庫模擬 DDL 陳述式的執行。 如需詳細資訊，請參閱 [部分自主資料庫](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx)。  
   

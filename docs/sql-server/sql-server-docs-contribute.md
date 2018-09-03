@@ -1,6 +1,6 @@
 ---
 title: 如何參與編輯 SQL Server 文件集 | Microsoft Docs
-ms.date: 04/12/2018
+ms.date: 08/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b35b9edbfb257d327f310d526729b7a60215e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926529"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42773920"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -33,36 +33,14 @@ ms.locfileid: "36926529"
 
 ## <a id="githubui"></a> 在瀏覽器中編輯
 
-下列步驟提供在瀏覽器中對 SQL Server 內容進行簡單編輯的概觀。 完整程序記載於[適用於次要或不頻繁變更的 GitHub 參與工作流程](https://docs.microsoft.com/contribute/light-workflow)一文中。
+您可以在瀏覽器中對 SQL Server 內容進行簡單的編輯，再提交到 Microsoft。 [Microsoft Docs 參與者指南概觀](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)一文記載了完整程序。 下列影片示範在瀏覽器中提交變更的端對端程序：
 
-1. 每篇文章 (包含本篇) 的右側都有一個 [編輯] 按鈕。 找到您想要變更的文章，然後按一下 [編輯] 按鈕即可開始。
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
 
-   ![SQL 文件的 [編輯] 按鈕](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
-
-   docs.microsoft.com 上的所有內容都是在各種 GitHub 存放庫中進行管理。 當您按一下 [編輯] 按鈕時，即會前往 **sql-docs** 存放庫中的文章。 或者，如果您要編輯 Azure 文件中的 SQL 文章，即會前往 **azure-docs** 存放庫。 
-
-1. 接下來，按一下 GitHub 文章右上角的鉛筆圖示。
-
-   ![[編輯] 按鈕](./media/sql-server-docs-contribute/edit-button.png)
-
-   > [!NOTE]
-   > 您必須登入 GitHub 才能編輯文章。 如果您沒有 GitHub 帳戶，請參閱 [GitHub 帳戶設定](https://docs.microsoft.com/contribute/get-started-setup-github)。 建立新帳戶後，您也必須向 GitHub 驗證電子郵件地址才可進行編輯。
-
-1. 在瀏覽器中編輯文章。 所有文章都是以 Markdown 來撰寫。 如果您需要使用 Markdown 的說明，可以檢閱 [Markdown 基本概念](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)。 您也可以觀察並了解已發佈的文章如何呈現既有的 Markdown。
-
-1. 向下捲動至 [編輯] 視窗底部，為您的變更輸入標題，然後按一下 [Propose file change] (提議檔案變更) 按鈕。
-
-   ![建議提取要求](./media/sql-server-docs-contribute/propose-file-change.png)
-
-1. 在下一個頁面上，按一下 [Create pull request] (建立提取要求)。
-
-   ![建立提取要求](./media/sql-server-docs-contribute/create-pull-request.png)
-
-1. 輸入提取要求的標題和描述。 然後再按一下 [Create pull request] (建立提取要求)。
-
-   ![建立提取要求](./media/sql-server-docs-contribute/create-pull-request2.png)
-
-此時，系統應該會引導您完成提取要求註解程序的其餘部分。 您可以在[參與者指南](https://docs.microsoft.com/contribute/light-workflow)中找到完整程序和其他詳細資料。
+> [!TIP]
+> 請注意，[編輯] 按鈕的位置與影片中顯示的位置會稍有不同，但程序相同。
+>
+> ![[編輯] 按鈕](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
 ## <a id="tools"></a> 使用工具以在本機編輯
 
@@ -73,7 +51,7 @@ ms.locfileid: "36926529"
 - [建立 GitHub 帳戶](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [安裝內容撰寫工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [本機設定 Git 存放庫](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [使用工具來參與編輯](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
+- [使用工具來參與編輯](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
 如果您送出對文件集的重大變更提取要求時，就會收到一個 GitHub 註解，要求您提交線上的**貢獻授權合約 (CLA)**。 您必須填妥線上表單，系統才會接受您的提取要求。
 
@@ -92,7 +70,7 @@ ms.locfileid: "36926529"
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) 存放區會使用數個標準的資料夾來組織內容。
 
-| 資料夾 | 描述 |
+| 資料夾 | Description |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 包含所有已發佈的 SQL Server 內容。 子資料夾會以邏輯方式組織內容的不同區域。 |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | 包含 include 檔案。 這些檔案是可能在一或多個其他主題中包含的內容區塊。 |
@@ -115,10 +93,11 @@ ms.locfileid: "36926529"
 
 若要為文章尋找正確的 applies-to include，請使用下列祕訣：
 
+- 如需常用 include 檔案的清單，請參閱 [SQL Server 版本和 applies-to include 檔案](applies-to-includes.md)。
 - 查看其他涵蓋相同功能或相關工作的文章。 如果您要編輯這篇文章，可以複製 Markdown 以取得 applies-to include 連結 (您可以取消編輯而不送出)。
 - 搜尋 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目錄，找出包含 "applies-to" 文字的檔案。 您可以使用 GitHub 中的 [尋找] 按鈕快速篩選。 按一下檔案以查看呈現的方式。
 - 請注意命名慣例。 如果名稱中有 x，它們通常是預留位置，表示不支援服務。 比方說，**appliesto-xx-xxxx-asdw-xxx-md.md** 表示只支援 Azure SQL 資料倉儲，因為只拼寫出 **asdw**，而其他欄位均為 x。
-- 某些 include 會指定版本號碼，例如 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**。 當您知道某項功能是由特定版本的 SQL Server 導入時，請只使用該版本的 include。 
+- 某些 include 會指定版本號碼，例如 **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**。 當您知道某項功能是由特定版本的 SQL Server 導入時，請只使用該版本的 include。
 
 ## <a name="contributor-resources"></a>參與者資源
 

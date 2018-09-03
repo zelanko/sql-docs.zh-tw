@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 36acedbe323b1b28c4b8db11d3241e77b8a8f322
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452522"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899758"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -71,10 +71,10 @@ SSMS 17.x 安裝不會升級或取代 SSMS 16.x 版或更早版本。 SSMS 17.x 
 此版 SSMS 提供下列語言版本：
 
 SQL Server Management Studio 17.8.1：<br>
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 SQL Server Management Studio 17.8.1 升級套件 (從 17.x 升級至 17.8.1)：<br>
-[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模組現在透過 PowerShell 資源庫個別安裝。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
