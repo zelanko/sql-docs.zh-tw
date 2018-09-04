@@ -1,13 +1,9 @@
 ---
 title: 升級和移轉 Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
@@ -15,16 +11,14 @@ helpviewer_keywords:
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b8d166d52b25b7c36f26f8d51556d118dbaf7480
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f9993dad8b8a0325720269fe83d3a5d83b81762f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38003000"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266804"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 

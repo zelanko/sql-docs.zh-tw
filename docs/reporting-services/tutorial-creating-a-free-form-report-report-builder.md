@@ -1,28 +1,22 @@
 ---
 title: 教學課程：建立自由格式報表 (報表產生器) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 7f1f50c211910400ec99b2dc309a5f42dd3d3081
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfd009008af99f853079c26e566a3b7194b4e304
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037185"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265920"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
 在本教學課程中，您會建立分頁報表，作為電子報。 每個頁面會顯示靜態文字、摘要的視覺效果，以及詳細的範例銷售資料。

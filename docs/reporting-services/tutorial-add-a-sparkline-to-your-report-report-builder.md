@@ -1,28 +1,22 @@
 ---
 title: 教學課程：將走勢圖新增至報表 (報表產生器) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 7a56433d349188cf60807814825c7eb0a4f5a4ef
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40409465"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266596"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
 

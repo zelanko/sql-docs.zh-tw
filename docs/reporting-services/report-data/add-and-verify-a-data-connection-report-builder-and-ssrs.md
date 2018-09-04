@@ -1,26 +1,20 @@
 ---
 title: 新增及驗證資料連接 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 314ee1763e9b1130e8f0bb78c04af17c3e251d71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77e0590ef3d066060a9fc7951e19d2ccd576f184
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019245"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264557"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>加入及驗證資料連接 (報表產生器及 SSRS)
   在報表產生器中，您可以從報表伺服器加入共用資料來源，或是為您的報表建立內嵌資料來源。 在報表設計師中，您可以建立共用資料來源或內嵌資料來源，並將它部署至報表伺服器。  

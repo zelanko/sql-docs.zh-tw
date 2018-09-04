@@ -1,14 +1,10 @@
 ---
 title: 將報表發行至報表伺服器 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
@@ -24,16 +20,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9a69b67fcbc9d047526ff0c30883731543a826a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95427bd5ccb158ede439cb32aa7ebfcb24c61bf9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026665"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264435"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
   在您設計和測試完報表或報表集之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能，將報表發行至報表伺服器。 您可以發行個別報表，或可包含多個報表和資料來源的報表伺服器專案。 發行報表伺服器專案是發行多份報表最簡單的方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用「部署」一詞，而不是「發行」一詞。 這兩個詞可以互換。  

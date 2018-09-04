@@ -1,28 +1,23 @@
 ---
 title: 鍵盤快速鍵 (報表產生器) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4e2fa3d574930cbf03ee9fbf1664431668b808c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264537"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)
   當您在報表產生器中建立及編輯分頁的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表時，可以存取 Windows 環境提供之所有用於導覽的快速鍵。 您可以從許多標準鍵盤對應配置中選取。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>報表產生器中的鍵盤快速鍵  
   
-|描述|按鍵組合|  
+|Description|按鍵組合|  
 |-----------------|---------------------|  
 |開啟報表產生器的功能表。|ALT+F|  
 |建立報表。|CTRL+N|  

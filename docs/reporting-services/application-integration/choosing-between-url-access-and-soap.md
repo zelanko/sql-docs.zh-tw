@@ -1,25 +1,20 @@
 ---
 title: 在 Reporting Services 的 URL 存取與 SOAP 之間選擇 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: markingmyname
 ms.author: maghan
-manager: kfile
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b1515301d1efe45cb27da2125188a72ad2dad7ad
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 22664247911d791c74f4b280aa264272d345851a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400751"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265070"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 的 URL 存取與 SOAP 之間選擇
 

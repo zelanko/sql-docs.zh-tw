@@ -1,15 +1,11 @@
 ---
 title: 技術參考 (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
 - technical reference [Reporting Services]
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9f8c4492d47e86d8cad526f54ec1b927befa5424
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96011e34d52439f845460c528fb6e4d438ebf395
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029418"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265930"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
 

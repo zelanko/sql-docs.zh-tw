@@ -23,16 +23,16 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 681a9fddbeba2453d306b3907b0f8b8478339b3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6924a66746699e429ef2cd45d1692ced5c9bf44d
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077664"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118535"
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,8 +102,7 @@ ms.locfileid: "43077664"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- 
-  **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
+ **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
   
 ### <a name="server-roles"></a>[伺服器角色]  
  **[伺服器角色]** 頁面列出所有可指派給新登入的可能角色。 下列是可以使用的選項：  

@@ -1,14 +1,10 @@
 ---
 title: 連線至 Management Studio 中的報表伺服器 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connecttors.connectionproperties.f1
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], registering
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 96d62699a9745543973976c68bcf212f041deead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40ee30be70b9f5e180a4d437d95a1eeb0bf9f576
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033725"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265606"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>連接至 Management Studio 中的報表伺服器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供物件總管，可讓您連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何伺服器並以圖形方式瀏覽其內容。 若為 Reporting Services，您可以使用 [物件總管] 來進行下列作業：  
@@ -110,7 +104,7 @@ ms.locfileid: "33033725"
   
  當您在 [連線到伺服器] 對話方塊中，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指定為 [伺服器類型] 時，就可以指定報表伺服器名稱或 Web 服務的端點。  
   
-|連接至|工作|Permissions|  
+|連接至|工作|[權限]|  
 |----------------|-----------|-----------------|  
 |原生模式報表伺服器 (當做預設或具名執行個體連接)：<br /><br /> \<伺服器名稱>\<_執行個體><br /><br /> 報表伺服器的連接是透過報表伺服器 WMI 提供者建立的。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
 |原生模式報表伺服器 (透過報表伺服器 Web 服務的端點，當做預設或具名執行個體連接)：<br /><br /> `http://<servername>/reportserver`<br /><br /> 指定報表伺服器的 URL 會提供連接至報表伺服器的替代方式。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  

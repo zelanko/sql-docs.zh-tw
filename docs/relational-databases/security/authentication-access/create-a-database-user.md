@@ -24,16 +24,16 @@ helpviewer_keywords:
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72d889e8be30c90a61627379d53ca41156fe0a27
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 90b53c9b8a2b4e4976c526762cdc67dbf2752263
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096986"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118485"
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -119,8 +119,7 @@ ms.locfileid: "43096986"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- 
-  **[資料庫使用者 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[擁有的結構描述]**、 **[成員資格]**、 **[安全性實體]** 和 **[擴充屬性]**。  
+ **[資料庫使用者 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[擁有的結構描述]**、 **[成員資格]**、 **[安全性實體]** 和 **[擴充屬性]**。  
   
 -   **[擁有的結構描述]** 頁面列出新資料庫使用者可擁有的所有可能結構描述。 若要在資料庫使用者中加入或移除結構描述，請在 **[這個使用者擁有的結構描述]** 底下選取或清除結構描述旁邊的核取方塊。  
   

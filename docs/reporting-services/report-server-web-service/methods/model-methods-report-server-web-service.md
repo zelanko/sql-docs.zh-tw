@@ -1,27 +1,22 @@
 ---
 title: 模型方法 - 報表伺服器 Web 服務 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: bd5f023ba4dd5424e9e5ca270cc24161537d0465
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05e7c6ba42cc4d00b27193bbdce58740d41d41a9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264620"
 ---
 # <a name="model-methods---report-server-web-service"></a>模型方法 - 報表伺服器 Web 服務
   您可以使用這些方法來管理模型。  

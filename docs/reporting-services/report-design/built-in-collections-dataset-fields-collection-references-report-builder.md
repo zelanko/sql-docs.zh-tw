@@ -1,26 +1,20 @@
 ---
 title: 資料集 Fields 集合參考 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 5c3c5f21887c6f2307f78df008340700eb5b722f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcc14000dac439a1f559133883789ca27f3c2b40
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021035"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264799"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>內建集合 - 資料集 Fields 集合參考 (報表產生器)
   報表中的每一個資料集都包含一個 Fields 集合。 Fields 集合是資料集查詢所指定的欄位加上您建立之任何其他導出欄位的集合。 當您建立資料集之後，欄位集合會出現在 **[報表資料]** 窗格中。  

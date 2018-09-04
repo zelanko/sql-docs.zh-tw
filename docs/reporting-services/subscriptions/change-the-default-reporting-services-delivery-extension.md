@@ -1,28 +1,22 @@
 ---
 title: 變更預設 Reporting Services 傳遞延伸模組 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 46ed69acae00a7c75d8d3921ee9e221b3c564bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4132b043a6a67cadb77a2546242c67d48cf06ca
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032115"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265547"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>變更預設 Reporting Services 傳遞延伸模組
   您可以修改 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態設定，以變更訂閱定義頁面的 **[傳遞者]** 清單中所顯示的預設傳遞延伸模組。 例如，您可以修改組態，使得在使用者建立新的訂閱時依預設會選取檔案共用傳遞，而不是電子郵件傳遞。 您也可以變更傳遞延伸模組在使用者介面中列出的順序。  
@@ -121,6 +115,6 @@ ms.locfileid: "33032115"
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 中的檔案共用傳遞](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
- [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [為電子郵件傳遞設定報表伺服器 (SSRS 設定管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

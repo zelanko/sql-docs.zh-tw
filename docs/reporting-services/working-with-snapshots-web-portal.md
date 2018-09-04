@@ -1,26 +1,20 @@
 ---
 title: 使用快照集 (Web 入口網站) | Microsoft Docs
-ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 33fb57b26b883d7515c6c0bfc8640ed67be3994d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9cb58d6bef18bea2d2de4effbad8ce303bd4e25f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38027302"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267010"
 ---
 # <a name="working-with-snapshots-web-portal"></a>使用快照集 (入口網站)
 
