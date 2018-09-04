@@ -1,26 +1,20 @@
 ---
 title: SQL Server Reporting Services 中的樹狀圖與放射環狀圖 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/31/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: fb3ab2f509632547119bd02fc0a3052f512b87f0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40415795"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277773"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

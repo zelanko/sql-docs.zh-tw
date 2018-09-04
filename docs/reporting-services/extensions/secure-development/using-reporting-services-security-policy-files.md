@@ -1,14 +1,10 @@
 ---
 title: 使用 Reporting Services 安全性原則檔 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e606f248ba8343ab5bddae2b0968b80d0d7e4cb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0746a087870157e0336f20c5114387e02d48de48
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016735"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278509"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全性原則檔
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會將元件安全性原則資訊儲存在安裝過程中複製到檔案系統的三個組態檔內。 這些組態檔可能會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中程式碼組件之內部使用和使用者定義安全性原則的組合。 這三個組態檔會對應至 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三個安全性實體元件：報表伺服器和 Windows 服務、報表管理員 Web 應用程式，以及報表設計師預覽視窗。  
@@ -43,7 +37,7 @@ ms.locfileid: "33016735"
 ## <a name="policy-files-in-reporting-services"></a>Reporting Services 中的原則檔  
  下表將列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的原則組態檔、其位置 (假設是預設安裝)，以及其個別功能。  
   
-|[檔案名稱]|位置 (預設安裝)|描述|  
+|[檔案名稱]|位置 (預設安裝)|Description|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|報表伺服器原則組態檔。 一旦報表部署至報表伺服器時，這些安全性原則主要會影響報表運算式和自訂組件。 這個原則檔也會影響部署至報表伺服器的自訂資料、傳遞、轉譯和安全性延伸模組。|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|報表管理員原則組態檔。 這些安全性原則會影響擴充報表管理員的所有組件。例如，自訂傳遞的訂閱使用者介面延伸模組。|  

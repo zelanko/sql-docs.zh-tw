@@ -1,14 +1,10 @@
 ---
 title: 報表伺服器 Web 服務方法 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +16,14 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6f0730ea9ab0ea2a79e6716922739203568977d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96f6e5773d5b85f3af5a9217c56eefc424112ea5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026645"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267499"
 ---
 # <a name="report-server-web-service-methods"></a>報表伺服器 Web 服務方法
   報表伺服器 Web 服務包含數個以元件功能為基礎的方法類別。 這些方法是透過多個 Web 服務端點 (三個用於報表管理，一個用於報表執行) 而提供，這些端點會公開為 <xref:ReportService2010.ReportingService2010> 和 <xref:ReportExecution2005.ReportExecutionService> 類別的成員。 這些類別可透過 wsdl.exe 之類的 Proxy 類別工具產生，此工具包含在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 中。 如需報表伺服器 Web 服務和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的詳細資訊，請參閱[使用 Web 服務和 .NET Framework 建置應用程式](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
@@ -37,7 +31,7 @@ ms.locfileid: "33026645"
 ## <a name="endpoints-and-methods"></a>端點和方法  
  下表將列出報表伺服器 Web 服務的端點，以及 <xref:ReportService2010.ReportingService2010> 端點所提供之方法的類別目錄。 如需其他端點所提供之方法的詳細資訊，請參閱[技術參考 &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)。  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[報表伺服器 Web 服務端點](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|描述報表伺服器 Web 服務的管理和執行端點。|  
 |[報表伺服器命名空間管理方法](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|描述您可以用於管理報表伺服器資料庫的方法。 也就是說，您可以管理資料夾和資源並設定項目屬性。|  

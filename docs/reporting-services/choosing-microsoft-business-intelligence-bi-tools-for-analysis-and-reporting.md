@@ -1,29 +1,23 @@
 ---
 title: 選擇用於分析及報告的 Microsoft 商業智慧 (BI) 工具 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b0268948fe26b5f1f008cd2a3fbc2c5e83bc6c03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a2d2b1a8956f4ccdacb26ff735eb2e5dcf2a702
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016075"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278645"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>選擇用於分析及報告的 Microsoft 商業智慧 (BI) 工具
-選擇適當的商業智慧工具可能勢在必行。 了解不同的 Microsoft 產品，並找出最適合您需求的一種。
+選擇適當的商業智慧工具可能勢在必行。 了解不同的 Microsoft 供應項目，並找出最適合您需求的一種。
 
 下表會將資料分析與報告的工作負載對應到最適合這些工作負載的 Microsoft BI 工具。 如需有關產品的詳細資訊，請按一下表格中的產品連結。  
   
@@ -31,7 +25,7 @@ ms.locfileid: "33016075"
   
 |工作負載|使用者|||BI 工具|||  
 |---------------|----------|-|-|--------------|-|-|  
-|||[匯出]|**SharePoint**|**SharePoint Online**|**Power BI**|**[SQL Server]**|  
+|||[匯出]|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**自助 BI**|分析師/使用者||||||  
 |輕鬆地探索及存取公用和公司資料||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure 資料目錄](https://azure.microsoft.com/services/data-catalog/)||  
 |建立功能強大的資料模型||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  

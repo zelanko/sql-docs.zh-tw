@@ -1,26 +1,20 @@
 ---
 title: CountRows 函式 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: dd228fc50c66e8d742dcf151de4fee6f85ced10c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfc17d7989ea3f65f7800a83d809c08042bd8bfc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024375"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279910"
 ---
 # <a name="report-builder-functions---countrows-function"></a>報表產生器函式 - CountRows 函式
   傳回指定之範圍中的資料列數目，包括具有 Null 值的資料列。  

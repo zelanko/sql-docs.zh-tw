@@ -1,29 +1,23 @@
 ---
 title: 以 SharePoint 模式安裝 Reporting Services 2016 | Microsoft Docs
-ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - installing Reporting Services, SharePoint integrated mode
 - installation options [Reporting Services]
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 046cb064f7cb61bba17d7cff2c3cdd27e46e7b15
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ba362c52e772350c31b5e7aa26a66fd0032dc08f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983240"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277762"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>以 SharePoint 模式安裝 Reporting Services 2016
 

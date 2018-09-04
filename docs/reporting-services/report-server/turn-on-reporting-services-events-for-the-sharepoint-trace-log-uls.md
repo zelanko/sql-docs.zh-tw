@@ -1,26 +1,20 @@
 ---
 title: 開啟 SharePoint 追蹤記錄檔的 Reporting Services 事件 (ULS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 99fedd6b1dd298f545b578342b79ca91aafc0eef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 973ac09ae8630b5118ec1b5221ccda8d3ef78acc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028455"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275747"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -45,7 +39,7 @@ ms.locfileid: "33028455"
 ##  <a name="bkmk_general"></a> 一般 ULS 記錄建議  
  下表將針對監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境，列出建議的事件類別目錄和層級。 記錄事件時，每個項目都會包含記錄事件的時間、處理序名稱，以及執行緒識別碼。  
   
-|類別目錄|層級|描述|  
+|類別目錄|層級|Description|  
 |--------------|-----------|-----------------|  
 |[資料庫]|「詳細資訊」|記錄涉及資料庫存取權的事件。|  
 |一般|「詳細資訊」|記錄涉及下列項目之存取權的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 網頁<br /><br /> 報表檢視器 HTTP 處理常式<br /><br /> 報表存取 (.rdl 檔)<br /><br /> 資料來源 (.rsds 檔)<br /><br /> SharePoint 網站的 URL (.smdl 檔)|  

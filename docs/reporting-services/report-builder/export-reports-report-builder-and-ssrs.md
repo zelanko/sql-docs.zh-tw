@@ -1,28 +1,22 @@
 ---
 title: 匯出報表 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035452208fbd27c3669239f9177136d71051d854
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022405"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268127"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 
@@ -119,7 +113,7 @@ ms.locfileid: "33022405"
 ##  <a name="ExportFormats"></a> 可在檢視報表時匯出的格式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供轉譯延伸模組，可將報表轉譯成各種不同格式。 您應該針對所選的檔案格式進行報表設計最佳化。  下表列出您可以從使用者介面匯出的格式。  有一些額外格式可以與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱搭配使用，或者，從 URL 存取匯出時也會有一些額外格式。  請參閱本主題中的 [匯出報表的其他方式](#OtherWaysExportingReports)一節。  
   
-|[格式]|轉譯延伸模組類型|描述|  
+|[格式]|轉譯延伸模組類型|Description|  
 |------------|------------------------------|-----------------|  
 |Acrobat (PDF) 檔案|手動分頁|PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 與支援 PDF 1.3 之其他協力廠商 PDF 檢視器中開啟的檔案。 雖然 PDF 1.3 與 Adobe Acrobat 4.0 和更新版本相容，但是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只支援 Adobe Acrobat 6 或更新版本。 轉譯延伸模組不需要 Adobe 軟體就能轉譯報表。 不過，必須使用 PDF 檢視器 (例如 Adobe Acrobat) 才能檢視或列印 PDF 格式的報表。<br /><br /> 如需詳細資訊，請參閱[匯出至 PDF 檔案](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)。|  
 |Atom|data|Atom 轉譯延伸模組會從報表產生與 Atom 相符的資料摘要。 資料摘要可以透過可使用與 Atom 相符之資料摘要的應用程式 (例如 Power Pivot 或 Power BI) 讀取和交換。<br /><br /> 輸出結果為 Atom 服務文件，其中會列出可從報表取得的資料摘要。 針對報表中的每一個資料區，至少會建立一個資料摘要。 根據資料區的類型以及該資料區顯示的資料而定，可能會產生多個資料摘要。<br /><br /> 如需詳細資訊，請參閱[從多個報表產生資料摘要](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。|  

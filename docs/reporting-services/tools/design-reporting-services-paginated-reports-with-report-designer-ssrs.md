@@ -1,28 +1,22 @@
 ---
 title: 設計使用報表設計師 (SSRS) 報表 |Microsoft 文件
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 09311458bc7815a7a63d58ad19c8d8b0a3845da4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1607193731e20f4111d38da44ee21375dfff09e0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037035"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282790"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
@@ -175,10 +169,10 @@ ms.locfileid: "33037035"
   
  下表列出這些錯誤層級。  
   
-|錯誤層級|描述|  
+|錯誤層級|Description|  
 |-----------------|-----------------|  
 |0|最嚴重而且無法避免的建立問題，這些問題會導致無法預覽和部署報表。|  
-|@shouldalert|嚴重的建立問題，這些問題會徹底變更報表配置。|  
+|1|嚴重的建立問題，這些問題會徹底變更報表配置。|  
 |2|較不嚴重的建立問題，這些問題會大幅變更報表配置。|  
 |3|輕微的建立問題，這些問題會以可能不會注意到的次要方式變更報表配置。|  
 |4|僅用於發行警告。|  

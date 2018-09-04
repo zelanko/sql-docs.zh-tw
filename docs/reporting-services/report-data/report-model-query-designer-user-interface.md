@@ -1,14 +1,10 @@
 ---
 title: 報表模型查詢設計工具使用者介面 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10015"
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 19e623c9f36d9128c0143695b9d3d1aa427bf1e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dae0c4af2629bfe29766f2d55b7e635c6cf3f3fe
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021285"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276237"
 ---
 # <a name="report-model-query-designer-user-interface"></a>報表模型查詢設計工具使用者介面
   報表設計師提供了兩個查詢設計工具，可協助您指定想要將「報表伺服器模型」資料來源中的哪些資料用於報表中。 圖形化查詢設計工具可用來瀏覽和選擇模型實體與實體欄位。 使用以文字為基礎的查詢設計工具可直接處理 XML 格式的語意模型定義語言 (SMDL) 規格。  
@@ -57,7 +51,7 @@ ms.locfileid: "33021285"
 ### <a name="graphical-query-designer-toolbar"></a>圖形化查詢設計工具工具列  
  設計查詢時也可以使用工具列按鈕。 下表會列出工具列上的按鈕及其用途。  
   
-|按鈕|描述|  
+|按鈕|Description|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 「報表伺服器」模型資料來源的查詢是 XML 格式的語意模型查詢語言 (SMQL) 規格。|  
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
@@ -85,7 +79,7 @@ ms.locfileid: "33021285"
 ### <a name="text-based-query-designer-toolbar"></a>以文字為基礎的查詢設計工具工具列  
  設計查詢時也可以使用工具列按鈕。 下表會列出工具列上的按鈕及其用途。  
   
-|按鈕|描述|  
+|按鈕|Description|  
 |------------|-----------------|  
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。|  
 |**匯入**|從現有的報表中匯入查詢。|  

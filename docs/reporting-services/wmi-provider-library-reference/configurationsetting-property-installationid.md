@@ -1,14 +1,10 @@
 ---
 title: InstallationID 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - InstallationID Property
@@ -20,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3afa9332e9691e5f391efa3fe0f2fc1599edb050
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 96c232284082907dc18ebbbdf91417af5cfccf1e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36925939"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279509"
 ---
 # <a name="configurationsetting-property---installationid"></a>ConfigurationSetting 屬性 - InstallationID
   這個屬性會傳回特定報表伺服器執行個體的唯一識別碼。  

@@ -1,28 +1,22 @@
 ---
 title: 項目層級工作 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: bb15ac339ab00d76adb8cbc7a702eaccb50d380c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6beb756a0e1fd49531a06883feab11794d8108f9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033265"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272701"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>工作和權限 - 項目層級工作
   項目層級工作是與報表、資料夾、報表模型、資源或共用資料來源關聯的權限集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也包括套用至整個報表伺服器網站的系統層級工作。 如需詳細資訊，請參閱 [系統層級工作](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)。 如需一般工作和權限的詳細資訊，請參閱 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。  
@@ -35,7 +29,7 @@ ms.locfileid: "33033265"
   
  共用資料集使用與報表相同的權限集合。 報表組件使用與資源相同的權限集合。  
   
-|工作|適用於項目|Permissions|  
+|工作|適用於項目|[權限]|  
 |----------|---------------------|-----------------|  
 |取用報表|報表|讀取內容<br /><br /> 讀取報表定義<br /><br /> 讀取屬性|  
 |取用報表|共用資料集|讀取內容<br /><br /> 讀取報表定義<br /><br /> 讀取屬性|  

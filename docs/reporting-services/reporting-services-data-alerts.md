@@ -1,26 +1,20 @@
 ---
 title: Reporting Services 資料警示 | Microsoft Docs
-ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: cd9099b3f814fd65ac0c5d54e187fcfbc9cffb86
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4a6661587d73fe0f7d04feada71331e9288f110c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175116"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268600"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
 

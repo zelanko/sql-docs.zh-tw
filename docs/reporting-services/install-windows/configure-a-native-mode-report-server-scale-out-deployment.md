@@ -1,29 +1,23 @@
 ---
 title: 設定原生模式報表伺服器向外延展部署 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 344c748b915ff8db4ce8a58267ab5e343a03c4f5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8d40d80f17277c018ba0bbd6bc82be1dcaf94c3b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970220"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275503"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>設定原生模式報表伺服器向外延展部署
 

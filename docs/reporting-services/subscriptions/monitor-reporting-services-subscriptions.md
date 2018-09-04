@@ -1,14 +1,10 @@
 ---
 title: 監視 Reporting Services 訂閱 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1b81bf16cc4f9352da7b0a4c37cac91dd73f5eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8f95bd3da2aefb0fc98388231641d94b3442311
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035735"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282630"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -50,7 +44,7 @@ ms.locfileid: "33035735"
   
  下表描述 [狀態]  欄的可能值。  
   
-|[狀態]|描述|  
+|[狀態]|Description|  
 |------------|-----------------|  
 |新增訂閱|出現在第一次建立訂閱時。|  
 |非使用中|出現在無法處理訂閱時。 如需詳細資訊，請參閱此主題稍後的＜管理非使用中訂閱＞。|  

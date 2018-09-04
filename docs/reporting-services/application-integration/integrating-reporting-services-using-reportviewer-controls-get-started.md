@@ -1,26 +1,20 @@
 ---
 title: 開始使用 ReportViewer 2016 控制項 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: application-integration
-ms.reviewer: ''
+ms.technology: application-integration
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1395b2351ebba9aa1d805b651640593942aaa9cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33225be23805250df8b59f6d71f0a98dfb917294
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016945"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268780"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>使用 ReportViewer 控制項整合 Reporting Services - 快速入門
 

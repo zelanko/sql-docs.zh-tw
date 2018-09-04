@@ -1,28 +1,22 @@
 ---
 title: 報表伺服器 HTTP 記錄 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 55682735cb578c7f01f3c64caa057f5f4bcec6c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a528b55edcadfa54a0b1cad4095b384d89de5c6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028115"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272730"
 ---
 # <a name="report-server-http-log"></a>報表伺服器 HTTP 記錄
   報表伺服器 HTTP 記錄檔會保留報表伺服器所處理之每個 HTTP 要求與回應的記錄。 由於要求溢位和逾時錯誤不會送達報表伺服器，因此它們不會記錄在記錄檔中。  
@@ -61,7 +55,7 @@ ms.locfileid: "33028115"
 ## <a name="log-file-fields"></a>記錄檔欄位  
  下表將描述記錄中提供的欄位。 此欄位清單是可設定的。您可以透過 **HTTPTraceSwitches** 組態設定，指定要包含的欄位。 **預設** 資料行會指定此欄位是否自動包含在記錄檔中 (如果您沒有指定 **HTTPTraceSwitches**的話)。  
   
-|欄位|描述|預設|  
+|欄位|Description|預設|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|此為選擇性的值。 預設值為 ReportServerServiceHTTP_。 如果您想要使用不同的檔案命名慣例 (例如，當您要將記錄檔儲存至集中位置時，若要包含伺服器名稱)，可以指定不同的值。|是|  
 |HTTPTraceSwitches|此為選擇性的值。 如果您指定了此欄位，就可以使用逗號分隔的格式來設定記錄檔中使用的欄位。|否|  

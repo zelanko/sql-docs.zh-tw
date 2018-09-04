@@ -1,26 +1,20 @@
 ---
 title: 運算式中的內建集合 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e73b24b9680a18dcc19ab294aa6357310ac6cf36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93c0b81d1a267f447564605b86b34fadcfcb1c83
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021209"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278150"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>運算式中的內建集合 (報表產生器)
   在報表的運算式中，您可以包含下列內建集合的參考：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及類似報表名稱等全域資訊的內建欄位。 並不是所有的集合都會顯示在 **[運算式]** 對話方塊中。 只有報表伺服器上已發行的報表，才可以在執行階段使用 DataSets 和 DataSources 集合。 ReportItems 集合是報表區域中的文字方塊集合，例如在頁面或頁首中的文字方塊。  
@@ -33,7 +27,7 @@ ms.locfileid: "33021209"
 ##  <a name="Collections"></a> 了解內建集合  
  下表列出可在撰寫運算式時使用的內建集合。 每一列都包含該集合的區分大小寫程式設計名稱，以及您是否可以使用 [運算式] 對話方塊以互動的方式加入集合的參考、範例及描述 (包含初始化及提供集合值的時間)。  
   
-|內建集合|[運算式] 對話方塊中的類別目錄|範例|描述|  
+|內建集合|[運算式] 對話方塊中的類別目錄|範例|Description|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Globals**|內建欄位|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|代表對報表很有用的全域變數，例如：報表名稱或頁碼。 永遠可以使用。<br /><br /> 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |**使用者**|內建欄位|`=User.UserID`<br /><br /> - 或 -<br /><br /> `=User.Language`|代表有關執行報表之使用者的資料集合，例如，語言設定或使用者識別碼。 永遠可以使用。<br /><br /> 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  

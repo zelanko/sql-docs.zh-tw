@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409383"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348148"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "40409383"
 -   相關資源的限制，例如：硬體、人員、儲存備份媒體的空間、儲存媒體的實體安全性等等。  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>復原模式對備份和還原的影響  
- 備份和還原作業是在復原模式的內容中發生。 復原模式是控制交易記錄管理方式的資料庫屬性。 此外，資料庫的復原模式也將決定資料庫所支援的備份類型與還原實例。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 完整復原模式可以藉由在大量作業之前切換到大量記錄復原模式，補充其功能。 如需這些復原模式及其對交易記錄管理之影響的簡介，請參閱 [交易記錄 (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)  
+ 備份和還原作業是在復原模式的內容中發生。 復原模式是控制交易記錄管理方式的資料庫屬性。 此外，資料庫的復原模式也將決定資料庫所支援的備份類型與還原實例。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 完整復原模式可以藉由在大量作業之前切換到大量記錄復原模式，補充其功能。 如需這些復原模式及其對交易記錄管理之影響的簡介，請參閱 [交易記錄 (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
  資料庫復原模式的最佳選擇視您的商務需求而定。 若要避免管理交易記錄，並簡化備份和還原，請使用簡單復原模式。 若要將遺失工作的風險降到最低 (但會耗用管理負擔成本)，請使用完整復原模式。 如需復原模式對備份與還原之影響的資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   

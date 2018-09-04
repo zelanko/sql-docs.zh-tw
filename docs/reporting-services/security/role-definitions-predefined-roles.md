@@ -1,29 +1,24 @@
 ---
 title: 預先定義的角色 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282430"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定義 - 預先定義的角色
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  下表描述預先定義的角色、範圍，以及其使用方式。  
   
-|預先定義的角色|「範圍」|描述|  
+|預先定義的角色|「範圍」|Description|  
 |---------------------|-----------|-----------------|  
 |[內容管理員角色](#bkmk_content)|項目|包含所有項目層級的工作。 指派給這個角色的使用者擁有管理報表伺服器內容的完整權限，其中包括授與權限給其他使用者，以及定義儲存報表和其他項目之資料夾結構的能力。|  
 |[發行者角色](#bkmk_publisher)|項目|指派至這個角色的使用者可以將項目加入至報表伺服器，包括建立和管理包含這些項目之資料夾的能力。|  
@@ -61,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="content-manager-tasks"></a>內容管理員工作  
  下表列出 **內容管理員** 角色中包含的工作。  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |取用報表|讀取報表定義。|  
 |建立連結報表|建立以非連結報表為基礎的連結報表。|  
@@ -98,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="publisher-tasks"></a>發行者工作  
  下表列出 **發行者** 角色中包含的工作。  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |建立連結報表|建立連結報表並將它們發行至報表伺服器資料夾。|  
 |管理資料來源|建立並刪除共用資料來源項目、檢視和修改資料來源屬性及內容。|  
@@ -120,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="browser-tasks"></a>瀏覽者工作  
  下表描述 **瀏覽者** 角色定義中包含的工作。  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |檢視報表|執行報表與檢視報表屬性。|  
 |檢視資源|檢視資源與資源屬性。|  
@@ -139,7 +134,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="report-builder-tasks"></a>報表產生器工作  
  下表描述 **報表產生器** 角色定義中包含的工作。  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |取用報表|讀取報表定義。|  
 |檢視報表|執行報表與檢視報表屬性。|  
@@ -161,7 +156,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="my-reports-tasks"></a>[我的報表] 工作  
  下表列出 **[我的報表]** 角色中包含的工作。  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |建立連結報表|建立連結報表，以儲存在使用者之 [我的報表] 資料夾的報表為基礎。|  
 |管理資料夾|建立、檢視與刪除資料夾，以及檢視和修改資料夾屬性。|  
@@ -189,7 +184,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="system-administrator-tasks"></a>系統管理員工作  
  下表列出 **系統管理員** 角色中包含的工作。  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |執行報表定義|開始執行報表定義，但是不將定義發行到報表伺服器。|  
 |管理作業|檢視和取消執行中的作業。 如需詳細資訊，請參閱 [管理執行中的處理序](../../reporting-services/subscriptions/manage-a-running-process.md)。|  
@@ -205,7 +200,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="system-user-tasks"></a>系統使用者工作  
   
-|工作|描述|  
+|工作|Description|  
 |----------|-----------------|  
 |執行報表定義|執行報表，但不將它發行至報表伺服器。|  
 |檢視報表伺服器屬性|檢視套用至報表伺服器的屬性，例如應用程式名稱、是否啟用「我的報表」，以及報表記錄預設值。<br /><br /> 如果您從 **系統使用者** 角色移除此工作，將無法使用 [站台設定] 頁面。 另外，應用程式標題不會在每一個頁面的頂端顯示。 根據預設，報表管理員的標題是 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"。|  

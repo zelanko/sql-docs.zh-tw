@@ -1,14 +1,10 @@
 ---
 title: 報表伺服器服務追蹤記錄 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -16,15 +12,14 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: df621b94f8fecf5587cead165b88875b8d7dd4c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29efe95c5c8712b7c4423e3412252a8d66485936
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277125"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器追蹤記錄是 ASCII 文字檔，包含了報表伺服器服務作業的詳細資訊。  檔案中的資訊包括報表伺服器 Web 服務、Web 入口網站及背景處理所執行的作業。 追蹤記錄檔包括已記錄於其他記錄檔的重複資訊，加上別處所沒有的其他資訊。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊會很有用。 例如，疑難排解訂閱問題時。  
@@ -66,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
  下表提供有關各項設定的資訊。  
   
-|設定|描述|值|  
+|設定|Description|值|  
 |-------------|-----------------|------------|  
 |**RStrace**|指定用於錯誤和追蹤的命名空間。||  
 |**DefaultTraceSwitch**|指定報告到 ReportServerService 追蹤記錄的資訊層級。 每一個層級包括所有較低層級所報告的資訊。 不建議停用追蹤。|有效值為：<br /><br /> <br /><br /> 0= 停用追蹤。 ReportServerService 記錄檔是預設為啟用。 若要關閉，請將追蹤層級設定為 0。<br /><br /> 1= 例外狀況和重新啟動<br /><br /> 2= 例外、重新啟動和警告<br /><br /> 3= 例外、重新啟動、警告和狀態訊息 (預設值)<br /><br /> 4= 詳細資訊模式|  

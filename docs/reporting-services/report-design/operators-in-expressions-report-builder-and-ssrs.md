@@ -1,26 +1,20 @@
 ---
 title: 運算式中的運算子 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8c2d21c06a97b78bb774911078b6e9e5e00f1859
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a098567515f7f5884c787c288ea01b09bb34c06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027435"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266724"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>運算式中的運算子 (報表產生器及 SSRS)
   運算子是一個符號，代表套用至運算式中一個或多個詞彙的動作。 在運算式中支援下列的運算子類別：算術、比較、串連、邏輯或位元，以及位元移位。  
@@ -31,7 +25,7 @@ ms.locfileid: "33027435"
 ### <a name="arithmetic"></a>算術  
  算術運算子會針對運算式中的兩個數值詞彙執行數學運算。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
 |^|將一數值對另一數值做乘冪運算。|  
 |*|兩個數目相乘。|  
@@ -44,7 +38,7 @@ ms.locfileid: "33027435"
 ### <a name="comparison"></a>比較  
  比較運算子用來測試兩個運算式是否相同。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
 |<|小於。|  
 |\<=|小於或等於。|  
@@ -58,7 +52,7 @@ ms.locfileid: "33027435"
 ### <a name="string-concatenation"></a>字串串連  
  字串串連會在運算式中將第二個字串附加至第一個字串。 如果要進行其他字串作業，請使用內建的函數。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
 |&|串連兩個字串|  
 |+|串連兩個字串|  
@@ -66,7 +60,7 @@ ms.locfileid: "33027435"
 ### <a name="logical-and-bitwise"></a>邏輯和位元  
  邏輯和位元運算子會在運算式的兩個整數詞彙之間，執行邏輯操作。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
 |And|對兩個布林運算式執行邏輯結合，或對兩個數值運算式 (Numeric Expression) 執行位元結合。|  
 |Not|對布林運算式執行邏輯否定，或對數值運算式執行位元否定。|  
@@ -78,7 +72,7 @@ ms.locfileid: "33027435"
 ### <a name="bit-shift"></a>位元位移  
  位元運算子會在運算式的兩個整數詞彙之間，執行位元操作。  
   
-|運算子|描述|  
+|運算子|Description|  
 |--------------|-----------------|  
 |<\<|執行位元模式的算術左移位。|  
 |>>|執行位元模式的算術右移位。|  

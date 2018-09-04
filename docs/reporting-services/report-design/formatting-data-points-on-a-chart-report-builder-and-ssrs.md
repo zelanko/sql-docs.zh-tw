@@ -1,29 +1,23 @@
 ---
 title: 將圖表上的資料點格式化 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028145"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269668"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -63,19 +57,19 @@ ms.locfileid: "33028145"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>為資料點標籤、工具提示和圖例文字加入關鍵字  
  您可以使用區分大小寫的圖表專用關鍵字來表示存在於圖表中的項目。 這些關鍵字僅適用於工具提示、自訂圖例文字與資料點標籤屬性。 在許多情況下，圖表關鍵字擁有相等的簡單運算式，但是關鍵字輸入時更快、更容易。 下列是圖表關鍵字的清單。  
   
-|圖表關鍵字|描述|適用於圖表類型|相等簡單運算式的範例|  
+|圖表關鍵字|Description|適用於圖表類型|相等簡單運算式的範例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|資料點的 Y 值。|All|`=Fields!MyDataField.Value`|  
-|#VALY2|資料點的 Y 值 #2。|範圍圖、泡泡圖|無|  
-|#VALY3|資料點的 Y 值 #3。|股票圖、K 線圖|無|  
-|#VALY4|資料點的 Y 值 #4。|股票圖、K 線圖|無|  
-|#SERIESNAME|數列名稱。|All|無|  
-|#LABEL|資料點標籤。|All|無|  
+|#VALY2|資料點的 Y 值 #2。|範圍圖、泡泡圖|None|  
+|#VALY3|資料點的 Y 值 #3。|股票圖、K 線圖|None|  
+|#VALY4|資料點的 Y 值 #4。|股票圖、K 線圖|None|  
+|#SERIESNAME|數列名稱。|All|None|  
+|#LABEL|資料點標籤。|All|None|  
 |#AXISLABEL|軸資料點標籤。|形狀圖|`=Fields!MyDataField.Value`|  
-|#INDEX|資料點索引。|All|無|  
+|#INDEX|資料點索引。|All|None|  
 |#PERCENT|資料點 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|數列中所有 Y 值的總計。|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|對應到圖例項目文字的文字。|All|無|  
+|#LEGENDTEXT|對應到圖例項目文字的文字。|All|None|  
 |#AVG|數列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|數列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|數列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  

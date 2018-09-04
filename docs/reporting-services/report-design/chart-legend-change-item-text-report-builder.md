@@ -1,25 +1,20 @@
 ---
 title: 變更圖例項目的文字 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 96bf59c33e72a6271b5b1f6421df2101839f5a1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff6d22f2ed031a64061b0adab3c19f85df706e74
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275790"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>圖表圖例 - 變更項目文字 (報表產生器)
   將欄位放在圖表的 [值] 區域中時，系統會自動產生包含此欄位名稱的圖例項目。 每個圖例項目都會連接到報表上的個別數列，但是形狀圖例外 (其圖例會連接到個別資料點而非個別數列)。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  下表提供用於 [自訂圖例文字] 屬性之圖表特定關鍵字的範例。 如需關鍵字的詳細資訊，請參閱[格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
-|關鍵字|描述|在圖例中顯示為文字的範例|  
+|關鍵字|Description|在圖例中顯示為文字的範例|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|將總值的百分比顯示為一個小數位數。|85.0%|  
 |`#VALY`|顯示資料欄位的實際數值。|17000|  

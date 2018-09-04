@@ -1,26 +1,20 @@
 ---
 title: 使用分頁報表 (Web 入口網站) | Microsoft Docs
-ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e7036050c715f1c53275cdad4cd2f3069d7b6f8b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6a53d608ffe2e84462812b71fc0dee91557fe8f8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971757"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269976"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分頁報表 (Web 入口網站)
 

@@ -3,13 +3,9 @@ title: SQL Server 2016 中的 SQL Server Reporting Services 行為變更 | Micro
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - rows [Reporting Services], heights
@@ -24,16 +20,14 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-caps.latest.revision: 69
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 01ea6c0eea113f3c80796a6f54a7aa88bbfbe10f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 41c2d68480448da2feef73e8f569aeb4ea9229a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968730"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271508"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中的 SQL Server Reporting Services 行為變更
 

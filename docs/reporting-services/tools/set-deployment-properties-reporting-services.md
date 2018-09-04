@@ -1,13 +1,9 @@
 ---
 title: 設定部署屬性 (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: reporting-services
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
@@ -15,17 +11,15 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.date: 03/07/2017
-ms.openlocfilehash: b63061c1be758c166523f02600de6a16cfd18cf9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: fc6a97151ef86ce6961c03bae1e5bc595ab3e5d9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175161"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280497"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)
 
@@ -71,7 +65,7 @@ ms.locfileid: "40175161"
   
 10. 在 [TargetServerURL] 文字方塊中，鍵入目標報表伺服器的 URL。 在發行報表之前，您必須設定此屬性為有效的報表伺服器 URL。 當您發行至以原生模式執行的報表伺服器時，請使用報表伺服器之虛擬目錄的 URL (例如 http:*//server/reportserver* 或 https:*//server/reportserver*)。 這是報表伺服器的虛擬目錄，而非報表管理員。  
   
-     發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 如果您未指定網站，則會使用預設頂層網站 (例如 http://*伺服器名稱*、http://*伺服器名稱*/*網站*或 http://*伺服器名稱*/*網站*/*子網站*)。  
+     發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 如果您未指定網站，則會使用預設頂層網站 (例如 http://*伺服器名稱*、 http://*伺服器名稱*/*網站*或 http://*伺服器名稱*/*網站*/*子網站*)。  
   
 ### <a name="to-set-configuration-manager-properties"></a>設定組態管理員屬性  
   

@@ -1,14 +1,10 @@
 ---
 title: 在自訂應用程式中使用 RSClientPrint 控制項 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 67ee94b303f8d75e3249b1f20b2ed891c632dc92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef2cedf56fd314244a598ddc77df391f44237ca
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027865"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272977"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印] 對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  
@@ -72,7 +66,7 @@ ms.locfileid: "33027865"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 屬性  
   
-|屬性|類型|RW|預設|描述|  
+|屬性|類型|RW|預設|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|報表設定|取得或設定左邊界。 如果開發人員未設定或報表中未指定，則預設值為 12.2 公釐。|  
 |MarginRight|Double|RW|報表設定|取得或設定右邊界。 如果開發人員未設定或報表中未指定，則預設值為 12.2 公釐。|  
@@ -109,7 +103,7 @@ ms.locfileid: "33027865"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient 支援 Print 方法  
  **RSClientPrint** 物件支援用來啟動 [列印] 對話方塊的 **Print** 方法。 **Print** 方法具有下列引數。  
   
-|引數|I/O|類型|描述|  
+|引數|I/O|類型|Description|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|指定報表伺服器虛擬目錄 (例如 `https://adventure-works/reportserver`)。|  
 |ReportPathParameters|In|String|在報表伺服器資料夾命名空間內指定報表的全名，包括參數在內。 報表是透過 URL 存取來擷取。 例如："/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  

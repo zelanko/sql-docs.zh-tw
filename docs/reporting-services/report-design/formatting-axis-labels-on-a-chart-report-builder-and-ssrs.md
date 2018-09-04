@@ -1,14 +1,10 @@
 ---
 title: 格式化圖表上的軸標籤 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -28,15 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b18f14d4a21b1515438715d24378a8e272a317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273365"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
   以座標為基礎的圖表類型 (直條圖、橫條圖、區域圖、點圖、折線圖和範圍圖) 具有兩個座標軸，可用來分類及顯示資料關聯性。 每個座標軸都會套用不同類型的格式設定。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  軸刻度受限於最小值及最大值，這些值會定義在軸上顯示的資料範圍。 圖表會根據結果集中的值來計算每個軸的最小值及最大值。 值軸上的刻度永遠是由值欄位中的最小及最大數決定， 類別目錄軸上的最小及最大值類型則是根據類別目錄欄位的類型而定。 資料集中的任何欄位都可分類成三種類別目錄欄位類型之一。 下表說明這三種類別目錄欄位類型。  
   
-|類型目錄欄位類型|描述|範例|  
+|類型目錄欄位類型|Description|範例|  
 |-------------------------|-----------------|-------------|  
 |數值|類別目錄會以數值次序沿著 X 軸繪製。|依員工識別碼排列的銷售報表，沿著 X 軸顯示員工識別碼。|  
 |日期/時間|類別目錄會依時間順序沿著 X 軸繪製。|依月份排列的銷售報表，沿著 X 軸顯示格式化的日期。|  

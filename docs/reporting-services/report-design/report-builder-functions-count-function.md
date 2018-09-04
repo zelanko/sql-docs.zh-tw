@@ -1,26 +1,20 @@
 ---
 title: Count 函式 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2016b2aef554c2efa6c97b8541607bacd77e23fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d56bc57e8a4f675430c4abe6ef099a0ec204d0dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025145"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279476"
 ---
 # <a name="report-builder-functions---count-function"></a>報表產生器函式 - Count 函式
   傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。  
@@ -67,7 +61,7 @@ Count(expression, scope, recursive)
   
  範例  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  下列程式碼範例顯示的運算式會針對預設範圍及父群組範圍，計算 `Size` 的非 Null 值數目。 運算式會加到屬於子群組 `GroupbySubcategory`的資料列中的資料格。 父群組是 `GroupbyCategory`。 運算式會先顯示 `GroupbySubcategory` (預設範圍) 的結果，再顯示 `GroupbyCategory` (父群組範圍) 的結果。  
   
 > [!NOTE]  

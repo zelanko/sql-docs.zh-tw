@@ -1,26 +1,20 @@
 ---
 title: 資料集欄位集合 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d7b5f9f4e9dba9018455eec10d552cdb9afc54e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0986f432f2d94bcc81bdf2112ebe19c589767ae
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023005"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273600"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
   資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。 範例包括銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像、空間資料及電子郵件地址。 在設計介面上，欄位會以報表項目 (如文字方塊、資料表和圖表) 中的運算式形式出現。  
@@ -96,7 +90,7 @@ ms.locfileid: "33023005"
   
      例如， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 已導入報表處理器用於新日期和時間類型的日期類型，如下表所示：  
   
-    |SQL 資料類型|CLR 資料類型|描述|  
+    |SQL 資料類型|CLR 資料類型|Description|  
     |-------------------|-------------------|-----------------|  
     |**Date**|**DateTime**|僅限日期|  
     |**Time**|**TimeSpan**|只有時間|  

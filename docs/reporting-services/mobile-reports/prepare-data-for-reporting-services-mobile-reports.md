@@ -1,26 +1,20 @@
 ---
 title: 準備 Reporting Services 行動報表的資料 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 731b28c5f2f269d9527a7ba846beec747680ffe5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac39aa9d781b8f77b020b6f275a775b57bc22f22
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020135"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278320"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的資料
   

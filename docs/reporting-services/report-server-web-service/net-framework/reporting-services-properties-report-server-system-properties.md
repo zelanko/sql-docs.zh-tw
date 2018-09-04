@@ -1,14 +1,10 @@
 ---
 title: 報表伺服器系統屬性 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,23 +12,21 @@ helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a5c76d55357aeda9c66b2de668eb80426dd8fa22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4d49b97eba1684e7b3ad50209cf2fee2fbfb64f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028625"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274844"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 屬性 - 報表伺服器系統屬性
   下列系統屬性名稱會保留。 您無法建立具有相同名稱的使用者定義屬性。 您可以使用 Web 服務方法，來讀取或是修改大部分屬性。  
   
 ## <a name="properties"></a>屬性  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |SiteName|顯示在使用者介面上的報表伺服器網站名稱。 預設值為 **Microsoft 報表伺服器**。 這個屬性可以是空字串。 最大長度是 8,000 個字元。|  
 |SystemSnapshotLimit|針對報表所儲存之快照集的最大數目。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，表示沒有任何快照集限制。|  

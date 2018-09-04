@@ -1,28 +1,22 @@
 ---
 title: Version 屬性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2a99f016722ab7ee89848b48d387f0ffc71c9435
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76601dd77ad3049235ccd8eae40b845a77028571
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029885"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281946"
 ---
 # <a name="configurationsetting-property---version"></a>ConfigurationSetting 屬性 - Version
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  

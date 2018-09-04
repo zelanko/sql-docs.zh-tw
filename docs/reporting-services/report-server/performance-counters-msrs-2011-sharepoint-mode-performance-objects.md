@@ -1,14 +1,10 @@
 ---
 title: 效能計數器 MSRS 2011 SharePoint 模式效能物件 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 4b71aab05f6e9fe43b5077ef04cf3d7bd8dbc41d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 934267601abcedd1499e45c5a5eafdcee6ab8f35
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028415"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267108"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>效能計數器 MSRS 2011 SharePoint 模式效能物件
   本主題描述屬於 **SharePoint 模式部署一部分之** MSRS 2011 Web 服務 SharePoint 模式 **和** MSRS 2011 Windows 服務 SharePoint 模式 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  
@@ -52,7 +46,7 @@ ms.locfileid: "33028415"
   
  下表將列出 **MSRS 2011 Web 服務 SharePoint 模式** 效能物件所包含的計數器。  
   
-|計數器|描述|  
+|計數器|Description|  
 |-------------|-----------------|  
 |**Active Sessions**|使用中的工作階段數目。 此計數器提供從報表執行產生之所有瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。<br /><br /> 隨著工作階段記錄移除，此計數器會遞減。 根據預設，工作階段會在沒有活動的十分鐘後移除。|  
 |**Cache Hits/Sec**|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱本主題稍後的 **Total Cache Hits** )。|  
@@ -82,7 +76,7 @@ ms.locfileid: "33028415"
   
  下表將列出 **MSRS 2011 Windows 服務 SharePoint 模式** 效能物件所包含的計數器。  
   
-|計數器|描述|  
+|計數器|Description|  
 |-------------|-----------------|  
 |**Active Sessions**|儲存在報表伺服器資料庫中之使用中工作階段的數目。 此計數器提供從報表訂閱產生之所有可使用瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。|  
 |**警示：事件佇列長度**||  

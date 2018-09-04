@@ -1,26 +1,20 @@
 ---
 title: 使用共用資料集 (Web 入口網站) | Microsoft Docs
-ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 97b787e06c3979e8e41586804164edcccc9cd0a0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 87cc9b9f95451c0ec5823b05c99d315bfcb93d8b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971720"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278310"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>使用共用資料集 - Web 入口網站
 

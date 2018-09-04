@@ -1,26 +1,20 @@
 ---
 title: 報表伺服器上的項目 URL 範例 - SharePoint 模式 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 42638cca55a7d567ebe3ec3bfad37880cca6aebe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036985"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273449"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>報表伺服器上的項目 URL 範例 - SharePoint 模式
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  
@@ -36,7 +30,7 @@ ms.locfileid: "33036985"
   
  您可以使用以下的 Web 階層元素來存取報表伺服器的內容並保護其安全性。 其他諸如清單與頁面等物件則不會用來存取報表伺服器的內容，因此不會在下表中說明。  
   
-|Object|描述|  
+|Object|Description|  
 |------------|-----------------|  
 |SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如 `http:*//servername*`)，並可包含多個網站。|  
 |網站|網站可能是 Web 應用程式的上層網站或子網站。|  

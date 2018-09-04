@@ -1,26 +1,20 @@
 ---
 title: 在報表產生器中預覽報表 | Microsoft Docs
-ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: eb6447d896a68a932e24223944fd6117f54638eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08682ef7985727e17aca84ee4013d2b0b90761ad
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022345"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273141"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
   當您建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，這對經常預覽報表以確認報表如預期般顯示相當有幫助。 若要預覽報表，按一下 **[執行]**。 報表隨即在預覽模式下呈現。  

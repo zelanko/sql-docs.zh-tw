@@ -1,26 +1,20 @@
 ---
 title: 匯出至 Microsoft Excel (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2985d8337cfbbb33b867de3f84f307bea4a6a67b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad451fd016345ec541782f4ac4aed85dd3974799
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022385"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275653"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表轉譯成 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
@@ -178,7 +172,7 @@ ms.locfileid: "33022385"
 |每個工作表的資料行上限|256|16,384|  
 |每個工作表的資料列上限|65,536|1,048,576|  
 |工作表中允許的色彩數目|56 (調色盤)<br /><br /> 如果在報表中使用的色彩超過 56 種，轉譯延伸模組會讓所需的色彩符合自訂調色版中已提供的 56 種色彩之一。|約為 1600 萬 (24 位元色彩)|  
-|ZIP 壓縮的檔案|無|ZIP 壓縮|  
+|ZIP 壓縮的檔案|None|ZIP 壓縮|  
 |預設字型家族|Arial|Calibri|  
 |預設字型大小|10pt|11pt|  
 |預設資料列高度|12.75 pt|15 pt|  
@@ -211,11 +205,11 @@ ms.locfileid: "33022385"
 ##  <a name="DocumentProperties"></a> 文件屬性  
  Excel 轉譯器會將下列中繼資料寫入到 Excel 檔。  
   
-|報表元素屬性|描述|  
+|報表元素屬性|Description|  
 |-------------------------------|-----------------|  
 |建立日期|執行報表的日期和時間，當做 ISO 日期/時間值。|  
 |作者|Report.Author|  
-|描述|Report.Description|  
+|Description|Report.Description|  
 |LastSaved|執行報表的日期和時間，當做 ISO 日期/時間值。|  
   
 ##  <a name="PageHeadersFooters"></a> 頁首和頁尾  

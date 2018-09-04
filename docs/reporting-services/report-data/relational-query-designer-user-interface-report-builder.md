@@ -1,14 +1,10 @@
 ---
 title: 關聯式查詢設計工具使用者介面 (報表產生器) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 23924ef7630d41ea1d60d34a4a131d004b2d8aa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1028e874fce10946f73dda095a1c047909b34e3d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022427"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277381"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表產生器和報表設計師同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，用來指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中針對報表資料集擷取的資料。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -100,7 +94,7 @@ ms.locfileid: "33022427"
   
  下表列出彙總並提供彙總的簡要說明。  
   
-|Aggregate|描述|  
+|Aggregate|Description|  
 |---------------|-----------------|  
 |Avg|傳回群組中值的平均值。 實作 SQL AVG 彙總。|  
 |Count|傳回群組中的項目數。 實作 SQL COUNT 彙總。|  
@@ -189,7 +183,7 @@ ms.locfileid: "33022427"
 ### <a name="graphical-query-designer-toolbar"></a>圖形化查詢設計工具工具列  
  關聯式查詢設計工具的工具列會提供下列按鈕來協助您指定或檢視查詢的結果。  
   
-|按鈕|描述|  
+|按鈕|Description|  
 |------------|-----------------|  
 |**當成文字編輯**|切換至以文字為基礎的查詢設計工具，以便檢視自動產生的查詢，或是修改查詢。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 支援 .sql 和 .rdl 檔案類型。|  

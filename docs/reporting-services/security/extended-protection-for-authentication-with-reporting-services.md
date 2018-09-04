@@ -1,26 +1,20 @@
 ---
 title: Reporting Services 的驗證擴充保護 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6abe1579a0b54f701ed648746b4a5fc5ae597b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49827ffcafca3131554ec806afa61e49ad03dd58
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028305"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281364"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 
@@ -117,7 +111,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 ###  <a name="ConfigurationSettings"></a> Reporting Services 擴充保護的組態設定  
  下表提供顯示在 **rsreportserver.config** 中之擴充保護的組態設定相關資訊。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**RSWindowsExtendedProtectionLevel**|指定擴充保護的強制執行程度。 有效值為：<br /><br /> **Off**︰預設值。 不會指定通道繫結或服務繫結驗證。<br /><br /> **Allow** 支援擴充保護但其非必要。  指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 強制執行保護的方式取決於 **RsWindowsExtendedProtectionScenario**設定<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> **Require** 指定下列項目︰<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> - 對於在不支援擴充保護之作業系統上執行的應用程式， **不** 允許執行驗證。|  
 |**RsWindowsExtendedProtectionScenario**|指定什麼擴充保護的形式要經過驗證：通道繫結、服務繫結，或兩者。 有效值為：<br /><br /> **Proxy**︰預設值。 指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Any** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> **Direct** 指定下列項目︰<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意︰如果 **RsWindowsExtendedProtectionLevel** 設為 **OFF** ，則會忽略 **RsWindowsExtendedProtectionScenario**設定。|  
@@ -149,7 +143,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
 ### <a name="hosts-collection-sources"></a>主機集合來源。  
  下表列出主機集合的潛在來源。  
   
-|來源類型|描述|  
+|來源類型|Description|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|指派給本機電腦之 DNS 網域的名稱。 如果本機電腦是叢集中的一個節點，則會使用叢集虛擬伺服器的 DNS 網域名稱。|  
 |ComputerNameDnsFullyQualified|唯一識別本機電腦的完整 DNS 名稱。 此名稱結合 DNS 主機名稱與 DNS 網域名稱，其格式為 *HostName*.*DomainName*。 如果本機電腦是叢集中的一個節點，則會使用叢集虛擬伺服器的完整 DNS 名稱。|  

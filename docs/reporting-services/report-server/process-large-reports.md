@@ -1,14 +1,10 @@
 ---
 title: 處理大型報表 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0c1f8df989b6b87b141870b4e5072354e8dceb3e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f938b26c3224ba1e10a54ffae71f03c39978eac2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028045"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269223"
 ---
 # <a name="process-large-reports"></a>處理大型報表
   大型報表會造成一定的處理挑戰，若要正確執行，就需要特定的組態。 除非將大型報表設定成支援分頁，否則不應視需要執行大型報表。  

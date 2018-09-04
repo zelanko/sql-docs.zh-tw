@@ -1,14 +1,10 @@
 ---
 title: 使用規則與分析資料更改多邊形、線條與點顯示 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10538"
@@ -21,16 +17,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12f65c737b17c62c925a1b129a2d527ac849aeaf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027455"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278837"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>使用規則與分析資料更改多邊形、線條與點顯示
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  
@@ -126,7 +120,7 @@ ms.locfileid: "33027455"
   
  下表顯示您可以使用之不同格式的範例。  
   
-|關鍵字與格式|描述|在圖例中顯示為文字的範例|  
+|關鍵字與格式|Description|在圖例中顯示為文字的範例|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|顯示沒有小數位數之總值的貨幣|$400|  
 |`#FROMVALUE {C2}`|顯示兩個小數位數之總值的貨幣。|$400.55|  

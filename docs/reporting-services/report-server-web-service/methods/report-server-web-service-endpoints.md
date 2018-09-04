@@ -1,14 +1,10 @@
 ---
 title: 報表伺服器 Web 服務端點 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 66feb1faf61d3d317fdbae4d70d1344782608c6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c7c0362271c57f9e69a3b2d628d95b1ec629a07
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028685"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271852"
 ---
 # <a name="report-server-web-service-endpoints"></a>報表伺服器 Web 服務端點
   報表伺服器 Web 服務提供幾個端點來管理報表伺服器以及執行和導覽報表。  
@@ -70,7 +64,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint Proxy 端點  
  當報表伺服器設定為 SharePoint 整合模式，而且已經安裝 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集時，SharePoint 伺服器上會安裝一組 Proxy 端點。 當報表伺服器設定為 SharePoint 整合模式時，這些 Proxy 端點是用來開發報表方案的主要 API。 當針對 Proxy 端點進行開發時，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集會在信任帳戶驗證模式下管理 SharePoint 伺服器與報表伺服器之間的認證交換。 當針對報表伺服器端點開發時，呼叫應用程式必須在信任帳戶驗證模式下管理認證交換。 下表將列出隨 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 增益集一起安裝的端點。  
   
-|Proxy 端點|描述|  
+|Proxy 端點|Description|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|提供 API 以管理設定為 SharePoint 整合模式的報表伺服器。<br /><br /> 注意：[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 已取代此端點。|  
 |<xref:ReportService2010>|提供 API 以管理設定為原生模式或 SharePoint 整合模式的報表伺服器。|  

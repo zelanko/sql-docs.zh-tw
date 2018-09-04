@@ -1,29 +1,23 @@
 ---
 title: 設定報表伺服器 URL (SSRS 設定管理員) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9d49d5cae66834cd9cfd304198fc4f677020fe75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: db96a1af36bea565d00587096dfdbbc925b1fedf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322317"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273736"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 是用來存取報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在您可以使用其中一個應用程式以前，您至少必須為此 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]設定一個 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會針對在大多數部署方案下運作良好的這兩個應用程式 URL 提供預設值，其中包括與其他 Web 服務和應用程式並存的部署。  
@@ -35,7 +29,7 @@ ms.locfileid: "35322317"
 ## <a name="defining-a-report-server-url"></a>定義報表伺服器 URL  
  此 URL 會精確識別報表伺服器應用程式執行個體在網路上的位置。 當您建立報表伺服器 URL 時，必須指定以下部分。  
   
-|部分|描述|  
+|部分|Description|  
 |----------|-----------------|  
 |主機名稱|TCP/IP 網路會使用 IP 位址來唯一識別網路上的裝置。 電腦上安裝的每一張網路卡都有一個實體 IP 位址。 如果此 IP 位址解析成主機標頭，您就可以指定主機標頭。 如果您正在企業網路上部署報表伺服器，可以使用電腦的網路名稱。|  
 |通訊埠|TCP 通訊埠是裝置上的端點。 報表伺服器將會接聽指定之通訊埠上的要求。|  

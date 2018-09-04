@@ -1,23 +1,18 @@
 ---
 title: 以 SharePoint 模式安裝第一部報表伺服器 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8c4dc2d101dac523058192a4acd45034f38dadc6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d30bb50979d583452e7ae77d73d0eac26f395fbc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988110"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268393"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>以 SharePoint 模式安裝第一部報表伺服器
 
@@ -275,7 +270,7 @@ ms.locfileid: "37988110"
   
 1.  下列步驟會假設您的 SharePoint 網站設定為適用於 SharePoint 2013 的 2013 **體驗版**。  
   
-     開啟瀏覽器，移至所要的 SharePoint 網站。 例如，http://\<伺服器名稱>/sites/bi  
+     開啟瀏覽器，移至所要的 SharePoint 網站。 例如， http://\<伺服器名稱>/sites/bi  
   
 2.  選取 [設定]![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。  
   

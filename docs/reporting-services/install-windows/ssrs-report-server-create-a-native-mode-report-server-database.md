@@ -1,28 +1,22 @@
 ---
 title: 建立原生模式報表伺服器資料庫 (SSRS 設定管理員) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 336a2feb2050f1e501408fe90b65e0e60ef4261c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1f2d9b4e4ab3ca5e82294bee4ed337e025a8f1f9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993540"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277248"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>建立原生模式報表伺服器資料庫
 

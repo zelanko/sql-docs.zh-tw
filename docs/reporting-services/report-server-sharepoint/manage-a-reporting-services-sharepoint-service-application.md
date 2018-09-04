@@ -1,24 +1,19 @@
 ---
 title: 管理 Reporting Services SharePoint 服務應用程式 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server-sharepoint
-ms.reviewer: ''
+ms.technology: report-server-sharepoint
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e74f983cfa2dd98a986c66a2cdcf2fcef4f9a21
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971780"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268978"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服務應用程式
 
@@ -97,7 +92,7 @@ ms.locfileid: "37971780"
 |設定|註解|  
 |-------------|--------------|  
 |啟用報表產生器下載|預設值是 TRUE。<br /><br /> 指定用戶端是否能夠看到下載報表產生器應用程式的按鈕。|  
-|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值：http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
+|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值： http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
 |啟用用戶端列印|預設值是 TRUE。<br /><br /> 指定使用者是否可以下載提供列印選項的用戶端控制項。|  
 |編輯工作階段逾時|預設值是 7200 秒。|  
 |編輯工作階段快取限制|預設值為 5。|  

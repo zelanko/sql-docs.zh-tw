@@ -1,26 +1,20 @@
 ---
 title: 針對 Reporting Services 報表轉譯問題進行疑難排解 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 73b5fe3ae626076b6579671038c50ccc8cd87380
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "40406153"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281933"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services 報表轉譯問題疑難排解
 結合報表資料與配置資訊之後，編譯完的報表會傳送到報表轉譯器。 例如，當您在本機預覽報表時，您會使用 HTML 轉譯器來檢視已編譯的報表。 您可以使用本主題來協助疑難排解有關報表轉譯的問題。   

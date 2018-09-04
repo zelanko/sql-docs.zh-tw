@@ -1,29 +1,23 @@
 ---
 title: 報表伺服器 ExecutionLog 和 ExecutionLog3 檢視 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2127c8b47f7b61114b8a2b9aa7bce78df5682f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028895"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273790"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -113,7 +107,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  下表描述在報表執行記錄中擷取的資料。  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。 如果您的環境具有多個報表伺服器，您可以分析 InstanceName 散發以監視並判斷網路負載平衡器是否依照預期方式在報表伺服器之間散發要求。|  
 |ItemPath|儲存報表或報表項目的路徑。|  
@@ -328,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  下表描述在報表執行記錄中擷取的資料。  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
 |ReportPath|報表的路徑結構。  例如，名為 ”test” 且位於報表管理員根資料夾中的報表會具有 “/test” 的 ReportPath。<br /><br /> 名為 ”test” 且儲存在報表管理員 “samples” 資料夾中的報表會具有 “/Samples/test/” 的 ReportPath。|  
@@ -360,7 +354,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  下表描述在報表執行記錄中擷取的資料。  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
 |ReportID|報表識別碼。|  

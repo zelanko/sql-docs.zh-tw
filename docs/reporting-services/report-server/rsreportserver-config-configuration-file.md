@@ -1,26 +1,20 @@
 ---
 title: RsReportServer.config 組態檔 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a0bc8e10c310ed490ae64022a5c002b66e104a9c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9d3ca27df3ccd68df1b5b3e10c67d7550742d236
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550859"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274737"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -66,7 +60,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 > [!NOTE]  
 >  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
   
-|設定|描述|[模式]|  
+|設定|Description|[模式]|  
 |-------------|-----------------|----------|  
 |**Dsn**|將連接字串指定給主控報表伺服器資料庫的資料庫伺服器。 當您建立報表伺服器資料庫時，這個值會加密並加入至組態檔。 如果是 SharePoint，資料庫連接資訊會取自 SharePoint 組態資料庫。|N、S|  
 |**ConnectionType**|指定報表伺服器用於連接到報表伺服器資料庫的認證類型。 有效值為 **Default** 和 **Impersonate**。 如果將報表伺服器設定為使用**登入或服務帳戶連接到報表伺服器資料庫，則會指定** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果報表伺服器是使用 Windows 帳戶連接到報表伺服器資料庫，則會指定**Impersonate** 。|N|  
@@ -105,7 +99,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  資料表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 (N)、SharePoint 模式的報表伺服器 (S)，還是兩者。  
   
-|設定|描述|[模式]|  
+|設定|Description|[模式]|  
 |-------------|-----------------|----------|  
 |**應用程式**|包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的設定。|N|  
 |**名稱**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式。 有效值為 ReportServerWebService 或 ReportManager。|N|  
@@ -134,7 +128,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  下表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 (N)、SharePoint 模式的報表伺服器 (S)，還是兩者。  
   
-|設定|描述|[模式]|  
+|設定|Description|[模式]|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|指定一或多種驗證類型。 有效值為： **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、 **RSWindowsBasic**和 **Custom**。<br /><br /> **RSWindows** 類型和 **Custom** 互斥。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**和 **RSWindowsBasic** 是累計的，而且可以一起使用，如本節前面的預設值範例所示。<br /><br /> 如果您預期會收到來自各種使用不同驗證類型之用戶端應用程式或瀏覽器的要求，指定多種驗證類型就是必要的做法。<br /><br /> 請勿移除 **RSWindowsNTLM**，否則瀏覽器支援會限制在部分支援的瀏覽器類型。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。|N|  
 |**RSWindowsNegotiate**|報表伺服器接受 Kerberos 或 NTLM 安全性 Token。 當報表伺服器在原生模式下執行，而且服務帳戶為網路服務時，此為預設值。 當報表伺服器在原生模式下執行，而且服務帳戶設定成網域使用者帳戶時，會省略此設定。<br /><br /> 如果網域帳戶設定成報表伺服器服務帳戶，而且服務主要名稱 (SPN) 未設定成報表伺服器，此設定可能會防止使用者登入伺服器。|N|  
@@ -154,7 +148,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  下表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 (N)、SharePoint 模式的報表伺服器 (S)，還是兩者。  
   
-|設定|描述|[模式]|  
+|設定|Description|[模式]|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|指定報表伺服器是否要維護一組對應到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者所建立之排程與訂閱的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Agent 作業。 有效值包括 **True** (預設值) 和 **False**。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N、S|  
 |**IsNotificationService**|指定報表伺服器是否處理通知和傳遞。 有效值包括 **True** (預設值) 和 **False**。 當值為 **False**時，不會傳遞訂閱。<br /><br /> 當您使用原則式管理的 [Reporting Services 的介面區組態] Facet 來啟用或停用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時，這個設定會受到影響。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)。|N、S|  
@@ -180,7 +174,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  下表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 (N)、SharePoint 模式的報表伺服器 (S)，還是兩者。  
   
-|設定|描述|[模式]|  
+|設定|Description|[模式]|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|指定入口網站對其建立連線的報表伺服器 URL。 只有當您要將入口網站設定成連接線另一個執行個體或遠端電腦中的報表伺服器時，才應該修改這個值。|N、S|  
 |**ReportBuilderTrustLevel**|請勿修改這個值，因為它是無法設定的。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本中，報表產生器只能以 **FullTrust**執行。 如需停用部分信任模式的詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N、S|  
@@ -228,7 +222,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  所有傳遞延伸模組都具有 **Extension Name**、 **MaxRetries**、 **SecondsBeforeRetry**和 **Configuration**。 這些共用設定會優先記載。 延伸模組特有設定的描述接著列於第二個表格中。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**Extension Name**|指定傳遞延伸模組的易記名稱和組件。 請勿修改此值。|  
 |**MaxRetries**|指定報表伺服器將重試傳遞的次數 (如果第一次嘗試不成功的話)。 預設值是 3。|  
@@ -238,14 +232,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ####  <a name="bkmk_fileshare_extension"></a> 檔案共用傳遞延伸模組組態設定  
  檔案共用傳遞會將已經匯出成應用程式檔案格式的報表傳送至網路上的共用資料夾。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)＞。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**、 **RenderingExtension**|這些設定是用於刻意排除無法搭配檔案共用傳遞使用的匯出格式。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> 報表伺服器電子郵件延伸模組組態設定  
  報表伺服器電子郵件會使用 SMTP 網路裝置，將報表傳送至電子郵件地址。 您必須先設定這個傳遞延伸模組，然後才能使用它。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) 和 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**SMTPServer**|指定表示遠端 SMTP 伺服器或轉送器位址的字串值。 遠端 SMTP 服務需要此值。 這可以是 IP 位址、您公司內部網路上電腦的 UNC 名稱，或者完整網域名稱。|  
 |**SMTPServerPort**|指定一個整數值，表示 SMTP 服務用於傳送外寄郵件的通訊埠。 通常使用通訊埠 25 來傳送電子郵件。|  
@@ -266,7 +260,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ####  <a name="bkmk_documentlibrary_extension"></a> 報表伺服器 SharePoint 文件庫延伸模組組態  
  報表伺服器文件庫會將已經匯出成應用程式檔案格式的報表傳送至文件庫。 只有設定為在 SharePoint 整合模式中執行的報表伺服器可以使用這個傳遞延伸模組。 如需詳細資訊，請參閱＜ [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)＞。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats、RenderingExtension**|這些設定是用於刻意排除無法搭配文件庫傳遞使用的匯出格式。 系統會排除 HTMLOWC、RGDI 和 Null 傳遞延伸模組。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。|  
   
@@ -276,7 +270,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ###  <a name="bkmk_ui"></a> 傳遞 UI 延伸模組一般組態  
  指定包含使用者介面元件的傳遞延伸模組，而該元件會顯示於在入口網站中定義個別訂閱時使用的訂閱定義頁面中。 如果您建立並部署具有使用者定義選項的自訂傳遞延伸模組，而且您想要使用入口網站，就必須在這個區段中註冊該傳遞延伸模組。 根據預設，報表伺服器電子郵件和報表伺服器檔案共用都具有組態設定。 只在資料驅動訂閱或 SharePoint 應用程式頁面中使用的傳遞延伸模組沒有此區段的設定。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**DefaultDeliveryExtension**|此設定會決定會先顯示在訂閱定義頁面之傳遞類型清單中的傳遞延伸模組。 只有一個傳遞延伸模組可以包含這項設定。 有效值包括 **True** 或 **False**。 當此值設定為 **True**時，表示該延伸模組為預設選取項目。|  
 |**Configuration**|指定傳遞延伸模組的組態選項。 您可以針對每一個傳遞延伸模組設定預設轉譯格式。 有效值是在 rsreportserver.config 檔案的轉譯區段中，所註明的轉譯延伸模組名稱。|  
@@ -384,7 +378,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (RSReportServer.config 檔案)  
  **MapTileServerConfiguration** 會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing Maps Web 服務的組態設定，以便針對在報表伺服器上發行之報表中的地圖報表項目提供影像分割背景。 所有子元素都是必要的。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**MaxConnections**|指定 Bing Maps Web 服務的連接數目上限。|  
 |**逾時**|指定等候 Bing Maps Web 服務回應的逾時 (以秒為單位)。|  

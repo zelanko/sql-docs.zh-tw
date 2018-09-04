@@ -1,29 +1,23 @@
 ---
 title: 報表伺服器應用程式的應用程式網域 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: fad2f5fd529550e7d5ed1f6101f271d15753364a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbb25efefd5fc69a3a64f04208e5f32ef20387f4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027955"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277752"
 ---
 # <a name="application-domains-for-report-server-applications"></a>報表伺服器應用程式的應用程式網域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表伺服器會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 每個應用程式都會在單一報表伺服器處理序內部的應用程式網域中執行。 在大部分情況下，應用程式網域是在內部建立、設定和管理的。 不過，如果您要調查效能或記憶體問題或者疑難排解服務中斷，了解報表伺服器應用程式網域的回收作業如何發生可能會很有用。  

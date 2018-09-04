@@ -1,26 +1,20 @@
 ---
 title: 針對 Reporting Services 報表的處理進行疑難排解 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 22790e8572c9a14812946df7454cb9674f9980f9
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 70dbbaa44b18dec81ecad4f07905cb44ff65df1d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406584"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275247"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>疑難排解 Reporting Services 報表的處理
 擷取報表資料之後，報表處理器會結合資料與配置資訊。 包含運算式的每一個報表項目屬性，都會在結合資料與配置的內容中進行評估。 您可以使用本主題來協助疑難排解這些問題。   

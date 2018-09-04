@@ -1,14 +1,10 @@
 ---
 title: Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,16 +12,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8eb51a0c7240f1eff35ecc754d3a6b1d6fdc1000
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8ec3075444b0885cb6e6ea5b52c2f2fe6b60941
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028665"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281343"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)
   若要控制 Tablix 資料區的資料列和資料行如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。 在許多情況下，您可以使用資料表、矩陣或清單的預設結構來顯示您的資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)、[矩陣](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)或[清單](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
@@ -43,7 +37,7 @@ ms.locfileid: "33028665"
 ### <a name="row-and-column-handles"></a>資料列和資料行控點  
  當您選取 Tablix 資料區域時，資料列和資料行控點圖形會指出每個資料列和資料行的用途。 控點表示群組內部或群組外部的資料列和資料行。 下表顯示各種控點顯示。  
   
-|圖示|描述|  
+|圖示|Description|  
 |----------|-----------------|  
 |![具有詳細資料列之三條平行線的資料列代碼](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼")|只有資料列群組階層上的詳細資料群組|  
 |![具有詳細資料列及一個外部群組的資料列代碼](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "具有詳細資料列及一個外部群組的資料列代碼")|一個外部群組和詳細資料子群組|  

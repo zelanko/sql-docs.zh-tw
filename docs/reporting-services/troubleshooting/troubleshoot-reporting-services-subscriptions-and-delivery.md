@@ -1,26 +1,20 @@
 ---
 title: 針對 Reporting Services 訂用帳戶和傳遞進行疑難排解 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 901e9b6530dcae026ab6f3a4989260ff237c758a
-ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
+ms.openlocfilehash: 9b7aa6f15508797b90dd1ddd9bd515c150cbabd2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "40405505"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274820"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解
   

@@ -1,26 +1,20 @@
 ---
 title: 運算式 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2e0630d23d308c061f5d3adf69e17473b5cfbf2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0e20a42c42702e99e1ed607b7ebb7a74a88e6b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024345"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273131"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 
@@ -86,7 +80,7 @@ ms.locfileid: "33024345"
   
  下表列出可以包含在運算式中的參考種類：  
   
-|參考|描述|範例|  
+|參考|Description|範例|  
 |----------------|-----------------|-------------|  
 |[常數](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|描述可透過互動方式針對需要常數值的屬性而存取的常數，例如字型色彩。|`="Blue"`|  
 |[運算子](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|描述您可以用來結合運算式中參考的運算子。 例如， **&** 運算子用於串連字串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  

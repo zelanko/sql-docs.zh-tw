@@ -1,25 +1,20 @@
 ---
 title: 轉譯資料區域 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 567bb447bec9e6ff59269aa23d7ab7fc88fc89e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02b1ef974d7f2e3366e67fd426b10aae3278d477
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277923"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>轉譯資料區 (報表產生器及 SSRS)
   除了適用於所有報表項目的一般轉譯行為之外，資料區也擁有所遵循的其他分頁與轉譯行為。 資料區域特定的轉譯規則包括如何擴展資料區域；如何轉譯特殊資料格，例如，邊角資料格或標頭資料格；以及如何轉譯由右至左讀取的資料區域。 本主題討論如何轉譯資料區的各個部分。  

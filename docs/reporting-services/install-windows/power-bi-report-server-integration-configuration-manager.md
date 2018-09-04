@@ -1,13 +1,9 @@
 ---
 title: Power BI 報表伺服器整合 (設定管理員) | Microsoft Docs
-ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - pbi
@@ -15,13 +11,12 @@ f1_keywords:
 - power bi integration
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 26d9e1dee4b18de1d90920a9ad88c09b2bc84419
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975308"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277794"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 

@@ -1,26 +1,20 @@
 ---
 title: Multilookup 函式 (報表產生器及 SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9934684dc787d7f258f223b2e9ba8997aa7bd009
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4e735719ecf352b1ceadf6ab35931359187ee5e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027185"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277179"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>報表產生器函式 - Multilookup 函式
   從包含名稱/值組的資料集傳回第一組符合指定之名稱集合的值。  
@@ -97,7 +91,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ID|[屬性]|  
 |--------|----------|  
-|@shouldalert|Accessories|  
+|1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
 |4|Components|  
@@ -117,7 +111,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|Color|  
 |-------------|-----------|  
-|@shouldalert|紅色|  
+|1|紅色|  
 |2|藍色|  
 |3|綠色|  
   
