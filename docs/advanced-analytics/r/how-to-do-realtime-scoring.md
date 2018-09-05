@@ -1,253 +1,112 @@
 ---
-title: 如何執行即時評分，或在 SQL Server Machine Learning 中的原生評分 |Microsoft Docs
+title: 如何產生預測與使用 SQL Server 中的機器學習服務模型的預測 |Microsoft Docs
+description: 使用原生評分的預測和預測 R 和 SQL Server Machine Learning 中的 Pythin 即時計分或預測 T-SQL rxPredict 或 sp_rxPredict。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40393459"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348209"
 ---
-# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>如何執行即時評分或 SQL Server 中的原生評分
+# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何產生預測與使用 SQL Server 中的機器學習服務模型的預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章會示範兩種方法，來預測結果，在 「 SQL Server 中的近乎即時的方式使用以 r 撰寫的預先定型的模型即時評分和原生評分被設計來讓您使用的機器學習模型，而不需要安裝。指定預先定型的模型相容的格式-儲存至 SQL Server 資料庫-您可以使用標準資料存取技術，快速產生新的輸入上的預測分數。
+使用現有的模型來預測或預測新的資料輸入的結果是在 machine learning 中的核心工作。 這篇文章會列舉 SQL Server 中產生預測的方法。 在方法之間高速的預測，其中速度為基礎的累加式簡化的內部處理方法執行階段相依性。 較少的相依性表示更快得到預測。
 
-## <a name="choose-a-scoring-method"></a>選擇計分方法
+使用內部處理基礎結構 （即時或原生評分） 隨附的程式庫需求。 函式必須是從 Microsoft 程式庫。 CLR 或 c + + 延伸模組不支援呼叫開放原始碼或協力廠商的函式中的 R 或 Python 程式碼。
 
-下列選項可支援快速的批次預測：
+下表摘要說明預測和預測評分的架構。 
 
-+ **原生評分**： 在 SQL Server 2017 Windows、 SQL Server 2017 Linux 和 Azure SQL Database 的 T-SQL 預測函式。
-+ **即時計分**： 使用 sp\_rxPredict 預存程序，在 SQL Server 2016 或 SQL Server 2017 (僅 Windows)。
+| 方法           | 介面         | 程式庫需求 | 處理速度 |
+|-----------------------|-------------------|----------------------|----------------------|
+| 擴充性架構 | : [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 無。 模型可以根據任何 R 或 Python 函式 | 數百毫秒。 <br/>載入執行階段環境都有固定的成本之前的任何新資料計分,，平均三到六個 100 毫秒。 |
+| 即時評分的 CLR 延伸模組 | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化的模型 | : RevoScaleR MicrosoftML <br/>Python: revoscalepy microsoftml | 數以萬計的平均 （毫秒）。 |
+| 原生評分的 c + + 延伸模組| [預測 T-SQL 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化的模型 | : RevoScaleR <br/>Python: revoscalepy | 小於 20 毫秒，平均。 | 
 
-> [!NOTE]
-> SQL Server 2017 中，建議使用 PREDICT 函式。
-> 若要使用預存程序\_rxPredict，您必須啟用 SQLCLR 整合。 啟用此選項之前，請考慮安全性隱含意義。
+處理速度和不獨特是輸出的差異的功能。 假設相同的功能和輸入，經過評分的輸出應該不會隨著您使用的方法上。
 
-準備模型，並將產生分數的整體程序如下：
+必須使用支援的函式中，建立模型，然後序列化為未經處理的位元組資料流儲存到磁碟，或儲存在資料庫中的二進位格式。 您可以使用預存程序或 T-SQL，載入和使用 R 或 Python 語言執行平台，不必二進位模型而能更快完成時產生新的輸入上的預測分數。
+
+CLR 和 c + + 的擴充功能的重要性是鄰近的資料庫引擎本身。 Database engine 的原生語言是 c + +，這表示在執行較少的相依性的 c + + 撰寫延伸模組。 相反地，CLR 的擴充功能會相依於.NET Core。 
+
+如您所料，平台支援將會受到這些執行的階段環境。 原生資料庫引擎延伸模組在關聯式資料庫支援的任何地方執行： Windows，Linux，Azure。 CLR 與.NET Core 需求的延伸模組目前為 Windows 只。
+
+## <a name="scoring-overview"></a>評分的概觀
+
+_評分_是兩個步驟的程序。 首先，您可以指定已定型的模型，以從資料表載入。 第二，傳遞新輸入資料，請在函式，來產生預測值 (或_分數_)。 輸入通常是傳回表格式或單一資料列的 T-SQL 查詢。 您可以選擇輸出單一資料行值代表機率，或您可能會輸出數個值，例如信賴區間 」、 「 錯誤 」 或 「 預測其他實用補充。
+
+採取的步驟後，準備模型的整體程序，然後產生分數可以如此歸納：
 
 1. 建立模型，使用支援的演算法。
 2. 序列化使用特殊的二進位格式的模型。
 3. 將模型提供給 SQL Server。 通常這表示已序列化的模型儲存在 SQL Server 資料表中。
-4. 呼叫的函式或預存程序，並傳遞模型和輸入的資料。
+4. 呼叫函式或預存程序，做為參數指定的模型和輸入的資料。
 
-### <a name="requirements"></a>需求
+當輸入包含多個資料列時，它通常是快速插入資料表中的預測值，評分程序的一部分。  產生單一的分數是從表單或使用者的要求，取得輸入的值和傳回的分數，以用戶端應用程式的案例中較為典型的。 若要產生連續的分數時，改善效能，SQL Server 可能會快取模型，以便載入記憶體。
 
-+ PREDICT 函式可用於所有版本的 SQL Server 2017，並依預設會啟用。 您不需要安裝 R，或啟用其他功能。
+## <a name="compare-methods"></a>比較方法
 
-+ 如果使用預存程序\_rxPredict，一些額外的步驟所需。 請參閱[啟用即時評分](#bkmk_enableRtScoring)。
+若要保留核心資料庫引擎處理序的完整性，隔離從 RDBMS 處理的語言處理雙架構中已啟用對 R 和 Python 支援。 從 SQL Server 2016 開始，Microsoft 會加入一種擴充性架構，可讓從 T-SQL 執行 R 指令碼。 在 SQL Server 2017 中，已新增 Python 整合。 
 
-+ 在此階段中，只有 RevoScaleR 和 MicrosoftML 可以建立相容的模型。 其他的模型型別可能會在未來。 如需目前支援的演算法的清單，請參閱[即時評分](../real-time-scoring.md)。
+擴充性架構支援以 R 或 Python，範圍從簡單的函數到訓練複雜機器學習服務模型，您可能會執行任何作業。 不過，雙同處理序架構需要叫用每個呼叫，不論作業的複雜度外部 R 或 Python 處理序。 當工作負載需要從資料表載入預先定型的模型，並針對它評分已在 SQL Server 中的資料時，呼叫外部處理序的額外工作將可以在某些情況下無法接受的延遲。 例如，詐騙偵測需要快速評分相關性。
 
-### <a name="serialization-and-storage"></a>序列化與儲存體
+若要增加評分的速度，像是詐騙偵測案例，SQL Server 會將內建生計分庫成為消除的 R 和 Python 的啟動程序的額外負荷的 c + + 和 CLR 的延伸模組。
+
+[**即時計分**](../real-time-scoring.md)是高效能評分的第一個解決方案。 舊版的 SQL Server 2017 和更新版本的更新中，導入 SQL Server 2016，即時評分依賴內就能對 R 和 Python 處理而不受 Microsoft 管制 RevoScaleR、 MicrosoftML (R)、 revoscalepy 中的函式的 CLR 程式庫和microsoftml (Python)。 CLR 程式庫會使用叫用**sp_rxPredict**預存程序從任何支援的模型型別，產生分數，而不需要呼叫 R 或 Python 執行階段。
+
+[**原生評分**](../sql-native-scoring.md)是 SQL Server 2017 功能，實為原生的 c + + 程式庫，但僅適用於 RevoScaleR 與 revoscalepy 模式。 它是最快且更安全的方式，但是支援較少的相對於其他方法的函式。
+
+## <a name="choose-a-scoring-method"></a>選擇計分方法
+
+平台需求通常會指定要使用哪一個評分方法。
+
+| 產品版本及平台 | 方法 |
+|------------------------------|-------------|
+| Windows、 SQL Server 2017 Linux 和 Azure SQL Database 上的 SQL Server 2017 | **原生評分**與 T-SQL 的預測 |
+| SQL Server 2017 (Windows 只)，SQL Server 2016 R Services SP1 或更高版本 | **即時計分**sp\_rxPredict 預存程序 |
+
+我們建議使用 PREDICT 函式的原生評分。 使用預存程序\_rxPredict，您必須啟用 SQLCLR 整合。 啟用此選項之前，請考慮安全性隱含意義。
+
+## <a name="serialization-and-storage"></a>序列化與儲存體
 
 若要使用其中一個快速的評分選項模型，將儲存模型使用特殊的序列化的格式，這已針對大小最佳化和評分的效率。
 
-+ 呼叫`rxSerializeModel`寫入至支援的模型**原始**格式。
-+ 呼叫`rxUnserializeModel`才能重新組成其他 R 程式碼中使用的模型，或檢視的模型。
-
-如需詳細資訊，請參閱 < [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)。
++ 呼叫[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)寫入到支援的模型**原始**格式。
++ 呼叫[rxUnserializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)' 來重新構成其他 R 程式碼中使用的模型或檢視模型。
 
 **使用 SQL**
 
-從 SQL 程式碼中，您可以訓練模型使用`sp_execute_external_script`，並直接插入至資料表，類型的資料行中的 定型的模型**varbinary （max)**。
-
-如需簡單的範例，請參閱[本教學課程](../tutorials/rtsql-create-a-predictive-model-r.md)
+從 SQL 程式碼中，您可以訓練模型使用[sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，並直接插入至資料表，類型的資料行中的 定型的模型**varbinary （max)**。 如需簡單的範例，請參閱[在 R 中建立 preditive 模型](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **使用 R**
 
-從 R 程式碼中，有兩種方式可將模型儲存至資料表：
-
-+ 呼叫`rxWriteObject`函式，從 RevoScaleR 封裝，將模型直接寫入資料庫。
-
-  `rxWriteObject()`函式可以擷取從 ODBC 資料來源，例如 SQL Server 的 R 物件或物件寫入 SQL Server。 API 被仿造的簡單索引鍵-值存放區。
+從 R 程式碼，呼叫[rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject)模型直接寫入至資料庫的 RevoScaleR 封裝中的函式。 **RxWriteObject()** 函式可以擷取從 ODBC 資料來源，例如 SQL Server 的 R 物件或物件寫入 SQL Server。 API 被仿造的簡單索引鍵-值存放區。
   
-  如果您使用此函式時，請務必將序列化的第一次使用新的序列化函式的模型。 然後，設定*序列化*中的引數`rxWriteObject`設為 FALSE，以避免重複序列化步驟。
+如果您使用此函式時，務必模型使用序列化[rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)第一次。 然後，設定*序列化*中的引數**rxWriteObject**設為 FALSE，以避免重複序列化步驟。
 
-+ 您可以也將模型儲存至檔案的原始格式，並從檔案中讀取 SQL server。 如果您要移動或複製環境之間的模型，此選項可能會很有用。
+序列化成二進位格式的模型非常有用，但並非必要，如果您計分預測使用 R 和 Python 執行階段環境中的擴充性架構。 您可以將模型儲存至檔案的原始位元組格式，並從檔案中讀取 SQL server。 如果您要移動或複製環境之間的模型，此選項可能會很有用。
 
-## <a name="native-scoring-with-predict"></a>原生評分與預測
+## <a name="scoring-in-related-products"></a>相關產品中的評分
 
-在此範例中，您可以建立模型時，並接著從 T-SQL 呼叫即時的預測函數。
-
-### <a name="step-1-prepare-and-save-the-model"></a>步驟 1： 準備和儲存模型
-
-執行下列的程式碼，以建立範例資料庫和必要的資料表。
-
-```SQL
-CREATE DATABASE NativeScoringTest;
-GO
-USE NativeScoringTest;
-GO
-DROP TABLE IF EXISTS iris_rx_data;
-GO
-CREATE TABLE iris_rx_data (
-  "Sepal.Length" float not null, "Sepal.Width" float not null
-  , "Petal.Length" float not null, "Petal.Width" float not null
-  , "Species" varchar(100) null
-);
-GO
-```
-
-使用下列陳述式來填入資料的資料表**鳶尾花**資料集。
-
-```SQL
-INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'iris_data <- iris;'
-  , @input_data_1 = N''
-  , @output_data_1_name = N'iris_data';
-GO
-```
-
-現在，建立儲存模型的資料表。
-
-```SQL
-DROP TABLE IF EXISTS ml_models;
-GO
-CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
-  , model_version nvarchar(100) not null
-  , native_model_object varbinary(max) not null);
-GO
-```
-
-下列程式碼會建立模型，根據**鳶尾花**資料集並將它儲存到名為資料表**模型**。
-
-```SQL
-DECLARE @model varbinary(max);
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'
-    iris.sub <- c(sample(1:50, 25), sample(51:100, 25), sample(101:150, 25))
-    iris.dtree <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris[iris.sub, ])
-    model <- rxSerializeModel(iris.dtree, realtimeScoringOnly = TRUE)
-    '
-  , @params = N'@model varbinary(max) OUTPUT'
-  , @model = @model OUTPUT
-  INSERT [dbo].[ml_models]([model_name], [model_version], [native_model_object])
-  VALUES('iris.dtree','v1', @model) ;
-```
-
-> [!NOTE] 
-> 請務必使用[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)從儲存模型的 RevoScaleR 函式。 標準 R`serialize`函式無法產生所需的格式。
-
-您可以執行下列命令來檢視預存的模型，以二進位格式等陳述式：
-
-```SQL
-SELECT *, datalength(native_model_object)/1024. as model_size_kb
-FROM ml_models;
-```
-
-### <a name="step-2-run-predict-on-the-model"></a>步驟 2： 在模型上執行預測
-
-下列簡單的預測陳述式從決策樹模型使用取得分類**原生評分**函式。 它可預測的鳶尾花品種根據您提供的屬性、 花瓣長度和寬度。
-
-```SQL
-DECLARE @model varbinary(max) = (
-  SELECT native_model_object
-  FROM ml_models
-  WHERE model_name = 'iris.dtree'
-  AND model_version = 'v1');
-SELECT d.*, p.*
-  FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
-  WITH(setosa_Pred float, versicolor_Pred float, virginica_Pred float) as p;
-go
-```
-
-如果您收到錯誤，「 執行期間發生錯誤的函式 PREDICT。 模型已損毀或無效 」，通常表示您的查詢未傳回模型。 請檢查是否輸入模型名稱正確，或如果是空的模型資料表。
-
-> [!NOTE]
-> 因為所傳回的資料行和值**PREDICT**可能會因模型類型，您必須使用來定義傳回資料的結構描述**WITH**子句。
-
-## <a name="real-time-scoring-with-sprxpredict"></a>使用 sp_rxPredict 進行即時評分
-
-本節說明設定所需的步驟**即時**預測，並提供如何從 T-SQL 呼叫函數的範例。
-
-### <a name ="bkmk_enableRtScoring"></a> 步驟 1。 啟用即時評分程序
-
-您必須啟用此功能的每個您想要用於評分的資料庫。 伺服器系統管理員應該執行的命令列公用程式，RegisterRExt.exe 隨附的 RevoScaleR 封裝。
-
-> [!NOTE]
-> 必須在執行個體中啟用 SQL CLR 功能以進行即時評分工作順序，此外，資料庫必須標示為值得信任。 當您執行指令碼時，為您執行這些動作。 不過，這麼做之前考量的額外的安全性影響 ！
-
-1. 開啟提升權限的命令提示字元，並瀏覽至 RegisterRExt.exe 所在的資料夾。 在預設安裝中可用的下列路徑：
-    
-    `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
-
-2. 執行下列命令，並以您的執行個體和您要啟用擴充預存程序的目標資料庫的名稱取代：
-
-    `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
-
-    比方說，若要將擴充預存程序加入 CLRPredict 資料庫的預設執行個體，請輸入：
-
-    `RegisterRExt.exe /installRts /database:CLRPRedict`
-
-    執行個體名稱是選擇性，如果資料庫位於預設執行個體。 如果您使用具名執行個體，您必須指定執行個體名稱。
-
-3. RegisterRExt.exe 建立下列物件：
-
-    + 受信任的組件
-    + 預存程序 `sp_rxPredict`
-    + 新的資料庫角色， `rxpredict_users`。 資料庫管理員可以使用此角色，授與權限給使用者使用即時評分的功能。
-
-4. 新增需要執行任何使用者`sp_rxPredict`至新的角色。
-
-> [!NOTE]
-> 
-> 在 SQL Server 2017 中，其他安全性量值會防止使用 CLR 整合的問題。 這些量值會使用這個預存程序以及其他限制。 
-
-### <a name="step-2-prepare-and-save-the-model"></a>步驟 2： 準備和儲存模型
-
-預存程序所需的二進位格式\_rxPredict 是使用 PREDICT 函式所需的格式相同。 因此，R 程式碼中包含呼叫[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)，並務必指定`realtimeScoringOnly = TRUE`，如這個範例所示：
-
-```R
-model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
-```
-
-### <a name="step-3-call-sprxpredict"></a>步驟 3： 呼叫 sp_rxPredict
-
-您呼叫 sp\_rxPredict 您對任何其他預存程序。 在目前的版本中，預存程序會採用只有兩個參數： _\@模型_模型，以二進位格式，和 _\@inputData_用於評分的資料定義為有效的 SQL 查詢。
-
-因為二進位的格式相同，可由 PREDICT 函式，您可以使用前述範例中的模型和資料的資料表。
-
-```SQL
-DECLARE @irismodel varbinary(max)
-SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree' 
-AND model_version = 'v1''
-
-EXEC sp_rxPredict
-@model = @irismodel,
-@inputData = N'SELECT * FROM iris_rx_data'
-```
-
-> [!NOTE]
-> 
-> 預存程序呼叫\_rxPredict 失敗時，如果評分的輸入的資料不包含資料行符合模型的需求。 目前支援只有下列.NET 資料類型： double、 float、 short、 ushort、 long、 ulong 和字串。
-> 
-> 因此，您可能需要進行即時評分使用之前，先篩選出不支援的類型，在您的輸入資料。
-> 
-> 如需對應的 SQL 類型的資訊，請參閱[SQL-CLR 類型對應](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或是[對應 CLR 參數資料](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
-
-## <a name="disable-real-time-scoring"></a>停用即時評分
-
-若要停用即時評分的功能，請開啟提升權限的命令提示字元，並執行下列命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
-
-## <a name="real-time-scoring-in-other-microsoft-product"></a>在其他 Microsoft 產品中的即時評分
-
-如果您使用獨立伺服器或 Microsoft Machine Learning Server 而不 SQL Server 資料庫內分析，您會有其他選項，除了預存程序和 T-SQL 函式來產生預測。
-
-獨立伺服器和 Machine Learning Server 支援的概念*web 服務*程式碼部署。 您可以組合 R 或 Python 預先定型模型，為 web 服務，在評估新的資料輸入的執行階段呼叫。 如需詳細資訊，請參閱下列文章：
+如果您使用[獨立主機](r-server-standalone.md)或[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，您有其他選項，除了預存程序和 T-SQL 函式，來快速產生預測。 獨立伺服器和 Machine Learning Server 支援的概念*web 服務*程式碼部署。 您可以組合 R 或 Python 預先定型模型，為 web 服務，在評估新的資料輸入的執行階段呼叫。 如需詳細資訊，請參閱下列文章：
 
 + [在 Machine Learning Server 中的 web 服務是什麼？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [什麼是作業？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
 + [將 Python 模型部署為 web 服務使用 azureml 模型-管理 sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [將 R 程式碼區塊或即時模型發佈為新的 web 服務](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [適用於 R 的 mrsdeploy 套件](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+
+
+## <a name="see-also"></a>另請參閱
+
++ [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
++ [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
++ [預存程序 rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
++ [預測 T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

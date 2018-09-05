@@ -54,12 +54,12 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7750a2cf088e25cb0a6ac689e99d2ea1398b5954
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175136"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348569"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "40175136"
   
 -   [設定服務啟動類型](#Configure_services)  
   
--   [防火牆通訊埠](#Firewall)  
+-   [防火牆連接埠](#Firewall)  
   
 ###  <a name="Default_Accts"></a> 預設服務帳戶
 
@@ -135,11 +135,11 @@ ms.locfileid: "40175136"
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)* **|  
-|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
-|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\* \*\*|  
+|[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)\*|  
 |FD 啟動器 (全文檢索搜尋)|[LOCAL SERVICE](#Local_Service)|[虛擬帳戶](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
@@ -147,8 +147,8 @@ ms.locfileid: "40175136"
 |PolyBase 引擎  |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
 |PolyBase 資料移動服務 |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
   
- * 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦外部的資源時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用受管理的服務帳戶 (MSA)，並且為帳戶設定所需的最低權限。   
- ** 安裝在網域控制站上，不支援作為服務帳戶的虛擬帳戶。
+ \*需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦外部的資源時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用受管理的服務帳戶 (MSA)，並且為帳戶設定所需的最低權限。   
+ \*\*安裝在網域控制站上時，不支援作為服務帳戶的虛擬帳戶。
   
  **SQL Server 容錯移轉叢集執行個體**
   
@@ -194,7 +194,7 @@ ms.locfileid: "40175136"
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    虛擬帳戶 (從 Windows Server 2008 R2 和 Windows 7 開始) 為「受管理的本機帳戶」  ，並會提供下列功能來簡化服務管理工作。 虛擬帳戶是自動管理的，而且虛擬帳戶可以在網域環境中存取網路。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安裝期間針對服務帳戶使用預設值，則會使用以執行個體名稱作為服務名稱的虛擬帳戶，其格式為 **NT SERVICE\\****\<服務名稱>。 以虛擬帳戶執行的服務，會利用電腦帳戶的認證存取網路資源，其格式為 <網域名稱>__\\__<電腦名稱>__$__。  指定虛擬帳戶啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請讓密碼空白。 如果虛擬帳戶無法註冊服務主要名稱 (SPN)，請手動註冊 SPN。 如需手動註冊 SPN 的詳細資訊，請參閱 [手動 SPN 註冊](register-a-service-principal-name-for-kerberos-connections.md)。  
+    虛擬帳戶 (從 Windows Server 2008 R2 和 Windows 7 開始) 為「受管理的本機帳戶」  ，並會提供下列功能來簡化服務管理工作。 虛擬帳戶是自動管理的，而且虛擬帳戶可以在網域環境中存取網路。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安裝期間針對服務帳戶使用預設值，則會使用以執行個體名稱作為服務名稱的虛擬帳戶，其格式為 **NT SERVICE\\**\<服務名稱>。 以虛擬帳戶執行的服務，會利用電腦帳戶的認證存取網路資源，其格式為 <網域名稱>__\\__<電腦名稱>__$__。  指定虛擬帳戶啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請讓密碼空白。 如果虛擬帳戶無法註冊服務主要名稱 (SPN)，請手動註冊 SPN。 如需手動註冊 SPN 的詳細資訊，請參閱 [手動 SPN 註冊](register-a-service-principal-name-for-kerberos-connections.md)。  
   
     > [!NOTE]  
     >  虛擬帳戶無法用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，因為虛擬帳戶在叢集的每一個節點上不會有相同的 SID。  
@@ -228,27 +228,27 @@ ms.locfileid: "40175136"
 
 下表顯示可以在安裝期間設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 若為自動安裝，您可以在組態檔案中或從命令提示字元使用這些參數。  
   
-|SQL Server 服務名稱|自動安裝的參數*|  
+|SQL Server 服務名稱|自動安裝的參數\*|  
 |-----------------------------|---------------------------------------------|  
 |MSSQLSERVER|SQLSVCACCOUNT、SQLSVCPASSWORD、SQLSVCSTARTUPTYPE|  
-|SQLServerAgent**|AGTSVCACCOUNT、AGTSVCPASSWORD、AGTSVCSTARTUPTYPE|  
+|SQLServerAgent\*\*|AGTSVCACCOUNT、AGTSVCPASSWORD、AGTSVCSTARTUPTYPE|  
 |MSSQLServerOLAPService|ASSVCACCOUNT、ASSVCPASSWORD、ASSVCSTARTUPTYPE|  
 |ReportServer|RSSVCACCOUNT、RSSVCPASSWORD、RSSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT、ISSVCPASSWORD、ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR、CTLRSVCACCOUNT、CTLRSVCPASSWORD、CTLRSTARTUPTYPE、CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT、CLTSVCACCOUNT、CLTSVCPASSWORD、CLTSTARTUPTYPE、CLTCTLRNAME、CLTWORKINGDIR、CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS***|
+|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT、EXTSVCPASSWORD、ADVANCEDANALYTICS\*\*\*|
 |PolyBase 引擎| PBENGSVCACCOUNT、PBENGSVCPASSWORD、PBENGSVCSTARTUPTYPE、PBDMSSVCACCOUNT、PBDMSSVCPASSWORD、PBDMSSVCSTARTUPTYPE、PBSCALEOUT、PBPORTRANGE。
   
- *如需自動安裝的詳細資訊和範例語法，請參閱 [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+ \*需自動安裝的詳細資訊和範例語法，請參閱[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
- ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 的執行個體會停用 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Agent 服務。
+ \*\*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式服務。
 
- ***目前不支援單獨透過交換器設定 Launchpad 的帳戶。 請使用 SQL Server 設定管理員來變更帳戶及其他服務設定。
+ \*\*\*目前不支援單獨透過交換器設定 Launchpad 的帳戶。 請使用 SQL Server 設定管理員來變更帳戶及其他服務設定。
 
-###  <a name="Firewall"></a> 防火牆通訊埠
+###  <a name="Firewall"></a> 防火牆連接埠
 
-大部分情況下，在初始安裝時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以藉由像是與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 安裝在同一部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這類工具進行連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會在 Windows 防火牆中開啟通訊埠。 除非將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為在 TCP 通訊埠上接聽，而且已在 Windows 防火牆中開啟適當的通訊埠進行連接，否則無法從其他電腦連接。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+大部分情況下，在初始安裝時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以藉由像是與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 安裝在同一部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這類工具進行連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會在 Windows 防火牆中開啟連接埠。 除非將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為在 TCP 連接埠上接聽，而且已在 Windows 防火牆中開啟適當的連接埠進行連線，否則無法從其他電腦連線。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 ##  <a name="Serv_Perm"></a> 服務權限
 
@@ -274,14 +274,14 @@ ms.locfileid: "40175136"
   
 ###  <a name="Serv_SID"></a> 服務組態和存取控制
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會對它的每個服務啟用個別服務 SID，以提供深度的服務隔離和防禦。 每個服務 SID 都是衍生自服務名稱，而且是該服務專用的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的服務 SID 名稱可能是 **NT Service\MSSQL$***\<執行個體名稱>*。 服務隔離可讓服務存取特定物件，而不需要以高權限帳戶執行或降低物件的安全性保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可以透過使用包含服務 SID 的存取控制項目，來限制其資源的存取權。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會對它的每個服務啟用個別服務 SID，以提供深度的服務隔離和防禦。 每個服務 SID 都是衍生自服務名稱，而且是該服務專用的。 例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的服務 SID 名稱可能是 **NT Service\MSSQL$**\<執行個體名稱>。 服務隔離可讓服務存取特定物件，而不需要以高權限帳戶執行或降低物件的安全性保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務可以透過使用包含服務 SID 的存取控制項目，來限制其資源的存取權。
   
 > [!NOTE]  
 >  在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (以及更新版本) 上，個別服務 SID 可以是服務所使用的虛擬帳戶。
   
  針對大部分元件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會直接為個別服務帳戶設定 ACL，因此不需重複資源 ACL 程序即可變更服務帳戶。
   
- 安裝 [!INCLUDE[ssAS](../../includes/ssas-md.md)]時，會建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的個別服務 SID。 另外還會建立本機的 Windows 群組，其命名格式為 **SQLServerMSASUser$***computer_name***$***instance_name*。 個別服務 SID **NT SERVICE\MSSQLServerOLAPService** 會在本機 Windows 群組中授與成員資格，而本機 Windows 群組則是在 ACL 中授與適當的權限。 如果用來啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的帳戶變更， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員就必須變更部分 Windows 授權 (例如，以服務登入的權利)，不過指派給本機 Windows 群組的權限仍然可以使用，而且不會有任何更新，因為個別服務 SID 並未變更。 這個方法可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務在升級期間重新命名。
+ 安裝 [!INCLUDE[ssAS](../../includes/ssas-md.md)]時，會建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的個別服務 SID。 另外還會建立本機的 Windows 群組，其命名格式為 **SQLServerMSASUser$**_computer_name_**$**_instance_name*。 個別服務 SID **NT SERVICE\MSSQLServerOLAPService** 會在本機 Windows 群組中授與成員資格，而本機 Windows 群組則是在 ACL 中授與適當的權限。 如果用來啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的帳戶變更， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員就必須變更部分 Windows 授權 (例如，以服務登入的權利)，不過指派給本機 Windows 群組的權限仍然可以使用，而且不會有任何更新，因為個別服務 SID 並未變更。 這個方法可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務在升級期間重新命名。
   
  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會為 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務建立本機 Windows 群組。 針對這些服務， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會為本機 Windows 群組設定 ACL。  
   
@@ -295,12 +295,12 @@ ms.locfileid: "40175136"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式授與的權限|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT SERVICE\MSSQLSERVER**。 具名執行個體： **NT SERVICE\MSSQL$** InstanceName)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$***InstanceName*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$***ComputerName***$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$***ComputerName***$***InstanceName*。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$***ComputerName***$***PowerPivot*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) – 其只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$***InstanceName*。)|**以服務方式登入** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\SQLSERVERAGENT**。 具名執行個體： **NT Service\SQLAGENT$**_InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體： **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**。 具名執行個體： **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體： **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) – 其只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$**<執行個體名稱>)。|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體和具名執行個體： **NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)|  
-|**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\MSSQLFDLauncher**。 具名執行個體：**NT Service\ MSSQLFDLauncher$***InstanceName*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設或具名執行個體：**SQLServer2005SQLBrowserUser***$ComputerName*。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的具名執行個體沒有個別處理序)。|**以服務方式登入** (SeServiceLogonRight)|  
+|**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\MSSQLFDLauncher**。 具名執行個體： **NT Service\ MSSQLFDLauncher$**_InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設或具名執行個體： **SQLServer2005SQLBrowserUser**_$ComputerName_。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的具名執行個體沒有個別處理序)。|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer：**<br /><br /> (所有權利都會授與個別服務 SID。 預設或具名執行個體： **NT Service\SQLWriter**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer 的具名執行個體沒有個別處理序。)|SQLWriter 服務會以 LOCAL SYSTEM 帳戶執行，該帳戶擁有所有必要的權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會檢查或授與此服務的權限。| 
   |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller：**|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client：**|**以服務方式登入** (SeServiceLogonRight)|  
@@ -308,7 +308,7 @@ ms.locfileid: "40175136"
 |**Launchpad：**|**以服務方式登入** (SeServiceLogonRight) <br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br />**略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br />**調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|     
 |**R 服務：** **SQLRUserGroup**  |**允許本機登入** |   
 
- * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體會停用 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]Agent 服務。  
+ \*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 代理程式服務。  
   
 ###  <a name="Reviewing_ACLs"></a> 授與 SQL Server 個別服務 SID 或本機 Windows 群組的檔案系統權限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶必須有資源的存取權。 存取控制清單會針對個別服務 SID 或本機 Windows 群組設定。  
@@ -329,7 +329,7 @@ ms.locfileid: "40175136"
 ||Instid\MSSQL\Repldata|完整控制|  
 ||130\shared|讀取、執行|  
 ||Instid\MSSQL\Template Data (僅限[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|讀取|  
-|SQLServerAgent*|Instid\MSSQL\binn|完整控制|  
+|SQLServerAgent\*|Instid\MSSQL\binn|完整控制|  
 ||Instid\MSSQL\binn|完整控制|  
 ||Instid\MSSQL\Log|讀取、寫入、刪除、執行|  
 ||130\com|讀取、執行|  
@@ -396,7 +396,7 @@ ms.locfileid: "40175136"
 ||ExtensiblilityData|完整控制|
 ||Log\ExtensibiltityLog|完整控制|
   
- * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 的執行個體會停用 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Agent 服務。  
+ \*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A代理程式服務。  
   
  當資料庫檔案儲存於使用者定義的位置時，您必須授與個別服務 SID 對該位置的存取權。 如需將檔案系統權限授與個別服務 SID 的詳細資訊，請參閱 [設定 Database Engine 對檔案系統的存取權限](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)。  
   
@@ -409,7 +409,7 @@ ms.locfileid: "40175136"
 |MSSQLServer|效能記錄使用者|Instid\MSSQL\binn|列出資料夾內容|  
 ||效能監視器使用者|Instid\MSSQL\binn|列出資料夾內容|  
 ||效能記錄使用者、效能監視器使用者|\WINNT\system32\sqlctr130.dll|讀取、執行|  
-||僅限管理員|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>*|完整控制|  
+||僅限管理員|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<SQL_執行個體名稱>\*|完整控制|  
 ||管理員，系統|\tools\binn\schemas\sqlserver\2004\07\showplan|完整控制|  
 ||使用者|\tools\binn\schemas\sqlserver\2004\07\showplan|讀取、執行|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<報表伺服器 Web 服務帳戶>|\<安裝>\Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
@@ -425,7 +425,7 @@ ms.locfileid: "40175136"
 ||終端服務使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> 通知<br /><br /> DELETE<br /><br /> 讀取控制|  
 ||進階使用者|報表伺服器索引鍵 (Instid 登錄區)|查詢值<br /><br /> 設定值<br /><br /> 建立子機碼<br /><br /> 列舉子機碼<br /><br /> 通知<br /><br /> DELETE<br /><br /> 讀取控制|  
   
- *這是 WMI 提供者命名空間。  
+ \*這是 WMI 提供者命名空間。  
   
 ###  <a name="Unusual_Locations"></a> 與不常見磁碟位置相關的檔案系統權限  
 
@@ -440,7 +440,7 @@ ms.locfileid: "40175136"
  將資料庫安裝到網路共用時，服務帳戶必須擁有使用者和 tempdb 資料庫之檔案位置的存取權。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會提供網路共用的存取。 在執行安裝程式之前，使用者必須先為服務帳戶提供 tempdb 位置的存取。 使用者在建立資料庫之前，必須先提供使用者資料庫位置的存取。  
   
 > [!NOTE]  
->  虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用下列格式提供電腦帳戶：*<網域名稱>***\\***<電腦名稱>***$**。  
+>  虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用下列格式提供電腦帳戶：<網域名稱>**\\**<電腦名稱>**$**。  
   
 ###  <a name="Review_additional_considerations"></a> 檢閱其他考量  
 
@@ -457,7 +457,7 @@ ms.locfileid: "40175136"
 >  在升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 Windows 驗證，並確認必要的預設組態： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin (系統管理員) 群組的成員。  
   
 ###  <a name="Registry"></a> 登錄權限  
- 執行個體感知元件的登錄區會建立在 **HKLM\Software\Microsoft\Microsoft SQL Server\\***<執行個體識別碼>* 之下。 例如：  
+ 執行個體感知元件的登錄區會建立在 **HKLM\Software\Microsoft\Microsoft SQL Server\\**<執行個體識別碼> 之下。 例如：  
   
 -   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL13.MyInstance**  
   
@@ -570,7 +570,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源仍然會提供至本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 群組。  
   
-    -   服務的本機 Windows 群組已從 **SQLServer2005MSSQLUser$***<電腦名稱>***$***<執行個體名稱>* 重新命名為 **SQLServerMSSQLUser$***<電腦名稱>***$***<執行個體名稱>*。 移轉之資料庫的檔案位置將會有本機 Windows 群組的存取控制項目 (ACE)。 新資料庫的位置將會有個別服務 SID 的 ACE。  
+    -   服務的本機 Windows 群組已從 **SQLServer2005MSSQLUser$**_<電腦名稱>_**$**_<執行個體名稱>_ 重新命名為 **SQLServerMSSQLUser$**<電腦名稱>**$**<執行個體名稱>。 移轉之資料庫的檔案位置將會有本機 Windows 群組的存取控制項目 (ACE)。 新資料庫的位置將會有個別服務 SID 的 ACE。  
   
 -   從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]升級的期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 個別服務 SID 的 ACE。  
   
@@ -608,7 +608,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
   
  <a name="Network_Service"></a> **網路服務帳戶**  
   
- 網路服務帳戶是一個內建帳戶，它對於資源和物件所擁有的存取權高於使用者群組的成員。 以網路服務帳戶執行的服務，會利用電腦帳戶的認證 (格式為 *<網域名稱>***\\***<電腦名稱>***$**) 存取網路資源。 此帳戶的實際名稱是 **NT AUTHORITY\NETWORK SERVICE**。  
+ 網路服務帳戶是一個內建帳戶，它對於資源和物件所擁有的存取權高於使用者群組的成員。 以網路服務帳戶執行的服務，會利用電腦帳戶的認證 (格式為 _<網域名稱>_**\\**<電腦名稱>**$**) 存取網路資源。 此帳戶的實際名稱是 **NT AUTHORITY\NETWORK SERVICE**。  
   
 <a name="Local_System"></a> **本機系統帳戶**  
   
@@ -625,7 +625,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
   
      請注意，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services 的執行個體上會停用 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Agent 服務。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]*  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]\*  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
@@ -639,7 +639,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
   
 -   SQL 寫入器  
   
- *處於 SharePoint 整合模式中的 Analysis Services 會以單一具名執行個體的形式執行 '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]'。 執行個體名稱是固定的。 您無法指定不同的名稱。 在每個實體伺服器上，您只能安裝一個執行成 '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]' 的 Analysis Services 執行個體。  
+ \*處於 SharePoint 整合模式中的 Analysis Services 會以單一具名執行個體的形式執行 '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]'。 執行個體名稱是固定的。 您無法指定不同的名稱。 在每個實體伺服器上，您只能安裝一個執行成 '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]' 的 Analysis Services 執行個體。  
   
 ###  <a name="Localized_service_names"></a> 當地語系化服務名稱  
  下表將顯示 Windows 當地語系化版本所顯示的服務名稱。  

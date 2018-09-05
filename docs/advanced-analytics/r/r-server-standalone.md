@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
-ms.translationtype: HT
+ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118296"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240026"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （獨立式） 和 SQL Server 中的 Machine Learning Server （獨立式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ SQL Server 2016 只是 R。 SQL Server 2017 支援 R 和 Python。 下表描述�
 | Python 範例和指令碼 | 在使用 R、 Python 會包含內建的資料集與指令碼。 尋找 revoscalepy 資料在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 資料。 |
 | 預先定型的模型，在 R 和 Python | 預先定型的模型建立的特定使用案例，並由 Microsoft 的資料科學工程小組所維護。 您可以使用預先定型的模型，以-為評分正負面情感的文字，或在映像，使用您提供的新資料輸入中偵測功能。 預先定型的模型支援和可用的獨立伺服器上，但您無法透過 SQL Server 安裝程式來安裝它們。 如需詳細資訊，請參閱 <<c0> [ 安裝預先定型的機器學習服務模型，在 SQL Server 上的](../install/sql-pretrained-models-install.md)。 |
 
-## <a name="use-cases"></a>使用案例
+## <a name="using-a-standalone-server"></a>使用獨立伺服器
 
 R 和 Python 開發人員通常會選擇獨立伺服器，以超越開放原始碼 R 和 Python 的記憶體和處理條件約束。 在獨立伺服器上執行的 R 和 Python 程式庫可以載入並處理多個核心上大量的資料和彙總成單一的彙總輸出的結果。 高效能函數設計成可調整和公用程式： 提供預測性分析、 統計模型、 資料視覺效果，與頂尖的機器學習服務演算法在商用伺服器產品中的設計和支援Microsoft。
 

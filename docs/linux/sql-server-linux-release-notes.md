@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 55fc722a3205984fbb48f2a2c0945ebf4ff117b8
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: bcc1b86da4da46575279b373d288800e5ea6a35c
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393370"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381176"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的版本資訊
 
@@ -47,6 +47,7 @@ ms.locfileid: "40393370"
 
 | 版本               | 版本       | 發行日期 |
 |-----------------------|---------------|--------------|
+| [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
 | [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
@@ -71,6 +72,20 @@ ms.locfileid: "40393370"
 - [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU10"></a> CU10 (年 8 月 2018)
+
+這是 SQL Server 2017 的累計更新 10 (CU10) 版本。 此版本的 SQL Server 引擎版本是 14.0.3037.1。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4342123 ](https://support.microsoft.com/en-us/help/4342123)。
+
+### <a name="package-details"></a>套件詳細資料
+
+若為手動或離線套件安裝，您可以下載 RPM 和 Debian 套件使用下表中的資訊：
+
+| 封裝 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3037.1-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3037.1-2 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
+| Ubuntu 16.04 的 Debian 套件 | 14.0.3037.1-2 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU9-GDR2"></a> CU9 GDR2 (年 8 月 2018)
 

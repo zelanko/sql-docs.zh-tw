@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e483a76ece4c87492e1cdd9aa23fbaba6648632
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: de33de3178535a54919cc1ad6da3b4b22c25956a
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068298"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381206"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "43068298"
 
 ## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>新增 B 型樹狀結構非叢集索引，以保障有效率的資料表搜尋
 
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以將非叢集 B 型樹狀結構索引建立為叢集資料行存放區索引上的次要索引。 資料行存放區索引發生變更時，會更新 B 型樹狀結構非叢集索引。 您可以使用這項強大功能來發揮優勢。 
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以將非叢集 B 型樹狀結構索引建立為叢集資料行存放區索引上的次要索引。 資料行存放區索引發生變更時，會更新 B 型樹狀結構非叢集索引。 您可以使用這個強大功能來發揮優勢。 
 
 藉由使用次要 B 型樹狀結構索引，您可以有效率地搜尋特定的資料列，而不需掃描所有資料列。  其他選項現在也可以使用。 例如，您可以在 B 型樹狀結構索引上使用 UNIQUE 條件約束，強制執行主索引鍵或外部索引鍵條件約束。 由於非唯一的值無法插入 B 型樹狀結構索引，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法將值插入資料行存放區。 
 
@@ -97,7 +97,6 @@ ms.locfileid: "43068298"
   
 *   免除個別資料倉儲的需要。 傳統上，公司會在資料列存放區資料表上執行交易，再將資料載入不同的資料倉儲執行分析。 如果工作負載很多，您可以在交易式資料表上建立非叢集資料行存放區索引，以避免載入處理序與個別的資料倉儲。
 
-  
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供數種策略，可讓這個案例更有效能。 您可以啟用非叢集資料行存放區索引，而不需變更您的 OLTP 應用程式，因此可以輕鬆試用。 
 
 若要新增額外的處理資源，請在可讀取的次要複本上執行分析。 使用可讀取次要複本時，可以區隔交易式工作負載和分析工作負載的處理。 
@@ -177,8 +176,8 @@ ms.locfileid: "43068298"
 |----------|----------------------|-----------|  
 |建立資料表作為資料行存放區。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立資料表作為叢集資料行存放區索引。 您不需要先建立資料列存放區資料表，再將它轉換成資料行存放區。|  
 |建立具有資料行存放區索引的記憶體資料表。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立具有資料行存放區索引的記憶體最佳化資料表。 建立資料表之後，也可以使用 ALTER TABLE ADD INDEX 語法來加入資料行存放區索引。|  
-|將資料列存放區資料表轉換成資料行存放區。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|將現有的堆積或二進位樹狀目錄轉換成資料行存放區。 範例示範如何在執行這項轉換時處理現有的索引及索引名稱。|  
-|將資料行存放區資料表轉換成資料列存放區。|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41; 或 DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|這通常並非必要，但有時您需要執行這項轉換。 範例示範如何將資料行存放區轉換成堆積或叢集索引。|  
+|將資料列存放區資料表轉換成資料行存放區。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|將現有的堆積或二進位樹狀目錄轉換成資料行存放區。 範例示範如何在執行此轉換時處理現有的索引及索引名稱。|  
+|將資料行存放區資料表轉換成資料列存放區。|[建立叢集索引X &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) 或[將資料行存放區資料表轉換回資料列存放區堆積](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |此轉換通常並非必要，但有時您仍舊需要轉換。 範例示範如何將資料行存放區轉換成堆積或叢集索引。|   
 |在資料列存放區資料表上建立資料行存放區索引。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|資料列存放區資料表可以有一個資料行存放區索引。  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，資料行存放區索引可以有一個篩選條件。 範例示範基本語法。|  
 |為作業分析建立高效能的索引。|[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|描述如何建立互補資料行存放區和 B 型樹狀結構索引，讓 OLTP 查詢使用 B 型樹狀結構索引，而分析查詢使用資料行存放區索引。|  
 |為資料倉儲建立高效能的資料行存放區索引。|[資料行存放區索引 - 資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|描述如何在資料行存放區資料表上使用 B 型樹狀結構索引，建立高效能的資料倉儲查詢。|  

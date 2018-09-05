@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769064"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348199"
 ---
 # <a name="configure-distributed-availability-group"></a>設定分散式的可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34769064"
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>建立接聽所有 IP 位址的接聽程式
 
-例如，下列指令碼會在 TCP 通訊埠 5022 上建立接聽程式端點，接聽所有 IP 位址。  
+例如，下列指令碼會在 TCP 連接埠 5022 上建立接聽程式端點，接聽所有 IP 位址。  
 
 ```sql
 CREATE ENDPOINT [aodns-hadr] 
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>建立第一個可用性群組
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一個叢集上建立主要可用性群組  
-在第一個 WSFC 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。      
+在第一個 WSFC 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」。 Server1 在此範例中是全域主要。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>建立第二個可用性群組  
- 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  
+ 接著在第二個 WSFC 上，建立第二個可用性群組 `ag2`。 在此案例中未指定資料庫，因為其會從主要可用性群組自動植入。  次要可用性群組的主要複本在分散式可用性群組中稱為「轉寄站」。 在此範例中，server3 是轉寄站。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -135,7 +135,7 @@ GO
 ```  
   
 > [!NOTE]  
-> 次要可用性群組必須使用相同的資料庫鏡像端點 (在本範例中為通訊埠 5022)。 否則在執行本機容錯移轉後將會停止複寫。  
+> 次要可用性群組必須使用相同的資料庫鏡像端點 (在本範例中為連接埠 5022)。 否則在執行本機容錯移轉後將會停止複寫。  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>將次要複本聯結至次要可用性群組  
  在此範例中，系統會在次要複本 `server4`執行下列命令，以聯結 `ag2` 可用性群組。 接著會允許可用性群組在次要複本上建立資料庫，以支援直接植入。  
@@ -180,7 +180,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** 會指定每個可用性群組的接聽程式，以及可用性群組的資料庫鏡像端點。 在此範例中，其為通訊埠 `5022` (非用於建立接聽程式的通訊埠 `60173` )。 如果您要使用負載平衡器 (例如在 Azure 中)，則請[新增分散式可用性群組連接埠的負載平衡規則](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 除了 SQL Server 執行個體連接埠之外，還需要新增接聽程式連接埠的規則。 
+>  **LISTENER_URL** 會指定每個可用性群組的接聽程式，以及可用性群組的資料庫鏡像端點。 在此範例中，其為連接埠 `5022` (非用於建立接聽程式的連接埠 `60173` )。 如果您要使用負載平衡器 (例如在 Azure 中)，則請[新增分散式可用性群組連接埠的負載平衡規則](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 除了 SQL Server 執行個體連接埠之外，還需要新增接聽程式連接埠的規則。 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>將分散式可用性群組加入第二個叢集  
  然後在第二個 WSFC 上聯結分散式可用性群組。  
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 目前僅支援手動容錯移轉。 下列 Transact-SQL 陳述式會容錯移轉名為 `distributedag` 的分散式可用性群組：  
 
 
-1. 將兩個可用性群組的可用性模式設定為同步認可。 
+1. 透過同時在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
-   >與一般可用性群組相似，分散式可用性群組中兩個可用性群組複本的同步處理狀態會取決於這兩個複本的可用性模式。 例如，若要發生同步認可，目前的主要可用性群組與次要可用性群組都必須設定成同步認可可用性模式。  
+   >與一般可用性群組相似，分散式可用性群組中兩個可用性群組複本的同步處理狀態會取決於這兩個複本的可用性模式。 例如，若要讓同步認可發生，目前的主要可用性群組與次要可用性群組都必須設定成同步認可可用性模式。  
 
 
-1. 等到分散式可用性群組的狀態變更為 `SYNCHRONIZED`。 在裝載主要可用性群組之主要複本的 SQL Server 上，執行下列查詢。 
+1. 等到分散式可用性群組的狀態變更為 `SYNCHRONIZED`。 在裝載主要可用性群組之主要複本的全域主要上，執行下列查詢。 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     當可用性群組 **synchronization_state_desc** 成為 `SYNCHRONIZED`之後繼續進行。 如果 **synchronization_state_desc** 不是 `SYNCHRONIZED`，請每隔五秒執行命令一次，直到變更為止。 在 **synchronization_state_desc** = `SYNCHRONIZED`之前，請不要繼續進行。 
 
-1. 在裝載主要可用性群組主要複本的 SQL Server 上，將分散式可用性群組角色設定為 `SECONDARY`。 
+1. 在全域主要上，將分散式可用性群組角色設定為 `SECONDARY`。 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

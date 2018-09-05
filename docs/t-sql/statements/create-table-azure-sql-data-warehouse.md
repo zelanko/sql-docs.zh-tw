@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 701de1160cad251691253b32b828c6ad91c945db
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058746"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348318"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> 資料行選項
 
  `COLLATE` *Windows_collation_name*  
- 指定運算式的定序。 定序必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的其中一個 Windows 定序。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援 Windows 定序的清單，請參閱 [Windows 定序名稱 (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)。  
+ 指定運算式的定序。 定序必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的其中一個 Windows 定序。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援 Windows 定序的清單，請參閱 [Windows 定序名稱 (Transact-SQL)](windows-collation-name-transact-sql.md)。  
   
  `NULL` | `NOT NULL`  
  指定資料行是否允許使用 `NULL` 值。 預設值為 `NULL`。  
@@ -180,7 +180,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |*n* 值|有效位數|小數位數|  
 |--:|--:|-:|  
 |`0`|19|0|  
-|`1`|21|@shouldalert|  
+|`1`|21|1|  
 |`2`|22|2|  
 |`3`|23|3|  
 |`4`|24|4|  
@@ -247,7 +247,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 | `bigint`|8|  
 | `int` |4|  
 | `smallint` |2|  
-| `tinyint` |@shouldalert|  
+| `tinyint` |1|  
   
  `bit`  
  一種整數資料類型，其值有 `1`、`0` 或 NULL 幾種。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 可將 bit 資料行的儲存體最佳化。 如果資料表中的 bit 資料行小於或等於 8 個，這些資料行會儲存為 1 個位元組。 如果有 9 到 16 個 bit 資料行，則儲存為 2 個位元組，依此類推。  

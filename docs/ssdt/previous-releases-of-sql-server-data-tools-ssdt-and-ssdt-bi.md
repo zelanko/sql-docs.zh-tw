@@ -1,7 +1,7 @@
 ---
 title: 舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 92b9f905726bc3fb1d7288b5cc2b69edbb828ca7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bb437b756c19ee9c995452295c36000296846851
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077550"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152677"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 
 ## <a name="recent-downloads"></a>最近的下載
 
-我們提供最近幾次下載的相關資訊，以便您在不幸遇到[最新版本](download-sql-server-data-tools-ssdt.md)相關問題時可參考 (雖然這非常不可能發生)。 
+我們提供最近幾次下載的相關資訊，以便您在不幸遇到最新版本相關問題時可參考 (雖然這非常不可能發生)。
 
 |SSDT 版本| Visual Studio 2017|
 |:---|:---|
@@ -43,10 +43,10 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 |15.5.2|[SSDT for VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
 <br>
 
-
 |SSDT 版本| Visual Studio 2015|
 |:---|:---|
-|17.3|[適用於 VS2015 17.3 的 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)| 
+|17.4|[適用於 VS2015 17.4 的 SSDT](https://go.microsoft.com/fwlink/?linkid=863440)|
+|17.3|[適用於 VS2015 17.3 的 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 

@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152829"
+ms.locfileid: "43240146"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>識別您的內部部署資料庫正確的 Azure SQL 資料庫 SKU
 
@@ -34,11 +34,14 @@ ms.locfileid: "43152829"
 > [!NOTE] 
 > 才提供此功能目前只能透過命令列介面 (CLI)。 近期版本中，會新增這項功能透過 DMA 的使用者介面的支援。
 
+> [!IMPORTANT]
+> Azure SQL database 的 SKU 建議為目前可供移轉，從 SQL Server 2016 或更新版本的。
+
 下列指示將協助您判斷 Azure SQL 資料庫 SKU 建議，並使用 Data Migration Assistant 佈建至 Azure，相關聯的資料庫。
 
 ## <a name="prerequisites"></a>先決條件
 
-下載資料庫移轉小幫手 v4.0 或更新版本，然後再進行安裝。 如果您已經有此工具安裝，請關閉並重新開啟它，並將提示您升級的工具。
+下載資料庫移轉小幫手 v4.0 或更新版本，然後再進行安裝。 如果您已經有此工具安裝，請關閉並重新開啟它，並將提示您升級工具。
 
 ## <a name="collect-performance-counters"></a>收集效能計數器
 
@@ -58,7 +61,7 @@ ms.locfileid: "43152829"
     - **OutputFilePath**： 輸出檔案路徑來儲存所收集的計數器。
     - **CollectionTimeInSeconds**： 在這期間您想要收集效能計數器資料的時間量。
       擷取效能計數器，以取得有意義的建議至少 40 分鐘。 擷取的持續時間越長越精準建議會。
-    - **DbConnectionString**： 指向您要從中收集效能計數器資料的電腦上主控的 master 資料庫的連接字串。
+    - **DbConnectionString**： 指向要從中收集效能計數器資料的電腦上主控的主要資料庫的連接字串。
      
     以下是範例引動過程：
 
@@ -144,7 +147,7 @@ TSV 輸出檔案包含資料行，如下圖所示：
 - **ExclusionReasons** -這個值是空白，如果建議的層。 建議您不要每個層，我們會提供為什麼它未選取的原因。
 - **AppliedRules** -簡短的標記法的已套用的規則。
 
-請注意，建議的值與成功率類似於您的內部部署資料庫，在 Azure 中執行查詢所需的最低 SKU。 比方說，如果建議的最低 SKU S4 適用於標準層中，然後選擇 S3 或下方將會導致查詢逾時或無法執行。
+建議的值是您在 Azure 中執行與成功率類似於您的內部部署資料庫的查詢所需的最低 SKU。 比方說，如果建議的最低 SKU S4 適用於標準層中，然後選擇 S3 或下方將會導致查詢逾時或無法執行。
 
 HTML 檔案包含以圖形格式的這項資訊。 您可以使用 HTML 檔案，輸入 Azure 訂用帳戶資訊、 挑選定價層、 計算層級和資料大小上限為您的資料庫，以及產生指令碼來佈建您的資料庫。 您可以使用 PowerShell 執行此指令碼。
 

@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f0fc76b5ffd86d351c9199acc0b227ed1fd4b96
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 853067176f9b779d86e52e9199674adf6e6e99c5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087584"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348529"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "43087584"
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |一種作業系統： Windows 或 Linux |
 |**host_distribution** |**nvarchar(256)** |作業系統的描述。 |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統版本 (版本號碼)。 如需值和描述的清單，請參閱 < [Operating System Version (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)。 <br> 針對 Linux，會傳回空字串。 |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統版本 (版本號碼)。 如需值和描述的清單，請參閱 < [Operating System Version (Windows)](/windows/desktop/SysInfo/operating-system-version)。 <br> 針對 Linux，會傳回空字串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 作業系統的 Service Pack 層級。 <br> 針對 Linux，會傳回空字串。 |  
 |**host_sku**|**int**|Windows 庫存單位 (SKU) 識別碼。 如需 SKU Id 和描述的清單，請參閱 < [GetProductInfo 函數](http://msdn.microsoft.com/library/ms724358.aspx)。 可為 Null。 <br> 針對 Linux，則傳回 NULL。 |  
 |**os_language_version**|**int**|作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱 <<c0> [ 由 Microsoft 指派的地區設定識別碼](http://go.microsoft.com/fwlink/?LinkId=208080)。 不可為 null。|  

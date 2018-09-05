@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd3fe488c2ae6bff1b94a11996bc67a88fd72691
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 447f57e753c243958904d6f5c6c380ed157c222e
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863983"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381216"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>開啟 ODBC 資料來源管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32863983"
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>在 Windows 10 中開啟 ODBC 資料來源管理員   
 
-1.  在 [開始] 頁面上輸入 **ODBC 資料來源**。 「ODBC 資料來源」傳統型應用程式應該會出現在搜尋選項中。 
+1.  在 [開始] 頁面上輸入 **ODBC 資料來源**。 「ODBC 資料來源傳統型應用程式」應該會出現在搜尋選項中。 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>若要在 Windows 7 中開啟 ODBC 資料來源管理員  

@@ -1,26 +1,20 @@
 ---
 title: 建立、刪除或修改資料夾 (入口網站) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0622d84da89af1f2cfda36500e5257168417ba14
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dff7a3a711b0462e7c47869a390f8b171370877c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082450"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270664"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>建立、刪除或修改資料夾 (Web 入口網站)
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
@@ -33,7 +27,7 @@ ms.locfileid: "39082450"
   
      [建立新資料夾] 對話方塊隨即開啟。  
   
-3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：; ? : \@ & = + , $ / * < > |。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
+3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：\;\? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
   
 4.  選取 [建立]。  
   

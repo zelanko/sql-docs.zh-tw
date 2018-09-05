@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3dc4c730ea9c7c9ba0126a50ed4bb8129efc9c
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152578"
+ms.locfileid: "43193024"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,21 @@ ms.locfileid: "43152578"
 
 此版本新增了[的 Python 支援和領先業界的機器學習服務演算法](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)。 重新命名以反映新的範圍，SQL Server 2017 標示了[SQL Server Machine Learning 服務 （資料庫）](what-is-sql-server-machine-learning.md)，使用 Python 和 r 語言支援 
 
-此版也導入了[SQL Server Machine Learning Server （獨立式）](r/r-server-standalone.md)、 完全獨立的 SQL Server，針對您想要在專用的系統上執行的 R 和 Python 工作負載。 獨立伺服器，與您發佈及調整而不需使用 SQL Server 的 R 或 Python 的解決方案。
+### <a name="r-enhancements"></a>R 的增強功能
+
+SQL Server 2017 Machine Learning 服務的 R 元件是新一代的 SQL Server 2016 R Services，基底 R、 RevoScaler 和其他套件的更新版本。
+
+適用於 R 的新功能包括[**套件管理**](r/install-additional-r-packages-on-sql-server.md)，具有下列優點： 
+
++ 資料庫角色可協助 Dba 管理封裝，以及指派安裝套件的權限。
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)協助 Dba 會管理在熟悉的 T-SQL 語言中的封裝。
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)函式說明安裝時，使用者所擁有的移除或列出的套件。 如需詳細資訊，請參閱 <<c0> [ 如何使用 RevoScaleR 函數來尋找或安裝 R 封裝在 SQL Server 上](r/use-revoscaler-to-manage-r-packages.md)。
+
+### <a name="r-libraries"></a>R 程式庫
+
+| 封裝 | 描述 |
+|---------|-------------|
+| [**MicrosoftML**](using-the-microsoftml-package.md) | 在此版本中，MicrosoftML 包含在預設 R 安裝中，刪除在先前的 SQL Server 2016 R Services 所需的升級步驟。 MicrosoftML 提供的圖案狀態機器學習服務演算法和可調整，或在遠端計算內容中執行資料轉換。 演算法會包括可自訂的深度類神經網路、 迅速的決策樹及決策樹、 線性迴歸和羅吉斯迴歸。  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>在資料庫內分析 Python 整合
 
@@ -39,16 +53,13 @@ T-SQL 和 Python 的整合現在支援透過[sp_execute_external_script](https:/
 [**revoscalepy**](python/what-is-revoscalepy.md)| RevoScaleR 的 Python 相當。 您可以建立用於線性及羅吉斯迴歸、 決策樹、 梯度上升的樹和隨機樹系，所有可平行執行，且能夠在遠端計算內容中執行的 Python 模型。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以執行 Python 程式碼的遠端 SQL 伺服器上，瀏覽資料，或建立模型，而不移動資料。 |
 |[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |Python 相當的 MicrosoftML R 封裝。 |
 
-### <a name="r-libraries"></a>R 程式庫
-
-| 封裝 | 描述 |
-|---------|-------------|
-| [**MicrosoftML (R)**](using-the-microsoftml-package.md) | 新狀態機器學習演算法和資料轉換可以縮放或執行在遠端計算內容。 演算法會包括可自訂的深度類神經網路、 迅速的決策樹及決策樹、 線性迴歸和羅吉斯迴歸。  |
-| [**R 封裝管理**](r/install-additional-r-packages-on-sql-server.md) | 增強在此版本中，具有下列優點： 資料庫角色來協助管理套件，並指派權限才能安裝封裝，DBA [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)中協助 dba 在遇到管理套件，而不需要的 T-SQL 陳述式不需要知道 R 和一組豐富的中的 R 函數[RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)幫助您安裝、 移除或列出的封裝，使用者所擁有。 |
-
 ### <a name="pre-trained-models"></a>預先定型的模型
 
 [**預先定型的模型**](install/sql-pretrained-models-install.md)可供 Python 和。 使用影像辨識和正負面情感分析，這些模型來產生預測，根據您的資料。 
+
+### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>做為共用的功能，在 SQL Server 安裝程式的獨立伺服器
+
+此版本也加入[SQL Server Machine Learning Server （獨立式）](r/r-server-standalone.md)，完全獨立的資料科學伺服器，支援 R 和 Python 中的統計和預測性分析。 如同 R Services，此伺服器是新版的 SQL Server 2016 R Server （獨立式）。 獨立伺服器，與您發佈及調整 SQL Server 上的 R 或 Python 的解決方案，不含相依性。
 
 
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016 的新功能

@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5020aa262de57eb63849e3aac51a9d8f571a40
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a1bf31190d1dbdcac8506d2306b6cd6ecbd259ac
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43193044"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "43084776"
 |**class**|**tinyint**|識別權限所在的類別。<br /><br /> 0 = 資料庫<br />1 = 物件或資料行<br />3 = 結構描述<br />4 = 資料庫主體<br />5 = 組件-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />6 = 類型<br />10 = XML 結構描述集合- <br />                      **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />15 = 訊息類型-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />16 = 服務合約-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />17 = 服務-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />18 = 遠端服務繫結-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />19 = 的路由-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />23 = 全文檢索目錄-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />24 = 對稱金鑰-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />25 = 憑證-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />26 = 非對稱金鑰-**適用於**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |**class_desc**|**nvarchar(60)**|權限所在類別的描述。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|權限所在項目的識別碼，它是根據類別加以解譯。 通常 **，則 major_id 就**只是套用至類別所代表的識別碼。 <br /><br /> 0 = 資料庫本身 <br /><br /> > 0 = 使用者物件的物件識別碼 <br /><br /> \<0 = 系統物件的物件識別碼 |  
-|**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。 通常 **，則 major_id 就**是零，因為不沒有可用的物件類別的任何子類別目錄。 否則，它是資料表的資料行識別碼。|  
+|**minor_id**|**int**|權限所在項目的次要識別碼，它是根據類別加以解譯。 通常**minor_id**是零，因為不沒有可用的物件類別的任何子類別目錄。 否則，它是資料表的資料行識別碼。|  
 |**grantee_principal_id**|**int**|獲授與權限的資料庫主體識別碼。|  
 |**grantor_principal_id**|**int**|這些權限之同意授權者的資料庫主體識別碼。|  
 |**type**|**char(4)**|資料庫權限類型。 如需權限類型的清單，請參閱下表。|  

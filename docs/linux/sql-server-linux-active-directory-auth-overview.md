@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087110"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381166"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 驗證
 
@@ -52,7 +52,6 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 ## <a name="known-issues"></a>已知問題
 
 - 此時，資料庫鏡像端點支援的唯一驗證方法是憑證。 在未來版本中，將會啟用 WINDOWS 驗證方法。
-- 第三方 AD 工具，例如 Centrify，Powerbroker，並不支援 Vintela。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 51ffa33bef7ab880704c9c1391a69feb3e194202
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a75ed22e46576c701e281f495d5bc123ca489526
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984560"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348459"
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>使用 MicrosoftML 封裝與 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction)隨附 Microsoft R Server 和 SQL Server 2017 的套件包含多個機器學習演算法。 這些 Api 的內部的機器學習服務應用程式，由 Microsoft 所開發，並提出看法多年來支援高效能巨量資料，使用多核心處理和快速資料流。 MicrosoftML 也包含文字和映像處理的許多轉換。
 
-在 SQL Server 2017 CTP 2.0 中已新增 Python 語言的支援。 **Microsoftml** Python 函式相當於 MicrosoftML 套件中包含 r 封裝 
+在 SQL Server 2017 中，已新增 Python 語言的支援。 **Microsoftml** Python 函式相當於 MicrosoftML 套件中包含 r 封裝 
 
 + **MicrosoftML for R**
 

@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395247"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348428"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的交易效能收集器可協助您評估記憶體中 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  
@@ -38,7 +38,7 @@ ms.locfileid: "40395247"
   
  交易效能收集器和交易效能分析報表將協助您完成下列工作：  
   
--   分析您的工作負載，判斷記憶體中 OLTP 是否可改善效能。 交易效能收集器會收集和評估您的工作負載的效能特性。 執行個體時提供 SQL Server 登入。 交易效能分析報表接著會建議轉換成記憶體中 OLTP 後獲益最多的資料表和預存程序。  
+-   分析您的工作負載，判斷記憶體中 OLTP 是否可改善效能。 交易效能收集器會收集和評估您的工作負載的效能特性。 . 交易效能分析報表接著會建議轉換成記憶體中 OLTP 後獲益最多的資料表和預存程序。  
   
 -   協助您規劃及執行移轉為記憶體中 OLTP 的作業。 從磁碟資料表移轉到記憶體最佳化資料表，其間的移轉路徑可能會很費時。 記憶體最佳化 Advisor 可協助您識別將資料表移至記憶體中 OLTP 之前必須先從資料表移除的不相容項目。 記憶體最佳化 Advisor 也可協助您了解將資料表移轉到記憶體最佳化的資料表時，將對應用程式造成什麼影響。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "40395247"
   
  可以在 SQL Server 2012 或更新版本的設定資料收集器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[如何： 建立認證 (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx)如需如何建立認證的詳細資訊。  
+ 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[如何： 建立認證 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)如需如何建立認證的詳細資訊。  
   
  若要設定資料收集，以便上傳至不同執行個體上的管理資料倉儲資料庫：  
   

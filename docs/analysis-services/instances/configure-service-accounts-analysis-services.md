@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
-ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
+ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130604"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348337"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39130604"
  群組的唯一成員是個別服務 SID。 旁邊就是登入帳戶。 登入帳戶名稱是表面，在此提供內容給個別服務 SID。 如果您後續變更登入帳戶，然後返回此頁面，會發現安全性群組和個別服務 SID 不會變更，但是登入帳戶標籤則不同。  
   
 ##  <a name="bkmk_winpriv"></a> 指派給 Analysis Services 服務帳戶的 Windows 權限  
- Analysis Services 需要來自作業系統的權限，才能進行服務啟動，以及要求系統資源。 需求會依照伺服器模式以及執行個體是否已叢集而改變。 如果您不熟悉 Windows 權限，請參閱 [權限](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [權限常數 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) 以了解詳細資訊。  
+ Analysis Services 需要來自作業系統的權限，才能進行服務啟動，以及要求系統資源。 需求會依照伺服器模式以及執行個體是否已叢集而改變。 如果您不熟悉 Windows 權限，請參閱 [權限](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [權限常數 (Windows)](/windows/desktop/SecAuthZ/privilege-constants) 以了解詳細資訊。  
   
  Analysis Services 的所有執行個體都需有 **[以服務方式登入]** (SeServiceLogonRight) 權限。 SQL Server 安裝程式會為您指派安裝期間所指定之服務帳戶的權限。 對於以多維度和資料採礦模式執行的伺服器而言，這對獨立伺服器安裝而言是 Analysis Services 服務帳戶所需的唯一 Windows 權限，而且它是安裝程式為 Analysis Services 所設定的唯一權限。 至於叢集和表格式執行個體，則是必須手動新增其他 Windows 權限。  
   
@@ -147,8 +147,8 @@ ms.locfileid: "39130604"
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server 服務帳戶和個別服務 SID （部落格）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server 使用服務 SID 提供服務隔離 （知識庫文章）](http://support.microsoft.com/kb/2620201)   
- [存取 Token (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [安全性識別碼 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [存取 Token (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [安全性識別碼 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [存取 Token (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [存取控制清單 (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

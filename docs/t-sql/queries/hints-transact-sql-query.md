@@ -1,7 +1,7 @@
 ---
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331594"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240286"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331594"
  防止查詢使用非叢集之記憶體最佳化的資料行存放區索引。 如果查詢同時包含禁止使用資料行存放區索引的查詢提示，以及使用資料行索引的索引提示，將會因為兩提示相互衝突而傳回錯誤。  
   
  MAX_GRANT_PERCENT = *percent*  
- 最大記憶體授與大小 (百分比)。 查詢保證不會超過此限制。 如果 Resource Governor 設定低於此值，實際的限制可能更低。 有效值介於 0.0 與 100.0 之間。  
+ 最大記憶體授與大小 (百分比)。 查詢保證不會超過此限制。 如果 Resource Governor 設定低於此提示所指定的值，實際限制可能更低。 有效值介於 0.0 與 100.0 之間。  
   
 **適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "39331594"
  如果不可能執行這類計畫，查詢最佳化工具會傳回錯誤，而不是將錯誤偵測延遲到查詢執行時。 資料列可能包含可變長度的資料行；[!INCLUDE[ssDE](../../includes/ssde-md.md)] 允許資料列定義成超出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力的最大潛在大小。 一般而言，雖然有最大潛在大小，但應用程式仍會儲存實際大小在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力限制之內的資料列。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 發現太長的資料列，便會傳回執行錯誤。  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
- **適用對象**：適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以上) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起) 與 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  提供一或多個額外的提示給**單引號內**之提示名稱所指定的查詢處理器。   
 
@@ -285,11 +285,17 @@ ms.locfileid: "39331594"
  停用批次模式記憶體授與意見反應。 如需詳細資訊，請參閱[批次模式記憶體授與意見反應](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  停用批次模式自適性聯結。 如需詳細資訊，請參閱[批次模式自適性聯結](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ 強制查詢層級的查詢最佳化工具行為，就像查詢是使用資料庫相容性層級 *n* 所編譯，其中 *n* 是支援的資料庫相容性層級。 請參閱 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 以取得目前支援之 *n* 值的清單。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起) 與 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
  
-> [!TIP]
-> 提示名稱不區分大小寫。
+    > [!NOTE]
+    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不會覆寫預設值或舊版基數估計設定，若它是透過資料庫範圍設定所強制，追蹤旗標或另一個查詢提示，例如 QUERYTRACEON。   
+    > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，例如特定資料庫功能的可用性。   
   
   您可以使用動態管理檢視 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，來查詢所有支援的 USE HINT 名稱清單。    
+
+> [!TIP]
+> 提示名稱不區分大小寫。   
   
 > [!IMPORTANT] 
 > 一些 USE HINT 提示可能會與在全域或工作階段層級啟用的追蹤旗標發生衝突，或與資料庫範圍設定的設定發生衝突。 在此情況下，查詢層級提示 (USE HINT) 一律優先。 如果 USE HINT 與其他查詢提示或在查詢層級啟用的追蹤旗標 (例如由 QUERYTRACEON 啟用) 發生衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在嘗試執行查詢時會產生錯誤。 
@@ -305,7 +311,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
 -   沒有使用別名時，*exposed_object_name* 就是 FROM 子句中所參考之資料表或檢視的完全相符項目。 例如，如果使用兩部分名稱參考資料表或檢視，*exposed_object_name* 就是相同的兩部分名稱。  
   
- 當指定 *exposed_object_name* 但沒有同時指定資料表提示時，在查詢中指定成物件之資料表提示一部分的任何索引都會被忽略，而且查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用這項技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
+ 當指定 *exposed_object_name* 但沒有同時指定資料表提示時，在查詢中指定成物件之資料表提示一部分的任何索引都會被忽略，而且查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用此技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
   
 **\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 這是要套用至以查詢提示形式與 *exposed_object_name* 對應之資料表或檢視表的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
@@ -331,7 +337,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   動態管理檢視  
 -   具名子查詢  
   
-對於不具任何現有資料表提示的查詢，也可將 INDEX、FORCESCAN 和 FORCESEEK 資料表提示指定為查詢提示，或以其取代查詢中現有的 INDEX、FORCESCAN 或 FORCESEEK 提示。 除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 在此情況下，也必須在 OPTION 子句中使用 TABLE HINT 將相符的提示指定為查詢提示，以保留此查詢的語意。 例如，如果查詢包含資料表提示 NOLOCK，則計劃指南的 **@hints** 參數中的 OPTION 子句也必須包含 NOLOCK 提示。 請參閱範例 K。如果在 OPTION 子句中使用 TABLE HINT 指定 INDEX、FORCESCAN 或 FORCESEEK 以外的資料表提示，但是沒有相符的查詢提示 (反之亦然)，則會引發錯誤 8702 (指出 OPTION 子句可能會造成查詢語意變更) 並導致查詢失敗。  
+對於不具任何現有資料表提示的查詢，也可以將 INDEX、FORCESCAN 與 FORCESEEK 資料表提示指定為查詢提示，或以其取代查詢中現有的 INDEX、FORCESCAN 或 FORCESEEK 提示。 除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 在此情況下，也必須在 OPTION 子句中使用 TABLE HINT 將相符的提示指定為查詢提示，以保留此查詢的語意。 例如，如果查詢包含資料表提示 NOLOCK，則計劃指南的 **@hints** 參數中的 OPTION 子句也必須包含 NOLOCK 提示。 請參閱範例 K。如果在 OPTION 子句中使用 TABLE HINT 指定 INDEX、FORCESCAN 或 FORCESEEK 以外的資料表提示，但是沒有相符的查詢提示 (反之亦然)，則會引發錯誤 8702 (指出 OPTION 子句可能會造成查詢語意變更) 並導致查詢失敗。  
   
 ## <a name="examples"></a>範例  
   
