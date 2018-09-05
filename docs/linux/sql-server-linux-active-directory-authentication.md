@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400701"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381256"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程： 使用 Active Directory Linux 上的 SQL Server 驗證
 
@@ -35,6 +35,10 @@ ms.locfileid: "39400701"
 > * 在考慮改用 SQL 建立 AD 架構的登入
 > * 連線到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 驗證
 
+> [!NOTE]
+>
+> 如果您想要設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Linux 上使用的第三方 AD 提供者，請參閱[使用 Linux 上的 SQL Server 中的第三方 Active Directory 提供者](./sql-server-linux-active-directory-third-party-providers.md)。
+
 ## <a name="prerequisites"></a>先決條件
 
 設定 AD 驗證之前，您必須：
@@ -49,7 +53,7 @@ ms.locfileid: "39400701"
 
 使用下列步驟，加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機加入 Active Directory 網域：
 
-1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 到 AD 網域加入您的主機電腦。 如果您尚未開始，將 [realmd] 與 [Kerberos 用戶端封裝上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發封裝管理員：
+1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 到 AD 網域加入您的主機電腦。 如果您尚未開始，將 [realmd] 與 Kerberos 用戶端封裝上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發封裝管理員：
 
    ```bash
    # RHEL
@@ -93,7 +97,7 @@ ms.locfileid: "39400701"
 
       現在請檢查您`/etc/resolv.conf`檔案包含一條線，如下列範例所示：  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -115,7 +119,28 @@ ms.locfileid: "39400701"
 
      現在請檢查您`/etc/resolv.conf`檔案包含一條線，如下列範例所示：  
 
-     ```Code
+     ```/etc/resolv.conf
+     nameserver **<AD domain controller IP address>**
+     ```
+
+   - **SLES**:
+
+     編輯`/etc/sysconfig/network/config`檔案，讓您的 AD 網域控制站 IP 將用於 DNS 查詢，您的 AD 網域是網域的 [搜尋] 清單中：
+
+     ```/etc/sysconfig/network/config
+     <...>
+     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+     ```
+
+     在編輯這個檔案之後, 重新啟動網路服務：
+
+     ```bash
+     sudo systemctl restart network
+     ```
+
+     現在請檢查您`/etc/resolv.conf`檔案包含一條線，如下列範例所示：
+
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -307,19 +332,27 @@ ms.locfileid: "39400701"
    請確定您已安裝[mssql 工具](sql-server-linux-setup-tools.md)套件，然後使用連接`sqlcmd`未指定任何認證：
 
    ```bash
-   sqlcmd -S mssql.contoso.com
+   sqlcmd -S mssql-host.contoso.com
    ```
 
 * 已加入網域的 Windows 用戶端上的 SSMS
 
-   已加入網域的 Windows 用戶端使用您的網域認證登入。 請確定[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]已安裝，然後連接至您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]藉由指定的執行個體**Windows 驗證**中**連接到伺服器**對話方塊。
+   已加入網域的 Windows 用戶端使用您的網域認證登入。 請確定[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]已安裝，然後連接至您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]藉由指定的執行個體 (例如"mssql-host.contoso.com") **Windows 驗證**中**連接到伺服器**對話方塊。
 
 * 使用其他用戶端驅動程式的 AD 驗證
 
   * JDBC:[使用 Kerberos 整合式驗證來連接 SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC:[使用整合式的驗證](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[連接字串語法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
- 
+
+## <a name="performance-improvements"></a>效能改進
+如果您注意到 AD 帳戶查閱花費一段時間，並檢查您 AD 設定是有效的步驟[透過第三方 AD 提供者的 Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-third-party-providers.md)，您可以新增下列各行，以`/var/opt/mssql/mssql.conf`略過 SSSD 呼叫，並直接使用 LDAP 呼叫。
+
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
+
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，我們逐步解說如何設定與 Linux 上的 SQL Server 的 Active Directory 驗證。 您已學到如何以：

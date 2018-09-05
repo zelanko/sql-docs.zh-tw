@@ -19,14 +19,14 @@ helpviewer_keywords:
 - connection strings [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 024f014dda25be2d5b9ab01bd6eeffc57c3efcae
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: cbc464d86f77c609ecc53bc6ed02bb5fff60e3a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107214"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026107"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>利用 OLE DB Driver for SQL Server 使用連接字串關鍵字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
