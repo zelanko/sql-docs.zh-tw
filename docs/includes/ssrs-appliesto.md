@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 0448a0bb463fe9074bf8812f35eb3c97dcc570f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 04bf648aa3840a5c6f7f40b333a388ec11e278c4
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38067077"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42788817"
 ---
-**本主題適用於：**
+**適用於：**

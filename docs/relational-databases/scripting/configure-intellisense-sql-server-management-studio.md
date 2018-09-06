@@ -18,13 +18,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a6ccc7e2964568b71c25d92bea6658c0d8abf590
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b67b64f3166febe9327b770cb67a6c2f979967f1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549388"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067849"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>設定 IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "39549388"
 >  目前編輯器工作階段中的某些變更不會生效。  您必須開啟新的 Transact-SQL 編輯器工作階段，才能看到變更。
   
 ### <a name="to-turn-statement-completion-options-off-by-default"></a>預設關閉陳述式完成選項  
+
+> [!NOTE]
+> SQL 資料倉儲不支援 IntelliSense。
+>
+>
   
 1.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   

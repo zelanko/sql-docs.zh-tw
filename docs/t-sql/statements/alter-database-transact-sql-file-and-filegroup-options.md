@@ -45,23 +45,32 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ada5cd545aa805d5f5ec95bcb21a9258011ea56e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459932"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43095336"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
 
 修改與資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組，以及變更資料庫或其檔案和檔案群組的屬性。 如需其他 ALTER DATABASE 選項，請參閱 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)。
 
-按一下下列其中一個索引標籤，以查看您所使用特定 SQL 版本的語法、引數、備註、權限和範例。
-
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
-# <a name="sql-servertabsqlserver"></a>[[SQL Server]](#tab/sqlserver)
+## <a name="click-a-product"></a>按一下產品！
+
+在下一行中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> |||
+> |-|-|-|
+> |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+# <a name="sql-server"></a>[SQL Server]
 
 ## <a name="syntax"></a>語法  
   
@@ -658,7 +667,24 @@ GO
 [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
 [資料庫檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)    
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB 受控執行個體](#tab/sqldbmi)  
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 在 Azure SQL Database 受控執行個體中，搭配資料庫使用此陳述式。
 
@@ -1036,4 +1062,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
+ 
+::: moniker-end

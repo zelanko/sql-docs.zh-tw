@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184684"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780759"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|基本的 R 整合|是|是|是|是|否|   
-|進階的 R 整合|是|否|否|否|否| 
+|基本 R 整合 <sup>1</sup>|是|是|是|是|否|   
+|進階 R 整合 <sup>2</sup>|是|否|否|否|否| 
 |基本 Python 整合|是|是|是|是|否|
 |進階 Python 整合|是|否|否|否|否| 
 |Machine Learning 伺服器 (獨立式)|是|否|否|否|否|   
-|Polybase 計算節點|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup> | 
+|Polybase 計算節點|是|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup> | 
 |Polybase 前端節點|是|否|否|否|否| 
 |JSON|是|是|是|是|是|   
 |查詢存放區|是|是|是|是|是|   
@@ -322,7 +322,12 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |圖表|是|是|是|是|是|  
 
 
-<sup>1</sup> 使用多個運算節點向外延展時需要標題節點。
+<sup>1</sup> 基本整合僅限使用 2 個核心及記憶體內部資料集。 
+
+<sup>2</sup> 進階整合可依硬體限制，使用所有可用核心來平行處理任何大小的資料集。 
+
+<sup>3</sup> 使用多個計算節點相應放大需要前端節點。
+
 
 ## <a name="IS"></a> Integration Services
 

@@ -17,13 +17,13 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78eb769a8f37ca055628a89aeebe7dd444673434
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 6989aaf0ccef6a9cb7656a23ffdc28062a33839b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988220"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084927"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,8 +70,8 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：  
 
-[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[簡體中文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[繁體中文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
 [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
 [法文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
 [德文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
@@ -100,8 +100,8 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
   
 這版**適用於 VS 2015 的 SSDT** 提供下列語言版本：  
 
-[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
+[簡體中文]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
+[繁體中文]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
 [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
 [法文]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
 [德文]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
@@ -119,8 +119,8 @@ SSDT 的 ISO 映像提供了另一種方式，可讓您用來安裝 SSDT 或設�
 > [!NOTE]
 > 現在可使用 VS 2015 17.4 ISO 映像的 SSDT。
 
-[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[簡體中文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[繁體中文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
 [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
 [法文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
 [德文]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |

@@ -18,19 +18,22 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d45174da7a0d8792229051a9f6cdb486b64e8343
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 074a799f9027fee4297332f47dbdbd064ab7593d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309817"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790929"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>將定義域或複合定義域附加至參考資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   此主題描述如何將資料品質知識庫中的定義域/複合定義域附加至 Windows Azure Marketplace 中的參考資料服務，以便針對高品質參考資料建立知識。 每一項參考資料服務都包含結構描述 (資料行)。 將定義域或複合定義域附加至參考資料服務之後，您必須將附加的複合定義域內的附加定義域或個別定義域對應至參考資料服務結構描述中的適當資料行。 將複合定義域附加至參考資料服務可讓您只將一個定義域附加至參考資料服務，然後將複合定義域中的個別定義域對應至參考資料服務結構描述中的適當資料行。  
-  
+
+> [!IMPORTANT]
+> 本文提到的協力廠商參考資料服務先前可從 Azure DataMarket 取得。 自 2016 年 12 月 31 日起已中止 DataMarket 和資料服務 (例如包含 Melissa 位址資料)。 因此，您再也無法使用從 DataMarket 取得的指定服務來執行本文中的範例。 但您仍然可以使用協力廠商參考資料提供者直接線上提供的參考資料服務。
+
 > [!WARNING]  
 >  附加至參考資料服務的複合定義域可在將定義域對應至參考資料服務中的資料行時，於定義域下拉式清單中使用。 不要將複合定義域對應至參考資料服務結構描述中的資料行；您必須只將複合定義域內的個別定義域對應至參考資料服務結構描述中的適當資料行。 否則，它將會導致錯誤。  
   
@@ -45,7 +48,7 @@ ms.locfileid: "35309817"
   
 ###  <a name="Security"></a> 安全性  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>[權限]  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色，才能將定義域對應至參考資料。  
   
 ##  <a name="Map"></a> 將定義域對應至 Melissa Data 中的參考資料  
