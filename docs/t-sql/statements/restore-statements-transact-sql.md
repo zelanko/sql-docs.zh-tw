@@ -44,12 +44,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7caf240c4f1fa6d0641b91db7061d50752941b6b
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 37bf91db051a3f3a8369ecefea68288139181075
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008940"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412595"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 還原利用 BACKUP 命令取得的 SQL 資料庫備份。 
@@ -72,8 +72,8 @@ ms.locfileid: "40008940"
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
 > </tr>
 > </table>
@@ -724,8 +724,8 @@ RESTORE DATABASE Sales
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
->   <th><strong><em>* SQL DB<br />受控執行個體</th>
+>   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
 > </tr>
 > </table>
@@ -734,7 +734,7 @@ RESTORE DATABASE Sales
 
 # <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
-此命令可讓您從完整資料庫備份還原整個資料庫 (完整還原)。
+此命令可讓您使用 Azure Blob 儲存體帳戶從完整資料庫備份還原整個資料庫 (完整還原)。
 
 如需其他支援的 RESTORE命令，請參閱：
 - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -763,7 +763,7 @@ DATABASE
   
 FROM URL
 
-指定要用於還原作業的 URL。 URL 格式可用於從 Microsoft Azure 儲存體服務還原備份。 
+指定放置於 URL而且將用於還原作業的一或多個備份裝置。 URL 格式可用於從 Microsoft Azure 儲存體服務還原備份。 
 
 > [!IMPORTANT]  
 > 為了在從 URL 還原時能從多部裝置還原，您必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。  
@@ -773,7 +773,7 @@ FROM URL
  
 ## <a name="general-remarks"></a>一般備註
 
-如果是非同步的還原，即使用戶端連線中斷，還是會繼續還原。 如果您的連線中斷，可以檢查 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 檢視以取得還原作業 (以及建立和卸除資料庫) 的狀態。 
+還原作業非同步 - 即使用戶端連線中斷，還是會繼續還原。 如果您的連線中斷，可以檢查 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 檢視以取得還原作業 (以及建立和卸除資料庫) 的狀態。 
 
 會設定/覆寫下列資料庫選項，且稍後無法變更：
 
@@ -806,6 +806,7 @@ RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色
 ##  <a name="examples"></a> 範例  
 下列範例會從 URL　還原僅限複製資料庫備份，包括建立認證。  
   
+###  <a name="restore-mi-database"></a> A. 從三個備份裝置還原資料庫。   
 ```sql
 
 -- Create credential
@@ -819,16 +820,14 @@ FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-Wid
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
-
---The following error is shown if the database already exists:
+```
+如果資料庫已經存在，則會顯示下列錯誤：
+```
 Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
-
--- An example with variables:
-DECLARE @db_name sysname = 'WideWorldImportersStandard';
-DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
-RESTORE DATABASE @db_name
-FROM URL = @url
+```
+###  <a name="restore-mi-database-variables"></a> B. 還原透過變數所指定的資料庫。  
+-- 含變數的範例：DECLARE @db_name sysname = 'WideWorldImportersStandard'; DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak'; RESTORE DATABASE @db_name FROM URL = @url
 ```  
 
 ::: moniker-end
@@ -842,24 +841,24 @@ FROM URL = @url
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
->   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
+# SQL Parallel Data Warehouse
 
 
-將[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用者資料庫從資料庫備份還原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 資料庫會從 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/backup-transact-sql.md) 命令先前所建立備份還原。 您可以使用備份和還原作業來建置災害復原計劃，或將資料庫從一個應用裝置移至另一個應用裝置。  
+Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
   
 > [!NOTE]  
->  還原 master 時，會包括還原應用裝置登入資訊。 若要還 master，請使用**組態管理員**工具中的[還原 master 資料庫 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)頁面。 能夠存取控制節點的系統管理員將可執行這項作業。  
-如需有關[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫備份的詳細資訊，請參閱[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的＜Backup and Restore＞(備份和還原)。  
+>  Restoring master includes restoring appliance login information. To restore master, use the [Restore the master Database &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
+For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="syntax"></a>語法  
+## Syntax  
   
 ```sql  
   

@@ -1,7 +1,7 @@
 ---
 title: 運算式中的資料類型 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61d9e125f12d9c642408316ccb936e54f2a29372
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9030de2c1c189bdbdb036b40df8400c07da8bbb5
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022826"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405427"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  
@@ -143,9 +143,9 @@ ms.locfileid: "33022826"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料類型的詳細資訊，請參閱 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=120955)中的[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 及[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 及[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料類型的詳細資訊，請參閱《 [SQL Server 線上叢書](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 》中的 [SQL Server Books Onl》中的e](http://go.microsoft.com/fwlink/?linkid=120955)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料類型的詳細資訊，請參閱 [Analysis Services 中的資料類型](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

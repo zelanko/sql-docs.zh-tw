@@ -1,7 +1,7 @@
 ---
 title: 資料連線、資料來源、連接字串-報表產生器-SSRS | Microsoft Docs
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d97b92107887fe0348213947fc683bf9e86013d
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969410"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42441567"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)
 
@@ -26,11 +26,23 @@ ms.locfileid: "37969410"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  若要在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中包括資料，您必須先建立「資料來源」與「資料集」。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
+  若要在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]分頁報表中包括資料，您必須先建立「資料來源」與「資料集」。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
 
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的資料  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
+1.  **報表資料窗格中的資料來源** ：在您建立內嵌資料來源或加入共用資料來源之後，[報表資料] 窗格中就會出現資料來源。  
+  
+2.  **連接對話方塊** ：使用 [連接對話方塊] 可建立連接字串或貼上連接字串。  
+  
+3.  **資料連接資訊** ：連接字串會傳遞至資料延伸模組。  
+  
+4.  **認證** ：認證會與連接字串分開管理。  
+  
+5.  **資料延伸模組/資料提供者** ：資料可經由多個資料存取層連接。  
+  
+6.  **外部資料來源** ：從關聯式資料庫、多維資料庫、SharePoint 清單、Web 服務或報表模型擷取資料。  
+
 ##  <a name="bkmk_data_sources"></a> 內嵌與共用資料來源  
  如果資料來源使用頻率很高，則共用資料來源很有用。 建議您盡量使用共用資料來源。 它們會簡化報表和報表存取的管理，而且有助於提升報表和報表所存取之資料來源的安全性。 如果您需要共用資料來源，請要求系統管理員為您建立一個。  
   
@@ -44,7 +56,7 @@ ms.locfileid: "37969410"
   
      開發人員可以使用 <xref:Microsoft.ReportingServices.DataProcessing> API 建立資料處理延伸模組，以支援其他類型的資料來源。  
   
--   在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中，您可以瀏覽至報表伺服器或 SharePoint 網站，然後選取共用資料來源或在報表中建立內嵌資料來源。 您無法在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中建立共用資料來源。 您無法在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中使用自訂資料延伸模組。  
+-   在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中，您可以瀏覽至報表伺服器或 SharePoint 網站，然後選取共用資料來源或在報表中建立內嵌資料來源。 您無法在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中建立共用資料來源。 您無法在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中使用自訂資料延伸模組。  
   
  下表摘要列出內嵌與共用資料來源之間的差異。  
   
@@ -86,21 +98,6 @@ ms.locfileid: "37969410"
 -   Power View 的 Microsoft BI 語意模型：在已為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫與 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]設定 SharePoint 的網站上，可以使用此資料來源。 此資料來源類型僅用於 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 簡報。 如需詳細資訊，請參閱 [建立 Power View 的完整 BI 語意表格式模型](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
   
  如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援之資料來源與版本的完整清單，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
-  
-## <a name="data-in-includessrbnoversionincludesssrbnoversion-mdmd"></a>下者中的資料： [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
-  
-1.  **報表資料窗格中的資料來源** ：在您建立內嵌資料來源或加入共用資料來源之後，[報表資料] 窗格中就會出現資料來源。  
-  
-2.  **連接對話方塊** ：使用 [連接對話方塊] 可建立連接字串或貼上連接字串。  
-  
-3.  **資料連接資訊** ：連接字串會傳遞至資料延伸模組。  
-  
-4.  **認證** ：認證會與連接字串分開管理。  
-  
-5.  **資料延伸模組/資料提供者** ：資料可經由多個資料存取層連接。  
-  
-6.  **外部資料來源** ：從關聯式資料庫、多維資料庫、SharePoint 清單、Web 服務或報表模型擷取資料。  
   
 ##  <a name="bkmk_connection_examples"></a> 一般連接字串範例  
  連接字串是資料提供者之連接屬性的文字表示。 下表列出各種資料連接類型之連接字串的範例。  

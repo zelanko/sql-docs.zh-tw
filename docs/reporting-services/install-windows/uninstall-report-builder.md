@@ -14,18 +14,18 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e4cdf1a8b5c690e8f4ac25ddf28843dc36a5b63e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 72a6b25840fe897d2fa15c3ced283e6968893ec4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322787"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405660"
 ---
 # <a name="uninstall-report-builder"></a>將報表產生器解除安裝
 
 您可以從控制台或命令列解除安裝單機版本的報表產生器。
 
-從命令列解除安裝報表產生器所用的語法與用來安裝報表產生器的語法完全相同，不過您會使用 /x 選項來取代 /i 選項。 解除安裝的命令列也可以包含 /quiet 選項和其他標準選項。 如果已經移除了報表產生器的 Windows Installer 套件 (ReportBuilder3_x86.msi)，您就無法輕鬆地使用命令列來解除安裝報表產生器。 若要深入了解如何使用 GUID 移除報表產生器，請參閱 [Command-Line Options](https://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)(命令列選項)。  
+從命令列解除安裝報表產生器所用的語法與用來安裝報表產生器的語法完全相同，不過您會使用 /x 選項來取代 /i 選項。 解除安裝的命令列也可以包含 /quiet 選項和其他標準選項。 如果已經移除了報表產生器的 Windows Installer 套件 (ReportBuilder3_x86.msi)，您就無法輕鬆地使用命令列來解除安裝報表產生器。 若要深入了解如何使用報表產生器的 GUID 來移除報表產生器，請參閱[命令列選項](/windows/desktop/Msi/command-line-options)中 msiexec 程式的文件。  
 
 如果報表產生器使用的資料夾包含自訂檔案，移除報表產生器時便會保留這些資料夾和檔案。 系統只會移除報表產生器的檔案。  
 

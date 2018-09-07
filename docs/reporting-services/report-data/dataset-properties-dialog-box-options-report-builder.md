@@ -1,7 +1,7 @@
 ---
 title: 資料集屬性對話方塊、選項 (報表產生器) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -19,15 +19,15 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 411fe1b3d55ec8ad34120fd69ee129910e75a6b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a54bc37b189427049c18a13a33a36c1a1a4a8033
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020745"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411003"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>資料集屬性對話方塊、選項 (報表產生器)
-  選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/collations/collation-and-unicode-support.md) 》中的 [定序與 Unicode 支援](http://go.microsoft.com/fwlink/?linkid=98335)。  
+  選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
  屬於報表伺服器上共用資料集定義之一部分的資料選項會影響所有使用共用資料集的報表。 當共用資料集加入至報表之後，您可以覆寫它的選項。 這些變更只會影響其定義所在的報表。  
   
@@ -55,7 +55,6 @@ ms.locfileid: "33020745"
  選取一個值，指出您是否要讓小計資料列當做詳細資料列而非彙總資料列。 如果報表不使用 **Aggregate**() 函數來存取資料集中的任何欄位，預設值 **Auto**表示小計資料列應視為詳細資料列。 如果您要讓小計資料列當做彙總資料列，選擇 **[False]**。 如果您要讓小計資料列當作詳細資料列，而且您知道它們不使用 **Aggregate**() 函數，請選擇 **True**。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、窗格和精靈的報表產生器說明](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [彙總函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   

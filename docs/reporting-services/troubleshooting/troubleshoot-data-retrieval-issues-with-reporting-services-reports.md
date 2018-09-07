@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066666"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432509"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>搭配 Reporting Services 報表為資料擷取問題疑難排解
 在報表處理期間，第一個步驟是執行資料集查詢以擷取各資料集的報表資料。 在本機預覽報表時，您的資料來源連接和認證必須使用足夠的權限，才能將資料擷取到電腦上。 在報表伺服器上執行報表時，資料來源連接和認證也必須使用足夠的權限，才能將資料擷取到報表伺服器上。 您可以使用本主題來協助疑難排解有關報表資料擷取的問題。   
@@ -47,7 +47,7 @@ ms.locfileid: "38066666"
 確認密碼不包含特殊字元。 如果無法變更此密碼，請與資料庫管理員合作，將適當的認證儲存在本機以及伺服器上，當做系統 ODBC 資料來源名稱 (DSN) 的一部分。 如需詳細資訊，請參閱 MSDN 上 .NET Framework SDK 文件集中的＜OdbcConnection.ConnectionString＞。   
   
 > [!NOTE]  
->建議您不要在連接字串中加入登入資訊，例如密碼。 報表設計師會在[資料來源屬性](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)或[共用資料來源屬性](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)對話方塊中提供 [認證] 頁面，讓您用於輸入認證。 這些認證都加上保護，儲存在報表撰寫電腦上。  
+>建議您不要在連接字串中加入登入資訊，例如密碼。 報表設計師會在您可用來輸入認證的 [資料來源屬性] 或 [共用資料來源屬性] 對話方塊上提供 [認證] 頁面。 這些認證都加上保護，儲存在報表撰寫電腦上。  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>在查詢設計工具中執行查詢時，為什麼看不到資料？  
 當您建立資料集之後，資料集欄位集合會出現在 [報表資料] 窗格中。 有時候，資料集欄位集合不會如預期顯示。   
@@ -71,7 +71,7 @@ ms.locfileid: "38066666"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

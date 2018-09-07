@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25acdc921c925d3882fb8282a3f78a7ed04a757f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5195e5c7c6e1c3126db3c2335fac605bbb869f2b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042596"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405890"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -70,7 +70,7 @@ ms.locfileid: "38042596"
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  有新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 可用。 這是更新過的新式入口網站，納入了 KPI、行動報表、分頁報表、Excel 和 Power BI Desktop 檔案。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 取代舊版中的報表管理員。 您也可以從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 下載行動報表發行工具和報表產生器，而不需要 ClickOnce 技術。
  
- 若要建立行動報表，您將需要 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)]。  
+ 若要建立行動報表，您將需要 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]。  
   
  如需 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]的詳細資訊，請參閱 [入口網站 (SSRS 原生模式)](../reporting-services/web-portal-ssrs-native-mode.md)。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "38042596"
 Reporting Services 行動報表是針對各種外形規格最佳化的專用報表，並為存取行動裝置上報表的使用者提供最佳體驗。 行動報表具備各種視覺效果，從時間、類別和比較圖表，到矩形式樹狀結構圖和自訂地圖。 將行動報表連接到資料來源範圍，包括內部部署 SQL Server Analysis Services 多維度和表格式資料。 在設計介面上，使用可調式格線列和格線欄以及根據任何螢幕大小適當縮放的彈性行動報表元素，來配置行動報表。 然後將這些行動報表儲存至 Reporting Service 伺服器，在 iPad、iPhone、Android 手機及 Windows 10 裝置的瀏覽器或 Power BI 行動裝置應用程式中，檢視報表並與其互動。
   
 #### <a name="mobile-report-publisher"></a>行動報表發行工具  
- [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]可讓您將 SQL Server 行動報表建立並發行到您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
+ [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 可讓您將 SQL Server 行動報表建立並發行到您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -170,7 +170,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ### <a name="report-builder-improvements"></a>報表產生器改進
 
-**新的報表產生器使用者介面** ：核心 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 使用者介面現在透過簡化的 UI 元素，具備了新式外觀及操作。  
+**新的報表產生器使用者介面：** 核心 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 使用者介面現在是現代化的外觀及操作與簡化的 UI 項目。  
   
 |||  
 |-|-|  
@@ -182,7 +182,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![[報表資料] 窗格和參數窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "[報表資料] 窗格和參數窗格中的參數清單")  
 
   
-**高 DPI 支援** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 支援高 DPI (每英吋點數) 縮放比例及裝置。  如需高 DPI 的詳細資訊，請參閱下列主題：  
+**高 DPI 支援：**[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 支援高 DPI (每英吋點數) 縮放比例及裝置。  如需高 DPI 的詳細資訊，請參閱下列主題：  
   
 -   [Windows 8.1 DPI 縮放比例功能加強 (英文)](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -192,7 +192,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 [Analysis Services 的新功能](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)   
-[回溯相容性](http://msdn.microsoft.com/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[回溯相容性](reporting-services-backward-compatibility.md)   
 [SQL Server 2016 版本所支援的 Reporting Services 功能](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [升級和移轉 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

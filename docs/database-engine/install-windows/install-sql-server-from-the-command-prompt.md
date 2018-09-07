@@ -85,13 +85,14 @@ helpviewer_keywords:
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a12eab1a7ea003c1837c68f53eae33989ed884ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 509fd76b510df010e4dc3c7f8364dc2424e223d9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225148"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406709"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -190,7 +191,7 @@ ms.locfileid: "37225148"
 ##  <a name="Install"></a> 安裝參數  
  您可以使用下表中的參數來開發安裝的命令列指令碼。  
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值： **Install**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -292,7 +293,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>準備圖像參數  
  使用下表中的參數開發命令列指令碼，以便準備 SQL Server 的執行個體而不必加以設定。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值︰ **PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -325,7 +326,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>完成圖像參數  
  使用下表中的參數開發命令列指令碼，以便完成與設定準備好的 SQL Server 執行個體。 
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值︰ **CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -390,7 +391,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> 升級參數  
  您可以使用下表中的參數來開發升級的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。 支援的值：<br /><br /> **升級**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> **EditionUpgrade** 值是用來將現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本升級為不同的版本。 如需有關支援之版本與版別升級的詳細資訊，請參閱＜ [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -428,7 +429,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> 修復參數  
  您可以使用下表中的參數來開發修復的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出修復工作流程的必要參數。<br /><br /> 支援的值： **Repair**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。|  
@@ -452,7 +453,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> 重建系統資料庫參數  
  您可以使用下表中的參數開發命令列指令碼，以重建 master、model、msdb 與 tempdb 系統資料庫。 如需詳細資訊，請參閱 [重建系統資料庫](../../relational-databases/databases/rebuild-system-databases.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出重建資料庫工作流程的必要參數。<br /><br /> 支援的值︰ **Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/INSTANCENAME<br /><br /> **必要**|指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體名稱。<br /><br /> 如需詳細資訊，請參閱＜ [Instance Configuration](../../database-engine/install-windows/install-sql-server.md)＞。|  
@@ -471,7 +472,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> 解除安裝參數  
  您可以使用下表中的參數來開發解除安裝的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出解除安裝工作流程的必要參數。<br /><br /> 支援的值： **Uninstall**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -601,7 +602,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>準備容錯移轉叢集參數  
  您可以使用下表中的參數來開發容錯移轉叢集準備的命令列指令碼。 這是進階叢集安裝的第一個步驟。在此步驟中，您必須在容錯移轉叢集的所有節點上準備容錯移轉叢集執行個體。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出容錯移轉叢集準備工作流程的必要參數。<br /><br /> 支援的值︰ **PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -666,7 +667,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>完成容錯移轉叢集參數  
  您可以使用下表中的參數來開發容錯移轉叢集完成的命令列指令碼。 這是進階容錯移轉叢集安裝選項中的第二個步驟。 在所有容錯移轉叢集節點上執行準備作業之後，您就可以在擁有共用磁碟的節點上執行這個命令。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出容錯移轉叢集完成工作流程的必要參數。<br /><br /> 支援的值︰ **CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 SQL Server。|  
@@ -729,7 +730,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>升級容錯移轉叢集參數  
  您可以使用下表中的參數來開發容錯移轉叢集升級的命令列指令碼。 如需詳細資訊，請參閱[升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) 和 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值： **Upgrade**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -759,7 +760,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a> 加入節點參數  
  您可以使用下表中的參數來開發 AddNode 的命令列指令碼。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出 AddNode 工作流程的必要參數。<br /><br /> 支援的值： **AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
@@ -804,7 +805,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>移除節點參數  
  您可以使用下表中的參數來開發 若要解除安裝容錯移轉叢集，您必須在每個容錯移轉叢集節點上執行 RemoveNode。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|描述|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 元件|參數|Description|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出 RemoveNode 工作流程的必要參數。<br /><br /> 支援的值： **RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
@@ -842,7 +843,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> 功能參數  
  若要安裝特定功能，請使用 /FEATURES 參數，然後指定下表中的父功能或功能值。 如需 SQL Server 版本支援的功能清單，請參閱 [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 
   
-|父功能參數|功能參數|描述|  
+|父功能參數|功能參數|Description|  
 |:---|:---|:---|  
 |SQL||安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、複寫、全文檢索和 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。|  
 ||SQLEngine|只安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
@@ -877,7 +878,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>功能參數範例：  
   
-|參數和值|描述| 
+|參數和值|Description| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|安裝不含複寫和全文檢索的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。|  
 |/FEATURES=SQLEngine, FullText|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文檢索。|  
@@ -886,11 +887,11 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine, PolyBase|安裝 PolyBase 引擎。|  
   
 ##  <a name="RoleParameters"></a> 角色參數  
- 安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] 角色會在現有的 SharePoint 伺服陣列或未設定的新伺服陣列中安裝 [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 
+ 安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有的 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 
   
  AllFeatures_WithDefaults 角色是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本的預設行為，而且會減少向使用者顯示的對話方塊數目。 安裝非 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]的 SQL Server 版本時，可以從命令列指定該角色。 
   
-|角色|描述|安裝…|  
+|角色|Description|安裝…|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|在現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服陣列或獨立伺服器上，將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 具名執行個體。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算引擎已針對記憶體內部資料儲存和處理進行預先設定。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server 線上叢書|  
 |SPI_AS_NewFarm|在全新且未設定的 Office [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服陣列或獨立伺服器上，將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 安裝為 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 具名執行個體。 SQL Server 安裝程式將會在功能角色安裝期間設定伺服陣列。|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算引擎已針對記憶體內部資料儲存和處理進行預先設定。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件<br /><br /> SQL Server 線上叢書<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 組態工具<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

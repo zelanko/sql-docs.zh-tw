@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef72373f91b9104c8ff83f6d1d9b012b283df3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 811c4b01264d16df1091629524823dd14acf3ea0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036245"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405273"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 (報表產生器)
-在本教學課程中，您會使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 接著新增篩選，並加強圖表。 
+在本教學課程中，您會使用[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立橫條圖。 接著新增篩選，並加強圖表。 
 
 橫條圖會以水平方向顯示類別目錄資料。 這樣有助於：  
   

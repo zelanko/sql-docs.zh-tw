@@ -17,12 +17,12 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de8e4632223d81f8e49e78fee7ef14fb9983a268
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037195"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406723"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
@@ -286,7 +286,7 @@ ms.locfileid: "33037195"
   
 -   控制 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的視窗和模式：  
   
-    |描述|按鍵組合|  
+    |Description|按鍵組合|  
     |-----------------|---------------------|  
     |建立選取的專案|CTRL+SHIFT+B|  
     |顯示 [屬性] 視窗|F4|  
@@ -296,7 +296,7 @@ ms.locfileid: "33037195"
   
 -   控制報表設計介面上的項目：  
   
-    |描述|按鍵組合|  
+    |Description|按鍵組合|  
     |-----------------|---------------------|  
     |將焦點從某個報表項目移到下一個報表項目|TAB|  
     |移動選取的報表項目|方向鍵|  
@@ -313,7 +313,7 @@ ms.locfileid: "33037195"
 ## <a name="next-steps"></a>後續步驟
 
 [下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
-[方案總管](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[方案總管](../../ssms/solution/solution-explorer.md)   
 [Reporting Services 報表](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [報表定義語言](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server 資料工具中的部署和版本支援](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

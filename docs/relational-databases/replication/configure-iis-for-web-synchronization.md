@@ -19,12 +19,12 @@ caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ffab68d239f7992d7f3b1c3a289f8c67c17b53
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ed503598b4a093876b0323ee1284a7bb9d782171
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358810"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406159"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37358810"
   
 -   RMO： [如何：設定訂閱使用 Web 同步處理 (RMO 程式設計)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Web 同步處理利用執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦，來同步處理合併式發行集的提取訂閱。 支援 IIS 5.0 版、IIS 6.0 版和 [!INCLUDE[iisver](../../includes/iisver-md.md)] 。 [!INCLUDE[iisver](../../includes/iisver-md.md)]不支援設定 Web 同步處理精靈。  
+ Web 同步處理利用執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦，來同步處理合併式發行集的提取訂閱。 支援 IIS 5.0 版、IIS 6.0 版和 IIS 7.0 版。 但是，IIS 7.0 版不支援「設定 Web 同步處理精靈」。  
   
 > [!IMPORTANT]  
 >  確定您的應用程式只使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更新版本，而且 IIS 伺服器上未安裝較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。 較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能導致錯誤。 其中包括下列項目：「Web 同步處理期間，訊息的格式無效。 請確認已在 Web 伺服器正確地設定複寫元件」。  

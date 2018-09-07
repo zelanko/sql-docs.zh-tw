@@ -27,13 +27,13 @@ caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3f74e50441a1015eb6ae5709f38da6315dd6284c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 98bea9d55f324cb65fdf71d25cbf5586c307bea0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457182"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111650"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 針對 SQL Server 與平行處理資料倉儲，主要金鑰通常由服務主要金鑰和至少一個密碼來保護。 如果資料庫要實際移動到不同的伺服器 (記錄傳送、還原備份等)，資料庫會包含以原始伺服器服務主要金鑰所加密的主要金鑰複本 (除非已使用 ALTER MASTER KEY DDL 明確移除此加密)，以及在 CREATE MASTER KEY 或後續 ALTER MASTER KEY DDL 作業期間由每個指定密碼加密的複本。 若要在移動資料庫之後復原主要金鑰與所有資料 (已使用主要金鑰作為金鑰階層中的根加密)，使用者必須使用 OPEN MASTER KEY 陳述式與其中一個用來保護主要金鑰的密碼來還原主要金鑰備份，或在新伺服器上還原原始服務主要金鑰備份。 
 
-若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，在資料庫可以從某部伺服器移到另一部伺服器的情況下，密碼保護並非避免資料遺失的安全機制，因為主要金鑰上的服務主要金鑰保護是由 Microsoft Azure 平台來管理。 因此，主要金鑰密碼在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中為選擇性的。
+若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，在資料庫可以從某部伺服器移到另一部伺服器的情況下，密碼保護並非避免資料遺失的安全機制，因為主要金鑰上的服務主要金鑰保護是由 Microsoft Azure 平台來管理。 因此，主要金鑰密碼在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中為選擇性。
   
 > [!IMPORTANT]  
 >  您應該使用 [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md) 來備份主要金鑰，然後將該備份儲存在安全的離站位置。  

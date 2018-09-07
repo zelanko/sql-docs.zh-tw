@@ -24,13 +24,13 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e65dd6ddbb2b71c92e7e3dd967a4cf50af2d687
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58c276a0e70857b09c30bc405a0437cb2fbba61f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453912"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087797"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ END
   
  CASE 運算式無法用於控制 Transact-SQL 陳述式、陳述式區塊、使用者定義函數以及預存程序的執行流程。 如需流程控制方法的清單，請參閱[流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
- CASE 陳述式會依序評估其條件，並在滿足其條件的第一個條件時停止。 在某些情況下，運算式會在 CASE 陳述式收到運算式的結果做為其輸入之前進行評估。 評估這些運算式是否可能時發生錯誤。 針對 CASE 陳述式，出現在 WHEN 引數中的彙總運算式會先進行評估，然後再提供給 CASE 陳述式。 例如，下列查詢會在產生 MAX 彙總的值時，產生除以零的錯誤。 這個情況會在評估 CASE 運算式之前發生。  
+ CASE 運算式會依序評估其條件，並在滿足其條件的第一個條件時停止。 在某些情況下，運算式會在 CASE 運算式收到運算式的結果作為其輸入之前進行評估。 評估這些運算式是否可能時發生錯誤。 針對 CASE 運算式，會先評估出現在 WHEN 引數中的彙總運算式，再將其提供給 CASE 運算式。 例如，下列查詢會在產生 MAX 彙總的值時，產生除以零的錯誤。 這個情況會在評估 CASE 運算式之前發生。  
   
 ```sql  
 WITH Data (value) AS   

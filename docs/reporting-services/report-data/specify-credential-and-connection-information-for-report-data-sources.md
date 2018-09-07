@@ -1,7 +1,7 @@
 ---
 title: 指定報表資料來源的認證及連線資訊 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,12 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e0a75286b8a4e3529202c5ef700d4157b85f2a8a
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550729"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42440063"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
   報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。 您可以指定認證來使用 Windows 驗證、資料庫驗證、無驗證或自訂驗證。 透過網路傳送連接要求時，報表伺服器會模擬使用者帳戶或自動執行帳戶。 如需安全性內容 (連接要求會在其底下進行) 的詳細資訊，請參閱本主題之後的 [資料來源組態和網路連接](#DataSourceConfigurationConnections) 。  
@@ -51,7 +51,7 @@ ms.locfileid: "34550729"
 ## <a name="when-credentials-are-used-in-report-builder"></a>在報表產生器中使用認證時  
  在報表產生器中，認證經常在您連接至報表伺服器時使用，或是用於資料相關工作，例如建立內嵌的資料來源、執行資料集查詢，或是預覽報表。 認證不會儲存在報表中。 認證會在報表伺服器或本機用戶端上另行管理。 下列清單說明您可能需要提供的認證類型、認證儲存的位置，以及使用認證的方式：  
   
--   您在 [Reporting Services 登入對話方塊 &#40;報表產生器&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md) 中輸入的報表伺服器認證。  
+-   您在 [Reporting Services 登入] 對話方塊中輸入的報表伺服器認證。  
   
      當您初次儲存、發佈或瀏覽至報表伺服器或 SharePoint 網站時，可能需要輸入您的認證。 您輸入的認證會持續使用到報表產生器工作階段結束為止。 如果您選擇儲存認證，這些認證會在電腦上與使用者設定安全地儲存在一起。 在後續報表產生器工作階段中，儲存的認證會用來連接至相同的報表伺服器或 SharePoint 網站。 報表伺服器管理員或 SharePoint 管理員會指定要使用的認證類型。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34550729"
   
      報表伺服器會使用這些認證建立與外部資料來源的資料連接。 針對部分類型的資料來源，其認證可以安全地儲存在報表伺服器上。 這些認證可讓其他使用者執行報表，而不需提供基礎資料連接的認證。  
   
--   您執行資料集查詢、重新整理資料集欄位或預覽報表時，在[輸入資料來源認證對話方塊 &#40;報表產生器&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 中輸入的資料來源認證。  
+-   當您執行資料集查詢、重新整理資料集欄位或預覽報表時在 [輸入資料來源認證] 對話方塊中輸入的資料來源認證。  
   
      這些認證會用來建立報表產生器與外部資料來源之間的資料連接，或是預覽設定為提示認證的報表。 您在此對話方塊中輸入的認證不會儲存在報表伺服器上，也無法供其他使用者使用。 報表產生器會在報表編輯工作階段中快取認證，因此您不必在每次執行查詢或預覽報表時輸入認證。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34550729"
 |整合式安全性|模擬目前的使用者|針對所有資料來源類型，利用目前的使用者帳戶來連接。|  
 |Windows 認證|模擬指定的使用者|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模擬使用者帳戶進行連接。|  
 |資料庫認證|模擬自動執行帳戶或服務帳戶。<br /><br /> (利用服務識別傳送連接要求時，Reporting Services 會移除管理員權限)。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 將使用者名稱和密碼附加至連接字串。<br /><br /> 若為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 使用 TCP/IP 通訊協定時，連接會成功，否則會失敗。<br /><br /> 如果是 XML：<br /><br /> 使用資料庫認證時，會使報表伺服器上的連接失敗。|  
-|無|模擬自動執行帳戶。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用連接字串中定義的認證。 如果未定義自動執行帳戶，報表伺服器上的連接會失敗。<br /><br /> 若為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 指定無認證或定義自動執行帳戶時，永遠會使連接失敗。<br /><br /> 如果是 XML：<br /><br /> 如果已定義自動執行帳戶，則以匿名使用者連接；否則會使連接失敗。|  
+|None|模擬自動執行帳戶。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用連接字串中定義的認證。 如果未定義自動執行帳戶，報表伺服器上的連接會失敗。<br /><br /> 若為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 指定無認證或定義自動執行帳戶時，永遠會使連接失敗。<br /><br /> 如果是 XML：<br /><br /> 如果已定義自動執行帳戶，則以匿名使用者連接；否則會使連接失敗。|  
   
 ## <a name="setting-credentials-programmatically"></a>以設計程式的方式設定認證  
  您可以在您的程式碼中設定認證，來控制報表和報表伺服器的存取。 如需詳細資訊，請參閱 [資料來源和連接方法](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)。  

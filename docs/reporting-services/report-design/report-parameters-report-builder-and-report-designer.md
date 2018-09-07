@@ -22,19 +22,19 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b28f6079135161b7aeabbb2bebf06a4d8ac883d4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028285"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405752"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
-  本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和報表設計師中建立的分頁報表中，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
+  本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和報表設計師中建立的分頁報表，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和原生模式|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和原生模式|  
   
  若要嘗試自行將參數加入報表，請參閱 [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)中建立的行動報表。  
     
@@ -144,7 +144,7 @@ ms.locfileid: "33028285"
 ##  <a name="bkmk_Report_Parameters"></a> 報表參數屬性  
  您可以使用 [報表屬性] 對話方塊來變更報表參數屬性。 下表摘要說明您可以針對每個參數設定的屬性：  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |[屬性]|輸入區分大小寫的參數名稱。 此名稱必須以字母開頭，可以包含字母、數字和底線 (_)。 名稱不能有空格。 若為自動產生的參數，此名稱會符合資料集查詢中的參數。 根據預設，手動建立的參數與 ReportParameter1 類似。|  
 |提示|在報表檢視器工具列上顯示於參數旁邊的文字。|  

@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: b8d694b0afadd7504b60bd7bcc06df3151e42735
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456192"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40406487"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -56,7 +56,33 @@ ms.locfileid: "39456192"
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>按一下產品！
+
+在下一行中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>[SQL Server]
 
 ## <a name="overview"></a>概觀
 
@@ -858,7 +884,30 @@ GO
  [資料庫](../../relational-databases/databases/databases.md)   
  [二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
 
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 邏輯伺服器](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Database<br />邏輯伺服器 *</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
 
 ## <a name="overview"></a>概觀
 
@@ -1169,7 +1218,30 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 - [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-transact-sql.md?&tabs=sqldbls) 
 
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB 受控執行個體](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 ## <a name="overview"></a>概觀
 
@@ -1230,7 +1302,30 @@ CREATE DATABASE TestDB1;
 
 請參閱 [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi) 
 
-# <a name="sql-data-warehousetabsqldw"></a>[SQL 資料倉儲](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
+>   <th><strong><em>* SQL 資料<br />倉儲 *</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
 
 ## <a name="overview"></a>概觀
 
@@ -1331,7 +1426,30 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL 平行資料倉儲](#tab/sqlpdw)
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
 
 ## <a name="overview"></a>概觀
 
@@ -1458,4 +1576,4 @@ CREATE DATABASE mytest
  [ALTER DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
-  
+::: moniker-end

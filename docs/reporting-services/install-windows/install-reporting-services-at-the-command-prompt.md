@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 736159b9928eb3eb28665302140c72f8c8f4b382
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: b9c5d6a80e03ddf55fd463cac0c74486135884dd
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400901"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406495"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services 2016
 
@@ -56,7 +56,7 @@ Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint 模式 Reporting Services  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE (SharePoint 模式)  
- 在 SharePoint 模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的輸入設定是 **/RSSHPINSTALLMODE**。 此輸入設定包含一個選項：SharePointFilesOnlyMode。 這個選項會安裝 SharePoint 模式所需的所有檔案，但是安裝之後需要進行設定。 額外設定步驟是使用 SharePoint 管理中心完成。 如需詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
+ 在 SharePoint 模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的輸入設定是 **/RSSHPINSTALLMODE**。 此輸入設定包含一個選項：SharePointFilesOnlyMode。 這個選項會安裝 SharePoint 模式所需的所有檔案，但是安裝之後需要進行設定。 額外設定步驟是使用 SharePoint 管理中心完成。 如需詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。  
   
 ### <a name="examples-of-sharepoint-mode-installation"></a>SharePoint 模式安裝範例  
  以下範例將安裝 SQL Server 資料庫引擎服務和 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，以及適用於 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集 (RS_SHPWFE)。  

@@ -1,7 +1,7 @@
 ---
 title: 選擇加密演算法 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549598"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096556"
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549598"
   
 -   長金鑰通常會比短金鑰產生更強的加密。  
   
--   非對稱加密比使用相同金鑰長度的對稱加密更弱，而且速度相對比較慢。  
+-   非對稱式加密比對稱式加密還要慢。  
   
 -   含有長金鑰的區塊密碼比串流式密碼更強。  
   
 -   複雜的長密碼比短密碼更強。  
+
+-   只有在對稱式加密金鑰儲存在本機時，通常才會建議使用對稱式加密，而在需要跨網路共用金鑰時，則建議使用非對稱式加密。
   
 -   如果您要加密很多資料，應該使用對稱金鑰來加密資料，並使用非對稱金鑰來加密對稱金鑰。  
   

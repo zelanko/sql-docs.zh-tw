@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870233"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405915"
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,8 @@ ms.locfileid: "32870233"
 設定此選項並不會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [動態記憶體管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)，使其可應其他記憶體 Clerk 的要求擴張或縮減。 使用 [在記憶體中鎖定分頁] 使用者權利時，建議設定[如上詳述](#max_server_memory)的 [最大伺服器記憶體] 上限。
 
 > [!IMPORTANT]
-> 請只有必要的情況下才設定此選項，例如出現 sqlservr 程序移出分頁的跡象。在此情況下，錯誤記錄檔中會回報錯誤 17890，類似下列範例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，Standard 版本不需要[追蹤旗標 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 即可使用鎖定的分頁。 
+> 請只有必要的情況下才設定此選項，例如出現 sqlservr 程序移出分頁的跡象。在此情況下，錯誤記錄檔中會回報錯誤 17890，類似下列範例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，Standard Edition 不需要[追蹤旗標 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 即可使用已鎖定頁面。 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>啟用在記憶體中鎖定分頁  
 若要啟用在記憶體中鎖定分頁選項：  
@@ -122,7 +123,7 @@ ms.locfileid: "32870233"
  您可以變更這些設定，而不必重新啟動執行個體，因此，您可以輕易體驗來尋找使用模式的最佳設定。  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>為 SQL Server 提供最大的記憶體數量  
-在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，最多可將記憶體設定為處理虛擬位址空間的最大上限。 如需詳細資訊，請參閱 [Windows 與 Windows Server 版本的記憶體限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016)。
+在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，最多可將記憶體設定為處理虛擬位址空間的最大上限。 如需詳細資訊，請參閱 [Windows 與 Windows Server 版本的記憶體限制](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)。
   
 ## <a name="examples"></a>範例  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [SQL Server 2016 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [SQL Server 2017 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Linux 上的 SQL Server 2017 版本與支援的功能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Windows 與 Windows Server 版本的記憶體限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Windows 與 Windows Server 版本的記憶體限制](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

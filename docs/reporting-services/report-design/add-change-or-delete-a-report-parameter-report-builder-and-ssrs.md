@@ -15,26 +15,26 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5cba98e1d3aacddfe191dfec324d664e905fc1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c6751843d730f01f609b19069bda900a4e9aebe
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020365"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406482"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>加入、變更或刪除報表參數 (報表產生器及 SSRS)
   報表參數可讓您選擇報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 您可以提供預設值和可用值的清單，而且使用者可以變更選取範圍。  
   
  在您發行報表之後，可以在報表伺服器上變更報表參數的預設值、可用值，以及其他屬性。 您可以建立連結報表來提供多組預設參數值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
- 本文是關於將報表參數加入至 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中分頁報表或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表設計師。 您也可以將報表參數加入至  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中的行動報表。 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 。  
+ 本文是關於將報表參數新增至 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]或報表設計師的分頁報表。 您也可以將報表參數新增至 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中的行動報表。 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>若要加入或編輯報表參數  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 內，[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 或報表設計師中的 [報表資料] 窗格中，以滑鼠右鍵按一下 [參數] 節點，然後按一下 [新增參數]。 **[報表參數屬性]** 對話方塊隨即開啟。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 內，[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 或報表設計師中的 [報表資料] 窗格中，以滑鼠右鍵按一下 [參數] 節點，然後按一下 [新增參數]。 **[報表參數屬性]** 對話方塊隨即開啟。  
   
 2.  在 **[名稱]** 中，輸入參數的名稱或接受預設的名稱。  
   

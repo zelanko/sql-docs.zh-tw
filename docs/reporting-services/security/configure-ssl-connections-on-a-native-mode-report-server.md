@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0eead8d73153621430037141e0a509adac4cd1fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1f8ba05e8969d2758e33c64ff43cb006a2b6a03
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028475"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409346"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器的加密連接。 如果您在報表伺服器電腦的本機憑證存放區內有安裝憑證 (.cer) 檔案，您可以將此憑證繫結到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目，以便透過加密通道支援報表伺服器連接。  
@@ -37,7 +37,7 @@ ms.locfileid: "33028475"
   
  如果是為了測試，您可以在本機產生憑證。 如果您使用 **MakeCert** 公用程式和範例命令當做範本，請務必將伺服器名稱指定為主機，並在執行此命令之前先移除所有分行符號。 如果您在 DOS 視窗中執行此命令，可能需要增加視窗的緩衝區大小，以容納整個命令。  
   
- 如果您在同一部電腦上一起執行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，您可以使用 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] 主控台應用程式來取得電腦上所安裝的憑證。 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] 包括了一些選項，可讓您建立及封裝憑證要求 (.crt) 檔案，以供信任的憑證授權單位進行後續處理。 您所使用的憑證授權單位將會產生憑證 (.cer) 檔案，並將它送回給您。 您可以使用 IIS 管理主控台，將憑證檔案安裝在本機存放區。 如需詳細資訊，請參閱 TechNet 上的 [使用 SSL 將機密資料加密](http://go.microsoft.com/fwlink/?LinkId=71123) 。  
+ 如果您在同一部電腦上一起執行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您可以使用 IIS Manager 主控台應用程式來取得電腦上所安裝的憑證。 IIS Manager 包括一些選項，可讓您建立及封裝憑證要求 (.crt) 檔案，以供信任的憑證授權單位進行後續處理。 您所使用的憑證授權單位將會產生憑證 (.cer) 檔案，並將它送回給您。 您可以使用 IIS 管理主控台，將憑證檔案安裝在本機存放區。 如需詳細資訊，請參閱 TechNet 上的 [使用 SSL 將機密資料加密](http://go.microsoft.com/fwlink/?LinkId=71123) 。  
   
 ## <a name="interoperability-issues-with-iis"></a>與 IIS 的互通性問題  
  與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相同的電腦上有存在 IIS，將會大幅影響與報表伺服器的 SSL 連接。  
@@ -46,7 +46,7 @@ ms.locfileid: "33028475"
   
 -   解除安裝 IIS 會暫時中斷對 SSL 繫結之報表伺服器 URL 的服務。 因此，強烈建議您在解除安裝 IIS 之後，要重新啟動電腦。  
   
-     必須要重新開機，才能清除快取中的所有 SSL 工作階段。 某些作業系統最多會快取 10 個小時的 SSL 工作階段，即使當 SSL 繫結已經從 HTTP.SYS 的 URL 保留項目中移除後，https:// URL 仍然繼續運作。 重新開機會關閉使用此通道的任何開啟連接。  
+     必須要重新開機，才能清除快取中的所有 SSL 工作階段。 某些作業系統最多會快取 10 個小時的 SSL 工作階段，即使當 SSL 繫結已經從 HTTP.SYS 的 URL 保留項目中移除後， https:// URL 仍然繼續運作。 重新開機會關閉使用此通道的任何開啟連接。  
   
 ## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>將 SSL 繫結到 Reporting Services URL 保留項目  
  下列步驟不包含要求、產生、下載或安裝憑證的指示。 您必須已安裝憑證，而且此憑證可供使用。 您所指定的憑證屬性、憑證取自的憑證授權單位，以及您用於要求及安裝此憑證的工具和公用程式都是由您決定。  

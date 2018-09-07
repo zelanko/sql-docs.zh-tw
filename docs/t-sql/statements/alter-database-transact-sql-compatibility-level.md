@@ -27,13 +27,13 @@ caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: edf54224fddb5fce7eafdc978d05535264aa29d0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452672"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099374"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > 在指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的已停用功能不會受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中已移除的功能。
 > 
 > 例如，`FASTFIRSTROW` 提示已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中停用，並以 `OPTION (FAST n )` 提示取代。 將資料庫相容性層級設定為 110 不會還原已停用的提示。
-> 如需已停用功能的詳細資訊，請參閱 [SQL Server 2016 中已停用的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中已停用的資料庫引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.120))、[SQL Server 2012 中已停用的資料庫引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.110))，以及 [SQL Server 2008 中已停用的資料庫引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.100))。
+> 如需已停用功能的詳細資訊，請參閱 [SQL Server 2016 中已停用的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中已停用的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md))、[SQL Server 2012 中已停用的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md))，以及 [SQL Server 2008 中已停用的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md))。
 
 > [!IMPORTANT]
 > 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的重大變更**可能**不會受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之間的行為變更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行為通常會受到相容性層級保護。 但是，已變更或已移除的系統物件**不會**受到相容性層級保護。
@@ -159,7 +159,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > -  在系統物件中變更資料欄名稱。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，sys.dm_os_sys_info 中的資料行 *single_pages_kb* 已重新命名為 *pages_kb*。 無論相容性層級為何，查詢 `SELECT single_pages_kb FROM sys.dm_os_sys_info` 都會產生錯誤 207 (無效的資料行名稱)。
 > -  移除的系統物件。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，已移除 `sp_dboption`。 無論相容性層級為何，陳述式 `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` 都會產生錯誤 2812 (找不到預存程序 'sp_dboption')。
 >
-> 如需重大變更的詳細資訊，請參閱 [SQL Server 2017 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2014 中資料庫引擎功能的重大變更](http://msdn.microsoft.com/library/ms143179(v=sql.120))、[SQL Server 2012 中資料庫引擎功能的重大變更](http://msdn.microsoft.com/library/ms143179(v=sql.110))，以及 [SQL Server 2008 中資料庫引擎功能的重大變更](http://msdn.microsoft.com/library/ms143179(v=sql.100))。
+> 如需重大變更的詳細資訊，請參閱 [SQL Server 2017 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2014 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md))、[SQL Server 2012 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md))，以及 [SQL Server 2008 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md))。
   
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>升級資料庫相容性層級的最佳做法 
 如需升級相容性層級的建議工作流程，請參閱[變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。  

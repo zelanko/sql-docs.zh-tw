@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022675"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432581"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
 內嵌資料集適用於單一 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表。 報表伺服器上的共用資料集可供多份報表使用，行動和分頁報表皆可。 若要建立資料集，您需要內嵌或共用的資料來源。  
   
- 請使用 **報表產生器** 來執行下列工作：  
+## <a name="report-builder-tasks"></a>報表產生器工作
+
+報表產生器用於下列工作：  
   
 1.  在資料集設計檢視中建立共用資料集。 共用資料集必須使用已發行的共用資料來源。  
   
@@ -33,7 +35,9 @@ ms.locfileid: "33022675"
   
 3.   將資料集直接儲存至報表伺服器或 SharePoint 網站。  
   
- 請使用 **的** 報表產生器 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 來執行下列工作：  
+## <a name="report-designer-tasks"></a>報表設計師工作
+
+請使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師來執行下列工作：  
   
 1.  在 [方案總管] 中建立共用資料集。 共用資料集必須使用 [方案總管] 中 [共用資料來源] 資料夾內的資料來源。  
   
@@ -46,7 +50,7 @@ ms.locfileid: "33022675"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>若要開啟報表產生器，並建立共用資料集  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>在報表產生器中建立共用資料集
   
 1.  開啟報表產生器。 **[新增報表或資料集]** 窗格隨即開啟，如下圖所示：  
   

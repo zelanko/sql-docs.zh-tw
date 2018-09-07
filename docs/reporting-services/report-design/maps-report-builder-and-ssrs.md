@@ -1,7 +1,7 @@
 ---
 title: 地圖 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -22,12 +22,12 @@ caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e5a6a0c2bfb86e57f900a89c48e84ca68e6689f
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028915"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410478"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
   若要針對地理背景將商務資料視覺化，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表。 您選取的地圖類型取決於您想要在報表中傳達的資訊而定。 您可以加入只顯示位置的地圖，或是根據某區域住家數而變動泡泡大小的泡泡地圖，或者是根據每一家商店最有利潤的產品而變動標記樣式的標記地圖，或者是顯示商店之間之路線的線路地圖。  
@@ -84,7 +84,7 @@ ms.locfileid: "33028915"
   
 -   **ESRI 形狀檔：** ESRI 形狀檔包含與環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI)形狀檔空間資料格式相容的資料。 ESRI 形狀檔指的是一組檔案。 .shp 檔案中的資料會指定地理或幾何圖案。 .dbf 檔案中的資料會提供這些圖案的屬性。 若要在設計檢視中檢視地圖或是從報表伺服器執行地圖，這兩種檔案必須位於相同的資料夾。 當您從本機檔案系統的 .shp 檔案加入空間資料時，空間資料會內嵌在您的報表中。 若要在執行階段動態擷取空間資料，請將形狀檔上傳至報表伺服器，然後將其指定為空間資料的來源。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](http://go.microsoft.com/fwlink/?linkid=178814)。  
   
--   **儲存在資料庫中的 SQL Server 空間資料：** 您可以使用查詢來指定 **關聯式資料庫中的** SQLGeometry **或** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/spatial/spatial-data-types-overview.md) 》中的 [空間資料類型概觀](http://go.microsoft.com/fwlink/?linkid=98335)。  
+-   **儲存在資料庫中的 SQL Server 空間資料：** 您可以使用查詢來指定 **關聯式資料庫中的** SQLGeometry **或** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱[空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
      當您在查詢設計工具中查看結果集時，每一列空間資料都視為一個單位，並儲存在單一地圖元素中。 例如，如果有多個點定義在結果集的一個資料列中，顯示屬性會套用到該地圖元素中的所有點。  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 886143cc00831cd6921a07738f6ffbd1e6ef36ef
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983774"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405926"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器：原生或 SharePoint。 確認安裝所應遵循的步驟會視報表伺服器模式而定。  
@@ -39,7 +39,7 @@ ms.locfileid: "38983774"
   
 2.  確認已安裝 **[SQL Server Reporting Services 服務]** ，且該服務處於 **[執行中]** 狀態。  
   
-     如果您在清單中未看到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，請確認是否已安裝此服務。 如需詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
+     如果您在清單中未看到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，請確認是否已安裝此服務。 如需詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。  
   
 ### <a name="to-verify-the-service-application"></a>確認服務應用程式  
   
@@ -71,7 +71,7 @@ ms.locfileid: "38983774"
   
 1.  在 SharePoint 文件庫中，建立只包含一個文字方塊 (例如標題) 的基本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表。 此報表不包含任何資料來源或資料集。 其目的是要確認您可以開啟報表產生器，而且基本報表將會進行預覽。  
   
-2.  將報表儲存至文件庫，然後從文件庫中執行報表。 如需使用報表產生器建立報表的詳細資訊，請參閱[啟動報表產生器](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259)。  
+2.  將報表儲存至文件庫，然後從文件庫中執行報表。 如需使用報表產生器建立報表的詳細資訊，請參閱[啟動報表產生器](../report-builder/start-report-builder.md)。  
   
 ### <a name="reporting-services-samples"></a>Reporting Services 範例  
   
@@ -88,7 +88,7 @@ ms.locfileid: "38983774"
   
 2.  開啟 [服務] 主控台應用程式，並確認報表伺服器服務正在執行中。 若要檢視報表伺服器服務的狀態，請按一下 [開始]，指向 [控制台]，並按兩下 [系統管理工具]，然後按兩下 [服務]。 當服務清單出現時，請捲動至 [報表伺服器 (MSSQLSERVER)]。 其狀態應該是 **[已啟動]**。  
   
-3.  開啟瀏覽器，並在位址列輸入報表伺服器 URL。 位址是由您在安裝期間對報表伺服器指定的伺服器名稱和虛擬目錄名稱所組成。 報表伺服器虛擬目錄的預設名稱為 **ReportServer**。 您可以使用下列 URL 來確認報表伺服器的安裝：http://\<電腦名稱>/ReportServer\<_執行個體名稱>。 如果您將報表伺服器安裝成具名執行個體，則需使用不同的 URL。 如需 URL 格式的詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。 如果您是 Windows Vista 或 Windows Server 2008 的本機系統管理員，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+3.  開啟瀏覽器，並在位址列輸入報表伺服器 URL。 位址是由您在安裝期間對報表伺服器指定的伺服器名稱和虛擬目錄名稱所組成。 報表伺服器虛擬目錄的預設名稱為 **ReportServer**。 您可以使用下列 URL 來確認報表伺服器的安裝： http://\<電腦名稱>/ReportServer\<_執行個體名稱>。 如果您將報表伺服器安裝成具名執行個體，則需使用不同的 URL。 如需 URL 格式的詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。 如果您是 Windows Vista 或 Windows Server 2008 的本機系統管理員，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 4.  執行報表來測試報表伺服器作業。 在此步驟中，您可以根據教學課程建立範例報表。 如需詳細資訊，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。  
   

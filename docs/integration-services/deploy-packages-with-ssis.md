@@ -1,14 +1,14 @@
 ---
 title: 使用 SSIS 部署套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7abdad422347e140e230eac9b7f19a78d5ba47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328262"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028812"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署封裝
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供數個工具，可讓您輕鬆地將套件部署到另一部電腦。 部署工具也可以用來管理任何相依性，例如封裝所需的組態和檔案。 在這個教學課程中，您會學到如何使用這些工具，將封裝及其相依性安裝到目標電腦上。    
@@ -45,37 +45,49 @@ ms.locfileid: "35328262"
 最後，您會使用「執行封裝公用程式」在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中執行封裝。    
     
 這個教學課程的目標是，模擬在實際部署時可能遇到的各種問題的複雜性。 但是，如果您無法將封裝部署到其他電腦上，仍然可以進行這個教學課程，只要將封裝安裝在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]本機執行個體上的 msdb 資料庫中，然後從本機執行個體上的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行封裝就可以了。    
-    
-## <a name="what-you-will-learn"></a>學習內容    
+
+**完成這個教學課程的估計時間：** 2 小時
+
+## <a name="what-you-learn"></a>學習內容    
 要熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程會逐步解說各個步驟，教您建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後將封裝和其他必要檔案加入至專案中。 當專案完成之後，您還要建立部署配套、將部署配套複製到目的地電腦，然後將封裝安裝到目的地電腦上。    
     
-## <a name="requirements"></a>需求    
+## <a name="prerequisites"></a>Prerequisites    
 這個教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能較為陌生的使用者。 為了進一步了解在這個教學課程中所要用到的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基本概念，若能先完成下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程，將會很有幫助： [SSIS 如何建立 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
-**來源電腦。** 要用來建立部署配套的電腦 **必須安裝下列元件：**
-- [SQL Server]  
-- 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。     
-> **注意！** 請確定您具有在 AdventureWorks 中建立和卸除資料表或您使用的其他資料的權限。         
+### <a name="on-the-source-computer"></a>在來源電腦上
+
+要用來建立部署配套的電腦**必須安裝下列元件：**
+
+- SQL Server。 (從 [SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)來下載免費評估或開發人員版本的 SQL Server。)
+
+- 範例資料、完成的套件、組態和讀我檔案。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。 ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
+
+-   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorks2014.bak`，並還原備份。  
+
+-   您必須具有在 AdventureWorks 資料庫中建立和卸除資料表的權限。
     
 -   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。    
     
-**目的地電腦。** 要在其中部署套件的電腦 **必須安裝下列元件：**    
+### <a name="on-the-destination-computer"></a>在目的電腦上
+
+要在其中部署套件的電腦 **必須安裝下列元件：**    
     
-- [SQL Server]
-- 範例資料、完成的套件、組態和讀我檔案。 如果您下載 [Adventure Works 2014 範例資料庫](https://msftdbprodsamples.codeplex.com/releases/view/125550)，則會同時安裝這些檔案。 
+- SQL Server。 (從 [SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)來下載免費評估或開發人員版本的 SQL Server。)
+
+- 範例資料、完成的套件、組態和讀我檔案。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。 ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
+
+-   **AdventureWorks2014** 範例資料庫。 若要下載 **AdventureWorks2014** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorks2014.bak`，並還原備份。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 若要安裝 SSIS，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。
     
--   您必須具有在 AdventureWorks 中建立和卸除資料表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中執行套件的權限。    
+-   您必須具有在 AdventureWorks 資料庫中建立和卸除資料表的權限，以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中執行 SSIS 套件的權限。    
     
--   您必須具有 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統資料庫中 sysssispackages 資料表的讀取和寫入權限。    
+-   您必須具有 `sysssispackages` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系統資料庫中 `msdb` 資料表的讀取和寫入權限。    
     
 如果您計畫將封裝部署到建立部署配套時所使用的同一部電腦，則該部電腦必須同時符合來源電腦和目的地電腦的需求。    
-    
-**完成這個教學課程的估計時間：** 2 小時    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程    
 [第 1 課：準備建立部署配套](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 在這一課中，您會建立一個新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並且將封裝和其他必要檔案加入至專案中，以開始部署 ETL 方案。    

@@ -1,14 +1,14 @@
 ---
 title: SSIS 如何建立 ETL 套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -23,16 +23,16 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.openlocfilehash: 1b2863ac1e5a9f9bdf072e674bb4e556eeecc268
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999278"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029594"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
 
- > 如需舊版 SQL Server 的相關內容，請參閱 [SSIS 教學課程：建立簡易 ETL 套件](https://msdn.microsoft.com/library/ms169917(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱 [SSIS 教學課程：建立簡易 ETL 套件](ssis-how-to-create-an-etl-package.md)。
 
 在此教學課程中，您將學會如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計工具來建立簡單的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件。 您建立的封裝會從一般檔案取用資料，重新格式化資料，然後將重新格式化之後的資料插入到事實資料表中。 在下列課程中，將會擴充套件以示範迴圈、套件設定、記錄和錯誤流程。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38999278"
 
 -   **AdventureWorksDW2012 範例資料庫**。 若要下載 **AdventureWorksDW2012** 資料庫，請從 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)下載 `AdventureWorksDW2012.bak`，並還原備份。  
 
--   **範例資料**檔案。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services 教學課程 - 建立簡易 ETL 套件](https://www.microsoft.com/download/details.aspx?id=56827)。
+-   **範例資料**檔案。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要將範例資料與課程套件下載為 ZIP 檔案，請參閱 [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (SQL Server Integration Services 教學課程檔案)。
 
     - ZIP 檔案中的檔案大部分都是唯讀，以避免不小心變更。 若要將輸出寫入至檔案或變更它，您可能必須關閉檔案屬性中的唯讀屬性。
     - 範例套件會假設資料檔案位於資料夾 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`。 如果您將下載解壓縮到其他位置，則您可能需要更新範例套件中多個位置的檔案路徑。

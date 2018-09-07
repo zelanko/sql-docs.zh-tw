@@ -1,7 +1,7 @@
 ---
 title: SQL Azure 連線類型 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3183a2d7ec717cfd5f00768c16a142727d3fc058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e8ed9c88cf2e6c77321e26e6704ae64cb2249b3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022785"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410007"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 是運用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術所建立的雲端式主控關聯式資料庫。 若要在報表中包含來自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料，您必須具有以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料延伸模組為基礎。 使用此資料來源類型可連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]並從中擷取資料。  
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  如果預存程序的參數有預設值，可以使用 DEFAULT 關鍵字做為參數值來存取該值。 如果查詢參數連結到報表參數，使用者可以在報表參數的輸入方塊中輸入或選取 DEFAULT 一字。  
   
- 如需預存程序的詳細資訊，請參閱 msdn.microsoft.com 上《 [SQL Server 線上叢書》](http://go.microsoft.com/fwlink/?linkid=98335) 中的＜預存程序 (資料庫引擎)＞。  
+ 如需預存程序的詳細資訊，請參閱[預存程序 (資料庫引擎)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)。  
   
   
 ##  <a name="Parameters"></a> 參數  

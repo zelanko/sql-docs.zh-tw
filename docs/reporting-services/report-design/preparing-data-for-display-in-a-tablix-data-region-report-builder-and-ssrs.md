@@ -1,7 +1,7 @@
 ---
 title: 準備要在 Tablix 資料區中顯示的資料 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6b8f3672b21a43c87eb1dec7008593a93f3b850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0106cac1213e9037008bc9c89b0ef501457c6446
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023965"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406494"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>準備要在 Tablix 資料區中顯示的資料 (報表產生器及 SSRS)
   Tablix 資料區域會顯示資料集中的資料。 您可以檢視針對資料集擷取的所有資料，或者您可以建立篩選，讓您僅能看到資料的子集。 您也可以加入條件式運算式來填入 Null 值，或修改資料集的查詢來包含定義現有資料行之排序次序的資料行。  
@@ -37,7 +37,7 @@ ms.locfileid: "33023965"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- 如需有關使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料來源擷取資料之前，排除資料中 Null 值的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 線上叢書 [》中](http://go.microsoft.com/fwlink/?linkid=120955)文件集的＜Null 值＞和＜Null 值與聯結＞。  
+ 如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源擷取資料前排除資料中 Null 值的詳細資訊，請參閱 [NULL 和 UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)。  
   
 ## <a name="handling-null-field-names"></a>處理 Null 欄位名稱  
  只要欄位本身存在於查詢結果集中，就可以在運算式中測試 Null 值。 您可以從自訂程式碼中，測試欄位本身是否出現在執行階段從資料來源傳回的集合欄位中。 如需詳細資訊，請參閱[資料集 Fields 集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。  

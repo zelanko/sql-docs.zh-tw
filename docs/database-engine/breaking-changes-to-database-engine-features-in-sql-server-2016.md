@@ -19,12 +19,12 @@ caps.latest.revision: 144
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 191155643b072cc2963d3de5e4b1651e219e35f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b43a8008fcfddc43cad78b049483b6ff3b1fb75
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863233"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406593"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中對於 Database Engine 的重大變更
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "32863233"
   
 ## <a name="previous-versions"></a>先前版本  
   
--   [SQL Server 2014 中對於 Database Engine 的重大變更](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
+-   [SQL Server 2014 中對於資料庫引擎的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [SQL Server 2012 中對於 Database Engine 的重大變更](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
+-   [SQL Server 2012 中對於資料庫引擎的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [SQL Server 2008 中對於 Database Engine 的重大變更](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
+-   [SQL Server 2008 中對於資料庫引擎的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 中已被取代的 Database Engine 功能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

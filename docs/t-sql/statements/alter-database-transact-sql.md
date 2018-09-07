@@ -29,14 +29,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
+ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008970"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802567"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
 
 修改資料庫的特定組態選項。 
 
@@ -50,23 +50,10 @@ ms.locfileid: "40008970"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL 平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -299,9 +286,9 @@ GO
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
->   <th style="border: 1"><strong><em>* SQL DB<br />邏輯伺服器 *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Database<br />邏輯伺服器 *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
 > </tr>
@@ -663,9 +650,9 @@ ALTER DATABASE db1 FAILOVER
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
->   <th><strong><em>* SQL DB<br />受控執行個體</th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
 > </tr>
@@ -799,9 +786,9 @@ ALTER DATABASE WideWorldImporters
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
 >   <th><strong><em>* SQL 資料<br />倉儲 *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
 > </tr>
@@ -913,7 +900,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>另請參閱  
 [CREATE DATABASE (Azure SQL 資料倉儲)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[SQL 資料倉儲參考文章清單](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+[SQL 資料倉儲參考文章清單](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -928,9 +915,9 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
 >   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
 > </tr>
@@ -984,7 +971,7 @@ LOG_SIZE = *size* [GB]
 指定每個資料庫的新 GB 上限，以用來儲存要改變之資料庫中的所有交易記錄。 此大小會分佈於設備中的所有計算節點上。  
   
 ENCRYPTION { ON | OFF }  
-設定資料庫要加密 (ON) 或是不要加密 (OFF)。 只有在將 [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) \(英文\) 設為 **1** 時，才能針對[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]設定加密。 您必須先建立資料庫加密金鑰，才能設定透明資料加密。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+設定資料庫要加密 (ON) 或是不要加密 (OFF)。 只有在將 [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) \(英文\) 設為 **1** 時，才能針對[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]設定加密。 您必須先建立資料庫加密金鑰，才能設定透明資料加密。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
 
 SET AUTO_CREATE_STATISTICS { ON | OFF } 自動建立統計資料選項 AUTO_CREATE_STATISTICS 為 ON 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有長條圖的資料行建立的。
 
@@ -1022,7 +1009,7 @@ REPLICATED_SIZE、DISTRIBUTED_SIZE 和 LOG_SIZE 的值可以大於、等於或�
 只有在系統管理員啟用了自動統計資料時，統計資料設定才會作用。如果您是系統管理員，請使用功能參數 [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) 來啟用或停用自動統計資料。 
   
 ## <a name="locking-behavior"></a>鎖定行為  
-在 DATABASE 物件上採取共用鎖定。 您無法改變有另一個使用者正在讀取或寫入的資料庫。 這包括已在資料庫上發出 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) \(英文\) 陳述式的工作階段。  
+在 DATABASE 物件上採取共用鎖定。 您無法改變有另一個使用者正在讀取或寫入的資料庫。 這包括已在資料庫上發出 [USE](../language-elements/use-transact-sql.md) \(英文\) 陳述式的工作階段。  
   
 ## <a name="performance"></a>效能  
 根據資料庫內實際資料的大小及磁碟上的片段程度而定，壓縮資料庫可能需要大量的時間與系統資源。 例如，壓縮資料庫可能需要數小時以上的時間。  

@@ -1,13 +1,12 @@
 ---
-title: 通用條件合規性已啟用伺服器組態選項 | Microsoft Docs
+title: 啟用通用條件合規性設定 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -17,23 +16,22 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 24
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 320c81ef93d11e1ebd73c861617be322a99f2655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 5f259daef42200f05fe3bc495559d1ed4292638f
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863703"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40427278"
 ---
-# <a name="common-criteria-compliance-enabled-server-configuration-option"></a>通用條件符合已啟用伺服器組態選項
+# <a name="common-criteria-compliance-enabled-server-configuration"></a>啟用通用條件合規性伺服器設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  common criteria compliance enabled 選項會啟用通用條件所需的下列元素。  
+通用條件合規性選項會啟用 [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/) (資訊技術安全性評估通用條件) 所需的下列項目。  
   
-|準則|描述|  
+|準則|Description|  
 |--------------|-----------------|  
 |剩餘資訊保護 (RIP)|在記憶體重新配置到新的資源之前，RIP 需要使用已知的位元模式來覆寫記憶體配置。 符合 RIP 標準可促使安全性改善。不過，覆寫記憶體配置可能會降低效能。 啟用 common criteria compliance enabled 選項之後，就會進行覆寫。|  
 |檢視登入統計資料的功能|啟用 common criteria compliance enabled 選項之後，就會啟用登入稽核。 每次使用者成功登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，就會提供一些資訊，包括上次登入成功的時間、上次登入不成功的時間，以及上次登入成功與目前登入時間之間的登入嘗試次數。 您可以透過查詢 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 動態管理檢視，檢視這些登入統計資料。|  
@@ -67,6 +65,4 @@ GO
 重新啟動 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。
   
 ## <a name="see-also"></a>另請參閱  
- [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

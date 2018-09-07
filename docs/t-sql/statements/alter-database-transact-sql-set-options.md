@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動微調、加密、查詢存放區
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -32,13 +32,13 @@ caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 16505ba07dcd1035ad260b68785eea763c050d1b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560498"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067570"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
 
@@ -46,9 +46,31 @@ ms.locfileid: "39560498"
 
 按一下下列其中一個索引標籤，以查看您所使用特定 SQL 版本的語法、引數、備註、權限和範例。
 
-如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-synt如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
-# <a name="sql-servertabsqlserver"></a>[[SQL Server]](#tab/sqlserver)
+## <a name="click-a-product"></a>按一下產品！
+
+在下一行中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>[SQL Server]
   
 資料庫鏡像、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和相容性層級為 `SET` 選項，但是礙於篇幅的因素，將會在個別的文章中描述。 如需詳細資訊，請參閱 [ALTER DATABASE 資料庫鏡像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 和 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
@@ -89,7 +111,7 @@ SET
   | <service_broker_option>  
   | <snapshot_option>  
   | <sql_option>   
-  | <target_recovery_time_option>   
+  | <target_recovery_time_option> 
   | <termination>  
 }  
 ;
@@ -118,7 +140,7 @@ SET
    }  
 }  
   
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF }   
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -362,7 +384,7 @@ ON
 根據預設，AUTO_UPDATE_STATISTICS_ASYNC 選項設定為 OFF，而且查詢最佳化工具會以同步方式更新統計資料。  
   
 OFF  
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 在查詢最佳化工具編譯查詢之前，它會先等候統計資料更新完成。  
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。  
   
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 OFF 沒有作用。  
   
@@ -377,15 +399,15 @@ OFF
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會持續監視 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 查詢搭配強制計劃的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以藉由套用檢視中顯示的 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 指令碼，來監視使用中的建議並修正已識別的問題。 這是預設值。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中所顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
 
 **\<change_tracking_option> ::=**  
   
 **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]。  
   
-控制變更追蹤選項。 您可以啟用變更追蹤、設定選項、變更選項，以及停用變更追蹤。 如需範例，請參閱本主題稍後的「範例」一節。  
+控制變更追蹤選項。 您可以啟用變更追蹤、設定選項、變更選項，以及停用變更追蹤。 如需範例，請參閱本文稍後的＜範例＞一節。  
   
 ON  
 啟用資料庫的變更追蹤。 當您啟用變更追蹤時，也可以設定 AUTO CLEANUP 和 CHANGE RETENTION 選項。  
@@ -1086,7 +1108,7 @@ MINUTES
 指定資料庫狀態轉換時，何時回復不完整的交易。 如果省略 termination 子句，且資料庫有任何鎖定，ALTER DATABASE 陳述式會無限等待。 只能指定一個 termination 子句，它在 SET 子句之後。  
   
 > [!NOTE]  
->  並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本主題＜備註＞一節中[設定選項](#SettingOptions) 下的表格。  
+>  並非所有的資料庫選項都會使用 WITH \<termination> 子句。 如需詳細資訊，請參閱本文＜備註＞一節中[設定選項](#SettingOptions)下的表格。  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 指定在指定的秒數之後回復，或是立即回復。  
@@ -1263,8 +1285,27 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 邏輯伺服器](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。  
   
 > [!NOTE]  
@@ -1308,14 +1349,11 @@ SET
 }
 
 <automatic_tuning_option> ::=  
-{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+{   AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
-}  
-
-ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
-ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
+}
 
 <change_tracking_option> ::=  
 {  
@@ -1327,7 +1365,7 @@ ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_I
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1448,7 +1486,7 @@ OFF
   
 > [!NOTE]  
 > 自主資料庫無法使用 AUTO_SHRINK 選項。  
-  
+
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
 ON  
 指定當查詢使用統計資料而且這些統計資料可能已過期時，查詢最佳化工具就會更新這些統計資料。 當插入、更新、刪除或合併作業變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並且比較修改次數與臨界值，藉以判斷統計資料可能過期的時間。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。  
@@ -1477,7 +1515,7 @@ ON
 根據預設，AUTO_UPDATE_STATISTICS_ASYNC 選項設定為 OFF，而且查詢最佳化工具會以同步方式更新統計資料。  
   
 OFF  
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 在查詢最佳化工具編譯查詢之前，它會先等候統計資料更新完成。  
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。  
   
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 OFF 沒有作用。  
   
@@ -1485,35 +1523,57 @@ OFF
   
 如需描述使用同步或非同步統計資料更新之時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。  
 
-**\<automatic_tuning_option> ::=**  
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
 **適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
-
-啟用或停用資料庫的[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)。
-
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO 將自動調整值設為 AUTO，會套用 Azure 設定預設以進行自動調整。
-INHERIT 使用 INHERIT 值會從父伺服器繼承預設設定。 如果您想在父伺服器自訂自動調整設定，並讓這種伺服器上的所有資料庫都 INHERIT 這些自訂設定，這會特別實用。 請注意，為了讓繼承有效，FORCE_LAST_GOOD_PLAN、CREATE_INDEX 及 DROP_INDEX 這三個個別的調整選項就必須在伺服器上設為 DEFAULT。
-CUSTOM 使用 CUSTOM 值，您就必須手動自訂設定資料庫上可用的各個自動調整選項。
-
-啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動索引管理 `CREATE_INDEX` 選項。
-
-CREATE_INDEX = { DEFAULT | ON | OFF } DEFALT 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
-ON 啟用時，會在資料庫自動產生缺少的索引。 在建立索引之後，會驗證工作負載效能的增量。 當這類建立的索引不再對工作負載效能有助益時，會自動還原。 自動建立的索引會加上旗標，表示是系統產生的索引。
-OFF 不自動在資料庫產生缺少的索引。
-
-啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動索引管理 `DROP_INDEX` 選項。
-
-DROP_INDEX = { DEFAULT | ON | OFF } DEFALT 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
-ON 自動卸除重複或不再對效能工作負載有用的索引。 OFF 不自動卸除資料庫上缺少的索引。
-
-啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動計劃修正 `FORCE_LAST_GOOD_PLAN` 選項。
-
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
-DEFAULT 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
+  
+控制[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動選項。  
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }  
+AUTO  
+將自動調整值設定為 AUTO，會套用 Azure 設定預設值以進行自動調整。  
+    
+INHERIT  
+使用 INHERIT 值會從父伺服器繼承預設設定。 如果您想在父伺服器自訂自動調整設定，並讓這種伺服器上的所有資料庫都 INHERIT 這些自訂設定，這會特別實用。 請注意，為了讓繼承有效，FORCE_LAST_GOOD_PLAN、CREATE_INDEX 及 DROP_INDEX 這三個個別的調整選項就必須在伺服器上設為 DEFAULT。  
+  
+CUSTOM  
+使用 CUSTOM 值，您就必須手動自訂設定資料庫上可用的各個自動調整選項。  
+  
+啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動索引管理 `CREATE_INDEX` 選項。  
+  
+CREATE_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。  
+  
 ON  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會持續監視 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 查詢搭配強制計劃的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
+啟用時，會在資料庫自動產生缺少的索引。 在建立索引之後，會驗證工作負載效能的增量。 當這類建立的索引不再對工作負載效能有助益時，會自動還原。 自動建立的索引會加上旗標，表示是系統產生的索引。  
+  
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以藉由套用檢視中顯示的 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 指令碼，來監視使用中的建議並修正已識別的問題。 這是預設值。
-
+不自動在資料庫產生缺少的索引。  
+  
+啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動索引管理 `DROP_INDEX` 選項。  
+  
+DROP_INDEX = { DEFAULT | ON | OFF }  
+DEFALT  
+從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。  
+  
+ON  
+自動卸除重複索引或不再對效能工作負載有用的索引。   
+  
+OFF  
+不自動卸除資料庫上缺少的索引。  
+  
+啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動計劃修正 `FORCE_LAST_GOOD_PLAN` 選項。  
+  
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT  
+從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。  
+  
+ON  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
+  
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中所顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。  
+  
 **\<change_tracking_option> ::=**  
   
 控制變更追蹤選項。 您可以啟用變更追蹤、設定選項、變更選項，以及停用變更追蹤。 如需範例，請參閱本文稍後的＜範例＞一節。  
@@ -2021,7 +2081,26 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB 受控執行個體](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
+>   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。  
   
@@ -2062,6 +2141,11 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
 
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING 
@@ -2072,7 +2156,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -2209,7 +2293,7 @@ ON
 根據預設，AUTO_UPDATE_STATISTICS_ASYNC 選項設定為 OFF，而且查詢最佳化工具會以同步方式更新統計資料。  
   
 OFF  
-指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 在查詢最佳化工具編譯查詢之前，它會先等候統計資料更新完成。  
+指定 AUTO_UPDATE_STATISTICS 選項的統計資料更新是同步的。 查詢最佳化工具在編譯查詢之前，會先等候統計資料更新完成。  
   
 除非 AUTO_UPDATE_STATISTICS 設為 ON，否則將這個選項設為 OFF 沒有作用。  
   
@@ -2217,6 +2301,17 @@ OFF
   
 如需描述使用同步或非同步統計資料更新之時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。  
   
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
+
+啟用或停用 `FORCE_LAST_GOOD_PLAN` [自動微調](../../relational-databases/automatic-tuning/automatic-tuning.md)選項。  
+  
+FORCE_LAST_GOOD_PLAN = { ON | OFF }  
+ON  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
+
 **\<change_tracking_option> ::=**  
   
 控制變更追蹤選項。 您可以啟用變更追蹤、設定選項、變更選項，以及停用變更追蹤。 如需範例，請參閱本文稍後的＜範例＞一節。  
@@ -2695,3 +2790,4 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
+::: moniker-end

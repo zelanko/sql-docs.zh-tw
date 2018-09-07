@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3ab8635837723b99a559bffcd546ff99d27fe283
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411800"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405524"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -109,6 +109,9 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 ## <a name="9-add-the-scale-out-workers"></a>9.新增 Scale Out Worker
 
 現在，您可以透過 [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md) 的協助來新增 Scale Out Worker。 在連線頁面上輸入 `[SQL Server Availability Group Listener DNS name],[Port]`。
+
+# <a name="upgrade-scale-out-in-high-availability-environment"></a>在高可用性環境中升級 Scale Out
+若要在高可用性環境中升級 Scale Out，請遵循 [Always On for SSIS 目錄的升級步驟](../catalog/ssis-catalog.md#Upgrade)，並升級每部機器上的 Scale Out 主機和 Scale Out 背景工作，然後使用新版的 Scale Out 主機服務重新建立上面步驟 7 中的 Windows Server 容錯移轉叢集角色。
 
 ## <a name="next-steps"></a>後續步驟
 如需詳細資訊，請參閱下列文章：

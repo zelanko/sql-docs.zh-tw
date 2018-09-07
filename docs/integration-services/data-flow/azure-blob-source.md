@@ -1,7 +1,7 @@
 ---
 title: Azure Blob 來源 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 5404b7bc7e7543f85890816973fdbd0c1e39022f
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964350"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406493"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 來源
   **Azure Blob 來源** 元件可讓 SSIS 封裝從 Azure Blob 讀取資料。 支援的檔案格式：CSV 與 AVRO。
@@ -39,7 +39,9 @@ ms.locfileid: "36964350"
   
 4.  針對 [Blob 檔案格式] 欄位，請指定要使用 [文字] 或 [Avro] 的 Blob 格式。  
   
-5.  檔案格式若為 [文字]，則您必須指定 [資料行分隔符號字元] 值。 若檔案中第一個資料列包含資料行名稱，請選取 [第一個資料列的資料行名稱]  。
+5.  檔案格式若為 [文字]，則您必須指定 [資料行分隔符號字元] 值。 (不支援多字元分隔符號)。
+
+    若檔案中第一個資料列包含資料行名稱，請選取 [第一個資料列的資料行名稱]  。
 
 6.  如果檔案已壓縮，請選取 [解壓縮檔案]。
 

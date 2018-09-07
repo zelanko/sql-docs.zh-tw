@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008800"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024461"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 這個教學課程利用案例來說明涉及擁有權鏈結和使用者內容切換的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念。  
   
 > [!NOTE]  
-> 若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。 如需混合模式安全性的詳細資訊，請參閱 [選擇驗證模式](../relational-databases/security/choose-an-authentication-mode.md)。  
+> 若要執行本教學課程中的程式碼，您必須設定使用混合模式安全性，並已安裝 AdventureWorks2017 資料庫。 如需混合模式安全性的詳細資訊，請參閱 [選擇驗證模式](../relational-databases/security/choose-an-authentication-mode.md)。  
   
 ## <a name="scenario"></a>狀況  
-在此狀況中，有兩位使用者需要使用其帳戶來存取 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫內儲存的採購訂單資料。 需求如下：  
+在此狀況下，有兩位使用者需要使用其帳戶來存取 AdventureWorks2017 資料庫內儲存的採購訂單資料。 需求如下：  
   
 -   第一個帳戶 (TestManagerUser) 必須能夠看見每筆訂單的所有詳細資料。  
-  
 -   第二個帳戶 (TestEmployeeUser) 必須能夠看見訂單號碼、訂貨日期、送貨日期、產品識別碼，以及已部分送達的每筆訂單所採購和收到的貨品數量。  
-  
--   其餘所有帳戶必須保有各自現行的權限。  
-  
+-   其餘所有帳戶必須保有各自現行的權限。   
 為了滿足此案例的需求，範例將拆成四部分示範擁有權鏈結和內容切換的概念：  
   
-1.  設定環境。  
-  
-2.  建立預存程序用於存取訂單資料。  
-  
+1.  設定環境。   
+2.  建立預存程序用於存取訂單資料。   
 3.  透過預存程序存取資料。  
-  
 4.  重設環境。  
   
-此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。  
+此範例會在每個程式碼區塊中各行附上說明。 若要複製整個範例，請參閱本教學課程結尾處的＜ [完整範例](#CompleteExample) ＞一節。
+
+## <a name="prerequisites"></a>Prerequisites
+若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
+
+- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- 下載 [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) (AdventureWorks2017 範例資料庫)。
+
+如需還原 SQL Server Management Studio 中資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
   
 ## <a name="1-configure-the-environment"></a>1.設定環境  
-使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 與下列程式碼開啟 `AdventureWorks2012` 資料庫，然後使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式檢查 dbo 使用者是否顯示為內容。  
+使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 與下列程式碼開啟 `AdventureWorks2017` 資料庫，然後使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式檢查 dbo 使用者是否顯示為內容。  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 如需 CURRENT_USER 陳述式的詳細資訊，請參閱 [CURRENT_USER &#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md)。  
   
-使用下列程式碼，以 dbo 使用者身分在伺服器和 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫中建立兩位使用者。  
+使用下列程式碼，以 dbo 使用者身分在伺服器和 AdventureWorks2017 資料庫中建立兩位使用者。  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+傳回的錯誤：
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 由於 `TestManagerUser` 憑藉其 `Purchasing` 結構描述擁有權而成為上一節所建立預存程序中參考之物件的擁有者， `TestEmployeeUser` 可透過預存程序存取基底資料表。 下列程式碼仍舊使用 `TestEmployeeUser` 內容，傳遞訂單號碼 952 做為參數。  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

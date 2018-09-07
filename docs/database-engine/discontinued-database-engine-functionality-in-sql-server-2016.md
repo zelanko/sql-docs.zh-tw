@@ -39,12 +39,12 @@ caps.latest.revision: 100
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 024986a082bee4e823d66fdb588e65fc6d4f4c88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9b801380bb6bc37fb419eedfa91d510fb8ad1076
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989704"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409496"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016 中已停止的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ ms.locfileid: "37989704"
   
 ## <a name="previous-versions"></a>先前版本  
   
--   [SQL Server 2014 中已停止的 Database Engine 功能](https://msdn.microsoft.com/library/ms144262\(v=sql.120\))  
+-   [SQL Server 2014 中已停止的資料庫引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [SQL Server 2012 中已停止的 Database Engine 功能](https://msdn.microsoft.com/library/ms144262\(v=sql.110\))  
+-   [SQL Server 2012 中已停止的資料庫引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
--   [SQL Server 2008 中已停止的 Database Engine 功能](https://msdn.microsoft.com/library/ms144262\(v=sql.100\))  
+-   [SQL Server 2008 中已停止的資料庫引擎功能](discontinued-database-engine-functionality-in-sql-server-2016.md))  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 中已被取代的 Database Engine 功能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

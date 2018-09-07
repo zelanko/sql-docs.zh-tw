@@ -1,6 +1,6 @@
 ---
-title: 使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL Database | Microsoft Docs
-description: 示範如何建立 SQL Server Integration Services (SSIS) 套件，將來自各種資料來源的資料移至 Azure SQL Database。
+title: 使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database | Microsoft Docs
+description: 示範如何建立 SQL Server Integration Services (SSIS) 套件，將來自各種資料來源的資料移至 SQL Server 或 Azure SQL Database。
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,26 +10,27 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/14/2018
+ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ed87e5a83e992ba5de6289d72465d92c94126748
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175018"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405798"
 ---
-# <a name="load-data-into-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL Database
+# <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database
 
-建立 SQL Server Integration Services (SSIS) 套件，將資料載入 [Azure SQL Database](/azure/sql-database/)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
+建立 SQL Server Integration Services (SSIS) 套件，將資料載入 SQL Server 或 [Azure SQL Database](/azure/sql-database/)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
 
 本文示範如何執行下列作業：
 
 * 在 Visual Studio 中建立新的 Integration Services 專案。
 * 設計可將資料從來源載入至目的地的 SSIS 套件。
 * 執行 SSIS 套件以載入資料。
+
 
 ## <a name="basic-concepts"></a>基本概念
 
@@ -57,9 +58,13 @@ SSIS 的詳細簡介超出本文範圍。 如需詳細資訊，請參閱下列�
 1. **SQL Server Integration Services (SSIS)**。 SSIS 是 SQL Server 的元件，並且需要 SQL Server 的授權版本或是開發人員或評估版本。 若要取得 SQL Server 的評估版本，請參閱[評估 SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)。
 2. **Visual Studio** (選擇性)。 若要取得免費的 Visual Studio Community Edition，請參閱 [Visual Studio Community][Visual Studio Community]。 如果您不想要安裝 Visual Studio，您可以只安裝 SQL Server Data Tools (SSDT)。 SSDT 會安裝具有有限功能的 Visual Studio 版本。
 3. **適用於 Visual Studio 的 SQL Server Data Tools (SSDT)**。 若要取得適用於 Visual Studio 的 SQL Server Data Tools，請參閱[下載 SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)]。
-4. **Azure SQL Database 資料庫與權限**。 本教學課程會連線到 SQL Database 執行個體，並將資料載入其中。 您必須有連線、建立資料表和載入資料的權限。
-5. **範例資料**。 本教學課程使用儲存在 SQL Server 上 AdventureWorks 範例資料庫內的範例資料，作為要載入 SQL Database 的來源資料。 若要取得 AdventureWorks 範例資料庫，請參閱 [AdventureWorks 範例資料庫][AdventureWorks 2014 Sample Databases]。
-6. **防火牆規則**。 您必須先在 SQL Database 上，為您本機電腦的 IP 位址建立防火牆規則，然後才能將資料上傳到 SQL Database。
+4. 本教學課程會連線到 SQL Server 或 SQL Database 執行個體，並將資料載入其中。 您必須具有連線、建立資料表以及對下列其中一項載入資料的權限：
+   - **Azure SQL Database 資料庫**。 如需詳細資訊，請參閱 [Azure SQL Database](/azure/sql-database/)。  
+      中的多個
+   - **SQL Server 執行個體**。 SQL Server 會在內部部署或 Azure 虛擬機器上執行。 若要下載免費評估或開發人員版本的 SQL Server，請參閱 [SQL Server 下載](https://www.microsoft.com/sql-server/sql-server-downloads)。
+
+5. **範例資料**。 本教學課程使用儲存在 SQL Server 的 AdventureWorks 範例資料庫內的範例資料，作為來源資料。 若要取得 AdventureWorks 範例資料庫，請參閱 [AdventureWorks 範例資料庫][AdventureWorks 2014 Sample Databases]。
+6. 如果您將資料載入至 SQL Database，則為**防火牆規則**。 您必須先在 SQL Database 上，為您本機電腦的 IP 位址建立防火牆規則，然後才能將資料上傳到 SQL Database。
 
 ## <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
 1. 啟動 Visual Studio。
@@ -81,7 +86,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
     ![][02]
 2. 按兩下 [資料流程工作] 以切換到 [資料流程] 索引標籤。
 3. 從 [工具箱] 的 [其他來源] 清單中，將 [ADO.NET 來源] 拖曳至設計介面。 保持選取來源配接器，在 [屬性] 窗格中將其名稱變更為 **SQL Server 來源**。
-4. 從 [工具箱] 的 [其他目的地] 清單中，將 [ADO.NET 目的地] 拖曳至設計介面的 [ADO.NET 來源] 底下。 選取目的地配接器，然後在 [屬性] 窗格中將其名稱變更為 **SQL DW 目的地**。
+4. 從 [工具箱] 的 [其他目的地] 清單中，將 [ADO.NET 目的地] 拖曳至設計介面的 [ADO.NET 來源] 底下。 選取目的地配接器，然後在 [屬性] 窗格中將其名稱變更為 [SQL 目的地]。
    
     ![][09]
 
@@ -128,16 +133,16 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 1. 按兩下目的地配接器以開啟 [ADO.NET 目的地編輯器]。
    
     ![][11]
-2. 在 [ADO.NET 目的地編輯器] 的 [連線管理員] 索引標籤上，按一下 [連線管理員] 清單旁的 [新增] 按鈕，以開啟 [設定 ADO.NET 連線管理員] 對話方塊，為提供本教學課程載入資料的目的地 Azure SQL Database 建立連線設定。
+2. 在 [ADO.NET 目的地編輯器] 的 [連線管理員] 索引標籤上，按一下 [連線管理員] 清單旁的 [新增] 按鈕，以開啟 [設定 ADO.NET 連線管理員] 對話方塊，然後針對本教學課程載入資料的目的地資料庫建立連線設定。
 3. 在 [設定 ADO.NET 連線管理員] 對話方塊中，按一下 [新增] 按鈕以開啟 [連線管理員] 對話方塊並建立新的資料連線。
 4. 在 [連線管理員] 對話方塊中，執行下列事項。
    1. 針對 [提供者]，選取 [SqlClient 資料提供者]。
-   2. 在 [伺服器名稱] 中，輸入 SQL Database 名稱。
+   2. 針對 [伺服器名稱]，輸入 SQL Server 或 SQL Database 伺服器的名稱。
    3. 在 [登入伺服器] 區段中，選取 [使用 SQL Server 驗證] 並輸入驗證資訊。
-   4. 在 [連線到資料庫] 區段中，選取現有的 SAzure SQL Database 資料庫。
-   5. 按一下 **[測試連接]**。
-   6. 在報告連線測試結果的對話方塊中，按一下 [確定] 以返回 [連線管理員] 對話方塊。
-   7. 在 [連線管理員] 對話方塊中，按一下 [確定] 以返回 [設定 ADO.NET 連線管理員] 對話方塊。
+   4. 在 [連線至資料庫] 區段中，選取現有資料庫。
+    A. 按一下 **[測試連接]**。
+    B. 在報告連線測試結果的對話方塊中，按一下 [確定] 以返回 [連線管理員] 對話方塊。
+    c. 在 [連線管理員] 對話方塊中，按一下 [確定] 以返回 [設定 ADO.NET 連線管理員] 對話方塊。
 5. 在 [設定 ADO.NET 連線管理員] 對話方塊中，按一下 [確定] 以返回 [ADO.NET 目的地編輯器]。
 6. 在 [ADO.NET 目的地編輯器] 中，按一下 [使用資料表或檢視] 清單旁的 [新增] 以開啟 [建立資料表] 對話方塊，並使用與來源資料表相符的資料行清單建立新的目的地資料表。
    
@@ -167,7 +172,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 ![][15]
 
-恭喜！ 您已成功使用 SQL Server Integration Services，將資料載入 Azure SQL Database。
+恭喜！ 您已成功使用 SQL Server Integration Services，將資料載入 SQL Server 或 Azure SQL Database。
 
 ## <a name="next-steps"></a>後續步驟
 

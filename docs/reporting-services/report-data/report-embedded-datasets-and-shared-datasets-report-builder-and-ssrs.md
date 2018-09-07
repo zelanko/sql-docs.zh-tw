@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2f7eecd7b6b98f03e75abea03370dff14524333f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75567e7c1dfd0ca78adaf283d09c7c6a0019c706
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022485"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410319"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>報表內嵌資料集和共用資料集 (報表產生器及 SSRS)
   資料集會從資料連接指定您要使用的資料。 資料集是以報表中儲存為內嵌資料來源或報表伺服器上共用資料來源參考的資料連接為基礎。 資料集包含指定一組欄位的查詢。 當您將這些欄位拖曳至設計介面時，您可以建立報表執行時評估為實際資料的運算式。  
@@ -129,7 +129,7 @@ ms.locfileid: "33022485"
   
  內嵌與共用資料來源之間的差異在於建立、儲存和管理的方式。 下表摘要列出內嵌與共用資料來源之間的差異：  
   
-|描述|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
+|Description|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
 |-----------------|------------------------------|----------------------------|  
 |資料連接會內嵌在報表定義中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |報表伺服器上資料連接的指標會內嵌在報表定義中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  
@@ -181,7 +181,7 @@ ms.locfileid: "33022485"
  您無法在資料集中分組資料。 若要彙總資料集中的資料，您可以在擷取報表的資料前，編輯查詢命令來計算彙總。 這些值稱為 *「伺服器彙總」*(Server Aggregate)。 在運算式中，若要將這些值識別為預先計算的彙總，請使用彙總函式。 如需詳細資訊，請參閱[彙總函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
 ##  <a name="Parameters"></a> 使用參數與資料集  
- 針對包含查詢變數的內嵌資料集查詢，系統會自動建立查詢參數和對應的報表參數。 當報表執行時，報表參數的值會連結到資料集查詢參數。 利用這個方式，在外部資料來源上執行的查詢命令會包含針對報表參數所指定的值。 報表參數可讓使用者選擇他們想要在報表中查看的資料。 您可以在[資料集屬性對話方塊、參數 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 頁面中檢視查詢參數與報表參數的連結方式。  
+ 針對包含查詢變數的內嵌資料集查詢，系統會自動建立查詢參數和對應的報表參數。 當報表執行時，報表參數的值會連結到資料集查詢參數。 利用這個方式，在外部資料來源上執行的查詢命令會包含針對報表參數所指定的值。 報表參數可讓使用者選擇他們想要在報表中查看的資料。 您可以在 [資料集屬性] 對話方塊的 [參數] 頁面中檢視如何連結查詢參數與報表參數。  
   
  若是共用資料集，查詢參數是共用資料集定義的一部分，可以在報表伺服器上與報表分開管理。 下列清單描述查詢參數值的支援：  
   
@@ -193,7 +193,7 @@ ms.locfileid: "33022485"
   
 -   無法包含內建 Parameters 集合 (表示報表參數) 的參考。  
   
- 若要在資料集設計模式下設定共用資料集的查詢參數值，請瀏覽至報表伺服器中的共用資料集並開啟它，然後設定[資料集屬性對話方塊、參數 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 頁面上的選項。 如需詳細資訊，請參閱 [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
+ 若要設定共用資料集的查詢參數值，請以資料集設計模式瀏覽至並從報表伺服器開啟共用資料集，並在 [資料集屬性] 對話方塊的 [參數] 頁面上設定選項。 如需詳細資訊，請參閱 [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
  對於某些多維度資料來源 (例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)])，圖形化查詢設計工具可讓您指定查詢篩選，然後選取一個選項來建立對應的查詢參數。 當您選取參數選項時，資料延伸模組會自動建立一個個別的報表資料集，以便針對該參數的下拉式清單提供可用的值。 根據預設，這些隱藏的資料集不會出現在 [報表資料] 窗格內。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "33022485"
  在報表處理期間，當資料集的查詢執行時，結果集可能不包含任何資料列。 在轉譯的報表中，連結到空資料集的資料區域會顯示為空資料區域。 您可以指定要在轉譯之報表中顯示的文字來取代空資料區域。 當所有資料集的查詢在執行階段沒有產生任何資料時，您也可以指定子報表的訊息。 如需詳細資訊，請參閱[在資料區域中設定沒有資料的訊息 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
   
 ##  <a name="Options"></a> 設定資料集選項  
- 對於支援國際資料的資料來源，您可能需要針對影響排序次序、國際字元屬性，以及區分大小寫的資料集調整屬性。 這些屬性包含大小寫、假名、寬度、腔調字和定序。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=98335)》中的＜資料庫和 Database Engine 應用程式的國際化考量＞和＜使用定序＞。 如需如何設定這些屬性的詳細資訊，請參閱[資料集屬性對話方塊、選項 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)。  
+ 對於支援國際資料的資料來源，您可能需要針對影響排序次序、國際字元屬性，以及區分大小寫的資料集調整屬性。 這些屬性包含大小寫、假名、寬度、腔調字和定序。 如需如何設定這些屬性的詳細資訊，請參閱[資料集屬性對話方塊、選項 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
