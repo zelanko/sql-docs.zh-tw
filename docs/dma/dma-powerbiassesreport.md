@@ -61,7 +61,7 @@ ms.locfileid: "43152619"
 
 1. 選取向下箭號旁**編輯查詢**，然後選取**資料來源設定**。
 
-   ![編輯查詢] 功能表、 [資料來源設定](../dma/media/DataSourceSettings.png)
+   ![編輯查詢 功能表、 資料來源設定](../dma/media/DataSourceSettings.png)
 
 1. 選取**變更來源...**，然後輸入伺服器和資料庫的值。
 
