@@ -1,29 +1,23 @@
 ---
 title: 升級報表伺服器資料庫 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9997e0c0d68d01721a33924f8d7b1e7842a9a21a
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 5b3f2406a73010cf590c4711b397b997232364bd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40405200"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277237"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
 

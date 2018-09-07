@@ -1,28 +1,22 @@
 ---
 title: 在命令提示字元安裝 Reporting Services 2016 | Microsoft Docs
-ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command line
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: kfile
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b9c5d6a80e03ddf55fd463cac0c74486135884dd
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 53797621cda632c85700506c753c96f5d1e21ae4
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40406495"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267598"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services 2016
 

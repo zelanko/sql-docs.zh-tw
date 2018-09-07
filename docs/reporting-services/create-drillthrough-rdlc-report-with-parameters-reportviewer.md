@@ -1,28 +1,22 @@
 ---
 title: 建立具有參數的鑽研 (RDLC) 報表 - ReportViewer | Microsoft Docs
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2efa6c156e1fff67e83c19c53c2c64c834329bd2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5b36374d792820d70e537049052bc89341fa80a5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410993"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274319"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>建立具有參數的鑽研 (RDLC) 報表 - ReportViewer
 [鑽研](http://technet.microsoft.com/library/ff519554.aspx) 報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程，以[本機模式報表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)建立包含參數和查詢的鑽研報表。  

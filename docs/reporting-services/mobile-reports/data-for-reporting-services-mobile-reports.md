@@ -1,26 +1,20 @@
 ---
 title: Reporting Services 行動報表資料 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f645d72cfc751aa302c7a4e4f4e13284b4197106
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4e8b6f7561ff2af54652787ce95e2368d3fa882e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410981"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274909"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Reporting Services 行動報表資料
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 資料模型十分簡單。 資料會以資料集的集合形式匯入至 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 。 資料集之間的正式關聯性不是必要的。 只要符合索引鍵值，就會從某個資料集查閱到另一個資料集。 日期/時間彙總是由行動報表執行階段所處理，而且在不同的資料集之間會相符，即使資料集之間的日期/時間資料粒度不同也是一樣。   

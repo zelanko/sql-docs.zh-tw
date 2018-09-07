@@ -30,10 +30,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
-ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
+ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "42802567"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 

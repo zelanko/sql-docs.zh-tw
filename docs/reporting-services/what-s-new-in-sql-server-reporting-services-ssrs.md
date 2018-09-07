@@ -3,22 +3,17 @@ title: Reporting Services (SSRS) 中的新功能 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 5195e5c7c6e1c3126db3c2335fac605bbb869f2b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5e427312fcc73596c709d54252b27286d09372ce
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405890"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268086"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 

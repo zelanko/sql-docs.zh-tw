@@ -1,31 +1,25 @@
 ---
 title: SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能 | Microsoft Docs
-ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - deprecated features [Reporting Services]
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 46245e2330faa9c1dec831c21b01b64c115788a0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 509c4dc13b89a90c7d86bdabaae1eccfdfedf955
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40415801"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277601"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能
 

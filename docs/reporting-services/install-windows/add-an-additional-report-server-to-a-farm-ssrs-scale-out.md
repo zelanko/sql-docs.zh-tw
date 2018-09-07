@@ -1,25 +1,19 @@
 ---
 title: 將其他報表伺服器新增至伺服器陣列 (SSRS 向外延展) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 7b94aa017c8e1fcfd46d86b254424c29d1c987c9
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: ec301df6aeef1977bc635a6920c1eeb1ef92f2b5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40410477"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43277449"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展)
 

@@ -11,16 +11,16 @@ ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 887603c4da7eb9a582d8068a98690116dc14128c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c75bb08f0c96c386db8a9eee307e696b31c67160
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076465"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43239786"
 ---
 # <a name="always-encrypted-client-development"></a>永遠加密 (用戶端開發)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
