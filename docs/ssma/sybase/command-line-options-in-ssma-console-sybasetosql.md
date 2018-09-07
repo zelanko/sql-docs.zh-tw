@@ -91,7 +91,7 @@ Microsoft 為您提供一組強大的命令列選項來執行，並控制 SSMA �
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項:-x / xmloutput [xmloutputfile]  
 此命令用來輸出至主控台或至 xml 檔案的 xml 格式的命令輸出訊息。  
   
-有兩個選項可供 xmloutput，報導。。，：  
+有兩個選項可供 xmloutput， 報導..,：  
   
 -   如果 xmloutput 切換之後提供檔案路徑，則會輸出重新導向至檔案。  
   
