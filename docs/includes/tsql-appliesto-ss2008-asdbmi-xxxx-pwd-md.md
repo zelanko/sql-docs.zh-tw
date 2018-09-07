@@ -1,1 +1,0 @@
-<Token>**適用於：** ![是](media/yes.png)（從 2008年開始） 的 SQL Server ![yes](media/yes.png)Azure SQL Database （受控執行個體只）![沒有](media/no.png)Azure SQL 資料倉儲![是](media/yes.png)平行處理資料倉儲 </Token>
