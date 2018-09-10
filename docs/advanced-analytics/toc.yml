@@ -19,19 +19,21 @@ items:
     href: install/sql-machine-learning-standalone-windows-install.md
   - name: 預先定型的模型
     href: install/sql-pretrained-models-install.md
-  - name: 命令提示字元安裝程式
-    href: install/sql-ml-component-commandline-install.md
   - name: 離線安裝程式 (不連線到網際網路)
     href: install/sql-ml-component-install-without-internet-access.md
     items:
     - name: CAB 下載 (離線安裝程式)
       href: install/sql-ml-cab-downloads.md
+  - name: 命令提示字元安裝程式
+    href: install/sql-ml-component-commandline-install.md
   - name: 升級 R 與 Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: 設定 R 工具
     href: r/set-up-a-data-science-client.md
   - name: 設定 Python 工具
     href: python/setup-python-client-tools-sql.md
+  - name: 設定虛擬伺服器
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
 - name: 快速入門
   items:
   - name: R
@@ -147,28 +149,13 @@ items:
 - name: 方案
   href: tutorials/data-science-scenarios-and-solution-templates.md
 - name: 概念
-  href: architecture-overview-machine-learning.md
   items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R 互通性
-      href: r/r-interoperability-in-sql-server.md
-    - name: 支援 R 整合的元件
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: R 的安全性
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: 機器學習服務中的 Python
-      href: python/sql-server-python-services.md
-    - name: Python 互通性
-      href: python/python-interoperability.md
-    - name: 支援 Python 的元件
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python 安全性
-      href: python/security-overview-sql-server-python-services.md
+  - name: Extensibility Framework
+    href: concepts/extensibility-framework.md
+  - name: R 延伸模組
+    href: concepts/extension-r.md
+  - name: Python 延伸模組
+    href: concepts/extension-python.md
 - name: 如何
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -236,18 +223,26 @@ items:
       href: r/performance-case-study-r-services.md
     - name: 使用 R 程式碼剖析函式
       href: r/using-r-code-profiling-functions.md
+  - name: Security
+    items:
+    - name: SQL Server 中 R 執行階段的安全性考量
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: R 的安全性
+      href: r/security-overview-sql-server-r.md
+    - name: Python 安全性
+      href: python/security-overview-sql-server-python-services.md
+    - name: SQL Server Launchpad 服務帳戶
+      href: general/sql-server-launchpad-service-account.md
+    - name: 修改 SQLRUserGroup
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: 新增 SQLRUserGroup 作為資料庫使用者
+      href: r/add-sqlrusergroup-to-database.md
   - name: 系統管理
     items:
     - name: 設定及管理 R
       href: r/configuration-sql-server-r-services.md
     - name: 機器學習服務的進階組態選項
       href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: SQL Server 中 R 執行階段的安全性考量
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: 修改 SQL Server 機器學習服務的使用者帳戶集區
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
-    - name: 新增 SQLRUserGroup 作為資料庫使用者
-      href: r/add-sqlrusergroup-to-database.md
     - name: 使用 Web 服務部署及取用模型
       href: operationalization-with-mrsdeploy.md
     - name: 管理與監視解決方案
@@ -287,8 +282,6 @@ items:
     href: known-issues-for-sql-server-machine-learning-services.md
   - name: 版本資訊
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
-  - name: 設定虛擬機器
-    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
   - name: 疑難排解
     href: machine-learning-troubleshooting-faq.md
     items:
@@ -314,9 +307,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888864"
