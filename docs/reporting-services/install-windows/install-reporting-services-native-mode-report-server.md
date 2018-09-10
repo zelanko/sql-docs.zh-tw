@@ -121,7 +121,7 @@ ms.locfileid: "43272681"
   
 3.  在 **[特徵選取]** 頁面上，選取下列選項：  
   
-    -   (1) [Database Engine Services] (除非已安裝資料庫引擎執行個體)。  
+    -   (1) [Database Engine Services]\(除非已安裝資料庫引擎執行個體)。  
   
     -   (2) [Reporting Services-原生]。  
   
