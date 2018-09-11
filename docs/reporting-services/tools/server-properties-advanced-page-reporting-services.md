@@ -2,25 +2,18 @@
 title: 伺服器屬性 (進階頁面) - Reporting Services | Microsoft Docs
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405887"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266266"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -89,7 +82,7 @@ ms.locfileid: "40405887"
 針對報表所儲存之快照集的最大數目。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，表示沒有任何快照集限制。  
 
 **EnableIntegratedSecurity**  
-決定 Windows 整合式安全性是否支援報表資料來源連接。 預設值為 **True**。 有效值如下：
+決定報表資料來源連線是否支援 Windows 整合式安全性。 預設值為 **True**。 有效值如下：
 
 |值|Description|
 |---------|---------|
@@ -139,15 +132,15 @@ ms.locfileid: "40405887"
 
 **OfficeOnlineDiscoveryURL** ***(僅限 Power BI 報表伺服器)*** 設定 Office Online Server 執行個體的位址以檢視 Excel 活頁簿。
 
-**RequireIntune** 設定此項目，以要求 Intune 透過 Power BI 行動應用程式存取組織報表。 *預設值為 False。*
+**RequireIntune** 要求 Intune 透過 Power BI 行動應用程式存取組織報表。 *預設值為 False。*
 
-**ScheduleRefreshTimeoutMinutes** ***(僅限 Power BI 報表伺服器)*** 設定您要排程重新整理多久逾時。 *預設值為 120。*
+**ScheduleRefreshTimeoutMinutes** ***(僅限 Power BI 報表伺服器)*** 設定您要排程重新整理多久逾時。*預設值為 120。*
 
-**ShowDownloadMenu** 設定此項目，以啟用用戶端工具下載功能表。 *預設值為 true。*
+**ShowDownloadMenu** 啟用用戶端工具下載功能表。 *預設值為 true。*
 
 **TimeInitialDelaySeconds** 設定您要延遲多久的初始時間 (以秒為單位)。 *預設值為 60。*
 
-**TrustedFileFormat** 設定所有可儲存的外部檔案格式。 預設值為 jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web、png。
+**TrustedFileFormat**設定在 Reporting Services 入口網站之下，所有要在瀏覽器中開啟的外部檔案格式。 未列出的外部檔案格式會在瀏覽器中提示下載選項。 預設值為 jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web、png。
 
 **EnablePowerBIReportExportData** ***(僅限 Power BI 報表伺服器)***  
 啟用從 Power BI 視覺效果的 Power BI 報表伺服器資料匯出。 值為 True、False。  預設值是 True。  
