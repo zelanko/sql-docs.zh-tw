@@ -3,11 +3,7 @@ title: DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
 ms.date: 06/17/2018
 ms.reviewer: ''
 ms.prod: sql
-ms.prod_service: sql-database
-ms.service: sql-database
 ms.technology: t-sql
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.custom: ''
 ms.manager: craigg
@@ -29,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7571742d0484065a90734ad9d9972e37076e20d3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5e873944e68a05b29ed865572202e7e2b4438d76
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058667"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816894"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

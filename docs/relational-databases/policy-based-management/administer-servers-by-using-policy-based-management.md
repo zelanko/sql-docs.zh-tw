@@ -26,12 +26,12 @@ caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bd3cc266d1f706179c6627316dcd8dfcdcf4a09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28f9302f9849a24fd980d40e6576ac695c6c1b20
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956143"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694671"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,9 +122,12 @@ ms.locfileid: "32956143"
 
   
  ## <a name="examples"></a>範例
+ 
  - [建立依預設為關閉的原則](lesson-1-1-create-the-off-by-default-policy.md)
-  - [將伺服器設定為執行 Off By Default 原則](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
-## <a name="see-also"></a>另請參閱  
+ - [將伺服器設定為執行 Off By Default 原則](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
+ 
+ ## <a name="see-also"></a>另請參閱  
+ 
  [以原則為基礎的管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
