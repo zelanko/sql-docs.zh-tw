@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0161171ff488627c5cc70dd81fac9a991f52aebe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e7ea7d5bafa4e08aa98f9eb8ebfca3dd4811987
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297078"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809625"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>連接到伺服器 (連接屬性頁面) Integration Services
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  

@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80c0a03a6eeaa33977e5152a4b4da24b17abf8b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0823ea73a9694af8a22ff13254700ee6ace541eb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212478"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814294"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
   您可以利用 [說明] 功能表和《[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 線上叢書》，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 38
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 117bf64e7b554dc68cb10f8491d05fba8c4b5e67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c90feac974f7bc81ccc7e6c41faa92a46d54f4d7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155029"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817464"
 ---
 # <a name="features-in-sql-server-management-studio"></a>SQL Server Management Studio 中的功能
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包括下列一般功能：  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c709be85fcd21340e9d1254c7bfc14103509d643
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2331f842980255bd3ac62d0ad8a604c07b4e0236
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212868"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814304"
 ---
 # <a name="symmetric-keys-on-system-databases"></a>系統資料庫上的對稱金鑰
   此規則會檢查 master、msdb、model 和 tempdb 資料庫中是否有使用者建立的對稱金鑰。  

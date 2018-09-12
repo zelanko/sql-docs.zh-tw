@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 266bb97f9c94cb7ae6951193d9a1df08b56fd4c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9787213ea1914f613d71b3c548dffd4729bb40c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238098"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810434"
 ---
 # <a name="create-a-cmdexec-job-step"></a>建立 CmdExec 作業步驟
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立和定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟，來使用可執行程式或作業系統命令。  
@@ -34,7 +33,7 @@ ms.locfileid: "37238098"
   
 -   **若要使用下列項目建立 CmdExec 作業步驟：**  
   
-     [SQL Server Management Studio](#SSMS)  
+     [Transact-SQL](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   

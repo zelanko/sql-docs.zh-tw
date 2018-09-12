@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d50f6bb85aa013ece08c2c7ce12c9b1c7f05a731
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4658d8bc6ec0733673f9cc4087e44da962c7733
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155719"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820254"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>選擇搜尋資料夾對話方塊 (Visual Studio)
   允許您組合、儲存和修訂您個人之搜尋資料夾的命名集，並指定要搜尋的順序。 若要顯示此對話方塊，請選取位於 [檔案中尋找] 或 [檔案中取代]，[尋找和取代] 視窗上之 [查詢] 下拉式清單旁的 [瀏覽 (...)] 按鈕。  

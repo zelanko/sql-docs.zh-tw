@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a682e89cb0c6f419b29d36faa3970730baf4b22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 770b7651aa9359677e610e610938cd33cc5fffa9
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296518"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810054"
 ---
 # <a name="manage-data-collection"></a>管理資料收集
   您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序和函數來管理不同層面的資料收集，例如啟用或停用資料收集、 變更收集組的組態，或是檢視管理資料倉儲中的資料.  
@@ -165,7 +164,7 @@ ms.locfileid: "37296518"
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql)|從執行記錄中刪除收集組項目。|  
   
-### <a name="functions"></a>函數  
+### <a name="functions"></a>函式  
  下表描述的是您可以用來取得執行和追蹤資訊的函數。  
   
 |函數名稱|描述|  

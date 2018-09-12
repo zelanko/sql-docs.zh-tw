@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c430bba54c46572f5d8afdfe5a0606e207d875c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ab51f2eac94875b510d9f998120e47fdd9b6180
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303488"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813994"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>變更作業類別目錄的成員資格
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中變更作業類別目錄的成員資格。  
@@ -39,7 +38,7 @@ ms.locfileid: "37303488"
   
 -   **若要使用下列項目變更作業類別目錄的成員資格：**  
   
-     [SQL Server Management Studio](#SSMS)  
+     [Transact-SQL](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   

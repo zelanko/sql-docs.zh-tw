@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2a968f1fa15f0f61d988f5068ab5ce39be0808e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8b4021dd2e8bc7060f223a1b1fc337041365ea4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299930"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814734"
 ---
 # <a name="xtp-garbage-collection"></a>XTP 記憶體回收
   XTP 記憶體回收效能物件包含與 XTP 引擎記憶體回收行程相關的計數器。  

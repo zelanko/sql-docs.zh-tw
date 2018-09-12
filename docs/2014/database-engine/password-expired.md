@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fabcfd609f5463cea9012ee779a41b87cf143f2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 982795a23e2fc45a3c15feaa2d81a433f0c281bd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224138"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819094"
 ---
 # <a name="password-expired"></a>密碼已過期
   當您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接到具有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的伺服器，而您提供的密碼正確但是已過期時，就會出現此訊息。 當您使用新的帳戶連接到伺服器，且該帳戶是以 [使用者必須在下次登入時變更密碼] 選項建立時，也會出現此訊息。 使用 [密碼已過期] 對話方塊來變更此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入的密碼。  

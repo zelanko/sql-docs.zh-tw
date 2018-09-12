@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f26b11bb7822262cb9b240bfe0d8c318d2011d1
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228238"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811324"
 ---
 # <a name="view-a-list-of-modified-files"></a>檢視修改檔案清單
   您可以使用**暫止簽入**視窗完全顯示在目前的方案中，已簽出檔案的清單以及簽入這些檔案，利用單一按鈕按一下。  

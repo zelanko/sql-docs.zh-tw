@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d46e235af0b2fb7ca47c53b50edd156e9e24553
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 268d240d151c09c8677dd58e900a06944deae1bb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313408"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816824"
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊
   當您使用 **[評估原則]** 對話方塊來執行原則並按一下 **[評估]** 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  
@@ -37,7 +36,7 @@ ms.locfileid: "37313408"
  **欄位**  
  正在模型化之 Facet 的屬性。  
   
- **[運算子]**  
+ **運算子**  
  運算式的運算子，例如 **=** 或 **Like**。  
   
  **預期的值**  

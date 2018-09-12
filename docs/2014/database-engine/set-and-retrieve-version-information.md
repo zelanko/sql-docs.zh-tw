@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dde0359b67d34e712b76e53a855efaafc29b5b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52fdedc502bc2d8c53a01b0bc69d8a3168957b97
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265226"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820264"
 ---
 # <a name="set-and-retrieve-version-information"></a>設定及擷取版本資訊
   版本資訊包括原始檔控制檔案的記錄和目前狀態。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 會維護每個原始檔控制檔案的完整歷程，供您追蹤一或多個檔案在時間中的進展。 您也可以利用這項資訊來擷取檔案任何版本的本機副本，或比較任意兩個檔案版本。  

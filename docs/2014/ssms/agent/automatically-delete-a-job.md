@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 116fdf251848053bfbe6eab1df243400cfafcb3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bee2c12bdf0ab24b3ab62ff48ee8f769ff47a7af
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216568"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815594"
 ---
 # <a name="automatically-delete-a-job"></a>自動刪除作業
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業成功、失敗或完成時自動予以刪除。  
@@ -53,7 +52,7 @@ ms.locfileid: "37216568"
   
 -   **若要使用下列項目指定作業回應：**  
   
-     [SQL Server Management Studio](#SSMS)  
+     [Transact-SQL](#SSMS)  
   
      [SQL Server 管理物件](#SMO)  
   

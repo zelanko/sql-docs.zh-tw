@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff85c29870300199b33680dfc3edbf6c275688fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d2ae6130ff9f56bebddb4c8e9f52423115b7e86
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273054"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817434"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server 的 Database Mirroring 物件
   **SQLServer:Database Mirroring** 效能物件含有效能計數器，可報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫鏡像的相關資訊。 下表列出這個物件包含的計數器。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44438695929f3eaed3529fcbc3fb14f66d3d5fd1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db2464b7e971fa801a099d7fb65b61a6a3ef798d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153629"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816844"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上設定資料庫圖表化時，會自動升級在舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫上所建立的資料庫圖表。 如需設定圖表化，請參閱詳細步驟[設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](visual-database-tools.md)。  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87400d7bed6f23c6990afd45b5c3fe7bf81a683f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 818960e4d85aae2c73e767250072e4108a55d9fa
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189145"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816654"
 ---
 # <a name="view-file-status"></a>檢視檔案狀態
   原始檔控制會維護每個原始檔控制項目的詳細狀態資訊。 您可以利用這項資訊來識別檔案目前的狀態，以及建立項目的狀態報表。  

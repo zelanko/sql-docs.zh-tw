@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a63d4596b89a927d0b6f3fe47387ad9652f48985
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197198"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811554"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
   使用任何一種**註冊資料層應用程式精靈**或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有的資料庫中的物件，並註冊 DAC 定義中的`msdb`系統資料庫 (**主要**在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  

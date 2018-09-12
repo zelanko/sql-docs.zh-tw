@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f360b9553c754c5e6fa9ee2bdd5e39d73f9194b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24dd9f4ca5b4f551f958a24636a942d50bcc68f3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329007"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820084"
 ---
 # <a name="object-dependencies"></a>物件相依性
   某些資料庫物件與其他資料庫物件具有相依性。 例如，檢視和預存程序必須相依於特定資料表，這些資料表中包含檢視或程序所傳回的資料。 目前物件的 **物件相依性 (一般頁面)** 列出必須存在，物件才能正常運作的資料庫物件，以及相依於所選物件的物件。 參考自身定義中之其他物件，並將定義儲存在系統目錄中的物件稱為 *參考實體*。 受其他物件參考的物件稱為 *被參考的實體*。  
@@ -31,10 +30,10 @@ ms.locfileid: "37329007"
  在變更或刪除選取的物件之前，請使用此對話方塊來了解相依性。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **相依於物件***\<所選取的物件 >  *  
+ **相依於物件***\<所選取的物件 >*   
  按一下此按鈕會顯示已進行相依性追蹤，並相依於所選取物件的物件清單。  
   
- **物件所在***\<所選取的物件 >***而定    **  
+ **物件所在***\<所選取的物件 >***而定**   
  按一下此按鈕會顯示已進行相依性追蹤，所選取物件相依的物件清單。  
   
  **相依性**  

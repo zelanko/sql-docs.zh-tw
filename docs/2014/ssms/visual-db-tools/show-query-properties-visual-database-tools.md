@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54b2fad8886f0fee98854e3fe9cb93ed8a773669
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e4889d52d6ab91f04706bd3cb70c32756dd48b5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216398"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807834"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>顯示查詢屬性 (Visual Database Tools)
   您可以在 [查詢和檢視設計師] 的 [屬性] 視窗中顯示查詢的屬性。  

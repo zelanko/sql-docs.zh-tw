@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3693d798e74f0ec342c916846e2892e64f779449
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 145fbb64b5b7ca0098187a96515cd60d26e770e8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154739"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814164"
 ---
 # <a name="manage-checkins"></a>管理簽入
   若要變更其他使用者能夠使用的原始檔控制檔案，您必須簽入檔案。 當您簽入檔案時，您建立的版本會複製到原始檔控制提供者中，且會成為檔案的最新版本，有適當權限的使用者通常都可以使用它。  

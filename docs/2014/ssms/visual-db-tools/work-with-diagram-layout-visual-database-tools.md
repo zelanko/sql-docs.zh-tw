@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea8d803d5d1b8e0f845bcfe7a049ad5bfce541b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 289498ceb8e69d9923929a3ad7d67a01e403fd09
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177165"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819974"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>使用圖表配置 (Visual Database Tools)
   您可以自訂資料庫圖表的外觀。  

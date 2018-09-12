@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01564150ef8ba4ff8834d7bab7dd10f78e79b019
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d2ad8a70bf43e8aecc48341f318993bdc5bc815
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175077"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813534"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
   您可以選取 [列印] 對話方塊中的選項，藉以指定您要列印文件的方式。  

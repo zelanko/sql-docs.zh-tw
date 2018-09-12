@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 732151bbd730275e5cc65ab6f15691603483c2d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7af982e36fd2385e577a68722d176787456637dd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189635"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811114"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>製成資料表對話方塊 (Visual Database Tools)
   讓您命名為複製資料列所建立的資料表。 這個對話方塊會在將查詢的類型變更為 MAKE TABLE 查詢時出現。 若要變更查詢類型，請在 [查詢設計工具] 功能表中指向 [變更類型]，然後按一下 [製成資料表]。  

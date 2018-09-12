@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf1f23d456e0d40a62df13af09e35d30147b7fbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee6c2f146680d1ce45b4713d9a550a0e3ef067ac
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294608"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811384"
 ---
 # <a name="storage-system-input-output-time-out"></a>儲存體系統輸入輸出逾時
   這個規則會檢查系統事件記錄檔中是否有 EventId 9。 此訊息表示儲存體系統中發生了 I/O 逾時。  

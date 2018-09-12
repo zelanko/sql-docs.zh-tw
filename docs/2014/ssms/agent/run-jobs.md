@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 385c3c1a0a4c9bacae58b7b1dc74049d652f0b7f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c064391c7ce7b14551ce2752bbdbea64550e007
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261864"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811854"
 ---
 # <a name="run-jobs"></a>執行作業
   若要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件。  

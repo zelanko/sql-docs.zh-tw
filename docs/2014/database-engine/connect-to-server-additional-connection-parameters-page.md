@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 670d2e23467d80ee1a183ad3f5c5aae46ce64067
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 238a558f7b11c122012c2bfbe9538fa803fa8444
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283934"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816254"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>連接到伺服器 (其他連接參數頁面)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [連接到] 對話方塊會將最常用的連接字串值呈現為選項。 使用 [其他連接參數] 頁面可將更多連接參數新增到連接字串。  

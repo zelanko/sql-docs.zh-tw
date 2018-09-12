@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 274bf22ef6d5c22f840074a7e510ad5aff084d34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b10056debcba87b7f2a87118e865c97870ef81c5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214378"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811904"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>儲存後告知對話方塊 (Visual Database Tools)
   這個對話方塊會在嘗試儲存變更至資料表但發生錯誤時出現。 此對話方塊列出資料庫中成功儲存的物件、未儲存的物件，以及發生的錯誤。  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5478cb168d6c30dccdb33c1f40edb2605a13b3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d6035f7f05a8687290cfb388cbf47dbc5222376
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171389"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809254"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>連線到伺服器 (登入頁面) Reporting Services
   連線到 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，可使用此索引標籤檢視或指定下列選項。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8702521d385b6036825190ed5652bf395997160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ffcff965e3a8ab7896f7bd0dcce8faa1bbc9774
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241804"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817504"
 ---
 # <a name="template-explorer"></a>範本總管
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供各種範本。 範本為包含 SQL 指令碼的模板檔案，可協助您在資料庫中建立物件。 第一次開啟範本總管時，範本的複本是放置在 C:\Users 使用者資料夾的 AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 底下。  

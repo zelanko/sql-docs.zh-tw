@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d42d36a22be0f65552435b1ddef0d7328eaeb2d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed84257be696772ee89d2f72968ae6b41a219fc2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306848"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809844"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在圖表窗格中顯示資料行名稱 (Visual Database Tools)
   您可以選擇隱藏或顯示查詢和檢視表設計工具中 [圖表] 窗格資料表的資料行名稱。  

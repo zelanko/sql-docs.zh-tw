@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 453a95005018f2c5f62d8591fbd8f29a04ffa57c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170219"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819904"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>選項 （SQL Server 物件總管編寫指令碼頁面）
   使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  

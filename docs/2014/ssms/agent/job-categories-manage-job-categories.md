@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,14 +17,14 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3db326c0097a57997133ae93173d9da8c791844
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b394e4b8df108786043e9eddca92ce72a135729
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299588"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814054"
 ---
-# <a name="job-categories-manage-job-categories"></a>作業類別目錄： 管理作業類別目錄
+# <a name="job-categories-manage-job-categories"></a>作業類別目錄：管理作業類別目錄
   使用 [作業類別目錄] 對話方塊以加入或刪除作業類別目錄。 無法刪除內建作業類別目錄。  
   
 ## <a name="options"></a>選項。  

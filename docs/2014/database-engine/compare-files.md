@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d65cce1e96cbf3bb8ec8e6d428074c89424c8636
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d04fcf3113aeed4c2cd1512375956921029c992f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314468"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819034"
 ---
 # <a name="compare-files"></a>比較檔案
   您可以比較檔案來判斷檔案如何進入目前的狀態。 例如，如果您在簽入特定來源檔案版本之後，在程式碼專案的某項建置中偵測到錯誤，您可以比較目前的檔案版本和先前的版本。 這可以協助您找出引起錯誤的程式碼。  

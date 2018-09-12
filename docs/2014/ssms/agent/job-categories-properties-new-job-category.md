@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e17a8aafb263c58f2b6e729970884be8dea7fad1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6484d52f8cc996127d636942189de1eb7bc070f6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274034"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820004"
 ---
-# <a name="job-categories-properties-and-new-job-category"></a>作業類別目錄屬性和新增作業類別目錄
+# <a name="job-categories-properties-and-new-job-category"></a>作業類別目錄屬性及新增作業類別目錄
   列出一項作業類別目錄或所有作業類別目錄中的作業，並讓您能夠加入新的作業類別目錄。  
   
 ## <a name="options"></a>選項。  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 48e61e47e9752b187dd8b391cfe8b7983f00f136
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fc758cb5be461bf229ca9b9ad6bcf695e4f1611
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290484"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816714"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server 的 Transactions 物件
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 Transactions 物件會提供計數器，可監視 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的使用中交易數，以及這些交易在資源上產生的影響，例如 **tempdb** 中的快照隔離資料列版本存放區。 交易是邏輯工作單位；必須全部成功或全部從資料庫清除的一組作業，才能維持資料的邏輯完整性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的所有資料修改都是透過交易來完成。  

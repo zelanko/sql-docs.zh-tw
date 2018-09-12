@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a24c1f4e695b86d27737dc09df33a7a91f2bdac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 579316f5a919184528b70f3fb287f8cbe1711306
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313131"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815044"
 ---
 # <a name="object-explorer-details-pane"></a>物件總管詳細資料窗格
   [物件總管詳細資料] 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的元件，它會提供伺服器中所有物件的表格式檢視，並且呈現可管理這些物件的使用者介面。 物件總管的功能會隨著伺服器的類型而稍有不同，不過，它通常會包括資料庫的開發功能，以及所有伺服器類型的管理功能。  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e16da651d51054293303f38598a1168eb1474226
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200778"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808454"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>選項 (環境： 字型和色彩頁面)
+# <a name="options-environment-fonts-and-colors-page"></a>選項 (環境：字型和色彩頁面)
   [選項] 對話方塊讓您能夠針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各種使用者介面元素，來建立自訂的字型和色彩配置。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後選取 [字型和色彩]。  
   
  在對色彩配置進行變更的工作階段中，色彩配置的變更並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的其他執行個體，並產生您希望套用變更的條件，來評估色彩變更。  

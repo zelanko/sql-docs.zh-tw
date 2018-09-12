@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a64e2346479c95327c3f183331cc7971481521b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320708"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813044"
 ---
 # <a name="manage-checkouts"></a>管理簽出
   檔案加入原始檔控制之後，您必須先簽出檔案，才能修改它。 當您將檔案從原始檔控制中簽出時，原始檔控制提供者會在您的本機磁碟中建立最新版本的本機副本，且會移除檔案的唯讀屬性。 在某些情況下，您可能需要在未簽出檔案的情況下編輯檔案。 如需有關如何在未簽出檔案的情況下編輯檔案的詳細資訊，請參閱[編輯 Checked-In 檔案](../../2014/database-engine/edit-checked-in-files.md)。  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d158c2a0981b6174bcb83948b10bacd1a97d1f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cacfeef1468a0aec47ecd8e0b27a432bb689d1ef
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188945"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812984"
 ---
 # <a name="change-source-control-connections"></a>變更原始檔控制連接
   您第一次從原始檔控制中加入或開啟方案時，您的原始檔控制提供者會建立本機方案目錄的根資料夾及其對應的伺服器資料夾之間的關聯。  

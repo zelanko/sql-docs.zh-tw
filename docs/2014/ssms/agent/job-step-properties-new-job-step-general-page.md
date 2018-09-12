@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa2ee7a5a54c02618230a91b67e0d4c1db8a294e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db65dfaec0688ab7eec9a7597bcf94b2cbcfc131
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224738"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811104"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>作業步驟屬性： 新增作業步驟 （一般頁面）
+# <a name="job-step-properties-new-job-step-general-page"></a>作業步驟屬性：新增作業步驟 (一般頁面)
   使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
   
  若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以滑鼠右鍵按一下 [作業]，按一下 [新增作業]，選取 [步驟] 頁面，然後按一下 [新增]。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]、選取 [步驟] 頁面，然後按一下 [新增]、[插入] 或 [編輯]，以導覽至此頁面。  
@@ -211,7 +210,7 @@ ms.locfileid: "37224738"
  **封裝來源**  
  指定儲存 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的位置。 選擇下列其中之一：  
   
--   **[SQL Server]**  
+-   **SQL Server**  
   
 -   **檔案系統**  
   
@@ -328,7 +327,7 @@ ms.locfileid: "37224738"
  **屬性路徑**  
  檢視或變更屬性的路徑。  
   
- **ReplTest1**  
+ **值**  
  檢視或變更屬性的值。  
   
  **移除**  

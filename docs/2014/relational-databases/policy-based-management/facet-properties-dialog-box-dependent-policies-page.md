@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a95c6b4cafe8d5a0bde34d67b9d7a2b579cee5de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d85e941ed5ed9b9b6575f7dadfde3f152c5d2ac7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175412"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807804"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Facet 屬性對話方塊、相依原則頁面
   使用此對話方塊可顯示目前參考這個以原則為基礎之管理 Facet 的原則清單。  

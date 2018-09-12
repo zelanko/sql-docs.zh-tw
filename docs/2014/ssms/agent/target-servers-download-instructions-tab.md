@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cbf0ff5ccc24fe019f5496b30d09f965e242fb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb670de4d0e7de9cf8c5417ee323345e966f8a0
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228428"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810144"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目標伺服器 (下載指示索引標籤)
   使用此頁面來顯示和更新一或多個目標伺服器的下載指示。  

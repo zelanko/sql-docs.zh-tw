@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80187c230268c7316856b83ce5c94f4b3ff67bac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 397eeb90ce4e2c3c15298f332d44b9776e35fb60
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210518"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816684"
 ---
-# <a name="proxy-editor-and--add-principal"></a>Proxy 編輯器，並新增主體
+# <a name="proxy-editor-and--add-principal"></a>Proxy 編輯器及新增主體
   使用此頁面將伺服器主體存取權授與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶。  
   
 ## <a name="options"></a>選項。  

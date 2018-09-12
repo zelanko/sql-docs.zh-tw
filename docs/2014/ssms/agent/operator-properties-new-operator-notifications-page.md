@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f54bf301cf6123799127aa5b3c7e8eec61bf9c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6aa4045359162b146f9c65f5291e79a1fbdba46c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172155"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815474"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>運算子屬性： 新增操作員 （通知頁面）
+# <a name="operator-properties-new-operator-notifications-page"></a>操作員屬性：新增操作員 (通知頁面)
   使用此頁面即可設定通知操作員的警示和作業。  
   
 ## <a name="options"></a>選項。  

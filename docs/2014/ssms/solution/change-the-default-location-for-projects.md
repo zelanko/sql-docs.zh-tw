@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2edaedea87ff9c808ad09c7602ef3bd89029cfc2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad8ea26cfbeebe9795c1161cca23d1ea792a054
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295838"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812464"
 ---
 # <a name="change-the-default-location-for-projects"></a>變更專案的預設位置
   檔案和專案的預設位置是 [我的文件] 資料夾中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 專案資料夾。  

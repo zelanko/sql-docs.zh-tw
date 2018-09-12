@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25de2e0ab2e5921bf0e83c2d22d1040d9728f7ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2b86ded9832513ad0aa992256f99ce81ba1e7bd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296388"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819454"
 ---
 # <a name="device-driver-control-error"></a>裝置驅動程式控制項錯誤
   這個規則會檢查系統事件記錄檔中是否有 EventId 11。 這可能是因為裝置驅動程式損毀、硬體問題、纜線不良或連接問題所造成。  

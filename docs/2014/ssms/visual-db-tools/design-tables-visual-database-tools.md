@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba130e5c5b62ff4f37eb7b13f75c3ee85d332b31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d131b91003b77bc5a7a2721e0935d1d0006f91c8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148989"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815464"
 ---
 # <a name="design-tables-visual-database-tools"></a>設計資料表 (Visual Database Tools)
   [資料表設計工具] 提供完整的視窗，供您設計個別的資料表。 本節的主題說明如何使用 [資料表設計工具] 建立及修改資料庫資料表。  

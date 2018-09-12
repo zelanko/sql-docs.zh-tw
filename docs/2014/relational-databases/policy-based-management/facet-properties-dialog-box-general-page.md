@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 430fe415d75377e46be292461c22e46ae65791c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 036a631c2324c16561981d0998066fb66e9a054c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329378"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818254"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Facet 屬性對話方塊、一般頁面
   使用此對話方塊可檢視以原則為基礎之管理 Facet 的屬性。 每一個 Facet 都可以套用到一或多個目標類型，例如：伺服器、資料庫或資料表。 使用此頁面可檢視哪些目標類型與這個 Facet 有關。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個頁面加以變更。  

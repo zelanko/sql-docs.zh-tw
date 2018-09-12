@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 065f8d2d32d8ad16fe955ba8e36c7e65926bec95
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165289"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808284"
 ---
 # <a name="edit-checked-in-files"></a>編輯簽入的檔案
   您通常必須先簽出原始檔控制檔案，才能編輯它們。 不過，您也可以設定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，以便修改尚未簽出的檔案。當執行這個動作時，變更會保留在記憶體內，直到您儲存檔案為止。 之後，系統會提示您從原始檔控制中簽出檔案。  

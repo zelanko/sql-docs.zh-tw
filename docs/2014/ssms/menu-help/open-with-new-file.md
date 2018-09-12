@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89d4d09713717d74a5116b7295523be3f24e7cfa
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272094"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815214"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
   按一下 [檔案] 功能表上的 [開啟]，然後按一下 [檔案]，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案] 對話方塊中選取檔案，按一下 [開啟] 箭頭，然後按一下 [開啟方式]。 在 [開啟方式] 對話方塊的 [選取要開啟的程式] 清單中，按一下慣用的程式，然後按一下 [開啟]。  

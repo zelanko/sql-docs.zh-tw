@@ -3,11 +3,7 @@ title: sys.sensitivity_classifications (TRANSACT-SQL) |Microsoft Docs
 ms.date: 06/17/2018
 ms.reviewer: ''
 ms.prod: sql
-ms.prod_service: sql-database
-ms.service: sql-database
 ms.technology: t-sql
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.custom: ''
 ms.manager: craigg
@@ -27,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d0adbbeb82c06d6a44f3a7439bcbf479d7358401
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 53f99419e70b7ebd97f19cc7245b226b20a7f7a4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993790"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808634"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -79,8 +75,8 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 ## <a name="see-also"></a>另請參閱  
 
-[新增敏感度 CLASSIFICTION & Amp;#40;transact-SQL&AMP;#41](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[卸除敏感度 CLASSIFICTION & Amp;#40;transact-SQL&AMP;#41](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [開始使用 SQL 資訊保護](http://aka.ms/sqlip)

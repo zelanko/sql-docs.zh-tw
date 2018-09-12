@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21004c5afbd0dc9e3eae2c70f2a45858a4a3d295
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87c6b1c72273a9ca0185de4274cfbbcbd31982df
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232918"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815664"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>索引資料行對話方塊 (Visual Database Tools)
   使用這個對話方塊，即可選取索引的資料行，並設定其排序順序。 索引可以使用一個或多個資料行，而且每個資料行都可以用遞增或遞減順序排序。 若要存取這個對話方塊，請在 [索引/索引鍵] 對話方塊中，按一下 [一般] 區段中的 [資料行] 省略符號按鈕。  

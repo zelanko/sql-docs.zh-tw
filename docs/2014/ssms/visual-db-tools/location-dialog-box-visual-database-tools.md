@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55bdf0e85a80793c3e16b92337f10b6c1d54aa0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75c8b90fde2ce956600f4935007bc6800030586a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234448"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814484"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>位置對話方塊 (Visual Database Tools)
   使用這個對話方塊可尋找並選取含有感興趣之檔案的資料夾。 這個對話方塊會將所選取之資料夾的路徑傳回給呼叫對話方塊。 您可以使用下列方法存取這個對話方塊：  
