@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fc6c82815b66c1534ab378f7412f53eac5c16bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3c5cadf833a479b5a6678dd8c8aa03e8d54150e
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230698"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890214"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤銷 XML 結構描述集合上的權限
   建立 XML 結構描述集合的權限可以使用下列其中一種方式來撤銷：  

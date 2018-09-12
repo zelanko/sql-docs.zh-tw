@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb03c7af49e3b2ba0437241fc2fbd9aba3c56fcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 001c06b44eba66bd7e1ee1da3907d39158d5d4ce
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331218"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890224"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>搭配 FOR XML 使用 RAW 模式
   RAW 模式會將查詢結果集的每一個資料列轉換成具有泛用識別碼 \<資料列> 的 XML 項目，或選擇性提供的項目名稱。 依預設，資料列集內每一個非 NULL 的資料行值，都會對應到一個 \<資料列> 項目的屬性。 若將 ELEMENTS 指示詞加入 FOR XML 子句，則每一個資料行值都會對應到一個 \<資料列> 項目的子項目。 您還可以搭配 ELEMENTS 指示詞，選擇性地指定 XSINIL 選項，將結果集的 NULL 資料行值對應到具有 xsi:nil=`"`true`"`屬性的元素。  

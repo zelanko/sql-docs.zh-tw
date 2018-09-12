@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084671"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343083"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>SQL Server 資料的教學課程： 使用 RevoScaleR R 函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ RevoScaleR 是提供分散式和平行處理的資料科學與機器學習服務
 
 R 開發人員通常會使用 Ide 來撰寫和偵錯的 R 程式碼。 以下是一些建議：
 
-- **適用於 Visual Studio R 工具**(RTVS) 是免費的外掛程式提供 Intellisense、 偵錯，以及 Microsoft。 您可以使用它搭配 R Server 與 SQL Server Machine Learning 服務的支援。 若要下載，請參閱 [適用於 Visual Studio 的 R 工具](https://www.visualstudio.com/vs/rtvs/)。
+- **適用於 Visual Studio R 工具**(RTVS) 是免費的外掛程式提供 Intellisense、 偵錯，以及支援 Microsoft。您可以使用 R Server 和 SQL Server Machine Learning 服務來使用它。 若要下載，請參閱 [適用於 Visual Studio 的 R 工具](https://www.visualstudio.com/vs/rtvs/)。
 
 - **RStudio** 是其中一個比較常見的 R 開發環境。 如需詳細資訊，請參閱 < [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)。
 

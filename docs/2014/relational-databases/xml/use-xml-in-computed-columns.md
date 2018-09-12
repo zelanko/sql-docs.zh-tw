@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f67ecf15309e76b19358964a3ecb286f214cca71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dab66d6bea7c386c668d55319c531a315be9b60a
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206678"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889338"
 ---
 # <a name="use-xml-in-computed-columns"></a>使用計算資料行中的 XML
   XML 執行個體可依計算資料行的來源或依計算資料行的類型顯示。 本主題的範例將示範如何搭配計算資料行使用 XML。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52fd8f5f58095fb53377ae1ea4bd99ca2fe15759
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2975d6783088285cb0f741f293666866e6249ce0
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202698"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889538"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
   選擇性 XML 索引是除了一般 XML 索引之外，另一種可供您使用 XML 索引類型。 選擇性 XML 索引功能的目標如下：  

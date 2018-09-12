@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f575b1a21efa30d2317cff644b65c73150c4ac1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc4890077c25e98ebff0832423f6d1f0aaabdc46
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170179"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889214"
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
   您可以使用`xml`類型資料行建立檢視。 下列範例會建立一個檢視中的值`xml`類型資料行使用來擷取`value()`方法`xml`資料型別。  

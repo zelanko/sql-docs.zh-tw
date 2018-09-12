@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec6e13386adfcbdfa2a6ff36021c9199a2e91353
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdee30a86425db3d0d603dd4c134a098c2d24f88
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284764"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889774"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本語法
   FOR XML 模式可以是 RAW、AUTO、EXPLICIT 或 PATH。 它可以決定產生 XML 的外觀。  

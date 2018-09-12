@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,12 +28,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13440d6941d05fd02c1c98c8a75d538adbf749de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd4cd4f0edba28fc8bb7171a2e120fe7439057c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293948"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889804"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
   本主題描述可供您使用的選項`xml`應用程式中的資料類型。 此主題包括有關下列項目的資訊：  

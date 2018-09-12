@@ -1,26 +1,26 @@
 ---
-title: 機器學習服務在 SQL Server |Microsoft Docs
-description: 概觀簡介 SQL Server 2017 Machine Learning 服務、 R 和 Python 支援在資料庫內分析
+title: R 和 Python 機器學習服務在 SQL Server |Microsoft Docs
+description: SQL Server 和 SQL Server，適用於資料科學和統計模型、 機器學習服務模型，預測性分析、 資料視覺效果的關聯式資料整合在 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 09/10/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240186"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343109"
 ---
-# <a name="machine-learning-services-in-sql-server-2017"></a>機器學習服務中的 SQL Server 2017
+# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning 服務 （R、 Python） 在 SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 Machine Learning 服務是 database engine 執行個體，用於執行 SQL Server 上的 R 和 Python 程式碼的附加元件。 與核心引擎處理序隔離，但預存程序、 T-SQL 指令碼包含 R 或 Python 的陳述式，或包含 T-SQL 中的 R 或 Python 程式碼的關聯式資料完全可供使用的擴充性架構中，執行程式碼。 
 
-如果您先前使用 SQL Server 2016 R Services，SQL Server 2017 中的 Machine Learning 服務是新一代的 R 支援的基底 R、 RevoScaleR、 MicrosoftML 及 2016年中引進的其他程式庫的更新版本。
+如果您先前使用[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的 Machine Learning 服務是新一代的 R 支援的基底 R，RevoScaleR，MicrosoftML，更新版本和 2016年中引進的其他程式庫。
 
 Machine Learning 服務的主要價值主張是其企業 R 和 Python 套件的乘冪，以提供進階的分析，在小數位數，並且能夠讓計算和處理資料的所在，不必在提取資料在網路中。
 
@@ -35,7 +35,7 @@ SQL Server 2017 支援 R 和 Python。 下表描述的元件。
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的開放原始碼散發套件的。會包含封裝和解譯器。 一律使用 MRO 安裝程式安裝的版本。 |
 | R 工具 | R 主控台視窗和命令提示字元是標準的工具，在 R 散發。  |
 | R 範例和指令碼 |  開放原始碼 R 和 RevoScaleR 套件包含內建的資料集，讓您可以建立並使用預先安裝的資料執行指令碼。 |
-| Python 套件 | [**revoscalepy** ](python/what-is-revoscalepy.md)可延展的 Python 與資料操作、 轉換、 視覺化和分析的函式中為主要媒體櫃。 <br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。  |
+| Python 套件 | [**revoscalepy** ](python/what-is-revoscalepy.md)是主要的程式庫適用於可調整的 Python 搭配資料操作、 轉換、 視覺效果和分析的函式。 <br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。  |
 | Python 工具 | 內建的 Python 命令列工具可用於臨機操作測試和工作項目。  |
 | Anaconda | Anaconda 是開放原始碼散發套件的 Python 和基本封裝。 |
 | Python 範例和指令碼 | 在使用 R、 Python 會包含內建的資料集與指令碼。  |
@@ -44,6 +44,8 @@ SQL Server 2017 支援 R 和 Python。 下表描述的元件。
 ## <a name="using-sql-mls"></a>使用 SQL MLS
 
 開發人員和分析師通常會有在本機的 SQL Server 執行個體上執行的程式碼。 藉由新增機器學習服務，然後啟用外部指令碼執行，您可以在 SQL 伺服器型態執行 R 和 Python 程式碼的能力： 包裝在預存程序的指令碼、 將模型儲存在 SQL Server 資料表中，或結合 T-SQL 和 R 或 Python 函式在查詢中。
+
+執行指令碼是界限內的資料安全性模型： 關聯式資料庫的權限是在您的指令碼中的資料存取的基礎。 執行 R 或 Python 指令碼的使用者應該不能使用 SQL 查詢中的該使用者無法存取的任何資料。 您需要標準資料庫的讀取和寫入權限，再加上額外的權限來執行外部指令碼。 模型和關聯式資料撰寫的程式碼包裝在預存程序，或序列化為二進位格式並儲存在資料表中，或如果序列化至檔案的原始位元組資料流，從磁碟載入。
 
 在資料庫內分析的最常見方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，傳遞做為輸入參數的 R 或 Python 指令碼。
 

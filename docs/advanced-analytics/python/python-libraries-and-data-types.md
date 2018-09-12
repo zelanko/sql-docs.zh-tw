@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b977d079589dbb4c54d5c31fec644d9f984dd61
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 384c8c94bdef65e41af999848c9bac63fc0c8d40
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434848"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888364"
 ---
 # <a name="python-libraries-and-data-types"></a>Python 程式庫和資料類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,16 +29,14 @@ RevoScaleR 功能的子集 (rxLinMod，rxLogit，rxPredict，rxDTrees，rxBTrees
 
 如需詳細資訊，請參閱 <<c0> [ 什麼是 revoscalepy？](what-is-revoscalepy.md)。
 
+Python 支援有限的數目的資料類型，相較於 SQL Server。 如此一來，每當您使用 Python 指令碼中的資料從 SQL Server 時，資料可能會隱含地轉換成相容的資料類型。 不過，通常的確切轉換無法自動執行，而且會傳回錯誤。
+
 ## <a name="python-and-sql-data-types"></a>Python 和 SQL 資料類型
-
-Python 支援有限的數目的資料類型，相較於 SQL Server。
-
-如此一來，每當您使用來自[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Python 指令碼中的資料可能會隱含地轉換成相容的資料類型。 不過，通常的確切轉換無法自動執行，而且會傳回錯誤。
 
 下表列出所提供的隱含轉換。 不支援其他資料型別。
 
 |SQLtype|Python 類型|
-|-|-|
+|-------|-----------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d55a482435673d69b82cca0f95f4a31656a21a96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 322bd5111aac211f400e5f917c9486e0a2c84b4c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219078"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888744"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>在 OPENXML 中使用 value () 和 nodes () 方法
   您可以使用多個**value （)** 上的方法`xml`中的資料類型**選取**子句產生的資料列集擷取的值。 **nodes()** 方法會針對可用於額外查詢的每個選定節點，各產生一個內部參考。 在產生資料列集時，如果所產生的資料列集會有數個資料行，且用來產生資料列集的路徑運算式很複雜時，合併 **nodes()** 和 **value()** 方法會比較有效率。  

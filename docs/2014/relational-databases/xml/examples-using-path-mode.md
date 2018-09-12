@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 68cfc33604bee9ed3e4b7d0c34c1ebfb6dec2454
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084010"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888554"
 ---
 # <a name="examples-using-path-mode"></a>範例：使用 PATH 模式
   以下範例說明使用 PATH 模式從 SELECT 查詢產生 XML。 這些查詢中有許多是針對自行車製造指示的 XML 文件所指定，這些文件是儲存在 ProductModel 資料表的 Instructions 資料行中。  
@@ -126,7 +125,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>指定類似 XPath 的資料行名稱  
- 在下列查詢`ProductModelID`指定的資料行名稱開頭為 '\@'，而且不包含斜線 （'/')。 因此，會在產生的 XML 中建立含有對應資料行值之 <`row`> 元素的屬性。  
+ 在以下查詢中，指定的 `ProductModelID` 資料行名稱是以 '\@' 開頭，而且不包含斜線 ('/')。 因此，會在產生的 XML 中建立含有對應資料行值之 <`row`> 元素的屬性。  
   
 ```  
 USE AdventureWorks2012;  

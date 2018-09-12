@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40a1ee49efbd50e9ee0ec57b46fe86abb250291f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194775"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889254"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
   在 FOR XML 子句中，您可以要求您的查詢將內嵌結構描述連同查詢結果一起傳回。 如果您要的是 XDR 結構描述，請在 FOR XML 子句中使用 XMLDATA 關鍵字。 而如果您要的是 XSD 結構描述，則請使用 XMLSCHEMA 關鍵字。  

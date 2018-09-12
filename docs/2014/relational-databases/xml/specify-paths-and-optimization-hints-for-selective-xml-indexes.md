@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
@@ -14,12 +13,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42fbf8de0e7d0240ff9ad7faca43f215c0a695a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0305c5229d5e690b163cfec12e87aa1d412af4f6
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202858"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889844"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
   本主題描述如何指定建立或修改選擇性 XML 索引時，要索引的節點路徑以及索引的最佳化提示。  

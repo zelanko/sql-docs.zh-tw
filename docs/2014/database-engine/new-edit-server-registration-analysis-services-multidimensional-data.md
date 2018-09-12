@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e006cbe7729d35a34bf8f652c7560a66a39e0ad8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e542f2498ef035cb35f4a12f4dfe3a845bcd8cae
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184795"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820804"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>新增或編輯伺服器註冊 (一般索引標籤) (Analysis Services - 多維度資料)
   當您註冊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  

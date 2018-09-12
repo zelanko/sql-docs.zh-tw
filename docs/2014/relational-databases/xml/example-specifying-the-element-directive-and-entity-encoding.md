@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8099442a27a9df036f3a8374d6fbe057a7f610aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b09cd6304ea860cb97fd56cb9c3d98891bfa150
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296128"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888594"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例：指定 ELEMENT 指示詞及實體編碼
   此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<摘要> 項目指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  

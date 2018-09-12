@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -37,12 +36,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc49d265969735e375b579b2f819ebbe1648bd8b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152079"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889634"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   可以在建立 XML 索引`xml`資料類型資料行。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  

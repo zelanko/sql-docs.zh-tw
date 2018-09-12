@@ -1,13 +1,7 @@
 ---
 title: sys.firewall_rules (Azure SQL Database) |Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
-ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
+ms.prod: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
@@ -26,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 88fec5755999e4fcb036e01e272e0e4fea8f36da
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 37313fc7aa6bfe29622bb6ec6900120a89e68dff
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032391"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820524"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

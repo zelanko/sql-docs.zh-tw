@@ -1,27 +1,28 @@
 ---
 title: 安裝 SQL Server 2016 R Services （資料庫） |Microsoft Docs
+description: 當您在 Windows 上安裝 SQL Server 2016 R Services 使用 SQL Server 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118506"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311678"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章說明如何安裝和設定**SQL Server 2016 R Services （資料庫）**。 如果您有 SQL Server 2016 時，安裝此功能以啟用 SQL Server 中的 R 程式碼執行。
+這篇文章說明如何安裝和設定**SQL Server 2016 R Services**。 如果您有 SQL Server 2016 時，安裝此功能以啟用 SQL Server 中的 R 程式碼執行。
+
+在 SQL Server 2017 中，提供 R 整合[Machine Learning 服務](../r/r-server-standalone.md)，反映的 Python。 如果您的 R 整合，並讓 SQL Server 2017 安裝媒體，請參閱[安裝 SQL Server 2017 Machine Learning 服務](sql-machine-learning-services-windows-install.md)新增功能。 
 
 ## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
-
-+ 如果您想要安裝 R 服務需要 SQL Server 2016 安裝程式。 如果相反地，您有 SQL Server 2017 安裝媒體，您應該安裝[SQL Server 2017 Machine Learning 服務 （資料庫）](sql-machine-learning-services-windows-install.md)取得該版本的 SQL Server 的 R 整合。
 
 + 需要資料庫引擎執行個體。 雖然您可以將它以累加方式加入現有的執行個體，您無法安裝只是 R。
 
@@ -31,7 +32,7 @@ ms.locfileid: "43118506"
 
 + 未安裝**共用功能** > **R Server （獨立式）** 同一部電腦上執行的資料庫執行個體。 
 
-+ 與其他版本的 R 和 Python 的並排顯示安裝可能會因為 SQL Server 執行個體會使用自己的開放原始碼 R 和 Anaconda 散發套件。 不過，執行 SQL Server 外部的 SQL Server 電腦使用 R 和 Python 程式碼可能會導致各種問題：
+  與其他版本的 R 和 Python 的並排顯示安裝可能會因為 SQL Server 執行個體會使用自己的開放原始碼 R 和 Anaconda 散發套件。 不過，執行 SQL Server 外部的 SQL Server 電腦使用 R 和 Python 程式碼可能會導致各種問題：
     
   + 您使用不同的程式庫和其他可執行檔，並比您在 SQL Server 中執行時，取得不同的結果。
   + 執行外部程式庫中的 R 和 Python 指令碼不受 SQL Server，導致資源爭用。
@@ -128,7 +129,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 
     **run_value** 現在應該設定為 1。
 
-2. 開啟**Services**面板或 SQL Server 組態管理員，並確認**SQL Server Launchpad 服務**正在執行。 您應該有一項服務，每個資料庫引擎執行個體具有 R 或 Python 安裝。 如需詳細資訊，請參閱 <<c0> [ 元件來支援 Python 整合](../python/new-components-in-sql-server-to-support-python-integration.md)。
+2. 開啟**Services**面板或 SQL Server 組態管理員，並確認**SQL Server Launchpad 服務**正在執行。 您應該有一項服務，每個資料庫引擎執行個體具有 R 或 Python 安裝。 如需有關服務的詳細資訊，請參閱[Extensibility framework](../concepts/extensibility-framework.md)。
 
 7. 如果 Launchpad 正在執行，您應該能夠執行簡單的 R，以確認外部指令碼的執行階段可與 SQL Server 通訊。 
 

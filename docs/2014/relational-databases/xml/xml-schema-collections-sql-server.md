@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,12 +24,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7be770bfbcde0f21197d3edfbe3a5c69bebec816
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221088"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889914"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
   主題中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供原生的 XML 資料，透過儲存`xml`資料類型。 您可以選擇性地關聯的 XSD 結構描述的變數或資料行`xml`透過 XML 結構描述集合的型別。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  

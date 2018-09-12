@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9f4b3655243e726d11a5b73227ec73db8660ba1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b48d4b760759d2c3976f4598a4064802bae563b4
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191629"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889424"
 ---
 # <a name="example-specifying-the-element-directive"></a>範例：指定 ELEMENT 指示詞
   這會擷取員工資訊，並產生元素中心的 XML，如下所示：  

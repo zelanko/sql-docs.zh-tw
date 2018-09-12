@@ -1,7 +1,7 @@
 ---
 title: 複寫快照集代理程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190168"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311688"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  
@@ -62,7 +62,8 @@ ms.locfileid: "37190168"
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -112,7 +113,7 @@ ms.locfileid: "37190168"
  這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的散發者時，系統所使用的登入。  
   
  **-DistributorPassword** *distributor_password*  
- 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的散發者時，系統所使用的密碼。 執行個體時提供 SQL Server 登入。  
+ 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的散發者時，系統所使用的密碼。 .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  指定散發者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證模式 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
@@ -194,6 +195,14 @@ ms.locfileid: "37190168"
 |**0**|僅列印錯誤訊息。|  
 |**1** (預設值)|列印所有進度報表訊息 (預設值)。|  
 |**2**|列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ 指定是否將預先提取及快取的資料表物件的選擇性參數。  預設行為是預先擷取特定資料表屬性，使用內部計算為基礎的 SMO 元件。  這個參數可以是在執行其中 SMO 預先擷取作業所花費相當長再的案例中很有幫助。 如果未使用此參數，此決策是在執行階段根據為發行項加入發行集的資料表的百分比。  
+  
+|OutputVerboseLevel 值|描述|  
+|------------------------------|-----------------|  
+|**0**|SMO 元件的預先擷取方法的呼叫已停用。|  
+|**1**|快照集代理程式會呼叫預先擷取的方法，以快取使用 SMO 某些資料表屬性|  
   
  **-PacketSize** *packet_size*  
  這是快照集代理程式連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時所使用的封包大小 (以位元組為單位)。 預設值為 8192 個位元組。  
@@ -223,7 +232,7 @@ ms.locfileid: "37190168"
  這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的登入。  
   
  **-PublisherPassword**  *publisher_password*  
- 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的密碼。 執行個體時提供 SQL Server 登入。  
+ 這是連接至使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的發行者時，系統所使用的密碼。 .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  

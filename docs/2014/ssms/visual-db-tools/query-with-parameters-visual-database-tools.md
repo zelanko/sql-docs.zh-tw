@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1822c3af10346c72ead4e68d1f51ebe599e8d059
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8969363ad3b30fb430f5cbe04e7b0f644582cc9b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226448"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820954"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用參數查詢 (Visual Database Tools)
   在許多情況下，建立可以在應用程式中重複使用多次，而每次輸入都不相同的查詢，是有幫助的。 在此章節中，您能夠獲得關於如何針對這些一般用途建立參數查詢的詳細資訊。  

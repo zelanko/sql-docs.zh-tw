@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4494302f761a98278ae7f4b24db51cdf15906ab1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e8703669a5fb8a263452cc1dd1950ba895d88fad
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301800"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889894"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>建立、修改和卸除選擇性 XML 索引
   描述如何建立新的選擇性 XML 索引，或是修改或卸除現有的選擇性 XML 索引。  

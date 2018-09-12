@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2868591cbb80cfb39eaaa81d6cbe75d2bda08c6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d331e0a22042258c087a3f58b0c72330c66f9203
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294218"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889414"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援[xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql)可讓您選擇性地要求的 FOR XML 查詢結果傳回為`xml`藉由指定 TYPE 指示詞的資料類型。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、 將結果指派給`xml`類型變數或撰寫[巢狀 FOR XML 查詢](use-nested-for-xml-queries.md)。  

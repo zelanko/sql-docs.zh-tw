@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084180"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375671"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>第 1 課： 建立資料庫和權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     與一個特定的使用者名稱相關聯的結構描述時，使用者是_結構描述擁有者_。 在建立物件時，除非您特別要求要以另一個結構描述來建立，否則一律會以您自己的結構描述來建立物件。
   
-    例如，如果您建立的資料表名稱`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< 資料庫名稱 >.db_datareader。TestData'。
+    例如，如果您建立的資料表名稱**TestData**，且您的預設結構描述**db_datareader**，資料表會建立具有名稱`<database_name>.db_datareader.TestData`。
   
     因此，資料庫可以包含多個具有相同名稱的資料表，只要資料表屬於不同的結構描述即可。
    

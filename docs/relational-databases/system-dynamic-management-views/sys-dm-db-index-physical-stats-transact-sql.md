@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085551"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375701"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|壓縮的頁面數。<br /><br /> 如果是堆積，新配置的頁面不會使用 PAGE 壓縮方式。 堆積會在兩個特殊情況下使用 PAGE 壓縮方式：大量匯入資料或是重建堆積時。 造成頁面配置的一般 DML 作業將不會使用 PAGE 壓縮方式。 當 compressed_page_count 值成長到大於您要的臨界值時，重建堆積。<br /><br /> 如果是具有叢集索引的資料表，compressed_page_count 值會指示 PAGE 壓縮的效能。|  
 |hobt_id|BIGINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 為僅限資料行存放區索引，則會追蹤分割區的內部資料行存放區資料的資料列集的識別碼。 資料列集是儲存為資料堆積或二進位樹狀結構。 它們有相同的索引識別碼，做為父資料行存放區索引。 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果|  
 |column_store_delete_buffer_state|TINYINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 備妥|  
-|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> NOT_APPLICABLE – 父索引不是資料行存放區索引。<br /><br /> 開啟 – deleters 和掃描器會使用此。<br /><br /> 正在清空 – 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清 – 緩衝區就會關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 淘汰 – 的封閉式的刪除緩衝區中的資料列寫入為刪除的點陣圖，但緩衝區有未遭截斷，因為掃描器仍在使用它。 新的掃描器，不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好 – 此刪除緩衝區可供使用。|  
+|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 不正確 – 父索引不是資料行存放區索引。<br /><br /> 開啟 – deleters 和掃描器會使用此。<br /><br /> 正在清空 – 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清 – 緩衝區就會關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 淘汰 – 的封閉式的刪除緩衝區中的資料列寫入為刪除的點陣圖，但緩衝區有未遭截斷，因為掃描器仍在使用它。 新的掃描器，不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好 – 此刪除緩衝區可供使用。|  
   
 ## <a name="remarks"></a>備註  
  sys.dm_db_index_physical_stats 動態管理函數會取代 DBCC SHOWCONTIG 陳述式。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a00e44cc43f59b4b158f0b780c3bd14b944d3a52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dda9f7469adb205fad6a3aeee4714ab5ee19da4
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270354"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889624"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
   此範例說明如何在溢位資料行中的資料定址`XMLTEXT`指示詞`SELECT`使用 EXPLICIT 模式的陳述式。  

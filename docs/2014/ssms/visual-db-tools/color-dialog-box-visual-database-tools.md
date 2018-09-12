@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2b6ecc75ade6da9d489c30105ad3bc4e961bf59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cbccdf13e88375e39dcd53c5e8461eb76064e34
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220548"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820814"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>色彩對話方塊 (Visual Database Tools)
   [色彩] 對話方塊會傳回使用者所選取之色彩的 RGB 值。 使用者可從一組由顯示驅動程式所判斷的基本色彩或一組自訂色彩中進行選取。 請從基本色彩中進行選取，或建立自訂色彩。 按一下色彩矩陣，或輸入 [色調]、[濃度]、[亮度]、[紅]、[綠] 和 [藍] 方塊，即可定義色彩。  

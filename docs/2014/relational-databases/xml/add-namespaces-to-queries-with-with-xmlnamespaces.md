@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,12 +24,12 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb2205588f3ba0747c3efd09806f6278b428a119
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67ca4f1a0663b83eb4fe9cb1abfa2a1b609e2c56
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155839"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889564"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 將命名空間加入至查詢
   [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](/sql/t-sql/xml/with-xmlnamespaces) 會以下列方式支援命名空間 URI：  

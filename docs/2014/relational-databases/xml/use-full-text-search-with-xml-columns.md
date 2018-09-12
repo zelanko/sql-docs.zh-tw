@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0de5bbffb53374ea10e52977e8c0a5781b16bf75
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54bf7f5993962bb885d16a513cf34c49bda0de0a
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307378"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888564"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>使用 XML 資料行進行全文檢索搜尋
   您可以在 XML 資料行上建立全文檢索索引，以檢索 XML 值的內容，但忽略 XML 標記。 元素標記會當做 Token 界限來使用。 其中會檢索下列項目：  

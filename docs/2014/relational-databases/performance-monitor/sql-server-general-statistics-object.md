@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc039c5e5c8c7aafbb1fb3b0405ad50413b24ca4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48b8df37c64ea017445f1e44cd6e03603708fa86
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258454"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820754"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
   **的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件提供計數器來監視整個伺服器範圍的一般活動，例如目前的連接數目，以及每秒與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之電腦連接與中斷連接的使用者數目。 當您處理大型線上交易處理 (OLTP) 類型的系統時，這類系統中有許多用戶端會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體連接與中斷連接，這時就會相當有用。  

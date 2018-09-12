@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,28 +15,28 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa867d399d11b65be61617a51991d6cc2dd2a8f2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d3966ec508c7b9b4858c3982b28a5f634ce7b426
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083220"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889284"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
   以下是具有名稱的資料列集資料行，以區分大小寫的方式對應至產生之 XML 的特定條件：  
   
--   資料行名稱開頭為 @ 記號 (\@)。  
+-   此資料行名稱以 \@ 符號開頭。  
   
--   資料行名稱開頭不 at 符號 (\@)。  
+-   此資料行名稱不是以 \@ 符號開頭。  
   
--   資料行名稱開頭不 at 符號\@且包含斜線 （/）。  
+-   此資料行名稱不是以 \@ 符號開頭且包含斜線 (/)。  
   
 -   數個資料行共用相同的前置詞。  
   
 -   一個資料行具有不同的名稱。  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>資料行名稱開頭為 @ 記號 (\@)  
- 如果資料行名稱的開頭 at 符號 (\@)，而且不包含斜線 （/） 的屬性 <`row`> 會建立具有對應的資料行值的項目。 例如，下列查詢會傳回兩個資料行 (\@PmId、 名稱) 資料列集。 在產生的 XML 中，**PmId** 屬性會加入對應的 <`row`> 元素中，並會將 ProductModelID 值指派給該元素。  
+## <a name="column-name-starts-with-an-at-sign-"></a>資料行名稱以 \@ 符號開頭  
+ 如果資料行名稱的開頭 at 符號 (\@)，而且不包含斜線 （/） 的屬性 <`row`> 會建立具有對應的資料行值的項目。 例如，以下查詢會傳回兩個資料行 (\@PmId、Name) 的資料列集。 在產生的 XML 中，**PmId** 屬性會加入對應的 <`row`> 元素中，並會將 ProductModelID 值指派給該元素。  
   
 ```  
   
@@ -69,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>資料行名稱不是開頭使用 @ 記號 (\@)  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>資料行名稱不是以 \@ 符號開頭  
  如果資料行名稱開頭不 at 符號 (\@)、 不是其中一個 XPath 節點測試中，而且不包含斜線 （/），是資料列元素的子元素的 XML 項目 <`row`> 根據預設，會建立。  
   
  下列查詢指定資料行名稱，也就是結果。 因此，<`result`> 子元素會加入 <`row`> 元素。  
@@ -116,8 +115,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>資料行名稱不是開頭使用 @ 記號 (\@) 且包含斜線 （/）  
- 如果資料行名稱開頭不 at 符號 (\@)，但包含斜線 （/），資料行名稱會指出 XML 階層。 例如，如果資料行名稱是 "Name1/Name2/Name3.../Name***n*** "，則每個 Name***i*** 代表一個元素名稱，該元素以巢狀化方式出現在目前資料列元素 (for i=1) 中，或是在具有 Name***i-1***名稱之元素的底下。 如果 Name***n***開頭為 '\@'，它會對應到名稱的屬性***n-1***項目。  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>資料行名稱不是以 \@ 符號開頭且包含斜線 (/)  
+ 如果資料行名稱不是以 \@ 符號開頭，但包含斜線 (/)，則資料行名稱會指出 XML 階層。 例如，如果資料行名稱是 "Name1/Name2/Name3.../Name***n*** "，則每個 Name***i*** 代表一個元素名稱，該元素以巢狀化方式出現在目前資料列元素 (for i=1) 中，或是在具有 Name***i-1***名稱之元素的底下。 如果 Name***n*** 以 '\@' 開頭，它會對應至 Name***n-1*** 元素的屬性。  
   
  例如，下列查詢將會傳回員工識別碼與姓名，它們是以複雜的元素 EmpName 所代表，該元素包含姓名的 First、Middle 及 Last。  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf9e0d63af7283dfbb36a12d34224a6c379c111f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb5b70541c6fb01f04be891bfda72acb55d9e7c0
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249658"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888834"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
   `xml`資料類型和[FOR XML 查詢中的 TYPE 指示詞](type-directive-in-for-xml-queries.md)讓 FOR XML 查詢所傳回的 XML 在伺服器上，以及在用戶端上進行處理。  

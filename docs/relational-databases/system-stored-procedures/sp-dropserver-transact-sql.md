@@ -1,7 +1,7 @@
 ---
 title: sp_dropserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,36 +23,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: faf0d79f399a714e4402d59c662df12021eb34f2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1aa8b62529bee6c5035161a9d7964c5f2f8ec5c7
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031901"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171700"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本機執行個體上的已知遠端和連結伺服器清單中移除伺服器。  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```sql  
 sp_dropserver [ @server = ] 'server'   
      [ , [ @droplogins = ] { 'droplogins' | NULL} ]  
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@server =** ] **'***server***'**  
+ *伺服器*  
  這是要移除的伺服器。 *server* 是 **sysname**，沒有預設值。 *伺服器*必須存在。  
   
- [  **@droplogins =** ] **'droplogins'** |NULL  
- 指出相關遠端和連結伺服器登入*伺服器*也必須移除如果**droplogins**指定。 **@droplogins** 已**char(10)**，預設值是 NULL。  
+ *droplogins*  
+ 指出相關遠端和連結伺服器登入*伺服器*也必須移除如果**droplogins**指定。 **`@droplogins`** 已**char(10)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

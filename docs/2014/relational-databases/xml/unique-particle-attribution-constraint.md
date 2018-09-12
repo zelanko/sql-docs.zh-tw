@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be25a2a6b9706cc83080741521f18480968ec5e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83e8b26094099f86bcd1851651973b1e66d517aa
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210748"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888944"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一物件屬性條件約束
   在 XSD 中，會以唯一物件屬性 (UPA) 條件約束規則來限制複雜的內容模型。 此規則要求執行個體文件中的每個元素，都要明確地對應至其父系內容模型中的一個 `<xsd:element>` 或 `<xsd:any>` 物件。 若有任何結構描述，其包含的類型可能含有模稜兩可的內容模型，都會被拒絕。  

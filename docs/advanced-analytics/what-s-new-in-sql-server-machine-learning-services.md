@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
-ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
+ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193024"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888854"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,6 +23,8 @@ ms.locfileid: "43193024"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 
 此版本新增了[的 Python 支援和領先業界的機器學習服務演算法](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)。 重新命名以反映新的範圍，SQL Server 2017 標示了[SQL Server Machine Learning 服務 （資料庫）](what-is-sql-server-machine-learning.md)，使用 Python 和 r 語言支援 
+
+功能通知所有總，請參閱[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
 
 ### <a name="r-enhancements"></a>R 的增強功能
 
@@ -42,7 +44,11 @@ SQL Server 2017 Machine Learning 服務的 R 元件是新一代的 SQL Server 20
 
 ### <a name="python-integration-for-in-database-analytics"></a>在資料庫內分析 Python 整合
 
-T-SQL 和 Python 的整合現在支援透過[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系統預存程序。 您可以呼叫任何使用此預存程序的 Python 程式碼。 在安全的雙重的架構，可讓企業級部署 Python 模型及指令碼，可從應用程式使用簡單的預存程序呼叫中執行程式碼。 從 SQL Python 程序和 MPI 通道平行處理的資料流處理資料，可達到進一步提高效能。
+Python 是機器的一種語言，可提供很大的彈性和各種不同學習工作的能力。 適用於 Python 的開放原始碼程式庫包含數個平台，可自訂的類神經網路，以及熱門的程式庫進行自然語言處理。 現在，在 SQL Server 2017 Machine Learning 中支援這個廣泛使用的語言。
+
+因為 Python 會與 database engine 整合，您可以讓分析貼近資料，並排除與移動資料相關聯的安全性風險與成本。 您可以部署使用 Visual Studio 等工具的 Python 為基礎的機器學習解決方案。 生產應用程式可以取得模型的預測，或視覺效果的 Python 3.5 執行階段使用 SQL Server 資料存取方法。
+
+T-SQL 和 Python 整合透過支援[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系統預存程序。 您可以呼叫任何使用此預存程序的 Python 程式碼。 在安全的雙重的架構，可讓企業級部署 Python 模型及指令碼，可從應用程式使用簡單的預存程序呼叫中執行程式碼。 從 SQL Python 程序和 MPI 通道平行處理的資料流處理資料，可達到進一步提高效能。
 
 您可以使用 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)函式來執行[原生評分](sql-native-scoring.md)上預先定型的模型，就已經先前儲存在所需的二進位格式。
 
@@ -67,6 +73,8 @@ T-SQL 和 Python 的整合現在支援透過[sp_execute_external_script](https:/
 這個的版導入了機器學習服務透過 SQL server 的功能**SQL Server 2016 R Services**，處理 R 指令碼中的資料庫引擎執行個體的常駐資料的資料庫內分析引擎。
 
 此外， **SQL Server 2016 R Server （獨立式）** 做為 Windows 伺服器上安裝 R Server 的方式發行。 一開始，SQL Server 安裝程式會提供唯一的方式，來安裝 R Server for Windows。 在更新版本中，開發人員和想要在 Windows 上的 R 伺服器的資料科學家可以使用另一個獨立安裝程式來達到相同的目標。 在 SQL Server 的獨立伺服器和獨立的伺服器產品的功能上相當[Microsoft R Server for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
+
+功能通知所有總，請參閱[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)。
 
 | 版本 |功能更新 |
 |---------|----------------|

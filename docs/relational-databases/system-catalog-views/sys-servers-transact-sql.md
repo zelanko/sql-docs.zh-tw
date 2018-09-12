@@ -1,7 +1,7 @@
 ---
 title: sys.servers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038811"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171750"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   包含連結伺服器或遠端伺服器註冊，每一個資料列和具有本機伺服器的資料列**server_id** = 0。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|連結伺服器的本機識別碼。|  
-|**name**|**sysname**|當**server_id** = 0，這是伺服器名稱。<br /><br /> 當**server_id** > 0，這是連結伺服器的本機名稱。|  
-|**product**|**sysname**|連結伺服器的產品名稱。 "SQL Server" 表示這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體。|  
+|**name**|**sysname**|當**server_id** = 0 時，傳回的值是伺服器名稱。<br /><br /> 當**server_id** > 0，則傳回的值是連結伺服器的本機名稱。|  
+|**product**|**sysname**|連結伺服器的產品名稱。 值為"SQL Server"表示另一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**provider**|**sysname**|連接連結伺服器所用的 OLE DB 提供者名稱。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 資料來源連接屬性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置連接屬性。 如果沒有，則為 NULL。|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038811"
   
  若要檢視本機伺服器不需要權限 (**server_id** = 0)。  
   
- 當您建立的連結或遠端伺服器，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立預設登入對應至**公用**伺服器角色。 這表示所有登入預設都可以檢視所有的連結伺服器和遠端伺服器。 若要限制可見性到這些伺服器，請移除預設登入對應執行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)並指定，則為 NULL *locallogin*參數。  
+ 當您建立的連結或遠端伺服器，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立預設登入對應至**公用**伺服器角色。 預設登入對應表示所有登入，可以檢視所有連結伺服器和遠端伺服器。 若要限制可見性到這些伺服器，請移除預設登入對應執行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)並指定，則為 NULL *locallogin*參數。  
   
- 如果刪除預設登入對應，則只有已明確加入成為連結登入或遠端登入的使用者可以檢視他們所擁有之登入的連結伺服器或遠端伺服器。 刪除預設登入對應之後，使用者必須具備下列權限才能檢視所有的連結伺服器和遠端伺服器：  
+ 如果刪除預設登入對應，則只有已明確加入成為連結登入或遠端登入的使用者可以檢視他們所擁有之登入的連結伺服器或遠端伺服器。  下列權限是預設登入對應之後，檢視所有連結伺服器和遠端伺服器的必要項目：  
   
--   ALTER ANY LINKED SERVER 或 ALTER ANY LOGIN ON SERVER  
-  
--   中的成員資格**setupadmin**或是**sysadmin**固定伺服器角色  
+- `ALTER ANY LINKED SERVER` 或 `ALTER ANY LOGIN ON SERVER`  
+- 中的成員資格**setupadmin**或是**sysadmin**固定伺服器角色  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dca972aecd3bbe0dec05a58678538ca2dfaff5ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc5206e6f193c359553d3873666a50da313fb820
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286804"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890274"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>預設包含 NULL 值的資料行
   依預設，資料行中的 Null 值會與缺少的屬性、節點或元素相對應。 此預設行為是可以覆寫的，方法為使用 ELEMENTS 指示詞來要求元素中心的 XML，並指定 XSINIL 來要求為 NULL 值加入元素，如下列查詢所示：  
