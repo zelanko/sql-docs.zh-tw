@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc38ee51f6f10b3d4cd6378e39070c6fcf84fce1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1a6e010be8f1799708bf90d00f45e90e621828d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220738"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807015"
 ---
 # <a name="copy-items-in-a-solution"></a>複製方案中的項目
   您可以利用 [方案總管] 或 Windows 的 [檔案總管] 來複製項目。  
