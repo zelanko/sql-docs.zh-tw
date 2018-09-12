@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e3c6b143f352b51f7c5b16a7f29f5165624746f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5e5af30cc693efb01f14eec7ff9d428d09a3459
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172009"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820674"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>選項 （SQL Server 物件總管-命令）
   當您以滑鼠右鍵按一下 [物件總管] 中的資料表或檢視時，即會出現可用來顯示資料表資料列的以下兩個選項：  

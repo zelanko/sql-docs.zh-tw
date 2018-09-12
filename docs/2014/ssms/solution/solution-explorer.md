@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +20,15 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57c7271167585be8cc3bd2f863c99f5e03e3d25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b17c072e70806bc2e6dd05193efa8dfba1b7015
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297678"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820494"
 ---
 # <a name="solution-explorer"></a>方案總管
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
   
  方案包括一個或多個專案，加上有助於將方案當做一個整體來定義的檔案和中繼資料。 專案是一組檔案，加上連接資訊等相關的中繼資料。 方案和專案包含代表建立資料庫方案時所需要之指令碼、查詢、連接資訊和檔案的項目。  
   
