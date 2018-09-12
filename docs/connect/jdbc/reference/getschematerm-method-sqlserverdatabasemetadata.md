@@ -1,5 +1,5 @@
 ---
-title: getSchemaTerm 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getSchemaTerm 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b93016639c6f151e5ad490bb363fa9344e97b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dfa14c040aa8c399fa4993fe68347ffe61ee8f7b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837293"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785606"
 ---
 # <a name="getschematerm-method-sqlserverdatabasemetadata"></a>getSchemaTerm 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +39,15 @@ public java.lang.String getSchemaTerm()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**包含慣用的詞彙。  
+ **String**，包含慣用詞彙。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getSchemaTerm 方法是由 java.sql.DatabaseMetaData 介面中 getSchemaTerm 方法指定。  
   
- 當使用[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料庫，這個方法會傳回 「 結構描述 」 做為慣用詞彙。  
+ 當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回作為慣用詞彙的 "schema"。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

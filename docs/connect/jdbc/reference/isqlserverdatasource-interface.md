@@ -1,5 +1,5 @@
 ---
-title: ISQLServerDataSource 介面 |Microsoft 文件
+title: ISQLServerDataSource 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9106cd417574d1e29d974236544116e2e0530fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 498554dc92e9ec8e52a36227412b9e74f28c40ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843133"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786452"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  建立此物件代表之資料來源連接的 Factory。 此介面已加入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC 驅動程式 3.0。  
+  建立此物件代表之資料來源連接的 Factory。 這個介面是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增。  
   
- **封裝：** com.microsoft.sqlserver.jdbc  
+ **套件：** com.microsoft.sqlserver.jdbc  
   
  **擴充：** java.sql.CommonDataSource  
   
@@ -37,12 +37,12 @@ ms.locfileid: "32843133"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>備註  
- 這個介面由實作[SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)。  
+## <a name="remarks"></a>Remarks  
+ 此介面由實作[SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)。  
   
- 這個介面會公開下列[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特有的方法：  
+ 此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的特定方法：  
   
-|方法|如需詳細資訊，請參閱|  
+|方法|如需相關資訊，請參閱|  
 |------------|-------------------------------|  
 |public String getApplicationName()|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|  
 |public String getDatabaseName()|[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|  

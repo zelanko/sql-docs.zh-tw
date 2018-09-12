@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 (java.util.Calendar) 資料行 |Microsoft 文件
+title: getDate 方法 (java.util.Calendar) 資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5402a16946770f9167c8d3aef17cedf916f11c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 893d0015b7e60b65e3d160651f2760bf64f37d30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834813"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787796"
 ---
-# <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getDate 方法 （java.lang.String，java.util.Calendar） (SQLServerResultSet)
+# <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getDate 方法 (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，這個目前的資料列內指定之資料行名稱的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)來當做 java.sql.Date 物件在 Java 程式語言，並透過給定的行事曆物件中的物件。  
+  使用Java 程式設計語言，透過指定的 Calender 物件，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列內擷取指定資料行名稱值作為 java.sql.Date 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,13 +40,13 @@ public java.sql.Date getDate(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>參數  
- *ColName*  
+ *colName*  
   
  包含資料行名稱的**字串**。  
   
  *cal*  
   
- 行事曆物件。  
+ 月曆物件。  
   
 ## <a name="return-value"></a>傳回值  
  Date 物件。  
@@ -54,10 +54,10 @@ public java.sql.Date getDate(java.lang.String colName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetDate 方法 java.sql.ResultSet 介面中所指定此 getDate 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 getDate 方法是由 java.sql.ResultSet 介面中的 getDate 方法指定。  
   
- 這個方法會傳回有效日期部分[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]datetime 或 smalldatetime 資料型別，而時間部分是設定成 Java 時間基準 00:00 （午夜） 中提供的月曆時區。  
+ 這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料類型中的有效日期部分，而時間部分會根據所提供的 Calendar 時區設定成 Java 時間基準 00:00 (午夜)。  
   
 ## <a name="see-also"></a>另請參閱  
  [getDate 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   

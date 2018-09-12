@@ -1,5 +1,5 @@
 ---
-title: getLong 方法 (int) |Microsoft 文件
+title: getLong 方法 (int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2152de272ccfd5f2bcdfa87b2af909b8a2f3950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2fbd9011cc7b698ee657773f379c1075faca080a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834853"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784178"
 ---
 # <a name="getlong-method-int"></a>getLong 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取所指定之參數的值**長**在 Java 程式語言中使用給定的參數索引。  
+  使用 Java 程式設計語言，並配合指定參數索引來擷取指定參數的值當作 **long**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ public long getLong(int index)
 ```  
   
 #### <a name="parameters"></a>參數  
- *索引*  
+ *index*  
   
  指出參數索引的 **int**。  
   
@@ -49,13 +49,13 @@ public long getLong(int index)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetLong 方法 java.sql.CallableStatement 介面中所指定此 getLong 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getLong 方法由 java.sql.CallableStatement 介面中的 getLong 方法指定。  
   
- 這個方法僅支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以安全傳回整數值，例如 bigint、 int、 smallint、 tinyint 和 bit 資料類型。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
+ 只有可以安全傳回整數值 (如 bigint、int、smallint、tinyint 和 bit) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- [getLong 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
+ [getLong 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

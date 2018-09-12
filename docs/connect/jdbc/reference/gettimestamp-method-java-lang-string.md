@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 (java.lang.String) |Microsoft 文件
+title: getTimestamp 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5aa22363251036aeb10f738a369be61a40f6f34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29fa80a283ed556166ca240a4cf7ebb983456b7c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839605"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785266"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>getTimestamp 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,18 +44,18 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
  包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- 時間戳記的物件。  
+ 時間戳記物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetTimestamp 方法 java.sql.CallableStatement 介面中所指定此 getTimestamp 方法。  
+## <a name="remarks"></a>Remarks  
+ GetTimestamp 方法 java.sql.CallableStatement 介面中所指定這個 getTimestamp 方法。  
   
- 這個方法會傳回值，只能從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**和**smalldatetime**資料行。  
+ 這個方法只會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 和 **smalldatetime** 資料行中的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [getTimestamp 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+ [getTimestamp 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

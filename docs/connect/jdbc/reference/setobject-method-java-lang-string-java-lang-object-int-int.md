@@ -1,5 +1,5 @@
 ---
-title: setObject 方法 （java.lang.String，java.lang.Object，int，int） |Microsoft 文件
+title: setObject 方法 (java.lang.String, java.lang.Object, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42124090d8caac8290d30b9000bf73de5ca916ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6cf5eae5524ae2737acff20d516eecad2ac40243
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844563"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784010"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>setObject 方法 (java.lang.String, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,28 +48,28 @@ public void setObject(java.lang.String sCol,
   
  *o*  
   
- **物件**值。  
+ **Object** 值。  
   
  *n*  
   
- **Int** ，指出 java.sql.Types 內定義的目標類型。  
+ **int**，指出 java.sql.Types 中定義的目標類型。  
   
  *m*  
   
- **Int** ，指出小數點右邊的位數。 NUMERIC 和 DECIMAL 以外的所有型別都會忽略這個參數。  
+ **int**，指出小數點右邊的位數。 NUMERIC 和 DECIMAL 以外的所有型別都會忽略這個參數。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 setObject 方法是由 java.sql.CallableStatement 介面中的 setObject 方法所指定。  
+## <a name="remarks"></a>Remarks  
+ 此 setObject 方法由 java.sql.CallableStatement 介面中的 setObject 方法指定。  
   
- 開頭為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0 中，這個方法的行為由修改**sendTimeAsDatetime**連接屬性 ([設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ 開頭[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC 驅動程式 3.0 中，這個方法的行為由修改**sendTimeAsDatetime**連接屬性 ([設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
   
- 如需詳細資訊，請參閱[如何設定 java.sql.Time 值傳送給伺服器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 如何設定 java.sql.Time 值傳送給伺服器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [setObject 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
+ [setObject 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

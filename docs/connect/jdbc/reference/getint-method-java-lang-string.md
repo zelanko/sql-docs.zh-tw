@@ -1,5 +1,5 @@
 ---
-title: getInt 方法 (java.lang.String) |Microsoft 文件
+title: getInt 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9320aff9e7d33baf84cad734b82ad3b91262977e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5e474b25171827e0bf3857b8bd2132af14793cd7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835363"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784895"
 ---
 # <a name="getint-method-javalangstring"></a>getInt 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取所指定之參數的值**int**在 Java 程式語言中使用給定的參數名稱。  
+  使用 Java 程式設計語言，並配合指定參數名稱來擷取指定參數的值當作 **int**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,13 +49,13 @@ public int getInt(java.lang.String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetInt 方法 java.sql.CallableStatement 介面中所指定此 getInt 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getInt 方法由 java.sql.CallableStatement 介面中的 getInt 方法指定。  
   
- 這個方法僅支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以安全傳回整數值，例如 int、 smallint、 tinyint 和 bit 資料類型。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
+ 只有可以安全傳回整數值 (如 int、smallint、tinyint 和 bit) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- [getInt 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)   
+ [getInt 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

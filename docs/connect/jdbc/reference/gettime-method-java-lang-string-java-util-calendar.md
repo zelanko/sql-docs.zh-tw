@@ -1,5 +1,5 @@
 ---
-title: getTime 方法 （java.lang.String，java.util.Calendar） |Microsoft 文件
+title: getTime 方法 (java.lang.String, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d24681d9cb7ff5f8f0488c4bdeb4c0be1d9993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b72cbb765ae11de0ece12547dd0b8a15e87f393f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838388"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787798"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime 方法 (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取指定之參數的值來當做 java.sql.Time 物件在 Java 程式語言中，給定的參數名稱，使用指定的行事曆物件。  
+  使用 Java 程式設計語言以指定的參數名稱，透過指定的 Calender 物件，擷取指定的參數值作為 java.sql.Time 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,21 +46,21 @@ public java.sql.Time getTime(java.lang.String sCol,
   
  *cal*  
   
- 行事曆物件。  
+ 月曆物件。  
   
 ## <a name="return-value"></a>傳回值  
- Time 物件。  
+ 時間物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetTime 方法 java.sql.CallableStatement 介面中所指定此 getTime 方法。  
+## <a name="remarks"></a>Remarks  
+ 這項 getTime 方法由 java.sql.CallableStatement 介面中的 getTime 方法指定。  
   
- 請參閱標題為 「 Getter 方法轉換 」 圖表[了解資料類型轉換](../../../connect/jdbc/understanding-data-type-conversions.md)查看哪些[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]採用這種方法可擷取的資料類型。  
+ 圖表標題為 「 Getter 方法轉換 」 所示[了解資料類型轉換](../../../connect/jdbc/understanding-data-type-conversions.md)若要查看哪些[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以使用此方法擷取的資料型別。  
   
 ## <a name="see-also"></a>另請參閱  
- [getTime 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
+ [getTime 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

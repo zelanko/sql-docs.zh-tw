@@ -1,5 +1,5 @@
 ---
-title: getByte 方法 (java.lang.String) (SQLServerResultSet) |Microsoft 文件
+title: getByte 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac43acc93f9a08439b5acfe42612a1a38feafe0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8509cdaa97609249babaa45af4a0533dc3c9d443
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830713"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787822"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>getByte 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，這個目前的資料列內指定之資料行名稱的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件當做**位元組**在 Java 程式語言。  
+  使用 Java 程式設計語言，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列內擷取指定資料行名稱值來作為 **byte**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,15 +44,15 @@ public byte getByte(java.lang.String columnName)
  包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- A**位元組**值。  
+ **位元組** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetByte 方法 java.sql.ResultSet 介面中所指定此 getByte 方法。  
+## <a name="remarks"></a>Remarks  
+ GetByte 方法 java.sql.ResultSet 介面中所指定這個 getByte 方法。  
   
- 這個方法僅支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以安全傳回位元組值，如 tinyint 和 bit 資料類型。 所有其他資料類型將會擲回例外狀況。  
+ 只有可安全傳回位元組值 (如 tinyint 和 bit) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型支援這項方法。 所有其他資料類型將會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
  [getByte 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   

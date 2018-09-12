@@ -1,5 +1,5 @@
 ---
-title: getProcedures 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getProcedures 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df6101068f9d64ac243666d28c231c88a7926001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9841158629f4103540374c324e56fc54fd3f9446
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839253"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784550"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +43,43 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 #### <a name="parameters"></a>參數  
  *sCatalog*  
   
- A**字串**，其中包含目錄名稱。 提供 null 給這個參數，將指出不需要使用目錄名稱。  
+ 包含目錄名稱的 **String**。 提供 null 給這個參數，將指出不需要使用目錄名稱。  
   
  *s*  
   
- A**字串**，包含結構描述名稱模式。 提供 null 給這個參數，將指出不需要使用結構描述名稱。  
+ 包含結構描述名稱模式的 **String**。 提供 null 給這個參數，將指出不需要使用結構描述名稱。  
   
- *程序*  
+ *proc*  
   
- A**字串**，包含程序名稱模式。  
+ 包含程序名稱模式的 **String**。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getProcedures 方法是由 java.sql.DatabaseMetaData 介面中 getProcedures 方法指定。  
   
- 由 getProcedures 方法傳回的結果集將包含下列資訊：  
+ 透過 getProcedures 方法所傳回的結果將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**字串**|指定之預存程序所在之資料庫的名稱。|  
-|PROCEDURE_SCHEM|**字串**|預存程序的結構描述。|  
-|PROCEDURE_NAME|**字串**|預存程序的名稱。|  
+|PROCEDURE_CAT|**String**|指定之預存程序所在之資料庫的名稱。|  
+|PROCEDURE_SCHEM|**String**|預存程序的結構描述。|  
+|PROCEDURE_NAME|**String**|預存程序的名稱。|  
 |NUM_INPUT_PARAMS|**int**|保留供日後使用，目前會傳回值 -1。|  
 |NUM_OUTPUT_PARAMS|**int**|保留供日後使用，目前會傳回值 -1。|  
 |NUM_RESULT_SETS|**int**|保留供日後使用，目前會傳回值 -1。|  
-|REMARKS|**字串**|程序資料行的描述。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不會傳回此資料行的值。  |  
+|REMARKS|**String**|程序資料行的描述。<br /><br /> <br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |PROCEDURE_TYPE|**smallint**|預存程序的類型。 它可能是下列其中一個值：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  
->  多個由 getProcedures 方法傳回之資料的詳細資訊，請參閱 < sp_stored_procedures (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getProcedures 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_stored_procedures (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getProcedures 方法傳回的資訊中的 uspGetBillOfMaterials 預存程序[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。  
+ 下列範例會示範如何使用 getProcedures 方法來傳回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫中 uspGetBillOfMaterials 預存程序的相關資訊。  
   
 ```  
 public static void executeGetProcedures(Connection con) {  

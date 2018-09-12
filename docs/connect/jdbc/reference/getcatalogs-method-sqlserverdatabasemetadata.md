@@ -1,5 +1,5 @@
 ---
-title: getCatalogs 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getCatalogs 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20537ecc2ecb42b1384e52e3e95dd611f7ad8797
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84f5f8668dea2b06a6390235be315ee25a27ba80
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832203"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787799"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +39,25 @@ public java.sql.ResultSet getCatalogs()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getCatalogs 方法是由 java.sql.DatabaseMetaData 介面中 getCatalogs 方法指定。  
   
 > [!NOTE]  
->  SQL azure，您應該連接至 master 資料庫來呼叫**SQLServerDatabaseMetaData.getCatalogs**。 SQL Azure 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 檢視取得目錄。 中的權限討論內容，請參閱[sys.databases （SQL Azure 資料庫）](http://go.microsoft.com/fwlink/?LinkId=217396)來了解**SQLServerDatabaseMetaData.getCatalogs** SQL Azure 上的行為。  
+>  在 SQL Azure，您應該連接至 master 資料庫來呼叫**SQLServerDatabaseMetaData.getCatalogs**。 SQL Azure 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**會使用 sys.databases 檢視取得目錄。 中的權限的討論，請參閱[sys.databases （SQL Azure 資料庫）](http://go.microsoft.com/fwlink/?LinkId=217396)若要了解**SQLServerDatabaseMetaData.getCatalogs** SQL Azure 上的行為。  
   
- GetCatalogs 方法所傳回的結果集將包含下列資訊：  
+ getCatalogs 方法所傳回的結果集將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**字串**|類別目錄，包括系統資料庫中的名稱[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。|  
+|TABLE_CAT|**String**|目錄名稱，包含 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的系統資料庫。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getCatalogs 方法來傳回中所包含的所有資料庫的名稱[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，包括系統資料庫。  
+ 下列範例會說明如何使用 getCatalogs 方法來傳回 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內含之所有資料庫的名稱，包括系統資料庫。  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  

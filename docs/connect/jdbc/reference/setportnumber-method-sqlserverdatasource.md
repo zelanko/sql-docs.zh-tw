@@ -1,5 +1,5 @@
 ---
-title: setPortNumber 方法 (SQLServerDataSource) |Microsoft 文件
+title: setPortNumber 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5665bd5ed6f10a755f3980607995b19887908379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 608c83e843941f80d4f6c9805711394975fb0c20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844503"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784194"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定用來與通訊的連接埠號碼[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+  設定用來與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通訊的連接埠號碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,15 +39,15 @@ public void setPortNumber(int portNumber)
 ```  
   
 #### <a name="parameters"></a>參數  
- *通訊埠編號*  
+ *portNumber*  
   
- **Int**包含通訊埠編號的值。  
+ 包含連接埠號碼 **int** 值。  
   
-## <a name="remarks"></a>備註  
- 連接埠號碼是開啟的通訊端連接時，會使用 TCP/IP 通訊埠編號[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 如果未設定 portNumber 屬性， [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)方法會傳回預設值 1433年。  
+## <a name="remarks"></a>Remarks  
+ 連接埠號碼為 TCP/IP 連接埠號碼，當開啟與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間的通訊端連線時就會使用它。 如果未設定 portNumber 屬性，[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) 方法會傳回預設值 1433。  
   
 > [!NOTE]  
->  SetPortNumber 方法不會進行任何範圍檢查傳入的連接埠值。 您可以傳遞無效，如 99999，而不觸發錯誤的通訊埠編號。  
+>  SetPortNumber 方法不會執行任何範圍檢查傳入的連接埠值。 您可以傳遞無效，如 99999，而不觸發錯誤的連接埠號碼。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

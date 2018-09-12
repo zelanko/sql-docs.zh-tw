@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 (java.lang.String) (SQLServerResultSet) |Microsoft 文件
+title: getTimestamp 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f109d4c5e7a5d816e728d6e39ecd6a10d2fa2c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 714689555d35e8745c1779e6dcbaaa5414948c9b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839113"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784191"
 ---
 # <a name="gettimestamp-method-javalangstring-sqlserverresultset"></a>getTimestamp 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，這個目前的資料列內指定之資料行名稱的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)來當做 java.sql.Timestamp 物件在 Java 程式語言中的物件。  
+  使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定的資料行名稱值來當作 java.sql.Timestamp 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,18 +44,18 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
  包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- 時間戳記的物件。  
+ 時間戳記物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetTimestamp 方法 java.sql.ResultSet 介面中所指定此 getTimestamp 方法。  
+## <a name="remarks"></a>Remarks  
+ GetTimestamp 方法 java.sql.ResultSet 介面中所指定這個 getTimestamp 方法。  
   
- 這個方法會傳回值，只能從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]datetime 和 smalldatetime 資料行。  
+ 這個方法只會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 資料行中的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [getTimestamp 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   
+ [getTimestamp 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -16,19 +16,19 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015802"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786979"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) 公用程式可在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux 和 macOS 上使用。
+[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) 公用程式可在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux 和 macOS 上使用。
   
-下列命令顯示如何使用 Windows 驗證 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]驗證，分別：
+下列命令顯示如何使用 Windows 驗證 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驗證，分別：
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -73,12 +73,12 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 > [!NOTE]  
 > CTP for SUSE Linux 不支援 **-K** 。 不過，您可以在傳遞至 `sqlcmd` 的 DSN 檔案中指定 **ApplicationIntent=ReadOnly** 關鍵字。 如需詳細資訊，請參閱本主題結尾處的＜`sqlcmd` 和 `bcp` 中的 DSN 支援＞。  
   
-- -l*逾時*指定之前的秒數`sqlcmd`登入逾時，當您嘗試連接到伺服器。
+- –l *timeout* 選項會指定在您嘗試連線到伺服器時，`sqlcmd` 登入的逾時秒數。
 
 - -m *error_level* 控制哪些錯誤訊息會傳送至 stdout。  
   
 - **-M * * * multisubnet_failover*  
-在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > CTP for SUSE Linux 不支援 **-M** 。 不過，您可以在傳遞至 `sqlcmd` 的 DSN 檔案中指定 **MultiSubnetFailover=Yes** 關鍵字。 如需詳細資訊，請參閱本主題結尾處的＜`sqlcmd` 和 `bcp` 中的 DSN 支援＞。  
@@ -102,7 +102,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -s *column_separator_char*指定資料行分隔符號字元。  
 
 - -S [*protocol*:] *server*[**,***port*]  
-指定的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]連線，或如果-D 是使用，資料來源名稱。 ODBC driver on Linux 和 macOS 需要-s。 請注意， **tcp**是唯一有效的通訊協定。  
+指定的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連線，或如果-D 是使用，資料來源名稱。 ODBC driver on Linux 和 macOS 需要-s。 請注意， **tcp**是唯一有效的通訊協定。  
   
 - -t *query_timeout* 指定命令 (或 SQL 陳述式) 逾時之前的秒數。  
   
@@ -162,7 +162,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 ## <a name="unavailable-options"></a>無法使用的選項
 在目前版本中，下列選項無法使用：  
 
-- -A 使用專用管理員連線 (DAC) 來登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 如需如何建立專用管理員連線 (DAC) 的資訊，請參閱[程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)。  
+- -A 使用專用管理員連線 (DAC) 來登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需如何建立專用管理員連線 (DAC) 的資訊，請參閱[程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)。  
   
 - -f *code_page* 指定輸入和輸出字碼頁。  
   

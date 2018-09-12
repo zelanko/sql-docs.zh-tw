@@ -1,5 +1,5 @@
 ---
-title: ISQLServerResultSet 介面 |Microsoft 文件
+title: ISQLServerResultSet 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e49f78882fd135c9bb9363644423dd54d54f7c80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ec793a4f7cebd39adc1d3663e53217370831e25e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843223"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787171"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  代表 JDBC 結果集。 此介面已加入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC 驅動程式 3.0。  
+  代表 JDBC 結果集。 這個介面是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增。  
   
- **封裝：** com.microsoft.sqlserver.jdbc  
+ **套件：** com.microsoft.sqlserver.jdbc  
   
  **擴充：** java.sql.ResultSet  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32843223"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>備註  
- 這個介面由實作[SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)。  
+## <a name="remarks"></a>Remarks  
+ 此介面由實作[SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)。  
   
- 此介面會公開[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特有的方法：  
+ 此介面會公開 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的特定方法：  
   
 |方法|如需詳細資訊，請參閱|  
 |------------|-------------------------------|  
@@ -49,9 +49,9 @@ public interface ISQLServerResultSet
 |public void updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|  
 |public void updateDateTimeOffset(String, microsoft.sql.DateTimeOffset)|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|  
   
- 這個介面會公開下列[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定欄位：  
+ 此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特有的欄位：  
   
-|欄位|如需詳細資訊，請參閱|  
+|欄位|如需相關資訊，請參閱|  
 |-----------|-------------------------------|  
 |public static final int CONCUR_SS_OPTIMISTIC_CC|[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|  
 |public static final int CONCUR_SS_OPTIMISTIC_CCVAL|[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|  

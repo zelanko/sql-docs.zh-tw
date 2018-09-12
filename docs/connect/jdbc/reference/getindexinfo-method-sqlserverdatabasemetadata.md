@@ -1,5 +1,5 @@
 ---
-title: getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 68595a385022f9bd42ccc8e925068e1d1e0ed1d3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836865"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786438"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,56 +45,56 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 #### <a name="parameters"></a>參數  
  *cat*  
   
- A**字串**，其中包含目錄名稱。  
+ 包含目錄名稱的**字串**。  
   
  *schema*  
   
- A**字串**，其中包含結構描述名稱。  
+ 包含結構描述名稱的**字串**。  
   
  *table*  
   
- A**字串**，其中包含資料表名稱。  
+ 包含資料表名稱的**字串**。  
   
- *唯一*  
+ *unique*  
   
- **true**是否只會傳回唯一值的索引。 **false**如果傳回所有索引。  
+ **true**如果只會傳回唯一值的索引。 **false**如果傳回的所有索引。  
   
- *近似*  
+ *approximate*  
   
  **true**如果結果會反映近似或過期的值。 **false**如果結果非常精確。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getIndexInfo 方法是由 java.sql.DatabaseMetaData 介面中 getIndexInfo 方法指定。  
   
- GetIndexInfo 方法所傳回的結果集將包含下列資訊：  
+ 透過 getIndexInfo 方法所傳回的結果將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**字串**|指定之資料表所在的資料庫名稱。|  
-|TABLE_SCHEM|**字串**|資料表的結構描述。|  
-|TABLE_NAME|**字串**|資料表的名稱。|  
+|TABLE_CAT|**String**|指定之資料表所在的資料庫名稱。|  
+|TABLE_SCHEM|**String**|資料表的結構描述。|  
+|TABLE_NAME|**String**|資料表的名稱。|  
 |NON_UNIQUE|**boolean**|指出索引值是否可以不是唯一的。|  
-|INDEX_QUALIFIER|**字串**|索引擁有者的名稱。 當 TYPE 為 tableIndexStatistic 時，它會是 null。|  
-|INDEX_NAME|**字串**|索引的名稱。|  
+|INDEX_QUALIFIER|**String**|索引擁有者的名稱。 當 TYPE 為 tableIndexStatistic 時，它會是 null。|  
+|INDEX_NAME|**String**|索引的名稱。|  
 |TYPE|**short**|索引的類型。 它可能是下列其中一個值：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|資料行在索引中的序數位置。 索引中的第一個資料行是 1。|  
-|COLUMN_NAME|**字串**|資料行的名稱。|  
-|ASC_OR_DESC|**字串**|用於索引定序的順序。 它可能是下列其中一個值：<br /><br /> A (遞增)<br /><br /> D (遞減)<br /><br /> NULL (不適用)<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一律會傳回"A"。  |  
+|COLUMN_NAME|**String**|資料行的名稱。|  
+|ASC_OR_DESC|**String**|用於索引定序的順序。 它可能是下列其中一個值：<br /><br /> A (遞增)<br /><br /> D (遞減)<br /><br /> NULL (不適用)<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一律會傳回 "A"。|  
 |CARDINALITY|**int**|資料表中的資料列數，或索引中的唯一值數目。|  
 |PAGES|**int**|用來儲存索引或資料表的頁數。|  
-|FILTER_CONDITION|**字串**|篩選條件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一定會傳回 null。  |  
+|FILTER_CONDITION|**String**|篩選條件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一律會傳回 null。|  
   
 > [!NOTE]  
->  多個 getIndexInfo 方法所傳回的資料的詳細資訊，請參閱 「 < sp_indexes (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getIndexInfo 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_indexes (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getIndexInfo 方法來傳回資訊的索引和統計資料中的 Person.Contact 資料表[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。  
+ 下列範例會示範如何使用 getIndexInf 方法來傳回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫中 Person.Contact 資料表索引和統計資料的相關資訊。  
   
 ```  
 public static void executeGetIndexInfo(Connection con) {  

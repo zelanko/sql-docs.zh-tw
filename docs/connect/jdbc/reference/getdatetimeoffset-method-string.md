@@ -1,5 +1,5 @@
 ---
-title: getDateTimeOffset 方法 （字串） |Microsoft 文件
+title: getDateTimeOffset 方法 （字串） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b49a2459b17a471f3326f0d8a63553467438bcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a42c4b7be5e693ef81a24cdf3c44dba8033f70de
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834413"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787361"
 ---
 # <a name="getdatetimeoffset-method-string"></a>getDateTimeOffset 方法 (String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  這個方法加入在[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 驅動程式 3.0。  
+  這個方法是在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中所新增。  
   
- 擷取所指定之參數的值[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)Java 程式語言中使用給定的參數索引中的物件。  
+ 使用 Java 程式設計語言，以指定的參數索引來擷取指定的參數值作為 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,11 +46,11 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 您可以設定[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)參數值與[SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)。  
+## <a name="remarks"></a>Remarks  
+ 您可以設定[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)參數值為[SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [getDateTimeOffset 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   
+ [getDateTimeOffset 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

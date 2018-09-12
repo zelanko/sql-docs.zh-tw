@@ -1,5 +1,5 @@
 ---
-title: ISQLServerConnection 介面 |Microsoft 文件
+title: ISQLServerConnection 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ca0e0504a7f28622ba2419545d2167ad917f784
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7b9c02332b5a680fcb04c2a9d38c27f6fe5a9e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841433"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785059"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  代表 JDBC 連接[!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料庫。 此介面已加入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC 驅動程式 3.0。  
+  代表與 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的 JDBC 連線。 這個介面是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增。  
   
- **封裝：** com.microsoft.sqlserver.jdbc  
+ **套件：** com.microsoft.sqlserver.jdbc  
   
  **擴充：** java.sql.Connection  
   
@@ -37,12 +37,12 @@ ms.locfileid: "32841433"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>備註  
- 這個介面由實作[SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)。  
+## <a name="remarks"></a>Remarks  
+ 此介面由實作[SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)。  
   
- 這個介面會公開下列[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定欄位：  
+ 此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特有的欄位：  
   
-|欄位|如需詳細資訊，請參閱|  
+|欄位|如需相關資訊，請參閱|  
 |-----------|-------------------------------|  
 |public final static int TRANSACTION_SNAPSHOT|[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|  
 |public UUID getClientConnectionId()|[getClientConnectionID()](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|  

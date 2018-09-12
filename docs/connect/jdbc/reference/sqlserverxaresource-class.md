@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAResource 類別 |Microsoft 文件
+title: SQLServerXAResource 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46281eca1f326f39a0e8aff7e167214152a839e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7a40dc7a3f55a9c331f15783a4349e3ffbed269
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847791"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787359"
 ---
 # <a name="sqlserverxaresource-class"></a>SQLServerXAResource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  XAResource 代表 xa 分散式交易管理。  
+  代表 XA 分散式交易管理的 XAResource。  
   
- **封裝：** com.microsoft.sqlserver.jdbc  
+ **套件：** com.microsoft.sqlserver.jdbc  
   
  **擴充：** java.lang.Object  
   
@@ -39,8 +39,8 @@ ms.locfileid: "32847791"
 public class SQLServerXAResource  
 ```  
   
-## <a name="remarks"></a>備註  
- XA 交易中實作[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用[!INCLUDE[msCoName](../../../includes/msconame_md.md)]分散式交易協調器 (DTC)。 SQLServerXAResource 類別會呼叫[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]擴充 dll sqljdbc_xa.dll，此介面為 DTC。 SQLServerXAResource （XA_START、 XA_END、 XA_PREPARE 等等） 所接收的 XA 呼叫會對應到對應的 DTC 函數呼叫。  
+## <a name="remarks"></a>Remarks  
+ XA 交易會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 分散式交易協調器 (DTC) 來實作。 The SQLServerXAResource 類別會呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充 dll sqljdbc_xa.dll，此 dll 會與 DTC 接觸。 SQLServerXAResource (XA_START、XA_END、XA_PREPARE 等) 所接收的 XA 呼叫會對應到對應的 DTC 函式呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   

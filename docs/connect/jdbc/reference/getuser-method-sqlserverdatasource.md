@@ -1,5 +1,5 @@
 ---
-title: getUser 方法 (SQLServerDataSource) |Microsoft 文件
+title: getUser 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd095dc3968ae89dfedb110cc5a75eb1b19844a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4d35f898c93e7764bd9436b24ac4a5d7989ac91e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839233"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786263"
 ---
 # <a name="getuser-method-sqlserverdatasource"></a>getUser 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,10 +39,10 @@ public java.lang.String getUser()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**，其中包含使用者名稱。  
+ 包含使用者名稱的**字串**。  
   
-## <a name="remarks"></a>備註  
- [SetUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)方法設定將會在執行個體的連接時使用的使用者名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 如果未設定使用者名稱值，getUser 方法會傳回預設值 null。  
+## <a name="remarks"></a>Remarks  
+ [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 方法會設定當連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時將要使用的使用者名稱。 如果未設定使用者名稱值，getUser 方法會傳回預設值 null。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

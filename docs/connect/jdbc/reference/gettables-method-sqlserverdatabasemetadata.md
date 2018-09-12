@@ -1,5 +1,5 @@
 ---
-title: getTables 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getTables 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64b6559137dca42bf2602b19aaa92c754dc255be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2bbe1c39895febd9d853afee54c034d6eb77c3b1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840803"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786243"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,49 +44,49 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- A**字串**，其中包含目錄名稱。 提供 null 給這個參數，將指出不需要使用目錄名稱。  
+ 包含目錄名稱的**字串**。 提供 null 給這個參數，將指出不需要使用目錄名稱。  
   
  *schema*  
   
- A**字串**，包含結構描述名稱模式。 提供 null 給這個參數，將指出不需要使用結構描述名稱。  
+ 包含結構描述名稱模式的**字串**。 提供 null 給這個參數，將指出不需要使用結構描述名稱。  
   
  *tableName*  
   
- A**字串**，包含資料表名稱模式。  
+ 包含資料表名稱模式的**字串**。  
   
- *型別*  
+ *types*  
   
  字串的陣列，包含要納入的資料表類型。 Null 表示應該納入所有資料表類型。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 getTables 方法是由 java.sql.DatabaseMetaData 介面中 getTables 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 getTables 方法是由 java.sql.DatabaseMetaData 介面中的 getTables 方法指定。  
   
- 由 getTables 方法傳回的結果集將包含下列資訊：  
+ 透過 getTables 方法所傳回的結果將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**字串**|指定之資料表所在的資料庫名稱。|  
-|TABLE_SCHEM|**字串**|資料表結構描述名稱。|  
-|TABLE_NAME|**字串**|資料表名稱。|  
-|TABLE_TYPE|**字串**|資料表類型。|  
-|REMARKS|**字串**|資料表的描述。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不會傳回此資料行的值。  |  
-|TYPE_CAT|**字串**|JDBC 驅動程式不支援。|  
-|TYPE_SCHEM|**字串**|JDBC 驅動程式不支援。|  
-|TYPE_NAME|**字串**|JDBC 驅動程式不支援。|  
-|SELF_REFERENCING_COL_NAME|**字串**|JDBC 驅動程式不支援。|  
-|REF_GENERATION|**字串**|JDBC 驅動程式不支援。|  
+|TABLE_CAT|**String**|指定之資料表所在的資料庫名稱。|  
+|TABLE_SCHEM|**String**|資料表結構描述名稱。|  
+|TABLE_NAME|**String**|資料表名稱。|  
+|TABLE_TYPE|**String**|資料表類型。|  
+|REMARKS|**String**|資料表的描述。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|TYPE_CAT|**String**|JDBC 驅動程式不支援。|  
+|TYPE_SCHEM|**String**|JDBC 驅動程式不支援。|  
+|TYPE_NAME|**String**|JDBC 驅動程式不支援。|  
+|SELF_REFERENCING_COL_NAME|**String**|JDBC 驅動程式不支援。|  
+|REF_GENERATION|**String**|JDBC 驅動程式不支援。|  
   
 > [!NOTE]  
->  多個由 getTables 方法傳回之資料的詳細資訊，請參閱"sp_tables (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getTables 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_tables (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getTables 方法傳回的 Person.Contact 資料表中的資料表描述資訊[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。  
+ 下列範例示範如何使用 getTables 方法來傳回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫中 Person.Contact 資料表的資料表描述資訊。  
   
 ```  
 public static void executeGetTables(Connection con) {  

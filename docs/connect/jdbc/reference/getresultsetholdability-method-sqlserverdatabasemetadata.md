@@ -1,5 +1,5 @@
 ---
-title: getResultSetHoldability 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getResultSetHoldability 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17b464323d950477ed5d2f66fc2b55822258d501
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dc11c559628fff46b6cf3047105f4ef003035232
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837243"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785605"
 ---
 # <a name="getresultsetholdability-method-sqlserverdatabasemetadata"></a>getResultSetHoldability 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +39,15 @@ public int getResultSetHoldability()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **Int** ，指出預設的保留性。  
+ **int**，指出預設的保留性。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getResultSetHoldability 方法是由 java.sql.DatabaseMetaData 介面中 getResultSetHoldability 方法指定。  
   
- 當使用[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料庫，這個方法會傳回 1，相當於 ResultSet.HOLD_CURSORS_OVER_COMMIT 常數。  
+ 當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會傳回等同於 ResultSet.HOLD_CURSORS_OVER_COMMIT 常數的 1。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

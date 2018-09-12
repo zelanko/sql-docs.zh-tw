@@ -1,5 +1,5 @@
 ---
-title: 處理中繼資料，JDBC 驅動程式 |Microsoft 文件
+title: 使用 JDBC Driver 處理中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6fbf435775709ec9890b1c26832b1730f8c6d31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 57e5ac25c8196b15bd204e993090efd69f2cb55c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829413"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784378"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>使用 JDBC Driver 處理中繼資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]可以用來處理中繼資料中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫中有許多種。 JDBC 驅動程式可用來取得有關資料庫的中繼資料、結果集或參數。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 可用許多不同方式來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的中繼資料。 JDBC 驅動程式可用來取得有關資料庫的中繼資料、結果集或參數。  
   
- JDBC 驅動程式提供三種類別來擷取中繼資料從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫：  
+ JDBC 驅動程式提供三種類別來擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的中繼資料：  
   
--   [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)，用來傳回目前連接之資料庫的相關資訊。  
+-   [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)，用來傳回目前所連線資料庫的相關資訊。  
   
 -   [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)，用來傳回結果集的相關資訊。  
   
--   [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md)，用來傳回已備妥及可呼叫陳述式的參數資訊。  
+-   [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md)，用來傳回已準備和可呼叫陳述式的參數相關資訊。  
   
- 本節主題說明如何使用三個中繼資料類別的每個使用中的中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
+ 本節中的主題描述如何使用這三個中繼資料類型來使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的中繼資料。  
   
 > [!NOTE]  
 >  從應用程式效能方面來看，本節所討論的中繼資料方法一般而言成本較高，因此使用時要小心。  

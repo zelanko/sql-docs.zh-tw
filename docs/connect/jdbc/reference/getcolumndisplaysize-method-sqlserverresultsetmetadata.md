@@ -1,5 +1,5 @@
 ---
-title: getColumnDisplaySize 方法 (SQLServerResultSetMetaData) |Microsoft 文件
+title: getColumnDisplaySize 方法 (SQLServerResultSetMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97d5899370329d49d6ed289e8742ebcab6d402d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7f2c1f3efa0b4aeb6417d947ba524b10ff44035
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832163"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787358"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,15 +44,15 @@ public int getColumnDisplaySize(int column)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- **Int**表示的最大寬度。 如果寬度未知，則會傳回 0。  
+ **int**，指出最大寬度。 如果寬度未知，則會傳回 0。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getColumnDisplaySize 方法是由 java.sql.ResultSetMetaData 介面中 getColumnDisplaySize 方法指定。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 驅動程式 3.0 在 COLUMN_SIZE 資料行中有行為變更。 如需詳細資訊，請參閱 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 在 COLUMN_SIZE 資料行中有行為變更。 如需詳細資訊，請參閱 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSetMetaData 成員](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

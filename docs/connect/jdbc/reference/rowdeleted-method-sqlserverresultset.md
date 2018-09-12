@@ -1,5 +1,5 @@
 ---
-title: rowDeleted 方法 (SQLServerResultSet) |Microsoft 文件
+title: rowDeleted 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5a42409119b1d0e4280e36d417fd4d149b7625a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 90dc0d90de6c0ae55b29085b7658b7b71f21e32d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841633"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786791"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>rowDeleted 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,18 +39,18 @@ public boolean rowDeleted()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果一個資料列已經刪除而且偵測到刪除則。 否則為 **false**。  
+ 如果資料列已經刪除且偵測到刪除，則為 **true**。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 rowDeleted 方法是由 java.sql.ResultSet 介面中的 rowDeleted 方法來指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 rowDeleted 方法是由 java.sql.ResultSet 介面中的 rowDeleted 方法指定。  
   
- 刪除的資料列可能會在結果集中留下可見的漏洞。 這個方法可用來偵測結果集中的漏洞。 傳回的值取決於是否這[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件可以偵測到刪除。  
+ 刪除的資料列可能會在結果集中留下可見的漏洞。 這個方法可用來偵測結果集中的漏洞。 傳回的值取決於這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件是否可以偵測到刪除。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 會偵測所有可更新的資料指標類型，已刪除的資料列，雖然偵測作業屬於暫時順向和動態資料指標。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會偵測所有可更新資料指標類型的資料列，雖然順向和動態資料指標的偵測作業屬於暫時性質。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

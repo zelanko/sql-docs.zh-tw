@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 （int，java.util.Calendar） (SQLServerResultSet) |Microsoft 文件
+title: getDate 方法 (int, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad49f68c86068907fc0324fc13c6adbe926398f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8b58834c9a95c3ebf8b4562d323633b5af08df26
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834583"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784357"
 ---
-# <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate 方法 （int，java.util.Calendar） (SQLServerResultSet)
+# <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate 方法 (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，這個目前的資料列內指定之資料行索引的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)來當做 java.sql.Date 物件在 Java 程式語言，並透過給定的行事曆物件中的物件。  
+  使用 Java 程式設計語言，並透過指定 Calendar 物件，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中指定資料行索引的值來當作 java.sql.Date 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ public java.sql.Date getDate(int columnIndex,
   
  *cal*  
   
- 行事曆物件。  
+ 月曆物件。  
   
 ## <a name="return-value"></a>傳回值  
  Date 物件。  
@@ -54,10 +54,10 @@ public java.sql.Date getDate(int columnIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetDate 方法 java.sql.ResultSet 介面中所指定此 getDate 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 getDate 方法是由 java.sql.ResultSet 介面中的 getDate 方法指定。  
   
- 這個方法會傳回有效日期部分[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]datetime 或 smalldatetime 資料型別，而時間部分是設定成 Java 時間基準 00:00 （午夜） 中提供的月曆時區。  
+ 這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料類型中的有效日期部分，而時間部分是設定成 Java 基準時間 (午夜) 00:00 (根據所提供的日曆時區)。  
   
 ## <a name="see-also"></a>另請參閱  
  [getDate 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   

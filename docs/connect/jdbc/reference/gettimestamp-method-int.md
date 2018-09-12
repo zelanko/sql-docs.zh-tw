@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 (int) |Microsoft 文件
+title: getTimestamp 方法 (int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9169645c578a2f5a45c75248c61e99d61771bb11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e60839e4bd4cd42211712233f75cfc0018a2ee01
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838803"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786432"
 ---
 # <a name="gettimestamp-method-int"></a>getTimestamp 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,23 +39,23 @@ public java.sql.Timestamp getTimestamp(int index)
 ```  
   
 #### <a name="parameters"></a>參數  
- *索引*  
+ *index*  
   
  指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 時間戳記的物件。  
+ 時間戳記物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetTimestamp 方法 java.sql.CallableStatement 介面中所指定此 getTimestamp 方法。  
+## <a name="remarks"></a>Remarks  
+ GetTimestamp 方法 java.sql.CallableStatement 介面中所指定這個 getTimestamp 方法。  
   
- 這個方法會傳回值，只能從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**和**smalldatetime**資料行。  
+ 這個方法只會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 和 **smalldatetime** 資料行中的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [getTimestamp 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+ [getTimestamp 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

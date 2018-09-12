@@ -1,5 +1,5 @@
 ---
-title: getColumnPrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getColumnPrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54f6ef742ac4d61e195e33590d7bdee6ebbc0739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 16c0b0314d4e0e3b2b28e81c118ef0533ba55768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833313"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785739"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,47 +44,47 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- A**字串**，其中包含目錄名稱。  
+ 包含目錄名稱的 **String**。  
   
  *schema*  
   
- A**字串**，其中包含結構描述名稱。  
+ 包含結構描述名稱的 **String**。  
   
  *table*  
   
- A**字串**，其中包含資料表名稱。  
+ 包含資料表名稱的 **String**。  
   
- *資料行*  
+ *col*  
   
- A**字串**，其中包含資料行名稱模式。  
+ 包含資料表名稱模式的 **String**。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getColumnPrivileges 方法是由 java.sql.DatabaseMetaData 介面中 getColumnPrivileges 方法指定。  
   
  GetColumnPrivileges 方法所傳回的結果集將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**字串**|目錄的名稱。|  
-|TABLE_SCHEM|**字串**|資料表結構描述名稱。|  
-|TABLE_NAME|**字串**|資料表名稱。|  
-|COLUMN_NAME|**字串**|資料行名稱。|  
-|GRANTOR|**字串**|授與存取權的物件。|  
-|GRANTEE|**字串**|接收存取權的物件。|  
-|PRIVILEGE|**字串**|授與的存取類型。|  
-|IS_GRANTABLE|**字串**|指出是否允許被授與者授與存取權給其他使用者。|  
+|TABLE_CAT|**String**|目錄的名稱。|  
+|TABLE_SCHEM|**String**|資料表結構描述名稱。|  
+|TABLE_NAME|**String**|資料表名稱。|  
+|COLUMN_NAME|**String**|資料行名稱。|  
+|GRANTOR|**String**|授與存取權的物件。|  
+|GRANTEE|**String**|接收存取權的物件。|  
+|PRIVILEGE|**String**|授與的存取類型。|  
+|IS_GRANTABLE|**String**|指出是否允許被授與者授與存取權給其他使用者。|  
   
 > [!NOTE]  
->  多個 getColumnPrivileges 方法所傳回的資料的詳細資訊，請參閱 「 sp_column_privileges (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getColumnPrivileges 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_column_privileges (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getColumnPrivileges 方法來傳回中的 Person.Contact 資料表中 FirstName 資料行的存取權限[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。  
+ 下列範例會示範如何使用 getColumnPrivileges 方法來傳回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫中 Person.Contact 資料表中 FirstName 資料行的存取權限。  
   
 ```  
 public static void executeGetColumnPrivileges(Connection con) {  

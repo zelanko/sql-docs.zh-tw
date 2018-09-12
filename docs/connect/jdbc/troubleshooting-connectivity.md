@@ -1,5 +1,5 @@
 ---
-title: 疑難排解連線 |Microsoft 文件
+title: 疑難排解連線能力 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,37 +14,37 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f7f46aa17ca8fba97c4c17d6efdfee8358448a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dc0b307790452c1eeb347b4482a13c3f57ec05a6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852043"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787823"
 ---
 # <a name="troubleshooting-connectivity"></a>連接性疑難排解
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]需要 TCP/IP，才能安裝並執行與您[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]組態管理員來確認已安裝的網路程式庫通訊協定。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 需要已安裝並執行 TCP/IP 後，才能與您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫通訊。 您可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來確認哪些網路程式庫通訊協定已安裝。  
   
  資料庫連接嘗試可能會因為許多因素而失敗。 這些因素如下所述：  
   
--   未啟用 TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，或指定的伺服器或連接埠號碼不正確。 確認[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]會接聽指定的伺服器和連接埠上的 TCP/IP。 可能會報告類似以下的例外狀況：「登入失敗。 TCP/IP 連接至主機已失敗。」 此訊息會指出下列其中一項：  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未啟用 TCP/IP，或者指定的伺服器或連接埠號碼不正確。 確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽指定伺服器與連接埠上的 TCP/IP。 可能會報告類似以下的例外狀況：「登入失敗。 TCP/IP 連接至主機已失敗。」 此訊息會指出下列其中一項：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 已安裝但 TCP/IP 尚未安裝做為網路通訊協定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]網路公用程式[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]適用之 Configuration Manager[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]和更新版本。  
+    -   已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但未使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路公用程式，或是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的網路通訊協定。  
   
-    -   TCP/IP 已安裝為[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]通訊協定，但它並未接聽在 JDBC 連接 URL 中指定的連接埠。 預設連接埠為 1433，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，可以在產品安裝，以接聽任何通訊埠設定。 請確定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]通訊埠 1433年上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需 JDBC 連接 Url 的詳細資訊，請參閱[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)。  
+    -   TCP/IP 已安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通訊協定，但未在 JDBC 連線 URL 中指定的連接埠上接聽。 預設連接埠為 1433，但可在產品安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為在任何連接埠上接聽。 請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正於連接埠 1433 上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需有關 JDBC 連接 Url 的詳細資訊，請參閱 < [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)。  
   
-    -   JDBC 連接中指定之電腦的位址 URL 並未參考伺服器其中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]會安裝並啟動。  
+    -   JDBC 連線 URL 中指定的電腦位址並不是指已安裝並啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器。  
   
-    -   用戶端與伺服器之間的 TCP/IP 網路作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不是可執行。 您可以檢查 TCP/IP 連接性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用 telnet。 例如，在命令提示字元中，輸入`telnet 192.168.0.0 1433`其中 192.168.0.0 為執行電腦的位址[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]而 1433年則為正在接聽的連接埠。 如果您收到訊息，指出 「 Telnet 無法連接 」 時，TCP/IP 未接聽該通訊埠[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]連線。 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]網路公用程式[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]適用之 Configuration Manager[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]版本，請確定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]設定為使用 TCP/IP 通訊埠 1433年。  
+    -   用戶端與執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器間的 TCP/IP 網路作業無法運作。 您可使用 telnet 檢查 TCP/IP 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線能力。 例如，在命令提示字元中鍵入 `telnet 192.168.0.0 1433`，其中 192.168.0.0 是執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦位址，而 1433 則是目前接聽所在的連接埠。 如果您收訊息，內容指出「Telnet 無法連線」，即表示 TCP/IP 沒有在該連接埠上接聽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線。 請使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路公用程式，或是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，來確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已設定為在連接埠 1433 上使用 TCP/IP。  
   
     -   伺服器所使用的通訊埠尚未在防火牆內開啟。 這包括伺服器所使用的通訊埠，或與具名的伺服器執行個體相關聯的選用通訊埠。  
   
--   指定的資料庫名稱不正確。 請確定您正登入到現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
+-   指定的資料庫名稱不正確。 請確定您正在登入現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
 -   使用者名稱或密碼不正確。 請確定您擁有正確的值。  
   
--   當您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，JDBC 驅動程式會要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]會隨[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，但不是預設值。 請確定您安裝或設定您的執行個體時，會包含此選項[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+-   當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，JDBC 驅動程式需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證一同安裝，這不是預設。 請確定當您安裝或設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，已包含此選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   

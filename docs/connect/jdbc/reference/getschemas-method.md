@@ -1,5 +1,5 @@
 ---
-title: getSchemas 方法 （) |Microsoft 文件
+title: getSchemas 方法 （) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04066c42fabfd81d5579e4900bd6072c7f767747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bdfcd711d1ddc2b36fe4524b14cd12455f346b30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839413"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785436"
 ---
 # <a name="getschemas-method-"></a>getSchemas 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,28 +39,28 @@ public java.sql.ResultSet getSchemas()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetSchemas 方法 java.sql.DatabaseMetaData 介面中所指定此 getSchemas 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 getSchemas 方法是由 java.sql.DatabaseMetaData 介面中 getSchemas 方法指定。  
   
- GetSchemas 方法所傳回的結果集包含下列資訊：  
+ 透過 getSchemas 方法所傳回的結果集將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**字串**|結構描述的名稱。|  
-|TABLE_CATALOG|**字串**|結構描述的目錄名稱。|  
+|TABLE_SCHEM|**String**|結構描述的名稱。|  
+|TABLE_CATALOG|**String**|結構描述的目錄名稱。|  
   
  這些結果會依據 TABLE_CATALOG 排列，接著再依據 TABLE_SCHEM 排列。 每個資料列都是以 TABLE_SCHEM 做為第一個資料列，以 TABLE_CATALOG 做為第二個資料列。  
   
 > [!NOTE]  
->  GetSchemas 方法所傳回的資料的詳細資訊，請參閱 < sys.schemas (TRANSACT-SQL) 」 中,[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getSchemas 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sys.schemas (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getSchemas 方法來傳回目錄，並在其相關聯的結構描述名稱的相關資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]當連接引數指定要使用的資料庫。  
+ 下列範例會示範當連接引數指定要使用的資料庫時，如何在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用 getSchemas 方法來傳回目錄及其相關聯結構描述名稱的相關資訊。  
   
 ```  
 public static void executeGetSchemas(Connection con) {  

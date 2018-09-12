@@ -1,5 +1,5 @@
 ---
-title: getPrimaryKeys 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getPrimaryKeys 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15e8882067a67ec5d276e23c7cb3d2ea3684bf38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 80ea0345ffa8e608c3e67ab90b0ad108cde143d4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837443"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785449"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,41 +43,41 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 #### <a name="parameters"></a>參數  
  *cat*  
   
- A**字串**，其中包含目錄名稱。  
+ 包含目錄名稱的 **String**。  
   
  *schema*  
   
- A**字串**，其中包含結構描述名稱。  
+ 包含結構描述名稱的 **String**。  
   
  *table*  
   
- A**字串**，其中包含資料表名稱。  
+ 包含資料表名稱的 **String**。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getPrimaryKeys 方法是由 java.sql.DatabaseMetaData 介面中 getPrimaryKeys 方法指定。  
   
- GetPrimaryKeys 方法所傳回的結果集將包含下列資訊：  
+ 透過 getPrimaryKeys 方法所傳回的結果集將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TABLE_CAT|字串|指定之資料表所在的資料庫名稱。|  
-|TABLE_SCHEM|字串|資料表的結構描述。|  
-|TABLE_NAME|字串|資料表的名稱。|  
-|COLUMN_NAME|字串|資料行的名稱。|  
+|TABLE_CAT|String|指定之資料表所在的資料庫名稱。|  
+|TABLE_SCHEM|String|資料表的結構描述。|  
+|TABLE_NAME|String|資料表的名稱。|  
+|COLUMN_NAME|String|資料行的名稱。|  
 |KEY_SEQ|short|資料行在多重資料行主索引鍵中的序號。|  
-|PK_NAME|字串|主索引鍵的名稱。|  
+|PK_NAME|String|主索引鍵的名稱。|  
   
 > [!NOTE]  
->  多個 getPrimaryKeys 方法所傳回的資料的詳細資訊，請參閱 「 sp_pkeys (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getPrimaryKeys 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_pkeys (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何傳回有關的 Person.Contact 資料表中的主索引鍵使用 getPrimaryKeys 方法[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。  
+ 下列範例會示範如何使用 getPrimaryKeys 方法來傳回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫中 Person.Contact 資料表中主索引鍵的相關資訊。  
   
 ```  
 public static void executeGetPrimaryKeys(Connection con) {  

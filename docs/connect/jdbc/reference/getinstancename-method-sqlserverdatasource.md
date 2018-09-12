@@ -1,5 +1,5 @@
 ---
-title: getInstanceName 方法 (SQLServerDataSource) |Microsoft 文件
+title: getInstanceName 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83ee00a02b29a1d0dd8bba87fe81a1bfbfe0c4e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 86d209b066d9a2e08052e143b8e7b6a08ee183a0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834513"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785259"
 ---
 # <a name="getinstancename-method-sqlserverdatasource"></a>getInstanceName 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  傳回[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]執行個體名稱。  
+  傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ public java.lang.String getInstanceName()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**，其中包含執行個體名稱，或如果未不設定任何值則為 null。  
+ 包含執行個體名稱的 **String**，如果未設定任何值，則為 null。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

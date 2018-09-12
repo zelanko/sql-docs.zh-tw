@@ -1,5 +1,5 @@
 ---
-title: getVersionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getVersionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 449af2fc385e569c8a08051f155f704108153f84
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841623"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783863"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +43,43 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- A**字串**，其中包含目錄名稱。  
+ 包含目錄名稱的 **String**。  
   
  *schema*  
   
- A**字串**，包含結構描述名稱模式。  
+ 包含結構描述名稱模式的 **String**。  
   
  *table*  
   
- A**字串**，其中包含資料表名稱。  
+ 包含資料表名稱的 **String**。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getVersionColumns 方法是由 java.sql.DatabaseMetaData 介面中 getVersionColumns 方法指定。  
   
- GetVersionColumns 方法所傳回的結果集將包含下列資訊：  
+ 透過 getVersionColumns 方法所傳回的結果將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|JDBC 驅動程式不支援。|  
-|COLUMN_NAME|**字串**|資料行名稱。|  
+|COLUMN_NAME|**String**|資料行名稱。|  
 |DATA_TYPE|**short**|來自 java.sql.Types 的 SQL 資料型別。|  
-|TYPE_NAME|**字串**|資料類型的名稱。|  
+|TYPE_NAME|**String**|資料類型的名稱。|  
 |COLUMN_SIZE|**int**|資料行的有效位數。|  
 |BUFFER_LENGTH|**int**|資料行長度 (以位元組為單位)。|  
 |DECIMAL_DIGITS|**short**|資料行的小數位數。|  
 |PSEUDO_COLUMN|**short**|指出資料行是否為虛擬資料行。 它可能是下列其中一個值：<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
->  多個 getVersionColumns 方法所傳回的資料的詳細資訊，請參閱 「 sp_datatype_info (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getVersionColumns 方法所傳回資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_datatype_info (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getVersionColumns 方法來傳回有關自動更新的資料行中的 Person.Contact 資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。  
+ 下列範例會示範如何使用 getVersionColumns 方法來傳回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫中 Person.Contact 資料表中自動更新的資料行相關資訊。  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  

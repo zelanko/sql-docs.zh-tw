@@ -1,5 +1,5 @@
 ---
-title: deletesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: deletesAreDetected 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be04cfff99afb70570cf00fc7191738593be2cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6def9d94b1cbfb1b3e6bee07454d5f5adad2392
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832283"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786437"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  可以呼叫來偵測可見資料列的刪除是否擷取[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)類別。  
+  擷取值，此值指出是否可呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法來偵測可見資料列刪除。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ public boolean deletesAreDetected(int type)
 #### <a name="parameters"></a>參數  
  *type*  
   
- **Int** ，指出結果集類型，可以是下列值的其中一個定義於 java.sql.ResultSet 或 SQLServerResultSet 中：  
+ 指出結果集類型的 **int**，可以是定義於 java.sql.ResultSet 或 SQLServerResultSet 中的下列其中一個值：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 型別  
  TYPE_FORWARD_ONLY  
@@ -64,16 +64,16 @@ public boolean deletesAreDetected(int type)
 ## <a name="return-value"></a>傳回值  
  **true**如果一個洞來取代刪除的資料列。 **false**如果移除刪除的資料列。  
   
- 使用時[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料庫，這個方法會傳回**true**針對 TYPE_SS_SCROLL_KEYSET 資料指標和**false**的所有其他結果集類型。  
+ 當配合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫使用 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 時，這個方法會針對 TYPE_SS_SCROLL_KEYSET 資料指標傳回 **true**，而針對所有的其他結果集類型傳回 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 deletesAreDetected 方法是由 java.sql.DatabaseMetaData 介面中 deletesAreDetected 方法指定。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 會偵測所有可更新的資料指標類型，已刪除的資料列，雖然偵測作業屬於暫時順向和動態資料指標。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會偵測所有可更新資料指標類型的資料列，雖然順向和動態資料指標的偵測作業屬於暫時性質。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

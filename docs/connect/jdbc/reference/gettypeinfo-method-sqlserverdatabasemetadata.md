@@ -1,5 +1,5 @@
 ---
-title: getTypeInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getTypeInfo 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d81b932d536240b01c79e8e4a8e8589efae4d603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1917982457f00ff4e383d8ba8d317de4352cb61
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843253"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787360"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,44 +39,44 @@ public java.sql.ResultSet getTypeInfo()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getTypeInfo 方法是由 java.sql.DatabaseMetaData 介面中 getTypeInfo 方法指定。  
   
- GetTypeInfo 方法所傳回的結果集將包含下列資訊：  
+ getTypeInfo 方法所傳回的結果將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TYPE_NAME|**字串**|資料類型的名稱。|  
+|TYPE_NAME|**String**|資料類型的名稱。|  
 |DATA_TYPE|**short**|來自 java.sql.Types 的 SQL 資料型別。|  
 |PRECISION|**int**|有效位數的總數。|  
-|LITERAL_PREFIX|**字串**|用於常數前面的字元或多個字元。|  
-|LITERAL_SUFFIX|**字串**|用於中止常數的字元或多個字元。|  
-|CREATE_PARAMS|**字串**|資料類型之 creation 參數的描述。|  
+|LITERAL_PREFIX|**String**|用於常數前面的字元或多個字元。|  
+|LITERAL_SUFFIX|**String**|用於中止常數的字元或多個字元。|  
+|CREATE_PARAMS|**String**|資料類型之 creation 參數的描述。|  
 |NULLABLE|**short**|指出資料行是否能包含 null 值。 它可能是下列其中一個值：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
-|CASE_SENSITIVE|**boolean**|指出資料類型是否區分大小寫。 「**true**"如果類型是區分大小寫，否則 「**false**"。|  
+|CASE_SENSITIVE|**boolean**|指出資料類型是否區分大小寫。 如果類型會區分大小寫則為 "**true**"，否則為 "**false**"。|  
 |SEARCHABLE|**short**|指出資料行是否能用於 SQL WHERE 子句。 它可能是下列其中一個值：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
-|UNSIGNED_ATTRIBUTE|**boolean**|指出資料類型的正負號。 「**true**"如果類型是不帶正負號; 否則 「**false**"。|  
-|FIXED_PREC_SCALE|**boolean**|指出資料類型可以是 money 值。 "**true**"如果資料類型為 money 類型，否則"**false**"。|  
-|AUTO_INCREMENT|**boolean**|指出資料類型可以自動遞增。 「**true**"if 類型可以自動遞增，否則 「**false**"。|  
-|LOCAL_TYPE_NAME|**字串**|資料類型的當地語系化名稱。|  
+|UNSIGNED_ATTRIBUTE|**boolean**|指出資料類型的正負號。 如果類型不帶正負號則為 "**true**"，否則為 "**false**"。|  
+|FIXED_PREC_SCALE|**boolean**|指出資料類型可以是 money 值。 如果資料類型是 money 值則為"**true**"，否則為 "**false**"。|  
+|AUTO_INCREMENT|**boolean**|指出資料類型可以自動遞增。 如果類型可以自動遞增則為 "**true**"，否則為 "**false**"。|  
+|LOCAL_TYPE_NAME|**String**|資料類型的當地語系化名稱。|  
 |MINIMUM_SCALE|**short**|小數點右邊的最大位數。|  
 |MAXIMUM_SCALE|**short**|小數點右邊的最小位數。|  
 |SQL_DATA_TYPE|**int**|JDBC 驅動程式不支援。|  
 |SQL_DATETIME_SUB|**int**|JDBC 驅動程式不支援。|  
 |NUM_PREC_RADIX|**int**|用來計算資料行可保留之最大數字的位元數目或位數。|  
 |INTERVAL_PRECISION|**smallint**|間隔開頭有效位數的值。|  
-|USERTYPE|**smallint**|**Usertype**值**systypes**資料表。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 線上叢書》。|  
+|USERTYPE|**smallint**|**systypes** 資料表中的 **usertype** 值。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》。|  
   
 > [!NOTE]  
->  多個 getTypeInfo 方法所傳回的資料的詳細資訊，請參閱 「 sp_datatype_info (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
+>  如需 getTypeInfo 方法所回傳資料的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜sp_datatype_info (Transact-SQL)＞。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getTypeInfo 方法來傳回使用中的資料類型的相關資訊[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]（或更新版本） 資料庫。  
+ 下列範例將示範如何使用 getTypeInfo 方法來傳回 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (或更新版本) 資料庫中所使用之資料類型的相關資訊。  
   
 ```  
 public static void executeGetTypeInfo(Connection con) {  

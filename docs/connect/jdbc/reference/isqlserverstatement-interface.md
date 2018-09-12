@@ -1,5 +1,5 @@
 ---
-title: ISQLServerStatement 介面 |Microsoft 文件
+title: ISQLServerStatement 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c292f5540706e924ecf56b5e34174d041af1b21e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 36fc0247fa436d7be7e06e6ff5d00406ff389aa8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839423"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785912"
 ---
 # <a name="isqlserverstatement-interface"></a>ISQLServerStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  代表 JDBC 陳述式功能的基本實作。 此介面已加入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC 驅動程式 3.0。  
+  代表 JDBC 陳述式功能的基本實作。 這個介面是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增。  
   
- **封裝：** com.microsoft.sqlserver.jdbc  
+ **套件：** com.microsoft.sqlserver.jdbc  
   
  **擴充：** java.sql.Statement  
   
@@ -37,12 +37,12 @@ ms.locfileid: "32839423"
 public interface ISQLServerStatement  
 ```  
   
-## <a name="remarks"></a>備註  
- 這個介面由實作[SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)。  
+## <a name="remarks"></a>Remarks  
+ 此介面由實作[SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)。  
   
- 這個介面會公開下列[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特有的方法：  
+ 此介面會公開下列 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的特定方法：  
   
-|方法|如需詳細資訊，請參閱|  
+|方法|如需相關資訊，請參閱|  
 |------------|-------------------------------|  
 |public String getResponseBuffering|[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|  
 |public void setResponseBuffering|[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|  

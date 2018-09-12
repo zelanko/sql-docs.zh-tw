@@ -1,5 +1,5 @@
 ---
-title: getString 方法 (int) (SQLServerResultSet) |Microsoft 文件
+title: getString 方法 (int) (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51332e0e8d3b09723130585b770fff3d9d4b6e80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 24622aafce61bd5e4fe0faf07ee23d863a7c3628
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837823"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786070"
 ---
 # <a name="getstring-method-int-sqlserverresultset"></a>getString 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，這個目前的資料列內指定之資料行索引的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件當做**字串**在 Java 程式語言。  
+  使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中指定資料行索引的值來當作**字串**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,22 +44,22 @@ public java.lang.String getString(int columnIndex)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**值。  
+ **字串**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 getString 方法是由 java.sql.ResultSet 介面中的 getString 方法來指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 getString 方法是由 java.sql.ResultSet 介面中的 getString 方法指定。  
   
- 中的所有資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以當做字串傳回。 這表示**字串**的所有數字和字元類型，表示和十六進位字串表示法，例如 binary、 varbinary、 varbinary （max）、 映像、 時間戳記，以及 uniqueidentifier、 二進位資料行可以是傳回。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的所有資料行都可以當作字串傳回。 這表示可以傳回所有數字和字元類型的**字串**表示法，以及二進位資料行的十六進位字串表示法，例如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier。  
   
  區分位置的型別 (例如 money、smallmoney、datetime、smalldatetime、float、real、decimal 和 numeric) 將會針對該型別的基礎值傳回標準 toString() 格式。  
   
- 使用者定義型別會當做十六進位傳回**字串**值。  
+ 使用者定義型別會當作十六進位**字串**值傳回。  
   
 ## <a name="see-also"></a>另請參閱  
- [getString 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   
+ [getString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

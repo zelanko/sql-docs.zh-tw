@@ -1,5 +1,5 @@
 ---
-title: executeUpdate 方法 (java.lang.String) (SQLServerStatement) |Microsoft 文件
+title: executeUpdate 方法 (java.lang.String) (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148f2887e01d5238ac7461f4922eea77af599bdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5a9acd92a357866a6a7dea79f215710d9687019a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833623"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785766"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>executeUpdate 方法 (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  執行可能是 INSERT、UPDATE 或 DELETE 陳述式的給定 SQL 陳述式，否則會是不傳回任何項目的 SQL 陳述式，例如 SQL DDL 陳述式。 從開始[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 中，executeUpdate 將會傳回正確的更新合併作業中的資料列數目。  
+  執行可能是 INSERT、UPDATE 或 DELETE 陳述式的給定 SQL 陳述式，否則會是不傳回任何項目的 SQL 陳述式，例如 SQL DDL 陳述式。 從 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 開始，executeUpdate 將會傳回 MERGE 作業中更新的正確資料列數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ public int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>參數  
  *sql*  
   
- A**字串**，其中包含 SQL 陳述式。  
+ 包含 SQL 陳述式的 **String**。  
   
 ## <a name="return-value"></a>傳回值  
  **int** 會指出受影響的資料列數目，如果是使用 DDL 陳述式，則為 0。  
@@ -49,7 +49,7 @@ public int executeUpdate(java.lang.String sql)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 executeUpdate 方法是由 java.sql.Statement 介面中的 executeUpdate 方法指定。  
   
  如果執行預存程序產生的更新計數大於一或是產生一個以上的結果集，請使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法執行預存程序。  
