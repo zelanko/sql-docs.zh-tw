@@ -38,7 +38,7 @@ ms.locfileid: "43269550"
 ## <a name="ways-to-create-the-report-server-database"></a>建立報表伺服器資料庫的方法  
  **原生模式：** 您可以利用下列方式建立原生模式報表伺服器資料庫：  
   
--   自動：如果選擇預設組態安裝選項，則會使用 SQL Server 安裝精靈。 在 [SQL Server 安裝精靈] 中，這是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [Install only] (只安裝) 選項，就必須使用 Reporting Services 設定管理員建立資料庫。  
+-   自動：如果選擇預設組態安裝選項，則會使用 SQL Server 安裝精靈。 在 [SQL Server 安裝精靈] 中，這是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [Install only]  (只安裝) 選項，就必須使用 Reporting Services 設定管理員建立資料庫。  
   
 -   手動：使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來主控報表伺服器資料庫，您必須手動建立此資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   

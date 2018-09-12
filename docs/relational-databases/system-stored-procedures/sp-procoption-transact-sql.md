@@ -53,7 +53,7 @@ sp_procoption [ @ProcName = ] 'procedure'
  這是您要設定的選項名稱。 唯一的值* 選項*是**啟動**。  
   
  [  **@OptionValue =** ] **'***值***'**  
- 這是指是否選項設為 on (**，則為 true**或**上**) 或 [關閉] (**false**或**關閉**)。 *值*已**varchar(12)**，沒有預設值。  
+ 這是指是否選項設為 on (**，則為 true**或**上**) 或 [關閉]  (**false**或**關閉**)。 *值*已**varchar(12)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或錯誤號碼 (失敗)  
