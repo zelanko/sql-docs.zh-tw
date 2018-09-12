@@ -40,7 +40,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/16/2018
 ms.locfileid: "42787371"
 ---
-# <a name="sqlcmd-utility"></a>sqlcmd 工用程式
+# <a name="sqlcmd-utility"></a>sqlcmd 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](sqlcmd-utility.md)。
