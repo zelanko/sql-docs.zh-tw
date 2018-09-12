@@ -1,7 +1,7 @@
 ---
 title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,19 +26,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d16529308dc45fd64f6b16d7dec92f1fe8be8cc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 85ee3b6a5f674a9d4ee63cb54ffca867abca1f04
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452112"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171740"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 來建立伺服器稽核物件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +45,7 @@ ms.locfileid: "39452112"
 ```  
 CREATE SERVER AUDIT audit_name  
 {  
-    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG }  
+    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL}  
     [ WITH ( <audit_options> [ , ...n ] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -80,8 +78,11 @@ CREATE SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>引數  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG }  
+ TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL  
  判斷稽核目標的位置。 選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就無法寫入 Windows 安全性記錄檔。 如需詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
+
+> [!IMPORTANT]
+> 在 Azure SQL Database 受控執行個體中，SQL Audit 會在伺服器層級執行並在 Azure Blob 儲存體中存放 `.xel` 檔案。
   
  FILEPATH ='*os_file_path*'  
  稽核記錄檔的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  
@@ -149,12 +150,12 @@ SHUTDOWN
   
  ANSI 或 Unicode 字串 (依述詞比較的需求而定)。 不會針對述詞比較函數執行隱含字串類型轉換。 傳遞錯誤的類型會產生錯誤。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當建立伺服器稽核之後，它就會處於停用狀態。  
   
  CREATE SERVER AUDIT 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要建立、更改或卸除伺服器稽核，主體需要使用 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以限制對檔案位置的存取：  

@@ -1,7 +1,7 @@
 ---
 title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,15 +27,15 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942924"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171800"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   修改組件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄屬性來改變組件。 ALTER ASSEMBLY 會將它重新整理為保留其實作的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組最新備份，並且加入或移除其相關檔案。 組件是利用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 加以建立的。  
 
@@ -79,6 +79,9 @@ ALTER ASSEMBLY assembly_name
  將組件更新為保留其實作的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組最新備份。 只有在沒有與指定組件相關的檔案時，才能使用這個選項。  
   
  \<client_assembly_specifier> 會指定正在重新整理之組件所在的網路或本機位置。 網路位置包含電腦名稱、共用名稱，以及該共用內的路徑。 *manifest_file_name* 指定包含組件資訊清單的檔案名稱。  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援參考檔案。
   
  \<assembly_bits> 是組件的二進位值。  
   
@@ -118,15 +121,15 @@ ALTER ASSEMBLY assembly_name
  從資料庫移除與該組件相關聯的檔案名稱，或是所有與該組件相關聯的檔案。 如果使用底下的 ADD FILE，則會先執行 DROP FILE。 此舉可讓您取代同名的檔案。  
   
 > [!NOTE]  
->  自主資料庫無法使用這個選項。  
+>  此選項在自主資料庫或 Azure SQL Database 中無法使用。  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  將與組件相關聯的檔案 (例如，原始程式碼、偵錯檔案或其他相關資訊)，上傳到伺服器，並顯示在 **sys.assembly_files** 目錄檢視中。 *client_file_specifier* 會指定要上傳檔案的位置。 您可以改用 *file_bits* 來指定構成該檔的二進位值清單。 *file_name* 會指定該檔案儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所用的名稱。 如果已指定 *file_bits*，則必須指定 *file_name*，而如果已指定 *client_file_specifier*，則為選用。 如果未指定 *file_name*，*client_file_specifier* 的 file_name 部分會作為 *file_name* 使用。  
   
 > [!NOTE]  
->  自主資料庫無法使用這個選項。  
+>  此選項在自主資料庫或 Azure SQL Database 中無法使用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  ALTER ASSEMBLY 不會中斷正在修改的組件中，目前正在執行程式碼的執行中工作階段。 目前工作階段是利用組件的未修改位元，來完成執行作業。  
   
  如果指定了 FROM 子句，ALTER ASSEMBLY 便會以所提供的模組最新備份來更新組件。 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，可能已經針對該組件定義了 CLR 函數、預存程序、觸發程序、資料類型和使用者定義彙總函式，因此 ALTER ASSEMBLY 陳述式會將它們重新繫結到組件的最新實作中。 若要重新繫結，則對應到 CLR 函數、預存程序和觸發程序的方法，必須仍以相同的簽章留在修改後的組件中。 實作 CLR 使用者自訂類型和使用者定義彙總函式的類別，仍然必須滿足身為使用者自訂類型或彙總函式的需求。  
@@ -168,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  如果執行 ALTER ASSEMBLY 時，沒有 UNCHECKED 資料子句，則會進行檢查，驗證新組件版本沒有影響資料表中現有的資料。 此舉可能會影響效能，這一點要看必須檢查的資料量而定。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>權限  
  需要組件的 ALTER 權限。 其他需求如下：  
   
 -   若要變更現有權限集合為 EXTERNAL_ACCESS 的組件，則需要伺服器的 **EXTERNAL ACCESS ASSEMBLY** 權限。  
@@ -205,6 +208,10 @@ ALTER ASSEMBLY assembly_name
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援參考檔案。
+
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. 加入檔案，與組件建立關聯  
  下列範例會上傳即將與組件 `Class1.cs` 建立關聯的原始程式碼檔案 `MyClass`。 這個範例假設組件 `MyClass` 已在資料庫中建立。  
   
@@ -212,7 +219,10 @@ ALTER ASSEMBLY assembly_name
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援參考檔案。
+
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>C. 變更組件的權限  
  下列範例會將組件 `ComplexNumber` 的權限集合，從 SAFE 改為 `EXTERNAL ACCESS`。  
   

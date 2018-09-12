@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,21 +27,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 63619b21a6e82458a64128a4f892cac6c6220420
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457962"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171562"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   提供特定連接資訊做為四部分物件名稱，而不使用連結伺服器名稱。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,13 +62,13 @@ OPENDATASOURCE ( provider_name, init_string )
 |資料來源|DBPROP_INIT_DATASOURCE|要連接的資料來源名稱。 不同提供者以不同方式解譯這個名稱。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，這表示伺服器的名稱。 如果是 Jet OLE DB 提供者，這表示 .mdb 檔或 .xls 檔的完整路徑。|  
 |位置|DBPROP_INIT_LOCATION|要連接的資料庫位置。|  
 |擴充屬性|DBPROP_INIT_PROVIDERSTRING|提供者特定連接字串。|  
-|連接逾時|DBPROP_INIT_TIMEOUT|逾時值，在此之後連接嘗試會失敗。|  
+|連接逾時|DBPROP_INIT_TIMEOUT|逾時值，在此之後連線嘗試會失敗。|  
 |使用者識別碼|DBPROP_AUTH_USERID|用於連接的使用者識別碼。|  
 |[密碼]|DBPROP_AUTH_PASSWORD|用於連接的密碼。|  
 |目錄|DBPROP_INIT_CATALOG|連接到資料來源的初始或預設目錄名稱。|  
 |整合式安全性|DBPROP_AUTH_INTEGRATED|SSPI，用來指定 Windows 驗證|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  唯有針對指定的提供者將 DisallowAdhocAccess 登錄選項明確設為 0 時，且已啟用 [特定分散式查詢] 進階組態選項時，才可使用 OPENDATASOURCE 來存取 OLE DB 資料來源的遠端資料。 若未設定這些選項，預設行為便不允許特定存取。  
   
  OPENDATASOURCE 函數可使用於與連結伺服器名稱相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法位置。 因此，OPENDATASOURCE 可做為四部分名稱的第一部分使用，來參考 SELECT、INSERT、UPDATE 或 DELETE 陳述式中的資料表或檢視名稱，或參考 EXECUTE 陳述式中的遠端預存程序。 執行遠端預存程序時，OPENDATASOURCE 應該參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體。 OPENDATASOURCE 不接受變數做為其引數。  
@@ -80,11 +78,11 @@ OPENDATASOURCE ( provider_name, init_string )
 > [!IMPORTANT]  
 >  Windows 驗證比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證更安全。 可能的話，您應該使用 Windows 驗證。 OPENDATASOURCE 不應與連接字串中的明確密碼一起使用。  
   
- 每一個提供者的連接需求都類似於建立連結伺服器時的參數需求。 許多常見提供者的詳細資料列於 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 主題中。  
+ 每一個提供者的連接需求都類似於建立連結伺服器時的參數需求。 許多常見提供者的詳細資料列於 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 文章中。  
   
  FROM 子句中 OPENDATASOURCE、OPENQUERY 或 OPENROWSET 的任何呼叫都會與當做更新目標使用之這些函數的任何呼叫進行個別且獨立的評估，即使完全相同的引數套用至這兩種呼叫也一樣。 尤其，針對其中一個呼叫結果所套用的篩選或聯結條件對於另一個呼叫的結果沒有作用。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  任何使用者都可以執行 OPENDATASOURCE。 您可以從連接字串判斷用來連接到遠端伺服器的權限。  
   
 ## <a name="examples"></a>範例  

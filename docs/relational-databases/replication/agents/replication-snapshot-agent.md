@@ -1,7 +1,7 @@
 ---
 title: 複寫快照集代理程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: replication
@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349990"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311658"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -202,7 +203,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  除非確信有助於提升效能，否則請勿變更封包大小。 對於大部分應用程式而言，預設封包大小是最適當的大小。  
+
+**-PrefetchTables** [ **0**| **1**]  
+ 指定是否要預先擷取並快取資料表物件的選擇性參數。  預設行為是根據內部計算，使用 SMO 元件預先擷取特調資料表內容。  此參數在 SMO 預先擷取作業花非常長的時間執行的情況下很實用。 若未使用此參數，會在執行階段根據已新增為要發佈之發行項的資料表百分比來制訂決策。  
   
+|OutputVerboseLevel 值|描述|  
+|------------------------------|-----------------|  
+|**0**|SMO 元件的「呼叫以預先擷取」方法已停用。|  
+|**1**|「快照集代理程式」將會呼叫預先擷取方法以使用 SMO 快取某些資料表內容|  
+
  **-ProfileName** *profile_name*  
  指定要用於代理程式參數的代理程式設定檔。 如果 **ProfileName** 為 NULL，就會停用代理程式設定檔。 如果沒有指定 **ProfileName** ，就會使用該代理程式類型的預設設定檔。 如需資訊，請參閱[複寫代理程式設定檔](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
@@ -245,10 +254,10 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** *use_per_article_contents_view*  
  這個參數已被取代，而且是為了回溯相容性才提供支援。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的快照集代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，快照集代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
+>  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，此服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的快照集代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，快照集代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
   
  若要啟動快照集代理程式，請從命令提示字元執行 **snapshot.exe** 。 如需詳細資訊，請參閱＜ [複寫代理程式可執行檔](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)＞。  
   

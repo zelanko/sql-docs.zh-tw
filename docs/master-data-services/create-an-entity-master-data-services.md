@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410460"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811084"
 ---
 # <a name="create-an-entity-master-data-services"></a>建立實體 (Master Data Services)
 
@@ -57,7 +57,9 @@ ms.locfileid: "35410460"
      如果未填寫這個欄位，則會使用實體名稱。  
   
     > [!TIP]  
-    >  使用模型名稱當做暫存資料表名稱的一部分，例如 *Modelname_Entityname*。 這樣會更容易在資料庫中找到資料表。 如需暫存資料表的詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+    >  使用模型名稱當做暫存資料表名稱的一部分，例如 *Modelname_Entityname*。 這樣會更容易在資料庫中找到資料表。 如需暫存資料表的詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。
+    > [!TIP]  
+    >  若為暫存表格使用預設命名，且另一個 Model.MDS 中已有同名的實體存在，MDS 會自動將識別碼 (例如 _1、_2) 附加到暫存表格名稱。
   
 7.  在 [交易記錄類型] 欄位中，選擇下拉式清單中的交易記錄類型。  
   

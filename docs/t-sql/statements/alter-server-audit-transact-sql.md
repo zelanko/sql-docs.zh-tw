@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -24,19 +24,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7c409bb68795ae2d15aa549aeca2a419e95c697
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456112"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171840"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能改變伺服器稽核物件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +43,7 @@ ms.locfileid: "39456112"
 ```  
 ALTER SERVER AUDIT audit_name  
 {  
-    [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } ]  
+    [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } | URL]  
     [ WITH ( <audit_options> [ , ...n] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -81,8 +79,11 @@ ALTER SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>引數  
- TO { FILE | APPLICATION_LOG | SECURITY }  
+ TO { FILE | APPLICATION_LOG | SECURITY |URL}  
  判斷稽核目標的位置。 選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。  
+
+> [!IMPORTANT]
+> 在 Azure SQL Database 受控執行個體中，SQL Audit 會在伺服器層級執行並在 Azure Blob 儲存體中存放 `.xel` 檔案。
   
  FILEPATH **= '***os_file_path***'**  
  稽核記錄的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  
@@ -138,7 +139,7 @@ SHUTDOWN
  ANSI 或 Unicode 字串 (依述詞比較的需求而定)。 不會針對述詞比較函數執行隱含字串類型轉換。 傳遞錯誤的類型會產生錯誤。  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  當您呼叫 ALTER AUDIT 時，您至少必須指定其中一個 TO、WITH 或 MODIFY NAME 子句。  
   
  您必須將稽核的狀態設定為 OFF 選項，才能變更稽核。 如果在設定 STATE=OFF 以外的任何選項時啟用稽核，而且執行 ALTER AUDIT，您會收到 MSG_NEED_AUDIT_DISABLED 錯誤訊息。  
@@ -147,7 +148,7 @@ SHUTDOWN
   
  在稽核已建立之後，就不能變更稽核的 GUID。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要建立、改變或卸除伺服器稽核主體，您必須具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

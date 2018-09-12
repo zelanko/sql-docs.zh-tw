@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899498"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889794"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
 
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+組建編號：14.0.17285.0<br>
+發行日期：2018 年 9 月 4 日
+
+### <a name="whats-new"></a>新功能
+
+**一般 SSMS**
+
+
+執行程序表：
+
+- 圖形化執行程序表現在會顯示新資料列模式記憶體授與回應屬性 (當此功能已針對特定方案啟用時)：IsMemoryGrantFeedbackAdjusted 與 LastRequestedMemory 會被新增到 MemoryGrantInfo 查詢計劃 XML 元素。 如需有關資料列模式記憶體授與回應的詳細資訊，請參閱 [SQL 資料庫中的調適型查詢處理](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing)。
+
+Azure SQL： 
+
+- 新增對建立 Azure DB 時的 vCore SKU 支援。 如需詳細資訊，請參閱[以虛擬核心為基礎的購買模型](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+ 
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**一般 SSMS**
+    
+複寫監視器：
+
+- 修正導致複寫監視器 (SqlMonitor.exe) 未啟動的問題 (User Voice 項目： https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+匯入一般檔案精靈： 
+
+- 修正 [一般檔案精靈] 對話方塊說明頁面的連結 
+- 修正當資料表已存在時，精靈不允許變更目的地資料表的問題：這可讓使用者重試，而不需要結束精靈、刪除失敗的資料表，然後重新輸入資訊到精靈 (User Voice 項目： https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 
+
+匯入/匯出資料層應用程式：
+
+- 修正 DacFx 中導致當處理具有已定義且在資料表上無索引的資料表時匯入 .bacpac 失敗並顯示「錯誤 SQL72014: .Net SqlClient 資料提供者: 訊息 9108、層級 16、狀態 10、行 1 此類型的統計資料不支援累加。」 訊息的問題。 
+
+IntelliSense：
+
+- 修正搭配 MFA 使用 AAD 時，intellisense 完成無法運作的問題。 
+
+物件總管： 
+
+- 修正在隨機監視器上而非 SSMS 執行所在監視器 (多監視器系統) 上顯示 [篩選對話方塊] 的問題。
+
+Azure SQL： 
+
+- 修正與 [可用資料庫] 中的列舉相關的問題，其中當連線到特定資料庫時，"master" 未顯示在下拉式清單中。 
+- 修正在搭配 MFA 使用 ADD 連線到 SQL Azure DB 時嘗試產生指令碼 (「資料」或「結構描述與資料」) 失敗的問題。 
+- 修正在檢視表設計工具 (檢視表) 無法在已連線到 SQL Azure DB 的情況下從 UI 選取 [新增資料表] 的問題。 
+- 修正 SSMS 查詢編輯器在 MFA 權杖更新期間自動關閉並重新開啟連線的問題。 這可以防止發生使用者不知情的副作用 (例如關閉交易而且用不重新開啟)。 此變更會將權杖到期時間加到屬性視窗。 
+- 修正 SSMS 未搭配 MFA 登入使用 AAD 針對 MSA 帳戶強制密碼提示的問題。 
+
+活動監視器： 
+
+- 修正導致即時查詢統計資料從活動監視器啟動並使用 SQL 驗證時當機的問題。 
+
+Microsoft Azure 整合： 
+
+- 修正 SSMS 只顯示前 50 的訂用帳戶 (Always Encrypted 對話、來自 URL 的備份/還原等…) 的問題。 
+- 修正 SSMS 在嘗試登入沒有任何儲存體帳戶的 Microsoft Azure 帳戶時擲回例外狀況 (「索引超出範圍」 ) 的問題 (在 [從 URL 還原備份] 對話方塊中)。 
+
+物件指令碼： 
+
+- 編寫「Drop 及 Create」指令碼時，SSMS 現在會避免產生動態 T-SQL。
+- 編寫資料庫物件指令碼時，SSMS 現在不會產生指令碼以設定資料庫範圍設定 (若它們是設定為預設值)。
+
+說明：
+
+- 修正「如何使用輔助說明」未遵循線上/離線模式這個長期未解決的問題。
+- 當按一下 [說明 | 社群專案與範例] 時，SSMS 現在會開啟指向 Git 頁面的網頁瀏覽器，而且不會因未使用舊瀏覽器而顯示錯誤/警告。
+
+### <a name="known-issues"></a>已知問題
+
+- 目前此版本中沒有已知問題。
+
+
+
+## <a name="previous-ssms-releases"></a>舊版 SSMS
+
+按一下下列各節中的標題連結，以下載舊版 SSMS。
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![下載](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 17.8 中發現一個與佈建 SQL 資料庫有關的 BUG，因此以 SSMS 17.8.1 取代 17.8。
-
 
 組建編號：14.0.17277.0<br>
 發行日期：2018 年 6 月 26 日
+
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>新功能
@@ -43,7 +124,7 @@ ms.locfileid: "42899498"
 
 資料庫屬性：
 
-- 這項改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
+- 此改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
     
 SQL 編輯器：
 
@@ -93,10 +174,6 @@ Always Encrypted：
 - 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql) 中的已知問題。 請考慮升級到 NetFx 4.7.2。
 
 
-
-## <a name="previous-ssms-releases"></a>舊版 SSMS
-
-按一下下列各節中的標題連結，以下載舊版 SSMS。
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![下載](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
@@ -250,7 +327,7 @@ Database Mail：
 ### <a name="known-issues"></a>已知問題
 
 > [!WARNING]
-> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有這項問題的影響，請降級至 SSMS 17.5。 
+> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有此問題的影響，請降級至 SSMS 17.5。 
 
 
 
@@ -271,7 +348,7 @@ Database Mail：
 
 查詢編輯器：
 
-- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 這項功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
+- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 此功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
 
 執行程序表：
 
@@ -398,7 +475,7 @@ XE 分析工具：
 - SSMS 安裝程式：
     - 已修正 SSMS 安裝程式不正確地造成電腦上所有已安裝產品重新設定的問題。
 - 使用者設定：
-   - 藉由此修正，US Government 官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 ARM 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
+   - 透過此修正，US Government 官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 ARM 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
 
 **Analysis Services (AS)**
 
@@ -663,7 +740,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 安裝程式：
   - 已修正下列問題：SSMS 17.0 已在 Visual Studio 2013 上中斷 SSDT [連接項目 3133479]
   - 已修正下列問題：按一下安裝程式結尾處的 [重新啟動]，並不會重新啟動電腦
-- 指令碼：藉由停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
+- 指令碼：透過停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
 - 物件總管：已修正下列問題：連接至使用 "AS COPY" 建立的 Azure 資料庫時，「資料庫」節點未展開
 
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![下載](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)

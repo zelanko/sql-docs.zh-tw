@@ -46,12 +46,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095336"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089998"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
 
@@ -260,7 +260,7 @@ OFFLINE
 將檔案設成離線，使檔案群組中的所有物件都無法存取。  
   
 > [!CAUTION]  
->  請只在檔案損毀且可以還原時，才使用這個選項。 設為 OFFLINE 的檔案，只能藉由從備份中還原檔案來設成線上狀態。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
+>  請只在檔案損毀且可以還原時，才使用這個選項。 設為 OFFLINE 的檔案，只能透過從備份中還原檔案來設成線上狀態。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
 > [!NOTE]  
 > 自主資料庫中無法使用 \<filespec> 選項。  
@@ -315,7 +315,10 @@ AUTOGROW_ALL_FILES
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
-當檔案群組中的某個檔案達到自動成長閾值時，檔案群組中的所有檔案都會成長。  
+當檔案群組中的某個檔案達到自動成長閾值時，檔案群組中的所有檔案都會成長。 
+
+> [!NOTE]
+> 這是 TempDB 的預設值。
   
 **\<filegroup_updatability_option>::=**  
   
@@ -341,7 +344,7 @@ READ_WRITE | READWRITE
   
 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
 當 `BACKUP` 陳述式正在執行時，您不能新增或移除檔案。  
@@ -869,7 +872,7 @@ READ_WRITE | READWRITE
   
 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
 當 `BACKUP` 陳述式正在執行時，您不能新增或移除檔案。  

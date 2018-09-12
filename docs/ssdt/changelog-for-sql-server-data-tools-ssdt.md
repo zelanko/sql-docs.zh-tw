@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096117"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743501"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
+組建編號：14.0.16174.0  
+發行日期：2018 年 9 月 5 日  
+
+### <a name="whats-new"></a>新功能
+
+**SSIS：**
+
+1. 修正在 VS 15.8 中儲存指令碼工作/元件將會觸發編譯錯誤的迴歸。
+1. 修正 VS 15.8 中部署精靈無法運作的迴歸。
+1. 修正 ADO.NET 連線管理員不支援第三方 ADO.NET 提供者的問題。
+
+**安裝程式：**
+
+- 實作在 Windows 10 上安裝 SSDT 時的中途重新開機。
+
+
+### <a name="known-issues"></a>已知問題：
+
+- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+
+
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT for Visual Studio 2017 (15.7.1)
@@ -682,7 +705,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 - **Analysis Services - 表格式模型總管：** 表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
-    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
+    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援此功能。 未來版本中將會支援 SQL Server 物件總管。
 
 
 **更新和修正**

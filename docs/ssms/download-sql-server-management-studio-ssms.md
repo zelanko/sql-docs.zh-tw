@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36acedbe323b1b28c4b8db11d3241e77b8a8f322
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: c226957b2bd8c0a66bda053795fa1bbe96ba042f
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899758"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694731"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,16 +45,16 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 SSMS 17.x 是最新一代的 *SQL Server Management Studio*，並提供 SQL Server 2017 的支援。
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802) (電腦上不需要有先前版本的 SSMS 17.x)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306) (電腦上不需要有先前版本的 SSMS 17.x)**
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.8.1 升級套件](https://go.microsoft.com/fwlink/?linkid=875804) (若要將 17.x 升級到 17.8.1，電腦上需要有先前版本的 SSMS 17.x)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9 升級套件](https://go.microsoft.com/fwlink/?linkid=2014215) (若要將 17.x 升級到 17.9，電腦上需要有先前版本的 SSMS 17.x)**
 
 
 **版本資訊**
 
-版本編號：17.8.1<br>
-組建編號：14.0.17277.0<br>
-發行日期：2018 年 6 月 26 日
+版本編號：17.9<br>
+組建編號：14.0.17285.0<br>
+發行日期：2018 年 9 月 4 日
 
 SSMS 17.x 安裝不會升級或取代 SSMS 16.x 版或更早版本。 SSMS 17.x 會與舊版本並存安裝，讓兩個版本同時可供使用。
 如果電腦包含 SSMS 並存安裝，請確認已針對您的特定需求啟動正確的版本。 最新版本會標上 Microsoft SQL Server Management Studio 17，並且具有新的圖示： 
@@ -70,11 +70,11 @@ SSMS 17.x 安裝不會升級或取代 SSMS 16.x 版或更早版本。 SSMS 17.x 
 
 此版 SSMS 提供下列語言版本：
 
-SQL Server Management Studio 17.8.1：<br>
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
+SQL Server Management Studio 17.9：<br>
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
-SQL Server Management Studio 17.8.1 升級套件 (從 17.x 升級至 17.8.1)：<br>
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=875804&clcid=0x40a)
+SQL Server Management Studio 17.9 升級套件 (從 17.x 升級至 17.9)：<br>
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell 模組現在透過 PowerShell 資源庫個別安裝。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
@@ -84,27 +84,19 @@ SQL Server Management Studio 17.8.1 升級套件 (從 17.x 升級至 17.8.1)：<
 
 ## <a name="new-in-this-release"></a>此版本中的新功能
 
-SSMS 17.8.1 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2017 的所有功能領域。 17.x 版也支援 SQL Analysis Service PaaS。
+SSMS 17.9 是 SQL Server Management Studio 的最新版本。 17.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2017 的所有功能領域。 17.x 版也支援 SQL Analysis Service PaaS。
 
-17.8.1 版包括：
+17.9 版包括：
 
 **一般 SSMS**
 
-資料庫屬性：
+執行程序表：
 
-- 這項改進會公開檔案群組的 "AUTOGROW_ALL_FILES" 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 AUTOGROW_ALL_FILES 選項的指令碼。
-    
-SQL 編輯器：
+- 圖形化執行程序表現在會顯示新資料列模式記憶體授與回應屬性 (當此功能已針對特定方案啟用時)：IsMemoryGrantFeedbackAdjusted 與 LastRequestedMemory 會被新增到 MemoryGrantInfo 查詢計劃 XML 元素。 如需有關資料列模式記憶體授與回應的詳細資訊，請參閱 [SQL 資料庫中的調適型查詢處理](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing)。
 
-- 已改善當使用者沒有 master 存取權時，在 Azure SQL Database 中的 IntelliSense 體驗。
+Azure SQL： 
 
-指令碼：
-
-- 一般效能改進，特別是透過高延遲連線的情況。
-    
-**Analysis Servics (AS)**
-
-- Analysis Services 用戶端程式庫與資料提供者已更新至最新版本，其中加入了對新 Azure Government AAD 授權單位 (login.microsoftonline.us) 的支援。
+- 新增對建立 Azure DB 時的 vCore SKU 支援。 如需詳細資訊，請參閱[以虛擬核心為基礎的購買模型](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
 
 
 ## <a name="supported-sql-offerings"></a>支援的 SQL 供應項目
@@ -142,16 +134,8 @@ SQL 編輯器：
 
 ## <a name="release-notes"></a>版本資訊
 
-以下是此 17.8.1 版本的問題和限制：
+目前此版本中沒有已知問題。
 
-- 在 [特性] 視窗中修改任何檔案群組特性之後按一下 [指令碼] 按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一項錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
-- 使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
-- 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.NET Framework 中的已知問題](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 請考慮升級到 NetFx 4.7.2。
-- 複寫監視器損毀，發生「無法載入檔案或組件...」錯誤。 此問題的因應措施：
-  1. 關閉 *SqlMonitor.exe* (也就是「複寫監視器」) 和 SSMS。
-  2. 從 [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) 下載更新的 *sqlmonitor.exe.config*。
-  3. 使用您下載的項目取代 *sqlmonitor.exe.config* (通常位在 "C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn")。
-  4. 重新啟動 SSMS 和/或複寫監視器。
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>解除並重新安裝 SSMS

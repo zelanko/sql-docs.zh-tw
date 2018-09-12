@@ -1,7 +1,7 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99d7e5d69e560fd5d94c38bdab1d29f6d5e0860e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 44c9ba8b3514c1a28ef2bbe800e0bec0c41b1bba
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456752"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171553"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   建立一個 Managed 應用程式模組，其中所包含的類別中繼資料和 Managed 程式碼是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的一個物件。 您可以參考這個模組，在資料庫中建立 Common Language Runtime (CLR) 函數、預存程序、觸發程序、使用者定義彙總以及使用者定義型別。  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 >  [!WARNING]
 >  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
   
@@ -71,6 +69,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  \<client_assembly_specifier>  
 指定正在上傳之組件所在的本機路徑或網路位置，以及對應於該組件的資訊清單檔案名稱。  \<client_assembly_specifier> 可以用變數表示為固定字串或評估為固定字串的運算式。 CREATE ASSEMBLY 不支援載入多模組組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會在同一個位置尋找這個組件的任何相依組件，同時以同一位擁有者做為根層級組件來上傳它們。 如果找不到這些相依組件，而且它們也尚未載入目前資料庫，CREATE ASSEMBLY 便會失敗。 如果相依組件已經載入到目前資料庫中，則那些組件的擁有者，必須與剛建立組件的擁有者一樣。
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從檔案建立組件。
   
  如果登入的使用者正被模擬，就不能指定 \<client_assembly_specifier>。  
   
@@ -113,7 +114,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  如需有關組件權限集合的詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  CREATE ASSEMBLY 會上傳之前從 Managed 程式碼編譯為 .dll 檔、用於 SQL Server 執行個體內部的組件。  
  
 啟用時，會在執行階段忽略 `CREATE ASSEMBLY` 和 `ALTER ASSEMBLY` 陳述式中的 `PERMISSION_SET` 選項，但在中繼資料中會保留 `PERMISSION_SET` 選項。 忽略此選項可將中斷現有程式碼陳述式最小化。
@@ -135,7 +136,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   以 SAFE 或 EXTERNAL ACCESS 權限集合加以建立的組件：  
   
-    -   組件程式碼應該是類型安全的程式碼。 類型安全性是藉由對組件執行 Common Language Runtime 驗證器而完成的。  
+    -   組件程式碼應該是類型安全的程式碼。 類型安全性是透過對組件執行 Common Language Runtime 驗證器而完成的。  
   
     -   除非被標示為唯讀，否則組件的類別不應包含任何靜態資料成員。  
   
@@ -151,7 +152,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  如需詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 CREATE ASSEMBLY 權限。  
   
  如果指定 PERMISSION_SET = EXTERNAL_ACCESS，則需要伺服器的 **EXTERNAL ACCESS ASSEMBLY** 權限。 如果未指定 PERMISSION_SET = UNSAFE，則伺服器上需要 **UNSAFE ASSEMBLY** 權限。  
@@ -181,6 +182,9 @@ CREATE ASSEMBLY HelloWorld
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從檔案建立組件。
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>範例 B：從組件位元建立組件  
   

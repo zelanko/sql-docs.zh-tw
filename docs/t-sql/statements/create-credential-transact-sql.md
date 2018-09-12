@@ -1,7 +1,7 @@
 ---
 title: CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,19 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 87759a536e979600e7ff12d8ad932c4fcf4cd248
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458072"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171610"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   建立伺服器層級認證。 認證是包含驗證資訊的記錄，而該資訊是連線到 SQL Server 外部資源時的必要資訊。 大部分認證都包含 Windows 使用者和密碼。 例如，將資料庫備份儲存至某位置，可能需要 SQL Server 提供特殊的認證才能存取該位置。 如需詳細資訊，請參閱[認證 (資料引擎)](../../relational-databases/security/authentication-access/credentials-database-engine.md)。
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  若要在資料庫層級建立認證，請使用 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。 當您需要在伺服器上的多個資料庫使用相同認證時，請使用伺服器層級認證。 使用資料庫範圍認證讓資料庫更方便移植。 當資料庫移動至新的伺服器時，資料庫範圍認證會隨著一起移動。 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用資料庫範圍認證。  
@@ -63,7 +61,10 @@ WITH IDENTITY = 'identity_name'
   
  IDENTITY **='***identity_name***'**  
  指定連接到伺服器外部時所要使用的帳戶名稱。 認證用來存取 Azure Key Vault 時，**IDENTITY** 是金鑰保存庫的名稱。 請參閱以下的範例 C。 認證使用共用存取簽章 (SAS) 時，**IDENTITY** 是 *SHARED ACCESS SIGNATURE*。 請參閱下方範例 D。  
-  
+ 
+> [!IMPORTANT]
+> Azure SQL Database 只支援 Azure Key Vault 與共用存取簽章身分識別。 不支援 Windows 使用者身分識別。
+ 
  SECRET **='***secret***'**  
  指定外寄驗證所需的秘密。  
   
@@ -72,7 +73,7 @@ WITH IDENTITY = 'identity_name'
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  指定*企業金鑰管理 (EKM) 提供者*的名稱。 如需金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
 
  當 IDENTITY 是 Windows 使用者時，秘密可以是密碼。 秘密是利用服務主要金鑰來加密的。 如果重新產生服務主要金鑰，便會利用新的服務主要金鑰來重新加密秘密。  
   
@@ -84,7 +85,7 @@ WITH IDENTITY = 'identity_name'
   
  一個登入可以具有多個對應認證，只要這些認證用於不同的提供者即可。 但是，每個登入的每個提供者必須只有一個對應認證。 相同的認證可對應至其他登入。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 **ALTER ANY CREDENTIAL** 權限。  
   
 ## <a name="examples"></a>範例  

@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782669"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171690"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用者指定的格式，將資料檔案匯入資料庫資料表或檢視表中  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,6 +100,10 @@ BULK INSERT
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 可位於 Azure Blob 儲存體中。
 
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
+
+
 **'** *data_source_name* **'**   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 這是具名的外部資料來源，指向將匯入之檔案的 Azure Blob 儲存體位置。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。    
@@ -146,8 +148,7 @@ BULK INSERT
 |**char** (預設值)|字元格式。<br /><br /> 如需詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。|  
 |**native**|原生 (資料庫) 資料類型。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立原生資料檔案。<br /><br /> 原生值提供了效能比 char 值更高的替代項。<br /><br /> 如需詳細資訊，請參閱[使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。|  
 |**widechar**|Unicode 字元。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。|  
-|**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> 
-  **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
+|**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
   
   ERRORFILE **='***file_name***'**  
  指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。  
@@ -210,7 +211,7 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  TABLOCK  
  指定在大量匯入作業期間，取得資料表層級鎖定。 如果資料表沒有索引，且指定了 TABLOCK，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為是由資料表選項 **table lock on bulk load**所決定。 在大量匯入作業期間保留鎖定，會減少競爭資料表鎖定的情況，在某些情況下，可以大幅提升效能。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
- 就資料行存放區索引而言， 鎖定行為不同，因為它會在內部分割成多個資料列集。  每個執行緒都會藉由在允許以並行資料載入工作階段進行平行資料載入的資料列集上採取 X 鎖定，以獨佔方式將資料載入到每個資料列集。 使用 TABLOCK 選項將導致執行緒在資料表上採取 X 鎖定 (不同於傳統資料列集的 BU 鎖定)，這會防止其他並行執行緒同時載入資料。  
+ 就資料行存放區索引而言， 鎖定行為不同，因為它會在內部分割成多個資料列集。  每個執行緒都會透過在允許以並行資料載入工作階段進行平行資料載入的資料列集上採取 X 鎖定，以獨佔方式將資料載入到每個資料列集。 使用 TABLOCK 選項將導致執行緒在資料表上採取 X 鎖定 (不同於傳統資料列集的 BU 鎖定)，這會防止其他並行執行緒同時載入資料。  
 
 ### <a name="input-file-format-options"></a>輸入檔案格式選項
   
@@ -294,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>大量匯出或匯入 SQLXML 文件的資料類型  
  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：  
   
@@ -339,7 +344,7 @@ GO
   
  如需有關此安全性考量及其他使用 BULK INSERT 之安全性考量的詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>權限  
  需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
   
 -   有條件約束存在而且未指定 CHECK_CONSTRAINTS 選項。  
@@ -368,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
   
 ### <a name="b-using-the-firetriggers-argument"></a>B. 使用 FIRE_TRIGGERS 觸發程序  
  下列範例指定 `FIRE_TRIGGERS` 引數。  
@@ -382,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 利用換行字元做為資料列結束字元  
  下列範例利用換行字元做為資料列結束字元來匯入檔案，如 UNIX 輸出：  
@@ -396,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  由於 Microsoft Windows 處理文字檔的方式，**(\n** 會自動被取代為 **\r\n)**。  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
   
 ### <a name="d-specifying-a-code-page"></a>D. 指定字碼頁  
  下列範例說明如何指定字碼頁。  
@@ -409,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
+
 ### <a name="e-importing-data-from-a-csv-file"></a>E. 從 CSV 檔案匯入資料   
 下列範例說明如何指定 CSV 檔案。   
 ```
@@ -416,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. 從 Azure Blob 儲存體中的檔案匯入資料   
 下列範例說明如何從已設定為外部資料來源之 Azure Blob 儲存體位置中的 CSV 檔案載入資料。 這需要一個使用共用存取簽章的資料庫範圍認證。    
@@ -426,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL Database 不支援從 Windows 檔案讀取。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 從 Azure Blob 儲存體中的檔案匯入資料並指定錯誤檔   
 下列範例說明如何在已設定為外部資料來源並指定錯誤檔的 Azure Blob 儲存體位置中，從 CSV 檔案載入資料。 這需要一個使用共用存取簽章的資料庫範圍認證。 請注意，如果在 Azure SQL Database 上執行，ERRORFILE 選項應伴隨 ERRORFILE_DATA_SOURCE，否則匯入可能會因權限錯誤而導致失敗。 ERRORFILE 中指定的檔案不應該存在容器中。

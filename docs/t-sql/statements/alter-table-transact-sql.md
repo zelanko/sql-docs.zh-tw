@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -63,19 +63,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083932"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171870"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   您可以利用改變、加入或卸除資料行與條件約束、重新指派和重建分割區，或是停用或啟用條件約束與觸發程序等方式來修改資料表定義。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -244,7 +242,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ```  
   
 ```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -688,7 +686,7 @@ COLUMN *column_name*
   
  *max_degree_of_parallelism* 可以是下列其中一個值：  
   
- @shouldalert  
+ 1  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -785,7 +783,7 @@ COLUMN *column_name*
  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  CTP1 以及 SQL Database V12 之前版本 建立的非叢集資料行存放區索引是唯讀格式。 執行任何 PARTITION 作業之前，必須將非叢集資料行存放區索引重建成最新的格式 (可以更新的格式)。  
   
  SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
- **適用於**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+ **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 Azure SQL Database 不支援 `FILESTREAM`。  
   
  指定 FILESTREAM 資料存放的位置。  
   
@@ -892,7 +890,7 @@ TABLE
  啟用或停用 FileTable 的系統定義條件約束。 只能用於 FileTable。  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  Azure SQL Database 不支援 `FILETABLE`。  
   
  指定 Windows 相容的 FileTable 目錄名稱。 在資料庫的所有 FileTable 目錄名稱之間，此名稱必須是唯一的。 不論 SQL 定序設定為何，唯一性比較不區分大小寫。 只能用於 FileTable。  
 ```    
@@ -994,7 +992,7 @@ IF EXISTS
   
  只有在已經存在的情況下，才有條件地卸除資料行或條件約束。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  若要加入新的資料列，請使用 [INSERT](../../t-sql/statements/insert-transact-sql.md)。 若要移除資料列，請使用 [DELETE](../../t-sql/statements/delete-transact-sql.md) 或 [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)。 若要變更現有資料列中的值，請使用 [UPDATE](../../t-sql/queries/update-transact-sql.md)。  
   
  如果參考資料表的程序快取中有任何執行計畫，ALTER TABLE 會加以標示，以便在下一次執行時重新編譯。  
@@ -1028,7 +1026,7 @@ IF EXISTS
   
  若要移除某資料行，必須先移除以該資料行為基礎的所有索引和條件約束。  
   
- 刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再藉由指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
+ 刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再透過指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
   
 -   MOVE TO 對於索引檢視表或非叢集索引無效。  
 -   分割區配置或檔案群組必須已經存在。  
@@ -1049,7 +1047,7 @@ ONLINE **=** ON 有下列限制：
 > *\<drop_clustered_constraint_option>* 底下所列的選項可套用到資料表上的叢集索引，但不可套用到檢視表上的叢集索引或套用至非叢集索引。  
   
 ## <a name="replicating-schema-changes"></a>複寫結構描述變更  
- 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 這項功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 此功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="data-compression"></a>資料壓縮  
  系統資料表無法啟用壓縮。 如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
@@ -1079,7 +1077,7 @@ ONLINE **=** ON 有下列限制：
   
 若要解決此問題，請移除 4 部分前置詞的用法。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要資料表的 ALTER 權限。  
   
  ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料表。 所切換的任何資料，都會繼承目標資料表的安全性。  
@@ -1483,7 +1481,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
  如需其他資料壓縮範例，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. 修改資料行存放區資料表來變更封存壓縮  
- 下列範例藉由套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 這樣會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
+ 下列範例透過套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 這樣會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
   
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1891,7 +1889,7 @@ WITH
   
 |資料分割|有資料？|界限範圍|  
 |---------------|---------------|--------------------|  
-|@shouldalert|是|OrderDate < '2004-01-01'|  
+|1|是|OrderDate < '2004-01-01'|  
 |2|是|'2004-01-01' <= OrderDate < '2005-01-01'|  
 |3|是|'2005-01-01' <= OrderDate< '2006-01-01'|  
 |4|是|'2006-01-01'<= OrderDate < '2007-01-01'|  

@@ -1,7 +1,7 @@
 ---
 title: 複寫、變更追蹤和異動資料擷取 - 可用性群組 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769374"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311668"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34769374"
 ###  <a name="Changes"></a> 支援可用性群組的複寫代理程式一般變更  
  三個複寫代理程式已修改成支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 記錄讀取器、快照集和合併代理程式已修改成查詢重新導向發行者的散發資料庫，並且使用傳回的可用性群組接聽程式名稱來連接到資料庫發行者 (如果已宣告重新導向發行者的話)。  
   
- 根據預設，當代理程式查詢散發者以判斷原始發行者是否已重新導向時，會驗證重新導向目前目標的適用性，然後才將重新導向的主機傳回至代理程式。 這是建議的行為。 不過，如果代理程式啟動太頻繁，與驗證預存程序相關的負擔成本可能太高。 新命令列參數 *BypassPublisherValidation*已加入至記錄讀取器、快照集和合併代理程式。 使用此參數時，重新導向的主機會立即傳回至代理程式，而略過驗證預存程序的執行。  
+ 根據預設，當代理程式查詢散發者以判斷原始發行者是否已重新導向時，會驗證重新導向目前目標的適用性，然後才將重新導向的主機傳回至代理程式。 這是建議的行為。 不過，如果代理程式啟動太頻繁，與驗證預存程序相關的負擔成本可能太高。 新命令列參數 *BBypassPublisherValidation* 已加入至記錄讀取器、快照集和合併代理程式。 使用此參數時，重新導向的主機會立即傳回至代理程式，而略過驗證預存程序的執行。  
   
  從驗證預存程序傳回的失敗會記錄在代理程式記錄檔中。 嚴重性大於或等於 16 的這些錯誤會導致代理程式終止。 某些重試功能已內建到代理程式，以處理在容錯移轉至新主要複本時預期的已發行資料庫中斷連接。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34769374"
   
 -   **追蹤旗標 1448**  
   
-     追蹤旗標 1448 可讓複寫記錄讀取器向前移動，即使非同步次要複本尚未認可收到變更也一樣。 即使這個追蹤旗標已啟用，記錄讀取器一定會等候同步次要複本。 記錄讀取器不會超過同步次要複本的最小認可。 這個追蹤旗標會套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，而不只套用至可用性群組、可用性資料庫或記錄讀取器執行個體。 這個追蹤旗標會立即生效，不必重新啟動。 您可以事先或在非同步次要複本失敗時啟動它。  
+     追蹤旗標 1448 可讓複寫記錄讀取器向前移動，即使非同步次要複本尚未認可收到變更也一樣。 即使這個追蹤旗標已啟用，記錄讀取器也一律會等候同步次要複本。 記錄讀取器不會超過同步次要複本的最小認可。 這個追蹤旗標會套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，而不只套用至可用性群組、可用性資料庫或記錄讀取器執行個體。 這個追蹤旗標會立即生效，不必重新啟動。 您可以事先或在非同步次要複本失敗時啟動它。  
   
 ###  <a name="StoredProcs"></a> 支援可用性群組的預存程序  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34769374"
   
 -   **sp_validate_replicate_hosts_as_publishers**  
   
-     雖然讓代理程式確保目前主要複本能夠作為發行者資料庫的複寫發行者運作已經很有用，不過還是需要一項更全面的驗證功能，才能確立 AlwaysOn 可用性資料庫上整個複寫拓撲的有效性。 預存程序 **sp_validate_replica_hosts_as_publishers** 就是為了滿足這項需求所設計。  
+     雖然讓代理程式確保目前主要複本能夠作為發行者資料庫的複寫發行者運作已經很有用，不過還是需要一項更全面的驗證功能，才能確立 AlwaysOn 可用性資料庫上整個複寫拓撲的有效性。 預存程序 **sp_validate_replica_hosts_as_publishers** 就是為了滿足此需求所設計。  
   
      此預存程序一律以手動方式執行。 呼叫端必須是散發者端的系統管理員 ( **sysadmin** )、散發資料庫的 **dbowner** 或是發行者資料庫中發行集之 **發行集存取清單** 的成員。 此外，對於所有可用性複本主機而言，呼叫端的登入必須是有效的登入，而且擁有與發行者資料庫相關聯之可用性資料庫的選取權限。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34769374"
   
 -   **存取 CDC 變更資料的用戶端應用程式和 AlwaysOn**  
   
-     使用資料表值函式 (TVF) 或連結的伺服器存取變更資料表資料的用戶端應用程式，也需要在容錯移轉後找出適當 CDC 主機的功能。 可用性群組接聽程式名稱是 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 所提供的機制，這項機制會以透明的方式允許連接以不同主機為新目標。 一旦可用性群組接聽程式名稱與可用性群組產生關聯之後，它就可用於 TCP 連接字串中。 透過可用性群組接聽程式名稱支援兩個不同的連接案例。  
+     使用資料表值函式 (TVF) 或連結的伺服器存取變更資料表資料的用戶端應用程式，也需要在容錯移轉後找出適當 CDC 主機的功能。 可用性群組接聽程式名稱是 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 所提供的機制，此機制會以透明的方式允許連接以不同主機為新目標。 一旦可用性群組接聽程式名稱與可用性群組產生關聯之後，它就可用於 TCP 連接字串中。 透過可用性群組接聽程式名稱支援兩個不同的連接案例。  
   
     -   一個確保連接要求一律導向至目前的主要複本。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "34769374"
   
 -   **將查詢負載重新導向至可讀取次要複本**  
   
-     雖然在許多情況下用戶端應用程式一定會要連接到目前的主要複本，但這不是利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的唯一方法。 如果可用性群組設定為支援可讀取的次要複本，則也可以從次要節點收集變更資料。  
+     雖然在許多情況下用戶端應用程式一定會要連接到目前的主要複本，但這不是利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的唯一方法。 如果可用性群組設定為支援可讀取的次要複本，則也可以從次要節點收集變更資料。  
   
-     已設定可用性群組時，與 SECONDARY_ROLE 關聯的 ALLOW_CONNECTIONS 屬性會用來指定支援的次要存取類型。 如果設定為 ALL，則會允許次要的所有連接，但只有需要唯讀存取的連接會成功。 如果設定為 READ_ONLY，則需要在建立次要資料庫的連接時指定唯讀意圖，連接才會成功。 如需詳細資訊，請參閱[設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+     已設定可用性群組時，與 SECONDARY_ROLE 關聯的 ALLOW_CONNECTIONS 屬性會用來指定支援的次要存取類型。 如果設定為 ALL，則會允許次要的所有連線，但只有需要唯讀存取的連線會成功。 如果設定為 READ_ONLY，則需要在建立次要資料庫的連接時指定唯讀意圖，連接才會成功。 如需詳細資訊，請參閱[設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
      您可以使用下列查詢，以判斷是否需要唯讀意圖以連接到可讀取次要複本。  
   
@@ -211,12 +211,10 @@ ms.locfileid: "34769374"
 |||||  
 |-|-|-|-|  
 ||**發行者**|**Distributor***\*|**訂閱者**|  
-|**異動**|是<br /><br /> 注意：不包含雙向和相互異動複寫的支援。|否|是|  
+|**異動**|是<br /><br /> 注意：不包含雙向和相互異動複寫的支援。|是|是| 
 |**P2P**|否|否|否|  
-|**合併式**|是|否|是*|  
-|**快照式**|是|否|是*|  
-  
- *容錯移轉至複本資料庫是手動程序。 沒有提供自動容錯移轉。  
+|**合併式**|是|否|否|  
+|**快照式**|是|否|是|
   
  **散發者資料庫不支援與資料庫鏡像搭配使用。  
   

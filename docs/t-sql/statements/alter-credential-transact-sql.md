@@ -1,13 +1,9 @@
 ---
 title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/19/2015
+ms.date: 09/07/2018
 ms.prod: sql
-ms.prod_service: sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER CREDENTIAL
@@ -21,26 +17,24 @@ helpviewer_keywords:
 - authentication [SQL Server], credentials
 - ALTER CREDENTIAL statement
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
-caps.latest.revision: 27
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b86aef0e9dd9395f1c803cc3dd2b9e14866b25d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6939de7db25f8f0e572cebef2181551f5190922b
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451903"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171880"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   變更認證的屬性。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> [!IMPORTANT]
+> 「應該執行」資訊表示最佳做法；「必須執行」表示完成工作![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,16 +52,19 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  指定連接到伺服器外部時所要使用的帳戶名稱。  
   
  SECRET **='***secret***'**  
- 指定外寄驗證所需的秘密。 *secret* 為選擇性。  
+ 指定外寄驗證所需的秘密。 *secret* 為選擇性。
   
-## <a name="remarks"></a>Remarks  
+> [!IMPORTANT]
+> Azure SQL Database 只支援 Azure Key Vault 與共用存取簽章身分識別。 不支援 Windows 使用者身分識別。
+  
+## <a name="remarks"></a>備註  
  當認證變更時，*identity_name* 和 *secret* 的值都會重設。 如果未指定選擇性 SECRET 引數，預存秘密的值便會設為 NULL。  
   
  秘密是利用服務主要金鑰來加密的。 如果重新產生服務主要金鑰，便會利用新的服務主要金鑰來重新加密秘密。  
   
  您可以在 **sys.credentials** 目錄檢視中，看到認證的相關資訊。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 ALTER ANY CREDENTIAL 權限。 如果認證是系統認證，則需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

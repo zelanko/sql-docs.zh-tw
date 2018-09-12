@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 27d08ae64d0387f60963358bbdbb04471d9ffb05
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 2d12d84ca2784b58b839a3177a31d9fecc73feff
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453552"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171770"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中修改現有路由的路由資訊。 
 
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +64,7 @@ WITH
  導入定義所改變之路由的子句。  
   
  SERVICE_NAME **='***service_name***'**  
- 指定這個路由所指向的遠端服務名稱。 *service_name* 必須與遠端服務所使用的名稱完全相符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會使用逐位元組的比較方式來比對 *service_name*。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。 服務名稱是 **'SQL/ServiceBroker/BrokerConfiguration'** 的路由，是指向 Broker Configuration Notice 服務的路由。 指向這項服務的路由不能指定 Broker 執行個體。  
+ 指定這個路由所指向的遠端服務名稱。 *service_name* 必須與遠端服務所使用的名稱完全相符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會使用逐位元組的比較方式來比對 *service_name*。 換言之，此比較會區分大小寫，且不會考慮目前的定序。 服務名稱是 **'SQL/ServiceBroker/BrokerConfiguration'** 的路由，是指向 Broker Configuration Notice 服務的路由。 指向此服務的路由不能指定 Broker 執行個體。  
   
  如果省略 SERVICE_NAME 子句，路由的服務名稱就會維持不變。  
   
@@ -89,7 +87,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='***next_hop_address'*  
 
- Azure SQL Database 受控執行個體的 `ADDRESS` 必須為本機。
+ 針對 Azure SQL Database 受控執行個體，`ADDRESS` 必須為本機。
 
  指定這個路由的網路位址。 *next_hop_address* 以下列格式指定 TCP/IP 位址：  
   
@@ -134,7 +132,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  儲存路由的路由表是可利用 **sys.routes** 目錄檢視來讀取的中繼資料表。 您只能利用 CREATE ROUTE、ALTER ROUTE 和 DROP ROUTE 陳述式來更新路由表。  
   
  ALTER ROUTE 命令所未指定的子句會維持不變。 因此，您無法變更 (ALTER) 路由來指定路由不逾時、路由符合任何服務名稱，或是路由符合任何 Broker 執行個體。 若要變更路由的這些特性，您必須卸除現有的路由，再以新的資訊建立新的路由。  
@@ -145,7 +143,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  若要改變服務的 AUTHORIZATION，請使用 ALTER AUTHORIZATION 陳述式。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  改變路由的權限預設為路由的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及系統管理員 (**sysadmin**) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  
