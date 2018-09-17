@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085940"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564014"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
 本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項] 功能表巡覽至 [選項] 對話方塊。  
@@ -57,7 +57,7 @@ ms.locfileid: "39085940"
 |**SET NOEXEC**|若為 **ON**，則告知 Microsoft® SQL Server™ 編譯 Transact-SQL 陳述式的每個批次，但不要執行它們。 若為 **OFF**，則告知 Microsoft® SQL Server™ 在編譯之後執行所有批次。如需詳細資訊，請參閱 [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770)。|  
 |**SET PARSEONLY**|檢查每個 Transact-SQL 陳述式的語法，且會在未編譯或執行陳述式的情況下，傳回任何錯誤訊息。 如需詳細資訊，請參閱 [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)。|  
 |**SET CONCAT_NULL_YIELDS_NULL**|控制是否將串連結果視為 Null 或空字串值。如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733)。|  
-|**SET ARITHABORT**|查詢執行過程中發生溢位或除以零的錯誤時終止查詢。 如需詳細資訊，請參閱  [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx) \(英文\)。|  
+|**SET ARITHABORT**|查詢執行過程中發生溢位或除以零的錯誤時終止查詢。 如需詳細資訊，請參閱  [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx) \(英文\)。|  
 |**SET SHOWPLAN_TEXT**|使 Microsoft® SQL Server™ 不執行 Transact-SQL 陳述式。 相反地，SQL Server 會傳回如何執行這些陳述式的詳細資訊。 如需詳細資訊，請參閱 [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737)。|  
 |**SET STATISTICS TIME**|顯示剖析、編譯和執行每個陳述式所需要的毫秒數。|  
 |**SET STATISTICS IO**|使 Microsoft® SQL Server™ 顯示 Transact-SQL 陳述式所產生之磁碟活動量的相關資訊。|  

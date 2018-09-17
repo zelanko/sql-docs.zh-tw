@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce5ff3926693961069b089284baf2bd9ce34c460
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dad3c26c68535c16586c7a31f87600ed7791cc03
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088080"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564052"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以修改部署計畫
-您可以建立部署參與者，以便在部署 SQL 專案時執行自訂動作。 您可以建立 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 或 [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。 使用 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，在計畫執行前變更計畫；使用 [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，在計畫執行時執行作業。 在這個逐步解說中，您將建立 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，名稱為 SqlRestartableScriptContributor，這個部署參與者會將 IF 陳述式加入至部署指令碼中的批次，以在執行期間發生錯誤時，讓指令碼重新執行直到完成為止。  
+您可以建立部署參與者，以便在部署 SQL 專案時執行自訂動作。 您可以建立 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 或 [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。 使用 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，在計畫執行前變更計畫；使用 [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，在計畫執行時執行作業。 在這個逐步解說中，您將建立 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，名稱為 SqlRestartableScriptContributor，這個部署參與者會將 IF 陳述式加入至部署指令碼中的批次，以在執行期間發生錯誤時，讓指令碼重新執行直到完成為止。  
   
 在本逐步解說中，您將會完成下列主要工作：  
   
@@ -49,9 +49,9 @@ ms.locfileid: "39088080"
   
 -   建立類別庫專案並加入必要參考。  
   
--   定義繼承自 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 且名稱為 SqlRestartableScriptContributor 的類別。  
+-   定義繼承自 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 且名稱為 SqlRestartableScriptContributor 的類別。  
   
--   覆寫 [OnExecute](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 方法。  
+-   覆寫 [OnExecute](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 方法。  
   
 -   加入私用 Helper 方法。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "39088080"
   
     ```  
   
-    現在您已經定義繼承自 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 的部署參與者。 在建置和部署程序期間，自訂參與者是從標準擴充目錄載入。 部署計畫修改參與者是由 [ExportDeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute.aspx) 屬性加以識別。 參與者需要這個屬性，才能設定為可搜尋的。 這個屬性應看起來如下：  
+    現在您已經定義繼承自 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 的部署參與者。 在建置和部署程序期間，自訂參與者是從標準擴充目錄載入。 部署計畫修改參與者是由 [ExportDeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute.aspx) 屬性加以識別。 參與者需要這個屬性，才能設定為可搜尋的。 這個屬性應看起來如下：  
   
     ```csharp  
     [ExportDeploymentPlanModifier("MyOtherDeploymentContributor.RestartableScriptContributor", "1.0.0.0")]  
@@ -152,7 +152,7 @@ ms.locfileid: "39088080"
   
     ```  
   
-    覆寫 [DeploymentPlanContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) 基底類別的 [OnExecute](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 方法，這是 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 和 [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的基底類別。 將 [DeploymentPlanContributorContext](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 物件傳遞給 OnExecute 方法，以存取任何指定的引數、來源和目標資料庫模型、部署計畫和部署選項。 在這個範例中，我們會取得部署計畫和目標資料庫名稱。  
+    覆寫 [DeploymentPlanContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) 基底類別的 [OnExecute](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 方法，這是 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 和 [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的基底類別。 將 [DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 物件傳遞給 OnExecute 方法，以存取任何指定的引數、來源和目標資料庫模型、部署計畫和部署選項。 在這個範例中，我們會取得部署計畫和目標資料庫名稱。  
   
 2.  現在將主體開頭加入至 OnExecute 方法：  
   
@@ -184,7 +184,7 @@ ms.locfileid: "39088080"
   
     ```  
   
-    在這個程式碼，我們定義一些區域變數，而且設定會處理部署計畫中所有步驟的迴圈。 在迴圈完成後，我們必須進行一些後置處理，然後卸除部署期間建立用來追蹤計畫執行進度的暫存資料表。 這裡的重要型別為：[DeploymentStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) 和 [DeploymentScriptStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx)。 重要的方法是 AddAfter。  
+    在這個程式碼，我們定義一些區域變數，而且設定會處理部署計畫中所有步驟的迴圈。 在迴圈完成後，我們必須進行一些後置處理，然後卸除部署期間建立用來追蹤計畫執行進度的暫存資料表。 這裡的重要型別為：[DeploymentStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) 和 [DeploymentScriptStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx)。 重要的方法是 AddAfter。  
   
 3.  現在加入額外的步驟處理，以取代註解 "Add additional step processing here"：  
   
@@ -251,7 +251,7 @@ ms.locfileid: "39088080"
   
     ```  
   
-    程式碼註解說明處理程序。 在高層次上，此程式碼尋找您重視的步驟，略過其他步驟，並在到達部署後步驟開頭時停止。 如果步驟包含我們必須以條件式圍繞的陳述式，我們會執行額外的處理。 重要型別、方法和屬性包含：[BeginPreDeploymentScriptStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx)、[BeginPostDeploymentScriptStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx)、[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[TSqlScript](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx)、Script、[DeploymentScriptDomStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx) 和 [SqlPrintStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx)。  
+    程式碼註解說明處理程序。 在高層次上，此程式碼尋找您重視的步驟，略過其他步驟，並在到達部署後步驟開頭時停止。 如果步驟包含我們必須以條件式圍繞的陳述式，我們會執行額外的處理。 重要型別、方法和屬性包含：[BeginPreDeploymentScriptStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx)、[BeginPostDeploymentScriptStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx)、[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[TSqlScript](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx)、Script、[DeploymentScriptDomStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx) 和 [SqlPrintStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx)。  
   
 4.  現在，取代註解 "Add batch processing here"，加入批次處理程式碼：  
   
@@ -301,7 +301,7 @@ ms.locfileid: "39088080"
   
     ```  
   
-    這個程式碼會建立 IF 陳述式和 BEGIN/END 區塊。 然後我們對批次中的陳述式執行額外處理。 完成後，我們加入 INSERT 陳述式，將資訊加入至追蹤指令碼執行進度的暫存資料表。 最後，更新批次，將原來的陳述式取代為包含這些陳述式的新 IF 陳述式。重要型別、方法和屬性包含：[IfStatement](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx)、[BeginEndBlockStatement](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx)、[StatementList](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx)、[TSqlBatch](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx)、[PredicateSetStatement](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx)、[SetOptions](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx) 和 [InsertStatement](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx)。  
+    這個程式碼會建立 IF 陳述式和 BEGIN/END 區塊。 然後我們對批次中的陳述式執行額外處理。 完成後，我們加入 INSERT 陳述式，將資訊加入至追蹤指令碼執行進度的暫存資料表。 最後，更新批次，將原來的陳述式取代為包含這些陳述式的新 IF 陳述式。重要型別、方法和屬性包含：[IfStatement](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx)、[BeginEndBlockStatement](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx)、[StatementList](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx)、[TSqlBatch](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx)、[PredicateSetStatement](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx)、[SetOptions](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx) 和 [InsertStatement](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx)。  
   
 5.  現在，加入陳述式處理迴圈的主體。 取代註解 "Add additional statement processing here"：  
   
@@ -321,7 +321,7 @@ ms.locfileid: "39088080"
   
     ```  
   
-    對於批次內的每個陳述式，如果陳述式是必須以 sp_executesql 陳述式包裝的類型，請據此修改陳述式。 然後程式碼會將陳述式加入至您建立之 BEGIN/END 區塊的陳述式清單。 重要型別、方法和屬性包含 [TSqlStatement](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement.aspx) 和 [ExecuteStatement](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)。  
+    對於批次內的每個陳述式，如果陳述式是必須以 sp_executesql 陳述式包裝的類型，請據此修改陳述式。 然後程式碼會將陳述式加入至您建立之 BEGIN/END 區塊的陳述式清單。 重要型別、方法和屬性包含 [TSqlStatement](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement.aspx) 和 [ExecuteStatement](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)。  
   
 6.  最後，加入後置處理區段，以取代註解 "Add additional post-processing here"：  
   
@@ -356,7 +356,7 @@ ms.locfileid: "39088080"
   
     其他相關型別、屬性和方法包含：  
   
-    StringBuilder、[DeploymentScriptStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx) 和 AddBefore。  
+    StringBuilder、[DeploymentScriptStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx) 和 AddBefore。  
   
     下一步，您會定義這個方法呼叫的 Helper 方法。  
   
@@ -366,12 +366,12 @@ ms.locfileid: "39088080"
   
     |**方法**|**說明**|  
     |--------------|-------------------|  
-    |CreateExecuteSQL|定義 CreateExecuteSQL 方法，以便用 EXEC sp_executesql 陳述式圍繞提供的陳述式。 重要型別、方法和屬性包含：[ExecuteStatement](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)、[ExecutableProcedureReference](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx)、[SchemaObjectName](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)、[ProcedureReference](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) 和 [ExecuteParameter](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx)。|  
-    |CreateCompletedBatchesName|定義 CreateCompletedBatchesName 方法。 這個方法會建立插入批次暫存資料表的名稱。重要型別、方法和屬性包含：[SchemaObjectName](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)。|  
+    |CreateExecuteSQL|定義 CreateExecuteSQL 方法，以便用 EXEC sp_executesql 陳述式圍繞提供的陳述式。 重要型別、方法和屬性包含：[ExecuteStatement](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)、[ExecutableProcedureReference](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx)、[SchemaObjectName](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)、[ProcedureReference](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) 和 [ExecuteParameter](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx)。|  
+    |CreateCompletedBatchesName|定義 CreateCompletedBatchesName 方法。 這個方法會建立插入批次暫存資料表的名稱。重要型別、方法和屬性包含：[SchemaObjectName](http://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)。|  
     |IsStatementEscaped|定義 IsStatementEscaped 方法。 這個方法會判斷模型項目型別是否要求陳述式先包裝在 EXEC sp_executesql 陳述式中，然後才可以使用 IF 陳述式括住。 重要類型、方法和屬性包含：TSqlObject.ObjectType、ModelTypeClass 和 TypeClass 屬性，適用於下列模型類型：Schema、Procedure、View、TableValuedFunction、ScalarFunction、DatabaseDdlTrigger、DmlTrigger、ServerDdlTrigger。|  
     |CreateBatchCompleteInsert|定義 CreateBatchCompleteInsert 方法。 這個方法會建立將加入至部署指令碼以追蹤指令碼執行進度的 INSERT 陳述式。 重要類型、方法和屬性包含：InsertStatement、NamedTableReference、ColumnReferenceExpression、ValuesInsertSource 和 RowValue。|  
     |CreateIfNotExecutedStatement|定義 CreateIfNotExecutedStatement 方法。 這個方法會產生 IF 陳述式，檢查暫存批次執行資料表是否指出此批次已經執行。 重要類型、方法和屬性包含：IfStatement、ExistsPredicate、ScalarSubquery、NamedTableReference、WhereClause、ColumnReferenceExpression、IntegerLiteral、BooleanComparisonExpression 和 BooleanNotExpression。|  
-    |GetStepInfo|定義 GetStepInfo 方法。 除了步驟名稱之外，這個方法還會擷取用來建立步驟指令碼的模型項目資訊。 相關型別和方法包含：[DeploymentPlanContributorContext](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)、[DeploymentScriptDomStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx)、[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[CreateElementStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) 和 [DropElementStep](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。|  
+    |GetStepInfo|定義 GetStepInfo 方法。 除了步驟名稱之外，這個方法還會擷取用來建立步驟指令碼的模型項目資訊。 相關型別和方法包含：[DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)、[DeploymentScriptDomStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx)、[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[CreateElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) 和 [DropElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。|  
     |GetElementName|建立 TSqlObject 的格式化名稱。|  
   
 1.  加入下列程式碼以定義 Helper 方法：  
@@ -778,7 +778,7 @@ ms.locfileid: "39088080"
         > 如果部署的資料庫專案與目標資料庫相同，產生的報表不會有多大意義。 若要更有意義的結果，請將變更部署至資料庫或部署新的資料庫。  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>使用產生的 dacpac 檔案進行命令列部署  
-建置 SQL 專案後，產生的 dacpac 檔案可用來從命令列部署結構描述，因此可以從另一部電腦 (例如組建電腦) 執行部署。 SqlPackage 是啟用 dacpac 部署的命令列公用程式，具有全套的選項可讓使用者部署 dacpac 或產生部署指令碼，以及其他動作。 如需詳細資訊，請參閱 [SqlPackage.exe](http://msdn.microsoft.com/en-us/library/hh550080(v=VS.103).aspx) \(機器翻譯\)。  
+建置 SQL 專案後，產生的 dacpac 檔案可用來從命令列部署結構描述，因此可以從另一部電腦 (例如組建電腦) 執行部署。 SqlPackage 是啟用 dacpac 部署的命令列公用程式，具有全套的選項可讓使用者部署 dacpac 或產生部署指令碼，以及其他動作。 如需詳細資訊，請參閱 [SqlPackage.exe](http://msdn.microsoft.com/library/hh550080(v=VS.103).aspx) \(機器翻譯\)。  
   
 > [!NOTE]  
 > 若要成功部署已定義 DeploymentContributors 屬性的專案所建立的 dacpac，在使用的電腦必須安裝包含部署參與者的 DLL。 這是因為它們已經標示為部署順利完成的必要項。  

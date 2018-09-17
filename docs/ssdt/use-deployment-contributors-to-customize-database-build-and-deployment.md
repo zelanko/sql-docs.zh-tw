@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea94d533714f17cd251805c5c33ec886ebbfb989
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 37fdcf6fdce41cf69a81eaea0d3ca3c9bd5c0c67
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083780"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563764"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>使用組建和部署參與者自訂資料庫建置和部署
 Visual Studio 提供可用來修改資料庫專案建置和部署動作行為的擴充點。  
@@ -36,11 +36,11 @@ Visual Studio 提供可用來修改資料庫專案建置和部署動作行為的
 ### <a name="supported-extensibility-scenarios"></a>支援的擴充性案例  
 您可以實作組建或部署參與者以實現下列範例案例：  
   
--   **專案建置期間產生結構描述文件** - 若要支援這個案例，請實作 [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 並覆寫 OnExecute 方法以產生結構描述文件。 您可以建立目標檔案，定義可控制擴充功能是否執行及指定輸出檔名稱的預設引數。  
+-   **專案建置期間產生結構描述文件** - 若要支援這個案例，請實作 [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 並覆寫 OnExecute 方法以產生結構描述文件。 您可以建立目標檔案，定義可控制擴充功能是否執行及指定輸出檔名稱的預設引數。  
   
--   **當部署 SQL 專案時產生差異報表** - 若要支援這個案例，請實作 [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，以便在部署 SQL 專案時產生 XML 檔案。  
+-   **當部署 SQL 專案時產生差異報表** - 若要支援這個案例，請實作 [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，以便在部署 SQL 專案時產生 XML 檔案。  
   
--   **修改部署計畫，隨資料異動而變更** - 若要支援這個案例，請實作 [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 並且逐一查看部署計畫。 對於該計畫中的每 SqlTableMigrationStep，檢查比較結果，決定應該執行或略過該步驟。  
+-   **修改部署計畫，隨資料異動而變更** - 若要支援這個案例，請實作 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 並且逐一查看部署計畫。 對於該計畫中的每 SqlTableMigrationStep，檢查比較結果，決定應該執行或略過該步驟。  
   
 -   **將檔案複製到部署 SQL 專案時產生的 dacpac** - 若要支援這個案例，請實作部署參與者並覆寫 OnEstablishDeploymentConfiguration 方法，以指定由專案系統標示為 DeploymentExtensionConfiguration 的檔案。 這些檔案應複製到輸出資料夾並加入至產生的 dacpac 內部。 您也可以修改參與者，將多個檔案合併至一個新檔案，以便複製到輸出資料夾並加入至部署資訊清單。 在部署期間，您可以實作 OnApplyDeploymentConfiguration 方法，從 dacpac 擷取那些檔案並準備檔案使用於 OnExecute 方法。  
   
@@ -50,9 +50,9 @@ Visual Studio 提供可用來修改資料庫專案建置和部署動作行為的
   
 |**一般工作**|**支援內容**|  
 |--------------------|--------------------------|  
-|**深入了解擴充點：** 您可以了解用來實作組建和部署參與者的基底類別。|[BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**深入了解擴充點：** 您可以了解用來實作組建和部署參與者的基底類別。|[BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
 |**建立範例參與者：** 了解建立組建或部署參與者所需的步驟。 如果遵循這些逐步解說，您會：<br /><br />-   建立組建參與者，以產生列出模型中所有項目的報表。<br />-   建立部署參與者，以便在執行之前變更部署計畫。<br />-   建立部署參與者，以便在部署 SQL 專案時產生部署報表。<br /><br />根據您要如何將參與者散發給小組，可以在單一組件或數個組件中建立所有參與者。|[逐步解說：擴充資料庫專案組建，以產生模型統計資料](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md) \(機器翻譯\)<br /><br />[逐步解說：擴充資料庫專案部署以修改部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[逐步解說：擴充資料庫專案部署以分析部署計畫](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>另請參閱  
-[定義 SQL 單元測試的自訂條件](http://msdn.microsoft.com/en-us/library/jj860449(v=vs.103).aspx)  
+[定義 SQL 單元測試的自訂條件](http://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
   

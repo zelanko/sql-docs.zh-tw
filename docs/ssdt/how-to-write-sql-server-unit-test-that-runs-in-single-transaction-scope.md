@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085070"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564124"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
 您可以修改單元測試，使其在單一交易範圍中執行。 如果採用這種方法，在測試結束之後，可以復原此測試所進行的任何變更。 下列程序說明其做法：  
@@ -60,7 +60,7 @@ ms.locfileid: "39085070"
     如需如何搭配預存程序和觸發程序使用 ROLLBACK TRANSACTION 的詳細資訊，請參閱 Microsoft 網站上的這個網頁：[ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927)。  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>若要建立單一測試方法的交易  
-在此範例中，您是在使用 [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 類型時使用環境交易。 根據預設，執行連接和授權連接不會使用環境交易，因為這些連接是在執行方法前即已建立。 SqlConnection 擁有的 [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) 方法會將作用中的連接與交易產生關聯。 建立環境交易時，會將自己註冊為目前的交易，而您可以透過 [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) 屬性存取此交易。 在此範例中，在處置環境交易時就會復原交易。 如果想要認可在執行單元測試時進行的任何變更，您必須呼叫 [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) 方法。  
+在此範例中，您是在使用 [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 類型時使用環境交易。 根據預設，執行連接和授權連接不會使用環境交易，因為這些連接是在執行方法前即已建立。 SqlConnection 擁有的 [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) 方法會將作用中的連接與交易產生關聯。 建立環境交易時，會將自己註冊為目前的交易，而您可以透過 [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) 屬性存取此交易。 在此範例中，在處置環境交易時就會復原交易。 如果想要認可在執行單元測試時進行的任何變更，您必須呼叫 [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) 方法。  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>若要建立單一測試方法的交易  
   

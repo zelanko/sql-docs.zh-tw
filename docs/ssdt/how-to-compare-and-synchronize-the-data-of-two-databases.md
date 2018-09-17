@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae6d78109eb4a6898efc9bc3e972c9f65503cf63
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 197e6130a33df4413d9c936fca9291c02557acb7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088520"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563870"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>HOW TO：比較和同步處理兩個資料庫的資料
 您可以比較兩個資料庫包含的資料。 要比較的資料庫稱為「來源」和「目標」。  
@@ -86,7 +86,7 @@ ms.locfileid: "39088520"
   
     將預留位置 (*sServerName*、*sDatabaseName*、*sUserName*、*sPassword*、*sDisplayName*、*tServerName*、*tDatabaseName*、*tUserName*、*tPassword* 和 *tDisplayName*) 取代為來源和目標資料庫的值。  
   
-    如果您沒有指定來源和目標，便會顯示 [新增資料比較] 對話方塊。 如需 Sql.NewDataComparison 命令參數的詳細資訊，請參閱 [Visual Studio Team System 資料庫功能的自動化命令參考](https://msdn.microsoft.com/en-us/library/dd470565.aspx)。  
+    如果您沒有指定來源和目標，便會顯示 [新增資料比較] 對話方塊。 如需 Sql.NewDataComparison 命令參數的詳細資訊，請參閱 [Visual Studio Team System 資料庫功能的自動化命令參考](https://msdn.microsoft.com/library/dd470565.aspx)。  
   
     對指定的來源和目標資料庫中的資料進行比較。 在資料比較工作階段中顯示結果。 如需如何檢視結果或同步處理資料的詳細資訊，請參閱[檢視資料差異](#ViewDifferences)和[同步處理資料庫資料](#Synchronize)。  
   
