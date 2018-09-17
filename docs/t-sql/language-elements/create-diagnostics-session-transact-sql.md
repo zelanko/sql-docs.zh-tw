@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aa24f75efeb5453573d54d0ec3a51d98414933e3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f143da5d3d7fbd5a03bfac5f2012826d04103450
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993091"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563534"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +66,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  要保存於檢視中的事件數目。 例如，如果指定 100，系統將在診斷工作階段中保存最近 100 個符合篩選準則的事件。 如果找到的相符事件少於 100 個，診斷工作階段將會包含少於 100 個事件。 *max_item_count_num* 必須至少為 100 且小於或等於 100,000。  
   
  *event_name*  
- 定義要在診斷工作階段中收集的實際事件。  *event_name* 是列於 [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) \(英文\) 中且為 `sys.pdw_diag_events.is_enabled='True'` 的其中一個事件。  
+ 定義要在診斷工作階段中收集的實際事件。  *event_name* 是列於 [sys.pdw_diag_events](http://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587) \(英文\) 中且為 `sys.pdw_diag_events.is_enabled='True'` 的其中一個事件。  
   
  *filter_property_name*  
  要限制結果之屬性的名稱。 例如，如果您想要根據工作階段識別碼進行限制，*filter_property_name* 便應該是 *SessionId*。 如需 *filter_property_name* 的可能值清單，請參閱下方的＜*property_name*＞。  
@@ -92,7 +92,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|服務處理序識別碼。|  
   
 ## <a name="remarks"></a>Remarks  
- 允許每位使用者最多 10 個並行診斷工作階段。 如需目前工作階段的清單，請參閱 [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) \(英文\)，並使用 `DROP DIAGNOSTICS SESSION` 卸除任何不需要的工作階段。  
+ 允許每位使用者最多 10 個並行診斷工作階段。 如需目前工作階段的清單，請參閱 [sys.pdw_diag_sessions](http://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) \(英文\)，並使用 `DROP DIAGNOSTICS SESSION` 卸除任何不需要的工作階段。  
   
  診斷工作階段將繼續收集中繼資料，直到被卸除為止。  
   

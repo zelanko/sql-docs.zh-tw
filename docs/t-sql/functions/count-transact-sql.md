@@ -27,12 +27,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 439f115655f2655a40053954490a201d78963820
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 47ce6d33af94869656388fceb379129e54ed4c56
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085628"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375631"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,24 +44,12 @@ ms.locfileid: "43085628"
 ## <a name="syntax"></a>語法  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )   
-    [ OVER (   
-        [ partition_by_clause ]   
-        [ order_by_clause ]   
-        [ ROW_or_RANGE_clause ]  
-    ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
 
 -- Analytic Function Syntax  
-COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT ( [ ALL ]  { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## <a name="arguments"></a>引數  

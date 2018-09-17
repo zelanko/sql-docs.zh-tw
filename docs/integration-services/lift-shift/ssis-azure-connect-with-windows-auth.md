@@ -12,21 +12,21 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c2b7a091b4bfe5add722ad224adc175b06817a74
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.openlocfilehash: 8979512a2ac2edeba8a5a6479fe0ef8bb6c3179a
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066018"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564004"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>在 Azure 中從 SSIS 套件使用 Windows 驗證來連線至資料來源和檔案共用
 無論是在內部部署/Azure 虛擬機器上及 Azure 檔案中，您都可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime (IR) 相同虛擬網路中的資料來源與檔案共用。 從在 Azure-SSIS IR 上執行的 SSIS 套件，使用 Windows 驗證連線至資料來源與檔案共用的方法有三種：
 
 | 連線方法 | 有效範圍 | 設定步驟 | 套件中的存取方法 | 認證組數和已連線資源 | 已連線資源的類型 | 
 |---|---|---|---|---|---|
-| 透過 `cmdkey` 命令保存認證 | 每個 Azure SSIS IR | 佈建/重新設定 Azure-SSIS IR 時以自訂安裝指令碼 (`main.cmd`) 執行 `cmdkey` 命令，例如：`cmdkey /add:fileshareserver /user:xxx /pass:yyy`。<br/><br/> 如需詳細資訊，請參閱[自訂 Azure SSIS IR 的安裝](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。 | 透過 UNC 路徑 (例如：`\\fileshareserver\folder`) 直接存取套件中的資源 | 支援針對不同的連線資源使用多組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 |
-| 設定目錄層級的執行內容 | 每個 Azure SSIS IR | 執行 SSISDB `catalog.set_execution_credential` 預存程序，以設定「執行身分」內容。<br/><br/> 如需詳細資訊，請參閱本文下方的其餘部分。 | 直接存取套件中的資源 | 針對所有已連線的資源只支援一組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 | 
-| 在套件執行期間裝載磁碟機 (非持續性) | 每個套件 | 以在套件控制流程一開始加入的「執行處理工作」執行 `net use` 命令，例如：`net use D: \\fileshareserver\sharename` | 透過對應磁碟機存取檔案共用 | 支援不同的檔案共用使用多個磁碟機 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows) |
+| 透過 `cmdkey` 命令保存認證 | 每個 Azure SSIS IR | 佈建/重新設定 Azure-SSIS IR 時以自訂安裝指令碼 (`main.cmd`) 執行 `cmdkey` 命令，例如：`cmdkey /add:fileshareserver /user:xxx /pass:yyy`。<br/><br/> 如需詳細資訊，請參閱[自訂 Azure SSIS IR 的安裝](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。 | 透過 UNC 路徑 (例如：`\\fileshareserver\folder`) 直接存取套件中的資源 | 支援針對不同的連線資源使用多組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 |
+| 設定目錄層級的執行內容 | 每個 Azure SSIS IR | 執行 SSISDB `catalog.set_execution_credential` 預存程序，以設定「執行身分」內容。<br/><br/> 如需詳細資訊，請參閱本文下方的其餘部分。 | 直接存取套件中的資源 | 針對所有已連線的資源只支援一組認證 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Server 搭配 Windows 驗證<br/><br/> - 其他資源搭配 Windows 驗證 | 
+| 在套件執行期間裝載磁碟機 (非持續性) | 每個套件 | 以在套件控制流程一開始加入的「執行處理工作」執行 `net use` 命令，例如：`net use D: \\fileshareserver\sharename` | 透過對應磁碟機存取檔案共用 | 支援不同的檔案共用使用多個磁碟機 | - 內部部署/Azure VM 上的檔案共用<br/><br/> - Azure 檔案，請參閱[使用 Azure 檔案共用](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) |
 |||||||
 
 > [!WARNING]
@@ -83,7 +83,7 @@ ms.locfileid: "37066018"
 ## <a name="connect-to-an-on-premises-sql-server"></a>連線到內部部署 SQL Server
 若要檢查是否可以連線至內部部署 SQL Server，請執行下列動作：
 
-1.  若要執行此測試，請尋找未加入網域的電腦。
+1.  若要執行這項測試，請尋找未加入網域的電腦。
 
 2.  在未加入網域的電腦上，執行下列命令，以您想要使用的網域認證啟動 SQL Server Management Studio (SSMS)：
 
@@ -93,8 +93,8 @@ ms.locfileid: "37066018"
 
 3.  從 SSMS 中，檢查是否可以連線至您想要使用的內部部署 SQL Server。
 
-### <a name="prerequisites"></a>先決條件
-若要從 Azure 上執行的套件連線到內部部署 SQL Server，您必須啟用下列先決條件：
+### <a name="prerequisites"></a>Prerequisites
+若要從 Azure 上執行的套件連線到內部部署 SQL Server，您必須啟用下列必要條件：
 
 1.  在 SQL Server 組態管理員中，啟用 TCP/IP 通訊協定。
 2.  允許通過 Windows 防火牆進行存取。 如需詳細資訊，請參閱[設定 Windows 防火牆以允許 SQL Server 存取](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access)。
@@ -103,7 +103,7 @@ ms.locfileid: "37066018"
 ## <a name="connect-to-an-on-premises-file-share"></a>連線至內部部署檔案共用
 若要檢查是否可以連線至內部部署檔案共用，請執行下列動作：
 
-1.  若要執行此測試，請尋找未加入網域的電腦。
+1.  若要執行這項測試，請尋找未加入網域的電腦。
 
 2.  在未加入網域的電腦上，執行下列命令。 此命令會使用您要使用的網域認證開啟命令提示字元視窗，然後藉由取得目錄清單來測試與檔案共用的連線。
 

@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084631"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563834"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "39084631"
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-您可以使用擴充屬性目錄檢視 [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) 來存取中繼資料。
+您可以使用擴充屬性目錄檢視 [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) 來存取中繼資料。
 
 下列程式碼範例會傳回所有的分類資料行，以及其對應的分類：
 
@@ -150,8 +150,8 @@ FROM
 
 請考慮套用資料行層級安全性機制來保護敏感資料行：
 
-* [動態資料遮罩](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking)以模糊化使用中的敏感資料行。
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) 以加密靜止的敏感資料行。
+* [動態資料遮罩](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking)以模糊化使用中的敏感資料行。
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) 以加密靜止的敏感資料行。
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

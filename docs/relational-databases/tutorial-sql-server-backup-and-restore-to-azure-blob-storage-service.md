@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2c3ae93bc044f75f502a357df50495f5041b165e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991891"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563699"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37991891"
 [第 2 課：建立 SQL Server 認證](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 在這一課，您會建立認證以儲存用來存取 Azure 儲存體帳戶的安全性資訊。  
   
-[第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務](https://technet.microsoft.com/en-us/library/jj720552\(v=sql.110\).aspx)  
+[第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務](https://technet.microsoft.com/library/jj720552\(v=sql.110\).aspx)  
 在這一課，您會發出 T-SQL 陳述式，以便將 AdventureWorks2012 資料庫的備份寫入 Azure Blob 儲存體服務。  
   
 [第 4 課：從完整資料庫備份執行還原](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

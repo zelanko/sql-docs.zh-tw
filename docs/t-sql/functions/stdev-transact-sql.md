@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd5d088d0b6d93912e9639be46c31bf47b705541
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6d630e0729a9d75dadcb787c237f18ff3f971849
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058588"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375691"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,21 +40,12 @@ ms.locfileid: "43058588"
   
 ## <a name="syntax"></a>語法  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-STDEV ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+```    
 -- Aggregate Function Syntax   
 STDEV ( [ ALL | DISTINCT ] expression )  
   
 -- Analytic Function Syntax   
-STDEV (expression) OVER ( [ partition_by_clause ] order_by_clause)  
+STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## <a name="arguments"></a>引數  

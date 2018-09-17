@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087560"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564204"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * 請使用具有快速處理器的伺服器並盡量多使用您可以負擔的處理器核心，以充分利用平行查詢處理功能。
 * 確定伺服器擁有足夠的 I/O 控制器頻寬。 
 * 在每一個大型資料分割資料表上建立叢集索引，以充分利用 B 型樹狀結構的掃描最佳化。
-* 當您將資料大量載入資料分割資料表時，請遵循 [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx) (資料載入效能指南) 技術白皮書中的最佳做法建議。
+* 當您將資料大量載入資料分割資料表時，請遵循 [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx) (資料載入效能指南) 技術白皮書中的最佳做法建議。
 
 ### <a name="example"></a>範例
 

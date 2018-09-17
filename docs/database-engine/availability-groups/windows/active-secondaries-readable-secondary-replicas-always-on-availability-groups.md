@@ -20,12 +20,12 @@ caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5197fb00840296dc4ef05b478d0dd3f0cd37c46
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 972b7bffab1ff6b4bf0710078d5c64a299ffe793
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770054"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564142"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34770054"
   
 -   以磁碟資料表的唯讀工作負載，會使用資料列版本設定以移除對於次要資料庫的封鎖競爭。 針對次要資料庫執行的所有查詢都會自動對應到快照集隔離交易層級，即使已明確設定其他交易隔離等級也是如此。 此外，所有鎖定提示都會被忽略。 這排除了讀取器/寫入器競爭。  
   
--   記憶體最佳化持久資料表的唯讀工作負載存取資料的方式，與主要資料庫上的存取方式完全相同，都是使用原生預存程序或 SQL 互通性，而且具有相同的交易隔離等級限制 (請參閱 [Database Engine 中的隔離等級](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7))。 在主要複本上執行的報表工作負載或唯讀查詢可以在次要複本上執行，不需要任何變更。 同樣地，在次要複本上執行的報表工作負載或唯讀查詢也可以在主要複本上執行，不需要任何變更。  與磁碟基礎的資料表類似，對次要資料庫執行的所有查詢都會自動對應到快照集隔離交易層級，即使已明確設定其他交易隔離等級也是如此。  
+-   記憶體最佳化持久資料表的唯讀工作負載存取資料的方式，與主要資料庫上的存取方式完全相同，都是使用原生預存程序或 SQL 互通性，而且具有相同的交易隔離等級限制 (請參閱 [Database Engine 中的隔離等級](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7))。 在主要複本上執行的報表工作負載或唯讀查詢可以在次要複本上執行，不需要任何變更。 同樣地，在次要複本上執行的報表工作負載或唯讀查詢也可以在主要複本上執行，不需要任何變更。  與磁碟基礎的資料表類似，對次要資料庫執行的所有查詢都會自動對應到快照集隔離交易層級，即使已明確設定其他交易隔離等級也是如此。  
   
 -   次要複本上以磁碟為基礎和記憶體最佳化資料表類型，都允許對資料表變數進行 DML 作業。  
   

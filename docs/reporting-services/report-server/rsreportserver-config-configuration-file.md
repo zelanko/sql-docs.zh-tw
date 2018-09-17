@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3ca27df3ccd68df1b5b3e10c67d7550742d236
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bcf0521ad8d6f32bd9c351c0f5f212c12dfebd57
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274737"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564184"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -237,7 +237,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**、 **RenderingExtension**|這些設定是用於刻意排除無法搭配檔案共用傳遞使用的匯出格式。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> 報表伺服器電子郵件延伸模組組態設定  
- 報表伺服器電子郵件會使用 SMTP 網路裝置，將報表傳送至電子郵件地址。 您必須先設定這個傳遞延伸模組，然後才能使用它。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) 和 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
+ 報表伺服器電子郵件會使用 SMTP 網路裝置，將報表傳送至電子郵件地址。 您必須先設定這個傳遞延伸模組，然後才能使用它。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 和 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 |設定|Description|  
 |-------------|-----------------|  

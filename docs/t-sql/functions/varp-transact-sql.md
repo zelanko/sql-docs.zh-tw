@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 045c120dbf3091815eb7dfe14cfe484325c2058e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3be8a53bd12b3cb21d597974bb35c3452ed51249
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070009"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375641"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,20 +41,11 @@ ms.locfileid: "43070009"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-VARP ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Aggregate Function Syntax   
 VARP ( [ ALL | DISTINCT ] expression )  
   
 -- Analytic Function Syntax  
-VARP (expression) OVER ( [ partition_by_clause ] order_by_clause)  
+VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## <a name="arguments"></a>引數  

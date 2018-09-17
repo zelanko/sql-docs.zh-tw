@@ -36,12 +36,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bef7cd94172b6560803b5bf3372903419f1eb10
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ff9a91e139b350e858ee715b40065afda89cc374
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077332"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564147"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -1001,7 +1001,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. 搭配 INSERT 陳述式使用標籤及查詢提示  
- 此查詢示範搭配使用 INSERT 陳述式、標籤及查詢聯結提示的基本語法。 向控制節點提交查詢之後，在計算節點上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會於產生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢計劃時套用雜湊聯結策略。 如需聯結提示及如何使用 OPTION 子句的詳細資訊，請參閱 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc)。  
+ 此查詢示範搭配使用 INSERT 陳述式、標籤及查詢聯結提示的基本語法。 向控制節點提交查詢之後，在計算節點上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會於產生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢計劃時套用雜湊聯結策略。 如需聯結提示及如何使用 OPTION 子句的詳細資訊，請參閱 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
   
 ```  
 -- Uses AdventureWorks  

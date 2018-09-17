@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecbe8b1fb2540eff9334e7c68a7b5a8872decb2b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084651"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499324"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>索引的 SORT_IN_TEMPDB 選項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "43084651"
   
  若 SORT_IN_TEMPDB 設定為 OFF，目標檔案群組中的可用磁碟空間必須大約為最後索引的大小。 在第一階段中，排序結果將被建立，並且要求大約與最後索引相同的空間數量。 在第二個階段中，每個排序結果範圍都會在處理過後釋出。 這代表該排序結果範圍釋出的速度約和範圍被要求去保存最後索引頁面的速度一樣，因此整體的空間需求並不會大幅超過最後索引的大小。 它的一個副作用是若可用空間的數量非常接近最後索引的大小， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 一般將重複使用剛剛才釋出的排序結果範圍。 因為排序結果範圍會以有些隨機的方式釋出，這將會減少在此案例中的索引範圍接近程度。 若 SORT_IN_TEMPDB 設定為 OFF，當目標檔案群組中擁有足夠的可用空間時，索引範圍的接近程度將會改善，這是因為索引範圍可從連續的集區中配置而得，而不用從剛剛取消配置的排序結果範圍來取得。  
   
- 當您建立非叢集的索引時，您必須擁有足夠的可用空間：  
+當您建立非叢集的索引時，您必須擁有足夠的可用空間：  
   
 -   若 SORT_IN_TEMPDB 設定為 ON， **tempdb** 中必須有足夠的可用空間來儲存排序結果，目標檔案群組中也必須有足夠的可用空間來儲存最後的索引結構。 排序結果包含了索引的分葉資料列。  
   
 -   若 SORT_IN_TEMPDB 設定為 OFF，目標檔案群組中的可用空間必須足夠儲存最後的索引結構。 若有更多的可用空間，索引範圍的接近程度將可改善。  
   
- 當您在沒有非叢集索引的資料表上建立叢集索引時，您必須擁有足夠的可用空間：  
+當您在沒有非叢集索引的資料表上建立叢集索引時，您必須擁有足夠的可用空間：  
   
 -   若 SORT_IN_TEMPDB 設定為 ON， **tempdb** 中必須有足夠的可用空間來儲存排序結果。 這包括了資料表的資料列。 目標檔案群組中必須有足夠的空間來儲存最後的索引結構。 這包括了資料表的資料列，以及索引的 B 型樹狀目錄。 您可能必須調整一些因數的估計，例如使用較大型的索引鍵，或是使用較小值的填滿因數。  
   
 -   若 SORT_IN_TEMPDB 設定為 OFF，目標檔案群組中的可用空間必須足夠儲存最後的資料表。 這包括了索引結構。 若有更多的可用空間，資料表與索引範圍的接近程度將可改善。  
   
- 當您在具有非叢集索引的資料表上建立叢集索引時，您必須擁有足夠的可用空間：  
+當您在具有非叢集索引的資料表上建立叢集索引時，您必須擁有足夠的可用空間：  
   
 -   若 SORT_IN_TEMPDB 設定為 ON， **tempdb** 中必須有足夠的可用空間來儲存最大索引 (通常是叢集索引) 排序結果的集合，目標檔案群組中也必須有足夠的可用空間來儲存所有索引的最後結構。 這包括了包含資料表資料列的叢集索引。  
   

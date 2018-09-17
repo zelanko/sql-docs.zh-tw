@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: dcc08dfd4c4759f834a7371dd700c32c69c8de24
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 088c7b60bff2c050cec0b486fd4c91f3b9df1213
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39536158"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564114"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39536158"
 |**3226**|根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常建立記錄備份，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。<br /><br />透過這個追蹤旗標，您可以隱藏這些記錄項目。 如果您正執行經常記錄備份，而且沒有任何指令碼相依於這些項目，這樣做就會很有用。<br /><br />**範圍**：只限全域|   
 |**3427**|為許多連續性交易在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 的暫存資料表中插入資料時所耗用的 CPU 比在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 更多的問題，啟用修正。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/3216543)<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 及更新的組建。 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU4 開始，此追蹤旗標沒有任何作用。<br /><br />**範圍**：只限全域|  
 |**3459**|停用平行重做。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/3200975)和 [Microsoft 支援服務文章](http://support.microsoft.com/help/4101554)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]。<br /><br />**範圍**：只限全域| 
-|**3468**|停用 TempDB 上的[間接檢查點](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 及更新的組建。<br /><br />**範圍**：只限全域|  
+|**3468**|停用 TempDB 上的[間接檢查點](https://docs.microsoft.com/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 及更新的組建。<br /><br />**範圍**：只限全域|  
 |**3608**|防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自動啟動並復原任何資料庫，但 **master** 資料庫除外。 若起始了需要 **tempdb** 的活動，則會復原 **model** 並建立 **tempdb**。 其他資料庫會在存取時啟動和復原。 但是，某些功能 (例如快照集隔離和讀取認可的快照集) 可能無法運作。 用於[移動系統資料庫](../../relational-databases/databases/move-system-databases.md)和[移動使用者資料庫](../../relational-databases/databases/move-user-databases.md)。<br /><br />**注意：** 請勿在一般作業期間使用。<br /><br />**範圍**：只限全域|   
 |**3625**|使用 '\*\*\*\*\*\*' 來遮罩某些錯誤訊息的參數，藉以限制傳回給非 sysadmin 固定伺服器角色成員之使用者的資訊量。 這樣做有助於避免洩漏機密資訊。<br /><br />**範圍**：只限全域|  
 |**4136**|除非使用了 OPTION(RECOMPILE), WITH RECOMPILE or OPTIMIZE FOR \<value>，否則請停用參數探查。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/980653) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若要在資料庫層級完成此操作，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 PARAMETER_SNIFFING 選項。<br /><br />若要在查詢層級完成此操作，請新增 OPTIMIZE FOR UNKNOWN [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，在查詢層級完成此操作的第二個選項是新增 USE HINT 'DISABLE_PARAMETER_SNIFFING' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後再部署到生產環境。<br /><br />**範圍**：全域或工作階段|  

@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ddad036821e735f693a2e2dec031dcb07c76902
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3ccbb7da44967b7be3bb30b218a1b779215755db
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070891"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533900"
 ---
 # <a name="view-collation-information"></a>檢視定序資訊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-##  <a name="Top"></a> 您可以使用 [物件總管] 功能表選項或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視伺服器、資料庫或資料行的定序。  
+<a name="Top"></a> 您可以使用 [物件總管] 功能表選項或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視伺服器、資料庫或資料行的定序。  
   
 ##  <a name="Procedures"></a> 如何檢視定序設定  
  您可以使用下列其中一項：  
@@ -65,13 +65,13 @@ ms.locfileid: "43070891"
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
     ```  
   
 3.  或者，您可以使用 sp_helpsort 系統預存程序。  
   
-    ```  
+    ```sql  
     EXECUTE sp_helpsort;  
     ```  
   
@@ -81,7 +81,7 @@ ms.locfileid: "43070891"
   
 2.  在查詢視窗中，輸入下列使用 SERVERPROPERTY 系統函數的陳述式。  
   
-    ```  
+    ```sql  
     SELECT name, description FROM sys.fn_helpcollations();  
     ```  
   
@@ -91,13 +91,13 @@ ms.locfileid: "43070891"
   
 2.  在查詢視窗中，輸入下列使用 sys.databases 系統目錄檢視的陳述式。  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.databases;  
     ```  
   
 3.  或者，您可以使用 DATABASEPROPERTYEX 系統函數。  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
@@ -107,7 +107,7 @@ ms.locfileid: "43070891"
   
 2.  在查詢視窗中，輸入下列使用 sys.columns 系統目錄檢視的陳述式。  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
@@ -117,6 +117,7 @@ ms.locfileid: "43070891"
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   
