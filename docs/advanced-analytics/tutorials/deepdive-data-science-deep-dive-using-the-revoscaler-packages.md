@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 4aa45d7ee690d55672c86be256e66d454860c2b6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343083"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563874"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>SQL Server 資料的教學課程： 使用 RevoScaleR R 函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ RevoScaleR 是提供分散式和平行處理的資料科學與機器學習服務
   
     本機和遠端計算內容之間來回切換，您需要兩個系統。 本機通常是使用足夠的能力，用於資料科學工作負載的開發工作站。 遠端在此情況下是 SQL Server 2017 或 SQL Server 2016 已啟用 R 功能。 
     
-    於本機和遠端系統上具有相同版本 RevoScaleR 中預測有切換計算內容。 在本機工作站上，您可以取得 RevoScaleR 套件及相關的提供者安裝或使用下列任何一個：[在 Azure 上的資料科學 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)， [（免費） 的 Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client)，或[Microsoft Machine Learning Server （獨立式）](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)。 安裝獨立伺服器 選項中，使用 Linux 或 Windows 安裝程式的免費開發人員版本。 您也可以使用 SQL Server 安裝程式安裝在獨立伺服器。
+    於本機和遠端系統上具有相同版本 RevoScaleR 中預測有切換計算內容。 在本機工作站上，您可以取得 RevoScaleR 套件及相關的提供者安裝或使用下列任何一個：[在 Azure 上的資料科學 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)， [（免費） 的 Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，或[Microsoft Machine Learning Server （獨立式）](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)。 安裝獨立伺服器 選項中，使用 Linux 或 Windows 安裝程式的免費開發人員版本。 您也可以使用 SQL Server 安裝程式安裝在獨立伺服器。
       
 -   **其他 R 套件**
   

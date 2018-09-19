@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068745"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534000"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "43068745"
 
 ## <a name="why-automatic-tuning"></a>為什麼自動調整？
 
-其中一個傳統資料庫系統管理的主要工作正在監視的工作負載中，然後再用來識別重要[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查詢時，應該以改善效能，新增，而很少使用索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供之查詢和索引，您需要監視的詳細的解析。 不過，持續監視資料庫是困難且單調乏味的工作，特別是在處理多個資料庫。 管理大量資料庫可能無法有效率地。 而不是監視和手動調整您的資料庫，您可以考慮委派部分監視和微調動作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自動調整功能。
+三個傳統資料庫系統管理的主要工作正在監視的工作負載中，然後再用來識別重要[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查詢時，應新增以提升效能，以及識別很少使用的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供之查詢和索引，您需要監視的詳細的解析。 不過，持續監視資料庫是困難且單調乏味的工作，特別是在處理多個資料庫。 管理大量資料庫可能無法有效率地。 而不是監視和手動調整您的資料庫，您可以考慮委派部分監視和微調動作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自動調整功能。
 
-### <a name="how-does-automatic-tuning-works"></a>自動調整運作方式？
+### <a name="how-does-automatic-tuning-work"></a>自動調整的方式為何？
 
-自動調整是以持續監視和分析程序，持續了解您的工作負載特性，並識別潛在的問題和增強功能。
+自動調整是以持續監視和分析程序，持續了解您的工作負載的特性，並識別潛在的問題和增強功能。
 
 ![自動調整程序](./media/tuning-process.png)
 

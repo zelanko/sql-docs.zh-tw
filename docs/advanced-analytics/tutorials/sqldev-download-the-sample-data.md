@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703601"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724332"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>適用於 SQL Server 的 NYC 計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 |**物件名稱**|**物件類型**|**說明**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | [資料庫] |建立-db-tb-上傳-data.sql 指令碼建立。 建立資料庫和兩個資料表：<br /><br />dbo.nyctaxi_sample 資料表： 包含主要紐約市計程車資料集。 叢集資料行存放區索引會加入資料表，以提升儲存體和查詢效能。 NYC 計程車資料集的 1%樣本會插入此資料表。<br /><br />dbo.nyc_taxi_models 資料表： 用來保存定型的進階的分析模型。|
+|**NYCTaxi_Sample** | [資料庫] |建立-db-tb-上傳-data.sql 指令碼建立。 建立資料庫和兩個資料表：<br /><br />dbo.nyctaxi_sample 資料表： 包含主要紐約市計程車資料集。 叢集資料行存放區索引會加入資料表，以提升儲存體和查詢效能。 NYC 計程車資料集的 1%樣本會插入此資料表。<br /><br />dbo.nyc_taxi_models 資料表： 用來保存定型的進階的分析模型。|
 |**fnCalculateDistance** |純量值函式 | FnCalculateDistance.sql 指令碼建立。 計算上車與下車位置之間的直線距離。 此函式會在[建立資料特徵](sqldev-create-data-features-using-t-sql.md)，[定型及儲存模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)並[R 模型作業化](sqldev-operationalize-the-model.md)。|
 |**fnEngineerFeatures** |資料表值函式 | FnEngineerFeatures.sql 指令碼建立。 建立新的資料特徵來訓練模型。 此函式會在[建立資料特徵](sqldev-create-data-features-using-t-sql.md)並[R 模型作業化](sqldev-operationalize-the-model.md)。|
 |**PlotHistogram** |預存程序 | PlotHistogram.sql 指令碼建立。 呼叫 R 函數，以繪製變數的長條圖，然後傳回繪圖作為二進位物件。 這個預存程序會在[瀏覽及視覺化資料](sqldev-explore-and-visualize-the-data.md)。|

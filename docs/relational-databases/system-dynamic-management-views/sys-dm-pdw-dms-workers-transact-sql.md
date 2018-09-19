@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c46c6b83d820d7c970d16e2e84a3a81a0e07b340
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 823b3be3ee731857e9307c7cf1bb15f512310d2e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029568"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563700"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "38029568"
 |source_info|**nvarchar(4000)**|讀取器、 來源資料表和資料行規格。||  
 |destination_info|**nvarchar(4000)**|寫入器，目的地資料表的規格。||  
   
- 這份檢視所保留的最大資料列的相關資訊，請參閱[系統檢視的最大值](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9)。  
+ 這份檢視所保留的最大資料列的相關資訊，請參閱[系統檢視的最大值](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

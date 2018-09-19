@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095311"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563626"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "37095311"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|指出報告 15 秒的時間間隔開始的 UTC 時間|  
 |end_time|**datetime**|表示 15 秒報告時間間隔結束的 UTC 時間|
-|resource_type|& Lt;languagekeyword>nvarchar(128)</languagekeyword&gt|計量會提供的目標資源類型|
+|resource_type|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|計量會提供的目標資源類型|
 |resource_name|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|資源的名稱。|
 |sku|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|受管理的執行個體的執行個體服務層。 以下是可能的值： <br><ul><li>一般用途</li></ul><ul><li>業務關鍵</li></ul>|
 |hardware_generation|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|硬體產生識別碼： 例如，第 4 代或第 5 代|
@@ -59,7 +59,7 @@ ms.locfileid: "37095311"
 
  
 > [!TIP]  
->  如需這些限制和服務層的詳細內容，請參閱主題[受控執行個體的服務層](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)。  
+>  如需這些限制和服務層的詳細內容，請參閱主題[受控執行個體的服務層](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)。  
     
 ## <a name="permissions"></a>Permissions  
  這個檢視可供所有使用者角色權限來連接到**主要**資料庫。  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>另請參閱  
- [受控執行個體的服務層](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [受控執行個體的服務層](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

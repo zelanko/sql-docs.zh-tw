@@ -21,12 +21,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 44588ed7365e7f38ec514e1d272e342572f8c967
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 90007b46558fbe348f1619bbbdcf877faeaf1f7e
+ms.sourcegitcommit: c12e41eff37fdfededc9b18ecf2e7e11893eb850
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038711"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45599942"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ sp_setapprole [ @rolename = ] 'role',
  下列範例會啟動一個名為 `SalesAppRole` 的應用程式角色，其純文字密碼為 `AsDeF00MbXX`，而且是利用專門針對目前的使用者使用之應用程式設計的權限來建立的。  
   
 ```  
-EXEC sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
+EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
 GO  
 ```  
   
@@ -105,12 +105,12 @@ GO
   
 ```  
 DECLARE @cookie varbinary(8000);  
-EXEC sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
+EXEC sys.sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
     , @fCreateCookie = true, @cookie = @cookie OUTPUT;  
 -- The application role is now active.  
 SELECT USER_NAME();  
 -- This will return the name of the application role, Sales11.  
-EXEC sp_unsetapprole @cookie;  
+EXEC sys.sp_unsetapprole @cookie;  
 -- The application role is no longer active.  
 -- The original context has now been restored.  
 GO  

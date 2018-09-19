@@ -1,6 +1,6 @@
 ---
-title: 建立及管理角色 |Microsoft 文件
-ms.date: 05/07/2018
+title: 建立及管理角色 |Microsoft Docs
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975667"
 ---
 # <a name="create-and-manage-roles"></a>建立及管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
+  表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 
+
+> [!IMPORTANT]
+> 如果您要部署專案至 Azure Analysis Services，使用**整合式工作區**與您的工作區資料庫。 若要進一步了解，請參閱[工作區資料庫](workspace-database-ssas-tabular.md)。
   
- 這篇文章中的工作描述如何建立及管理角色使用角色管理員 對話方塊中的模型撰寫期間[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 管理已部署的模型資料庫中角色的相關資訊，請參閱[表格式模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
+ 這篇文章中的工作描述如何建立及管理角色，在使用中的 [角色管理員] 對話方塊中的模型製作期間[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 如需管理已部署的模型資料庫中的角色資訊，請參閱[表格式模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
 ## <a name="tasks"></a>工作  
  若要建立、編輯、複製及刪除角色，您要使用 [角色管理員] 對話方塊。 若要檢視 [角色管理員] 對話方塊，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中按一下 [模型] 功能表，然後按一下 [角色管理員]。  
@@ -39,7 +42,7 @@ ms.locfileid: "34045612"
   
 4.  在 [權限] 欄位中，按一下向下箭頭，然後選取下列其中一個權限類型：  
   
-    |權限|Description|  
+    |權限|描述|  
     |----------------|-----------------|  
     |**無**|成員無法對模型結構描述進行任何修改，也無法查詢資料。|  
     |**讀取**|成員可以查詢資料 (根據資料列篩選)，但無法對模型結構描述進行任何變更。|  
@@ -54,7 +57,7 @@ ms.locfileid: "34045612"
 7.  若要將成員加入至角色，請按一下 [成員] 索引標籤，然後按一下 [加入]。  
   
     > [!NOTE]  
-    >  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，將角色成員加入至已部署的模型。 如需詳細資訊，請參閱[使用 SSMS 管理角色](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)。  
+    >  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，將角色成員加入至已部署的模型。 如需詳細資訊，請參閱 <<c0> [ 使用 SSMS 管理角色](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)。  
   
 8.  在 [選取使用者或群組] 對話方塊中，輸入 Windows 使用者或 Windows 群組物件做為成員。  
   
@@ -64,7 +67,7 @@ ms.locfileid: "34045612"
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [在 Excel 中進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函數 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [使用者名稱的函式 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
  [CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: sys.elastic_pool_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997980"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563264"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,8 @@ ms.locfileid: "37997980"
 |**max_worker_percent**|**decimal(5,2)**|最大並行背景工作角色 （要求） 限制的集區的百分比。|  
 |**max_session_percent**|**decimal(5,2)**|最大並行工作階段百分比限制的集區。|  
 |**elastic_pool_dtu_limit**|**int**|目前最大的彈性集區 DTU 設定此彈性集區在此間隔期間。|  
-|**elastic_pool_storage_limit_mb**|**bigint**|在此間隔期間此彈性集區，以 mb 為單位設定目前最大的彈性集區儲存體限制。|  
+|**elastic_pool_storage_limit_mb**|**bigint**|在此間隔期間此彈性集區，以 mb 為單位設定目前最大的彈性集區儲存體限制。|
+|**avg_allocated_storage_percent**|**decimal(5,2)**|彈性集區中的所有資料庫所配置的資料空間的百分比。  這是配置給資料的彈性集區的最大大小的資料空間的比例。  如需詳細資訊，請參閱： [SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>備註  
  此檢視位於邏輯伺服器的 master 資料庫。 您必須連接到 master 資料庫來查詢**sys.elastic_pool_resource_stats**。  

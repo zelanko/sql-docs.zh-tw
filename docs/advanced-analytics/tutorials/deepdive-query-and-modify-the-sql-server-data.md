@@ -1,5 +1,5 @@
 ---
-title: 查詢及修改 SQL Server 資料 （SQL 與 R 深入探討） |Microsoft 文件
+title: 查詢及修改 SQL Server 資料 （SQL 和 R 深入探討） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,29 +7,29 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 90b836cd09fd0c6f130ff65c531f6077a28c2014
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202220"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975647"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>查詢及修改 SQL Server 資料 （SQL 與 R 深入探討）
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>查詢及修改 SQL Server 資料 （SQL 和 R 深入探討）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這篇文章是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
 既然您已將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，便可以在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]使用您建立的資料來源作為 R 函數的引數，以取得變數的基本資訊，並產生摘要和長條圖。
 
-在此步驟中，您可以重複使用進行一些快速分析，並提升資料的資料來源。
+在此步驟中，您可以重複使用來進行一些快速分析，然後提升資料的資料來源。
 
 ## <a name="query-the-data"></a>查詢資料
 
 首先，取得一份資料行和其資料類型的清單。
 
-1.  使用函數[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)並指定您想要分析的資料來源。
+1.  使用函式[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)並指定您想要分析的資料來源。
 
-    根據您的 RevoScaleR 版本，您也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
+    根據您的 RevoScaleR 的版本，您也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -58,11 +58,11 @@ ms.locfileid: "31202220"
 
 ## <a name="modify-metadata"></a>修改中繼資料
 
-所有的變數會儲存為整數，但某些變數代表類別的資料 – 在 R 中稱為「因素變數」。例如，資料行 *state* 包含數字，用來作為 50 個州再加上華盛頓哥倫比亞特區的識別碼。  為了讓您更輕鬆地了解資料，您將數字取代為各州縮寫的清單。
+所有變數會都儲存為整數，但某些變數代表類別的資料，稱為*因素變數*例如，資料行*狀態*包含當做識別項之 50 州再加上哥倫比亞特區的數字。  為了讓您更輕鬆地了解資料，您將數字取代為各州縮寫的清單。
 
-在此步驟中，建立包含縮寫的字串向量，然後將這些類別的值對應至原始的整數識別碼。 然後使用中的新變數*colInfo*引數，以指定此資料行，做為因數處理。 每當您分析資料，或將它移，使用縮寫，而且資料行處理做為因數。
+在此步驟中，您會建立包含縮寫的字串向量，並再將這些類別的值對應至原始的整數識別碼。 然後使用中的新變數*colInfo*引數，來指定此資料行視為因素。 每當您分析資料，或將它移，使用縮寫，以及資料行視為因素。
 
-將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊，請參閱[R 和資料最佳化](..\r\r-and-data-optimization-r-services.md)。
+將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊，請參閱 < [R 和資料最佳化](..\r\r-and-data-optimization-r-services.md)。
 
 1. 一開始先建立 R 變數 *stateAbb*，以及定義要新增給它的字串向量，如下所示︰
   
@@ -120,11 +120,11 @@ ms.locfileid: "31202220"
     
     *Var 1: custID, Type: integer*
     
-    *Var 2： 性別 2 因素層： 男性女性*
+    *Var 2： 性別 2 個因素層級： 男性女性*
     
-    *Var 3： 狀態 51 因素層級： AK AL AR AZ CA...VT WA WI WV WY*
+    *Var 3： 狀態 51 因素 levels: AK AL AR AZ CA...VT WA WI WV WY*
     
-    *Var 4： 持卡人 2 因素層級： 主體次要資料庫*
+    *Var 4： 持卡人 2 因素層級： 主體的次要資料庫*
     
     *Var 5: balance, Type: integer*
     

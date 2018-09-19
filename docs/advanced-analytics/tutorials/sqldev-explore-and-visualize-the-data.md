@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703621"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724342"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 課： 瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "42703621"
 2.  開啟 PowerShell 命令提示字元並執行下列命令，並提供適當的執行個體名稱、 資料庫名稱、 使用者名稱和認證做為引數。 對於使用 Windows 身分識別，您可以取代 **-U**並 **-P**具有 **-T**。
   
      ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]

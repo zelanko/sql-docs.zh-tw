@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392933"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724302"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>教學課程： 了解在 SQL Server 中使用 R 的資料庫內分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

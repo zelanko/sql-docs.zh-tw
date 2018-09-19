@@ -17,17 +17,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 52a9b00f7c2bda0b0bd488e94d1674019b9fc5cb
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: b07a7e69cf45968c56dfc238a3e99f7d24d699d0
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806683"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563514"
 ---
 # <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  保存有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OS 狀態與不同節點上執行的執行個體相關。 如需等候的類型和其描述的清單，請參閱 < [sys.dm_os_wait_stats](http://msdn.microsoft.com/en-us/library/ms179984\(v=sql.120\).aspx)。  
+  保存有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OS 狀態與不同節點上執行的執行個體相關。 如需等候的類型和其描述的清單，請參閱 < [sys.dm_os_wait_stats](http://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  

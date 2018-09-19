@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 263e2edb61529a197815f95cc595dcb9b5949877
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c25a8486ebdaf81b868b6fedcc25c39e225048c3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032113"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563544"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38032113"
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|\<繼承資料行 >||如需這個檢視所繼承的資料行的清單，請參閱 < [sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f)。||  
+|\<繼承資料行 >||如需這個檢視所繼承的資料行的清單，請參閱 < [sys.objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)。||  
 |lob_data_space_id|**int**||一律是 0。|  
 |filestream_data_space_id|**int**|資料空間識別碼是 FILESTREAM 檔案群組或 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|此資料表所使用的最大資料行識別碼。||  

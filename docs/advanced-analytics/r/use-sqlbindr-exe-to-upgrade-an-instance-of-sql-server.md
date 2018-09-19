@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795657"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563744"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的 機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 中的 R 和 Python 整合包括開放原始碼和 Microsoft 的專屬套件。 在標準的 SQL Server 服務，根據 SQL Server 發行週期、 錯誤修正，以在目前版本的現有套件進行更新 R 和 Python 套件。 
 
-大部分的資料科學家已習慣新版的套件，可供使用。 SQL Server 2017 Machine Learning 服務 （資料庫） 和 SQL Server 2016 R Services （資料庫） 中，您可以藉由變更取得較新版本的 R 和 Python*繫結*從 SQL Server 服務才能[MicrosoftMachine Learning Server](https://docs.microsoft.com/en-us/machine-learning-server/index)而[新式生命週期支援原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
+大部分的資料科學家已習慣新版的套件，可供使用。 SQL Server 2017 Machine Learning 服務 （資料庫） 和 SQL Server 2016 R Services （資料庫） 中，您可以藉由變更取得較新版本的 R 和 Python*繫結*從 SQL Server 服務才能[MicrosoftMachine Learning Server](https://docs.microsoft.com/machine-learning-server/index)而[新式生命週期支援原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 
 繫結不會變更您的安裝的基本概念： R 和 Python 整合仍然是一部分的資料庫引擎執行個體中，授權會維持不變的 （不需要額外費用與繫結相關聯），並仍保留資料庫的 SQL Server 支援原則引擎。 但重新繫結，並變更 R 和 Python 套件服務的方式。 本文的其餘部分說明繫結機制，以及每個版本的 SQL Server 的運作方式。
 
