@@ -9,19 +9,40 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
+ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289309"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新的 Microsoft® Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.1"></a>
+## <a name="aps-cu71"></a>APS CU7.1
+發行日期為 2018 年 7 月
 
+### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不會取用的並行存取插槽 （行為變更）
+APS 支援 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)這類[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 這些命令之前，會耗用[並行存取插槽](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)減少使用者載入/查詢無法執行的數目。 `DBCC`現在會執行命令並不會耗用改善整體的查詢執行效能的使用者並行存取插槽的本機佇列中。
+
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>有些中繼資料的呼叫取代目錄物件
+使用目錄物件，而不是使用 SMO 的中繼資料呼叫已顯示效能改善的 APS。 CU7.1 從開始，這些中繼資料呼叫的一些現在目錄物件，依預設使用。 可以關閉此行為由[功能切換](appliance-feature-switch.md)如果客戶使用中繼資料查詢時遇到任何問題。
+
+### <a name="bug-fixes"></a>錯誤修正
+我們已經升級至 SQL Server 2016 SP2 CU2 AP CU7.1 使用。 升級會修正一些問題，如下所述。
+
+| Title | 描述 |
+|:---|:---|
+| **潛在的 tuple mover 死結** |升級分散式交易和 tuple mover 背景執行緒中的修正長久可能的死結。 安裝之後 CU7.1，用以 TF634 停止 tuple mover 為 SQL Server 啟動參數或全域追蹤旗標的客戶可以安全地移除它。 | 
+| **某些 lag/lead 查詢失敗** |使用錯誤的巢狀的 lag/lead 函式的 CCI 資料表上的特定查詢現在已修正此升級。 | 
+
+
+<a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>APS AU7
+發行日期為 2018 年
+
 APS 2016 是升級至 AU7 的必要條件。 以下是 AP AU7 的新功能：
 
 ### <a name="auto-create-and-auto-update-statistics"></a>自動建立 」 與 「 自動更新統計資料
@@ -42,7 +63,7 @@ Microsoft 建議所有客戶安裝 BIOS 更新。 Microsoft 已在各種環境�
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 針對 APS 2016 AU6 這一節所述的新功能。
 
