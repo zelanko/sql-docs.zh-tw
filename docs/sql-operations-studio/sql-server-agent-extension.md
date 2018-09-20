@@ -24,10 +24,10 @@ ms.locfileid: "39147012"
 
 SQL Server Agent 擴充功能是管理和疑難排解 SQL Agent 作業和組態的擴充功能。 此延伸模組目前為預覽狀態。
 
-Agree with slight modification
-- Agree with slight modification
+主要工作包括：
+- 列出在 SQL Server 上設定的 SQL Server Agent 作業
 - 檢視作業歷程記錄與工作執行結果
-- Agree
+- 啟動和停止作業的基本作業控制
 
 ## <a name="install-the-sql-server-agent-extension"></a>安裝 SQL Server Agent 擴充功能
 
@@ -46,7 +46,7 @@ Agree with slight modification
 
 ## <a name="view-jobs"></a>檢視作業
 
-Agree with slight modification
+當您連接到 SQL Server Agent 延伸模組時，您會看到第一個東西是一份您所有的 Agent 作業清單。
 
    ![檢視作業](media/extensions/sql-server-agent-extension/job-view.png)
 

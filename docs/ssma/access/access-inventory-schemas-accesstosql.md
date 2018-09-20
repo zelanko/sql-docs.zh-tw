@@ -146,7 +146,7 @@ ms.locfileid: "40393805"
 |**QueryName**|**nvarchar(4000)**|查詢的名稱。|  
 |**QueryText**|**nvarchar(4000)**|SQL 查詢程式碼，例如 SELECT 陳述式。|  
 |**IsUpdateable**|**bit**|指定查詢是否可更新或唯讀狀態。|  
-|**QueryType**|**nvarchar(4000)**|指定查詢的類型，例如**選取 **或是**SetOperation**。|  
+|**QueryType**|**nvarchar(4000)**|指定查詢的類型，例如**選取** 或是 **SetOperation**。|  
 |**ExternalSource**|**nvarchar(4000)**|如果查詢所參考的外部資料來源，這是查詢所用的連接字串。|  
   
 ## <a name="forms"></a>表單  
