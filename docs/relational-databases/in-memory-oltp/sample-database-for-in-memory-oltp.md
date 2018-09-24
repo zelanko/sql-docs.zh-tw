@@ -40,7 +40,7 @@ ms.locfileid: "43094799"
   
 -   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
   
--   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
+-   [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
 -   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) – 這包含記憶體內部 OLTP 範例加入 AdventureWorks 中的資料表和程序的描述，以及將部分原始 AdventureWorks 資料表移轉至記憶體最佳化資料表的考量  
   
@@ -54,7 +54,7 @@ ms.locfileid: "43094799"
   
 -   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需記憶體內部 OLTP 的硬體一般指導方針，請參閱下列部落格文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例  
  請遵循下列步驟來安裝範例：  
   
 1.  從 [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) 將 AdventureWorks2016CTP3.bak 和 SQLServer2016CTP3Samples.zip 下載至本機資料夾，例如 'c:\temp'。  

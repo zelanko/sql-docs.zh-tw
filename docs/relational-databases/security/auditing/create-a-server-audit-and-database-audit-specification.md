@@ -68,7 +68,7 @@ ms.locfileid: "43018404"
   
 1.  在 [物件總管] 中，展開 **[安全性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核…]。 如需詳細資訊，請參閱 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核…]。 如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  當您完成選取選項之後，按一下 **[確定]**。  
   
