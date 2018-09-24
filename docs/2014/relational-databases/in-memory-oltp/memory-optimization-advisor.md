@@ -24,7 +24,7 @@ ms.lasthandoff: 08/16/2018
 ms.locfileid: "40395666"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
-  交易效能報告工具 (請參閱＜ [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)＞) 會通知您，匯出使用記憶體中 OLTP 時資料庫中哪些資料表有加分效果。 識別您要匯出使用記憶體中 OLTP 的資料表之後，即可使用 Memory Optimization Advisor，協助您將以磁碟為基礎的資料庫資料表移轉到記憶體中 OLTP。  
+  交易效能報告工具 (請參閱＜ [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)＞) 會通知您，匯出使用記憶體中 OLTP 時資料庫中哪些資料表有加分效果。 識別您要匯出使用記憶體中 OLTP 的資料表之後，即可使用 Memory Optimization Advisor，協助您將以磁碟為基礎的資料庫資料表移轉到記憶體中 OLTP。  
   
  開始時，請先連接至執行個體，其中包含以磁碟為基礎的資料庫資料表。 您可連接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 執行個體。 不過，如果您想要使用 Advisor 執行移轉作業，則必須連接到已啟用 In-Memory OLTP 功能的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 執行個體。 如需有關記憶體中 OLTP 需求的詳細資訊，請參閱＜ [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)＞。  
   
