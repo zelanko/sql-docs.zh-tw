@@ -28,7 +28,7 @@ ms.locfileid: "43273720"
  當報表組件從報表撰寫應用程式 (如報表產生器) 發行至 SharePoint 整合模式的報表伺服器時，報表伺服器目錄也會更新，而且會從組件庫搜尋以準確反映新的或更新的報表組件。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>直接將報表組件上傳到 SharePoint 資料夾  
- 如果報表組件是直接上傳到 SharePoint 文件資料夾 (而非從報表撰寫應用程式發行)，則報表伺服器目錄不會更新。 從報表組件庫搜尋就找不到上傳的報表組件。 若要讓 SharePoint 資料夾與報表伺服器目錄保持同步，您可以在 SharePoint 伺服器上啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案同步處理功能。 如需詳細資訊，請參閱 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
+ 如果報表組件是直接上傳到 SharePoint 文件資料夾 (而非從報表撰寫應用程式發行)，則報表伺服器目錄不會更新。 從報表組件庫搜尋就找不到上傳的報表組件。 若要讓 SharePoint 資料夾與報表伺服器目錄保持同步，您可以在 SharePoint 伺服器上啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案同步處理功能。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)。  
   
  檔案也可以透過呼叫一些報表服務管理 API (如 GetProperties 和 SetProperties 等) 進行同步處理。  
   
