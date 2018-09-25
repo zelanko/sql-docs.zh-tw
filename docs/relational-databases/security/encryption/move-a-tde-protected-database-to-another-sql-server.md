@@ -3,7 +3,7 @@ title: 將 TDE 保護的資料庫移至另一個 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 5a8b05786cf5a1584513c248d539b7d059b7d2bf
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8512a02e65df08ba99e48af6ece110ab7c893b71
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013783"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ ms.locfileid: "35701339"
      **狀態**  
      根據下表顯示資料庫的狀態。  
   
-    |圖示|狀態文字|描述|  
+    |圖示|狀態文字|Description|  
     |----------|-----------------|-----------------|  
     |(無圖示)|(沒有文字)|附加作業尚未啟動或是針對此物件進行暫止。 當對話方塊開啟時，這是預設的動作。|  
     |綠色、指向右方的三角形|進行中|附加作業已啟動，但尚未完成。|  

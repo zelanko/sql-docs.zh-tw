@@ -3,7 +3,7 @@ title: Always Encrypted 精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2016
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 133881d4ca8e77684ca5ea941f80aeda21ec7621
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bc80b486a6231020447cba3a3ab899fc9e699965
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013503"
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

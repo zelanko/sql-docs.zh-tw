@@ -3,7 +3,7 @@ title: SQL Server 連接器維護和疑難排解 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9735b7d12bf8042436c6b554e6bb3c32fd5083b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 88bcc9874dbbef707ac727111515a298033168b2
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013693"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -205,10 +205,10 @@ ms.locfileid: "35695829"
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的錯誤碼說明  
  **提供者錯誤碼：**  
   
-錯誤碼  |符號  |描述    
+錯誤碼  |符號  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | 此作業已成功。    
-@shouldalert | scp_err_Failure | 作業失敗。    
+1 | scp_err_Failure | 作業失敗。    
 2 | scp_err_InsufficientBuffer | 此錯誤會指示引擎為緩衝區配置更多記憶體。    
 3 | scp_err_NotSupported | 不支援此作業。 例如，EKM 提供者不支援指定的金鑰類型或演算法。    
 4 | scp_err_NotFound | EKM 提供者找不到指定的金鑰或演算法。    

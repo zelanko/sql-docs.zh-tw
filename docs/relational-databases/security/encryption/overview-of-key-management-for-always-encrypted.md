@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 07/20/2016
 ms.prod: sql
 ms.prod_service: security, sql-database"
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1bf32549d66721d74c1b8eaad6bda13093e7a1a2
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 60010a0d537b619dc3227efccc6d012e1456992b
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013893"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>永遠加密的金鑰管理概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
