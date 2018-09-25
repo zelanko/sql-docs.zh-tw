@@ -52,7 +52,7 @@ ms.locfileid: "43103991"
  如果*DriverCompletion*參數值為 SQL_DRIVER_COMPLETE 或 SQL_DRIVER_PROMPT，而且如果語言或資料庫無效， **SQLDriverConnect**會重新顯示對話方塊。  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQLDriverConnect 支援  
- 如需使用詳細資訊**SQLDriverConnect**連線到[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]叢集，請參閱[SQL Server Native Client Support for High Availability，Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 如需使用詳細資訊**SQLDriverConnect**連線到[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]叢集，請參閱[高可用性/災害復原的 SQL Server Native Client 支援](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLDriverConnect 支援  
  SQLDDriverConnect 會使用啟用對話方塊 boxwhen 提示時，ODBC 登入。 如此可允許同時針對主體伺服器和它的容錯移轉夥伴來輸入 SPN。  
