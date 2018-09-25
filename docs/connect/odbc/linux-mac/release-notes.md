@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a12475a1f759be12949d5642e5af865b10e4af99
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 1a894abb9b89448430a5e95deebe75a40e6f3941
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786456"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049728"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上 Microsoft ODBC Driver for SQL Server 的版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -29,6 +29,8 @@ ms.locfileid: "42786456"
 **新增功能**:
 
 資料分類，Azure SQL Database 和 SQL Server，如需詳細資訊請參閱[資料分類](../data-classification.md)
+
+支援 utf-8 伺服器版本編碼方式
 
 SQLBrowseConnect
 

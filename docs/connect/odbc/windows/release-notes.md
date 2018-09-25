@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ff40299845ab92822d223f177cc9674ce9fd67f4
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 3988a3387e5b33e5bdc5ebc757643be2a0e1de1f
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787800"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049518"
 ---
 # <a name="release-notes"></a>版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "42787800"
 **新增功能**:
 
 資料分類，Azure SQL Database 和 SQL Server，如需詳細資訊請參閱[資料分類](../data-classification.md)
+
+Utf-8 伺服器版本編碼方式的支援
 
 [ug 修正](../bug-fixes.md)
 
