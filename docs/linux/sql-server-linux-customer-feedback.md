@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 31bd8be73051349c122eb4a99dc99417b491669d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072177"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713581"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的客戶意見反應
 
@@ -60,6 +60,9 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
 ### <a name="on-docker"></a>在 Docker 上
 若要在 docker 上，停用客戶的意見反應，您必須擁有 Docker[保存您的資料](sql-server-linux-configure-docker.md)。 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. 新增`mssql.conf`幾行的檔案`[telemetry]`和`customerfeedback = false`主應用程式目錄中：
  
    ```bash
@@ -69,15 +72,43 @@ SQL Server 2017 一律會收集並傳送與安裝程序中安裝體驗相關的�
    ```bash
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
+
 2. 執行容器映像
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. 新增`mssql.conf`幾行的檔案`[telemetry]`和`customerfeedback = false`主應用程式目錄中：
+
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'customerfeedback = false' >> <host directory>/mssql.conf
+   ```
+
+2. 執行容器映像
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>SQL Server on Linux 使用意見收集的本機稽核
 
 Microsoft SQL Server 2017 包含網際網路通訊功能，可收集並將您的電腦或裝置 （「 標準電腦資訊 」） 的相關資訊傳送給 Microsoft。 SQL Server 使用意見收集的本機稽核元件可以寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 （記錄） 服務所收集的資料。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。
@@ -94,20 +125,20 @@ Microsoft SQL Server 2017 包含網際網路通訊功能，可收集並將您的
    sudo mkdir /tmp/audit
    ```
 
-1. 變更擁有者和群組的目錄**mssql**使用者：
+2. 變更擁有者和群組的目錄**mssql**使用者：
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. 以 root 身分執行 mssql conf 指令碼**設定**命令**telemetry.userrequestedlocalauditdirectory**:
+3. 以 root 身分執行 mssql conf 指令碼**設定**命令**telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-1. 重新啟動 SQL Server 服務：
+4. 重新啟動 SQL Server 服務：
 
    ```bash
    sudo systemctl restart mssql-server
@@ -116,13 +147,15 @@ Microsoft SQL Server 2017 包含網際網路通訊功能，可收集並將您的
 ### <a name="on-docker"></a>在 Docker 上
 若要在 docker 上啟用本機稽核，您必須擁有 Docker[保存您的資料](sql-server-linux-configure-docker.md)。 
 
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 1. 新的本機稽核記錄檔的目標目錄會在容器中。 在您的電腦上的主應用程式目錄中建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新 **/稽核**目錄：
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-   
 1. 新增`mssql.conf`幾行的檔案`[telemetry]`和`userrequestedlocalauditdirectory = <host directory>/audit`主應用程式目錄中：
  
    ```bash
@@ -132,15 +165,49 @@ Microsoft SQL Server 2017 包含網際網路通訊功能，可收集並將您的
    ```bash
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
-2. 執行容器映像
+
+1. 執行容器映像
+
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
-   
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+1. 新的本機稽核記錄檔的目標目錄會在容器中。 在您的電腦上的主應用程式目錄中建立新的本機稽核記錄檔的目標目錄。 下列範例會建立新 **/稽核**目錄：
+
+   ```bash
+   sudo mkdir <host directory>/audit
+   ```
+
+1. 新增`mssql.conf`幾行的檔案`[telemetry]`和`userrequestedlocalauditdirectory = <host directory>/audit`主應用程式目錄中：
+ 
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
+   ```
+
+1. 執行容器映像
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   ```
+
+::: moniker-end
+
 ## <a name="next-steps"></a>後續步驟
 
 在 Linux 上 SQL Server 的相關資訊，請參閱[概觀的 SQL Server on Linux](sql-server-linux-overview.md)。

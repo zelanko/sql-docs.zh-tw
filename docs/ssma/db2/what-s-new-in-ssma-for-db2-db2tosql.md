@@ -2,7 +2,7 @@
 title: SSMA for DB2 中最新消息 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,23 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af4167d1d101fe0647a2fade000e174aeb5efa6b
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 81a343c0ac4f37f02b0c461209a023f908ab608b
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395845"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46361992"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中最新消息 (DB2ToSQL)
 本文章列出 SSMA for DB2 變更每個版本中。  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for DB2 的 v7.10 版本包含下列變更：
+- 目標式的修正，旨在提供額外的安全性和隱私權保護，以符合全球需求的變更。
+- 轉換 BEGIN END 區塊的修正。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for DB2 的 v7.9 版本包含下列變更：
@@ -84,7 +92,7 @@ SSMA for DB2 的 v7.3 版本包含下列變更：
   - 可供執行自訂轉換的 SSMA 的程式庫。
     - 您現在可以建構自訂的語法轉換和轉換先前未處理的 SSMA 可以處理的程式碼。
       - 在此部落格文章中，可指示如何建構自訂轉換器[擴充 SQL Server Migration Assistant 的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      - 轉換的範例專案是可下載這[部落格文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+      - 下載範例專案進行轉換，從此[部落格文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 SSMA for DB2 的 v7.2 版本包含下列變更：

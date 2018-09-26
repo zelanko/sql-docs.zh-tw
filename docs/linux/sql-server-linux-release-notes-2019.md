@@ -1,0 +1,98 @@
+---
+title: 在 Linux 上的 SQL Server 2019 預覽的版本資訊 |Microsoft Docs
+description: 本文包含的版本資訊，並在 Linux 上執行的 SQL Server 2019 CTP 的支援的功能。 版本資訊會包含最新版本和先前的數個版本。
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 09/24/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.component: ''
+ms.suite: sql
+ms.custom: sql-linux
+ms.technology: linux
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 54b955609941e1c4f5921486fc5c67716120a499
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049416"
+---
+# <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>在 Linux 上的 SQL Server 2019 preview 版本資訊
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
+
+下列版本資訊適用於在 Linux 上執行的 SQL Server 2019 CTP。 這篇文章會分成區段，每個版本。 每個版本具有描述 CU 的變更，以及連結至 Linux 套件下載技術支援文件的連結。
+
+> [!TIP]
+> 若要深入了解 SQL Server 2019 的新 Linux 功能，請參閱[的新功能 SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
+
+## <a name="supported-platforms"></a>支援的平台
+
+| 平台 | 檔案系統 | 安裝指南 |
+|-----|-----|-----|
+| Red Hat Enterprise Linux 7.3 或 7.4 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
+| Docker 引擎 1.8 以上版本 Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
+
+> [!TIP]
+> 如需詳細資訊，請檢閱[系統需求](sql-server-linux-setup.md#system)Linux 上的 SQL Server。 SQL Server 2017 的最新支援原則，請參閱 < [Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
+
+## <a name="tools"></a>工具
+
+大部分現有的用戶端工具的目標 SQL Server 可以順暢地，針對 Linux 上執行的 SQL Server。 有些工具可能會有適用於 Linux 的特定版本需求。 如需 SQL Server 工具的完整清單，請參閱 < [SQL Tools 和 SQL Server 公用程式](../tools/overview-sql-tools.md)。
+
+## <a name="release-history"></a>版本歷程記錄
+
+下表列出 SQL Server 2019 Ctp 版本歷程記錄。
+
+| 版本               | 版本       | 發行日期 |
+|-----------------------|---------------|--------------|
+| [CTP 2.0](#CTP20) | 15.0.1000.34   | 2018-09-24   |
+
+## <a id="cuinstall"></a> 如何將更新安裝
+
+如果您已設定預覽儲存機制 (**mssql server 預覽版**)，則當您執行全新安裝，您會收到最新的 SQL Server CTP 套件。 如果您需要 Docker 容器映像，請參閱官方的映像[Microsoft SQL Server on Linux 的 Docker 引擎](https://hub.docker.com/r/microsoft/mssql-server/)。 如需有關存放庫組態的詳細資訊，請參閱[在 Linux 上的 SQL server 設定存放庫](sql-server-linux-change-repo.md)。
+
+如果您要更新現有的 SQL Server 封裝、 執行適當的更新命令，針對每個封裝，以取得最新的 CU。 特定更新每個套件的指示，請參閱下列的安裝指南：
+
+- [安裝 SQL Server 套件](sql-server-linux-setup.md#upgrade)
+- [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
+- [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+- [在 Linux 上安裝 SQL Server 2019 預覽版機器學習服務 R 和 Python 支援](sql-server-linux-setup-machine-learning.md)
+- [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CTP20"></a> CTP 2.0 (第 2018 年 9 月)
+
+下列章節提供封裝的位置以及版 CTP 2.0 的已知的問題。 若要深入了解新功能適用於 Linux 上 SQL Server 2019，請參閱[的新功能 SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)。
+
+### <a name="package-details"></a>套件詳細資料
+
+若為手動或離線套件安裝，您可以下載 RPM 和 Debian 套件使用下表中的資訊：
+
+| 封裝 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 15.0.1000.34-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
+| SLES RPM 套件 | 15.0.1000.34-2 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java 擴充性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
+| Ubuntu 16.04 的 Debian 套件 | 15.0.1000.34-2 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[擴充性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Java 擴充性中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
+
+### <a name="known-issues"></a>已知問題
+
+#### <a id="msdtc"></a> Microsoft 分散式交易協調器
+
+目前，MSDTC 會需要為未經驗證的交易。 比方說，如果您使用連結的伺服器，從 SQL Server 到 Linux 上的 SQL Server 的 Windows 上，或使用 Windows 用戶端應用程式開始在 Linux 上的 SQL Server 對分散式的交易，然後在 Windows server/用戶端上的 MSDTC 才可使用選項 否需要驗證 」。
+
+## <a name="next-steps"></a>後續步驟
+
+若要開始，請參閱下列快速入門：
+
+- [在 Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
+- [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
+- [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
+- [在 Docker 上執行](quickstart-install-connect-ubuntu.md)
+- [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [執行與連線 - 雲端](quickstart-install-connect-clouds.md)
+
+如需常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](sql-server-linux-faq.md)。

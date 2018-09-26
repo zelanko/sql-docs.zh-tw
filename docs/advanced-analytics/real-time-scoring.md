@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348298"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713511"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server machine learning 中的 sp_rxPredict 進行即時評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-即時評分會使用 CLR 擴充功能在 SQL Server 的高效能預測或預測的工作負載中的分數。 即時評分與語言無關，因為它會執行任何依賴 R 或 Python 執行時間。 假設從 Microsoft 函式建立、 定型，並序列化為 SQL Server 中的二進位格式的模型，您可以使用即時評分來產生新的資料輸入，並沒有的 R 或 Python 的附加元件功能的 SQL Server 執行個體上的預測的結果安裝。
+進行即時評分用法[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)系統預存程序和 CLR 擴充功能在 SQL Server 的高效能預測或預測的工作負載中的分數。 即時評分與語言無關，並執行 R 或 Python 執行時間不含相依性。 假設模型建立並定型使用 Microsoft 函式，然後序列化為 SQL Server 中的二進位格式，您可以使用即時評分來產生新的資料輸入，並沒有 R 或 Python 的附加元件的 SQL Server 執行個體上的預測的結果安裝。
 
 ## <a name="how-real-time-scoring-works"></a>如何進行即時評分運作方式
 
-即時評分支援在 SQL Server 2017 和 SQL Server 2016 中，特定模型類型，例如根據 RevoScaleR 或 MicrosoftML functions [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)或[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 它會使用原生 c + + 程式庫產生分數，根據使用者輸入提供給 machine learning 的特殊的二進位格式儲存的模型。
+即時評分支援在 SQL Server 2017 和 SQL Server 2016[支援的模型型別](#bkmk_py_supported_algos)用於線性及羅吉斯迴歸 」 和 「 決策樹模型。 它會使用原生 c + + 程式庫產生分數，根據使用者輸入提供給 machine learning 的特殊的二進位格式儲存的模型。
 
 因為可以使用定型的模型進行評分，而不需要呼叫外部語言執行階段，則會減少多個處理序的額外負荷。 這可用於評分案例的生產環境支援更快的預測效能。 因為資料絕不會離開 SQL Server，就可以產生並插入新的資料表，而不需要任何 R 與 SQL 之間的資料轉譯結果。
 
@@ -30,8 +30,8 @@ ms.locfileid: "43348298"
 
 1. 未評分的預存程序必須啟用每個資料庫為基礎。
 2. 您載入預先定型的模型，以二進位格式。
-3. 您可以提供新的輸入的資料，表格式或單一資料列，做為模型的輸入。
-4. 若要產生分數，請呼叫 sp_rxPredict 預存程序。
+3. 您提供新的輸入的資料評分，表格式或單一資料列，做為模型的輸入。
+4. 若要產生分數，請呼叫[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)預存程序。
 
 > [!TIP]
 > 如需範例的作用中的即時評分，請參閱[端對端貸款壞帳預測建置使用 Azure HDInsight Spark 叢集和 SQL Server 2016 R 服務](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
@@ -45,6 +45,8 @@ ms.locfileid: "43348298"
 + 必須事先使用其中一個支援訓練模型**rx**演算法。 針對 R，使用即時評分`sp_rxPredict`配合[RevoScaleR 和 MicrosoftML 支援演算法](#bkmk_rt_supported_algos)。 對於 Python，請參閱[revoscalepy 和 microsoftml 支援的演算法](#bkmk_py_supported_algos)
 
 + 模型使用序列化[rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)針對 R，以及[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)適用於 Python。 這些序列化函式已經過最佳化，支援快速評分。
+
++ 將模型儲存至資料庫引擎執行個體，您要呼叫它。 這個執行個體不需要擁有 R 或 Python 執行階段延伸模組。
 
 > [!Note]
 > 即時評分目前已針對較小的資料集，範圍從幾個資料列到數十萬個資料列上的快速預測最佳化。 使用的巨量資料集[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)可能會比較快。

@@ -1,5 +1,5 @@
 ---
-title: sys.sysprocesses (TRANSACT-SQL) |Microsoft 文件
+title: sys.sysprocesses (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3a27e699312793e734d9a94680677eb509a2bd5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f63aeb2b2a898335037f8a9df4b36186b66900f8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233751"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712312"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33233751"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作階段識別碼。|  
 |kpid|**smallint**|Windows 執行緒識別碼。|  
@@ -58,7 +58,7 @@ ms.locfileid: "33233751"
 |last_batch|**datetime**|上次用戶端處理序執行遠端預存程序呼叫或 EXECUTE 陳述式的時間。|  
 |ecid|**smallint**|用來唯一識別代表單一處理序操作之子執行緒的執行內容識別碼。|  
 |open_tran|**smallint**|處理序的開啟交易數目。|  
-|status|**nchar(30)**|處理序識別碼狀態。 可能的值為：<br /><br /> **休眠** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在重設工作階段。<br /><br /> **執行**= 工作階段正在執行一個或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Set & #40;MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **背景**= 工作階段正在執行背景工作，例如死結偵測。<br /><br /> **復原**= 工作階段處理序中有交易回復。<br /><br /> **暫止**= 工作階段正在等候工作者執行緒變成可用。<br /><br /> **可執行**= 工作階段中的工作時可執行的排程器佇列中等候取得時間配量。<br /><br /> **spinloop** = 工作階段中的工作正在等候單一執行緒存取鎖變成可用。<br /><br /> **暫止**= 工作階段正在等候事件，例如 I/O，來完成。|  
+|status|**nchar(30)**|處理序識別碼狀態。 可能值為：<br /><br /> **休眠** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在重設工作階段。<br /><br /> **執行**= 工作階段正在執行一或多個批次。 啟用 Multiple Active Result Set (MARS) 之後，工作階段就可以執行多個批次。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**= 工作階段正在執行背景工作，例如死結偵測。<br /><br /> **回復**= 工作階段已進行交易回復程序中。<br /><br /> **暫止**= 工作階段正在等候工作者執行緒變成可用。<br /><br /> **可執行**= 工作階段中的工作時排程器可執行佇列中等候取得時間配量。<br /><br /> **spinloop** = 工作階段中的工作正在等候單一執行緒存取鎖變成可用。<br /><br /> **暫止**= 工作階段正在等候事件，例如 I/O，才能完成。|  
 |sid|**binary(86)**|使用者的全域唯一識別碼 (GUID)。|  
 |hostname|**nchar(128)**|工作站的名稱。|  
 |program_name|**nchar(128)**|應用程式的名稱。|  
@@ -73,13 +73,14 @@ ms.locfileid: "33233751"
 |sql_handle|**binary(20)**|代表目前正在執行的批次或物件。<br /><br /> **請注意**此值衍生自物件的批次或記憶體位址。 而不是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 雜湊式演算法導出。|  
 |stmt_start|**int**|開始指定的 sql_handle 之目前 SQL 陳述式的位移。|  
 |stmt_end|**int**|結束指定之 sql_handle 的目前 SQL 陳述式的位移。<br /><br /> -1 = 目前陳述式執行至指定 sql_handle 之 fn_get_sql 函數傳回的結果尾端。|  
-|request_id|**int**|要求識別碼。 用來識別在特定工作階段中執行的要求。|  
+|request_id|**int**|要求識別碼。 用來識別在特定工作階段中執行的要求。|
+|page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8 個位元組的十六進位表示的頁面資源如果`waitresource`資料行包含一頁。 |  
   
 ## <a name="remarks"></a>備註  
  如果使用者具有伺服器的 VIEW SERVER STATE 權限，使用者會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上看到所有執行中的工作階段；否則，使用者只會看到目前的工作階段。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

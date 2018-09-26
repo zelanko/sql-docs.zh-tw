@@ -20,23 +20,22 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8f46403afef0e2f6cf967561a8fd24ec6409fe93
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: a8b23fe592b7e7fc90f2e3229d71a805f7332f4d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434858"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713860"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-產生給定的輸入，機器學習模型以二進位格式儲存在 SQL Server 資料庫為基礎的預測的值。
+產生指定的輸入，機器學習模型以二進位格式儲存在 SQL Server 資料庫所組成的預測的值。
 
-提供在 R 和 Python 機器學習服務模型中近乎即時評分。 `sp_rxPredict` 提供的包裝函式的預存程序`rxPredict`中的 R 函式[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)並[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)，而[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函式，在[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)並[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 它以 C + 撰寫，並已特別針對評分作業最佳化。
+提供在 R 和 Python 機器學習服務模型中近乎即時評分。 `sp_rxPredict` 提供的包裝函式的預存程序`rxPredict`中的 R 函式[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)並[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)，而[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函式，在[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)並[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 它以 c + + 撰寫，並已特別針對評分作業最佳化。
 
-**本文適用於**:  
-- SQL Server 2017  
-- SQL Server 2016 R Services 搭配[升級 R 元件](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
+雖然必須使用 R 或 Python 之後它會序列化並儲存在目標資料庫引擎執行個體上的二進位格式,，建立模型，便可以從該資料庫引擎執行個體即使在未安裝 R 或 Python 整合。 如需詳細資訊，請參閱 <<c0> [ 即時評分 sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
+
 
 ## <a name="syntax"></a>語法
 
@@ -64,26 +63,73 @@ sp_rxPredict  ( @model, @input )
 若要啟用使用預存程序，必須在執行個體上已啟用 SQLCLR。
 
 > [!NOTE]
-> 啟用此選項之前，請考慮安全性隱含意義。
+> 有安全性影響 enabing 此選項。 使用替代的實作，例如[TRANSACT-SQL 預測](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)函式，如果無法在伺服器上已啟用 SQLCLR。
 
 使用者需求`EXECUTE`資料庫的權限。
 
-### <a name="supported-platforms"></a>支援的平台
- 
-- SQL Server 2017 Machine Learning 服務 （包括 R Server 9.2）  
-- SQL Server 2017 Machine Learning 伺服器 （獨立式） 
-- SQL Server R Services 2016 中，使用 R 伺服器 9.1.0 R Services 執行個體的升級或更新版本  
 
 ### <a name="supported-algorithms"></a>支援的演算法
 
-如需支援的演算法的清單，請參閱 <<c0> [ 即時評分](../../advanced-analytics/real-time-scoring.md)。
+若要建立並定型模型，R 或 Python，使用其中一個支援的演算法所提供[SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)， [SQL Server 2016 R Server （獨立式）](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)， [SQL Server 2017 Machine學習 （R 或 Python） 的服務](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017)，或[SQL Server 2017 伺服器 （獨立式） （R 或 Python）](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)。
 
-下列模型類型所**不**支援：  
-- 包含其他不受支援的 R 轉換類型的模型  
-- 模型使用`rxGlm`或`rxNaiveBayes`RevoScaleR 中的演算法  
-- PMML 模型  
-- 使用其他的 R 程式庫，從 CRAN 或其他存放庫中建立的模型  
-- 包含 R 轉換，此處所列以外的任何其他類型的模型  
+
+#### <a name="r-revoscaler-models"></a>: RevoScaleR 模型
+
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
+
+#### <a name="r-microsoftml-models"></a>: MicrosoftML 模型
+
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+
+#### <a name="r-transformations-supplied-by-microsoftml"></a>： MicrosoftML 所提供的轉換
+
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
+
+#### <a name="python-revoscalepy-models"></a>Python: revoscalepy 模型
+
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit)
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees)
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree)
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest)
+
+
+#### <a name="python-microsoftml-models"></a>Python: microsoftml 模型
+
+  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Microsoftml 所提供的 Python： 轉換
+
+  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-referencee/microsoftml/categorical-hash)
+  
+### <a name="unsupported-model-types"></a>不支援的模型型別
+
+不支援下列模型類型：
+
++ 模型使用`rxGlm`或`rxNaiveBayes`RevoScaleR 中的演算法
++ 在 R 中的 PMML 模型
++ 使用其他協力廠商程式庫所建立的模型 
 
 ## <a name="examples"></a>範例
 

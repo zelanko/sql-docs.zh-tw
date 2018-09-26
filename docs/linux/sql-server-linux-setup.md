@@ -1,5 +1,5 @@
 ---
-title: Linux 上的 SQL Server 2017 的安裝指南 |Microsoft Docs
+title: Linux 上的 SQL Server 安裝指南 |Microsoft Docs
 description: 安裝、 更新及解除安裝 Linux 上的 SQL Server。 本文章涵蓋線上、 離線，和自動安裝案例。
 author: rothja
 ms.author: jroth
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 5157bd9bbadec02fe21c9b552f05c6f5635c31a4
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: ce9a2c9956ab4c40c2a5840f65bf8a630fb25065
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268746"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713000"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安裝指引
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這篇文章提供安裝、 更新及解除安裝 SQL Server 2017 Linux 上的指引。
+本文提供安裝、 更新及解除安裝 SQL Server 2017 和 Linux 上的 SQL Server 2019 預覽的指引。
 
 > [!TIP]
 > 本指南 coves 數個部署案例。 如果您只想逐步安裝指示，請跳至其中一個快速入門：
@@ -71,20 +71,24 @@ SQL Server 2017 都有適用於 Linux 的系統需求如下：
 
 ## <a id="repositories"></a> 設定來源儲存機制
 
-當您安裝或升級 SQL Server 時，您會從您設定的 Microsoft 存放庫取得最新版的 SQL Server 2017。 使用 快速入門**累積更新 (CU)** 存放庫。 但您可以改為設定**GDR**存放庫。 如需有關儲存機制和設定方式的詳細資訊，請參閱[在 Linux 上的 SQL server 設定存放庫](sql-server-linux-change-repo.md)。
+當您安裝或升級 SQL Server 時，您會從您設定的 Microsoft 存放庫取得最新版本的 SQL Server。 快速入門使用 SQL Server 2017 累積更新**CU**存放庫。 但您可以改為設定**GDR**存放庫或**預覽 (vNext)** 存放庫。 如需有關儲存機制和設定方式的詳細資訊，請參閱[在 Linux 上的 SQL server 設定存放庫](sql-server-linux-change-repo.md)。
 
 > [!IMPORTANT]
 > 如果您先前安裝的 CTP 或 SQL Server 2017 RC 版本，您必須移除預覽存放庫，並註冊公開上市 (GA) 其中一個。 如需詳細資訊，請參閱 <<c0> [ 在 Linux 上的 SQL server 設定存放庫](sql-server-linux-change-repo.md)。
 
-## <a id="platforms"></a> 安裝 SQL Server
+## <a id="platforms"></a> 安裝 SQL Server 2017
 
-您可以從命令列，在 Linux 上安裝 SQL Server。 如需指示，請參閱下列快速入門：
+您可以從命令列，在 Linux 上安裝 SQL Server 2017。 如需逐步指示，請參閱下列快速入門：
 
 - [在 Red Hat Enterprise Linux 上安裝](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server 上安裝](quickstart-install-connect-suse.md)
 - [在 Ubuntu 上安裝](quickstart-install-connect-ubuntu.md)
 - [在 Docker 上執行](quickstart-install-connect-docker.md)
 - [在 Azure 中佈建 SQL VM](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="sqlvnext"></a> 安裝 SQL Server 2019 preview
+
+您可以使用相同的快速入門連結上一節中的 Linux 上安裝 SQL Server 2019 預覽。 不過，您必須註冊**預覽 (vNext)** 存放庫，而不是**CU**存放庫。 快速入門會提供有關如何執行這項操作的指示。  
 
 安裝之後，請考慮進行額外的組態變更，以獲得最佳效能。 如需詳細資訊，請參閱 <<c0> [ 效能最佳做法和 Linux 上的 SQL Server 組態指導方針](sql-server-linux-performance-best-practices.md)。
 
@@ -99,6 +103,9 @@ SQL Server 2017 都有適用於 Linux 的系統需求如下：
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 這些命令會下載最新的套件，並取代二進位檔位於`/opt/mssql/`。 使用者產生的資料庫和系統資料庫不會受到這項作業。
+
+> [!TIP]
+> 如果您第一次[變更設定的儲存機制](sql-server-linux-change-repo.md)，就可能**更新**命令來升級您的 SQL Server 版本。 如果兩個存放庫間可支援的升級路徑，這是只有大小寫。
 
 ## <a id="rollback"></a> 復原 SQL Server
 

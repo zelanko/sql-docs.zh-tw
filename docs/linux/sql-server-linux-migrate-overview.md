@@ -12,21 +12,21 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: sql-linux
-ms.openlocfilehash: 818920fe2f79a19253f2a0a943a77fe0c067df1f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4571589c84d5faaed82ae251a4af262d51e30f3f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083661"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712872"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>將資料庫和結構化的資料移轉至 Linux 上的 SQL Server 
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-您可以將您的資料庫和資料移轉至在 Linux 上執行的 SQL Server 2017。 您選擇使用的方法取決於來源資料和您的特定案例。 下列各節提供各種不同的移轉案例的最佳作法。
+您可以將您的資料庫和資料移轉至在 Linux 上執行的 SQL Server。 您選擇使用的方法取決於來源資料和您的特定案例。 下列各節提供各種不同的移轉案例的最佳作法。
 
 ## <a name="migrate-from-sql-server-on-windows"></a>從 Windows 上的 SQL Server 移轉
-如果您想要在 Windows 上的 SQL Server 資料庫移轉至 Linux 上的 SQL Server 2017 時，建議的技巧是使用 SQL Server 備份和還原。
+如果您想要在 Windows 上的 SQL Server 資料庫移轉到 Linux 上的 SQL Server，建議的技巧是使用 SQL Server 備份和還原。
 
 1. 在 Windows 電腦上建立資料庫的備份。
 2. 將備份的檔案傳輸至目標 SQL Server Linux 機器。
@@ -41,7 +41,7 @@ ms.locfileid: "39083661"
 - [匯出和匯入使用 SSMS 或 SqlPackage.exe 的資料庫](sql-server-linux-migrate-ssms.md)
 
 ## <a name="migrate-from-other-database-servers"></a>從其他資料庫伺服器移轉
-您可以將其他資料庫系統上的資料庫移轉至 Linux 上的 SQL Server 2017。 這包括 Microsoft Access、 DB2、 MySQL、 Oracle 及 Sybase 資料庫。 在此案例中，使用 SQL Server 管理小幫手 (SSMA) 自動移轉至 Linux 上的 SQL Server。 如需詳細資訊，請參閱 < [，將資料庫移轉到 Linux 上的 SQL Server 使用 SSMA](sql-server-linux-migrate-ssma.md)。  
+您可以將其他資料庫系統上的資料庫移轉至 Linux 上的 SQL Server。 這包括 Microsoft Access、 DB2、 MySQL、 Oracle 及 Sybase 資料庫。 在此案例中，使用 SQL Server 管理小幫手 (SSMA) 自動移轉至 Linux 上的 SQL Server。 如需詳細資訊，請參閱 < [，將資料庫移轉到 Linux 上的 SQL Server 使用 SSMA](sql-server-linux-migrate-ssma.md)。  
 
 ## <a name="migrate-structured-data"></a>移轉的結構化的資料
 另外還有匯入未經處理資料的技術。 您可能會有結構化資料從其他資料庫或資料來源所匯出的檔案。 在此情況下，您可以使用 bcp 工具來大量插入資料。 或者，您可以在 Linux 上的 SQL Server 資料庫將資料匯入的 Windows 上執行 SQL Server Integration Services。 SQL Server Integration Services 可讓您在匯入期間對資料執行更複雜的轉換。 

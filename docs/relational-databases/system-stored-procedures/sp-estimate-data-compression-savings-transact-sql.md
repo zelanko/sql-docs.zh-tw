@@ -23,17 +23,17 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 70efe047d1fae61f9755c2dbeecf9627de5b5a79
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027537"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713950"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回要求之物件目前的大小，並針對要求的壓縮狀態預估物件大小。 可以針對整個資料表或部分資料表評估壓縮， 這包括堆積、叢集索引、非叢集索引、索引檢視表以及資料表和索引資料分割。 您可以使用資料列壓縮或頁面壓縮來壓縮物件。 如果資料表、索引或資料分割已經壓縮，您可以使用此程序來估計已重新壓縮之資料表、索引或資料分割的大小。  
+  傳回要求之物件目前的大小，並針對要求的壓縮狀態預估物件大小。 可以針對整個資料表或部分資料表評估壓縮， 這包括堆積、 叢集索引、 非叢集的索引、 資料行存放區索引、 索引檢視和資料表及索引分割區。 可以使用資料列、 頁面、 資料行存放區或資料行存放區封存壓縮來壓縮物件。 如果資料表、索引或資料分割已經壓縮，您可以使用此程序來估計已重新壓縮之資料表、索引或資料分割的大小。  
   
 > [!NOTE]  
 >  壓縮並**sp_estimate_data_compression_savings**不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -76,7 +76,7 @@ sp_estimate_data_compression_savings
  若要指定資料分割，您也可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函式。 若要傳回主控物件之所有資料分割的相關資訊，請指定 NULL。  
   
  [ @data_compression=] '*data_compression*'  
- 這是要評估的壓縮類型。 *data_compression*可以是下列值之一： NONE、 ROW 或 PAGE。  
+ 這是要評估的壓縮類型。 *data_compression*可以是下列值之一： 無、 資料列、 頁面、 資料行存放區或 COLUMNSTORE_ARCHIVE。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -96,7 +96,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_requested_compression_setting (KB)|**bigint**|使用要求之壓縮設定所建立的樣本大小，以及適用的現有填滿因數 (沒有片段)。|  
   
 ## <a name="remarks"></a>備註  
- 使用 sp_estimate_data_compression_savings 可估計當您啟用資料表或資料分割進行資料列或頁面壓縮時，可以產生的節省程度。 例如，如果資料列的平均大小可縮減 40%，您就可能會將物件的大小縮減 40%。 您可能無法節省空間，因為這是根據填滿因數和資料列的大小而定。 例如，如果您有一個長度為 8000 個位元組的資料列，而且您將它的大小縮減 40%，則仍然只能在資料頁面上容納單一資料列。 無法節省任何空間。  
+ 使用 sp_estimate_data_compression_savings 來預估所節省的當您啟用資料表或資料列、 頁面、 資料行存放區或資料行存放區封存壓縮的資料分割可能會發生。 例如，如果資料列的平均大小可縮減 40%，您就可能會將物件的大小縮減 40%。 您可能無法節省空間，因為這是根據填滿因數和資料列的大小而定。 例如，如果您有一個長度為 8000 個位元組的資料列，而且您將它的大小縮減 40%，則仍然只能在資料頁面上容納單一資料列。 無法節省任何空間。  
   
  如果執行 sp_estimate_data_compression_savings 的結果指示資料表將會成長，就表示資料表中的許多資料列都使用資料類型的幾乎完整有效位數，而且壓縮格式所需的小型負擔增加會比壓縮的空間節省更大。 在這種罕見情況下，請勿啟用壓縮。  
   
@@ -112,7 +112,31 @@ sp_estimate_data_compression_savings
  需要資料表的 SELECT 權限。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 此程序不適用於資料行存放區資料表，因此不接受 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE 資料壓縮參數。  
+ 在 SQL Server 2019 之前, 此程序並不適用於資料行存放區索引，並因此不接受 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE 資料壓縮參數。  從 SQL Server 2019 開始，資料行存放區索引可用作為來源物件的估計，和要求的壓縮類型。
+
+## <a name="considerations-for-columnstore-indexes"></a>資料行存放區索引的考量
+ 開始使用 SQL Server 2019，sp_estimate_compression_savings 評估資料行存放區和資料行存放區封存壓縮的支援。 不同於 page 和 row 壓縮，將資料行存放區壓縮套用到物件需要建立新的資料行存放區索引。 基於這個理由，使用此程序的 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE 選項時，提供給程序的來源物件的類型會決定壓縮的大小估計所用的資料行存放區索引的類型。 下表將說明參考物件用來預估所節省的每個來源物件的壓縮類型@data_compression參數設定為資料行存放區或 COLUMNSTORE_ARCHIVE。
+
+ |來源物件|參考物件|
+ |-----------------|---------------|
+ |堆積|叢集資料行存放區索引|
+ |叢集索引|叢集資料行存放區索引|
+ |非叢集索引|非叢集資料行存放區索引 （包括索引鍵資料行和提供的非叢集索引，任何包含資料行，以及資料分割資料表的資料行，如果有的話）|
+ |非叢集資料行存放區索引|非叢集資料行存放區索引 （包括相同的資料行，做為提供非叢集資料行存放區索引）|
+ |叢集資料行存放區索引|叢集資料行存放區索引|
+
+> [!NOTE]  
+> 如果有任何來源物件中的資料行具有資料類型不支援在資料行存放區索引中，sp_estimate_compression_ 估計從資料列存放區的來源物件 （叢集的索引、 非叢集索引或堆積） 的資料行存放區壓縮時省下將會失敗並發生錯誤。
+
+ 同樣地，當@data_compression參數設定為 NONE、 ROW 或 PAGE 和來源物件是資料行存放區索引下, 表列出使用的參考物件。
+
+ |來源物件|參考物件|
+ |-----------------|---------------|
+ |叢集資料行存放區索引|堆積|
+ |非叢集資料行存放區索引|非叢集索引 （包括內含資料行的任何索引鍵資料行，以及資料分割資料表的資料行，包含非叢集資料行存放區索引中的資料行）|
+
+> [!NOTE]  
+> 在估計資料列存放區壓縮 （無、 資料列或頁面） 從資料行存放區的來源物件時，務必的來源索引並不包含 32 個以上的資料行因為這是支援在資料列存放區 （非叢集） 索引的限制。
   
 ## <a name="examples"></a>範例  
  下列範例會估計 `Production.WorkOrderRouting` 資料表的大小 (如果使用 `ROW` 壓縮來將它壓縮)。  

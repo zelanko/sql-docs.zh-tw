@@ -12,26 +12,26 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: e198ae15b5f618b25f7d4391a0a09be33621c2da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b9b8429bfdc1738955aba739520ac07e2d39efa7
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085730"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712080"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows 上使用 PowerShell 來管理 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這篇文章介紹[SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)並逐步指導您有幾個範例有關如何使用 Linux 上的 SQL Server 2017。 PowerShell 支援的 SQL Server 上目前已 Windows，因此您可以使用它時可以連線到 Linux 上的遠端 SQL Server 執行個體的 Windows 電腦。
+這篇文章介紹[SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)並逐步指導您有幾個範例有關如何使用 Linux 上的 SQL Server。 PowerShell 支援的 SQL Server 上目前已 Windows，因此您可以使用它時可以連線到 Linux 上的遠端 SQL Server 執行個體的 Windows 電腦。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows 上安裝最新版的 SQL PowerShell
 
-[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)在 Windows 上是隨附[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。 當使用 SQL Server，您應該一律使用最新版的 SSMS 和 SQL PowerShell。 最新版的 SSMS 會持續更新及最佳化和目前適用於 SQL Server 2017 on Linux。 若要下載並安裝最新版本，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 若要保持最新狀態，最新版的 SSMS 會提示您有新的版本可供下載時。
+[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)在 Windows 上是隨附[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。 當使用 SQL Server，您應該一律使用最新版的 SSMS 和 SQL PowerShell。 最新版的 SSMS 會持續更新並最佳化和目前適用於 Linux 上的 SQL Server。 若要下載並安裝最新版本，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 若要保持最新狀態，最新版的 SSMS 會提示您有新的版本可供下載時。
 
 ## <a name="before-you-begin"></a>開始之前
 
-讀取[已知問題](sql-server-linux-release-notes.md)針對 Linux 上的 SQL Server 2017。
+讀取[已知問題](sql-server-linux-release-notes.md)for SQL Server on Linux。
 
 ## <a name="launch-powershell-and-import-the-sqlserver-module"></a>啟動 PowerShell 並匯入*sqlserver*模組
 
@@ -66,15 +66,15 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>連接到 SQL Server，並取得伺服器資訊
 
-連接到您在 Linux 上的 SQL Server 2017 執行個體，並顯示數種伺服器屬性，讓我們在 Windows 上使用 PowerShell。
+連接到您在 Linux 上的 SQL Server 執行個體，並顯示數種伺服器屬性，讓我們在 Windows 上使用 PowerShell。
 
 複製並貼上下列命令在 PowerShell 提示字元。 當您執行這些命令時，PowerShell 將會：
-- 顯示*Windows PowerShell 認證要求*會提示您輸入認證的對話方塊 (*SQL 使用者名稱*並*SQL 密碼*) 連接到 SQL Server 2017在 Linux 上的執行個體
+- 顯示*Windows PowerShell 認證要求*會提示您輸入認證的對話方塊 (*SQL 使用者名稱*並*SQL 密碼*) 連接到您的 SQL Server在 Linux 上的執行個體
 - 載入 SQL Server 管理物件 (SMO) 組件
 - 建立的執行個體[Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx)物件
 - 連接到**Server**並顯示幾個屬性
 
-請記得取代**\<your_server_instance\>** 與 IP 位址或您的 SQL Server 2017 執行個體，在 Linux 上的主機名稱。
+請記得取代**\<your_server_instance\>** 與 IP 位址或您的 SQL Server 執行個體，在 Linux 上的主機名稱。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -107,14 +107,14 @@ HostDistribution : Ubuntu
 
 ## <a name="examine-sql-server-error-logs"></a>檢查 SQL Server 錯誤記錄檔
 
-讓我們使用 PowerShell 來檢查錯誤記錄檔的 Windows 上連接您在 Linux 上的 SQL Server 2017 執行個體。 我們也會使用**Out-gridview** cmdlet 來顯示資訊從錯誤記錄中的方格檢視顯示。
+讓我們使用 PowerShell 來檢查錯誤記錄檔的 Windows 上連接您在 Linux 上的 SQL Server 執行個體。 我們也會使用**Out-gridview** cmdlet 來顯示資訊從錯誤記錄中的方格檢視顯示。
 
 複製並貼上下列命令在 PowerShell 提示字元。 它們可能需要幾分鐘的時間來執行。 這些命令執行下列作業：
-- 顯示*Windows PowerShell 認證要求*會提示您輸入認證的對話方塊 (*SQL 使用者名稱*並*SQL 密碼*) 連接到 SQL Server 2017在 Linux 上的執行個體
-- 使用**Get SqlErrorLog** cmdlet 來連線到 Linux 上的 SQL Server 2017 執行個體，並擷取錯誤記錄檔自**昨天**
+- 顯示*Windows PowerShell 認證要求*會提示您輸入認證的對話方塊 (*SQL 使用者名稱*並*SQL 密碼*) 連接到您的 SQL Server在 Linux 上的執行個體
+- 使用**Get SqlErrorLog** cmdlet 來連線到 Linux 上的 SQL Server 執行個體，並擷取錯誤記錄檔自**昨天**
 - 將輸出輸送至**Out-gridview** cmdlet
 
-請記得取代**\<your_server_instance\>** 與 IP 位址或您的 SQL Server 2017 執行個體，在 Linux 上的主機名稱。
+請記得取代**\<your_server_instance\>** 與 IP 位址或您的 SQL Server 執行個體，在 Linux 上的主機名稱。
 
 ```powershell
 # Prompt for credentials to login into SQL Server

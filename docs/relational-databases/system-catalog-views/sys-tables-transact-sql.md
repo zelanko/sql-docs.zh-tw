@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 330c8be09065d6c08ba0cc8468b8a5c687fdca6b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 960ffccc2945531aa525c9a1d1db45cc47951190
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096812"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178314"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "43096812"
 |history_retention_period|**int**|**適用於**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>數字的值，表示與 history_retention_period_unit 指定單位的時態性記錄保留期限的持續時間。 |  
 |history_retention_period_unit|**int**|**適用於**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示類型的時態性記錄保留週期單位的數值。 <br /><br />-1： 無限 <br /><br />3： 天 <br /><br />4： 週 <br /><br />5： 月份 <br /><br />6： 年份 |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**適用於**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>時態性記錄保留週期單位類型的文字描述。 <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-  
+|is_node|**bit**|**適用對象**：[!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = 這是圖形的節點資料表。 <br /><br />0 = 這不是圖形的節點資料表。 |  
+|is_edge|**bit**|**適用對象**：[!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = 這是圖形的邊緣資料表。 <br /><br />0 = 這不是圖表邊緣資料表。 |  
+
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

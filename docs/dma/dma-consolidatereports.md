@@ -2,7 +2,7 @@
 title: 評估企業並合併評定報告 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA，以評估企業，並合併評定報告，然後再升級 SQL Server，或移轉至 Azure SQL Database。
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152629"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493759"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -88,7 +88,7 @@ ms.locfileid: "43152629"
 
 如果此資料庫不在工具電腦上，請確定工具的電腦具有網路連線到此 SQL Server 執行個體。
 
-透過 CSV 檔案中使用 SQL Server 資料表的好處是，您可以使用評估旗標資料行控制執行個體 / 資料庫取得撿起進行評估，可讓您更輕鬆地分隔成較小區塊的評估。  您接著可以跨越多個評量 （在本文稍後執行評量，請參閱節，） （請參閱區段在本文稍後執行評量），也就是容易維護多個 CSV 檔案。
+透過 CSV 檔案中使用 SQL Server 資料表的好處是，您可以使用評估旗標資料行控制執行個體 / 資料庫取得撿起進行評估，可讓您更輕鬆地分隔成較小區塊的評估。  您接著可以跨越多個評量 （請參閱區段在本文稍後執行評量），也就是容易維護多個 CSV 檔案。
 
 請記住，根據物件和其複雜性的數目，評估可能需要更長的時間 （小時 +，） 區隔成易於管理的區塊評估容錯度加倍，因此。
 
@@ -102,7 +102,7 @@ ms.locfileid: "43152629"
 |參數  |描述
 |---------|---------|
 |**getServerListFrom** | 您的清查。 可能的值為**SqlServer**並**CSV**。 |
-|**伺服器名稱** | 清查時使用的 SQL Server 執行個體名稱**SqlServer**中**getServerListFrom**參數。 |
+|**serverName** | 清查時使用的 SQL Server 執行個體名稱**SqlServer**中**getServerListFrom**參數。 |
 |**databaseName** | 裝載清查資料表的資料庫。 |
 |**AssessmentName** | DMA 評估的名稱。 |
 |**TargetPlatform** | 您想要執行之評定目標型別。  可能的值為**AzureSQLDatabase**， **SQLServer2012**， **SQLServer2014**， **SQLServer2016**， **SQLServerLinux2017**，並**SQLServerWindows2017**。 |
@@ -124,7 +124,7 @@ ms.locfileid: "43152629"
 |參數  |描述
 |---------|---------|
 |**processTo**  | 處理 JSON 檔案的位置。 可能的值為**SQLServer**並**AzureSQLDatabase**。 |
-|**伺服器名稱** | 處理資料的 SQL Server 執行個體。  如果您指定**AzureSQLDatabase** for **processTo**參數，則會包含只有 SQL Server 名稱 (不包括。 database.windows.net)。 系統會提示兩個登入的目標為 Azure SQL Database; 時第一個是您的 Azure 租用戶認證，而第二個是您的系統管理員登入 Azure SQL server。 |
+|**serverName** | 處理資料的 SQL Server 執行個體。  如果您指定**AzureSQLDatabase** for **processTo**參數，則會包含只有 SQL Server 名稱 (不包括。 database.windows.net)。 系統會提示兩個登入的目標為 Azure SQL Database; 時第一個是您的 Azure 租用戶認證，而第二個是您的系統管理員登入 Azure SQL server。 |
 |**CreateDMAReporting** | 要建立來處理 JSON 檔案的暫存資料庫。  如果您已經指定此資料庫確實存在，而且您將此參數設定為其中一個，然後無法取得建立物件。  此參數可用於重新建立已卸除單一物件。 |
 |**CreateDataWarehouse** | 建立將用於 Power BI 報表資料倉儲。 |
 |**databaseName** | DMAReporting 資料庫的名稱。 |

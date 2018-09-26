@@ -2,7 +2,7 @@
 title: 什麼是 SSMA for Access(AccessToSQL) 新功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,21 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 290a88698052e8bf65ebe45e4cc0ba48ccc396ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "40392493"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362022"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 中最新消息
 這篇文章列出 SSMA 存取每個版本中的變更。  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for Access v7.10 發行的增強提供目標式修正，旨在提供額外的安全性和隱私權保護，以符合全球需求的變更。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for Access v7.9 版本包含下列變更：
@@ -84,7 +90,7 @@ SSMA for Access v7.3 版本包含下列變更：
   - 可供執行自訂轉換的 SSMA 的程式庫。
     - 您現在可以建構自訂的語法轉換和轉換先前未處理的 SSMA 可以處理的程式碼。
       - 在此部落格文章中，可指示如何建構自訂轉換器[擴充 SQL Server Migration Assistant 的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      - 轉換的範例專案是可下載這[部落格文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+      - 下載範例專案進行轉換，從此[部落格文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 SSMA for Access v7.2 版本包含下列變更：

@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 32adfba6edf8497f7ea10f8f68401c99c246ae5c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: af15f6243dc29fc3c7596a758295cc53c66a55c0
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084360"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713560"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>在 Linux 上安裝 SQL Server 代理程式
 
@@ -45,7 +45,7 @@ sudo systemctl restart mssql-server
 ## <a name="InstallAgentBelowCU4">針對版本 2017 cu3 開始 （含） 以下，安裝 SQL Server Agent</a>
 
 > [!NOTE]
-> 安裝指示適用於 SQL Server 版本 2017 CU3 和以下版本。 然後再安裝 SQL Server Agent，第一次[安裝 SQL Server 2017](sql-server-linux-setup.md#platforms)。 這會設定索引鍵和您在安裝時使用的儲存機制**mssql server agent**封裝。
+> 安裝指示適用於 SQL Server 版本 2017 CU3 和以下版本。 然後再安裝 SQL Server Agent，第一次[安裝 SQL Server](sql-server-linux-setup.md#platforms)。 這會設定索引鍵和您在安裝時使用的儲存機制**mssql server agent**封裝。
 
 安裝 SQL Server 代理程式，您的平台：
 - [Red Hat Enterprise Linux](#RHEL)

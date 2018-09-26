@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2018
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -25,21 +25,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e866f5a9856fe1308bc5233432e053b18d207f7
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118316"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712841"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script & Amp;#40;transact-SQL&AMP;#41;
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  執行與位於外部位置引數提供的指令碼。 必須在支援的和已註冊的語言 （R 或 Python） 中撰寫指令碼。 若要執行**sp_execute_external_script**，您必須先啟用外部指令碼使用陳述式， `sp_configure 'external scripts enabled', 1;`。  
+執行程序輸入引數提供的指令碼。 執行指令碼[擴充性架構](../../advanced-analytics/concepts/extensibility-framework.md)。 必須有至少一個延伸模組的資料庫引擎上支援的和已註冊的語言，撰寫指令碼： [ **R**](../../advanced-analytics/concepts/extension-r.md)， [ **Python** ](../../advanced-analytics/concepts/extension-python.md)或[ **Java** （在 SQL Server 2019 僅限預覽）](../../advanced-analytics/java/extension-java.md)。 
+
+若要執行**sp_execute_external_script**，您必須先啟用外部指令碼使用陳述式， `sp_configure 'external scripts enabled', 1;`。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!Note]
+> 機器學習 （R 和 Python） 和程式設計延伸模組會安裝 database engine 執行個體的附加元件。 支援特定的延伸模組是根據 SQL Server 版本而異。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax"></a>語法
 
 ```
@@ -47,70 +53,98 @@ sp_execute_external_script
     @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
-    [ , @input_data_1_name = N'input_data_1_name' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]    
+    [ , @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]  
     [ , @output_data_1_name = N'output_data_1_name' ]  
     [ , @parallel = 0 | 1 ]  
     [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```
+::: moniker-end
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-2017-and-earlier"></a>2017 及更早版本的語法
+
+```
+sp_execute_external_script   
+    @language = N'language',   
+    @script = N'script'  
+    [ , @input_data_1 = N'input_data_1' ]   
+    [ , @input_data_1_name = N'input_data_1_name' ]  
+    [ , @output_data_1_name = N'output_data_1_name' ]  
+    [ , @parallel = 0 | 1 ]  
+    [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
+    [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
+```
+::: moniker-end
 
 ## <a name="arguments"></a>引數
- \@語言 = N'*語言*'  
- 表示指令碼語言。 *語言*已**sysname**。  
+ **@language** = N'*語言*'  
+ 表示指令碼語言。 *語言*已**sysname**。  根據您的 SQL Server 的版本，有效值為 R (SQL Server 2016 和更新版本)、 (SQL Server 2017 和更新版本)、 Python 和 Java （SQL Server 2019 預覽）。 
+  
+ **@script** = N'*指令碼*' 指定為常值或變數輸入的外部語言指令碼。 *指令碼*已**nvarchar （max)**。  
 
- 有效值`Python`或`R`。 
-  
- \@指令碼 = N'*指令碼*'  
- 指定為常值或變數輸入的外部語言指令碼。 *指令碼*已**nvarchar （max)**。  
-  
- [ \@input_data_1_name = N'*input_data_1_name*']  
- 指定用來代表查詢所定義的變數名稱\@input_data_1。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 *input_data_1_name*已**sysname**。  
-  
- 預設值是`InputDataSet`。  
-  
- [ \@input_data_1 = N'*input_data_1*']  
+  [ **@input_data_1** = N'*input_data_1*']  
  指定的表單中的外部指令碼所使用的輸入的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 資料類型*input_data_1*是**nvarchar （max)**。
-  
- [ \@output_data_1_name = N'*output_data_1_name*']  
- 包含要傳回之資料的外部指令碼中指定的變數名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序呼叫完成時。 在 外部指令碼變數的資料類型會因語言而定。 針對 R，輸出必須是資料框架。 對於 Python，輸出必須是 pandas 資料框架。 *output_data_1_name*已**sysname**。  
-  
- 預設值為"OutputDataSet 」。  
-  
- [\@平行 = 0 | 1]
 
- 藉由設定啟用平行執行 R 指令碼`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。  
+ [ **@input_data_1_name** = N'*input_data_1_name*']  
+ 指定用來代表查詢所定義的變數名稱@input_data_1。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 *input_data_1_name*已**sysname**。  預設值是*InputDataSet*。  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*']  
+ 僅適用於 SQL Server 2019，並用來建立每個磁碟分割模型。 指定用來排序結果集資料行的名稱，例如依產品名稱。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。
+
+  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*']  
+ 僅適用於 SQL Server 2019，並用來建立每個磁碟分割模型。 指定用來分割資料，例如地理區域或日期資料行的名稱。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 
+::: moniker-end
+
+ [ **@output_data_1_name** = N'*output_data_1_name*']  
+ 包含要傳回之資料的外部指令碼中指定的變數名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序呼叫完成時。 在 外部指令碼變數的資料類型會因語言而定。 針對 R，輸出必須是資料框架。 對於 Python，輸出必須是 pandas 資料框架。 *output_data_1_name*已**sysname**。  預設值是*OutputDataSet*。  
+
+ [ **@parallel** = 0 | 1]  
+ 藉由設定啟用平行執行 R 指令碼`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。 如果`@parallel = 1`和輸出串流直接至用戶端電腦，則`WITH RESULTS SETS`子句是必要的而且必須指定輸出結構描述。  
   
- 針對未使用 RevoScaleR 函式，使用 R 指令碼`@parallel`參數可以是有幫助處理大型資料集，假設指令碼可透過極簡方式平行處理。 例如，當使用 R`predict`函式使用的模型，來產生新預測，請將設定`@parallel = 1`以做為查詢引擎的提示。 如果可以平行處理查詢，資料列會根據散發**MAXDOP**設定。  
+ + 針對未使用 RevoScaleR 函式，使用 R 指令碼`@parallel`參數可以是有幫助處理大型資料集，假設指令碼可透過極簡方式平行處理。 例如，當使用 R`predict`函式使用的模型，來產生新預測，請將設定`@parallel = 1`以做為查詢引擎的提示。 如果可以平行處理查詢，資料列會根據散發**MAXDOP**設定。  
   
- 如果`@parallel = 1`和輸出串流直接至用戶端電腦，則`WITH RESULTS SETS`子句是必要的而且必須指定輸出結構描述。  
+ + 使用 RevoScaleR 函數的 R 指令碼，平行處理會自動處理，您不應指定`@parallel = 1`要**sp_execute_external_script**呼叫。  
   
- 使用 RevoScaleR 函數的 R 指令碼，平行處理會自動處理，您不應指定`@parallel = 1`要**sp_execute_external_script**呼叫。  
-  
- [ \@params = N'*\@parameter_name data_type* [OUT |輸出] [，......n]']  
+[ **@params** = N' *@parameter_name data_type* [OUT |輸出] [，......n]']  
  外部指令碼中使用的輸入的參數宣告的清單。  
   
- [ \@parameter1 = '*value1*' [OUT |輸出] [，......n]]  
-
+[ **@parameter1** = '*value1*' [OUT |輸出] [，......n]]  
  外部指令碼所使用的輸入參數的值清單。  
 
 ## <a name="remarks"></a>備註
 
-使用**sp_execute_external_script**執行支援的語言撰寫的指令碼。 目前，支援的語言是 SQL Server 2016 和 Python 的 R 和 R 的 SQL Server 2017。 
-
 > [!IMPORTANT]
 > 查詢樹狀結構由控制[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，使用者無法執行查詢的任意作業。 
+
+使用**sp_execute_external_script**執行支援的語言撰寫的指令碼。 目前，支援的語言是 SQL Server 2016 R Services，以及 Python 和 R 適用的 SQL Server 2017 Machine Learning 服務的 R。 
 
 根據預設，此預存程序所傳回的結果集是未命名的資料行的輸出。 在指令碼內使用的資料行名稱是本機指令碼環境，並不會反映在輸出的結果集。 若要命名結果集資料行，使用`WITH RESULTS SET`子句[ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)。
   
  除了傳回的結果集，您可以傳回純量值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 OUTPUT 參數。 下列範例示範使用輸出參數傳回序列化的 R 模型來做為指令碼的輸入：  
-
-在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]與一起安裝的伺服器元件所組成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和一組工作站工具和資料科學家連接至的高效能環境的連線程式庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您必須安裝的機器學習服務期間，元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以啟用外部指令碼執行安裝程式。 如需詳細資訊，請參閱 <<c0> [ 設定 SQL Server Machine Learning 服務](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)。  
   
 您可以控制藉由設定外部資源集區的 外部指令碼所使用的資源。 如需詳細資訊，請參閱 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)。 工作負載的相關資訊可以取自 resource governor 目錄檢視、 DMV 和計數器。 如需詳細資訊，請參閱[Resource Governor 目錄檢視&#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)， [Resource Governor 相關動態管理檢視&#40;-&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)，以及[SQL Server 的 External Scripts 物件](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)。  
 
+### <a name="monitor-script-execution"></a>監視指令碼執行
+
 使用的監視指令碼執行[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)並[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 
 
-## <a name="streaming-execution-for-r-and-python-scripts"></a>如需 R 和 Python 指令碼的資料流執行  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="parameters-for-partition-modeling"></a>磁碟分割模型的參數
+
+ 在 SQL Server 2019，，您也可以在目前在公開預覽，設定兩個額外的參數可讓資料分割的資料，其中資料分割根據一個或多個資料行提供自然地將資料集分成邏輯分割區建立及使用模型僅指令碼執行期間。 年齡、 性別、 地區、 日期或時間，包含重複值的資料行是讓資料分割的資料集的一些範例。
+ 
+ 兩個參數**input_data_1_partition_by_columns**並**input_data_1_order_by_columns**，第二個參數用以排序結果集。 將參數傳遞做為輸入`sp_execute_external_script`外部指令碼中執行一次的每個資料分割。 如需詳細資訊和範例，請參閱 <<c0> [ 教學課程： 建立資料分割為基礎的模型](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)。
+
+ 您可以以平行方式執行指令碼，藉由指定`@parallel=1`。 如果輸入的查詢可以平行處理，您應該設定`@parallel=1`做為您的引數的一部分`sp_execute_external_script`。 根據預設，查詢最佳化工具運作`@parallel=1`超過 256 個資料列，但如果您想要明確地處理此資料表上還會使用這個指令碼包含基於示範用途的參數。
+
+ > [!Tip]
+> 您可以使用訓練 workoads`@parallel`任何任意的訓練指令碼，甚至是使用非 Microsoft rx 演算法。 通常，只有 RevoScaleR 演算法 （具有 rx 前置詞） 會提供 SQL Server 中的定型案例中的平行處理原則。 但是，與 SQL Server vNext 的新參數，您可以平行處理呼叫函式不是明確地使用這項功能設計的指令碼。
+::: moniker-end
+
+### <a name="streaming-execution-for-r-and-python-scripts"></a>如需 R 和 Python 指令碼的資料流執行  
 
 資料流可讓 R 或 Python 指令碼來處理記憶體內可容納更多的資料。 若要控制的串流處理期間傳遞的資料列數目，指定參數的整數值`@r_rowsPerRead`在`@params`集合。  例如，如果您要訓練一個模型來使用非常廣泛的資料，您無法將值調整為讀取較少的資料列，以確保所有資料列都可以傳送資料的一個區塊中。 您也可以使用這個參數，來管理正在讀取和處理一次，以降低伺服器效能問題的資料列數目。 
   

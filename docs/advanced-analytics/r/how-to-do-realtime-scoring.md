@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348209"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712468"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何產生預測與使用 SQL Server 中的機器學習服務模型的預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "43348209"
 
 | 方法           | 介面         | 程式庫需求 | 處理速度 |
 |-----------------------|-------------------|----------------------|----------------------|
-| 擴充性架構 | : [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 無。 模型可以根據任何 R 或 Python 函式 | 數百毫秒。 <br/>載入執行階段環境都有固定的成本之前的任何新資料計分,，平均三到六個 100 毫秒。 |
-| 即時評分的 CLR 延伸模組 | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化的模型 | : RevoScaleR MicrosoftML <br/>Python: revoscalepy microsoftml | 數以萬計的平均 （毫秒）。 |
-| 原生評分的 c + + 延伸模組| [預測 T-SQL 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化的模型 | : RevoScaleR <br/>Python: revoscalepy | 小於 20 毫秒，平均。 | 
+| Extensibility Framework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 無。 模型可以根據任何 R 或 Python 函式 | 數百毫秒。 <br/>載入執行階段環境都有固定的成本之前的任何新資料計分,，平均三到六個 100 毫秒。 |
+| [即時評分的 CLR 延伸模組](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化的模型 | : RevoScaleR MicrosoftML <br/>Python: revoscalepy microsoftml | 數以萬計的平均 （毫秒）。 |
+| [原生評分的 c + + 延伸模組](../sql-native-scoring.md) | [預測 T-SQL 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化的模型 | : RevoScaleR <br/>Python: revoscalepy | 小於 20 毫秒，平均。 | 
 
 處理速度和不獨特是輸出的差異的功能。 假設相同的功能和輸入，經過評分的輸出應該不會隨著您使用的方法上。
 
@@ -44,12 +44,13 @@ _評分_是兩個步驟的程序。 首先，您可以指定已定型的模型�
 
 採取的步驟後，準備模型的整體程序，然後產生分數可以如此歸納：
 
-1. 建立模型，使用支援的演算法。
-2. 序列化使用特殊的二進位格式的模型。
-3. 將模型提供給 SQL Server。 通常這表示已序列化的模型儲存在 SQL Server 資料表中。
-4. 呼叫函式或預存程序，做為參數指定的模型和輸入的資料。
+1. 建立模型，使用支援的演算法。 支援會因您所選擇的計分方法而異。
+2. 定型模型。
+3. 序列化使用特殊的二進位格式的模型。
+3. 將模型儲存至 SQL Server。 通常這表示已序列化的模型儲存在 SQL Server 資料表中。
+4. 呼叫函式或預存程序，做為參數指定的模型和資料的輸入。
 
-當輸入包含多個資料列時，它通常是快速插入資料表中的預測值，評分程序的一部分。  產生單一的分數是從表單或使用者的要求，取得輸入的值和傳回的分數，以用戶端應用程式的案例中較為典型的。 若要產生連續的分數時，改善效能，SQL Server 可能會快取模型，以便載入記憶體。
+當輸入包含多個資料列時，它通常是快速插入資料表中的預測值，評分程序的一部分。 產生單一的分數是從表單或使用者的要求，取得輸入的值和傳回的分數，以用戶端應用程式的案例中較為典型的。 若要產生連續的分數時，改善效能，SQL Server 可能會快取模型，以便載入記憶體。
 
 ## <a name="compare-methods"></a>比較方法
 

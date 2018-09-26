@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348609"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713150"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用預測 T-SQL 函式的原生評分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-原生評分利用原生 c + + 延伸模組功能，SQL Server 2017 中的產生預測值或*分數*中近乎即時的新資料輸入。 這種方法提供最快的處理速度預測和預測的工作負載，但隨附平台和程式庫的需求： 只有來自 RevoScaleR 與 revoscalepy 函式具有 c + + 實作。
+原生評分會使用[預測 T-SQL 函式](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和 原生 c + + 延伸模組功能在 SQL Server 2017 中的產生預測值或*分數*中近乎即時的新資料輸入。 這種方法提供預測和預測的工作負載，可能的處理速度最快，但隨附平台和程式庫的需求： 只有來自 RevoScaleR 與 revoscalepy 函式具有 c + + 實作。
 
-原生評分，您需要已定型的模型。 在 SQL Server 2017 Windows 或 Linux，或 Azure SQL Database 中，您可以在 TRANSACT-SQL 中使用 PREDICT 函式，來叫用原生評分項目。 PREDICT 函式會採用預先定型的模型，並透過您提供的資料輸入產生分數。
+原生評分，您需要已定型的模型。 在 SQL Server 2017 Windows 或 Linux，或 Azure SQL Database 中，您可以呼叫 PREDICT 函數中 TRANSACT-SQL 來叫用原生對您提供做為輸入參數的新資料評分。 PREDICT 函式會傳回分數，透過您提供的資料輸入。
 
 ## <a name="how-native-scoring-works"></a>原生評分的運作方式
 

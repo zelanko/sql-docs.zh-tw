@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101808"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058897"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>完全整合在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎 
-圖表延伸模組已完全整合在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎。 我們使用相同的儲存體引擎、 中繼資料，查詢處理器等，來儲存和查詢圖形資料。 這可讓使用者在其圖，並在單一查詢中的關聯式資料查詢。 使用者也可以從圖形功能結合其他獲益[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等資料行存放區，HA，R services，技術等等。SQL graph database 也支援所有的安全性和合規性功能適用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+圖表延伸模組已完全整合在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引擎。 使用相同的儲存體引擎、 中繼資料，查詢處理器等，來儲存和查詢圖形資料。 跨圖，並在單一查詢中的關聯式資料的查詢。 圖形功能結合其他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等資料行存放區，HA，R services，技術等等。SQL graph database 也支援所有的安全性和合規性功能適用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
  
-### <a name="tooling-and-ecosystem"></a>工具和生態系統  
-使用者可獲得從現有的工具和生態系統，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 工具，例如備份與還原、 匯入和匯出，請立即可用的 BCP 都可運作。 其他工具或服務，例如 SSIS、 SSRS 或 power Bi 會使用圖形資料表的關聯式表格運作方式。
- 
+### <a name="tooling-and-ecosystem"></a>工具和生態系統
+
+受益於現有的工具和生態系統，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 工具，例如備份與還原、 匯入和匯出，請立即可用的 BCP 都可運作。 其他工具或服務，例如 SSIS、 SSRS、 或 Power BI 會使用圖形資料表的關聯式表格運作方式。
+
+## <a name="edge-constraints"></a>邊緣條件約束
+邊緣條件約束圖形邊緣資料表上定義，而且是一組指定的邊緣類型可連接的節點資料表。 這可讓使用者透過其圖形結構描述更佳控制。 透過邊緣條件約束的協助，使用者可以限制允許連接指定的邊緣節點的類型。 
+
+若要深入了解如何建立和使用邊緣條件約束，請參閱[邊緣條件約束](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>合併 DML 
+[合併](../../t-sql/statements/merge-transact-sql.md)陳述式會執行插入、 更新或刪除與來源資料表聯結的結果為基礎的目標資料表上的作業。 例如，您可以同步處理兩個資料表插入、 更新或刪除根據目標資料表與來源資料表之間的差異在目標資料表中的資料列。 Azure SQL Database 和 SQL Server vNext 現在支援使用 MERGE 陳述式中的相符項目述詞。 也就是說，現可使用符合述詞來指定在單一陳述式，而不是個別的 INSERT/UPDATE/DELETE 陳述式中的圖形關聯性的新資料與合併您目前的圖表資料 （節點或邊緣資料表）。
+
+若要了解如何使用相符項目，在合併 DML 參閱[MERGE 陳述式](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>後續步驟  
 讀取[SQL 圖形資料庫架構](./sql-graph-architecture.md)
    

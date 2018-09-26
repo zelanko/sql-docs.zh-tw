@@ -12,18 +12,18 @@ ms.custom: sql-linux
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 317c2ea2064f7ffc286671a8fff7eef2f8149ee7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c50b0ad1798f161d945a54e0e9a080a04a6eca05
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084915"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712970"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何開始開發應用程式在 Linux 上的 SQL server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-您可以建立應用程式連接到並使用從各種程式設計語言，例如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + 的 Linux 上的 SQL Server 2017。 您也可以使用熱門的 web 架構和物件關聯式對應 (ORM) 架構。
+您可以建立連線至並使用 SQL Server 從各種程式設計語言，例如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + 的 Linux 上的應用程式。 您也可以使用熱門的 web 架構和物件關聯式對應 (ORM) 架構。
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -39,7 +39,7 @@ ms.locfileid: "39084915"
 - 嘗試的程式碼範例。
 
 > [!TIP]
-> 如果您想要在 Docker 上的 SQL Server 2017 的開發，看看**macOS**教學課程。
+> 如果您想要在 Docker 上的 SQL Server 的開發，看看**macOS**教學課程。
 
 ## <a name="create-new-applications"></a>建立新的應用程式
 
@@ -47,11 +47,11 @@ ms.locfileid: "39084915"
 
 ## <a name="use-existing-applications"></a>使用現有的應用程式
 
-如果您有現有的資料庫應用程式時，您只可以在目標 SQL Server 2017 Linux 上，變更其連接字串。 請務必閱讀[已知問題](sql-server-linux-release-notes.md)在 Linux 上的 SQL Server 2017。
+如果您有現有的資料庫應用程式時，您只可以在目標 SQL Server on Linux，變更其連接字串。 請務必閱讀[已知問題](sql-server-linux-release-notes.md)在 Linux 上的 SQL Server。
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Windows 與 Linux 上的 SQL Server 上使用現有的 SQL 工具
 
-目前 SSMS、 SSDT 和 PowerShell，例如 Windows 執行的工具也適用於 Linux 上的 SQL Server 2017。 雖然它們未執行原生 Linux 上，您還是可以管理在 Linux 上的遠端 SQL Server 執行個體。 
+目前 SSMS、 SSDT 和 PowerShell，例如 Windows 執行的工具也適用於 Linux 上的 SQL Server。 雖然它們未執行原生 Linux 上，您還是可以管理在 Linux 上的遠端 SQL Server 執行個體。 
 
 請參閱下列主題中的詳細資訊：
 

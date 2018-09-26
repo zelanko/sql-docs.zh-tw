@@ -1,7 +1,7 @@
 ---
 title: SQL Graph 架構 |Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: graphs
@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 186d65c28eefc4fc350738932ba404202c067a61
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ebf687fb162b1c5c2ec17c0a0a5ec096dcfdd69d
+ms.sourcegitcommit: 07d4ebb8438f7c348880c39046e2b452b2152fd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090361"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47158069"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "43090361"
 
 
 ## <a name="edge-table"></a>邊緣資料表
-邊緣資料表代表圖形中的關聯性。 邊緣會一律導向，並連接兩個節點。 邊緣資料表可讓使用者模型圖形中的多對多關聯性。 邊緣資料表可能會或可能沒有任何使用者定義屬性中。 每次建立邊緣資料表時，以及使用者定義屬性中，以邊緣資料表建立三個隱含的資料行：
+邊緣資料表代表圖形中的關聯性。 邊緣會一律導向，並連接兩個節點。 邊緣資料表可讓使用者模型圖形中的多對多關聯性。 邊緣資料表可能會或可能沒有任何使用者定義的屬性中。 每次建立邊緣資料表時，使用者定義的屬性，以及在邊緣資料表建立三個隱含的資料行：
 
 |資料行名稱    |描述  |
 |---   |---  |
@@ -105,32 +105,32 @@ ms.locfileid: "43090361"
 節點資料表中的隱含資料行  
 |資料行名稱    |資料類型  |is_hidden  |註解  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |內部 graph_id 資料行  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |外部的節點識別碼資料行  |
+|graph_id_\<hex_string> |bigint |1  |內部`graph_id`資料行  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |外部節點`node_id`資料行  |
 
 邊緣資料表中的隱含資料行  
 |資料行名稱    |資料類型  |is_hidden  |註解  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |內部 graph_id 資料行  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |外部邊緣識別碼資料行  |
-|from_obj_id_\<hex_string>  |INT    |1  |內部節點的物件識別碼  |
-|from_id_\<hex_string>  |bigint |1  |從節點 graph_id 內部  |
-|$from_id_\<hex_string> |NVARCHAR   |0  |節點識別碼從外部  |
-|to_obj_id_\<hex_string>    |INT    |1  |內部節點的物件識別碼  |
-|to_id_\<hex_string>    |bigint |1  |內部節點 graph_id  |
-|$to_id_\<hex_string>   |NVARCHAR   |0  |外部的節點識別碼  |
+|graph_id_\<hex_string> |bigint |1  |內部`graph_id`資料行  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |外部`edge_id`資料行  |
+|from_obj_id_\<hex_string>  |INT    |1  |從節點內部 `object_id`  |
+|from_id_\<hex_string>  |bigint |1  |從節點的內部 `graph_id`  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |從節點的外部 `node_id`  |
+|to_obj_id_\<hex_string>    |INT    |1  |內部節點 `object_id`  |
+|to_id_\<hex_string>    |bigint |1  |內部節點 `graph_id`  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |外部的節點 `node_id`  |
  
 ### <a name="system-functions"></a>系統函數
 加入下列的內建函式。 這些功能會協助使用者產生的資料行中擷取資訊。 請注意，這些方法將不會驗證使用者的輸入。 如果使用者指定了無效`sys.node_id`方法會擷取適當的組件，並將它傳回。 比方說，需要 OBJECT_ID_FROM_NODE_ID`$node_id`做為輸入，並將傳回 object_id 這個節點所屬的資料表。 
  
 |內建   |描述  |
 |---  |---  |
-|OBJECT_ID_FROM_NODE_ID |Object_id 擷取 node_id  |
-|GRAPH_ID_FROM_NODE_ID  |Graph_id 擷取 node_id  |
-|NODE_ID_FROM_PARTS |建構 object_id 與 graph_id node_id  |
-|OBJECT_ID_FROM_EDGE_ID |擷取 edge_id object_id  |
-|GRAPH_ID_FROM_EDGE_ID  |從 edge_id 擷取身分識別  |
-|EDGE_ID_FROM_PARTS |建構 edge_id object_id 與身分識別  |
+|OBJECT_ID_FROM_NODE_ID |擷取從 object_id `node_id`  |
+|GRAPH_ID_FROM_NODE_ID  |擷取從 graph_id `node_id`  |
+|NODE_ID_FROM_PARTS |建構來自 node_id`object_id`和 `graph_id`  |
+|OBJECT_ID_FROM_EDGE_ID |擷取`object_id`從 `edge_id`  |
+|GRAPH_ID_FROM_EDGE_ID  |擷取從身分識別 `edge_id`  |
+|EDGE_ID_FROM_PARTS |建構`edge_id`從`object_id`和身分識別  |
 
 
 
@@ -138,25 +138,26 @@ ms.locfileid: "43090361"
 了解[!INCLUDE[tsql-md](../../includes/tsql-md.md)]導入 SQL Server 和 Azure SQL Database 中的擴充功能，可讓建立和查詢圖表物件。 查詢語言擴充功能會協助查詢和周遊圖形，使用 ASCII 作品語法。
  
 ### <a name="data-definition-language-ddl-statements"></a>資料定義語言 (DDL) 陳述式
-|工作   |相關主題  |注意
+|工作   |相關的文章  |注意
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 現在已擴充到支援建立 AS 節點或 AS 邊緣資料表。 請注意，邊緣資料表可能會或可能沒有任何使用者定義屬性。  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 現在已擴充到支援建立 AS 節點或 AS 邊緣資料表。 請注意，邊緣資料表可能會或可能沒有任何使用者定義的屬性。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|節點和邊緣資料表可以改變關聯式資料表，使用的相同方式`ALTER TABLE`。 使用者可以新增或修改使用者定義資料行、 索引或條件約束。 不過，改變內部圖形資料行，例如`$node_id`或`$edge_id`，將會產生錯誤。  |
-|CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |使用者可以在虛擬資料行和節點和邊緣資料表中的使用者定義資料行上建立索引。 支援所有的索引類型，包括叢集和非叢集資料行存放區索引。  |
+|CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |使用者可以在虛擬資料行和節點和邊緣資料表中的 使用者定義資料行上建立索引。 支援所有的索引類型，包括叢集和非叢集資料行存放區索引。  |
+|建立邊緣條件約束    |[邊緣條件約束&#40;Transact SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |使用者可以現在建立邊緣條件約束，強制執行特定的語意的 edge 資料表上，同時又維持資料完整性  |
 |DROP TABLE |[卸除資料表&#40;Transact SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點和邊緣資料表卸除相同的方式，使用關聯式資料表`DROP TABLE`。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援的邊緣節點或節點資料表的刪除時的串聯的刪除。 我們建議如果除節點資料表時，使用者會捨棄任何連接到該節點資料表，以手動方式來維護圖形的完整性中節點的邊緣。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>資料操作語言 (DML) 陳述式
-|工作   |相關主題  |注意
+|工作   |相關的文章  |注意
 |---  |---  |---  |
 |Insert |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|插入節點資料表並無不同於關聯式資料表中插入就行了。 值`$node_id`自動產生資料行。 嘗試插入的值`$node_id`或`$edge_id`欄將會導致錯誤。 使用者必須提供值`$from_id`和`$to_id`插入至邊緣資料表時的資料行。 `$from_id` 並`$to_id`是`$node_id`指定的邊緣相連接節點的值。  |
 |Delete | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|從節點或邊緣資料表的資料可以刪除相同的方式，因為它會從關聯式資料表中刪除。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援的邊緣節點的刪除時的串聯的刪除。 建議是，每當刪除節點時，該節點的所有連接邊緣也會一併刪除，以維持圖表的完整性。  |
-|UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |可以使用 UPDATE 陳述式來更新使用者定義資料行中的值。 更新內部圖形資料行`$node_id`， `$edge_id`，`$from_id`和`$to_id`不允許。  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` 將節點或邊緣資料表不支援陳述式。  |
+|UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |可以使用 UPDATE 陳述式來更新使用者定義的資料行中的值。 更新內部圖形資料行`$node_id`， `$edge_id`，`$from_id`和`$to_id`不允許。  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` 將節點或邊緣資料表支援陳述式。  |
 
 
 ### <a name="query-statements"></a>查詢陳述式
-|工作   |相關主題  |注意
+|工作   |相關的文章  |注意
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|節點和邊緣資料表為內部儲存，因此節點和邊緣資料表才支援大部分的 SQL Server 或 Azure SQL Database 中的資料表上支援的作業  |
 |MATCH  | [比對&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)|相符項目內建引進以支援模式比對和周遊圖形。  |
@@ -169,7 +170,7 @@ ms.locfileid: "43090361"
 * 資料表類型和資料表變數不可以宣告為節點或邊緣資料表。 
 * 無法建立節點和邊緣資料表，為系統版本設定時態表。   
 * 節點和邊緣資料表不可為記憶體最佳化資料表。  
-* 使用者無法更新 $from_id 和 $to_id 資料行的邊緣使用 UPDATE 陳述式。 若要更新以邊緣相連接的節點，使用者必須插入指向新節點的新邊緣和刪除前一個。
+* 無法更新使用者`$from_id`和`$to_id`鎏靮箵使用 UPDATE 陳述式的資料行。 若要更新以邊緣相連接的節點，使用者必須插入指向新節點的新邊緣和刪除前一個。
 * 跨資料庫查詢圖形物件上的不支援。 
 
 

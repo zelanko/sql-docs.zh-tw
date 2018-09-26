@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 1ce94cb159e552b147ad1798eeacf60b9c7ff25a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 36e18344efe0e3e329d4cb2672b51f23f0900128
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085090"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713180"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>匯出和匯入使用 SSMS 或 SqlPackage.exe 在 Windows 上的 Linux 上的資料庫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這篇文章示範如何使用[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)並[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)匯出和匯入 SQL Server 2017 Linux 上的資料庫。 SSMS 和 SqlPackage.exe 是 Windows 應用程式，因此您可以連線到 Linux 上的遠端 SQL Server 執行個體的 Windows 機器時，使用這項技術。
+這篇文章示範如何使用[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)並[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx)匯出和匯入 SQL Server on Linux 上的資料庫。 SSMS 和 SqlPackage.exe 是 Windows 應用程式，因此您可以連線到 Linux 上的遠端 SQL Server 執行個體的 Windows 機器時，使用這項技術。
 
 您一定要安裝並使用最新版本的 SQL Server Management Studio (SSMS) 中所述[連接到 SQL Server on Linux 的 Windows 上的 使用 SSMS](sql-server-linux-manage-ssms.md)
 

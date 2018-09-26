@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 448db7c77d26e06651e01a7e790917757aff0e9d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268806"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713600"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (Faq)
 
@@ -60,7 +60,7 @@ ms.locfileid: "39268806"
 
    資料分割 在 Windows 10 上執行的 Linux 目前不支援的平台，適用於 SQL Server 和相關的工具。
 
-1. **SQL Server 2017 可以使用的 Linux 檔案系統的資料檔案？**
+1. **SQL Server 可以使用的 Linux 檔案系統的資料檔案？**
 
    目前在 Linux 上的 SQL Server 支援 ext4 和 XFS。 視需要在未來，則會加入支援其他檔案系統。
 
@@ -80,7 +80,7 @@ ms.locfileid: "39268806"
 
 1. **有在 Linux 執行的 SSMS 之類的工具嗎？**
 
-   新的 Microsoft SQL Operations Studio (preview) 是用來管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱 <<c0> [ 什麼是 Microsoft SQL Operations Studio （預覽）](../sql-operations-studio/what-is.md)。
+   新的 Azure Data Studio （預覽） 是用於管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱 <<c0> [ 什麼是 Azure Data Studio （預覽）](../azure-data-studio/what-is.md)。
 
 1. **Sqlcmd 和 bcp 等的命令是在 Linux 上使用的？**
 
@@ -125,7 +125,7 @@ ms.locfileid: "39268806"
 
 1. **我可以移轉我的資料從 Oracle 和其他資料庫引擎到 Linux 上的 SQL Server 嗎？**
 
-   是的。 SSMA 支援從數種類型的資料庫引擎移轉： Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE (前身為 SAP Sybase ASE)。 如需如何使用 SSMA 的範例，請參閱 < [Oracle 結構描述移轉至 SQL Server 2017 Linux 上使用 SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)。
+   是的。 SSMA 支援從數種類型的資料庫引擎移轉： Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE (前身為 SAP Sybase ASE)。 如需如何使用 SSMA 的範例，請參閱 < [Oracle 結構描述移轉至 SQL Server，在 Linux 上使用 SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)。
 
 1. **SQL Server 檔案需要哪些權限？**
 

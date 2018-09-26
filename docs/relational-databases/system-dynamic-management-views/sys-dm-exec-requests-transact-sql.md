@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edb89a58c6ca1b845d1705bd3a7d92138fe2bfd6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 47c8bac2f70ccae8a265590577cfed4fdd9242d6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098002"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712650"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,8 @@ ms.locfileid: "43098002"
 |parallel_worker_count |**int** |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 如果這是平行查詢的保留平行工作者數目。  |  
 |external_script_request_id |**uniqueidentifier** |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 與目前要求相關聯的外部指令碼要求識別碼。 |  
 |is_resumable |**bit** |**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出要求是否可繼續索引作業。 |  
-  
+|page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 個位元組的十六進位表示的頁面資源如果`wait_resource`資料行包含一頁。 |
+
 ## <a name="permissions"></a>Permissions  
  如果使用者擁有`VIEW SERVER STATE`伺服器的權限，使用者會看到所有執行的工作階段的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否則使用者會看到只有目前的工作階段。 `VIEW SERVER STATE` 無法授與在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]因此`sys.dm_exec_requests`會受限於目前的連接。 
   

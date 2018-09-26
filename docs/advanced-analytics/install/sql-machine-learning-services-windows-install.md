@@ -3,19 +3,19 @@ title: 安裝 SQL Server Machine Learning 在 Windows 上的服務 （資料庫�
 description: 當您在 Windows 上安裝 SQL Server 2017 Machine Learning 服務，可使用 R 在 SQL Server 或 SQL Server 上的 Python。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311648"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713030"
 ---
-# <a name="install-sql-server-machine-learning-services"></a>安裝 SQL Server Machine Learning 服務
+# <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 從 SQL Server 2017 中，R 和 Python 支援對 SQL Server 機器學習服務，後續版本中提供的資料庫內分析[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 中引進。 函式程式庫適用於 R 和 Python，database engine 執行個體上執行外部指令碼。 
@@ -24,12 +24,12 @@ ms.locfileid: "44311648"
 
 ## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
 
-+ 使用 R 和 Python 的 Machine Learning 服務需要 SQL Server 2017 安裝程式。 如果相反地，您有 SQL Server 2016 安裝媒體，請參閱[安裝 SQL Server 2016 R Services](sql-r-services-windows-install.md)取得 R 語言支援。
++ 如果您想要使用 R、 Python 或 Java 語言支援安裝 Machine Learning 服務需要 SQL Server 2017 （或更新版本） 安裝程式。 如果相反地，您有 SQL Server 2016 安裝媒體，您可以安裝[SQL Server 2016 R Services （資料庫）](sql-r-services-windows-install.md)取得 R 語言支援。
 
 + 需要資料庫引擎執行個體。 您無法安裝只是 R 或 Python 功能，雖然您可以將它們以累加方式加入現有的執行個體。
 
-+ 請勿在容錯移轉叢集上安裝 Machine Learning 服務。 用來隔離 R 和 Python 處理程序的安全性機制與不相容的 Windows Server 容錯移轉叢集環境。
-
+- 安裝 Machine Learning 服務*不支援*SQL Server 2017 中的容錯移轉叢集。 不過，它*支援*與 SQL Server 2019。 
+ 
 + 請勿在網域控制站上安裝 Machine Learning 服務。 Machine Learning 服務的部分安裝程式將會失敗。
 
 + 未安裝**共用功能** > **Machine Learning Server （獨立式）** 同一部電腦上執行的資料庫執行個體。 在獨立伺服器將會競爭相同的資源，進而破壞的兩個安裝效能。
@@ -108,7 +108,7 @@ ms.locfileid: "44311648"
     > [!TIP]
     > 您可以下載並安裝適當版本，從這個頁面：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
     > 
-    > 您也可以試試預覽版[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)，其支援的系統管理工作和 SQL Server 查詢。
+    > 您也可以試試預覽版[Azure Data Studio](../../azure-data-studio/what-is.md)，其支援的系統管理工作和 SQL Server 查詢。
   
 2. 連接到您安裝 Machine Learning 服務的執行個體，請按一下**新的查詢**開啟查詢視窗中，並執行下列命令：
 
@@ -193,34 +193,31 @@ ms.locfileid: "44311648"
 
 ## <a name="additional-configuration"></a>其他組態
 
-如果外部指令碼驗證步驟成功，您可以從 SQL Server Management Studio、 Visual Studio Code 中或任何其他用戶端可以傳送至伺服器的 T-SQL 陳述式來執行 Python 命令。
+如果執行外部指令碼驗證步驟成功，您可以執行 R 或 Python 的命令，從 SQL Server Management Studio、 Visual Studio Code 或其他任何可以傳送至伺服器的 T-SQL 陳述式的用戶端。
 
 如果執行命令時，您會收到錯誤，請檢閱本節中的其他設定步驟。 您可能需要對服務或資料庫中的其他適當的組態。
 
-需要進行其他變更的常見案例包括：
+執行個體層級，可能包括額外的設定：
 
 * [設定傳入連接的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [啟用額外的網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [啟用遠端連接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+
+在資料庫上，您可能需要將下列的組態更新：
+
 * [擴充內建的權限給遠端使用者](#bkmk_configureAccounts)
 * [授與權限來執行外部指令碼](#permissions-external-script)
 * [授與存取權，對個別的資料庫](#permissions-db)
 
 > [!NOTE]
-> 並非所有列出的變更是必要的而且沒有任何可能需要。 需求取決於您的安全性結構描述，您可在此安裝 SQL Server，和您預期使用者會連線到資料庫並執行外部指令碼的方式。 這裡可以找到其他疑難排解提示：[升級及安裝常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> 是否需要額外的設定取決於您安全性結構描述中，您可在此安裝 SQL Server，和您預期使用者會連線到資料庫並執行外部指令碼的方式。 
 
-###  <a name="bkmk_configureAccounts"></a> 啟用為 Launchpad 帳戶群組的隱含的驗證
+###  <a name="bkmk_configureAccounts"></a> 啟用 SQL 限制使用者群組 (SQLRUserGroup) 帳戶群組的隱含的驗證
 
-在安裝期間建立了一些新的 Windows 使用者帳戶，以在 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務的安全性權杖下執行工作。 當使用者從外部用戶端傳送的 Python 或 R 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動可用的背景工作帳戶。 然後將它對應至呼叫的使用者的身分識別，並執行指令碼，代表使用者。
+如果您需要從遠端資料科學用戶端中，執行指令碼和您使用 Windows 驗證，則需要其他組態才能授與背景工作帳戶執行 R 和 Python 處理程序的登入的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表您的執行個體。 這個行為稱為*隱含的驗證*，而且以支援安全執行外部指令碼在 SQL Server 2016 和 SQL Server 2017 資料庫引擎所實作。
 
-這就叫做*隱含的驗證*，而是 database engine 服務。 此服務會在 SQL Server 2016 和 SQL Server 2017 支援安全執行外部指令碼。
-
-您可以在 Windows 使用者群組 **SQLRUserGroup**中，檢視這些帳戶。 根據預設，會建立 20 個背景工作帳戶，而這通常是遠超過執行外部指令碼的更多作業。
-
-> [!IMPORTANT]
-> 名為背景工作角色群組**SQLRUserGroup**不論是否安裝 R 或 Python。 沒有單一的群組，每個執行個體。
-
-如果您需要從遠端資料科學用戶端中，執行指令碼，而且您使用 Windows 驗證，還有其他考量。 這些工作者帳戶必須具備登入的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表您的執行個體。
+> [!NOTE]
+> 如果您使用**SQL 登入**的 SQL Server 計算內容中執行指令碼，這個額外步驟則不需要。
 
 1. 在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管] 中展開**安全性**。 然後以滑鼠右鍵按一下**登入**，然後選取**新的登入**。
 2. 在 **登入-新增**對話方塊中，選取**搜尋**。
@@ -230,8 +227,13 @@ ms.locfileid: "44311648"
 6. 根據預設，群組指派給**公用**角色，而且具有連接到 database engine 的權限。
 7. 選取 [確定]。
 
-> [!NOTE]
-> 如果您使用**SQL 登入**的 SQL Server 計算內容中執行指令碼，這個額外步驟則不需要。
+在 SQL Server 2017 和更早版本，來執行工作的安全性權杖下建立本機 Windows 使用者帳戶的許多[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服務。 您可以在 Windows 使用者群組 **SQLRUserGroup**中，檢視這些帳戶。 根據預設，會建立 20 個背景工作帳戶，而這通常是遠超過執行外部指令碼的更多作業。 
+
+這些帳戶用，如下所示。 當使用者從外部用戶端傳送的 Python 或 R 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動可用的工作者帳戶、 將它對應至呼叫的使用者的身分識別和執行指令碼，代表使用者。 如果指令碼，對 SQL Server 外部執行時，必須從 SQL Server 擷取資料或資源，SQL Server 的連線需要登入。 建立的資料庫登入**SQLRUserGroup**也連接才會成功。
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+在 SQL Server 2019，背景工作帳戶會取代 AppContainers，與在 SQL Server Launchpad 服務下執行的程序。 雖然無法再使用背景工作帳戶，則仍然必須新增的資料庫登入**SQLRUsergroup**如果隱含需要驗證。 如同背景工作帳戶沒有登入權限，Launchpad 服務身分識別會不。 建立的登入**SQLRUserGroup**，後者包含 Launchpad 服務在此版本中，允許隱含的驗證，才能運作。
+::: moniker-end
 
 ### <a name="permissions-external-script"></a> 給予使用者執行外部指令碼的權限
 

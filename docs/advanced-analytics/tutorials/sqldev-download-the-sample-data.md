@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724332"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712751"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>適用於 SQL Server 的 NYC 計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 |**PredictTip**  |預存程序 |PredictTip.sql 指令碼建立。 呼叫所定型的模型，來使用模型建立預測。 此預存程序接受查詢作為其輸入參數，並傳回包含輸入資料列分數的數值資料行。 這個預存程序會在[使 R 模型作業化](sqldev-operationalize-the-model.md)。|
 |**PredictTipSingleMode**  |預存程序| PredictTipSingleMode.sql 指令碼建立。 呼叫所定型的模型，來使用模型建立預測。 此預存程序接受新的觀察值作為輸入，其個別特徵值會當作內嵌參數傳遞，並傳回值以預測新觀察值的結果。 這個預存程序會在[使 R 模型作業化](sqldev-operationalize-the-model.md)。|
 |**TrainTipPredictionModel**  |預存程序|TrainTipPredictionModel.sql 指令碼建立。 藉由呼叫 R 封裝，可訓練羅吉斯迴歸模型。 此模型會預測已支付小費資料行的值，並使用隨機選取的 70%資料進行定型。 此預存程序會輸出已定型的模型，並儲存在資料表 nyc_taxi_models 中。 這個預存程序會在[定型及儲存模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)。|
+
+## <a name="query-data-for-verification"></a>驗證查詢資料
+
+驗證步驟中，執行查詢，以確認資料已上傳。
+
+1. 在 [物件總管] 中，在資料庫中，展開**NYCTaxi_Sample**資料庫，然後開啟 [資料表] 資料夾。
+
+2. 以滑鼠右鍵按一下**dbo.nyctaxi_sample** ，然後選擇**選取前 1000 個資料列**傳回一些資料。
 
 ## <a name="next-steps"></a>後續步驟
 

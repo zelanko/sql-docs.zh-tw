@@ -108,7 +108,7 @@ QUIT
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | 跨平台 GUI 資料庫管理公用程式。 |
+| [Azure Data Studio](../azure-data-studio/index.md) | 跨平台 GUI 資料庫管理公用程式。 |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | 執行 TRANSACT-SQL 命令的跨平台命令列介面。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | 使用 mssql 延伸模組執行 TRANSACT-SQL 陳述式的跨平台 GUI 程式碼編輯器中。 |
 

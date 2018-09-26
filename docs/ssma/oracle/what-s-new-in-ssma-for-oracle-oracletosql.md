@@ -2,7 +2,7 @@
 title: 什麼是 SSMA for Oracle (OracleToSQL) 新功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -13,15 +13,23 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e5a819910b898c4527b5cad24edb62aa9142395e
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 78f1615e375dfeafbcf25a8b0466ed92fbcc16ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396457"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362042"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 中最新消息
 本文章列出 SSMA 中每個版本的 Oracle 變更。  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for Oracle 的 v7.10 版本包含下列變更：
+- 目標式的修正，旨在提供額外的安全性和隱私權保護，以符合全球需求的變更。
+- 轉換改善，與階層式查詢。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for Oracle 的 v7.9 版本包含下列變更：
@@ -50,7 +58,7 @@ SSMA for Oracle 的 v7.8 版本包含下列變更：
 SSMA for Oracle 的 v7.7 版本包含下列變更：
 - SSMA for Oracle 已改良，提供目標式修正，可改善品質和轉換的計量。
 - 32 位元版本的 SSMA for Oracle 依據熱門的需求，已經恢復。 相較於先前的實作 （在之前 v7.4)，有兩個安裝程式套件，但它們無法並存安裝。 如此一來，您必須選擇您所擁有的最適當版本的連線元件為基礎。 一律最好是使用 64 位元版本，如果可能的話。
-- SQL Server 2017 現已支援官方 Oracle 延伸模組組件也支援在 Linux 上 （新的遠端安裝選項）。 請注意，延伸模組組件功能有限時安裝在 Linux 上，因為不支援的軟體測試人員和伺服器端資料移轉功能 
+- SQL Server 2017 現已支援官方 Oracle 延伸模組組件也支援在 Linux 上 （新的遠端安裝選項）。 請注意，延伸模組組件功能有限時安裝在 Linux 上，為測試人員並不支援伺服器端資料移轉功能。
 - SSMA for Oracle 可讓您移轉具體化檢視表做為一般資料表 (可透過設定的設定**專案設定** -> **同步處理** ->  **具體化檢視探索支援資料表**)。
 
 > [!IMPORTANT]
@@ -128,7 +136,7 @@ SSMA for Oracle 的 v7.2 版本包含下列變更：
 - 已新增的支援 SQL Server 2016。
 - 已新增至 SQL Server 的時態表 Oracle 倒敘封存資料表的轉換。
 
-    **請注意**-SSMA 不會複製歷程記錄資料從 Oracle 倒敘資料封存資料表。 如此一來，必須手動複製歷程記錄資料移轉的程序。 此外，雖然 SSMA 不會在 SQL Server 中繼資料總管 中顯示歷程記錄資料表，因為它會被視為系統資料表，您就可以在 SQL Server Management Studio 中檢視歷程記錄資料表。
+    **請注意**-SSMA 不複製 Oracle 倒敘資料封存資料表的歷程記錄資料。 如此一來，必須手動複製歷程記錄資料移轉的程序。 此外，雖然 SSMA 不在 SQL Server 中繼資料總管 中顯示歷程記錄資料表，因為它會被視為系統資料表，您就可以在 SQL Server Management Studio 中檢視歷程記錄資料表。
     SQL Server 2016 不支援數個 Oracle 倒敘功能，包括：
     - Oracle 倒敘交易查詢
     - DBMS_FLASHBACK 封裝

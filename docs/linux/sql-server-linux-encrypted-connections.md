@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: f0c6e0e8b6999ce2ebcce009a4ac1c298ededdff
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40009030"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712120"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>將 Linux 上的 SQL Server 連線加密
 
@@ -34,9 +34,13 @@ ms.locfileid: "40009030"
 - 必須可以使用 AT_KEYEXCHANGE KeySpec 選項來建立憑證。 通常，憑證的金鑰使用方法屬性 (KEY_USAGE) 也包括金鑰編密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
 - 憑證的 Subject 屬性必須指出，一般名稱 (CN) 為相同的主機名稱或伺服器電腦的完整的網域名稱 (FQDN)。 注意： 支援萬用字元憑證。
 
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>設定 （選擇性） 使用 OpenSSL 程式庫
+您可以建立中的符號連結`/opt/mssql/lib/`參考其中的目錄`libcrypto.so`和`libssl.so`程式庫應該用於加密。 這非常有用，如果您想要強制使用 OpenSSL 系統所提供的預設值以外的特定版本的 SQL Server。 如果這些符號連結不存在，SQL Server 就會載入系統上的預設設定 OpenSSL 程式庫。
+
+應該命名為這些符號連結`libcrypto.so`並`libssl.so`並放置在`/opt/mssql/lib/`目錄。
+
 ## <a name="overview"></a>概觀
 TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如果設定正確，TLS 提供隱私權和資料完整性，以用戶端與伺服器之間的通訊。  用戶端起始伺服器可以是 TLS 連線。 
-
 
 ## <a name="client-initiated-encryption"></a>用戶端起始加密 
 - **產生憑證**（/CN 應該符合您的 SQL Server 主機完整的網域名稱）

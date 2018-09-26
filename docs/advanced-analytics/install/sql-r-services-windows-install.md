@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 92d477434460c9395342e1a522173a301b5a0ad8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311678"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713300"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
     > [!TIP]
     > 您可以下載並安裝適當版本，從這個頁面：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
     > 
-    > 您也可以試試預覽版[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)，其支援的系統管理工作和 SQL Server 查詢。
+    > 您也可以試試預覽版[Azure Data Studio](../../azure-data-studio/what-is.md)，其支援的系統管理工作和 SQL Server 查詢。
   
 2. 連接到您安裝 Machine Learning 服務的執行個體，請按一下**新的查詢**開啟查詢視窗中，並執行下列命令：
 

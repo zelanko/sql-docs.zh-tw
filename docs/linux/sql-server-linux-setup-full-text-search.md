@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a2cb44cf4f6a3b6c689ea66a4d353d97ce8c8af2
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396244"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713140"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
 
@@ -88,7 +88,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>支援的語言
 
-全文檢索搜尋會使用[斷詞工具](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，以決定如何識別個別單字語言為基礎。 您可以藉由查詢來取得一份已註冊的斷詞工具**sys.fulltext_languages**目錄檢視。 針對下列語言的斷詞工具會隨 SQL Server 2017:
+全文檢索搜尋會使用[斷詞工具](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)，以決定如何識別個別單字語言為基礎。 您可以藉由查詢來取得一份已註冊的斷詞工具**sys.fulltext_languages**目錄檢視。 針對下列語言的斷詞工具會隨 SQL Server:
 
 | 語言 | 語言識別碼 |
 |---|---|
@@ -150,7 +150,7 @@ sudo zypper update mssql-server-fts
 
 全文檢索搜尋也可以搭配儲存在二進位檔案中的文字。 但在此情況下，已安裝的篩選條件，才能處理檔案。 如需有關篩選的詳細資訊，請參閱[設定及管理搜尋的篩選](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 
-您可以看到已安裝的篩選器清單，藉由呼叫**sp_help_fulltext_system_components 'filter'**。 SQL Server 2017 中，會安裝下列的篩選條件︰
+您可以看到已安裝的篩選器清單，藉由呼叫**sp_help_fulltext_system_components 'filter'**。 SQL Server 會安裝下列的篩選條件︰
 
 | 元件名稱 | 類別識別碼 | 版本 |
 |---|---|---|

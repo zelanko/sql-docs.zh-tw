@@ -12,12 +12,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 1b01cfea93b2348d912b726bbad38f7e97dd0d94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d01a53524bf03e0ea8318c41b05b9cc59499de33
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086840"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713220"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入使用 SSIS 在 Linux 上的資料
 
@@ -79,13 +79,13 @@ ms.locfileid: "39086840"
 
 **路徑**。 提供 Windows 樣式路徑在您的 SSIS 套件。 在 Linux 上的 SSIS 不支援 Linux 式路徑，但 Windows 樣式路徑對應至 Linux 式路徑，在執行階段。 然後，例如，在 Linux 上的 SSIS 對應的 Windows 樣式路徑時，才`C:\test`Linux 樣式路徑`/test`。
 
-## <a name="deploy-packages"></a>部署封裝
+## <a name="deploy-packages"></a>部署套件
 此外，您只可以將封裝儲存在此版本中的 Linux 上的檔案系統中。 SSIS 目錄資料庫和舊版 SSIS 服務不在 Linux 上使用封裝部署和儲存體。
 
 ## <a name="schedule-packages"></a>排程套件
 您可以使用 Linux 系統，例如排程工具`cron`排程封裝。 您無法使用 Linux 上的 SQL Agent 來排程套件執行，在此版本中。 如需詳細資訊，請參閱 < [on Linux cron 排程 SSIS 套件](sql-server-linux-schedule-ssis-packages.md)。
 
-## <a name="limitations-and-known-issues"></a>限制與已知的問題
+## <a name="limitations-and-known-issues"></a>限制與已知問題
 
 有關 SSIS 在 Linux 上的已知的問題與限制的詳細資訊，請參閱[限制與已知的問題適用於 Linux 上的 SSIS](sql-server-linux-ssis-known-issues.md)。
 
@@ -93,8 +93,8 @@ ms.locfileid: "39086840"
 
 如需 Linux 上的 SSIS 的詳細資訊，請參閱下列部落格文章：
 
--   [在 Linux 上的 SSIS 適用於 SQL Server 2017 CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
--   [ODBC （SQL Server 2017 CTP 2.1 重新整理） 在 Linux 上的 SSIS 支援](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
+-   [在 Linux 上的 SSIS 適用於 SQL Server CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [ODBC （SQL Server CTP 2.1 重新整理） 在 Linux 上的 SSIS 支援](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
 ## <a name="more-info-about-ssis"></a>SSIS 的詳細資訊
 

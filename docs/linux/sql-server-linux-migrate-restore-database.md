@@ -1,6 +1,6 @@
 ---
 title: 從 Windows 的 SQL Server 資料庫移轉至 Linux |Microsoft Docs
-description: 本教學課程會示範如何取得 Windows 上的 SQL Server 資料庫備份，並將它還原到執行 SQL Server 2017 的 Linux 機器。
+description: 本教學課程會示範如何取得 Windows 上的 SQL Server 資料庫備份，並將它還原到執行 SQL Server 的 Linux 機器。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 6e779e3bd3958f440234bdc5f078d52088803a78
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: e3aa22603fa79a2d03b69b1043ea9b0200706925
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240064"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713010"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>從 Windows 的 SQL Server 資料庫移轉至 Linux 使用備份與還原
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料庫移轉至 SQL Server 2017 Linux 上的建議的方式。 在本教學課程中，您將逐步完成將資料庫移至 Linux 中，使用備份和還原技術所需的步驟。
+SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料庫移轉至 Linux 上的 SQL Server 的建議的方式。 在本教學課程中，您將逐步完成將資料庫移至 Linux 中，使用備份和還原技術所需的步驟。
 
 > [!div class="checklist"]
 > * 使用 SSMS 建立在 Windows 上的備份檔案
@@ -44,7 +44,7 @@ SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料
   * 要移轉的目標資料庫。
 
 * Linux 機器會有安裝下列項目：
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)，或[Ubuntu](quickstart-install-connect-ubuntu.md)) 的命令列工具。
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)，或[Ubuntu](quickstart-install-connect-ubuntu.md)) 的命令列工具。
 
 ## <a name="create-a-backup-on-windows"></a>Windows 上建立備份
 
@@ -224,7 +224,7 @@ SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已了解如何在 Windows 上的資料庫備份，並將它移到執行 SQL Server 2017 的 Linux 伺服器。 您已學到如何以：
+在本教學課程中，您已了解如何在 Windows 上的資料庫備份，並將它移到執行 SQL Server 的 Linux 伺服器。 您已學到如何以：
 > [!div class="checklist"]
 > * 使用 SSMS 和 TRANSACT-SQL 來建立在 Windows 上的備份檔案
 > * 安裝在 Windows 上的 Bash 殼層
