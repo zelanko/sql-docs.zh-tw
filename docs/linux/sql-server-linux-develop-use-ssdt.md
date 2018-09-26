@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1c6de6fd77de2594f4d2942fa5e5c4c82c614cc6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086970"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46714030"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 來建立 Linux 上的 SQL Server 資料庫
 
@@ -39,7 +39,7 @@ Linux 上的 SQL Server，SQL Server Data Tools (SSDT) 會將 Visual Studio 變�
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>升級至 SSDT 17.0 RC 版本的 SQL Server Data Tools
 
-Linux 上的 SQL Server 2017 的 SSDT 17.0 RC 或更新版本的版本支援。
+SSDT 17.0 RC 或更新版本的版本支援在 Linux 上的 SQL Server。
 
 * [下載和安裝 SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939)。
 
@@ -79,13 +79,13 @@ Linux 上的 SQL Server 2017 的 SSDT 17.0 RC 或更新版本的版本支援。
 
 ## <a name="build-and-validate-the-database"></a>建置及驗證資料庫
 
-1. 開啟資料庫的 [專案] 功能表**TutorialDB** ，然後選取**建置**。 SSDT 會編譯您的專案中的.sql 原始程式檔，並建置資料層應用程式封裝 (dacpac) 檔案。 這可用來將資料庫發佈至您在 Linux 上的 SQL Server 2017 執行個體。 
+1. 開啟資料庫的 [專案] 功能表**TutorialDB** ，然後選取**建置**。 SSDT 會編譯您的專案中的.sql 原始程式檔，並建置資料層應用程式封裝 (dacpac) 檔案。 這可用來將資料庫發佈至您在 Linux 上的 SQL Server 執行個體。 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. 簽入組建成功訊息**輸出**Visual Studio 中的視窗。 
 
-## <a name="publish-the-database-to-sql-server-2017-instance-on-linux"></a>將資料庫發行至 Linux 上的 SQL Server 2017 執行個體
+## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>將資料庫發行至 Linux 上的 SQL Server 執行個體
 
 1. 開啟資料庫的 [專案] 功能表**TutorialDB** ，然後選取**發佈**。
 

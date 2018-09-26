@@ -1,5 +1,5 @@
 ---
-title: 與資料庫相關動態管理檢視 (TRANSACT-SQL) |Microsoft 文件
+title: 與資料庫相關動態管理檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
@@ -18,27 +18,29 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a512ae98eb219b8614100fabb2d376841e9ce216
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3d0d01a815b84f2770a3182d1485f7c958ae1c4a
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463545"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713330"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  本章節描述下列動態管理物件中的[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]和有時 SQL Database。  
+  本章節描述下列動態管理物件中的[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]有時在 SQL Database。  
   
 |||  
 |-|-|  
 |[sys.dm_db_file_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)|[sys.dm_db_fts_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)|  
 |[sys.dm_db_log_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) |[sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) |  
-|[sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) |[sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|
-|[sys.dm_db_persisted_sku_features ](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|[sys.dm_db_session_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|
-|[sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|[sys.dm_db_uncontained_entities ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)|
+|[sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)|[sys.dm_db_page_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
+|[sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|[sys.dm_db_persisted_sku_features ](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|
+|[sys.dm_db_session_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|[sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|
+|[sys.dm_db_uncontained_entities ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)||
 
-DMV 的特有的 SQL 資料庫或 SQL 資料倉儲。   
+
+DMV 的 SQL Database 或 SQL 資料倉儲所獨有。   
 | | | 
 |-|-|  
 |[sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
