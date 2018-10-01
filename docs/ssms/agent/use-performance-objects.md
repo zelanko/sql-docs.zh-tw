@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0838b0d6620e5cfeaf528755ca5abe7d21f694df
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776609"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47440242"
 ---
 # <a name="use-performance-objects"></a>使用效能物件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "42776609"
   
 |執行個體類型|物件名稱|  
 |-----------------|---------------|  
-|預設|**SQLAgent:***object*:*counter*|  
-|具名|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
+|預設|**SQLAgent:**_object_:_counter_|  
+|具名|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的下列效能物件。  
   

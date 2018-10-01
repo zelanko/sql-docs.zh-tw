@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: a7f21e6ea62192f15fa19f1498aaa2dd4a80c2e2
+ms.sourcegitcommit: e29ef5022653fe911b5fbf58fb8c7c8feb940398
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42780759"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403335"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -406,6 +406,6 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
  [SQL Server 的產品規格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [SQL Server 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
- [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

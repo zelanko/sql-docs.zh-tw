@@ -1,7 +1,7 @@
 ---
 title: 建立新資料庫圖表 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms-visual-db
@@ -18,15 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a672bf8d0a05d928e9bc7101e5f1fb2860b8cd95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 44499867a37dfe590511ce2fdff719791a259e35
+ms.sourcegitcommit: e29ef5022653fe911b5fbf58fb8c7c8feb940398
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023705"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403285"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>建立新資料庫圖表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 您可以使用 [物件總管] 建立新的資料庫圖表。 資料庫圖表以圖形方式顯示資料庫結構。 使用資料庫圖表可建立及修改資料表、資料行、關聯性和索引鍵。 此外，您可修改索引及條件約束。  
   
 ### <a name="to-create-a-new-database-diagram"></a>若要建立新的資料庫圖表  
@@ -45,5 +45,4 @@ ms.locfileid: "38023705"
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[了解資料庫圖表擁有權 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-  
+[了解資料庫圖表擁有權 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)

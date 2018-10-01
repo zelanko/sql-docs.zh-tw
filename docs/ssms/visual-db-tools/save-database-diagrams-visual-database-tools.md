@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa10fd70f4202f659eaa41f58b40612b70d6987
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 829d8af7da228ab9fbd778fb59c68074cfaa502d
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999410"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47442752"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>儲存資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37999410"
   
 ### <a name="to-save-the-database-diagram"></a>儲存資料庫圖表  
   
-1.  從 [檔案] 功能表中，選擇 [儲存 \<表格名稱>]。  
+1.  從 [檔案] 功能表中，選擇 **[儲存 \<**_tablename_**>]**。  
   
 2.  如果這是從未儲存過的新圖表，[另存新檔] 對話方塊便會出現。 輸入圖表的名稱。  
   
