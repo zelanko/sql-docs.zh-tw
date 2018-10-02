@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96676bfa7c997d94eb79712f67b4b51fd165134b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c4ba18b045570c365a53371d0abc54c86582cfd4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835906"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>HOW TO：建立函式、觸發程序和預存程序的 SQL Server 單元測試
 您可以撰寫單元測試來評估任何資料庫物件的變更。 不過，SQL Server Data Tools 包含從 SQL Server [物件總管] 的資料庫專案節點中建立資料庫函式、觸發程序和預存程序測試的額外支援。 Transact\-SQL 程式碼 Stub 可以自動產生，供您自訂。  

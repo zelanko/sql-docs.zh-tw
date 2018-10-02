@@ -5,12 +5,8 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1c8abe94f55ceedc97632ed5ece8d61b5034f7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b64d9d1410e7a5020689b4f057eb2f08051268e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402500"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836477"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>開發具有非同步輸出的自訂轉換元件
   當轉換在元件收到它的所有輸入資料列以前無法輸出資料料時，或是當轉換無法針對每一個收到的輸入資料列剛好產生一個輸出資料列時，您會使用非同步輸出。 例如，彙總轉換要等到讀取所有資料列以後，才能計算資料列的總和。 相反地，每當您在資料通過時修改每一個資料列時，都可以搭配同步輸出來使用元件。 您可以就地修改每一個資料列的資料，或是建立一或多個其他新的資料行，每一個資料行對於每一個輸入資料列都有一個值。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
