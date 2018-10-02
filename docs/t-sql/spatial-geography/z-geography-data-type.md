@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Z (geography Data Type)
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Z method
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 004e2a20073fc88e368984d8688124f712e86923
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 0671ccc73643e365da6555bb1ea40df827c32bd3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665186"
 ---
 # <a name="z-geography-data-type"></a>Z (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

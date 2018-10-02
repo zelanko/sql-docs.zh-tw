@@ -5,9 +5,7 @@ ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FUNCTION
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4e29041776bb0b4c9edde3d2e839b89b8e88100a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596877"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -575,7 +572,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>計算資料行的互通性  
  函數具有下列屬性。 這些屬性的值會決定是否可以在可保存或索引的計算資料行中使用函數。  
   
-|屬性|描述|注意|  
+|屬性|Description|注意|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|函數可分為具決定性或不具決定性。|具決定性函數中允許本機資料存取。 例如，每當利用一組特定輸入值來呼叫函數時都一律傳回相同結果且含有相同資料庫狀態的函數，就會被標示為具決定性。|  
 |**IsPrecise**|函數可分為精確或不精確。|不精確函數內含浮點作業之類的作業。|  
@@ -651,14 +648,14 @@ RETURNS return_data_type
 ## <a name="metadata"></a>中繼資料  
  下表列出您可以用來傳回使用者定義函數之中繼資料的系統目錄檢視表。  
   
-|系統檢視表|描述|  
+|系統檢視表|Description|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|請參閱下方＜範例＞一節中的範例 E。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|顯示 CLR 使用者定義函數的相關資訊。|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|顯示使用者定義函數中定義之參數的相關資訊。|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|顯示函數所參考的基礎物件。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料庫中的 CREATE FUNCTION 權限，以及此函數建立所在之結構描述上的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
   
 ## <a name="examples"></a>範例  

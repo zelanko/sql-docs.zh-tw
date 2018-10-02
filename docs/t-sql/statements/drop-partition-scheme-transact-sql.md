@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP PARTITION SCHEME
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - removing partition schemes
 - partition schemes [SQL Server], removing
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a0d5add7ab611df190b2201c228c71acfc5e665
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: cd96a77a90086c894024a2d46f3497f2ae7f14ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641516"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ## <a name="remarks"></a>Remarks  
  只有在目前沒有資料表或索引在使用資料分割結構描述時，才可以卸除資料分割結構描述。 如果有資料表或索引在使用資料分割結構描述，DROP PARTITION SCHEME 便會傳回錯誤。 DROP PARTITION SCHEME 不會移除檔案群組本身。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  下列權限可用來執行 DROP PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  

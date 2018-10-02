@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae1375a871598a1bf4ce4bd217336450c50d3264
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676166"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>如何：刪除物件及解析依存性
 在 [SQL Server 物件總管] 中重新命名或刪除物件時，SQL Server Data Tools 會自動偵測該物件的所有相依性物件，並視需要準備 ALTER 指令碼以重新命名或卸除相依性。  

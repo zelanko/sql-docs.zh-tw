@@ -5,9 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing server groups
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting server groups
 - groups [SQL Server], server
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f00c49ecd95e777b937e6a4e61a05c67e930a354
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 1c4b2d41165dc6630990bc6300c7371b6a03288e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640876"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>移除伺服器群組 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

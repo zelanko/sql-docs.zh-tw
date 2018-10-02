@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 79
 author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 9522a954f3afd5f29d923aa58844cfc26d7a5669
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c70928d3a123dd3348baeb9c91edc42c06d7fc5e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405920"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676006"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
 

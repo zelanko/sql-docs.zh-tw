@@ -5,8 +5,6 @@ ms.date: 06/14/2016
 ms.prod: sql
 ms.technology: backup-restore
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, backing up
@@ -15,12 +13,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 72c41239ba6b5f843ae28b8337fb7de4c4d50ebd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 190b318de25edd79d980fb81d69bff0e2634b87a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645156"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>備份已啟用延展功能的資料庫(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

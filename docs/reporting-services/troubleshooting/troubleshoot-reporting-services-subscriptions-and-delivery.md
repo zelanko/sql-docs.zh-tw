@@ -4,17 +4,16 @@ ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b7aa6f15508797b90dd1ddd9bd515c150cbabd2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7a8384ad803f70b6ec4bcca2bca49390f969a661
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604306"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解
   

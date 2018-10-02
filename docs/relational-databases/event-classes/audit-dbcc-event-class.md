@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit DBCC event class
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05df934e4c29dd7b354275e2b82cbc494e6fd8c8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: be502a5bfb5c3abbfb7116a5e4deeff36bfb1910
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649886"
 ---
 # <a name="audit-dbcc-event-class"></a>稽核 DBCC 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "43064031"
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 ||||||  
 ||||||  
-|**TextData**|**ntext**|DBCC 命令的 SQL 文字|@shouldalert|是|  
+|**TextData**|**ntext**|DBCC 命令的 SQL 文字|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

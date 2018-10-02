@@ -4,17 +4,16 @@ ms.date: 09/15/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 00b14f80b7e6cc316fb5857b44140bd30cc92765
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 440f034ae7fd90f26d023874c5d758bd6e4156de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594848"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>轉譯延伸模組的裝置資訊設定 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 每一個轉譯延伸模組都會接受一組特定的設定。  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-objects
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.objectexplorer.scriptingoptions
@@ -27,16 +24,15 @@ helpviewer_keywords:
 - filtering objects [SQL Server]
 - Object Explorer, about Object Explorer
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cb565e830ac0f773299c3cace9afb36d19f1bbb
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 4201be08286e90848eeafcb3732cfdc198d059ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42775576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682066"
 ---
 # <a name="object-explorer"></a>物件總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

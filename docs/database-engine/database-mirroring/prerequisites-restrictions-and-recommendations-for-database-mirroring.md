@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], planning
 - database mirroring [SQL Server], about database mirroring
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
-caps.latest.revision: 55
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a69c538a1b24d0963542581cc27d4c2e935ec31b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cc62539432599cf6273772d5db9fca0a296b5980
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669856"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>資料庫鏡像的必要條件、限制和建議事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

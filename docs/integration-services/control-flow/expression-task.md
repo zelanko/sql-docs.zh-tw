@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12c81df7ebfdc907a139bf33393b2b3017524c62
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5f2bfc7d8e3f5782851178667305966cc243d8c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602641"
 ---
 # <a name="expression-task"></a>運算式工作
   運算式工作會使用運算式產生器，建立及評估在執行階段設定變數值的運算式。 當您編輯工作時，會啟動 [Expression Builder](../../integration-services/expressions/expression-builder.md) 。  

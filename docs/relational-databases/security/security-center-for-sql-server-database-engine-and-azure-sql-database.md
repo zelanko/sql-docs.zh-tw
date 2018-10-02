@@ -5,9 +5,7 @@ ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 55
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c300b527cb8ba9a2e6047bdb1783239d0190114
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: ccd0c9360cea6c03fa4e5418c669b7a6b9769f5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617906"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

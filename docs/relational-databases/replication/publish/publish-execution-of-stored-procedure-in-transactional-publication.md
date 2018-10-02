@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - stored procedures [SQL Server replication], publishing
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 273873f2e208c1be3d3b2fbd59a4b0e25efbbdb1
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 47cfb440c83f8d82ca92a7fbbcbee43ac8da53e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610636"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>在交易式發行集中發行預存程序的執行項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

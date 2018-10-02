@@ -5,9 +5,7 @@ ms.date: 09/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@TOTAL_READ_TSQL'
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - total read [SQL Server]
 - read activity since last started
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2abe0c2ecc79e9af2e87195c178aef8602ab6c0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 000a6f432bb123ef4e2cb592acc96857af492452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681946"
 ---
 # <a name="x40x40totalread-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

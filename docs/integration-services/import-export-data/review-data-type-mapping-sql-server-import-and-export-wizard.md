@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b49a83a389c0d9fec7a843e005946faccbef5a86
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5ef44f25a923471eadbc14abcfb6586606638dd3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637916"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
 如果您所指定的資料類型對應在 [資料行對應]  對話方塊的 [對應]  清單中失敗，則 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [檢閱資料類型對應]  頁面。 在這個頁面上，您可以檢閱精靈必須執行才能讓來源資料與目的地相容之資料類型轉換的詳細資訊。 這項資訊包括視覺提示，可區別預期會成功的轉換與可能導致錯誤或截斷的資料類型轉換。 針對每個轉換，您可以決定是否要接受精靈所建議的轉換，而且可以指定如何處理發生的任何錯誤。   
@@ -48,7 +45,7 @@ ms.locfileid: "35405110"
   
  下表描述 [資料表]  清單中的資料行。  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |(來源圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料表的所有資料類型轉換都會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的個別轉換。 若要檢閱這些轉換，請選取資料表，然後在 **[資料類型對應]** 清單中檢閱個別資料行的轉換。<br />- **紅色** 的錯誤圖示表示精靈無法確實針對這個資料表執行某些轉換。|  
 |**來源**|來源資料表的名稱。|  
@@ -64,7 +61,7 @@ ms.locfileid: "35405110"
 
 下表描述 [資料類型對應]  清單中的資料行。 
 
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |(轉換圖示)|指出資料類型轉換的成功機率：<br /> - **綠色** 的核取記號圖示表示精靈預期這個資料行的資料類型轉換會成功。<br />- **黃色** 的警告圖示表示您應該檢閱精靈即將執行的轉換。 若要檢閱轉換，請按兩下資料行，即可檢視 [資料行轉換詳細資訊]  對話方塊。 如需詳細資訊，請參閱 [資料行轉換詳細資訊對話方塊](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)。<br />- **紅色** 錯誤圖示表示精靈無法確實執行轉換。|  
 |**來源資料行**|來源資料行的名稱。|  

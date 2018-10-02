@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [SQL Server]
 - database diagrams [SQL Server], annotations
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0c47ccc00bc4a3f00faeb053296ad78f17b77de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9dadc8b2aadfbf00b67a3ae697336124f53ddcdc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612726"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>將文字附註加入至圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

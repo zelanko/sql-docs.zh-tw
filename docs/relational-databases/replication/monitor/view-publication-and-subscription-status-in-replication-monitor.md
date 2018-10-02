@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, monitoring
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], viewing status
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f656827b0f40ea364ebcd99125fff5f5af8359c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 851431754767545977c43c19b44880c54543872d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613437"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

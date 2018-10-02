@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a4cdccc289b8348b443be415beed1656f5c3dde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f59d1724d3808bba92e70d7ca64e933555266
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640292"
 ---
 # <a name="database-mail-configuration-objects"></a>Database Mail 組態物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,14 +130,14 @@ ms.locfileid: "32931853"
   
 ### <a name="database-mail-settings"></a>Database Mail 設定  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|變更 Database Mail 的組態設定。|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|顯示 Database Mail 的組態設定。|  
   
 ### <a name="accounts-and-profiles"></a>帳戶與設定檔  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|將郵件帳戶加入到 Database Mail 設定檔。|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|刪除 Database Mail 帳戶。|  
@@ -156,7 +152,7 @@ ms.locfileid: "32931853"
   
 ### <a name="security"></a>Security  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|授與資料庫主體使用 Database Mail 設定檔的權限。|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|移除資料庫使用者使用公用或私人 Database Mail 設定檔的權限。|  
@@ -165,7 +161,7 @@ ms.locfileid: "32931853"
   
 ### <a name="system-state"></a>系統狀態  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|啟動 Database Mail 外部程式，以及關聯的 SQL Service Broker 佇列。|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|停止 Database Mail 外部程式，以及關聯的 SQL Service Broker 佇列。|  

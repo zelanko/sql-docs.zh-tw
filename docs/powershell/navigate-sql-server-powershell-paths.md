@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: scripting
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37be2c3dc4c2307cea99164a5fa955dfbbfdd6d9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 4cc00205c7278e25fad3c3301dcdf0507cb9b4bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600606"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +31,7 @@ Windows PowerShell 實作指令程式以導覽路徑結構，而路徑結構代�
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會實作提供者 Cmdlet 的子集，如下表所示：  
   
-|Cmdlet|標準的別名|cmd 別名|UNIX Shell 別名|描述|  
+|Cmdlet|標準的別名|cmd 別名|UNIX Shell 別名|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|取得目前的節點。|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|變更目前的節點。|  

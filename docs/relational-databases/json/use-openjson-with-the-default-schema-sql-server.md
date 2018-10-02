@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENJSON, with default schema
@@ -15,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8ca37635aac90c20f4021659ab6ae538dadae48
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ea2154045da369c045eea39591266cfb02f53722
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43110030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630219"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>搭配使用 OPENJSON 與預設結構描述 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +56,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 |索引鍵|ReplTest1|  
 |---------|-----------|  
 |0|en-GB|  
-|@shouldalert|en-UK|  
+|1|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
@@ -90,7 +88,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
 |索引鍵|ReplTest1|類型|  
 |---------|-----------|----------|  
-|型別|@shouldalert|0|  
+|型別|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |標記|[ "Sport", "Water polo" ]|4|  
   

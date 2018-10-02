@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -34,16 +31,15 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3d3c7a580a347a487c31cd6667a76da9c984b90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a80a90c998e02e91546dfe306da558a0a7235df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642716"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ ms.locfileid: "32932603"
 ## <a name="database-files"></a>資料庫檔案  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有三種檔案類型，如下表所示。  
   
-|檔案|描述|  
+|檔案|Description|  
 |----------|-----------------|  
 |Primary|主要資料檔包含資料庫啟動資訊，並指到資料庫中的其他檔案。 使用者資料和物件可儲存於此檔案或次要的資料檔中。 每個資料庫都有一個主要資料檔案。 建議您將主要資料檔的副檔名設為 .mdf。|  
 |次要|次要資料檔是選擇性且使用者自訂的，並可儲存使用者資料。 次要檔可用以將資料分散在多個磁碟上，即透過將每個檔案放在不同的磁碟機上來達成此目的。 此外，若資料庫超過了單一 Windows 檔案的大小上限，您可使用次要資料檔，以容許資料庫繼續成長。<br /><br /> 建議您將次要資料檔的副檔名設為 .ndf。|  
@@ -107,7 +103,7 @@ ms.locfileid: "32932603"
   
  所有儲存在檔案群組中的資料檔列於下表。  
   
-|檔案群組|描述|  
+|檔案群組|Description|  
 |---------------|-----------------|  
 |Primary|包含主要檔案的檔案群組。 所有的系統資料表都配置於主要檔案群組內。|  
 |記憶體最佳化資料|記憶體最佳化檔案群組是根據檔案資料流檔案群組|  

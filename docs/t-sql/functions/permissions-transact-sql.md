@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PERMISSIONS_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 121b7e229220793e7e1b9bc9307f3398281d6c2d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641506"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |位元 (dec)|位元 (hex)|陳述式權限|  
 |-----------------|-----------------|--------------------------|  
-|@shouldalert|0x1|CREATE DATABASE (僅限 master 資料庫)|  
+|1|0x1|CREATE DATABASE (僅限 master 資料庫)|  
 |2|0x2|CREATE TABLE|  
 |4|0x4|CREATE PROCEDURE|  
 |8|0x8|CREATE VIEW|  
@@ -90,7 +87,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |位元 (dec)|位元 (hex)|陳述式權限|  
 |-----------------|-----------------|--------------------------|  
-|@shouldalert|0x1|SELECT ALL|  
+|1|0x1|SELECT ALL|  
 |2|0x2|UPDATE ALL|  
 |4|0x4|REFERENCES ALL|  
 |8|0x8|Insert|  
@@ -104,7 +101,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 |位元 (dec)|位元 (hex)|陳述式權限|  
 |-----------------|-----------------|--------------------------|  
-|@shouldalert|0x1|SELECT|  
+|1|0x1|SELECT|  
 |2|0x2|UPDATE|  
 |4|0x4|REFERENCES|  
   

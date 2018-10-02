@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-solutions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], renaming
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], renaming
 - renaming solutions
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e09530ebd13d076efbc497bdb99f15e00df5261
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 838db10a6e82708416b634975ca6ea0cb21bf777
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606006"
 ---
 # <a name="rename-solutions-and-project-items"></a>重新命名方案和專案項目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

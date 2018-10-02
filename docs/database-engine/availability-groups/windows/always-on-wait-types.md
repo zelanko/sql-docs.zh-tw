@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1eee6003c8697be620fd69a0dc137d12c14620b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ee819aefcac1dc21fdf56d6b8ec93d4d1297f83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32858353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675716"
 ---
 # <a name="always-on-availability-groups-wait-types"></a>Always On 可用性群組等候類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

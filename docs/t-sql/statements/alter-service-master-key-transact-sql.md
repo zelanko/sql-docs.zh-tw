@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVICE_MASTER_KEY_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], modifying
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fefd6e921e9dbadae3ffb732d341550fffda0221
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651776"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +103,7 @@ ALTER SERVICE MASTER KEY
   
  如果您將 SQL 移至另一部電腦，則必須使用相同的服務帳戶來解密 SMK - SQL Server 將自動修正電腦帳戶加密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要伺服器的 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

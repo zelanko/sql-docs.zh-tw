@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - MSReportServer_ConfigurationSetting Members
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eca70b3b23e82a804f5501840869bd978db6901
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e956eaac01b6cb301eb477c28374ff0fab57484d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616146"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting 成員
   MSReportServer_ConfigurationSetting 類別包含下列屬性和方法。  

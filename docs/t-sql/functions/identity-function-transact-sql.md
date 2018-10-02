@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - columns [SQL Server], creating
 - identity columns [SQL Server], IDENTITY function
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93c282c9b0df9b94a092be4ef603033fbc9c126
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9b1bd37d807914ebdb8b41797cb7452f65c7b5e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618556"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (函數) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

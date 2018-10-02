@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22606fe669b6e68efec8c82252d8a2345adb5450
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 35a8af1e63172dd678a85a612a09d922759373fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658446"
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
   使用 [建立交易資料的 InfoSource] 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoSource。  
@@ -85,7 +82,7 @@ ms.locfileid: "35410620"
  **型別**  
  顯示與資料流程資料行相關聯的 InfoObject 類型。 下表列出類型的可能值。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |CHA|特性|  
 |UNI|單位|  

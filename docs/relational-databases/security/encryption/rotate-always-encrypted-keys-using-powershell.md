@@ -5,22 +5,19 @@ ms.date: 05/17/2017
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
-caps.latest.revision: 19
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb755f9051ec1f473421aa3dbba9c0b2abda50a7
-ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
+ms.openlocfilehash: dca46f2aa08235e69c93efb4a9538ef5004b71b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46013913"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652986"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 輪替永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

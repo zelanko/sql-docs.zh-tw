@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cde09f46f702a6d1df6fba57feb52fb7f9e25928
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 98230dfb1287460e9844c4adb87a47943edabcc2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265156"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666216"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Analysis Services Connection Type for DMX (SSRS)
   當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源建立資料集時，報表設計師會在偵測到有效的 Cube 時顯示多維度運算式 (MDX) 查詢設計工具。 如果未偵測到任何 Cube，但是有提供資料採礦模型，報表設計師會顯示資料採礦延伸模組 (DMX) 查詢設計工具。 若要在 MDX 與 DMX 設計工具之間切換，請按一下工具列上的 [命令類型 DMX] (![變更為 DMX 查詢語言檢視](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "變更為 DMX 查詢語言檢視")) 按鈕。 使用 DMX 查詢設計工具，透過圖形元素以互動方式建立 DMX 查詢。 若要使用 DMX 查詢設計工具，您指定的資料來源必須已經具有提供資料的資料採礦模型。 查詢結果會轉換成扁平化的資料列集，以提供報表使用。  

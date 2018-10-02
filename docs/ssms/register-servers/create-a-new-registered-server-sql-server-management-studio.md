@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.registerserver.general.sqlce.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1d2c0f80d80a48005821038b2cb90367fef6cdd
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: fcd0ba6c37b6e88d3d7ef362e1050f53721e89f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776225"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668650"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

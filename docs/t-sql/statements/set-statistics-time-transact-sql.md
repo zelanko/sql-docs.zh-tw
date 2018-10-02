@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_STATISTICS_TIME_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - compile times [SQL Server]
 - execution processing time [SQL Server]
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d0a4124355ebe625213b7027279f8d642e07a058
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 2be43a9ed439d3f4fb72c26683973ca4c18b263f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786405"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619851"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ SET STATISTICS TIME { ON | OFF }
   
  ON 和 OFF 設定也會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中目前活動的 [處理序資訊] 檢視中的 CPU 資料行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要使用 SET STATISTICS TIME，使用者必須有執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的適當權限。 不需要 SHOWPLAN 權限。  
   
 ## <a name="examples"></a>範例  

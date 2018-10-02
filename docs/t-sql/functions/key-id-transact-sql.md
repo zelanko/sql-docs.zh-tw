@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Key_ID
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], IDs
 - IDs [SQL Server], symmetric keys
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c8c79057c9d4a56aafca8e5114cc4100275239c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 1ffafacce7d82645d0f1e8c0335637d26d850798
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604756"
 ---
 # <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ Key_ID ( 'Key_Name' )
 ## <a name="remarks"></a>Remarks  
  暫時金鑰的名稱，必須以數字符號 (#) 開頭。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  由於暫時金鑰只能用在建立它們的工作階段當中，因此存取它們無需任何權限。 若要存取的是非暫時金鑰，呼叫端就必須對金鑰具備某種權限，而且絕對不能拒絕過該金鑰的 VIEW 權限。  
   
 ## <a name="examples"></a>範例  

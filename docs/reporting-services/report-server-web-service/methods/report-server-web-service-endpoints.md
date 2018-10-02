@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - management endpoints [Reporting Services]
 - Web service [Reporting Services], endpoints
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c7c0362271c57f9e69a3b2d628d95b1ec629a07
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a57110500cc51bda0ddaea459d69af7a127ec67c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605963"
 ---
 # <a name="report-server-web-service-endpoints"></a>報表伺服器 Web 服務端點
   報表伺服器 Web 服務提供幾個端點來管理報表伺服器以及執行和導覽報表。  

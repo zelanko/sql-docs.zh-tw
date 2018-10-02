@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 276096d9e5ce082f31439e664614833eb68f6984
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bbaaa9635a39ab4a0b8f8fcd1a0a4dc8048d6c2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645136"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>HOW TO：執行 SQL Server 單元測試
 您可以使用數種方式的任何一種來執行 SQL Server 單元測試，例如使用各種視窗和 [命令提示字元] 視窗。  

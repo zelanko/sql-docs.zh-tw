@@ -6,23 +6,20 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cdd7e27cfba54215f3f2eda52c9132c0b366325
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 96effd7670d22461f6c347c9220f7a3c26b7f611
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624516"
 ---
 # <a name="project-oriented-offline-database-development"></a>專案導向的離線資料庫開發
 本節將說明 SQL Server Data Tools (SSDT) 所提供用於撰寫、建置、偵錯及發行資料庫專案的功能。  

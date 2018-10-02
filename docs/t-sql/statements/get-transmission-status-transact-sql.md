@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STATUS_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - status information [SQL Server], conversations
 - GET_TRANSMISSION_STATUS statement
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8cf9505ddefcac3fc78f5faa15a00736513f30d5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4c7997c72b376a0187407e7688e29944c0eeb984
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642086"
 ---
 # <a name="gettransmissionstatus-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

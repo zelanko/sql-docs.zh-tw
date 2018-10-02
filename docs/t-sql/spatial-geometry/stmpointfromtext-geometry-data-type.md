@@ -5,9 +5,7 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STMPointFromText (geometry Data Type)
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromText (geometry Data Type)
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a12cc3f81e831639b7aa88770c5a57cbc3f35727
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 10d6547d8547abdf795decf01bcc7af6e80f346e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661496"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

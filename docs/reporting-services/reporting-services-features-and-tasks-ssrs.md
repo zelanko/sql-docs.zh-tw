@@ -4,7 +4,6 @@ ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce7bd172b582247d9eadc6f22ae4a9589e00dd8c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2dcdb2dff46534f52cd8fb115edd8d29072c98a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623376"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能及工作 (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基礎內容是依報表和報表功能、報表伺服器功能以及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 產品功能進行組織。  

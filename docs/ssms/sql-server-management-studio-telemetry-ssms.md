@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 02/20/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
-caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78e74f96f36c5bfb21859bbc1f4ef1916e061b59
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: abe3642cf4d74b67fcb595548a498fb062d5cddd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633346"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用意見收集的本機稽核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

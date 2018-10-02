@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.agdashboard.drp1notsuspended.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 890e178af2d0f4577dce42e681a6156ae99b0246
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8f4292c6623c266e67da6fb977786073ccfb8578
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646536"
 ---
 # <a name="availability-database-is-suspended"></a>可用性資料庫已暫停
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "34769954"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性資料庫|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  此原則會檢查次要資料庫 (也稱為「次要資料庫複本」) 的資料移動。 當資料移動已暫停時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

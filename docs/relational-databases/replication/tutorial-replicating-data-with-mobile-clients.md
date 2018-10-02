@@ -4,28 +4,22 @@ ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37b8e7acb2ce51b6a190967e16e9b2e17aa112ea
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0e5cc02ffa4062ff7860f2c1bac17247d4c6964d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075361"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627356"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教學課程：設定伺服器和行動用戶端之間的複寫 (合併式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

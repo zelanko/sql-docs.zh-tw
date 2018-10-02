@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7cf50bad1e75b5729bc946f6887e02654b69d8d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683046"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>交易式發行項 - 指定變更的傳播方式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "38005971"
   
 -   處理刪除的 **sp_MSdel_\<**<資料表名稱> **>**。  
   
- 程序中使用的 **\<資料表名稱>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
+ 程序中使用的 **\<**_tablename_**>** 取決於發行項新增至發行集的方式，以及訂閱資料庫是否包含與不同擁有者具有相同名稱的資料表。  
   
  以上任何程序均可取代為您在將發行項新增至發行集時指定的自訂程序。 如果應用程式需要自訂邏輯，例如在「訂閱者」端更新資料列時將資料插入稽核資料表，就要使用自訂程序。 如需指定自訂預存程序的詳細資訊，請參閱以上所列的「如何」主題。  
   

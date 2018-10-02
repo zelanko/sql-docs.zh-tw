@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 007f055303de7093c4fe0b90bbfddde9d0173211
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: db65d03e5a831e4438b407997a2ac42599e3df4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611156"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修復失敗的 SQL Server 安裝
 

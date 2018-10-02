@@ -5,9 +5,7 @@ ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: vanto
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cryptography [SQL Server], algorithms
@@ -19,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ea16b21dcdbf6abe6d92877b241006f5fd629f6
-ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
+ms.openlocfilehash: 5dee2105857392c1083baeca842d59c1c173f36e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670656"
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -4,17 +4,16 @@ ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9950fa3211f3cf3cc7b8d595168283b0acf87005
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 775880471620acaac5c46bf1efd04d961f60ce6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608656"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>從行動報表將鑽研加入其他行動報表或 URL
 您可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中的任何量測計、圖表或資料格將鑽研加入另一個行動報表或自訂 URL。 

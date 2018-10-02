@@ -5,26 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 716b80d50d8498f2a3325bd4719ddf0a7f1e9946
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 308898cb506dcfe34b27b7081109c77251e2dc15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599476"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   下表描述 ODBC 目的地的自訂屬性。 所有屬性都可從 SSIS 屬性運算式設定。  
   
-|屬性名稱|資料類型|描述|  
+|屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |連接|ODBC 連接|用來存取目的地資料庫的 ODBC 連接。|  
 |BatchSize|Integer|大量載入的批次大小。 這是當做批次載入的資料列數目。 這只適用於支援資料列取向的參數繫結時。 如果不支援資料列取向的參數繫結，則批次大小為 1。|  

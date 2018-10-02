@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 12/08/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], opening
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Management Studio command line
 - opening SQL Server Management Studio
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
-caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8c64df36bef9012e91d444f9f5326a4e746b543
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 6b7eac4f10292107ab61aa165dd814fa6f630826
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678092"
 ---
 # <a name="ssms-utility"></a>Ssms 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

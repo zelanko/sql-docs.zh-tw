@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - transactional replication, identity range management
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: debc7e5750d6d96e11a61a07be7ee4c7bbd97330
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 50050cc767d27a6e25192d1f4fded2eb259b1d4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673506"
 ---
 # <a name="manage-identity-columns"></a>管理識別欄位
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +69,7 @@ ms.locfileid: "37355450"
   
 5.  如果在步驟 4 中選取了 **[自動]** 或 **[True]** ，請在下表中輸入選項的值。 如需如何使用這些設定的詳細資訊，請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。  
   
-    |選項|ReplTest1|描述|  
+    |選項|ReplTest1|Description|  
     |------------|-----------|-----------------|  
     |**發行者範圍大小**|範圍大小的整數值 (例如 20000)。|請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
     |**訂閱者範圍大小**|範圍大小的整數值 (例如 10000)。|請參閱[複寫識別欄位](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  

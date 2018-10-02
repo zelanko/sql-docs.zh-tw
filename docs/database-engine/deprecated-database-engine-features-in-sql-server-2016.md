@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 799f2b0df6a33d70006baf4b1389584cd7acf801
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 87fcb3590b628af4400edf3c3f6541f0f11a9b92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598596"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中已被取代的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +141,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |資料表壓縮|使用 Vardecimal 儲存格式。|Vardecimal 儲存格式已被取代。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。|Vardecimal 儲存格式|200|  
 |資料表壓縮|使用 sp_db_vardecimal_storage_format 程序。|Vardecimal 儲存格式已被取代。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。|sp_db_vardecimal_storage_format|201|  
 |資料表壓縮|使用 sp_estimated_rowsize_reduction_for_vardecimal 程序。|請改用資料壓縮和 sp_estimate_data_compression_savings 程序。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|資料表提示|在 UPDATE 或 DELETE 陳述式的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|請從 FROM 子句中移除 NOLOCK 或 READUNCOMMITTED 資料表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|@shouldalert|  
+|資料表提示|在 UPDATE 或 DELETE 陳述式的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|請從 FROM 子句中移除 NOLOCK 或 READUNCOMMITTED 資料表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|1|  
 |資料表提示|指定資料表提示，而不使用 WITH 關鍵字。|使用 WITH。|沒有 WITH 的資料表提示|8|  
 |資料表提示|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointer|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT 或 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  

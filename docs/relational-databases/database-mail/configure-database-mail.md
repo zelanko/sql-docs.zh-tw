@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -41,16 +38,15 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1df9d91458211d66722ac1b844e5d938690acc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da0246a1a953dcfa4d3af6af6d1bb28116c9005e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625776"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +156,7 @@ ms.locfileid: "32933233"
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
- 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，這會使用類似 **smtp.<您的公司>.com** 的格式。如需相關說明，請洽詢您的郵件管理員。  
+ 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，這會使用類似 **smtp.<您的公司>.com** 的格式。 如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
@@ -210,7 +206,7 @@ ms.locfileid: "32933233"
  檢視或更新電子郵件地址，這將用於回覆給由這個帳戶傳送的電子郵件訊息。 回覆電子郵件是選擇性的。 例如，回覆給 SQL Server Agent 帳戶的郵件，可能會傳送給資料庫管理員 **danw@Adventure-Works.com**之電腦上的使用者。  
   
  **伺服器名稱**  
- 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。如需相關說明，請洽詢您的郵件管理員。  
+ 檢視或更新帳戶用來傳送電子郵件的 SMTP 伺服器名稱。 一般而言，此格式類似於 **smtp.<貴公司>.com**。 如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  檢視或更新此帳戶的 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  

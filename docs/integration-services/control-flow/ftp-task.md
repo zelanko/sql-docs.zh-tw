@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f6918b56ec5335a25b9f0606b4646222df7ce9ee
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 55f98003cc391c3b5cf770646ccc2db783a99495
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599466"
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -54,7 +51,7 @@ ms.locfileid: "35330892"
 ## <a name="predefined-ftp-operations"></a>預先定義的 FTP 作業  
  FTP 工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|作業|描述|  
+|作業|Description|  
 |---------------|-----------------|  
 |傳送檔案|從本機電腦將檔案傳送到 FTP 伺服器。|  
 |接收檔案|從 FTP 伺服器將檔案儲存到本機電腦。|  
@@ -68,7 +65,7 @@ ms.locfileid: "35330892"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 工作上可用的自訂記錄項目  
  下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|描述|  
+|記錄項目|Description|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|指出工作已經起始與 FTP 伺服器的連接。|  
 |**FTPOperation**|報告工作執行之 FTP 作業的開始及其類型。|  
@@ -111,7 +108,7 @@ ms.locfileid: "35330892"
  **IsRemotePathVariable**  
  指出遠端路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[RemoteVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[RemotePath]**。|  
@@ -122,7 +119,7 @@ ms.locfileid: "35330892"
  **IsLocalPathVariable**  
  指出本機路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 **[LocalVariable]**。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項 **[LocalPath]**。|  
@@ -130,7 +127,7 @@ ms.locfileid: "35330892"
  **運算**  
  選取要執行的 FTP 作業。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**傳送檔案**|傳送檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收檔案**|接收檔案。 選取此值會顯示動態選項 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  

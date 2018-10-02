@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.portal.Installation.f1
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - installation [SQL Server]
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 228202a91e14b7735cd0fba1f6eb60dad8832a7e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c2044c56bdb1581f3d68af741198bcffa4ff6b4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625666"
 ---
 # <a name="sql-server-installation"></a>SQL Server 安裝
 

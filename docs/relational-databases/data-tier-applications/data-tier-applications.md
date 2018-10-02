@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d66981713b0ba67c87a33530436c8159f8a6a33a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680306"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

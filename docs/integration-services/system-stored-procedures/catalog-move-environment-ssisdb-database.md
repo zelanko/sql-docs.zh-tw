@@ -5,21 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d6dd258c197dadb62006705213b34a6a369aae7f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f63d78418c087fe4d6da526ac28c86932674592b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620766"
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +45,9 @@ catalog.move_environment [ @source_folder = ] source_folder
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
   
 -   環境的 READ 和 MODIFY 權限  

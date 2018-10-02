@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65546
 - vdt.dlgbox.saveincomplete
 - vdtsql.chm:98831
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e08b0ff2ec2f69b7f2796b6bb3956c82ccda7373
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e2ad3d8239a1d3ecdb2dffa6c2f6fc4027002cb5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662086"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>儲存後告知對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

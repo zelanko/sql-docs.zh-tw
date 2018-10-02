@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 37ba44f3607f17b1045f069642ae5daa06e94056
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 717f817e7d318e4eae40e071f925264c42878a16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675846"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering Report Items (Report Builder and SSRS)
   報表項目的數目、大小和位置會影響轉譯器為報表主體分頁的方式。 下列是如何轉譯各種報表項目的描述。  

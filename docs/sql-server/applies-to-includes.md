@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlcmd
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: database-engine
-caps.latest.revision: 155
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fb4947d8984f657b0ca48e70e7fa13445bca169
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614756"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>版本設定和 applies-to 的 SQL Server include 檔案
 

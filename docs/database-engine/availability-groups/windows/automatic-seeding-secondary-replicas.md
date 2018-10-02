@@ -6,23 +6,20 @@ ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: ''
-caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97ae521971c94a572a64ed0f504eca677951d21d
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 0f84f3171f1266bb79763d360818faf75519e6a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669406"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,7 +242,7 @@ GO
 
 下表列出與自動植入相關的擴充事件。
 
-|[屬性]|描述|
+|[屬性]|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|正在植入要求訊息。|
 |hadr_physical_seeding_backup_state_change|實體植入備份端的狀態變更。|

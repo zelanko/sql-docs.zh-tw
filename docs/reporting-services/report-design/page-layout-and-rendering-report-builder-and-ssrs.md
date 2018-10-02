@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b22bc1c57de005cc9637f3f88d8450dae868b271
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d525d686b8be1e17214dd8908017b86358f87ec2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605996"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
 請閱讀分頁報表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轉譯延伸模組，確定報表就是您要的外觀 (包括頁面配置、分頁符號和頁面大小)。 

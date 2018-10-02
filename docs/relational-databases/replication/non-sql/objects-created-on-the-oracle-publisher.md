@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], objects created
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa0a1257f6cb873c92b88cbe00001ed39fcf2845
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1dad91e3b387903cd170af8fc6f181fbc6a174e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642356"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 發行者端建立的物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫會在 Oracle 發行者端安裝資料庫物件，以啟用變更追蹤和轉送 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會在 Oracle 發行者端安裝任何二進位檔案)。 下表列出當「Oracle 發行者」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端上識別為「發行者」時，在該「Oracle 發行者」端上建立的物件。 提供的物件描述僅供參考之用。 不應對這些物件進行修改。  
   
-|Object Name|物件類型|描述|  
+|Object Name|物件類型|Description|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Table|用於儲存已發行資料表進行變更時的資訊之變更追蹤資料表。 每個已發行資料表都會建立變更追蹤資料表。|  
 |HREPL_Changes|Table|Xactset 作業內部用於決定等待被指派至交易集之變更數量的資料表。 如需此作業的詳細資訊，請參閱 [Oracle 發行者的效能微調](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)。|  
