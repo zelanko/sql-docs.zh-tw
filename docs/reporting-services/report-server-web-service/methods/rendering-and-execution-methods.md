@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - reports [Reporting Services], execution options
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24d7ae431296310e74f82122328b9a9f339879e4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0fcd2398f2f02814d435ab1d611f139ebe5de181
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779246"
 ---
 # <a name="rendering-and-execution-methods"></a>轉譯及執行方法
   您可以使用這些方法來管理項目執行和快取，以及報表轉譯。  

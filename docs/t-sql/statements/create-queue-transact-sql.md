@@ -5,9 +5,7 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUEUE_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fc12318b9d19ec7d14d1d97e5c83276fedfe6c98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777466"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +150,7 @@ CREATE QUEUE <object>
   
  下表列出佇列中的資料行。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|訊息狀態。 RECEIVE 陳述式會傳回 status 為**1** 的所有訊息。 如果訊息保留開啟，則 status 會設定為 0。 如果訊息保留關閉，訊息會從佇列刪除。 佇列中的訊息可包含下列其中一個值：<br /><br /> **0**=已保留接收的訊息<br /><br /> **1**=準備好接收<br /><br /> **2**=未完成<br /><br /> **3**=已保留傳送的訊息|  
 |priority|**tinyint**|指派給這個訊息的優先權等級。|  
@@ -171,7 +168,7 @@ CREATE QUEUE <object>
 |message_body|**varbinary(max)**|訊息內容。|  
 |message_id|**uniqueidentifier**|訊息的唯一識別碼。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  建立佇列的權限會使用 db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
  佇列的 REFERENCES 權限預設為佇列的擁有者、db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
