@@ -4,22 +4,20 @@ description: 示範如何建立 SQL Server Integration Services (SSIS) 套件，
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 8151b4e46e3a36eebc54642075aeb9b8648ac927
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40405798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705496"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database
 

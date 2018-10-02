@@ -5,22 +5,19 @@ ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b75d16beda2ebe0f3ca5ce188bb61f0410b52c0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c720c40703a24e529d62e8e39f3adfde7f7f8d91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703998"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +58,7 @@ ms.locfileid: "43090344"
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 資料列群組大小：145,000|0|  
-|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576。|@shouldalert|  
+|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576。|1|  
 |2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576、1,048,576、155,000|0|  
   
  下列範例顯示將 1,048,577 個資料列載入資料表的結果。 結果顯示，資料行存放區中有一個 COMPRESSED 資料列群組 (壓縮的資料行區段)，而差異存放區中有 1 個資料列。  

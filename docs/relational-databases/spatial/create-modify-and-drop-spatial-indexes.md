@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cde2105ac4291e7553b4a073d62ecb7e43348401
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f4582efcfd91c71e1b40b454712d5d0afeeb8765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646446"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ ms.locfileid: "43076768"
   
 11. 在 [空間] 頁面上，指定您想要用於索引之空間屬性的值。  
   
-     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(***X-min***,***Y-min***)** 和 **(***X-max***,***Y-max***)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定 **地理方格** 鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
+     當您在 **geometry** 類型資料行上建立索引時，您必須指定週框方塊的 **(**_X-min_**,**_Y-min_**)** 和 **(**_X-max_**,**_Y-max_**)** 座標。 如果是 **geography** 類型資料行上的索引，在您指定**地理方格**鑲嵌式配置之後，週框方塊欄位會變成唯讀，因為地理方格鑲嵌式不會使用週框方塊。  
   
      您可以選擇性地針對 [每一物件的資料格] 欄位及鑲嵌式配置的任何方格密度等級指定非預設值。 每一物件的資料格預設數目為 16 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或 8 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或更高，而預設方格密度是 [中] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)])。  
   

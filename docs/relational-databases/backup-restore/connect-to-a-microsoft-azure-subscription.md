@@ -5,18 +5,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61e56e7d7abc2f9d103ff162cdb192e439b24afa
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b0b5840b99b75507bda45a0a456ba6e68612c9d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033751"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656156"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>連接至 Microsoft Azure 訂用帳戶
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

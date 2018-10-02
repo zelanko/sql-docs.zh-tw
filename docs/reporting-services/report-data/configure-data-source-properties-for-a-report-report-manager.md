@@ -4,19 +4,18 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81c037101caec5bd9d1087ee4910bb5bedb47f0c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7e50917bd524e8ce8c68bc904e100b673419d684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843936"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>設定編頁報表的資料來源屬性
   當您執行編頁報表時，報表伺服器會擷取屬性資訊來判斷如何連線至資料來源。 資料來源類型、連接字串和認證資訊都是在已發行報表的 [資料來源] 屬性頁面中指定的。 您可以設定這些屬性，讓資料來源連接資訊與建立報表時所指定的原始值不同。  

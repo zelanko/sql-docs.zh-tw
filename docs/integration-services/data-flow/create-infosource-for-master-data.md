@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f13813381b70d820151ba422912980a2d78e7789
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5d481544611f1246922fc16b1c89f16dcf745802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750342"
 ---
 # <a name="create-infosource-for-master-data"></a>[建立主要資料的 InfoSource]
   使用 [建立主要資料的 InfoSource] 對話方塊可以在 SAP Netweaver BW 系統中建立主要資料的新 InfoSource。  

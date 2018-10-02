@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e67cb06d13ec7474a2a6fb23d3a6dbbd5efaecc0
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 55a224b9fec672cbb240831ba2ea850a90dbe10c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656796"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (位元 Not) (SSIS 運算式)
   執行整數的位元否定運算。 此運算子可套用至帶正負號及不帶正負號的整數資料類型。  
@@ -43,7 +40,7 @@ ms.locfileid: "35403160"
  傳回 *integer_expression*的資料類型。  
   
 ## <a name="remarks"></a>Remarks  
- 無  
+ None  
   
 ## <a name="expression-examples"></a>運算式範例  
  此範例會在數字 170 (0000 0000 1010 1010) 上執行位元 ~ (NOT) 運算。 此數字為帶正負號的整數。  

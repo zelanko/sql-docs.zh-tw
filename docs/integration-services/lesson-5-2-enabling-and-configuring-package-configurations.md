@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 135f1778e8b2fd29b1e026d662d57795a763a269
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634766"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>課程 5-2 - 啟用和設定套件設定
 在此工作中，您會將專案轉換成封裝部署模型，並使用封裝組態精靈來啟用封裝組態。 您將利用這個精靈來產生 XML 組態檔，它包含 Foreach 迴圈容器的 **Directory** 屬性的組態設定。 Directory 屬性的值是由新的封裝層級變數提供，您可以在執行階段更新它。 另外，您還會擴展一個要在測試期間使用的新範例資料夾。  
@@ -110,5 +106,5 @@ ms.locfileid: "35404110"
 3.  在 **New Sample Data** 資料夾，貼上已複製的檔案。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 3：修改 Directory 屬性組態值](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+[步驟 3：修改 Directory 屬性設定值](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   

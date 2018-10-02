@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP QUEUE
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - DROP QUEUE statement
 - removing queues
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83dffe9cc07a8b9b62dce006264d1c6cab061cb5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b9c8d95cec73c09b59a1d2045961fb1707f0d92c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698636"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ DROP QUEUE <object>
 ## <a name="remarks"></a>Remarks  
  如果有任何服務參考佇列，您便不能卸除這個佇列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  卸除佇列的權限預設為佇列的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

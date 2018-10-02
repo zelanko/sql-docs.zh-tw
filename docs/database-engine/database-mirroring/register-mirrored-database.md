@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b61c469ddf764ab2db6d7c56a23d0d87ef7a563
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 551d71d427b9e7997082a8feda1b766b85bfe659
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837267"
 ---
 # <a name="register-mirrored-database"></a>註冊鏡像資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "35312237"
   
  方格包含下列資料行：  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意：若要取消註冊資料庫，請關閉 [註冊鏡像資料庫]  對話方塊，在導覽樹狀目錄中選取資料庫，然後選取 [動作]  功能表中的 [取消註冊]  。|  
 |**[資料庫備份]**|選取之伺服器執行個體上的鏡像資料庫名稱。|  

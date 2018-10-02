@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.multifile.advanced.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb6e84a6ad213cbce4d2ec98c7401d0e9d2699f4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 04664f3e8553ba1c9a29f6036532d2b8bc8fe3dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742786"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
   「多個一般檔案」連接管理員可讓封裝存取多個一般檔案中的資料。 例如，當資料流程工作位於迴圈容器 (如 For 迴圈容器) 內時，「一般檔案」來源可以使用「多個一般檔案」連接管理員。 在此容器的每一個迴圈上，「一般檔案」來源會從「多個一般檔案」連接管理員提供的下一個檔案名稱中載入資料。  
@@ -101,7 +98,7 @@ ms.locfileid: "35405160"
  **格式**  
  指出是要使用分隔符號、固定寬度或不齊右的格式。 所有檔案必須有相同的資料格式。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |使用分隔符號|資料行是以分隔符號隔開，分隔符號是在 **[資料行]** 頁面上指定的。|  
 |固定寬度|資料行具有固定寬度，由 **[資料行]** 頁面上的拖曳標記線所指定。|  
@@ -113,7 +110,7 @@ ms.locfileid: "35405160"
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|標頭資料列是以歸位字元分隔。|  
@@ -148,7 +145,7 @@ ms.locfileid: "35405160"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -162,7 +159,7 @@ ms.locfileid: "35405160"
  **資料行分隔符號**  
  從可用的資料行分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料行是以歸位字元分隔。|  
@@ -203,7 +200,7 @@ ms.locfileid: "35405160"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -234,7 +231,7 @@ ms.locfileid: "35405160"
  **設定每一個資料行的屬性**  
  請在左窗格中選取一個資料行以便在右窗格中檢視它的屬性。 請參閱下表以了解資料類型屬性的描述。 部分列出的屬性，只能在某些一般檔案格式中設定。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行是由資料列分隔符號所終止之外，其他所有資料行都有固定寬度的檔案。|  
 |**OutputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。<br /><br /> 注意：在物件模型中，這個屬性的名稱為 MaximumWidth。|  
@@ -249,7 +246,7 @@ ms.locfileid: "35405160"
  **新增**  
  按一下 [新增] 來加入新的資料行。 [新增] 按鈕預設會在清單結尾加入新資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**加入資料行**|在清單結尾加入新資料行。|  
 |**插在前面**|在選取的資料行之前插入新資料行。|  

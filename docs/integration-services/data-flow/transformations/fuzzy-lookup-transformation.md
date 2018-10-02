@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782226"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
@@ -96,7 +93,7 @@ ms.locfileid: "35406060"
   
  下表描述相符索引選項。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|建立、儲存並維護新索引。 轉換會在參考資料表上安裝觸發程序，以讓參考資料表與索引資料表同步。|  
 |**GenerateAndPersistNewIndex**|建立並儲存新索引，但不對其進行維護。|  

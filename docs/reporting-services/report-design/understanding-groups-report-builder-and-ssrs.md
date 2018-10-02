@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10056"
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2eb3c54cc36512d9806146606b936e6f48d99f7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c9d7125e0575a5df51baa0594aee39e366b015ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608306"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解群組 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，群組是一組來自繫結至資料區域之報表資料集的具名資料。 基本上，一個群組會組織一個報表資料集的檢視。 資料區域中的所有群組會指定相同報表資料集的不同檢視。  

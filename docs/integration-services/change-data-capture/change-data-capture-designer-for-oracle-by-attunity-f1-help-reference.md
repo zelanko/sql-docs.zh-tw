@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 672e7f1a9b5c442691db7ab88d063927ba4f636b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: efd9edb4b778bc7a9d8822ab5e663162d2bb9b64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795906"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考
   Attunity Oracle Change Data Capture (CDC) 設計工具是用來建立及管理 Oracle CDC 執行個體。 本節的主題說明如何在 CDC 設計工具主控台中執行可用的工作。  

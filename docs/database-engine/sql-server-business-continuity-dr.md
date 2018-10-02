@@ -8,16 +8,15 @@ ms.reviewer: mikeray
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.suite: sql
 ms.custom: ''
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.openlocfilehash: 6f21f283da22d48f3344b5c0da72fcbc0dc936e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3a258245bbdac41b2c6a0588150f9b29a637e45a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656826"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>商務持續性與資料庫復原 - SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

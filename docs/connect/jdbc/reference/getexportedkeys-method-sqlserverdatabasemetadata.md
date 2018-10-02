@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getExportedKeys
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d1c4ef8b1c5ae0422fd140cd16a318843f6a22
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 91c4b7bdcf360047cc02a53f4bc013b3e3d972e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839976"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,15 +40,15 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 #### <a name="parameters"></a>參數  
  *cat*  
   
- 包含目錄名稱的**字串**。  
+ 包含目錄名稱的 **String**。  
   
  *schema*  
   
- 包含結構描述名稱的**字串**。  
+ 包含結構描述名稱的 **String**。  
   
  *table*  
   
- 包含資料表名稱的**字串**。  
+ 包含資料表名稱的 **String**。  
   
 ## <a name="return-value"></a>傳回值  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  

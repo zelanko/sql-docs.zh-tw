@@ -5,28 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c2b31380d18a929f3fb5a6277f4f5a9df8bf713
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 321dc1a912dcc28719c8416be9fa917ab86c49bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665225"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目的地自訂屬性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|描述|  
+|屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |TableName|String|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 資料庫中目的地資料表的名稱。<br /><br /> 此屬性的值可以使用屬性運算式指定。|  
   

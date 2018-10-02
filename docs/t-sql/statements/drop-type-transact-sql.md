@@ -5,9 +5,7 @@ ms.date: 05/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP TYPE
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], removing
 - DROP TYPE statement
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
-caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f8c3082ac8a44106dc3ed48086b788f6c5a0ff30
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 12a3a63f9944747ea7ea742b88c4d46a3277f692
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777756"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

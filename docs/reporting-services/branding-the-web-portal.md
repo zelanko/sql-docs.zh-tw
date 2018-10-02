@@ -4,16 +4,15 @@ ms.date: 11/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94c54a646ca954f8b55bf359a0b86b0850d19e02
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9f5ac75f42d436bf0561478773bbf0eb1dea66d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646876"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 

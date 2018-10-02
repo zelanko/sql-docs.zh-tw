@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: dc5770d8390c7a7014eec86e7b576d1c64deec23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596087"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +77,7 @@ ms.locfileid: "44311668"
   
 -   **sp_validate_replicate_hosts_as_publishers**  
   
-     雖然讓代理程式確保目前主要複本能夠作為發行者資料庫的複寫發行者運作已經很有用，不過還是需要一項更全面的驗證功能，才能確立 AlwaysOn 可用性資料庫上整個複寫拓撲的有效性。 預存程序 **sp_validate_replica_hosts_as_publishers** 就是為了滿足此需求所設計。  
+     雖然讓代理程式確保目前主要複本能夠作為發行者資料庫的複寫發行者運作已經很有用，不過還是需要一項更全面的驗證功能，才能確立 AlwaysOn 可用性資料庫上整個複寫拓撲的有效性。 預存程序 **sp_validate_replica_hosts_as_publishers** 就是為了滿足這項需求所設計。  
   
      此預存程序一律以手動方式執行。 呼叫端必須是散發者端的系統管理員 ( **sysadmin** )、散發資料庫的 **dbowner** 或是發行者資料庫中發行集之 **發行集存取清單** 的成員。 此外，對於所有可用性複本主機而言，呼叫端的登入必須是有效的登入，而且擁有與發行者資料庫相關聯之可用性資料庫的選取權限。  
   
@@ -120,7 +117,7 @@ ms.locfileid: "44311668"
   
 -   **存取 CDC 變更資料的用戶端應用程式和 AlwaysOn**  
   
-     使用資料表值函式 (TVF) 或連結的伺服器存取變更資料表資料的用戶端應用程式，也需要在容錯移轉後找出適當 CDC 主機的功能。 可用性群組接聽程式名稱是 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 所提供的機制，此機制會以透明的方式允許連接以不同主機為新目標。 一旦可用性群組接聽程式名稱與可用性群組產生關聯之後，它就可用於 TCP 連接字串中。 透過可用性群組接聽程式名稱支援兩個不同的連接案例。  
+     使用資料表值函式 (TVF) 或連結的伺服器存取變更資料表資料的用戶端應用程式，也需要在容錯移轉後找出適當 CDC 主機的功能。 可用性群組接聽程式名稱是 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 所提供的機制，這項機制會以透明的方式允許連接以不同主機為新目標。 一旦可用性群組接聽程式名稱與可用性群組產生關聯之後，它就可用於 TCP 連接字串中。 透過可用性群組接聽程式名稱支援兩個不同的連接案例。  
   
     -   一個確保連接要求一律導向至目前的主要複本。  
   

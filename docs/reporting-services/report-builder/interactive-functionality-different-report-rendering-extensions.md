@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 837086489e52f4f34513aecd68403ce1c78047f1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789076"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>互動式功能 - 不同報表轉譯延伸模組
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可在執行階段與分頁報表互動的功能。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 利用下表來了解每個互動式功能在特定格式中的運作方式。  

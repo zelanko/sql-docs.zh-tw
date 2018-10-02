@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2a5e265f00931bd06609f288d3c30f733548f39
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d621833e1c05787d6e9ef52f33b8bccfcdb793ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599521"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
   文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  
@@ -36,7 +33,7 @@ ms.locfileid: "35408870"
   
 ## <a name="error-messages"></a>錯誤訊息  
   
-|錯誤的符號名稱|描述|  
+|錯誤的符號名稱|Description|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|指出封裝無法執行，因為某個「快取轉換」轉換正嘗試將資料寫入記憶體中的快取。 不過，快取連線管理員已經將快取檔案載入記憶體中的快取。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指出封裝無法執行，因為指定的連接已失敗。|  
@@ -55,7 +52,7 @@ ms.locfileid: "35408870"
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  如需詳細資訊，請參閱 [Integration Services 封裝所記錄的事件](../integration-services/performance/events-logged-by-an-integration-services-package.md)。  
   
-|事件|描述|  
+|事件|Description|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指出封裝已經啟動。|  
 |SQLISPackage_12289|指出封裝已順利地完成執行。|  
@@ -69,7 +66,7 @@ ms.locfileid: "35408870"
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  如需詳細資訊，請參閱 [Integration Services 服務所記錄的事件](../integration-services/service/events-logged-by-the-integration-services-service.md)。  
   
-|事件|描述|  
+|事件|Description|  
 |-----------|-----------------|  
 |SQLISService_256|指出服務即將啟動。|  
 |SQLISService_257|指出服務已經啟動。|  

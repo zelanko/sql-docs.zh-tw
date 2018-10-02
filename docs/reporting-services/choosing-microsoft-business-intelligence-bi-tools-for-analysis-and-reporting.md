@@ -4,17 +4,16 @@ ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a2d2b1a8956f4ccdacb26ff735eb2e5dcf2a702
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fa6fdb1ff90ab8f01e06bb2f551870521ff2c595
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705956"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>選擇用於分析及報告的 Microsoft 商業智慧 (BI) 工具
 選擇適當的商業智慧工具可能勢在必行。 了解不同的 Microsoft 供應項目，並找出最適合您需求的一種。

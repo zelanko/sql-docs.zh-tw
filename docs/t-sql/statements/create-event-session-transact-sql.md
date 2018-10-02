@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EVENT SESSION
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 65
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 65cca871af07f9b9c74c46acf1d328261378c9c5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c143f1abe85594cc399f19ed9d845c6c01573396
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769016"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -244,7 +241,7 @@ ON SERVER
 ## <a name="remarks"></a>Remarks  
  邏輯運算子的優先順序是 NOT (最高)，後面依序接著 AND 和 OR。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 ALTER ANY EVENT SESSION 權限。  
   
 ## <a name="examples"></a>範例  

@@ -5,9 +5,7 @@ ms.date: 07/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FREESESSIONCACHE
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - clearing distributed query cache
 - flushing distributed query cache
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
-caps.latest.revision: 15
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ceeb44c8b2149e30299e3e27de2bc9893e1889c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b5b501e8f56c8c294d7791771a953cdb77aabd1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702396"
 ---
 # <a name="dbcc-freesessioncache-transact-sql"></a>DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  隱藏所有參考訊息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

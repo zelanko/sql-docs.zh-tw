@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d805bc8bdb62f5aad87afa19fd12e4d134a6ed8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dc21969541334a1cf07887e0a5bc5074d1083bc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692956"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "34771694"
   
  您可以查詢這些資料表來監視記錄傳送工作階段的狀態。 例如，若要知道記錄傳送的狀態，請檢查備份作業、複製作業及還原作業的狀態和記錄。 您可以查詢下列監視資料表，以檢視特定的記錄傳送記錄和錯誤詳細資料。  
   
-|Table|描述|  
+|Table|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|儲存警示作業識別碼。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|儲存記錄傳送作業的錯誤明細。 您可以查詢此資料表來查看代理程式工作階段的錯誤。 您可以選擇依每個錯誤的記錄日期和時間來排序。 每個錯誤都會被記錄成一個例外狀況序列，而多重錯誤 (序列) 會依每項代理程式工作階段來記錄。|  
@@ -53,7 +50,7 @@ ms.locfileid: "34771694"
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>用來監視記錄傳送的預存程序  
  監視和記錄資訊會儲存在 **msdb**的資料表中，可使用記錄傳送預存程序來存取。 在下表所指定的伺服器上執行這些預存程序。  
   
-|預存程序|描述|執行此程序的伺服器|  
+|預存程序|Description|執行此程序的伺服器|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|從 **log_shipping_monitor_primary** 資料表傳回指定的主要資料庫的監視記錄。|監視伺服器或主要伺服器|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|從 **log_shipping_monitor_secondary** 資料表傳回指定的次要資料庫的監視記錄。|監視伺服器或次要伺服器|  

@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - GetAdminSiteUrl method
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f915395c8e27e8e270b19635d1275f46de81315e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 40f62a917762d4942cad60dd27ab6db757b42d7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772216"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>ConfigurationSetting 方法 - GetAdminSiteUrl
   取得與報表伺服器整合之 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 伺服陣列的管理中心網站的絕對 URL。  

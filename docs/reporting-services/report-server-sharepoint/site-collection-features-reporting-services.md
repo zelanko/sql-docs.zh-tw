@@ -4,16 +4,16 @@ ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7efbb63d3bd32312b0e470de6b5126cdf4a48568
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 2610ac04f49ccfd39f1e752ecdc03376c05285fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773836"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
 

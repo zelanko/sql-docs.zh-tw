@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EVENT_NOTIFICATION_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ec76374712bfc1b0d32c2044c766382539d58591
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629146"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +117,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  事件通知的任何傳送失敗，都會記錄下來。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要建立以資料庫為範圍 (ON DATABASE) 的事件通知，需要目前資料庫的 CREATE DATABASE DDL EVENT NOTIFICATION 權限。  
   
  若要建立以伺服器為範圍 (ON SERVER) 之 DDL 陳述式的事件通知，需要伺服器的 CREATE DDL EVENT NOTIFICATION 權限。  

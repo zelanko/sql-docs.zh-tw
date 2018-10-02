@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 17148 (Database Engine error)
 ms.assetid: acc6bb58-7248-4237-8bd6-4b3ed2c11446
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14e4b54cec341fa4f2bff3e3d9d24f3914b7a62a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a46b2ebf1aa0069f1c61ef9b52ad290d160f8a0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628566"
 ---
 # <a name="mssqlserver17148"></a>MSSQLSERVER_17148
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +37,5 @@ ms.locfileid: "34320191"
 服務控制管理員已關閉 SQL Server。  
   
 ## <a name="user-action"></a>使用者動作  
-無  
+None  
   

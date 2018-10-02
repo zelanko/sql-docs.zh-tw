@@ -5,28 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4409c736d53617d87c6d2a36f1f50b4eab4ee2b3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: eb300ad961ded0b49ae8a9d36d3ccaeacf635e5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733746"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有專案和封裝驗證顯示詳細資料。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|驗證的唯一識別碼 (ID)。|  
 |environment_scope|**Char(1)**|指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。|  
@@ -55,7 +52,7 @@ ms.locfileid: "35403880"
 ## <a name="remarks"></a>Remarks  
  這個檢視會針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的每個驗證顯示一行資料列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   對應作業的 READ 權限  

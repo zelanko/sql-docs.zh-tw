@@ -5,28 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5de2d2b10c1def40790e590ead2d9b7c0c0d2ef7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7aaea76c93cdce4864c4a1e2491d542acee30b08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829439"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄的屬性。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|目錄屬性的名稱。|  
 |property_value|**nvarchar(256)**|目錄屬性的值。|  
@@ -34,7 +31,7 @@ ms.locfileid: "35408180"
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示每個目錄屬性的資料列。
   
-|屬性名稱|描述|  
+|屬性名稱|Description|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|套件的全伺服器的預設執行模式，為 `Server` (0) 或 `Scale Out` (1)。 |
 |**ENCRYPTION_ALGORITHM**|用來加密機密資料的加密演算法類型。 支援的值包括：`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192` 和 `AES_256`。 注意：目錄資料庫必須處於單一使用者模式，才可以變更這個屬性。|
@@ -51,7 +48,7 @@ ms.locfileid: "35408180"
 |**VERSION_CLEANUP_ENABLED**|當值為 `TRUE` 時，目錄中只會儲存 **MAX_PROJECT_VERSIONS** 數目的專案版本，並會刪除所有其他專案版本。 當值為 **FALSE** 時，所有專案版本都會儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|
 |||
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   **ssis_admin** 資料庫角色的成員資格  

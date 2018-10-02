@@ -5,26 +5,23 @@ ms.date: 03/22/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb47883ac95cf5e07d3cd34c2887642bf8ee730
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 79b653f3e93e896c3a7f72f4d3473fac2f34988b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648096"
 ---
 # <a name="use-sparse-columns"></a>使用疏鬆資料行
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ ms.locfileid: "43105387"
 |資料類型|非疏鬆位元組|疏鬆位元組|NULL 百分比|  
 |---------------|---------------------|------------------|---------------------|  
 |**bit**|0.125|5|98%|  
-|**tinyint**|@shouldalert|5|86%|  
+|**tinyint**|1|5|86%|  
 |**smallint**|2|6|76%|  
 |**int**|4|8|64%|  
 |**bigint**|8|12|52%|  

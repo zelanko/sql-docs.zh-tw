@@ -5,21 +5,18 @@ ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 683ee4dcfd797f49ccd297f0a88f8fc607ea7aae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9471c0c86edd9ff5a8357b797014036bd60fec83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647653"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +31,7 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>參數  
-$*parameter*：(混合) 參數識別碼。 如果是使用具名預留位置的陳述式，請使用參數名稱 (:name)。 如果是使用問號語法的已備妥陳述式，則會是以 1 起始的參數索引。  
+$*parameter*：(混合的) 參數識別碼。 若是使用具名預留位置的陳述式，使用參數名稱 (:name)。 如果是使用問號語法的已備妥陳述式，則會是以 1 起始的參數索引。  
   
 &$*variable*：要繫結至 SQL 陳述式參數之 PHP 變數的 (混合) 名稱。  
   

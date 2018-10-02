@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STCurveN
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geography)
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e01fa293c043fbc5682862d633201f27a0f9ee75
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: c9807fd2d9a447ba9d791b590eed6daf0cde60b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36244600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747666"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

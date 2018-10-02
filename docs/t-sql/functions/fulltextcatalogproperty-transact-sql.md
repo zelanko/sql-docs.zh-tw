@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXTCATALOGPROPERTY_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 546d1dee29425e2dba13747e2ae75c2cddd82b54
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a5d7cedaf4763fb129c488974f0489aff65820bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781759"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718916"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
  *property*  
  這是一個包含全文檢索目錄屬性名稱的運算式。 下表列出各個屬性，並提供傳回資訊的描述。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|區分腔調字設定。<br /><br /> 0 = 不區分腔調字<br /><br /> 1 = 區分腔調字|  
 |**IndexSize**|顯示全文檢索目錄的邏輯大小，以 MB 為單位。 包括語意關鍵片語和文件相似度索引的大小。<br /><br /> 如需詳細資訊，請參閱此主題稍後的「備註」。|  

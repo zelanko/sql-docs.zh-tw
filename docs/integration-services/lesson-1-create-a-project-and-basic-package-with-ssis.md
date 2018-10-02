@@ -5,22 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c3626fb6bb6c3ef42d465aa21e8eed9086c161d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608446"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 建立專案和基本套件
 
@@ -72,7 +68,7 @@ ms.locfileid: "40410310"
 |一般檔案資料行|資料表名稱|資料行名稱|資料類型|  
 |--------------------|--------------|---------------|-------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
-|@shouldalert|DimCurrency|CurrencyAlternateKey|nchar(3)|  
+|1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
 |2|DimDate|FullDateAlternateKey|日期|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   

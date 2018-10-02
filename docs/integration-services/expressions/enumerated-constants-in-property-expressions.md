@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2eb60419ef09d3cd9dc0cdec3b0a815af9e432d3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408930"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736886"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定了 **LoggingMode** 屬性，您就必須使用數值 2 來取代易記名稱 Disabled。  
@@ -55,7 +52,7 @@ ms.locfileid: "35408930"
 |DTSPackageType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |預設|0|  
-|DTSWizard|@shouldalert|  
+|DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
@@ -66,7 +63,7 @@ ms.locfileid: "35408930"
 |DTSCheckpointUsage 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |永不|0|  
-|IfExists|@shouldalert|  
+|IfExists|1|  
 |永遠|2|  
   
  **PackagePriorityClass** 屬性：使用來自 **DTSPriorityClass** 列舉的值進行設定。  
@@ -74,7 +71,7 @@ ms.locfileid: "35408930"
 |DTSPriorityClass 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
 |預設|0|  
-|AboveNormal|@shouldalert|  
+|AboveNormal|1|  
 |一般|2|  
 |BelowNormal|3|  
 |Idle|4|  
@@ -84,7 +81,7 @@ ms.locfileid: "35408930"
 |DTSProtectionLevel 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |DontSaveSensitive|0|  
-|EncryptSensitiveWithUserKey|@shouldalert|  
+|EncryptSensitiveWithUserKey|1|  
 |EncryptSensitiveWithPassword|2|  
 |EncryptAllWithPassword|3|  
 |EncryptAllWithUserKey|4|  
@@ -95,7 +92,7 @@ ms.locfileid: "35408930"
   
 |DTSPrecedenceEvalOp 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
-|運算式|@shouldalert|  
+|運算式|1|  
 |條件約束|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -105,7 +102,7 @@ ms.locfileid: "35408930"
 |易記名稱|數值|  
 |-------------------|-------------------|  
 |成功|0|  
-|失敗|@shouldalert|  
+|失敗|1|  
 |Completion|2|  
 |已取消|3|  
   
@@ -118,7 +115,7 @@ ms.locfileid: "35408930"
 |ADOEnumerationType 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |EnumerateTables|0|  
-|EnumerateAllRows|@shouldalert|  
+|EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach NodeList 列舉值  
@@ -127,7 +124,7 @@ ms.locfileid: "35408930"
 |SourceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|@shouldalert|  
+|變數|1|  
 |DirectInput|2|  
   
  **EnumerationType** 屬性：使用來自 **EnumerationType** 列舉的值進行設定。  
@@ -135,7 +132,7 @@ ms.locfileid: "35408930"
 |EnumerationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |Navigator|0|  
-|節點|@shouldalert|  
+|節點|1|  
 |NodeText|2|  
 |ElementCollection|3|  
   
@@ -144,7 +141,7 @@ ms.locfileid: "35408930"
 |InnerElementType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
 |Navigator|0|  
-|節點|@shouldalert|  
+|節點|1|  
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> 工作  
@@ -156,7 +153,7 @@ ms.locfileid: "35408930"
 |DDLSourceType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |DirectInput|0|  
-|FileConnection|@shouldalert|  
+|FileConnection|1|  
 |變數|2|  
   
 ### <a name="bulk-insert-task"></a>大量插入工作  
@@ -165,7 +162,7 @@ ms.locfileid: "35408930"
 |DTSBulkInsert_DataFileType 中的易記名稱|數值|  
 |--------------------------------------------------|-------------------|  
 |DTSBulkInsert_DataFileType_Char|0|  
-|DTSBulkInsert_DataFileType_Native|@shouldalert|  
+|DTSBulkInsert_DataFileType_Native|1|  
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
@@ -174,7 +171,7 @@ ms.locfileid: "35408930"
   
 |ResultSetType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
-|ResultSetType_None|@shouldalert|  
+|ResultSetType_None|1|  
 |ResultSetType_SingleRow|2|  
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
@@ -183,7 +180,7 @@ ms.locfileid: "35408930"
   
 |SqlStatementSourceType 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
-|DirectInput|@shouldalert|  
+|DirectInput|1|  
 |FileConnection|2|  
 |變數|3|  
   
@@ -193,7 +190,7 @@ ms.locfileid: "35408930"
 |DTSFileSystemOperation 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
 |CopyFile|0|  
-|MoveFile|@shouldalert|  
+|MoveFile|1|  
 |DeleteFile|2|  
 |RenameFile|3|  
 |SetAttributes|4|  
@@ -208,7 +205,7 @@ ms.locfileid: "35408930"
 |DTSFileSystemAttributes 中的易記名稱|數值|  
 |----------------------------------------------|-------------------|  
 |一般|0|  
-|Archive|@shouldalert|  
+|Archive|1|  
 |Hidden|2|  
 |ReadOnly|4|  
 |系統|8|  
@@ -219,7 +216,7 @@ ms.locfileid: "35408930"
 |DTSFTPOp 中的易記名稱|數值|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|@shouldalert|  
+|Receive|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -233,7 +230,7 @@ ms.locfileid: "35408930"
 |MQMessageType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |DTSMQMessageType_String|0|  
-|DTSMQMessageType_DataFile|@shouldalert|  
+|DTSMQMessageType_DataFile|1|  
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
@@ -242,7 +239,7 @@ ms.locfileid: "35408930"
 |MQStringMessageCompare 中的易記名稱|數值|  
 |---------------------------------------------|-------------------|  
 |DTSMQStringMessageCompare_None|0|  
-|DTSMQStringMessageCompare_Exact|@shouldalert|  
+|DTSMQStringMessageCompare_Exact|1|  
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
@@ -251,7 +248,7 @@ ms.locfileid: "35408930"
 |MQType 中的易記名稱|數值|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
-|DTSMQType_Receiver|@shouldalert|  
+|DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>傳送郵件工作  
  **MessageSourceType** 屬性：使用來自 **SendMailMessageSourceType** 列舉的值進行設定。  
@@ -259,14 +256,14 @@ ms.locfileid: "35408930"
 |SendMailMessageSourceType 中的易記名稱|數值|  
 |------------------------------------------------|-------------------|  
 |DirectInput|0|  
-|FileConnection|@shouldalert|  
+|FileConnection|1|  
 |變數|2|  
   
  **Priority** 屬性：使用來自 **MailPriority** 列舉的值進行設定。  
   
 |MailPriority 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
-|高|@shouldalert|  
+|高|1|  
 |一般|3|  
 |低|5|  
   
@@ -276,14 +273,14 @@ ms.locfileid: "35408930"
 |TransferAction 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |[複製]|0|  
-|[移動]|@shouldalert|  
+|[移動]|1|  
   
  **Method** 屬性：使用來自 **TransferMethod** 列舉的值設定。  
   
 |TransferMethod 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
-|DatabaseOnline|@shouldalert|  
+|DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作  
  **IfObjectExists** 屬性：使用來自 **IfObjectExists** 列舉的值設定。  
@@ -291,7 +288,7 @@ ms.locfileid: "35408930"
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>傳送作業工作  
@@ -300,7 +297,7 @@ ms.locfileid: "35408930"
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>傳送登入工作  
@@ -309,7 +306,7 @@ ms.locfileid: "35408930"
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
  **LoginsToTransfer** 屬性：使用來自 **LoginsToTransfer** 列舉的值進行設定。  
@@ -317,7 +314,7 @@ ms.locfileid: "35408930"
 |LoginsToTransfer 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
 |AllLogins|0|  
-|SelectedLogins|@shouldalert|  
+|SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作  
@@ -326,7 +323,7 @@ ms.locfileid: "35408930"
 |IfObjectExists 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作  
@@ -335,7 +332,7 @@ ms.locfileid: "35408930"
 |ExistingData 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
 |取代|0|  
-|附加|@shouldalert|  
+|附加|1|  
   
 ### <a name="web-service-task"></a>Web 服務工作  
  **OutputType** 屬性：使用來自 **DTSOutputType** 列舉的值進行設定。  
@@ -343,7 +340,7 @@ ms.locfileid: "35408930"
 |DTSOutputType 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |檔案|0|  
-|變數|@shouldalert|  
+|變數|1|  
   
 ### <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作  
  **OverwriteDestination** 屬性：使用來自 **OverwriteDestination** 列舉的值設定。  
@@ -351,7 +348,7 @@ ms.locfileid: "35408930"
 |OverwriteDestination 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |OverwriteDestination|0|  
-|AppendToDestination|@shouldalert|  
+|AppendToDestination|1|  
 |KeepOriginal|2|  
   
  **OutputType** 屬性：使用來自 **OutputType** 列舉的值進行設定。  
@@ -359,7 +356,7 @@ ms.locfileid: "35408930"
 |OutputType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |DataTable|0|  
-|PropertyValue|@shouldalert|  
+|PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
  **DestinationType** 屬性：使用來自 **DestinationType** 列舉的值進行設定。  
@@ -367,14 +364,14 @@ ms.locfileid: "35408930"
 |DestinationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|@shouldalert|  
+|變數|1|  
   
  **WqlQuerySourceType** 屬性：使用來自 **QuerySourceType** 列舉的值進行設定。  
   
 |QuerySourceType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|DirectInput|@shouldalert|  
+|DirectInput|1|  
 |變數|2|  
   
  WMI 事件監看員 **ActionAtEvent** 屬性：使用來自 **ActionAtEvent** 列舉的值進行設定。  
@@ -382,21 +379,21 @@ ms.locfileid: "35408930"
 |ActionAtEvent 中的易記名稱|數值|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
-|LogTheEvent|@shouldalert|  
+|LogTheEvent|1|  
   
  **ActionAtTimeout** 屬性：使用來自 **ActionAtTimeout** 列舉的值進行設定。  
   
 |ActionAtTimeout 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
-|LogTimeout|@shouldalert|  
+|LogTimeout|1|  
   
  **AfterEvent** 屬性：使用來自 **AfterEvent** 列舉的值進行設定。  
   
 |AfterEvent 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|@shouldalert|  
+|ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
  **AfterTimeout** 屬性：使用來自 **AfterTimeout** 列舉的值進行設定。  
@@ -404,7 +401,7 @@ ms.locfileid: "35408930"
 |AfterTimeout 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|@shouldalert|  
+|ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
  **WqlQuerySourceType** 屬性：使用來自 **QuerySourceType** 列舉的值進行設定。  
@@ -412,7 +409,7 @@ ms.locfileid: "35408930"
 |QuerySourceType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|DirectInput|@shouldalert|  
+|DirectInput|1|  
 |變數|2|  
   
 ### <a name="xml-task"></a>XML 工作  
@@ -421,7 +418,7 @@ ms.locfileid: "35408930"
 |DTSXMLOperation 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |Validate|0|  
-|XSLT|@shouldalert|  
+|XSLT|1|  
 |XPATH|2|  
 |合併式|3|  
 |Diff|4|  
@@ -432,7 +429,7 @@ ms.locfileid: "35408930"
 |DTSXMLSourceType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|@shouldalert|  
+|變數|1|  
 |DirectInput|2|  
   
  **DestinationType** 和 **DiffGramDestinationType** 屬性：使用來自 **DTSXMLSaveResultTo** 列舉的值進行設定。  
@@ -440,29 +437,29 @@ ms.locfileid: "35408930"
 |DTSXMLSaveResultTo 中的易記名稱|數值|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
-|變數|@shouldalert|  
+|變數|1|  
   
  **ValidationType** 屬性：使用來自 **DTSXMLValidationType** 列舉的值進行設定。  
   
 |DTSXMLValidationType 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
-|XSD|@shouldalert|  
+|XSD|1|  
   
  **XPathOperation** 屬性：使用來自 **DTSXMLXPathOperation** 列舉的值進行設定。  
   
 |DTSXMLXPathOperation 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |Evaluation|0|  
-|值|@shouldalert|  
+|值|1|  
 |NodeList|2|  
   
  **DiffOptions** 屬性：使用來自 **DTSXMLDiffOptions** 列舉的值進行設定。 此列舉值中的選項不會互斥。 若要使用多個選項，請提供要套用之選項的逗號分隔清單。  
   
 |DTSXMLDiffOptions 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
-|無|0|  
-|IgnoreChildOrder|@shouldalert|  
+|None|0|  
+|IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
 |IgnoreWhitespace|8|  
@@ -476,7 +473,7 @@ ms.locfileid: "35408930"
 |DTSXMLDiffAlgorithm 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
 |Auto|0|  
-|快速|@shouldalert|  
+|快速|1|  
 |精確|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> 維護計畫工作  
@@ -491,8 +488,8 @@ ms.locfileid: "35408930"
   
 |DatabaseSelection 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
-|無|0|  
-|All|@shouldalert|  
+|None|0|  
+|All|1|  
 |系統|2|  
 |使用者|3|  
 |Specific|4|  
@@ -501,8 +498,8 @@ ms.locfileid: "35408930"
   
 |TableSelection 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
-|無|0|  
-|All|@shouldalert|  
+|None|0|  
+|All|1|  
 |Specific|2|  
   
  **ObjectTypeSelection** 屬性：使用來自 **ObjectType** 列舉的值進行設定。  
@@ -510,7 +507,7 @@ ms.locfileid: "35408930"
 |ObjectType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |Table|0|  
-|檢視|@shouldalert|  
+|檢視|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>備份資料庫工作  
@@ -519,21 +516,21 @@ ms.locfileid: "35408930"
 |DestinationType 中的易記名稱|數值|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|手動|@shouldalert|  
+|手動|1|  
   
  **ExistingBackupsAction** 屬性：使用來自 **ActionForExistingBackups** 列舉的值設定。  
   
 |ActionForExistingBackups 中的易記名稱|數值|  
 |-----------------------------------------------|-------------------|  
 |附加|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
   
  **BackupAction** 屬性：使用來自 **BackupTaskType** 列舉的值進行設定。 此屬性可搭配 **BackupIsIncremental** 屬性使用，以定義工作執行的備份類型。  
   
 |BackupTaskType 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |[資料庫]|0|  
-|檔案|@shouldalert|  
+|檔案|1|  
 |Log|2|  
   
  **BackupDevice** 屬性：使用來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) **DeviceType** 列舉的值進行設定。  
@@ -541,7 +538,7 @@ ms.locfileid: "35408930"
 |DeviceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
-|磁帶|@shouldalert|  
+|磁帶|1|  
 |檔案|2|  
 |Pipe|3|  
 |VirtualDevice|4|  
@@ -552,14 +549,14 @@ ms.locfileid: "35408930"
 |FileType 中的易記名稱|數值|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
-|FileReport|@shouldalert|  
+|FileReport|1|  
   
  **OlderThanTimeUnitType** 屬性：使用來自 **TimeUnitType** 列舉的值進行設定。  
   
 |TimeUnitType 中的易記名稱|數值|  
 |-----------------------------------|-------------------|  
 |Day|0|  
-|週|@shouldalert|  
+|週|1|  
 |Month|2|  
 |Year|3|  
   
@@ -568,7 +565,7 @@ ms.locfileid: "35408930"
   
 |StatisticsTarget 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  
-|「資料行」|@shouldalert|  
+|「資料行」|1|  
 |索引|2|  
 |All|3|  
   
@@ -579,9 +576,9 @@ ms.locfileid: "35408930"
   
 |DTSForcedExecResult 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
-|無|-1|  
+|None|-1|  
 |成功|0|  
-|失敗|@shouldalert|  
+|失敗|1|  
 |Completion|2|  
   
  **IsolationLevel** 屬性：由 .NET Framework **IsolationLevel** 列舉設定。 如需詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的＜.NET Framework 類別庫＞。  
@@ -591,7 +588,7 @@ ms.locfileid: "35408930"
 |DTSLoggingMode 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|已啟用|@shouldalert|  
+|已啟用|1|  
 |已停用|2|  
   
  **TransactionOption** 屬性：使用來自 **DTSTransactionOption** 列舉的值進行設定。  
@@ -599,7 +596,7 @@ ms.locfileid: "35408930"
 |DTSTransactionOption 中的易記名稱|數值|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|支援|@shouldalert|  
+|支援|1|  
 |必要項|2|  
   
 ## <a name="related-tasks"></a>相關工作  

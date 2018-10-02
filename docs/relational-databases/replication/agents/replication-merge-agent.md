@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2be02312e00441df86c3f9811c3d625fc98d18cf
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: fafb8f803aedf5c200f2e1e09c2400478a5da374
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846546"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +167,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，合併代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|Description|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -185,7 +181,7 @@ replmerg [-?]
   
  指定同步處理期間資料交換的類型，它可以是下列其中一個值：  
   
-|ExchangeType 值|描述|  
+|ExchangeType 值|Description|  
 |------------------------|-----------------|  
 |**1**|代理程式應該將資料變更從訂閱者上傳至發行者。|  
 |**2**|代理程式應該將資料變更從發行者下載至訂閱者。|  
@@ -204,7 +200,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合併代理程式應該使用的聚合層級，而且可以是下列其中一個值。  
   
-|ForceConvergenceLevel 值|描述|  
+|ForceConvergenceLevel 值|Description|  
 |---------------------------------|-----------------|  
 |**0** (預設)|預設值。 執行標準合併，但不進行其他聚合。|  
 |**1**|針對所有層代強制執行聚合。|  
@@ -225,7 +221,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  指定在合併作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|Description|  
 |-------------------------------|-----------------|  
 |**0**|記錄最終代理程式狀態訊息、最終工作階段詳細資料，以及任何錯誤。|  
 |**1**|除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料，包括完成百分比。|  
@@ -330,7 +326,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  指定現有的訂閱者資料庫是否存在。  
   
-|SubscriberDBAddOption 值|描述|  
+|SubscriberDBAddOption 值|Description|  
 |---------------------------------|-----------------|  
 |**0**|使用現有的資料庫 (預設值)。|  
 |**1**|建立新的空白訂閱者資料庫。|  
@@ -376,7 +372,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否應該在合併工作階段結束時完成驗證，而且如果是的話，應該完成哪一種驗證。 值 **3** 是建議值。  
   
-|Validate 值|描述|  
+|Validate 值|Description|  
 |--------------------|-----------------|  
 |**0** (預設)|不驗證。|  
 |**1**|僅驗證資料列計數。|  

@@ -4,7 +4,6 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: reference
 f1_keywords:
 - sql13.rpt.rptdesigner.projectpropertypages.general.f1
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64b9ef5f94d23929d4cdfe415533dbb8aec3bdcf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1c8f13b792a09ea8b34eccaf2d41ea073f98f25c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710868"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 

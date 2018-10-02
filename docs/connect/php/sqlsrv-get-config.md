@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_get_config
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_get_config
 - sqlsrv_get_config
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60437df28456c949d3a03cb58cef89136acbdf2d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3aa0093405e197e2ad65c3dea5b5eedbd7e9efc9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641986"
 ---
 # <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

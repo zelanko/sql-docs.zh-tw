@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.querybuilder.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e3603e4eb3f446518562eec82cf33d02d0ff1fa
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689516"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
   「執行 SQL」工作、OLE DB 來源、OLE DB 目的地和「查閱」轉換可使用 SQL 查詢。 在「執行 SQL」工作中，SQL 陳述式可建立、更新和刪除資料庫物件和資料；執行預存程序；以及執行 SELECT 陳述式。 在 OLE DB 來源和「查閱」轉換中的 SQL 陳述式通常都是 SELECT 陳述式或 EXEC 陳述式。 後者最常執行傳回結果集的預存程序。  
@@ -94,7 +91,7 @@ ms.locfileid: "35411660"
  **工具列**  
  使用工具列來管理資料集、選取要顯示的窗格，以及控制查詢功能。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**顯示/隱藏圖表窗格**|顯示或隱藏 **[圖表]** 窗格。|  
 |**顯示/隱藏方格窗格**|顯示或隱藏 **[方格]** 窗格。|  
@@ -111,7 +108,7 @@ ms.locfileid: "35411660"
  **查詢定義**  
  查詢定義會提供可在其中定義和測試查詢的工具列和窗格。  
   
-|窗格|描述|  
+|窗格|Description|  
 |----------|-----------------|  
 |**圖表** 窗格|在圖表中顯示查詢。 此圖表顯示查詢所包括的資料表及其聯結方式。 選取或清除資料表之資料行旁邊的核取方塊，以便在查詢輸出中加入或移除。<br /><br /> 將資料表加入查詢時，查詢產生器會依據資料表中的索引鍵來建立以資料表為基礎的資料表之間的聯結。 若要加入聯結，請將欄位從一個資料表拖曳至另一個資料表的欄位。 若要管理聯結，請以滑鼠右鍵按一下聯結，然後選取功能表選項。<br /><br /> 以滑鼠右鍵按一下 [圖表] 窗格，即可加入或移除資料表、選取所有資料表以及顯示或隱藏窗格。|  
 |**方格** 窗格|在方格中顯示查詢。 您可以使用此方格，將資料行加入至查詢、從查詢移除資料行，以及變更每個資料行的設定。|  

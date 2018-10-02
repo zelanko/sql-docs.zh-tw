@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_CONTEXT_INFO_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - CONTEXT_INFO option
 - SET CONTEXT_INFO statement
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4f3de0f20674fadcf951c4098d938b6d928a6305
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6aad4a262c60e4ecab5d286f04971e024d114666
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747516"
 ---
 # <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

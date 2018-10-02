@@ -5,26 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b15b88320c48a711539c952ea749c21d85ab6e15
-ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
+ms.openlocfilehash: b961bb0dff9f832660807211cf59189db036dd23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730176"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   下表將描述 ODBC 來源的自訂屬性。 所有屬性都可從 SSIS 屬性運算式設定。  
   
-|屬性名稱|資料類型|描述|  
+|屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |連接|ODBC 連接|用來存取來源資料庫的 ODBC 連接。|  
 |AccessMode|整數 (列舉)|用來存取資料庫的模式。 可能值為資料表名稱 (0) 和 SQL 命令(1)。<br /><br /> 預設值為資料表名稱 (0)。|  

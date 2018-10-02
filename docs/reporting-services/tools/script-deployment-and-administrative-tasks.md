@@ -4,7 +4,6 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
@@ -21,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6217ae2fc8f27aaa9a768ad228960f5e0f019998
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 705d96bd7da45423b94baa6b25cff667c98bade8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791446"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
 

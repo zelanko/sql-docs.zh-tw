@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DEALLOCATE
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c05655cfa13393c4687296ea2c62acbc987fa59
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 715803e27516df04c0fb1267ceabc8a162d5da4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36247890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747826"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +98,7 @@ GO
   
  您不需要明確取消配置資料指標變數。 當變數離開範圍時，會隱含地取消配置。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  DEALLOCATE 權限預設會授與任何有效的使用者。  
   
 ## <a name="examples"></a>範例  

@@ -5,9 +5,7 @@ ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699df374b814c1332fa32a16b42974355e569e7a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4eb65f9b2d0c19ed2e32e6466beec715790f81c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755142"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ TEXTPTR ( column )
   
 |函數或陳述式|Description|  
 |---------------------------|-----------------|  
-|PATINDEX **('***%pattern%***' ,** *expression***)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
-|DATALENGTH **(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
+|DATALENGTH<b>(</b>_expression_**)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
-|SUBSTRING**(***text_column*, *start*, *length***)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
   
 ## <a name="examples"></a>範例  
   

@@ -5,21 +5,18 @@ ms.date: 07/30/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc330f8d5dbc2a0f6c09adac0f61d4f603b4c02f
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 726711458f62011fc7bcaef268887813c9c9c3d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842002"
 ---
 # <a name="using-spatial-datatypes"></a>使用空間資料類型
 

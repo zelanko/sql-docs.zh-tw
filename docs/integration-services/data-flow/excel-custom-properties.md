@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dfdf9ba43d247d21500ee986e52c5e3ae141a0c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 241c9e197d11d261efd5ee5e104059658d9604bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819826"
 ---
 # <a name="excel-custom-properties"></a>Excel 自訂屬性
   **來源自訂屬性**  
@@ -28,7 +25,7 @@ ms.locfileid: "35401600"
   
  下表描述的是 Excel 來源的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|描述|  
+|屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|用來存取資料庫的模式。 可能的值包括 **[開啟資料列集]**、 **[來自變數的開啟資料列集]**、 **[SQL 命令]** 和 **[來自變數的 SQL 命令]**。 預設值為 **[開啟資料列集]**。|  
 |CommandTimeout|Integer|命令逾時之前的秒數。值為 0 表示無限逾時。<br /><br /> **注意**：雖然您無法在 [Excel 來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
@@ -48,7 +45,7 @@ ms.locfileid: "35401600"
   
  下表描述的是 Excel 目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|描述|  
+|屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|整數 (列舉)|一個值，指定目的地如何存取其目的地資料庫。<br /><br /> 此屬性可以有下列其中一個值：<br /><br /> **OpenRowset** (0) - 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數 OpenRowset** (1) - 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **使用 FastLoad OpenRowset** (3) - 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數使用 FastLoad OpenRowset** (4) - 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **SQL 命令** (2) - 您要提供 SQL 陳述式。|  
 |CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。<br /><br /> 注意：雖然您無法在 [Excel 目的地編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  

@@ -6,9 +6,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34dfaa1d241c015ed94bc21997d9e6a3c8254339
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762626"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
 
@@ -401,7 +398,7 @@ FORCE_LAST_GOOD_PLAN = { ON | OFF }
 ON  
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中所顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。
 
 **\<change_tracking_option> ::=**  
   
@@ -1228,7 +1225,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |@shouldalert                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>D. 啟用、修改及停用變更追蹤  
 下列範例會啟用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的變更追蹤，並將保留週期設定為 `2` 天。  
@@ -1572,7 +1569,7 @@ ON
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會使用強制方案持續監視 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 查詢的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
   
 OFF  
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中所顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以套用檢視中顯示的 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 指令碼，來監視使用中建議並修正已識別的問題。 這是預設值。  
   
 **\<change_tracking_option> ::=**  
   
@@ -2026,7 +2023,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |@shouldalert                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 啟用、修改及停用變更追蹤  
 下列範例會啟用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的變更追蹤，並將保留週期設定為 `2` 天。  
@@ -2735,7 +2732,7 @@ GO
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   |@shouldalert                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 啟用、修改及停用變更追蹤  
 下列範例會啟用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的變更追蹤，並將保留週期設定為 `2` 天。  

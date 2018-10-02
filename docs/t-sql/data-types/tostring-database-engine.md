@@ -5,9 +5,7 @@ ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ToString
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ToString [Database Engine]
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b2bd8bdbe0c2de0baf598010cbec6604a3ff696f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 69b64e215e207a53e623e7ec68dc48a051f492b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752356"
 ---
 # <a name="tostring-database-engine"></a>ToString (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 39
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 77e1fad23e16ca48573d460c1a876e4c6b548e90
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ee5082535620d05c96b505b1920b8036d92f5e97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843097"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +104,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ||||||  
 |-|-|-|-|-|  
 |**檔案群組**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**資料分割**|@shouldalert|2|3|4|  
+|**資料分割**|1|2|3|4|  
 |**值**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. 建立將多個資料分割對應至相同檔案群組的資料分割結構描述  
@@ -127,7 +124,7 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ||||||  
 |-|-|-|-|-|  
 |**檔案群組**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**資料分割**|@shouldalert|2|3|4|  
+|**資料分割**|1|2|3|4|  
 |**值**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. 建立將所有資料分割對應至相同檔案群組的資料分割結構描述  

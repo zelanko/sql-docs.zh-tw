@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XACT_STATE
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d14b5af9c0ad7ca0e6261e1e7a34d13704ca54f2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098117"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799336"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +52,7 @@ XACT_STATE()
   
 |傳回值|意義|  
 |------------------|-------------|  
-|@shouldalert|目前的要求具有使用中的使用者交易。 要求可以執行任何動作，其中包括寫入資料和認可交易。|  
+|1|目前的要求具有使用中的使用者交易。 要求可以執行任何動作，其中包括寫入資料和認可交易。|  
 |0|目前的要求沒有任何使用中的使用者交易。|  
 |-1|目前的要求有一項使用中的使用者交易，但發生錯誤，使交易被分類為無法認可的交易。 要求無法認可交易或回復到儲存點；它只能要求完整回復交易。 要求無法執行任何寫入作業，直到它回復交易為止。 要求只能執行讀取作業，直到它回復交易為止。 在交易回復之後，要求便可以執行讀取和寫入作業，且可以起始一項新交易。<br /><br /> 當最外層的批次完成執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動回復任何使用中無法認可的交易。 如果在交易進入無法認可的狀態時沒有傳送任何錯誤訊息，則當批次完成時，就會將錯誤訊息傳送給用戶端應用程式。 此訊息表示偵測到無法認可的交易，並已回復。|  
   

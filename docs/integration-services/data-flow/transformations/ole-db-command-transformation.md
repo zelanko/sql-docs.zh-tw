@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.oledbcommandtrans.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd5b9c18c1c160688cb42c49677fc440ca1c566e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799872"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令轉換
   OLE DB 命令轉換為資料流程中每個資料列執行 SQL 陳述式。 例如，可以執行在資料庫資料表中插入、更新或刪除資料列的 SQL 陳述式。  

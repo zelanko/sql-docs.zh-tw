@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 199f12a6318b9a283a62176289a2c6501444255e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652868"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何：使用資料表設計工具管理資料表和關聯性
 資料表設計工具與 Transact\-SQL 編輯器一起為 SQL Server 資料庫提供用於建立及編輯資料表結構 (包括資料表特定的程式設計物件) 的視覺效果。  為連接的資料庫或專案建立新資料表，或是在 [SQL Server 物件總管] 或 [方案總管] 中按兩下資料表加以編輯時，就會啟動資料表設計工具。  

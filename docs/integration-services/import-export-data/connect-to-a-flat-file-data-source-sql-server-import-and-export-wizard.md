@@ -5,21 +5,18 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ffe74a41067f146ed94289f04f81fe5681933b87
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1c893a38541d6e79380b25f0e8e5414a6ee0d2b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853366"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至**一般檔案** (文字檔) 資料來源。 針對一般檔案，精靈的這兩個頁面會呈現不同的選項集，因此，本主題會分別描述一般檔案來源和一般檔案目的地。
@@ -65,7 +62,7 @@ ms.locfileid: "35404420"
  **格式**  
  選取檔案是要使用分隔符號、固定寬度還是不齊右格式。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |使用分隔符號|資料行是以分隔符號分隔。 您可以在 [資料行] 頁面上指定分隔符號。|  
 |固定寬度|資料行具有固定寬度。|  
@@ -80,7 +77,7 @@ ms.locfileid: "35404420"
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|標頭資料列是以歸位字元分隔。|  
@@ -107,7 +104,7 @@ ms.locfileid: "35404420"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -121,7 +118,7 @@ ms.locfileid: "35404420"
  **資料行分隔符號**  
  從可用的資料行分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料行是以歸位字元分隔。|  
@@ -179,7 +176,7 @@ ms.locfileid: "35404420"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -205,7 +202,7 @@ ms.locfileid: "35404420"
  **設定每一個資料行的屬性**  
  請在左窗格中選取一個資料行以便在右窗格中檢視它的屬性。 請參閱下表以了解資料行屬性的描述。 列出的部分屬性只能針對特定一般檔案格式以及特定資料類型的資料行進行設定。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**名稱**|提供描述性資料行名稱。 如果您未輸入名稱，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|
 |**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}**： 資料行是以歸位字元分隔。<br /><br /> **{LF}**： 資料行是以換行字元分隔。<br /><br /> **分號 {;}**： 資料行是以分號分隔。<br /><br /> **冒號 {:}**： 資料行是以冒號分隔。<br /><br /> **逗號 {,}**. 資料行是以逗號分隔。<br /><br /> **定位字元 {t}**： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}**： 資料行是以分隔號分隔。|
@@ -220,7 +217,7 @@ ms.locfileid: "35404420"
 **新增**  
  按一下 [新增] 來加入新的資料行。 依預設，[新增] 按鈕會在清單結尾加入新的資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**加入資料行**|在清單結尾加入新資料行。|  
 |**插在前面**|在選取的資料行之前插入新資料行。|  
@@ -288,7 +285,7 @@ ms.locfileid: "35404420"
  **格式**  
  選取檔案是要使用分隔符號、固定寬度還是不齊右格式。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |使用分隔符號|資料行是以分隔符號分隔。 您可以在 [資料行] 頁面上指定分隔符號。|  
 |固定寬度|資料行具有固定寬度。|  

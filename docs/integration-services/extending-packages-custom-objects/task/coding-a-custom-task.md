@@ -5,12 +5,8 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -20,16 +16,15 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 241b2b8b24422edcd5b67e8a18012805286f3002
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a83eb948dfdf1f7cde6b6a68ef774b3cb54a9aeb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410580"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595876"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
@@ -169,7 +164,7 @@ End Class
   
  下表列出 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法中提供給工作的參數。  
   
-|參數|描述|  
+|參數|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|包含可供工作使用的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件集合。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|包含工作可用的變數。 工作會透過 VariableDispenser 來使用變數，不會直接使用變數。 變數分配程式會鎖定和解除鎖定變數，並防止死結或是覆寫。|  

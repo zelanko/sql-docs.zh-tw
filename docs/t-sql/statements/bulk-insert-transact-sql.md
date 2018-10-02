@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BULK_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7409eb0c6c26b03309fbdbdd37b8d2255cfa5b75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620426"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +130,7 @@ BULK INSERT
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您在[格式檔案](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中，針對每一個資料行各指定一個定序名稱。  
   
-|CODEPAGE 值|描述|  
+|CODEPAGE 值|Description|  
 |--------------------|-----------------|  
 |ACP|將 **char**、**varchar** 或 **text** 資料類型的資料行，從 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|  
 |OEM (預設值)|將 **char**、**varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|  
@@ -211,7 +208,7 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  TABLOCK  
  指定在大量匯入作業期間，取得資料表層級鎖定。 如果資料表沒有索引，且指定了 TABLOCK，多個用戶端便可以同時載入這份資料表。 根據預設，鎖定行為是由資料表選項 **table lock on bulk load**所決定。 在大量匯入作業期間保留鎖定，會減少競爭資料表鎖定的情況，在某些情況下，可以大幅提升效能。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
- 就資料行存放區索引而言， 鎖定行為不同，因為它會在內部分割成多個資料列集。  每個執行緒都會透過在允許以並行資料載入工作階段進行平行資料載入的資料列集上採取 X 鎖定，以獨佔方式將資料載入到每個資料列集。 使用 TABLOCK 選項將導致執行緒在資料表上採取 X 鎖定 (不同於傳統資料列集的 BU 鎖定)，這會防止其他並行執行緒同時載入資料。  
+ 就資料行存放區索引而言， 鎖定行為不同，因為它會在內部分割成多個資料列集。  每個執行緒都會藉由在允許以並行資料載入工作階段進行平行資料載入的資料列集上採取 X 鎖定，以獨佔方式將資料載入到每個資料列集。 使用 TABLOCK 選項將導致執行緒在資料表上採取 X 鎖定 (不同於傳統資料列集的 BU 鎖定)，這會防止其他並行執行緒同時載入資料。  
 
 ### <a name="input-file-format-options"></a>輸入檔案格式選項
   
@@ -344,7 +341,7 @@ GO
   
  如需有關此安全性考量及其他使用 BULK INSERT 之安全性考量的詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-### <a name="permissions"></a>權限  
+### <a name="permissions"></a>[權限]  
  需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
   
 -   有條件約束存在而且未指定 CHECK_CONSTRAINTS 選項。  

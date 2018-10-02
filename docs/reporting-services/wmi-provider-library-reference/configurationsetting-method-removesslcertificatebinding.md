@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - RemoveSSLCertificateBindings method
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4b241b4903bd11897f157d3d37ce3e3d90ff765
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f19c414c199020f3c85226b1ea691618649e070e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716006"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting 方法 - RemoveSSLCertificateBinding
   移除 SSL 憑證繫結。  

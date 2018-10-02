@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
-caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 455f8c4c409a5314fb24f4f41c75641c0128cfa7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b341dc48a5f72e3f3a0067c9f4d00267175243be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713226"
 ---
 # <a name="changesets-master-data-services"></a>變更集 (Master Data Services)
 

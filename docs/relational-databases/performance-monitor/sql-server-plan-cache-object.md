@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e46cebc6bfb2443f78d15a54b3ec59da5169d59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bddbfdd03a8209a80b78ad8a1faac9dcda983592
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951063"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773236"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server 的 Plan Cache 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951063"
   
  下表描述 **SQLServer:Plan Cache**計數器。  
   
-|SQL Server Plan Cache 計數器|描述|  
+|SQL Server Plan Cache 計數器|Description|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|快取叫用數和查閱數之間的比率|  
 |**Cache Hit Ratio Base**|僅供內部使用。| 
@@ -42,7 +38,7 @@ ms.locfileid: "32951063"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|Plan Cache 執行個體|描述|  
+|Plan Cache 執行個體|Description|  
 |-------------------------|-----------------|  
 |**_Total**|所有快取執行個體類型的資訊。|  
 |**Sql Plans**|從特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (包括自動參數化查詢) 產生的查詢計劃，或從使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **準備之**陳述式產生的查詢計劃。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會快取特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的計畫，以便稍後執行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時重複使用。 使用者的參數化查詢 (即使未確實預備) 也會當作預備的 SQL 計畫來監視。|  

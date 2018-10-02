@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5985712af5eb0f4cb45446e5072229023456cea5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598886"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>進階編輯 (條件) 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ ms.locfileid: "32956633"
   
 > **重要！** 您可用來建立以原則為基礎之管理條件的函數不一定會使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法。 請確定您有遵循範例語法。 例如，當您使用 **DateAdd** 或 **DatePart** 函數時，您必須用單引號括住 *datepart* 引數。  
   
-|函數|簽章|描述|引數|傳回值|範例|  
+|函數|簽章|Description|引數|傳回值|範例|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|兩個數字相加。|*expression1* 和 *expression2* - numeric 類別目錄中任何一種資料類型的任何有效運算式 ( **bit** 資料類型除外)。 可以是常數、屬性或傳回數值類型的函數。|傳回具有較高優先順序之引數的資料類型。|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|從值清單建立陣列。 可以搭配彙總函式 (如 Sum() 和 Count()) 使用。|*expression* - 這是將要轉換成陣列的運算式。|陣列|`Array(2,3,4,5,6)`|  
@@ -86,7 +82,7 @@ ms.locfileid: "32956633"
 |**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|針對目標伺服器執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。<br /><br /> 如需 ExecuteSql() 的詳細資訊，請參閱 [ExecuteSql() 函數](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)。|*returnType* - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所傳回的傳回資料類型。 *returnType* 的有效常值如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> *sqlQuery* - 這是包含要執行之查詢的字串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 對目標 SQL Server 執行個體執行純量值的 Transact-SQL 查詢。 `SELECT` 陳述式中，只能指定一個資料行，會忽略第一個以外的其他資料行。 產生的查詢應該只傳回一個資料列，會忽略第一個以外的其他資料列。 如果查詢傳回空集合，依據 `ExecuteSQL` 建立的條件運算式會評估為 false。 `ExecuteSql` 支援 **視需要** 和 **按排程時間** 評估模式。<br /><br /> -`@@ObjectName`:<br />                      對應到 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名稱欄位。 將會以目前物件的名稱來取代此變數。<br /><br /> -`@@SchemaName`：對應到 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 將會以目前物件的結構描述名稱來取代此變數 (如果適用的話)。<br /><br /> 注意：若要在 ExecuteSQL 陳述式中加入單引號，請以第二個單引號來逸出該單引號。 例如，若要包含名為 O'Brian 之使用者的參考，請輸入 O''Brian。|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|針對提供的命名空間執行 WQL 指令碼。 Select 陳述式只能包含單一傳回資料行。 如果提供了一個以上的資料行，將會擲回錯誤。|*returnType* - 指定 WQL 所指定的傳回資料類型。 有效的常值為 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> *namespace* - 這是執行所要針對的 WMI 命名空間。<br /><br /> *wql* - 這是包含所要執行之 WQL 的字串。||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|傳回布林值 FALSE。|無|傳回布林值 FALSE。|`IsDatabaseMailEnabled = False()`|  
-|**GetDate()**|DateTime GetDate()|傳回系統日期。|無|以日期時間形式傳回系統日期。|`@DateLastModified = GetDate()`|  
+|**GetDate()**|DateTime GetDate()|傳回系統日期。|None|以日期時間形式傳回系統日期。|`@DateLastModified = GetDate()`|  
 |**Guid()**|Guid Guid(String *guidString*)|從字串中傳回 GUID。|*guidString* - 這是要建立之 GUID 的字串表示法。|傳回從字串建立的 GUID。|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|如果它不是 NULL，就會傳回 *check_expression* 的值，否則會傳回 *replacement_value* 。 如果類型不同， *replacement_value* 會隱含地轉換成 *check_expression*的類型。|*check_expression* - 這是要檢查 NULL 的運算式。 *check_expression* 可以是任何以原則為基礎之管理支援的類型：Numeric、String、Bool、DateTime、Array 和 Guid。<br /><br /> *replacement_value* - 這是 *check_expression* 為 NULL 時所傳回的運算式。 *replacement_value* 必須是能夠隱含地轉換成 *check_expression*類型的類型。|如果 *check_expression* 不是 NULL，則傳回類型是 *check_expression* 的類型，否則會傳回 *replacement_value* 的類型。||  
 |**Len()**|Numeric Len (*string_expression*)|傳回指定字串運算式的字元數，但不包括尾端空白。|*string_expression* - 這是要評估的字串運算式。|傳回整數資料類型類別目錄的值。|`Len('Hello')` 會傳回 `5` 。|  

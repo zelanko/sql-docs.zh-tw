@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a3d221c9f2d3b7e9e1c91d9b11d21afc537856c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6244e3f3ab3d04c24fa54ab7769a0fc707825e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954018"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732489"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server 的 Broker Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQLServer:Broker Statistics 效能物件包含可針對 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體報告一般 [!INCLUDE[ssDE](../../includes/ssde-md.md)]資訊的效能計數器。 下表列出這個物件包含的計數器：  
   
-|SQL Server 的 Broker Statistics 計數器|描述|  
+|SQL Server 的 Broker Statistics 計數器|Description|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 啟用預存程序已結束並發生錯誤的次數。|  
 |**Broker Transaction Rollbacks**|包含與 [!INCLUDE[ssSB](../../includes/sssb-md.md)]相關之 DML 陳述式 (例如 SEND 和 RECEIVE) 的回復交易數目。|  

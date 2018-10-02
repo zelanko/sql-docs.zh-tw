@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d0fa44abcf871cdcc932d49947f971f6ccc53fe
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6fa469c83bf1aa75be583a553ecf3668db4c4b07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730870"
 ---
 # <a name="report-builder-functions---union-function"></a>報表產生器函式 - Union 函式
   傳回運算式所指定之所有非 Null 數值的聯集 (在給定範圍中評估)。  

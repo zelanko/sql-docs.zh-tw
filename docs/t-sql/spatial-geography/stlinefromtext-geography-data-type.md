@@ -5,9 +5,7 @@ ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STLineFromText (geography Data Type)
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d6cdba7df9785147f027112f41530083d4b19527
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 2cf74f1bcb275b932965812d90222b505f6abaa8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642106"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

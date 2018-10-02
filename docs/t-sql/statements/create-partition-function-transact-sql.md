@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION FUNCTION
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: 57
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 547075818327bb7c53733b8f3ce7510a2b31a10c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755356"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
  任何資料分割資料行含有 Null 值的資料列，都會放在最左側資料分割中，除非將 NULL 指定為界限值，且指示 RIGHT。 在這個情況下，最左側的資料分割是空的資料分割，NULL 值會放在下列資料分割中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  下列任何一個權限，都可以用來執行 CREATE PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  
@@ -103,7 +100,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
   
  下表顯示在分割資料行 **col1** 上使用這個資料分割函數的資料表如何進行分割。  
   
-|資料分割|@shouldalert|2|3|4|  
+|資料分割|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
@@ -117,7 +114,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
  下表顯示在分割資料行 **col1** 上使用這個資料分割函數的資料表如何進行分割。  
   
-|資料分割|@shouldalert|2|3|4|  
+|資料分割|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
@@ -133,7 +130,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  下表顯示在分割資料行 **datecol** 上使用這個資料分割函數的資料表或索引如何進行分割。  
   
-|資料分割|@shouldalert|2|...|11|12|  
+|資料分割|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**值**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
@@ -147,7 +144,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
  下表顯示在分割資料行 **col1** 上使用這個資料分割函數的資料表如何進行分割。  
   
-|資料分割|@shouldalert|2|3|4|  
+|資料分割|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**值**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   

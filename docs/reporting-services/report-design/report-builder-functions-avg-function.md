@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 857c0a7a5b7113adef4e43adcacc28b11f7e06f8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b02b21a0011fb838a697792955c56ac04d52ce32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602736"
 ---
 # <a name="report-builder-functions---avg-function"></a>報表產生器函式 - Avg 函式
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，傳回運算式指定的所有非 Null 數值的平均值 (在給定範圍中評估)。  

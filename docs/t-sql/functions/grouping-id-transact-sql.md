@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUPING_ID_TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a9dcd15410321cc3c4540db522a45358b995b99
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836826"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -146,13 +143,13 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
 |----------|-----------|--------------------|--------------------|----------|  
 |Document Control|Control Specialist|0|2|Document Control|  
 |Document Control|Document Control Assistant|0|2|Document Control|  
-|Document Control|Document Control Manager|0|@shouldalert|Document Control|  
-|Document Control|NULL|@shouldalert|5|Document Control|  
-|Facilities and Maintenance|Facilities Administrative Assistant|0|@shouldalert|Facilities and Maintenance|  
-|Facilities and Maintenance|Facilities Manager|0|@shouldalert|Facilities and Maintenance|  
+|Document Control|Document Control Manager|0|1|Document Control|  
+|Document Control|NULL|1|5|Document Control|  
+|Facilities and Maintenance|Facilities Administrative Assistant|0|1|Facilities and Maintenance|  
+|Facilities and Maintenance|Facilities Manager|0|1|Facilities and Maintenance|  
 |Facilities and Maintenance|Janitor|0|4|Facilities and Maintenance|  
-|Facilities and Maintenance|Maintenance Supervisor|0|@shouldalert|Facilities and Maintenance|  
-|Facilities and Maintenance|NULL|@shouldalert|7|Facilities and Maintenance|  
+|Facilities and Maintenance|Maintenance Supervisor|0|1|Facilities and Maintenance|  
+|Facilities and Maintenance|NULL|1|7|Facilities and Maintenance|  
 |NULL|NULL|3|12|NULL|  
   
 #### <a name="complex-example"></a>複雜範例  
@@ -310,18 +307,18 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
 |Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|@shouldalert|@shouldalert|1497452.6066|000|0|Year Month Day|  
-|2007|@shouldalert|2|21772.3494|000|0|Year Month Day|  
-|2007|2|@shouldalert|2705653.5913|000|0|Year Month Day|  
+|2007|1|1|1497452.6066|000|0|Year Month Day|  
+|2007|1|2|21772.3494|000|0|Year Month Day|  
+|2007|2|1|2705653.5913|000|0|Year Month Day|  
 |2007|2|2|21684.4068|000|0|Year Month Day|  
-|2008|@shouldalert|@shouldalert|1908122.0967|000|0|Year Month Day|  
-|2008|@shouldalert|2|46458.0691|000|0|Year Month Day|  
-|2008|2|@shouldalert|3108771.9729|000|0|Year Month Day|  
+|2008|1|1|1908122.0967|000|0|Year Month Day|  
+|2008|1|2|46458.0691|000|0|Year Month Day|  
+|2008|2|1|3108771.9729|000|0|Year Month Day|  
 |2008|2|2|54598.5488|000|0|Year Month Day|  
-|2007|@shouldalert|NULL|1519224.956|100|@shouldalert|Year Month|  
-|2007|2|NULL|2727337.9981|100|@shouldalert|Year Month|  
-|2008|@shouldalert|NULL|1954580.1658|100|@shouldalert|Year Month|  
-|2008|2|NULL|3163370.5217|100|@shouldalert|Year Month|  
+|2007|1|NULL|1519224.956|100|1|Year Month|  
+|2007|2|NULL|2727337.9981|100|1|Year Month|  
+|2008|1|NULL|1954580.1658|100|1|Year Month|  
+|2008|2|NULL|3163370.5217|100|1|Year Month|  
 |2007|NULL|NULL|4246562.9541|110|3|Year|  
 |2008|NULL|NULL|5117950.6875|110|3|Year|  
 |NULL|NULL|NULL|9364513.6416|111|7|總計|  
@@ -391,31 +388,31 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
 |Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|@shouldalert|@shouldalert|1497452.6066|000|0|Year Month Day|  
-|2007|@shouldalert|2|21772.3494|000|0|Year Month Day|  
-|2007|2|@shouldalert|2705653.5913|000|0|Year Month Day|  
+|2007|1|1|1497452.6066|000|0|Year Month Day|  
+|2007|1|2|21772.3494|000|0|Year Month Day|  
+|2007|2|1|2705653.5913|000|0|Year Month Day|  
 |2007|2|2|21684.4068|000|0|Year Month Day|  
-|2008|@shouldalert|@shouldalert|1908122.0967|000|0|Year Month Day|  
-|2008|@shouldalert|2|46458.0691|000|0|Year Month Day|  
-|2008|2|@shouldalert|3108771.9729|000|0|Year Month Day|  
+|2008|1|1|1908122.0967|000|0|Year Month Day|  
+|2008|1|2|46458.0691|000|0|Year Month Day|  
+|2008|2|1|3108771.9729|000|0|Year Month Day|  
 |2008|2|2|54598.5488|000|0|Year Month Day|  
-|2007|@shouldalert|NULL|1519224.956|100|@shouldalert|Year Month|  
-|2007|2|NULL|2727337.9981|100|@shouldalert|Year Month|  
-|2008|@shouldalert|NULL|1954580.1658|100|@shouldalert|Year Month|  
-|2008|2|NULL|3163370.5217|100|@shouldalert|Year Month|  
-|2007|NULL|@shouldalert|4203106.1979|010|2|Year Day|  
+|2007|1|NULL|1519224.956|100|1|Year Month|  
+|2007|2|NULL|2727337.9981|100|1|Year Month|  
+|2008|1|NULL|1954580.1658|100|1|Year Month|  
+|2008|2|NULL|3163370.5217|100|1|Year Month|  
+|2007|NULL|1|4203106.1979|010|2|Year Day|  
 |2007|NULL|2|43456.7562|010|2|Year Day|  
-|2008|NULL|@shouldalert|5016894.0696|010|2|Year Day|  
+|2008|NULL|1|5016894.0696|010|2|Year Day|  
 |2008|NULL|2|101056.6179|010|2|Year Day|  
 |2007|NULL|NULL|4246562.9541|110|3|Year|  
 |2008|NULL|NULL|5117950.6875|110|3|Year|  
-|NULL|@shouldalert|@shouldalert|3405574.7033|001|4|Month Day|  
-|NULL|@shouldalert|2|68230.4185|001|4|Month Day|  
-|NULL|2|@shouldalert|5814425.5642|001|4|Month Day|  
+|NULL|1|1|3405574.7033|001|4|Month Day|  
+|NULL|1|2|68230.4185|001|4|Month Day|  
+|NULL|2|1|5814425.5642|001|4|Month Day|  
 |NULL|2|2|76282.9556|001|4|Month Day|  
-|NULL|@shouldalert|NULL|3473805.1218|101|5|Month|  
+|NULL|1|NULL|3473805.1218|101|5|Month|  
 |NULL|2|NULL|5890708.5198|101|5|Month|  
-|NULL|NULL|@shouldalert|9220000.2675|011|6|Day|  
+|NULL|NULL|1|9220000.2675|011|6|Day|  
 |NULL|NULL|2|144513.3741|011|6|Day|  
 |NULL|NULL|NULL|9364513.6416|111|7|總計|  
   

@@ -5,23 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f87066ce8b1f3bf28c904b3b8e225933d318fab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d0250f590fa8821a9709a7003e25b9f7cc22e84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652363"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>第 3 課：安裝 SSIS 套件
 在 [第 2 課：在 SSIS 中建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)中，您建立了部署公用程式，也建立了部署配套，其中包含您必須在其他電腦上安裝套件的項目。 此外，您也確認了部署配套中的檔案清單，並且檢查了建立部署公用程式時所建立的資訊清單檔內容。  
@@ -35,7 +30,7 @@ ms.locfileid: "35403840"
   
 -   [步驟 1：複製部署配套](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [步驟 2：執行封裝安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [步驟 2：執行套件安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
 -   [步驟 3：測試部署的封裝](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   

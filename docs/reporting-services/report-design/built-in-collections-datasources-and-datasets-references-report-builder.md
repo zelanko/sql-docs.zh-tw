@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9a6476f1652fec24cd72761608c9bc5f4ad52d01
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d832ee2a79c41b99690f7176e423b5a237e77271
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273625"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763996"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>內建集合 - DataSources 和 DataSets 參考 (報表產生器)
   **DataSources** 集合代表報表中使用的所有資料來源。 同樣地， **DataSets** 集合則代表報表中所有資料來源的所有資料集。 請使用 [報表資料] 窗格以階層的方式檢視報表資料集 (排列在所參考資料來源的下方)。 如果加入這些集合的參考，就不會在預覽報表時看到值。 只有發行報表至報表伺服器後，才可以使用這些集合。  

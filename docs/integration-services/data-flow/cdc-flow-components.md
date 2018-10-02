@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c453a98b91e001fbb15ec608513a8803981a26e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 78d5b8b15d9a063646e9a68e3a77c08166ffde8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828596"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
   Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可協助 SSIS 開發人員使用 CDC 並且降低 CDC 封裝的複雜性。  
@@ -173,7 +170,7 @@ ms.locfileid: "35334912"
 ## <a name="cdc-state"></a>CDC 狀態  
  每個 CDC 群組都具有相關聯的狀態，由特定格式的字串表示。 如需詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。 下表顯示可能的 CDC 狀態值。  
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |0-(INITIAL)|在目前 CDC 群組上執行任何封裝之前就存在的狀態。 這也是 CDC 狀態為空白時呈現的狀態。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  
 |1-ILSTART (初始載入開始)|這是初始載入封裝啟動時存在的狀態。 這個狀態會在 CDC 控制工作的 **MarkInitialLoadStart** 作業呼叫之後出現。<br /><br /> 如需 CDC 控制工作作業的詳細資訊，請參閱 [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)。|  

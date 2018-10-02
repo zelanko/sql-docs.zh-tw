@@ -5,9 +5,7 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_begin_transaction
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_begin_transaction
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c83c62cf6a9ec637573682cc3b0193b173875a42
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9a7387890ef61348ed473bee7928a4bebc38d882
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618756"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

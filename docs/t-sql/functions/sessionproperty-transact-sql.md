@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SESSIONPROPERTY
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SESSIONPROPERTY function
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8674d633df2c8e4c2dfc15197a46f2d790b38e59
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 36fb5844c7255aff7b8527ff5cc462ec5a573977
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642906"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ SESSIONPROPERTY (option)
  *選項*  
  這是此工作階段的目前選項設定。 *option* 可以是下列值之一。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |ANSI_NULLS|指定是否套用對於 Null 值的等於 (=) 和不等於 (<>) 的 ISO 標準行為。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |ANSI_PADDING|控制資料行如何儲存比資料行的定義大小還短的值，以及如何儲存字元和二進位資料含有尾端空格的值。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  

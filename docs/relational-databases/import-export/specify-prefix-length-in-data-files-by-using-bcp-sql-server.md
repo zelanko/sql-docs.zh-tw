@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: import-export
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bbab0e01278681a8db292a85f4659978a6b8bd2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6cdf2add41c7aec5a4044ea05271cfa723a8da2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607106"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定資料檔的前置長度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,21 +64,21 @@ ms.locfileid: "43073200"
 |**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
-|**datetime**|0|@shouldalert|0|@shouldalert|  
-|**smalldatetime**|0|@shouldalert|0|@shouldalert|  
-|**decimal**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|**numeric**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|**float**|0|@shouldalert|0|@shouldalert|  
-|**real**|0|@shouldalert|0|@shouldalert|  
-|**int**|0|@shouldalert|0|@shouldalert|  
-|**bigint**|0|@shouldalert|0|@shouldalert|  
-|**smallint**|0|@shouldalert|0|@shouldalert|  
-|**tinyint**|0|@shouldalert|0|@shouldalert|  
-|**money**|0|@shouldalert|0|@shouldalert|  
-|**smallmoney**|0|@shouldalert|0|@shouldalert|  
-|**bit**|0|@shouldalert|0|@shouldalert|  
-|**uniqueidentifier**|@shouldalert|@shouldalert|0|@shouldalert|  
-|**timestamp**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**datetime**|0|1|0|1|  
+|**smalldatetime**|0|1|0|1|  
+|**decimal**|1|1|1|1|  
+|**numeric**|1|1|1|1|  
+|**float**|0|1|0|1|  
+|**real**|0|1|0|1|  
+|**int**|0|1|0|1|  
+|**bigint**|0|1|0|1|  
+|**smallint**|0|1|0|1|  
+|**tinyint**|0|1|0|1|  
+|**money**|0|1|0|1|  
+|**smallmoney**|0|1|0|1|  
+|**bit**|0|1|0|1|  
+|**uniqueidentifier**|1|1|0|1|  
+|**timestamp**|1|1|1|1|  
 |**varchar(max)**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** (使用者定義資料類型)|8|8|8|8|  

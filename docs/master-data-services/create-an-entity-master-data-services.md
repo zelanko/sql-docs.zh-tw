@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702956"
 ---
 # <a name="create-an-entity-master-data-services"></a>建立實體 (Master Data Services)
 
@@ -74,11 +71,11 @@ ms.locfileid: "43811084"
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的實體，會將含有十三個資料行的資料列加入格線。 以下是資料行。  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[狀態]|實體狀態。 當您按一下 [儲存] 時，下列影像隨即顯示，指出正在更新實體。<br /><br /> ![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")<br /><br /> 如果建立或編輯實體時發生錯誤，則會顯示下列影像。<br /><br /> ![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")|  
 |[屬性]|實體名稱。|  
-|描述|實體描述。|  
+|Description|實體描述。|  
 |暫存資料表|此資料表的前置名稱用於儲存資料。|  
 |交易記錄類型|實體的交易記錄類型。|  
 |自動建立代碼|指定是否啟用自動建立程式碼。|  

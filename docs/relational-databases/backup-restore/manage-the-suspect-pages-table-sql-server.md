@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b09fd93843050d71c59f1b7bef9a026bb773f32a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621546"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.locfileid: "32921808"
   
     |錯誤描述|**event_type** 值|  
     |-----------------------|---------------------------|  
-    |作業系統 CRC 錯誤所導致的 823 錯誤，或是總和檢查碼錯誤或頁面損毀以外之原因 (例如，頁面識別碼不正確) 所導致的 824 錯誤|@shouldalert|  
+    |作業系統 CRC 錯誤所導致的 823 錯誤，或是總和檢查碼錯誤或頁面損毀以外之原因 (例如，頁面識別碼不正確) 所導致的 824 錯誤|1|  
     |錯誤的總和檢查碼|2|  
     |損毀頁面|3|  
     |已還原 (在將頁面標示為錯誤頁面之後，還原該頁面)|4|  

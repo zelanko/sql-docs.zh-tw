@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - backing up databases [SQL Server], copying databases
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 113095b4e1ad71b2f034c3dd7f92c02a0fc65e9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1f557b93983f098b5834b0903cc23daf634971e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931093"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818557"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>使用備份與還原複製資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 277121625c568b060a560adaa5342f8f40083537
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2652b7ac43daba48c214de00d9787a60c6a7b4c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857066"
 ---
 # <a name="identifying-execution-state"></a>識別執行狀態
   超文字傳輸協定 (HTTP) 是一種無連接且沒有狀態 (Stateless) 的通訊協定，也就是說它不會自動指出不同的要求是否全都來自相同的用戶端，也不會自動指出某個特定瀏覽器執行個體是否仍在主動檢視網頁或網站。 工作階段會建立邏輯連接以透過 HTTP 維護伺服器與用戶端之間的狀態。 與特定工作階段相關的使用者特定資訊又稱為工作階段狀態。  

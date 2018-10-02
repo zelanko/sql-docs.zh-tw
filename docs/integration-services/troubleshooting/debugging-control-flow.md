@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.setbreakpoints.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: fcc1dd9aa113c53071363beefc5d9ad238144e28
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796136"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
@@ -46,7 +43,7 @@ ms.locfileid: "35405300"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供您可以在所有工作及容器上啟用的十個中斷條件。 在 [設定中斷點] 對話方塊中，您可以在滿足下列條件時啟用中斷點：  
   
-|中斷條件|描述|  
+|中斷條件|Description|  
 |---------------------|-----------------|  
 |當容器收到 **OnPreExecute** 事件時。|即將執行工作時呼叫。 工作或容器會在即將執行之前引發此事件。|  
 |當容器收到 **OnPostExecute** 事件時。|在工作的執行邏輯完成之後立即呼叫。 工作或容器會在執行之後立即引發此事件。|  
@@ -71,7 +68,7 @@ ms.locfileid: "35405300"
   
  下表描述叫用計數類型。  
   
-|叫用計數類型|描述|  
+|叫用計數類型|Description|  
 |--------------------|-----------------|  
 |永遠|叫用中斷點時，一律暫停執行。|  
 |叫用計數等於|當中斷點發生的次數等於叫用計數時，暫停執行。|  
@@ -112,7 +109,7 @@ ms.locfileid: "35405300"
   
  下表描述這些視窗。  
   
-|視窗|描述|  
+|視窗|Description|  
 |------------|-----------------|  
 |中斷點|列出封裝中的中斷點，並提供啟用及刪除中斷點的選項。|  
 |輸出|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中顯示各功能的狀態訊息。|  
@@ -154,7 +151,7 @@ ms.locfileid: "35405300"
  **叫用計數類型**  
  指定中斷點生效的時間。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**永遠**|叫用中斷點時，一律暫停執行。|  
 |**叫用計數等於**|當中斷點發生的次數等於叫用計數時，暫停執行。|  

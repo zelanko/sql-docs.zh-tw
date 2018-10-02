@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: reference
 f1_keywords:
 - "10024"
@@ -13,12 +12,12 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c37d9db5128acb71a7cdbe5d52a0d0d3359c598e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 88d02eafa98beeca7dfe789e7697afe5acd31116
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268759"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608706"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>資料集屬性對話方塊、查詢 (報表產生器)
  

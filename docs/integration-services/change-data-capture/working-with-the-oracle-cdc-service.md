@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 769ce099fc299900c93e11222f58389b2c43249b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 82e08d0cdffd4d9f339b4dc1c35322d8e2dd687d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607858"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
   本章節描述 Oracle CDC 服務的一些重要概念。 本章節包含的概念如下：  
@@ -74,7 +71,7 @@ ms.locfileid: "35332532"
   
  以下描述 **dbo.xdbcdc_trace** 資料表中包含的項目。  
   
-|項目|描述|  
+|項目|Description|  
 |----------|-----------------|  
 |TIMESTAMP|寫入追蹤記錄的精確 UTC 時間戳記。|  
 |型別|包含下列其中一個值。<br /><br /> error<br /><br /> INFO<br /><br /> 追蹤|  
@@ -93,7 +90,7 @@ ms.locfileid: "35332532"
   
  下表描述 **dbo.xdbcdc_databases** 資料表中包含的項目。  
   
-|項目|描述|  
+|項目|Description|  
 |----------|-----------------|  
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 Oracle 資料庫的名稱。|  
 |config_version|對應 CDC 資料庫 **xdbcdc_config** 資料表中上次變更的時間戳記 (UTC)，或是此資料表中目前資料列的時間戳記 (UTC)。<br /><br /> UPDATE 觸發程序會針對這個項目強制使用 GETUTCDATE() 的值。 **config_version** 可讓 CDC 服務識別需要檢查是否有組態變更或啟用/停用的 CDC 執行個體。|  
@@ -105,7 +102,7 @@ ms.locfileid: "35332532"
   
  以下描述 **dbo.xdbcdc_databases** 資料表中包含的擷取狀態項目。  
   
-|項目|描述|  
+|項目|Description|  
 |----------|-----------------|  
 |cdc_service_name|Oracle CDC 服務的名稱 (Windows 服務名稱)。|  
 |cdc_service_sql_login|Oracle CDC 服務為了連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 隨即建立名為 cdc_service 的新 SQL 使用者並與這個登入名稱產生關聯，然後針對此服務處理的每一個 CDC 資料庫，將此使用者當做 db_ddladmin、db_datareader 和 db_datawriter 固定資料庫角色的成員加入。|  

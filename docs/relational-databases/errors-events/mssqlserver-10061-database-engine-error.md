@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - "10061"
 helpviewer_keywords:
 - 10061 (Database Engine error)
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5e5961d26fcc9e03abe383204d7cf737d6a8bbf
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 40293fa341856cd03e4b827bcf78e91282025be3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766074"
 ---
 # <a name="mssqlserver10061"></a>MSSQLSERVER_10061
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

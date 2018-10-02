@@ -5,9 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.digitalsigning.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 205f3fc9309853ca8c8563ee3614c8396cf8c5ad
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ee92e9c8873a65dd6f35da970e2bb2223a4649e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798023"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
   您可以使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便識別其來源。 當您已經使用數位憑證來簽署封裝之後，就可以讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查數位簽章，然後再載入封裝。 若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查簽章，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式 (dtexec.exe) 中設定選項，或設定選擇性登錄值。  
@@ -62,10 +59,10 @@ ms.locfileid: "35328420"
   
  下表列出 DWORD 資料的有效值及其相關聯的原則。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|沒有管理限制。|  
-|@shouldalert|封鎖無效的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝。|  
+|1|封鎖無效的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝。|  
 |2|封鎖無效及不受信任的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝，但是會封鎖自我產生的簽章。|  
 |3|封鎖無效和不受信任的簽章以及未簽署的封裝<br /><br /> 此設定也會封鎖自我產生的簽章。|  
   

@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 122409bc6f4f03dff871a72f7a70aca83e557308
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7b23ab90b6c9e0a8b4296b95da6ff91ba962936d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631387"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
 
@@ -42,7 +39,7 @@ ms.locfileid: "35402020"
   
  階層成員權限會套用到您指派的模型版本以及該版本的任何將來複本。 它們不會套用到早於您所指派的版本。  
   
-|權限|描述|  
+|權限|Description|  
 |----------------|-----------------|  
 |**讀取**|顯示成員。<br /><br /> <br /><br /> 注意：如果您僅指派 [讀取] 權限給 [根]，[根] 底下的成員是唯讀的。但是在明確階層和集合中，使用者可以將成員移到 [根] 而且可以將新的成員加入到 [根]。|  
 |**建立**|階層成員的權限不足以建立權限。|  

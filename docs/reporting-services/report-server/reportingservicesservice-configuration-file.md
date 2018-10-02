@@ -4,7 +4,6 @@ ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd16e3838519e9de7e10878837d5023c1f10842d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 992f029f64cdb9d6c60bcef4e748b2fee21a0c90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673028"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
  ||  

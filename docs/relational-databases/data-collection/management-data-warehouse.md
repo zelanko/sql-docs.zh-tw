@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 943d896b2afd0e0fe30a211899f0fe805d89cbf8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59e9b89200e9510266f40e7ae8e471d4f6283a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595416"
 ---
 # <a name="management-data-warehouse"></a>管理資料倉儲
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.locfileid: "33145049"
   
  下表描述核心結構描述中的資料庫資料表。 這些資料庫資料表可讓資料收集器追蹤資料的來源、繼承者，以及何時將資料上傳到資料倉儲。  
   
-|資料表名稱|描述|  
+|資料表名稱|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|儲存有關管理資料倉儲報表應該如何群組和彙總效能計數器的資訊。|  
 |core.snapshots_internal|識別每個新的快照集。 每當上傳封裝開始上傳新的資料批次時，就會在這個資料表中插入新的資料列。|  

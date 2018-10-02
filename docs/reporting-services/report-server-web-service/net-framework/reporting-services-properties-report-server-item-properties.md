@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - item-specific properties [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f0a00d57eae7045e8eb06624115d0814ed5a86f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759526"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 屬性 - 報表伺服器項目屬性
   項目屬性是報表伺服器資料庫中項目特有的屬性。 這類型的項目包括報表、連結報表、資料夾、資源、模型以及資料來源。  

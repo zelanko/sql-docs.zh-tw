@@ -5,9 +5,7 @@ ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EnvelopeAggregate_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeAggregate method (geography)
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b932420fa3190cc98095f38347b467327db4386
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: e93ac828041c45a00bec2465e18b6e8306ce8f87
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855786"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

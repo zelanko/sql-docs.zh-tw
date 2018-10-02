@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 07/11/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 2814 (Database Engine error)
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 758b87cc12cf7c8232f486cf55da0b114a962264
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c4a2620affb6732ef0f48fe5ca29689f7d39ec38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320589"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649916"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +38,9 @@ ms.locfileid: "34320589"
   
 下表列出重新編譯的原因。  
   
-|原因代碼|描述|  
+|原因代碼|Description|  
 |---------------|---------------|  
-|@shouldalert|結構描述已變更|  
+|1|結構描述已變更|  
 |2|統計資料已變更|  
 |3|延遲編譯|  
 |4|Set 選項已變更|  

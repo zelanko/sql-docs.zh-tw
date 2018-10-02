@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 275d8a790ab95d6ffd3bfb02f7427d8e2e3cecdf
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: b9a9cd14574599da10c0bc2747a94387d7851943
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790886"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
 
@@ -74,7 +71,7 @@ ms.locfileid: "35311267"
 ##  <a name="CommandPrompt"></a> 從命令提示字元執行 DQSInstaller.exe  
  您可以在命令提示字元中使用下列命令列參數執行 DQSInstaller.exe：  
   
-|DQSInstaller.exe 參數|描述|範例語法|  
+|DQSInstaller.exe 參數|Description|範例語法|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|要用於安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的伺服器定序。<br /><br /> DQS 僅支援不區分大小寫的定序。 如果您指定區分大小寫的定序，則安裝程式會嘗試使用所指定定序的不區分大小寫版本。 如果沒有不區分大小寫的版本，或是 SQL 不支援定序，則 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝會失敗。<br /><br /> 如果未指定伺服器定序，則會使用預設定序 SQL_Latin1_General_CP1_CI_AS。|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|略過重新建立 DQS 資料庫 (DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA)，並且僅更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫中 DQS 所使用的 SQL Common Language Runtime (SQLCLR) 組件。<br /><br /> 如需詳細資訊，請參閱 [在 .NET Framework 更新之後升級 SQLCLR 組件](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)。|`dqsinstaller.exe -upgradedlls`|  

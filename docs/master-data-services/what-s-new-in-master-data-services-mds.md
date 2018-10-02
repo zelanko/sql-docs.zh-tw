@@ -5,22 +5,19 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: 85
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f148c48f66aefacaa760938dddcbf77e43ada36
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855226"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 

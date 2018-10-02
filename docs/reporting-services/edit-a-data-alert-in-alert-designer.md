@@ -4,7 +4,6 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2772235d6c18fb4569eb45fc65e88b6e33c805a7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: ca10624e5bf22cd23aef89e07a8e7e6486164a32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709916"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>在警示設計工具中編輯資料警示
 

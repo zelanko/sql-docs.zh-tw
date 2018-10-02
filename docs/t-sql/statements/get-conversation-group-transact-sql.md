@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GET
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - GET CONVERSATION GROUP statement
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-caps.latest.revision: 39
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8be62945e89b3b7e6b074338ec8fbd5b593f1eae
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 997334b76a2f07d5e9c9b7a06cc5499838251e7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792229"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665077"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +98,7 @@ ms.locfileid: "37792229"
   
  在使用者自訂函數中，GET CONVERSATION GROUP 無效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要從佇列取得交談群組識別碼，目前使用者必須有佇列的 RECEIVE 權限。  
   
 ## <a name="examples"></a>範例  

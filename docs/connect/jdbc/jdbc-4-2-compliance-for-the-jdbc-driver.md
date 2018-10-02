@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc17cdf4c3ff38e1daa5e427670c021cc45d857b
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 56cbb52552a8709a26ad4c2d8241b435d014dc9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455672"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783036"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>適用於 JDBC 驅動程式的 JDBC 4.2 相容性
 

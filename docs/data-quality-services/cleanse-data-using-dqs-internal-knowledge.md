@@ -5,10 +5,8 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -16,16 +14,15 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78335b05976d63c1da39a69766fd44e073ad4e54
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822036"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS (內部) 知識清理資料
 
@@ -111,7 +108,7 @@ ms.locfileid: "35310317"
   
  根據信賴等級，這些值會顯示在下列五個索引標籤之下：  
   
-|索引標籤|描述|  
+|索引標籤|Description|  
 |---------|-----------------|  
 |**建議**|顯示以下情況的定義域值：DQS 找到信賴等級高於 *自動建議臨界值* ，但低於 *自動更正臨界值* 的建議值。<br /><br /> 建議值會針對原始值顯示在 **[更正為]** 資料行中。 您可以在上方方格中，針對某個值按一下 **[核准]** 或 **[拒絕]** 資料行中的選項按鈕，以接受或拒絕該值所有出現地方的建議。 在此情況下，接受的值會移到 **[更正]** 索引標籤，而拒絕的值則會移到 **[無效]** 索引標籤。|  
 |**新增**|顯示以下情況的有效定義域：DQS 沒有足夠的資訊，因此無法對應至其他任何索引標籤。此外，此索引標籤也包含信賴等級低於 *自動建議臨界值* ，但夠高而可以標示為有效的值。<br /><br /> 如果您認為此值是正確的，請按一下 **[核准]** 資料行中的選項按鈕。 否則，請按一下 **[拒絕]** 資料行中的選項按鈕。 接受的值會移到 **[正確]** 索引標籤，而拒絕的值則會移到 **[無效]** 索引標籤。您也可以在 [更正為] 資料行中，針對該值手動輸入正確值來取代原始值，然後按一下 [核准] 資料行中的選項按鈕，以接受變更。 在此情況下，此值會移到 **[更正]** 索引標籤。|  

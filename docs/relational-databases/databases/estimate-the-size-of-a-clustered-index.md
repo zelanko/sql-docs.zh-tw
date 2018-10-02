@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: SQL
 ms.prod_service: database-engine, sql-database
-ms.component: indexes
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
@@ -24,17 +21,16 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c10509bbdde9b1fc19184f8429a8d72b06131cf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e03241e66501b68f8f36986993d62a46a1bc5bc2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638066"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估計叢集索引的大小
 

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Key_GUID_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - KEY_GUID function
 - GUIDs [SQL Server]
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b175bb55b08427ce41d2d6ad638d625f25944413
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 06ffb5927414cc169863dbe2435fe4221618e5cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799956"
 ---
 # <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ Key_GUID( 'Key_Name' )
   
  如果金鑰是一個暫時金鑰，則金鑰名稱必須以數字符號 (#) 開頭。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  由於暫時金鑰只能用在建立它們的工作階段當中，因此存取它們無需任何權限。 若要存取非暫時的金鑰，呼叫端就必須對金鑰具備某種權限，而且絕對不能拒絕過該金鑰的 VIEW 權限。  
   
 ## <a name="examples"></a>範例  

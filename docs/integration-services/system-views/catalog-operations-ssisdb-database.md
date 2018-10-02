@@ -5,31 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bca95756f99b957f410e1d9dadcb7186c404ffbb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2844d9c1a1c8ea7263de09c1dc2b5544b11fd783
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828421"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有作業的詳細資料。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|作業的唯一識別碼 (ID)。|  
 |operation_type|**smallint**|作業的類型。|  
@@ -66,7 +63,7 @@ ms.locfileid: "35402320"
 |`301`|**validate_package**<br /><br /> (預存程序)|專案識別碼|封裝名稱|  
 |`1000`|**configure_catalog**<br /><br /> (預存程序)|**NULL**|**NULL**||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   作業的 READ 權限  

@@ -5,9 +5,7 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STIsEmpty_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsEmpty (geometry Data Type)
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81160e85acfe753a2df8a0a08b3e177690faf288
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 62419df0c6d0768924f841e2b06ec21eda1ee5e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667166"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

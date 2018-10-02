@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], permissions
 - permissions [Master Data Services], collections
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 778e4890ede89415ac52b1a8fd70af4366a0133b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: aa360d47553f539438843ab1872fedc270ac1e99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749689"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合權限 (Master Data Services)
 
@@ -34,7 +31,7 @@ ms.locfileid: "35332612"
 > [!NOTE]  
 >  這些權限只適用於使用者介面的 [總管] 功能區域。  
   
-|權限|描述|  
+|權限|Description|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取集合成員和成員屬性。|  
 |**建立**|使用者可以建立集合成員及指派屬性值。|  

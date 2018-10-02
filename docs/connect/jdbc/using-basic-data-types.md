@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
-caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759406"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 

@@ -4,17 +4,16 @@ ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f74e09afc4be0bf5297f0c7e6e4026fbf57e0dae
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 65dac70a2b3eebc090cf282d650aff3840d00e89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738666"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>疑難排解圖表 (報表產生器及 SSRS)
   使用圖表時，這些問題很有協助。  

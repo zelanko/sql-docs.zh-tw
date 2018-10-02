@@ -3,7 +3,6 @@ title: 升級報表伺服器資料庫 | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b3f2406a73010cf590c4711b397b997232364bd
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 06a345284c235ffc1bf65400238ef01107df9f2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628946"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
 

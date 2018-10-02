@@ -5,22 +5,19 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a6c61b007f24cf78e182358d864789012c13015a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 601334f4d767f0e632f5641512b9855a75ddd282
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335122"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696306"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升級資料庫精靈 (Master Data Services 組態管理員)
 
@@ -34,7 +31,7 @@ ms.locfileid: "35335122"
 ## <a name="upgrade-review"></a>升級檢閱  
  檢閱此頁面上指定的資訊。 如果該資訊正確，按一下 [下一步] 升級指定的資料庫。  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |**SQL Server 執行個體**|目前所選取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的名稱。|  
 |**Master Data Services 資料庫**|目前所選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的名稱。|  

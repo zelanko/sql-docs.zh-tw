@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec398599747218d8764bc21ba977dbed2ecf72b8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bca33bafe131254991133a9fb48fd4d808594c50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803616"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>如何：偵錯自訂組件
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析自訂組譯碼並尋找其中的錯誤。 要使用的最佳工具將視您嘗試完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]。  

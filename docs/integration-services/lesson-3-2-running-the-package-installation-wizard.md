@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0674745116b0d861961aa5f41179ba355df46292
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a884d0faf7f3f688e00ed83e2c7eeab770791f7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646793"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
 在這項工作中，您會執行「封裝安裝精靈」，將「部署教學課程」專案中的封裝部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上。 只有封裝可以安裝在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 sysssispackages 資料表中，部署配套所包含的支援檔案則會部署到檔案系統中。  
@@ -104,7 +100,7 @@ ms.locfileid: "35411350"
     > 暫存記錄檔是為了在封裝驗證中使用而建立的， 執行封裝時，並不會使用這個檔案。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 3：測試部署的封裝](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[步驟 3：測試部署的套件](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [Integration Services 服務 &#40;SSIS 服務&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
