@@ -1,40 +1,47 @@
+items:
 - name: 概觀
   href: planning-a-sql-server-installation.md
 - name: 規劃
   items:
-    - name: SQL Server 安裝的新增功能
-      href: what-s-new-in-sql-server-installation.md
-    - name: 安裝 SQL Server 2008 R2 的硬體和軟體需求
-      href: hardware-and-software-requirements-for-installing-sql-server.md
-    - name: SQL Server 安裝的安全性考量
-      href: security-considerations-for-a-sql-server-installation.md
-    - name: 網路通訊協定和網路程式庫
-      href: network-protocols-and-network-libraries.md
-    - name: 使用 SQL Server 的多個版本和執行個體
-      href: work-with-multiple-versions-and-instances-of-sql-server.md
-    - name: SQL Server 中的地區語言版本
-      href: local-language-versions-in-sql-server.md
-    - name: SQL Server 的預設和具名執行個體的檔案位置
-      href: file-locations-for-default-and-named-instances-of-sql-server.md
+  - name: SQL Server 安裝的新增功能
+    href: what-s-new-in-sql-server-installation.md
+  - name: 安裝 SQL Server 2008 R2 的硬體和軟體需求
+    href: hardware-and-software-requirements-for-installing-sql-server.md
+  - name: SQL Server 安裝的安全性考量
+    href: security-considerations-for-a-sql-server-installation.md
+  - name: 網路通訊協定和網路程式庫
+    href: network-protocols-and-network-libraries.md
+  - name: 使用 SQL Server 的多個版本和執行個體
+    href: work-with-multiple-versions-and-instances-of-sql-server.md
+  - name: SQL Server 中的地區語言版本
+    href: local-language-versions-in-sql-server.md
+  - name: SQL Server 的預設和具名執行個體的檔案位置
+    href: file-locations-for-default-and-named-instances-of-sql-server.md
 - name: 解除安裝 SQL Server
   href: uninstall-sql-server.md
   items:
-    - name: 解除安裝現有的 SQL Server 執行個體 (安裝程式)
-      href: uninstall-an-existing-instance-of-sql-server-setup.md
-    - name: 移除 Data Quality Server 物件
-      href: remove-data-quality-server-objects.md
-    - name: 解除安裝及移除 Master Data Services
-      href: uninstall-and-remove-master-data-services.md
-    - name: 解除安裝 PowerPivot for SharePoint
-      href: uninstall-power-pivot-for-sharepoint.md
-    - name: 解除安裝 Reporting Services
-      href: uninstall-reporting-services.md
+  - name: 解除安裝現有的 SQL Server 執行個體 (安裝程式)
+    href: uninstall-an-existing-instance-of-sql-server-setup.md
+  - name: 移除 Data Quality Server 物件
+    href: remove-data-quality-server-objects.md
+  - name: 解除安裝及移除 Master Data Services
+    href: uninstall-and-remove-master-data-services.md
+  - name: 解除安裝 PowerPivot for SharePoint
+    href: uninstall-power-pivot-for-sharepoint.md
+  - name: 解除安裝 Reporting Services
+    href: uninstall-reporting-services.md
 - name: 安裝 SQL Server BI 功能
   href: install-sql-server-business-intelligence-features.md
 - name: Configure the Windows Firewall to Allow SQL Server Access
   href: configure-the-windows-firewall-to-allow-sql-server-access.md
   items:
-    - name: 設定多重主目錄電腦進行 SQL Server 存取
-      href: configure-a-multi-homed-computer-for-sql-server-access.md
+  - name: 設定多重主目錄電腦進行 SQL Server 存取
+    href: configure-a-multi-homed-computer-for-sql-server-access.md
 - name: 安裝精靈說明
   href: instance-configuration.md
+ms.openlocfilehash: c0346481208e1f0878663f6bb278e4bc8c9a9de2
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "39313832"
