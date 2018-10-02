@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - WindowsServiceIdentityActual
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 060ed8629de6edfc7672a782ccee9b0dc27eac71
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 833cb4d01e50ad5f8851bdcc036428ffb0c295c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787236"
 ---
 # <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting 屬性 - WindowsServiceIdentityActual
   執行報表伺服器 Windows 服務所使用的識別。 唯讀。  

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 07/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.cdw.packageconfiguration.f1
@@ -27,16 +24,15 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c2e7b3ab7707747014ebf25f063cc3e3574b4d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 43fd3d9eee0e5279882ed3355c6b804e45b77754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787506"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
