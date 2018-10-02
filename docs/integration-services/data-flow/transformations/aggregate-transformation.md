@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607336"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
   「彙總」轉換會將彙總函式 (例如 Average) 套用至資料行值，並將結果複製到轉換輸出。 除了彙總函式外，該轉換還提供 GROUP BY 子句，讓您用來指定要彙總的群組。  
@@ -36,7 +33,7 @@ ms.locfileid: "35331192"
 ## <a name="operations"></a>作業  
  「彙總」轉換支援下列作業。  
   
-|作業|描述|  
+|作業|Description|  
 |---------------|-----------------|  
 |群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md)。|  
 |SUM|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)。|  
@@ -154,7 +151,7 @@ ms.locfileid: "35331192"
  **索引鍵小數位數**  
  在 [進階] 顯示中，選擇性地指定彙總可以寫入的大約索引鍵數目。 根據預設，此選項的值為 **[未指定]**。 如果 [索引鍵小數位數] 和 [索引鍵] 屬性都有設定，會優先使用 [索引鍵]。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|不使用 [索引鍵小數位數] 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -176,7 +173,7 @@ ms.locfileid: "35331192"
  **運算**  
  使用下表作為指南，從可用的作業清單中選擇。  
   
-|作業|描述|  
+|作業|Description|  
 |---------------|-----------------|  
 |**GroupBy**|將資料集分割成群組。 具有任何資料類型的資料行可用於分組。 如需詳細資訊，請參閱 GROUP BY。|  
 |**Sum**|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 SUM。|  
@@ -192,7 +189,7 @@ ms.locfileid: "35331192"
  **Count Distinct Scale**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果 [CountDistinctScale] 和 [CountDistinctKeys] 都有指定，會優先使用 [CountDistinctKeys]。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|不使用 **CountDistinctScale** 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  
@@ -214,7 +211,7 @@ ms.locfileid: "35331192"
  **[索引鍵小數位數]**  
  選擇性地指定彙總預期的近似索引鍵數目。 轉換時會使用此資訊來最佳化初始快取大小。 根據預設，此選項的值為 **[未指定]**。 如果 **[索引鍵小數位數]** 和 **[索引鍵數目]** 都有指定，會優先使用 **[索引鍵數目]** 。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|不使用 **[索引鍵小數位數]** 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -227,7 +224,7 @@ ms.locfileid: "35331192"
  **[計算相異小數位數]**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果 **[計算相異小數位數]** 和 **[計算相異索引鍵]** 都有指定，會優先使用 **[計算相異索引鍵]** 。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |[未指定]|不使用 CountDistinctScale 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  

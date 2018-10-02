@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 17147 (Database Engine error)
 ms.assetid: c7fe3109-8c10-4725-ab19-28e244f5aeee
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a61015b35f41cbcc0ca25ad8469cc83d90262c07
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 56d79e2c1a46d3cb19a1f4dcd7c71c2c4f51050f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34317979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646787"
 ---
 # <a name="mssqlserver17147"></a>MSSQLSERVER_17147
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +37,5 @@ ms.locfileid: "34317979"
 系統已經關閉。  
   
 ## <a name="user-action"></a>使用者動作  
-無  
+None  
   

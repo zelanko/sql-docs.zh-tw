@@ -3,22 +3,20 @@ title: 監視 SQL Server 夥伴 | Microsoft Docs
 description: 具有 Server 監視解決方案的協力廠商夥伴清單。
 services: sql-server
 documentationcenter: NA
-ms.suite: sql
 ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: e116d80b61208d6a75b05c381117207844c0c565
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 9bf0de47776edd1435f9106656052d5a6763e746
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683836"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

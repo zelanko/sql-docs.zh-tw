@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,12 +19,12 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 539906b1a09838e43e34be96e4ee32daec19fab7
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 4d3f2de58bdbfb4f476710bb9bb629dcac3db940
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455222"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670036"
 ---
 # <a name="tutorial-using-templates-in-sql-server-management-studio"></a>教學課程：使用 SQL Server Management Studio 中的範本
 本教學課程將介紹 SQL Server Management Studio (SSMS) 中可用的預先建立 Transact-SQL (T-SQL) 範本。 在本文中，您將學會如何：

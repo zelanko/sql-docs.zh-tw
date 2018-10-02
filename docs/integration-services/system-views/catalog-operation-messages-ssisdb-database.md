@@ -5,31 +5,28 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8de728484d1c0e00eb4ad1bc4dd7ad4137b618c8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1cd45e4350bb09c215fb6f6104effbf5f3326973
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655342"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中之作業期間所記錄的訊息。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|訊息的唯一識別碼 (ID)。|  
 |operation_id|**bigint**|作業的唯一識別碼。|  
@@ -44,7 +41,7 @@ ms.locfileid: "35401950"
   
  這個檢視會顯示下列訊息類型：  
   
-|**message_type** 值|描述|  
+|**message_type** 值|Description|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|錯誤|  
@@ -66,7 +63,7 @@ ms.locfileid: "35401950"
   
  這個檢視會顯示下列訊息來源類型。  
   
-|**message_source_type**|描述|  
+|**message_source_type**|Description|  
 |-------------------------------|-----------------|  
 |10|項目 API，例如 T-SQL 和 CLR 預存程序|  
 |20|用來執行封裝的外部處理序 (ISServerExec.exe)|  
@@ -75,7 +72,7 @@ ms.locfileid: "35401950"
 |50|控制流程容器|  
 |60|資料流程工作|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   作業的 READ 權限  

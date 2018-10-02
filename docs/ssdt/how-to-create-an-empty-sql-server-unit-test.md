@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dead1b79e36fbda2565eaf64cb26dc63db0a7af7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627587"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>HOW TO：建立空白 SQL Server 單元測試
 將單元測試包含在資料庫專案中來驗證您對資料庫物件所做的變更，並不會中斷現有的功能。 下列程序說明如何為任何資料庫物件建立 SQL Server 單元測試。 SQL Server Data Tools 包括一些對資料庫函數、觸發程序和預存程序的額外支援。 如需詳細資訊，請參閱[如何：建立函式、觸發程序和預存程序的 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)。  

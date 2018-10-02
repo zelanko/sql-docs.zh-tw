@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10039"
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d751cb78db33d1decaaad7f61b445ec6bbfc3681
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 03fb902cc4150ef9ab0eed9774a3c67fe427de6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611519"
 ---
 # <a name="report-data-pane"></a>報表資料窗格
   [報表資料] 窗格可用於檢視報表中目前定義的參數、資料來源、資料集、欄位集合和影像。 [報表資料] 窗格會以階層檢視來顯示表示報表中資料的項目。 最上層節點代表內建欄位、參數、影像和資料來源參考。 請展開每個節點以檢視資料項目。 例如，當您展開資料來源節點時，為該資料來源所定義的資料集就會顯示。 在展開資料集時，其欄位集合就會顯示。 將項目拖曳到報表設計介面，以將資料連結到報表頁面的報表項目。  

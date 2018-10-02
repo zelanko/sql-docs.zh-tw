@@ -5,22 +5,19 @@ ms.date: 01/05/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 60fdefca0b30606ce6cb11ab8cd44f05188b59f6
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4eca1a4ebb1c8b943709fba4b96e5bda96ab7747
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637716"
 ---
 # <a name="business-rule-examples-master-data-services"></a>商務規則範例 (Master Data Services)
 
@@ -32,7 +29,7 @@ ms.locfileid: "35335332"
   
   
 ## <a name="business-rule-examples"></a>商務規則範例  
-範例模型 |實體  |商務規則名稱| 描述  
+範例模型 |實體  |商務規則名稱| Description  
 ---------|---------|---------|-----------|  
 客戶    | 客戶   | 個人付款條件| 指定客戶的預設付款條件。          
 在下列商務規則中，如果 CustomerType 屬性值符合 `is equal` [規則條件](../master-data-services/business-rule-conditions-master-data-services.md)，則 `defaults to` [規則動作](../master-data-services/business-rule-conditions-master-data-services.md) 會套用至 PaymentTerms 屬性。 否則，就不採取任何動作。  
@@ -47,7 +44,7 @@ Else
   
 **--------------------------------------------------**  
   
-範例模型  |實體  |商務規則名稱|描述    
+範例模型  |實體  |商務規則名稱|Description    
 ---------|---------|---------|---------------  
 客戶     | 客戶    | 組織付款條件 | 指定組織的預設付款條件。         
 在下列商務規則中，如果 CustomerType 屬性值符合 `is equal` [規則條件](../master-data-services/business-rule-conditions-master-data-services.md)，則 `defaults to` [規則動作](../master-data-services/business-rule-actions-master-data-services.md) 會套用至 PaymentTerms 屬性。 否則，就不採取任何動作。  
@@ -63,7 +60,7 @@ Else
 **--------------------------------------------------**  
   
   
-範例模型  |實體  |商務規則名稱| 描述    
+範例模型  |實體  |商務規則名稱| Description    
 ---------|---------|---------|-----------  
 產品     |  產品       | DaysToManufacture |指定製造商的廠內生產天數範圍。          
 在下列商務規則中，如果 InHouseManufacture 屬性值符合 `is equal` [規則條件](../master-data-services/business-rule-conditions-master-data-services.md)，則 `must be between` [規則動作](../master-data-services/business-rule-actions-master-data-services.md) 會套用至 DaysToManufacture 屬性。 否則，就不採取任何動作。  
@@ -79,7 +76,7 @@ Else
 **--------------------------------------------------**  
   
   
-範例模型  |實體  |商務規則名稱|描述    
+範例模型  |實體  |商務規則名稱|Description    
 ---------|---------|---------|-------------  
 產品     |產品         |必要的欄位| 指定產品實體成員的必要屬性。           
 在下列商務規則中，不論何種條件，都會針對指定的屬性採取 `is required` [驗證動作](../master-data-services/business-rule-actions-master-data-services.md) 。 屬性值不能是 Null 或空白。  
@@ -104,7 +101,7 @@ Else
 **--------------------------------------------------**  
   
   
-範例模型  |實體  |商務規則名稱|描述    
+範例模型  |實體  |商務規則名稱|Description    
 ---------|---------|---------|-----------  
 產品     | 產品        |  標準成本| 標準成本必須大於 0。        
 在下列商務規則中，不論何種條件，都會將 `must be greater than` [規則動作](../master-data-services/business-rule-actions-master-data-services.md) 套用到產品的 StandardCost 屬性。  
@@ -120,7 +117,7 @@ Else
 **--------------------------------------------------**  
   
   
-範例模型  |實體  |商務規則名稱|描述    
+範例模型  |實體  |商務規則名稱|Description    
 ---------|---------|---------|------------  
 產品     | 產品        | FG MSRP 成本|指定當產品是完好商品時，MSRP (製造商建議的零售價格) 與經銷商成本必須大於 0。           
   
@@ -138,7 +135,7 @@ Else
 **--------------------------------------------------**  
   
   
-範例模型  |實體  |商務規則名稱|描述    
+範例模型  |實體  |商務規則名稱|Description    
 ---------|---------|---------|------------  
 產品     | 產品        |  預設名稱| 依據 Color 和 Class 屬性值指定預設的產品名稱。 當 Color 屬性值不是 YLO 而 Class 屬性值不是 NA 時，預設名稱是 Yellow NA。         
 在下列商務規則中，如果 Color 和 Class 屬性不符合 `is equal` 規則條件，則 `defaults to` [規則動作](../master-data-services/business-rule-actions-master-data-services.md)會套用至 Name 屬性。  

@@ -5,29 +5,26 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd1ef1ee5c1d2d322beb41dc60439036d490c62f
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 40bca8db984a0f1c4b84dd6ba01f78c5be915b32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36903781"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623836"
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   描述 FileTable 預先定義且固定的結構描述。  
   
-|檔案屬性名稱|型別|大小|預設|描述|檔案系統可存取性|  
+|檔案屬性名稱|型別|大小|預設|Description|檔案系統可存取性|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|變數|識別此項目位置的 **hierarchyid** 。|此節點在階層式 FileNamespace 中的位置。<br /><br /> 資料表的主索引鍵。|可透過設定 Windows 路徑值加以建立及修改。|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||**NEWID()** 函數所傳回的值。|FILESTREAM 資料的唯一識別碼。|不適用。|  

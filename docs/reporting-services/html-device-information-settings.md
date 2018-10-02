@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b50d541226e42eb89d70efc650d2baf3765219a0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265338"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614776"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
 下表列出以 HTML 格式轉譯的裝置資訊設定。  

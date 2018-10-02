@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Output Window [SQL Server Management Studio]
 - Activity Monitor [SQL Server Management Studio]
 - Object Explorer [SQL Server Management Studio]
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
-caps.latest.revision: 1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a3075f8aa917c4728ffa70a87137f5ad3e20043
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 38127390c049e2d5daef5b20aeb47eb727dcba53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607396"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio 中的輸出視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

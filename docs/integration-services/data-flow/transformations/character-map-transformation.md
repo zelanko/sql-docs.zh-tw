@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 6bbf9e0fa3d3c2a8cc900e0bd48163dc11eba3ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619376"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  
@@ -41,7 +38,7 @@ ms.locfileid: "35403230"
 ## <a name="mapping-operations"></a>對應作業  
  下表描述「字元對應」轉換支援的對應作業。  
   
-|作業|描述|  
+|作業|Description|  
 |---------------|-----------------|  
 |位元組反轉|反轉位元組的順序。|  
 |全形|將半形字元對應到全形字元。|  
@@ -100,7 +97,7 @@ ms.locfileid: "35403230"
  **目的地**  
  指定字串作業之結果的儲存方式為就地儲存、使用現有的資料行儲存，或將修改的資料儲存為新的資料行。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |新增資料行|將資料儲存在新的資料行中。 在 **[輸出別名]** 之下指派資料行名稱。|  
 |就地變更|將修改的資料儲存在現有的資料行中。|  
@@ -108,7 +105,7 @@ ms.locfileid: "35403230"
  **運算**  
  從字串函數要套用至資料行資料的清單中選取。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |小寫|轉換為小寫。|  
 |大寫|轉換為大寫。|  

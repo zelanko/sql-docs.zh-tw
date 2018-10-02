@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17d6a3f39ce45c3669ef9820b8b73d4c77a1b08
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a61361460513e546e459aa6183b8081f510d8ed7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646866"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>連接字串和權限概觀
 若要執行 SQL Server 單元測試，您必須使用一個或兩個特定連接字串來連接到資料庫伺服器。 每一個連接字串都代表具有特定權限的帳戶 (如果您要在測試中的特定指令碼執行某個工作或一組工作，必須擁有該帳戶)。 您可以在 [SQL Server 測試組態] 對話方塊中指定這些字串，或是手動為測試專案編輯 app.config 檔案來加以指定。  

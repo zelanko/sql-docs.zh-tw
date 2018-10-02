@@ -6,23 +6,20 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.projectconversion.dialog
 - sql.data.tools.ImportDAC
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e9a42da76b60e891b123196cc6d38c436f92541
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 671af78539b77eee18e649c90abbcd583ae52134
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635596"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>HOW TO：將 Visual Studio 2010 資料庫專案轉換成 SQL Server 資料庫專案並重定目標為不同平台
 在 SQL Server Data Tools (SSDT) 中，您可以將 Visual Studio 2010 中建立的現有 SQL Server 資料庫、CLR 物件和資料層應用程式專案轉換成新的 SQL Server 資料庫專案。 如此一來，您便能利用 SSDT 提供的新型態資料庫開發體驗，例如更新的 Transact\-SQL 編輯體驗，以及透過程式碼驗證將專案目標重定為 Microsoft SQL Server 2012 和 SQL Azure 的功能。 轉換程序會轉換 SSDT 中具有對等類型的物件 (資料表、檢視表、預存程序、屬性檔或指令碼)，包括物件的權限和 DAC 原則檔。 在轉換記錄檔/報告中將重點強調無法轉換的成品。  

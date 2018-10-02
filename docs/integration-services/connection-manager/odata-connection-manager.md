@@ -4,25 +4,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 9
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6a3fbd4cc0f1865559f4f4b64987aa906b2839
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4ec5760d6f62c045b1985aad534c7447f75f59c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667276"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
  使用 OData 連線管理員連線到 OData 資料來源。 OData 來源元件會使用 OData 連線管理員連線到 OData 資料來源，並取用服務中的資料。 如需詳細資訊，請參閱＜ [OData Source](../../integration-services/data-flow/odata-source.md)＞。  
@@ -63,7 +60,7 @@ ms.locfileid: "35333502"
   
 |||  
 |-|-|  
-|屬性|描述|  
+|屬性|Description|  
 |Url|服務文件的 URL。|  
 |UserName|如有必要，驗證使用使用者名稱。|  
 |[密碼]|如有必要，驗證使用密碼。|  

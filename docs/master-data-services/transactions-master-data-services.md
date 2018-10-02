@@ -5,25 +5,22 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 17d4db723ab0cfbb7a8974460e0385f7cbebcd3b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 09b7d5894f46bca7b493601d9a7df40ed4c0935a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668076"
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
 
@@ -59,7 +56,7 @@ ms.locfileid: "35335352"
   
  也可以呼叫下列預存程序來清除交易記錄檔。  
   
-|預存程序|描述|  
+|預存程序|Description|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|會清除交易記錄|  
 |mdm.udpValidationsCleanup|會清除驗證記錄|  

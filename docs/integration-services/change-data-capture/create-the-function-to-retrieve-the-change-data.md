@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288d57ef9d9c02698d0f402a97356c18f0b7fd87
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: fca9cfa8f04e5c3c506e1c4ba6d0226c26db4711
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650216"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
   完成執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程後，下一個工作是建立可擷取變更資料的資料表值函式。 第一次累加式載入前，您僅需要建立一次這個函數。  
@@ -210,7 +207,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>擷取包含異動資料的其他中繼資料  
  雖然之前顯示之使用者建立的資料表值函式僅使用 **__$operation** 資料行，但 **cdc.fn_cdc_get_net_changes_<capture_instance>** 函式會針對每個變更資料列傳回四個中繼資料。 如果您要在資料流程中使用這些值，您可以傳回它們，當做資料表值包裝函數的其他資料行。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|與變更之認可交易相關聯的 LSN。<br /><br /> 在相同交易中認可的所有變更都會共用相同的認可 LSN。 例如，如果來源資料表上的更新作業修改了兩個不同的資料列，此變更資料表將會包含四個資料列 (其中兩個是舊值，而另外兩個是新值)，而且每個資料列都包含相同的 **__$start_lsn** 值。|  
 |**__$seqval**|**binary(10)**|用來排序交易內資料列變更的序列值。|  

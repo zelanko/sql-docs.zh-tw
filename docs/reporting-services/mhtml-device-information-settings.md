@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e5bf5f929be3af2d5fa911c4aed93458713ceba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 170c97c2f01f58972fbcba1d8dc9e63045a1095f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659316"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 裝置資訊設定
   下表列出以 Web 封存 (MHTML) 格式轉譯報表的裝置資訊設定。  

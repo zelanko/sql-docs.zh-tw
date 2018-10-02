@@ -5,9 +5,7 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.bids.converttolegacydeployment.f1
@@ -18,16 +16,15 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5efe57352b1c3ddbbdc1a4db0eb64ba8a27af65f
-ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
+ms.openlocfilehash: a0912f9404f59f57e4a0a09ae2346049bbb01c97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2018
-ms.locfileid: "35513013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638504"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -64,7 +61,7 @@ ms.locfileid: "35513013"
 ## <a name="features-of-project-deployment-model"></a>專案部署模型的功能  
  下表列出可用於專為專案部署模型開發之專案的功能。  
   
-|功能|描述|  
+|功能|Description|  
 |-------------|-----------------|  
 |參數|參數指定要供封裝使用的資料。 您可以將參數範圍限定在分別具有封裝參數和專案參數的封裝層級或專案層級。 在運算式或工作中，都會用到參數。 將專案部署到目錄之後，您可以為每個參數各指定一個常值，或是使用在設計時所指派的預設值。 您也可以參考環境變數來替代常值。 環境變數會在封裝執行時解析。|  
 |環境|環境是可供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案參考之變數的容器。 每個專案都可以有多個環境參考，但是封裝執行的單一執行個體只能參考來自單一環境的變數。 環境可讓您組織指派給封裝的值。 例如，您可能會有命名為 "Dev"、"test" 和 "Production" 的環境。|  

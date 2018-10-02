@@ -5,25 +5,22 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - distributed transactions [SQL Server], unresolved transactions
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f8b649548cf2c8182dfa05fe0680c3c4d7b6f94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8bf7949d13738df6b78a7b3c8edfebcdea017e46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32864763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646466"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>不能肯定的交易解析伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +29,10 @@ ms.locfileid: "32864763"
   
  下表列出解析不確定的交易時，可能出現的結果值。  
   
-|結果值|描述|  
+|結果值|Description|  
 |-------------------|-----------------|  
 |0|無假設結果。 如果 MS DTC 有無法解析的不確定交易，復原即會失敗。|  
-|@shouldalert|假設為認可。 任何 MS DTC 不確定的交易都假設為已認可。|  
+|1|假設為認可。 任何 MS DTC 不確定的交易都假設為已認可。|  
 |2|假設為中止。 任何 MS DTC 不確定的交易都假設為已中止。|  
   
  若要將停機時間降到最低，系統管理員可將此選項設為「假設為認可」或「假設為中止」，如以下範例所示。  

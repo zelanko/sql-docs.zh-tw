@@ -5,21 +5,18 @@ ms.date: 02/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abbc9354d0df37f122aae398b45a35c4b40fee7c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 28fc6d66c9f64be96220154f011a62fe3af97676
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329992"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669526"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
 本節的這項主題會示範如何使用 SQL Server 的 [匯入及匯出精靈] 連線到許多常用的資料來源。 您必須在精靈的 [選擇資料來源] 與 [選擇目的地] 頁面提供資料來源連線資訊。
@@ -28,7 +25,7 @@ ms.locfileid: "35329992"
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>連線到常用的資料來源
 按一下連結深入了解如何連線到下列其中一項常用的資料來源。
--   [[SQL Server]](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+-   [SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [一般檔案 (文字檔)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)

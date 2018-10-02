@@ -5,9 +5,7 @@ ms.date: 05/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - HasZ
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - HasZ geography
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6f2419d31b513bcd0dfe1389a640c21eb27b6eb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 54d74f96eee99b7c05ab9d26bf9733d4b457bbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625106"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
