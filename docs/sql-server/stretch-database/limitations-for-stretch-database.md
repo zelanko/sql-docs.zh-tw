@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, limitations
@@ -16,12 +14,12 @@ ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5537ba71505cf14657e69f0e3ec5ccb8b125ebf3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b2b6cbcd7fd94d63e3999a8d7678cf6a55aed5ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38044181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804406"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 235e7bf226544e415ecc32264c0c627d33f95aa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804656"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。  
   
 ## <a name="what-is-change-data-capture"></a>什麼是異動資料擷取？  
  來源資料表會隨著時間變更。 以這些資料表為基礎的資料超市或資料倉儲必須反映這些變更。 不過，定期複製完整來源之快照集的程序會耗費太多時間和資源。 包括時間戳記資料行、觸發程序或複雜查詢的替代方式通常有損效能並增加複雜度。 需要的是變更資料結構化的可靠資料流，讓消費者可以將其輕鬆地套用到資料的目標表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的異動資料擷取會提供這個解決方案。  

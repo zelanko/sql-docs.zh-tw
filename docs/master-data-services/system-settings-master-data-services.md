@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9f4162789cf09c326b3b5d016e22bafed9fe790b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330132"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801696"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
 
@@ -55,7 +52,7 @@ ms.locfileid: "35330132"
   
 ##  <a name="General"></a> 一般設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**資料庫連接逾時**|**DatabaseConnectionTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫允許連接完成的秒數。 如果連接未在此時間內完成，則會取消連接並傳回錯誤。 預設值為 **60** 秒 (1 分鐘)。|  
 |**資料庫命令逾時**|**DatabaseCommandTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫允許命令完成的秒數。 如果命令未在此時間內完成，則會取消命令並傳回錯誤。 預設值為 **3600** 秒 (60 分鐘)。|  
@@ -68,7 +65,7 @@ ms.locfileid: "35330132"
   
 ##  <a name="Versions"></a> 版本管理設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**僅複製認可的版本**|**CopyOnlyCommittedVersion**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，決定使用者是否可以複製狀態為 [已認可] 的模型版本，或是複製任何狀態的版本。 預設值是 [是] 或 **1**，表示使用者只能複製 [已認可] 的版本。 變更為 [否] 或 **2** 則會允許使用者複製所有版本。|  
   
@@ -76,7 +73,7 @@ ms.locfileid: "35330132"
   
 ##  <a name="Staging"></a> 暫存設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**記錄所有暫存交易**|**StagingTransactionLogging**|僅適用於 SQL Server 2008 R2。 決定在將暫存記錄載入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，是否要記錄交易。 預設值是 [關閉] 或 **2**。 變更為 [開啟] 或 **1** 則會開啟記錄功能。|  
 |**暫存批次間隔**|**StagingBatchInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [整合管理] 功能區域中，從選取 [啟動批次] 後到開始處理批次前所經過的秒數。 預設值為 **60** 秒 (1 分鐘)。|  
@@ -85,7 +82,7 @@ ms.locfileid: "35330132"
   
 ##  <a name="Explorer"></a> 總管設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**階層中預設的成員數目**|**HierarchyChildNodeLimit**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，於顯示 […其他…] 之前，每個階層節點中所顯示的成員數目上限。 就會出現。 您可以按一下 […更多…] 來顯示下一個成員群組。 預設值為 **50**。|  
 |**顯示階層中預設的名稱**|**ShowNamesInHierarchy**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，決定檢視階層時所選取的預設設定。<br /><br /> 預設值是 [是] 或 **1**，表示每個成員的名稱和程式碼都會顯示。 變更為 [否] 或 **2** 則只會顯示程式碼。|  
@@ -94,14 +91,14 @@ ms.locfileid: "35330132"
   
 ##  <a name="xls"></a> Excel 增益集設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |在網站首頁上顯示 Excel 增益集的文字|ShowAddInText|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，顯示讓使用者下載 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]的連結。|  
 |網站首頁 Excel 增益集的安裝路徑|AddInURL|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，如果顯示指向 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 的連結，則是使用者按一下連結之後前往的位置。|  
   
 ##  <a name="BusinessRules"></a> 商務規則設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**要遞增新商務規則的數目依據**|**BusinessRuleDefaultPriorityIncrement**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [系統管理] 功能區域中，每個新商務規則之優先順序遞增的數目。 預設值為 **10**。|  
 |**要套用商務規則的成員數目**|**BusinessRuleRealtimeMemberCount**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，方格中要套用商務規則的成員數目上限。 在 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 中，使用中工作表中要套用商務規則的成員數目上限。 預設值為 **10000**。|  
@@ -110,7 +107,7 @@ ms.locfileid: "35330132"
   
 ##  <a name="Notifications"></a> 通知設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**通知的主資料管理員 URL**|**MDMRootURL**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，其為電子郵件通知中所用的連結，例如 `http://constoso/mds`。|  
 |**通知電子郵件間隔**|**NotificationInterval**|傳送電子郵件的頻率 (以秒為單位)。 預設值為 **120** 秒 (2 分鐘)。|  
@@ -128,7 +125,7 @@ ms.locfileid: "35330132"
   
 ##  <a name="Security"></a> 安全性設定  
   
-|組態管理員設定|系統設定|描述|  
+|組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [使用者及群組的權限] 功能區域中，[階層成員] 索引標籤上設定之使用者和群組權限的套用頻率 (以秒為單位)。 預設值為 **3600** 秒 (60 分鐘)。|  
   

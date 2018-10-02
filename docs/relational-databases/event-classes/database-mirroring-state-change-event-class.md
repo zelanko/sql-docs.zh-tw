@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], database mirroring
 - database mirroring [SQL Server], event notifications
 - Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 905a04afa865baffbca0929c2086cd0986d08213
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b1474dea560935e675a3817c22d94d24f63bfe57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43081329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803728"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "43081329"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**整數**|新鏡像作業的狀態識別碼：<br /><br /> 0 = Null 通知<br /><br /> 1 = 已同步處理主體伺服器，有見證伺服器監督<br /><br /> 2 = 已同步處理主體伺服器，沒有見證伺服器監督<br /><br /> 3 = 已同步處理鏡像伺服器，有見證伺服器監督<br /><br /> 4 = 已同步處理鏡像伺服器，沒有見證伺服器監督<br /><br /> 5 = 主體伺服器連接中斷<br /><br /> 6 = 鏡像伺服器連接中斷<br /><br /> 7 = 手動容錯移轉<br /><br /> 8 = 自動容錯移轉<br /><br /> 9 = 鏡像作業暫停<br /><br /> 10 = 無仲裁伺服器<br /><br /> 11 = 正在同步處理鏡像伺服器<br /><br /> 12 = 執行中的主體伺服器已公開|30|是|  
-|**TextData**|**ntext**|狀態變更描述。|@shouldalert|是|  
+|**TextData**|**ntext**|狀態變更描述。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

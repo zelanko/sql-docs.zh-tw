@@ -5,21 +5,18 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a9914b45153ccd8912d8009bc0baf7971eacce2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4516be4acd8512feee743e986eea9fd554e4089e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808656"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
 
@@ -32,7 +29,7 @@ ms.locfileid: "35408560"
 ## <a name="columns"></a>[資料行]  
  使用 [資料行] 區段可決定您想要在 Excel 中顯示的屬性 (資料行)。  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |屬性類型|屬性類型會描述您想要使用的成員類型。 在大多數情況下，這種類型是 [分葉]。 如需成員類型的詳細資訊，請參閱[成員 &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)。|  
 |明確階層|如果您選擇 [合併] 屬性類型，請選擇這些合併成員所屬的階層。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../../master-data-services/explicit-hierarchies-master-data-services.md)。|  
@@ -44,7 +41,7 @@ ms.locfileid: "35408560"
 ## <a name="rows"></a>資料列  
  使用 [資料列] 區段可決定您想要在 Excel 中顯示的成員 (資料列)。 您可以透過定義準則進行此作業，以便篩選即將顯示的資料列。  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |attribute|顯示您想要據以篩選的屬性。 如果沒有列出任何屬性，這是因為尚未加入屬性。<br /><br /> 注意：您可以依照不想要在工作表中顯示的屬性篩選。|  
 |運算子|顯示對應至已選取之屬性類型的運算子。 如需詳細資訊，請參閱[篩選運算子 &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md)。|  
@@ -57,7 +54,7 @@ ms.locfileid: "35408560"
 ## <a name="summary"></a>摘要  
  使用 [摘要] 區段即可在載入之前檢視即將載入之資料量的相關詳細資料。  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |[模型]|模型的名稱。|  
 |Version|版本的名稱。|  

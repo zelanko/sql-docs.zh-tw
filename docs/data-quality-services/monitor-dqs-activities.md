@@ -5,10 +5,8 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.administration.activitymonitoring.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0fbdc64df58381f91e7729d2a8213b111e944d0b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: e0864e25376f514186da5afe35d9dd4355ae939c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801796"
 ---
 # <a name="monitor-dqs-activities"></a>監控 DQS 活動
 
@@ -141,7 +138,7 @@ ms.locfileid: "35311457"
   
 3.  此時，系統會提示您指定要儲存之 Excel 檔案的名稱和位置。 匯出的 Excel 檔案包含下列工作表：  
   
-    |工作表名稱|描述|  
+    |工作表名稱|Description|  
     |----------------|-----------------|  
     |活動|包含活動的相關資訊 (資料行)，如活動方格所示。|  
     |處理序|包含活動中處理序的相關資訊 (資料行)，如 **[活動步驟]** 索引標籤所示。|  
