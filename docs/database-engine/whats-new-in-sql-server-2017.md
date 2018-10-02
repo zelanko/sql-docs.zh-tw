@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: release-landing
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b3d32cba82f35066cd66a130e8d2cb12aafcb4c3
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838676"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>資料庫引擎的新功能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +32,7 @@ ms.locfileid: "40405385"
 - 引進新的 DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)，以公開摘要層級屬性與交易記錄檔的資訊；這在監視交易記錄的健康情況時非常實用。  
 - 可繼續的線上索引重建。 「可繼續的線上索引重建」可讓您在線上索引重建作業發生失敗 (例如容錯移轉至複本或磁碟空間不足) 後，從停止處繼續。 您也可以暫停並於稍後繼續線上索引重建作業。 例如，您可能需要暫時釋出系統資源，才能執行高優先順序的工作；或者，如果大型資料表的可用維護期間太短，則會在另一個維護期間完成索引重建。 最後，可繼續線上索引重建不需要大量記錄空間，以讓您在可繼續重建作業執行時執行記錄截斷。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。
 - **ALTER DATABASE SCOPED CONFIGURATION 的 IDENTITY_CACHE 選項**。 新選項 IDENTITY_CACHE 已新增至 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 陳述式。 此選項設定為 `OFF` 時，可讓資料庫引擎在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別資料行的值出現間隙。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。   
--  
-  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 現在提供圖形資料庫功能來更有意義的關聯性導向資料的模型。 這包含建立節點和邊緣資料表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及查詢的 [MATCH](../t-sql/queries/match-sql-graph.md) 關鍵字。 如需詳細資訊，請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。   
+-  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 現在提供圖形資料庫功能來更有意義的關聯性導向資料的模型。 這包含建立節點和邊緣資料表的新 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及查詢的 [MATCH](../t-sql/queries/match-sql-graph.md) 關鍵字。 如需詳細資訊，請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。   
 - 新一代的查詢處理功能改進會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [SQL 資料庫中的自適性查詢處理](../relational-databases/performance/adaptive-query-processing.md)。
 - 「自動調整」是一種資料庫功能，可深入探索潛在的查詢效能問題、建議解決方法，並且自動修正找到的問題。 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] 中的自動調整只要偵測到潛在的效能問題時就會通知您，並可讓您套用矯正措施，或可讓 [!INCLUDE[ssde-md](../includes/ssde-md.md)] 自動修正效能問題。 如需詳細資訊，請參閱[自動微調](../relational-databases/automatic-tuning/automatic-tuning.md)。
 - 記憶體最佳化資料表上非叢集索引建置的效能增強。 資料庫復原期間 MEMORY_OPTIMIZED 資料表的 bwtree (非叢集) 索引建置效能已大幅最佳化。 這項改善可在使用非叢集索引時大幅減少資料庫復原時間。  

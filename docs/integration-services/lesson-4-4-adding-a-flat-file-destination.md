@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a66649974ee1821388ad362aedb14cfd1d20f1c7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9ed5aa9aab3e53288f2cc482f87b32048d45a56b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842786"
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>課程 4-4 - 新增一般檔案目的地
 [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
@@ -65,7 +60,7 @@ ms.locfileid: "35400210"
 15. 按一下 [確定] 。  
   
 ## <a name="next-steps"></a>Next Steps  
-[步驟 5：測試第 4 課的教學課程封裝](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+[步驟 5：測試第 4 課的教學課程套件](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   
   
