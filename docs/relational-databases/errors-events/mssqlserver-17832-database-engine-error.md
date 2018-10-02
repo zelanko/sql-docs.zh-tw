@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 17828 (Database Engine error)
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - 17832 (Database Engine error)
 - login packet (bad)
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e49646a91d9343692ebb70a0d9f3d36605d1c81
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 6431ccfaff9cf9b78a257db3908edc7134904a51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664256"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

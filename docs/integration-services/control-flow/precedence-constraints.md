@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.precedenceconstraint.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca90530dbce46d98f3fbaa9faeaa744426e4843f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733656"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
   優先順序條件約束可在控制流程中，連結封裝中的可執行檔、容器和工作，並指定判斷可執行檔是否執行的條件。 可執行檔可以是「For 迴圈」容器、「Foreach 迴圈」容器、「時序」容器、工作或事件處理常式。 事件處理常式也可使用優先順序條件約束，以將其可執行檔連結至控制流程。  
@@ -152,7 +149,7 @@ ms.locfileid: "35333432"
   
     |讀取/寫入屬性|組態動作|  
     |--------------------------|--------------------------|  
-    |描述|提供描述。|  
+    |Description|提供描述。|  
     |EvalOp|選取評估作業。 如果選取 [Expression]、[ExpressionAndConstant] 或 [ExpressionOrConstant] 作業，您就可以指定運算式。|  
     |運算式|如果評估作業包含運算式，請提供一個運算式。 運算式必須評估為布林。 如需運算式語言的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)。|  
     |LogicalAnd|設定 [LogicalAnd]，指定當多個可執行檔優先於並連結到受條件約束的可執行檔時，優先順序條件約束是否要配合其他優先順序條件約束進行評估|  

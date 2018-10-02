@@ -5,9 +5,7 @@ ms.date: 05/08/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER TRIGGER
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ALTER TRIGGER statement
 - DML triggers, modifying
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-caps.latest.revision: 74
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5a05b189faff53fc836a6b6e9fcae8e0602cb588
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a44415653cffdbd98f7ef7bc1a39ba58c5473a86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824956"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -243,7 +240,7 @@ AS { sql_statement
 ## <a name="logon-triggers"></a>登入觸發程序  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援登入事件的觸發程序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  變更 DML 觸發程序需要定義觸發程序的資料表或檢視表的 ALTER 權限。  
   
  若要變更以伺服器範圍 (ON ALL SERVER) 定義的 DDL 觸發程序或登入觸發程序，則需要伺服器的 CONTROL SERVER 權限。 若要變更以資料庫範圍 (ON DATABASE) 定義的 DDL 觸發程序，則需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。  

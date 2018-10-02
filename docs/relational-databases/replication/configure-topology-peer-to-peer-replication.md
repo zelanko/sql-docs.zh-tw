@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0d0d154c844bd1afbcb4662b7e45f8a120de618
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793256"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "37351280"
 ## <a name="options"></a>選項。  
  **[設定拓撲]** 頁面包含當您以滑鼠右鍵按一下元素時可用的介面元素和選項。 下表描述的是每個介面元素。  
   
-|介面元素|描述|  
+|介面元素|Description|  
 |-----------------------|-----------------|  
 |設計介面|顯示其他介面元素。 若要加入元素，請以滑鼠右鍵按一下設計介面。|  
 |![拓撲中的第一個節點](../../relational-databases/replication/media/p2pwizard-firstnode.gif "拓撲中的第一個節點")|拓撲中的原始節點。 系統會使用原始節點的發行集資料庫副本來初始化新的節點。|  

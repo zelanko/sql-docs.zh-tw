@@ -5,21 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43268b60d23a32c688363790a732a3ebff66cf8a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808666"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,10 +74,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  將 *object_type*參數設為 50。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|0|無<br /><br /> 關閉記錄功能。 只記錄封裝執行狀態。|  
-|@shouldalert|[基本]<br /><br /> 記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
+|0|None<br /><br /> 關閉記錄功能。 只記錄封裝執行狀態。|  
+|1|[基本]<br /><br /> 記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
 |2|效能<br /><br /> 只記錄效能統計資料，以及 OnError 和 OnWarning 事件。|  
 |3|「詳細資訊」<br /><br /> 記錄所有事件，包括自訂和診斷事件。 <br />自訂事件，包括 Integration Services 工作所記錄的那些事件。 如需詳細資訊，請參閱[自訂訊息以進行記錄](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|執行階段歷程<br /><br /> 收集追蹤資料流程中歷程所需的資料。|  
@@ -93,7 +90,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|執行的執行個體之唯一識別碼|  
 |*object_type*|50|  
 |*parameter_name*|'DUMP_ON_ERROR|  
-|*parameter_value*|@shouldalert|  
+|*parameter_value*|1|  
   
  若要指定 Integration Services 伺服器在封裝執行期間發生事件時產生傾印檔案，請針對尚未執行的執行執行個體，設定下列參數值。  
   
@@ -102,7 +99,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|執行的執行個體之唯一識別碼|  
 |*object_type*|50|  
 |*parameter_name*|'DUMP_ON_EVENT|  
-|*parameter_value*|@shouldalert|  
+|*parameter_value*|1|  
   
  若要指定封裝執行期間會導致 Integration Services 伺服器產生傾印檔案的事件，請針對尚未執行之執行的執行個體，設定下列參數值。 使用分號來分隔多個事件代碼。  
   
@@ -137,9 +134,9 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
   
 -   執行的執行個體之 READ 和 MODIFY 權限  

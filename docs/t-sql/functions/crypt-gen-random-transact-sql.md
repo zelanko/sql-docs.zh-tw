@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CRYPT_GEN_RANDOM_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CRYPT_GEN_RANDOM function
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a97e2afca882d168f4ca0f6143680f85ccd002ae
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 7fa0beb2e7b920e24e77ce9fbb498f7386f57847
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850046"
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 ## <a name="returned-types"></a>傳回的類型  
 **varbinary(8000)**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 這個函數是公用的，而且不需要任何特殊權限。
   
 ## <a name="examples"></a>範例  

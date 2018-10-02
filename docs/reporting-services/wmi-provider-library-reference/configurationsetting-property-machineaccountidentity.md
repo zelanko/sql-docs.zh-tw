@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b087d632811a16207e3216a4347335cea9b98e36
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 964882042f14ca79c8e45ccea8617f8aa9479dc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273500"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785206"
 ---
 # <a name="configurationsetting-property---machineaccountidentity"></a>ConfigurationSetting 屬性 - MachineAccountIdentity
   取得安裝報表伺服器的電腦帳戶識別。  

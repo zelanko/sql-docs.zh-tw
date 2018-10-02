@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BREAK
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - ignored statements
 - BREAK keyword
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df3dd290b91aa9cc3ed1c8f4d158618f3d4d9925
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0c3d87d20703477b0beaab04b5ab6cd77036c64f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759836"
 ---
 # <a name="break-transact-sql"></a>BREAK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

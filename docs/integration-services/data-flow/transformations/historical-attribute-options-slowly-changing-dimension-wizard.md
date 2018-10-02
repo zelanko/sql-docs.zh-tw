@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eacef877fe8cd803a06d3cce2b75f7eb445f8b3c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1a5a01a87bb8b8d52f4d3857c3b44aee3dbde52a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847576"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>記錄屬性選項 (緩時變維度精靈)
   使用 [記錄屬性選項] 對話方塊，依開始和結束日期來顯示記錄屬性，或者在基於此目的而建立的資料行中記錄記錄屬性。  
@@ -32,7 +29,7 @@ ms.locfileid: "35333212"
  **使用單一資料行顯示目前與逾期記錄**  
  如果您選擇使用單一資料行來記錄記錄屬性的狀態，則可以使用下列選項：  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |**指出目前記錄的資料行**|選取要指出目前記錄的資料行。|  
 |**目前值**|使用 [True] 或 [目前] 來顯示記錄是否為目前的。|  
@@ -41,7 +38,7 @@ ms.locfileid: "35333212"
  **使用開始和結束日期以識別目前與逾期記錄**  
  此選項的維度資料表必須包含日期資料行。 如果您選擇依開始和結束日期顯示記錄屬性，則可以使用下列選項：  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |**開始日期資料行**|選取維度資料表中的資料行以包含開始日期。|  
 |**結束日期資料行**|選取維度資料表中的資料行以包含結束日期。|  

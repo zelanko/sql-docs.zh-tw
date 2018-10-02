@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f35bc0041d986cc7347c4ee12299d2470a4b1aa
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330742"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806046"
 ---
 # <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>課程 1-8 - 使課程 1 的封裝更容易了解
 現在您已完成第 1 課封裝的組態，不妨整理一下封裝配置。 如果控制流程配置和資料流程配置中的形狀是隨機大小，或形狀沒有對齊或分組，則封裝功能可能更難以了解。  
@@ -56,7 +52,7 @@ ms.locfileid: "35330742"
     如果您沒有將文字加入註解方塊中，則您在方塊之外按一下時，它就會消失不見。  
   
 ## <a name="next-steps"></a>Next Steps  
-[步驟 9：測試第 1 課的教學課程封裝](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+[步驟 9：測試第 1 課的教學課程套件](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

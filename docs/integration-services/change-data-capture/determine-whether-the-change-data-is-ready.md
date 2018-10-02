@@ -5,23 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860f0f1d6dc774c7a009db193c2c84e940c6cc47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596196"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第二個工作是確保所選間隔之變更資料已就緒。 由於非同步的擷取程序可能還沒有處理到所選端點的所有變更，因此這是必要的步驟。  
@@ -93,7 +90,7 @@ ms.locfileid: "35332492"
 |傳回值|意義|回應|  
 |------------------|-------------|--------------|  
 |0|表示變更資料尚未就緒。<br /><br /> 沒有晚於所選間隔之結束點的異動資料擷取記錄。|執行會繼續進行實作延遲的元件。 然後，控制會傳回「For 迴圈」容器，只要傳回的值為 0，就會繼續檢查「執行 SQL」工作。|  
-|@shouldalert|可能表示尚未擷取完整間隔的變更資料，或該變更資料已遭刪除。 這會被視為錯誤狀況。<br /><br /> 沒有早於所選間隔之起始點的異動資料擷取記錄。|執行會繼續進行記錄錯誤的選擇性元件。|  
+|1|可能表示尚未擷取完整間隔的變更資料，或該變更資料已遭刪除。 這會被視為錯誤狀況。<br /><br /> 沒有早於所選間隔之起始點的異動資料擷取記錄。|執行會繼續進行記錄錯誤的選擇性元件。|  
 |2|表示資料已就緒。<br /><br /> 沒有早於所選間隔之起始點，也沒有晚於所選間隔之結束點的異動資料擷取記錄。|執行會通過「For 迴圈」容器之外，而且會開始累加式載入。|  
 |3|表示所有可用變更資料的初始載入。<br /><br /> 條件式邏輯會從僅用於此用途的特殊封裝變數取得這個值。|執行會通過「For 迴圈」容器之外，而且會開始累加式載入。|  
 |5|表示已達到 TimeoutCeiling。<br /><br /> 資料的迴圈已經測試過指定的次數，而且資料仍然無法使用。 如果沒有這個測試或類似的測試，封裝可能會無期限地執行。|執行會繼續進行記錄逾時的選擇性元件。|  

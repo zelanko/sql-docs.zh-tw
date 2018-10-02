@@ -5,9 +5,7 @@ ms.date: 04/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 95
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ed53bf8d3bb8034f7a55e8329bb14ba24bbccb73
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662096"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -288,7 +285,7 @@ ALTER FULLTEXT INDEX ON table_name
     > [!NOTE]  
     >  針對不同的搜尋屬性清單 (例如 `spl_2`)，也需要進行重建。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  使用者必須具有資料表或索引檢視表的 ALTER 權限，或必須是 **sysadmin** 固定伺服器角色的成員，或是 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員。  
   
  如果指定了 SET STOPLIST，使用者在停用字詞表上必須具有 REFERENCES 權限。 如果指定了 SET SEARCH PROPERTY LIST，使用者必須有搜尋屬性清單的 REFERENCES 權限。 如果指定之停用字詞表或搜尋屬性清單的擁有者有 ALTER FULLTEXT CATALOG 權限，該擁有者可以授與 REFERENCES 權限。  

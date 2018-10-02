@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVICE_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1230507e5c304ca111c50dc4dcfc591814be1ed3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739036"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ CREATE SERVICE service_name
   
  當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 接受來自遠端服務的新交談時，目標服務的名稱會決定 Broker 將交談訊息放在其中的佇列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  建立服務的權限預設為 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。 執行 CREATE SERVICE 陳述式的使用者必須有佇列及所有指定合約的 REFERENCES 權限。  
   
  服務的 REFERENCES 權限預設為服務的擁有者、**db_ddladmin** 或 **db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。 服務的 SEND 權限預設為服務的擁有者、**db_owner** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  

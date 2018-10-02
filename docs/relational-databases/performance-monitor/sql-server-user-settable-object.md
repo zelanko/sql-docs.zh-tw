@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64c32d1497a0bc54f6d3d72779ca65f1b5fa05d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c908154b21c1adca88b959d0a1d1243a0465ea02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951953"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609956"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server 的 User Settable 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +33,13 @@ ms.locfileid: "32951953"
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
   
-|SQL Server User Settable 計數器|描述|  
+|SQL Server User Settable 計數器|Description|  
 |---------------------------------------|-----------------|  
 |**[資料集屬性]**|**User Settable** 物件包含查詢計數器。 使用者可設定查詢物件內的 **User counter** 。|  
   
  下表描述 **Query** 計數器的 **執行個體** 。  
   
-|Query 計數器執行個體|描述|  
+|Query 計數器執行個體|Description|  
 |-----------------------------|-----------------|  
 |**User counter 1**|使用 **sp_user_counter1**來定義。|  
 |**使用者計數器 2**|使用 **sp_user_counter2**來定義。|  
@@ -73,7 +69,7 @@ GO
 > [!IMPORTANT]  
 >  盡量讓定義於使用者計數器預存程序的查詢越簡單越好。 執行大量排序或雜湊作業的記憶體密集查詢，或是執行大量 I/O 的查詢，都需要很多資源才能執行，所以可能影響效能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  **sp_user_counter** 適用於所有使用者，但可以由任何查詢計數器來限制。  
   
 ## <a name="see-also"></a>另請參閱  

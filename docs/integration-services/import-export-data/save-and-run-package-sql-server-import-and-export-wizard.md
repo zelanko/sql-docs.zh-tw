@@ -5,23 +5,20 @@ ms.date: 02/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacdf2495f91edf5614af47fc59f444a45a39867
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 78fb4a1905e53fce60e7d2461e33782e24441ee5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742506"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>儲存並執行套件 (SQL Server 匯入和匯出精靈)
   在您指定及設定資料來源和目的地之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [儲存並執行封裝] 。 在此頁面上，您可以指定是否要立即執行複製作業。 根據您的設定，也可以將設定儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 套件進行自訂並在稍後重複使用。
@@ -53,7 +50,7 @@ ms.locfileid: "35404686"
 -   精靈會將套件「儲存」至可從中啟動精靈的 Integration Services 專案。
 
 ## <a name="specify-options-for-saving-the-package"></a>指定儲存套件的選項
-**[SQL Server]**  
+**SQL Server**  
  選取此選項，以將 **msdb** 資料庫的 SQL Server 中的套件儲存至 **sysssispackages** 資料表。
  
 > [!IMPORTANT]

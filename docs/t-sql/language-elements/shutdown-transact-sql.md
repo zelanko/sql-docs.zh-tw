@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHUTDOWN_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee366089ceb6451aeea16669f45f06b0bc5a97fe
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 98a5cdb6b02cda84424cb305a4ecc63e38056bdc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36244060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797266"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +74,7 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  使用這些方法的任一種來停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會將 `SERVICE_CONTROL_STOP` 訊息傳給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  SHUTDOWN 權限會指派給 **sysadmin** 和 **serveradmin** 固定伺服器角色的成員，且無法轉讓。  
   
 ## <a name="see-also"></a>另請參閱  

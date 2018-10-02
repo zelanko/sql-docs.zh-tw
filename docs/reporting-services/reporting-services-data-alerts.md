@@ -4,17 +4,17 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a6661587d73fe0f7d04feada71331e9288f110c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 71359d043a648bfb0d7e6e24871be405879baa4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807846"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
 
