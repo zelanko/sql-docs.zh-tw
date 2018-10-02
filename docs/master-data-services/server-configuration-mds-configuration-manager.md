@@ -5,24 +5,21 @@ ms.date: 01/26/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 13a9965e7b56bf5bf3aec58f38d3e90fda387bed
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cb74a2bfe8f614cb0a1e8d9f7e7b41146eb615cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38003643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750458"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>伺服器組態 (MDS 組態管理員)
 

@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750356"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
@@ -43,14 +40,14 @@ ms.locfileid: "35404370"
   
 -   [設定對話方塊](../integration-services/service/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+-   [執行套件對話方塊](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
 ### <a name="parameter-values"></a>參數值  
  您最多可以將三種不同類型的值指派給參數。 啟動封裝執行時，單一值會用於參數，而且參數會解析成最終常值。  
   
  下表將列出值的類型。  
   
-|值名稱|描述|值的類型|  
+|值名稱|Description|值的類型|  
 |----------------|-----------------|-------------------|  
 |執行值|指派給封裝執行之特定執行個體的值。 此指派會覆寫所有其他值，但是只會套用至封裝執行的單一執行個體。|常值|  
 |伺服器值|在專案部署至 Integration Services 伺服器之後，指派給專案範圍內之參數的值。 此值會覆寫設計預設值。|常值或環境變數參考|  
@@ -120,14 +117,14 @@ ms.locfileid: "35404370"
   
 3.  在清單本身或 **[屬性]** 視窗中，輸入 **[名稱]**、 **[資料類型]**、 **[值]**、 **[區分]** 以及 **[必要]** 屬性的值。 下表描述這些屬性。  
   
-    |屬性|描述|  
+    |屬性|Description|  
     |--------------|-----------------|  
     |[屬性]|參數的名稱。|  
     |[名稱]|參數的資料類型。|  
     |預設值|在設計時指派的參數預設值。 這也稱為設計預設值。|  
     |區分|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
     |必要項|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
-    |描述|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
+    |Description|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
     > **注意**：當您將專案部署至目錄時，會再多幾個屬性與專案相關聯。 若要查看目錄中所有參數的所有屬性，請使用 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。  
   
@@ -151,14 +148,14 @@ ms.locfileid: "35404370"
   
 4.  輸入 **[名稱]**、 **[資料類型]**、 **[值]**、 **[區分]** 以及 **[必要]** 屬性的值。  
   
-    |屬性|描述|  
+    |屬性|Description|  
     |--------------|-----------------|  
     |[屬性]|參數的名稱。|  
     |[名稱]|參數的資料類型。|  
     |預設值|在設計時指派的參數預設值。 這也稱為設計預設值。|  
     |區分|敏感性參數值會在目錄中加密，以 Transact-SQL 或 SQL Server Management Studio 來檢視時，會顯示為 NULL 值。|  
     |必要項|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
-    |描述|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
+    |Description|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
 5.  儲存專案以儲存參數的變更。 參數值儲存在專案檔案的組態中。 儲存專案檔案即可將參數值的任何變更認可到磁碟。  
   
