@@ -4,17 +4,16 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a53d608ffe2e84462812b71fc0dee91557fe8f8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b92436ca928037d2f31fa4952f376692e9ad87f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764280"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分頁報表 (Web 入口網站)
 

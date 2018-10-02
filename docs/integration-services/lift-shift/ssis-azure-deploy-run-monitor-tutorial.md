@@ -5,19 +5,18 @@ ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: fc9923cdc27594c37e8f89390f0cb4906f3478f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758946"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教學課程：在 Azure 中部署和執行 SQL Server Integration Services (SSIS) 套件
 本教學課程示範如何將 SQL Server Integration Services (SSIS) 專案部署至 Azure SQL Database 中的 SSIS 目錄、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
@@ -52,7 +51,7 @@ ms.locfileid: "36262492"
 
 2. **連線至伺服器**。 在 [連線至伺服器] 對話方塊中，輸入下列資訊：
 
-   | 設定       | 建議值 | 描述 | 
+   | 設定       | 建議值 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 如果您需要伺服器名稱，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。 |

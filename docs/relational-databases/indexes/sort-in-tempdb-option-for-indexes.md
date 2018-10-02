@@ -5,9 +5,7 @@ ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SORT_IN_TEMPDB option
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
-ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
+ms.openlocfilehash: 0e09e749cc76a5f2790a2cd885e09631e66e42bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44499324"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764618"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>索引的 SORT_IN_TEMPDB 選項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
