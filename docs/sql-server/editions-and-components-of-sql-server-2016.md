@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -35,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 766b7fc1f43cb4ba00dfbac60ece3974095a1573
-ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
+ms.openlocfilehash: 1adfdcbc706000b795b4a7c74c354d408b27f59e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42776477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711616"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

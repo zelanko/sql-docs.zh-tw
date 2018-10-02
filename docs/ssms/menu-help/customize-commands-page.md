@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-menu
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
 - vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6865dc84048e2a8e46880e3cd2a57098958f4e6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 594e97c1d5ac65eb353664471232f45f0c45e2d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040515"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716716"
 ---
 # <a name="customize-commands-page"></a>自訂 (命令頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

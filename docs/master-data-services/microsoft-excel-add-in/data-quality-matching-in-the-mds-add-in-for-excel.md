@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 909b74eb377c103ef5c44156f1ad04c3b7802cd1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 76f25db84d074a9aeb544daf2fe33b512836daf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406760"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713096"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
 

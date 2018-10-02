@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 372c423131dc4e35d3fd5efcc39b881518c19e2f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264779"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699496"
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色指派 - 修改或刪除
   角色指派會將某個群組或使用者帳戶對應至包含可執行之工作的預先定義角色定義。 它會決定某位使用者可執行的作業類型，包括資料夾、報表、模型或其他內容類型。 若要建立、修改或刪除角色指派，您可以使用報表管理員。 針對特定使用者或群組建立角色指派之後，您之後可以透過選取不同的角色，修改此指派。 如果您想要撤銷報表伺服器的權限，可以從報表伺服器中刪除角色指派。  

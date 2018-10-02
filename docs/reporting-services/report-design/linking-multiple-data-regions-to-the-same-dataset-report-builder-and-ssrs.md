@@ -4,17 +4,16 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1cd59c5246b23cfb8dc489909e5624de2d920b52
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7c54ab92fa1832b158062109c65426c5a540fe3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712196"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>將多個資料區連結至相同的資料集 (報表產生器及 SSRS)
 

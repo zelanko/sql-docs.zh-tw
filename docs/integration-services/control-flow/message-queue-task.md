@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720206"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -82,7 +79,7 @@ ms.locfileid: "35332482"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>訊息佇列工作上可用的自訂記錄訊息  
  下表列出「訊息佇列」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|描述|  
+|記錄項目|Description|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|指出工作已經完成開啟訊息佇列。|  
 |**MSMQBeforeOpen**|指出工作已經開始開啟訊息佇列。|  
@@ -146,7 +143,7 @@ ms.locfileid: "35332482"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
@@ -184,7 +181,7 @@ ms.locfileid: "35332482"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
@@ -203,7 +200,7 @@ ms.locfileid: "35332482"
  **篩選**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -224,7 +221,7 @@ ms.locfileid: "35332482"
  **篩選**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -250,7 +247,7 @@ ms.locfileid: "35332482"
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**無**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
@@ -264,7 +261,7 @@ ms.locfileid: "35332482"
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**無**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  

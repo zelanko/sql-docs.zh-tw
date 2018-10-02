@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing Policy-Based Management facets
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - facets [Policy-Based Management], viewing
 - copying Policy-Based Management facets
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8add0751a1c299ff927f11e836a4865e57eb86dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18f47db0c69a228083714806a11d3c3dc85661be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952833"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706960"
 ---
 # <a name="working-with-policy-based-management-facets"></a>使用原則式管理 Facet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

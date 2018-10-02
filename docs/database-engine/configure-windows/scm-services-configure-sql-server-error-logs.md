@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b101a2d41a2cdd3398d06d93df1be965d8448158
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1463ce687568320791fda7d6f4626a1b4f6105bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32864143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699826"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>SCM 服務 - 設定 SQL Server 錯誤記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

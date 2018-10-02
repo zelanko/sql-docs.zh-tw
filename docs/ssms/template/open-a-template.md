@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-templates
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Transact-SQL], opening
 - opening templates
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce3a1ab49b33bd8b4f4fd79f3c216a99797f3405
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: a9d7566a71f5b7c86f45b667c376f06d3a4db38c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42776465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717406"
 ---
 # <a name="open-a-template"></a>開啟範本
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

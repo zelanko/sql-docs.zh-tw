@@ -5,9 +5,7 @@ ms.date: 01/06/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic SQL Server startup
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - stopping SQL Server
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2abc9a96023941ad76c2181d0bbba07ddde9d3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865193"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706296"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM 服務 - 避免自動啟動執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], executing
 - executing queries [SQL Server]
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 494b51e9ffb7ab063ef2d50932898ce28a280a0c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f9bffd6f227344d4f94b004af928f86f98d75eaa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715376"
 ---
 # <a name="run-queries-visual-database-tools"></a>執行查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,9 +5,7 @@ ms.date: 11/20/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 728d36ad9bb4630fb1457d92164a09d9dbeb64cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49c30d7f0d241d61855e50c53a897281b23ff22e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709386"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

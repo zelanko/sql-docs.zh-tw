@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9929b2588bb3d168e54d49c0eb95278011dbec
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8815f7e5bf0192222a0dfdf9917a39606642da1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716647"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,25 +5,22 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e7f350fe56cca57506811eb04ce4c1fdbd1537d6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: de33b9191f38c862d8f5092f9801795fc791ddb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046382"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720746"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>建立檔案屬性 (Master Data Services)
 

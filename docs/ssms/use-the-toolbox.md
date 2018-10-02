@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: fad7d0d5106af21db50b10835d862ffbaef5a875
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42776463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713526"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

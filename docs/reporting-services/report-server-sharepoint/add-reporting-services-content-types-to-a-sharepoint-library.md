@@ -4,17 +4,17 @@ ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f8f7e4b0a841c3566a213b701f3fae362e036d8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: fc4f46292f3144f0e82028a98de329f8bb2fec62
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713576"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 

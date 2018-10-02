@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stretch cluster
@@ -18,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82a292ed83ec145e5e09bc5fd3f7dd424effebb6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2bde47d4db0a86d84715a0265042e57e2202f497
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704216"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

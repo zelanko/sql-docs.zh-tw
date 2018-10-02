@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60e7e7c130924f674119f13d911aad1c0e342dae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 468ed7025781a3a3f3ed258b78883b9df61e92d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715086"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在圖表上建立資料表之間的關聯性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

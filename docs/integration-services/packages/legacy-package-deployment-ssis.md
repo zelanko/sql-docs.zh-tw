@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.packageconfigurationorganizer.f1
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408500"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718266"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的工具和精靈可以簡化將封裝從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
@@ -110,7 +107,7 @@ ms.locfileid: "35408500"
 ### <a name="package-configuration-types"></a>封裝組態類型  
  下表描述封裝組態類型。  
   
-|類型|描述|  
+|類型|Description|  
 |----------|-----------------|  
 |XML 組態檔|XML 檔案包含組態。 XML 檔案可以包含多重組態。|  
 |環境變數|環境變數包含組態。|  
@@ -219,7 +216,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表描述 [封裝組態組合管理] 對話方塊中組態清單中的資料行。  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |**組態名稱**|組態的名稱。|  
 |**組態類型**|組態類型。|  
@@ -321,13 +318,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態類型**  
  使用下列選項，即可選取儲存組態的來源類型：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**XML 組態檔**|將組態儲存為 XML 檔案。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
 |**環境變數**|將組態儲存在其中一個環境變數中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
 |**登錄項目**|將組態儲存在登錄中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
 |**父封裝變數**|以變數將組態儲存在包含工作的封裝中。  選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
-|**[SQL Server]**|將組態儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
+|**SQL Server**|將組態儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的資料表中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
   
  **下一個**  
  檢視精靈順序的下一頁。  
@@ -338,7 +335,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**組態檔名稱**|鍵入精靈產生之組態檔的路徑。|  
 |**瀏覽**|使用 **[選取組態檔位置]** 對話方塊，即可指定精靈產生之組態檔的路徑。 如果檔案不存在，精靈就會建立檔案。|  
@@ -346,7 +343,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -358,14 +355,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**登錄項目**|輸入包含組態資訊的登錄機碼。 格式為 \<登錄機碼>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式來識別該機碼。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -373,14 +370,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**父變數**|在包含組態資訊的父封裝中指定變數。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -388,7 +385,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[連接]**|請從清單中選取連接，或按一下 **[新增]** 即可建立新的連接。|  
 |**組態資料表**|選取現有的資料表，或按一下 **[新增]** ，即可撰寫建立新資料表的 SQL 陳述式。|  
@@ -397,7 +394,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -482,7 +479,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  下表列出部署公用程式屬性。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |AllowConfigurationChange|指定部署期間是否可以更新組態的值。|  
 |[CreateDeploymentUtility]|指定建立專案時是否建立封裝部署公用程式的值。 此屬性必須為 **True** ，才能建立部署公用程式。|  

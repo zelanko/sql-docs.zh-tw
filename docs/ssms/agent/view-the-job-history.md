@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - historical information [SQL Server], jobs
 - displaying job history
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a798da3b7a74cb003cdb0848211389e2f36f710
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f648feffc82ab9f39e3f0a46f744f6373990e7db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775363"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725066"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
 ms.topic: quickstart
 helpviewer_keywords:
@@ -13,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 331eec843268b0de341f23f8f391f379bb3fc48a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038498"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713176"
 ---
 # <a name="planning-a-sql-server-installation"></a>規劃 SQL Server 安裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

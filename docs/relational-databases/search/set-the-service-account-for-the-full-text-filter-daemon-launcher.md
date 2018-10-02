@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 822e02a83041aa07dd912c271719f63c91f24cd5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a6aa1d3f6417d91c43eb59ea40c773e7b2b2619
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715696"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>設定全文檢索篩選背景程式啟動器的服務帳戶
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVers
   
 1.  在 [開始] 功能表上，指向 [所有程式]，展開 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server 2016 組態管理員]。  
   
-2.  在 [SQL Server 設定管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 [SQL 全文檢索篩選精靈啟動器 (執行個體名稱)]，然後按一下 [屬性]。  
+2.  在 [SQL Server 組態管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 **[SQL 全文檢索篩選背景程式啟動器 (** 執行個體名稱 **)]**，然後按一下 [屬性]。  
   
 3.  按一下對話方塊的 [登入] 索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所啟動之處理序的帳戶。  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Schema Object Access event class
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd7d793d96d3e274f9890880e3eb1e0c82d9ed0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9406faa0bb97019e2270fd0c75518d30b16e5af0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726496"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ ms.locfileid: "43079380"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 表示權限檢查成功，值為 0 表示該檢查失敗。|23|是|  
-|**TextData**|**ntext**|陳述式的 SQL 文字。|@shouldalert|是|  
+|**TextData**|**ntext**|陳述式的 SQL 文字。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

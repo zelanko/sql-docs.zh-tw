@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
@@ -15,12 +13,12 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 313180f9fb4565d38e1b38e3a2c78331d03f5f58
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 54e15ee24997c4b7ca56b70893cd613079374ec0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705186"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>設定叢集仲裁 NodeWeight 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

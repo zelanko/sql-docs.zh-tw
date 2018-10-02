@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717886"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
@@ -66,7 +63,7 @@ ms.locfileid: "40175137"
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        |@shouldalert|John|Doe|  
+        |1|John|Doe|  
         |2|Jane|Doe|  
   
     4.  將 [OLE DB 來源]  元件從 [SSIS 工具箱]  拖曳至 [資料流程設計師] 。  

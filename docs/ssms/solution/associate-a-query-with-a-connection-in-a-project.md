@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-solutions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22f5eb05640404a3f1da980f0b4f28f172fefc0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a08e42fc309bfc7cb49a5e333cd679021783be0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700946"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

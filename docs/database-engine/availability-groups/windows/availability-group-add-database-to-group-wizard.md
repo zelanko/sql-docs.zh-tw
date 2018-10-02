@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.adddatabasewizard.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e836fb404f71d1e2a37a7ab91353b4734aa50484
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 25bea0c614d55774207692ab275917d7ecdcab2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769284"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724246"
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>可用性群組 - 將資料庫新增至可用性群組精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

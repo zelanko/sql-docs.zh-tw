@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.categorygroupproperties.general.f1
@@ -18,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9192032176d81542d26df9465f80c323cd852b0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fe646114217d00fbdf18b6eb304c8826b8b949d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725966"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
   在報表中，運算式可用於協助您控制、組織和排序報表資料。 依預設，在您建立資料集與設計報表配置時，報表項目的屬性會依據資料集欄位、參數和 [報表資料] 窗格中出現的其他項目，自動設定為運算式。 您也可以將互動式排序按鈕加入至資料表或矩陣資料格，讓使用者以互動方式變更群組或群組內資料列的資料列排序順序。  

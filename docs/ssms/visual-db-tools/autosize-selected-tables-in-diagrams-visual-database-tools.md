@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic database diagram table sizing
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], autosizing objects
 - autosizing objects in database diagrams
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be12de5eadf1f6d144bb0a076222025190f74d8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95a89a3b7fe7a6f09f2a8ed26ab6e272826d439b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710666"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>自動調整圖表中所選資料表的大小 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

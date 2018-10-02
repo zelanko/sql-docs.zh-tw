@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021385 error
 ms.assetid: a2c0444f-d97b-4760-8905-3574791c2e26
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e93c9dc9f1374d6215f441f5430d0968870502f6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: aae90638be1a03b210564d73cb66519718478cce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719456"
 ---
 # <a name="mssqleng021385"></a>MSSQL_ENG021385
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

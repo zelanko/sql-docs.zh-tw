@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collection sets [SQL Server], stopping
 - collection sets [SQL Server], starting
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f412a00aa9d03951ced8cc9742eefa0e17538d7a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5669af5105e8d46f346d279b3be8027b7c22088d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145589"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700090"
 ---
 # <a name="start-or-stop-a-collection-set"></a>啟動或停止收集組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

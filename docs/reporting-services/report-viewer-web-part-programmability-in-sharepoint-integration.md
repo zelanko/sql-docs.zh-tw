@@ -4,19 +4,16 @@ ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db9ddd6867dea5e34be4d1cb54103418410cea65
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: eb208c17e426575ad4013d1ae923b8293afa0ae5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713006"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 整合中的報表檢視器 Web 組件可程式性
   報表檢視器網頁組件是伺服器控制項，這個控制項包含一組公用應用程式開發介面 (API)，可讓開發人員建立自訂 SharePoint 應用程式。 您可以建立自訂 Web 組件，利用 Web 組件連接提供報表路徑和參數給報表檢視器 Web 組件。 您也可以將 Web 組件內嵌在自訂 SharePoint Web 組件頁面中，並使用公用 API 來自訂該組件。  

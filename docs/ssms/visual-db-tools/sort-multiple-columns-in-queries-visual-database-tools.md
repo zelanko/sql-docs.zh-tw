@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple query columns
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb1ae881051d12466963414d112653e6b34b816e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5afeeaec91d6c7e2443360be67ffca88ef23df8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710216"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

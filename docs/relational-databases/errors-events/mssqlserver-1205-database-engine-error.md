@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 606e2f948dbbef82b07bba46184d07ef12f8c50f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c1c42e2e64a0ff43c34d4d928d75ae091702d7db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34318729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724597"
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

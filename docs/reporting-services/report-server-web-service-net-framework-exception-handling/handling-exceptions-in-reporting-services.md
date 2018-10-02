@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], exceptions
 - .NET Framework [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 65cd20ffca2b8f2915db43c2a0c114ba303594c0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b743287ad9056d32c55a7d83189cd7c98fcf9920
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723856"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>處理 Reporting Services 中的例外狀況
   無法完成 Reporting Services SOAP API 用戶端要求時，報表伺服器會傳回錯誤，而非呼叫的預期結果。 無法完成呼叫時，則會以 SOAP **Fault** XML 項目傳回報表伺服器 Web 服務的錯誤。 該錯誤的關鍵描述項目為 **detail** 項目，此項目會包含報表伺服器提供的所有錯誤資訊以及任何其他 Web 服務錯誤資訊。 報表伺服器錯誤碼是 **detail** 項目中的主要資訊。 您可以根據訊息與錯誤碼，決定要在應用程式中採取的下一個適當動作。 如需有關 SOAP 錯誤的詳細資訊，請參閱全球資訊網協會 (W3C) 網站，網址為 http://www.w3.org/TR/SOAP。  

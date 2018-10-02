@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], permissions
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d64737f0da6faabb2be218da19f2c04b4591d681
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d3e1ea3a9a813a5dcc9bf238ab2a7fafee84a3d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728762"
 ---
 # <a name="model-permissions-master-data-services"></a>模型權限 (Master Data Services)
 
@@ -34,7 +31,7 @@ ms.locfileid: "35330202"
 > [!NOTE]  
 >  如果使用者是模型管理員，則使用者介面的所有功能區域中都會顯示此模型。 否則，此模型只會顯示在 [總管] 功能區域中。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
-|權限|描述|  
+|權限|Description|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取成員、屬性、階層成員資格或集合成員資格。|  
 |**建立**|使用者可以建立成員，並在建立期間指派屬性值。|  

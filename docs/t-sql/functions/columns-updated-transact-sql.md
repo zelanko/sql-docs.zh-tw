@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLUMNS_UPDATED_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - column testing [SQL Server]
 - updated columns
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-caps.latest.revision: 53
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca83d32a720c74c22dc9fd7561feca9a15dc614d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787899"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720316"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

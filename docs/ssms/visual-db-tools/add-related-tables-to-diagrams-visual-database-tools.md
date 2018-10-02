@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
 - adding tables
 - related tables [SQL Server]
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e6a6eb148704c88f2df2e5fe00d83dab4e1d4ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9846e37e890f15fc6663d2539c8b21790eed0e0e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046755"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704986"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>將相關的資料表加入圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

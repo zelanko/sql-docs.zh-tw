@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/08/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7622d20cab1ec63e7c0d324d71676cfc9d851319
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b4478c599de236930b0222b31cad4c5c6d5e4fa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713126"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
 

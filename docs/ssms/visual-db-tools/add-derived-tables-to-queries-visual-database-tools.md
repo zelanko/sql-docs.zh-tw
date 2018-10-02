@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - table joins [SQL Server]
 - derived tables
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3442e8c3c7dc5b99f587f7856cb29f3a19aabe89
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4af6f1ff410395623c3857d347e0497d044b53eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715906"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>將衍生資料表加入查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

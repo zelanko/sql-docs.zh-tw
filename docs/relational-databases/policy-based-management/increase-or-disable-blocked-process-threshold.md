@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 71db8ef6-341b-4465-99db-5c63e48d4c7d
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6eb3e60b73f72eefbe9225f340ab57ba31ac3cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523ac3bfe8f1b9f96840cbfe5ca523bf0640cf79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717846"
 ---
 # <a name="increase-or-disable-blocked-process-threshold"></a>增加或停用 Blocked Process Threshold
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

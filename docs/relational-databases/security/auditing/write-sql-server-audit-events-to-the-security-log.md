@@ -5,9 +5,7 @@ ms.date: 09/21/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], Security Log
@@ -18,12 +16,12 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5b21bddd4c82c6265d77ad3b031c3d8636e0904f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723396"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

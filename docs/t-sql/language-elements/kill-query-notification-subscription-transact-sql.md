@@ -5,9 +5,7 @@ ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - KILL QUERY NOTIFICATION SUBSCRIPTION
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server query notifications], stopping
 - query notifications [SQL Server], subscriptions
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8128770c6da7518eace098b4704c05065b64a60
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 7ba34906f9ff4b2595644d16b2c13ea3b8a63269
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36254830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713156"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
   
  如果指定的訂閱識別碼不存在，陳述式便會產生錯誤。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  只有 **sysadmin** 固定伺服器角色的成員，才有執行這個陳述式的權限。  
   
 ## <a name="examples"></a>範例  

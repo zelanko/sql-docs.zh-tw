@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e822966687a1b17a67dafb3f0d634d604cda9fe8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 028f1776a41600146bd94114bfb54e9bd5f90420
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715506"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>原生編譯預存程序的移轉問題
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

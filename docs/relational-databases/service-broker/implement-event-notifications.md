@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: service-broker
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], target service
 - target service [SQL Server]
 - event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46be0ae46fff0af1ba926777e042312523500ad0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7eb36c8e5c92672132c07228bb265ad90d327b97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061676"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704510"
 ---
 # <a name="implement-event-notifications"></a>實作事件通知
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

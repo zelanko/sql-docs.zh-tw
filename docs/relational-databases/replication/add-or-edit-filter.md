@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c29de77be7dc0a36ce7311055fa081a3ca9a36d6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7e91f5bd925ec0a9aba9998f0c4dbdae4afa599e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719946"
 ---
 # <a name="add-or-edit-filter"></a>加入或編輯篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

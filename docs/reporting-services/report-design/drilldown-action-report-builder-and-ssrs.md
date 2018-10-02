@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10249"
@@ -39,12 +38,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da1b61cecbd54bac03fc023ab3c610a02e1b091e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8904fb5fc75ee169c8b442b89f87de6e62394b87
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727916"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>向下鑽研動作 (報表產生器及 SSRS)
 透過在文字方塊上提供加號和減號圖示，您就可以讓使用者以互動方式隱藏和顯示項目。 這稱為 *「向下鑽研」* (Drilldown) 動作。 對於資料表或矩陣，您可以顯示或隱藏靜態資料列和資料行，或者顯示或隱藏與群組相關聯的資料列和資料行。  

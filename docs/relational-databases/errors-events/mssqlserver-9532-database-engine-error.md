@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 9532 (Database Engine error)
 ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e779b0f514ed6892d345c2f72ecf37b8711257e3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: e14c046d646aedbf95a7c7649f6294fc76340994
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709346"
 ---
 # <a name="mssqlserver9532"></a>MSSQLSERVER_9532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

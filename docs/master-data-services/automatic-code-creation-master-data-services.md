@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e77e28f06858a2d8413a3355f226685d310a1407
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 24965436108df067d7bd4ea10b4ad1e71b9ce69e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727276"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自動建立代碼 (Master Data Services)
 

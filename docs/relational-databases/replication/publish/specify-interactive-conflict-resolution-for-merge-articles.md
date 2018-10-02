@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], interactive resolvers
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a20f9da610969a3fe96bdd6cd834a2185a94239
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 5c5153a9c3a21366ae83b1576b6d3c4e61725ff8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709056"
 ---
 # <a name="specify-interactive-conflict-resolution-for-merge-articles"></a>指定合併發行項的互動式衝突解決方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

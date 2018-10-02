@@ -5,9 +5,7 @@ ms.date: 08/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@CURSOR_ROWS'
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e7ea135967049f5ab6c09d35fdb52e07216ea57
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b22a70494e76f559edd461b566c81224503d8c2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707959"
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "37785319"
   
 ## <a name="return-value"></a>傳回值  
   
-|傳回值|描述|  
+|傳回值|Description|  
 |---|---|
 |-*m*|資料指標非同步地擴展。 傳回的值 (-*m*) 是目前在索引鍵集中的資料列數。|  
 |-1|資料指標是動態的。 由於動態資料指標會反映所有變更；因此，資料指標適用的資料列數會不斷改變。 資料指標不一定會擷取所有合格的資料列。|  

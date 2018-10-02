@@ -5,23 +5,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9a549eea881a23e62ab8e8a158a2c36c07955a3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 38cd77776070b6a7c493e68eaf42da49c79ba425
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728767"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>設定資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

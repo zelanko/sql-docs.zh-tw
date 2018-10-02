@@ -5,15 +5,14 @@ ms.author: maghan
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: reporting-services
 ms.topic: conceptual
 ms.date: 08/16/2018
-ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f897c332130ece43357869972ff406ea79a6c21d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725017"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 

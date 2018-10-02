@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49225c9ceb00b7398be7e14a99d915140491bac0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724216"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

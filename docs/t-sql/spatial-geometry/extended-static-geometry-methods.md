@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - Extended Static Geometry Methods [SQL Server]
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0dadf902763e48a94ba83c6aee1b465e0c0ec21e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b3e6e6b269a930ccc9460bf52d70b532573a730c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727657"
 ---
 # <a name="extended-static-geometry-methods"></a>擴充的靜態幾何方法
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

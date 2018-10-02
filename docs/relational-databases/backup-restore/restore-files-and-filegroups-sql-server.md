@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restorefilesandfilegrps.general.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 72cfa32d5ee40b83c439ff672230b42352f8ca58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ed0ab606ec5ff41719111f160d5afb30da534bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922693"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721786"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

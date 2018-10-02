@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6338a060ca3e5ab3f7e2f7a73b4a9a1fd9538c9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 40464a10cd58e870070636919f6f570efac97aa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725166"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +103,7 @@ ms.locfileid: "43102980"
   
  例如，以上圖為例，圖中顯示一個八邊形完全納入層級 1 方格的資料格 15。 在此圖中，已經鑲嵌資料格 15，將此八邊形分解成九個層級 2 的資料格。 這個圖假設每個物件的資料格限制為 9 以上 (含)。 但是，如果每個物件的資料格限制為 8 以下 (含)，將不會鑲嵌資料格 15，而且此物件只會計算該資料格 15。  
   
- 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是，[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT**=***n* 子句，該子句可讓您指定 1 和 8192 之間 (含) 每個物件的資料格限制。  
+ 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT**=**_n_ 子句，該子句可讓您指定 1 和 8192 之間 (含) 的每個物件的資料格限制。  
   
 > [!NOTE]  
 >  空間索引的 **cells_per_object** 設定可以在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視中看到。  
@@ -136,7 +132,7 @@ ms.locfileid: "43102980"
 >  您可以使用 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句來明確指定這個鑲嵌式配置。  
   
 ##### <a name="the-bounding-box"></a>週框方塊  
- 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 週框方塊是由四個座標 **(***x-min***,***y-min***)** 和 **(***x-max***,***y-max***)** 所定義，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
+ 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 週框方塊是由四個座標 **(**_x-min_**,**_y-min_**)** 和 **(**_x-max_**,**_y-max_**)** 所定義，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
   
 -   *x-min* 是週框方塊左下角的 X 座標。  
   
@@ -149,11 +145,11 @@ ms.locfileid: "43102980"
 > [!NOTE]  
 >  這些座標是由 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 BOUNDING_BOX 子句所指定。  
   
- **(***x-min***,***y-min***)** 和 **(***x-max***,***y-max***)** 座標可決定週框方塊的位置和維度。 週框方塊外面的空間會視為編號 0 的單一資料格。  
+ **(**_x-min_**,**_y-min_**)** 和 **(**_x-max_**,**_y-max_**)** 座標可決定週框方塊的位置和維度。 週框方塊外面的空間會視為編號 0 的單一資料格。  
   
  空間索引會分解週框方塊內的空間。 方格階層的層級 1 方格會填滿此週框方塊。 若要將幾何物件放在方格階層中，空間索引會將此物件的座標與週框方塊座標相比較。  
   
- 下圖顯示由週框方塊的 **(***x-min***,***y-min***)** 和 **(***x-max***,***y-max***)** 座標所定義的點。 方格階層的最上層會顯示為 4x4 方格。 為了說明起見，較低的層級會予以忽略。 週框方塊外面的空間是由零 (0) 所指示。 請注意，物件 'A' 有一部分延伸到方塊外面，而物件 'B' 則完全位於資料格 0 的方塊內。  
+ 下圖顯示由週框方塊的 **(**_x-min_**,**_y-min_**)** 和 **(**_x-max_**,**_y-max_**)** 座標所定義的點。 方格階層的最上層會顯示為 4x4 方格。 為了說明起見，較低的層級會予以忽略。 週框方塊外面的空間是由零 (0) 所指示。 請注意，物件 'A' 有一部分延伸到方塊外面，而物件 'B' 則完全位於資料格 0 的方塊內。  
   
  ![顯示座標和資料格 0 的週框方塊。](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "顯示座標和資料格 0 的週框方塊。")  
   

@@ -5,20 +5,18 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: d51961c8c06c0b7769ef8896b92ad1ad0633e0cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 48cdfcf18aee274d9017e8d25c44536f2ec51c76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712016"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

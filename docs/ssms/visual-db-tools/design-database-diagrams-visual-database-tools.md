@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2fa73a0d25934117a4ae8a199e665e36f1a229d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e4dcaf21e561275e6379745f47c4eabd789c3965
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711906"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>設計資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

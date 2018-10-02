@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 793a09253cc70565ae7ed10684ce191a468dd957
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 287e0861be1a3a037b1be776346073f956375b76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331512"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721386"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
 

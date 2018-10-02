@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-f1
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SQL Server Management Studio
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a43c92057429466cea26bc84afea26d7d1e4fce
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3acb06bf912f0c5f9195ad002c9aab8b721e60d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720146"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
