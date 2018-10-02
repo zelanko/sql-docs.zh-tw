@@ -6,20 +6,17 @@ ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 25d404552fe71cf79cda57a7d204a5c2263f8e2e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 343a06ea9ed68b77ebad6bb09b7b01d6989257c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854656"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) 相應放大主機
 Scale Out Master 透過 SSISDB 目錄和 Scale Out Master 服務來管理 Scale Out 系統。 
@@ -49,7 +46,7 @@ Scale Out Master 服務是一種 Windows 服務，負責與 Scale Out Worker 通
 您可以使用 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` 檔案來設定 Scale Out Master 服務。 更新設定檔之後，必須重新啟動服務。
 
 
-組態  |描述  |[預設值]  
+組態  |Description  |[預設值]  
 ---------|---------|---------
 PortNumber|用來與相應放大背景工作通訊的網路連接埠號碼。|8391         
 SSLCertThumbprint|用來保護與相應放大背景工作通訊的 SSL 憑證指紋。|在相應放大主機安裝期間指定的 SSL 憑證指紋         

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ed204382cf962e82fc6418a57343909515afaca
-ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
+ms.openlocfilehash: cff08e85cb8235567dd2ce7e8f8294f465892b47
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838866"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808286"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
@@ -110,7 +107,7 @@ ms.locfileid: "35409980"
 #### <a name="data-access-mode"></a>資料存取模式  
  選取將資料載入目的地的方法。 下表將顯示這些選項：  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |資料表名稱 - 批次|若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以使用下列選項：|  
 ||**資料表或檢視的名稱**：從清單中選取可用的資料表或檢視表。<br /><br /> 此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (\*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。<br /><br /> **批次大小**：輸入大量載入的批次大小。 這是當做批次載入的資料列數目。|  
@@ -164,7 +161,7 @@ ms.locfileid: "35409980"
 #### <a name="truncation"></a>截斷  
  選取 ODBC 目的地應該如何處理流程中的截斷：忽略失敗、重新導向資料列，或使元件失效。  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  檢視錯誤的描述。  
   
 #### <a name="set-this-value-to-selected-cells"></a>將這個值設定到選取的資料格  

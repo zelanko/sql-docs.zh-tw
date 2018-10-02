@@ -3,20 +3,18 @@ title: 如何參與編輯 SQL Server 文件集 | Microsoft Docs
 ms.date: 08/13/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 57b35b9edbfb257d327f310d526729b7a60215e2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ce7561130f6d8864dc36b6ab2760a9e5f555afc4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42773920"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773587"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 

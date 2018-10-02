@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 617477c76066d9711c79543ab28580add5740487
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 0489d3d1486cb447a16b9658a17c0e6f4d9f41f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825186"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +89,7 @@ ms.locfileid: "37355550"
   
  在 Oracle Universal Installer 中，您必須提供下列資訊：  
   
-|[資訊]|描述|  
+|[資訊]|Description|  
 |-----------------|-----------------|  
 |Oracle Home|這是到 Oracle 軟體之安裝目錄的路徑。 接受預設路徑 (C:\oracle\ora90 或類似路徑) 或輸入其他路徑。 如需有關 Oracle Home 的詳細資訊，請參閱本主題後面的「Oracle Home 的注意事項」。|  
 |Oracle Home 名稱|Oracle Home 路徑的別名。|  
@@ -101,7 +97,7 @@ ms.locfileid: "37355550"
   
  Oracle Universal Installer 完成之後，請使用 Net Configuration Assistant 設定網路連接性。 您必須提供四項資訊來設定網路連接性。 Oracle 資料庫管理員會在設定資料庫與接聽程式時設定網路組態，如果您沒有此一資訊，管理員應該能夠提供。 您必須執行下列工作：  
   
-|動作|描述|  
+|動作|Description|  
 |------------|-----------------|  
 |識別資料庫|有兩種方法可以識別資料庫。 第一種方法使用 Oracle 系統識別碼 (SID)，每個 Oracle 版本都有。 第二種方法使用服務名稱，從 Oracle 8.0 版開始提供。 這兩種方法都使用在建立資料庫時設定的值，重要的是，用戶端網路組態必須使用相同於管理員在設定資料庫接聽程式時，所使用的命名方法。|  
 |識別資料庫的網路別名|您必須指定一個用於存取 Oracle 資料庫的網路別名。 在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端將 Oracle 資料庫視為「發行者」時也要提供此別名。 網路別名實質上是指向在建立資料庫時設定之遠端 SID 或服務名稱的指標；不同的 Oracle 版本與產品中所使用的稱呼各有不同，包括網路服務名稱 (Net Service Name) 和 TNS 別名 (TNS Alias)。 您登入時，SQL*Plus 會提示以「Host String」參數輸入這個別名。|  

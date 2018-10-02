@@ -4,16 +4,15 @@ ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f39da2fe550309e73f8cdf0a32336fd3669cfa08
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2cac4c0df7f995baa8445b639237c61e26a98856
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271546"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837946"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 報表伺服器
 

@@ -3,17 +3,16 @@ title: 設定 Reporting Services 服務應用程式的電子郵件 | Microsoft D
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c347a5aa80734ee5fdddb39db63911ed39186aa9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b5d4e324ba9911b78bab9a94e38a479d1cad5c27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812516"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>設定 Reporting Services 服務應用程式的電子郵件
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], publishing model
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], about publications
 - Distributors [SQL Server replication]
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd9860eba94b2da555859f7845c28446c943f5c3
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 5b191c87206ba16a51243a71b0aeea3df1f08590
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845429"
 ---
 # <a name="replication-publishing-model-overview"></a>複寫發行模型概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

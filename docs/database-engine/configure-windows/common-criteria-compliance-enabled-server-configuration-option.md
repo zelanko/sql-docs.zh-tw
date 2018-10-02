@@ -5,7 +5,6 @@ ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.openlocfilehash: 5f259daef42200f05fe3bc495559d1ed4292638f
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 13ebffbaf9d80374f735f3cae147df74c2643f20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40427278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743176"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>啟用通用條件合規性伺服器設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

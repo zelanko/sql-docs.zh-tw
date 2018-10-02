@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c6e9a137dfb3db4cc5a4a5611d96b2902e42a21a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d33917267f50b12b0088c62ae56ab8024e40e917
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753956"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>從 SQL Server 2005 升級嗎？
 

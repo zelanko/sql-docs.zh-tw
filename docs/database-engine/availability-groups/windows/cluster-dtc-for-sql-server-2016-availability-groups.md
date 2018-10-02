@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: 3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 57cf381aa397a1edd2c86ce971f6711c2151090d
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509117"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703726"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>針對 SQL Server 2016 可用性群組叢集化 DTC
 

@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cursor Manager by Type object
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bcf783c6ff68a2626b823d5dc5d077124f06b2bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 531bb0ebc4520bb358116f2bd4c47d9ecec58ff9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847076"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server 的 Cursor Manager by Type 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32950483"
   
  下表說明 SQL Server **Cursor Manager by Type** 計數器。  
   
-|Cursor Manager by Type 計數器|描述|  
+|Cursor Manager by Type 計數器|Description|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|使用中的資料指標數目。|  
 |**Cache Hit Ratio**|快取叫用數和查閱數之間的比率|  
@@ -46,7 +42,7 @@ ms.locfileid: "32950483"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|Cursor Manager 執行個體|描述|  
+|Cursor Manager 執行個體|Description|  
 |-----------------------------|-----------------|  
 |**_Total**|所有資料指標的相關資訊。|  
 |**API Cursor**|僅限 API 資料指標資訊。|  

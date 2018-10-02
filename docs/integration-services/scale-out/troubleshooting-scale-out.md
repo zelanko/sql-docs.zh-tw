@@ -6,20 +6,17 @@ ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 91063b4895ee46c5bd1746348b37d6564a0d4b10
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732488"
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
 

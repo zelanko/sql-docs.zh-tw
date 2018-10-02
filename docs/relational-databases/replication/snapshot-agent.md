@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.snapshotagent.f1
 helpviewer_keywords:
 - Snapshot Agent dialog box
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97b301042abac0163b237f4dd4ecc41d06969c69
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ff2ba1d74d8ffa722dfecad9dc0ed588a2902459
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760846"
 ---
 # <a name="snapshot-agent"></a>快照集代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

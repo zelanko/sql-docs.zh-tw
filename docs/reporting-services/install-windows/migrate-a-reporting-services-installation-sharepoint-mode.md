@@ -3,17 +3,16 @@ title: 移轉 Reporting Services 安裝 (SharePoint 模式) | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4092c9f0b91a8d2efb241efa6fc3ddacb13aea9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5710e60a5fec0577c3b36cc04c3d87d68f2ff80a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826836"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>移轉 Reporting Services 安裝 (SharePoint 模式)
 

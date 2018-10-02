@@ -5,22 +5,19 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d3b5a419fc1b813359cf37e52bc072ba2146331f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 56b4bb8fe7bad21e19814ab3afc0f91d26a24689
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330382"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840216"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>總管功能區域 (主資料管理員)
 

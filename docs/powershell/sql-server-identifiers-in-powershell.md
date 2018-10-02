@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: scripting
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - identifiers [SQL Server], PowerShell
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2df709e52d78a9d1b6401bfff0dc6e8ecf65148e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 654bd3d29de94401fc95d1a5d4d580f299b95297
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824330"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell 中的 SQL Server 識別碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

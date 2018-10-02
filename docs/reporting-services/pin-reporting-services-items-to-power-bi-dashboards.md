@@ -4,7 +4,6 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - pbi
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffcd2000c54c25abc7ab417a6c8cb9846ccaabee
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710548"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>將 Reporting Services 項目釘選到 Power BI 儀表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 讓使用者能夠將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表項目從報表檢視器工具列固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板，當成新的圖格。   若要固定，您的系統管理員必須先整合報表伺服器和 Azure Active Directory 及 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。  

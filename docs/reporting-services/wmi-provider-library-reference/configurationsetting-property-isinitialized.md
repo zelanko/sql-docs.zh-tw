@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - IsInitialized
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ece657a606b5aad1d1b00fb8058e2870922fefd
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bed6b8366ecd452cd3c65fcb06e16e108adf7932
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855586"
 ---
 # <a name="configurationsetting-property---isinitialized"></a>ConfigurationSetting 屬性 - IsInitialized
   指出報表伺服器執行個體是否已初始化。 唯讀。  

@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d56bc57e8a4f675430c4abe6ef099a0ec204d0dc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 76172811a5c6807b31c8c2b660a0620976fab1ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818816"
 ---
 # <a name="report-builder-functions---count-function"></a>報表產生器函式 - Count 函式
   傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。  

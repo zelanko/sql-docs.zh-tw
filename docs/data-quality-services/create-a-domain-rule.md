@@ -5,25 +5,22 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a90d530044eb24193f899f0926b392bec8dfe92
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d4a75dabb3933a19302e03bb004c6caf88758e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818336"
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
 
@@ -117,7 +114,7 @@ ms.locfileid: "35310127"
   
  您可以在建立定義域規則時選擇其他替代方式。 例如，若要驗證值的開頭是否為 A、B 或 C 字母，您可以建立包含複雜條件的簡單規則 (例如包含縱線字元的規則運算式)，也可以建立包含許多簡單條件的複雜規則。 第一項規則的範例為「值包含規則運算式 (^A|^B|^C)」。 第二項規則的範例為「‘值開頭為 A’ OR ‘值開頭為 B’ OR ‘值開頭為 C’」。  
   
-|條件|描述|範例|  
+|條件|Description|範例|  
 |---------------|-----------------|-------------|  
 |長度等於|只有由運算元指定之字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1<br /><br /> 無效值：AA|  
 |長度大於或等於|只有由運算元指定之字元數或更多字元數所組成的值才有效。|範例運算元：3<br /><br /> 有效值：BB1、BBAA<br /><br /> 無效值：AA|  

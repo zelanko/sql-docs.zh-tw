@@ -4,22 +4,19 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - methods [Reporting Services], report parameters
 - parameters [Reporting Services], methods
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ca7f5e64a7d0c230f4238586e9f19b537280c59
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1ea7da5f30d30cb587948d848836cc0b83fd8b3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802866"
 ---
 # <a name="report-parameters-methods"></a>報表參數方法
   您可以使用這些方法來設定和擷取報表的參數。  

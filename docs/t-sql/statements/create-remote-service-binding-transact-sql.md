@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE REMOTE SERVICE BINDING
@@ -37,16 +35,15 @@ helpviewer_keywords:
 - conversation security [Service Broker]
 - remote service bindings [Service Broker], creating
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd14b0c623ef89d872eb222f5546b4d06afaf41d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 53b43fece12144b60a4d6b0cfcd0918997e55613
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783639"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710506"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +88,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  當使用者擁有多項憑證時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會從目前有效的憑證中，選取到期日最晚的憑證，並將它標示為 AVAILABLE FOR BEGIN_DIALOG。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  建立遠端服務繫結的權限預設為 USER 子句中所指定的使用者、**db_owner** 固定資料庫角色的成員、**db_ddladmin** 固定資料庫角色的成員，以及 **sysadmin** 固定伺服器角色的成員。  
   
  執行 CREATE REMOTE SERVICE BINDING 陳述式的使用者必須有陳述式指定的主體之模擬權限。  

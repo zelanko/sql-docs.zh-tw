@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10134"
@@ -14,12 +13,12 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e2071dc483285dca2135ba92c296aed881131a4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ccfc1e3c3c455a191d6a4a76c6e44a8df0289aee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815476"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文字方塊 (報表產生器及 SSRS)
   當您考慮文字方塊時，可能會考慮包含介面 (如在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint 內) 文字的獨立方塊。 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，有些文字方塊就像那樣，而且這些文字方塊可以根據運算式，顯示標題、描述與標籤或動態文字的靜態文字。 但是，資料表或矩陣 (Tablix 資料區) 中的每個資料格也都包含一個文字方塊，您可以使用和報表中之獨立文字方塊的相同方式進行格式化。  

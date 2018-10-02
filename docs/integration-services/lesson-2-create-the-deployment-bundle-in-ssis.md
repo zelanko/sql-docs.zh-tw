@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf50c3ec8a31aab68cc6087b5840a947f764f763
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a7513169dbff655d185c130b320075f0e2f2d855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715136"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>第 2 課：在 SSIS 中建立部署配套
 在 [第 1 課：準備建立部署配套](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)中，您建立了名稱為「部署教學課程」的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案、在專案中加入了套件和支援檔案，並且已在套件中實作組態。  
@@ -35,7 +30,7 @@ ms.locfileid: "35332242"
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  
   
--   [步驟 1：建立部署公用程式](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [步驟 1：建置部署公用程式](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
 -   [步驟 2：確認部署配套](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   

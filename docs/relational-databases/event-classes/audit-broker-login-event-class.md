@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 741b49223f1727f06808e387f1f6b0f6ec961165
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 409e35e1f3f331eac121fea0588814a62bac6144
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802306"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ ms.locfileid: "43085020"
   
 |ID|子類別|Description|  
 |--------|--------------|-----------------|  
-|@shouldalert|Login Success|Login Success 事件是用以報告已成功完成相鄰的 Broker 登入處理序。|  
+|1|Login Success|Login Success 事件是用以報告已成功完成相鄰的 Broker 登入處理序。|  
 |2|Login Protocol Error|Login Protocol Error 事件是用以報告 Broker 所收到的訊息格式正確，但對於登入處理序目前的狀態無效。 此訊息可能已遺失或未按照順序送出。|  
 |3|Message Format Error|Message Format Error 事件是用以報告 Broker 所收到訊息與預期的格式不符。 該訊息可能已損毀，或是 SQL Server 以外的程式可能有傳送訊息給 Service Broker 所使用的通訊埠。|  
 |4|Negotiate Failure|Negotiate Failure 事件是用以報告本機 Broker 與遠端 Broker 支援驗證的互斥層級。|  

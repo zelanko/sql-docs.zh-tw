@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-caps.latest.revision: 3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 748a0ca7d58da911b8144ae56f48d1bdccc8d484
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 4f691fa89bf3d6db014542088fdd127e344a8346
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690696"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>使用 DTA 建議的效能改善
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

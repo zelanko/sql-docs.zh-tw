@@ -4,20 +4,18 @@ author: alazad-msft
 ms.author: alazad
 manager: craigg
 ms.technology: polybase
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: na
 ms.devlang: ''
 ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: c59f23da8c18958d5ddc53a4010358c592a43479
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 515a98fba15d6531ce106d2c47bb0a62d1a84572
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847226"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 

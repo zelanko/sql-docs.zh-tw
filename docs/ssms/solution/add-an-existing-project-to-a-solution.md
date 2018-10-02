@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.addexistingproject
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], project additions
 - projects [SQL Server Management Studio], adding
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8452554b06cfb63e140c89db706ca856e2be7f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 786ac732e4e2dafed7275d477d5cc2552542400b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759616"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

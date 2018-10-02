@@ -5,22 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e9407e6c678945f6d4f483c4babbe4d4ce37cb0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798042"
 ---
 # <a name="filter-operators-master-data-services"></a>篩選運算子 (Master Data Services)
 
@@ -33,7 +30,7 @@ ms.locfileid: "35402610"
   
 ## <a name="filter-operators"></a>篩選運算子  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |**等於**|傳回與指定準則完全相同的屬性值。 例如，若要以 **Mountain-100**篩選，必須輸入 **Mountain-100**。|  
 |**不等於**|傳回與指定準則不是完全相同的屬性值。 篩選準則必須與您要排除於結果之外的屬性值完全相同。 例如，若要排除與 **Mountain-100**相符的結果，必須輸入 **Mountain-100**。<br /><br /> <br /><br /> 注意：當您針對某個屬性套用具有 “Is not equal” 子句的篩選條件時，其屬性為 NULL 的成員將會通過篩選條件，並在資料庫設定中 SET ANSI_NULLS 設為 ON 時傳回。 若要停止此行為，請在資料庫設定中，將 SET ANSI_NULLS 變成 OFF。 當 SET ANSI_NULLS 設定為 OFF 時，如果資料值為 NULL，所有資料則針對 null 值所做的比較都會評估為 TRUE，且結果是成員不會通過 “Is not equal” 子句。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  

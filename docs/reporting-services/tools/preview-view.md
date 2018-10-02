@@ -4,7 +4,6 @@ ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.previewview.f1
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ca0aa6329a06fbcf3a079c61c7d61da6b8d316c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4386fef770eb741b55df5740651cec1bd64ef048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854276"
 ---
 # <a name="preview-view"></a>預覽檢視
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表設計師中，使用 [預覽] 檢視可顯示轉譯的報表。 在預覽報表時，報表設計師會在本機執行報表，然後顯示在 [預覽] 檢視中。 在預覽模式中，會完整處理報表。 如果報表中有複雜的查詢或大量的資料，則在第一次進行檢視時，可能需要幾分鐘才能完成預覽。 若要查看只會影響報表格式的後續變更，則預覽會使用快取的資料。

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e06181582c7a08a7165f7e8545a170b5eec27310
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 35e3b5d32676526f696d8b95b6894c8edb411ead
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754538"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +43,9 @@ ms.locfileid: "34323449"
 > [!NOTE]  
 > 信號緩衝區是一個內部元件，不會進行完整記錄，也並非供客戶之用。 當您連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客戶支援時，信號緩衝區中的訊息將提供有用協助。 若要檢視信號緩衝區，請查詢 sys.dm_os_ring_buffers 動態管理檢視。  
   
-|State|描述|  
+|State|Description|  
 |---------|---------------|  
-|@shouldalert|內建的 encryptbykey() 函式中使用 RC4 金鑰。 內建函數傳回 NULL。 此訊息僅會顯示於信號緩衝區中。|  
+|1|內建的 encryptbykey() 函式中使用 RC4 金鑰。 內建函數傳回 NULL。 此訊息僅會顯示於信號緩衝區中。|  
 |2|內建的 decryptbykey() 函式中使用 RC4 金鑰。 此訊息僅會顯示於信號緩衝區中。|  
 |3|已被取代的 RC4 金鑰正由對稱金鑰加密中。 使用者可看見，也會顯示於信號緩衝區中。 已被取代的 RC4 對稱金鑰不能改變相容性層級為 110。 嘗試使用非 RC4 金鑰進行加密作業。 請視需要將回溯相容性層級設定為 90 或 100。|  
 |4|非 RC4 金鑰正由已被取代的 RC4 對稱金鑰加密中。 使用者可看見，也會顯示於信號緩衝區中。 將應用程式修改為使用非 RC4 對稱金鑰，或將回溯相容性層級設定為 90 或 100。|  

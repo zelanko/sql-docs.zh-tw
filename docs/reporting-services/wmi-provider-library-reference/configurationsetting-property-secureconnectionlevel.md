@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SecureConnectionLevel
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d9132af7b33ff04fb17d8e74dd4edab06c1e0b3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 42beaf5446038bfaa0faf1b8e95a4eb5fc6d16b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727896"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 屬性 - SecureConnectionLevel
   傳回 RSReportServer.config 檔案中指定的安全連接層級。 唯讀。  

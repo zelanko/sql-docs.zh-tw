@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 14d3ac3a941f9d0bd23931673255083b1e113979
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7403564eabb8f7e5ff6c26bdce57caefaefa2cc2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948223"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830156"
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>第 8 課： 從記錄備份還原為新的資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e67b8ad7112be79d34a1bfa790d5e05fde67377b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840986"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.locfileid: "40410312"
   
  若要在伺服器執行個體上啟用資料庫主要金鑰的自動解密，就要使用服務主要金鑰來加密此金鑰的副本。 這個加密的副本會同時存放在資料庫和 **master**中。 通常，每當主要金鑰變更時，儲存在 **master** 中的副本便會以無訊息模式更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先嘗試使用執行個體的服務主要金鑰來解密資料庫主要金鑰。 如果該解密失敗， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從認證存放區中搜尋主要金鑰認證，這些主要金鑰認證具有與它需要其主要金鑰之資料庫相同的家族 GUID。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試利用每個相符的認證來將資料庫主要金鑰解密，直到解密成功或沒有其他認證為止。 未以服務主要金鑰加密的主要金鑰必須使用 OPEN MASTER KEY 陳述式和密碼來開啟。  
   
- 當加密的資料庫複製、還原或附加至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，以服務主要金鑰加密的資料庫主要金鑰副本並不會存放在目的地伺服器執行個體的 **master** 中。 您必須在目的地伺服器執行個體上，開啟資料庫的主要金鑰。 若要開啟主要金鑰，請執行下列陳述式：OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**。 建議您接著執行下列陳述式來啟用資料庫主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 這個 ALTER MASTER KEY 陳述式會將以服務主要金鑰加密的資料庫主要金鑰副本提供給伺服器執行個體。 如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ 當加密的資料庫複製、還原或附加至新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時，以服務主要金鑰加密的資料庫主要金鑰副本並不會存放在目的地伺服器執行個體的 **master** 中。 您必須在目的地伺服器執行個體上，開啟資料庫的主要金鑰。 若要開啟主要金鑰，請執行下列陳述式：OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_密碼_**'**。 建議您接著執行下列陳述式來啟用資料庫主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 這個 ALTER MASTER KEY 陳述式會將以服務主要金鑰加密的資料庫主要金鑰副本提供給伺服器執行個體。 如需詳細資訊，請參閱 [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
  如需如何啟用鏡像資料庫之資料庫主要金鑰的自動解密相關資訊，請參閱[設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   

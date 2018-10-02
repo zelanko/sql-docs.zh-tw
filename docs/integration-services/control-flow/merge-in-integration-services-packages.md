@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45d8c2a102fe55607e89456a3c5bdec741367194
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856106"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   目前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之「執行 SQL」工作中的 SQL 陳述式可能會包含 MERGE 陳述式。 這個 MERGE 陳述式可讓您在單一陳述式中完成多項 INSERT、UPDATE 及 DELETE 作業。  

@@ -3,26 +3,23 @@ title: 安裝容錯移轉叢集之前 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 141
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 572ccd5abbfc5cae54364a13af20e0851412e38a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1d156013805b9ab681af0b4a076932365cd51005
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729126"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

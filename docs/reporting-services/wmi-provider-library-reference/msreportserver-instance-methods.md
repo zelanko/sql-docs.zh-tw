@@ -4,7 +4,6 @@ ms.date: 06/09/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - MSReportServer_Instance Methods
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6bbc290c79c86d8b1c76d2e6fe3aab86fafa5abb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7328f126419cead51a1a5aee4517e9e8b61474c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810438"
 ---
 # <a name="msreportserverinstance-methods"></a>MSReportServer_Instance 方法
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

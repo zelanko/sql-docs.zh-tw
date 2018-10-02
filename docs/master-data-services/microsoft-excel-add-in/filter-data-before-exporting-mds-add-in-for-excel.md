@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 110771dc83b9c2e902738c2a9ce10bcfb118428b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cc58f0809f830363586390b20da29603fd1b2bcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853266"
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>在匯出之前篩選資料 (適用於 Excel 的 MDS 增益集)
 

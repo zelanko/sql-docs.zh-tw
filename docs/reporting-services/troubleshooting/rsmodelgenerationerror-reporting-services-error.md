@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - rsModelGenerationError
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47d9432f9a2032119a85e9fd70203ef132bc503d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9a8c2dc17bbb6599acbb363d7d8f8b9c51bc061a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707676"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services 錯誤
     

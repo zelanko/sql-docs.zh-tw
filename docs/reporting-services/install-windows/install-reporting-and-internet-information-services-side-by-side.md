@@ -3,19 +3,18 @@ title: 並存安裝 Reporting Services 和 Internet Information Services | Micro
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc6ad2402df5b8c95439ada3a5554fbdc88f9600
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f28687ef3d4faa4feb10aac78bed8c1ee28bed85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743566"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>並存安裝 Reporting Services 和 Internet Information Services
 

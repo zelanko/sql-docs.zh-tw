@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726266"
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
@@ -35,7 +32,7 @@ ms.locfileid: "35331632"
 ## <a name="system-variables-for-packages"></a>封裝的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為封裝提供的系統變數。  
   
-|系統變數|資料類型|描述|  
+|系統變數|資料類型|Description|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|[Windows 事件] 物件的控制代碼，可以讓工作發出信號以指出該工作應該停止執行。|  
 |**ContainerStartTime**|DateTime|容器的開始時間。|  
@@ -63,14 +60,14 @@ ms.locfileid: "35331632"
 ## <a name="system-variables-for-containers"></a>容器的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為 For 迴圈、Foreach 迴圈及時序容器提供的系統變數。  
   
-|系統變數|資料類型|描述|容器|  
+|系統變數|資料類型|Description|容器|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|容器使用的地區設定。|For 迴圈容器<br /><br /> Foreach 迴圈容器<br /><br /> 時序容器|  
   
 ## <a name="system-variables-for-tasks"></a>工作的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為工作提供的系統變數。  
   
-|系統變數|資料類型|描述|  
+|系統變數|資料類型|Description|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|工作的名稱。|  
 |**LocaleId**|Int32|工作使用的地區設定。|  
@@ -81,7 +78,7 @@ ms.locfileid: "35331632"
 ## <a name="system-variables-for-event-handlers"></a>事件處理常式的系統變數  
  下表描述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為事件處理常式提供的系統變數。 並非所有變數都可用於所有事件處理常式。  
   
-|系統變數|資料類型|描述|事件處理常式|  
+|系統變數|資料類型|Description|事件處理常式|  
 |---------------------|---------------|-----------------|-------------------|  
 |**取消**|布林|指示當發生錯誤、警告或查詢取消時，事件處理常式是否停止執行。|OnError 事件處理常式<br /><br /> OnWarning 事件處理常式<br /><br /> OnQueryCancel 事件處理常式|  
 |**ErrorCode**|Int32|錯誤識別碼。|OnError 事件處理常式<br /><br /> OnInformation 事件處理常式<br /><br /> OnWarning 事件處理常式|  

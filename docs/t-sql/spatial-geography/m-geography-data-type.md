@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - M (geography Data Type)
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - M method
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad5e310f90b1ced6956cbbcef2d057ba3a4e0e8
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 9be06ef22018256fd0df0840af055cdfacd04ee6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741186"
 ---
 # <a name="m-geography-data-type"></a>M (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

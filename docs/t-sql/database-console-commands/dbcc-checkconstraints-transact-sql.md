@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC CHECKCONSTRAINTS
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a274fea3b1171774def99daea9248ca96cd4c365
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759638"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,13 +106,13 @@ DBCC CHECKCONSTRAINTS 會檢查 FOREIGN KEY 和 CHECK 條件約束的完整性�
 ## <a name="result-sets"></a>結果集  
 DBCC CHECKCONSTRAINTS 會傳回含有下列資料行的資料列集。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |資料表名稱|**varchar**|資料表的名稱。|  
 |Constraint Name|**varchar**|違反的條件約束名稱。|  
 |位置|**varchar**|用來識別違反條件約束的一個或多個資料列的資料行值指派。<br /><br /> 在查詢違反條件約束的資料列之 SELECT 陳述式的 WHERE 子句中，可以使用這個資料行中的值。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  

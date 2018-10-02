@@ -5,9 +5,7 @@ ms.date: 02/27/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE SCOPED CREDENTIAL
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - DROP DATABASE SCOPED CREDENTIAL statement
 - credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ae5fceaf5b5eca88dfc147f03a8beeec5cd93c22
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f1f95a30377feb928fb84bde2a618948e004763a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970941"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711746"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

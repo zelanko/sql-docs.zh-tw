@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7935d6f46297fd1d7b6ffe61a737b5852c9ac815
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 12229b018a6b7b2e7908d7d77091ce5caef5fb5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800806"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
   SAP BW 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的目的地元件。 因此，SAP BW 目的地會將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中資料流程的資料載入 SAP Netweaver BW 版本 7 系統中。  

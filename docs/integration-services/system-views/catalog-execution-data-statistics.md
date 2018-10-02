@@ -5,28 +5,25 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45085c7ed2a5a2915e6ac7c6a96c952910698dac
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f413b5d7d5cb3480adfa8ee37b8fd4af520d6a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721346"
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   每當資料流程元件傳送資料至特定封裝執行的下游元件，此檢視就會顯示一個資料列。 此檢視中的資訊可用來計算元件的資料輸送量。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|資料的唯一識別碼 (ID)。|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
@@ -48,7 +45,7 @@ ms.locfileid: "35329002"
   
 -   若要檢視指定套件執行的這項資料，請將記錄層級設為**詳細資訊**。 如需詳細資訊，請參閱 [在 SSIS 伺服器上啟用封裝執行的記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   執行的執行個體之 READ 權限  

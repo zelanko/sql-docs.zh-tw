@@ -5,31 +5,28 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db9244b176b36bb9d77d5cfb25312fbb40f7e549
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b70f7bc5680c297572380a273ad2cff35691ffe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729876"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中封裝的執行執行個體。 以 [封裝執行工作] 執行的封裝會使用與父封裝的相同執行執行個體來執行。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|執行執行個體的唯一識別碼 (ID)。|  
 |folder_name|**sysname(nvarchar(128))**|包含專案之資料夾的名稱。|  
@@ -65,7 +62,7 @@ ms.locfileid: "35410780"
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個執行之執行個體的資料列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   執行的執行個體之 READ 權限  

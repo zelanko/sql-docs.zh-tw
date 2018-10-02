@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 298bfd7fba08743ee7477588afe7d2cdc1b0531b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1f89356f45f2b67baab231a357c8b7fbf32c4f41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708486"
 ---
 # <a name="report-builder-functions---last-function"></a>報表產生器函式 - Last 函式
   傳回所指定運算式給定範圍中的最後一個值。  

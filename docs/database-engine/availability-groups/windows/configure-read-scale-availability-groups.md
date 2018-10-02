@@ -8,15 +8,13 @@ ms.reviewer: ''
 ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
-ms.openlocfilehash: 926e97d7aa6026946235d7abebdd5d3fd7023891
-ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
+ms.openlocfilehash: 334b594e6ad83af65f6b6536dd8157d421767b52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2018
-ms.locfileid: "35513003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757096"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-windows"></a>設定 SQL Server 可用性群組供 Windows 上的讀取縮放使用
 

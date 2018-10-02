@@ -5,9 +5,7 @@ ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ASSEMBLY_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb8f59bca89bccd40f598bf5788ef3201145e323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805576"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -129,7 +126,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  此選項在自主資料庫或 Azure SQL Database 中無法使用。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  ALTER ASSEMBLY 不會中斷正在修改的組件中，目前正在執行程式碼的執行中工作階段。 目前工作階段是利用組件的未修改位元，來完成執行作業。  
   
  如果指定了 FROM 子句，ALTER ASSEMBLY 便會以所提供的模組最新備份來更新組件。 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，可能已經針對該組件定義了 CLR 函數、預存程序、觸發程序、資料類型和使用者定義彙總函式，因此 ALTER ASSEMBLY 陳述式會將它們重新繫結到組件的最新實作中。 若要重新繫結，則對應到 CLR 函數、預存程序和觸發程序的方法，必須仍以相同的簽章留在修改後的組件中。 實作 CLR 使用者自訂類型和使用者定義彙總函式的類別，仍然必須滿足身為使用者自訂類型或彙總函式的需求。  
@@ -171,7 +168,7 @@ ALTER ASSEMBLY assembly_name
   
  如果執行 ALTER ASSEMBLY 時，沒有 UNCHECKED 資料子句，則會進行檢查，驗證新組件版本沒有影響資料表中現有的資料。 此舉可能會影響效能，這一點要看必須檢查的資料量而定。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  需要組件的 ALTER 權限。 其他需求如下：  
   
 -   若要變更現有權限集合為 EXTERNAL_ACCESS 的組件，則需要伺服器的 **EXTERNAL ACCESS ASSEMBLY** 權限。  

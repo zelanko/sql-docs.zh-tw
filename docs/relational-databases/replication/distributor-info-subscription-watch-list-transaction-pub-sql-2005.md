@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.Distributor.SubscriptionSummary.tran.f1
 ms.assetid: f569444d-c53f-4a22-bf4f-fff450c092de
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fbe098caaeed8f9ad5173a2925893eeee54b369
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 5834c322e1eeb80a307ea9515ff084d37a30ed2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696436"
 ---
 # <a name="distributor-info-subscription-watch-list-transaction-pub-sql-2005"></a>散發者資訊、訂閱監看清單 (交易式發行集，SQL 2005+)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE TRIGGER
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 140
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fb429009395a190380f2200dba7ccd3f6cda4c27
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719636"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "43240266"
  DDL 觸發程序會根據各種資料定義語言 (DDL) 事件的不同而執行。 這些事件主要是對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE、ALTER 和 DROP 陳述式，以及執行類似 DDL 作業的特定系統預存程序。 登入觸發程序會引發以回應在建立使用者工作階段時引發的 LOGON 事件。 您可以直接從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式建立觸發程序，也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 所建立的組件方法來建立觸發程序，再將其上傳到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許針對任何特定陳述式建立多個觸發程序。  
   
 > [!IMPORTANT]  
->  觸發程序內的惡意程式碼可能在擴大的權限下執行。 如需如何降低此威脅的詳細資訊，請參閱[管理觸發程序安全性](../../relational-databases/triggers/manage-trigger-security.md)。  
+>  觸發程序內的惡意程式碼可能在擴大的權限下執行。 如需如何降低這項威脅的詳細資訊，請參閱[管理觸發程序安全性](../../relational-databases/triggers/manage-trigger-security.md)。  
   
 > [!NOTE]  
 >  本主題將討論如何將 .NET Framework CLR 整合至 SQL Server。 CLR 整合不適用於 Azure SQL Database。  
@@ -372,7 +369,7 @@ RETURN;
 ### <a name="returning-results"></a>傳回結果  
  SQL Server 的未來版本將移除從觸發程序傳回結果的功能。 傳回結果集的觸發程序可能會導致非專用的應用程式發生非預期的行為。 請在新的開發工作中避免從觸發程序傳回結果集，並計畫修改目前如此運作的應用程式。 若要避免觸發程序傳回結果集，請將[不允許來自觸發程序的結果選項](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md)設為 1。  
   
- 登入觸發程序不允許傳回結果集，而且您無法設定此行為。 如果登入觸發程序產生結果集，此觸發程序將無法執行，而引發觸發程序的登入嘗試將被拒絕。  
+ 登入觸發程序不允許傳回結果集，而且您無法設定這項行為。 如果登入觸發程序產生結果集，此觸發程序將無法執行，而引發觸發程序的登入嘗試將被拒絕。  
   
 ### <a name="multiple-triggers"></a>多重觸發程序  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許每個 DML、DDL 或 LOGON 事件各建立多個觸發程序。 例如，如果針對已有 UPDATE 觸發程序的資料表來執行 CREATE TRIGGER FOR UPDATE，便會建立其他更新觸發程序。 在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，每份資料表的每個 INSERT、UPDATE 或 DELETE 資料修改事件都只能有一個觸發程序。  
@@ -400,14 +397,14 @@ RETURN;
  如果有任何觸發程序執行 ROLLBACK TRANSACTION，不論巢狀層級為何，都不會執行任何觸發程序。  
   
 ### <a name="nested-triggers"></a>巢狀觸發程序  
- 觸發程序的巢狀結構，最多可達 32 層。 如果觸發程序變更了一份資料表，且這份資料表有另一個觸發程序，就會啟動第二個觸發程序，之後這個觸發程序可能會呼叫第三個觸發程序，依此類推。 如果鏈結中的任何觸發程序造成無限迴圈，就會超出巢狀層級，並取消觸發程序。 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序參考 CLR 常式、類型或彙總來執行 Managed 程式碼時，在 32 層的巢狀限制中，此參考算是一層。 從 Managed 程式碼內叫用的方法，不列入此限制。  
+ 觸發程序的巢狀結構，最多可達 32 層。 如果觸發程序變更了一份資料表，且這份資料表有另一個觸發程序，就會啟動第二個觸發程序，之後這個觸發程序可能會呼叫第三個觸發程序，依此類推。 如果鏈結中的任何觸發程序造成無限迴圈，就會超出巢狀層級，並取消觸發程序。 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序參考 CLR 常式、類型或彙總來執行 Managed 程式碼時，在 32 層的巢狀限制中，這項參考算是一層。 從 Managed 程式碼內叫用的方法，不列入這項限制。  
   
  若要停用巢狀觸發程序，請將 sp_configure 的 nested triggers 選項設成 0 (關閉)。 預設組態接受巢狀觸發程序。 如果關閉巢狀觸發程序，遞迴觸發程序也會停用，不論使用 ALTER DATABASE 設定的 RECURSIVE_TRIGGERS 設定為何，都是如此。  
   
  即使 [巢狀觸發程序] 伺服器設定選項設為 0，INSTEAD OF 觸發程序內部的第一個巢狀 AFTER 觸發程序仍會引發。 不過，在此設定下，後續的 AFTER 觸發程序不會引發。 建議您檢閱應用程式中是否有巢狀觸發程序，以判斷當 [巢狀觸發程序] 伺服器設定選項設定為 0 時，這些應用程式的新行為是否符合您的商務規則，然後進行適當的修改。  
   
 ### <a name="deferred-name-resolution"></a>延遲名稱解析  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序、觸發程序和批次參考在編譯階段並不存在的資料表。 此功能稱為延遲名稱解析。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序、觸發程序和批次參考在編譯階段並不存在的資料表。 這項功能稱為延遲名稱解析。  
   
 ## <a name="permissions"></a>[權限]  
  若要建立 DML 觸發程序，需要建立觸發程序的資料表或檢視的 ALTER 權限。  

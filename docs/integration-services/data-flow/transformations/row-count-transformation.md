@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.rowcounttrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], updating
 - counting rows
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c86e3162f62de07811ff8908cc52cdff608688bd
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 7b0f82fd5a2f3096094b509ce636f74b5ddd27bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698656"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換
   「資料列計數」轉換會在資料列通過資料流程時計算其數目，並將最後計數儲存到變數中。  

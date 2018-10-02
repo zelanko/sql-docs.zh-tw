@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 89ec24adc8c02bdf1458391c66233f640d5e0262
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a59b05b349c626896e45cc47c9670a1e1daf1897
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825856"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概觀：將資料匯出至 Excel (適用於 Excel 的 MDS 增益集)
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
@@ -33,16 +30,15 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dd3aa737e6155166d86f0dde983c4d9f63fd7c3
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 18f27adad094effd34ab3778f54ac5d362dd4534
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834626"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

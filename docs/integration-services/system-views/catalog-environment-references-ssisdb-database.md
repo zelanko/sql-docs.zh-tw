@@ -5,28 +5,25 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 168c88a87d6f35a3497d1d7b52efb5c57e351a08
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d8f1a844d015238d1b8d80c6af601299f02572af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710796"
 ---
 # <a name="catalogenvironmentreferences-ssisdb-database"></a>catalog.environment_references (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 **SSISDB** 目錄中的所有專案顯示環境參考。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|參考的唯一識別碼 (ID)。|  
 |project_id|**bigint**|專案的唯一識別碼。|  
@@ -39,7 +36,7 @@ ms.locfileid: "35400590"
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個環境參考的資料列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   對應專案的 READ 權限  

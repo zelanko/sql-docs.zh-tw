@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 05/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ghost cleanup
@@ -19,12 +15,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86121ab464175e303ff1d143d8dd64527c22258c
-ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
+ms.openlocfilehash: 74bb9ad241c4f7d778cd85741c64464d592641fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34758058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780886"
 ---
 # <a name="ghost-cleanup-process-guide"></a>準刪除清除程序指南
 

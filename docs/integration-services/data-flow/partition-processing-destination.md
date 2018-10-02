@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8f4a37d9d1ffc68c0887bf67921a3b32b097413
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ef097b772aca991ed7b61b79572a1eff2d837108
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333652"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838876"
 ---
 # <a name="partition-processing-destination"></a>資料分割處理目的地
   「資料分割處理」目的地會載入及處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料分割。 如需資料分割的詳細資訊，請參閱[資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)。  
@@ -80,7 +77,7 @@ ms.locfileid: "35333652"
  **處理方法**  
  選取處理方法。 此選項的預設值是 **[完整]**。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |加入 (累加)|執行資料分割的累加處理。|  
 |完整|執行資料分割的完整處理。|  
@@ -118,7 +115,7 @@ ms.locfileid: "35333652"
  **索引鍵錯誤動作**  
  指定如何處理具有無法接受之索引鍵值的記錄。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|將無法接受的索引鍵值轉換為未知值。|  
 |**DiscardRecord**|捨棄記錄。|  
@@ -135,7 +132,7 @@ ms.locfileid: "35333652"
  **發生錯誤時要執行的動作**  
  如果您已選取 [發生錯誤時停止]，請指定到達錯誤臨界值時要採取的動作。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|停止處理。|  
 |**StopLogging**|停止記錄錯誤。|  
@@ -143,7 +140,7 @@ ms.locfileid: "35333652"
  **找不到索引鍵**  
  針對找不到索引鍵錯誤，指定要採取的動作。 依預設，此值為 **ReportAndContinue**。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -152,7 +149,7 @@ ms.locfileid: "35333652"
  **重複的索引鍵**  
  針對重複索引鍵錯誤，指定要採取的動作。 依預設，此值為 **IgnoreError**。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -161,7 +158,7 @@ ms.locfileid: "35333652"
  **Null 索引鍵已轉換為未知**  
  指定當 Null 索引鍵轉換為未知值的時候應採取的動作。 依預設，此值為 **IgnoreError**。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  
@@ -170,7 +167,7 @@ ms.locfileid: "35333652"
  **不允許 Null 索引鍵**  
  指定在不允許 Null 索引鍵的情況下如果發現 Null 索引鍵，所要採取的動作。 依預設，此值為 **ReportAndContinue**。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略錯誤並繼續處理。|  
 |**ReportAndContinue**|報告錯誤並繼續處理。|  

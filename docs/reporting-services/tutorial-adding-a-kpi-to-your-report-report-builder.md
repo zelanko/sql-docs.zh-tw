@@ -4,19 +4,16 @@ ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f200c851a9cf5d8e279d0b3bd00d92481cc85128
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7a7e189f7ed6735d9519900735e2fde9529c50e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723956"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
 在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。  
@@ -98,7 +95,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. 在查詢設計工具的工具列上，按一下 [執行]  (**!**)。
+10. 在查詢設計工具的工具列上，按一下 [執行](**!**)。
 
 11. 按 [下一步] 。  
   

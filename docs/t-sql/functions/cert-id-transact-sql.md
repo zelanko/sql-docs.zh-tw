@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERT_ID
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - IDs [SQL Server], certificates
 - certificates [SQL Server], IDs
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7083a4dbfc87b33d9c00f6c84d0cf18047338e6c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 1b424d7c19f668d17dbe899804c2ef3002775a27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708596"
 ---
 # <a name="certid-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ Cert_ID ( 'cert_name' )
 ## <a name="remarks"></a>Remarks  
 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 目錄檢視會顯示憑證名稱。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要憑證的適當權限，並且需要呼叫端尚未拒絕憑證的 VIEW DEFINITION 權限。 如需憑證權限的詳細資訊，請參閱 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md#permissions)。
   
 ## <a name="examples"></a>範例  

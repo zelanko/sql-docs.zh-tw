@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - lock compatibility matrix, [SQL Server]
 - lock granularity and hierarchies, [SQL Server]
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08b93402a40fc935269953e23825acaa56aa4213
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710706"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1062,8 +1058,7 @@ BEGIN TRANSACTION
 ```   
   
 ##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的資料列版本設定型隔離等級  
- 從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]便提供現有之讀取認可交易隔離等級的實作，這可使用資料列版本設定來提供陳述式層級的快照集。 
-  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]也提供快照交易隔離等級，這同樣是使用資料列版本設定，但提供交易層級的快照集。  
+ 從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]便提供現有之讀取認可交易隔離等級的實作，這可使用資料列版本設定來提供陳述式層級的快照集。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]也提供快照交易隔離等級，這同樣是使用資料列版本設定，但提供交易層級的快照集。  
   
  資料列版本設定是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的一般架構，會在資料列遭修改或刪除的情況下叫用寫入時複製機制。 為此，當交易正在執行時，舊版本的資料列務必可供仍需要早先交易一致狀態的交易使用。 資料列版本設定用於執行下列事項：  
   

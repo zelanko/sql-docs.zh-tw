@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - MSReportServer_Instance Members
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2759395c283d329d589b2dfe95cdd23758c246aa
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4190c7654cc449162c57a93fc1d8acf2fcda2b48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726166"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 成員
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

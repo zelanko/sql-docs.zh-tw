@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication synchronization [SQL Server replication]
@@ -18,16 +15,15 @@ helpviewer_keywords:
 - Web synchronization, about
 - Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 889e0e8251912e081e18a8f6d26461851a1fbd23
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c7be0bb2b8864fc7720753e2af8a372c57a4ec3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770036"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

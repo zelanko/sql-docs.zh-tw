@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC
@@ -36,16 +34,15 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-caps.latest.revision: 50
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 6dbf227ec42614e77cb4129c273ec55609781b2f
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 30b407b4cbfd10f6a5844978bbabbb9bf26e2784
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988904"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731346"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +97,7 @@ DBCC 命令有輸入參數和傳回值。 所有 DBCC 命令參數都可以接�
   
 進度單位的定義會隨著 DBCC 命令目前的執行階段而不同。 有時候，進度會以資料庫頁面的資料粒度來報告；在其他階段，則以單一資料庫或配置修復的資料粒度來報告。 下表描述每個執行階段，以及命令報告進度的資料粒度。
   
-|執行階段|描述|進度報告資料粒度|  
+|執行階段|Description|進度報告資料粒度|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|在這個階段中，會檢查資料庫中各物件的邏輯和實體一致性。|資料庫頁面層級所報告的進度。<br /><br /> 每檢查 1000 個資料庫頁面，就會更新進度報告值。|  
 |DBCC TABLE REPAIR|如果指定了 REPAIR_FAST、REPAIR_REBUILD 或 REPAIR_ALLOW_DATA_LOSS，而且有必須加以修復的物件錯誤，就會在這個階段期間執行資料庫修復。|個別修復層級所報告的進度。<br /><br /> 每次修復完成，就會更新計數器。|  

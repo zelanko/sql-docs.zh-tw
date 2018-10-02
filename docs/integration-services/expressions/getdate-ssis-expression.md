@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - current date
 - GETDATE function
 - dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5353e13e6c50f5a7f1438f7cd172211e2d45937e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: afbbc80ce19c2820d24d65a9caa0736d00e7f8b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833156"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS 運算式)
   以 DT_DBTIMESTAMP 格式傳回目前的系統日期。 GETDATE 函數不採用引數。  
@@ -39,7 +36,7 @@ GETDATE()
 ```  
   
 ## <a name="arguments"></a>引數  
- 無  
+ None  
   
 ## <a name="result-types"></a>結果類型  
  DT_DBTIMESTAMP  

@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadooppigtask.f1
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4027f5762330f694e24058d9b9583d57fa6e0fbd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ea94918ce0c09033ed716d12026151c410d7d1f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805406"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
   使用 Hadoop Pig 工作在 Hadoop 叢集上執行 Pig 指令碼。  
@@ -33,7 +30,7 @@ ms.locfileid: "35410590"
 ## <a name="options"></a>選項。  
  在 [Hadoop Pig 工作編輯器] 對話方塊中設定下列選項。  
   
-|欄位|描述|  
+|欄位|Description|  
 |-----------|-----------------|  
 |**Hadoop 連接**|指定現有的 Hadoop 連接管理員或建立新的連接管理員。 此連接管理員會指出 WebHCat 服務的裝載位置。|  
 |**SourceType**|指定查詢的來源類型。 可用的值為 **ScriptFile** 和 **DirectInput**。|  

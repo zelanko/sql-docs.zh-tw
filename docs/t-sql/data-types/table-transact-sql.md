@@ -5,9 +5,7 @@ ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - table data type [SQL Server]
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
-ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
+ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39240680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839756"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -115,13 +112,13 @@ SELECT select_list INTO table_variable;
   
 資料表變數在建立之後無法修改。
 
-## <a name="table-variable-deferred-compilation"></a>資料表變數延遲編譯
+## <a name="table-variable-deferred-compilation"></a>資料表變數延後編譯
 **資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始計劃編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個精確的資料列計數資訊接著將用於最佳化下游計劃作業。
 
 > [!NOTE]
 > 資料表變數延遲編譯是 Azure SQL Database 中的一個公開預覽功能。  
 
-使用資料表變數延遲編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 這個延遲編譯行為與暫存資料表的行為完全相同，而且此變更會導致使用實際基數，而不是原始的單一資料列猜測。 
+使用資料表變數延後編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 這個延後編譯行為與暫存資料表的行為完全相同，而且此變更會導致使用實際基數，而不是原始的單一資料列猜測。 
 
 若要啟用資料表變數延遲編譯的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
 

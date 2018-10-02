@@ -3,7 +3,6 @@ title: 設定和管理加密金鑰 (SSRS 設定管理員) | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 426093317cb633ac49b350bef914b451d9bf4625
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 65a8808fb81e843219a25dc2805c6da4b73be404
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280816"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773618"
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 加密金鑰 - 管理加密金鑰
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用加密金鑰來保護儲存於報表伺服器資料庫中之認證和連線資訊的安全。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可透過用於保護敏感性資料的公開、私密和對稱金鑰組合來支援加密。 當您安裝或設定報表伺服器時，對稱金鑰會在報表伺服器起始設定期間建立，供報表伺服器用來對儲存於報表伺服器中之機密資料進行加密。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存報表伺服器資料庫中之機密資料的每一個報表伺服器執行個體，建立一組公開金鑰和私密金鑰。  

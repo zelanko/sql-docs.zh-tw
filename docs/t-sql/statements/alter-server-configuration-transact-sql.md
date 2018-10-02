@@ -5,9 +5,7 @@ ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ALTER SERVER CONFIGURATION statement
 - setting process affinity
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 72
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9124ec354c325e01b71542be7a7c00d8e3c51775
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 0782f5739bb6ed86dfa2d58e0e84ce2ea496802f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713889"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -255,7 +252,7 @@ SQLDUMPEREDUMPFLAGS
 ## <a name="limitations-and-restrictions"></a>限制事項  
  這個陳述式不支援 DDL 觸發程序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要處理序相似性選項的 ALTER SETTINGS 權限。 診斷記錄檔和容錯移轉叢集屬性選項的 ALTER SETTINGS 與 VIEW SERVER STATE 權限，以及 HADR 叢集內容選項的 CONTROL SERVER 權限。  
   
  需要緩衝集區延伸模組選項的 ALTER SERVER STATE 權限。  

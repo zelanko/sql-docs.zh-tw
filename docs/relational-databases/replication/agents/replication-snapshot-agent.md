@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 39756ee24011373c30ec23cd4c0caab2eb813338
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756778"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +101,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  這是發生死結時散發者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
-|DistributorDeadlockPriority 值|描述|  
+|DistributorDeadlockPriority 值|Description|  
 |---------------------------------------|-----------------|  
 |**-1**|在散發者端發生死結時，快照集代理程式以外的應用程式擁有優先權。|  
 |**0** (預設值)|未指派優先權。|  
@@ -132,7 +128,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，快照集代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|Description|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -146,7 +142,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  指定在快照集作業期間記錄的記錄量。 您可以透過選取 **1**，盡量減少記錄作業對效能造成的影響。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|Description|  
 |-------------------------------|-----------------|  
 |**0**|進度訊息會寫入主控台或輸出檔中。 但是，記錄不會記錄在散發資料庫中。|  
 |**1**|一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
@@ -192,7 +188,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  指定輸出是否應該詳細。  
   
-|OutputVerboseLevel 值|描述|  
+|OutputVerboseLevel 值|Description|  
 |------------------------------|-----------------|  
 |**0**|僅列印錯誤訊息。|  
 |**1** (預設值)|列印所有進度報表訊息 (預設值)。|  
@@ -207,7 +203,7 @@ snapshot [ -?]
 **-PrefetchTables** [ **0**| **1**]  
  指定是否要預先擷取並快取資料表物件的選擇性參數。  預設行為是根據內部計算，使用 SMO 元件預先擷取特調資料表內容。  此參數在 SMO 預先擷取作業花非常長的時間執行的情況下很實用。 若未使用此參數，會在執行階段根據已新增為要發佈之發行項的資料表百分比來制訂決策。  
   
-|OutputVerboseLevel 值|描述|  
+|OutputVerboseLevel 值|Description|  
 |------------------------------|-----------------|  
 |**0**|SMO 元件的「呼叫以預先擷取」方法已停用。|  
 |**1**|「快照集代理程式」將會呼叫預先擷取方法以使用 SMO 快取某些資料表內容|  
@@ -221,7 +217,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  這是發生死結時發行者之快照集代理程式連接的優先權。 指定這個參數的目的是為了解決快照集產生期間，快照集代理程式與使用者應用程式之間可能會發生的死結。  
   
-|PublisherDeadlockPriority 值|描述|  
+|PublisherDeadlockPriority 值|Description|  
 |-------------------------------------|-----------------|  
 |**-1**|在發行者端發生死結時，快照集代理程式以外的應用程式擁有優先權。|  
 |**0** (預設值)|未指派優先權。|  
@@ -254,10 +250,10 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** *use_per_article_contents_view*  
  這個參數已被取代，而且是為了回溯相容性才提供支援。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，此服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的快照集代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，快照集代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
+>  如果您已將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 安裝成在本機系統帳戶而非網域使用者帳戶 (預設值) 底下執行，這項服務就只能存取本機電腦。 如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 底下執行的快照集代理程式設定為使用 Windows 驗證模式，當它登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時，快照集代理程式就會失敗。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設設定為  驗證。  
   
  若要啟動快照集代理程式，請從命令提示字元執行 **snapshot.exe** 。 如需詳細資訊，請參閱＜ [複寫代理程式可執行檔](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)＞。  
   

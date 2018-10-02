@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16c9bbfbd26f51fb32083a4376b76175b5ec4580
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e4e1282c19191e9260bfb8d564dcc4d0d9265d0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732716"
 ---
 # <a name="configurationsetting-method---listreportserversindatabase"></a>ConfigurationSetting 方法 - ListReportServersInDatabase
   傳回存在報表伺服器資料庫中之報表伺服器安裝的清單，不論它們是否具有安全資訊的存取權都一樣。  

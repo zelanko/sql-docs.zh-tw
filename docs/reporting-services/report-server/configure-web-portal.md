@@ -4,19 +4,18 @@ ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f43d73f61be6a1662bfe2c87a1cf8b91584ce6f1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0c2acade2ac4e0a4def5bc136d0faa5a11c4815a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795296"
 ---
 # <a name="configure-the-web-portal"></a>設定入口網站
 

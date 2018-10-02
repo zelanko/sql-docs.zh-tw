@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 04/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e61613a4da7caa82be3b3ece5c423a003bd0b24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a701f2354b23d0f6936124ae2c00c1efd812a2f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746966"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (記憶體中 OLTP) 效能計數器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "32951333"
 ##  <a name="SQLServerPOs"></a> SQL Server XTP 效能物件  
  下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能物件。  
   
-|效能物件|描述|  
+|效能物件|Description|  
 |------------------------|-----------------|  
 |[SQL Server XTP 資料指標](../../relational-databases/performance-monitor/sql-server-xtp-cursors.md)|SQL Server XTP 資料指標效能物件包含與記憶體內 OLTP 引擎資料指標相關的計數器。 資料指標是記憶體內 OLTP 引擎用來處理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的低階建置組塊。 因此，您通常不會有這些指標的直接控制權。|  
 |[SQL Server XTP 資料庫](../../relational-databases/performance-monitor/sql-server-xtp-databases.md)|SQL Server XTP 資料庫效能物件提供記憶體內部 OLTP 資料庫特定的計數器。|  
