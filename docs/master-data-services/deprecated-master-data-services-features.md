@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-caps.latest.revision: 18
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: edc5d786ebfd5093c1caf284122345cfb344f07e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 75cdf58cfe2c5ca7c71654133626700a3ca36db9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798708"
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
 

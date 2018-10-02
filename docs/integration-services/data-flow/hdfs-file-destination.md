@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88b6bc5bafcc2fe3da77b55ac98d19ab7ec747e2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: addb3312def505802aab695301f7cca170eab3d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410700"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799666"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 檔案目的地
   HDFS 檔案目的地元件可讓 SSIS 封裝將資料寫入 HDFS 檔案。 支援的檔案格式為文字、Avro 和 ORC。  
@@ -33,7 +30,7 @@ ms.locfileid: "35410700"
 ## <a name="options"></a>選項。  
  在 [Hadoop File Destination Editor (Hadoop 檔案目的地編輯器)] 對話方塊的 [一般] 索引標籤上，設定下列選項。  
   
-|欄位|描述|  
+|欄位|Description|  
 |-----------|-----------------|  
 |**Hadoop 連接**|指定現有的 Hadoop 連接管理員或建立新的連接管理員。 此連接管理員會指出 HDFS 檔案的裝載位置。|  
 |**檔案路徑**|指定 HDFS 檔案的名稱。|  

@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b96f7d7f908508a8ca8e69e11ddc1fe9374f6577
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5119aef360778030f076a3e186225933b4a811a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334222"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796510"
 ---
 # <a name="lesson-6-3---testing-the-lesson-6-package"></a>課程 6-3 - 測試第 6 課的封裝
 在執行階段，您的封裝會從 VarFolderName 參數取得目錄屬性的值。  
