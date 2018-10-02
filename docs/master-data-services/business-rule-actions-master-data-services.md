@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e097e0ad00b0ee10799fb8194051ce51ec55935
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 22cd64be469f9e8c1ebdcac7bd463bbf4d6d9c26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694186"
 ---
 # <a name="business-rule-actions-master-data-services"></a>商務規則動作 (Master Data Services)
 
@@ -34,7 +31,7 @@ ms.locfileid: "35411830"
 ## <a name="default-value-actions"></a>預設值動作  
  **預設值** 動作會設定指定屬性的預設值。 具有權限的使用者可以變更這些預設值。  
   
-|值名稱|描述|  
+|值名稱|Description|  
 |----------------|-----------------|  
 |**預設為**|選取的屬性 **預設為** 特定的屬性、特定的屬性值或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**預設為產生的值**|選取的屬性 **預設為產生的值** ，這個值取決於輸入開始和增量值。<br /><br /> 此動作僅適用於文字及數值。|  
@@ -43,7 +40,7 @@ ms.locfileid: "35411830"
 ## <a name="change-value-actions"></a>變更值動作  
  **變更值** 動作會更新指定屬性或屬性值的值。 只有新的值導致動作為 true 時，使用者才可以變更這些值。  
   
-|值名稱|描述|  
+|值名稱|Description|  
 |----------------|-----------------|  
 |**等於**|選取的屬性變更為已定義的屬性值、另一個屬性或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**等於串連值**|選取的屬性變更為串連值，這個值取決於指定多個屬性。<br /><br /> 此動作適用於文字及連結值。|  
@@ -53,7 +50,7 @@ ms.locfileid: "35411830"
   
  唯一的例外狀況是： **強制性** 和 **無效** 動作。 這兩個動作必須與變更值動作結合，以便讓資料驗證成功，並讓版本進行認可。  
   
-|驗證名稱|描述|  
+|驗證名稱|Description|  
 |---------------------|-----------------|  
 |**需要**|選取的屬性 **為需要的**，表示不能為 null 或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**無效**|選取的屬性 **無效**。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
@@ -72,7 +69,7 @@ ms.locfileid: "35411830"
 ## <a name="external-action"></a>外部動作  
  **外部** 動作會與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]之外的應用程式互動。  
   
-|動作名稱|描述|  
+|動作名稱|Description|  
 |-----------------|-----------------|  
 |**啟動工作流程**|起始外部工作流程。 造成此動作發生的資料會傳遞給工作流程。 如需詳細資訊，請參閱 [Master Data Services 的 SharePoint 工作流程整合](http://msdn.microsoft.com/library/gg690195.aspx)。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
   

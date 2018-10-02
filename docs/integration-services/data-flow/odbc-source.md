@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcsource.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 796c0f5e2d0cb2d689921d75b9e2005a49a35106
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694507"
 ---
 # <a name="odbc-source"></a>ODBC 來源
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
@@ -110,7 +107,7 @@ ms.locfileid: "35332572"
 #### <a name="data-access-mode"></a>資料存取模式  
  選取從來源中選取資料的方法。 下表將顯示這些選項：  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |資料表名稱|從 ODBC 資料來源中的資料表或檢視表擷取資料。 當您選取此選項時，請從清單中選取下列項目的值：|  
 ||**資料表或檢視表的名稱**：從清單中選取可用的資料表或檢視表，或是輸入可識別資料表的規則運算式。|  
@@ -174,7 +171,7 @@ ms.locfileid: "35332572"
 #### <a name="truncation"></a>截斷  
  選取 ODBC 來源應該如何處理流程中的截斷：忽略失敗、重新導向資料列，或使元件失效。  
   
-#### <a name="description"></a>描述  
+#### <a name="description"></a>Description  
  未使用。  
   
 #### <a name="set-this-value-to-selected-cells"></a>將這個值設定到選取的資料格  

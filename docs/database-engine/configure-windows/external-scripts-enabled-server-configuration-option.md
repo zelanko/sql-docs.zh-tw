@@ -4,7 +4,6 @@ ms.date: 11/13/2017
 ms.prod: sql
 ms.technology: configuration
 ms.reviewer: ''
-ms.suite: sql
 ms.topic: language-reference
 f1_keywords:
 - external scripts enabled
@@ -15,12 +14,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb602248a8a409cb79c4ca4c0769fbc4fd66b616
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2108f68e6eb73ae447326eac0be008e042b05119
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428907"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693324"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

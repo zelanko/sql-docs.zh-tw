@@ -4,17 +4,16 @@ ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: ''
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46b05d1cd4f942f254ab46bb27363696987dd8b2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686126"
 ---
 # <a name="troubleshoot-reporting-services"></a>針對 Reporting Services 進行疑難排解
   檢閱本節中的主題，以便識別及疑難排解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的問題。  
