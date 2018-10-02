@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], opening
 - opening database diagrams
 - diagrams [SQL Server], opening
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49252fc1b8de890aaa2f78c2045f5f75fb0c4a98
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cc949044510a1471f0715ccc30209242a1543ac9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732036"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>開啟資料庫圖表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

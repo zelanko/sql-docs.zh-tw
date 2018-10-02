@@ -5,22 +5,19 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff1a31645de3c39773ff9d78bddba03f3304fc19
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738456"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 

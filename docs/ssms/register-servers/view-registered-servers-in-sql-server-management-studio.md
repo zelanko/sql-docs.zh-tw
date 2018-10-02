@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying Registered Servers
 - viewing Registered Servers
 - Registered Servers [SQL Server], viewing
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4101ffabb1b39a33311d0fcfb0edacca3023fda
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 03ff4ef697e9da8d26f2a5dd5c74811ae9ada327
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738256"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中檢視已註冊的伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

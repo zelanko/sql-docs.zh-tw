@@ -5,9 +5,7 @@ ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STPolyFromWKB_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromWKB method
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2131cd61e16994df12ff2f15850efb291ad51de7
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 509ceaf76afe153d7cb3921b404cad4397df2a6b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36259020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733846"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
