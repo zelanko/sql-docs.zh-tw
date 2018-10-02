@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AsBinaryZM
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - AsBinaryZM, geography
 - AsBinaryZM
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5666547134235dec0cec2ec104c5123946f0a13
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 045068e39fdfd5ed4a5e875f4be55a9c5385b1ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825416"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

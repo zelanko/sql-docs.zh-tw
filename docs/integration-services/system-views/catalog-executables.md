@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f3e926072e79fbe18774cc3f9ab300a91d7ba5
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: cca22286db2bb959a3aecb6524528292a207eedc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329162"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817516"
 ---
 # <a name="catalogexecutables"></a>catalog.executables
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "35329162"
   
  可執行檔是您加入至封裝之控制流程的工作或容器。  
   
-|資料行名稱|**Data type**|描述|  
+|資料行名稱|**Data type**|Description|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|可執行檔的唯一識別碼。|  
 |execution_id|**bigint**|執行之執行個體的唯一識別碼。|  
@@ -37,7 +34,7 @@ ms.locfileid: "35329162"
 |package_name|**nvarchar(260)**|封裝名稱。|  
 |package_path|**nvarchar(max)**|封裝的路徑。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   執行的執行個體之 READ 權限  

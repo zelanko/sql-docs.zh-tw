@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a8d50ca3c1b998bd564b4cdad967db3e28e3986
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: fcf04dc0eb2209afcd9dfc180d59e6452e5b52d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820066"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
   「緩時變維度」轉換可在資料倉儲維度資料表中協調記錄的更新與插入。 例如，您可利用此轉換來設定轉換輸出，該轉換輸出會使用 AdventureWorks OLTP 資料庫中 Production.Products 資料表的資料，在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 資料庫的 DimProduct 資料表內插入和更新記錄。  
@@ -68,7 +65,7 @@ ms.locfileid: "35329682"
   
  下表描述轉換輸出及其後續資料流程的需求。 該需求會描述「緩時變維度精靈」建立的資料流程。  
   
-|輸出|描述|資料流程需求|  
+|輸出|Description|資料流程需求|  
 |------------|-----------------|----------------------------|  
 |**[變更屬性更新輸出]**|會更新查閱資料表中的記錄。 此輸出用於變更屬性資料列。|「OLE DB 命令」轉換會使用 UPDATE 陳述式更新記錄。|  
 |**[固定屬性輸出]**|不得變更之資料列中的值與查閱資料表中的值不相符。 此輸出用於固定屬性資料列。|不會建立任何預設資料流程。 如果轉換已設定為遇到固定屬性資料行的變更之後繼續，則應該建立擷取這些資料列的資料流程。|  

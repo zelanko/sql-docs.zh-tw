@@ -4,10 +4,8 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 148fcb3dd5970d84be7a0380c97ab0be7bd8ca92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263174"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831936"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -184,10 +181,10 @@ DBCC CHECKTABLE 會利用內部資料庫快照集來提供執行這些檢查所�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息    
 DBCC CHECKTABLE 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
     
-|State|描述|    
+|State|Description|    
 |-----------|-----------------|    
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|    
-|@shouldalert|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    
+|1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    
 |2|修復緊急模式資料庫期間發生失敗。|    
 |3|這表示中繼資料損毀使 DBCC 命令終止。|    
 |4|偵測到判斷提示或存取違規。|    
@@ -220,7 +217,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
 ```    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>[權限]    
 使用者必須擁有資料表，或是 系統管理員 (sysadmin) 固定伺服器角色、db_owner 固定資料庫角色，或 db_ddladmin 固定資料庫角色的成員。    
     
 ## <a name="examples"></a>範例    

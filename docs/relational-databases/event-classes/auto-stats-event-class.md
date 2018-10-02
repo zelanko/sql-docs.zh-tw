@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24ab2577ca22083c298b6f5b5099aee2a96b59c2
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40405383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827347"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "40405383"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|0 = 錯誤。<br /><br /> 1 = 成功。<br /><br /> 2 = 因伺服器調整流速而略過 (MSDE)。|23|是|  
-|**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL； **IndexID** 資料行中會填入已更新之統計資料的索引/統計資料識別碼。|@shouldalert|是|  
+|**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL； **IndexID** 資料行中會填入已更新之統計資料的索引/統計資料識別碼。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**型別**|**int**|作業類型。|57|是|  
   

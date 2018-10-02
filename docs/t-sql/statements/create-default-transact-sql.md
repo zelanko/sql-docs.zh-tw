@@ -5,9 +5,7 @@ ms.date: 11/25/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_DEFAULT_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], creating
 - DEFAULT definition
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8058a122907400b576dd17a2fd7b758abe08bca2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 27af02d973c048ca5be4dd5c28010b3bcde65314
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983749"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815186"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

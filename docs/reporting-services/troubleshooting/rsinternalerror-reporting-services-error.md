@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - rsInternalError
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6531ff336eedcd5cb01ac4fbbf2d59118d8e0a2f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 113321ca016042adfb2c98ef1601f5e27dbd7933
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825902"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 錯誤
     
