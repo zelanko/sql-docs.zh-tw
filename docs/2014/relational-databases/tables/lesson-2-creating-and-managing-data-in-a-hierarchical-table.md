@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e86268cb83887027159629069195fee60b5e85fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e17ad0f4f73ccec1875a57fc3263c4320c0625a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076718"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 課：在階層式資料表中建立與管理資料
   在第 1 課中，您修改了現有的資料表以使用 `hierarchyid` 資料類型，並使用現有資料的表示法來擴展 `hierarchyid` 資料行。 在本課程中，您將從新資料表開始，然後使用階層式方法插入資料。 接著，您將使用階層式方法來查詢與操作資料。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9069acf132c048f07f8e27cb956032100f53a9eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cb49325f8ead610840b8d14213ccbf630813daf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114388"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>資料採礦查詢工作編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢工作]** 對話方塊的 **[採礦模型]** 索引標籤，即可指定要使用的採礦結構和採礦模型。  

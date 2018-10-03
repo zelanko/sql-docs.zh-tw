@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1db1837c339960c0d320170fd25eb8a05b499a35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9c136f2eb27f4c999d71c398b14b67405cee108
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128318"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
   從新增發行集精靈和 **[發行集屬性]** 對話方塊中，可以使用 **[發行項屬性]** 對話方塊。 它可讓您檢視和設定所有類型之發行項的屬性。 某些屬性只有在建立發行集時才能設定，而其他的則只有在發行集沒有使用中的訂閱時才能設定。 無法設定的屬性會以唯讀顯示。  
@@ -43,8 +40,7 @@ ms.locfileid: "37242358"
   
 ## <a name="options-for-all-publications"></a>所有發行集的選項  
  **[複製資料表資料分割結構描述]** 和 **[複製索引資料分割結構描述]**  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入資料表資料分割和索引資料分割，這與透過資料列和資料行篩選提供的資料分割複寫不相關。 **[複製資料表資料分割結構描述]** 和 **[複製索引資料分割結構描述]** 選項，會指定是否應將資料分割結構描述複製到訂閱者。 如需有關資料分割的詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)＞。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入資料表資料分割和索引資料分割，這與透過資料列和資料行篩選提供的資料分割複寫不相關。 **[複製資料表資料分割結構描述]** 和 **[複製索引資料分割結構描述]** 選項，會指定是否應將資料分割結構描述複製到訂閱者。 如需有關資料分割的詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)＞。  
   
  **轉換資料類型**  
  在訂閱者端建立物件時，決定是否從使用者自訂資料類型轉換為基底資料型別。 使用者定義資料類型包括 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中導入的使用者定義 CLR 類型。 如果您要將這些資料類型複寫到舊版的 **，請指定** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值；這可確保訂閱者端能夠正確地處理這些類型。  

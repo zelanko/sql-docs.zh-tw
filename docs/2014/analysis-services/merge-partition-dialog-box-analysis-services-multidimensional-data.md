@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.mergepartition.f1
 ms.assetid: 1c94e250-ee18-4f98-b112-985f6346102a
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 916f660572de412134fc9fd58e56b288e0c983ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c18ffdaa50c6ee48896f2d2e6e65db46c8fe3349
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288084"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117420"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>合併資料分割對話方塊 (Analysis Services - 多維度資料)
   在 **SQL Server Management Studio** 中，使用 **[合併資料分割]** 對話方塊，即可為 Cube 中的量值群組合併資料分割。 在物件總管中，以滑鼠右鍵按一下 [資料分割] 資料夾或資料分割，然後從操作功能表選取 [合併資料分割]，即可顯示 [合併資料分割] 對話方塊。  

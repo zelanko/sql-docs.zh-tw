@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - viewing replication security settings
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5f4de1de339e3fc6d92106e645a6b84ead2cd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ffe50320214f9d2d21c28612d5ac3ffb348dda6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163758"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改複寫安全性設定。 例如，您可能要將「記錄讀取器代理程式」到「發行者」的連接從 SQL Server 驗證變更為 Windows 整合式驗證，或者在 Windows 帳戶密碼變更後，可能需要變更用來執行代理程式作業的認證。 如需各代理程式需要的權限資訊，請參閱[複寫代理程式安全性模型](replication-agent-security-model.md)。  

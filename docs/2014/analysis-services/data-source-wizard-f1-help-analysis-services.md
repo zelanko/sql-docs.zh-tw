@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Source Wizard
 ms.assetid: 0ed3caf1-249d-4307-b588-d8a0ef315faa
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a23004d60ecaa7b2961b99d6c489b9b21376e7aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8ed248a0ef05dbff3f0cc906adc946d6dd58e2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117588"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>資料來源精靈 F1 說明 (Analysis Services)
   使用資料來源精靈即可建立資料來源，在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中用於下列商業智慧專案：  

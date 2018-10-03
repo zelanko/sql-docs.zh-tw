@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descending sorts
 - ascending sorts
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0069a597175fda4a8589640e02cf9b5e2122b76f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 589ff3685d24b02499d0d250063f6ed885b66841
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178928"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>以遞增或遞減順序排序 (Visual Database Tools)
   您可以使用 `ASC` 或 `DESC` 關鍵字搭配 `ORDER BY` 子句，針對結果集中一個或多個資料行，將查詢結果按照遞增或遞減排序。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bf2b5a600bf3f04fac1c48a3113ff6c22441235
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee4da71b8abc31faea0dfbeee0dd98f5a781b4e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140606"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 事件類別
   每當使用陳述式權限時 (如 CREATE TABLE)，就會發生 **Audit Statement Permission** 事件類別。  

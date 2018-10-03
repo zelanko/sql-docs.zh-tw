@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Configure Peer-to-Peer Topology Wizard
 ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: febce52fe43b4b0494c6c8a6d754f85049b1f2a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ee8c94b12cdfa2bd4fcd414a0e6466c9a627516
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116358"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>設定點對點拓撲精靈
   此章節提供有關設定點對點拓撲精靈之所有頁面的資訊：  

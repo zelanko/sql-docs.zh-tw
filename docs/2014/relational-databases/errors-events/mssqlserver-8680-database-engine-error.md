@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 8680 (Database Engine error)
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7bf1c68bd8c2c00115d879c543f5182a93c7cae9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 51b69c7092a81fd84cc586e79dbb201c69c668ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066798"
 ---
 # <a name="mssqlserver8680"></a>MSSQLSERVER_8680
     

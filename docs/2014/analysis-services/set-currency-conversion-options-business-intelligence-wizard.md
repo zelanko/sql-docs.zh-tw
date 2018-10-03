@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.calculationsettings.f1
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6ecdd5959754ab2ca7d4d9e5fc32d313dacfa00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205728"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>設定貨幣轉換選項 (商業智慧精靈)
   使用 **[設定貨幣轉換]** 頁面，即可定義包含匯率之量值群組的貨幣轉換計算。  

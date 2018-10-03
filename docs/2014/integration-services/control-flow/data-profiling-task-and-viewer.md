@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc1acfc6e3eaece880f4ce3242f746a2a15a5c6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a20b4b2ddaee99a9ce6f2f9efa5ffc5dbbc206a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119910"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
   「資料分析」工作提供擷取、轉換和載入資料之處理內部的資料分析功能。 您可以使用「資料分析」工作來獲得下列好處：  

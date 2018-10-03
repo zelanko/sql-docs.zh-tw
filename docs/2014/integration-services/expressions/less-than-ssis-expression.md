@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e61faf60834ecfb312859ba80d953d49b82a477a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 877c8f762b8f70c68ae3549417e0eeb3e3410473
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156928"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (小於) (SSIS 運算式)
   執行比較來決定第一個運算式是否小於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  

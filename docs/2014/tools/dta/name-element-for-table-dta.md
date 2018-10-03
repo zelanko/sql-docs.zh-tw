@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2158ea2131d917ff1ca5ababcc93392ffce8c0dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 513a3751baa41293c6a8dd84ab03af5f3d5a3103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206318"
 ---
 # <a name="name-element-for-table-dta"></a>資料表的 Name 元素 (DTA)
   指定要微調的資料表名稱。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
-caps.latest.revision: 6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ebabe1d982f427002eea31f09541cd40654bcfc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128268"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>將已排程的原則部署至多個執行個體
   您可以使用已註冊的伺服器，將已排程的原則從中央位置部署到 Managed 伺服器。 您可以從本機伺服器群組，或從中央管理伺服器部署已排程的原則。  
@@ -93,7 +90,7 @@ ms.locfileid: "37249528"
     > [!NOTE]  
     >  若要在已排程的原則執行後檢視評估結果，請開啟目標執行個體上的「原則記錄」記錄檔。 若要開啟記錄檔，以滑鼠右鍵按一下**原則管理**，然後按一下**檢視歷程記錄**。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  本教學課程已為您示範如何針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個或多個執行個體，視需要或按排程來執行最佳做法原則的評估。  
   
 ## <a name="next"></a>下一個  

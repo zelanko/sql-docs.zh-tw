@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7923 (Database Engine error)
 ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69771147c2409413fae69c052ab908b7e90468d5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e8dc32ad3061f4991cc38a136e2346e5087a93d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181338"
 ---
 # <a name="mssqlserver7923"></a>MSSQLSERVER_7923
     
@@ -39,6 +36,6 @@ ms.locfileid: "37426397"
  這是來自 DBCC CHECKALLOC 命令的參考用訊息， 其中包含位於資料表中所有配置單位之配置資訊清單頂端的資料表名稱和識別碼。  
   
 ## <a name="user-action"></a>使用者動作  
- 無  
+ None  
   
   

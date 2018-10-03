@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6a118b8d9dfe69f5890c9c66e71c2319a6a27a1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396520"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113208"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>原生編譯的預存程序上支援的建構
   本主題列出原生編譯預存程序所支援的建構。  
@@ -40,7 +37,7 @@ ms.locfileid: "40396520"
   
 -   資料表值參數。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  支援下列功能：  
   
 -   針對程序：EXECUTE AS OWNER、SELF 和使用者。  

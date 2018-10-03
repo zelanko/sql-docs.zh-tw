@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c9b2832e59db33e645847e7787e80e467c285454
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8732495ad9eadf6660104f9a3edb4c991dce800
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183468"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制資料列和資料行標題 (報表產生器及 SSRS)
   資料表、矩陣或清單資料區可以用垂直或水平方式跨越多個頁面。 您可以指定是否要在每一頁重複資料列標題或資料行標題。 在報表管理員或報表預覽等互動式轉譯器中，您也可以指定是否要凍結資料列或資料行標題，以便在橫向捲動或向下捲動報表時讓它們保持可見狀態。 在資料表或矩陣中，第一個資料列通常包含標示每個資料行中之資料的資料行標題；第一個資料行通常包含標示每個資料列中之資料的資料列標題。 對於巢狀群組，您可能會想要重複包含群組標籤的初始資料列和資料行標題集合。 根據預設，清單資料區域並不包含標題。  

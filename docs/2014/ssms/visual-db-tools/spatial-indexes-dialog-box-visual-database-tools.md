@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 207a5df2cc4641819eb2b06ddb0fe1aec6d4d984
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113357"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
   使用 [空間索引] 對話方塊來建立 **geometry** 或 **geography** 資料類型之資料行 (「空間資料行」(Spatial Column)) 的索引，該資料行無法使用 [索引/索引鍵] 對話方塊來建立索引。 每一個空間資料行都可以有一個以上的空間索引，但是一次只能建立一個。  

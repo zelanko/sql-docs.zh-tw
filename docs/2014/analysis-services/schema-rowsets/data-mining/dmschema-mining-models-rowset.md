@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_MODELS
@@ -17,21 +15,20 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 915a4f98c319af16daff2d07667463d2ec77c50d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178098"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS 資料列集
   列舉目前目錄中的資料採礦模型。 `DMSCHEMA_MINING_MODELS` 資料列集包括與每個採礦模型相關聯的資訊，如模型名稱、處理日期及採礦演算法等。  
   
- 執行個體時提供 SQL Server 登入。 `DMSCHEMA_MINING_MODELS`結構描述資料列集是非常類似於[DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md)結構描述資料列集，可以使用相同的方式。  
+ . `DMSCHEMA_MINING_MODELS`結構描述資料列集是非常類似於[DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md)結構描述資料列集，可以使用相同的方式。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  `DMSCHEMA_MINING_MODELS`資料列集包含下列資料行。  

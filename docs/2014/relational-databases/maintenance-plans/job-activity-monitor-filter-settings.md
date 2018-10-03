@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8cdb39e6070e1a7876859d3a620cb852345dbb0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205258"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207551"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作業活動監視器 (篩選設定)
   使用此頁面來減少可以在作業活動監視器看到的資料列數目。 在一或數個可用的方塊中輸入準則，只顯示符合指定值的資料列。 有些方塊 (例如 [狀態] 或 [封鎖類型]) 提供有限數目的可能值，經由下拉式清單提供。 其他的方塊 (例如 [應用程式]) 則允許您以逗號分隔的清單，輸入任何值以及隨您想要之數量的值。 工具列圖示允許您依類別或字母順序排序可用的方塊。 按一下準則以顯示每個準則的簡短描述。  

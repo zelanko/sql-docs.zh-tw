@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104904"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>編輯或刪除分割區 (Analysis Services - 多維度)
   若要修改 Cube 資料分割，可以在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中使用 Cube 設計師的 [資料分割] 索引標籤。 [資料分割] 索引標籤會列出 Cube 中所有量值群組的資料分割。 它也會列出已啟用回寫功能的回寫分割區。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CancelAssociated Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CancelAssociated element
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66a866a9f00a745e24fe2c83a4fce31ac67b2f34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 294f1060c0a52c357e791d5b3db7ad87d0d98309
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126588"
 ---
 # <a name="cancelassociated-element-xmla"></a>CancelAssociated 元素 (XMLA)
   指出 [Cancel](../xml-elements-commands/cancel-element-xmla.md) 父元素是否應該取消所有相關聯的命令。  
@@ -61,7 +58,7 @@ ms.locfileid: "37159229"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[取消](../xml-elements-commands/cancel-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  如果指定這個元素並將其設為`True`，每個對應連接、 工作階段和識別的父系中的命令`Cancel`取消命令為止。  

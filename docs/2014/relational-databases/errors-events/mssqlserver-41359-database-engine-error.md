@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 41359 (Database Engine error)
 ms.assetid: 02b717c7-9170-4676-b0f6-4dec9eb5b5d4
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cfc69b5c7da77f53c6d49d82a70739fb5a7d09c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8ecf42a161af2dba5c0444b92fea5a55144b0c7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089492"
 ---
 # <a name="mssqlserver41359"></a>MSSQLSERVER_41359
     

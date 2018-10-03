@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursors, positioned updates
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5c6f1874c84c294aba4bbf167de69adcabc4da4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115760"
 ---
 # <a name="positioned-updates-odbc"></a>定位更新 (ODBC)
   ODBC 支援兩個方法於資料指標上執行定位更新：  

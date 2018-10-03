@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, indexes
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29940e4ed8e9bb3a0ca7e3e3db419b27e491b1e2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072708"
 ---
 # <a name="tables-and-indexes"></a>資料表和索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**IIndexDefinition**並**ITableDefinition**介面，讓取用者建立、 改變和卸除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表和索引。 有效的資料表和索引定義是取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。  
@@ -40,7 +37,7 @@ ms.locfileid: "37430978"
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|類型：VT_BSTR<br /><br /> R/W：寫入<br /><br /> 預設值：Null<br /><br /> 描述： 這個屬性只能用於**ITableDefinition**。 建立時，會使用這個屬性中指定的字串[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)<br /><br /> 陳述式。|  
+|SSPROP_COL_COLLATIONNAME|類型：VT_BSTR<br /><br /> R/W：寫入<br /><br /> 預設值：Null<br /><br /> 描述：此屬性只能用於 **ITableDefinition**。 在建立 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 時會使用這個屬性指定的字串<br /><br /> 陳述式。|  
   
 ## <a name="in-this-section"></a>本節內容  
   

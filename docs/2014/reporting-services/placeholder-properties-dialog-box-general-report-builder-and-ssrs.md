@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bceb733247e806f9e03803797c831561662229d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171158"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>預留位置屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[預留位置屬性]** 對話方塊可變更文字方塊內某個預留位置的值、工具提示和標記選項。  
@@ -31,7 +28,7 @@ ms.locfileid: "37309728"
  **標籤**  
  輸入預留位置的標籤。 此標籤只會在設計介面上顯示。  
   
- **ReplTest1**  
+ **值**  
  輸入文字方塊的值。 這應該是欄位運算式、其他運算式或標籤。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
   
  **工具提示**  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvqueued.f1
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a098bdec4b7ad5e7f213d4cb34f93a7b624b9c7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 003450f73ae1026a294827a6d52c50f38d259b52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072478"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 複寫衝突檢視器 (異動複寫)
   「複寫衝突檢視器」可讓您檢視在點對點異動複寫和具有佇列更新訂閱之異動複寫的同步處理期間發生的衝突。 如需詳細資訊，請參閱[檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  

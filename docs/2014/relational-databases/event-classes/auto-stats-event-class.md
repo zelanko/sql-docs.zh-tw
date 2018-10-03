@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 796f417d3dae943334b6cdadc62c633dcbe18baf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b15ac5c21a8fb9b1efafd1124e2338b58d0324e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111394"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
   **Auto Stats** 事件類別表示索引和資料行統計資料已發生自動更新。  

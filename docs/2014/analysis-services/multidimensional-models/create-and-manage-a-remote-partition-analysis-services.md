@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106900"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
   分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
@@ -114,7 +111,7 @@ ms.locfileid: "37315038"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>設定遠端分割區 (在 SSDT 中)  
   
-1.  在主要伺服器上：開啟 Cube 設計師中的 Cube，然後按一下 [資料分割] 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]；否則在 [來源] 資料行中按一下瀏覽 (. 執行個體時提供 SQL Server 登入。 ) 按鈕，以編輯現有的分割區。  
+1.  在主要伺服器上：開啟 Cube 設計師中的 Cube，然後按一下 [資料分割] 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]；否則在 [來源] 資料行中按一下瀏覽 (. . ) 按鈕，以編輯現有的分割區。  
   
 2.  在 [資料分割精靈] 的 [指定來源資訊] 中，選取原始資料來源檢視和事實資料表。  
   

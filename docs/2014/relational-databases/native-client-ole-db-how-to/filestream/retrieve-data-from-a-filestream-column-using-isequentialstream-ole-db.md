@@ -1,24 +1,21 @@
 ---
-title: 使用 ISequentialStream (OLE DB) 的 FILESTREAM 資料行中擷取資料 |Microsoft Docs
+title: 使用 ISequentialStream 從 FILESTREAM 資料行擷取資料 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af1fdbad51d7d6ae1c6c2320a6ac05d103123324
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086388"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 從 FILESTREAM 資料行擷取資料 (OLE DB)
   此範例會範例如何在 ICommandText 介面中使用 ISequentialStream 介面來擷取 Filestream 資料行中的單一記錄。  
@@ -30,9 +27,9 @@ ms.locfileid: "37424857"
   
  使用下列其中一個範例來建立此範例讀取的來源資料表：  
   
--   [將資料傳送至使用 ISequentialStream Bound to ICommandText 參數將 FILESTREAM 資料行&#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [使用繫結至 ICommandText 參數的 ISequentialStream 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [將資料傳送至使用 IRowsetFastUpload 將 FILESTREAM 資料行&#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  複製第一個程式碼清單並將它貼入名為 ISSHelper.h 的檔案中。  
   

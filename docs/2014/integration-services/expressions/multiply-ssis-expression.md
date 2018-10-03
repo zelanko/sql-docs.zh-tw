@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea47f8957d942e57a6dfda79e263dcbe5600e38c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a357e02af88c1e3a0c9806b1f1a228881137397
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069848"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乘) (SSIS 運算式)
   將兩個數值運算式相乘。  

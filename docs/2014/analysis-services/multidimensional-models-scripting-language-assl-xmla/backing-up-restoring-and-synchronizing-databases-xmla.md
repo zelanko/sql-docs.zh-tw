@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159599"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061158"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>備份、還原和同步處理資料庫 (XMLA)
   在 XML for Analysis 中，有三個命令分別可用來備份、還原和同步處理資料庫：  
@@ -66,7 +63,7 @@ ms.locfileid: "37159599"
   
 |值|描述|  
 |-----------|-----------------|  
-|*SkipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
+|*skipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在備份檔案中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從備份檔案排除安全性定義。|  
   
@@ -96,7 +93,7 @@ ms.locfileid: "37159599"
   
 |值|描述|  
 |-----------|-----------------|  
-|*SkipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*skipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從資料庫排除安全性定義。|  
   
@@ -134,7 +131,7 @@ ms.locfileid: "37159599"
   
 |值|描述|  
 |-----------|-----------------|  
-|*SkipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*skipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在目的地資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從目的地資料庫排除安全性定義。|  
   
@@ -148,7 +145,7 @@ ms.locfileid: "37159599"
 ### <a name="synchronizing-rolap-objects"></a>同步處理 ROLAP 物件  
  `Synchronize` 命令無法為使用 ROLAP 儲存的物件同步處理彙總或是資料，因為這樣的資訊是儲存在基礎關聯式資料來源的資料表中。 不過，可以同步處理 ROLAP 物件的中繼資料。 若要同步處理中繼資料，`Synchronize` 命令會在關聯式資料來源上重新建立資料表結構。  
   
- 您可以在 Synchronize 命令中使用 `Location` 元素，同步處理 ROLAP 物件。 每個`Location`用來重新放置資料來源的項目`DataSourceType`屬性必須明確設定為*本機*。 執行個體時提供 SQL Server 登入。 另外，您也必須將 `ConnectionString` 元素的 `Location` 屬性設定為新位置的連接字串。 在同步處理期間，`Synchronize` 命令將會使用 `DataSourceID` 元素的 `Location` 屬性值，取代 `ConnectionString` 元素的 `Location` 屬性所識別的資料來源連接字串。  
+ 您可以在 Synchronize 命令中使用 `Location` 元素，同步處理 ROLAP 物件。 每個`Location`用來重新放置資料來源的項目`DataSourceType`屬性必須明確設定為*本機*。 . 另外，您也必須將 `ConnectionString` 元素的 `Location` 屬性設定為新位置的連接字串。 在同步處理期間，`Synchronize` 命令將會使用 `DataSourceID` 元素的 `Location` 屬性值，取代 `ConnectionString` 元素的 `Location` 屬性所識別的資料來源連接字串。  
   
 ## <a name="see-also"></a>另請參閱  
  [備份項目&#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   

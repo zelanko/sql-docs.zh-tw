@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ParentObject Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04feffe81c9f42344748713161a81310ddf65e11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089118"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 元素 (XMLA)
   包含用來建立父元素所定義之物件的父物件的識別碼[建立](../xml-elements-commands/create-element-xmla.md)項目。  
@@ -54,8 +51,8 @@ ms.locfileid: "37259164"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

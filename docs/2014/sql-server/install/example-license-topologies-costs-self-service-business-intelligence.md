@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4672647d8e9caae94e3b64fc43c3b687aa010920
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091398"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>SQL Server 2014 自助商業智慧的授權拓撲和成本範例
   本主題說明如何針對選取的高層級考量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Business Intelligence 版或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition。 本主題包含數個內部部署 Microsoft 自助商業智慧 (BI) 拓撲的範例。 您可以利用這些範例所包含的版本和授權，在成本與效能之間取得最佳平衡。 本文提供的拓撲、伺服器數目和授權成本 **僅為範例**。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 Microsoft SharePoint 2013 導入了幾項授權變更，提供更多的選項讓您選擇伺服器、使用者和裝置的授權方式。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 授權支援相同的商業智慧相關案例。  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 隨附於 Business Intelligence 版，它針對某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本提供每個核心的授權方式。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 隨附於 Business Intelligence 版，它針對某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本提供每個核心的授權方式。  
   
 -   SharePoint 2013 針對外部網路與網際網路案例簡化了 SharePoint Server 的授權方式，以及簡化了 SharePoint Online 的選項。  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, backup and restore
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - restoring packages [Integration Services]
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
-caps.latest.revision: 43
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aab0068df8906640acb5b8282f1b80d5e966c2b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 586ab104ed802c0d78465d600fccd5f65e213b39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139900"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>封裝備份和還原 (SSIS 服務)
     

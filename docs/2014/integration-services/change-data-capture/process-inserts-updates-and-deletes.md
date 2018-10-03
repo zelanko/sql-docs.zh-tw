@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89e532328541cb515d6b39394f1a3a3ea0665506
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7cf579c8839b2f990486f9bf5dcca1700dac50e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066408"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
   在執行累加式變更資料載入之 Integration Services 封裝的資料流程中，第二個工作是分隔插入、更新與刪除。 然後，您可以使用適當的命令，將其套用到目的地。  

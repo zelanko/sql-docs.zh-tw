@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29190b58267181a028b2a4f13343f0e8400effb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25f4faa1aec81d940677c85c11be6f45f1e94de5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099388"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>此活頁簿包含可重新整理外部資料的一個或多個查詢。
   對於包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在偵測到連接資訊時顯示這個警告，然後提示您啟用或停用此活頁簿的查詢。  

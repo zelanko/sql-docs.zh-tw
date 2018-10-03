@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 17b8ebfa534b5b6cb9605fa5088cec2e30b607ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fecb188c4a793c2742e28d7b1c76193b901ba0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190558"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步處理的安全性架構
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過 Web 同步處理安全性的組態來啟用精確控制項。 本主題提供一份完整清單，其中列有可併入 Web 同步處理組態中的所有元件，並提供有關元件之間所建立的連接資訊。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -64,8 +61,8 @@ ms.locfileid: "37208868"
   
 |驗證類型|指定驗證的位置|  
 |----------------------------|-------------------------------------------|  
-|如果指定下列其中一項，則會使用「基本驗證」：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**0** for ** @internet_security_mode **參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**0** for **-InternetSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@internet_login** 的 **@internet_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)參數。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>。<br /><br /> 「合併代理程式」命令列： **-InternetLogin** 和 **-InternetPassword**。|  
-|整合式驗證\*如果指定下列其中一項會使用：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**1** for ** @internet_security_mode **參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**1** for **-InternetSecurityMode**。|合併代理程式會在針對合併代理程式 (A) 指定之 Windows 使用者的內容下建立連接。|  
+|如果指定下列其中一項，則會使用「基本驗證」：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**0** for **@internet_security_mode**參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**0** for **-InternetSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@internet_login** 的 **@internet_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)參數。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>。<br /><br /> 「合併代理程式」命令列： **-InternetLogin** 和 **-InternetPassword**。|  
+|整合式驗證\*如果指定下列其中一項會使用：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**1** for **@internet_security_mode**參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**1** for **-InternetSecurityMode**。|合併代理程式會在針對合併代理程式 (A) 指定之 Windows 使用者的內容下建立連接。|  
   
  * 只有當所有電腦位於相同的網域，或彼此具有信任關聯性，彼此的多個網域中，可以使用整合式驗證。  
   
@@ -89,8 +86,8 @@ ms.locfileid: "37208868"
   
 |驗證類型|指定驗證的位置|  
 |----------------------------|-------------------------------------------|  
-|如果指定下列其中一項，則使用 Windows 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**1** for ** @publisher_security_mode **參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**1** for **-PublisherSecurityMode**。|合併代理程式會在針對 IIS 連接 (D) 指定之 Windows 使用者的內容下建立發行者連接。 如果發行者和 IIS 在不同的電腦上，且整合式驗證是用於連接 (D)，則必須在執行 IIS 的電腦上啟用 Kerberos 委派。 如需詳細資訊，請參閱 Windows 文件集。|  
-|如果指定下列其中一項，則使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**0** for ** @publisher_security_mode **參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**0** for **-PublisherSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@publisher_login** 的 **@publisher_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)參數。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>。<br /><br /> 「合併代理程式」命令列： **-PublisherLogin** 和 **-PublisherPassword**。|  
+|如果指定下列其中一項，則使用 Windows 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**1** for **@publisher_security_mode**參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**1** for **-PublisherSecurityMode**。|合併代理程式會在針對 IIS 連接 (D) 指定之 Windows 使用者的內容下建立發行者連接。 如果發行者和 IIS 在不同的電腦上，且整合式驗證是用於連接 (D)，則必須在執行 IIS 的電腦上啟用 Kerberos 委派。 如需詳細資訊，請參閱 Windows 文件集。|  
+|如果指定下列其中一項，則使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**0** for **@publisher_security_mode**參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**0** for **-PublisherSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@publisher_login** 的 **@publisher_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)參數。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>。<br /><br /> 「合併代理程式」命令列： **-PublisherLogin** 和 **-PublisherPassword**。|  
   
 ## <a name="f-connection-to-the-distributor"></a>F. 連接散發者  
  在執行 IIS 的電腦上主控的合併式複寫重新調整器，也會建立散發者連接。 合併式複寫重新調整器會利用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證來連接散發者。 您指定的 Windows 使用者或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入必須符合下列條件：  
@@ -103,8 +100,8 @@ ms.locfileid: "37208868"
   
 |驗證類型|指定驗證的位置|  
 |----------------------------|-------------------------------------------|  
-|如果指定下列其中一項，則使用 Windows 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**1** for ** @distributor_security_mode **參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**1** for **-DistributorSecurityMode**。|合併代理程式會在針對 IIS 連接 (D) 指定之 Windows 使用者的內容下建立散發者連接。 如果散發者和 IIS 在不同的電腦上，且整合式驗證是用於連接 (D)，則必須在執行 IIS 的電腦上啟用 Kerberos 委派。 如需詳細資訊，請參閱 Windows 文件集。|  
-|如果指定下列其中一項，則使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**0** for ** @distributor_security_mode **參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**0** for **-DistributorSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@distributor_login** 的 **@distributor_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)參數。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>。<br /><br /> 「合併代理程式」命令列： **-DistributorLogin** 和 **-DistributorPassword**。|  
+|如果指定下列其中一項，則使用 Windows 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**1** for **@distributor_security_mode**參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**1** for **-DistributorSecurityMode**。|合併代理程式會在針對 IIS 連接 (D) 指定之 Windows 使用者的內容下建立散發者連接。 如果散發者和 IIS 在不同的電腦上，且整合式驗證是用於連接 (D)，則必須在執行 IIS 的電腦上啟用 Kerberos 委派。 如需詳細資訊，請參閱 Windows 文件集。|  
+|如果指定下列其中一項，則使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證：<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]： 值為**0** for **@distributor_security_mode**參數[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)。<br /><br /> RMO： 的值<xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>針對<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>。<br /><br /> 「 合併代理程式命令列： 值為**0** for **-DistributorSecurityMode**。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]： **@distributor_login** 的 **@distributor_password** 和 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)參數。<br /><br /> RMO： <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 和 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>。<br /><br /> 「合併代理程式」命令列： **-DistributorLogin** 和 **-DistributorPassword**。|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. 連接 FTP 伺服器  
  只有在您要將快照集檔案從 FTP 伺服器 (而不是從 UNC 位置) 下載到執行 IIS 的電腦，然後將快照集套用到訂閱者時，才需要指定此連接的 Windows 使用者。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../transfer-snapshots-through-ftp.md)。  

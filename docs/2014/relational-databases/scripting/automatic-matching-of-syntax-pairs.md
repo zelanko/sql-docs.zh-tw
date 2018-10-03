@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 263481d1fe499ef59257d6f9211e638fe6c0b159
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 174918e72602acaef4ec4f505fb387e78ab04d8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085354"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
   語法組的自動比對會提供有關必須成對編碼的語法元素是否正確配對的立即回應給您。 這就是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的分隔符號比對、Analysis Services XMLA 查詢編輯器中的大括號比對，以及 MDX 和 DMX 編輯器中的括號比對。  

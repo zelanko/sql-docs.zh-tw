@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-caps.latest.revision: 45
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160639"
 ---
 # <a name="common-properties"></a>通用屬性
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -119,7 +116,7 @@ ms.locfileid: "37169327"
 |IsSorted|布林|指示是否要排序輸入中的資料。|  
 |名稱|String|輸入的名稱。|  
 |SourceLocale|Integer|輸入資料的地區設定識別碼 (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 執行個體時提供 SQL Server 登入。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 . 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
   
  目的地和某些轉換不支援錯誤輸出，而且這些元件的 ErrorRowDisposition 和 TruncationRowDisposition 屬性是唯讀的。  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142238"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>從現有物件建立資料來源 (資料來源精靈) (Analysis Services)
   使用 **[從現有物件中建立資料來源]** 頁面，即可指定新資料來源將依據的現有資料來源或專案。  

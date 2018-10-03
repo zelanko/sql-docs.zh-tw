@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Name Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 422bd152e82a471ce0f130a26aaa12a56026419a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127898"
 ---
 # <a name="name-element-xmla"></a>Name 元素 (XMLA)
   包含父代之屬性成員的名稱[屬性](attribute-element-xmla.md)或是[轉譯](translation-element-xmla.md)項目。  
@@ -53,7 +50,7 @@ ms.locfileid: "37194228"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |上階或父系：|基數|  
 |[Attribute](attribute-element-xmla.md)|1-1：只出現一次的必要元素。|  
 |[轉譯](translation-element-xmla.md)|0-1：只能出現一次的選擇性元素。|  
@@ -63,7 +60,7 @@ ms.locfileid: "37194228"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[屬性](attribute-element-xmla.md)，[轉譯](translation-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  若為 `Attribute` 元素，`Name` 元素會包含在進行 `Insert` 或 `Update` 命令期間要分別插入或更新之屬性成員的名稱。  

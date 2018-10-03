@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagesettingsdialog.f1
 ms.assetid: 58b26088-f4b1-4962-b824-3e360e955671
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8dc26c4b2d56f34136d45efe80faee953298082e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad155eb0a7893b7c48fabb0ef7b8ba97373122e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099415"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>儲存選項對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [儲存選項] 對話方塊，即可指定維度、Cube、量值群組以及資料分割的自訂儲存模式、主動式快取和通知選項。 您可以藉由在 [儲存設定] 對話方塊上按一下 [選項]，來顯示 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [儲存選項] 對話方塊。 如需 [儲存設定] 對話方塊的詳細資訊，請參閱[儲存設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md)。  

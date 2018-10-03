@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076717"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 資料庫的擴充欄位屬性 (SSRS)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 `Value` 和 `IsMissing` 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 您可以在報表中包含擴充的欄位屬性值，藉由撰寫運算式，使用內建的名稱來指定這些`Fields`集合。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 `Value` 和 `IsMissing` 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 您可以在報表中包含擴充的欄位屬性值，藉由撰寫運算式，使用內建的名稱來指定這些`Fields`集合。  
   
  擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是屬性會對應到特定欄位屬性名稱，而且您可以透過內建的多個資料來源共通`Fields`集合按照名稱。 自訂屬性則是各個資料提供者專有的屬性，這類屬性可透過內建的 `Fields` 集合存取，但只能透過使用擴充屬性名稱做為字串的語法。  
   
@@ -50,7 +47,7 @@ ms.locfileid: "37268626"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|指定欄位的資料值。|  
 |`IsMissing`|`Boolean`|指出在產生的資料集裡是否有找到欄位。|  
-|`UniqueName`|`String`|傳回層級的完整名稱。 例如，`UniqueName`值可能是員工 *[Employee]。 [Employee Department]。[部門]。.& [Sales]。 （& s) [North American Sales Manager]。 [272] &*。|  
+|`UniqueName`|`String`|傳回層級的完整名稱。 例如，`UniqueName`值可能是員工 *[Employee]。 [Employee Department]。[部門].& [Sales]。 （& s) [North American Sales Manager]。 [272] &*。|  
 |`BackgroundColor`|`String`|傳回資料庫中為欄位定義的背景色彩。|  
 |`Color`|`String`|傳回資料庫中為項目定義的前景色彩。|  
 |`FontFamily`|`String`|傳回資料庫中為項目定義之字型的名稱。|  

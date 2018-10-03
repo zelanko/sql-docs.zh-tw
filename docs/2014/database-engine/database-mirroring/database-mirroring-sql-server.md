@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - mirror database [SQL Server]
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
-caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154938"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
     
@@ -316,7 +313,7 @@ ms.locfileid: "37233888"
   
 -   [移除資料庫鏡像 &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
- **SQL Server Management Studio**  
+ **Transact-SQL**  
   
 -   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

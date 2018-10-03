@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147518"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
   本主題提供 SharePoint 伺服器陣列中 PowerPivot 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
@@ -80,7 +77,7 @@ ms.locfileid: "37173559"
 |----------|-------------|------------------|-----------------|  
 |開始時間|上午 04:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的下限。|  
 |結束時間|下午 08:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的上限。|  
-|PowerPivot 自動資料重新整理帳戶|無|目標應用程式識別碼|此帳戶用來代表排程擁有者執行資料重新整理作業。<br /><br /> 自動資料重新整理必須事先加以定義，才能在服務應用程式組態頁面參考。 如需詳細資訊，請參閱 <<c0> [ 設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。</c0>|  
+|PowerPivot 自動資料重新整理帳戶|None|目標應用程式識別碼|此帳戶用來代表排程擁有者執行資料重新整理作業。<br /><br /> 自動資料重新整理必須事先加以定義，才能在服務應用程式組態頁面參考。 如需詳細資訊，請參閱 <<c0> [ 設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。</c0>|  
 |允許使用者輸入自訂的 Windows 認證|已啟用|布林|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱 < [PowerPivot 資料重新整理設定的預存認證&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
 |最大處理記錄長度|365|1 到 5000 天|決定資料重新整理記錄要保留在 PowerPivot 服務應用程式資料庫中的時間長度。 如需詳細資訊，請參閱 < [PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。|  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:StmtStarting event class
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95382cec4c94c9cd75a3164bac1566d8a88c2322
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 892a3aee2236c93953825d3414b402ce5b49d174
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115868"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 事件類別
   SP:StmtStarting 事件類別指出已啟動預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

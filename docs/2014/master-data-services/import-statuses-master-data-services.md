@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d2d9255978078af9b23c4b00e4e3fec2a8f57c4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab4dd37863bfea66c472f33213896927e4e39600
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122489"
 ---
 # <a name="import-statuses-master-data-services"></a>匯入狀態 (Master Data Services)
   在 **[整合管理]** 功能區域的 **[暫存批次]** 頁面上，可能會出現下列狀態。  

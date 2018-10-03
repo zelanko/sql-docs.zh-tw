@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad77c531a5ea83cc5d65b5be17e9cc231f00abe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079669"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
   升級至 Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 的情況有四種。 請選擇最適合您情況的情況。  

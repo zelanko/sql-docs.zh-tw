@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReportAction Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReportAction data type
 ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bacb34e6a57126048253a5292fe19627838d21e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb1679d0275e6662116976b572f612f9ab113bb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176395"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164319"
 ---
 # <a name="reportaction-data-type-assl"></a>ReportAction 資料類型 (ASSL)
   定義代表產生的動作的衍生的資料類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表。  
@@ -53,13 +50,13 @@ ms.locfileid: "37176395"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[動作](action-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[路徑](../properties/path-element-assl.md)， [ReportFormatParameters](../collections/reportformatparameters-element-assl.md)， [ReportParameters](../collections/reportparameters-element-assl.md)， [ReportServer](../objects/server-element-assl.md)|  
 |衍生的元素|[動作](../objects/action-element-assl.md)([動作](../collections/actions-element-assl.md)的集合[Cube](../objects/cube-element-assl.md)或是[觀點來看](../objects/perspective-element-assl.md))|  
   

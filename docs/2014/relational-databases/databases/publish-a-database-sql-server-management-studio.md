@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc01e05624d55b2f8bfda2c7d747d03604f17fac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9bb58b72cb4a4e785c4dc94b448e5e754ac0c80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260901"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129738"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>發行資料庫 (SQL Server Management Studio)
   您可以使用 **[產生和發佈指令碼]** 精靈，將整個資料庫或個別的資料庫物件發行至 Web 主控提供者。  

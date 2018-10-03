@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data viewers [Integration Services]
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a92dbd4bcd778ce081ff94e7e16dee75bccaee4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab1e8476a7ddb05ff129417ba0493aae90a12852
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059928"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>將資料檢視器加入資料流程
   本主題描述如何在資料流程中加入和設定資料檢視器。 資料檢視器可以顯示在兩個資料流程元件之間移動的資料。 例如，在資料流程中的轉換修改從資料來源擷取的資料之前，資料檢視器可以先顯示該資料。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClientNetworkProtocol Class
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ClientNetworkProtocol class
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
-caps.latest.revision: 27
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1452673041397a5af7d3274964e1221f448dbc1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26d1667f80547d81e9bda47d66dd3cf7df4b3bbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071248"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 類別
   [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)代表網路上允許的執行個體通訊的用戶端執行個體安裝的通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過網路。  

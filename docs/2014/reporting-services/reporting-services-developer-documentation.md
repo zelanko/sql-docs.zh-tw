@@ -4,32 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0cb0e08f48dbb873d3dec7d4d688182ebe3415fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116005"
 ---
 # <a name="developer39s-guide-reporting-services"></a>開發人員&#39;指南 (Reporting Services)
-  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供一些可在自己的應用程式中利用的程式設計介面。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的現有功能和能力，將自訂報表與管理工具建立到網站和 Windows 應用程式中，或是可以延伸 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供一些可在自己的應用程式中利用的程式設計介面。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的現有功能和能力，將自訂報表與管理工具建立到網站和 Windows 應用程式中，或是可以延伸 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
   
  擴充 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台包括建立可用於資料存取、報表傳遞等的新元件與資源。 您可以將這些元件與資源行銷到在其組織中使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的公司。  
   

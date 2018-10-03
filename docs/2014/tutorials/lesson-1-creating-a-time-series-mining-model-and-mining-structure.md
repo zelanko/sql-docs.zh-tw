@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251180"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174018"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>第 1 課：建立時間序列採礦模型和採礦結構
   在這一課，您將建立一個採礦模型，好讓您根據歷程記錄資料預測一段時間的值。 當您建立此模型時，基礎結構將會自動產生而且可用來當做其他採礦模型的基礎。  

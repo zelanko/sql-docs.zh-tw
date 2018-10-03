@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94d29f4e488e68c5fda2549b793a26770480e30a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 766a0c03bc47527d27fec6e50f2525284a6bdd0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204148"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>設定或變更封裝的保護等級
   若要控制封裝內容以及其中包含之機密值 (例如密碼) 的存取權，請設定 `ProtectionLevel` 屬性的值 包含在專案中的封裝需要有和專案相同的保護層級，才能建立專案。 如果您變更專案上的 `ProtectionLevel` 屬性設定，就需要手動更新封裝的屬性設定。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebf2117570a343c740eaaaa964d956d2c8faede2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c51d2242ec06b4cb68cb054f9214566b0dbf3946
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158781"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099278"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
   您可以使用 CDC 設計工具主控台來檢視有關您所建立之執行個體的資訊，並管理執行個體的操作。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105168"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授與資料格資料的自訂存取權 (Analysis Services)
   資料格安全性可用來允許或拒絕存取 Cube 內的量值資料。 下圖顯示在利用其角色僅允許存取特定量值的使用者身分連接時，樞紐分析表中允許和拒絕的量值組合。 在此範例中， **Reseller Sales Amount** 及 **Reseller Total Product Cost** 是唯二能夠透過此角色取得的量值。 所有其他量值都會明確遭到拒絕 (下一節＜允許存取特定量值＞將提供用來取得這個結果的步驟)。  

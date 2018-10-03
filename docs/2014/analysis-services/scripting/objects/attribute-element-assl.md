@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Attribute Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Attribute element
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e94fcb4fdffacfad0bbf735bfc2fe3c7b19b798
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f058abfe3fd0b06e57fb749d64d3dc8c1d11fa72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123378"
 ---
 # <a name="attribute-element-assl"></a>Attribute 元素 (ASSL)
   包含屬性的描述。  
@@ -81,7 +78,7 @@ ms.locfileid: "37171459"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[屬性](../collections/attributes-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  在 「 分析管理物件 (AMO) 物件模型的對應項目<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>， <xref:Microsoft.AnalysisServices.AggregationAttribute>， <xref:Microsoft.AnalysisServices.CubeAttribute>， <xref:Microsoft.AnalysisServices.DimensionAttribute>， <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>，和<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79a86a9b589fc5118f3418d0898117c7482dda6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8309a4d66fbcf36aca4e5e4d817c2bb34722bc08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072968"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
   在您可以檢閱來源資料的設定檔前，第一個步驟是設定並執行「資料分析」工作。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部建立這個工作。 若要設定「資料分析」工作，您可以使用「資料分析工作編輯器」。 此編輯器可讓您選取要輸出設定檔的位置以及要計算的設定檔。 設定工作後，您可以執行封裝以計算資料設定檔。  

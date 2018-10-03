@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090208"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>連接到報表或資料摘要 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您連接到資料摘要。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

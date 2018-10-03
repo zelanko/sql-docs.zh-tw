@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a649ffffe6f2d9f5902ede9e6d7a6126fd09e25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09f42856788dffa45a03690c87e2383849c5f813
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189818"
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 元素 (CSDLBI)
   Kpi 元素會定義可當做關鍵效能指標 (KPI) 使用的計算。 在商業智慧資料模型中，KPI 是以量值為基礎，因此 KPI 的定義會包含與量值關聯的所有中繼資料以及呈現 KPI 值所需的資訊，包括預設圖形。  

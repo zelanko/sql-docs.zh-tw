@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133288"
 ---
 # <a name="report-manager-f1-help"></a>報表管理員 F1 說明
   下列主題將提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員的頁面層級說明。 應用程式中的每一個頁面，都會有一個主題。 並非所有頁面都是可用的。 安全性設定會決定您可以存取的頁面。 若要從報表管理員中存取這些主題，請按一下主要工具列上的 **[說明]** 。  

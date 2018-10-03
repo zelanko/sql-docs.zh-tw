@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5919fc4d600c8c4172edd4d067efbd37708dc87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e0d945e1fe95fe95d8ed655a0bd6b94e132f3c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273564"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176281"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>使用 Microsoft 一般內容樹狀檢視器瀏覽模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般採礦模型內容檢視器能針對採礦演算法所找到的模式提供詳細的資訊，也可以用來存取在分析程序期間所產生的各種統計資料。 資訊的量及類型是根據使用的演算法而定，但可能包含下列類別：  

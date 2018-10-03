@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 240ae9701aa48f393c77dd27aafcd350bdd89d51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137638"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>工作 6：從 Cleanse Supplier List 專案匯入值
   在這項工作中，您會匯入清理程序期間所收集的資料品質知識。 請參閱[清理專案值匯入定義域](http://msdn.microsoft.com/library/hh479581.aspx)如需詳細資訊。 您也將知識庫匯出到 DQS 檔案之前發行更新**供應商**知識庫。  

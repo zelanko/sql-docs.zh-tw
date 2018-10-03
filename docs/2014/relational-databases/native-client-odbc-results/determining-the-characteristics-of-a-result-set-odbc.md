@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], characteristics
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcf7c7fb126149de1e8e0355ac698eef1c95d36f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122228"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>決定結果集的特性 (ODBC)
   中繼資料是描述其他資料的資料。 例如，結果集中繼資料會描述結果集的特性，例如，結果集中的資料行數目、這些資料行的資料類型、其名稱、有效位數，以及 Null 屬性。  

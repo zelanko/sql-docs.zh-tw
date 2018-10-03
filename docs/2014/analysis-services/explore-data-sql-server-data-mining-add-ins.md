@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - histogram [data mining]
 - data visualization
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 813da97a8128464ef105d27780f459060867f11c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae3ac89f40c67a8097db676ba0628a25d260fbeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082668"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>瀏覽資料 (SQL Server 資料採礦增益集)
   ![瀏覽資料精靈](media/dmc-explore.gif "瀏覽資料精靈")  

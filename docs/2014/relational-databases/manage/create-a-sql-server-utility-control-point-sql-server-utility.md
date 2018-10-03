@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6b326cf19dde95a0b942a85c1d25bd6ac4a9456
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189268"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
   企業可以擁有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都可以管理多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料層應用程式。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都只能有一個公用程式控制點 (UCP)。 您必須針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式建立新的 UCP。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和每一個資料層應用程式都只是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的成員，而且是由單一 UCP 所管理。  

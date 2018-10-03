@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Expression Builder [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS, expressions
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2410b6c9cb601b47f1a55f9601a2bb7afe0cc593
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce809b13c9f9d1efdedea43d097c38ea955076f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189788"
 ---
 # <a name="expression-builder-integration-services"></a>運算式產生器 (Integration Services)
   **[運算式產生器]** 對話方塊提供圖形化使用者介面，用於建立屬性運算式所使用的運算式。 您可以從「 **設計師」中的自訂工作對話方塊，以及從** 中的 [!INCLUDE[ssIS](../includes/ssis-md.md)] [屬性] **視窗，存取** [運算式產生器] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]對話方塊。  

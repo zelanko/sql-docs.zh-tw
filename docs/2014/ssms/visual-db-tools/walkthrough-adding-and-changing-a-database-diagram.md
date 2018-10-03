@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f30616dd6f9ee51b929a98740a3d4c4ed320d7bb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195518"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
   這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  

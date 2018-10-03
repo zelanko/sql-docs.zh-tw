@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141888"
 ---
 # <a name="defining-a-referenced-relationship"></a>定義參考關聯性
   本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商] 維度 (稱為「參考維度」)，將 [地理位置] 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  

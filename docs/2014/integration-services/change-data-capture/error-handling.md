@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f2c47fee88ba536c084649669ac5cd5f53cf6d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c93e226ea61d9d427b236a31247d01346c8d5cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077348"
 ---
 # <a name="error-handling"></a>錯誤處理
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  

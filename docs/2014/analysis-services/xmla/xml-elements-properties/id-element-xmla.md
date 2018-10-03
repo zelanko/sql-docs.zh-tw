@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ID Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ID element
 ms.assetid: f7d67599-6a70-4455-bfdb-1d127e5eff4e
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42dc60e24d29399426eabc5d0bb76166c31d1423
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86a24d14a0c9e198c879e4dce092f430a4755871
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110128"
 ---
 # <a name="id-element-xmla"></a>ID 元素 (XMLA)
   識別要在上面執行父代[鎖定](../xml-elements-commands/lock-element-xmla.md)或是[Unlock](../xml-elements-commands/unlock-element-xmla.md)項目。  
@@ -53,7 +50,7 @@ ms.locfileid: "37151339"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37151339"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[鎖定](../xml-elements-commands/lock-element-xmla.md)，[解除鎖定](../xml-elements-commands/unlock-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `ID` 元素包含用來識別鎖定的全域唯一識別碼 (GUID)。  

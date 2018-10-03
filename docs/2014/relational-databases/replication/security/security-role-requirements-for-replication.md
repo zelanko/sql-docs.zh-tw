@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], roles
 - roles [SQL Server], replication
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f70f4e11bec18bb713fa04b01b912d476701b4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c57fa5ea252aa66e14628d49529970ceab7eb64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146409"
 ---
 # <a name="security-role-requirements-for-replication"></a>複寫的安全性角色需求
   基於使用者登入所對應之角色，複寫會限制使用者執行的特定動作。 複寫會將部份權限授與 **系統管理員 (sysadmin)** 固定伺服器角色、 **db_owner** 固定資料庫角色，以及發行集存取清單 (PAL) 中的登入。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
@@ -17,16 +15,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.chartproperties.filters.f1
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3123a7c1ba3a520ad743ffe7dbd65dfd57443672
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64dda9e4da8e5045466b63410c9c19788dc48fc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116328"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>篩選頁面、圖表對話方塊 ((報表產生器及 SSRS)
   按一下以下對話方塊中的 **[篩選]** ：  
@@ -60,10 +57,10 @@ ms.locfileid: "37317898"
   
  如果您所需要的資料類型選項不在此下拉式清單中，請撰寫運算式，以便將此值轉換為正確的資料類型。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
- **[運算子]**  
+ **運算子**  
  選擇要用來比較運算式和值的運算子。  
   
- **ReplTest1**  
+ **值**  
  在 [運算式] 中，輸入運算式或是要用來評估運算式的值。  
   
 ## <a name="see-also"></a>另請參閱  

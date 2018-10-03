@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], adding
 - adding extended stored procedures
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
-caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c88e0640c41e7307144912cc05f9cdd21022fee6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ec7501a3a1d554d3437ea37f208f60fc66555f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191548"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>將擴充預存程序加入至 SQL Server
     

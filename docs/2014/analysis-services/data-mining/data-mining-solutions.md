@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: 62
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57c0dcbc62475cd55b827d9104efe8a8c2db249c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d37ee863bbc14bbaa3c73a2c5781e080e81ee63
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161768"
 ---
 # <a name="data-mining-solutions"></a>資料採礦方案
   資料採礦方案是包含一個或多個資料採礦專案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案。  

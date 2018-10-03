@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ea8336f9e771676ab261b11570a57e68ad3eb321
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b5d14f94a9fdd71a628ddecdc1b91bad8e11e54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096680"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自訂組件物件
   在某些情況下，您可能需要在初始化自訂組件類別時，初始化其中的屬性與欄位值。 您很可能需要使用報表全域物件集合中可用的值，來初始化自訂類別。 您可以透過覆寫報表之 **Code** 物件的 **OnInit** 方法來完成。 若要存取 **OnInit**，請使用報表定義的 **Code** 項目。 有兩個技術可初始化您計劃在報表中使用的自訂組件中類別之屬性或欄位值。您可以使用 **OnInit** 來宣告和建立類別的新執行個體，或者您可以使用 **OnInit** 來呼叫公開可用的方法。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server]
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - error logs [SQL Server]
 - logs [SQL Server], Windows application logs
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b57393f61c0acdb39adec511f31dec8f5b266de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebb0f330fdad20ea42bd988247e4c26b55720455
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167298"
 ---
 # <a name="monitoring-the-error-logs"></a>監視錯誤記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將特定系統事件和使用者自訂事件記錄到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔中。 這兩種記錄檔都會自動替所有記錄的事件加入時間戳記。 請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中的資訊來解決 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的相關問題。  

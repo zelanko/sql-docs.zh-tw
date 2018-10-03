@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420587"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192869"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
   此範例會示範如何使用大量複製函數，透過 `bcp_bind` 和 `bcp_sendrow` 從程式變數大量複製資料到 SQL Server  (為了簡化這個範例會移除錯誤檢查程式碼)。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
- **安全性注意事項**可能的話，請使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該先加密它們[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
+ **安全性注意事項**可能的話，請使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) 加密這些認證。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>若要直接針對程式變數使用大量複製函數  
   

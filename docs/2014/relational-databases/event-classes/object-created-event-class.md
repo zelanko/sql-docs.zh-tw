@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Object:Created event class
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a03e57e5c2a3cea5d6cec1327ba0025ad5491b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ae6c6d63527a3d5dc817607270d4cb63dcaf315
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091459"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 事件類別
   Object:Created 事件類別指出已建立物件，例如，利用 CREATE INDEX、CREATE TABLE 或 CREATE DATABASE 陳述式建立的物件。  

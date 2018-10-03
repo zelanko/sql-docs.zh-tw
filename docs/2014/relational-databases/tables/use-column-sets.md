@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180658"
 ---
 # <a name="use-column-sets"></a>使用資料行集
   使用疏鬆資料行的資料表可以指定資料行集，以傳回資料表中的所有疏鬆資料行。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 資料行集類似於計算資料行，因為資料行集並未實際儲存在資料表中。 資料行集與計算資料行不同的地方在於資料行集可直接更新。  
@@ -129,7 +126,7 @@ GO
   
  **  不適用 = 在資料行集上的選取作業期間，沒有任何值是這些屬性的輸出。 當提供給插入或更新作業內資料行集的 XML 表示中的呼叫端指定這個屬性的值時，將會產生錯誤。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  資料行集之安全性模型的運作方式，類似於資料表和資料行之間存在的安全性模型。 資料行集可視為一個迷你資料表，而選取作業就像是此迷你資料表上的 SELECT * 作業。 但是，資料行集與疏鬆資料行之間的關聯性是一種群組關聯性，而不限為容器。 此安全性模型會檢查資料行集資料行上的安全性，並接受基礎疏鬆資料行上的 DENY 作業。 此安全性模型的其他特性如下：  
   
 -   可以從資料行集資料行授與及撤銷安全性權限，類似於資料表中的任何其他資料行。  

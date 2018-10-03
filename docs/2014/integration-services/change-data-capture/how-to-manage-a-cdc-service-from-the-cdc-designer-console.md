@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7bc3b226a22dd5bd2c62b124266b868125e38a77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 135d7998939c7b92de541221f89355d625a54c0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094628"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何從 CDC 設計工具主控台管理 CDC 服務
   此程序描述如何使用 CDC 設計工具主控台來管理 CDC 服務。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: 68
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3281a4112f585936f10b5c626a4b22f5fd359092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085508"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>疑難排解資料庫鏡像組態 (SQL Server)
   本主題提供資訊以協助您對設定資料庫鏡像工作階段的問題進行疑難排解。  
@@ -31,7 +28,7 @@ ms.locfileid: "37293158"
 > [!NOTE]  
 >  確定您符合所有 [資料庫鏡像的必要條件](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
-|問題|摘要|  
+|問題|總結|  
 |-----------|-------------|  
 |錯誤訊息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息指出無法連繫伺服器網路位址或該位址不存在，並建議您確認網路位址名稱，然後重新發出命令。 如需詳細資訊，請參閱 [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) 主題。|  
 |[帳戶](#Accounts)|討論正確設定在底下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之帳戶的需求。|  

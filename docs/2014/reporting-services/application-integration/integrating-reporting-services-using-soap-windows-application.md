@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b0656f3b44e4b0aa42a1b69f2290da82b0131abd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 638f3d5551bc04e92278405df4cddea8b73c6dcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104298"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>在 Windows 應用程式中使用 SOAP API
   您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 SOAP API 是一種 Web 服務，因此可以輕易地存取，以提供企業報表功能給自訂商務應用程式。 您只要撰寫呼叫服務的程式碼，即可在 Windows 應用程式中存取 Web 服務。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，您就可以產生公開 Web 服務的屬性與方法之 Proxy 類別，而且可讓您使用熟悉的基礎結構與工具，建立以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技術為基礎的商務應用程式。  
