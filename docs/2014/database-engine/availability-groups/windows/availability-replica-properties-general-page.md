@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29b53d91b1d60752a9e7ecea5d9d020ab6ab3d70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149868"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性複本屬性 (一般頁面)
   使用此對話方塊來檢視可用性複本的屬性。  

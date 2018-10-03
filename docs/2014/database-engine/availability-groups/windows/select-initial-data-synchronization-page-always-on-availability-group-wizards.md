@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f48418911358fb7833b745ee8c3172de2d763155
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091431"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>選取初始資料同步處理頁面 (AlwaysOn 可用性群組精靈)
   使用 AlwaysOn **[選取初始資料同步處理]** 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用： [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  

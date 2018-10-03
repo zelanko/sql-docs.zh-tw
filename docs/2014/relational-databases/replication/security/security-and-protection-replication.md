@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], security
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c392ef01680ec58374ef6a0aed5a02fe333abad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec3dacd98a872373bc1b17e5e525c674d9749b58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223764"
 ---
 # <a name="security-and-protection-replication"></a>安全性與保護 (複寫)
   協助保護在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中所部署的複寫案例不受到惡意的攻擊，並提升資料的安全性。  

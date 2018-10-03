@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310195"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161758"
 ---
-# SQL Server 2014 的線上叢書
+# <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 的線上叢書
   歡迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 線上叢書》。 線上叢書 》 包含工作描述和參考文件會說明如何使用執行資料管理與商業智慧工作[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **現在就試試看：**  
  ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
   
-## SQL Server 技術  
+## <a name="sql-server-technologies"></a>SQL Server 技術  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包含數種資料管理和分析技術。 按下表中的連結，以尋找每項技術的功能、工作及參考文件集。  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310195"
 |![複寫圖示](media/replication.gif "複寫圖示")|[複寫](../relational-databases/replication/sql-server-replication.md)<br /><br /> 複寫是一組技術，用於將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理以維護一致性。 使用複寫，您可以透過區域網路、廣域網路、撥號連接、無線連接及網際網路，將資料散發到不同的位置以及遠端或行動使用者。|  
 |![Reporting Services 圖示](media/reportingservices.gif "Reporting Services 圖示")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services 提供了啟用 Web 的企業級報表功能，讓您可以建立從各種資料來源取得內容的報表、以各種格式發行報表，以及集中管理安全性和訂閱。|  
   
-## 網站上的 SQL Server 資訊  
+## <a name="sql-server-information-on-the-web"></a>網站上的 SQL Server 資訊  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 在幾個網站中發行有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的其他資訊。  
   
  **SQL Server 網站**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310195"
   
 -   [XML 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 組態管理員說明](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

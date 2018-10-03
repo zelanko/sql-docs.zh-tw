@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full recovery model [SQL Server], RESTORE example
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7354181663b5a7a9c1224a9fd17f7ab73cea0590
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b104eab4067f4eeb435c397708d0cad4d1e9cd4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062188"
 ---
 # <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>範例：線上還原唯讀檔案 (完整復原模式)
   本主題是關於在完整復原模式下，包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  

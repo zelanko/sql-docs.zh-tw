@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], MDX
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cube context
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d42357b197b3a691321a5ffd9d066b787288efe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b877875c6a5c02b7d7715916d5515e93d95dbeb3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273444"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132141"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>建立查詢中的 Cube 內容 (MDX)
   每個  MDX 查詢都會在指定的 Cube 內容內執行。 此內容定義在查詢內由運算式評估的成員。  

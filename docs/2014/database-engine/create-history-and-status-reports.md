@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], reports
 - Visual SourceSafe, reports
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28d2dc6931f32b95bb318732a146b53d7bac5201
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807215"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192368"
 ---
 # <a name="create-history-and-status-reports"></a>建立記錄和狀態報表
   您可以在目前載入的方案中，建立一份記錄或檔案目前狀態的報表。 您也可以預覽報表，再將報表傳給印表機、檔案或 [剪貼簿]。 這些報表不是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產生的。 相反地，報表是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 產生的。  

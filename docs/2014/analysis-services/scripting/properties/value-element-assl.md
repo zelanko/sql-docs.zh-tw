@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bdf16f2f9ce7415d396cf5f4110fd3127e04774
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d338b8607d8515bf89183eeadd24252c55af8fc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218188"
 ---
 # <a name="value-element-assl"></a>Value 元素 (ASSL)
   包含父元素的值。  
@@ -50,7 +47,7 @@ ms.locfileid: "37201988"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 |上階或父系|資料類型|  
@@ -64,7 +61,7 @@ ms.locfileid: "37201988"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[AlgorithmParameter](../objects/algorithmparameter-element-assl.md)，[註解](../objects/annotation-element-assl.md)， [Kpi](../objects/kpi-element-assl.md)， [ReportFormatParameter](../objects/reportformatparameter-element-asl.md)， [ReportParameter](../objects/reportparameter-element-assl.md)， [ServerProperty](../objects/serverproperty-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `Value` 元素包含與父物件相關聯的值。 `Value` 元素的預期值會因父元素而不同，如下表所述。  

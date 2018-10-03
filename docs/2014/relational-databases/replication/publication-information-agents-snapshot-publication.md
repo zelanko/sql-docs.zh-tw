@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.downlevelagents.snapshot.f1
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2525fe7bb5010c1b76ff16a5c3cc6fe02d0fd98b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5d8ecb10d9c17da6f78ddef2544e48ee2c85c35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109801"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>發行集資訊，代理程式 (快照式發行集)
   **[代理程式]** 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  

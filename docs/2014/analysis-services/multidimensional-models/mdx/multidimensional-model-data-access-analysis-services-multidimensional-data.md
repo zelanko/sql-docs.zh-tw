@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cf03599736be8dbec6666c6977543279607bbdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203718"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多維度模型資料存取 (Analysis Services - 多維度資料)
   使用本主題中的資訊了解如何使用程式設計方法、指令碼或用戶端應用程式 (其中包含的內建支援可連接至網路上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器) 存取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料。  
@@ -61,7 +58,7 @@ ms.locfileid: "37291724"
   
  SQL Server Data Tools 建立在 Visual Studio Shell 之上，並使用專案組織與包含模型。 如需詳細資訊，請參閱[使用 SQL Server 資料工具建立多維度模型 &#40;SSDT&#41;](../creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)。  
   
-### <a name="sql-server-management-studio"></a>Transact-SQL  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  對於資料庫管理員，SQL Server Management Studio 是一個整合式的環境，可用來管理 SQL Server 執行個體，包括 Analysis Services 的執行個體與多維度資料庫。 如需詳細資訊，請參閱 [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 和 [連接到 Analysis Services](../../instances/connect-to-analysis-services.md)。  
   
 ##  <a name="bkmk_querylang"></a> 查詢語言  

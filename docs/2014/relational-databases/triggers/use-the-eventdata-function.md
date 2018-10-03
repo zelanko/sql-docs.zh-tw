@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
@@ -15,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222648"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
   使用 EVENTDATA 函數擷取引發 DDL 觸發程序之事件的相關資訊。 此函數會傳回 `xml` 值。 XML 結構描述包括有關下列項目的資訊：  

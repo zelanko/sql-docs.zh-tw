@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProcessingMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 550b19dc291818052b954b476d3673fd717d38ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148598"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode 元素 (ASSL)
   指出此執行個體應該在處理期間或處理之後進行索引和彙總。  
@@ -59,7 +56,7 @@ ms.locfileid: "37273784"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Cube](../objects/cube-element-assl.md)，[維度](../objects/dimension-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[資料分割](../objects/partition-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `ProcessingMode` 上的 `Cube` 值會提供預設值給 Cube，而且您可以透過設定每個資料分割的 `ProcessingMode`，覆寫此值。  

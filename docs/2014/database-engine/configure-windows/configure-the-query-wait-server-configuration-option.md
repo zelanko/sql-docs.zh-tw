@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], timing out
 - time [SQL Server], query wait time
 - query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e335012b7c25a5d72ec21f86970dfa5fcd364896
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe68f68034c71708ba6f23ba7bdb79a218ed2bc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100751"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>設定 query wait 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query wait [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 如果因為記憶體不足，無法執行會使用大量記憶體的查詢 (例如涉及排序與雜湊的查詢)，則這些查詢會排入佇列中。 **query wait** 選項會指定逾時前，查詢等候資源的秒數 (從 0 到 2147483647)。這個選項的預設值是 -1。 這表示逾時時間就會是估計查詢成本的 25 倍。  

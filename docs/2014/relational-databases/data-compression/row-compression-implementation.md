@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cddc9636612e5e96c067f4c1c0d87b46976372ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2fd9a15e4848cc9116d4a9ce3f19e006933291ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160469"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102848"
 ---
 # <a name="row-compression-implementation"></a>資料列壓縮實作
   本主題摘要說明 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如何實作資料列壓縮。 這個摘要提供協助您計畫資料所需之儲存空間的基本資訊。  

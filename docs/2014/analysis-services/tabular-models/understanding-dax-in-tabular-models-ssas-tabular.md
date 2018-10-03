@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c4047c082a890e0ddd2871bbd35d7dbd21d363d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136018"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格式模型中的 DAX (SSAS 表格式)
   資料分析運算式 (DAX) 是公式語言，可用來在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 活頁簿和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型專案中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  

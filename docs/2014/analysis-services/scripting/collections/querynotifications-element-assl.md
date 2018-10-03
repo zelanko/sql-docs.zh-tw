@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - QueryNotifications Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - QueryNotifications element
 ms.assetid: 0e7e951f-c8b9-4492-bb01-e4b5d16edde6
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb2e70a6e4b17d52568670a1a13d122387e9f613
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7da194e4d4aaa51d5b54553a3eacf162d4040eaa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124187"
 ---
 # <a name="querynotifications-element-assl"></a>QueryNotifications 元素 (ASSL)
   包含的集合[QueryNotification](../objects/querynotification-element-assl.md)項目提供資訊給[ProactiveCaching](../objects/proactivecaching-element-assl.md)有關判斷資料來源是否已經修改所執行之查詢的項目。  
@@ -50,8 +47,8 @@ ms.locfileid: "37213968"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

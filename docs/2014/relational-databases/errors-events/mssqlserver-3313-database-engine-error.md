@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 695e747a5b5e9f676c123e946f30824556107e7b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: dc4d894dc03a53892b69f33dbf153cdd15fcf340
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216241"
 ---
 # <a name="mssqlserver3313"></a>MSSQLSERVER_3313
     

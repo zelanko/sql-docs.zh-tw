@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.findnode.f1
 helpviewer_keywords:
 - Find Node dialog box
 ms.assetid: 220ebca3-3339-4b32-9770-4293fe8e70a4
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11f1755b9874ca667183257b67bb925bfb85f5a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178945"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218532"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>尋找節點對話方塊 (採礦模型檢視器)
   可以使用模型的 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊來尋找特定節點。 在包含許多節點或項目集的複雜圖表中，此功能很實用。  

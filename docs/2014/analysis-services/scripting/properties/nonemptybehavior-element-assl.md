@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NonEmptyBehavior Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 911b797b3f1d6ff2a8cd9fac1dfc88384d2cac7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227978"
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior 元素 (ASSL)
   決定父代相關聯的非空白行為[CalculationProperty](../objects/calculationproperty-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37183295"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37183295"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `NonEmptyBehavior`屬性會套用至`CalculationProperty`項目[CalculationType](calculationtype-element-assl.md)設定為*成員*。  

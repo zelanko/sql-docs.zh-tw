@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8fb21806baca20f1705f08065f0ec8e0b7a92fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134098"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>進階模型 (適用於 Excel 的資料採礦增益集)
   您可以使用**進階**資料模型化選項，以建立自訂資料採礦結構和模型使用參數所建立的精靈不同。 本章節描述的兩個精靈可幫助您建立全新的資料採礦結構，以及要套用到現有資料採礦結構的新採礦模型。  

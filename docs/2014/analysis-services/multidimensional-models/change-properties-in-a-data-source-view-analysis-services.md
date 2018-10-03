@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f264928a8abde5e20738b0fb60d712aa9bef2320
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153028"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>變更資料來源檢視的屬性 (Analysis Services)
   當您使用 [資料來源檢視精靈] 定義資料來源檢視，以及將資料表、檢視、具名計算和具名查詢加入到此資料來源檢視之後，您可能會想要變更與下列項目有關的屬性：  

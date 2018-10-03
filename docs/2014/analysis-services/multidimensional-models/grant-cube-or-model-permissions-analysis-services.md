@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - read/write permissions
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149708"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授與 Cube 或模型權限 (Analysis Services)
   Cube 或表格式模型是 Analysis Services 資料模型中的主要查詢物件。 從 Excel 連線到多維度或表格式資料以進行特定資料瀏覽時，使用者一開始通常會選取特定 Cube 或表格式模型做為樞紐分析報表物件後面的資料結構。 這個主題說明如何授與存取 Cube 或表格式資料的必要權限。  

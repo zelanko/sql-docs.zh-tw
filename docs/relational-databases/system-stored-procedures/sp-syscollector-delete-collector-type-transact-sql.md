@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_delete_collector_type (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_delete_collector_type (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6161667473e001fe596d073f8f16aa1022bd969
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738316"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +43,16 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
 ## <a name="arguments"></a>引數  
  [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- 這是收集器類型的 GUID。 *collector_type_uid 是否*是**uniqueidentifier**而且必須具有值，如果*名稱*是 NULL。  
+ 這是收集器類型的 GUID。 *collector_type_uid 是否*已**uniqueidentifier**而且必須具有值，如果*名稱*是 NULL。  
   
  [ **@name =** ] **'***name***'**  
- 這是收集器類型的名稱。 *名稱*是**sysname**而且必須具有值，如果*collector_type_uid*是 NULL。  
+ 這是收集器類型的名稱。 *名稱*已**sysname**而且必須具有值，如果*collector_type_uid&lt*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 任一*collector_type_uid*或*名稱*必須有值，不能同時為 NULL。  
+ 任一*collector_type_uid&lt*或是*名稱*必須具有值，兩者都不能是 NULL。  
   
  如果這種集合類型的集合項目存在，這個程序將會擲回錯誤。  
   
@@ -74,6 +70,6 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

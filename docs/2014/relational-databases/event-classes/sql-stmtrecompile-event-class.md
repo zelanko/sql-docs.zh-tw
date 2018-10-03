@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24630824594621499fcc1c3fc70fca74ed5562e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 288e086f164199ae372ccca2ffb482855bb3c2d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211888"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件類別
   SQL:StmtRecompile 事件類別表示所有批次類型造成的陳述式層級重新編譯：預存程序、觸發程序、特定批次及查詢。 使用 sp_executesql、動態 SQL、Prepare 方法、Execute 方法或類似介面可以提交查詢。 應該使用 SQL:StmtRecompile 事件類別來取代 SP:Recompile 事件類別。  

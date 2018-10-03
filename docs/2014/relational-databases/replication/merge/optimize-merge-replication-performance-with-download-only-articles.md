@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], download-only articles
 - articles [SQL Server replication], download-only
 - download-only articles
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7a522f788e36ca8b0380c21b338b1f3a18469d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b22d7c9d47092e9895ccb9ef2d63bdbfbc42367d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114586"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用僅限下載的發行項最佳化合併式複寫效能
   合併式複寫提供兩種不同類型的發行項，以滿足不同應用程式的需求。 發行集可包含這兩種類型的一種或兩種，以符合應用程式：  

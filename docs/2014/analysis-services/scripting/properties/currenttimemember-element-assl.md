@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CurrentTimeMember Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentTimeMember element
 ms.assetid: 2e73009c-9f2b-441c-bdf0-ca19b160da4f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 804b68d36d75741869595232fd09cd67959caa70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8016a1fc492225701c4fe47b60796f475a3c401
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119658"
 ---
 # <a name="currenttimemember-element-assl"></a>CurrentTimeMember 元素 (ASSL)
   定義的時間維度相關聯的目前成員[Kpi](../objects/kpi-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37204098"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37204098"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Kpi](../objects/kpi-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值是評估為時間維度之單一成員的多維度運算式 (MDX) 陳述式，可在評估關鍵效能指標 (KPI) 時用來擷取目前的時間範圍。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 59b187ec488716200c53021afb0c6da42cba291c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06623eabd8fe22581b7864d74d2d1623b2bd68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209898"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>安裝 PowerPivot for SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是中間層級後端服務的集合，可以在 SharePoint 2010 伺服器陣列中提供 PowerPivot 資料存取功能。 如果您的組織使用用戶端應用程式 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 來建立包含分析資料的活頁簿，您必須要有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，才能在伺服器環境中存取該資料。 本主題會逐步引導您完成基本安裝程序，而且提供了其他主題的連結，可協助您設定 PowerPivot。  

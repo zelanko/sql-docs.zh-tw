@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1ba225f5-3867-4aae-a519-e3c277688d1e
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4508dcf3e0dd590aaa92041d3a2136589b98e07d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f193cb746b8df43c33aa65ea3d69d87ab7c36655
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218828"
 ---
 # <a name="member-element-csdlbi"></a>Member 元素 (CSDLBI)
   Member 元素為複雜類型，可做為其他元素的基底。  
@@ -43,7 +40,7 @@ ms.locfileid: "37207938"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|使用屬性名稱。|  
+|None|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  
 |合併式|串連內送關聯性名稱和屬性名稱。|  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - relationships [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - fact dimensions [Analysis Services]
 - relationships [Analysis Services], dimensions
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8dd25cb785bf22e6d7a3fb6ddb5e899a0f3f16b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164518"
 ---
 # <a name="dimension-relationships"></a>維度關聯性
   維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]嘗試決定維度使用方式，藉由檢查 cube 的資料來源檢視 中的事實資料表與維度資料表之間的關聯性，以及透過檢查維度內屬性之間關聯性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  

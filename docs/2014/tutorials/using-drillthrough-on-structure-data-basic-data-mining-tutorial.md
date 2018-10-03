@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec32e6f46f63c6de342b6b4cab63bb8e6556bfb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053039"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>在結構資料上使用鑽研 (基本資料採礦教學課程)
   做為其廣告宣傳活動中，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]傳送郵件給潛在客戶在 34 到 40 歲人口統計。 行銷部門決定，他們也想購買自行車的客戶傳送郵件給[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]五年以前。 在這一課，您將會識別擁有比較舊的自行車的客戶，並擷取他們的連絡資訊。 此資訊不包括在模型中，但是會包括在結構中。 若要擷取連絡資訊，您要先確定此結構已啟用鑽研，然後您將會使用鑽研來顯示目標客戶的姓名和地址。  

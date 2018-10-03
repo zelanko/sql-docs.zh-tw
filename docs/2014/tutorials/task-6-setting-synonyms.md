@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11be818da421f02ec07b13c632c4fcda87652442
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211397"
 ---
 # <a name="task-6-setting-synonyms"></a>工作 6：設定同義字
   在這個工作中，您可以設定兩個定義域值，**美國**並**美國**的**國家/地區**同義字的網域**美國**為前置值。 由於**使用前置值**建立時，已選取選項**國家/地區**網域中，任何**USA**值**國家/地區**網域將會輸出為**美國**（因為 United States 是前置值）。 請參閱[Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx)如需詳細資訊。  

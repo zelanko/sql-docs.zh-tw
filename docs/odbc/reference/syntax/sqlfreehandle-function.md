@@ -1,13 +1,11 @@
 ---
-title: SQLFreeHandle 函數 |Microsoft 文件
+title: SQLFreeHandle 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLFreeHandle
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeHandle function [ODBC]
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94b40ad74f4925b0e5c2b1cbfa4795e85a2bbb15
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820196"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函數
-**一致性**  
- 版本引進了： ODBC 3.0 版的標準相容性： ISO 92  
+**合規性**  
+ 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
   
  **摘要**  
- **SQLFreeHandle**釋出特定的環境、 連接、 陳述式或描述項控制代碼相關聯的資源。  
+ **SQLFreeHandle**釋出與特定的環境、 連接、 陳述式或描述元控制代碼相關聯的資源。  
   
 > [!NOTE]  
->  此函式會釋放控制代碼的泛型函式。 它會取代 ODBC 2.0 函式**SQLFreeConnect** （適用於釋放連接控制代碼） 和**SQLFreeEnv** （適用於釋放環境控制代碼）。 **SQLFreeConnect**和**SQLFreeEnv**都不再支援的 ODBC 3 *.x*。 **SQLFreeHandle**也會取代 ODBC 2.0 函式**SQLFreeStmt** (與 SQL_DROP*選項*) 釋放陳述式控制代碼。 如需詳細資訊，請參閱 「 註解。 」 如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  此函式會釋放控制代碼的泛型函式。 它會取代 ODBC 2.0 函式**SQLFreeConnect** （適用於釋放連接控制代碼） 及**SQLFreeEnv** （適用於釋放環境控制代碼）。 **SQLFreeConnect**並**SQLFreeEnv**都不再支援的 ODBC 3 *.x*。 **SQLFreeHandle**也會取代 ODBC 2.0 函式**SQLFreeStmt** (使用 SQL_DROP*選項*) 釋放陳述式控制代碼。 如需詳細資訊，請參閱 「 註解。 」 如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3 *.x*應用程式正在使用的 ODBC 2 *.x*驅動程式，請參閱[對應為向後取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +48,7 @@ SQLRETURN SQLFreeHandle(
   
 ## <a name="arguments"></a>引數  
  *HandleType*  
- [輸入]若要釋放的控制代碼的類型**SQLFreeHandle**。 必須是下列值之一：  
+ [輸入]若要釋放的控制代碼的型別**SQLFreeHandle**。 必須是下列值之一：  
   
 -   利用 SQL_HANDLE_DBC  
   
@@ -63,7 +60,7 @@ SQLRETURN SQLFreeHandle(
   
 -   利用 SQL_HANDLE_STMT  
   
- 只在驅動程式管理員和驅動程式會使用 SQL_HANDLE_DBC_INFO_TOKEN 控制代碼。 應用程式不應該使用此控制代碼類型。 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[開發 ODBC 驅動程式中的連接集區感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
+ 只在驅動程式管理員和驅動程式會使用 SQL_HANDLE_DBC_INFO_TOKEN 控制代碼。 應用程式不應使用此控制代碼型別。 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
   
  如果*HandleType*不是其中一個值， **SQLFreeHandle**傳回 SQL_INVALID_HANDLE。  
   
@@ -76,51 +73,51 @@ SQLRETURN SQLFreeHandle(
  如果**SQLFreeHandle**傳回 SQL_ERROR，控制代碼是否仍然有效。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLFreeHandle**傳回 SQL_ERROR，相關聯的 SQLSTATE 值可以取自控制代碼的診斷資料結構， **SQLFreeHandle**嘗試釋出，但不是可以。 下表列出通常所傳回的 SQLSTATE 值**SQLFreeHandle** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
+ 當**SQLFreeHandle**會傳回 SQL_ERROR，相關聯的 SQLSTATE 值可能取自之診斷的資料結構的控制代碼所**SQLFreeHandle**嘗試免費，但無法。 下表列出通常所傳回的 SQLSTATE 值**SQLFreeHandle** ，並說明每個內容中的此函式; 標記法 」 (DM) 」 之前描述的驅動程式管理員所傳回的 Sqlstate。 傳回每個 SQLSTATE 值相關聯的程式碼會是 SQL_ERROR，除非另有指示。  
   
-|SQLSTATE|錯誤|Description|  
+|SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
-|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成的函式。|  
-|HY010|函數順序錯誤|(DM) *HandleType*引數為 SQL_HANDLE_ENV，和至少一個連接是在配置或已連線的狀態。 **SQLDisconnect**和**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_DBC 的必須呼叫每個連線然後再呼叫**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_ENV。<br /><br /> (DM) *HandleType*引數以前是利用 SQL_HANDLE_DBC，並會在呼叫之前已呼叫此函式**SQLDisconnect**連接。<br /><br /> (DM) *HandleType*引數以前是利用 SQL_HANDLE_DBC。 以非同步方式執行的函式呼叫與*處理*和函式還在執行時呼叫此函式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT。 **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**已使用陳述式控制代碼呼叫，並且傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT。 陳述式控制代碼或相關聯的連接控制代碼上呼叫非同步執行的函式和函式還在執行時呼叫此函式。<br /><br /> (DM) *HandleType*引數以前是 SQL_HANDLE_DESC。 以非同步方式執行的函式呼叫相關聯的連接控制代碼。和函式還在執行時呼叫此函式。<br /><br /> (DM) 所有附屬的控制代碼和其他資源並未釋放之前**SQLFreeHandle**呼叫。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**呼叫其中一個相關聯的陳述式控制代碼*處理*和*HandleType*已設定為 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 傳回 SQL_PARAM_DATA_AVAILABLE。 此函式呼叫之前的所有資料流處理的參數擷取資料。|  
-|HY013|記憶體管理錯誤|*HandleType*引數是 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC，和因為基礎記憶體的物件無法存取，可能是因為記憶體不足，無法處理函式呼叫。|  
-|HY017|使用自動配置描述項控制代碼無效。|(DM)*處理*引數設定為自動配置描述項的控制代碼。|  
-|HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYT01|連接逾時過期|連接逾時期限過期之前對要求回應資料來源。 連接逾時期限透過設定**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
-|IM001|驅動程式不支援此函式|(DM) *HandleType*引數是 SQL_HANDLE_DESC，且驅動程式的 ODBC 2 *.x*驅動程式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT，且驅動程式不是有效的 ODBC 驅動程式。|  
+|HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
+|HY001|記憶體配置錯誤|驅動程式無法配置記憶體，才能支援執行或完成函式。|  
+|HY010|函數順序錯誤|(DM) *HandleType*引數為 SQL_HANDLE_ENV，和至少一個連線處於已配置或已連線狀態。 **SQLDisconnect**並**SQLFreeHandle**具有*HandleType*利用 SQL_HANDLE_DBC 的必須呼叫每個連線，然後再呼叫**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_ENV。<br /><br /> (DM) *HandleType*引數是利用 SQL_HANDLE_DBC，和呼叫的函式呼叫之前，先**SQLDisconnect**連接。<br /><br /> (DM) *HandleType*引數是利用 SQL_HANDLE_DBC。 以非同步方式執行的函式呼叫與*處理*和函式仍執行時呼叫此函式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT。 **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**且已使用陳述式控制代碼呼叫和傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT。 陳述式控制代碼上或在相關聯的連接控制代碼上呼叫以非同步方式執行的函式和函式仍執行時呼叫此函式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_DESC。 以非同步方式執行的函式呼叫相關聯的連接控制代碼;和函式仍執行時呼叫此函式。<br /><br /> (DM) 所有分公司的控制代碼和其他資源就不會釋放之前**SQLFreeHandle**呼叫。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對其中一個相關聯的陳述式控制代碼呼叫*處理*並*HandleType*已設定為 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC 傳回 SQL_PARAM_DATA_AVAILABLE。 資料已擷取所有的資料流參數前呼叫此函式。|  
+|HY013|記憶體管理錯誤|*HandleType*引數為 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC，以及無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
+|HY017|使用自動配置描述項控制代碼無效。|(DM)*處理*引數設定為自動配置描述項控制代碼。|  
+|HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
+|HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
+|IM001|驅動程式不支援此函式|(DM) *HandleType*引數是 SQL_HANDLE_DESC，且驅動程式的 ODBC 2 *.x*驅動程式。<br /><br /> (DM) *HandleType*引數為 SQL_HANDLE_STMT，和驅動程式不是有效的 ODBC 驅動程式。|  
   
 ## <a name="comments"></a>註解  
- **SQLFreeHandle**用來釋放控制代碼的環境、 連接、 陳述式，以及描述元，如下列各節中所述。 如需控制代碼的一般資訊，請參閱[控點](../../../odbc/reference/develop-app/handles.md)。  
+ **SQLFreeHandle**用來釋放控制代碼的環境、 連接、 陳述式，以及描述元，如下列各節中所述。 如需控制代碼的一般資訊，請參閱[控制代碼](../../../odbc/reference/develop-app/handles.md)。  
   
- 應用程式不應該使用的控制代碼之後釋出。驅動程式管理員不會檢查函式呼叫中的控制代碼的有效性。  
+ 釋出; 之後，應用程式不應使用的控制代碼驅動程式管理員不會檢查函式呼叫中的控制代碼的有效性。  
   
 ## <a name="freeing-an-environment-handle"></a>釋放環境控制代碼  
- 它會呼叫之前**SQLFreeHandle**與*HandleType* SQL_HANDLE_ENV 的應用程式必須呼叫**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_DBC 的配置環境下的所有連線。 否則，呼叫**SQLFreeHandle**傳回 SQL_ERROR 並在環境中，任何使用中連接仍然有效。 如需詳細資訊，請參閱[環境處理](../../../odbc/reference/develop-app/environment-handles.md)和[配置環境處理](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。  
+ 它會呼叫之前**SQLFreeHandle**具有*HandleType* SQL_HANDLE_ENV，應用程式必須呼叫**SQLFreeHandle**具有*HandleType*配置的環境下的所有連線的利用 SQL_HANDLE_DBC。 否則，呼叫**SQLFreeHandle**傳回 SQL_ERROR 並在環境中，任何使用中連接仍然有效。 如需詳細資訊，請參閱 <<c0> [ 環境處理](../../../odbc/reference/develop-app/environment-handles.md)並[配置環境處理](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)。  
   
- 如果環境是共用的環境，應用程式呼叫**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_ENV 的不再擁有呼叫之後，環境，但環境的存取不一定釋放資源。 若要呼叫**SQLFreeHandle**遞減參考計數的環境。 參考計數會維護由驅動程式管理員。 它不會達到零，如果共用的環境不會釋放，因為仍由其他元件所使用。 如果參考計數達到零時，會釋放資源的共用的環境。  
+ 如果環境是共用的環境中，應用程式，會呼叫**SQLFreeHandle**具有*HandleType*利用 SQL_HANDLE_ENV 的不再具有存取權的環境呼叫之後，但環境不一定被釋放資源。 若要在呼叫**SQLFreeHandle**遞減參考計數的環境。 參考計數會維護由驅動程式管理員。 如果它不會到達零，共用的環境不會釋放，因為它仍正由另一個元件。 如果參考計數到達零時，會釋放共用的環境中的資源。  
   
 ## <a name="freeing-a-connection-handle"></a>釋放連接控制代碼  
- 它會呼叫之前**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_DBC 的應用程式必須呼叫**SQLDisconnect**如果沒有這個連接的連接處理 *。* 否則，呼叫**SQLFreeHandle**傳回 SQL_ERROR，而且連接會保持有效。  
+ 它會呼叫之前**SQLFreeHandle**具有*HandleType*利用 SQL_HANDLE_DBC 的應用程式必須呼叫**SQLDisconnect**如果沒有這個連接的連接處理 *。* 否則，呼叫**SQLFreeHandle**傳回 SQL_ERROR，而且連接會保持有效。  
   
- 如需詳細資訊，請參閱[連接控制代碼](../../../odbc/reference/develop-app/connection-handles.md)和[中斷資料來源或驅動程式](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 連接控制代碼](../../../odbc/reference/develop-app/connection-handles.md)並[中斷資料來源或驅動程式](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)。  
   
 ## <a name="freeing-a-statement-handle"></a>釋放陳述式控制代碼  
- 呼叫**SQLFreeHandle**與*HandleType*利用 SQL_HANDLE_STMT 的釋出所有的資源所配置的呼叫**SQLAllocHandle**與*HandleType*利用 SQL_HANDLE_STMT。 當應用程式呼叫**SQLFreeHandle**來釋放陳述式具有擱置的結果，會刪除暫止的結果。 當應用程式會釋放陳述式控制代碼時，驅動程式會釋放該控制代碼相關聯的四個自動配置描述元。 如需詳細資訊，請參閱[陳述式會處理](../../../odbc/reference/develop-app/statement-handles.md)和[釋放陳述式控制代碼](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)。  
+ 呼叫**SQLFreeHandle**具有*HandleType*利用 SQL_HANDLE_STMT 的釋出所有的呼叫所配置的資源**SQLAllocHandle**具有*HandleType*利用 SQL_HANDLE_STMT。 當應用程式呼叫**SQLFreeHandle**釋放具有暫止的結果陳述式，會刪除暫止的結果。 當應用程式會釋放陳述式控制代碼時，驅動程式會釋放該控制代碼相關聯的四個自動配置描述元。 如需詳細資訊，請參閱 <<c0> [ 陳述式會處理](../../../odbc/reference/develop-app/statement-handles.md)並[釋放陳述式控制代碼](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)。  
   
- 請注意， **SQLDisconnect**會自動在連接上卸除任何陳述式與開啟的描述。  
+ 請注意， **SQLDisconnect**會自動在連接上卸除任何陳述式和開啟的描述元。  
   
-## <a name="freeing-a-descriptor-handle"></a>釋放的描述項控制代碼  
- 呼叫**SQLFreeHandle**與*HandleType* SQL_HANDLE_DESC 的釋放中的描述項控制代碼*處理*。 若要呼叫**SQLFreeHandle**不會釋放任何可能由指標欄位 （包括 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 參考的應用程式所配置任何記憶體描述項記錄的*處理*。 非指標欄位的欄位的驅動程式所配置的記憶體釋放控制代碼已釋放時。 當使用者配置描述項控制代碼已釋放時，釋放控制代碼必須與相關聯的所有陳述式會還原成其各自的自動配置描述項控制代碼。  
+## <a name="freeing-a-descriptor-handle"></a>釋放描述項控制代碼  
+ 呼叫**SQLFreeHandle**具有*HandleType* SQL_HANDLE_DESC 的釋放描述項控制代碼，在*處理*。 若要在呼叫**SQLFreeHandle**不會釋放任何可能由指標欄位 （包括 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 參考的應用程式所配置任何記憶體描述項記錄*處理*。 不是指標欄位的欄位的驅動程式所配置的記憶體釋放控制代碼已釋放時。 當使用者配置描述項控制代碼已釋放時，釋放控制代碼必須與相關聯的所有陳述式還原成其各自的自動配置描述項控制代碼。  
   
 > [!NOTE]  
->  ODBC 2 *.x*驅動程式不會支援釋放描述項控制代碼，就如同它們不支援配置描述項控制代碼。  
+>  ODBC 2 *.x*驅動程式不會支援釋放描述項控制代碼，就像它們不支援配置描述項控制代碼。  
   
- 請注意， **SQLDisconnect**會自動在連接上卸除任何陳述式與開啟的描述。 當應用程式會釋放陳述式控制代碼時，驅動程式會釋放該控制代碼相關聯的所有自動產生描述元。  
+ 請注意， **SQLDisconnect**會自動在連接上卸除任何陳述式和開啟的描述元。 當應用程式會釋放陳述式控制代碼時，驅動程式會釋放該控制代碼相關聯的所有自動產生描述元。  
   
- 如需描述元的詳細資訊，請參閱[描述元](../../../odbc/reference/develop-app/descriptors.md)。  
+ 如需描述項的詳細資訊，請參閱[描述元](../../../odbc/reference/develop-app/descriptors.md)。  
   
 ## <a name="code-example"></a>程式碼範例  
- 如需額外的程式碼範例，請參閱[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)和[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)。  
+ 如需額外的程式碼範例，請參閱[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)並[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)。  
   
 ### <a name="code"></a>程式碼  
   
@@ -185,6 +182,6 @@ int main() {
 |設定資料指標名稱|[SQLSetCursorName 函式](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC 程式範例](../../../odbc/reference/sample-odbc-program.md)

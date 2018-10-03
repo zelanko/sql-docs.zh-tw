@@ -1,31 +1,28 @@
 ---
-title: 建立方法的範例 （VC + +） |Microsoft 文件
+title: Create 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Create method [ADOX], VC++ example
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 410e35fd85e427f1552860e81f6e79412d395c85
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 589d94d83bb23dcf6753e49dd8ea2e77276dd616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747816"
 ---
-# <a name="create-method-example-vc"></a>建立方法的範例 （VC + +）
+# <a name="create-method-example-vc"></a>Create 方法範例 (VC++)
 下列程式碼示範如何建立新的 Microsoft Jet 資料庫與[建立](../../../ado/reference/adox-api/create-method-adox.md)方法。  
   
 ```  

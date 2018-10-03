@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36ce151c29643e7843f0b2cf86e5c3a12d9cbd44
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 969721724f3d2dd171c56d5d62e56b41ec0ece73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081968"
 ---
 # <a name="examples-using-auto-mode"></a>範例：使用 AUTO 模式
   下列範例說明 AUTO 模式的用法。 這些查詢中有許多是針對自行車製造說明的 XML 文件來指定的，而這些文件儲存在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中 ProductModel 資料表的 Instructions 資料行中。  

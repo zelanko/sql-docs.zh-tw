@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 131c2a7618493d1b48758f653ab2e2d2e22ed2dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194738"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 發行者的資料類型對應
   Oracle 資料類型與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型並非始終完全相符。 若有可能，將在發行 Oracle 資料表時自動選取相符的資料類型。 如果單一資料類型對應不清楚，將提供替代的資料類型對應。 如需有關如何選取替代對應的詳細資訊，請參閱本主題稍後的「指定替代資料類型對應」一節。  

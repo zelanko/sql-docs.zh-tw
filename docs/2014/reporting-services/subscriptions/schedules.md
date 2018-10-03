@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 405bb71bc5ceaee65afa70d055c88a75a2326ca9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107462"
 ---
 # <a name="schedules"></a>[排程]
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供共用的排程和報表特定排程來協助您控制如何處理和散發報表。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。  
@@ -97,7 +94,7 @@ ms.locfileid: "37278406"
 ##  <a name="bkmk_credentials"></a> 儲存認證和處理帳戶  
  您使用排程的方式會視您的角色指派的工作而定。 如果您要使用預先定義的角色，屬於內容管理員和系統管理員的使用者就可以建立和管理任何排程。 如果您使用自訂角色指派，角色指派就必須包括支援排程作業的工作。  
   
-|以進行此動作|包括這個工作|原生模式預先定義的角色|SharePoint 模式群組|  
+|動作|包括這個工作|原生模式預先定義的角色|SharePoint 模式群組|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |建立、修改或刪除共用排程|管理共用排程|系統管理員|擁有者|  
 |選取共用排程|檢視共用排程|系統使用者|成員|  

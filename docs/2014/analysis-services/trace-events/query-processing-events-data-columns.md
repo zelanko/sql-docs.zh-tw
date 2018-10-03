@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d916a229420acac7e866b6f5802425b14993f22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bf8e8af93bce4c22fa241754c1321322fd2b8be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229998"
 ---
 # <a name="query-processing-events-data-columns"></a>查詢處理事件資料行
   查詢處理事件類別目錄具有下列事件類別：  

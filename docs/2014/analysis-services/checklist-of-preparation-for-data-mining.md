@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bed960058bdc9120089d89a32a3ede0bf2f3160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd702443b8f1addf43217499b639044d359647bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057568"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>資料採礦準備清單
   雖然資料採礦增益集讓模型的建立和試驗工作變得相當簡單有趣，不過當您需要取得可重複、可付諸行動的結果時，就必須預留足夠的時間來擬定基本業務需求，以及取得和準備資料。 本節提供一份檢查清單以協助您規劃調查，並描述常見的問題。  

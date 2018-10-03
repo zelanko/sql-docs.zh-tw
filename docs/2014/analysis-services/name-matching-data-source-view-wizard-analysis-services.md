@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217768"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名稱比對 (資料來源檢視精靈) (Analysis Services)
   使用 **[名稱比對]** 頁面並選取要使用的準則，即可偵測您為資料來源檢視所選取的資料表，與結構描述中的其他資料表是否有關聯性。 如果兩個資料表之間不存在實體外部索引鍵的關聯性，此準則可以幫助您識別相關的資料表，並將資料表加入資料來源檢視。 由名稱比對識別的邏輯關聯性，也會加入到資料來源檢視中。  

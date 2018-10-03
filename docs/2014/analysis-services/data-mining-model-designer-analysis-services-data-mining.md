@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dataminingeditor.f1
 helpviewer_keywords:
 - Data Mining Model Designer
 ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5dc167b60116575151b47aba8f0a9301648cb10a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d132d007b54e1677b2300ad3cc285c038b982209
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224174"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>資料採礦模型設計工具 (Analysis Services - 資料採礦)
   此章節包含 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中之資料採礦模型設計師的 F1 說明主題。 您將使用此設計空間來建立、管理和處理資料採礦模型。  

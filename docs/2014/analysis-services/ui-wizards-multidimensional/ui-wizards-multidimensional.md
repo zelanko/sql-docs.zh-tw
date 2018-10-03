@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccdd4a66b4b34cae9295cc553b795f0cda256a53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f20cde3c40d29a205a62c6ab62b83851460f933
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194948"
 ---
 # <a name="ui-wizards-for-multidimensional-analysis"></a>多維度分析的 UI 精靈
 

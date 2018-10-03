@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.miningmodelproperties.f1
 helpviewer_keywords:
 - Mining Model Properties dialog box
 ms.assetid: 8a4f0fa1-afb2-46fd-a713-52ba1887e537
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 142f9d3dde90037ce8de0c442a7032efdb9631f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198280"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179920"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>採礦模型屬性對話方塊 (Analysis Services - 資料採礦)
   使用 **中的** [採礦模型屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之採礦模型的屬性。 您可以在 [物件總管] 中以滑鼠右鍵按一下採礦模型，然後選取 [屬性]，來顯示 [採礦模型屬性] 對話方塊。  

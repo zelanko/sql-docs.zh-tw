@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.analysisserver.f1
 ms.assetid: 7e277d22-8d4b-422e-8882-7c5dd7a6d915
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d11dd391cb63ec1b9cc25df34e52bea3f54662a2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140150"
 ---
 # <a name="connect-to-server-analysis-services"></a>連接到伺服器 (Analysis Services)
   使用此對話方塊可在連線到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 時檢視或指定選項。  

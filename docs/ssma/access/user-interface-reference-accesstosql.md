@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - reference, user interface
 - user interface
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: bd75e56d1000f1c98746801e26f913c6fae91c79
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 54a0da71585c224fa3371ff6b6cf1097a7656bad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803097"
 ---
 # <a name="user-interface-reference-accesstosql"></a>使用者介面參考 (AccessToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) 進行存取。  

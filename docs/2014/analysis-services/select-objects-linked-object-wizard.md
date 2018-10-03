@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.linkedobjectwizard.selectobjects.f3
 ms.assetid: 733afc25-5055-4411-bab5-dd9e0595cd2d
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 727baef83ae62f790fd619b944aad92ebe03b733
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d1f7e83ebe2d1273cc2efaa5c341bfd970856fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172848"
 ---
 # <a name="select-objects-linked-object-wizard"></a>選取物件 (連結物件精靈)
   使用 **[選取物件]** 頁面，即可選取要連結至或匯入的物件。  

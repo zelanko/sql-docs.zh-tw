@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.decisiontree.f1
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86c229c4adc57200a2d1867c167aa3d998498765
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194488"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>決策樹索引標籤 (採礦模型檢視器)
   [決策樹] 窗格會顯示決策樹模型中建立之決策規則的視覺表示。 決策規則描述朝向某個特定結果的路徑。  

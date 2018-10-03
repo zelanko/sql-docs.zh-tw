@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf1b1d02ac8e36795703d233feb152339bd775eb
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0893a32d31c4f64d99503fce7e64ccdd325cea7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138508"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]是 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 中的新功能，可大幅提升 OLTP 資料庫應用程式效能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是已整合至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎的記憶體最佳化資料庫引擎，已針對 OLTP 最佳化。  

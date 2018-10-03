@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c93e14e122dbe3e0905e25e56570c67c3fa769a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8843e2eafd32ac9e4bdb4cc7e4cbf97a04ea3f51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054208"
 ---
 # <a name="contextualnamerule-element-xml"></a>ContextualNameRule 元素 (XML)
   提供有關為屬性建構複合名稱的最佳方法提示。  
@@ -49,7 +46,7 @@ ms.locfileid: "37193898"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[RelationshipEndVisualizationProperties](../../scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  向用戶端應用程式提供有關如何為此屬性建立明確名稱的提示。  

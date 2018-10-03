@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], about bulk importing
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2c1b53a3a8cb93eaca7b67351adaf23244f92f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e6d619a4922b58a99bc8cb45c952123bbae44d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068748"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>準備大量匯入資料 (SQL Server)
   您可以使用 **bcp** 命令、BULK INSERT 陳述式或 OPENROWSET(BULK) 函數，僅從資料檔案大量匯入資料。  

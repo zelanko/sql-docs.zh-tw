@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 15661 (Database Engine error)
 ms.assetid: 88b01bfb-74ce-4aa0-aec0-7885261c7ef3
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6314878bb6a177da1f156545be174346340ec1d6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 31e24d4cd5e790751b4a43773f2b7d0156b4b7da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215838"
 ---
 # <a name="mssqlserver15661"></a>MSSQLSERVER_15661
     

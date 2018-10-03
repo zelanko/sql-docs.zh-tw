@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3977ba9794010a6d1d0aba83669bc0550d415497
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8813dba9c266c6a7930a636da27015c300426c79
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220084"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用瀏覽器尋找及檢視報表 (報表產生器及 SSRS)
   您可以使用任何支援的網頁瀏覽器，透過報表伺服器的直接連接來檢視報表。 每一個報表在報表伺服器上都有一個 URL 位址。 您可以輸入報表的 Web 位址，在任何 Web 應用程式的瀏覽器視窗中開啟該報表。 該報表會以 HTML 格式開啟，而且其中包含報表工具列，讓您可以在報表中瀏覽頁面或搜尋資料值。 您可以在 URL 上設定參數，以隱藏工具列或選取報表的輸出格式。  

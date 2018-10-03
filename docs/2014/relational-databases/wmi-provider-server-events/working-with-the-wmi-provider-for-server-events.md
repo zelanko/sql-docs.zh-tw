@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event notifications [WMI]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f6a9b7733ba7413ded8580648d0d13911fd2ef5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd4def614340115bafc6046b4d0ea9d90f647e9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189945"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060169"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用伺服器事件的 WMI 提供者
   本主題會提供您使用伺服器事件的 WMI 提供者進行程式設計前應該考慮的指導方針。  

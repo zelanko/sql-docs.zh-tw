@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-caps.latest.revision: 62
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145598"
 ---
 # <a name="use-variables-in-packages"></a>在封裝中使用變數
   變數是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝之有用的彈性附加項目，可提供在封裝的物件間和父子封裝之間的通訊。 變數還可用於運算式和指令碼。  

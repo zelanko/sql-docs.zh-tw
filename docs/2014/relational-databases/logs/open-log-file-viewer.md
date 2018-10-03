@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 457d30086bf8be4f44c002ab1fd54c38f92f8031
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84f624ce603a852bed3527b45c942f1ffa00fdbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281564"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170240"
 ---
 # <a name="open-log-file-viewer"></a>開啟記錄檔檢視器
   您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用記錄檔檢視器，以存取下列記錄中所擷取之錯誤和事件的相關資訊：  
@@ -49,7 +46,7 @@ ms.locfileid: "37281564"
   
  若要存取離線 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記錄檔，您必須具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間以及儲存記錄檔之資料夾的讀取權限。 如需詳細資訊，請參閱 [檢視離線記錄檔](view-offline-log-files.md)主題的＜安全性＞一節。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  需要 securityadmin 固定伺服器角色中的成員資格。  
   
 ### <a name="view-log-files"></a>檢視記錄檔  

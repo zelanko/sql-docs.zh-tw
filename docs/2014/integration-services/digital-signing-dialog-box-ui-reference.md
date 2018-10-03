@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.digitalsigning.f1
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c24975549416e09ad73e8528dee3e74f1925cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0125281c3438f12e8dd7b27ec3d9bff89790d85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218038"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>數位簽章對話方塊 UI 參考
   使用 **[數位簽章]** 對話方塊，即可使用數位簽章來簽署封裝，或是移除簽章。 在 **中，可從** [SSIS] **功能表的** [數位簽章] **選項來使用** [數位簽章] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]對話方塊。  
