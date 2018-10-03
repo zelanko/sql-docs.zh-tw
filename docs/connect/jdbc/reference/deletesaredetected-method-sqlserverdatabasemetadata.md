@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.deletesAreDetected
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6def9d94b1cbfb1b3e6bee07454d5f5adad2392
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 20007b2918d8e0b8675c082edc5040c092973579
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806092"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sparse columns, OLE DB Driver for SQL Server
@@ -17,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 1b2e03ba16922f4130203dd897612a418e456f5f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f68761672232d2fed88ec3b56d5349d4f925fd43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718306"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 中的疏鬆資料行支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

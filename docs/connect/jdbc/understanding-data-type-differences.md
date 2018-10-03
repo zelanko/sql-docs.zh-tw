@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 105c7d5baa3c2ad7064bf95787975eca2b8c4863
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785613"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773206"
 ---
 # <a name="understanding-data-type-differences"></a>了解資料類型差異
 

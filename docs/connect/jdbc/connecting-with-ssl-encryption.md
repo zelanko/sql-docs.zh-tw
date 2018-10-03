@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d47c4234482c879e2ee564f8035c9e2033a469f3
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 78cdeb64cbd0bc76109c7bd3db784c2262ae80ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812186"
 ---
 # <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

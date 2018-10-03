@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_rows_affected
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sqlsrv_rows_affected
 - API Reference, sqlsrv_rows_affected
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f416bf1633909e548572f8f90c7fac7e188ecf75
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 549d23302474ae7838cc27da2e88e0cf9a16d16f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698506"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

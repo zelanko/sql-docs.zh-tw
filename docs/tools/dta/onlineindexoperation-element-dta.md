@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - OnlineIndexOperation element
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6a75b7e17afb7f23a7840612adcb654a55714b7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 39bb19b2b0b4c9e7a7dd11d227f1d84536702aa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796286"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

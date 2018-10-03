@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf9fd776fc14c060d5624d704efc315cc04da85f
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 58e5e403bb33663654c3cd5f0f884c13957d04f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711267"
 ---
 # <a name="using-database-metadata"></a>使用資料庫中繼資料
 

@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], data source objects
@@ -22,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 07fbc1d5c0a1001326e3cf114fbb6f0b756553a3
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726896"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

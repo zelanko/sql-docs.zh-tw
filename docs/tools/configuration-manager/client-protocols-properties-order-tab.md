@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a75e7dea303b3ccf64cd891e1888b8b626873362
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5fe1fb2d234b3cc4b785185f1fbd64605002cc1f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840646"
 ---
 # <a name="client-protocols-properties-order-tab"></a>用戶端通訊協定屬性 (順序索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

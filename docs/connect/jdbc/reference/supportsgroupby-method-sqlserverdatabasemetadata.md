@@ -1,13 +1,11 @@
 ---
-title: supportsGroupBy 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: supportsGroupBy 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsGroupBy
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6f368df5-e88a-4088-b0de-2b5ab655ebaa
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0e7335901647d4ce7e3782477ccf992d43946f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5cd51f9e0c58ca4fda42d6bf50bbf5063d6adee3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827756"
 ---
 # <a name="supportsgroupby-method-sqlserverdatabasemetadata"></a>supportsGroupBy 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public boolean supportsGroupBy()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**受支援。 否則為 **false**。  
+ **true**如果支援。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 supportsGroupBy 方法是由 java.sql.DatabaseMetaData 介面中 supportsGroupBy 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

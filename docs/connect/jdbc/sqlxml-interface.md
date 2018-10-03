@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 406c1c25c346680caba70c467e20e99df9977f13
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 6257f3575412bc35b00722a0b5da6b8c5ca74f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815996"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 介面
 

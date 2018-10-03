@@ -1,15 +1,12 @@
 ---
-title: sqlservr 應用程式 |Microsoft 文件
+title: sqlservr 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlservr
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b82c0fdd7eadcf32c23be6c833e69868dde08e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc4ff327c1962d4440df32badb234c715a64ac00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078035"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775588"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

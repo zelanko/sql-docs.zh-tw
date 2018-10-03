@@ -1,13 +1,11 @@
 ---
-title: isLast 方法 (SQLServerResultSet) |Microsoft 文件
+title: isLast 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.isLast
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881ad06c799e043fc4702174d99977054bd994e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b9030898e71ec13a75da9b91e41f9792d31cce82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798019"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取資料指標位於最後一個資料列，這個值指出是否[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+  擷取值，此值指出資料指標是否出現在這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的最後一個資料列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,8 +41,8 @@ public boolean isLast()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- IsLast 方法 java.sql.ResultSet 介面中所指定此 isLast 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 isLast 方法是由 java.sql.ResultSet 介面中的 isLast 方法指定。  
   
  如果搭配順向和動態資料指標使用這個方法，則會擲回例外狀況。  
   

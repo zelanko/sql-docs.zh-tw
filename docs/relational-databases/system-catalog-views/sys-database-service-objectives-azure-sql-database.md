@@ -1,15 +1,11 @@
 ---
-title: sys.database_service_objectives (Azure SQL Database) |Microsoft 文件
+title: sys.database_service_objectives (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2016
 ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - 彈性集區
@@ -17,17 +13,16 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 320d8d0dd434c4453a8004a0237bc9d2cbd9f352
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: a8b37ada1fa7c6024a5454ed907b886e513c151c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769306"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -48,7 +43,7 @@ ms.locfileid: "39216969"
 |service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，會傳回**ElasticPool**。<br /><br /> 在 **基本**層，會傳回**基本**。<br /><br /> **在標準服務層中的單一資料庫**傳回下列其中之一： S0、 S1、 S2、 S3、 S4、 S6、 S7、 S9 或 S12。<br /><br /> **進階層中的單一資料庫**傳回下列動作： P1、 P2、 P4、 P6、 P11 或 P15。<br /><br /> **SQL 資料倉儲**傳回透過 DW10000c DW100。|  
 |elastic_pool_name|sysname|名稱[彈性集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)所屬的資料庫。 傳回**NULL**如果資料庫是單一資料庫或資料 warehoue。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要**dbManager** master 資料庫的權限。  在資料庫層級中，使用者必須是建立者或擁有者。  
   
 ## <a name="examples"></a>範例  

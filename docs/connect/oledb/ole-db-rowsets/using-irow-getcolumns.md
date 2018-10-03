@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching rows
@@ -21,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b92b76eca593259457727f9f870eb45b66cb477d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d91a57c03e3adfe1e2a7ac18a4cc3f0d16b892cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729982"
 ---
 # <a name="using-irowgetcolumns"></a>使用 IRow::GetColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

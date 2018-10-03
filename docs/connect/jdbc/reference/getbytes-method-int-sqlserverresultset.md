@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getBytes (int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7b127c3a451d645ade0324d65fd8ded6a72c9f1
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 631534e2ca1d0fe7a4c127acb277fc9db7208ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784338"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722286"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>getBytes 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

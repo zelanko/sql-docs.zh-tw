@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setObject (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b57dcfb4e403c94ec7bc1348385b790b08ff181
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d12305261e72bcd903b852e83504fd1e5e6f6344
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724946"
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>setObject 方法 (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

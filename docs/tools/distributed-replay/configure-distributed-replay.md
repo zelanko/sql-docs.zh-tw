@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745316"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +165,23 @@ ms.locfileid: "38038479"
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>使用同步處理排序模式執行時，可能有問題
+ 您可能會遇到的徵兆，在此重新執行功能會出現 「 延遲 」，或重新執行事件速度很慢。 如果在重新執行追蹤相依於資料和/或不存在之還原的目標資料庫內的事件，可能會發生這種現象。 
+ 
+ 其中一個範例是使用 WAITFOR，例如，Service Broker 收到 WAITFOR 陳述式中擷取工作負載。 使用同步處理排序模式時，會循序重新執行批次。 如果資料庫備份之後，發生對來源資料庫的插入，但在重新執行擷取之前啟動追蹤，在重新執行期間發出的 WAITFOR 收到可能必須等候 WAITFOR 的整個持續期間。 設定之後會停止 WAITFOR 接收重新執行事件。 WAITFOR 完成之前，這會導致重新執行資料庫目標卸除為零的 Batch Requests/sec 效能監視器計數器。 
+ 
+ 如果您需要使用同步處理模式，並且想来避免此行為，您必須執行下列作業：
+ 
+1.  停止重新執行目標為您要使用的資料庫。
+
+2.  若要完成，以允許所有擱置中的活動。
+
+3.  備份資料庫，並允許完成的備份。
+
+4.  啟動分散式重新執行追蹤擷取，並繼續正常工作負載。 
+ 
+ 
 ## <a name="see-also"></a>另請參閱  
  [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
@@ -21,12 +18,12 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 19bac76afeb56bf196b7f717596777435d813f04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846426"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

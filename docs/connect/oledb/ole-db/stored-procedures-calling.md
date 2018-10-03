@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -22,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: df25145c876548139bd166d2aa3e767ddcb5b168
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740626"
 ---
 # <a name="stored-procedures---calling"></a>預存程序 - 呼叫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +96,7 @@ ms.locfileid: "43032710"
   
  使用 ODBC CALL 逸出序列呼叫程序的一般語法為：  
   
- {[**？ =**]**呼叫 * **procedure_name*[**(**[*參數*] [**，**[*參數*]]...**)**]}  
+ {[**？ =**]**呼叫**_程序\_名稱_[**(**[*參數*] [[_參數_]]...**)**]}  
   
  例如：  
   

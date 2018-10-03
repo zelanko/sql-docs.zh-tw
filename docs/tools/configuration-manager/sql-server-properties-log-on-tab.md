@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 50adc01b1f1ca30af4243e4a1a3762823f2fc0a0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f5bcf3ed174c5d25d817738195670ea573c64909
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42787177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759740"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 屬性 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

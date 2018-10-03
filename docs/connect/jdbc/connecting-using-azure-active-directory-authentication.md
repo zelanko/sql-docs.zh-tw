@@ -3,23 +3,20 @@ title: 使用 Azure Active Directory 驗證連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6c87e7b85282c7ca237689296e08d2b7645240ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452642"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767136"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 

@@ -4,20 +4,17 @@ ms.prod: sql
 ms.technology: ssdt
 ms.date: 2018-06-27
 ms.reviewer: alayu; sstein
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 715839a584561c38fb08b3e217016ef3cc27e9b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721746"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 

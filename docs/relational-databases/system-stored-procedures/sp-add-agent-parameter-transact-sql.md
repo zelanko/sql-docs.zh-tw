@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_add_agent_parameter_TSQL
 - sp_add_agent_parameter
@@ -22,12 +17,12 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b3947425e84734fcdd5920cac5b097426e252cb3
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3845f43d2d1b7a66e5726e92fa40386e6a07abf5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827366"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

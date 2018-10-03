@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], modifying
 - modifying filters, modifying
 - filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bc42acf774fb9f9b25147998a604e9afa7565eb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9257ec9eb963d692e3a280781ce3a441d3e12ba5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759706"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改篩選 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a906fea9cc3ff318a523695046c0a8c8fea2ce9d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 46d2ff64c5dd91f2e58f57c5f745a37e93efb0f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38048646"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835486"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

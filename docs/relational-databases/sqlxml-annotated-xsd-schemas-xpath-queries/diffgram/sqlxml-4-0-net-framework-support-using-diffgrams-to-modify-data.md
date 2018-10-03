@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data deletions [SQLXML]
@@ -26,17 +23,16 @@ helpviewer_keywords:
 - record updates [SQLXML]
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3998eab449bffafe464e9dcaf6f540bb7c8942c8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: eeee5df3f50ecf87cee896dff1c2b790a2a55564
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770168"
 ---
 # <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>SQLXML 4.0 .NET Framework 支援 - 使用 DiffGram 修改資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

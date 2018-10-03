@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsGetGeneratedKeys
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d7e9da829ae886f58d61906fee2590867af6522
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3c001fe39305cf2ac1299fe77a45c32d39b9598c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834066"
 ---
 # <a name="supportsgetgeneratedkeys-method-sqlserverdatabasemetadata"></a>supportsGetGeneratedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

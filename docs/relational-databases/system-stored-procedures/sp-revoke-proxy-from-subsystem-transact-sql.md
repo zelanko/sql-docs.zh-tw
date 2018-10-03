@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_subsystem
@@ -21,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883ae75134c2559c2f9c4742ed73e4c760d140d7
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812419"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

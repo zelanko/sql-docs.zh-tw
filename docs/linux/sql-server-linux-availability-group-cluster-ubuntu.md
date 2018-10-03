@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 48a6ed32b8b0898d44c28a425064ef46fc1e1561
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 45ac371576eff08576354aed04e3d54ac0dc7696
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740330"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 

@@ -5,21 +5,18 @@ ms.date: 07/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a62845e404024ae6d4d2aa8d30acef3f7ce233dd
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696558"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>使用大量複製 API 執行批次插入作業
 

@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 857de845853f796620e0595fb1f73ed3ed424152
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 69324ab25ba5efd293e445aa7ae4f0ff768b1c8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698276"
 ---
 # <a name="new-alias-alias-tab"></a>新增別名 (別名索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

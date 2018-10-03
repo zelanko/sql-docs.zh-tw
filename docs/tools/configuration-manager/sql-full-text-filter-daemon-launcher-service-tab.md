@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1f9033c14dd82e898e63a1f55c04a3bf6e4c7eba
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d69f13508ae1bee7cdacd166dae3bd80147a9d06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784718"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694907"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL 全文檢索篩選背景程式啟動器 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

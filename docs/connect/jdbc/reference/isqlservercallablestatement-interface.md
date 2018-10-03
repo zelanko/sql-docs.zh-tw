@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1421688e8454baa972fc592249f2a79a17d1b3d1
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 0a6d016f51dc5e651475cb5c6c58ed6cd0761b00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786433"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774638"
 ---
 # <a name="isqlservercallablestatement-interface"></a>ISQLServerCallableStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

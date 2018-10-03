@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f93ca145c96e2cc9b6d86e0ebc8c2c9899afad9
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: b4ffde9828a2136dc01dbb37dd4009f9a2783001
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844676"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>移除 SSMA for DB2 元件 (DB2ToSQL)
 當您完成從 DB2，以便將資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時間，以解除安裝用戶端元件。 不過，您不應該解除安裝延伸模組套件，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非您已移轉的資料庫不再使用中的函式**ssma_DB2**的結構描述**sysdb**資料庫。  

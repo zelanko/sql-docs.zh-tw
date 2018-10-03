@@ -1,13 +1,11 @@
 ---
-title: getDiscardedServerPreparedStatementCount 方法 (SQLServerConnection) |Microsoft 文件
+title: getDiscardedServerPreparedStatementCount 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getDiscardedServerPreparedStatementCount
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9e5364a5569f555713eae94ddb46fb7439fed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f71d28a725c35658128f01d3fa2d21b0f7960ed0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749578"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 傳回的目前未完成已備妥陳述式取消準備動作。
+ 傳回的目前未完成已備妥之陳述式取消準備動作。
 
 ## <a name="syntax"></a>語法  
   
@@ -39,12 +36,12 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>傳回值
- **Int** ，其中包含目前未完成的備妥陳述式的數字 unprepare 動作。
+ **Int** ，包含目前未完成的備妥陳述式數目 unprepare 動作。
 
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個方法是從 JDBC 驅動程式版本 6.4 可用且向外。
  
 ## <a name="see-also"></a>另請參閱  

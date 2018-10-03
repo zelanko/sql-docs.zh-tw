@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3801a2340fbc1ddad030d2bbfe53a73e87920cc8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 15384f5b0a0247d83bdfa987e48cab86f10b6599
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42787378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800716"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Report Server 屬性 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

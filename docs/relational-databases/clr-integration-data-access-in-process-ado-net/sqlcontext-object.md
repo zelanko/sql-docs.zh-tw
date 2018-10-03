@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Windows identity [CLR integration]
 - SqlContext object
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
-caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd8bcd270794394bcb576c42657c2d9cd831fc98
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c14003652db37ca23addd2ac0dfd14ca0ada9f00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825286"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

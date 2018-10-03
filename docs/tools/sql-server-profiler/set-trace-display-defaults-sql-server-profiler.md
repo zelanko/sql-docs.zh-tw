@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f67ce7dafe849f82a964140ac1aa25ce220773f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f7edcb08ee08103a0d2fc67ba77d714de6bd0b57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778206"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>設定追蹤顯示預設值 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

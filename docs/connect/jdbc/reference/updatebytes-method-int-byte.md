@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateBytes (int, byte[])
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8fdad2f99ced5590827713f04eae8ed8e10959a
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e61895c1d19cc2372de63be5572dcfe2d141b1fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831428"
 ---
 # <a name="updatebytes-method-int-byte"></a>updateBytes 方法 (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

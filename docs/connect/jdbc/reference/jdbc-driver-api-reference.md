@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a6949c49dc019e1dc7b9d875fb3ee7f38363a46
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f311458a8fb6b58f22a1ca4c23fa8d1f36dddc51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773788"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API 參考
 

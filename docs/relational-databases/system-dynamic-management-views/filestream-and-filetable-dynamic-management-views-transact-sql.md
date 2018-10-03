@@ -1,28 +1,25 @@
 ---
-title: Filestream 和 FileTable 動態管理檢視 (TRANSACT-SQL) |Microsoft 文件
+title: Filestream 及 FileTable 動態管理檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - FileTables [SQL Server], dynamic management views
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03cac56f24a288b06118aaef6b00928db6b935bd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 240da66536adb16c140e625ccefd99c672f80574
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794596"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Filestream 及 FileTable 動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

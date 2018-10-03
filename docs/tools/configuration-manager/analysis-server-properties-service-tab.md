@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d21ac2684225e5cc79073a13c7a06351100ecd7c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: dfea32595c7b6d7dfc5bb3d36400f020bb42ef6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833176"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Analysis Server 屬性 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

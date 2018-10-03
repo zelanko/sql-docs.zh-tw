@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints [SQL Server]
 - traces [SQL Server], replaying
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa261909c11cea67b1ddcb6438200788943e603f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 38b3ada072c6cf5ef8753f1218fea858d98b6f1d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751106"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重新執行至中斷點 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d53011410bec69b795a5f50464ce0bb4a5eac425
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: fa85b61a67655fbf363c1927b48cd79f8ff841ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774416"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

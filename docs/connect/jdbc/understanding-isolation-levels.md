@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4a91678f90164a85907a21f50d74b50561ceaff
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 9341004225f619f4b15aabb1a641a8a39a2329b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764856"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔離等級
 

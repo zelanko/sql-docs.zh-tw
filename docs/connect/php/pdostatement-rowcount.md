@@ -1,25 +1,22 @@
 ---
-title: 'Pdostatement:: Rowcount |Microsoft 文件'
+title: 'Pdostatement:: Rowcount |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 701ec616e311f8786ef6d9c2689bcaac84da6872
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 2b129f1d46635cfc275ef66e06ba0612c75b3c8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732476"
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +33,7 @@ int PDOStatement::rowCount ();
 ## <a name="return-value"></a>傳回值  
 加入、刪除或變更的資料列數。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 如果相關聯的 PDOStatement 所執行的最後一個 SQL 陳述式是 SELECT 陳述式，則 PDO::CURSOR_FWDONLY 資料指標會傳回 -1。 PDO::CURSOR_SCROLLABLE 資料指標會傳回結果集內的資料列數目。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  

@@ -1,27 +1,23 @@
 ---
-title: 檢閱重新執行結果 |Microsoft 文件
+title: 檢閱重新執行結果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bf4c08dee623e659e04e3be97f8e015daa57aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073955"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822206"
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +59,9 @@ ms.locfileid: "33073955"
 ## <a name="column-descriptions-for-result-trace"></a>結果追蹤的資料行說明  
  下表描述結果追蹤資料的資料行。  
   
-|資料行名稱|資料類型|描述|資料行識別碼|  
+|資料行名稱|資料類型|Description|資料行識別碼|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|事件類別的名稱。|@shouldalert|  
+|EventClass|**nvarchar**|事件類別的名稱。|1|  
 |EventSequence|**bigint**|針對提供者錯誤以及內部錯誤和警告，這是對應於錯誤或警告的擷取事件順序。<br /><br /> 針對所有其他事件類別，這是原始追蹤資料中的事件順序。|2|  
 |ReplaySequence|**bigint**|針對提供者錯誤以及內部錯誤和警告，這是對應於錯誤或警告的重新執行事件順序。<br /><br /> 針對所有其他事件類別，這是重新執行期間指派的事件順序。|3|  
 |TextData|**ntext**|TextData 的內容取決於 EventClass。<br /><br /> 針對 Audit Login 和 ExistingConnection，這是連接的設定選項。<br /><br /> 針對 SQL:BatchStarting，這是批次要求的主體。<br /><br /> 針對 RPC:Starting，這是呼叫的預存程序。<br /><br /> 針對 Replay Settings Event，此資料行包含重新執行組態檔中所定義的設定。<br /><br /> 針對 Replay Statistics Event，這包含下列資訊：<br /><br /> -重新執行目標 SQL Server<br /><br /> -可重新執行的事件總數<br /><br /> -提供者錯誤數目<br /><br /> -內部錯誤數目<br /><br /> -內部警告<br /><br /> -錯誤總數<br /><br /> -整體成功率<br /><br /> -重新執行時間 (HH:MM:SS:MMM)<br /><br /> 針對 Replay Result Set Event，這會顯示傳回結果資料行標頭的清單。<br /><br /> 針對 Replay Result Row Event，這會顯示該資料列所有資料行的傳回值。<br /><br /> 針對 Replay Internal Warning 和 Replay Provider Error，此資料行包含提供者警告或錯誤。|4|  

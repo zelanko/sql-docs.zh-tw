@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f39566af4b5fce341e37f991cfb1a67507dd0c7a
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d50968acff5370bade29886af8d4a52dff3cf016
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757786"
 ---
 # <a name="using-auto-generated-keys"></a>使用自動產生的金鑰
 

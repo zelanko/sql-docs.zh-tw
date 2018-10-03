@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSsnapshot_agents
 - MSsnapshot_agents_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb9d1fd6367762ca6cb8472d964568bd207f83a0
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: a0890b30946f2a2033d43712e62fc031fa8451c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836396"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

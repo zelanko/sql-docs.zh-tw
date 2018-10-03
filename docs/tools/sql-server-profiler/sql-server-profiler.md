@@ -5,9 +5,7 @@ ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 304aa9c09508fc7feb9a3522390acb221a7e4a7b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 302954dd00dacc385e1f97c1215eea47ab4519ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753730"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,25 +5,22 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa16f019656f65ebc2910770b09dec4451d4f4ed
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d81731eb933f5f1c35eff3ae358462d90af07f5e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743326"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

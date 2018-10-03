@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef8f6fa18b94e5bb48ca93e96b8c26921786a118
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d82973fd4b413252e5614ff0fe903269d3f45525
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096089"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843546"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>建立、改變和移除結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

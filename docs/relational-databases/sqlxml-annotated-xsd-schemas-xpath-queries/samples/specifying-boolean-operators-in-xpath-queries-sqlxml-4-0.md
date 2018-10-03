@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath operators [SQLXML]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6b90a7cf6a0354a213f8f1dc820212eb047ac1d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 312f8e38961f8eb283eaaa3070b7ec01dd149678
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822796"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

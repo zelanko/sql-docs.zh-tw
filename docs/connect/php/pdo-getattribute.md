@@ -5,21 +5,18 @@ ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e455225592c6f8ddd4964f9df80c2159543aade
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 69ba316a7a08025479ed57be95fa7cbfba216d2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804976"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

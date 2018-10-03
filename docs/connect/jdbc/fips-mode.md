@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
-ms.openlocfilehash: 792d843a2c11c7bde016aec513df9c8724b366b4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: cc13455e6f56950d6988909b53aa7664c7fd77f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723826"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

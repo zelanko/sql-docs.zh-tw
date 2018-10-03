@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e58e34027de67558e6dde62ada3d023939999aec
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7410a9b202209ea1f91e81c444e9ec090ba19589
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713406"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>從執行中追蹤衍生範本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_xtp_hash_index_stats
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d846c9178afacb63be75d0a77d0bc33b06519680
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 683adbb172802d3709250c3cac46efdbed6cc544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766127"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

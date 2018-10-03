@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 431df76c2835f1c85e46d64e576ad9ed632e9757
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661700"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798896"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 

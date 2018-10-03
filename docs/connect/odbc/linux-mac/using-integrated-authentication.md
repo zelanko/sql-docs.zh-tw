@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - integrated authentication
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c37c170360e966e730b120601efd6867f2bb2659
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42786092"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810146"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

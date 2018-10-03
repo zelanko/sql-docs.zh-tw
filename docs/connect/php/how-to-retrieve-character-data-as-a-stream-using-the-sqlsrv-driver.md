@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, as a character stream
 - streaming data
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bdb429478ff01782a571aab1d39c805ed501b7f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: af84ebccf47802e157f75ac591f7cd96c5e822be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754659"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

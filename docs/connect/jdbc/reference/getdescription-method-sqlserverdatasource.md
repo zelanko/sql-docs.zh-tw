@@ -1,13 +1,11 @@
 ---
-title: getDescription 方法 (SQLServerDataSource) |Microsoft 文件
+title: getDescription 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getDescription
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: dce7aa3a-9a2f-4a45-8191-e37949e2202f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c406b91f98b424fcdf019e28f5e894558ef37e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 88cd33eb001155b05079120e4a2f780caf079e22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784198"
 ---
 # <a name="getdescription-method-sqlserverdatasource"></a>getDescription 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69a57a42ac3fcd9b54952cca7bdb90a70e3422a9
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c75e4ef92a6410fa07fdc17b899a52b24d7804cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36874866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836006"
 ---
 # <a name="install-distributed-replay---overview"></a>安裝 Distributed Replay - 概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +23,7 @@ ms.locfileid: "36874866"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[Distributed Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)|列出安裝 Distributed Replay 需求的程序主題。|  
 |[安裝 Distributed Replay](../../tools/distributed-replay/install-distributed-replay.md)|提供一般 Distributed Replay 安裝的程序主題，包括使用安裝精靈、可執行自動安裝的範例語法與安裝參數，以及透過組態檔執行 Distributed Replay 的範例語法及安裝參數來進行。|  

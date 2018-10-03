@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - syspublications
 - syspublications_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cd880ca394c7584059133be9e0d9fee4e801657
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 2369b472fc4e7e7506aab72d46c3ecfe7cead8c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754836"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

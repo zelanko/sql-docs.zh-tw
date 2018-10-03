@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 983cf2bcbdbfd91f10331310dbf4318cd5b3fb5e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 37aaf09fd22a6f0a142a2b715b37d66de37d0f95
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823116"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用陳述式
 

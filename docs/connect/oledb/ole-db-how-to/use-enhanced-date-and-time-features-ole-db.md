@@ -5,21 +5,18 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 32f0808fe3939b4ea924390d9e697002f33a9220
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6b02c4a73a1b83a993745ca069672e43f09c5667
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814940"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

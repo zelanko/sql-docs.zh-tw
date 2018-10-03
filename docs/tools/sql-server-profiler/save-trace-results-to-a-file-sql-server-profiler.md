@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be8bb0c9876df4504e13c6098eb83eabe7ed2d84
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1b130d29fa98abd107a540b7acccc4bebd4e93ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716236"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>將追蹤結果儲存至檔案 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

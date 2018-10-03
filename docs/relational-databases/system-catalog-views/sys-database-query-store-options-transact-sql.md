@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbd92f7d3e08c56c55e1b7cb2c67446ac011114b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0d9d04832b09d357725dc7a4986d4ed074469559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775126"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

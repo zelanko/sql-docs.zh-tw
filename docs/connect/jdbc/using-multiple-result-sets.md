@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08f1f202ded4c9e0053cfc6c315b87c6f4616eee
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: fd3294eb5ff9d25b6e5d067249d829b21428035a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814706"
 ---
 # <a name="using-multiple-result-sets"></a>使用多個結果集
 

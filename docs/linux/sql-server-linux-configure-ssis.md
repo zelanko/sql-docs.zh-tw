@@ -8,16 +8,14 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 22662a8e4212d0856501a888efed05e35d372ac5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 957333697112105799d29aebecc3b3fcb049eb99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764966"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>在 Linux 上設定 SQL Server Integration Services 使用 ssis conf
 

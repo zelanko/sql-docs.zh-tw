@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_DATASOURCEINFO property set
@@ -25,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a92307ff23b9e267c79a573e10d091290f98c463
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8a5c362dff5b091461f7c88955dcabe309c3864a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839546"
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

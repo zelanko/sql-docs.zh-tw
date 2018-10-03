@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39596d1bc481005606a7442d755b3cc9a1ec668b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e2ed699e9c3eabfb2df1317794d8343d637244c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693286"
 ---
 # <a name="performing-batch-operations"></a>執行批次作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

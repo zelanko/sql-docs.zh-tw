@@ -1,14 +1,11 @@
 ---
-title: sys.fn_MSxe_read_event_stream (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_MSxe_read_event_stream (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_MSxe_read_event_stream_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.fn_MSxe_read_event_stream
 - fn_MSxe_read_event_stream
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
-caps.latest.revision: 9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1da76a946464f09defae3bbe804b741f58be9cf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 587180830491c10b6dc09a2af8d28718bf612e87
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752196"
 ---
 # <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |型別|**整數 (4)**|事件類型。 不可為 Null。|  
 |data|**映像 (16)**|事件影像資料。 可為 Null。|  

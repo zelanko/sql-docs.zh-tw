@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database objects [SMO]
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b058ca580684350e89ee69ec052e23d7e0778548
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d218c369c59d3f78ade615ed81048cc99e9a01e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815986"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>建立、改變和移除資料庫物件
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

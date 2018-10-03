@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73bc57c0519c3371b77e38b00b7cc2a8a203b811
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7fd35d23d97c8f24161301762033a63efb29dc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804374"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

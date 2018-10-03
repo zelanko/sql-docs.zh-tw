@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], traces
 - filters [SQL Server], SPIDs
 - traces [SQL Server], filters
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f70625ce37e2409e3a885e9c62ff4be227b3707
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5262d9a261e1fa9cb6cb0950f8509253d7eaced5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031396"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744696"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>篩選追蹤中的伺服器處理序識別碼 (SPID) (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,25 +1,22 @@
 ---
-title: getRowIdLifetime 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getRowIdLifetime 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 317c0b44-fe3f-4142-9cab-e40e4c4fe070
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b446ecaed7ff20ced714e93e6ce3f4756bcd0ce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 65541bc857dfcdd7c55caa8e2e7d3831026c79e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731516"
 ---
 # <a name="getrowidlifetime-method-sqlserverdatabasemetadata"></a>getRowIdLifetime 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +39,7 @@ public java.sql.RowIdLifetime getRowIdLifetime()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getRowIdLifetime 方法是由 java.sql.DatabaseMetaData 介面中 getRowIdLifetime 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

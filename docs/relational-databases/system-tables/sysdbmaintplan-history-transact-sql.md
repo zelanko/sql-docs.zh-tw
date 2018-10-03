@@ -1,14 +1,11 @@
 ---
-title: sysdbmaintplan_history (TRANSACT-SQL) |Microsoft 文件
+title: sysdbmaintplan_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdbmaintplan_history_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplan_history system table
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70afaf6e607f5c8455747a42429f815a6616a8a5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a51e2ea16ab7cc34ade122284a7162707c4d8f7d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732666"
 ---
 # <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "33260311"
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**sequence_id**|**int**|資料庫維護計畫執行記錄的順序。|  
 |**plan_id**|**uniqueidentifier**|資料庫維護計畫識別碼。|  

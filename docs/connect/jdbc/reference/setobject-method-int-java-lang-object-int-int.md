@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setObject (int, java.lang.Object, int, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d190ee20-d669-4c6f-a081-d5cfec2f72ca
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 922c6f315c560ac4b26a8140f47e79aaebae5b45
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: da06abf7222931551ca1ef9b441687837b2c65f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787536"
 ---
 # <a name="setobject-method-int-javalangobject-int-int"></a>setObject 方法 (int, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

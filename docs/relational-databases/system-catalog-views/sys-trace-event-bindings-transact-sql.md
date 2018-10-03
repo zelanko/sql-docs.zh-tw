@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.trace_event_bindings_TSQL
@@ -23,12 +20,12 @@ ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8f24a16d10b1e22324ec5ce7477e1953cffa077
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 156e8a2cd2ee6e0d2789526615b7236b26874dac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791969"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

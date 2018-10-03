@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_next_result
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 45af614b2ae194d741b43188f82dc346f657a399
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703636"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36638c4cc2bda58ac277822d5c4a4ce5421ab8b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2a227848ac7f7fde500aa03a1ab206d19c11f3fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758716"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.locfileid: "38066526"
 ## <a name="prerequisites"></a>先決條件
 
 - SQL Server 2016 （或更新版本），WideWorldImporters 和 WideWorldImportersDW 的資料庫 （在相同或不同 SQL Server 執行個體）
-- Transact-SQL
+- SQL Server Management Studio
 - SQL Server 2016 Integration Services
   - 請確定您建立的 Integration Services 目錄。 若要建立的 Integration Services 目錄中，在 SQL Server Management Studio 物件總管中，以滑鼠右鍵按一下**Integration Services**，然後選取**新增目錄**。 保留預設選項。 系統會提示您啟用 [SQLCLR] 並提供密碼。
 

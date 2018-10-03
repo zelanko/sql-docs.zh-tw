@@ -1,14 +1,11 @@
 ---
-title: log_shipping_monitor_history_detail (TRANSACT-SQL) |Microsoft 文件
+title: log_shipping_monitor_history_detail (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_history_detail_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_history_detail system table
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57136a4f8378c25892fa32c29956d89f7da9868
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f8968661442adabe4c04608ca5a5bb5362341c4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804106"
 ---
 # <a name="logshippingmonitorhistorydetail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33258269"
   
  主要伺服器和次要伺服器也會使用記錄和監視的相關資料表。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|用來備份的主要識別碼，或用來複製或還原的次要識別碼。|  
 |**agent_type**|**tinyint**|記錄傳送作業的類型。<br /><br /> 0 = 備份。<br /><br /> 1 = 複製。<br /><br /> 2 = 還原。|  
@@ -48,17 +44,17 @@ ms.locfileid: "33258269"
 |**message**|**nvarchar(max)**|訊息文字。|  
   
 ## <a name="remarks"></a>備註  
- 這份資料表包含記錄傳送代理程式的記錄詳細資料。 若要識別代理程式工作階段，請使用 資料行**agent_id**， **agent_type**，和**session_id**。 若要查看代理程式工作階段的記錄詳細資料，依排序**log_time**。  
+ 這份資料表包含記錄傳送代理程式的記錄詳細資料。 若要識別代理程式工作階段，請使用 資料行**agent_id**， **agent_type**，並**session_id**。 若要查看代理程式工作階段的記錄詳細資料，請依排序**log_time**。  
   
- 除了儲存在遠端監視伺服器，主要伺服器的相關資訊會儲存在主要伺服器上其**log_shipping_monitor_history_detail**資料表和次要複本的相關資訊伺服器也會儲存在次要伺服器中, 其**log_shipping_monitor_history_detail**資料表。  
+ 除了儲存在遠端監視伺服器，主要伺服器的相關資訊會儲存在主要伺服器上其**log_shipping_monitor_history_detail**資料表 」 和 「 次要資料庫的相關資訊伺服器也會儲存在次要伺服器上其**log_shipping_monitor_history_detail**資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_delete_log_shipping_primary_database &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_delete_log_shipping_primary_database &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_delete_log_shipping_secondary_database &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [系統資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
- [log_shipping_monitor_error_detail &#40;Transact SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
+ [log_shipping_monitor_error_detail &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
   
   

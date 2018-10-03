@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection, byte[].SQLServerBlob
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d93e5bee03976c5ae9c55247f98ba180e237a4e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5a0b33640f9978b5b7b383e7bd89c62e026d5386
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789809"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob 建構函式 (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +42,7 @@ public SQLServerBlob(SQLServerConnection connection,
 #### <a name="parameters"></a>參數  
  *connection*  
   
- 
-          SQLServerConnection 物件。  
+ SQLServerConnection 物件。  
   
  *data*  
   

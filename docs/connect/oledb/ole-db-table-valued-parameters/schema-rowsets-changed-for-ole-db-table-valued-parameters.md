@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - schema rowsets [OLE DB]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3f792ff7e9060494e13173b84e81f30601ad4f2a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3ebfae0c3b4753e35e02df570ebc170a7c37a686
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726556"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>針對 OLE DB 資料表值參數而變更的結構描述資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

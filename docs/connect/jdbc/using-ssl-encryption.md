@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59f8b726ca1b3b93328394dfc8e40d577dd41ba9
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 1453daf6bf9e806a4b3ac79ae8c9a322e5bd0bac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786992"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771521"
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 

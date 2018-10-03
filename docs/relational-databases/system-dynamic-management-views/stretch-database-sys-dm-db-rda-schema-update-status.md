@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_rda_schema_update_status
@@ -19,12 +17,12 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbd99f97902dbbd3c097b76b1f119f400f97c6f6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 930e717767c44f5d8151cd94c29f9b6aaa205fa4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755796"
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database-sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

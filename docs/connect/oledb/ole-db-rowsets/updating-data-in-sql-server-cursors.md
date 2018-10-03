@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updating data [SQL Server]
@@ -21,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0c3f3824225fdb50380c5681d02a2d4313091fd9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: ef4f863e4aca24cff654469f6447c02814008089
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706106"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 資料指標中的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

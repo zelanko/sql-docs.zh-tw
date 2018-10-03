@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a5d7e44945fdb435b7dcadbdd7c67033f8d4f8c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f418bdc6cd0dc3a4beda0a74ab1bcca3d1a7312a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787159"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835039"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>使用 JDBC 驅動程式連接到 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

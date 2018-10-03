@@ -5,23 +5,20 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cda57aaa1271182540ed83acc9d21856f7c1f013
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727466"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式設定錯誤和警告處理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

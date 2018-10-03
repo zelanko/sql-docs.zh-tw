@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d27f9cc7caa5ebeedf9052d5063ebec1e3851ba
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38017304"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717026"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

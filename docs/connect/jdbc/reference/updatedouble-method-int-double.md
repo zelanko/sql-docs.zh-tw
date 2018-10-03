@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateDouble (int, double)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 90c47643-e27e-425d-85a0-63866f858367
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d92dabbb9dda1091f3fc1c395da5183653989a01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 243d42ed167c1722cea796215af192213614b22f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746776"
 ---
 # <a name="updatedouble-method-int-double"></a>updateDouble 方法 (int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

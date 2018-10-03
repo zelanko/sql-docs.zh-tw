@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770946"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3︰使用 PHP 連接到 SQL 的概念證明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b745050556a0fa21d57daaf09bc21f7d4bbc93cf
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: b0f5bcfff72abb16c45aebc12f7c1a2220e2330f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392038"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735496"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>將 DB2 結構描述對應至 SQL Server 結構描述 (DB2ToSQL)
 DB2，在每個資料庫會有一或多個結構描述。 根據預設，SSMA 會移轉 DB2 結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名為結構描述的資料庫。 不過，您可以自訂 DB2 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  

@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetVersions 函數 |Microsoft 文件
+title: LocalDBGetVersions 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersions
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 365e6be64d45bbe5140ba063e045c0a53ea55ee0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b78298326fdac24ec64155ab86b4e0eddc854d7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935534"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831786"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ ms.locfileid: "32935534"
  發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

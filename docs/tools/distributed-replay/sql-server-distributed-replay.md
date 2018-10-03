@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f00057ac64780636ad1530ffdd2766396da8b40b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6f5320f6230b7dcc3d9042b4524de4c1fc51a409
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781446"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

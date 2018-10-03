@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 743616c9a18704bdd91a0d44259d3c980dcc2c9d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 5fb555b3731f9afc5296f7f558bb7a4b58b5b6bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694616"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 

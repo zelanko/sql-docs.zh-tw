@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a34dc859e81e430ad7eb0ae8863a63e35e2b5f3c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8b1c6198b525ed5dbf10aa9b3bb085737aef754f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716767"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>匯入追蹤範本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

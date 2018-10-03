@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1e8c40d3beb679da1c00f993ca3406bd755baa8
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9e0ac541989368aeb13e5c47d4ad2a6bae8e09ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736036"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault 範例版本 6.0.0
 

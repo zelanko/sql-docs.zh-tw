@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], replaying single event at a time
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c82ba2cfcfbefed2569c1f0e9fed9ff5637bc908
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ab6d5c64ab1f154e0b31cabfe89ba9aa095bf376
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800007"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>一次重新執行一個事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Open method
@@ -18,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 20c8698a0deb259cac3ec63d8c277651315ff682
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 79e10215fab0ca2f90d2685423a66cb95ea731c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743716"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

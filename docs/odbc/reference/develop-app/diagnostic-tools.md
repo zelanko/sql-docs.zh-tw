@@ -1,30 +1,27 @@
 ---
-title: 診斷工具 |Microsoft 文件
+title: 診斷工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic tools [ODBC]
 ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1d758e40a24b4305eb0dc269288d80b665d362f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fe70b1e484039593c9bb02a28788259f9afaf18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909713"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830056"
 ---
 # <a name="diagnostic-tools"></a>診斷工具
-兩個功能可以協助診斷問題，ODBC 應用程式中。 兩者都可以使用 ODBC 管理員從與實作由驅動程式管理員。 *追蹤*能記錄到記錄檔之函式呼叫的序列。 Visual Studio 分析器可讓分析的元件互動的相關資訊，在分散式環境中。  
+兩個功能可以協助診斷問題，ODBC 應用程式中。 兩者都可以使用 從 ODBC 系統管理員和實作由驅動程式管理員。 *追蹤*能記錄到記錄檔的函式呼叫順序。 Visual Studio Analyzer 可讓元件的互動的相關資訊的分析，在分散式環境中。  
   
  此章節包含下列主題。  
   

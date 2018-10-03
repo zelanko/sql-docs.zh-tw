@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f8281d520f64580af8432dbf2004227ce628d41
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d26b8d9b19b29a92481c3dccf9d4809e74691a44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794466"
 ---
 # <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

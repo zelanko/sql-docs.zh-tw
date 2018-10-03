@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - bulk loading data
 - data, loading into SQL Azure
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - SQL Azure, migrating data into
 - SQL Server, migrating data into
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7f63f3ac016a35cae82161cd9af1cfaafaf33353
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab3ce18b1b79951c76b34be3f90b2d8782ba64e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773819"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>將 Access 資料移轉到 SQL Server-Azure SQL DB (AccessToSQL)
 您已成功建立資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將資料從存取移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  

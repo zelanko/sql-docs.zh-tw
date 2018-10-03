@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842746"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "39662470"
 
 Always Encrypted 可讓用戶端加密敏感性資料，而且永遠不會向 SQL Server 或 Azure SQL Database 顯示資料或加密金鑰。 Microsoft JDBC Driver 6.0 (或更高版本) for SQL Server 等啟用了 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料，達成此行為。 驅動程式會自動判斷哪一個查詢參數對應至 Always Encrypted 的資料庫資料行，然後加密這些參數的值後, 才會將它們傳送到 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 < [Always Encrypted （資料庫引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)並[永遠加密 API 參考 JDBC 驅動程式](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 - 請確定 Microsoft JDBC Driver 6.0 （或更新版本） 的開發電腦上安裝 SQL Server。 
 - 下載並安裝 Java 密碼編譯延伸模組 (JCE) 無限制的強度管轄權原則檔。  請務必閱讀 ZIP 檔案中的讀我檔案，以了解安裝指示及可能的匯出/匯入問題相關詳細資料。  
 
@@ -46,7 +43,7 @@ Microsoft JDBC Driver for SQL Server 通訊金鑰儲存區，使用資料行主�
 ### <a name="using-built-in-column-master-key-store-providers"></a>使用內建資料行主要金鑰存放區提供者
 Microsoft JDBC Driver for SQL Server 隨附於下列內建的資料行主要金鑰存放區提供者。 這些提供者的一些預先註冊使用特定提供者名稱 （用以查閱提供者而定） 和一些需要額外的認證或明確註冊。
 
-| 類別                                                 | 說明                                        | 提供者 (查閱) 名稱  | 預先註冊嗎？ |
+| 類別                                                 | Description                                        | 提供者 (查閱) 名稱  | 預先註冊嗎？ |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure 金鑰保存庫金鑰儲存區提供者。 | AZURE_KEY_VAULT         | 否                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 憑證存放區的提供者。      | MSSQL_CERTIFICATE_STORE | 是                |

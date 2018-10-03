@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09e692d947874a4449a27dfd864c6d7268172ed6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8c636c1258a42135f758b839065f7de8c21c0514
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050514"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807078"
 ---
 # <a name="pdosqlsrv-driver-reference"></a>PDO_SQLSRV 驅動程式參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

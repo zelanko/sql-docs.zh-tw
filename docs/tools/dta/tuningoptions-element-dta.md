@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TuningOptions element
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef18228219a85275b6e88fb24ea4bba36a130ca0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4e0a20be1c4ff3dbaf9a0d833c5c029cbe6e2d30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775146"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,27 +1,23 @@
 ---
-title: 重新執行追蹤資料 |Microsoft 文件
+title: 重新執行追蹤資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc1bf91650cd45f3bdc3c7a17a6e907205c7c258
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bc31568ba3dfc603f2abe850d2388729fc25813
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746266"
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +25,7 @@ ms.locfileid: "33073145"
   
  您可以使用管理工具的 [重新執行]  選項以起始 Distributed Replay 的事件重新執行階段。 這個階段是由兩個部分組成：追蹤資料分派以及分散式重新執行的啟動和同步處理。  
   
- ![Distributed Replay 事件](../../tools/distributed-replay/media/eventreplay.gif "Distributed Replay 事件")  
+ ![Distributed Replay 事件](../../tools/distributed-replay/media/eventreplay.gif "分散式事件重新執行")  
   
  您可以在下列其中一種順序模式中重新執行追蹤資料：壓力模式或同步處理模式。 預設行為是在壓力模式中重新執行追蹤資料。 如需有關事件重新執行階段和順序模式的詳細資訊，請參閱＜ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)＞  
   

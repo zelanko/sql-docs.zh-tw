@@ -5,9 +5,7 @@ ms.date: 07/07/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.pro.traceproperties.general.f1;
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767156"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +193,7 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 
 |項目|Description
 |---|---
-|**[SQL Server]**|指定目前連接的 SQL Server 執行個體。 此欄位會自動擴展且無法更新。  
+|**SQL Server**|指定目前連接的 SQL Server 執行個體。 此欄位會自動擴展且無法更新。  
 |**[資料庫備份]**|指定追蹤資料表所在的資料庫。  
 |**[擁有者]**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
 |**Table**|指定從中讀取追蹤的追蹤資料表名稱。  
@@ -204,7 +201,7 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 使用 **[目的地資料表]** 對話方塊，來指定您要儲存追蹤的資料表。  
 |項目|Description
 |---|---
-|**[SQL Server]**|指定目前連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 此欄位會自動擴展且無法更新。 若要變更伺服器，請按一下 **[取消]** ，並連接到您要儲存追蹤資料表之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+|**SQL Server**|指定目前連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 此欄位會自動擴展且無法更新。 若要變更伺服器，請按一下 **[取消]** ，並連接到您要儲存追蹤資料表之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
 |**[資料庫備份]**|指定您要儲存追蹤資料表的資料庫。  
 |**[擁有者]**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
 |**Table**|指定您要儲存追蹤的資料表名稱。  

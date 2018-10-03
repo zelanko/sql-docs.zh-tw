@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f408cb1f6cb82610cfa74a4d59a3ce15e4307e64
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786444"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728526"
 ---
 # <a name="support-for-localdb"></a>LocalDB 的支援
 

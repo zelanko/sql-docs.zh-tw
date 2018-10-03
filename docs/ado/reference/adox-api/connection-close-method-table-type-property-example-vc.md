@@ -1,13 +1,11 @@
 ---
-title: 連接關閉方法，資料表類型的屬性範例 （VC + +） |Microsoft 文件
+title: 連接的 Close 方法、 Table Type 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cc1899b0d8772d27f3c505787469913a9e24150
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285277"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837866"
 ---
-# <a name="connection-close-method-table-type-property-example-vc"></a>連接關閉方法，資料表類型的屬性範例 （VC + +）
-設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性**Nothing**應該 「 關閉 」 類別目錄。 相關聯的集合將是空的。 從目錄中的結構描述物件所建立的任何物件會被遺棄。 已快取的物件上的任何屬性仍可使用，但嘗試讀取提供者呼叫的內容將會失敗。  
+# <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close 方法、Table Type 屬性範例 (VC++)
+設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性設**Nothing**應該 「 關閉 」 目錄。 相關聯的集合是空的。 從目錄中的結構描述物件所建立的任何物件會被遺棄。 任何已快取這些物件的屬性仍然可以使用，但嘗試讀取屬性需要呼叫提供者將會失敗。  
   
 ```  
 // BeginCloseConnectionCpp.cpp  

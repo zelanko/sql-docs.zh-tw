@@ -1,13 +1,11 @@
 ---
-title: setUnicodeStream 方法 (SQLServerPreparedStatement) |Microsoft 文件
+title: setUnicodeStream 方法 (SQLServerPreparedStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setUnicodeStream
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a413e83-e0a4-41f8-9fe0-33ce4d368ee4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7478baa859b65ce7c801ae8e9872d51f2e3fec3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 88b5cc280dad46ceedee621b4d4f8aeb008f131c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846443"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700886"
 ---
 # <a name="setunicodestream-method-sqlserverpreparedstatement"></a>setUnicodeStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,20 +43,20 @@ public final void setUnicodeStream(int n,
 #### <a name="parameters"></a>參數  
  *n*  
   
- **Int** ，指出參數編號。  
+ **int**，指出參數編號。  
   
  *x*  
   
  InputStream 物件。  
   
- *長度*  
+ *length*  
   
  位元組數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setUnicodeStream 方法是由 java.sql.PreparedStatement 介面中的 setUnicodeStream 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

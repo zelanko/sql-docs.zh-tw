@@ -1,13 +1,11 @@
 ---
-title: Visual c + + 延伸模組用於 ADO |Microsoft 文件
+title: Visual c + + 延伸模組用於 ADO |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,33 +13,32 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c9200939a34f3d1a2af936388acaa6740387416
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ca21e976783a10a738488762e382982e4fd8fd8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747676"
 ---
-# <a name="visual-c-extensions"></a>Visual c + + 擴充功能
-程式設計 Visual c + + 的 ADO 的慣用的方法使用 **#import**指示詞中所述[Microsoft Visual c + + ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版的 ADO 隨附的 Visual c + + 的程式設計替代方法： Visual c + + 擴充功能。 本章節記載這項功能的人員必須維護 Visual c + + 擴充功能的程式碼，但新的 ADO 程式碼應該使用 # 來撰寫**匯入**。
+# <a name="visual-c-extensions"></a>Visual c + + 延伸模組
+程式設計 Visual c + + ADO 的慣用的方法使用 **#import**指示詞中所述[Microsoft Visual c + + ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版 ADO 隨附使用 Visual c + + 的程式設計替代方法： Visual c + + 延伸模組。 本節提供這項功能的人必須維護 Visual c + + 延伸模組的程式碼，但新的 ADO 程式碼應該使用 # 來撰寫**匯入**。
 
- 面臨的其中一個最繁瑣作業 Visual c + + 程式設計人員使用 ADO 來擷取資料會轉換成 c + + 資料類型，當做 VARIANT 資料類型傳回，而且然後儲存轉換的資料類別或結構中的資料時。 除了麻煩，擷取透過 VARIANT 資料類型的 c + + 資料減少效能。
+ 其中一個最沉悶作業 Visual c + + 程式設計人員所面臨的 ADO 使用擷取資料會轉換成 c + + 資料型別，傳回 VARIANT 資料類型，而然後將轉換的資料儲存在類別或結構的資料時。 除了很麻煩，擷取透過 VARIANT 資料類型的 c + + 資料減少效能。
 
- ADO 提供的介面，支援擷取資料到原生 C/c + + 資料類型，而不需要透過 VARIANT，並提供前置處理器巨集，可簡化使用介面中。 結果是有彈性的工具更容易使用且具有較佳的效能。
+ ADO 提供的介面，支援擷取資料到原生 C/c + + 資料類型，而不需要經過 VARIANT，並提供簡化使用介面的前置處理器巨集。 結果是有彈性的工具更容易使用且具有極佳的效能。
 
- 一般的 C/c + + 用戶端案例是將繫結中的記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)C/c + + 結構或類別包含原生 C/c + + 類型。 當經過變體，這牽涉到從 VARIANT 轉換程式碼寫入 C/c + + 原生類型。 ADO 的 Visual c + + 擴充功能的適用對象為 Visual c + + 程式設計人員，使得此案例中更為簡單。
+ 常見的 C/c + + 用戶端案例是要繫結中的資料錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)C/c + + 結構或類別，包含原生 C/c + + 類型。 透過變數時，這牽涉到從 VARIANT 轉換程式碼寫入 C/c + + 原生型別。 Visual c + + 延伸模組，用於 ADO 為目標的 Visual c + + 程式設計師，使得這種情況下更為簡單。
 
- 請參閱下列主題來深入了解 ADO 的 Visual c + + 擴充功能。
+ 請參閱下列主題來深入了解 Visual c + + 延伸模組，用於 ADO。
 
--   [針對 ADO 使用 Visual c + + 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+-   [ADO 使用 Visual c + + 延伸模組](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
 -   [Visual C++ Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
--   [ADO 使用 Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
+-   [ADO 使用 Visual c + + 延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>另請參閱
- [Visual c + + 語法索引 com ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)[使用 Visual c + + 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual c + + 擴充功能的標頭](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Visual c + + 語法索引 com 的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual c + + Extensions 範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)[使用 Visual c + + 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual c + + Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)

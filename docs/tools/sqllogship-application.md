@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqllogship
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0dbdc7e2ccfdd2afc3e674100605a39d727bf5ec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5b1961f8ce9eadd34ece73f498d532428b50d001
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785927"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710956"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +59,16 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |level|Description|  
 |-----------|-----------------|  
 |0|輸出不追蹤和偵錯的訊息。|  
-|@shouldalert|輸出錯誤處理訊息。|  
+|1|輸出錯誤處理訊息。|  
 |2|輸出警告和錯誤處理訊息。|  
 |**3**|輸出參考用訊息、警告和錯誤處理訊息。 這是預設值。|  
 |4|輸出所有偵錯和追蹤訊息。|  
   
  **–logintimeout** *timeout_value*  
- 指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int***。*  
+ 指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int**_。_  
   
  **-querytimeout** *timeout_value*  
- 指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int***。*  
+ 指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int**_。_  
   
 ## <a name="remarks"></a>Remarks  
  建議您盡可能使用備份、複製和還原作業來執行備份、複製和還原。 若要從批次作業或其他應用程式執行這些作業，請呼叫 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 預存程序。  

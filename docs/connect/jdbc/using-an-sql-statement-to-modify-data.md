@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4463d57727435e501213725ed94fba001cb4306b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 89fd14cf4245a3c44dad41b4af5b3b14e779e82b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838285"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>使用 SQL 陳述式修改資料
 

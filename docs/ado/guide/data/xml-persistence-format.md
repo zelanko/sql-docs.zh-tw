@@ -1,32 +1,29 @@
 ---
-title: XML 持續性格式 |Microsoft 文件
+title: XML 保存格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e70b7ab799ee0c1704c2fcd492edb434eb7c536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842162"
 ---
-# <a name="xml-persistence-format"></a>XML 持續性格式
-ADO 使用 utf-8 編碼方式，它會保存 XML 資料流。  
+# <a name="xml-persistence-format"></a>XML 保存格式
+ADO 使用 utf-8 編碼方式，它會保存為 XML 資料流。  
   
- ADO XML 格式會分成兩個區段，後面接著資料區段的結構描述 > 一節。 以下是從 Northwind 資料庫的貨運公司資料表的範例 XML 檔案。 XML 的各個部分將討論下列範例。  
+ ADO XML 格式會分成兩個區段，後面接著資料區段的結構描述一節。 以下是從 Northwind 資料庫的貨運公司 資料表的範例 XML 檔案。 下列範例將討論各種組件的 xml。  
   
 ## <a name="remarks"></a>備註  
   
@@ -68,11 +65,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- 結構描述會顯示宣告的命名空間、 結構描述 區段中，以及資料區段。 結構描述 」 一節包含資料列、 即貨運公司編號、 CompanyName 和電話的定義。  
+ 結構描述會顯示宣告的命名空間、 結構描述 區段中和 資料 區段。 結構描述區段包含定義資料列、 即貨運公司編號、 CompanyName 和電話。  
   
- 結構描述定義符合[W3C XML 資料的規格](http://www.w3.org/TR/1998/NOTE-XML-data/)和 （但不會進行驗證，在 Internet Explorer 5） 會完整驗證。 XML 資料是目前唯一支援的結構描述的格式資料錄集持續性。  
+ 結構描述定義符合[W3C XML 資料的規格](http://www.w3.org/TR/1998/NOTE-XML-data/)並可在 （雖然驗證不會發生在 Internet Explorer 5） 完整驗證。 XML 資料是目前唯一支援的結構描述的格式資料錄集的持續性。  
   
- 資料區段有三個資料列，其中包含貨運公司的資訊。 空的資料列集的資料區段可能是空的但\<rs： 資料 > 標記必須存在。 沒有資料，您可以為撰寫標記縮寫\<rs： 資料 / >。 加上"rs"任何標記表示它是在 urn： 結構描述所定義的命名空間中的 microsoft-com:rowset。  
+ 資料區段會有三個資料列包含貨運公司的相關資訊。 空的資料列集，[資料] 區段可能是空的但\<rs： 資料 > 標記必須存在。 沒有資料，您可以簡單地撰寫標記速記\<rs： 資料 / >。 加上"rs"任何標記表示它是在 urn: schemas-microsoft 所定義的命名空間-microsoft-com:rowset。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

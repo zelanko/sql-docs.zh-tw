@@ -5,26 +5,23 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, communicating with SQL Server
 - ODBC applications, communicating with SQL Server
 - ODBC, communicating with SQL Server
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e37fe9ed11fd491a0e7974e08518e5f3c67e91e3
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e24660402f2278f1d71f0729281e0009029936da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080721"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707136"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>與 SQL Server 進行通訊 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

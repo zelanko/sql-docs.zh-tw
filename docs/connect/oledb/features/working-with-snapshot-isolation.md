@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], snapshot isolation
@@ -25,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 688360b213c256f5ec8ce79eff79cef4aaaf3a07
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a70489259d8636d424f24927cab4ebc5ff090bbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759366"
 ---
 # <a name="working-with-snapshot-isolation"></a>使用快照隔離
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

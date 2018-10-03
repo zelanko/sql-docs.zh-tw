@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.browseservers.local.f1
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 98f690178bedda265e785cce233e26cb4f6c1240
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 19e51d05d8716a43d30bb52849c20a4139a18b60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42786820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701996"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

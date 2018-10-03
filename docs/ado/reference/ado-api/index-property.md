@@ -1,13 +1,11 @@
 ---
-title: Index 屬性 |Microsoft 文件
+title: Index 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,48 +13,47 @@ f1_keywords:
 helpviewer_keywords:
 - Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716306"
 ---
 # <a name="index-property"></a>Index 屬性
-表示索引的目前作用中的名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
+指出正在使用中的目前的索引名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**字串**值，這是索引的名稱。  
+ 設定或傳回**字串**值，也就是索引的名稱。  
   
 ## <a name="remarks"></a>備註  
- 索引命名**索引**屬性必須先前已宣告於基底資料表的基礎**資料錄集**物件。 也就是索引之前一定已經宣告以程式設計方式為 ADOX[索引](../../../ado/reference/adox-api/index-object-adox.md)物件，或建立基底資料表時。  
+ 所命名的索引**Index**屬性必須先前已宣告於基底資料表的基礎**資料錄集**物件。 也就是索引之前一定已經宣告以程式設計方式為 ADOX [Index](../../../ado/reference/adox-api/index-object-adox.md)物件，或建立基底資料表時。  
   
- 如果索引不能設定，會發生執行階段錯誤。 **索引**屬性無法設定下列條件：  
+ 如果索引不能設定，會發生執行階段錯誤。 **Index**無法設定屬性，在下列情況下：  
   
--   內[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)或**RecordsetChangeComplete**事件處理常式。  
+-   內[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)或是**RecordsetChangeComplete**事件處理常式。  
   
--   如果**資料錄集**仍在執行作業 (這可以由[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性)。  
+-   如果**Recordset**仍在執行作業 (這可判斷[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性)。  
   
--   如果已設定篩選器上**資料錄集**與[篩選](../../../ado/reference/ado-api/filter-property.md)屬性。  
+-   如果已設定篩選**Recordset**使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性。  
   
- **索引**屬性可以永遠成功設定如果**資料錄集**已關閉，但**資料錄集**將不成功，會開啟，或索引將無法使用，如果基礎提供者不支援索引。  
+ **的索引**可以一律可設定屬性成功**資料錄集**已關閉，但**資料錄集**將不成功，會開啟，或索引將無法使用，如果基礎提供者不支援索引。  
   
- 如果可以設定的索引，可能會變更目前的資料列位置。 這會導致更新[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)屬性，而且會引發**WillChangeRecordset**， **RecordsetChangeComplete**， [WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)，和[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)事件。  
+ 如果可以設定索引，可能會變更目前的資料列位置。 這會更新[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)屬性，並會引發**WillChangeRecordset**， **RecordsetChangeComplete**， [WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)，並[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)事件。  
   
- 如果可以設定索引和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性是**Locktype**或**Adlockreadonly**，然後隱含[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)會執行作業。 這會釋放目前和受影響的群組。 已釋放任何現有的篩選，和目前資料列位置變更為第一個資料列 reordered**資料錄集**。  
+ 如果可以設定索引和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性是**Locktype**或是**adLockOptimistic**，然後隱含[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)執行作業。 這會釋放目前和受影響的群組。 已釋放任何現有的篩選條件，和目前的資料列位置變更為已排序的第一列**資料錄集**。  
   
- **索引**屬性用於搭配[搜尋](../../../ado/reference/ado-api/seek-method.md)方法。 如果基礎提供者不支援**索引**屬性，因此**搜尋**方法，請考慮使用[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法改為。 判斷是否**資料錄集**物件支援的索引將以[支援](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** 方法。  
+ **Index**屬性可搭配[搜尋](../../../ado/reference/ado-api/seek-method.md)方法。 如果基礎提供者不支援**索引**屬性，因此**Seek**方法，請考慮使用[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法改為。 判斷是否**Recordset**物件支援的索引[支援](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** 方法。  
   
- 內建**索引**與不相關的動態屬性[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性，雖然它們都處理索引。  
+ 內建**Index**屬性不相關的動態[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性，雖然它們都處理索引。  
   
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [搜尋方法和索引屬性範例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
- [索引物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Seek 方法和 Index 屬性範例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek 方法](../../../ado/reference/ado-api/seek-method.md)

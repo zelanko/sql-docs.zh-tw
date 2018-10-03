@@ -5,23 +5,20 @@ ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29d0fca68fa5359abffccb57806b93d6c781d0c2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36f53b9f4daaa25d6276778ed4f38ae641c73c93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716811"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

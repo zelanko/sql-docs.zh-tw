@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - lifetimes [SQL Server]
 - Transact-SQL vs. managed code
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
-caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 46de36a86103e5f6d9d9c652b17aba3f8602e1c1
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 12efdc644c950cecdbd676f53fe582b1d7d20ca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353580"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774176"
 ---
 # <a name="transaction-lifetimes"></a>交易存留期間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f68cfa7b434f26d6c36c92f0f693ade02aec4230
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1734bd4916ff073c0571dfd88b15ba8bd9ab0ca7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42783877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821686"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>用戶端通訊協定 (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

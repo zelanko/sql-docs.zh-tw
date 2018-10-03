@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 094f2c78f8158b01d3b48bd366aa7e9edc2e0998
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 782b254eca5a0fb60ab354e35b40eae5d5fd2640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810806"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 

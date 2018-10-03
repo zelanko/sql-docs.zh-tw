@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 7d8d0120093c1a71d1cbed088901cc3100ae56bc
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 9c58592568ca841df270190970fb76fefe43d96d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082932"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711716"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性限制
 

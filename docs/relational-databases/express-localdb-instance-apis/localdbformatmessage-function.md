@@ -1,15 +1,12 @@
 ---
-title: LocalDBFormatMessage 函數 |Microsoft 文件
+title: LocalDBFormatMessage 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBFormatMessage
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c787218996e72c3953243f24fb103ccaa8879720
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52a07ec8c2793116077cc88c6cb338befac2eee0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821296"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ HRESULT LocalDBFormatMessage(
  [輸出] 儲存 LocalDB 錯誤訊息的緩衝區。  
   
  *lpcchMessage*  
- [輸入/輸出]輸入包含大小的*wszMessage*以字元為單位的緩衝區。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
+ [輸入/輸出]輸入包含的大小*wszMessage*以字元為單位的緩衝區。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。 如果函數成功，則會在訊息中包含字元數，尾端的 Null 不計。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -90,7 +86,7 @@ HRESULT LocalDBFormatMessage(
  發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

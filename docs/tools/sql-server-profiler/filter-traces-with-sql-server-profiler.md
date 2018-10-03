@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], filters
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0204e06854c66b11415c9dc210e5d1d714842ef
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 94e8370c3d004d90f11a6bbe7f5b9492c4bcb1f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721976"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 篩選追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

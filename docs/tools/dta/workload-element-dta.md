@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17f6cf36856c3c4aee02d83f97c90cb7e345b933
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 205566e4721d76723ac6c1ab862ed37991e76b66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761136"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

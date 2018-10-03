@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea43e0ba0039523786ee6d9850c7426828359c69
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22abb1619002a20255778d901c2194795830384f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781315"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>狀態選項 (Distributed Replay 管理工具)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

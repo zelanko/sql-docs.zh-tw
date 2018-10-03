@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2fd75507ca7c1615b0282a9f56a1e8f4b33bc22b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 1f5aa998fa6e0e61bc0417aaf9703a0d0809fc4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737096"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>使用含傳回狀態的預存程序
 

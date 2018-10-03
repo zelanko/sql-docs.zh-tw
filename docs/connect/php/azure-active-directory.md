@@ -3,19 +3,18 @@ title: Azure Active Directory |Microsoft Docs
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 71e6b3b4556621b6bc8a8a4c7996cfdb47a12849
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 67f32c2c48188b3bcff50e22ca66bf2f563b1704
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814826"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證進行連線
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

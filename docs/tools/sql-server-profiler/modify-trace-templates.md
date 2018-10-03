@@ -5,9 +5,7 @@ ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - modifying trace templates
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28455e8a0af59b60ffa51e41c01726baaa851987
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7ca5a8fff488f827360f02a96992e01dcc3accb5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747506"
 ---
 # <a name="modify-trace-templates"></a>修改追蹤範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

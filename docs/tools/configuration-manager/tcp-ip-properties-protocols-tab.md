@@ -5,23 +5,20 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34f6d026e29da596afaa6c812a726a64fb7e828f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b8e961af919f3d92dad4aba5d87e910e341ce07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797397"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

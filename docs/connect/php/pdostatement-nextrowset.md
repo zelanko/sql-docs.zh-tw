@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 048a6d8f-7fc4-449e-8161-19268c68f41d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd5f05fb3f63434d134289b52d3445d749066da2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c6ae71b3f9f761338364ffd4d492a0a20a1aa809
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841576"
 ---
 # <a name="pdostatementnextrowset"></a>PDOStatement::nextRowset
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

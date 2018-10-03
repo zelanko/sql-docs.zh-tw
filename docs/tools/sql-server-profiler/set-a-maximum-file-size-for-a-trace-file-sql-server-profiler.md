@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - maximum file size for traces
 - size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79b32c201e9f2b9195378c6ff9042bc9b8adeda0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 063cdb883de4abd7b32819449251e6f3dec9f592
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063366"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774446"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>設定追蹤檔案的檔案大小上限 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

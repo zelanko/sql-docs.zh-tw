@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eee315022a94795dd27ae8ae7fee6cc784912bec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 066aa64a529d2066c0dcce50cd2f2aff12dcf948
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758986"
 ---
 # <a name="handling-errors"></a>處理錯誤
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

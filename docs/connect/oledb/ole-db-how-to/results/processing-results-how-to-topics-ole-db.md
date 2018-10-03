@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a798c2795ef19ad8c3823889b0e2d269ca8ec4ee
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1eb3eeedff7eb0cfcf3c22579e54aa711e80a555
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773226"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>處理結果的使用說明主題 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

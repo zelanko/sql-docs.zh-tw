@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a0c8554e85a3341a79c80b1b4e6c6c050cfcda1
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: b4dbd328fe72e4dd61ebc823488c7dba801b1e3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784542"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741426"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

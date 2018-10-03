@@ -1,13 +1,11 @@
 ---
-title: Cancel 方法 (ADO) |Microsoft 文件
+title: Cancel 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ec9158cc318b8c89ce0ea64a73190cb6f48de46
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760778"
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消暫止的非同步方法呼叫的執行。  
@@ -41,15 +38,15 @@ object.Cancel
 ```  
   
 ## <a name="remarks"></a>備註  
- 使用**取消**來結束執行非同步方法呼叫的方法： 也就是叫用方法與**adAsyncConnect**， **adAsyncExecute**，或**adAsyncFetch**選項。  
+ 使用**取消**來終止執行的非同步方法呼叫的方法： 也就是叫用方法與**adAsyncConnect**， **adAsyncExecute**，或**adAsyncFetch**選項。  
   
- 下表顯示當您使用時，會終止哪些工作**取消**特定類型的物件上的方法。  
+ 下表顯示您使用時，哪些工作就會終止**取消**特定類型的物件上的方法。  
   
-|如果*物件*是|此方法的最後一個非同步呼叫已終止|  
+|如果*物件*是|最後一次的非同步呼叫這個方法會終止|  
 |----------------------|-------------------------------------------------------------|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|[執行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[[連接]](../../../ado/reference/ado-api/connection-object-ado.md)|[執行](../../../ado/reference/ado-api/execute-method-ado-connection.md)或[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[資料錄](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，或[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)|  
+|[記錄](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，或[開啟](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[資料流](../../../ado/reference/ado-api/stream-object-ado.md)|[開啟](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
@@ -61,14 +58,14 @@ object.Cancel
 |[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
 ## <a name="see-also"></a>另請參閱  
- [取消方法範例 (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
- [取消方法範例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [取消方法的範例 （VC + +）](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
+ [Cancel 方法範例 (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
+ [Cancel 方法範例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
+ [Cancel 方法範例 （VC + +）](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
  [Cancel 方法 (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [CancelUpdate 方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Execute 方法 （ADO 命令中）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute 方法 （ADO 連接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Open 方法 （ADO 連接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Execute 方法 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute 方法 (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Open 方法 (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)

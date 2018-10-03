@@ -1,30 +1,24 @@
 ---
-title: SQL Server 移轉小幫手 |Microsoft 文件
+title: SQL Server 移轉小幫手 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778104"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845783"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
-Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 自動化 SQL Server 資料庫移轉所設計的工具。  
+Microsoft SQL Server 移轉小幫手 (SSMA) 是設計來自動化 SQL Server 從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 資料庫移轉工具。  
   
 ## <a name="migration-sources"></a>移轉來源  
   
@@ -32,14 +26,14 @@ Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、
   
 -   [DB2 的 SQL Server 移轉小幫手](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
--   [用於 MySQL 的 SQL Server 移轉小幫手](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+-   [適用於 MySQL 的 SQL Server 移轉小幫手](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
--   [Oracle 的 SQL Server 移轉小幫手](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+-   [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--   [SAP ASE 的 SQL Server 移轉小幫手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-   [適用於 SAP ASE 的 SQL Server 移轉小幫手](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>支援的來源和目標版本
-對於支援的來源，請檢閱 SSMA 下載下載中心上的資訊。
+對於支援的來源，檢閱 SSMA 下載 「 下載中心 」 上的資訊。
 
 SSMA 支援下列版本的目標。
 
@@ -52,7 +46,7 @@ SSMA 支援下列版本的目標。
 - 在 Windows 和 Linux （預覽） 上的 SQL Server 2017
 - * * Azure SQL 資料倉儲
 
-* * SSMA for Oracle 只有才支援此目標。
+* * 此目標，只有支援 SSMA for Oracle。
  
 ## <a name="downloads"></a>下載
 - [SSMA for Access](http://aka.ms/ssmaforaccess)
@@ -64,19 +58,19 @@ SSMA 支援下列版本的目標。
 ## <a name="getting-ssma-support"></a>取得 SSMA 支援  
 **說明及支援的 Microsoft SQL Server 移轉小幫手 (SSMA):**  
   
--   **產品說明**-若要存取產品支援、 啟動 SSMA，然後選取 [說明] 功能表或按下 F1 鍵。  
+-   **產品說明**-若要存取產品支援、 啟動 SSMA，然後選取 [說明] 功能表或按 F1 鍵。  
   
--   **SQL Server 社群論壇**– SQL Server 社群中提出問題  
+-   **SQL Server 社群論壇**– 在 SQL Server 社群中發問  
   
-    -   [SQL Server 社群](http://go.microsoft.com/fwlink/?LinkId=42455)-新聞群組和監視的 SQL Server 社群論壇。 此網站還會列出社群資訊來源，例如部落格或網站。  
+    -   [SQL Server 社群](http://go.microsoft.com/fwlink/?LinkId=42455)-新聞群組和由 SQL Server 社群監視的論壇。 此網站還會列出社群資訊來源，例如部落格或網站。  
   
-    -   [SQL Server 開發人員中心社群](http://go.microsoft.com/fwlink/?LinkId=42456)-新聞群組、 論壇及其他社群資源，SQL Server 開發人員很有用  
+    -   [SQL Server 開發人員中心社群](http://go.microsoft.com/fwlink/?LinkId=42456)-新聞群組、 論壇和其他社群資源，SQL Server 開發人員很有用  
   
--   協助支援-請移至[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ，並搜尋 [SQL Server 移轉小幫手]。  選取您的版本，然後選取 [start] 要求。  協助的支援隨附於 SQL Server 移轉小幫手 工具。  
+-   協助支援-請移至[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ，並搜尋 [SQL Server 移轉小幫手]。  選取您的版本，然後選取 [啟動要求]。  包含使用 SQL Server 移轉小幫手工具協助的支援。  
   
--   頂級支援-如果您有頂級合約，您可以取得頂級支援[Premier Online 入口網站](https://premier.microsoft.com/)。  
+-   頂級支援-如果您有頂級支援合約，您可以取得頂級支援[Premier Online 入口網站](https://premier.microsoft.com/)。  
   
--   諮詢服務 – 夥伴協助移轉，go[合作夥伴入口網站](https://www.platformmodernization.org/Pages/default.aspx)。  
+-   諮詢服務 – 夥伴協助移轉，go [Partner 入口網站](https://www.platformmodernization.org/Pages/default.aspx)。  
   
 ## <a name="legal-notice-ssma"></a>法律注意事項 (SSMA)  
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  
@@ -100,6 +94,6 @@ SQL Server 文件集中的內容均經過充分測試才發佈。 《SQL Server 
   
 在某些情況下，某項特定功能未供客戶直接使用，因此未受記載。 除非 Microsoft 所發佈的 SQL Server 文件集也討論到某項功能，否則 Microsoft 客戶支援並不支援來自協力廠商叢書或網站的內容，並且不得用於產品資料庫或應用程式。  
   
-客戶不得使用未記載的 API，包括 (但不限於)：預存程序、擴充預存程序、函式、檢視、資料表、資料行、屬性或中繼資料。 Microsoft 客戶支援服務不支援資料庫或應用程式利用或使用未記載之的進入點。  
+客戶不得使用未記載的 API，包括 (但不限於)：預存程序、擴充預存程序、函式、檢視、資料表、資料行、屬性或中繼資料。 Microsoft 客戶支援服務不支援資料庫或利用或使用未記載之的進入點的應用程式。  
   
 對於利用及使用未記載之進入點的應用程式或資料庫，則不保證能夠升級至 SQL Server 未來版本的伺服器或資料庫。 SQL Server 功能的用途不得超出 Microsoft SQL Server 文件集所含內容。 如果某功能未記載於 Microsoft SQL Server 文件集，即屬於 SQL Server 不支援的部分。  

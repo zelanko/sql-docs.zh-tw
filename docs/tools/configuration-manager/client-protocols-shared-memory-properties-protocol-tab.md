@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
 - client protocols [SQL Server]
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 5216bee5176c9345da64b019bb29637246bda68c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 2e144ae53a0809d459ea70123951c5f559bb60ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784899"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761406"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>用戶端通訊協定 - 共用記憶體屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

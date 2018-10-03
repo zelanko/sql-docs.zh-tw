@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], deadlocks
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 835f8fc1c5c7d86551ffac0616afd42e737083b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 918856e619fbb44ef5b5bc382e5d95efc99aba0e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38004590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833486"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,13 +1,11 @@
 ---
-title: 在 JScript 中的錯誤處理 |Microsoft 文件
+title: 處理 JScript 的錯誤 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcebaef8a36961a5c28af4eee80fca4d088b9ed5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838856"
 ---
-# <a name="handling-errors-in-jscript"></a>在 JScript 中的錯誤處理
-您的 Microsoft® JScript® 程式碼必須檢查**計數**屬性**連接**物件的**錯誤**集合。 如果值為大於 0，逐一查看集合，並列印在任何其他語言中一樣的值。  
+# <a name="handling-errors-in-jscript"></a>處理 JScript 的錯誤
+您的 Microsoft® JScript® 程式碼必須檢查**計數**屬性**連線**物件的**錯誤**集合。 如果值大於 0，逐一查看集合，並列印的值，如同在任何其他語言。  
   
 ```  
 <!-- BeginErrorExampleJS -->  

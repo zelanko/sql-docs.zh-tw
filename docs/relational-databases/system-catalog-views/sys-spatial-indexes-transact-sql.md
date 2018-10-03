@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.spatial_indexes_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.spatial_indexes catalog view
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b3a8337b40a3d6a6ff397775301f3e2d7aa4103
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b206a8e1a4290a9ac4a2db6b88b8e326ed44b42d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822826"
 ---
 # <a name="sysspatialindexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

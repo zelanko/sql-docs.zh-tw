@@ -5,9 +5,7 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_connect
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection pooling support
 - sqlsrv_connect
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-caps.latest.revision: 67
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8398a169e12f597e7baec9fe42495c59b19d6903
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fb1a54fc32fe4f840a0023fc707d5d93b0284f32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983226"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700896"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

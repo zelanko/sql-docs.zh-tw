@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 16ab7dd1f4a083c51108ef86ff9c9428df1649da
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3cc979cd0f47425b5cab4d8b242ad81df18f0659
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805296"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>增強型日期和時間類型的大量複製變更 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -103,10 +100,10 @@ ms.locfileid: "43029557"
   
 |目標 --><br /><br /> 來源|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|date|@shouldalert|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
+|date|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Time|不適用|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
-|Smalldatetime|1, 2|1, 4, 10|@shouldalert|@shouldalert|1, 10|1, 5, 10|1, 11|1, 11|  
-|DATETIME|1, 2|1, 4, 10|1, 12|@shouldalert|1, 10|1, 5, 10|1, 11|1, 11|  
+|Smalldatetime|1, 2|1, 4, 10|1|1|1, 10|1, 5, 10|1, 11|1, 11|  
+|DATETIME|1, 2|1, 4, 10|1, 12|1|1, 10|1, 5, 10|1, 11|1, 11|  
 |Datetime2|1, 2|1, 4, 10|1, 12|1, 10|1, 10|1, 5, 10|1, 3|1, 3|  
 |Datetimeoffset|1, 2, 8|1, 4, 8, 10|1, 8, 10|1, 8, 10|1, 8, 10|1, 10|1, 3|1, 3|  
 |Char/wchar (date)|9|-|9, 6, 12|9, 6, 12|9, 6|9, 5, 6|不適用|不適用|  
@@ -119,7 +116,7 @@ ms.locfileid: "43029557"
 |符號|意義|  
 |------------|-------------|  
 |-|不支援轉換。<br />|  
-|@shouldalert|如果提供的資料不是有效的就會發佈錯誤。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
+|1|如果提供的資料不是有效的就會發佈錯誤。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
 |2|忽略時間元件。|  
 |3|如果截斷時發生資料損失，則會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數位數 0：** 8<br /><br /> **隱含的小數位數 1..9：** 1..9<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數位數 0：** 19<br /><br /> **隱含的小數位數 1..9：** 21..29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0：** 26<br /><br /> **隱含的小數位數 1..9：** 28..36|  
 |4|忽略日期元件。|  

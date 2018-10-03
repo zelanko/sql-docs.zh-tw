@@ -5,21 +5,18 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a3a3b07d71a060d4a3b7b63362e32d9a7b8e47f6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9ce2029f4d110c74b608438a3f945ebc0e078241
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786876"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

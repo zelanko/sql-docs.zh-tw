@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff7220d48a161456d899fb150c3749accad10fcf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3f869c8e2aa06be9f1ba7605d89576b62bdc0ed5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710736"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

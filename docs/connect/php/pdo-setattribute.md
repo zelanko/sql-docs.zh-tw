@@ -5,21 +5,18 @@ ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb11436fdfda8e2bb0744d866ece700259e11586
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 66d64917b83e23739ad35e8629b028904a300060
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707686"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +40,7 @@ bool PDO::setAttribute ( $attribute, $value );
   
 ## <a name="remarks"></a>Remarks  
   
-|attribute|處理者|支援的值|說明|  
+|attribute|處理者|支援的值|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|指定資料行名稱的大小寫。<br /><br />PDO::CASE_LOWER 會產生小寫的資料行名稱。<br /><br />PDO::CASE_NATURAL (預設值) 會顯示資料庫所傳回的資料行名稱。<br /><br />PDO::CASE_UPPER 會使資料行名稱以大寫顯示。<br /><br />此屬性可以使用 PDO::setAttribute 來設定。|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|請參閱 PDO 文件。|請參閱 PDO 文件。|  

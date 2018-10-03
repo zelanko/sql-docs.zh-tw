@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, about OLE DB Driver for SQL Server
@@ -22,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9be35b231d518d975c5b9fb7d5657a044fa81e06
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 849acd4eabc86882912d72309b6507e4ba2fd21b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810766"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB Driver for SQL Server 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

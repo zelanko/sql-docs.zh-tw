@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setBinaryStream
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bef9214305fee9f86f04b4e57c23157f242d2139
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ff592c731de82a142ad1babf9d842d2b668cf0e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769472"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

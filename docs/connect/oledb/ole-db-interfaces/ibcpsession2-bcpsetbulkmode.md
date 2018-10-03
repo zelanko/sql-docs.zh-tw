@@ -5,24 +5,21 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8c490167020d3a47a3c9400657186f8b6a525f50
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 87cd70651cf3a4badb0bf99d3096cac801f40a7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737068"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

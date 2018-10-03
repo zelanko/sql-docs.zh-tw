@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b9276c0cf5afca6911b6d6132c3c6ec4dfc43ae
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 287a05727bf62de813afec4ad285ef47f3b65943
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801636"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -82,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |NULLABLE|**short**|指出參數或傳回值是否可以包含 **null** 值。<br /><br /> **它可以是下列值之一：**<br /><br /> functionNoNulls (0)：不允許 NULL 值。<br /><br /> functionNullable (1)：允許 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
 |REMARKS|**String**|資料行或參數的相關註解。|  
 |COLUMN_DEF|**String**|資料行的預設值。<br /><br /> **注意：** 這項資訊可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，而且是 JDBC 驅動程式的特定資訊。|  
-|SQL_DATA_TYPE|**smallint**|除了 **datetime** 和 ISO **interval** 資料類型，這個資料行與 **DATA_TYPE** 資料行相同。<br /><br /> **注意：** 這項資訊可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，而且是 JDBC 驅動程式的特定資訊。|  
+|SQL_DATA_TYPE|**smallint**|除了 **datetime** 和 **ISO interval** 資料類型，這個資料行與 **DATA_TYPE** 資料行相同。<br /><br /> **注意：** 這項資訊可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，而且是 JDBC 驅動程式的特定資訊。|  
 |SQL_DATETIME_SUB|**smallint**|**datetime** ISO **interval** 子代碼 (如果 **SQL_DATA_TYPE** 的值是 **SQL_DATETIME** 或 **SQL_INTERVAL**)。 資料類型以外**datetime**和 ISO**間隔**，此資料行是 NULL。<br /><br /> **注意：** 這項資訊可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供，而且是 JDBC 驅動程式的特定資訊。|  
 |CHAR_OCTET_LENGTH|**int**|針對以字元為基礎的參數或資料行之最大二進位長度。 如果是其他資料類型，則為 NULL。|  
 |ORDINAL_POSITION|**int**|針對輸入和輸出參數，這代表從位置 1 開始。<br /><br /> 針對結果集資料行，這是結果集中從 1 開始的資料行位置。<br /><br /> 針對傳回值，這個值是 0。|  

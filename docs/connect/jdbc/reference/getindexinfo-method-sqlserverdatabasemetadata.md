@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getIndexInfo
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68595a385022f9bd42ccc8e925068e1d1e0ed1d3
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d7d66a175522cd89cf4bd0aca567779244b0a385
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786438"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789821"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,15 +42,15 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 #### <a name="parameters"></a>參數  
  *cat*  
   
- 包含目錄名稱的**字串**。  
+ 包含目錄名稱的 **String**。  
   
  *schema*  
   
- 包含結構描述名稱的**字串**。  
+ 包含結構描述名稱的 **String**。  
   
  *table*  
   
- 包含資料表名稱的**字串**。  
+ 包含資料表名稱的 **String**。  
   
  *unique*  
   

@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f147da482308ca216baf8b98ebab125fd3ff44d8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7e88a41d433b4d3eaed9cc86a5a1a7696efaf69a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799896"
 ---
 # <a name="name-element-for-server-dta"></a>伺服器的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

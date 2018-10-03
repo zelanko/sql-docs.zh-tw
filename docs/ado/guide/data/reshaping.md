@@ -1,33 +1,30 @@
 ---
-title: 才可遏制 |Microsoft 文件
+title: 重整 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reshaping previously shaped Recordset [ADO]
 - data shaping [ADO], reshaping
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b2b66d691f94ce79795b7a11002ba88f7ac74a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714526"
 ---
-# <a name="reshaping"></a>才可遏制
-A**資料錄集**建立命令可能會指派 」 圖形的子句*別名*名稱 （通常是使用 AS 關鍵字）。 形狀的別名**資料錄集**可以完全不同的命令中參考。 也就是說，您可以重複使用，或*重繪*，先前形狀**資料錄集**中新的圖形命令。 若要支援這項功能，ADO 提供屬性，[重繪名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  
+# <a name="reshaping"></a>重新成形
+A **Recordset**建立命令可能會指派圖案的子句*別名*名稱 （通常是使用 AS 關鍵字）。 形狀的別名**資料錄集**可以完全不同的命令中參考。 也就是說，您可以重複使用，或*重塑*，先前形狀**資料錄集**在新的圖形命令。 若要支援這項功能，ADO 會提供屬性[調整形狀名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  
   
- 才可遏制有兩個主要的功能。 第一個是相關聯的現有**資料錄集**與新的父**資料錄集**。  
+ 重整有兩個主要的功能。 第一個步驟是建立關聯的現有**Recordset**使用新的父**資料錄集**。  
   
 ## <a name="example"></a>範例  
   
@@ -40,10 +37,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- 第二個函式是以非分段存取現有的子系**資料錄集**物件使用的語法 」 圖形\<資料錄集重新塑造名稱 >"。  
+ 第二個函式會以非編製章節存取現有的子系**資料錄集**物件，使用語法 「 圖形\<資料錄集調整形狀名稱 >"。  
   
 > [!NOTE]
->  您無法將資料行附加至現有**資料錄集**，調整參數化**資料錄集**或**資料錄集**任何中介的 COMPUTE 子句中的物件或執行彙總作業上任何**資料錄集**從**資料錄集**正在重繪。 **資料錄集**正在重繪和新的形狀命令都必須使用相同[連接](../../../ado/reference/ado-api/connection-object-ado.md)。  
+>  您無法將資料行附加至現有**資料錄集**，調整參數化**資料錄集**或**資料錄集**任何中介 COMPUTE 子句中的物件，或執行彙總任何作業**Recordset**從子系**資料錄集**正在重繪。 **Recordset**正在調整形狀和新的形狀命令都必須使用相同[連線](../../../ado/reference/ado-api/connection-object-ado.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)

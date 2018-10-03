@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4230a53e7f3c718d05ccae4a6f59e629adaf738a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 76032ffa6737e39556a9047e91b0d2666ddea39b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702136"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
 

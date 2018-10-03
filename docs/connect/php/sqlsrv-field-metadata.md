@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_field_metadata
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748506"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

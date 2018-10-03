@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Internet Protocol
 - IPv4
 - IPv6
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 319b74d31d89b46cf429aa37f8223b3c1bfbd6bf
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b4b62361e131658f7bab48a8367ea8cd3b9c336f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839666"
 ---
 # <a name="connecting-using-ipv6"></a>使用 IPv6 連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

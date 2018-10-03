@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - IHpublisherindexes
 - IHpublisherindexes_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 657d8d364d0691ec2c0150b4ca933fcd46ce8f9f
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 0c378ba5d753ee2c90a1ab34f40e47513286bb65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103836"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834990"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

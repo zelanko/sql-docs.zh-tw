@@ -1,35 +1,32 @@
 ---
-title: 步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程） |Microsoft 文件
+title: 步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server returns Recordset
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dec3b614f0401160df1310d80265d4a10798eb08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2edc9b1e0a235f10819f319cc68a595610a4e5d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783896"
 ---
-# <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程）
+# <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4：伺服器傳回資料錄集 (RDS 教學課程)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- RDS 轉換擷取**資料錄集**至表單，可以傳送回用戶端物件 (也就是它*把***資料錄集**)。 轉換和傳送的方式完全相同的形式取決於伺服器上網際網路或內部網路區域網路上，或是動態連結程式庫。 不過，此詳細資料並不重要;會將所有事情是該 RDS 傳送**資料錄集**傳回給用戶端。  
+ 將所擷取的 RDS**資料錄集**物件可以傳回給用戶端傳送的表單 (也就是它*封送處理***資料錄集**)。 轉換和傳送方式的實際格式取決於伺服器是否位於網際網路或內部網路、 區域網路，或動態連結程式庫。 不過，此詳細資料並不重要;所有大小事，是該 RDS 傳送**資料錄集**傳回給用戶端。  
   
- 在用戶端，**資料錄集**物件已傳回並指派給本機變數。  
+ 在用戶端**資料錄集**物件會傳回並指派給本機變數。  
   
 ```  
 Sub RDSTutorial4()  
@@ -42,5 +39,5 @@ Sub RDSTutorial4()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟 5: DataControl 已進行使用 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [步驟 5: DataControl 設為可用 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

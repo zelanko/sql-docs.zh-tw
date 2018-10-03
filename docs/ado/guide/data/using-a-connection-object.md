@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e04067cda6fad31ebd07f5d887e387139c7739b1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 729d6d0713e70e2d628a08c2ce5008772d6a005d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979770"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710146"
 ---
-# <a name="using-a-connection-object"></a>使用連接物件
+# <a name="using-a-connection-object"></a>使用 Connection 物件
 開始前**連線**物件時，您必須定義有關資料來源和連線類型的特定資訊。 大部分的這項資訊由持有*ConnectionString*的參數[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**連接**物件，或由[ConnectionString屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**連線**物件。 連接字串是由單引號括住的值以分號分隔，引數/值組的清單所組成。 例如：  
   
 ```  

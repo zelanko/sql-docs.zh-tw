@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9f3259d713fd846e59020b2551d5598f77b7d5d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704376"
 ---
 # <a name="default-sql-server-data-types"></a>預設 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

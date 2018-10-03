@@ -5,19 +5,17 @@ ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 1a894abb9b89448430a5e95deebe75a40e6f3941
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: 30dffe30bfe0b87156f65d5c21bd0aaba033f0af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746846"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上 Microsoft ODBC Driver for SQL Server 的版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

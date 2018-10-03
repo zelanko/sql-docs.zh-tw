@@ -5,23 +5,20 @@ ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 3c0b2b86bee4cccd9e8074529362b7e9c8ff6b20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786790"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725766"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的 bug 的清單
 

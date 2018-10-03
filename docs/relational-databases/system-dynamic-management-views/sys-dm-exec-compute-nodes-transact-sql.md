@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODES_TSQL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900af9de12fe8d6964e5b1a71810d58f158b75cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e09741600a63596d9b486ebf2d36a808e7981a87
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753116"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]

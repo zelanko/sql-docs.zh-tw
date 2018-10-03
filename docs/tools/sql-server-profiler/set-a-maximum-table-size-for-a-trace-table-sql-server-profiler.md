@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - size [SQL Server], trace tables
 - maximum table size for traces
 ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6778240b62eb801dfc9d183f02976e443f45ac67
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9237726570f35d913f27b24c69eebb1e58f8e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38043016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737202"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>設定追蹤資料表的資料表大小上限 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59d7be4b7ce36363c7a0921c563f10a036b88ee3
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 295d4b7867c8ed51822080d03489643d69f68f4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735456"
 ---
 # <a name="understanding-cursor-types"></a>了解資料指標類型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

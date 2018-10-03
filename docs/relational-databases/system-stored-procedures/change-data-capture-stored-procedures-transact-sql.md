@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,12 +16,12 @@ ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 11e8e00c8811a51fe0a19084bc685e16c78f8da0
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fade74c6ecebe55c859a79fa02cfbcc5a44df656
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811116"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>異動資料擷取預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

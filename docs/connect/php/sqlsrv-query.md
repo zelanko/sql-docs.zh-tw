@@ -5,9 +5,7 @@ ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_query
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_query
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45a25840023772d835fd2bbfbadf2977bfa90107
-ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
+ms.openlocfilehash: a1703c1ef98751be8696e7fa44db8cb58e3f202f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39415517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768246"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

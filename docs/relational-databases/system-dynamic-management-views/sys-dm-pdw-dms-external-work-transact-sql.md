@@ -4,26 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.suite: sql
-ms.component: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
-caps.latest.revision: 5
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 781ab0fb027a16ab50235221c6118a93dfa53342
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: d96a80edd474b9709e465bfb544ff457ffba5030
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843946"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

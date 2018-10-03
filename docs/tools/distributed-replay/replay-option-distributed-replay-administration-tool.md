@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2df2c2b5520ce7a13dba61007179b9776b636620
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9714f0026d9e01ad506a23ca36e982703b3e5db4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046836"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739276"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

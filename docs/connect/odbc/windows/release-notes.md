@@ -5,21 +5,18 @@ ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3988a3387e5b33e5bdc5ebc757643be2a0e1de1f
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: cb599d59a374fc09dbc0009f0288296cc1df9d9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702067"
 ---
 # <a name="release-notes"></a>版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

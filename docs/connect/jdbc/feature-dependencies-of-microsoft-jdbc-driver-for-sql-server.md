@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70179d55c6aae5fc01c84f0c4af860f86d528a06
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 61c66d192a158fb754563e2d103eba946dee47c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454222"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830356"
 ---
 # <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能相依性
 
