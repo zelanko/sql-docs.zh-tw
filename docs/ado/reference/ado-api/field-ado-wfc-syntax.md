@@ -1,30 +1,27 @@
 ---
-title: 欄位 (ADO-WFC 語法) |Microsoft 文件
+title: 欄位 (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613836"
 ---
-# <a name="field-ado---wfc-syntax"></a>欄位 (ADO-WFC 語法)
+# <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="methods"></a>方法  
@@ -68,13 +65,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>欄位存取子方法  
- [值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件取得或設定該物件的內容。 被表示為 VARIANT，可指派值的物件類型及數種資料類型的內容。  
+ [值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件取得或設定該物件的內容。 內容被以一種可以指派值的物件和數種資料類型的 VARIANT。  
   
- ADO/WFC 實作**值**屬性**getValue**方法，這個方法會傳回 VARIANT 的物件; 而**setValue**採用做為引數的 VARIANT 的方法。 Variant 則高效率的某些語言，例如 Microsoft Visual Basic 中。  
+ ADO/WFC 實作**值**屬性**getValue**方法，以傳回 VARIANT 的物件; 而**setValue**方法，後者會採用當做引數的 VARIANT。 變化是以特定語言，例如 Microsoft Visual Basic 高效率。  
   
- 除了**值**屬性 ADO/WFC 提供*存取子*用於取得及設定的內容中的 Java 資料類型方法**欄位**物件。 大部分的這些方法會有的名稱格式 **取得 * * * DataType*或 **設定 * * * DataType*。  
+ 除了**值**屬性，ADO/WFC 提供*存取子*來取得和設定的內容中使用 Java 資料類型的方法**欄位**物件。 大部分的這些方法都有名稱格式 **取得 * * * 資料型別*或 **設定 * * * 資料型別*。  
   
- 有兩個值得注意的例外狀況： 其中一個**getObject**方法會傳回強制轉型為指定之類別的物件。 沒有任何**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
+ 有兩個值得注意的例外狀況： 其中一個**getObject**方法會傳回強制轉型為指定的類別的物件。 沒有任何**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
   
 ```  
 public native boolean getBoolean();  

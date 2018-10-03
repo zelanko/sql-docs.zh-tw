@@ -1,32 +1,29 @@
 ---
-title: 值屬性範例 （VC + +） |Microsoft 文件
+title: 值屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c2f818240cac81bfad9dfc26a59ed4f11935ce2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d70cf7e3fe370556a3be480a561c9ca9733ed6aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602826"
 ---
-# <a name="value-property-example-vc"></a>值屬性範例 （VC + +）
-這個範例會示範[值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)和[屬性](../../../ado/reference/ado-api/property-object-ado.md)所顯示的欄位和屬性值的物件***員工***資料表。  
+# <a name="value-property-example-vc"></a>Value 屬性範例 (VC++)
+此範例示範[值](../../../ado/reference/ado-api/value-property-ado.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)並[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件顯示欄位和屬性值的***員工***資料表。  
   
 ```  
 // BeginValueCpp.cpp  
@@ -175,5 +172,5 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [屬性物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 屬性 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

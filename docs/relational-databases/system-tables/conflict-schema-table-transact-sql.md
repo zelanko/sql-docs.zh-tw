@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -19,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2424c16b56455ca14fafdd8cc1c070aa3058447a
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: c1341b9e9b1f00494c655ed5a91943fadfbd5b76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614136"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;結構描述&gt;_&lt;資料表&gt;& Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

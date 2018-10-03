@@ -1,14 +1,11 @@
 ---
-title: sys.sysforeignkeys (TRANSACT-SQL) |Microsoft 文件
+title: sys.sysforeignkeys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysforeignkeys
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysforeignkeys system table
 - sys.sysforeignkeys compatibility view
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ad4221f86b42fb1d4df36f464efad7748f0b60f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b94583225c842d52518087c0cbaf9f8acea2972a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603096"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "33222129"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|FOREIGN KEY 條件約束的識別碼。|  
 |**fkeyid**|**int**|具有 FOREIGN KEY 條件約束之資料表的物件識別碼。|  

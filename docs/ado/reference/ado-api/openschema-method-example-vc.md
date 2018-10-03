@@ -1,32 +1,29 @@
 ---
-title: OpenSchema 方法範例 （VC + +） |Microsoft 文件
+title: OpenSchema 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - OpenSchema method [ADO], VC++ example
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecc1d70f8a68653cdeb82422967e1c9888cecc12
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c529e6d4d03ad8ac476894a7442589c06c772b95
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613776"
 ---
-# <a name="openschema-method-example-vc"></a>OpenSchema 方法範例 （VC + +）
-這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法顯示的名稱和型別中每個資料表***Pubs***資料庫。  
+# <a name="openschema-method-example-vc"></a>OpenSchema 方法範例 (VC++)
+這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法，以顯示每個資料表中的類型與名稱***Pubs***資料庫。  
   
 ```  
 // OpenSchemaMethodExample.cpp  

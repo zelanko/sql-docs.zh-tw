@@ -4,17 +4,16 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cb58d6bef18bea2d2de4effbad8ce303bd4e25f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 039d1bc435103800151a29c790f19584f3721603
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595736"
 ---
 # <a name="working-with-snapshots-web-portal"></a>使用快照集 (入口網站)
 

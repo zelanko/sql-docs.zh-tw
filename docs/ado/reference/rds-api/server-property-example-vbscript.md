@@ -1,35 +1,32 @@
 ---
-title: 伺服器屬性的範例 (VBScript) |Microsoft 文件
+title: 伺服器屬性範例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d50633d3214f69a46b7de0112a0f3548d622db7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ccb6bd2b61350c71f44b1580b790ec66cdfff89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599737"
 ---
-# <a name="server-property-example-vbscript"></a>伺服器屬性的範例 (VBScript)
+# <a name="server-property-example-vbscript"></a>Server 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列程式碼示範如何設定[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)參數在設計時間，並將它繫結至資料感知控制項使用 SQLOLEDB 提供者。 剪下和貼上這段程式碼一般的 ASP 文件並將它命名**ServerDesignVBS.asp**。 ASP 指令碼會找出您的伺服器。  
+ 下列程式碼示範如何設定[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)參數在設計時間，並將它繫結至資料感知控制項使用 SQLOLEDB 提供者。 剪下並貼入正常的 ASP 文件中的這段程式碼並將它命名**ServerDesignVBS.asp**。 ASP 指令碼會識別您的伺服器。  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -93,7 +90,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- 下列範例示範如何設定必要的參數 **.RDSDataControl**在執行階段。 若要測試此範例中，剪下、 貼上這段程式碼正常的 ASP 文件和命名**ServerRuntimeVBS.asp**。 ASP 指令碼會找出您的伺服器。  
+ 下列範例示範如何設定必要的參數的**rds。DataControl**在執行階段。 若要測試此範例中，剪下並貼入正常的 ASP 文件中的這段程式碼並將它命名**ServerRuntimeVBS.asp**。 ASP 指令碼會識別您的伺服器。  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
