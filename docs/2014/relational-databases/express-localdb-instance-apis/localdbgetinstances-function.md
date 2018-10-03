@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 94dba6bd5c8900d1010b4d9e7f78402c3c9b2e65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128588"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
   傳回指定之版本的所有 SQL Server Express LocalDB 執行個體。  

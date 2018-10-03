@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Class
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_Instance class
 - MSReportServer_Instance class
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f7bc08df999c6c1c5e6a16eefb483284e5fea15f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80aa9e3838440e93cf92c7efb7f93723a1bdbdef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205928"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance 類別
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

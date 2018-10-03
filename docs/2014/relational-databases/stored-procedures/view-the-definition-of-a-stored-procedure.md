@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], viewing
@@ -17,12 +15,12 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09737f1b9764680e67dbb0bbefb2d0ec86df71e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063848"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>檢視預存程序的定義
     

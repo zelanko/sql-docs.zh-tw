@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], viewing
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], how-to topics
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2b463cd9a5cb58c1286d66ce88ab749e408d852
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1454e6d0644b8eed74cf9328e2068d91e7c8e8ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189669"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>採礦模型檢視器工作和使用說明
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器] 索引標籤的特定工作。  

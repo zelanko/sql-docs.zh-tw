@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - InstallationID Property
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceID property
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d1964f68b33d7adefed25990de9ea7d213f471b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c26157aac5eae0e5e01213d4d52aff089611d33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085398"
 ---
 # <a name="installationid-property-wmi-msreportserverconfigurationsetting"></a>InstallationID 屬性 (WMI MSReportServer_ConfigurationSetting)
   這個屬性會傳回特定報表伺服器執行個體的唯一識別碼。  

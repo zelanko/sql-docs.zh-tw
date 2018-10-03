@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a599a1ad2b4a2da7b3078b42b87f859b0f6bdfd4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110428"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定義和瀏覽檢視方塊
   檢視方塊可以針對特定的用途，簡化 Cube 的檢視。 根據預設，使用者可以看到 Cube 中他們擁有權限的所有元素。 當使用者檢視整個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 時，他們所檢視的就是該 Cube 的預設檢視方塊。 整個 Cube 的檢視可能非常複雜，讓使用者難以瀏覽，尤其有的使用者只需要與一小部分的 Cube 互動，即可滿足他們的商業智慧和報告需求。  
@@ -192,7 +189,7 @@ ms.locfileid: "37208188"
   
      請注意，每一個量值群組只會出現一個量值，如下圖所示。  
   
-     ![網際網路銷售 和 轉售商銷售的量值](../../2014/tutorials/media/l9-perspectives-4.gif "網際網路銷售 和 轉售商銷售的量值")  
+     ![網際網路銷售] 和 [轉售商銷售的量值](../../2014/tutorials/media/l9-perspectives-4.gif "網際網路銷售] 和 [轉售商銷售的量值")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [定義和瀏覽翻譯](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  

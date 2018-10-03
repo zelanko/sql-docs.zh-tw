@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discarding database diagram changes
 - database diagrams [SQL Server], discarding changes
 - diagrams [SQL Server], discarding changes
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d620cfdb16085f8abefe17682b40b4437a11e14b
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ef6a5ac623d8d0adf0dcd23ae6c435f0e215a59b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185158"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>捨棄對圖表所做的變更 (Visual Database Tools)
   您可以捨棄在資料庫圖表中所做且不想儲存到資料庫的變更。  

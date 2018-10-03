@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 874c69dcef4dd0704fa0c6fe59e96edfbffe9743
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f31308a08b177e59cad0193b6a4b15a9888d7e81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193578"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 組態管理員 F1 說明主題 (SSRS 原生模式)
   本節提供 Reporting Services 組態管理員的 F1 說明。  
@@ -56,7 +53,7 @@ ms.locfileid: "37177245"
   
 -   [備份加密金鑰](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
   
--   [從位址](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
+-   [還原加密金鑰](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
 -   [向外延展部署](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UserDefinedGroupBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - UserDefinedGroupBinding data type
 ms.assetid: 70149929-0ff7-4a67-84bf-e94908ae7611
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a31c1867296ff00d8000b24640dfb44bef034a00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 286355779e1cac2d858d9a288b1077888ab240e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199998"
 ---
 # <a name="userdefinedgroupbinding-data-type-assl"></a>UserDefinedGroupBinding 資料類型 (ASSL)
   定義代表某個屬性之使用者定義群組的衍生資料類型。  
@@ -51,13 +48,13 @@ ms.locfileid: "37194318"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[繫結](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[AttributeID](../properties/id-element-assl.md)，[群組](../collections/groups-element-assl.md)|  
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   

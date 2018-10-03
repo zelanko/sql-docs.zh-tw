@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d460721fd138c0629322687b1160b8c75cdd0cfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d567c422299809f04be97c8db298aadecc22dde8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177135"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192218"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
   Database Engine Tuning Advisor XML 輸入或輸出檔的根元素， **DTAXML** 包含說明 Database Engine Tuning Advisor 所產生之微調輸入和微調輸出的所有元素。  
@@ -58,7 +55,7 @@ ms.locfileid: "37177135"
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|無|  
+|**父元素**|None|  
 |**子元素**|[DTAInput 元素&#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` 項目 (請參閱[Database Engine Tuning Advisor XML 結構描述](http://schemas.microsoft.com/sqlserver/)資訊)|  
   
 ## <a name="remarks"></a>備註  

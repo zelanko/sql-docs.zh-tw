@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188208"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>交叉驗證索引標籤 (採礦精確度圖表檢視)
   交叉驗證可讓您將採礦結構資料分割成交叉區段，並反覆地針對每個交叉區段培訓和測試模型。 您會指定數個將資料分割成的折疊，然後使用每個折疊當做測試資料，而剩餘的資料則用來定型新模型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接著會產生一組標準精確度度量，每個模型。 藉由比較針對每個交叉區段所產生的模型標準，您可以充分了解採礦模型對整個資料集而言有多可靠。  

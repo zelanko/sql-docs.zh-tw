@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI errors
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ade088611479eca1c79a905ac076c9bbb56c6203
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6f86b5877934d45453f1f8b32dbabc5e609bebd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195586"
 ---
 # <a name="wmi-provider-events-and-errors"></a>WMI 提供者事件和錯誤
   本主題包含數個與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關之 WMI 錯誤的原因和解決方案資訊。  

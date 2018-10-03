@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff40f3c13d4132b9955c4bd01ae9d2bf2e31fa88
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195508"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>執行查詢使用說明主題 (ODBC)
   在 ODBC 應用程式中執行 SQL 陳述式需要配置陳述式控制代碼、設定陳述式屬性，以及準備和執行 SQL 陳述式。  

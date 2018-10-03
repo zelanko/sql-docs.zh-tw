@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Source_Control.Visual_SourceSafe
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], options
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 936b3b47050985d6d8507205a88c85a49cbbdd90
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101988"
 ---
 # <a name="set-source-control-options"></a>設定原始檔控制選項
   在利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中所建立的原始檔控制功能之前，您應該先設定您的各種工作環境的原始檔控制選項。  

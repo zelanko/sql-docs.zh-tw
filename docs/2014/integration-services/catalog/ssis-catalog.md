@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084080"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201338"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   `SSISDB`目錄是使用的中央點[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 專案，您已部署至[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -64,7 +61,7 @@ ms.locfileid: "39084080"
   
 -   名稱不得包含開頭或尾端空格。  
   
--   \@ 不允許做為第一個字元，但後續的字元可以使用\@。  
+-   不允許以 \@ 作為第一個字元，但隨後的字元可以使用 \@。  
   
 -   名稱的長度必須大於 0 且小於或等於 128。  
   
@@ -82,7 +79,7 @@ ms.locfileid: "39084080"
   
 -   名稱不得包含開頭或尾端空格。  
   
--   \@ 不允許做為第一個字元，但後續的字元可以使用\@。  
+-   不允許以 \@ 作為第一個字元，但隨後的字元可以使用 \@。  
   
 -   名稱的長度必須大於 0 且小於或等於 128。  
   
@@ -152,7 +149,7 @@ ms.locfileid: "39084080"
 |每一專案的版本數目上限|MAX_PROJECT_VERSIONS|  
 |全伺服器的預設記錄層次|SERVER_LOGGING_LEVEL|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  專案、環境和封裝會包含在屬於安全性實體物件的資料夾中。 您可以將權限授與資料夾，包括 MANAGE_OBJECT_PERMISSIONS 權限。 MANAGE_OBJECT_PERMISSIONS 可讓您將資料夾內容管理委派給使用者，而不必將使用者成員資格授與 ssis_admin 角色。 您還可以授與權限給專案、環境和作業。 作業包括初始化[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 部署專案、 建立和啟動執行、 驗證專案和封裝，以及設定`SSISDB`目錄。  
   
  如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  

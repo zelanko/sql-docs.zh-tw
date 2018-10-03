@@ -1,32 +1,29 @@
 ---
-title: 插入的 SQL 命令 |Microsoft 文件
+title: INSERT-SQL 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - INSERT [ODBC]
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881ee4d74eab6b1e26b1f3ec243a39c08125ea00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa2211ddef09e127b66430968792007d29dd5eb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840096"
 ---
-# <a name="insert---sql-command"></a>插入的 SQL 命令
+# <a name="insert---sql-command"></a>INSERT - SQL 命令
 將記錄附加至資料表，其中包含指定的欄位值的結尾。  
   
- Visual FoxPro ODBC 驅動程式支援的原生 Visual FoxPro 語言語法，此命令。 驅動程式特定資訊，請參閱 < 備註 >。  
+ Visual FoxPro ODBC Driver 支援原生 Visual FoxPro 語言語法，此命令。 驅動程式專屬資訊，請參閱 < 備註 >。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,24 +35,24 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
 ## <a name="arguments"></a>引數  
  INSERT INTO *dbf_name*  
- 指定附加新的記錄資料表的名稱。 *dbf_name*可包含路徑和名稱的運算式。  
+ 指定要附加新的記錄資料表的名稱。 *dbf_name*可以包含路徑，而且可以是名稱的運算式。  
   
- 如果您指定的資料表尚未開啟，新的工作區中，以獨佔方式開啟，且新的記錄會附加到資料表。 未選取新的工作區;目前的工作區仍為選取狀態。  
+ 如果您指定的資料表尚未開啟，以獨佔方式在新的工作區中開啟，新的記錄會附加到資料表。 新的工作區不是選取狀態;目前的工作區仍為選取狀態。  
   
- 如果您指定的資料表開啟時，INSERT 會將新的記錄附加至資料表。 如果資料表是在工作區中開啟的除了目前的工作區，它不被選取附加的記錄; 之後目前的工作區仍為選取狀態。  
+ 如果您指定的資料表開啟時，INSERT 會將新記錄附加至資料表。 如果資料表是在工作區中開啟的除了目前的工作區，未選取附加記錄; 之後目前的工作區仍為選取狀態。  
   
  [( *fname1*[， *fname2*[，...]])]  
  指定新記錄中欄位的名稱到所插入的值。  
   
  值 ( *eExpression1*[， *eExpression2*[，...]])  
- 指定插入新記錄的欄位值。 如果您省略欄位名稱，您必須指定欄位值的資料表結構所定義的順序。  
+ 指定插入新資料錄的欄位值。 如果您省略的欄位名稱，您必須指定欄位值的資料表結構所定義的順序。  
   
 ## <a name="remarks"></a>備註  
- 新的記錄包含 VALUES 子句中所列的資料。  
+ 新的記錄包含的 VALUES 子句中所列的資料。  
   
-## <a name="driver-remarks"></a>驅動程式註解  
- 當您的應用程式傳送 ODBC SQL 陳述式插入至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxProINSERT 命令，而不需轉譯中。  
+## <a name="driver-remarks"></a>驅動程式備註  
+ 當您的應用程式傳送至資料來源的 ODBC SQL 陳述式插入時，則 Visual FoxPro ODBC Driver 會將命令轉換 Visual FoxProINSERT 命令，無需進行翻譯。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立資料表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
+ [CREATE TABLE-SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [SELECT - SQL 命令](../../odbc/microsoft/select-sql-command.md)

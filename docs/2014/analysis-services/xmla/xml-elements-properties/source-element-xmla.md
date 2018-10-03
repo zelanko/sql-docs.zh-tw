@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06c69de2879b2298b180b6dd487fe2dc28f09684
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095718"
 ---
 # <a name="source-element-xmla"></a>Source 元素 (XMLA)
   表示期間合併的來源資料分割[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
@@ -55,8 +52,8 @@ ms.locfileid: "37182955"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-n：出現一次以上的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

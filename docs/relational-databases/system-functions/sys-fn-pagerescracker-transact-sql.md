@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_PageResCracker
@@ -28,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 1fb895e2eb47493b49ee0431e25008b270b3841a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a666e5d98d2c8ea0753981f05d1da20a6234251f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833336"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

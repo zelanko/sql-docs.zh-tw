@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], property values
 - Multidimensional Expressions [Analysis Services], property values
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b615fcec15421e46157c3d1c4485ca2668b52e8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286456"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195998"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>建立和使用屬性值 (MDX)
   多維度運算式 (MDX) 支援內建和使用者自訂維度、層級、成員，和資料格的屬性。 內建屬性可提供唯一的名稱、標題，甚至個別資料格的格式和字型大小。 另一方面使用者自訂屬性幾乎可以為成員提供所有的額外屬性。  

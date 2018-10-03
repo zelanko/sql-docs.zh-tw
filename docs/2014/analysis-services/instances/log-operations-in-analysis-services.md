@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198428"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
   Analysis Services 執行個體會將伺服器通知、錯誤和警告記錄至 msmdsrv.log 檔案 – 所安裝的各執行個體都有一個。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](http://support.microsoft.com/kb/2965035)檢閱整個變更清單。  

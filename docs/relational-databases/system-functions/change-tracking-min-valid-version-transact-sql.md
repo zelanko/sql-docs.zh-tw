@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - CHANGE_TRACKING_MIN_VALID_VERSION
 - change tracking [SQL Server], CHANGE_TRACKING_MIN_VALID_VERSION
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a37a969a2a5e0f7cfb6586549e78eb8b36c4fa0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d2858c61ea7316b1bafa06a1181b31e97b0724b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766636"
 ---
 # <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

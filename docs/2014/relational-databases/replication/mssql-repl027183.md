@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_REPL027183 error
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1cf753e93e6084051ea2e8592ddc24fab8d6140
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd3c0f4af8cf29d2da68009b036b8119f2557dd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197590"
 ---
 # <a name="mssqlrepl027183"></a>MSSQL_REPL027183
     

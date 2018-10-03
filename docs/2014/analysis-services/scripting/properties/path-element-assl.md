@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Path Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Path element
 ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc537a04723bb94dae76ab4bcb86e4d3d3e210f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1de2d6eac2f74c65a546ba0e1026ad3d4e6e1dab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067698"
 ---
 # <a name="path-element-assl"></a>Path 元素 (ASSL)
   所提供的執行個體所包含的路徑[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，所使用之報表的[ReportAction](../data-type/action-data-type-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37161259"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只出現一次的選擇性元素|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37161259"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[ReportAction](../data-type/action-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  對應至父系的元素`Path`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ReportAction>。  

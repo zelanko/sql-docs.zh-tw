@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Object GDR event class
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66375b0f9c4d42628ee1c41be121f7c99949e71f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49fba5b207b511cdf204c05de141af525d1dc697
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112829"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR 事件類別
   **Audit Server Object GDR** 事件類別會在對組件和結構描述等資料庫物件發出 GRANT、REVOKE 或 DENY 時發生。  

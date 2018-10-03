@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], errors
 - events [Reporting Services]
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0a09771deaff3f6996250840920675159209daf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c3a0dc2db7de79eb7fac8a54fa437ee66f1d365
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255380"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067808"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
   本主題提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]錯誤和事件的資訊。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔也包含錯誤資訊。 如需類型的可用記錄檔，以及如何檢視記錄檔的詳細資訊，請參閱[Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
@@ -44,7 +41,7 @@ ms.locfileid: "37255380"
 |109|[資訊]|管理|報表伺服器<br /><br /> 報表管理員|組態檔已經修改。 如需詳細資訊，請參閱 < [Reporting Services 組態檔](../report-server/reporting-services-configuration-files.md)。|  
 |110|警告|管理|報表伺服器<br /><br /> 報表管理員|組態檔其中之一的設定已經修改，因此不再有效。 會改用預設值。 如需詳細資訊，請參閱 < [Reporting Services 組態檔](../report-server/reporting-services-configuration-files.md)。|  
 |111|錯誤|記錄|報表伺服器<br /><br /> 報表管理員|\<來源> 無法建立追蹤記錄。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
-|112|警告|Security|報表伺服器|報表伺服器偵測到可能的阻斷服務攻擊。 如需詳細資訊，請參閱 < [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)。|  
+|112|警告|安全性|報表伺服器|報表伺服器偵測到可能的阻斷服務攻擊。 如需詳細資訊，請參閱 < [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)。|  
 |113|錯誤|記錄|報表伺服器|報表伺服器無法建立效能計數器。|  
 |114|錯誤|啟動/關閉|報表管理員|「報表管理員」無法連接到「報表伺服器」服務。|  
 |115|警告|排程|排程與傳遞處理器|SQL Server Agent 佇列的排程工作已經修改或刪除。|  
@@ -63,8 +60,8 @@ ms.locfileid: "37255380"
 |128|錯誤|啟用|報表伺服器|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不同版本的元件無法一起使用。|  
 |129|錯誤|管理|報表伺服器<br /><br /> 排程與傳遞處理器|加密的組態檔設定無法解密。|  
 |130|錯誤|管理|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源> 找不到設定檔。 報表伺服器需要組態檔。|  
-|131|錯誤|Security|報表伺服器<br /><br /> 排程與傳遞處理器|加密的使用者資料值無法解密。|  
-|132|錯誤|Security|報表伺服器|加密使用者資料期間發生失敗。 無法儲存值。|  
+|131|錯誤|安全性|報表伺服器<br /><br /> 排程與傳遞處理器|加密的使用者資料值無法解密。|  
+|132|錯誤|安全性|報表伺服器|加密使用者資料期間發生失敗。 無法儲存值。|  
 |133|錯誤|管理|報表伺服器<br /><br /> 報表管理員<br /><br /> 排程與傳遞處理器|組態檔上傳失敗。 如果 XML 無效就可能會發生此錯誤。|  
 |134|錯誤|管理|報表伺服器|報表伺服器加密組態檔設定的值失敗。|  
   

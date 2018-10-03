@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database master key [SMO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - certificates [SMO]
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0d99702b9b6a48e02fe5acc36abed823718c560
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95a0323cc5362ec2fd780c5ee28926b3b78aa755
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198518"
 ---
 # <a name="using-encryption"></a>使用加密
   在 SMO 中，服務主要金鑰由<xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>物件。 這由參考<xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A>屬性<xref:Microsoft.SqlServer.Management.Smo.Server>物件。 可以使用重新產生<xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>方法。  

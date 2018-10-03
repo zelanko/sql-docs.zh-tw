@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addcopyexistingpackage.f1
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22aad56f944bc0b9c605436d8d0ab5deba0a803d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2de0accc6822eb5d7e30191bee5dc2f5d850720
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195364"
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
   使用 **[加入現有封裝的副本]** 對話方塊，即可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、檔案系統，或 SSIS 封裝存放區中所儲存之封裝的副本，加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096978"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   依照序數根據每個參數來設定參數的屬性，或指定 SSPARAMPROPS 結構的陣列來設定大量參數屬性。  
@@ -40,7 +37,7 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>引數  
  *cParams*[in]  
- 中的數字的 SSPARAMPROPS 結構*rgParamProperties*陣列。 如果這個數字為零，`ISSCommandWithParameters::SetParameterProperties`會刪除所有可能的任何參數，在命令中指定的屬性。  
+ *rgParamProperties* 陣列中 SSPARAMPROPS 結構的數目。 如果這個數字為零，`ISSCommandWithParameters::SetParameterProperties`會刪除所有可能的任何參數，在命令中指定的屬性。  
   
  *rgParamProperties*[in]  
  要設定的 SSPARAMPROPS 結構的陣列。  
@@ -78,7 +75,7 @@ SSPARAMPROPS rgParamProperties[]);
 |成員|描述|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
-|*cPropertySets*|的 DBPROPSET 結構數目中*rgPropertySets*。|  
+|*cPropertySets*|*rgPropertySets* 中的 DBPROPSET 結構數目。|  
 |*rgPropertySets*|藉其傳回 DBPROPSET 結構陣列的記憶體指標。|  
   
 ## <a name="see-also"></a>另請參閱  

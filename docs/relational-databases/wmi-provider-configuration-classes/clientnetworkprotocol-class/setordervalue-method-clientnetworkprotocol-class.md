@@ -1,15 +1,12 @@
 ---
-title: SetOrderValue 方法 （ClientNetworkProtocol 類別） |Microsoft 文件
+title: SetOrderValue 方法 （ClientNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetOrderValue Method (ClientNetworkProtocol Class)
@@ -19,15 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dc2eb5f9c08731406d2dfce9bfab38599b21801
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5ca80a39e5e7359b0120a364ebe7046078e8e84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620196"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +38,21 @@ object.SetOrderValue(OrderValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
- A [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件，代表所使用的網路通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ *object*  
+ A [ClientNetworkProtocol 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)物件，表示所使用的網路通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
   
 #### <a name="parameters"></a>參數  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*OrderValue*|U**int32**設定順序值的值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- A **uint32**值為 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
+ A **uint32**值，也就是 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [用戶端通訊協定內容 （順序索引標籤）](http://technet.microsoft.com/library/ms187884.aspx)  
+ [用戶端通訊協定屬性 (順序索引標籤)](http://technet.microsoft.com/library/ms187884.aspx)  
   
   

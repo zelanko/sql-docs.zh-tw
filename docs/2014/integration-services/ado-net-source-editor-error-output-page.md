@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-caps.latest.revision: 13
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d593b46462f8ca4e4c02431d234ae2aa4f29c197
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259064"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191258"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 來源編輯器 (錯誤輸出頁面)
   使用 [ADO NET 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  

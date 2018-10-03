@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198138"
 ---
 # <a name="histogram-target"></a>長條圖目標
   長條圖目標會根據事件資料來分組特定事件類型的發生。 事件的群組會根據指定的事件資料行或動作來計算。 您可以使用長條圖目標來排除效能問題。 藉由識別哪些事件最常發生，您可以尋找「作用點」來指出效能問題的可能原因。  

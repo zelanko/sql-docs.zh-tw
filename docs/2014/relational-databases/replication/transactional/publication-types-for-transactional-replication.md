@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, publications
 ms.assetid: ad66aa34-3e37-401e-a6a1-fc1514eb6d50
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88941deda14053fdf2eac1e1600b4ef02253b401
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3943ce65c6984a7ac803b6f5aa657a85acdbd316
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184098"
 ---
 # <a name="publication-types-for-transactional-replication"></a>異動複寫的發行集類型
   異動複寫提供三種發行集類型：  

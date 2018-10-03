@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f26be233fc8a3e9b4bcc1aa5267619b839a02ae1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103908"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>*計算 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 [計算] 索引標籤來檢視和編輯計算，包含選取之 Cube 的導出成員、命名集和多維度運算式 (MDX) 指令碼命令。  

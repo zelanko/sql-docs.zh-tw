@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - excluding files from source control
 - source controls [SQL Server Management Studio], file exclusions
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa1379d18c84db90207e68d548219740ac8d60af
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195088"
 ---
 # <a name="exclude-files-from-source-control"></a>從原始檔控制中排除檔案
   如果您正在使用的方案包含不需要原始檔控制服務的檔案，您可以使用**從原始檔控制中排除**命令，從原始檔控制中排除檔案。 當您執行這個動作時，檔案會保留在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 資料庫中，但不會再隨著專案而簽入或簽出。  

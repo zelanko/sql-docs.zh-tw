@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c268854800acdfa1e725b4d00b564c018dd70f94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0741d908dba86e84ac3ee4cdc526caa853b462bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196958"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -84,7 +81,7 @@ ms.locfileid: "39084070"
 |擴充預存程序程式設計|srv_alloc<br /><br /> srv_convert<br /><br /> srv_describe<br /><br /> srv_getbindtoken<br /><br /> srv_got_attention<br /><br /> srv_message_handler<br /><br /> srv_paramdata<br /><br /> srv_paraminfo<br /><br /> srv_paramlen<br /><br /> srv_parammaxlen<br /><br /> srv_paramname<br /><br /> srv_paramnumber<br /><br /> srv_paramset<br /><br /> srv_paramsetoutput<br /><br /> srv_paramstatus<br /><br /> srv_paramtype<br /><br /> srv_pfield<br /><br /> srv_pfieldex<br /><br /> srv_rpcdb<br /><br /> srv_rpcname<br /><br /> srv_rpcnumber<br /><br /> srv_rpcoptions<br /><br /> srv_rpcowner<br /><br /> srv_rpcparams<br /><br /> srv_senddone<br /><br /> srv_sendmsg<br /><br /> srv_sendrow<br /><br /> srv_setcoldata<br /><br /> srv_setcollen<br /><br /> srv_setutype<br /><br /> srv_willconvert<br /><br /> srv_wsendmsg|請改用 CLR 整合。|XP_API|20|  
 |擴充預存程序程式設計|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|請改用 CLR 整合。|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |擴充預存程序|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|使用 CREATE LOGIN<br /><br /> 使用 SERVERPROPERTY 的 DROP LOGIN IsIntegratedSecurityOnly 引數|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
-|函數|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
+|函式|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
 |高可用性|資料庫鏡像|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> 如果您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本不支援 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]，請使用記錄傳送。|DATABASE_MIRRORING|267|  
 |索引選項|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |索引選項|CREATE TABLE、ALTER TABLE 或 CREATE INDEX 語法，但是選項周圍沒有括號。|請重寫陳述式來使用目前的語法。|INDEX_OPTION|33|  
@@ -98,23 +95,23 @@ ms.locfileid: "39084070"
 |原生 XML Web Service|具有 FOR SOAP 選項的 CREATE ENDPOINT 或 ALTER ENDPOINT 陳述式。<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|請改用 Windows Communications Foundation (WCF) 或 ASP.NET。|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |可移式資料庫|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |可移式資料庫|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|Security|ALTER LOGIN WITH SET CREDENTIAL 語法|以新的 ALTER LOGIN ADD 和 DROP CREDENTIAL 語法取代|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|Security|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
-|Security|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
-|Security|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
-|Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
-|Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
-|Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
-|Security|sp_changeobjectowner|ALTER SCHEMA 或 ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|Security|sp_control_dbmasterkey_password|主要金鑰必須存在且密碼必須正確。|sp_control_dbmasterkey_password|274|  
-|Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|這些預存程序會傳回 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]中的正確資訊。 這項輸出未反映 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中實作之權限階層的變更。 如需詳細資訊，請參閱 [固定伺服器角色的權限](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT、DENY 和 REVOKE 等特定權限。|ALL 權限|35|  
-|Security|PERMISSIONS 內建函數|請改為查詢 sys.fn_my_permissions。|PERMISSIONS|170|  
-|Security|SETUSER|EXECUTE AS|SETUSER|165|  
-|Security|RC4 和 DESX 加密演算法|請使用其他演算法，例如 AES。|DESX 演算法|238|  
+|安全性|ALTER LOGIN WITH SET CREDENTIAL 語法|以新的 ALTER LOGIN ADD 和 DROP CREDENTIAL 語法取代|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|安全性|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
+|安全性|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
+|安全性|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
+|安全性|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
+|安全性|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
+|安全性|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|安全性|sp_changeobjectowner|ALTER SCHEMA 或 ALTER AUTHORIZATION|sp_changeobjectowner|58|  
+|安全性|sp_control_dbmasterkey_password|主要金鑰必須存在且密碼必須正確。|sp_control_dbmasterkey_password|274|  
+|安全性|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|安全性|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|安全性|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|安全性|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|這些預存程序會傳回 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]中的正確資訊。 這項輸出未反映 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中實作之權限階層的變更。 如需詳細資訊，請參閱 [固定伺服器角色的權限](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|安全性|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT、DENY 和 REVOKE 等特定權限。|ALL 權限|35|  
+|安全性|PERMISSIONS 內建函數|請改為查詢 sys.fn_my_permissions。|PERMISSIONS|170|  
+|安全性|SETUSER|EXECUTE AS|SETUSER|165|  
+|安全性|RC4 和 DESX 加密演算法|請使用其他演算法，例如 AES。|DESX 演算法|238|  
 |Set 選項|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)、[sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)、[sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) 和 [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)。|SET FMTONLY|250|  
 |伺服器組態選項|c2 audit 選項<br /><br /> default trace enabled 選項|[通用條件符合已啟用伺服器組態選項](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [擴充事件](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 類別|`Microsoft.SQLServer.Management.Smo.Information` 類別<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` 類別<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` 類別<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` 屬性|`Microsoft.SqlServer.Management.Smo.Server` 類別<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` 類別<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` 類別<br /><br /> None|None|None|  

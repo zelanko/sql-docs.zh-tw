@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetStringValue Method (ServerNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetStringValue method
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bcb4cc8b3c5aee29dca2eee17b34992c93ff2d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 355fdfbec6ec57625410437400474f1f95f70788
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207328"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>SetStringValue 方法 (ServerNetworkProtocolProperty 類別)
   設定參考之屬性的字串值。  
@@ -52,7 +49,7 @@ StrValue
   
 |參數|描述|  
 |---------------|-----------------|  
-|*StrValue*|指定目前屬性之新值的字串值。|  
+|*strValue*|指定目前屬性之新值的字串值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

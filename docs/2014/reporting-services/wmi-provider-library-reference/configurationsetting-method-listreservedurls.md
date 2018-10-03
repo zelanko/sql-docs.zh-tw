@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ListReservedURLs method
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8893f8dcc1a2da3786265583f6e8c3fbd59c058d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 630680051d8f7c0806a23fb59232e67f14ad8176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181505"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197508"
 ---
 # <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting)
   列出針對報表伺服器上所有應用程式保留的 URL。  

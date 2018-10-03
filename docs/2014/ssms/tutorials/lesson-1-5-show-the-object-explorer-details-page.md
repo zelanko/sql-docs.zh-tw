@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c196db40452128395fa4c2c1f803b86cbfe8d99a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185305"
 ---
 # <a name="show-the-object-explorer-details-page"></a>顯示物件總管詳細資料頁面
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以針對物件總管中所選取的每個物件，各顯示一份報表。 這份報表稱為 [物件總管詳細資料] 頁面，是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立的，且會在文件視窗中開啟。  

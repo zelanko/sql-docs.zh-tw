@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - report server database
 - databases [Reporting Services], creating
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 913ec99d330f1eb62cbc1a27572296856c28f48b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b18b94289516d1ba38be392a13438e3a38029c4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172209"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206268"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>建立報表伺服器資料庫 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **原生模式** 會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫來儲存報表伺服器中繼資料和物件。 一個資料庫做為主要儲存體，而另一個用來儲存暫存資料。 兩個資料庫會一起建立，並依名稱繫結。 使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，資料庫會命名為 `reportserver` 和 `reportservertempdb`。 這兩個資料庫統稱為「報表伺服器資料庫」或「報表伺服器目錄」。  
@@ -44,7 +41,7 @@ ms.locfileid: "37172209"
 ## <a name="ways-to-create-the-report-server-database"></a>建立報表伺服器資料庫的方法  
  **原生模式：** 您可以利用下列方式建立原生模式報表伺服器資料庫：  
   
--   自動：如果選擇預設組態安裝選項，則會使用 SQL Server 安裝精靈。 在 [SQL Server 安裝精靈] 中，這是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [Install only] (只安裝) 選項，就必須使用 Reporting Services 設定管理員建立資料庫。  
+-   自動：如果選擇預設組態安裝選項，則會使用 SQL Server 安裝精靈。 在 [SQL Server 安裝精靈] 中，這是 [報表伺服器安裝選項] 頁面中的 [安裝和設定]。 如果您選擇了 [Install only]  (只安裝) 選項，就必須使用 Reporting Services 設定管理員建立資料庫。  
   
 -   手動：使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如果您要使用遠端 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 來主控報表伺服器資料庫，您必須手動建立此資料庫。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   

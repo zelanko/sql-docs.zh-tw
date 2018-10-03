@@ -1,24 +1,21 @@
 ---
-title: LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY |Microsoft 文件
+title: LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6bbaecd7cec42ceb85cde27ae7283b48ec0393b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 103d4f7b00702ca1af4f2f42e7b9d4ac5f1d4573
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326439"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618206"
 ---
 # <a name="localdberrorcannotmodifyinstanceregistry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +24,7 @@ ms.locfileid: "34326439"
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|265|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  

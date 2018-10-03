@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51df7fe3664e3e35bf0fb4c45a0124481d5c6ce7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207378"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>報表屬性對話方塊、版面設定 (報表產生器)
   選取 **[報表屬性]** 對話方塊上的 **[版面配置]** 來設定整個報表的頁面選項。  

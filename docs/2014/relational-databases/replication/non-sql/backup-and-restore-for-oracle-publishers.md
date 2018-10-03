@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], Oracle publishing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Oracle publishing [SQL Server replication], backup and restore
 - restoring [SQL Server replication], Oracle publishing
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55270122c19f014f16ef62dcdc5efa52395d3ec1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d43a87f42edf24f9cd51e1cd042fe65f2ae9f968
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176708"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 發行者的備份與還原
   在備份與還原時，請遵循下列指導方針：  

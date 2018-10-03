@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d44c68f381ee1fd7b6fed31e15bf2639dd57976e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b90f1ad3e67aafa2ee8b967f8a04ddb16daf4e53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132901"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 存取匯出報表
   您可以選擇性地指定用於轉譯報表所使用的格式*rs: Format*參數。 例如，直接從原生模式報表伺服器取得報表的 PDF 副本。  

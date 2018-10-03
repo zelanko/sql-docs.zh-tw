@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - history retention periods [SQL Server replication]
 - retention periods [SQL Server replication]
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd733e414ff554765cafcab8694d4dd174d43aaf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1e5694e84ab04c3161ed2485a534660bc72f495
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191538"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>設定記錄保留週期 (SQL Server Management Studio)
   在 [散發資料庫屬性 - \<散發資料庫>] 對話方塊的 [一般] 頁面中指定記錄保留期限。 此設定會控制複寫代理程式記錄的儲存時間。 此頁面可以從 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面取得。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, configurations
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-caps.latest.revision: 71
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec353414e9b910285152ed3f391ca4dc1970ed45
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140638"
 ---
 # <a name="create-package-configurations"></a>Create Package Configurations
   使用 [封裝組態組合管理] 對話方塊和「封裝組態精靈」，可以建立封裝組態。 若要存取這些工具，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [SSIS] 功能表中，按一下 [封裝組態]。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], what's new
 - breaking changes [SQL Server replication]
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6091b41a26b291245de30ac47529643a6eb4f7ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fbde5c55b4ef069d72dba9e01711b06d7172590f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182677"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 複寫中的重大變更
   本主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  

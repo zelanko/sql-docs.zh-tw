@@ -1,32 +1,29 @@
 ---
-title: GetRows 方法範例 (JScript) |Microsoft 文件
+title: GetRows 方法範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95799c397b5822b0169c9fcdca74c489880dbb0e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645616"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法範例 (JScript)
-這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取所有資料列的*Custiomers*資料表中[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，並使用產生的資料填入陣列。 **GetRows**方法會傳回所需的資料列數少於兩個案例中： 如果任一個[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取記錄其他使用者刪除。 此函數會傳回**False**第二種情況發生時，才。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**GetRowsJS.asp**。  
+這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取的所有資料列*Custiomers*資料表中[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和要使用產生的資料填入的陣列。 **GetRows**方法會傳回所需的資料列數目少於兩種情況： 如果任一[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取已記錄刪除由其他使用者。 此函數會傳回**False**只有當第二個案例，就會發生。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**GetRowsJS.asp**。  
   
 ```  
 <!-- BeginGetRowsJS -->  

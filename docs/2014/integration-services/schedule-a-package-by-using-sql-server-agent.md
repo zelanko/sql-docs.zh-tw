@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d3112f43436fa7e0a0bb87d58cca062857bae8e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0d955078772767804b625e1fb560e8cd0d15683
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201970"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server Agent 排程封裝
   下列程序會使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟執行封裝，藉此提供自動化封裝執行的步驟。  
@@ -58,7 +55,7 @@ ms.locfileid: "37215758"
     |封裝來源|描述|  
     |--------------------|-----------------|  
     |**SSIS 目錄**|儲存在 SSISDB 資料庫中的封裝。 封裝會包含在部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中。|  
-    |**[SQL Server]**|儲存在 MSDB 資料庫中的封裝。 您會使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務管理這些封裝。|  
+    |**SQL Server**|儲存在 MSDB 資料庫中的封裝。 您會使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務管理這些封裝。|  
     |**SSIS 封裝存放區**|儲存在您電腦上預設資料夾中的封裝。 預設資料夾為 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 您會使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務管理這些封裝。<br /><br /> 注意：您可以指定不同的資料夾，或指定檔案系統中 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務要管理的其他資料夾，方法是修改 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的組態檔。 如需詳細資訊，請參閱[設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)。|  
     |**[File System]**|儲存在您本機電腦上任何資料夾中的封裝。|  
   

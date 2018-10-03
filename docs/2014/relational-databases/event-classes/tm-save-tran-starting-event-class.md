@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Save Tran Starting event class'
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6525ad550d15d8c85437ad00c7829492634b621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12835350620a059e9bc214ed1abf3c629a953cae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204592"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting 事件類別
   TM: Save Tran Starting 事件類別指出正在啟動 SAVE TRANSACTION 要求。 此要求是從用戶端透過 Transaction Management 介面傳送的。  

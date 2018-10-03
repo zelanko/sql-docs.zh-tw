@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StorageEngineUsed Element
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d90cf84fec5d2a8dedc889cae096a5b414a1eb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203958"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197878"
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 元素 (XMLA)
   包含描述目前資料庫類型的唯讀值。  
@@ -72,7 +69,7 @@ ms.locfileid: "37203958"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -80,7 +77,7 @@ ms.locfileid: "37203958"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[database](../objects/database-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

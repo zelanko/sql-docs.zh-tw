@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PropertyList Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyList element
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b3fdd7f6d59ef6a2523bada292dfb2b8f17a4a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3eb6da43b5487efa93f3901c866a1183e77d978
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068908"
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList 元素 (XMLA)
   包含的 XML for Analysis (XMLA) 所使用的屬性集合[Discover](../xml-elements-methods-discover.md)並[Execute](../xml-elements-methods-execute.md)方法。  
@@ -52,8 +49,8 @@ ms.locfileid: "37323038"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

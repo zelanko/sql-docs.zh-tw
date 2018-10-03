@@ -1,13 +1,11 @@
 ---
-title: CommandStream 屬性 (ADO) |Microsoft 文件
+title: CommandStream 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,36 +13,35 @@ f1_keywords:
 helpviewer_keywords:
 - CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8696706c0a785c77d7ca6a811811e1aba5fe133
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b1048e8d243bd19d86d60c3c4f92e4e4b9d137a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828779"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 屬性 (ADO)
-表示用來做為輸入資料流[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+表示用做為輸入的資料流[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回用來做為輸入資料流**命令**物件。 這個資料流的格式是提供者特有的。請參閱您的提供者文件，如需詳細資訊。 這個屬性是類似於[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性，用來指定的輸入字串**命令**。  
+ 設定或傳回做為輸入使用的資料流**命令**物件。 這個資料流的格式是特定提供者;請參閱您的提供者文件，如需詳細資訊。 這個屬性是類似[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性，用來指定之型別的字串**命令**。  
   
 ## <a name="remarks"></a>備註  
- **CommandStream**和**CommandText**互為獨佔模式。 當使用者設定**CommandStream**屬性， **CommandText**屬性會設定為空字串 ("")。 如果使用者設定**CommandText**屬性， **CommandStream**屬性將設定為**Nothing**。  
+ **CommandStream**並**CommandText**互斥。 當使用者設定**CommandStream**屬性， **CommandText**屬性會設定為空字串 ("")。 如果使用者設定**CommandText**屬性， **CommandStream**屬性會設定為**Nothing**。  
   
- 行為**Command.Parameters.Refresh**和**Command.Prepare**提供者所定義的方法。 資料流中的參數的值不可以重新整理。  
+ 行為**Command.Parameters.Refresh**並**Command.Prepare**提供者所定義的方法。 可以重新整理的資料流中的參數值。  
   
- 輸入資料流不適用於其他 ADO 物件來源會傳回**命令**。 例如，如果[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)設**命令**具有做為輸入，資料流的物件**Recordset.Source**會繼續傳回**CommandText**屬性，其中包含空字串 ("")，而不是資料流內容的**CommandStream**屬性。  
+ 輸入資料流不適用於其他 ADO 物件傳回的來源**命令**。 比方說，如果[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)設定為**命令**物件，具有做為輸入，串流**Recordset.Source**會繼續傳回**CommandText**屬性，其中包含空字串 ("")，而不是資料流內容**CommandStream**屬性。  
   
- 使用命令資料流時 (所指定**CommandStream**)，唯一有效[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)屬性**adCmdText**和**adCmdUnknown**。 任何其他值會導致錯誤。  
+ 使用命令資料流時 (所指定**CommandStream**)，唯一有效[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)屬性**adCmdText**並**adCmdUnknown**。 任何其他值會導致錯誤。  
   
 ## <a name="applies-to"></a>適用於  
  [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [CommandText 屬性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [方言屬性](../../../ado/reference/ado-api/dialect-property.md)   
+ [Dialect 屬性](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

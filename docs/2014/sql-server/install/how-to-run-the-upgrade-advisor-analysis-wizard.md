@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
 ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
-caps.latest.revision: 36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29aeaa20d5fed63731c84872ffb193da4bcfce27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0896639f1c088b3ead255758075075f3e397b47
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282564"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065278"
 ---
 # <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>如何：執行 Upgrade Advisor 分析精靈
   您可以從 Upgrade Advisor 開始頁面啟動 Upgrade Advisor 分析精靈。 此主題描述如何執行 Upgrade Advisor 分析精靈。  

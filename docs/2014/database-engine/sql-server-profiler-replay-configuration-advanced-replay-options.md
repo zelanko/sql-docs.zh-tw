@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.advanced.f1
 helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d010365e010fc7748e6cb04d6d71479f0f2f9d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fff89f4be7953e2eb0cec3ed9a04883052ed6d1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280314"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192478"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler - 重新執行組態 (進階重新執行選項)
   在 [重新執行組態] 對話方塊中，使用 [進階重新執行選項] 索引標籤來指定如何重新執行追蹤檔案。  

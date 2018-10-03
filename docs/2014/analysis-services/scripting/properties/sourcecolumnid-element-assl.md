@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SourceColumnID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 523977b881e9e8357b32cd606252d0a758d3b46a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4bfcf8969123515436be0d53b181747c322b110
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187898"
 ---
 # <a name="sourcecolumnid-element-assl"></a>SourceColumnID 元素 (ASSL)
   包含上階中來源採礦結構資料行的識別碼 (ID) [MiningStructure](../objects/miningstructure-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37281774"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37281774"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  值`SourceColumnID`項目符合識別項中的採礦結構資料行[資料行](../collections/columns-element-assl.md)集合之父代`MiningStructure`。  

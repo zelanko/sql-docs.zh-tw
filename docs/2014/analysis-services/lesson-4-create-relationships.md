@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113238"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 課：建立關聯性
   在這一課，您將驗證匯入資料時自動建立的關聯性，以及在不同資料表之間加入新的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，[產品] 資料表和 [產品子類別目錄] 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 如需詳細資訊，請參閱[關聯性 &#40;SSAS 表格式&#41;](tabular-models/relationships-ssas-tabular.md)。  
@@ -49,7 +46,7 @@ ms.locfileid: "37204499"
   
 3.  在圖表檢視中使用模型設計師，或是使用 [管理關聯性] 對話方塊，確認從 AdventureWorksDW 資料庫匯入各個資料表時所建立的下列關聯性：  
   
-    |作用中|Table|相關查閱資料表|  
+    |作用中|資料表|相關查閱資料表|  
     |------------|-----------|--------------------------|  
     |是|**客戶 [地理位置 Id]**|**地理位置 [地理位置 Id]**|  
     |是|**產品 [產品子類別目錄 Id]**|**產品子類別目錄 [產品子類別目錄 Id]**|  

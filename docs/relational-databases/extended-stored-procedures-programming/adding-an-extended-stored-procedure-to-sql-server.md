@@ -1,30 +1,26 @@
 ---
-title: 加入擴充預存程序 SQL Server |Microsoft 文件
+title: 加入擴充預存程序到 SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], adding
 - adding extended stored procedures
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 367ee61ee76481d6771da08436c676f821291ee8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdfd4effc0d41dc31c4aefb95e8574525fb03544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938373"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648246"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>將擴充預存程序加入至 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "32938373"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- 如果在 `sp_addextendedproc` 中指定的函數名稱並未與 DLL 中的函數名稱完全相符，系統將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊新名稱，但是此名稱將無法使用。 例如，雖然`xp_Hello`註冊為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程序位於`xp_hello.dll`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不能在 DLL 中尋找的函式，如果您使用`xp_Hello`稍後呼叫函式。  
+ 如果在 `sp_addextendedproc` 中指定的函數名稱並未與 DLL 中的函數名稱完全相符，系統將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊新名稱，但是此名稱將無法使用。 比方說，雖然`xp_Hello`註冊為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程序位於`xp_hello.dll`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不能在 DLL 中尋找函式，如果您使用`xp_Hello`稍後呼叫函式。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -99,7 +95,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
  您不需要停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

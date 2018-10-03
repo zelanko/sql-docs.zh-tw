@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f27dbcf0375f7acc1e478cce2cd148b5efc03ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183488"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>報表產生器中的資料連接、資料來源及連接字串
   若要在報表中包含資料，請建立資料連接和資料集。 資料連接包括如何存取外部資料來源的相關資訊。 資料集包括查詢命令，其中指定要使用資料連接包含哪些資料。  

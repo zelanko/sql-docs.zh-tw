@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2e5c5fc61e206206df7666357990bdf517799f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04bbad9e68e783f5762cc089b6bf271f2203d174
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267184"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139594"
 ---
 # <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>UI 設計工具和多維度分析的對話方塊
 

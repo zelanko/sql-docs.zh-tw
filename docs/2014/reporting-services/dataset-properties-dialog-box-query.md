@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
-caps.latest.revision: 37
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a9a15146c6abbcad899f9af3c9fb5e665b76fa9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205948"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>資料集屬性對話方塊、查詢
   選取 **查詢**上**資料集屬性**對話方塊來選擇資料來源，並建立查詢。  

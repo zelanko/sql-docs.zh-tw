@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96f90e84bdd66d4b301193a4b3974964a6a7301e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194247"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>定義維度智慧 (商業智慧精靈)
   使用 **[定義維度智慧]** 頁面，即可將現有的維度屬性對應到所指定維度類型的屬性類型。  

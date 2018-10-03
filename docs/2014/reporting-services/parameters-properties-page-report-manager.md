@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
-caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153719"
 ---
 # <a name="parameters-properties-page-report-manager"></a>參數屬性頁面 (報表管理員)
   使用 [參數] 屬性頁面，即可檢視或修改參數化報表的參數設定。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ff05cc362f5be17df9b5ae0b282d55db4d030ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e107acad4bfd844478c47cfc5c19aa947c74bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104109"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>記錄傳送和複寫 (SQL Server)
   記錄傳送牽涉的對象，通常和不同電腦上各自儲存的單一資料庫複本有關。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主要資料庫。 用戶端對主要資料庫所做的更新，會透過記錄傳送方式傳播到其他資料庫複本 (亦稱為次要資料庫)。 記錄傳送會將交易記錄中對主要資料庫所做的每一項插入、更新或刪除，套用到次要資料庫上。  

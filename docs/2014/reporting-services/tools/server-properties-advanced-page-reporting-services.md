@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 2016-10-18
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183350"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
   您可以使用這個頁面來設定報表伺服器的系統屬性。 有許多方式可設定系統屬性。 這項工具提供了圖形化使用者介面，如此您不需要撰寫程式碼就可以設定屬性。  
@@ -81,7 +78,7 @@ ms.locfileid: "37258122"
  針對報表所儲存之快照集的最大數目。 有效值`-1`經由`2`，`147`，`483`，`647`。 如果值為`-1`，沒有任何快照集限制。  
   
  **EnableIntegratedSecurity**  
- 決定 Windows 整合式安全性是否支援報表資料來源連接。 預設值為 `True`。 有效值如下：  
+ 決定 Windows 整合式安全性是否支援報表資料來源連接。 預設為 `True`。 有效值如下：  
   
  `True` = Windows 整合式安全性已啟用。  
   

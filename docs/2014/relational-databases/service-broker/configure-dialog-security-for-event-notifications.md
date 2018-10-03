@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e129d7b64d079104a2378fb24dcc0419dd4e8647
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 754cec388eb6eb6ce30ae600b23a9397cc84f205
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266211"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191398"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話方塊安全性必須根據 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話方塊完整安全性模型來手動設定。 完整安全性模型使傳送到遠端伺服器和自遠端伺服器傳送的訊息得以加密和解密。 雖然事件通知是以單一方向傳送，但也會以相反方向傳回其他訊息 (例如錯誤)。  

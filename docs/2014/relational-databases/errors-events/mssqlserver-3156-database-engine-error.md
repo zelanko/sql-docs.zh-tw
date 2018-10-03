@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 3156 (Database Engine error)
 ms.assetid: 345d8ed4-177e-4ec3-bab3-25d30000e323
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3827aebb4acb40882d273609916df216be33f8e2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2b1c972481b7c4cf614cf0a91b29247c643696d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186868"
 ---
 # <a name="mssqlserver3156"></a>MSSQLSERVER_3156
     

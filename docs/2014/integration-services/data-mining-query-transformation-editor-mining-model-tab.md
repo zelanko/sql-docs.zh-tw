@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d47d8d95c08c2e625183832eec18a569b4171de0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c8ad2853a33ca804ebe414bf2e7a6ff837f4d2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195338"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>資料採礦查詢轉換編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[採礦模型]** 索引標籤，來選取資料採礦結構及其採礦模型。  

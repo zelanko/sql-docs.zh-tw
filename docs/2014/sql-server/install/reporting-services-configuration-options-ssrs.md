@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], installing
 - SQL Server Installation Wizard, Report Server Installation Options page
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9afc4e179807d6cc10925d4fb4964cea857427d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327078"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185338"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 組態選項 (SSRS)
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈的 [Reporting Services 組態] 頁面來指定報表伺服器的安裝和設定方式。 某個安裝選項的可用與否，取決於您先前在 [特徵選取] 頁面上選擇的選項，以及在安裝報表伺服器時是否也一併安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本機執行個體。  

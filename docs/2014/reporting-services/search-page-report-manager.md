@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206128"
 ---
 # <a name="search-page-report-manager"></a>搜尋頁面 (報表管理員)
   使用 [搜尋結果] 頁面可以檢視為報表、連結報表、報表模型、共用資料來源、資料夾或資源指定之搜尋作業的結果。 搜尋結果會依字母順序列出。 您可以依類型、名稱或描述來排序。  

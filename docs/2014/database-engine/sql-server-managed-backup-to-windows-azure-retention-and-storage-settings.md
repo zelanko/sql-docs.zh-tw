@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76d7a8453cec686311f478a439af926ab0e5c690
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be69309ebf3f52246fd9ea5cb0fbc72edcdaa42e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204590"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server Managed Backup to Windows Azure - 保留和儲存體設定
   本主題描述設定的基本步驟[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]資料庫，並設定執行個體的預設設定。 本主題也描述為執行個體暫停及繼續[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]服務的必要步驟。  

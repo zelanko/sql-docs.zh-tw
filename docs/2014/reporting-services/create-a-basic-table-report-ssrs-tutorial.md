@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 61
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c2c31258da39fa8aa7481432dad1286c8278bf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184365"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
   本教學課程旨在協助您建立基本資料表報表根據[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫使用報表設計師。 您也可以使用報表產生器或報表精靈來建立報表。 在這個教學課程中，您將建立報表專案、設定連接資訊、定義查詢、加入資料表資料區域、群組與加總某些欄位，以及預覽報表。  
@@ -38,7 +35,7 @@ ms.locfileid: "37196808"
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。  如需詳細資訊，請參閱 < [Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).。 如需支援的詳細資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]範例資料庫和範例程式碼[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，請參閱[資料庫及範例概觀](http://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 網站上。  
   
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]。  
+-   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   

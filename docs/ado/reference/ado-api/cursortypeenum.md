@@ -1,13 +1,11 @@
 ---
-title: CursorTypeEnum |Microsoft 文件
+title: CursorTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9affcc0692da9f9c7e0e5dd8a3fd99fbe772106f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 059d6bb8e621839ccf21bb4eb4251db08f427523
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761396"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-指定使用中的資料指標類型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
+指定資料指標中所使用的型別[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adOpenDynamic**|2|使用動態資料指標。 新增、 變更和其他使用者刪除是可見的以及透過移動的所有類型**資料錄集**允許，除了書籤，如果提供者不支援它們。|  
-|**adOpenForwardOnly**|0|預設值。 使用順向資料指標。 與相同的靜態資料指標，不同之處在於您可以只捲動轉寄的記錄。 這可改善效能，當您需要只執行一次通過**資料錄集**。|  
-|**adOpenKeyset**|@shouldalert|使用索引鍵集資料指標。 要動態資料指標，不同之處在於您看不記錄，新增其他使用者，雖然其他使用者刪除的記錄都無法存取，從您**資料錄集**。 其他使用者的資料變更是仍然可見的。|  
-|**adOpenStatic**|3|使用靜態資料指標，也就是靜態的一組可用來尋找資料，或產生報表記錄副本。 新增、 變更或刪除其他使用者不會顯示。|  
+|**adOpenDynamic**|2|使用動態資料指標。 新增、 變更及刪除由其他使用者是可見的而所有類型的移動**資料錄集**允許，除了書籤，如果提供者不支援。|  
+|**adOpenForwardOnly**|0|預設值。 使用順向資料指標。 相同的靜態資料指標，，不同之處在於您可以只捲動轉寄資料錄。 這可改善效能，當您需要只執行一次通過**資料錄集**。|  
+|**adOpenKeyset**|1|使用索引鍵集資料指標。 讓動態資料指標，不同之處在於雖然從無法存取其他使用者刪除的記錄，您無法看到其他使用者新增，記錄您**資料錄集**。 由其他使用者的資料變更是仍然可見。|  
+|**adOpenStatic**|3|使用靜態資料指標，也就是靜態的一組可用來尋找資料，或產生報表的記錄複本。 新增、 變更或刪除由其他使用者不會顯示。|  
 |**adOpenUnspecified**|-1|未指定資料指標的類型。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  

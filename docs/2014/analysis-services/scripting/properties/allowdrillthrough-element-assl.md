@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllowDrillThrough Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllowDrillThrough element
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f98b16569c3a7f4ab136be291d7bfd45698b5b11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79abc9833c111c472776d0713a0ca50888cae27d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090848"
 ---
 # <a name="allowdrillthrough-element-assl"></a>AllowDrillThrough 元素 (ASSL)
   決定是否允許針對父元素進行鑽研。  
@@ -59,7 +56,7 @@ ms.locfileid: "37178865"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MiningModel 元素](../objects/miningmodel-element-assl.md)， [MiningModelPermission](../objects/miningmodelpermission-element-assl.md)， [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  在「分析管理物件」(AMO) 物件模型中對應至 `AllowDrillThrough` 父系的元素是 <xref:Microsoft.AnalysisServices.MiningModel>、<xref:Microsoft.AnalysisServices.MiningModelPermission> 和 <xref:Microsoft.AnalysisServices.MiningStructurePermission>。  

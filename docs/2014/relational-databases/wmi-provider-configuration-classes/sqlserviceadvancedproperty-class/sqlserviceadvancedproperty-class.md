@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SqlServiceAdvancedProperty Class
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SqlServiceAdvancedProperty class
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 903d18b16aba79f4b0188058dbf801d09808a540
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c7d5345dc83edca0b2d81fcd15c26cf1f444008
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197398"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 類別
   [SqlServiceAdvancedProperty 類別](sqlserviceadvancedproperty-class.md)代表服務所參考的進階的屬性[SqlService 類別](../sqlservice-class/sqlservice-class.md)物件。  

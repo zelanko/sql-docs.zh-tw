@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.output
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b519da50addd621ee75e7c03aaf850b708c4236
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3b5ec44bf875701a029423bd19aa1467a9a7f95
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204198"
 ---
 # <a name="output-window"></a>輸出視窗
   此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各種功能的狀態訊息。 輸出會從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具、外部工具功能或是偵錯工具 [命令視窗] 內執行的命令傳遞給 [輸出] 視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [AMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6532aadf691121851358e923fc218c08db0fd6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205348"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>設計 AMO OLAP 基本物件的程式
   建立複雜的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件既簡單又直接，但是需要注意細節。 本主題說明 OLAP 基本物件的程式設計詳細資料。 本主題包含下列幾節：  

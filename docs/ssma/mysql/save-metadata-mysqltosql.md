@@ -1,32 +1,26 @@
 ---
-title: 儲存中繼資料 (MySQLToSQL) |Microsoft 文件
+title: 儲存中繼資料 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 71431697ed50b56fd3e9867239a4e294146c052a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f641b27357e75db0fb0f6ef71ff701d4f04b45a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602216"
 ---
 # <a name="save-metadata--mysqltosql"></a>儲存中繼資料 (MySQLToSQL)
-**儲存中繼資料**對話方塊會提示您儲存之前，先載入 SSMA 專案的中繼資料。 這樣，您有完整的專案檔，您可以離線使用，並傳送給其他人，例如技術支援人員。  
+**儲存中繼資料**對話方塊會提示您載入 SSMA 專案中的中繼資料，才能將它儲存。 這可以讓您擁有完整的專案檔案，您可離線使用，並傳送給其他人，例如技術支援人員。  
   
-若要存取**儲存中繼資料**對話方塊中的，儲存專案。 如果遺漏任何中繼資料，將會顯示 SSMA**儲存中繼資料** 對話方塊。  
+若要存取**儲存中繼資料**對話方塊中，儲存專案。 如果遺漏任何中繼資料，將會顯示 SSMA**儲存中繼資料** 對話方塊。  
   
 ## <a name="options"></a>選項。  
 **名稱**  
@@ -35,13 +29,13 @@ ms.locfileid: "34776594"
 **狀態**  
 表示中繼資料會載入 SSMA 專案，或遺漏中繼資料。  
   
-SSMA 會將視專案載入中繼資料。 當您瀏覽中繼資料，並將結構描述轉換時，會自動載入中繼資料。  
+SSMA 會載入與所需的專案中的中繼資料。 當您瀏覽中繼資料，並將結構描述轉換時，會自動載入中繼資料。  
   
 **全選**  
 選取所有列出的資料庫。  
   
 **Clear**  
-清除核取方塊，與遺失中繼資料的所有資料庫。 如果尚未載入中繼資料，您無法清除核取方塊。  
+清除遺漏的中繼資料的所有資料庫核取方塊。 如果尚未載入中繼資料，您無法清除此核取方塊。  
   
 **儲存**  
 儲存專案，並載入選取的資料庫有遺失的中繼資料的中繼資料。  

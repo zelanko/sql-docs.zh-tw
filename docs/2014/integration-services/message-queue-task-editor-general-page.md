@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.general.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22a76ae1c006eae5b2670e0405fb0c61c3b8f6e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea436e349a19d10eeb86a62b74f154b56b60ef7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204008"
 ---
 # <a name="message-queue-task-editor-general-page"></a>訊息佇列工作編輯器 (一般頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[一般頁面]** ，即可命名和描述訊息佇列工作、指定訊息格式以及指出工作是否傳送或接收訊息。  
@@ -41,7 +38,7 @@ ms.locfileid: "37320648"
  輸入訊息佇列工作的描述。  
   
  **Use2000Format**  
- 指示是否使用 Message Queuing (又稱為 MSMQ) 的 2000 格式。 預設值為 `False`。  
+ 指示是否使用 Message Queuing (又稱為 MSMQ) 的 2000 格式。 預設為 `False`。  
   
  **MSMQConnection**  
  選取現有的 MSMQ 連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  

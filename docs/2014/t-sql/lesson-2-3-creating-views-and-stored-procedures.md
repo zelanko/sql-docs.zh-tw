@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating views and stored procedures
@@ -14,12 +12,12 @@ ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee4ba8c35accc6a7d81732ee3d9f9fe5ad1cd01c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206488"
 ---
 # <a name="creating-views-and-stored-procedures"></a>建立檢視和預存程序
   既然 Mary 現在能存取 **TestData** 資料庫，您或許想要建立一些資料庫物件，如檢視和預存程序，然後授與 Mary 存取這些物件。 檢視是預存的 SELECT 陳述式，而預存程序是一個或多個批次執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 503e0067ebe0f6e90860a4797a0c916538cd04af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27630261887a7effd89f83c9d70cfe3169d10924
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193338"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>轉換類型但不檢查轉換 (SQL Server 匯入和匯出精靈)
   使用**轉換類型但不檢查轉換**頁面，即可檢閱此精靈會執行當精靈找不到一或多個對應[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]資料類型轉換和對應檔案。 這個頁面含有一些資訊，可協助您識別遺失的檔案。  

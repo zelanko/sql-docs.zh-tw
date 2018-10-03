@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae1d09ddc1df0d4ff33808c92b708f92b4f4820c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181250"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝
   這份檢查清單會引導您逐步完成新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]針對至您建置全新的三層式 SharePoint 2010 伺服陣列的 SharePoint。 三層伺服陣列包含資料庫、應用程式和 Web 層。 新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]此拓撲會要求您執行 SQL Server 安裝程式安裝[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式層上。 當您部署 web 應用程式方案時，PowerPivot 程式檔案會加入至 web 層，而只會做為後續安裝工作。 即使有部署步驟，但是在您需要執行的 Web 層或資料層並沒有個別的安裝步驟。 正在安裝您需要執行的唯一安裝步驟[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式伺服器上。  

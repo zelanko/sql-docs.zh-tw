@@ -1,30 +1,27 @@
 ---
-title: 參數 (ADO-WFC 語法) |Microsoft 文件
+title: 參數 (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720704"
 ---
-# <a name="parameter-ado---wfc-syntax"></a>參數 (ADO-WFC 語法)
+# <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
@@ -69,13 +66,13 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>參數存取子方法  
- [值](../../../ado/reference/ado-api/value-property-ado.md)屬性[參數](../../../ado/reference/ado-api/parameter-object.md)物件取得或設定該物件的內容。 被表示為 VARIANT，可指派值的物件類型及數種資料類型的內容。  
+ [值](../../../ado/reference/ado-api/value-property-ado.md)屬性[參數](../../../ado/reference/ado-api/parameter-object.md)物件取得或設定該物件的內容。 內容被以一種可以指派值的物件和數種資料類型的 VARIANT。  
   
- ADO/WFC 實作**值**屬性**getValue**方法，這個方法會傳回 VARIANT 的物件; 而**setValue**採用做為引數的 VARIANT 的方法。 Variant 則高效率的某些語言，例如 Microsoft Visual Basic 中。  
+ ADO/WFC 實作**值**屬性**getValue**方法，以傳回 VARIANT 的物件; 而**setValue**方法，後者會採用當做引數的 VARIANT。 變化是以特定語言，例如 Microsoft Visual Basic 高效率。  
   
- 除了**值**屬性 ADO/WFC 提供*存取子*用於取得及設定的內容中的 Java 資料類型方法**參數**物件。 大部分的這些方法會有的名稱格式 **取得 * * * DataType*或 **設定 * * * DataType*。  
+ 除了**值**屬性，ADO/WFC 提供*存取子*來取得和設定的內容中使用 Java 資料類型的方法**參數**物件。 大部分的這些方法都有名稱格式 **取得 * * * 資料型別*或 **設定 * * * 資料型別*。  
   
- 還有一個值得注意的例外狀況： 沒有任何**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
+ 還有一個值得注意的例外狀況： 有沒有**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
   
 ```  
 public boolean getBoolean()  

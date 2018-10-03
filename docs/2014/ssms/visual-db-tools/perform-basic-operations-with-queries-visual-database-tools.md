@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 602b9d955f9a768f5d610eb0e2a966c67bc66c8e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7b1cb510420ed224191d8eea25b6d3acc9fb0a79
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065440"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>執行查詢的基本作業 (Visual Database Tools)
   下列的基本操作適用於大部份或所有的查詢。  

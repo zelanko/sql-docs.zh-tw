@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39b279a22da8c75573aa0cad2dc50d7f85e46a74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54109bc479d06833aeee6af803c39e8ac7873ec7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195178"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
   報告 **ssbdiagnose** 公用程式所發現的問題。 **ssbdiagnose** XML 輸出檔案中每個報告的問題都有一個 Issue 元素。  
@@ -57,7 +54,7 @@ ms.locfileid: "37175200"
 |特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|`string`長度沒有限制。|  
-|**ReplTest1**|傳回錯誤訊息的文字。|  
+|**值**|傳回錯誤訊息的文字。|  
 |**出現次數**|每個報告的錯誤出現一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -65,7 +62,7 @@ ms.locfileid: "37175200"
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[DiagnosticInformation 元素&#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**子元素**|無|  
+|**子元素**|None|  
   
 ## <a name="example"></a>範例  
  這個元素會針對沒有主要金鑰的資料庫報告 1102 錯誤，而這項錯誤是在您分析 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 組態時發現的。  

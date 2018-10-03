@@ -3,24 +3,21 @@ title: Visual C#.NET 使用者入門 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 607b3569c8f008ec3c14bdc16fc8f6cbda2798be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 255cf7d05fad66976a0196b78212af2b9a780a94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781786"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO 程式設計 - Visual C# .NET 使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

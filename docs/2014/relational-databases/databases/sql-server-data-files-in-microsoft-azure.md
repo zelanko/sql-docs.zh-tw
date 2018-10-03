@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aac25e3bdab6ab5f52be0d5a443075ecbe05eb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45e874ab6ed6f73ab5f0c27081daf200971603d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206184"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Windows Azure 中的 SQL Server 資料檔案
   Windows Azure 中的 SQL Server 資料檔案可提供將 SQL Server 資料庫檔案儲存為 Windows Azure Blob 的原生支援。 它可讓您在內部部署執行的 SQL Server 或 Windows Azure 虛擬機器執行的 SQL Server 中建立資料庫，以將您的 Windows Azure Blob 儲存體資料儲存在專用儲存位置。 此增強功能特別簡化了使用卸離和附加作業，在電腦之間移動資料庫的工作。 此外，它可讓您還原至 Windows Azure 儲存體或從中還原，為您的資料庫備份檔案提供替代儲存位置。 因此，它會針對資料虛擬化、資料移動、安全性和可用性提供許多優點，進而實現許多混合式方案，而且成本低廉、維護簡單，即可達到高可用性和彈性調整的效果。  
@@ -83,7 +80,7 @@ ON
   
  **重要注意事項** ：如果有任何作用中參考指向容器中的資料檔案，則嘗試刪除對應的 SQL Server 認證將會失敗。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  以下是將 SQL Server 資料檔案儲存在 Windows Azure 儲存體中的安全性考量和需求。  
   
 -   建立 Windows Azure Blob 儲存體服務的容器時，建議您將存取權設為 [私用]。 當您將存取設為私用時，只有 Windows Azure 帳戶擁有者才能讀取容器和 Blob 資料。  

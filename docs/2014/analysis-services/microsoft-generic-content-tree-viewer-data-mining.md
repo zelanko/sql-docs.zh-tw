@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.contentviewer.f1
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85c2cccfe0d5b578c0faa359ca3c276b654aaa21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dff4254252523096b187bb2894782fe9eea523be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066943"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 一般內容樹狀檢視器 (資料採礦)
   **[Microsoft 一般內容樹狀檢視器]** 會以標準 HTML 資料表格式來顯示資料採礦模式內容的詳細資訊。 此檢視很有用，因為它會公開模型的基礎結構，以及有關係數、值分佈等項目的詳細資料。  
