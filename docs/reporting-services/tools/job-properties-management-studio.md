@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a5f23a8251790cedc36b5991f75e658d67257e7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5e93afa5dd974ed7ae6dbdff5844f849d50e72bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630561"
 ---
 # <a name="job-properties-management-studio"></a>作業屬性 (Management Studio)
   您可以使用 [作業屬性] 頁面來檢視有關進行中報表或訂閱的資訊，然後再加以取消。  

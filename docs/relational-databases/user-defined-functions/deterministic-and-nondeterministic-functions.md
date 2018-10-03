@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: udf
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - built-in functions [SQL Server]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45e86d3dc2b58f69780a77cbd7ee0ba4561755f7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d782f8f612d8d4e9eb86a25ddf96e3d147a2f024
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639406"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, starting
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22cd471b9b1b7c2b779c12967bb1ea1b9163678c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4ecfeb1175223ec1827732b702c0ff9d5285d73b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646106"
 ---
 # <a name="start-the-replication-monitor"></a>啟動複寫監視器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

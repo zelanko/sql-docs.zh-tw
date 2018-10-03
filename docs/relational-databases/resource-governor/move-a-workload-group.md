@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.rg.properties_moveworkloadgroup.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d1eb983f32e995d974ffbfb460e679f715d20ac
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 70b6c928d5df3fe6f36bfa2277899dfee4400385
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656331"
 ---
 # <a name="move-a-workload-group"></a>移動工作負載群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

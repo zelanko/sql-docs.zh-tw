@@ -5,21 +5,18 @@ ms.date: 05/23/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712e6a6b6f847bb781a121f8ab9944a3614828a3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 840aeed95c5ce891ac4fe17d81f4de35cf943da3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645866"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

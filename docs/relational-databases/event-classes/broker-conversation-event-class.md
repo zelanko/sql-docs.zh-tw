@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1d8073a83618bf644253efac8fd897ef1814ac5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 39e0ca2394c76d955fa480d17ed5369217ac8f69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636208"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "43101475"
 |**Severity**|**int**|如果此事件報告錯誤，即為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤嚴重性。|29|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|**ntext**|交談的目前狀態。 可以具有下列其中一個值：|@shouldalert|是|  
+|**TextData**|**ntext**|交談的目前狀態。 可以具有下列其中一個值：|1|是|  
 |||**SO**。 已開始傳出。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。|||  
 |||**SI**。 已起始傳入。 另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動了與目前執行個體的新交談，但是目前的執行個體尚未完成第一個訊息的接收動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果第一個訊息被分割或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO 狀態的交談。|||  
 |||**CO**。 正在交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。|||  
@@ -65,7 +62,7 @@ ms.locfileid: "43101475"
   
 |ID|子類別|Description|  
 |--------|--------------|-----------------|  
-|@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行未包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION WITH ERROR [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每當 **建立錯誤訊息時，會產生** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 例如，當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未能成功地路由傳送對話的訊息時，Broker 會針對該對話建立一個錯誤訊息，並產生此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果應用程式結束交談時發生錯誤，不會產生此事件。|  

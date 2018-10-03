@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-menu
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d512ff8a9093433eefd5bf6eef9946433dbebda8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 371b83be04f64c8f71b642e6cc95f71aacc897f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636056"
 ---
 # <a name="save-as"></a>另存新檔
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

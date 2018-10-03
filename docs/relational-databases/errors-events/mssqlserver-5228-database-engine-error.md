@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 5228 (Database Engine error)
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4f9fc626ad0608d47b8730e04e703d5f7aec3132
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 43e1eac679271e3f12d60d310724a8ff025933cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657136"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

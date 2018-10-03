@@ -5,28 +5,23 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - text file reading [Integration Services]
 - Script component [Integration Services], non-standard text file formats
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 190eed1e1c9770fb4a2ad08de6c17d5746b03d88
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 46b020f7ad63e38d283de993606109dadd3f6a5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645846"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
   當來源資料是以非標準格式排列時，為了達成相同的結果，您可能會發現將所有剖析邏輯合併在單一指令碼中會比將多個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 轉換鏈結在一起更方便。  

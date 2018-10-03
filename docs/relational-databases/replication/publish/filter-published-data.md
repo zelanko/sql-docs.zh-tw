@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], filtering published data
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc4fba539d46e67b61cf46e01c65f1a296e877ae
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 864edbeff7ce15e4cae3d2994ffa9ba2fd05f8ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625786"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

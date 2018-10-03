@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], CLR event category
 - SQL Server event classes, CLR event category
 - CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 533ed6c436de4090a4a627be279ce91d207069a8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1ff98dd89bd634e715075ac122d34bd5c0ba9c6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078511"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648026"
 ---
 # <a name="clr-event-category"></a>CLR 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "43078511"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|指出組件載入成功 (1) 或失敗 (0)。|23|是|  
-|**TextData**|**ntext**|如果載入成功則為「組件載入成功」；否則為「組件載入失敗」。|@shouldalert|是|  
+|**TextData**|**ntext**|如果載入成功則為「組件載入成功」；否則為「組件載入失敗」。|1|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   

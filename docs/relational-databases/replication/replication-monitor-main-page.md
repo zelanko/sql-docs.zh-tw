@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5fa7acd2213da96d67366f41c6744f4ed0c6b8a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7eb5a872b713571c544a03039010aa3dbdc4aa1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351700"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639946"
 ---
 # <a name="replication-monitor-main-page"></a>複寫監視器，主要頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FORMAT_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e05f3c1cbe0581b84dd1ce3512dd60874485fb7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 57b5d8aa37d5d7b3b3f4cb06add95b44a361e010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654176"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

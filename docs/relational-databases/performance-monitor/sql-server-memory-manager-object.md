@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9e677eb735b6a4b9d0d1c53648780e86a8d99c71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34473902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636647"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "34473902"
 ## <a name="memory-manager-counters"></a>Memory Manager 計數器  
  下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 計數器。  
   
-|SQL Server Memory Manager 計數器|描述|  
+|SQL Server Memory Manager 計數器|Description|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|指定伺服器用來維護連線的動態記憶體總數。|  
 |**Database Cache Memory (KB)**|指定伺服器目前用於資料庫頁面快取的記憶體數量。|  

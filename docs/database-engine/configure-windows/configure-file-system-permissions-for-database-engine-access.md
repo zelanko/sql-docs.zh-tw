@@ -5,25 +5,22 @@ ms.date: 06/06/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file system permissions
 - service account [SQL Server], file system permissions
 - permissions [SQL Server], file system
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7438b2ba6a1a908d47dec55c6773645a4f3ead85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8139bec00a512a9be6d5805e17f09671135eadb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865293"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640136"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>設定 Database Engine 對檔案系統的存取權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLEDB event category
 - SQL Server event classes, OLEDB event category
 - event classes [SQL Server], OLEDB event category
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ef4d4e3d69b9622a12fa8daa02c05ccd7963478
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7f67ec37ff1eaa83529d88ff3e00d19ae071359e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648266"
 ---
 # <a name="oledb-event-category"></a>OLEDB 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

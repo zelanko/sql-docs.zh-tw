@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0800899e6a8886bdfc6d8ce5668809d079d0d4fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c2911c656087fe3d4c0f5a81ea037ff02d6706
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650326"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

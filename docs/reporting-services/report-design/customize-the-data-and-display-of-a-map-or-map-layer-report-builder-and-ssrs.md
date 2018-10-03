@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10521"
@@ -22,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c3384670c4f04dd47ec58b6d9713711e3bf875
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 867e0fff62bf38f5f2d4d42a24e6c3bf49a9ee34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633706"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  

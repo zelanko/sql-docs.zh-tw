@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONVERSATION
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 94292f4a3b085f39e223f4b111c93959c5be8fd4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 40796cb658ba723e85a6d3e8c96a8eb531616493
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787919"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643978"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  在使用者自訂函數中，BEGIN CONVERSATION TIMER 無效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  交談計時器的設定權限預設給有交談服務之 SEND 權限的使用者、系統管理員 (**sysadmin**) 固定伺服器角色的成員，以及 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  

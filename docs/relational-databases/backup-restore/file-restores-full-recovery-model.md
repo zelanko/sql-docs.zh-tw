@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Transact-SQL restore sequence
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a9d6c5c0c31c37d443da2b1e12bdc1c411a8c38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2817ce0133db51ae5b4cd8ed4d7a81db81074fc2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639936"
 ---
 # <a name="file-restores-full-recovery-model"></a>檔案還原 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

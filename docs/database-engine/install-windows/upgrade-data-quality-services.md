@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 9f127f5e3765ce0c02df7742206f6141057fd798
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ecedd313044770cd3e8af42c915dc208fa5097cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40415799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629041"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
 

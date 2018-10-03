@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - swb.backupdatabase.mediaoptions.f1
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7103048caf9d4cc66a32065a410d41529110939
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecfa60f4b28d72e20d6f6b112d4739be793daaa1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920823"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657256"
 ---
 # <a name="back-up-database-media-options-page"></a>備份資料庫 (媒體選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

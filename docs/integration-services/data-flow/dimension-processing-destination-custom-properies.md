@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f763cf450fe7d8bb58f5b50633921a33d2370c3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3e0ab2450cca5e32cf1d940f800c20793d41d381
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628859"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>維度處理目的地自訂屬性
   維度處理目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是維度處理目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性|資料類型|描述|  
+|屬性|資料類型|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的連接字串。|  
 |KeyDuplicate|整數 (列舉)|當 UseDefaultConfiguration 為 **False**時，就是指出如何處理重複索引鍵錯誤的值。 可能的值為 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此屬性的預設值為 **IgnoreError** (0)。|  

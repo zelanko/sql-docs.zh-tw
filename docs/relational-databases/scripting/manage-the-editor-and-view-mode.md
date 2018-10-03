@@ -5,8 +5,6 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 673619396da99b5fe3202a455a24ae50a9e168dd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fb784621abf05db2cf32782a137e6c5f13013d72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650276"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理編輯器和檢視模式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

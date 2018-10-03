@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0cc3282b495267c0023925888ad639a22348b21
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9dca016cd56035a9973dd649744f7bca08e2e58a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626226"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 方法 - InitializeReportServer
   初始化指定的報表服務執行個體。  

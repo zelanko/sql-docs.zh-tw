@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - RenderedOutputFile class
 - data streams [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6aa46e455949aebaf62202678cc3db8280baa118
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ebf9266ce4e5bc1026a51fed0bf548c7793d071b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644986"
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>使用傳遞延伸模組的 RenderedOutputFile 類別
   <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 類別代表資料流以及與資料流的相關聯屬性的資訊。 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 類別的 **Data** 屬性，會用來代表作為 **Stream** 物件的轉譯報表或是報表資源。  

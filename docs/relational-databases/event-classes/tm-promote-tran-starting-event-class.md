@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 'TM: Promote Tran Starting event class'
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e14937de209bf779f7d9b0d98310d9f8ad554fb2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6c8ac6783b68f3f252a48a355baf0ae12057cd11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626366"
 ---
 # <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
