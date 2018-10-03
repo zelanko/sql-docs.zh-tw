@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5330fe2694c8d15b2e2fa1354a8deddbaaff269
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229028"
 ---
 # <a name="attributebinding-data-type-assl"></a>AttributeBinding 資料類型 (ASSL)
   定義衍生的資料類型表示的繫結[屬性](../objects/attribute-element-assl.md)項目。  
@@ -51,13 +48,13 @@ ms.locfileid: "37279744"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[繫結](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[AttributeID](../properties/id-element-assl.md)，[序數](../properties/ordinal-element-assl.md)，[類型](../properties/type-element-binding-assl.md)|  
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   

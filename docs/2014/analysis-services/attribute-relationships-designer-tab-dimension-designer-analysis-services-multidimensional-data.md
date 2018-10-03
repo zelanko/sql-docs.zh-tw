@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributerelationships.f1
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b362285a6ac8cee1551ad9c4bed36e6d9b5e5d0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 289ffeeb6158da7b2dce6d5be1ac0aa88ac029e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253210"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220628"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性關聯性 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [屬性關聯性] 清單，即可在屬性關聯性圖表中找到特定屬性關聯性，以及管理該項關聯性。 這個窗格會緊鄰在包含屬性關聯性圖表的窗格底下。  

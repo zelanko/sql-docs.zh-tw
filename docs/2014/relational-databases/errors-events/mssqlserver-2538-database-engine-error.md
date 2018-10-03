@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 2538 (Database Engine error)
 ms.assetid: 0a0f7d79-f1ba-4749-8804-fb660cca3492
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3bc66239e7147d7701303fde2ddaa6506b07bba2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 36ba25f8653e3fd3f1287d8de5108af880f9ba7c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228808"
 ---
 # <a name="mssqlserver2538"></a>MSSQLSERVER_2538
     
@@ -39,6 +36,6 @@ ms.locfileid: "37431827"
  這項資訊是 DBCC CHECKALLOC 命令輸出的一部分， 也是指定資料庫中已配置範圍、已使用頁面和已保留頁面的個別檔案摘要資訊。  
   
 ## <a name="user-action"></a>使用者動作  
- 無  
+ None  
   
   

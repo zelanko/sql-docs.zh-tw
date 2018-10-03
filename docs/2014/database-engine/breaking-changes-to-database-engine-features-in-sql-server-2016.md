@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 - breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227088"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 的重大變更
   本主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 以及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
@@ -46,7 +43,7 @@ ms.locfileid: "40394219"
 |ALTER TABLE|ALTER TABLE 陳述式只允許兩部分 (schema.object) 資料表名稱。 現在使用下列格式的資料表名稱來指定會在編譯時期顯示錯誤 117 失敗：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在舊版中，指定 server.database.schema.table 格式會傳回錯誤 4902。 不過，指定 .database.schema.table 格式或 ..schema.table 格式會成功。 若要解決此問題，請移除 4 部分前置詞的用法。|  
 |瀏覽中繼資料|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 來查詢檢視現在會傳回檢視的中繼資料，而非基礎物件的中繼資料。 這種行為現在與其他瀏覽中繼資料的方法相符。|  
 |SOUNDEX|在資料庫相容性層級 110 下，SOUNDEX 函式會實作新的規則，這些規則可能會使此函式將值計算成不同於在舊版相容性層級下計算的值。 升級到相容性層級 110 之後，您可能需要重建使用 SOUNDEX 函數的索引、堆積或 CHECK 條件約束。 如需詳細資訊，請參閱 [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
- 執行個體時提供 SQL Server 登入。|  
+ .|  
 |失敗之 DML 陳述式的資料列計數訊息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，當 DML 陳述式失敗時，[!INCLUDE[ssDE](../includes/ssde-md.md)] 會以一致的方式將含有 RowCount: 0 的 TDS DONE Token 傳送至用戶端。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，當失敗的 DML 陳述式包含在 TRY-CATCH 區塊中，而且由 [!INCLUDE[ssDE](../includes/ssde-md.md)] 自動參數化，或者 TRY-CATCH 區塊與失敗的陳述式不在相同的層級上時，系統會將錯誤的值 -1 傳送至用戶端。 例如，如果 TRY-CATCH 區塊呼叫了預存程序，而且此程序中的 DML 陳述式失敗，則用戶端將收到錯誤的 -1 值。<br /><br /> 仰賴此錯誤行為的應用程式將會失敗。|  
 |SERVERPROPERTY (‘Edition’)|已安裝的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 執行個體產品版本。 請利用這個屬性值來判斷已安裝的產品所支援的功能和限制 (如最大 CPU 數目)。<br /><br /> 根據已安裝的 Enterprise 版，這會傳回 ‘Enterprise Edition’ 或「Enterprise 版: 核心授權」。 Enterprise 版本會根據單一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的計算容量上限而區分。 如需有關中的計算容量限制[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，請參閱 < [SQL server 版本計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '`*密碼*`' HASHED`選項不能藉由建立雜湊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]7 或更早版本。|  

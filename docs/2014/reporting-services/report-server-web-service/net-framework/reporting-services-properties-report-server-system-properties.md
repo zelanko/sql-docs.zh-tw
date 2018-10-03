@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc749db6d8eee973ef4c146d62ce5ebebda230e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0cd5fd82a77d85b59de9fb4ebedebfd560c759f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211340"
 ---
 # <a name="report-server-system-properties"></a>報表伺服器系統屬性
   下列系統屬性名稱會保留。 您無法建立具有相同名稱的使用者定義屬性。 您可以使用 Web 服務方法，來讀取或是修改大部分屬性。  
@@ -43,7 +40,7 @@ ms.locfileid: "37276594"
 |ExecutionLogDaysKept|要將報表執行資訊保留在執行記錄中的天數。 這個屬性的有效值包括`0`經由`2`，`147`，`483`，`647`。 如果此值為 `0`，系統就不會從執行記錄資料表中刪除項目。 預設值是 `60`。|  
 |SnapshotCompression|定義快照集的壓縮方式。 預設值是 `SQL`。 有效值如下：<br /><br /> `SQL` = 當快照集儲存在報表伺服器資料庫時，系統會壓縮快照集。 這是目前的行為。<br /><br /> **無 =** 系統不會壓縮快照集。<br /><br /> `All` = 系統會針對所有儲存選項壓縮快照集，包括報表伺服器資料庫或是檔案系統。|  
 |EnableClientPrinting|決定是否可從報表伺服器下載 RSClientPrint ActiveX 控制項。 有效值`true`和`false`。 預設值是 `true`。 如需此控制項所需之其他設定的詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印功能](../../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。|  
-|EnableIntegratedSecurity|決定整合式安全性是否支援報表資料來源連接。 預設值為 `True`。 有效值如下：<br /><br /> `True` = 整合式安全性已啟用。<br /><br /> `False` = 整合式安全性未啟用。 設定為使用整合式安全性的報表資料來源不會執行。|  
+|EnableIntegratedSecurity|決定整合式安全性是否支援報表資料來源連接。 預設為 `True`。 有效值如下：<br /><br /> `True` = 整合式安全性已啟用。<br /><br /> `False` = 整合式安全性未啟用。 設定為使用整合式安全性的報表資料來源不會執行。|  
 |EnableRemoteErrors|包含外部錯誤資訊 (例如，有關報表資料來源的錯誤資訊) 以及針對從遠端電腦要求報表之使用者傳回的錯誤訊息。 有效值`true`和`false`。 預設值是 `false`。 如需詳細資訊，請參閱[啟用遠端錯誤 &#40;Reporting Services&#41;](../../report-server/enable-remote-errors-reporting-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  

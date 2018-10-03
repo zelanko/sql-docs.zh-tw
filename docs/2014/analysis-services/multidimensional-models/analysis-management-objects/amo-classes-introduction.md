@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb4e3761642f8b03e5853ae99e00cc4bc2f4a46f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ead51a0fadc54f0b68c550bda2a775a64a79b11a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218728"
 ---
 # <a name="introducing-amo-classes"></a>AMO 類別簡介
   分析管理物件 (AMO) 是設計用來管理的執行個體的類別庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]從用戶端應用程式。 AMO 類別是您將用以管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件 (例如資料庫、維度、Cube、採礦結構與模型、角色與權限、例外狀況等等) 的類別。  

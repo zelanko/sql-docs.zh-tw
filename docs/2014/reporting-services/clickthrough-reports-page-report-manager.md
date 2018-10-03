@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220722"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>點選連結報表頁面 (報表管理員)
   當您按一下報表中包含的互動式資料時，點選連結報表就會顯示相關資料的資料表。 這些報表是報表伺服器根據您用來建立報表之模型中包含的資訊所產生的。 如果您不想要使用報表伺服器所產生的點選連結報表，可以建立自訂報表，以便將它們發行至報表伺服器並對應至模型中定義的互動式資料點。 您必須根據相同的模型在報表產生器中建立這些自訂報表，然後將它們發行至報表伺服器。 若要將自訂報表對應至模型中的項目，請使用報表管理員中的 [點選連結報表] 頁面。  

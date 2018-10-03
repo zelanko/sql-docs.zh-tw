@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - warnings [XML for Analysis]
 - inline warnings [XMLA]
 ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc4d145d9f64c7a8b0761b6006aab9ede1184aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 206fbaa364f6410c9ac242aff9f4d3f10e14f9c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229485"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>處理錯誤和警告 (XMLA)
   當 XML for Analysis (XMLA) 時，就需要錯誤處理[Discover](../xmla/xml-elements-methods-discover.md)或是[Execute](../xmla/xml-elements-methods-execute.md)方法呼叫未執行、 成功執行但產生錯誤或是警告，或成功執行但傳回的結果包含錯誤。  
