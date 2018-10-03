@@ -1,13 +1,11 @@
 ---
-title: OriginalValue 屬性 (ADO) |Microsoft 文件
+title: OriginalValue 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c77c1badaa812efb13767b8f30afa37341bc07c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648992"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 屬性 (ADO)
 值會指出[欄位](../../../ado/reference/ado-api/field-object.md)，存在於記錄中進行任何變更之前。  
@@ -33,14 +30,14 @@ ms.locfileid: "35280020"
  傳回**Variant**值，表示之前的任何變更欄位的值。  
   
 ## <a name="remarks"></a>備註  
- 使用**OriginalValue**屬性，以傳回與目前記錄的原始欄位值的欄位。  
+ 使用**OriginalValue**從目前的記錄傳回欄位的原始欄位值的屬性。  
   
- 在*立即更新模式*(在其中提供者將變更寫入基礎資料來源之後，您呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法)，則**OriginalValue**屬性會傳回任何變更前存在的欄位值 (也就是從上次**更新**方法呼叫)。 這是相同值， [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法會使用取代[值](../../../ado/reference/ado-api/value-property-ado.md)屬性。  
+ 在 *立即更新模式*(在其中提供者將變更寫入基礎資料來源之後，您呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法)，則**OriginalValue**屬性會傳回任何變更前存在的欄位值 (也就是自上次**更新**方法呼叫)。 這是相同值[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法會使用來取代[值](../../../ado/reference/ado-api/value-property-ado.md)屬性。  
   
- 在*批次更新模式*(其中提供者會快取多個變更，並將它們寫入基礎資料來源，只有當您呼叫[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法)，則**OriginalValue**屬性會傳回任何變更前存在的欄位值 (也就是從上次**UpdateBatch**方法呼叫)。 這是相同值， [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法會使用取代**值**屬性。 當您使用這個屬性與[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)屬性，您可以解決所發生的批次更新衝突。  
+ 在 *批次更新模式*(提供者會快取的多項變更並將其寫入至基礎資料來源，只有當您呼叫時，才[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法)，則**OriginalValue**屬性傳回的任何變更前存在的欄位值 (也就是自上次**UpdateBatch**方法呼叫)。 這是相同值[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法會使用來取代**值**屬性。 當您使用此屬性與[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)屬性，您可以解決衝突所引發的批次更新。  
   
 ## <a name="record"></a>記錄  
- 如[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件**OriginalValue**屬性會是空的欄位前面加上[更新](../../../ado/reference/ado-api/update-method.md)呼叫。  
+ 針對[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件， **OriginalValue**屬性會是空的欄位前面加上[Update](../../../ado/reference/ado-api/update-method.md)呼叫。  
   
 ## <a name="applies-to"></a>適用於  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)  

@@ -1,13 +1,11 @@
 ---
-title: ConnectPromptEnum |Microsoft 文件
+title: ConnectPromptEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696897"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-指定是否應該顯示的對話方塊開啟資料來源的連接時，遺漏的參數提示。  
+指定是否應該顯示對話方塊中開啟資料來源的連接時，遺漏的參數提示。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|@shouldalert|永遠會提示。|  
-|**adPromptComplete**|2|如果您需要更多的資訊，會提示。|  
-|**adPromptCompleteRequired**|3|如果您需要更多的資訊，但不是允許有選擇性參數，則會提示。|  
-|**adPromptNever**|4|永遠不會提示。|  
+|**adPromptAlways**|1|一律提示。|  
+|**adPromptComplete**|2|如果需要更多的資訊，提示。|  
+|**adPromptCompleteRequired**|3|如果您需要更多的資訊，但不是允許使用選擇性的參數會提示。|  
+|**adPromptNever**|4|永遠不會出現提示。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  

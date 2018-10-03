@@ -1,14 +1,11 @@
 ---
-title: FileTableRootPath (TRANSACT-SQL) |Microsoft 文件
+title: FileTableRootPath & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 637653dc75154f00c14cb248703aec3645f313bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732926"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +39,12 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
   
 ## <a name="arguments"></a>引數  
  *FileTable_name*  
- FileTable 的名稱。 *FileTable_name*的型別**nvarchar**。 這是選擇性參數。 預設值為目前的資料庫。 指定*schema_name*也是選擇性的。 您可以傳遞 NULL 做*FileTable_name*使用預設參數值  
+ FileTable 的名稱。 *FileTable_name*屬於型別**nvarchar**。 這是選擇性參數。 預設值為目前的資料庫。 指定*schema_name*也是選擇性。 您可以傳遞 NULL 做*FileTable_name*若要使用的預設參數值  
   
  *@option*  
  定義路徑之伺服器元件格式化方式的整數運算式。 *@option* 可以有下列值之一：  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|傳回轉換成 NetBIOS 格式的伺服器名稱，例如：<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> 這是預設值。|  
 |**1**|在不轉換的情況下傳回伺服器名稱，例如：<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -57,12 +53,12 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
 ## <a name="return-type"></a>傳回類型  
  **nvarchar(4000)**  
   
- 當資料庫屬於 Alwayson 可用性群組，然後在**FileTableRootPath**函式會傳回虛擬網路名稱 (VNN) 而非電腦名稱。  
+ 當資料庫屬於 Alwayson 可用性群組，則**FileTableRootPath**函式會傳回虛擬網路名稱 (VNN) 而非電腦名稱。  
   
 ## <a name="general-remarks"></a>一般備註  
  **FileTableRootPath**函式會傳回 NULL，當下列條件的其中一個為 true 時：  
   
--   值*FileTable_name*不正確。  
+-   值*FileTable_name*無效。  
   
 -   呼叫端沒有足以參考指定資料表或目前資料庫的權限。  
   
@@ -71,7 +67,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
 ## <a name="best-practices"></a>最佳作法  
- 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，使用取得的檔案在執行階段的完整路徑**FileTableRootPath**和**GetFileNamespacePath**函式在一起，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
+ 若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，使用取得的檔案在執行階段的完整路徑**FileTableRootPath**並**GetFileNamespacePath**函式放在一起，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -85,14 +81,14 @@ FROM DocumentStore
 WHERE Name = N’document.docx’;  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  **FileTableRootPath**函式需要：  
   
 -   可以取得特定 FileTable 根路徑之 FileTable 的 SELECT 權限。  
   
--   **db_datareader**或更高的權限，為取得目前資料庫中的根路徑。  
+-   **db_datareader**或更高的權限，以取得目前資料庫中的根路徑。  
   
 ## <a name="examples"></a>範例  
  下列範例示範如何呼叫**FileTableRootPath**函式。  
@@ -110,6 +106,6 @@ SELECT FileTableRootPath(N'MyFileTable');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 FileTables 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [使用 FileTable 中的目錄與路徑](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

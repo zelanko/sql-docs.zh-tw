@@ -1,13 +1,11 @@
 ---
-title: 執行，請重新查詢，並清除方法範例 (JScript) |Microsoft 文件
+title: Execute、 Requery 和 Clear 方法範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2b93451eb327cbd76a5fb79eda2b2b6df4c3f26
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 96ee3363a5077f6ab8324b7bfb4ca81fa8b781d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674226"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>執行，請重新查詢，並清除方法範例 (JScript)
-這個範例會示範**Execute**方法執行時同時從[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前資料中的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除的內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**錯誤**透過存取集合**連接**物件[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。)將檔案命名**ExecuteJS.asp**。  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute、 Requery 和 Clear 方法範例 (JScript)
+此範例示範**Execute**方法時執行兩個[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前的資料，在[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 (**錯誤**收集透過存取**連線**物件[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。)將檔案命名**ExecuteJS.asp**。  
   
 ```  
 <!-- BeginExecuteJS -->  
@@ -184,10 +181,10 @@ BODY {
   
 ## <a name="see-also"></a>另請參閱  
  [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error 物件](../../../ado/reference/ado-api/error-object.md)   
- [Execute 方法 （ADO 命令中）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute 方法 （ADO 連接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute 方法 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute 方法 (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)

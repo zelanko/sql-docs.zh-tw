@@ -1,13 +1,11 @@
 ---
-title: ADORecordsetConstruction 介面 |Microsoft 文件
+title: ADORecordsetConstruction 介面 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634386"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 介面
-**ADORecordsetConstruction**介面用來建構 ADO**資料錄集**從 OLE DB 物件**資料列集**C/c + + 應用程式中的物件。  
+**ADORecordsetConstruction**介面用來建構 ADO **Recordset**的 OLE DB 物件**資料列集**C/c + + 應用程式中的物件。  
   
  此介面支援下列屬性：  
   
@@ -35,9 +32,9 @@ ms.locfileid: "35275617"
   
 |||  
 |-|-|  
-|[本文章節](../../../ado/reference/ado-api/chapter-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**章**物件上此 ADO/從**資料錄集**物件。|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB **RowPosition**物件上此 ADO/從**資料錄集**物件。|  
-|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列集**物件上此 ADO/從**資料錄集**物件。|  
+|[章節](../../../ado/reference/ado-api/chapter-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**一章**物件，此 ado 往返**資料錄集**物件。|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB **RowPosition**物件，此 ado 往返**資料錄集**物件。|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列集**物件，此 ado 往返**資料錄集**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  
@@ -46,7 +43,7 @@ ms.locfileid: "35275617"
  無。  
   
 ## <a name="remarks"></a>備註  
- 指定 OLE DB**資料列集**物件 (`pRowset`)，ADO 建構**資料錄集**物件 (`adoRs`) 於下列三個基本作業：  
+ 指定 OLE DB**資料列集**物件 (`pRowset`)，建構的 ADO**資料錄集**物件 (`adoRs`) 相當於下列三種基本作業：  
   
 1.  建立 ADO**資料錄集**物件：  
   
@@ -63,7 +60,7 @@ ms.locfileid: "35275617"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  呼叫`IADORecordsetConstruction::put_Rowset`屬性方法來設定 OLE DB`Rowset`上之 ADO 物件`Recordset`物件：  
+3.  呼叫`IADORecordsetConstruction::put_Rowset`屬性的方法，來設定 OLE DB `Rowset` ado 物件`Recordset`物件：  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -71,9 +68,9 @@ ms.locfileid: "35275617"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 產生`adoRs`物件現在代表 ADO**資料錄集**建構從 OLE DB 物件**資料列集**物件。  
+ 結果`adoRs`物件現在表示 ADO **Recordset**建構從 OLE DB 物件**資料列集**物件。  
   
- 您也可以建構 ADO**資料錄集**從 OLE DB 物件**章**或**RowPosition**物件。  
+ 您也可以建構 ADO **Recordset** OLE DB 物件**章**或**RowPosition**物件。  
   
 ## <a name="requirements"></a>需求  
  **版本：** ADO 2.0 和更新版本  

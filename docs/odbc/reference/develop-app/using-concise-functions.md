@@ -1,39 +1,36 @@
 ---
-title: 使用精簡函式 |Microsoft 文件
+title: 使用精簡函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - concise functions [ODBC]
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c53a628eaaa3ca8348ce8917ace36da35c33f653
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722726"
 ---
 # <a name="using-concise-functions"></a>使用精簡函式
-某些 ODBC 函數隱含存取描述元。 應用程式撰寫者可能會發現它們比撥號更方便**SQLSetDescField**或**SQLGetDescField**。 這些函式的呼叫*精簡*函式，因為它們執行的函式，包括設定或取得描述項欄位的數字。 某些精簡函式可讓應用程式設定或擷取單一函式呼叫中的數個相關的描述項欄位。  
+有些 ODBC 函式隱含存取描述元。 應用程式撰寫者可能會發現它們比呼叫更方便**SQLSetDescField**或是**SQLGetDescField**。 這些函式會呼叫*精簡*函式，因為它們執行數項功能，包括設定或取得描述項欄位。 某些精簡函式可讓應用程式設定或擷取單一函式呼叫中的數個相關的描述項欄位。  
   
- 精簡函式可以呼叫未先擷取用來做為引數的描述項控制代碼。 這些函式使用的描述項欄位相關聯的陳述式控制代碼上呼叫。  
+ 精簡函式可以呼叫未先擷取做為引數的描述項控制代碼。 這些函式使用的描述項欄位相關聯的陳述式控制代碼上呼叫。  
   
- 精簡函式**SQLBindCol**和**SQLBindParameter**繫結資料行或參數對應的描述項欄位設為其引數。 所有這些函式會執行更多的工作比只要設定描述元。 **SQLBindCol**和**SQLBindParameter**提供完整的資料行或動態參數繫結的規格。 應用程式可以不過，變更個別的繫結的詳細資料，藉由呼叫**SQLSetDescField**或**SQLSetDescRec**並可以完全繫結資料行或參數藉由一系列的適當的呼叫這些函式。  
+ 精簡函式**SQLBindCol**並**SQLBindParameter**繫結的資料行或參數對應的描述項欄位設為其引數。 所有這些函式會執行更多的工作比只要設定描述元。 **SQLBindCol**並**SQLBindParameter**提供完整的資料行或動態參數繫結的規格。 應用程式可以不過，藉由呼叫變更繫結的個別詳細資料**SQLSetDescField**或是**SQLSetDescRec**和可以藉由提出適合呼叫的一系列完整地結合資料行或參數這些函式。  
   
- 精簡函式**SQLColAttribute**， **SQLDescribeCol**， **SQLDescribeParam**， **SQLNumParams**，和**SQLNumResultCols**擷取中的描述項欄位的值。  
+ 精簡函式**SQLColAttribute**， **SQLDescribeCol**， **SQLDescribeParam**， **SQLNumParams**，和**SQLNumResultCols**擷取描述項欄位中的值。  
   
- **SQLSetDescRec**和**SQLGetDescRec**精簡函式，一次呼叫，以設定或取得多個會影響的資料類型和資料行或參數資料的儲存體的描述項欄位。 **SQLSetDescRec**是要變更的資料行或參數的資料，在一個步驟中的繫結的有效方式。  
+ **SQLSetDescRec**並**SQLGetDescRec**是精簡的函式，一次呼叫，以設定或取得多個會影響到儲存體的資料行或參數的資料與資料類型的描述項欄位。 **SQLSetDescRec**是要變更的資料行或參數的資料，在一個步驟中的繫結的有效方式。  
   
- **SQLSetStmtAttr**和**SQLGetStmtAttr**做為精簡函式，在某些情況下。 (請參閱[描述項欄位](../../../odbc/reference/develop-app/descriptor-fields.md)。)
+ **SQLSetStmtAttr**並**SQLGetStmtAttr**做為在某些情況下的精簡函式。 (請參閱[描述項欄位](../../../odbc/reference/develop-app/descriptor-fields.md)。)

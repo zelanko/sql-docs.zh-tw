@@ -5,20 +5,18 @@ ms.date: 10/23/2017
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e93a2b2d4c03ab9dd3e18e2bfe8fa0f01e37ee98
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9073bdc80d110df5c4b56d8130f12bae723047e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824156"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成資料庫引擎升級
 

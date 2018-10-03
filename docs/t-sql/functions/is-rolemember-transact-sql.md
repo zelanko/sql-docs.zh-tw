@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_ROLEMEMBER
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - IS_ROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ba776605d718c13dc57e8a9007f710f9ab84f0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 38be2330c039af77dd00d694aac2b59471d12785
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823996"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -58,7 +55,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |傳回值|Description|  
 |------------------|-----------------|  
 |0|*database_principal* 不是 *role* 的成員。|  
-|@shouldalert|*database_principal* 是 *role* 的成員。|  
+|1|*database_principal* 是 *role* 的成員。|  
 |NULL|*database_principal* 或 *role* 無效，或是您沒有檢視角色成員資格的權限。|  
   
 ## <a name="remarks"></a>Remarks  

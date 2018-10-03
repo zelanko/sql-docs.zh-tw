@@ -1,40 +1,37 @@
 ---
-title: 在 元件服務中執行商務物件 |Microsoft 文件
+title: 在 元件服務中執行商務物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - component services in RDS [ADO]
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c83442d248d7427ece0837f4ab449e37a9f3d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f4e59138b4594a6af741f4e73bb07df4e5a1178b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634729"
 ---
-# <a name="running-business-objects-in-component-services"></a>在 元件服務中執行商務物件
+# <a name="running-business-objects-in-component-services"></a>在 Component Services 中執行商務物件
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 可執行檔 (.exe) 或動態連結程式庫 (.dll)，可以是商務物件。 物件是.dll 或.exe 檔取決於您用來執行的商務物件的組態：  
+ 可執行檔 (.exe) 或動態連結程式庫 (.dll)，可以是商務物件。 您用來執行的商務物件的組態取決於該物件是.dll 或.exe 檔案：  
   
--   可以透過與 DCOM 呼叫商務物件建立為.exe 檔案。 如果透過網際網路資訊服務 (IIS) 時，會使用這些商務物件，因此有額外的資料，將會降低用戶端效能封送處理。  
+-   您可以透過 DCOM 呼叫商務物件建立為.exe 檔案。 如果透過網際網路資訊服務 (IIS) 時，會使用這些商務物件，則會受限於其他封送處理資料，將用戶端效能變慢。  
   
--   透過 IIS，可使用的.dll 檔案所建立的商務物件，因此也會透過 HTTP。 它們也可透過 DCOM 只能透過元件服務，或透過 Microsoft Transaction Server，如果您使用 Windows NT。 商務物件的 Dll 必須在可以透過 IIS 存取它們的 IIS 伺服器電腦上註冊。 有關如何設定 DCOM 上執行的 DLL 的資訊，請參閱 > 一節，[啟用 DCOM 上執行的 DLL](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)。  
+-   透過 IIS 建立，可使用的.dll 檔案所建立的商務物件，因此也會受到 HTTP。 它們也可用 dcom，只能透過元件服務，或透過 Microsoft Transaction Server 中，如果您使用 Windows NT。 商務物件的 Dll 必須透過 IIS 存取 IIS 伺服器電腦上註冊。 如需如何設定在 DCOM 上執行的 DLL 的詳細資訊，請參閱 區段中，[啟用 DLL 以在 DCOM 上執行](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)。  
   
 > [!NOTE]
->  當中介層商務物件會實作為 元件服務 」 元件使用**GetObjectContext**， **SetComplete**，和**SetAbort**，企業物件可以使用元件服務 （或 MTS，如果您使用 Windows NT） 以維護其狀態在多個用戶端呼叫的內容物件。 這個案例是 DCOM，通常會實作之間受信任的用戶端和伺服器在內部使用。 在此情況下， [.RDSDataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件和[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)交易內容物件來取代用戶端上的方法和**CreateInstance** 所提供的方法**ITransactionContext**介面，並藉由元件服務。  
+>  當在中間層商務物件會實作為元件服務 」 元件使用**GetObjectContext**， **SetComplete**，並**setabort 回**，企業物件可以使用元件服務 （或 MTS，如果您使用 Windows NT） 以維護其狀態在多個用戶端呼叫的內容物件。 此案例可透過 DCOM，通常會實作之間受信任的用戶端和伺服器的內部網路中。 在此情況下， [rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件和[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)用戶端上的方法會取代交易內容物件並**CreateInstance**方法，它會提供**ITransactionContext**介面，並藉由將元件服務。  
   
 ## <a name="see-also"></a>另請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)

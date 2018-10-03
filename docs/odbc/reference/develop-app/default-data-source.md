@@ -1,13 +1,11 @@
 ---
-title: 預設資料來源 |Microsoft 文件
+title: 預設資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b756f9b553c622028266d1fc591596bf58ddf45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619566"
 ---
-# <a name="default-data-source"></a>預設的資料來源
+# <a name="default-data-source"></a>預設資料來源
 驅動程式可能會選取資料來源，呼叫預設的資料來源，在某些情況下，應用程式並未明確指定其中一個：  
   
--   在呼叫**SQLConnect**其中*ServerName*引數是零長度字串、 null 指標或 DEFAULT。  
+-   在呼叫**SQLConnect**何處*ServerName*引數是長度為零的字串、 null 指標或預設值。  
   
--   在呼叫**SQLDriverConnect**其中*InConnectionString*是指定**DSN**= 預設值或指定**DSN**關鍵字並未包含在系統資訊的資料來源。  
+-   在呼叫**SQLDriverConnect**其中*InConnectionString*其中一個指定**DSN**= 預設值或指定具有**DSN**關鍵字未包含在系統資訊的資料來源。  
   
- 它為驅動程式定義的預設資料來源指定的方式。 這可能牽涉到系統管理動作，可能會取決於使用者。
+ 它是驅動程式定義的指定預設的資料來源的方式。 這可能牽涉到系統管理動作，並可能相依於使用者。

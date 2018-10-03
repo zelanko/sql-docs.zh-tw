@@ -1,13 +1,11 @@
 ---
-title: CommandType 屬性 (ADO) |Microsoft 文件
+title: CommandType 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 015ad28b7cffbb97c14c8ac9b5b287a36f14b2f9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6612a90b94f10bdd08441d7814a7137121659045
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658416"
 ---
 # <a name="commandtype-property-ado"></a>CommandType 屬性 (ADO)
-表示的類型[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+表示的型別[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回一或多個[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值。  
   
 > [!NOTE]
->  請勿使用**CommandTypeEnum**值**adCmdFile**或**adCmdTableDirect**與**CommandType**。 這些值只用於做為選項與[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[Requery](../../../ado/reference/ado-api/requery-method.md)方法[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+>  請勿使用**CommandTypeEnum**的值**adCmdFile**或是**adCmdTableDirect**具有**CommandType**。 這些值只可用來當做選項搭配[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)並[Requery](../../../ado/reference/ado-api/requery-method.md)方法[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 ## <a name="remarks"></a>備註  
- 使用**CommandType**屬性，以最佳化評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性。  
+ 使用**CommandType**屬性，以最佳化的評估結果[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性。  
   
- 如果**CommandType**屬性值設定為預設值為**adCmdUnknown**，您可能會感覺到的效能降低，因為 ADO 必須進行的呼叫提供者，以判斷是否**CommandText**屬性是 SQL 陳述式、 預存程序或資料表名稱。 如果您知道您使用何種命令，設定**CommandType**屬性會指示 ADO 可直接前往相關的程式碼。 如果**CommandType**屬性不相符的類型中的命令**CommandText**屬性，就會發生錯誤時呼叫[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法。  
+ 如果**CommandType**屬性值設為預設值為**adCmdUnknown**，您可能會感覺到的效能，因為 ADO 必須進行呼叫提供者，以判斷**CommandText**屬性是 SQL 陳述式、 預存程序中或資料表名稱。 如果您知道您正在使用的命令類型，則設定**CommandType**屬性會指示 ADO，直接移至相關的程式碼。 如果**CommandType**屬性不符合命令中的型別**CommandText**屬性，您呼叫時發生錯誤[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法。  
   
 ## <a name="applies-to"></a>適用於  
  [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

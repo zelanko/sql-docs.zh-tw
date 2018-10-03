@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 395c3e8a7c49a7054ebfa247f51b782d9ee6e0ab
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8887dcc89911963c2bdfb1b4d61af2fd5a224566
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816966"
 ---
 # <a name="configurationsetting-method---setdatabasequerytimeout"></a>ConfigurationSetting 方法 - SetDatabaseQueryTimeout
   指定報表伺服器資料庫查詢的預設逾時值。  

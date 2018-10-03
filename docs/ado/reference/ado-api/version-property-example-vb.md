@@ -1,32 +1,29 @@
 ---
-title: 版本屬性範例 (VB) |Microsoft 文件
+title: Version 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686168abddee50063db7f1150120302dea76c08e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645676"
 ---
-# <a name="version-property-example-vb"></a>版本屬性範例 (VB)
-這個範例會使用[版本](../../../ado/reference/ado-api/version-property-ado.md)屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，以顯示目前的 ADO 版本。 它也會使用數個動態屬性顯示：  
+# <a name="version-property-example-vb"></a>Version 屬性範例 (VB)
+這個範例會使用[版本](../../../ado/reference/ado-api/version-property-ado.md)屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件，以顯示目前的 ADO 版本。 它也會使用數個動態屬性顯示：  
   
 -   目前的 DBMS 名稱和版本。  
   

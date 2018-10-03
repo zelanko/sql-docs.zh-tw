@@ -1,13 +1,11 @@
 ---
-title: Close 方法 (ADO MD) |Microsoft 文件
+title: Close 方法 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO MD]
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91741cba272afddfae3f27c64bcfabb4233ef997
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ca61f383198207223abf30ce25d9c922909f6526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683688"
 ---
 # <a name="close-method-ado-md"></a>Close 方法 (ADO MD)
 關閉開啟的資料格集。  
@@ -38,16 +35,16 @@ Cellset.Close
 ```  
   
 ## <a name="remarks"></a>備註  
- 使用**關閉**方法，關閉[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件就會在釋放相關聯的資料，包括任何相關資料[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)，或[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件。 關閉**資料格集**不會移除它從記憶體中; 您可以變更其屬性設定，稍後重新開啟它。 若要完全消除從記憶體物件，設定為物件變數**Nothing**。  
+ 使用**關閉 **方法以關閉[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件會釋放相關聯的資料，包括任何相關的資料[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)，或[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件。 關閉**資料格集**不會移除它從記憶體中; 您可以變更其屬性設定，並稍後再重新開啟它。 若要完全排除記憶體中的物件，設定為物件變數**Nothing**。  
   
- 您可以稍後呼叫[開啟](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法，以重新開啟**資料格集**使用相同或不同來源字串。 雖然**資料格集**物件已關閉，擷取任何屬性或呼叫參考的基礎資料的任何方法或中繼資料會產生錯誤。  
+ 您可以於稍後呼叫[開放](../../../ado/reference/ado-md-api/open-method-ado-md.md)方法來重新開啟**資料格集**使用相同或另一個來源字串。 雖然**資料格集**物件已關閉，擷取任何屬性或呼叫任何方法的參考的基礎資料或中繼資料會產生錯誤。  
   
 ## <a name="applies-to"></a>適用於  
  [Cellset 物件 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [軸物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [資料格物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Axis 物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Cell 物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [成員物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   
  [Open 方法 (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
  [位置物件 (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
