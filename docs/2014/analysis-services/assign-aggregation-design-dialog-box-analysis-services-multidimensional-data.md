@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.copyaggregationdesign.f1
 ms.assetid: 50c26cb1-c294-4f17-8b9e-435fdbd4806d
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd78027790b3e88184fe221fd1a3d913d7af8bf2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3731fbb15abe51d010ed2d20a705f5a13c2878d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160527"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>指派彙總設計對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [指派彙總設計] 對話方塊，即可將彙總設計指派給一個或多個目的地資料分割。 您可以在**物件總管**中以滑鼠右鍵按一下資料分割或彙總設計，然後選取 [指派彙總設計]，藉以顯示 [指派彙總設計] 對話方塊。  

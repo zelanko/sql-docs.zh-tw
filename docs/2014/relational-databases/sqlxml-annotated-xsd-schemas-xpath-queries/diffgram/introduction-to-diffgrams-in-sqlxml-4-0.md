@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotations [SQLXML]
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 994c77c4c42280a04263d23977955bdbae450c48
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7f94ac060cc4f76472c56c284636c09349261de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160768"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>DiffGrams 的 SQLXML 4.0 簡介
   本主題提供 DiffGram 的簡介。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168180"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>設定專用的資料重新整理或僅查詢處理 (PowerPivot for SharePoint)
   在 SharePoint 整合模式中，Analysis Services 伺服器執行個體可以設定為支援特定的處理要求類型，例如資料重新整理或僅查詢處理。 在預設情況下，這兩種類型的載入要求都會啟用。 您可以關閉其中任何一種，以建立專用的查詢引擎或資料重新整理伺服器。  

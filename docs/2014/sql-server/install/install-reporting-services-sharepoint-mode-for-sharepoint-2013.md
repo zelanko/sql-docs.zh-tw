@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ea3d8ed6c8887a79b37a07ea30487d98872f21b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec543839524c78f22758e58b391a34e3473ee9b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167788"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>安裝適用於 SharePoint 2013 的 Reporting Services SharePoint 模式
   本主題中的程序會引導您完成 SharePoint 模式之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。 本主題也可以用於更新現有安裝的個別程序，例如建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。  
@@ -270,7 +267,7 @@ ms.locfileid: "37308968"
   
 1.  下列步驟會假設您的 SharePoint 網站設定為 2013 **體驗版**。  
   
-     開啟瀏覽器，移至所要的 SharePoint 網站。 例如，http://\<伺服器名稱>/sites/bi  
+     開啟瀏覽器，移至所要的 SharePoint 網站。 例如， http://\<伺服器名稱>/sites/bi  
   
 2.  按一下 **設定**![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。  
   
@@ -403,7 +400,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的內容類型，可用來管理共用資料來源 (.rsds) 檔、報表模型 (.smdl) 檔，以及報表產生器的報表定義 (.rdl) 檔。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。 如需詳細資訊，請參閱 <<c0> [ 將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。</c0>  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>啟動報表伺服器檔案同步處理功能  
- 如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫， **[報表伺服器檔案同步處理]** 網站層級功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
+ 如果使用者經常直接上傳已發行的報表項目至 SharePoint 文件庫， **[報表伺服器檔案同步處理]** 網站層級功能會很有協助。 檔案同步處理功能會更頻繁地同步處理報表伺服器目錄與文件庫中的項目。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
   
 ##  <a name="bkmk_verify_installation"></a> 驗證安裝  
  以下是驗證 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署的建議步驟和程序。  

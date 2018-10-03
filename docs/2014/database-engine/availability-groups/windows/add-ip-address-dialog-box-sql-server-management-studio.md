@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d39c831bf024b7f827987cfb4464951b5123f51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159009"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164668"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[加入 IP 位址] 對話方塊 (SQL Server Management Studio)
   此 F1 說明主題描述 **[加入 IP 位址]** 對話方塊的選項。 可從 **[新增可用性群組接聽程式]** 對話方塊以及   或 **的** [指定複本] [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 頁面的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [接聽程式] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]索引標籤存取此對話方塊。  

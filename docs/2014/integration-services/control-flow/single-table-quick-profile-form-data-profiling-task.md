@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.quickprofile.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d805c9378ee720557091c2734d06cccf2fec8ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60fdc137fd1789ce9e2cccf2f4cd85de2e03a40d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167209"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165128"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>單一資料表快速分析表單 (資料分析工作)
   您可以使用 **[單一資料表快速分析表單]** 來快速地設定資料分析工作，以便使用預設設定分析單一資料表或檢視表。  

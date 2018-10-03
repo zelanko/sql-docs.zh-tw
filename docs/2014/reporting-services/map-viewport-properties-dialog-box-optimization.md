@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da12f40cba7da5a7c56d702c20d7ad2e7759b796
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e1fd77ed97e42eaadd76f7b9c50f74d6b5007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162738"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>地圖檢視區屬性對話方塊、最佳化
   選取 **[地圖檢視區屬性]** 對話方塊的 **[最佳化]** 協助控制在報表中檢視地圖的解析度。  

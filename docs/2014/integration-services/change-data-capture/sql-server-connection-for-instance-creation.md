@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 157dbba6efbb3d5dd346ba5674064b53bb275705
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a5cff935637ed8f95aaf05d4d369286e679f511
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164801"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>用來建立執行個體的 SQL Server 連接
   建立 Oracle CDC 執行個體時的其中一個首要步驟就是在目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上建立 CDC 資料庫。 這個 CDC 資料庫會啟用 SQL Server CDC，而這樣的啟用需要屬於 `sysadmin` 固定伺服器角色成員的登入。  

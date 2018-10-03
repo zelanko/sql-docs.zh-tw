@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Table Properties dialog box
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28084e041538412399e518856ef4d948add75def
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77660e19bed6781d73efdd36e6a752ae5c3cc1fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169138"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>追蹤資料表屬性 (事件選取範圍索引標籤)
   使用 **[追蹤資料表屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，即可檢視追蹤的事件和資料行屬性，或從追蹤中移除事件或資料行。  

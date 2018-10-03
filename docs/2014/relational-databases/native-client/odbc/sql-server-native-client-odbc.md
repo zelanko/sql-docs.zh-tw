@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, ODBC
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client, ODBC
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ae0ba38664295ed32dbf425527ccdf7a48d1313
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 570c0574357d9315f0e6b153f3eeabac79ec673b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160998"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
   ODBC 是應用程式開發介面 (API) 的標準定義，用於存取關聯式資料庫或索引循序存取方法 (ISAM) 資料庫中的資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援 ODBC 做為其中一個原生應用程式開發介面，來撰寫與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進行通訊的 C 和 C++ 應用程式。  

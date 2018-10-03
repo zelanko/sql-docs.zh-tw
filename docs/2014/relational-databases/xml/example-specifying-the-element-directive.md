@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48d4b760759d2c3976f4598a4064802bae563b4
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 6e4fa28044f133a04f581ee51bd40663eaa871e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166684"
 ---
 # <a name="example-specifying-the-element-directive"></a>範例：指定 ELEMENT 指示詞
   這會擷取員工資訊，並產生元素中心的 XML，如下所示：  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Command Element
@@ -24,16 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - Command element
 ms.assetid: 9abc14df-7cbe-46bc-ba0f-f0691c19afad
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9b461e0ec565776ead270902cf6c01ebe7409d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd5362d84991a7880798763c9cfec760151ccf34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163488"
 ---
 # <a name="command-element-xmla"></a>Command 元素 (XMLA)
   包含要執行命令[Execute](../xml-elements-methods-execute.md)方法。  
@@ -103,8 +100,8 @@ ms.locfileid: "37332238"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

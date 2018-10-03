@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7eca258cc315a839f9f46185bcded8d8fc99aae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: add630c98373a9b49cbb2469ab3eccfbe41b4f05
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161076"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
   此範例會示範如何設定 BLOB 資料、建立資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值。 IA64 不支援此範例。  
   
  若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子，然後呼叫 `IRowsetChange::SetData` 或 `IRowsetChange::InsertRow` 方法。  
   
- 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -40,7 +37,7 @@ ms.locfileid: "37424337"
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 設定**wType**為 DBTYPE_IUNKNOWN，DBBINDING 結構中的項目並**pObject**以指向您所建立的 DBOBJECT 結構的項目。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 **wType** 項目設定為 DBTYPE_IUNKNOWN，並將 **pObject** 項目設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   
@@ -51,7 +48,7 @@ ms.locfileid: "37424337"
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
 ### <a name="code"></a>程式碼  
   

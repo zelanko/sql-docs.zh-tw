@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e661e6a993639d3eac86bd5fb45f607ba8d346f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3168cc6e56e7563dae29794219c150face86f584
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161677"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>屬性辨識索引標籤 (採礦模型檢視器)
   使用 [屬性辨識] 索引標籤，即可比較輸入屬性的狀態以及查看它們與結果屬性如何相關。 先列出造成兩個選取的可預測屬性狀態之間最大差異的屬性值。  

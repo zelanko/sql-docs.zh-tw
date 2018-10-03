@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ebbdf3a5f3f4402cca8da92295d5f9632d1e1e8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b554ec2044e95304c995a0dde7d67c444fa2dc05
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166118"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>將 3D 效果加入至圖表 (報表產生器及 SSRS)
   三維 (3D) 效果可用來針對圖表提供深度及增加視覺效果。 例如，若要強調分裂式圓形圖的特殊扇區，則可以旋轉及變更圖表的檢視方塊，讓使用者能首先注意該扇區。 將 3D 效果套用至圖表時，所有的漸層色彩和影線樣式都會停用。  

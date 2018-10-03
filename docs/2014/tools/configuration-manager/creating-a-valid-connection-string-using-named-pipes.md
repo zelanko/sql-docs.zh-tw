@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine], named pipes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-caps.latest.revision: 30
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b5cd4cc03a1b4254e26750b45704d67af62cef04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95c094282aa185f79f9399a26e3b6fe8049cc965
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167578"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>使用具名管道建立有效的連接字串
   除非使用者變更時的預設執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接聽具名的管道通訊協定，它使用`\\.\pipe\sql\query`做為管道名稱。 其中句點表示該電腦為本機電腦， `pipe` 表示連接是具名管道，而 `sql\query` 則是管道的名稱。 若要連接到預設管道，別名必須用 `\\<computer_name>\pipe\sql\query` 做為管道名稱。 若將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為接聽其他管道，則管道名稱必須使用該管道。 比方說，如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用`\\.\pipe\unit\app`管道，別名必須使用`\\<computer_name>\pipe\unit\app`做為管道名稱。  

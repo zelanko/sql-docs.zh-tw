@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9abf4ad5aef29b6064b53af80553b02ee01c2fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: efb68eefbaff0f984c38393c9bf863f0654716fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162568"
 ---
 # <a name="upload-files-to-a-folder"></a>上傳檔案到資料夾
   您可以從檔案系統上傳檔案，並將其當成 Managed 項目儲存在報表伺服器資料庫中。 上傳檔案會有何狀況取決於檔案類型。  
@@ -56,7 +53,7 @@ ms.locfileid: "37266144"
   
  若要上傳檔案，請使用報表管理員。 您是否能夠上傳檔案到報表伺服器，是依您角色指派中的工作而定。 如果您使用預設安全性，本機管理員就可以將項目加入報表伺服器。 如果已啟用我的報表，則只要是有 [我的報表] 資料夾的使用者，都有權將項目上傳至該資料夾。 如果您使用自訂角色指派，角色指派就必須包括支援資料夾管理的工作。  
   
-|以進行此動作|包括下列工作|  
+|動作|包括下列工作|  
 |----------------|-------------------------|  
 |將 .rdl 檔案上傳至資料夾|管理報表|  
 |將任何檔案當成二進位物件上傳|管理資源|  

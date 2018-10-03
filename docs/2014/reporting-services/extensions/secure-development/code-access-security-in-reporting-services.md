@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 94cae16b2cfd437ff5e2e1d4878ffb027745e3ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03c0dde2c3df8d8403897b660ed81ba7dbe75f43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163728"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的程式碼存取安全性
   程式碼存取安全性是以下列核心概念為主：辨識項、程式碼群組與具名使用權限集合。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，報表管理員、報表設計師和報表伺服器元件都各自具有一個原則檔，其中針對自訂組件以及資料、傳遞、轉譯和安全性延伸模組設定了程式碼存取安全性。 下列各節將提供程式碼存取安全性的概觀。 如需本節中涵蓋之主題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件中的＜安全性原則模型＞。  

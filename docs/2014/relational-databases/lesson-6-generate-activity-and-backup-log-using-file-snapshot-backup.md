@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44bc025ce3eb536e10f4c77410ea487e59f006ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b49907bb7cb9c2d33d7672570f161cbd98432d45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170072"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>第 7 課：將資料檔案移至 Windows Azure 儲存體
   在這一課，您將學習如何將資料檔案移至 Windows Azure 儲存體 (而不是您的 SQL Server 執行個體)。 進行這一課並不需要完成第 4、5 和 6 課。  

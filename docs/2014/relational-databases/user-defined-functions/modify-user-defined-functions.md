@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad0d2894a22efd5691109f568d3865cc424878fe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ee69a982dd16d165be9a808cb923b342157b4cf0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163548"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的使用者定義函數。 如下述修改使用者定義函數不會變更函數的權限，也不會影響任何相依函數、預存程序或觸發程序。  

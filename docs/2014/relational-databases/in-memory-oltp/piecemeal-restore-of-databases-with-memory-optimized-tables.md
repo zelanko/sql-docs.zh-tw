@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e5bb2800d49e047a67634076a44d99f416dc451
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170098"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>分次還原具有記憶體最佳化資料表的資料庫
   具有記憶體最佳化資料表的資料庫支援分次還原，但受到下列一項限制。 如需分次備份和還原的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) 和[分次還原 &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md)。  

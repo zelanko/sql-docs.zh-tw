@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/11/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fe6625cf512586c5f5e42bb4d5d4f601db41a70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8effab0536063466efe25161949a0efeebd0038b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265684"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162540"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 包含 Analysis Services PowerShell (SQLAS) 提供者和指令程式，讓您可以使用 Windows PowerShell 來導覽、管理和查詢 Analysis Services 物件。  
@@ -207,7 +204,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  HTTP 連線很實用，如果您使用本主題中的指示的 HTTP 存取您伺服器設定：[設定 Internet Information Services 上的 Analysis Services 的 HTTP 存取&#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假設伺服器 URL 的http://localhost/olap/msmdpump.dll，連接可能會如下所示：  
+ 假設伺服器 URL 的 http://localhost/olap/msmdpump.dll，連接可能會如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

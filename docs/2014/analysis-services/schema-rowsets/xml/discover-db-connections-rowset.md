@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_DB_CONNECTIONS rowset
 ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f22c330fcc1deef1e86f4442ed8524235a3ba5c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51eab7a38da893f0249a64299c08b9a409a4b9a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163988"
 ---
 # <a name="discoverdbconnections-rowset"></a>DISCOVER_DB_CONNECTIONS 資料列集
   提供有關目前從伺服器到資料庫之間已開啟之連接的資源使用量與活動資訊。  

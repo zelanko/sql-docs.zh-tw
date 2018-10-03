@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationDesignAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d723011d0342923e4020ab8655f45abb9a764396
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c20be714c6a302f7ba913cacc67b86f70c5379f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163300"
 ---
 # <a name="aggregationdesignattribute-data-type-assl"></a>AggregationDesignAttribute 資料類型 (ASSL)
   定義代表屬性之間的關聯的基本資料類型和[AggregationDesignDimension](dimension-data-type-assl.md)項目。  
@@ -49,14 +46,14 @@ ms.locfileid: "37188915"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[AttributeID](../properties/id-element-assl.md)， [EstimatedCount](../properties/estimatedcount-element-assl.md)|  
 |衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)的集合[AggregationDesignDimension](dimension-data-type-assl.md))|  
   

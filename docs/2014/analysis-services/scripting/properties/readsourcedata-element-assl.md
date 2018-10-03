@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReadSourceData Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ReadSourceData element
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38e24d324a6f29b55cfb8bf0b55289e2139bfb85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c341162a62eb74dc0b07863959e0e5318daf0a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166510"
 ---
 # <a name="readsourcedata-element-assl"></a>ReadSourceData 元素 (ASSL)
   決定如何唯一名稱的內所包含的階層產生[CubePermission](../objects/cubepermission-element-assl.md)。  
@@ -57,7 +54,7 @@ ms.locfileid: "37194188"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CubePermission](../objects/cubepermission-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting values
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - adding rows
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14e5ea17413d0479aa39cbe587264110c36069bc
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3e1f32b1a63c8deb25a9395b8e018b3b051e5a69
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160494"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>建立插入值查詢 (Visual Database Tools)
   您可使用 [插入值] 查詢在目前的資料表中建立新資料列。 當建立 [插入值] 查詢時，您指定：  

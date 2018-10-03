@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.performancecounterlimit.f1
 helpviewer_keywords:
 - Performance Counters List dialog box
 ms.assetid: d10140ef-36c4-449c-b365-1cff1b2524e4
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d2265147cf660430e1995030354013a518e76a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74ac3839567366c429c64e0139f8e86793aa942a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165218"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server Profiler - 效能計數器限制
   使用 [效能計數器限制] 對話方塊，即可在與 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 追蹤建立相互關聯時，限制系統監視器效能記錄檔的資訊。 您可以使用此對話方塊，來選取應該顯示及用於建立相互關聯的計數器。  

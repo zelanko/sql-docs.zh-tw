@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 651afe94debc9e96ff8a2e0df10515d66da517d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 571c6251b2af502d0032b95ac9bb4dc4227fcb15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165138"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能及工作 (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基礎內容是依報表和報表功能、報表伺服器功能以及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 產品功能進行組織。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - combining search conditions
 - AND, Criteria pane
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9dc2185b55431782d5fff5a496b9af50fbecbcff
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9da1317b17f7808f95596f98c6d7a18bf9558fe3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169938"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>在 AND 具有優先權時結合條件 (Visual Database Tools)
   若要使用 AND 結合條件，請將資料行加入至查詢兩次，每一個條件一次。 若要使用 OR 結合條件，請將第一個條件放入 [篩選條件] 資料行，其他條件則放入 [或...] 資料行。  

@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169708"
 ---
 # <a name="neural-network-mining-model-viewer"></a>類神經網路 (採礦模型檢視器)
   使用 **[類神經網路]** 檢視器，即可探索以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 類神經網路演算法或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 羅吉斯迴歸演算法為基礎的採礦模型。  
   
- **如需詳細資訊，請參閱 **[Microsoft 類神經網路演算法](data-mining/microsoft-neural-network-algorithm.md)、[Microsoft 羅吉斯迴歸演算法](data-mining/microsoft-logistic-regression-algorithm.md)、[使用 Microsoft 類神經網路檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **如需詳細資訊，請參閱** [Microsoft 類神經網路演算法](data-mining/microsoft-neural-network-algorithm.md)、[Microsoft 羅吉斯迴歸演算法](data-mining/microsoft-logistic-regression-algorithm.md)、[使用 Microsoft 類神經網路檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -44,7 +41,7 @@ ms.locfileid: "37297408"
 |值|描述|  
 |-----------|-----------------|  
 |**Attribute**|從清單選擇輸入屬性。 如果您將保留為預設值，選取**\<所有 >**，圖表會顯示一份依其對可預測屬性的影響進行排名的所有輸入屬性。|  
-|**ReplTest1**|選擇輸入屬性的值。|  
+|**值**|選擇輸入屬性的值。|  
   
  **輸出**  
  使用這些控制項，選擇要在橫條圖中分析和比較的可預測屬性和值。 如果您未變更選取項目，則橫條圖會比較最上面的兩個結果狀態。  
@@ -61,7 +58,7 @@ ms.locfileid: "37297408"
 |值|描述|  
 |-----------|-----------------|  
 |**Attribute**|顯示您在 **[屬性]** 中所選取輸入屬性的名稱。|  
-|**ReplTest1**|顯示所選取輸入屬性的值。|  
+|**值**|顯示所選取輸入屬性的值。|  
 |**喜好\<值 1 >**|顯示長條，該圖表示此特定屬性/值組合對 [值 1] 中選擇的目標結果有多大影響。|  
 |**喜好\<值 2 >**|顯示長條，該圖表示此特定屬性/值組合對 [值 2] 中選擇的目標結果有多大影響。|  
   

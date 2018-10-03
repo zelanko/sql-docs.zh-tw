@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - members [Analysis Services], groups
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 366c93b8110f8e9f0a9ef5bb418638c841585d5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251450"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164658"
 ---
 # <a name="group-attribute-members-discretization"></a>群組屬性成員 (分隔)
   成員群組是系統產生之連續維度成員的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以透過稱為分隔的處理序，將屬性的成員分組成許多成員群組。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  

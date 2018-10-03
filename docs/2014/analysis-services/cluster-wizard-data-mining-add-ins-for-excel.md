@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [data mining]
 ms.assetid: 85b25625-a7ab-4960-9f9c-df22e8ecae37
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b56eb6b8f264f4048294d02dc7f629ba64ed6201
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7803b5a5a2fccd3381b827eb15a19e036ffa017e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159619"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164608"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>叢集精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的叢集精靈](media/dmc-cluster.gif "資料採礦功能區中的叢集精靈")  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e209d9047dce2ec1452a36d702abc2da4afeedd1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 023a38a1d3b5c09fc7e1447ecd026d133abca1db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166494"
 ---
 # <a name="setting-tool-options-and-layout"></a>設定工具選項和配置
   您可以設定一些選項來設定 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 在啟動時所顯示的項目、它使用的字型，以及其他工具功能，以便對您使用它的方式，提供最好的支援。 這一頁的練習可讓您熟悉您可以設定的選項及如何設定它們。  

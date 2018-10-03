@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EditionID property
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e67f22a77c7ba348803624fca802ab92120f09c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 456396f5f41947fa9df5d8d1bfcd674610e7316b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268064"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170928"
 ---
 # <a name="editionid-property-wmi-msreportserverinstance"></a>EditionID 屬性 (WMI MSReportServer_Instance)
   傳回報表伺服器的版本。 唯讀。  

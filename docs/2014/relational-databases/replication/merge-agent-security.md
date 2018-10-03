@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.MA.f1
 helpviewer_keywords:
 - Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8593023d1ff8ed332bbd3480a56f8c15b366e23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26bfcd55d32c0cc124e0d2d6220ca04a9834aafb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166318"
 ---
 # <a name="merge-agent-security"></a>合併代理程式安全性
   **[合併代理程式安全性]** 對話方塊可讓您指定執行合併代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 合併代理程式會在發送訂閱的散發者端和提取訂閱的訂閱者端執行。 Windows 帳戶也稱為 *處理帳戶*，因為代理程式處理是在這個帳戶下執行。 對話方塊中其他可用的選項會視您存取的方式而定：  

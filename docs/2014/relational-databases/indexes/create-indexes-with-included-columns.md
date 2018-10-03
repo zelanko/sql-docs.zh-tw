@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b36575e6dbd197db0617ba258e93ae337027db2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168808"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中加入內含 (或非索引鍵) 資料行，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  

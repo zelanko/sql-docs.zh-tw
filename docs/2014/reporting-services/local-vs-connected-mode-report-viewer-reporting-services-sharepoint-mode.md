@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbae778b06c90f1e18cb5e45119a09e25d634738
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165308"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>比較報表檢視器中的本機模式與連接模式報表 (SharePoint 模式的 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表可以設定為執行中*本機模式*或是*連線的模式*，以運用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器。 而是，當資料延伸模組支援本機模式報表時，您可以使用報表檢視器直接從 SharePoint 轉譯報表。 這種方法稱為 *「本機模式」*(Local Mode)。 在舊版[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，在 SharePoint 伺服器陣列所需連接至[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器設定為 SharePoint 模式讓報表檢視器控制項可以呈現報表。 此方法稱為 *「遠端模式」* (Remote Mode) 或 *「連接模式」*(Connected Mode)。  

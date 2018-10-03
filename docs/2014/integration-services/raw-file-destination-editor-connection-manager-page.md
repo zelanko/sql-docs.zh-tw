@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cade93703374705e88abf136233a966e20aadfe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dca00ca68a700fa6e0283ed46d924b5ad4855f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162658"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>原始檔案目的地編輯器 (連接管理員頁面)
   使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  

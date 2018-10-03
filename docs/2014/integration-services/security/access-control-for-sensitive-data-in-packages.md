@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39c6316a6e256cf7dab161d57a032b777dfac09a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163628"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>封裝中的敏感性資料存取控制
   若要保護 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料，您可以設定保護等級，只保護封裝中的機密資料或全部資料。 此外，您可以使用密碼或使用者金鑰將資料加密，或是藉由資料庫來加密資料。 也請注意，用於封裝的保護等級不一定是靜態的，而是隨著封裝生命週期有所改變。 通常，您會在開發階段設定一個保護等級，然後在部署封裝時設定另一個保護等級。  

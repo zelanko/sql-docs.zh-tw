@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dea720120f13f1546af8a1ab9bdd572badabb350
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fe0efd10d2c9c9e972aaf32214d3e799de12d92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160723"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>圖表上的多個數列 (報表產生器及 SSRS)
   當圖表上出現多個數列時，您必須決定比較數列的最好方式。 您可以使用堆疊圖表顯示每個數列的相關比例。 如果您只要比較共用共同類別目錄 (x) 軸的兩個數列，請使用副座標軸。 顯示兩個相關資料數列 (例如，價格和數量，或收入和稅額) 時，這相當實用。 如果圖表變成無法讀取，請考慮使用多個圖表區域，在每個數列之間建立更多視覺上的分隔。  

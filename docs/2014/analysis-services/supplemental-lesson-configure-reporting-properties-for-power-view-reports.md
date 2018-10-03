@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee7bcbbb5294047c2499cabd4c094e15563883d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169228"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>設定 Power View 報表的報表屬性
   在此補充課程中，我們將會針對 Adventure Works Internet Sales Model 專案設定報表屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。  

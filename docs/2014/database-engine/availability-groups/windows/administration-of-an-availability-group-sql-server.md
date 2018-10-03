@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], managing
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1865b395566258684d40305b333f8baecd0c9ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b19f0a7e8bbc3724ddea364055c8023f327faa6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170158"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>可用性群組的管理 (SQL Server)
   在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理現有的 AlwaysOn 可用性群組包括下列一個或多個工作：  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165748"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
   在 SharePoint 2010 伺服陣列中執行的 PowerPivot for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 PowerPivot 相關的內容都儲存在 SharePoint 內容資料庫中，而且 PowerPivot 相關的所有作業都在伺服器陣列中的 PowerPivot 共用服務上執行，SharePoint 安全性基礎結構會延伸到 PowerPivot 內容和作業。 使用者若要求包含 PowerPivot 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  

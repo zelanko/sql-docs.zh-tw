@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a33777cd395bf461f85a93ba6cb625acc1436866
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7f84157b46b7e6490da1c524b0be314dc69325b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167740"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>參數集合參考 (報表產生器及 SSRS)
   報表參數是您可以從運算式參考的其中一個內建集合。 您可以在運算式中包含參數，以根據使用者所做的選擇來自訂報表資料及外觀。 可以針對提供 (*Fx*) 或 \<**運算式**> 選項的任何報表項目屬性或文字方塊屬性使用運算式。 您也可以用其他方法來使用運算式控制報表的內容及外觀。 如需詳細資訊，請參閱[運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
