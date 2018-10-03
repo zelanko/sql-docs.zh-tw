@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.f1
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95e8ba4b11509b73dfc1b529e89b612549de7308
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099308"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>一般 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
   在 **中，使用** [還原資料庫] **對話方塊的** [一般] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 頁面，即可指定在還原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫時使用的備份檔案和一般設定。  

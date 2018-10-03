@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Client
 - wizards
 - getting started
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78a71f5fed5bfcc46742f8554ff69329c3a30b0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063553"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>適用於 Excel 的資料採礦用戶端 (SQL Server 資料採礦增益集)
   適用於 Excel 的資料採礦用戶端是可讓您執行一般資料採礦工作 (從資料清理到模型建立與預測查詢) 的一組工具。 您可以使用 Excel 資料表或範圍中的資料，或是存取外部資料來源。  

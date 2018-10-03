@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], IntelliSense
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbc77c9aa9c1160f86193f1eae204d46ad5faa15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cafcf49f5552f9de1e94cf6978924e88246ec075
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155148"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>設定 IntelliSense (SQL Server Management Studio)
   依預設，大部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項都是開啟的。 不過，您可以關閉 IntelliSense 選項，再利用功能表命令或按鍵組合來叫用它。  

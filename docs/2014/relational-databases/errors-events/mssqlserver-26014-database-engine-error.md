@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 26014 (Database Engine error)
 ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b018c28ec8f718d74d00aec1cdb6fa74b9140118
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: edebfb36a1693f2a7d6a94d7c006d80e2bb27683
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151568"
 ---
 # <a name="mssqlserver26014"></a>MSSQLSERVER_26014
     

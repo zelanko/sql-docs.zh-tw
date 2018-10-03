@@ -1,13 +1,11 @@
 ---
-title: ODBC 函式和 Visual FoxPro ODBC 驅動程式 |Microsoft 文件
+title: ODBC 函式和 Visual FoxPro ODBC Driver |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
@@ -20,30 +18,29 @@ helpviewer_keywords:
 - level 2 API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbd0f2c54fb84f21d0a2448dcab07f22a47ae32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782676"
 ---
-# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函式和 Visual FoxPro ODBC 驅動程式
-此章節的主題提供的 ODBC API 函式的簡短摘要和任何 Visual FoxPro – 特定詳細資料。  
+# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函式和 Visual FoxPro ODBC Driver
+在本節中的主題會提供 ODBC API 函式的簡短摘要，以及任何 Visual FoxPro 特定詳細資料。  
   
 > [!NOTE]  
->  一般 ODBC 函數的詳細資訊，請參閱[ODBC 應用程式開發介面參考](../../odbc/reference/syntax/odbc-api-reference.md)《 ODBC 程式設計人員指南 》 中。  
+>  一般 ODBC 函數的詳細資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)《 ODBC 程式設計人員指南 》 中。  
   
  ODBC API 函式已分成三個主要的類別： 核心層級 API 函式、 層級 1 API 函式和層級 2 API 函式。  
   
 > [!NOTE]  
->  有幾個函式的行為而有所不同是否定義資料來源做為連接到的目錄[釋放資料表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 檔案） 或 Visual FoxPro[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbc 檔案）。 某些作業僅支援資料庫連接。  
+>  有幾個函式有不同的行為取決於是否為目錄的連接定義資料來源[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 檔案） 或 Visual FoxPro[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbc 檔案）。 某些作業僅支援資料庫連接。  
   
-## <a name="core-level-api-support"></a>核心層級的應用程式開發介面支援  
- 下表所列出的 ODBC 核心層級 API 函式。 Visual FoxPro ODBC 驅動程式支援所有這些函式。  
+## <a name="core-level-api-support"></a>核心層級的 API 支援  
+ 下表詳列 ODBC 核心層級 API 函式。 Visual FoxPro ODBC 驅動程式支援所有這些函式。  
   
 |||  
 |-|-|  
@@ -59,8 +56,8 @@ ms.locfileid: "32905073"
 |[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
 |[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-1-api-support"></a>層級 1 應用程式開發介面支援  
- 下表所列出的 ODBC 層級 1 API 函式。 這些函式的完整或部分支援所有 Visual FoxPro ODBC 驅動程式。  
+## <a name="level-1-api-support"></a>層級 1 API 支援  
+ 下表詳列 ODBC 層級 1 API 函式。 這些函式的完整或部分支援所有 Visual FoxPro ODBC Driver。  
   
 |||  
 |-|-|  
@@ -73,8 +70,8 @@ ms.locfileid: "32905073"
 |[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)|[SQLStatistics](../../odbc/microsoft/sqlstatistics-visual-foxpro-odbc-driver.md)|  
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-2-api-support"></a>層級 2 應用程式開發介面支援  
- 下列 ODBC 層級 2 API 函數完全或部分支援：  
+## <a name="level-2-api-support"></a>層級 2 API 支援  
+ 下列 ODBC 層級 2 API 函式是完整或部分支援：  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   
@@ -94,7 +91,7 @@ ms.locfileid: "32905073"
   
 -   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) （部分支援）  
   
- 不支援下列層級 2 應用程式開發介面函式：  
+ 不支援下列層級 2 API 函式：  
   
 -   SQLBrowseConnect  
   

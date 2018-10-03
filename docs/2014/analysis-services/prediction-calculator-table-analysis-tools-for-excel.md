@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model, regression
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - logistic regression
 - prediction calculator
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fde8a692652cbe166eaf2075a3cd0da5e17a7d6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060018"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>預測計算器 (適用於 Excel 的資料表分析工具)
   ![預測計算器工具](media/tat-predcal.gif "預測計算器 工具")  

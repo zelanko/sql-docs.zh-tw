@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.Distributor.Publications.f1
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 735ac38472991b3898934a1e6ec496a403a0ee23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60255543065843b4d1ebf10ff0c87532a2e9d0cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140296"
 ---
 # <a name="distributor-information-publications"></a>散發者資訊，發行集
   **[發行集]** 索引標籤可以提供在左窗格中所選取「散發者」之所有發行集的摘要資訊。  

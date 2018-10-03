@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DISCOVER_PROPERTIES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DISCOVER_PROPERTIES rowset
 ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc02dd29ee02ad4d1730a6af72c5df3c3fee1c55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: facf15dea30e4628b52584141c67528fa73d2adb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095538"
 ---
 # <a name="discoverproperties-rowset"></a>DISCOVER_PROPERTIES 資料列集
   針對指定的資料來源，傳回 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所支援標準和提供者特定屬性的相關資訊及值清單。 未支援的屬性不會列在傳回的結果集中。  

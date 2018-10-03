@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server replication], troubleshooting
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - errors [SQL Server replication]
 - errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 323894920d2fa7592ad410f37fc959981e9174da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee17325a02e6b146ef372b4655ae8c437b76cdff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159748"
 ---
 # <a name="errors-and-events-reference-replication"></a>錯誤和事件參考 (複寫)
   文件集的這一部分包含導致與複寫相關的許多錯誤之原因和解決方案的資訊。  

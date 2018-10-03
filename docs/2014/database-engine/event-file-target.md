@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event file target
 - file target [SQL Server extended events]
 - targets [SQL Server extended events], file target
 ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d60253eafa67b7d7922da6890a8dbb6fbe3536a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092850"
 ---
 # <a name="event-file-target"></a>Event File Target
   事件檔案目標是將完整緩衝區寫入磁碟的目標。  

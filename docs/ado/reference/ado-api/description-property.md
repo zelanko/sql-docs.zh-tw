@@ -1,13 +1,11 @@
 ---
-title: Description 屬性 |Microsoft 文件
+title: Description 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,34 +15,33 @@ f1_keywords:
 helpviewer_keywords:
 - Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2aaa6bb9f548c4b5719e597d7e20f341b029d0ca
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b9a97e1e63e3896cd451c68d6198baa991945e7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704515"
 ---
 # <a name="description-property"></a>Description 屬性
 描述[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**字串**值，包含錯誤的描述。  
+ 傳回**字串**值，其中包含錯誤的描述。  
   
 ## <a name="remarks"></a>備註  
- 使用**描述**屬性，以取得錯誤的簡短描述。 顯示這個屬性，以提醒使用者，您無法或不想要處理錯誤。 此字串會來自 ADO 或提供者。  
+ 使用**描述**屬性，以取得錯誤的簡短描述。 顯示這個屬性，以通知使用者有錯誤，您無法或不想要處理。 字串會來自 ADO 或提供者而定。  
   
- 提供者會負責將傳遞至 ADO 的特定錯誤文字。 ADO 將[錯誤](../../../ado/reference/ado-api/error-object.md)物件**錯誤**集合每個提供者的錯誤或警告它接收。 列舉**錯誤**追蹤提供者傳遞錯誤的集合。  
+ 提供者會負責 ado 傳遞特定的錯誤文字。 將 ADO[錯誤](../../../ado/reference/ado-api/error-object.md)物件**錯誤**集合每個提供者錯誤或警告它接收。 列舉**錯誤**追蹤提供者傳遞錯誤的集合。  
   
 ## <a name="applies-to"></a>適用於  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [HelpContext，HelpFile 屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [HelpContext、 HelpFile 屬性](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Number 屬性 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source 屬性 (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)

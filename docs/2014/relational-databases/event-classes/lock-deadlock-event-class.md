@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27fe1e6f8ba6663cc6401fbff082edfe6b702a3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76ad8d1326a4f574e90335148028f65c846e5a81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120813"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 事件類別
   當試圖取得鎖定，而這項嘗試是死結的一部份且已選定為死結的犧牲者，使得這項嘗試遭到取消，則會產生 Lock:Deadlock 事件類別。  

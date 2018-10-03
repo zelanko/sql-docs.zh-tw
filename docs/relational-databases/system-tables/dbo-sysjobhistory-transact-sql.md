@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobhistory (TRANSACT-SQL) |Microsoft 文件
+title: dbo.sysjobhistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobhistory_TSQL
@@ -20,25 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab9fbfb6a574f8f6c91ee15789c67cac204d5f3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658806"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行排程作業的相關資訊。 這份資料表儲存在**msdb**資料庫。  
   
-> **注意：** 只有在 jobstep 完成之後，更新資料。  
+> **注意：** 在 jobstep 完成後，只更新資料。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|資料列的唯一識別碼。|  
 |**job_id**|**uniqueidentifier**|作業識別碼。|  
@@ -50,7 +46,7 @@ ms.locfileid: "34334269"
 |**run_status**|**int**|作業執行的狀態：<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **4** = 進行中|  
 |**run_date**|**int**|作業或步驟開始執行的日期。 如果是「進行中」記錄，這就是開始寫入記錄的日期/時間。|  
 |**run_time**|**int**|作業或步驟開始的時間。|  
-|**run_duration**|**int**|中的作業或步驟中的執行的經過時間**HHMMSS**格式。|  
+|**run_duration**|**int**|在執行作業或步驟中的已耗用時間**HHMMSS**格式。|  
 |**operator_id_emailed**|**int**|作業完成時所通知之操作員的識別碼。|  
 |**operator_id_netsent**|**int**|當作業完成時，訊息所通知之操作員的識別碼。|  
 |**operator_id_paged**|**int**|當作業完成時，呼叫器所通知之操作員的識別碼。|  
@@ -58,7 +54,7 @@ ms.locfileid: "34334269"
 |**伺服器**|**sysname**|執行作業的伺服器名稱。|  
   
   ## <a name="example"></a>範例
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢會將轉換**run_time**和**run_duration**成更多的使用者易記格式的資料行。  執行中的指令碼[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢會將轉換**run_time**並**run_duration**成更多的使用者易記格式的資料行。  執行中的指令碼[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
  
  ```sql
  SET NOCOUNT ON;

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 - file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
-caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96ceb0dad6a52e4e1f54780e9b0a10084fab5d8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193331"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097498"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
   本主題僅與包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫有關。  

@@ -1,13 +1,11 @@
 ---
-title: Paradox 資料型別 |Microsoft 文件
+title: Paradox 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43c117a9026c1d00b879ab88892cb2b234894646
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628506"
 ---
 # <a name="paradox-data-types"></a>Paradox 資料類型
-ODBC Paradox 驅動程式會將 Paradox 資料類型對應至 ODBC SQL 資料類型。 下表列出所有 Paradox 資料型別，並顯示 ODBC SQL 資料類型對應至。  
+ODBC Paradox 驅動程式會將 Paradox 資料類型對應至 ODBC SQL 資料類型。 下表列出所有 Paradox 資料類型，並顯示 ODBC SQL 資料類型，它們會對應至。  
   
 |Paradox 資料類型|ODBC 資料類型|  
 |-----------------------|--------------------|  
@@ -38,30 +35,30 @@ ODBC Paradox 驅動程式會將 Paradox 資料類型對應至 ODBC SQL 資料類
 |BCD [1]|SQL_DOUBLE|  
 |位元組 [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
-|影像 [2]|SQL_LONGVARBINARY|  
+|[2] 的影像|SQL_LONGVARBINARY|  
 |邏輯 [1]|SQL_BIT|  
 |長時間 [1]|SQL_INTEGER|  
 |附註 [2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
-|短|SQL_SMALLINT|  
+|簡短|SQL_SMALLINT|  
 |時間 [1]|SQL_TIMESTAMP|  
 |時間戳記 [1]|SQL_TIMESTAMP|  
   
- 僅針對 Paradox 版本 5 的有效 [1]。*x*。  
+ [1] 只會針對 Paradox 第 5 版的有效。*x*。  
   
- [2] 適只用於 Paradox 4 版。*x*和 5。*x*。  
+ [2] 的適僅用於 Paradox 版本 4。*x*和 5。*x*。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**傳回 ODBC SQL 資料類型。 所有的轉換中的 < 附錄 D *ODBC 程式設計人員參考*支援本主題稍早所列的 ODBC SQL 資料類型。  
+>  **SQLGetTypeInfo**傳回 ODBC SQL 資料類型。 附錄 D 中的所有轉換*ODBC 程式設計人員參考*稍早在本主題中列出的 ODBC SQL 資料類型支援。  
   
  下表顯示 Paradox 資料類型的限制。  
   
-|資料類型|Description|  
+|資料類型|描述|  
 |---------------|-----------------|  
 |英數字元|建立的英數字元的資料行的零或未指定的長度實際上會傳回 255 個位元組的資料行。|  
 |BYTES|如果您將 NULL 插入 Paradox5 驅動程式的二進位資料行時，會將它變更為 0。|  
-|LONG|Long 資料類型的 Paradox 5 Paradox 驅動程式支援的最大負數值。*x*不是-2 ^31 (-2147483648)，因為很長的對應至 ODBC 資料之後輸入 SQL_INTEGER。 支援長時間的最大負數的值為實際上-2 ^31 + 1 (-2147483647)。|  
-|TIMESTAMP|當值插入 TIMESTAMP 資料行中的 Paradox 驅動程式，則接著就會擷取從資料行時，擷取的值可能不同於插入的值最多可達 1 的第二個因為捨入。|  
+|LONG|Paradox 5 中的 Long 資料類型的 Paradox 驅動程式所支援的最大負數值。*x*不是-2 ^31 (-2147483648)，因為它應該是因為長時間對應至 ODBC 資料類型 SQL_INTEGER。 支援長時間的最大負數的值是實際上-2 ^31 + 1 (-2147483647)。|  
+|timestamp|當值是 Paradox 驅動程式插入時間戳記資料行，再接著就會擷取從資料行時，擷取的值可能不同於插入的值最高達 1 的第二個因為捨入。|  
   
- 資料類型的多個限制可以在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。
+ 資料型別上的更多限制可在[資料型別限制](../../odbc/microsoft/data-type-limitations.md)。

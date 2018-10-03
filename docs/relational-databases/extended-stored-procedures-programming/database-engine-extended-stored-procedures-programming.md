@@ -1,14 +1,11 @@
 ---
-title: 擴充預存程序程式設計 |Microsoft 文件
+title: 擴充預存程序程式設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - gateway applications [SQL Server]
@@ -16,18 +13,17 @@ helpviewer_keywords:
 - Open Data Services [SQL Server]
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c80abd97dc5a371f6df37c3df1a474998b080493
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935433"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688566"
 ---
-# <a name="database-engine-extended-stored-procedures---programming"></a>資料庫引擎擴充預存程序的程式設計
+# <a name="database-engine-extended-stored-procedures---programming"></a>資料庫引擎擴充預存程序 - 程式設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -44,7 +40,7 @@ ms.locfileid: "32935433"
  在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，擴充預存程序 (XP) 提供資料庫應用程式開發人員用來撰寫伺服器端邏輯的唯一機制，這些邏輯在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中不是難以表示，就是無法撰寫。 CLR 整合會提供更健全的替代方法來撰寫此類預存程序。 此外，使用 CLR 整合時，過去以預存程序形式所撰寫的邏輯常可更精準地表示為資料表值函式，如此就可以用 SELECT 陳述式 (將其內嵌於 FROM 子句) 來查詢函數建立的結果。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Language Runtime &#40;CLR&#41;整合概觀](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
+ [通用語言執行平台&#40;CLR&#41;整合概觀](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
  [CLR 資料表值函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   
   

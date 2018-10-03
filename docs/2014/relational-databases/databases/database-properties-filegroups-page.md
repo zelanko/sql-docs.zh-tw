@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f879da34541b11cf511c2178c9a9ab8223af549
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67e1de3aaa877b666d43f39faa92f3cfe89bd4c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143828"
 ---
 # <a name="database-properties-filegroups-page"></a>資料庫屬性 (檔案群組頁面)
   使用此頁面來檢視檔案群組或將新的檔案群組加入選取的資料庫中。 檔案群組類型分成「資料列」檔案群組、FILESTREAM 資料和記憶體最佳化檔案群組。  

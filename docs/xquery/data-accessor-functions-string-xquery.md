@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - string function
 - fn:string function
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5b98660cb803c2cb3e17ee8be1d4b619de394c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836446"
 ---
-# <a name="data-accessor-functions---string-xquery"></a>資料存取子函式-string (XQuery)
+# <a name="data-accessor-functions---string-xquery"></a>資料存取子函式 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回的值 *$arg*表示為字串。  

@@ -1,14 +1,11 @@
 ---
-title: sp_fulltext_semantic_register_language_statistics_db (TRANSACT-SQL) |Microsoft 文件
+title: sp_fulltext_semantic_register_language_statistics_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3d7c6df327cb5b61408701fe3a03515e31ed508
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 577a587f601dc19d3c3ee652ee09a1fbe23a4001
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691356"
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ GO
   
 ##  <a name="Arguments"></a> 引數  
  [ @dbname =] '*database_name*'  
- 這是要在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中註冊的語義語言統計資料庫名稱。 資料庫必須已附加。 *database_name*是**sysname**，和不可以是 NULL。  
+ 這是要在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中註冊的語義語言統計資料庫名稱。 資料庫必須已附加。 *database_name*已**sysname**，和不可以是 NULL。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -59,7 +55,7 @@ GO
 ## <a name="general-remarks"></a>一般備註  
  語義語言統計資料庫包含文字內容語意處理所需的語言相關統計資料。  
   
- **sp_fulltext_semantic_register_language_statistics_db**執行下列步驟：  
+ **sp_fulltext_semantic_register_language_statistics_db**會執行下列步驟：  
   
 1.  檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是否為支援語意處理的版本。  
   
@@ -78,9 +74,9 @@ GO
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
- 如需有關執行個體上安裝的語義語言統計資料庫資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查詢目錄檢視[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ 執行個體上安裝之語義語言統計資料庫相關的資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查詢目錄檢視[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  

@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel 和模式屬性範例 (VB) |Microsoft 文件
+title: IsolationLevel 和 Mode 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8d199301be727faa3013100ba17bd340ed4661
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631312"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和模式屬性範例 (VB)
-這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性可開啟的獨佔連接，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)屬性可開啟所執行的交易中的其他交易隔離。  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 和 Mode 屬性範例 (VB)
+這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性，以開啟專屬的連線，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)開啟執行的交易中的其他交易隔離。  
   
 ```  
 'BeginIsolationLevelVB  

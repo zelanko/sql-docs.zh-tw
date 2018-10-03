@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, how-to topics
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4fbf9a77563d670713836fb2dea7d248756bdb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79c3cf157bccf99aa732b7de60fe4ce8277aa07c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128381"
 ---
 # <a name="installation-how-to-topics"></a>安裝的使用說明主題
   使用下列主題來安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

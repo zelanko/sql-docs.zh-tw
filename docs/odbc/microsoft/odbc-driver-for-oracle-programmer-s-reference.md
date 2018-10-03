@@ -1,29 +1,26 @@
 ---
-title: ODBC Driver for Oracle 程式設計人員&#39;s 參考 |Microsoft 文件
+title: ODBC Driver for Oracle 程式設計&#39;參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f68964557d5878b4575a1a6a9592514b3abe8cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b3373566d002d75856c13b725150f9202aef5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751136"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 程式設計人員&#39;s 參考
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 程式設計&#39;參考
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用由 Oracle 提供的 ODBC 驅動程式。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
  本章節包含下列主題：  
   
@@ -45,9 +42,9 @@ ms.locfileid: "32900933"
   
 -   [使用索引鍵集驅動資料指標的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [Oracle 的 ODBC 驅動程式預存程序](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [ODBC Driver for Oracle 預存程序](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [Oracle 錯誤訊息的 ODBC 驅動程式](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [ODBC Driver for Oracle 錯誤訊息](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
 -   [ODBC 一致性層級](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   

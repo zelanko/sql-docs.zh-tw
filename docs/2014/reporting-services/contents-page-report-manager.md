@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056248"
 ---
 # <a name="contents-page-report-manager"></a>內容頁面 (報表管理員)
   使用 [內容] 頁面來檢視目前資料夾的內容、選取要檢視的項目或導覽到其他資料夾。 此頁面會在您選取資料夾時開啟。 它也是報表管理員的首頁。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Actions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Actions element
 ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 583f265b0fb45b22cd0f6b3d20b577276d70ae92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6fd5c27cd6f8f94102e66d68d9e6cdbaa3984a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087108"
 ---
 # <a name="actions-element-assl"></a>Actions 元素 (ASSL)
   包含動作的集合[Cube](../objects/cube-element-assl.md)或是[觀點來看](../objects/perspective-element-assl.md)項目。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Axis Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8587e1cdb0105d72d2bc0219c8d038ca0bd03ca4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153466"
 ---
 # <a name="axis-element-xmla"></a>Axis 元素 (XMLA)
   包含一組用來代表多維度資料集中所包含之單一軸的 tuple[軸](axes-element-xmla.md)使用的項目[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
@@ -56,8 +53,8 @@ ms.locfileid: "37263224"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

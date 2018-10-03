@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bab6fa2667ea1f34348db87301873339d3ec6372
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0383bc30f93afd893abcf86717df3a4e3a06d7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138388"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>工作 2：手動加入定義域值
   在這個工作中，您新增值**國家/地區**網域以手動方式。 請參閱[Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx)主題，如需詳細資訊在此頁面上的欄位。  

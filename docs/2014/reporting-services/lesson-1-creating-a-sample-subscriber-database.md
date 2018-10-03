@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156038"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 課：建立範例訂閱者資料庫
   在定義資料驅動訂閱之前，您必須先有提供訂閱資料的資料來源。 在這個步驟中，您將建立一個小型資料庫來儲存這個教學課程所用的訂閱資料。 稍後，當處理訂閱時，報表伺服器會擷取這份資料，並利用它來自訂報表輸出、傳遞選項以及報表呈現格式。  

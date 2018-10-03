@@ -1,58 +1,55 @@
 ---
-title: RDS 教學課程 |Microsoft 文件
+title: RDS 教學課程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dca0329dc201d50335983c9078f85e31f8302d0d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9a7538bb51ebe0a04a20aff81e83c3cc1ac92aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747886"
 ---
 # <a name="rds-tutorial"></a>RDS 教學課程
-本教學課程說明如何使用查詢及更新資料來源的 RDS 程式設計模型。 首先，它會描述完成這項工作所需的步驟。 本教學課程會重複在 Microsoft® Visual Basic Scripting Edition （包括 ADO 的 Windows Foundation Classes (ADO/WFC)）。  
+本教學課程說明如何使用 RDS 程式設計模型來查詢及更新資料來源。 首先，它會描述要完成這項工作所需的步驟。 則教學課程中重複出現在 Microsoft® Visual Basic Scripting Edition （具備 ADO 的 Windows Foundation Classes (ADO/WFC)）。  
   
- 本教學課程以不同的語言編碼，原因有兩個：  
+ 本教學課程會以不同的語言編碼，原因有兩個：  
   
--   RDS 的文件會假設在 Visual Basic 中的讀取器程式碼。 這可讓文件方便的 Visual Basic 程式設計人員，但較沒有用的程式設計人員使用其他語言。  
+-   RDS 的文件會假設讀取器程式碼，在 Visual Basic 中。 這可讓文件方便 Visual Basic 程式設計人員，但較沒有用的程式設計人員使用其他語言。  
   
--   如果您不確定特定 RDS 功能，有了另一種語言，您可以藉由尋找另一種語言中表示的相同功能來解決您的問題。  
+-   如果您不確定特定的 RDS 功能資料，而且有了另一種語言，您可以尋找另一種語言來表示相同的功能來解決您的問題。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="how-the-tutorial-is-presented"></a>本教學課程的呈現方式  
- 本教學課程根據 RDS 的程式設計模型。 其中也會個別討論每個步驟的程式設計模型。 此外，它會說明每個步驟的 Visual Basic 程式碼片段。  
+ 本教學課程為基礎的 RDS 程式設計模型。 它會個別討論的程式設計模型的每個步驟。 此外，它會說明每個步驟的 Visual Basic 程式碼片段。  
   
- 程式碼範例會以最少的討論與其他語言重複。 程式設計模型和描述性的教學課程中，給定的程式設計語言教學課程中的每個步驟會標示為對應步驟。 使用步驟的數目，來參照描述性的教學課程中的討論。  
+ 在程式碼範例會在最少討論其他語言重複。 程式設計模型和描述性的教學課程中，在指定的程式設計語言教學課程中的每個步驟會標示為對應的步驟。 使用步驟的數目表示描述性的教學課程中的討論。  
   
- 下一節中所述的 RDS 的程式設計模型。 將它當做藍圖當您進行本教學課程。  
+ RDS 程式設計模型是由下列一節所述。 使用 azure 藍圖為您進行教學課程。  
   
-## <a name="rds-programming-model-with-objects"></a>RDS 與物件的程式設計模型  
+## <a name="rds-programming-model-with-objects"></a>具有物件的 RDS 程式設計模型  
   
 -   指定要在伺服器上，叫用的程式，並取得用戶端從參考它的方式 (proxy)。  
   
--   叫用伺服器程式。 將參數傳遞至伺服器程式的識別資料來源以及要發出的命令。  
+-   叫用伺服器程式。 將參數傳遞至伺服器程式識別資料來源以及要發出的命令。  
   
--   伺服器程式會取得[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來自資料來源，通常是透過使用 ADO 的物件。 （選擇性）**資料錄集**物件在伺服器上處理。  
+-   伺服器程式會取得[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從資料來源，通常是藉由使用 ADO 的物件。 （選擇性）**資料錄集**物件在伺服器上處理。  
   
--   伺服器程式傳回最終**資料錄集**用戶端應用程式的物件。  
+-   伺服器程式會傳回最後**資料錄集**用戶端應用程式的物件。  
   
--   在用戶端，**資料錄集**物件會選擇性地放入容易使用的視覺控制項的表單。  
+-   在用戶端**資料錄集**物件會選擇性地放入容易使用的視覺控制項的表單。  
   
 -   若要變更**資料錄集**物件傳送至伺服器及用來更新資料來源。  
   
@@ -73,5 +70,5 @@ ms.locfileid: "35274247"
 -   [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟 1： 指定程式的伺服器 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [步驟 1： 指定的伺服器程式 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

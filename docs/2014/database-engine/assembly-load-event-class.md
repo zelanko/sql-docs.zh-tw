@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Assembly Load event class
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1464f59c227577bc0c81f5f89ac84430c5b59497
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a57ec9e8d1cb6b2559622af339b9e8a6a3d7b29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152980"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 事件類別
   在執行載入組件的要求時，會發生 **Assembly Load** 事件類別。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, system requirements
 - requirements [SMO]
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
-caps.latest.revision: 43
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f82d99f820556630c846557f6c93d8dbdf56fa9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db02b170bd4cccb2842b44d405da332f3df18e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107578"
 ---
 # <a name="system-requirements"></a>系統需求
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 會使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]`System.Data.SqlClient`物件驅動程式來連線及通訊的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

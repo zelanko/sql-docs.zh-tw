@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetCurrentCertificate Method (SInstance Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 04b4d5c90f8f2d9d1ded3e6ee4bb143c41d9f21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95bf1d2ad53f3e1f1e67a89d41860208620c4773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138658"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate 方法 (SInstance 類別)
   設定目前的安全性憑證。  

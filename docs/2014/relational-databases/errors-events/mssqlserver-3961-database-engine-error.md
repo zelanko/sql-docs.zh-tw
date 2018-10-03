@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 3961 (Database Engine error)
 ms.assetid: 3bbc6965-6445-400c-940a-2d85b037513f
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19e0e49ea3b9648600de6974d227fad3d25a728e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f12e70423905a78eddecb93a8b4623c96a6f0322
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155458"
 ---
 # <a name="mssqlserver3961"></a>MSSQLSERVER_3961
     

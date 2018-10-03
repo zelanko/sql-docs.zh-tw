@@ -1,37 +1,34 @@
 ---
-title: 並行控制 |Microsoft 文件
+title: 並行存取控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2fd05a84e70b601180ce67a94cbdc4caabf7e37e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44d31fc1f929ca60d34e49db135cefd1a8ae7ebc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831366"
 ---
 # <a name="concurrency-control"></a>並行存取控制
-*並行*是兩筆交易能夠使用相同的資料在相同的時間，並增加了交易的隔離通常會降低的並行。 這是因為交易隔離通常實作鎖定的資料列，而且因為多個資料列已鎖定，而不會至少暫時封鎖的鎖定資料列已較少的交易完成。 並行性降低通常會獲接受成為維護資料庫的完整性需要高交易隔離等級的取捨，而會變得與使用資料指標的高的讀取/寫入活動的互動式應用程式中的問題。  
+*並行*是兩個交易的能力，在此同時，使用相同的資料和增加的交易隔離通常是並行減少。 這是因為交易隔離通常會實作鎖定的資料列，而且多個資料列被鎖住，因為較少的交易可以完成而不被鎖定的資料列至少要暫時封鎖。 雖然並行減少一般認為需要維護資料庫的完整性較高交易隔離等級的取捨，它具有使用資料指標的高的讀取/寫入活動成為互動式應用程式中的問題。  
   
- 例如，假設應用程式執行的 SQL 陳述式**選取\*從訂單**。 它會呼叫**SQLFetchScroll**來捲動結果集以及可讓使用者更新，請刪除或插入訂單。 使用者更新、 刪除或插入訂單之後，應用程式就會認可交易。  
+ 例如，假設應用程式執行的 SQL 陳述式**選取 \*從訂單**。 它會呼叫**SQLFetchScroll**來捲動結果設定，並可讓使用者更新，請刪除或插入訂單。 使用者更新、 刪除或插入訂單之後，應用程式就會認可交易。  
   
- 交易隔離等級是 Repeatable Read，如果可能，根據它的實作方式 — 鎖定所傳回的每個資料列**SQLFetchScroll**。 如果隔離等級為 Serializable，交易可能會鎖定整個 Orders 資料表。 在任一情況下，交易認可或回復時，才釋放鎖定。 因此，如果使用者耗費大量時間來閱讀訂單和一點時間更新、 刪除或插入，交易無法輕鬆地鎖定大量的資料列，讓其他使用者無法使用。  
+ 交易隔離等級是 Repeatable Read，如果可能，取決於它的實作方式 — 鎖定所傳回的每個資料列**SQLFetchScroll**。 如果隔離等級為 Serializable，交易可能會鎖定整個 Orders 資料表。 在任一情況下，交易認可或回復時，才釋放其鎖定。 因此如果使用者耗費太多時間來閱讀訂單和很短的時間更新、 刪除或插入，交易可以輕鬆地鎖定大量的資料列，讓其他使用者無法使用。  
   
- 這會是問題，即使資料指標是唯讀，且應用程式可讓使用者讀取唯一的現有訂單。 在此情況下，應用程式認可交易，並呼叫時，會釋放鎖定， **SQLCloseCursor** （處於自動認可模式） 或**SQLEndTran** （在手動認可模式）。  
+ 即使資料指標是唯讀的且應用程式可讓使用者讀取只有現有的訂單，這會是問題。 在此情況下，應用程式認可交易，並釋放鎖定，它會呼叫**SQLCloseCursor** （在自動認可模式） 或**SQLEndTran** （在手動認可模式）。  
   
  此章節包含下列主題。  
   

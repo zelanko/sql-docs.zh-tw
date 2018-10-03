@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partial updates [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9f42180f42071d53bcb3754e29baaee3b6bc82d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057766"
 ---
 # <a name="piecemeal-restores-sql-server"></a>分次還原 (SQL Server)
   這個主題僅與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版中包含多個檔案或檔案群組 (若是簡單模式，僅適用唯讀檔案群組) 的資料庫有關。  

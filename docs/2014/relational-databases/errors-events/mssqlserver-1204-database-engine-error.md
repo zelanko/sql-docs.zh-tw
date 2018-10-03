@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 1204 (Database Engine error)
 ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd7c0cd0f1488b8e81dce19898f9b694c511de10
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ee0544c14bbf3e05fcb59e16a9bb3e0d8e61e33b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143586"
 ---
 # <a name="mssqlserver1204"></a>MSSQLSERVER_1204
     

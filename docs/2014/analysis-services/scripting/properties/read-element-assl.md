@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Read Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f950d35e74a64b75ec239c7d35ba31660ec8f08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157378"
 ---
 # <a name="read-element-assl"></a>Read 元素 (ASSL)
   判斷是否可讀取資料或中繼資料的給定[CubeDimensionPermission](../data-type/permission-data-type-assl.md)或是[權限](../data-type/permission-data-type-assl.md)項目。  
@@ -57,7 +54,7 @@ ms.locfileid: "37321198"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CubeDimensionPermission](../objects/cubepermission-element-assl.md)，[權限](../data-type/permission-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -17,12 +15,12 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 79b362d7f9f4d0ba59b1d47d7f8e241b5d43a394
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 45138bfb48a675b4e99fe7050cbddd25119c2cbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061788"
 ---
 # <a name="join-a-role"></a>加入角色
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中將角色指派給登入和資料庫使用者。 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用角色來有效率地管理權限。 您可以將權限指派給角色，然後在這些角色中加入和移除使用者與登入。 使用角色時，不需要針對每位使用者個別維護權限。  

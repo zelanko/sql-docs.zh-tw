@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e1e100be7ab60e98b53681cf11a811b9627cfb57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ade327dc2ad59b9d262268c80c72edd4482e921
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147148"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>總管功能區域 (主資料管理員)
   在 [總管] 功能區域中，您可以更新資料，並使用階層和集合。  

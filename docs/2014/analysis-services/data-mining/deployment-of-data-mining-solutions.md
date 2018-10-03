@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - solutions [Analysis Services], deploying
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73e598996172c6e29e8e6ed14ba863d28a7b3b43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087638"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署資料採礦方案
   資料採礦程序的最後一個步驟就是將模型部署到實際執行環境。 部署作業非常重要，因為可將模型提供給使用者，好讓您可以執行以下任何工作：  

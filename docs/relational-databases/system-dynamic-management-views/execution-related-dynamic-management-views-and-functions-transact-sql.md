@@ -1,12 +1,10 @@
 ---
-title: 執行相關動態管理檢視和函數 (TRANSACT-SQL) |Microsoft 文件
+title: 執行相關動態管理檢視和函數 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], execution
 - execution-related dynamic management objects [SQL Server]
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f435d835e62ef5e129bba5bc33a9ec91cf1470b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d4527aba3a9ba14ac3af978b477ff5c8cbd1b3de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774640"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>執行相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +54,7 @@ ms.lasthandoff: 05/23/2018
 
   
 > [!NOTE]  
->  **Sys.dm_exec_query_transformation_stats**動態管理檢視識別僅供參考之用。 不支援。 我們無法保證未來的相容性。  
+>  **Sys.dm_exec_query_transformation_stats**動態管理檢視會識別僅供參考之用。 不支援。 我們無法保證未來的相容性。  
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

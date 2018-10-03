@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSpecialColumns function
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1bc1cb10816f407bed89e65ccc5e8927c82442b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b205e2637e9588404926d8d0e73016765cd54c56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107528"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   當要求資料列識別碼 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**針對 SQL_SCOPE_CURROW 以外的任何要求範圍傳回空的結果集 （無資料列）。 產生的結果集表示資料行只有在這個範圍中才是有效的。  

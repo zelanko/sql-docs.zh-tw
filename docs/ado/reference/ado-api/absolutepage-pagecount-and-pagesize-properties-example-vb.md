@@ -1,13 +1,11 @@
 ---
-title: AbsolutePage、 PageCount 和 PageSize 屬性範例 (VB) |Microsoft 文件
+title: AbsolutePage、 PageCount、 和 PageSize 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,18 +14,17 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], Visual Basic example
 - PageSize property [ADO], Visual Basic example
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7556f9f000043f570ec543cec92ea5aa3f236dfe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4e290e124b0c4c08905edc62838605112f1acf38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831206"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 (VB)
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、 PageCount、 和 PageSize 屬性範例 (VB)
 ```  
 'BeginAbsolutePageVB  
   

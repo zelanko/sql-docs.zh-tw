@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157038"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)
   在  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，您可以使用網頁瀏覽器來檢視報表和報表管理員中執行。 並非所有瀏覽器都支援所有報表功能。 本主題說明報表管理員管理功能「檢視報表」(Visual Studio 中的報表檢視器控制項) 的支援和需求。 本主題也概述受支援的瀏覽器、驗證需求和指令碼需求的功能可用性。  

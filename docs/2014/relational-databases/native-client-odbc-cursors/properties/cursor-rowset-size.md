@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], rowset size
 - ODBC cursors, rowset size
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c683ec4cf8b7fd430e9bddd0d126cc132880975f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143038"
 ---
 # <a name="cursor-rowset-size"></a>資料指標資料列集大小
   ODBC 資料指標不限制為一次只能提取一個資料列。 它們可以擷取每個呼叫中的多個資料列**SQLFetch**或是[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)。 與 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之類的用戶端/伺服器資料庫搭配使用時，一次擷取數個資料列會更有效率。 傳回在提取資料列數目稱為資料列集大小，並使用 SQL_ATTR_ROW_ARRAY_SIZE 來指定[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)。  

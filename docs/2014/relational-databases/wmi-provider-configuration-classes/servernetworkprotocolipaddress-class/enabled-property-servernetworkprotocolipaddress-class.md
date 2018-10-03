@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Enabled Property (ServerNetworkProtocolIpAddress Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Enabled property
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2296ec80dc8c97fef8588b810d5d4179dd5ed7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ecbe4a1d5a7a3522fe0ed22ac9097416a4d5307
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075770"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled 屬性 (ServerNetworkProtocolIpAddress 類別)
   取得布林屬性，該屬性會指定是否啟用 IP 位址。  

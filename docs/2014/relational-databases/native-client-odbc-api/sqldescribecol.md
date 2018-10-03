@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLDescribeCol function
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb0ae64b7a34dc06814d94bbdeafd90f3b4af4cc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410447"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054988"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   對於執行的陳述式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不需要查詢伺服器來描述結果集資料行。 在此情況下，`SQLDescribeCol`不會造成伺服器往返。 像是[SQLColAttribute](sqlnumresultcols.md)，則呼叫`SQLDescribeCol`上備妥但未執行的陳述式會產生伺服器往返。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211778"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133228"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>查詢窗格 (採礦模型預測檢視)
   [查詢] 窗格會顯示預測查詢產生器所建立的資料採礦運算式 (DMX) 陳述式。 您可以修改陳述式，然後按一下 [切換到查詢結果檢視] 按鈕，以傳回結果。 如果切換到 [設計] 檢視，您對陳述式所做的任何變更將會遺失。  

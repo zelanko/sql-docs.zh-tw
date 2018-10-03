@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 9790 (Database Engine error)
 ms.assetid: 83fd379f-5deb-4f97-8cb4-282e3d3fed94
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30cd74ab6ac78347f571b5c5c5029123a7e34c96
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5747a13e60182596610f25dd4ed1243670ff5018
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151172"
 ---
 # <a name="mssqlserver9790"></a>MSSQLSERVER_9790
     

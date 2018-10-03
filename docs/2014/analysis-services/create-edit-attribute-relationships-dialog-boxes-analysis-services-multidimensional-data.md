@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.createrelationshipdialog.f1
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3215615dd979714d0ec6c133818eb689d085324b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f13c975be4fb8e993cb682da20c6bdf725f25ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141588"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>建立屬性關聯性和編輯屬性關聯性對話方塊 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [建立屬性關聯性] 對話方塊，即可定義新的屬性關聯性，而使用 [編輯屬性關聯性] 對話方塊，即可變更屬性關聯性。 如需詳細資訊，請參閱 [定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)。  

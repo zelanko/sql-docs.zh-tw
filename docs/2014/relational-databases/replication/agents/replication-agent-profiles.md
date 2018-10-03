@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, profiles
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Snapshot Agent, profiles
 - Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0faf4d2636c8a9f9ccd6487dbb6c9ca601889076
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67a5355791ddb9043a5da65077ee5e531ab47da9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211078"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160368"
 ---
 # <a name="replication-agent-profiles"></a>複寫代理程式設定檔
   設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 針對使用 Web 同步處理的合併訂閱，會下載設定檔並儲存於「訂閱者」。 如果設定檔變更，則「訂閱者」中的設定檔會在下一次「合併代理程式」執行時更新。 如需有關 Web 同步處理的詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)＞。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: d8e3f89f-091c-434e-8f67-639f073edcdf
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a530b1ccbabc7b2165ccdf9c05e9d9cf71e8fc57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 970439430e0ddd4fa3759365dad1b96a32562c9b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079078"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>第 1 課：建立中繼資料採礦方案 (中繼資料採礦教學課程)
   在基本資料採礦教學課程中，您已建立[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案包含簡單的資料採礦方案為基礎的新[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫。  

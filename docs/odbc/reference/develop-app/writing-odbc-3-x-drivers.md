@@ -1,13 +1,11 @@
 ---
-title: 撰寫 ODBC 3.x 驅動程式 |Microsoft 文件
+title: 撰寫 ODBC 3.x 驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9b926d45e6556b53957ecd2934d7068418f3101
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77a94c7505b5ab221fee4896e91f9b26850669df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795648"
 ---
-# <a name="writing-odbc-3x-drivers"></a>寫入 ODBC 3.x 驅動程式
-下表會顯示在 ODBC 3 函式支援。*x*驅動程式和 ODBC 應用程式，以及對應函式的呼叫針對 ODBC 3 時，請執行驅動程式管理員。*x*驅動程式。  
+# <a name="writing-odbc-3x-drivers"></a>撰寫 ODBC 3.x 驅動程式
+下表會顯示在 ODBC 3 函數支援。*x*驅動程式和 ODBC 應用程式和函式呼叫針對 ODBC 3 時執行的驅動程式管理員中的對應。*x*驅動程式。  
   
-|函數|Supported<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式嗎？|Supported<br /><br /> 由<br /><br /> ODBC 3。*x*<br /><br /> 應用程式嗎？|對應/支援<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式管理員<br /><br /> ODBC 3。*x*驅動程式嗎？|  
+|函數|支援<br /><br /> 藉由<br /><br /> ODBC 3。*x*<br /><br /> 驅動程式？|支援<br /><br /> 藉由<br /><br /> ODBC 3。*x*<br /><br /> 應用程式嗎？|對應/支援<br /><br /> ODBC 3 中。*x*<br /><br /> 驅動程式管理員<br /><br /> ODBC 3。*x*驅動程式？|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|否|沒有 [1]|是|  
 |**SQLAllocEnv**|否|沒有 [1]|是|  
@@ -62,8 +59,8 @@ ms.locfileid: "32921153"
 |**SQLFetch**|是|是|否|  
 |**SQLFetchScroll**|是|是|否|  
 |**SQLForeignKeys**|是|是|否|  
-|**SQLFreeConnect**|否|是 [1]|是|  
-|**SQLFreeEnv**|否|是 [1]|是|  
+|**SQLFreeConnect**|否|[是] [1]|是|  
+|**SQLFreeEnv**|否|[是] [1]|是|  
 |**SQLFreeHandle**|是|是|否|  
 |**SQLFreeStmt**|是|是|否|  
 |**SQLGetConnectAttr**|是|是|否|  
@@ -109,14 +106,14 @@ ms.locfileid: "32921153"
 |**SQLTables**|是|是|否|  
 |**SQLTransact**|否|沒有 [1]|是|  
   
- [1] 此函式已被取代，在 ODBC 3。*x*。 ODBC 3。*x*應用程式不應該使用此函式。 不過，開啟 群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
+ [1] 此函式已被取代，在 ODBC 3。*x*。 ODBC 3。*x*應用程式不應使用此函式。 不過，開啟 群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
   
- [2] ODBC 3。*x*應用程式應該使用**SQLBindParameter**而不是**SQLBindParam**。 不過，開啟 群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
+ [2] ODBC 3。*x*應用程式應該改用**SQLBindParameter**而非**SQLBindParam**。 不過，開啟 群組或 ISO CLI 相容的應用程式可以呼叫此函式。  
   
- [3] 的驅動程式寫入器應該會注意 ODBC 2。*x* SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 和 SQL_COLUMN_LENGTH 必須使用支援的資料行屬性**SQLColAttribute**。  
+ [3] 的驅動程式撰寫人員應該注意到 ODBC 2。*x*資料行屬性使用，則必須支援 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 和 SQL_COLUMN_LENGTH **SQLColAttribute**。  
   
- [4] **SQLCopyDesc**跨屬於不同的驅動程式的連接複製描述元時，則部分實作由驅動程式管理員。 支援所需的驅動程式**SQLCopyDesc**跨兩個自己的連線。 函式，如**SQLDrivers**這實作僅由驅動程式管理員，不會出現在此清單上。  
+ [4] **SQLCopyDesc**跨屬於不同的驅動程式的連接複製描述項時，則部分實作由驅動程式管理員。 支援所需的驅動程式**SQLCopyDesc**跨兩個自己的連線。 這類函式**SQLDrivers**這會實作完全由驅動程式管理員，不會出現在這份清單。  
   
- [5] 在某些情況下，驅動程式可能需要支援此函式。 如需詳細資訊，請參閱函式的參考頁面。  
+ [5] 在某些情況下，驅動程式可能需要支援此函式。 如需詳細資訊，請參閱此函式的參考頁面。  
   
- [6] 的驅動程式可以選擇支援**SQLGetFunctions**如果驅動程式所支援的函式的組合不盡相同連接的連接。
+ [6] 的驅動程式可以選擇支援**SQLGetFunctions**如果驅動程式所支援的函式集改變連接連接。

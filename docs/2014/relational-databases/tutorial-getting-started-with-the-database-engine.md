@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [connecting]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4fe6e1227059628f01f4f7393a3744b6e6b5ae29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4809250a2b2fe963d32d66c62e2e71b3bea2c365
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119448"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：Database Engine 使用者入門
   歡迎使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 使用者入門教學課程。 本教學課程的主要對象是剛接觸 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 且已安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]的使用者。 這個簡短的教學課程可幫助您開始使用 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  

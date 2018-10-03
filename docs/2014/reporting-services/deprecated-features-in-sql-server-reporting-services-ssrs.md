@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6817f31ff83e1a502506893f66b5080399200fd8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93d31c4f9f8f712834131136034541bf469e0014
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119878"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 中 SQL Server Reporting Services 已被取代的功能
   本主題描述已被取代的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能。 在此版本中仍然提供已被取代的功能，不過，這些功能排程在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]之後版本中移除。 已被取代的功能不應在新應用程式中使用。  
   
  本主題內容：  
   
--   [SQL Server 2014 Reporting Services 已被取代的功能](#bkmk_2014)  
+-   [SQL Server 2014 Reporting Services 已淘汰功能](#bkmk_2014)  
   
 -   [SQL Server 2012 SP1 Reporting Services 已被取代的功能](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services 已被取代的功能](#bkmk_2012)  
+-   [SQL Server 2012 Reporting Services 已淘汰功能](#bkmk_2012)  
   
 -   [SQL Server 2008 R2 Reporting Services 已被取代的功能](#bkmk_kj)  
   
@@ -63,7 +60,7 @@ ms.locfileid: "37305138"
   
 -   UsePx  
   
--   顯示比例  
+-   縮放  
   
  如需有關 HTML 轉譯延伸模組的詳細資訊，請參閱[HTML 裝置資訊設定](html-device-information-settings.md)  
   
@@ -133,7 +130,7 @@ ms.locfileid: "37305138"
   
 -   UsePx  
   
--   顯示比例  
+-   縮放  
   
  如需有關 HTML 轉譯延伸模組的詳細資訊，請參閱[HTML 裝置資訊設定](html-device-information-settings.md)  
   

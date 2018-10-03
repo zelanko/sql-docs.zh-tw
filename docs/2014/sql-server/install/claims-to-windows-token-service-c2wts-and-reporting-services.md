@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - C2WTS
 - WSS_WPG
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02ca28f49468adced97c918521a685894bc9e9ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278184"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123078"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
   SharePoint 對 Windows Token Service 宣告 (c2WTS) 是必要項目[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式，如果您想要針對 SharePoint 伺服器陣列以外的資料來源使用 windows 驗證。 使用者若是利用 Windows 驗證存取資料來源也是如此，因為 Web 前端 (WFE) 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務之間的通訊皆會使用宣告驗證。  
@@ -103,7 +100,7 @@ ms.locfileid: "37278184"
 4.  啟動 SharePoint 對 Windows Token Service 的宣告': 在啟動對 Windows Token Service，透過 SharePoint 管理中心內的宣告**管理伺服器上的服務**頁面。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 c2WTS。 WFE 並不需要 c2WTS。  
   
 ## <a name="see-also"></a>另請參閱  
- [宣告對 Windows Token Service (c2WTS) 概觀 （http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
- [（Microsoft SharePoint 2010 產品的 Kerberos 驗證概觀http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
+ [宣告對 Windows Token Service (c2WTS) 概觀 （ http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
+ [（Microsoft SharePoint 2010 產品的 Kerberos 驗證概觀 http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

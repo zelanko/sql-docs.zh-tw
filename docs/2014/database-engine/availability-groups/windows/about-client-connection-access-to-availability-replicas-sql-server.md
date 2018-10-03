@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153659"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>關於可用性複本的用戶端連接存取 (SQL Server)
   在 AlwaysOn 可用性群組中，您可以設定一個或多個可用性複本，讓它在次要角色之下執行時 (也就是以次要複本的方式執行時)，允許唯讀連接。 以主要角色執行時 (也就是當做主要複本執行時)，您也可以設定每個可用性複本，以允許或排除唯讀連接。  
@@ -100,8 +97,8 @@ ms.locfileid: "37228508"
   
 |複本|認可模式|初始角色|次要角色的連接存取|主要角色的連接存取|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步的|Primary|無|讀寫|  
-|Replica2|同步的|次要|無|讀寫|  
+|Replica1|同步的|Primary|None|讀寫|  
+|Replica2|同步的|次要|None|讀寫|  
 |Replica3|非同步的|次要|僅限讀取意圖|讀寫|  
 |Replica4|非同步的|次要|僅限讀取意圖|讀寫|  
   

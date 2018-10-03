@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Location Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0277ab50eb7390d3272c309df8dc865ff088c89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107608"
 ---
 # <a name="location-element-xmla"></a>Location 元素 (XMLA)
   包含父代的遠端伺服器相關資訊[備份](../xml-elements-commands/backup-element-xmla.md)，[還原](../xml-elements-commands/restore-element-xmla.md)，或[同步處理](../xml-elements-commands/synchronize-element-xmla.md)命令。  
@@ -66,8 +63,8 @@ ms.locfileid: "37295388"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checking out files
 - automatic file check outs
 ms.assetid: afa9f637-3d14-4d64-be51-0e8167e21d2b
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99580fc43404dddfbf681d336b5e61280c4f4d21
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147188"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>在編輯時自動簽出檔案
   您可以將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 設定成在您開始編輯檔案時，自動簽出這個檔案。  

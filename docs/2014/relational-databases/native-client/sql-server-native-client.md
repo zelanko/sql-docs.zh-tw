@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16d5ad4f1f60978cedf380cbc17d6e3f09f1cb09
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 68acf1991e3d1b5af44f6335f59635fcc1eacefc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144518"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>什麼&#39;SQL Server Native Client 的新功能
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 會安裝 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client。 沒有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client。  

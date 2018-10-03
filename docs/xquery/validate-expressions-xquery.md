@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - expressions [XQuery], validate
 - validate expressions [XQuery]
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc8f8006679709e7ea8f9d73aed1f3757072ad53
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d6f48b0b8a6b7fb19e40856308c6ee9a46dcdf21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816816"
 ---
 # <a name="validate-expressions-xquery"></a>驗證運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

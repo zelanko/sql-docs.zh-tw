@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/07/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Merge Agent, security
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c093e7605e4adb86b3b1f42e12f90db83b962aa0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b17b7cccec50c9dc8d1eccc5cb6e1caacee47e2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135660"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
   複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連接所使用的帳戶：您可為每個代理程式指定不同的帳戶。 如需如何指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](manage-logins-and-passwords-in-replication.md)。  

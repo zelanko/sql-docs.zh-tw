@@ -1,13 +1,11 @@
 ---
-title: ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) |Microsoft 文件
+title: ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - FetchOptions property [ADO], VBScript example
 - ExecuteOptions property [ADO]
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14defde3a35bcccd35c741f7f9b681e9197a8a23
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cc7b120f41613a5797105695c415eea85d08fdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695206"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列程式碼示範如何設定[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)和[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)在設計階段屬性。 如果未設定， **ExecuteOptions**預設為**adcExecSync**。 這個設定指出，當 **.RDS重新整理**呼叫方法時，就會在目前的呼叫執行緒上執行它，也就是，以同步方式。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ExecuteOptionsDesignVBS.asp**。  
+ 下列程式碼示範如何設定[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)並[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)在設計階段屬性。 如果未設定， **ExecuteOptions**預設值為**adcExecSync**。 此設定表示，當**rds。重新整理**呼叫方法，就會在目前的呼叫執行緒上執行 — 也就是說，以同步方式。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ExecuteOptionsDesignVBS.asp**。  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -98,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- 下列範例示範如何設定**ExecuteOptions**和**FetchOptions** VBScript 程式碼在執行階段屬性。 請參閱[重新整理](../../../ado/reference/rds-api/refresh-method-rds.md)如需實用範例，這些屬性的方法。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ExecuteOptionsRuntimeVBS.asp**。  
+ 下列範例示範如何設定**ExecuteOptions**並**FetchOptions** VBScript 程式碼在執行階段的屬性。 請參閱[重新整理](../../../ado/reference/rds-api/refresh-method-rds.md)如需實用範例，這些屬性的方法。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ExecuteOptionsRuntimeVBS.asp**。  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  

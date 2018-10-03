@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -20,23 +15,22 @@ helpviewer_keywords:
 - xml data type [SQL Server], XQuery
 - functions [SQL Server], XQuery
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db1906027692ec40974668f48521588b2231cebd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ab763da75dda7a2f55f70d89b5e06368358f2c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746748"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本主題及其子主題說明指定針對 XQuery 時，您可以使用的函式**xml**資料型別。 如需 W3C 規格，請參閱[ http://www.w3.org/TR/2004/WD-xpath-functions-20040723 ](http://go.microsoft.com/fwlink/?LinkId=4873)。  
   
- XQuery 函數屬於http://www.w3.org/2004/07/xpath-functions命名空間。 W3C 規格會使用 "fn:" 命名空間前置詞，來描述這些函數。 使用函數時，您不需要明確地指定 "fn:" 命名空間前置詞。 由於此點以及為了能改善可讀性，所以在此份文件中通常不會使用命名空間前置詞。  
+ XQuery 函數屬於 http://www.w3.org/2004/07/xpath-functions命名空間。 W3C 規格會使用 "fn:" 命名空間前置詞，來描述這些函數。 使用函數時，您不需要明確地指定 "fn:" 命名空間前置詞。 由於此點以及為了能改善可讀性，所以在此份文件中通常不會使用命名空間前置詞。  
   
  下表列出支援的 XQuery 函式**xml**資料型別。  
   
@@ -55,7 +49,7 @@ ms.locfileid: "37997110"
 |[在節點上的函式](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[local-name 函數 (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[namespace-uri 函數 (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[內容函式](http://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[最後一個](../xquery/context-functions-last-xquery.md)|  
+|[內容函式](http://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
 ||[位置](../xquery/context-functions-position-xquery.md)|  
 |[在序列上的函式](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[空白](../xquery/functions-on-sequences-empty.md)|  
 ||[相異值](../xquery/functions-on-sequences-distinct-values.md)|  

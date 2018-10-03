@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2071c4d13fdaa26787c98dd3bc01123f235bacb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2c1579155bade7c2ddb3e3831e10ae1943cfd1f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141234"
 ---
 # <a name="data-collection"></a>資料收集
   資料收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的元件，它會收集不同的資料集。 資料收集會連續執行或依照使用者定義的排程執行。 然後，資料收集器會將收集而來的資料儲存在關聯式資料庫內 (稱為管理資料倉儲)。  

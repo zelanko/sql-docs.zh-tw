@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - GeneralFlags Property (ServerSettings Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 90e10e1d0c98f6ce93f5cc3362d93eb087a8b60d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a849ec790d72d506e9e0b351fb34d3e2b6e76d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148768"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 屬性 (ServerSettings 類別)
   取得與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體相關的一般旗標。  

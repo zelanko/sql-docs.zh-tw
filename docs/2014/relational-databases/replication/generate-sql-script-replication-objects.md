@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.generatesqlscript.f1
 helpviewer_keywords:
 - Generate SQL Script dialog box
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06b729ec2c9ff938b09a0faebb6d90d043cdaf0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49d5e5b25c150d8ce2b3cf2bdb0485bbe91cb32b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155478"
 ---
 # <a name="generate-sql-script-replication-objects"></a>產生 SQL 指令碼 (複寫物件)
   複寫指令碼包含要實作已編寫複寫元件之指令碼所必要的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序，例如發行集或訂閱。 拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 複寫提供編寫複寫物件之指令碼的兩個對話方塊：  

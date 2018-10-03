@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSsub_identity_range_TSQL
 - MSsub_identity_range
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsub_identity_range system table
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c73531e586a1328bc4cc6340a2020d38f103ee3
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 25c8efee14025b4e708662b9657563653a4e4f92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101646"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847206"
 ---
 # <a name="mssubidentityrange-transact-sql"></a>MSsub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

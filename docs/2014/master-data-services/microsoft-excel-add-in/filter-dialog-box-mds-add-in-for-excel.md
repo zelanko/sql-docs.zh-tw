@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1118f3a7ee1e9bbace60dc2ac36c813d5b147edb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fabc7fef47a3d80427e9a4c0ef4587f4dc13f405
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178065"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140548"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選] 對話方塊。  
@@ -52,7 +49,7 @@ ms.locfileid: "37178065"
 |全部移除|從清單中移除所有篩選。|  
 |移除|從清單中移除選取的篩選。|  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  使用 [摘要] 區段即可在載入之前檢視即將載入之資料量的相關詳細資料。  
   
 |控制項名稱|描述|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingInheritedBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingInheritedBinding data type
 ms.assetid: 913fa19f-1ecb-4fca-897e-12f0fb02cf8b
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c97f39574e6df202104bef0b34ab850f6cefdd6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93e3af5fe3fa032a665330a0fc5ecd018c328816
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250980"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060276"
 ---
 # <a name="proactivecachinginheritedbinding-data-type-assl"></a>ProactiveCachingInheritedBinding 資料類型 (ASSL)
   定義衍生的資料類型，表示資訊[ProactiveCaching](../objects/proactivecaching-element-assl.md)有關資料表和檢視透過需要重建快取的現有資料繫結所識別的資料來源變更的項目。  
@@ -47,15 +44,15 @@ ms.locfileid: "37250980"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[ProactiveCachingObjectNotificationBinding](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
-|子元素|無|  
-|衍生的元素|無|  
+|父元素|None|  
+|子元素|None|  
+|衍生的元素|None|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊`ProactiveCachingBinding`型別，包括繼承階層的資料表`ProactiveCachingBinding`類型，請參閱[ProactiveCachingBinding 資料類型&#40;ASSL&#41;](proactivecachingbinding-data-type-assl.md)。  

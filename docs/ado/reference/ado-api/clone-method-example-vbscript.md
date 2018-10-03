@@ -1,36 +1,33 @@
 ---
-title: 再製方法範例 (VBScript) |Microsoft 文件
+title: Clone 方法範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783666"
 ---
-# <a name="clone-method-example-vbscript"></a>再製方法範例 (VBScript)
-這個範例會使用[複製](../../../ado/reference/ado-api/clone-method-ado.md)方法建立的複本[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)然後讓每個複本的記錄指標放在個別的使用者。  
+# <a name="clone-method-example-vbscript"></a>Clone 方法範例 (VBScript)
+這個範例會使用[複製品](../../../ado/reference/ado-api/clone-method-ado.md)方法建立的複本[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)然後讓每個複本的記錄指標放在個別的使用者。  
   
- 動態伺服器網頁 (ASP) 中使用下列的範例。 這個範例會使用**Northwind**隨附 Microsoft Access 資料庫。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存為 CloneVBS.asp。 您可以在任何用戶端瀏覽器中檢視結果。  
+ Active Server Page (ASP) 中使用下列的範例。 這個範例會使用**Northwind**隨附 Microsoft Access 資料庫。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存為 CloneVBS.asp。 您可以在任何用戶端瀏覽器中檢視結果。  
   
- 若要執行此範例，變更線條`RsCustomerList.Source = "Customers"`至`RsCustomerList.Source = "Products"`計算較大的資料表。  
+ 若要執行此範例中，變更這一行`RsCustomerList.Source = "Customers"`至`RsCustomerList.Source = "Products"`計算較大的資料表。  
   
 ```  
 <!-- BeginCloneVBS -->  

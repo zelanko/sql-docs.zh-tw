@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9dd11d93fe40e65836f778191c025daba5a76d0d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: df7e09828a172a27c7819565954be2040e1ce909
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824166"
 ---
 # <a name="data-migration-settings-oracletosql"></a>資料移轉設定 (OracleToSQL)
   

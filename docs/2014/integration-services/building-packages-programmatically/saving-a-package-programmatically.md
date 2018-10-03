@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 373240a3c693494c57f92c56cf9fd424bf87ae57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 542e75cb1b806eb276df86793a08a0ed655fe9a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076818"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
   在以程式設計方式建立新封裝或是修改現有封裝之後，通常會想要儲存變更。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProtocolName Property (ClientNetLibInfo Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f1d206d00df773cbce4b2d5a49430e0d4eb98bec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fceb64cbf2623c48c5f5922806b5ff9e6934ff7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148939"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157018"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 屬性 (ClientNetLibInfo 類別)
   取得與用戶端網路程式庫有關的通訊協定名稱。  

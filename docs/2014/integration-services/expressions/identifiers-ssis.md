@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 322a91c77eaac5433cada0cfef056e1688020dc6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bfcd429eeb6979fea8ba889212b5e56a7afee887
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084000"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154828"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  
@@ -41,7 +38,7 @@ ms.locfileid: "39084000"
   
 -   名稱的第一個字元必須是 Unicode Standard 2.0 所定義的字母，或者底線 (_)。  
   
--   後續的字元可以是字母或數字 Unicode Standard 2.0 中，底線 (_)、 定義\@，$ 及 # 字元。  
+-   後續的字元可以是 Unicode Standard 2.0 所定義的字母或數字、底線 (_)、\@、$ 及 # 字元。  
   
 > [!IMPORTANT]  
 >  除了列出的字元之外，內嵌的空格和特殊字元在一般識別碼中無效。 若要使用空格和特殊字元，您必須使用限定識別碼，而非一般識別碼。  
@@ -89,15 +86,15 @@ ms.locfileid: "39084000"
 >  如果虛線標記法中的兩個元素都加上一對方括號，則運算式評估工具會將這對元素解譯為單一識別碼，而非來源資料行組合。  
   
 ## <a name="variables-in-expressions"></a>運算式中的變數  
- 在運算式中，參考變數時必須包含\@前置詞。 例如，**計數器**使用參考變數\@計數器。 \@字元不是變數名稱的一部分; 它只會識別運算式評估工具的變數。 如果您建立運算式所使用的對話方塊方塊的[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計師 」 提供，\@字元會自動加入變數的名稱。 不是有效之間加入空白\@字元和變數的名稱。  
+ 在運算式中參考變數時，必須包括 \@ 前置詞。 例如，**Counter** 變數是使用 \@Counter 來參考。 \@ 字元並非變數名稱的一部分；該字元僅供運算式評估工具用來識別變數。 如果您使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具提供的對話方塊建置運算式，則 \@ 字元會自動加入變數名稱中。 在 \@ 字元和變數名稱之間加入空白是無效的格式。  
   
  變數名稱與其他一般識別碼的名稱遵循相同的規則：  
   
 -   名稱的第一個字元必須是 Unicode Standard 2.0 所定義的字母，或者底線 (_)。  
   
--   後續的字元可以是字母或數字 Unicode Standard 2.0 中，底線 (_)、 定義\@，$ 及 # 字元。  
+-   後續的字元可以是 Unicode Standard 2.0 所定義的字母或數字、底線 (_)、\@、$ 及 # 字元。  
   
- 如果變數名稱包含所列出字元以外的字元，則變數必須加上方括號。 例如，含空白的變數名稱必須加上方括號。 左括號會遵循\@字元。 例如， **My Name**做為參考變數\@[My Name]。 不可在變數名稱和方括號之間加入空白。  
+ 如果變數名稱包含所列出字元以外的字元，則變數必須加上方括號。 例如，含空白的變數名稱必須加上方括號。 左方括弧會接在 \@ 字元後面。 例如，**My Name** 變數會以 \@[My Name] 的形式參考。 不可在變數名稱和方括號之間加入空白。  
   
 > [!NOTE]  
 >  使用者定義變數和系統變數的名稱會區分大小寫。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], subcubes
 - CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f63c776a1b5d095a7ae17c9e568c827bd660db88
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d480df54eeb0565ed685602870484deff6600d2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078699"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中建立 Subcube (MDX)
   Subcube 是 Cube 的子集，呈現篩選後的基礎資料檢視。 將 Cube 限制在 Subcube，可以改善查詢效能。  

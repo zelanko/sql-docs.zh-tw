@@ -1,32 +1,29 @@
 ---
-title: 狀態屬性範例 （欄位） (VB) |Microsoft 文件
+title: Status 屬性範例 (Field) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58c71c4f69cdd25de960eacba7370aa64b67bfb7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f6554e76488cd83452c0ab1617c9bd65e9196c11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816366"
 ---
-# <a name="status-property-example-field-vb"></a>狀態屬性範例 （欄位） (VB)
-下列範例會從讀取/寫入資料夾，請使用開啟的文件[網際網路發行的提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 [狀態](../../../ado/reference/ado-api/status-property-ado-field.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件[記錄](../../../ado/reference/ado-api/record-object-ado.md)先設為**adFieldPendingInsert**，然後更新至**adFieldOk**。  
+# <a name="status-property-example-field-vb"></a>Status 屬性範例 (Field) (VB)
+下列範例從讀取/寫入資料夾，請使用開啟的文件[網際網路發行的提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 [狀態](../../../ado/reference/ado-api/status-property-ado-field.md)屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件[記錄](../../../ado/reference/ado-api/record-object-ado.md)先將設定為**adFieldPendingInsert**，則會更新以**adFieldOk**。  
   
 ```  
 'BeginStatusFieldVB  
@@ -83,13 +80,13 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- 下列範例會刪除已知**欄位**從**記錄**開啟文件中。 **狀態**屬性第一次將設定為**adFieldOK**，然後**adFieldPendingUnknown**。  
+ 下列範例會刪除已知**欄位**從**記錄**開啟的文件。 **狀態**第一次將屬性設定為**adFieldOK**，然後**adFieldPendingUnknown**。  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- 下列程式碼會刪除**欄位**從**記錄**上唯讀的文件開啟。 **狀態**會設定為**adFieldPendingDelete**。 在[更新](../../../ado/reference/ado-api/update-method.md)，則刪除作業將會失敗並**狀態**將**adFieldPendingDelete**加上**adFieldPermissionDenied**。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)清除暫止**狀態**設定。  
+ 下列程式碼會刪除**欄位**從**記錄**唯讀的文件上開啟。 **狀態**將會設定為**adFieldPendingDelete**。 在[更新](../../../ado/reference/ado-api/update-method.md)，則刪除作業將會失敗並**狀態**會**adFieldPendingDelete**加上**adFieldPermissionDenied**。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)清除暫止**狀態**設定。  
   
 ```  
 Attribute VB_Name = "StatusField"  
@@ -97,5 +94,5 @@ Attribute VB_Name = "StatusField"
   
 ## <a name="see-also"></a>另請參閱  
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [記錄物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record 物件 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status 屬性 (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

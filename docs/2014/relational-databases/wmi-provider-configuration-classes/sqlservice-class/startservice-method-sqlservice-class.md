@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StartService Method (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83c4c70e01eed39ac18de27fb26d3df5d4c3de7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 708d96bab30b9828f41b1e29fef80173a6f711aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098078"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 方法 (SqlService 類別)
   嘗試將此服務置於它的啟動狀態。  

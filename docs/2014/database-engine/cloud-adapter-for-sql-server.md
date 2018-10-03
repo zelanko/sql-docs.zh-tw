@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157988"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>適用 SQL Server 的雲端配接器
   雲端配接器服務會隨 Windows Azure VM 上佈建的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一併建立。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以 **本機系統** 帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器還會建立 Windows 防火牆規則，允許其內送 TCP 連接使用預設通訊埠 11435。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CrossProduct Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0612d741cc6aa04d2564f7100179d3d1881b9e5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055218"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 元素 (XMLA)
   包含從每個階層的成員已排序集合之間的交叉乘積[軸](axis-element-xmla.md)使用的項目[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
@@ -54,8 +51,8 @@ ms.locfileid: "37278217"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], creating
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 60
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049488"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度模型中，資料來源物件代表資料來源的連接，您會從其中處理 (或匯入) 資料。 多維度模型至少必須包含一個資料來源物件，不過您可以加入更多資料來源物件，以便結合數個資料倉儲的資料。 使用本主題中的說明為您的模型建立資料來源物件。 如需設定這個物件之屬性的詳細資訊，請參閱[設定資料來源屬性 &#40;SSAS 多維度&#41;](set-data-source-properties-ssas-multidimensional.md)。  

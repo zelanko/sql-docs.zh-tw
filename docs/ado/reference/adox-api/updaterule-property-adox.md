@@ -1,13 +1,11 @@
 ---
-title: UpdateRule 屬性 (ADOX) |Microsoft 文件
+title: UpdateRule 屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24375b3faa749889fe98d2d3f99815bc48987439
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7a5845f8f595ee58c0085f022eff7f7c499887a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623580"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 屬性 (ADOX)
-表示執行的動作，當主要[金鑰](../../../ado/reference/adox-api/key-object-adox.md)會更新。  
+表示動作執行時的主要[金鑰](../../../ado/reference/adox-api/key-object-adox.md)會更新。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定並傳回**長**值可以是其中一個， [RuleEnum](../../../ado/reference/adox-api/ruleenum.md)常數。 預設值是**adRINone**。  
+ 設定，並傳回**長**值，可以是其中一個[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)常數。 預設值是**adRINone**。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性是唯讀[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件已經附加至集合。  
+ 這個屬性是唯讀[金鑰](../../../ado/reference/adox-api/key-object-adox.md)已附加至集合的物件。  
   
 ## <a name="applies-to"></a>適用於  
  [Key 物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

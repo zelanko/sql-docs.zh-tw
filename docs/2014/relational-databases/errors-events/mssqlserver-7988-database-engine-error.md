@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7988 (Database Engine error)
 ms.assetid: 29b967b8-de30-4618-99a8-8b1155e69026
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c9f8d0effc6bc7345553ac67f33a1de2588af441
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7912da245a04f2f62086e9ef08f0077aaac0196f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072618"
 ---
 # <a name="mssqlserver7988"></a>MSSQLSERVER_7988
     

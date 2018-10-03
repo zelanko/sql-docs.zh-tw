@@ -1,32 +1,29 @@
 ---
-title: 備妥屬性範例 （VC + +） |Microsoft 文件
+title: 備妥屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4aeb945af1a75c28e4849f4736064fdb50d63d8f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280767"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846486"
 ---
-# <a name="prepared-property-example-vc"></a>已備妥的屬性範例 （VC + +）
-這個範例會示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件 — 一個備妥，尚未準備好的另一個。  
+# <a name="prepared-property-example-vc"></a>Prepared 屬性範例 (VC++)
+此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件 — 一個已備妥，尚未備妥的另一個。  
   
 ## <a name="example"></a>範例  
   
@@ -146,7 +143,7 @@ void PrintComError(_com_error &e) {
   
  **效能結果：**  
 **尚未備妥： 0.016 秒**  
-**已備妥： 0.016 秒**   
+**備妥： 0.016 秒**   
 ## <a name="see-also"></a>另請參閱  
- [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 屬性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c4b2ae49de561dd7a82785bda955d6701abc770
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251280"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146338"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>工作 5：從 Excel 建立定義域屬性
   在這個工作中，您將轉換**狀態**屬性**供應商**實體**網域型屬性**。 設定是以網域為基礎，並將其發行至 MDS，名為的新實體的 State 屬性之後**狀態**資料行中的所有值的 MDS 伺服器上將建立並**狀態**屬性**供應商**的值將會填入實體**狀態**實體。 現在，請**供應商**模型應該有兩個實體：**供應商**並**狀態**其中**狀態**屬性**供應商**實體是取決於網域屬性**狀態**實體。  

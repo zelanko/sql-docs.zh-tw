@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-caps.latest.revision: 49
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ac1dd3c6c5c3cce2084fa604ad1876c885e422
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3226e759ab1a92cdfa3a251c1803a54ed9ed010a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140778"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   使用 SQLPutData 傳送 65,535 個位元組以上的資料時，適用下列限制 (如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.21a 版) 或 400 KB 的資料 （適用於 SQL Server 6.0 版和更新版本)，針對 SQL_LONGVARCHAR (`text`)、 SQL_WLONGVARCHAR (`ntext`) 或SQL_LONGVARBINARY (`image`) 資料行：  

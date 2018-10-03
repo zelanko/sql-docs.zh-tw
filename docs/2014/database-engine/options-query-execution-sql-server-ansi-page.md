@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149158"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>選項 （查詢執行-SQL Server-ANSI 頁面）
   這些 ANSI (ISO) 標準 SET 選項共同定義了使用者查詢的查詢處理環境是執行觸發，還是預存程序。 不過，這些 SET 選項並沒有包含符合 ISO 標準所需的所有選項。 使用此頁面來指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將使用 ISO 標準中所指定的所有或部分設定執行查詢。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。 在 **[查詢選項]** 對話方塊中，於 **[執行]** 之下，按一下 **[ANSI]**。  
@@ -57,7 +54,7 @@ ms.locfileid: "37173359"
  **SET ANSI_NULLS**  
  -   指定搭配 null 值一起使用時，等於 (=) 和不等於 (<>) 比較運算子的 ISO 相容行為。 如果選取 SET ANSI_NULLS，所有針對 Null 值的比較，都會評估為 UNKNOWN，也就是符合 ISO 的行為。 如果未選取 SET ANSI_NULLS，所有資料針對 Null 值的比較，都會評估為 TRUE。 依預設，這個核取方塊為已選取。  
   
- **重設預設值**  
+ **重設為預設值**  
  將此頁面上的所有值重設為原始預設值。  
   
   

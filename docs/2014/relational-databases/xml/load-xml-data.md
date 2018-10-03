@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37926d5ec10cfb5bc92de83e75d4d317d9123047
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 43c1286077b940516ca849fb3ad7ec847ba04ed5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890244"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153662"
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
   您可以透過幾種方式將 XML 資料傳送到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 例如：  

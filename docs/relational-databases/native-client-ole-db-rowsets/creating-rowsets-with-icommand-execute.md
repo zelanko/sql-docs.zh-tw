@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], creating
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 - Execute method
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 797bab2c51bdcb2c8c4ada4999fe1272ef4f229e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b2be5161bd84a6bd2fe2bcc87c494ddebe9e7787
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674216"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>使用 ICommand:: Execute 建立資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

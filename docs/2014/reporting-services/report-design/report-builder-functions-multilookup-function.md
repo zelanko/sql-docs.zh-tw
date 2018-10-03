@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147453"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回第一組符合指定之名稱集合的值。  
@@ -39,10 +36,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) 目前範圍中評估並指定名稱或查閱的索引鍵集的運算式。 例如，如果是多值參數 `=Parameters!IDs.value`。  
   
  *destination_expression*  
- (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value`。  
+ (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value` 。  
   
  *result_expression*  
- (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!Name.Value`。  
+ (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!Name.Value` 。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"Colors"。  

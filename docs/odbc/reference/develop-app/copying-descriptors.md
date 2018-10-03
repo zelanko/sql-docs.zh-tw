@@ -1,30 +1,27 @@
 ---
-title: 複製描述 |Microsoft 文件
+title: 複製描述項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], copying
 - copying descriptors [ODBC]
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5a09d56193641e899ebe64d5bfb455a06af902f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834206"
 ---
-# <a name="copying-descriptors"></a>複製的描述元
-**SQLCopyDesc**呼叫函式會將一個描述元欄位複製到另一個描述元。 只有應用程式描述項或 IPD，但不是屬於 IRD 欄位複製。 欄位可以從任何類型的描述元複製。 只有在來源和目標的描述元所定義的欄位會複製。 **SQLCopyDesc**不會複製 SQL_DESC_ALLOC_TYPE 欄位中，因為無法變更的描述元的配置類型。 複製的欄位覆寫現有的欄位。  
+# <a name="copying-descriptors"></a>複製描述項
+**SQLCopyDesc**呼叫函式可將有一個描述項欄位複製到另一個描述元。 只有應用程式描述項或 IPD，但不是屬於 IRD，可以複製欄位。 欄位可以從任何類型的描述元複製。 只有在來源和目標的描述項所定義的欄位都會複製。 **SQLCopyDesc**不會複製 SQL_DESC_ALLOC_TYPE 欄位中，因為無法變更的描述元的配置類型。 複製的欄位覆寫現有的欄位。  
   
- 上一個陳述式控制代碼 ARD 可做為另一個陳述式控制代碼上 APD。 這可讓應用程式來複製資料列，而不複製應用程式層級資料的資料表之間。 若要這樣做，以在 INSERT 陳述式中之參數的參數描述元中重複使用描述擷取的資料列的資料表資料列描述項。 SQL_MAX_CONCURRENT_ACTIVITIES 資訊類型必須是大於 1 的這項作業才能成功。
+ 上一個陳述式控制代碼 ARD 可做為另一個陳述式控制代碼上 APD。 這可讓應用程式複製資料表，而不複製應用程式層級的資料之間的資料列。 若要這樣做，資料列描述項所描述的資料表擷取的資料列會重複使用為 INSERT 陳述式中的參數的參數描述元。 SQL_MAX_CONCURRENT_ACTIVITIES 資訊型別必須是大於 1，這項作業才會成功。

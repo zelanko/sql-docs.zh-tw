@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.assemblyproperties.f1
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20a5837b112106952e649bc25fcda5a3d93ab3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdaa5e0fe92c09b728540d28aa71bdc786d8cae3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149178"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>組件屬性對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [組件屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之組件參考的屬性。 以滑鼠右鍵按一下物件總管中的組件，然後選取 [屬性]，即可顯示 [組件屬性] 對話方塊。  

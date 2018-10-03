@@ -1,30 +1,24 @@
 ---
-title: 建立伺服器連接檔案 (AccessToSQL) |Microsoft 文件
+title: 建立伺服器連線檔案 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672656"
 ---
-# <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連接檔案 (AccessToSQL)
-伺服器的資訊可以是指定的指令碼檔案的 [伺服器] 區段中。 伺服器的資訊也可以指定不同的伺服器連接檔案中。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 如果指令碼和伺服器的連接檔案中出現相同的伺服器識別碼，則會被視為指令碼檔案中的伺服器定義。  
+# <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連線檔案 (AccessToSQL)
+伺服器的資訊可以是指定伺服器一節的指令碼檔案。 伺服器的資訊也可以指定不同的伺服器連線檔案中。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 相同的伺服器識別碼是否存在於指令碼和伺服器連線檔案，則會視為在指令碼檔案中的伺服器定義。  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -67,12 +61,12 @@ ms.locfileid: "34773624"
 </sql-azure>  
 ```  
   
-## <a name="server-connection-file-validation"></a>伺服器連接檔案驗證  
-使用者可輕鬆地驗證其伺服器連線檔之結構描述定義檔 **'A2SSConsoleScriptServersSchema.xsd'** 可用 '結構描述' 資料夾中。  
+## <a name="server-connection-file-validation"></a>伺服器連線檔案驗證  
+使用者可以輕鬆地驗證他/她伺服器連線檔案對結構描述定義檔 **'A2SSConsoleScriptServersSchema.xsd'** 可用 [結構描述] 資料夾中。  
   
 ## <a name="next-step"></a>下一步  
-在操作主控台的下一個步驟是[執行 SSMA 主控台&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+操作主控台的下一個步驟是[執行 SSMA 主控台&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 (Access)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

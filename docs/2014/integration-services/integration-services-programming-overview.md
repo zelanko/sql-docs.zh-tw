@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services, programming
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5434546f2a6d392cb8eed82704d8164c31620e91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 634cbd5158331dde35afc81dd58c2e30b8d41fed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156548"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 程式設計概觀
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的架構會區隔資料移動和轉換與套件控制流程和管理。 定義這個架構的是兩個不同的引擎，當您針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，可以將這兩個引擎自動化及擴充。 執行階段引擎會實作控制流程和封裝管理基礎結構，該基礎結構可讓開發人員控制執行流程及設定記錄、事件處理常式和變數的選項。 資料流程引擎是一種特殊且高效率的引擎，它是專門用來擷取、轉換及載入資料。 在針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計時，您將會針對這兩個引擎進行程式設計。  
@@ -52,8 +49,7 @@ ms.locfileid: "37271644"
 ## <a name="supported-languages"></a>支援的語言  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 完全支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 如此可讓開發人員使用所選的 .NET 相容語言來針對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 進行程式設計。 雖然執行階段引擎和資料流程引擎都是以機器碼所撰寫，但是兩者都可透過完全受管理的物件模型來使用。  
   
- 您可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他程式碼或文字編輯器中，設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件、自訂工作和元件的程式。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供開發人員許多工具與功能，使之可以簡化及加快反覆執行程式碼撰寫、偵錯與測試週期的速度。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 也可簡化部署工作。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 編譯及建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程式碼專案。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包含 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 編譯器與相關工具。  
+ 您可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他程式碼或文字編輯器中，設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 套件、自訂工作和元件的程式。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供開發人員許多工具與功能，使之可以簡化及加快反覆執行程式碼撰寫、偵錯與測試週期的速度。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 也可簡化部署工作。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 編譯及建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程式碼專案。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包含 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 編譯器與相關工具。  
   
 > [!IMPORTANT]  
 >  依預設，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 會隨 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安裝，但是不會安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非已在電腦上安裝 SDK，而且 SDK 文件集是包含在線上叢書集合中，否則本節中的 SDK 內容連結將不會有任何作用。 在安裝 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 之後，您可以遵循[新增或移除 SQL Server 的產品文件集](../2014-toc/books-online-for-sql-server-2014.md)中的指示，將 SDK 文件集新增至線上叢書集合和目錄。  

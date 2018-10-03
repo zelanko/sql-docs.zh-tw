@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
-caps.latest.revision: 7
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: dca19f18df157756625b2335b2e38439c34d4f5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26ab900e8a043399191e8c26314d47e48dd3e1a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137378"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>第 1 課：建立 Windows Azure 儲存體物件
   您必須先建立儲存體帳戶，然後建立 Blob 容器，才能在雲端儲存體上建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份。 第 1 課會逐步引導您完成登入 Windows Azure 管理入口網站以及建立儲存體帳戶和 Blob 容器的步驟。  

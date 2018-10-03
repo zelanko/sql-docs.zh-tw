@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - result sets [ODBC], default
 - ODBC applications, cursors
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a4ad5f55da7e5188b4555fbbfe3c4a3fabdc3ae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1d7101cf4775e5280c22cc27ecae009410d231d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415010"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137928"
 ---
 # <a name="using-sql-server-default-result-sets"></a>使用 QL Server 預設結果集
   預設的 ODBC 資料指標屬性為：  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services objects, server objects
 ms.assetid: 365bfd63-c55a-433d-9e1a-a788bc149a25
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7f5b10fd53c8a2c1a12623d2e655d53f3e47333
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d98c3ed452a0ba56f0419caca9eb78df94577f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173520"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048468"
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>伺服器物件 (Analysis Services - 多維度資料)
     

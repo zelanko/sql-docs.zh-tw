@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 17130 (Database Engine error)
 ms.assetid: 7ce6afca-221d-402f-89df-da7e74a339a8
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1738e492f0247e34ac71058edc96fcf13f36daba
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4f8d62a98d39a65db78f79fdfaf3ecdb2921408e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142871"
 ---
 # <a name="mssqlserver17130"></a>MSSQLSERVER_17130
     

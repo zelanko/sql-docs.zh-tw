@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e143cbf9540aab467bd57a5c4f923df81d658fb0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21e055290abaf9edd4fffaa6b2179af70915086e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063298"
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中導入緩衝集區擴充，可將非動態隨機存取記憶體 (也就是固態硬碟) 擴充完全整合到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 緩衝集區，如此能大幅提升 I/O 輸送量。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都有提供緩衝集區擴充。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  

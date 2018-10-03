@@ -1,42 +1,39 @@
 ---
-title: 偵測和解決衝突 |Microsoft 文件
+title: 偵測並解決衝突 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625282"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
-如果您正在處理您的資料錄集即時模式中，會有更少的並行存取問題發生的機率。 相反地，如果您的應用程式會使用批次模式更新，可能有更佳可能發生在儲存編輯同一筆記錄的另一位使用者所做的變更之前，一位使用者將變更的記錄。 在這種情況下，您將會正常處理衝突的應用程式。 它可能是您要將更新傳送至伺服器的最後一個人員中 「 獲勝。 」 的希望 或者，您可能想要讓最新的使用者決定哪些更新應該優先藉由向他提供兩個衝突的值之間的選擇。  
+如果您在即時模式中處理資料錄集，會有較少機會發生的並行處理問題。 相反地，如果您的應用程式會使用批次模式更新，可能會有一個良好機會儲存編輯同一筆記錄的另一位使用者所做的變更之前，一位使用者將變更記錄。 在此情況下，您會想，正常處理衝突的應用程式。 它可能是您將更新傳送至伺服器的最後一個人中 「 獲勝。 」 的願望 或者，您可能想要讓最新的使用者決定哪些更新應該優先選擇兩個衝突的值，提供與他連絡。  
   
- 無論如何，ADO 提供 UnderlyingValue OriginalValue 物件和屬性欄位來處理這些類型的衝突。 重新同步處理方法與資料錄集的篩選屬性搭配使用這些屬性。  
+ 無論如何，ADO 提供 UnderlyingValue OriginalValue 物件和屬性欄位來處理這些衝突類型。 使用重新同步處理方法和資料錄集的 [篩選] 屬性搭配使用這些屬性。  
   
 ## <a name="remarks"></a>備註  
- 當 ADO 批次更新期間發生衝突時，警告將會加入至錯誤集合。 因此，您應該一律檢查錯誤之後您可以呼叫 BatchUpdate，並找到它們，如果開始測試假設發生衝突。 第一個步驟是在資料錄集 equal to adFilterConflictingRecords 上設定篩選屬性。 這會限制只在有衝突的記錄資料錄集的檢視。 RecordCount 屬性等於零，在此步驟之後，如果您知道錯誤已由以外的衝突所造成。  
+ 當 ADO 批次更新期間發生衝突時，警告會加入錯誤集合。 因此，您應該一律檢查錯誤呼叫 BatchUpdate，並找到它們，如果開始測試的假設，您已偵測到衝突之後，立即。 第一個步驟是資料錄集 equal to adFilterConflictingRecords 上設定篩選屬性。 這會限制只在有衝突的記錄資料錄集的檢視。 如果 RecordCount 屬性等於零，在此步驟之後，就會知道以外衝突的問題所引發的錯誤。  
   
- 當您呼叫 BatchUpdate 時，ADO 和提供者會產生 SQL 陳述式來執行更新的資料來源。 請記住特定資料來源有所在的資料行的類型可以用於 WHERE 子句的限制。  
+ 當您呼叫 BatchUpdate 時，ADO 和提供者會產生 SQL 陳述式來執行更新的資料來源。 請記住，特定資料來源已在其的資料行的類型可以使用 WHERE 子句中的限制。  
   
- 接下來，呼叫資料錄集與 AffectRecords 引數設為等於 adAffectGroup 和 ResyncValues 引數設為等於 adResyncUnderlyingValues 重新同步處理方法。 重新同步處理方法會更新目前的資料錄集物件，從基礎資料庫中的資料。 您可以藉由使用 adAffectGroup，確保只顯示與目前的篩選器設定，也就只衝突的記錄，記錄會重新同步處理資料庫。 如果您正在處理大量資料集，這可以讓顯著的效能差異。 藉由設定 adResyncUnderlyingValues ResyncValues 引數呼叫重新同步處理時，確保 UnderlyingValue 屬性將包含 （衝突） 的值來自資料庫、 「 值 」 屬性會維護由使用者所輸入的值和確認 OriginalValue 屬性會保留欄位 （最後一個成功 UpdateBatch 呼叫之前的值） 的原始值。 您接著可以使用這些值，以程式設計的方式解決衝突，或要求使用者選取將使用的值。  
+ 接下來，呼叫資料錄集與 AffectRecords 引數設定為等於 adAffectGroup 和 ResyncValues 引數設定為等於 adResyncUnderlyingValues 重新同步處理方法。 重新同步處理方法會更新目前的資料錄集物件，從基礎資料庫中的資料。 您可以藉由使用 adAffectGroup，確保只顯示與目前的篩選條件設定，也就只有衝突的記錄，記錄會重新同步處理與資料庫。 如果您正在處理大量資料集，這可能造成顯著的效能差異。 藉由呼叫重新同步處理時，則您可以設 adResyncUnderlyingValues ResyncValues 引數，可確保 UnderlyingValue 屬性將包含 （衝突） 的值，從資料庫中，[值] 屬性會維護由使用者輸入的值和OriginalValue 屬性會保留原始的值欄位 （在進行最後一個成功的 UpdateBatch 呼叫之前，它所具有的值）。 您接著可以使用這些值，以程式設計的方式解決衝突，或要求使用者選取將使用的值。  
   
- 這項技術是以下列程式碼範例所示。 在可用手動方式建立衝突變更基礎資料表中的值，會在呼叫 UpdateBatch 之前使用個別的資料錄集。  
+ 這項技術是以下列程式碼範例所示。 以人為方式的範例會使用不同的資料錄集變更基礎資料表中的值，才能呼叫 UpdateBatch 以建立衝突。  
   
 ```  
 'BeginConflicts  
@@ -115,7 +112,7 @@ ms.locfileid: "35270607"
 'EndConflicts  
 ```  
   
- 您可以使用目前的記錄或特定欄位的 Status 屬性來判斷發生何種衝突。  
+ 您可以使用目前資料錄或特定欄位的 Status 屬性來判斷發生何種衝突。  
   
  如需錯誤處理的詳細資訊，請參閱[錯誤處理](../../../ado/guide/data/error-handling.md)。  
   

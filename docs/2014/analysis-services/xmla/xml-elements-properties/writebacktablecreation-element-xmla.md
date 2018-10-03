@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - WritebackTableCreation Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 454ee8dc998fbbebc5a867a29a289bce4ee818be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131488"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 元素 (XMLA)
   決定是否要將回寫資料表建立期間[程序](../xml-elements-commands/process-element-xmla.md)作業。  
@@ -53,7 +50,7 @@ ms.locfileid: "37319208"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37319208"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[處理](../xml-elements-commands/process-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  Analysis Services 執行個體物件可用處理選項的相關資訊，請參閱[多維度模型物件處理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  

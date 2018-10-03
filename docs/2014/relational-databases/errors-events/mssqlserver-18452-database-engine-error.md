@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 18456 (Database Engine error)
 - 18452 (Database Engine error)
 ms.assetid: 21da332c-e81d-4dee-a9d2-95598911b3be
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 217f46ea6fcd8a2697335d9811902aabfad3b296
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d3318e2425ba8c9dde6f8a5cc950bc0444a0bb2d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139958"
 ---
 # <a name="mssqlserver18452"></a>MSSQLSERVER_18452
     

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147553"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為系統管理員提供了特殊的診斷連接，可在伺服器的標準連接失效時使用。 這個診斷連接可讓系統管理員存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以執行診斷查詢和排解疑難問題，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未回應標準連接要求。  

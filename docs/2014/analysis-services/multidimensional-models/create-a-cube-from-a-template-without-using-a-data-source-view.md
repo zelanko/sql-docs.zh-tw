@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104888"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>從範本建立 Cube，而不使用資料來源檢視
   在 [Cube 精靈] 的第一頁上，選取 [Build the cube without using a data source (不使用資料來源而建立 Cube)] 建立 Cube，而不使用資料來源檢視。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)。  
   
 ## <a name="selecting-the-build-method"></a>選取建立方法  
- 在 [Cube 精靈] 的 [Select Build Method (選取建立方法)] 頁面上，按一下 [Build the cube without using a data source (不使用資料來源而建立 Cube)]。 若要使用現有的 Cube 範本建立 Cube，請選取 [Use a cube template (使用 Cube 範本)] 核取方塊。 執行個體時提供 SQL Server 登入。 如果您不選取使用範本，則必須手動設定選項。  
+ 在 [Cube 精靈] 的 [Select Build Method (選取建立方法)] 頁面上，按一下 [Build the cube without using a data source (不使用資料來源而建立 Cube)]。 若要使用現有的 Cube 範本建立 Cube，請選取 [Use a cube template (使用 Cube 範本)] 核取方塊。 . 如果您不選取使用範本，則必須手動設定選項。  
   
  Cube 範本包含預先定義的量值、量值群組、維度、階層及屬性。 如果選取範本，精靈會使用範本中的物件定義做為基礎，來設定下列頁面中的選項。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 標準 Cube 的數個範本隨附安裝。 伺服器管理員也可以加入專為您的組織資料所設定的 Cube 或維度範本。  
   

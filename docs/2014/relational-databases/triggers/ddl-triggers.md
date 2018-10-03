@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, about DDL triggers
@@ -14,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b65cc412f2e9cb1ea2058a52ae8336c7827b9ca3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141568"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
   DDL 觸發程序則是為了回應各種資料定義語言 (DDL) 事件而引發的。 這些事件主要對應至以 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 關鍵字開頭的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 執行類似 DDL 作業的某些系統預存程序也可能引發 DDL 觸發程序。  

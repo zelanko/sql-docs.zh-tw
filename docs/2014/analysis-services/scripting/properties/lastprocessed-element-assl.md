@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LastProcessed Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LastProcessed element
 ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d5fd5e94c8a92ee21b1cb04e5f9ef62eddae91f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d634eead7abe78e60eda98083bc6dbeb4ae932ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153398"
 ---
 # <a name="lastprocessed-element-assl"></a>LastProcessed 元素 (ASSL)
   包含唯讀的時間戳記，指出上次處理包含父元素之資料庫的時間。  
@@ -51,7 +48,7 @@ ms.locfileid: "37206188"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|DateTime|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37206188"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Cube](../objects/cube-element-assl.md)，[資料庫](../objects/database-element-assl.md)，[維度](../objects/dimension-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)， [MiningModel](../objects/miningmodel-element-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)，[資料分割](../objects/partition-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的值`LastProcessed`項目。 只有當包含父元素的資料庫經過處理時，此值才會變更。 個別處理父元素並不會變更 `LastProcessed` 元素的值。  

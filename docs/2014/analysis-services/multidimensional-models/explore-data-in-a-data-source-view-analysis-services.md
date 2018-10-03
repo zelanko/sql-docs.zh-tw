@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - exploring data [Analysis Services]
 - data source views [Analysis Services], exploring data
 - viewing source data
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22d8f26a22f2cda64a6a9999ce4a2a730e4e5c06
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f02ffda65cfd981f84a41f62ed310a06b8dfbd63
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094900"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>在資料來源檢視中瀏覽資料 (Analysis Services)
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的資料來源檢視設計師中使用 [瀏覽資料] 對話方塊，瀏覽資料來源檢視 (DSV) 中之資料表、檢視或具名查詢的資料。 當您在資料來源檢視設計師中瀏覽資料時，可以檢視選定資料表、檢視或具名查詢中每一個資料行的內容。 檢視實際內容可協助您判斷是否需要所有的資料行、是否需要具名計算來提高使用者易懂性和可用性，以及現有的具名計算或具名查詢是否會傳回預期的值。  

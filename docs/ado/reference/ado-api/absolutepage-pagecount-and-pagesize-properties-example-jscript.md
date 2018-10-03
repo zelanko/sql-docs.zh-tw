@@ -1,13 +1,11 @@
 ---
-title: AbsolutePage、 PageCount 和 PageSize 屬性範例 (JScript) |Microsoft 文件
+title: AbsolutePage、 PageCount、 和 PageSize 屬性範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], JScript example
 - PageSize property [ADO], JScript example
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f165a920b1703d75792da45100eaf848bdb7e08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274779"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705086"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 (JScript)
-此範例示範 AbsolutePage、 PageCount 和 PageSize 屬性。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**AbsolutePageJS.asp**。  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、 PageCount、 和 PageSize 屬性範例 (JScript)
+此範例示範 AbsolutePage、 PageCount 和 PageSize 屬性。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AbsolutePageJS.asp**。  
   
 ```  
 <!-- BeginAbsolutePageJS -->  

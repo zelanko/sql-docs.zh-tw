@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user interface reference [Upgrade Advisor]
 - SQL Server Upgrade Advisor, user interface reference
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
-caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09cc0df077b51e02cc65edc244dfac8c03518fc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 57259e3608dfe58df5ce88ca5a4009c8c3ec0241
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159035"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Upgrade Advisor 使用者介面參考
   本節包含說明主題[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor。 這些主題都是從 Upgrade Advisor 精靈藉由按下 F1 鍵或按一下**協助**在精靈頁面和對話方塊中。  

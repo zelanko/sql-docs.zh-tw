@@ -3,29 +3,35 @@ title: 升級 SQL Server 執行個體 （機器學習服務） 中的 R 和 Pyth
 description: R 和 Python 中 SQL Server 2016 Services 或 SQL Server 2017 Machine Learning 服務繫結至 Machine Learning Server 使用 sqlbindr.exe 升級。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/19/2018
+ms.date: 09/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078888"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的 機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 中的 R 和 Python 整合包括開放原始碼和 Microsoft 的專屬套件。 在標準的 SQL Server 服務，根據 SQL Server 發行週期、 錯誤修正，以在目前版本的現有套件進行更新 R 和 Python 套件。 
+SQL Server 中的 R 和 Python 整合包括開放原始碼和 Microsoft 的專屬套件。 在標準的 SQL Server 服務，根據 SQL Server 發行週期、 錯誤修正，以在最新版本，但沒有主要版本升級現有的封裝更新套件。 
 
-大部分的資料科學家已習慣新版的套件，可供使用。 SQL Server 2017 Machine Learning 服務 （資料庫） 和 SQL Server 2016 R Services （資料庫） 中，您可以藉由變更取得較新版本的 R 和 Python*繫結*從 SQL Server 服務才能[MicrosoftMachine Learning Server](https://docs.microsoft.com/machine-learning-server/index)而[新式生命週期支援原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
+不過，許多資料科學家已習慣新版的套件，可供使用。 SQL Server 2017 Machine Learning 服務 （資料庫） 和 SQL Server 2016 R Services （資料庫） 中，您可以取得[較新版本的 R 和 Python](#version-map)依*繫結*到**MicrosoftMachine Learning Server**。 
 
-繫結不會變更您的安裝的基本概念： R 和 Python 整合仍然是一部分的資料庫引擎執行個體中，授權會維持不變的 （不需要額外費用與繫結相關聯），並仍保留資料庫的 SQL Server 支援原則引擎。 但重新繫結，並變更 R 和 Python 套件服務的方式。 本文的其餘部分說明繫結機制，以及每個版本的 SQL Server 的運作方式。
+## <a name="what-is-binding"></a>何謂繫結？
+
+繫結是交換出您的 R_SERVICES 與 PYTHON_SERVICES 資料夾，使用較新的可執行檔、 程式庫的內容，並從工具的安裝程序[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。
+
+與更新元件是在服務模型的參數。 而不是[SQL Server 產品生命週期](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017)，以[SQL Server 累計更新](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions)，現在符合您的服務更新[Microsoft R Server 和機器的支援時間表Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)上[新式生命週期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
+
+元件版本和服務更新，除了繫結不會變更您的安裝的基本概念： R 和 Python 整合仍然是一部分的資料庫引擎執行個體中，授權會維持不變的 （不需要額外費用與繫結相關聯），和 SQLServer 支援原則仍保留在資料庫引擎。 本文的其餘部分說明繫結機制，以及每個版本的 SQL Server 的運作方式。
 
 > [!NOTE]
-> 繫結，適用於僅 （資料庫內） 執行個體。 繫結 （獨立式） 安裝無關。
+> 繫結套用至 （資料庫內） 執行個體只會繫結至 SQL Server 執行個體。 繫結 （獨立式） 安裝無關。
 
 **SQL Server 2017 繫結的考量**
 
@@ -33,7 +39,9 @@ For SQL Server 2017 Machine Learning 服務，您會在 Microsoft Machine Learni
 
 **SQL Server 2016 繫結的考量**
 
-SQL Server 2016 R Services 的客戶，繫結會提供更新的 R 封裝，新的封裝不屬於原始的安裝 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))，以及[預先訓練模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)，全部都可以進一步在每個新的主要和次要版本的 Microsoft Machine Learning Server 重新整理。 繫結不會提供您的 Python 支援，這是 SQL Server 2017 功能。 
+SQL Server 2016 R Services 的客戶，繫結會提供更新的 R 封裝，新的封裝不屬於原始的安裝 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))，以及[預先訓練模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)，全部都可以進一步在每個新的主要和次要版本的重新整理[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。 繫結不會提供您的 Python 支援，這是 SQL Server 2017 功能。 
+
+<a name="version-map"></a>
 
 ## <a name="version-map"></a>版本的對應
 
@@ -67,16 +75,16 @@ SQL Server 2016 R Services 的客戶，繫結會提供更新的 R 封裝，新�
  [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
-## <a name="how-component-upgrade-works"></a>元件升級的運作方式
+## <a name="how-component-upgrade-works"></a>元件升級的運作方式 
 
-元件升級，就會發生時您*繫結*到 SQL Server 2016 R Services 執行個體 （或 SQL Server 2017 Machine Learning 服務執行個體） [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。 此程序基本上會覆寫 C:\Program Files\Microsoft SQL Server\MSSQL14 的內容。MSSQLSERVER\R_SERVICES 為 C:\Program Files\Microsoft\ML Server\R_SERVER 的內容已安裝 SQL Server 安裝程式。 
+當您將現有安裝的 R 和 Python 繫結至 Machine Learning Server 時，會升級 R 和 Python 程式庫和可執行檔。 繫結執行者[Microsoft Machine Learning Server 安裝程式](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)現有 SQL Server 資料庫引擎執行個體，2017年或 2016年上執行安裝程式時擁有 R 或 Python 整合。 安裝程式偵測到現有的功能，並提示您重新繫結至 Machine Learning Server。 
 
-Microsoft Machine Learning Server 是在內部部署伺服器產品分隔來自 SQL Server，但具有相同的解譯器和套件。 繫結交換出 SQL Server 服務更新機制，以便您可以使用 R 和 Python 套件隨附 Microsoft Machine Learning 伺服器，而這通常是較所安裝的 SQL Server。 切換的支援原則是一個不錯的選擇，資料科學小組需要新一代 R 和 Python 模組以便他們的解決方案。 
+在 C:\Program Files\Microsoft SQL Server\MSSQL14 內容的繫結。其會以較新的可執行檔和程式庫的 C:\Program Files\Microsoft\ML Server\R_SERVER 和 \PYTHON_SERVER 覆寫 MSSQLSERVER\R_SERVICES \PYTHON_SERVICES。
 
-繫結執行者[MLS installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。 安裝程式會更新特定的 R 和 Python 套件，但不會取代您的 SQL Server 資料庫執行個體與獨立、 中斷連接的伺服器安裝。
+在此同時，服務模型也從 SQL Server 更新機制，翻轉至更頻繁的主要和次要版本循環的 Microsoft Machine Learning Server。 切換的支援原則是一個不錯的選擇，資料科學小組需要新一代 R 和 Python 模組以便他們的解決方案。 
 
 + 沒有繫結，R 和 Python 套件已修補的 bug 修正程式，當您安裝 SQL Server service pack 或累積更新 (CU)。 
-+ 使用繫結，較新的套件版本可以套用至您的執行個體，獨立的 CU 發行排程，底下[新式生命週期原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft Machine Learning Server。 新式生命週期支援原則提供較短、 一年的存留時間更頻繁的更新。 後置繫結，您會繼續使用 MLS 安裝程式可在 Microsoft Machine Learning Server 的未來更新的 R 和 Python。
++ 使用繫結，較新的套件版本可以套用至您的執行個體，獨立的 CU 發行排程，底下[新式生命週期原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft Machine Learning Server。 新式生命週期支援原則提供較短、 一年的存留時間更頻繁的更新。 後置繫結，您會繼續使用 R 和 Python 的未來更新 MLS 安裝程式，可供 Microsoft 下載網站上。
 
 繫結，適用於 R 和 Python 功能。 也就是 Microsoft R Open （Anaconda）、 R 和 Python 功能的開放原始碼套件和專屬套件 RevoScaleR、 revoscalepy，等等。 繫結不會變更資料庫引擎執行個體的支援模型，並不會變更的 SQL Server 版本。
 

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server replication]
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58ea6e365d16e4487a1f24700a7731ed96e04914
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147488"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，系統預存程序可提供複寫拓撲中所有使用者可設定的功能之程式存取權。 雖然使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或是 sqlcmd 命令列公用程式，可以個別執行預存程序，但是撰寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼檔案對於執行一連串的邏輯複寫工作非常有幫助。  
@@ -53,7 +50,7 @@ ms.locfileid: "37292268"
   
 -   使用在複寫精靈中提供的指令碼產生功能或是  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如需詳細資訊，請參閱 [Scripting Replication](../scripting-replication.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. 如需詳細資訊，請參閱 [Scripting Replication](../scripting-replication.md)。  
   
 -   使用 Replication Management Objects (RMO) 以程式設計的方式產生指令碼來建立 RMO 物件。  
   

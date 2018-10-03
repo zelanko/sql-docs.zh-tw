@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 105c9b66e82c4c5dee12bbe8f54d60b960032a70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146318"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大量插入工作編輯器 (選項頁面)
   使用 **[大量插入工作編輯器]** 對話方塊的 **[選項]** 頁面，即可設定大量插入作業的屬性。 大量插入工作會將大量資料複製至 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表或檢視表。  
@@ -56,7 +53,7 @@ ms.locfileid: "37326208"
 |**引發觸發程序**|選取即可引發資料表上的任何插入、更新或刪除觸發程序。|  
   
  **SortedData**  
- 在大量插入陳述式中指定 ORDER BY 子句。 您所提供的資料行名稱必須是目的資料表中的有效資料行。 預設值為 `false`。 這表示資料並未依 ORDER BY 子句排序。  
+ 在大量插入陳述式中指定 ORDER BY 子句。 您所提供的資料行名稱必須是目的資料表中的有效資料行。 預設為 `false`。 這表示資料並未依 ORDER BY 子句排序。  
   
  **MaxErrors**  
  指定取消大量插入作業之前，可以發生的錯誤數目上限。 值為 0 指出允許發生無限個錯誤。  

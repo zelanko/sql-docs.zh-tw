@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDDataSet Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c1580365cc6c7949c552333728b5083b96f7ef9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d9208c800800032a2e79d58239132c5152b51b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124198"
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet 資料類型 (XMLA)
   定義代表多維度資料所傳回的衍生的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
@@ -57,15 +54,15 @@ ms.locfileid: "37165319"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[結果集](resultset-data-type-xmla.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[座標軸](../xml-elements-properties/axes-element-xmla.md)， [CellData](../xml-elements-properties/celldata-element-xmla.md)， [OlapInfo](../xml-elements-properties/olapinfo-element-xmla.md)|  
-|衍生的元素|無|  
+|衍生的元素|None|  
   
 ## <a name="remarks"></a>備註  
  `MDDataSet` 資料類型會提供以 XML 表示 OLAP 資料所需的 OLAP 導向資料列集 (或資料集)。 此資料列集的內容而異的值`Content`並`Format`屬性中提供[屬性](../xml-elements-properties/properties-element-xmla.md)集合`Execute`方法。 如需詳細資訊`Content`並`Format`屬性，請參閱[支援的 XMLA 屬性&#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  

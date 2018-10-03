@@ -1,13 +1,11 @@
 ---
-title: EventStatusEnum |Microsoft 文件
+title: EventStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20a5582eb8c8744e5d8a065c5fa8ce29c0d4b793
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678536"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定的事件執行的目前狀態。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|要求取消作業，導致發生此事件。|  
-|**adStatusCantDeny**|3|指出此作業無法要求取消的暫止的作業。|  
-|**adStatusErrorsOccurred**|2|指出造成事件的作業失敗，發生錯誤或錯誤。|  
-|**adStatusOK**|@shouldalert|表示造成事件的作業成功。|  
-|**adStatusUnwantedEvent**|5|事件方法已完成執行之前，可以防止後續的通知。|  
+|**adStatusCantDeny**|3|指出此作業無法要求取消暫止的作業。|  
+|**adStatusErrorsOccurred**|2|表示造成事件的作業失敗，因為發生錯誤或錯誤。|  
+|**adStatusOK**|1|表示造成事件的作業已順利完成。|  
+|**adStatusUnwantedEvent**|5|事件的方法完成執行之前，可防止後續的通知。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  

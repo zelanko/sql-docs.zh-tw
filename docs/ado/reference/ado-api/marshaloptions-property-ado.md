@@ -1,13 +1,11 @@
 ---
-title: MarshalOptions 屬性 (ADO) |Microsoft 文件
+title: MarshalOptions 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b81646d7d4339f06e5682c1886651cf69ea0dc4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 35646314a5c52e86284326ee91776b5afe2a0d17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625076"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 屬性 (ADO)
-指出哪一筆記錄的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)是要封送處理至伺服器。  
+指出哪些記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)要封送處理至伺服器。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回[MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)值。 預設值是**adMarshalAll**。  
   
 ## <a name="remarks"></a>備註  
- 使用用戶端時[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，已修改用戶端的記錄寫回至中介層或透過呼叫封送處理封裝和傳送介面方法的程序的技術的網頁伺服器跨執行緒或處理序界限參數。 設定**MarshalOptions**屬性已修改的遠端資料封送處理回中介層或 Web 伺服器更新時，可以改善效能。  
+ 使用用戶端時[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，用戶端修改過的資料錄寫回至中介層或透過呼叫封送處理封裝和傳送介面方法的程序的技術的 Web 伺服器跨執行緒或處理序界限的參數。 設定**MarshalOptions**屬性已修改的遠端資料封送處理回中介層或 Web 伺服器更新時，可以改善效能。  
   
 > [!NOTE]
 >  **遠端資料服務使用量**這個屬性只適用於用戶端**資料錄集**。  

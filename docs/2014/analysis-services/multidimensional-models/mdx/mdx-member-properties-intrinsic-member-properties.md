@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9cbfcb8926d8d4b1ae71c5a3b6ed35c3beb7796c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049329"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>內建成員屬性 (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會公開維度成員的內建屬性，您可以將它們納入查詢中，以便傳回用於自訂應用程式的其他資料或中繼資料，或協助模型調查或建構。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
@@ -105,7 +102,7 @@ ms.locfileid: "37236028"
 |`IS_DATAMEMBER`|指出成員是否為資料成員的布林值。|  
 |`IS_PLACEHOLDERMEMBER`|表示成員是否為預留位置的布林值。|  
 |`KEYx`|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於`Key`。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨參考每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 請注意，`KEYx` 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱 [簡單的 MDX 小知識：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|`LCID` *x*|以地區設定識別碼十六進位值翻譯的成員標題，其中 *x* 是地區設定識別碼十進位值 (例如，代表加拿大英文的 LCID1009)。 只有當翻譯的標題資料行繫結至資料來源時，才適用此功能。|  
+|`LCID` *X*|以地區設定識別碼十六進位值翻譯的成員標題，其中 *x* 是地區設定識別碼十進位值 (例如，代表加拿大英文的 LCID1009)。 只有當翻譯的標題資料行繫結至資料來源時，才適用此功能。|  
 |`LEVEL_NUMBER`|成員距根階層的距離。 根層級為零。|  
 |`LEVEL_UNIQUE_NAME`|成員所屬層級的唯一名稱。 對於會依識別資格產生唯一名稱的提供者，此名稱的每個元件會使用分隔符號。|  
 |`MEMBER_CAPTION`|與該成員關聯的標籤或標題。 標題主要是供顯示之用。 如果標題不存在，查詢就會傳回 `MEMBER_NAME`。|  

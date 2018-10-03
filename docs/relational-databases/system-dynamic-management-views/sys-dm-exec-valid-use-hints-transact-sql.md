@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sys.dm_exec_valid_use_hints
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_valid_use_hints management view
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
-caps.latest.revision: 5
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d1fb0ffed04c77e280d02378429cf769107bdfbc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fe3f6ed0e5a1760d70040a573376cc0306000a0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663366"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fb5c435f46788f7b3d703da16ccddab80d81d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127610"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>監視記錄傳送 (Transact-SQL)
   在您設定了記錄傳送之後，即可監視所有記錄傳送伺服器的狀態相關資訊。 記錄傳送作業的記錄和狀態一律是由記錄傳送作業儲存在本端。 備份作業的記錄和狀態會儲存在主要伺服器，而複製和還原作業的記錄和狀態會儲存在次要伺服器上。 若您已實作遠端監視伺服器，此資訊也會儲存在監視伺服器中。  
@@ -41,7 +38,7 @@ ms.locfileid: "37160915"
   
  您可以查詢這些資料表來監視記錄傳送工作階段的狀態。 例如，若要知道記錄傳送的狀態，請檢查備份作業、複製作業及還原作業的狀態和記錄。 您可以查詢下列監視資料表，以檢視特定的記錄傳送記錄和錯誤詳細資料。  
   
-|Table|描述|  
+|資料表|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存記錄傳送作業的錯誤明細。 您可以查詢此資料表來查看代理程式工作階段的錯誤。 您可以選擇依每個錯誤的記錄日期和時間來排序。 每個錯誤都會被記錄成一個例外狀況序列，而多重錯誤 (序列) 會依每項代理程式工作階段來記錄。|  

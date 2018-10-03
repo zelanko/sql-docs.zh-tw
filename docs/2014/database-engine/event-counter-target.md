@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronous event counter target [SQL Server extended events]
 - targets [SQL Server extended events], synchronous event counter target
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ca55e050a313d49421cfcc6992dbdfea60c3780
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f701ff8a1648a3f90f7e04c71f159081ac7a3da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219778"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101178"
 ---
 # <a name="event-counter-target"></a>事件計數器目標
   事件計數器目標會計算在擴充事件工作階段期間發生的所有事件。 您可以使用事件計數器目標來取得有關工作負載特性的資訊，而不會增加完整事件收集的負擔。 此目標沒有任何可自訂的參數。  

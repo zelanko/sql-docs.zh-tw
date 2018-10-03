@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.addcustomaggregation.customrollups.f1
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc5c8210dee9960dbb40320d1923d8e8681b4988
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e50d43bc030ad3267076422b8f6610b68e447ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066918"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>指定一元運算子 (商業智慧精靈)
   使用 [指定一元運算子] 頁面，即可識別包含一元運算子 (用於一般彙總) 或代表加權因數的值 (用於加權彙總) 之資料行的父子式關聯性。如需一般彙總和加權彙總的詳細資訊，請參閱[彙總和彙總設計](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  

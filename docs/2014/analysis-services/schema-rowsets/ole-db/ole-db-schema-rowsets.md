@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 500fa6a1e1ffe437d5c8faa0da99653c54d4228e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140199"
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 結構描述資料列集
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列 OLE DB 結構描述資料列集。 使用`DISCOVER_ENUMERATORS`資料列集搭配[Discover](../../xmla/xml-elements-methods-discover.md)方法來檢查特定的資料來源提供者是否支援資料列集。  

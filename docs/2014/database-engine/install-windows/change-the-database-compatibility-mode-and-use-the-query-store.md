@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82530d7707b6b93c2b4360ea4dd1fae27a868246
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143418"
 ---
 # <a name="migrate-query-plans"></a>移轉查詢計劃
   在大多數的情況下，將資料庫升級到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最新版，可提升查詢效能。 但是，如果您的關鍵任務查詢已針對效能謹慎地加以微調，您可能會想要在升級之前為這些查詢保留查詢計劃，透過的方式是為每一個查詢建立計畫指南。 如果在升級之後，查詢最佳化工具針對一個或多個查詢選擇比較沒有效率的計畫，您可啟用計畫指南，並強制查詢最佳化工具使用升級前計畫。  

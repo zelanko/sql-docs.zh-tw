@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server, configuring
 - configuration options [SMO]
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56be654635390f824817aaf90b5ab1cdb9d085be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0d54fd966594fc8219623e566f68edf65023546
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260444"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052178"
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中設定 SQL Server
   在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Information>物件，<xref:Microsoft.SqlServer.Management.Smo.Settings>物件，<xref:Microsoft.SqlServer.Management.Smo.UserOptions>物件，而<xref:Microsoft.SqlServer.Management.Smo.Configuration>物件包含的執行個體的設定和資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
