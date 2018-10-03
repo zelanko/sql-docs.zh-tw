@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fa260e1a20f13736b9df767508e4cf8a1b94de5
-ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
+ms.openlocfilehash: 4580df95cb5450836bcb2cc171c491724cf71c38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642406"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 課：使用 dta 命令提示字元公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +36,11 @@ ms.locfileid: "39654233"
   
 這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，利用它來微調工作負載。 它會使用您針對 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) [微調工作負載](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)練習所建立的 MyScript.sql 工作負載  
   
-本教學課程會使用 AdventureWorks2017 範例資料庫。 基於安全性的考量，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱[安裝 SQL Server 範例和範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。  
+本教學課程會使用 AdventureWorks2017 範例資料庫。 基於安全性的考量，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)＞。  
   
 下列工作將帶您逐步開啟命令提示字元、啟動 **dta** 命令提示字元公用程式、檢視其語法說明，以及微調您在 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)中所建立的簡單工作負載 MyScript.sql。  
 
-## <a name="prerequisites"></a>必要條件 
+## <a name="prerequisites"></a>Prerequisites 
 
 若要完成本教學課程，您需要 SQL Server Management Studio、執行 SQL Server 伺服器的存取權，以及 AdventureWorks 資料庫。
 

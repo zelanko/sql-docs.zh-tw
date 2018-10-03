@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 9e05ce22eb38bf0274ff515af3c20edfb8f46478
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655338"
 ---
 # <a name="wrappers-and-interfaces"></a>包裝函式與介面
 

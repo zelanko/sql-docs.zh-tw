@@ -1,13 +1,11 @@
 ---
-title: getAsciiStream 方法 (java.lang.String) |Microsoft 文件
+title: getAsciiStream 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getAsciiStream (java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e69333d1735704ce03b6ce53e18e2589dfed6d83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2ff964eebb92eb6b4642b2dde7d7f19cdbaf742b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618716"
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,8 +46,8 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetAsciiStream 方法 java.sql.ResultSet 介面中所指定此 getAsciiStream 方法。  
+## <a name="remarks"></a>Remarks  
+ GetAsciiStream 方法 java.sql.ResultSet 介面中所指定這個 getAsciiStream 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [getAsciiStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

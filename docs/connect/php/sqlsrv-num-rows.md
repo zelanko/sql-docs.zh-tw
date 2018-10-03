@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 500e9e48d541c3f518dc6dec0e779b90c896ee9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640618"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

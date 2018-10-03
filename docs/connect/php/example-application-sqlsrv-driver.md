@@ -5,23 +5,20 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - example application
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d47fe33801ca8a4932b6295a5052e9948bc5ef0f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d3e97f0fa4e8abfb8eddb27095fefcacd565d1d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007189"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671636"
 ---
 # <a name="example-application-sqlsrv-driver"></a>範例應用程式 (SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +30,7 @@ AdventureWorks Product Reviews 範例應用程式是使用 [!INCLUDE[ssDriverPHP
 1.  安裝 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 如需詳細資訊，請參閱 < [Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)。
 2.  將本文件稍後所列的程式碼複製到兩個檔案中：adventureworks_demo.php 和 photo.php。  
 3.  將 adventureworks_demo.php 和 photo.php 檔案放入您的 Web 伺服器的根目錄中。  
-4.  執行應用程式啟動http://localhost/adventureworks_demo.php從瀏覽器。  
+4.  執行應用程式啟動 http://localhost/adventureworks_demo.php從瀏覽器。  
   
 ## <a name="requirements"></a>需求  
 若要執行 AdventureWorks Product Reviews 範例應用程式，您的電腦的下列項目必須相符：  

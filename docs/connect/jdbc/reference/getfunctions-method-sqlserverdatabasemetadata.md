@@ -1,25 +1,22 @@
 ---
-title: getFunctions 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getFunctions 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf039e2104a7ac2fbbcce8a5a9fbd8bade8589d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6032cd14cf93d75714d46bfc825d53ecc68d39b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836023"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622436"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,23 +35,23 @@ public ResultSet getFunctions(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- 在資料庫中之目錄的名稱。 如果它是空字串 ""，結果就會包含函數而不包含目錄。 如果是**null**，目錄名稱不會用於搜尋。  
+ 在資料庫中之目錄的名稱。 如果它是空字串 ""，結果就會包含函數而不包含目錄。 如果它是 **null**，目錄名稱就不會用於搜尋。  
   
  *schemaPattern*  
   
- 結構描述的名稱。 如果它是空字串 ""，結果就會包含函數而不包含結構描述。 如果是**null**，結構描述名稱不會用於搜尋。  
+ 結構描述的名稱。 如果它是空字串 ""，結果就會包含函數而不包含結構描述。 如果它是 **null**，結構描述名稱就不會用於搜尋。  
   
  *functionNamePattern*  
   
  函數的名稱。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getFunctions 方法是由 java.sql.DatabaseMetaData 介面中 getFunctions 方法指定。  
   
  這個方法只會傳回符合指定之結構描述和函數名稱的系統和使用者函數。  
@@ -64,15 +61,15 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  每個函數描述都包括下列資料行：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**字串**|函數所在之資料庫的名稱。|  
-|FUNCTION_SCHEM|**字串**|函數所在之結構描述的名稱。|  
-|FUNCTION_NAME|**字串**|函數的名稱。|  
+|FUNCTION_CAT|**String**|函數所在之資料庫的名稱。|  
+|FUNCTION_SCHEM|**String**|函數所在之結構描述的名稱。|  
+|FUNCTION_NAME|**String**|函數的名稱。|  
 |NUM_INPUT_PARAMS|**int**|保留供日後使用，目前會傳回值 -1。|  
 |NUM_OUTPUT_PARAMS|**int**|保留供日後使用，目前會傳回值 -1。|  
 |NUM_RESULT_SETS|**int**|保留供日後使用，目前會傳回值 -1。|  
-|REMARKS|**字串**|有關此函數的註解。|  
+|REMARKS|**String**|有關此函數的註解。|  
 |FUNCTION_TYPE|**short**|函數的類型。 它可能是下列其中一個值：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  在所傳回結果集中的所有描述，都會依據 FUNCTION_CAT、FUNCTION_SCHEM、FUNCTION_NAME 和 SPECIFIC_NAME 排列順序。  

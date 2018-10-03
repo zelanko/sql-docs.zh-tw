@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4746e09839e2015e4b7b14963ae698c66066ac78
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: c6f83ca445468c0d230d0c2fd1660d58b2b75469
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645206"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

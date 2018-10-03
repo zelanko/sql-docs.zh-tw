@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 091c7a2e7df6a073f7404af9b512a9b6404e6324
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 42fed21bd2857ea9305b1b8f8771aff80ee9f2ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600406"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保護 JDBC Driver 應用程式
 

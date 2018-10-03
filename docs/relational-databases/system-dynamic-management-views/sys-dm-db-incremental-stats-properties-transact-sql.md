@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sys.dm_db_incremental_stats_properties
 - sys.dm_db_incremental_stats_properties_TSQL
@@ -20,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 562c6de437c37052b65b9d31571fa4c9b2c3a749
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602056"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

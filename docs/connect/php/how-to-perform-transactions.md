@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: de25969712c8b91494aeccfea120bbe4350cbcde
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015785"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641616"
 ---
 # <a name="how-to-perform-transactions"></a>如何：執行交易
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

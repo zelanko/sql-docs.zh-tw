@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - setTrustStore Method (SQLServerDataSource)
@@ -15,16 +13,15 @@ apilocation:
 - setTrustStore Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf5d6034fbf2e9ce9d1c1b58909146dbcf56f0c6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8deaaf006698018764eb67dc27e3f7cdb372e04a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687762"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

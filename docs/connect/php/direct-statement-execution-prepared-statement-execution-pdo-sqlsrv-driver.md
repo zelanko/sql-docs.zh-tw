@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c721a32936bf39d91042d6b7ac89a03a5fd85d6
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42783832"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658746"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

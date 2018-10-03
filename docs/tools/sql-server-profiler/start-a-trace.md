@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - stopping traces
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6120913436f128d8b395c3dc0c4ddb0de5bc5e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1956b5054f474cd27b4b6131821386c4af012bb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990023"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607782"
 ---
 # <a name="start-a-trace"></a>啟動追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

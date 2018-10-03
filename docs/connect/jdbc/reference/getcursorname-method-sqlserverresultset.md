@@ -1,13 +1,11 @@
 ---
-title: getCursorName 方法 (SQLServerResultSet) |Microsoft 文件
+title: getCursorName 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getCursorName
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 469fc8334755423e6032ce57c0fe7fd8532a9ac4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a299f8505e279cc752670b92338c893aa6b9e13d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624826"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +44,7 @@ public java.lang.String getCursorName()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getCursorName 方法是由 java.sql.ResultSet 介面中的 getCursorName 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

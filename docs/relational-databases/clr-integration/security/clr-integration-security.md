@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -13,16 +12,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8cef01a53327a0487119dd8c450da26f9fd0111c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4da058b6c4a36640ceb5273c18df5bf10feb602a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607206"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

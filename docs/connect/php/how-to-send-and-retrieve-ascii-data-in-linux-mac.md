@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, ASCII data
@@ -16,12 +14,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2fe78cc80cd7ca77f09465fb7d3e92482da7d008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669976"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

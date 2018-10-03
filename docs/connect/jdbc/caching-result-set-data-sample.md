@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62be6ad99231fb6fde258e145fb6c29e86759309
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ab7b884e79b3ffe32415bde6aa6b64c57d12bc6d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662708"
 ---
 # <a name="caching-result-set-data-sample"></a>快取結果集資料範例
 

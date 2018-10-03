@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e2d6df92bf4ddc101e1df0607ca745c7ec232485
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 539c9ffd8d7447761a2331d4895aec0f1de2544d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634236"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

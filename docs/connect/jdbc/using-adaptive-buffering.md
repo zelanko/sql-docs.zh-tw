@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 16ac54c78839df4c5ce911a1258dfa052ac1666c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785735"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625002"
 ---
 # <a name="using-adaptive-buffering"></a>使用適應性緩衝
 

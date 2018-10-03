@@ -5,21 +5,18 @@ ms.date: 03/13/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cef2fe82d65f9be77edde4b8ef279a8cea5836c3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a7e691c3be64bd58512a2a2c8ed0fab144cd001d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621966"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 
@@ -27,7 +24,7 @@ ms.locfileid: "38982220"
 
 ### <a name="windows"></a>Windows
 
-- [在 Windows 上下載 Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)
+- [下載 Microsoft ODBC Driver 17 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=56567)
 
 ### <a name="linux-and-macos"></a>Linux 和 macOS
 
@@ -58,7 +55,7 @@ ms.locfileid: "38982220"
 
 ### <a name="windows"></a>Windows
 
-- [在 Windows 上下載 Microsoft ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339)
+- [下載 Microsoft ODBC Driver 13.1 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=53339)
 - [下載 Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
 
 ### <a name="linux-and-macos"></a>Linux 和 macOS

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d76e50b4761e8d1a32bbcfc4606778f96513ed1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060225"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610740"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>使用透明網路 IP 解析
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -33,13 +30,13 @@ TransparentNetworkIPResolution 是現有 MultiSubnetFailover 中, 可用功能�
 |transparentNetworkIPResolution|MultiSubnetFailover|行為|
 |:-:|:-:|:-:|
 |(預設值)|(預設值)|0|
-|(預設值)|已啟用|@shouldalert|
+|(預設值)|已啟用|1|
 |(預設值)|已停用|0|
 |已啟用|(預設值)|0|
-|已啟用|已啟用|@shouldalert|
+|已啟用|已啟用|1|
 |已啟用|已停用|0|
 |已停用|(預設值)|2|
-|已停用|已啟用|@shouldalert|
+|已停用|已啟用|1|
 |已停用|已停用|2|
 
 `TransparentNetworkIPResolution`連接字串和 DSN 關鍵字會控制這項設定在連接字串的層級。 預設為啟用。

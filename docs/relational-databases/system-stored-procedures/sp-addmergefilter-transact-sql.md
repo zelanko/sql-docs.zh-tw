@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_addmergefilter
 - sp_addmergefilter_TSQL
@@ -22,12 +17,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94e3fe6f22e683cdd61b8f4c831c2b0eed0e45a6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022693"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595207"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

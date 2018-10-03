@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c51577cb661fd085a198bacfcfa8ffdcf49e4f58
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 03ce063437879db5c93ca83e512dc5f807bba40e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611736"
 ---
 # <a name="updating-large-data-sample"></a>更新大型資料範例
 
@@ -35,7 +32,7 @@ ms.locfileid: "39451875"
 
 ## <a name="requirements"></a>需求
 
-若要執行此範例應用程式，您必須存取 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫。 也請將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../../connect/jdbc/using-the-jdbc-driver.md)。
+若要執行此範例應用程式，您必須存取 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫。 也請將 Classpath 設定為包含 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../../connect/jdbc/using-the-jdbc-driver.md)。
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 此範例會使用 JDBC 4.0 API 中導入的 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法來存取驅動程式特有的回應緩衝方法。 若要編譯並執行此範例，您將需要使用 sqljdbc4.jar 類別庫，以便提供 JDBC 4.0 的支援。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。

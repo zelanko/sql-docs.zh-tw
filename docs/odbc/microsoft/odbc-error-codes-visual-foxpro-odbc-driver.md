@@ -1,13 +1,11 @@
 ---
-title: ODBC 錯誤碼 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+title: ODBC 錯誤碼 (Visual FoxPro ODBC Driver) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error codes
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9ba3a447912b61b38fc8742cf9ac876c01f4197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605106"
 ---
-# <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 錯誤碼 （Visual FoxPro ODBC 驅動程式）
-下表列出 Visual FoxPro 錯誤碼對應至 ODBC 錯誤程式碼 SQLSTATE 值。 對應的 SQLSTATE 值來自於[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)和[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。 從其他的 ODBC API 的任何其他 SQLSTATE 值會對應，因為**SQLExecDirect**和**SQLPrepare**是存取 Visual FoxPro 引擎只有函式。  
+# <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 錯誤碼 (Visual FoxPro ODBC Driver)
+下表列出對應至 ODBC 錯誤程式碼 SQLSTATE 值的 Visual FoxPro 錯誤碼。 對應的 SQLSTATE 值來自[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)並[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)。 從其他的 ODBC API 的任何其他 SQLSTATE 值會對應，因為**SQLExecDirect**並**SQLPrepare**是唯一的函式，存取 Visual FoxPro 引擎。  
   
- 如需有關 ODBC 錯誤碼的詳細資訊，請參閱[附錄 a: ODBC 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)，請在*ODBC 程式設計人員參考*。  
+ 如需有關 ODBC 錯誤碼的詳細資訊，請參閱 <<c0> [ 附錄 a: ODBC 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)，請在*ODBC 程式設計人員參考*。  
   
 |SQLSTATE|Visual FoxPro 錯誤碼|  
 |--------------|------------------------------|  

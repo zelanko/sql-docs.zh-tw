@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pipes [SQL Server]
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - pipes [SQL Server], listening on pipes
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 31f142f5647be6361a1cd619e44bf33dcb3bf957
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8e45e72c16366b08d76cd2431e1d43d613b57828
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42786457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682246"
 ---
 # <a name="named-pipes-properties"></a>具名管道屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

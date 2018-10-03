@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [SMO]
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11723df44664c4a3a5e5ca8ff9477c75a17d416a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d3c3329bfb88f77ac9a35c51158c71e2949c88f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603086"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>備份和還原資料庫與交易記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e5a14252410144e1bb2edd432c5df1d495c6f2cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991260"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655636"
 ---
 # <a name="using-directional-parameters"></a>使用方向參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

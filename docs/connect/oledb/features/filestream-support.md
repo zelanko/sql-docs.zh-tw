@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FILESTREAM [SQL Server], OLE DB Driver for SQL Server
@@ -17,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6dde88550692c8290148387ad8f3048d70e3eaec
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 93dad2e3a1739448e17fd8759b25f7b4dadeca66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610960"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +55,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下層相容性  
-如果使用 OLE DB Driver for SQL Server 編譯您的用戶端和應用程式連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])，然後**varbinary （max)** 行為將會與行為相容藉由引進[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 也就是說，傳回之資料的大小最大值受限於 2 GB。 如果結果值大於 2 GB，將會發生截斷，而且將會傳回「字串資料右邊截斷」警告。 
+如果使用 OLE DB Driver for SQL Server 編譯您的用戶端和應用程式連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])，然後**varbinary （max)** 行為將會與行為相容藉由引進[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 也就是說，傳回之資料的大小最大值受限於 2 GB。 如果結果值大於 2 GB，將會發生截斷，而且將會傳回「字串資料右邊截斷」警告。 
   
 當資料類型相容性設定為 80 時，用戶端行為將會與下層用戶端行為一致。  
   

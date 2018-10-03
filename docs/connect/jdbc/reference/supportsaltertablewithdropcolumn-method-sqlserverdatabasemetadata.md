@@ -1,13 +1,11 @@
 ---
-title: supportsAlterTableWithDropColumn 方法 |Microsoft 文件
+title: supportsAlterTableWithDropColumn 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsAlterTableWithDropColumn
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 55a182c1-28e5-4d32-aeb1-166a8ac76758
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a542e8454d4165dc593437a0abd3ede2581186e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9c9394408ef3fb421033df56ecbac87494acddba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847363"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668866"
 ---
 # <a name="supportsaltertablewithdropcolumn-method-sqlserverdatabasemetadata"></a>supportsAlterTableWithDropColumn 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public boolean supportsAlterTableWithDropColumn()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**受支援。 否則為 **false**。  
+ **true**如果支援。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 supportsAlterTableWithDropColumn 方法是由 java.sql.DatabaseMetaData 介面中 supportsAlterTableWithDropColumn 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 5afd57404fd7871e72183b76c2fb416182bc5520
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 94120c7c8dd52af8804c6fbe5c010ee9519d70e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017848"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649946"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>從結果集提取資料列 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,29 +1,26 @@
 ---
-title: Python SQL 驅動程式-pyodbc |Microsoft 文件
+title: Python SQL 驅動程式-pyodbc |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a747f9edc3a816d3b82eb22cb47aff6167638ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: effb73bb9edc1567848cd8ff700747049f54e5a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309787"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608929"
 ---
-# <a name="python-sql-driver---pyodbc"></a>Python SQL 驅動程式-pyodbc
+# <a name="python-sql-driver---pyodbc"></a>Python SQL 驅動程式 - pyodbc
 
-![下載 DownArrow Circled](../../../ssdt/media/download.png)[安裝 Python SQL 驅動程式](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![下載-向下箭號-圈選起來](../../../ssdt/media/download.png)[安裝適用於 Python 的 SQL 驅動程式](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="getting-started"></a>使用者入門
 

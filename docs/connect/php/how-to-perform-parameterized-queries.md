@@ -5,24 +5,21 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8c1e764373b0a8877da8dcdcf967ec8a591f1580
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032987"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666586"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：執行參數化查詢
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

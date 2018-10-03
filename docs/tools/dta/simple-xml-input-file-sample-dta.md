@@ -1,30 +1,27 @@
 ---
-title: 簡單 XML 輸入檔範例 (DTA) |Microsoft 文件
+title: 簡單 XML 輸入檔範例 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 960a8b56c1233cd453ba2308c6e1a647a5762e1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: d17e5d643b65c319277ee85037e527104bb82563
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650946"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>簡單 XML 輸入檔範例 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c865207156703d87ae827a3274e788b7b8bda270
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629926"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸入和輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613416"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver 常見問題集 (FAQ)
 

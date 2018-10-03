@@ -1,13 +1,11 @@
 ---
-title: createStatement 方法 （int，int，int） |Microsoft 文件
+title: createStatement 方法 （int，int，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.createStatement (int, int, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cabeeaf2759991bda02b3dd1f59e247c7037f15
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d07029a2f076c4342c715ac6c9fac38325d1a9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666056"
 ---
 # <a name="createstatement-method-int-int-int"></a>createStatement 方法 (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,8 +56,8 @@ public java.sql.Statement createStatement(int nType,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個的 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [createStatement 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

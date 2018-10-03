@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ea98438694963986c31f0dbb7dddecfb5caa9da6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610826"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用含有輸出參數的預存程序
 

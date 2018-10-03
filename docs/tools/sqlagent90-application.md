@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlagent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server Agent
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Agent, starting
 - command prompt utilities [SQL Server], sqlagent90
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbc6f3a3b463b27108f7e5601078416ea3267973
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9df8a9a63697f6fdc2cdf75b468dcb8e39b4eb4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678446"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

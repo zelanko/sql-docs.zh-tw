@@ -1,27 +1,24 @@
 ---
-title: 開啟追蹤檔案 (SQL Server Profiler) |Microsoft 文件
+title: 開啟追蹤檔案 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening trace files
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f9a6b0849c28bc84718c32b044774a4658010fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1672d8c58da05934c26a277dffee489452262aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599316"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>開啟追蹤檔案 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

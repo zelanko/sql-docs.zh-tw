@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_missing_index_group_stats_TSQL
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7234b9e3fe564ce777d3287b30efe2a64e1f889a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b7052eec4984d89bd9dfa4c0e94a6e35ed4f4222
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605477"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

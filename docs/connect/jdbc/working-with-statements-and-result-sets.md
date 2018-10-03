@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2eca6e7528b3b01a64640220906d9aee96ac3f48
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 94a0a5fbf228f7fbf8249e9e75a7e2aebf861065
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690048"
 ---
 # <a name="working-with-statements-and-result-sets"></a>使用陳述式及結果集
 

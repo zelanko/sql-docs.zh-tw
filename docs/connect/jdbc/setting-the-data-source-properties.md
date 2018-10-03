@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000d33df0320333e688051f1888659d152f62dde
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ef3719e41680f396c7dcd6bc41d667fe82fe7f6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639016"
 ---
 # <a name="setting-the-data-source-properties"></a>設定資料來源屬性
 

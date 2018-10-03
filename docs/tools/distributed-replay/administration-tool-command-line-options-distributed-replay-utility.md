@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f939ad0cc8f8711b69a7e67401954c20690e7b7d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e7dc5cdb9e6ccc575a029c0f4ac931107af05ae7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686779"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令列選項 (Distributed Replay Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

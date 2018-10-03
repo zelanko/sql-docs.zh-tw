@@ -1,13 +1,11 @@
 ---
-title: SetPermissions 方法 (ADOX) |Microsoft 文件
+title: SetPermissions 方法 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -18,19 +16,18 @@ f1_keywords:
 helpviewer_keywords:
 - SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cb3bb780109c61b5d481d0d0d3bae56badea819
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602418"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
-指定的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件上。  
+指定的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或是[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件上。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,25 +41,25 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  A**字串**值，指定要設定權限的物件名稱。  
   
  *ObjectType*  
- A**長**值可以是下列其中之一的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常數，指定要取得權限的物件類型。  
+ A**長**可以是其中一值的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常數，指定要取得權限的物件型別。  
   
  *動作*  
- A**長**值可以是下列其中之一的[ActionEnum](../../../ado/reference/adox-api/actionenum.md)常數，指定要設定權限時所執行的動作類型。  
+ A**長**可以是其中一值的[ActionEnum](../../../ado/reference/adox-api/actionenum.md)常數，指定要執行設定權限時的動作類型。  
   
  *權限*  
- A**長**值可以是位元遮罩的一或多個[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常數，表示權限設定。  
+ A**長**可以是位元遮罩值的一或多個[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常數，表示要設定的權限。  
   
  *繼承*  
- 選擇性。 A**長**值可以是下列其中之一的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常數，指定如何物件都會繼承這些權限。 預設值是**adInheritNone**。  
+ 選擇性。 A**長**可以是其中一值的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常數，指定如何物件會繼承這些權限。 預設值是**adInheritNone**。  
   
  *ObjectTypeId*  
- 選擇性。 A **Variant**值，指定不由 OLE DB 規格定義的提供者物件類型的 GUID。 這個參數是必要項，如果*ObjectType*設**adPermObjProviderSpecific**，否則不會使用它。  
+ 選擇性。 A **Variant**值，指定不由 OLE DB 規格定義的提供者物件類型的 GUID。 如果此參數，則需要*ObjectType*設為**adPermObjProviderSpecific**，否則不會使用它。  
   
 ## <a name="remarks"></a>備註  
  如果提供者不支援設定存取權限的群組或使用者，會發生錯誤。  
   
 > [!NOTE]
->  當呼叫**SetPermissions**，將動作設定為**adAccessRevoke**覆寫任何設定*權限*參數。 請勿設定*動作*至**adAccessRevoke**如果您想在指定的權限*權限*參數才會生效。  
+>  當呼叫**SetPermissions**，將動作設定為**adAccessRevoke**會覆寫的任何設定*權限*參數。 未設定*動作*要**adAccessRevoke**若要在指定的權限*權限*參數才會生效。  
   
 ## <a name="applies-to"></a>適用於  
   

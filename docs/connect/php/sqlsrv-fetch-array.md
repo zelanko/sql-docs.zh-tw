@@ -5,9 +5,7 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch_array
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e983d3c9a0989a5aae79c074ba7b77b09528af6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662686"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +59,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]1.1 版已加入可捲動的資料指標支援。  
   
-*offset* [選用]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
+*offset* [選擇性]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
   
 ## <a name="return-value"></a>傳回值  
 如果擷取資料列，則會傳回 **陣列** 。 如果沒有更多資料列可擷取，則會傳回 **null** 。 若發生錯誤，將會傳回 **false** 。  

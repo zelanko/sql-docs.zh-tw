@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0de0192e6ce3a5f5678d643bc90b24eb4fa10b3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b47c8cb1991d95ff18ed35e90bf0debda6794896
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664916"
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>含使用者指定組態的 XML 輸入檔範例 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

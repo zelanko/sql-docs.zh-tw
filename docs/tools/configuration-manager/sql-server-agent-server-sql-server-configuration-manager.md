@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d87da559ea4256bfc48038e4b8aa60de5c5107ed
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 32ca653f5ef0afe7eeaeba8facd2296de2843207
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42783879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660306"
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server Agent &lt;伺服器&gt; (SQL Server 設定管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

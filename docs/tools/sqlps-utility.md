@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlps
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 395eb782b93042a3edaf5be464748b88f9964083
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600707"
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,11 +69,11 @@ sqlps
  **-**  
  **-Command-** 會指定 **sqlps** 公用程式從標準輸入中讀取輸入。  
   
- *script_block* [ **-args***argument_array* ]  
+ *script_block* [ **-args**_引數\_陣列_]  
  指定要執行的 PowerShell 命令區塊，此區塊必須以大括號括住：{}。 只有當*Script_block* 或其他 **Script_block** 公用程式工作階段呼叫了 **Script_block** 公用程式時，才可指定 **Script_block** 。 *argument_array* 是 PowerShell 變數的陣列，其中包含 *script_block*中 PowerShell 命令的引數。  
   
  *string* [ *command_parameters* ]  
- 指定包含要執行之 PowerShell 命令的字串。 使用 **"&{***command***}"** 格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
+ 指定包含要執行之 PowerShell 命令的字串。 使用 **"&{**_command_**}"** 的格式。 引號表示字串，而叫用運算子 (&) 會讓 **sqlps** 公用程式執行此命令。  
   
  [ **-?** | **-Help** ]  
  顯示 **sqlps** 公用程式選項的語法摘要。  

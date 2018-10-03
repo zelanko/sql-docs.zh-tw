@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5710c5345508f3172814d8960cfce18bb11ba5ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 98d1e33b3775e6aaafa3951cb38de286694f203c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615146"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement 介面
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

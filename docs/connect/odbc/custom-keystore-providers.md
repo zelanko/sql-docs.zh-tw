@@ -5,21 +5,18 @@ ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: fa75def4572fa5d5b9b5eafaafde5d57bc21a81e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666656"
 ---
 # <a name="custom-keystore-providers"></a>自訂金鑰儲存區提供者
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
