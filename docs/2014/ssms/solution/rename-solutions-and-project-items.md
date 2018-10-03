@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], renaming
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], renaming
 - renaming solutions
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a775aba796ef6db06b44a78eb1c1957db830a5f0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ae0ead24c485c01a2eae759e5f25042cccc9425a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227288"
 ---
 # <a name="rename-solutions-and-project-items"></a>重新命名方案和專案項目
   您可以在 [方案總管] 中，重新命名方案及其專案項目。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 266f53a202906b05421b113a10e5853946810612
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96afa13033fee6a2767fc1ad3f6b6761c4a8247f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222310"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 從產生的 XML 文件排除結構描述元素 (SQLXML 4.0)
   XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您要在 XSD 結構中建立沒有對應到任何資料庫資料表 (檢視表) 或資料行，而且沒有出現在 XML 中的元素，您可以指定 `sql:mapped` 註解。  

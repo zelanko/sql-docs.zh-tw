@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a8ab9c6c57f2cb9aecfdbe15b2ea2e6cbeb9887
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222834"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
   當您更新現有的資料時，您必須同時指定**\<之前 >** 並**\<之後 >** 區塊。 在指定的項目**\<之前 >** 並**\<之後 >** 區塊描述所需的變更。 Updategram 會使用中所指定的項目**\<之前 >** 區塊來識別資料庫中的現有記錄。 中的對應項目**\<之後 >** 區塊表示記錄在執行更新作業後所呈現的外觀。 這項資訊，updategram 會建立比對的 SQL 陳述式**\<之後 >** 區塊。 接著，Updategram 會使用此陳述式來更新資料庫。  

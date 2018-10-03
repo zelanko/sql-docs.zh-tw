@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226248"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定命名慣例 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[指定命名慣例]** 頁面，即可定義結構描述產生精靈建立結構描述物件時使用的命名慣例。  
@@ -40,7 +37,7 @@ ms.locfileid: "37151529"
 |**自訂積存屬性後置詞**|指定字串，用於附加至每一個積存屬性資料行的名稱後面。 預設值是 **CustomRollupProperties**。|  
 |**一元運算子尾碼**|指定字串，用於附加至每一個一元運算子資料行的名稱後面。 預設值是 **UnaryOperator**。|  
   
- **ReplTest1**  
+ **值**  
  針對 [選項] 中所指定的選項指定一個值，亦即您要在產生結構描述時使用的值。  
   
 ## <a name="see-also"></a>另請參閱  

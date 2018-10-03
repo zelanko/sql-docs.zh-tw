@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d23f3e344bdc6ea66e134e5444d29129bd5f0dab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf6098bdb439e1b8bb78f7d875e3d2b5517f4945
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218278"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
   在報表產生器中，您可以瀏覽報表伺服器或 SharePoint 網站上的資料夾，以便尋找報表、共用資料來源、模型，以及其他相關的報表項目，並瀏覽電腦以尋找本機報表。 為了更容易尋找報表，報表產生器會維護一份最近使用之伺服器及網站的清單，而且可以直接存取電腦檔案系統中的 [桌面]、[我的文件] 和 [我的電腦] 資料夾。  

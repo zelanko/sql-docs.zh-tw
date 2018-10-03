@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], password expiration
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client, password expiration
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4de5badcb2b8c67d23b00fcb645c44fa8e1b1681
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229918"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援處理密碼逾期，以程式設計方式透過兩[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，以及透過變更**SQL Server 登入**對話方塊。  

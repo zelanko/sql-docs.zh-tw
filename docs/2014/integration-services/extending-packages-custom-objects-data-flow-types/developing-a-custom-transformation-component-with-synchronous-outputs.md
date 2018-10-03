@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: caf29b849b4993704163ce073f626e65729ef38f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cbdafae607bc9308bae20d7ffbef84ab7d9106f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225300"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>開發具有同步輸出的自訂轉換元件
   具有同步輸出的轉換元件會從上游元件接收資料列，並在傳遞資料列給下游元件時，讀取或是修改這些資料列之資料行中的值。 它們也必須定義從上游元件提供的資料行所衍生之其他輸出資料行，但是它們不需要將資料列加入資料流程。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../understanding-synchronous-and-asynchronous-transformations.md)。  

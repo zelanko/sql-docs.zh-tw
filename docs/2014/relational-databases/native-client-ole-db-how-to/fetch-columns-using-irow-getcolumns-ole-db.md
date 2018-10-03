@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f71c5ace41744221c740fc9c024124d2387ba527
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7b01e23f282f4b39043f23e70a98dab633806090
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228951"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
   `IRow` 介面允許直接存取結果集中單一資料列的資料行。 因此，`IRow` 是從包含一個資料列之結果集擷取資料行的有效方式。  
@@ -53,11 +50,11 @@ ms.locfileid: "37425907"
   
  在 DBCOLUMNACCESS 結構中，如果 pData 為 NULL，而 cbMaxLen 為 0，IRow->GetColumns 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 IRow->GetColumns 來擷取實際的資料。 IA64 不支援此範例。  
   
- 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
   

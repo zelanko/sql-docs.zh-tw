@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, XML Bulk Load
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], annotation interpretations
 - annotated XDR schemas, XML Bulk Load
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90f70a03d2da5d0d7c42c1e92163ef0d61a84f4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 310829f6e4e38d051942180d87f1e1566cadf7c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225748"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>註解的解譯 (SQLXML 4.0)
   本章節的主題描述 XML 大量載入要如何解譯 XSD 結構描述中的註解。 這裡所述的行為也適用於 XDR 結構描述中的註解。  

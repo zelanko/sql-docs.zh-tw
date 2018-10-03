@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2909079aa87638386db1398af6f62c10f96f66b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223781"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用 Excel 中的資料建立用於預測、建議或探索的分析模型。  

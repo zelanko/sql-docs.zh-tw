@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed48014c-3fc9-48ff-8c0f-8d1822195f14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1890a03b77baa23ea3e87e7894f5f89bf2eee09a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227068"
 ---
 # <a name="create-scripts-using-templates"></a>利用範本建立指令碼
   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供大量包含許多一般工作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之指令碼範本。 這些範本包含使用者提供值的參數，如資料表名稱。 您可以利用這些參數，只輸入名稱一次，之後，便自動將名稱複製到指令碼內所有必要的位置。 您可以撰寫您自己的自訂範本來支援您最常撰寫的指令碼。 您也可以重新組織範本樹狀結構、移動範本，或建立新資料夾來存放範本。 在下列練習中，您將利用範本，指定定序範本來建立資料庫。  

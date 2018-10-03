@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating a login
@@ -14,12 +12,12 @@ ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d62f8c381fb11dc34de1e51e56e7aefa3e85e17e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221931"
 ---
 # <a name="creating-a-login"></a>建立登入
   若要存取 [!INCLUDE[ssDE](../includes/ssde-md.md)]，使用者需要登入。 登入可以用 Windows 帳戶或 Windows 群組的成員來代表使用者的身分識別，或者登入也可以是只存在於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入。 請盡可能使用「Windows 驗證」。  

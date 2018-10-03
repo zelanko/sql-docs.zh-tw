@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e38ee67b5d8e4f0926ff93c45985b6246d8693f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce551de71785fb947283674771b23399bfc7417f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219908"
 ---
 # <a name="command-events-data-columns"></a>命令事件資料行
   下表列出 [命令事件] 事件類別目錄中，每種事件類別的資料行。  

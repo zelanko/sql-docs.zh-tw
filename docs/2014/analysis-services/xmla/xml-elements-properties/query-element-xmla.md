@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Query Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68da02ef99a5668c7ee0a3a57a06aca90ae68a25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224398"
 ---
 # <a name="query-element-xmla"></a>Query 元素 (XMLA)
   包含查詢中的[查詢](queries-element-xmla.md)所使用的集合[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)命令在基於使用方式的最佳化期間。  
@@ -53,7 +50,7 @@ ms.locfileid: "37293236"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37293236"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[查詢](queries-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `DesignAggregations` 命令會在命令的 `Query` 集合中包含一個或多個 `Queries` 元素，藉以支援基於使用方式的最佳化。 每個`Query`項目代表一個目標查詢，使用定義目標最常用的查詢的彙總設計程序。 您可以指定您自己的目標查詢，或者您可以使用的執行個體所儲存的資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]來擷取有關最常用的查詢記錄中使用的查詢。  

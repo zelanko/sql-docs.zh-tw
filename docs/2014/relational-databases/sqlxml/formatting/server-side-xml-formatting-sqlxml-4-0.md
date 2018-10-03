@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FOR XML clause, formatting
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 943974287b88249bbd277aa59bd4cccef36800a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d9e23528a7732d3974902c24ca777fc2d19dae9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222201"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>伺服器端 XML 格式 (SQLXML 4.0)
   本主題提供在伺服器端上，從針對 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫執行之查詢產生的資料列集格式化 XML 文件的相關資訊。  

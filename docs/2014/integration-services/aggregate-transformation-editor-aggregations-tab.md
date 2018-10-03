@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224458"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>彙總轉換編輯器 (彙總索引標籤)
   使用 [彙總轉換編輯器] 對話方塊的 [彙總] 索引標籤，即可指定彙總的資料行與彙總屬性。 您可以套用多個彙總。 此轉換不會產生錯誤輸出。  

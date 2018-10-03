@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 53ae2b68e51e534cc1b00afa9cf40e1786d644bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a9e726aea4428ac061ca57a4c1bc28199492492
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218130"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署檢查清單： 向外延展至 SharePoint 2010 伺服器陣列加入 PowerPivot 伺服器
   如果您預期 SharePoint 伺服器陣列中 PowerPivot 查詢處理有大量的要求，您可以加入額外的 PowerPivot for SharePoint 執行個體，以順暢地新增查詢和資料處理支援。  

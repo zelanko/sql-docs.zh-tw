@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], expiration
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - retention periods [SQL Server replication]
 - deactivating subscriptions
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95cdae09ead5238e8a48d3797f2b1f9a32b483f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc35e6e4f0fe4befe6db2ba93f990b9a7b8c6434
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268924"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220838"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>設定訂閱的逾期期限
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中設定訂閱的逾期期限。 訂閱的逾期期限可決定訂閱到期及移除之前的期間。 如需詳細資訊，請參閱＜ [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)＞。  

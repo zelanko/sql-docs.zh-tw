@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], dependencies
@@ -16,12 +14,12 @@ ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7693ac696484bfb67df337232dd50822598f9c61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149479"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224418"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
     

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ecdadef4e49f3630c78fc33c1c6f490deda26b5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27a94ac8af2a770d1e76c8e7c46966809c011f85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224668"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
   整個報表定義中都會使用運算式來指定或計算參數、查詢、篩選、報表項目屬性、群組和排序定義、文字方塊屬性、書籤、文件引導模式、動態頁首和頁尾內容、影像及動態資料來源定義的值。 本主題提供的範例將說明您可以在許多地方使用運算式來將報表的內容或外觀差異化。 這份清單並不是完整的清單。 您可以在顯示運算式 (**fx**) 按鈕的對話方塊中或在顯示 **\<運算式...>** 的下拉式清單中，為任何屬性設定運算式。  

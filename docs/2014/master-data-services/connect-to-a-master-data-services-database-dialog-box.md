@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvconnect.f1
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3fcec4c67e6c942e8f2a5f09a057696779f30106
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b326d1f46641e0530eafdf8568354ad69ff103d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225808"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>連接到 Master Data Services 資料庫對話方塊
   使用 [連接到 Master Data Services 資料庫] 對話方塊來選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  

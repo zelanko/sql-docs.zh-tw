@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], executing
 - executing extended stored procedures [SQL Server]
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b8b0f8e2b720336deb008b47dc5041d5ece3f55c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 60b5be56263c96fd850ce6e0c490f7b2c181395c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084620"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223528"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>擴充預存程序的執行特性
     

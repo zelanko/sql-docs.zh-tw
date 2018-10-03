@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Column Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Column element
 ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 474e094335c22ca1a715b48715e968c7dd13f515
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 314e5077f4212e2095d822e0e00d5028ca127a1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218778"
 ---
 # <a name="column-element-assl"></a>Column 元素 (ASSL)
   描述與父元素相關聯之資料行集合中的資料行。  
@@ -57,7 +54,7 @@ ms.locfileid: "37312428"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度||  
-|預設值|無|  
+|預設值|None|  
 |基數||  
   
 |上階或父系|資料類型|  
@@ -77,7 +74,7 @@ ms.locfileid: "37312428"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[資料行](../collections/columns-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

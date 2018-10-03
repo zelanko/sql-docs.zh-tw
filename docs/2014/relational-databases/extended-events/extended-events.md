@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fe49812e889cf360bce9d853b9bc9160da0c4ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e436ba6a981ac03ca5f4b194e9dc257a22aba7a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221658"
 ---
 # <a name="extended-events"></a>擴充事件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件具有可高度擴充及可高度設定的基礎結構，可以讓使用者視需要收集許多或部分的資訊來排除或識別效能問題。  

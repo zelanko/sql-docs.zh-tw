@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
-caps.latest.revision: 38
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aca8e62859da23d3a6b4749ae387fb12ee6c9d9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8737579fc495f36c59b13d67100854822145ebf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192371"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226758"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Visual Basic .NET 使用者入門
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 的通用執行階段程式庫所支援其中一種 Managed 程式語言。 本文件集的許多範例都是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 撰寫。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 來開發 SMO 應用程式。  

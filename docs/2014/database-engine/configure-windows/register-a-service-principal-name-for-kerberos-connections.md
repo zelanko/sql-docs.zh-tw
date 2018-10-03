@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-caps.latest.revision: 56
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 671c496b98688433cf09b78bdeab4839142fe13c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219248"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
   若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 驗證，需要符合下列兩個條件：  
@@ -68,7 +65,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  KB 文件 [How to use Kerberos authentication in SQL Server](http://support.microsoft.com/kb/319723)(如何在 SQL Server 中使用 Kerberos 驗證) 包含如何將讀取或寫入權限授與非網域管理員帳戶之 SPN 的資訊。  
   
-  [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
+ [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
   
 ##  <a name="Formats"></a> SPN 格式  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，SPN 格式就有了變動，以便能夠在 TCP/IP、具名管道和共用記憶體上支援 Kerberos 驗證。 具名和預設執行個體支援的 SPN 格式如下所示。  

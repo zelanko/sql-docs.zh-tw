@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d593de81b25e335e55e61dab5a8fce4205828656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 116c5d900cf56d89c01bbf333d2d8bd3905aa371
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224988"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>使用資料庫鏡像端點憑證 (Transact-SQL)
   若要啟用某伺服器執行個體上資料庫鏡像的憑證驗證，系統管理員必須設定每一個伺服器執行個體，才能同時在傳出和傳入的連接使用憑證。 您必須先設定傳出連接。  
@@ -63,7 +60,7 @@ ms.locfileid: "37157129"
   
  如需詳細資訊，請參閱 [允許資料庫鏡像端點使用輸入連線的憑證 &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。 如需詳細資訊，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)。  
   
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  

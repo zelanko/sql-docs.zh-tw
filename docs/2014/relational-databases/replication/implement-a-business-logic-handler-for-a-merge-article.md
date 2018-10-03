@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0404175f22e6edcb80e4179083555d23acf7db1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169050"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224658"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
   本主題描述如何使用複寫程式設計或 Replication Management Objects (RMO)，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中實作合併發行項的商務邏輯處理常式。  

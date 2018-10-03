@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SqlTriggerContext class
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
-caps.latest.revision: 67
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226698"
 ---
 # <a name="clr-triggers"></a>CLR 觸發程序
   因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 整合，所以您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 語言建立 CLR 觸發程序。 本節涵蓋使用 CLR 整合實作之觸發程序的特定資訊。 如需觸發程序的完整討論，請參閱 < [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e7bd0228b5eaf02b51313414cbd8ebab48f14522
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278704"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227268"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>實作 IRenderingExtension 介面
   轉譯延伸模組會從與實際資料結合的報表定義取得結果，並將產生的資料轉譯成可用的格式。 結合的資料與格式之轉換是利用實作 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的 Common Language Runtime (CLR) 類別來完成。 這可將物件模型轉換為檢視器、印表機或是其他輸出目標可取用的輸出格式。  

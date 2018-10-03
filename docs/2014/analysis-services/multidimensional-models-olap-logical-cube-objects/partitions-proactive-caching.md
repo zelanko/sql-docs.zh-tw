@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - hybrid OLAP
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ROLAP
 - cache [Analysis Services]
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8a9d32557e9b9158f1fa5429b2bcaec7dd17ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f79c628c9c58c3fca2884cbdf330eb23178081e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223428"
 ---
 # <a name="proactive-caching-partitions"></a>主動式快取 (資料分割)
   主動式快取會提供自動 MOLAP 快取建立及 OLAP 物件的管理。 Cube 會根據從資料庫接收而來的通知，立即併入對資料庫資料所做的變更。 主動式快取的目標是要提供傳統 MOLAP 的效能，同時保持 ROLAP 所提供的立即性與便於管理性。  

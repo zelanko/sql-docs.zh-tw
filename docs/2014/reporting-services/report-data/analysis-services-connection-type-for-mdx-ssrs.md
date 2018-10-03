@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3e40443fc2691c33a1d40603b932a4ac031d0a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2854a9742a7d864a73624a4676b6c0778ee182a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222738"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Analysis Services Connection Type for MDX (SSRS)
   若要在報表中包含來自 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 的資料，您必須擁有以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料延伸模組為基礎。 您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 擷取有關維度、階層、層級、關鍵效能指標 (KPI)、量值和屬性的中繼資料，用來做為報表資料。  

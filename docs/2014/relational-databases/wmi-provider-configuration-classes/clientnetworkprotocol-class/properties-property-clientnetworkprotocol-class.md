@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Properties Property (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Properties property
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 569c1b0f8f140bd05c2be03286e6c9fa1d66a200
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1464f236966f830125e62da65b3a645c99374a11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219940"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties 屬性 (ClientNetworkProtocol 類別)
   取得與所指定之目前用戶端網路通訊協定相關聯的屬性[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], commands
 - Command class
 - commands [Reporting Services]
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 26ab43be385f0e07b2b9c071b1ce59c846a58a6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 497844361f6b6cb47765448ea62022af237ed8c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222336"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作命令類別
   **Command** 物件會構成要求，並將它傳遞到資料來源。 命令文字可採用許多不同的語法形式，包括文字與 XML。 如果傳回結果，**Command** 物件會傳回結果以作為 **DataReader** 物件。  

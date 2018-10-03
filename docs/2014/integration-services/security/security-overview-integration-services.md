@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ee84e7cd1e8d652283eb758af7396257fecf7b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228578"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  

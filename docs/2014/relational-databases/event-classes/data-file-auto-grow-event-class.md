@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Data File Auto Grow event class
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a2b1b7bf2bd3567146512c5822915249749690d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab0f2d944e5e0fa3dcf27700b7d543268ce8d299
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229938"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 事件類別
   **Data File Auto Grow** 事件類別指出資料檔自動成長。 如果使用 ALTER DATABASE 陳述式讓資料檔明確成長，則不會觸發這個事件。  

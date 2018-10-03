@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ServiceName Property (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ServiceName property
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 002a81d7142d3ef44066d16bcae2ce3c2746433f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0849c6b0bb78fa0b6aa1e7100af869156b822cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222848"
 ---
 # <a name="servicename-property-sqlservice-class"></a>ServiceName 屬性 (SqlService 類別)
   取得服務的名稱。  

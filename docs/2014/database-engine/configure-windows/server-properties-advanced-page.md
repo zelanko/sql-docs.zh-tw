@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac7dcda83d623626759498bf61726f7b6c130662
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bd580c03657a35ac7244daca778d0585563c9d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225438"
 ---
 # <a name="server-properties-advanced-page"></a>伺服器屬性 (進階頁面)
   使用此頁面來檢視或修改進階的伺服器設定。  

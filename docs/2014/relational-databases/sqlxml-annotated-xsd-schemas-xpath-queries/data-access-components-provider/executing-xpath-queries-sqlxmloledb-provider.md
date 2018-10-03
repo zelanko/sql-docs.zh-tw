@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing XPath queries
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - Mapping Schema property
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34acdfc5c7957476534b2d637077a401144fc29e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fb3fb5c974c4a86909e86e5fd2630913673e192
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221478"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>執行 XPath 查詢 (SQLXMLOLEDB 提供者)
   此範例示範如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  

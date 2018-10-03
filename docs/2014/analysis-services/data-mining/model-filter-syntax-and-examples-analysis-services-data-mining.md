@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdf75e8911aaf4856092de273b332b3f4fb27aee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225788"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型篩選語法和範例 (Analysis Services - 資料採礦)
   本節提供了有關模型篩選語法的詳細資訊，以及範例運算式。  

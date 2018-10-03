@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - exceptions [data mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - outliers [data mining]
 - data cleaning
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01e87ee3f7bedb9b33b484b195492064cc4f0334
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0771c953875e9871c53892bc14a3e2a537060833
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224109"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>極端值 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的極端值精靈](media/dmc-outliers.gif "資料採礦功能區中的極端值精靈")  

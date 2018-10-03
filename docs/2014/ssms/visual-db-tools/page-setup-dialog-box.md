@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3d21e28d597badfb5220b9202a19f38b32d1e45
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6f28df5a3091ad54b8500bd29b9873277c33b690
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220944"
 ---
 # <a name="page-setup-dialog-box"></a>版面設定對話方塊
   您可以選取 [頁面設定] 對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  

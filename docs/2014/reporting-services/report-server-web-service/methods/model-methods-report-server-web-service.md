@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 97c026c2036e48397801d38430ef3349ebbaac79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30ebf7f456a7359d1723ccacc8e14a74cd29859f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221728"
 ---
 # <a name="model-methods"></a>模型方法
   您可以使用這些方法來管理模型。  

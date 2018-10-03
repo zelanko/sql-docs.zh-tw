@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cf5b1d813261786201f366e7f8dee6c296451c7
-ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
+ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39359615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229480"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 課：建立專案和基本封裝
   在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 封裝，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrency**事實資料表。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  

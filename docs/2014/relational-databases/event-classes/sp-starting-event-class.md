@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Starting event class
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84e247df75251ac63ec08cb9c812ac8b718737a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2d16976b78013cf373f8fa7e1895a225b13ff0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223908"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting 事件類別
   SP:Starting 事件類別指出正在開始執行預存程序。  

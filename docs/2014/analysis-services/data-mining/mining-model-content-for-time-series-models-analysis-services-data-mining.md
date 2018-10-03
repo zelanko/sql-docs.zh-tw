@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0c69583fec1e43ba65ac1da2c321f7b0a5d9599
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6cf2a574caa22bff357ebbc67e9b3117798e8041
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229888"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
   所有採礦模型都會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  

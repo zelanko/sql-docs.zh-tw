@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unavailable options [IntelliSense]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 517996d1b15b1e0fbc8eba47b10535d6bf833e9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f18f67aaa142ffeedabfd9269940d28d3fc1ce0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181705"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223768"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>疑難排解 IntelliSense (SQL Server Management Studio)
   在某些情況下，IntelliSense 選項的運作可能會不符合您的預期。  

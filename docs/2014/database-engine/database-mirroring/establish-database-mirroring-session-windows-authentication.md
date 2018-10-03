@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d212f5f1dda7ebe0e596808d56fb2060af467a04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9149852a37f7e201ec5b84cb86bab9f4342eecd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219828"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>使用 Windows 驗證建立資料庫鏡像工作階段 (SQL Server Management Studio)
     

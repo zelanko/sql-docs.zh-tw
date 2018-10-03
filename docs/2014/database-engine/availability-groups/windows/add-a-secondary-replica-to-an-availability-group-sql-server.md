@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], configuring
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d397e8b096a09f9f76d062d2bd73864edc18bf16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a60675d4d934c91be3ae8150cd865f404443d27
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219958"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本加入至現有的 AlwaysOn 可用性群組。  

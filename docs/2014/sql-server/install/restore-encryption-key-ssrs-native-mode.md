@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220080"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>還原加密金鑰 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 您可以使用 加密金鑰來保護儲存在報表伺服器資料庫中的機密資料。 為了確保您可持續存取加密的資料，一定要建立加密金鑰的備份，以免日後因為服務帳戶變更或進行規劃移轉時需要還原加密金鑰。 本主題會概述如何使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員還原金鑰。  

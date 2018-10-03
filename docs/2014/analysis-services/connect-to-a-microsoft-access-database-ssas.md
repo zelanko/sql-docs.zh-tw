@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connaccessdb.f1
 ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c97b313a5f1cfc3a9c4dfb76f7f0b58f77e59f7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36c3f4a6219e615fe2cf11e718bd1ef47869f85a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218792"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>連接到 Microsoft Access 資料庫 (SSAS)
   [資料表匯入精靈] 的這個頁面可讓您指定連接到 Microsoft Access 資料庫的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

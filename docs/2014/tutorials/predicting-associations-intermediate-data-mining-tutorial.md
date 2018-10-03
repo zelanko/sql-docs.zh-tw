@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79555990296cc3ecd0b30bb2cd3de92b6adabb50
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187705"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222801"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>預測關聯 (中繼資料採礦教學課程)
   當模型經過處理之後，您可以使用與模型中儲存的關聯有關的資訊來建立預測。 在本課程的最後一個工作中，您將會學習如何針對您所建立的關聯模型來建立預測查詢。 此課程假設您已熟悉如何使用預測查詢產生器，而且想要學習如何針對關聯模型來建立預測查詢。 如需如何使用預測查詢產生器，請參閱[資料採礦查詢介面](../../2014/analysis-services/data-mining/data-mining-query-tools.md)。  

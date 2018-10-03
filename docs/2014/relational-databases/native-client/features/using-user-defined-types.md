@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_DATASOURCEINFO property set
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7789a1f591b95ec5442697c5bfa6c7d730ba4faf
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 369e6f836c11f69a37b5cdd72f227c3b120e71b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228828"
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了使用者定義型別 (UDT)。 UDT 會擴充 SQL 類型系統，其方式是允許您將物件和自訂資料結構儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 UDT 是使用會產生可驗證程式碼之 .NET Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Microsoft Visual C#<sup>®</sup> 和 Visual Basic<sup>®</sup> .NET。 資料會公開為 .NET 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法來定義。  

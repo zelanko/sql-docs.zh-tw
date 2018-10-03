@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - rowsets [Analysis Services]
 - schema rowsets [Analysis Services], retrieving
 ms.assetid: 820d4b59-d428-4616-b792-c848e5da407e
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d01770593787032d96ab869dd59cd40658eca4b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 474de14a40b24fe113cebf1c933f7e28a351d5bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227898"
 ---
 # <a name="analysis-services-schema-rowsets"></a>Analysis Services 結構描述資料列集
   結構描述資料列集是預先定義的資料表，其中包含有關 Analysis Services 物件和伺服器狀態的資訊，包括在伺服器上執行的資料庫結構描述、使用中工作階段、連接、命令及作業。 您可以在 SQL Server Management Studio 中的 XML/A 指令碼視窗內查詢結構描述資料列集資料表、針對結構描述資料列集執行 DMV 查詢，或是建立可併入結構描述資料列集資訊的自訂應用程式 (例如，擷取可用於建立報表之可用維度清單的報表應用程式)。  

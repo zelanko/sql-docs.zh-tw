@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - GetCurrentCertificate Method (SInstance Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 75b383d6e983f035b22a6b6949d0c640b17007fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a5a5bb76cc99d859a459745f3c1315c35acc815
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221690"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>GetCurrentCertificate 方法 (SInstance 類別)
   取得目前的安全性憑證。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuredialog.f1
 helpviewer_keywords:
 - New Measure dialog box
 ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35bb394a835d8a667aa1ff3e339717ab4e1cf8e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225178"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>新增量值對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [新增量值] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可將新量值加入至 Cube 設計師中的量值群組。 您可以藉由下列方式顯示 **[新增量值]** 對話方塊：  

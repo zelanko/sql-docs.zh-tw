@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002627 error
 ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a32a248ab3f2a0dd3d65bcad606a8d9808cbcefb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1526c0f0a19cc171eaf63c829199af205f2756db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226188"
 ---
 # <a name="mssqleng002627"></a>MSSQL_ENG002627
     

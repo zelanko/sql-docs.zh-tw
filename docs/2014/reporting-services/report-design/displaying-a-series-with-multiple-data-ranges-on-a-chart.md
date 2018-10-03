@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 153a7dfafea308c57dd933de633a016871e32e6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221128"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>將包含多個資料範圍的數列顯示在圖表上 (報表產生器及 SSRS)
   圖表將會使用數列的最小值和最大值來計算軸刻度。 當圖表上的數列包含一個以上的資料範圍時，資料點可能會變得模糊，而圖表上只能清楚看到幾個資料點。 例如，假設您的報表顯示 30 天的期間內每天的銷售總額。  

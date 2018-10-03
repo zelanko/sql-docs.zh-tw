@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing database snapshots
 - deleting database snapshots
 - database snapshots [SQL Server], deleting
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b954aac7ca89a2b8fa55287446bd340ee9149c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e20a75d891595333afb19187d90ea7accc679957
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309958"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229558"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>卸除資料庫快照集 (Transact-SQL)
   卸除資料庫快照集，就會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 刪除資料庫快照集，並刪除快照集所使用的疏鬆檔案。 卸除資料庫快照集後，快照集的所有使用者連接都會結束。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ###  <a name="Permissions"></a> 權限  
  具有 DROP DATABASE 權限的任何使用者都可以卸除資料庫快照集。  

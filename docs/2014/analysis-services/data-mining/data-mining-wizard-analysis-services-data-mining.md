@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f30b9bbc04e7008a6d5be33e364ef6de7e91edf8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223838"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>資料採礦精靈 (Analysis Services - 資料採礦)
   每次將新的採礦結構加入至資料採礦專案時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈就會啟動。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  
@@ -40,7 +37,7 @@ ms.locfileid: "37288414"
   
 -   您想要使用哪些資料行或屬性來預測？ 哪些資料行或屬性非常適合當做分析的輸入使用？  
   
--   您應該使用哪一個演算法？  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的演算法各具有不同的特性，且會產生不同的結果。 很幸運的是，每一組資料不限於一個模型，所以您可以自由地加入不同的模型進行試驗。  
+-   您應該使用哪一個演算法？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的演算法各具有不同的特性，且會產生不同的結果。 很幸運的是，每一組資料不限於一個模型，所以您可以自由地加入不同的模型進行試驗。  
   
 -   您是否需要能夠針對統一的資料集測試模型？ 如果是的話，請考慮使用此選項，以保留某些資料進行測試。 您可以選擇某個百分比，然後視需要加以覆蓋指定的資料列數。  
   

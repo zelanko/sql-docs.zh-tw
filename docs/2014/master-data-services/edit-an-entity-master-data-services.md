@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3986f5508bd5b6fe5ce55b38ff038e4a14a2b73c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e8b4d17968d91d8b6c90a49730cbab9f4e422d1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260994"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228408"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>變更實體名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以變更實體的名稱。  

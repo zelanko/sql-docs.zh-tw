@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218698"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   本主題描述使用 Microsoft 類神經網路演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  

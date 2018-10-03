@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, parameters
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f117cf02f863eb2c5d3dae602ce4503e71b885e1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227908"
 ---
 # <a name="binding-parameters"></a>繫結參數
   SQL 陳述式中的每一個參數標記都必須與應用程式的變數相關聯或繫結，才能執行該陳述式。 這是藉由呼叫[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)函式。 **SQLBindParameter**描述驅動程式之程式變數 （位址、 C 資料類型，等等）。 它也會藉由指定序數值以辨識參數標記，然後描述它所代表的 SQL 物件的特性 (SQL 資料類型、有效位數等)。  

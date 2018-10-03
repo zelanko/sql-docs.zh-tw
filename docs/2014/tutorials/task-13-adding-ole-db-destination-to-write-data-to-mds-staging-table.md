@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc0bd3ad05ec740299e0cb06def5a439fa87da9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf8a96891040a6a751e0a6e34c902d77cec9dd35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223098"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13：加入 OLE DB 目的地，以便將資料寫入 MDS 暫存資料表
   既然您已新增**ImportType**並**BatchTag**所有記錄的值，您已準備好將它們傳送至 MDS 供暫存。 在這個工作中，您可以使用 OLE DB 目的地將資料寫入至**stg.supplier_Leaf**暫存資料表。  
