@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - EditionName property
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3f74d1038eb1b3dfeaf86883f28c751bc6d293e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 05dd5c1adf3082fb5db5527bc8681f7f92a2427e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683490"
 ---
 # <a name="msreportserverinstance-properties---editionname"></a>MSReportServer_Instance 屬性 - EditionName
   傳回報表伺服器版本之人們可讀取的名稱。 唯讀。  

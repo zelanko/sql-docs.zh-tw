@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ff75a9d01a392a3564b10fd2db74f15ed612c3c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e38a8c3bab42751672ccec31649c936b4c9395e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607976"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>如何管理本機 CDC 服務
   此程序描述如何使用 CDC 服務組態主控台來管理特定的 CDC 服務。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server replication]
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - replication [SQL Server], installing
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c80d68173537d667573def56992bb1d9255490af
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5fbfc888698149c960f4555a5ec88e9483e46a9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609226"
 ---
 # <a name="install-sql-server-replication"></a>安裝 SQL Server 複寫
 

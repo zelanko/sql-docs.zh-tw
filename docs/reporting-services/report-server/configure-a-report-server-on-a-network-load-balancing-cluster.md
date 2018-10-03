@@ -4,19 +4,18 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06bc8c4f366dadc391be2d6388a4383768c88d00
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 40564e92fa3eae3e7dcaf596a44792e8ee238a5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657776"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
   如果您要將報表伺服器向外延展設定為在網路負載平衡 (NLB) 叢集上執行，就必須進行下列動作：  

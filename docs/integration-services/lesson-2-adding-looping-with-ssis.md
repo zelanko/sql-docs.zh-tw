@@ -5,23 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba491a3ca7cec145f8b891c1b08d7d491b2c768d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5b26f7b7a36d024ec18de617b08fdefe2d352083
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686196"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>第 2 課：使用 SSIS 新增迴圈
 在 [第 1 課：使用 SSIS 建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，您建立了一個從單個一般檔案來源中擷取資料的套件、利用查閱轉換來轉換資料，最後將資料載入 **AdventureWorksDW2012** 範例資料庫的 **FactCurrency** 事實資料表中。  
@@ -60,11 +55,11 @@ Foreach 迴圈容器可讓封裝對指定列舉值的每一位成員重複控制
   
 -   [步驟 1：複製第 1 課的套件](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [步驟 2：加入和設定 Foreach 迴圈容器](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [步驟 2：新增和設定 Foreach 迴圈容器](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [步驟 3：修改一般檔案連接管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [步驟 3：修改一般檔案連線管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [步驟 4：測試第 2 課的教學課程封裝](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [步驟 4：測試第 2 課的教學課程套件](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
 [步驟 1：複製第 1 課的套件](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  

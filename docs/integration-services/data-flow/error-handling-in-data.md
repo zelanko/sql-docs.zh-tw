@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configureerroroutput.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805cb6c613375f0aee126a264f8894b9c09d92a6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: cb3e092e9ea185be0de966c73a5005072b8a70c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612203"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
   當資料流程元件將轉換套用至資料行資料、從來源擷取資料或將資料載入目的地時，可能會發生錯誤。 錯誤通常是因為非預期的資料值所產生的。 例如，資料轉換失敗的原因是資料行包含字串而非數字；向資料庫資料行插入失敗的原因是資料為日期，而資料行是數值資料類型；運算式評估失敗的原因是資料行值為零，導致數學運算無效。  
@@ -98,7 +95,7 @@ ms.locfileid: "35401410"
 ## <a name="select-an-error-handling-option"></a>選取錯誤處理選項  
  您可以設定來源、轉換及目的地處理錯誤和截斷的方式。 下表描述這些選項。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |失敗元件|當發生錯誤或截斷時，資料流程工作將失敗。 失敗是錯誤和截斷的預設選項。|  
 |忽略失敗|會忽略錯誤或截斷，並會將資料列導向轉換或來源的輸出。|  

@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 14cf02ac294c25204460c2081c402e9afc855de7
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608935"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>評定 DB2 結構描述的轉換 (DB2ToSQL)
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您應判斷移轉將會複雜程度，以及多少時間移轉。 SSMA 可以建立顯示的會成功轉換的物件百分比的評定報告。 SSMA 也可讓您檢視導致轉換失敗的特定問題。  

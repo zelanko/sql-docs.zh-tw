@@ -6,9 +6,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - SSIS
@@ -23,12 +21,12 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e143abb330c114a9d03e0cd7c8a40a7f422e6134
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b4424cfb5311ee75bc6ea184b1fb25d0246b03b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724206"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 

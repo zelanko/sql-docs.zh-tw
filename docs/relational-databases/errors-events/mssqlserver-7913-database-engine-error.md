@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 7913 (Database Engine error)
 ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0097fc3d7a2c7729af837146b46b1a77346ec3f9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 4e79bfacb1db51fc522f9c6520c6db0ad3a7cd1d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614586"
 ---
 # <a name="mssqlserver7913"></a>MSSQLSERVER_7913
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +37,5 @@ ms.locfileid: "34324469"
 這是來自 REPAIR 的參考用訊息，表示某個範圍已經從指定的物件取消配置。  
   
 ## <a name="user-action"></a>使用者動作  
-無  
+None  
   

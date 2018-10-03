@@ -5,9 +5,7 @@ ms.date: 07/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f86cc963e5328247b1ee883abb658dcc57e81efc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c8c2efee10a38120717487fc6e04429de7f1bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921773"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653423"
 ---
 # <a name="recovery-models-sql-server"></a>復原模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "32921773"
 ##  <a name="RMov"></a> 復原模式概觀  
  下表摘要說明三種復原模式。  
   
-|復原模式|描述|工作損失風險|復原至時間點？|  
+|復原模式|Description|工作損失風險|復原至時間點？|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Simple**|無記錄備份。<br /><br /> 自動收回記錄空間，使空間需求保持在最低，實際消弭管理交易記錄空間的需求。 如需簡單復原模式下之資料庫備份的相關資訊，請參閱[完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)。<br /><br /> 簡單復原模式不支援需要交易記錄備份的作業。 在簡單復原模式中，不能使用下列功能：<br /><br /> -記錄傳送<br /><br /> -AlwaysOn 或資料庫鏡像<br /><br /> -無資料遺失的媒體復原<br /><br /> -時間點還原|最近一次備份之後所做的變更並未受到保護。 如果發生損毀事件，則必須重做這些變更。|只能復原至備份結束時。 如需詳細資訊，請參閱[完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)。 <br><br> 如需簡單復原模式的更深入說明，請參閱 [SQL Server Simple Recovery Model](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) 人員所提供的 [SQL Server Simple Recovery Model](https://www.mssqltips.com)(SQL Server 簡單復原模式)。|  
 |**Full**|需要記錄備份。<br /><br /> 不因損失或損毀資料檔案而失去任何工作。<br /><br /> 可復原至任意時間點 (例如，應用程式或使用者錯誤前)。 如需完整復原模式下之資料庫備份的相關資訊，請參閱[完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 和[完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)。|通常沒有。<br /><br /> 如果記錄結尾損毀，必須重做最近一次記錄備份後的變更。|可以復原至特定時間點 (假設您已完成至該時間點的備份)。 如需使用記錄備份還原至失敗點的相關資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。<br /><br /> 注意：如果您有兩個以上在邏輯上必須一致的完整復原模式資料庫，您可能需要實作特殊的程序，以確保這些資料庫能夠復原。 如需詳細資訊，請參閱 [復原包含標示之交易的相關資料庫](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)。|  

@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 786d9b2e0d3a3f00d3f9e00496d8a11e9d2c18c1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 637993cecd7b5a7c750956042b245f670d9aa0f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628626"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
@@ -30,7 +27,7 @@ ms.locfileid: "35402990"
   
  下表提供 CDC 狀態變數值各項元件的進階說明。  
   
-|元件|描述|  
+|元件|Description|  
 |---------------|-----------------|  
 |**\<狀態名稱>**|此為目前 CDC 狀態的名稱。|  
 |**CS**|此標示目前處理範圍的起點 (Current Start)。|  
@@ -49,7 +46,7 @@ ms.locfileid: "35402990"
   
  下表描述可能的 CDC 狀態值。  
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |(INITIAL)|這是目前的 CDC 群組上有任何封裝執行之前的初始狀態。 這也是 CDC 狀態為空白時呈現的狀態。|  
 |ILSTART (初始載入開始)|這是在 CDC 控制工作的 **MarkInitialLoadStart** 作業呼叫之後，初始載入封裝開始時的狀態。|  

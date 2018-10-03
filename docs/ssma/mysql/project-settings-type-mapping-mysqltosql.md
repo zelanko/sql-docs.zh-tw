@@ -1,44 +1,38 @@
 ---
-title: 專案設定 （型別對應） (MySQLToSQL) |Microsoft 文件
+title: 專案設定 （類型對應） (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9bf1d1c219b8673345d5f2074fe8885b5c58223f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713246"
 ---
-# <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 （型別對應） (MySQLToSQL)
-型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。  
+# <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 (類型對應) (MySQLToSQL)
+型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。  
 
-型別對應是可用的專案設定和預設專案設定 對話方塊中：  
+型別對應會在 專案設定和預設專案設定對話方塊上市：  
   
--   使用 [專案設定] 對話方塊，設定目前專案的組態選項。 若要存取 [工具] 功能表上的型別對應設定選取專案設定，然後按一下類型對應的左窗格中。  
+-   使用 [專案設定] 對話方塊來設定目前專案的組態選項。 若要存取型別對應設定值，在 工具 功能表中，選取 專案設定，然後按一下類型對應的左窗格中。  
   
--   您可以使用預設專案設定 對話方塊來設定所有專案的組態選項。 若要存取的類型對應設定，請在 工具 功能表中，選取預設專案設定，設定會才能檢視 / 變更從選取的移轉專案類型**移轉的目標版本**下拉式清單，然後按一下左窗格中的 型別對應。  
+-   使用 [預設專案設定] 對話方塊中設定的所有專案的組態選項。 若要存取的型別對應設定，請在 [工具] 功能表中，選取預設專案設定，其設定被要求檢視 / 變更從選取的移轉專案類型**移轉目標版本**下拉式清單，然後再按一下類型在左窗格中的對應。  
   
 ## <a name="options"></a>選項。  
   
 ##### <a name="source-type"></a>來源類型  
-它是具有要對應到目標資料庫的資料類型的 MySQL 資料型別。  
+它是 MySQL 資料類型，必須對應到目標資料庫的資料類型。  
   
 ##### <a name="target-type"></a>目標類型  
-目標資料庫資料類型指定的 MySQL 資料型別。  
+目標資料庫資料類型指定的 MySQL 資料類型。  
   
 ##### <a name="add"></a>加入  
 按一下以新增的資料類型對應清單。  
@@ -50,21 +44,21 @@ ms.locfileid: "34776763"
 按一下即可從對應清單中移除選取的資料類型對應。  
   
 ##### <a name="reset-to-default"></a>重設為預設值  
-按一下 重設為 SSMA 預設值的類型對應清單。  
+按一下以重設 SSMA 的預設值的類型對應清單。  
   
 ## <a name="type-mappings"></a>型別對應  
-下表顯示來源和目標資料類型之間的預設對應  
+下表顯示預設值之間的對應來源和目標資料類型  
   
 |||  
 |-|-|  
 |**MySQL 資料類型**|**SQL Server 資料類型**|  
 |BIGINT|BIGINT|  
 |bigint [*..255]|BIGINT|  
-|BINARY|二進位 [1]|  
-|binary[0..1]|二進位 [1]|  
+|BINARY|[1] 的二進位檔|  
+|binary[0..1]|[1] 的二進位檔|  
 |binary[2..255]|binary[*]|  
-|bit|二進位 [1]|  
-|bit[0..8]|二進位 [1]|  
+|bit|[1] 的二進位檔|  
+|bit[0..8]|[1] 的二進位檔|  
 |bit[17..24]|二進位 [3]|  
 |bit[25..32]|二進位 [4]|  
 |bit[33..40]|二進位 [5]|  
@@ -79,8 +73,8 @@ ms.locfileid: "34776763"
 |bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
-|char 位元組|二進位 [1]|  
-|char 位元組 [0..1]|二進位 [1]|  
+|char 位元組|[1] 的二進位檔|  
+|char 位元組 [0..1]|[1] 的二進位檔|  
 |char 位元組 [2..255]|binary[*]|  
 |char[0..1]|nchar [1]|  
 |char[2..255]|nchar[*]|  
@@ -101,7 +95,7 @@ ms.locfileid: "34776763"
 |雙精度|float [53]|  
 |雙精確度 [*..255][\*..30]|數字 [*][\*]|  
 |double [*..255][\*..30]|數字 [*][\*]|  
-|修正|NUMERIC|  
+|已修正|NUMERIC|  
 |修正 [*..65][\*..30]|數字 [*][\*]|  
 |FLOAT|float[24]|  
 |float [*..255][\*..30]|數字 [*][\*]|  
@@ -116,20 +110,20 @@ ms.locfileid: "34776763"
 |mediumint|ssNoversion|  
 |mediumint [*..255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
-|國家 （地區) 的 char|nchar [1]|  
-|國家 （地區) 的 char [0..1]|nchar [1]|  
-|國家 （地區) 的 char [2..255]|nchar[*]|  
+|national char|nchar [1]|  
+|national char [0..1]|nchar [1]|  
+|national char [2..255]|nchar[*]|  
 |國家字元集|nchar [1]|  
 |不同的國家字元集|nvarchar [1]|  
-|國家字元集變動 [0..1]|nvarchar [1]|  
-|國家字元集變動 [2..4000]|nvarchar[*]|  
+|國家字元不同 [0..1]|nvarchar [1]|  
+|國家字元不同 [2..4000]|nvarchar[*]|  
 |不同的國家字元集 [4001..*]|nvarchar(max)|  
 |國家字元集 [0..1]|nchar [1]|  
 |國家字元集 [2..255]|nchar[*]|  
-|國家 （地區) 的 varchar|nvarchar [1]|  
-|國家 （地區) 的 varchar [0..1]|nvarchar [1]|  
-|國家 （地區) 的 varchar [2..4000]|nvarchar[*]|  
-|國家 （地區) 的 varchar [4001..*]|nvarchar(max)|  
+|national varchar|nvarchar [1]|  
+|national varchar [0..1]|nvarchar [1]|  
+|national varchar [2..4000]|nvarchar[*]|  
+|national varchar [4001..*]|nvarchar(max)|  
 |NCHAR|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [0..1]|nvarchar [1]|  
@@ -167,7 +161,7 @@ ms.locfileid: "34776763"
 |不帶正負號的十進位|Decimal|  
 |不帶正負號的十進位 [*..65]|decimal[*][0]|  
 |不帶正負號的十進位 [*..65][\*..30]|decimal[*][\*]|  
-|不帶正負號的雙|float [53]|  
+|不帶正負號的雙精度浮點數|float [53]|  
 |不帶正負號的雙精度|float [53]|  
 |不帶正負號雙精確度 [*..255][\*..30]|數字 [*][\*]|  
 |不帶正負號 double [*..255][\*..30]|數字 [*][\*]|  
@@ -185,7 +179,7 @@ ms.locfileid: "34776763"
 |不帶正負號的數字|NUMERIC|  
 |不帶正負號的數字 [*..65]|numeric[*][0]|  
 |不帶正負號的數字 [*..65][\*..30]|數字 [*][\*]|  
-|未簽署的真實|float [53]|  
+|不帶正負號實數|float [53]|  
 |未簽署的真實 [*..255[[\*..30]|數字 [*][\*]|  
 |不帶正負號的 smallint|ssNoversion|  
 |不帶正負號的 smallint [*..255]|ssNoversion|  
@@ -205,11 +199,11 @@ ms.locfileid: "34776763"
 按一下以新增的資料類型對應清單。  
   
 ##### <a name="edit"></a>編輯  
-按一下以編輯對應清單中的資料類型。  
+按一下以編輯 [對應] 清單中的資料類型。  
   
 ##### <a name="remove"></a>移除  
 按一下即可從對應清單中移除選取的資料類型對應。  
   
 ##### <a name="reset-to-default"></a>重設為預設值  
-按一下以重設 SSMA 的所有資料類型對應。  
+按一下以重設為 SSMA 預設值的所有資料類型對應。  
   

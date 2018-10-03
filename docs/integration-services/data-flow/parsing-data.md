@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd4bc0bfa30ee2df9b66de66f7002233426fa8f6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3b98b9cd1b4c99ba6fec20d8fe4912013aba1ea6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664289"
 ---
 # <a name="parsing-data"></a>剖析資料
   封裝中的資料流程會在異質資料存放區之間擷取和載入資料，這樣可以使用各種不同的標準和自訂資料類型。 在一個資料流程中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源執行擷取資料、剖析字串資料並將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的工作。 後續轉換可以剖析資料以便將其轉換成不同的資料類型，或者建立資料類型不同的資料行副本。 元件中使用的運算式同樣可以將引數和運算元轉換成不同的資料類型。 最後，當資料載入資料存放區時，目的地則可以剖析資料以便將其轉換成目的地使用的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -90,7 +87,7 @@ ms.locfileid: "35407420"
   
 -   ISO 8601 格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |[格式]|Description|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|四位數年份、兩位數月份和兩位數天數的基本格式與擴充格式。 在擴充格式中，日期各部份以連字號 (-) 分隔。|  
     |YYYY-MM|降低有效位數的四位數年份和兩位數月份之基本格式與擴充格式。 在擴充格式中，日期各部份以連字號 (-) 分隔。|  
@@ -121,7 +118,7 @@ ms.locfileid: "35407420"
   
 -   ISO 8601 時間格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |[格式]|Description|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|四位數小時、兩位數分鐘和兩位數秒鐘的基本格式與擴充格式。 在擴充格式中，時間各部份以冒號 (:) 分隔。|  
     |HHMI<br /><br /> HH:MI|兩位數小時和兩位數分鐘之基本截斷格式與擴充截斷格式。 在擴充格式中，時間各部份以冒號 (:) 分隔。|  
@@ -130,7 +127,7 @@ ms.locfileid: "35407420"
   
 -   指定時區的時間格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |[格式]|Description|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|基本格式及擴充格式，指出要加入至「國際標準時間」(UTC) 以取得本地時間的小時和分鐘數。|  
     |-HH:MI<br /><br /> -HHMI|基本格式及擴充格式，指出要從 UTC 減去以取得本地時間的小時和分鐘數。|  
@@ -148,7 +145,7 @@ ms.locfileid: "35407420"
   
 -   包含小數的時間格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |[格式]|Description|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n 是介於 0 和 9999999 之間且代表小數時數的值。 方括號表示此值是選擇性的。<br /><br /> 例如，值 12.750 表示 12:45。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n 是介於 0 和 9999999 之間且代表小數分鐘數的值。 方括號表示此值是選擇性的。<br /><br /> 例如，值 1220.500 表示 12:20:30。|  

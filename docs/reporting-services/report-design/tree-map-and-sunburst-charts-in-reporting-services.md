@@ -4,17 +4,16 @@ ms.date: 08/31/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb3ab2f509632547119bd02fc0a3052f512b87f0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a004b0d12d6a34b613c710f2018b9151b38f5d84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277773"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612856"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

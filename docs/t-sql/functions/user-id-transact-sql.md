@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - USER_ID
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - database IDs [SQL Server]
 - identification numbers [SQL Server], databases
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc11296cd538154fc56931e1dbb23389c1be0552
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b349278563b95190cac9de22899323ea7c0c708a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051836"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658057"
 ---
 # <a name="userid-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 12/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKDB_TSQL
@@ -34,16 +32,15 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 78cf2eae42192abf6b926b753595ed26cf4190bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705446"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -220,7 +217,7 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 |State|Description|    
 |-----------|-----------------|    
 |0|已引發錯誤號碼 8930。 這表示中繼資料中的損毀導致 DBCC 命令結束。|    
-|@shouldalert|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    
+|1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    
 |2|修復緊急模式資料庫期間發生失敗。|    
 |3|這表示中繼資料中的損毀導致 DBCC 命令結束。|    
 |4|偵測到判斷提示或存取違規。|    

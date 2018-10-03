@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69faba99ae28fd4b774f3751c2355c0addb0e9b2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 52fec67c4e07012896e7191803d90020d3988b7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698496"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>疑難排解 Reporting Services 的報表設計問題
 當您在報表撰寫應用程式中，以 [設計] 檢視建立報表配置時，可能會發生報表設計問題。 您可以使用本主題來協助疑難排解這些問題。   

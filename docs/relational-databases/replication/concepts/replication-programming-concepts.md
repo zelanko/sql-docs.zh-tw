@@ -4,29 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - replication [SQL Server], planning
 - programming [SQL Server replication], planning
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03bedc038bd35a85cd12d08c695491d9bba8d9c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd202a4e3b42280f309912cb94a0e6a5ff0379d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653433"
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

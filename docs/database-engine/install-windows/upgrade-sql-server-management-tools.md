@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 5ef475eecf39d57e0ae27fae5e80c18d85a67ff8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e967f69b7204fae916cb42ebea2c0c6694ae09fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643816"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>升級 SQL Server 管理工具
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sys.dm_os_host_info
@@ -18,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 853067176f9b779d86e52e9199674adf6e6e99c5
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 764e2f6481121bb7684c9c4db4b56af9dc9628f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348529"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602337"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "43348529"
 ## <a name="remarks"></a>備註  
 此檢視是類似[sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)，加入資料行來區分 Windows 和 Linux。
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
 `SELECT`權限`sys.dm_os_host_info`授與`public`預設的角色。 如果撤銷，需要`VIEW SERVER STATE`伺服器的權限。   

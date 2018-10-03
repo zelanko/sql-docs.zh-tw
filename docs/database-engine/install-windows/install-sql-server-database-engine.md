@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], installing
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26da8ecdc5387f44c911a7dcdb33129e62e044c6
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d688a977222960710c84a197ae47f8b48aafc3eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636926"
 ---
 # <a name="install-sql-server-database-engine"></a>安裝 SQL Server Database Engine
 

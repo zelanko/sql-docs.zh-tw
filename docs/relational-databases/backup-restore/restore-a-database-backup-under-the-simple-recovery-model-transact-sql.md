@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65594c3c0811245fa562493ba0faad75686f171a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0a2053c22e1aaa4229594e4937910b28a732397
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707658"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>在簡單復原模式下還原資料庫備份 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.locfileid: "32921333"
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  此範例會從磁帶還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 完整資料庫備份。  
   
 ### <a name="example"></a>範例  

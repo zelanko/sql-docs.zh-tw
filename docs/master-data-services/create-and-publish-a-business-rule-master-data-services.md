@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2c2c75fbe8251d66bc094f0e59681bcc160dba7a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8ed7c2329742cea3b7fb0fbd43b33233bb846a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400818"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628636"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
 
@@ -107,11 +104,11 @@ ms.locfileid: "35400818"
 ## <a name="grid-columns"></a>方格資料行  
  對於每個建立的商務規則，會將含有六個資料行的資料列加入方格中。 以下是資料行。  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[狀態]|當您按一下 [儲存]，下列影像隨即顯示，指出正在更新商務規則。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 如果建立或編輯商務規則時發生錯誤，則會顯示下列影像。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 如果狀態正常，則會顯示下列影像。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |[屬性]|商務規則名稱。|  
-|描述|商務規則描述。|  
+|Description|商務規則描述。|  
 |商務規則狀態|下列商務規則狀態之一：未定義規則、使用中、排除、暫止變更、暫止排除及暫止刪除。|  
 |已排除|指定商務規則是否已排除。|  
 |通知|指定選取傳送電子郵件通知的使用者或群組。|  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f88d9b7b79c074d02160fc839066ac6dfde97407
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: aa43a9bac948f5d03d21689b4272f2c93317792b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654876"
 ---
 # <a name="execute-process-task"></a>執行處理工作
   「執行處理」工作會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程執行應用程式或批次檔。 雖然可以使用「執行處理」工作來開啟任何標準應用程式，例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]，但通常您會使用它來執行處理資料來源的商業應用程式或批次檔。 例如，您可以使用「執行處理」工作展開壓縮的文字檔。 然後封裝就可以使用文字檔做為封裝中資料流程的資料來源。 另一項範例為：您可以使用「執行處理」工作來執行產生每日銷售報表的自訂 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式。 接著，您就可將報告附加至「傳送郵件」工作，並將報告轉寄到通訊群組清單。  
@@ -35,7 +32,7 @@ ms.locfileid: "35333422"
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>執行處理工作上可用的自訂記錄項目  
  下表列出「執行處理」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|描述|  
+|記錄項目|Description|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|提供將工作設定為執行之相關的程序資訊。<br /><br /> 將會寫入兩個記錄項目。 其中一個包含工作所執行之可執行檔的名稱和位置的相關資訊，另一個項目則記錄可執行檔的結束。|  
 |**ExecuteProcessVariableRouting**|提供有關哪些變數會傳到可執行檔之輸入和輸出的相關資訊。 將會寫入 stdin (輸入)、stdout (輸出) 和 stderr (錯誤輸出) 的記錄項目。|  

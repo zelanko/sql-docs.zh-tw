@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP SYNONYM
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - DROP SYNONYM statement
 - dropping synonyms
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9f1ec8aa48424961ab5fb3951eb8934e5694d851
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 3147ec1eb3fc790ae3672e9f39870935ee085b7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598907"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
  動態 SQL 中的同義字可以建立、卸除和參考。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  使用者至少必須符合下列一個條件，才能卸除同義字。 使用者必須是：  
   
 -   同義字的目前擁有者。  

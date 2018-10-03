@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce13efdb6b0373280d4691de4a50bdf1e02c987e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b5df50add8b380d922ea26277b8b261c9c4e2c6d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411430"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651611"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 說明
   本節包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 之三個元件的 F1 說明主題。 在使用者介面中按下 F1 鍵，或在精靈頁面和對話方塊中按一下 [說明]，也可以存取這些主題。  

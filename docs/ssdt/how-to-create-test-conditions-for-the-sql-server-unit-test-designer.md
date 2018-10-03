@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681966"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>HOW TO：建立 SQL Server 單元測試設計工具的測試條件
 您可以使用可延伸的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 類別，建立新的測試條件。 例如，您可以建立新的測試條件，驗證結果集中的資料行數目或值。  
@@ -181,7 +178,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 |屬性參數|位置|Description|  
 |-----------------------|------------|---------------|  
-|DisplayName|@shouldalert|識別 [測試條件] 下拉式方塊中的字串。 這個名稱必須是唯一的。 如果兩個條件有相同的顯示名稱，第一個找到的條件會向使用者顯示，並在 Visual Studio 錯誤管理員中顯示警告。|  
+|DisplayName|1|識別 [測試條件] 下拉式方塊中的字串。 這個名稱必須是唯一的。 如果兩個條件有相同的顯示名稱，第一個找到的條件會向使用者顯示，並在 Visual Studio 錯誤管理員中顯示警告。|  
 |ImplementingType|2|這個參數是用來唯一識別擴充功能。 您必須變更它，以符合屬性放置所在的型別。 此範例會使用 **ResultSetColumnCountCondition** 類型，因此請使用 **typeof(ResultSetColumnCountCondition)**。 如果您的類型是 **NewTestCondition**，則使用 **typeof(NewTestCondition)**。|  
   
 在這個範例中，您加入兩個屬性。 自訂測試條件的使用者可以使用 ResultSet 屬性，指定要驗證哪個結果集的資料行計數。 然後，使用者可以使用 Count 屬性來指定預期的資料行計數。  

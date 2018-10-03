@@ -4,7 +4,6 @@ ms.date: 05/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 285642926ae52e076d9c3012df16583c7896132e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8994681f816de7d1f7b8d35eaee87d58b77c04ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711256"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>將報表伺服器的存取權授與使用者
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_serveroption_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - 7343 (Database Engine error)
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7222b3963e3c2ff3b96966d254c075bea0cd44ad
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 57bc3a40cfaa600c27c0bded34d62a1f68060390
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607326"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

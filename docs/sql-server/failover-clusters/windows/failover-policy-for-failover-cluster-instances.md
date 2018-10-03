@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
@@ -14,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f3448583d07f73c23f19c2eec68eb59b71fd06af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772564"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709046"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,10 +93,10 @@ ms.locfileid: "34772564"
   
  請檢閱 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)，此系統預存程序在失敗狀況層級扮演重要角色。  
   
-|層級|條件|描述|  
+|層級|條件|Description|  
 |-----------|---------------|-----------------|  
 |0|沒有自動的容錯移轉或重新啟動|指出任何失敗狀況都不會自動觸發容錯移轉或重新啟動。 這個等級只會用於系統維護的用途。|  
-|@shouldalert|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  
+|1|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  
 |2|伺服器無回應的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。|  
 |3*|發生重大伺服器錯誤的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「系統錯誤」。|  
 |4|發生一般伺服器錯誤的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「系統錯誤」。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「資源錯誤」。|  

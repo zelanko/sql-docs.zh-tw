@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.agdashboard.agp2online.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dc3b221631d07291a4965f5bb37dca54f406703
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 14af3a13043a21691e38f5fa8226041fb797f975
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656366"
 ---
 # <a name="availability-group-is-offline"></a>可用性群組為離線
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "34768594"
 |**類別目錄**|**嚴重**|  
 |**Facet**|可用性群組|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  這項原則檢查可用性群組的線上或離線狀態。 當可用性群組的叢集資源為離線或可用性群組沒有主要複本時，原則為狀況不良並會引發警示。  
   
  當可用性群組的叢集資源為線上或可用性群組有主要複本時，原則為狀況良好。  

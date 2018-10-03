@@ -5,12 +5,8 @@ ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -19,16 +15,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b2863ac1e5a9f9bdf072e674bb4e556eeecc268
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c1009081d8b5d4f6c9054149b73bfe8966602a51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681646"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a6e654f5b692e5d52cbbaaa524fa9aa0bc637f9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ca52db342b92b3c20e52ca4080505244bfb78eea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997770"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601726"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

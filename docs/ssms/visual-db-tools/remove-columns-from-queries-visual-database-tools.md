@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing columns
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 948bba868f2a9c7401edae5fa39037b5e2acb38e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2321aa58c51eb87aac26931cdbd24b357ab6d1c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674367"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>移除查詢的資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

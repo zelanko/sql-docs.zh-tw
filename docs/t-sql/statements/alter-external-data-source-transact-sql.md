@@ -5,9 +5,7 @@ ms.date: 01/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7a8f604d87de12130967ce2ae27e26a542dc1c2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667246"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ TYPE = BLOB_STORAGE
 ## <a name="remarks"></a>Remarks
  每次只能修改單一來源。 修改相同來源的同時要求會導致一個陳述式進入等待。 不過，可同時修改不同的來源。 這個陳述式可以與其他陳述式同時執行。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  要求 ALTER ANY EXTERNAL DATA SOURCE 權限。
  > [!IMPORTANT]  
  >  ALTER ANY EXTERNAL DATA SOURCE 權限可讓任何主體都能夠建立及修改任何外部資料來源物件，因此也會讓主體能夠存取資料庫上的所有資料庫範圍認證。 必須將此權限視為具高度權限，因此必須僅授與系統中受信任的主體。

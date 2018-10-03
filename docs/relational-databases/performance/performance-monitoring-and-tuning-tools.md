@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29c01064646de4f80bd11f6a7536d895368b6e52
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+ms.openlocfilehash: c5411043ae54d4082cd4d1b2c194b48ae9d78b65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34811962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626836"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "34811962"
   
  下列為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視和微調工具：  
   
-|工具|描述|  
+|工具|Description|  
 |----------|-----------------|  
 |[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會追蹤引擎處理序事件 (例如批次或交易的開始)，讓您可以監視伺服器和資料庫活動 (例如死結、嚴重錯誤或登入活動)。 您可以將 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的資料擷取到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檔案中以供稍後分析，您也可以逐步重新執行於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擷取的事件，以查看實際的發生情形。|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 可以使用多部電腦重新執行追蹤資料，並模擬關鍵任務的工作負載。|  
@@ -69,7 +66,7 @@ ms.locfileid: "34811962"
 ## <a name="windows-monitoring-tools"></a>Windows 監視工具  
  Windows 作業系統與 Windows Server 2003 也提供下列監控工具。  
   
-|工具|描述|  
+|工具|Description|  
 |----------|-----------------|  
 |工作管理員|顯示執行於系統上的處理序與應用程式概要。|  
 |網路監視器代理程式|監視網路流量。|  

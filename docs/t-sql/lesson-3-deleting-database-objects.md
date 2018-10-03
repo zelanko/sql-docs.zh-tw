@@ -5,25 +5,20 @@ ms.date: 07/30/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - deleting database objects
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7381d5c4786fcd67a69029e158a0a931b8e8f628
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fc4bd0a0d3c70b31f398c791c4e75dbd7ab1403e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621146"
 ---
 # <a name="lesson-3-delete-database-objects"></a>課程 3：刪除資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

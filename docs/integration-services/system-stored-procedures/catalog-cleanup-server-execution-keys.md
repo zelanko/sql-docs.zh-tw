@@ -5,21 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6fe8695cc86a46c7f00f013cfc8fa8f19c1826a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9a39ae6682829121d2471d49c3dd8fd9fdfbfd8d
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864198"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="result-sets"></a>結果集  
  無。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
   
 -   專案的 READ 與 EXECUTE 權限，以及參考環境的 READ 權限 (如果適用的話)。  

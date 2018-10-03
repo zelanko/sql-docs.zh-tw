@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], PowerShell cmdlets
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21ec89f0a33e3170eed83f3a1ed0333a5bc67dac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f4491943f13e515bda4d46285b1a1e0dd52dfd9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597867"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.locfileid: "34769214"
   
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
-|指令程式|描述|支援的項目|  
+|指令程式|Description|支援的項目|  
 |-------------|-----------------|------------------|
 |[**Disable-SqlAlwaysOn**](/powershell/module/sqlserver/disable-sqlalwayson)|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|**Path**、 **InputObject**或 **Name** 參數所指定的伺服器執行個體。 (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本)。|  
 |[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
@@ -63,7 +60,7 @@ ms.locfileid: "34769214"
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
-|指令程式|描述|支援的項目|  
+|指令程式|Description|支援的項目|  
 |-------------|-----------------|------------------|  
 |[**Backup-SqlDatabase**](/powershell/module/sqlserver/backup-sqldatabase)|建立資料或記錄備份。|任何線上資料庫 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載主要複本之伺服器執行個體的資料庫)|  
 |[**Restore-SqlDatabase**](/powershell/module/sqlserver/restore-sqldatabase)|還原備份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載次要複本的伺服器執行個體)<br /><br />
@@ -75,7 +72,7 @@ ms.locfileid: "34769214"
   
 ##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
-|指令程式|描述|支援的項目|  
+|指令程式|Description|支援的項目|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroup**](/powershell/module/sqlserver/new-sqlavailabilitygroup)|建立新的可用性群組。|要裝載主要複本的伺服器執行個體|  
 |[**Remove-SqlAvailabilityGroup**](/powershell/module/sqlserver/remove-sqlavailabilitygroup)|刪除可用性群組。|啟用 HADR 的伺服器執行個體|  
@@ -84,7 +81,7 @@ ms.locfileid: "34769214"
   
 ##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
-|指令程式|描述|支援的項目|  
+|指令程式|Description|支援的項目|  
 |------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/new-sqlavailabilitygrouplistener)|建立新的可用性群組接聽程式，並將其附加至現有的可用性群組。|裝載主要複本的伺服器執行個體|  
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|修改現有可用性群組接聽程式上的通訊埠設定。|裝載主要複本的伺服器執行個體|  
@@ -92,7 +89,7 @@ ms.locfileid: "34769214"
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
-|指令程式|描述|支援的項目|  
+|指令程式|Description|支援的項目|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityReplica**](/powershell/module/sqlserver/new-sqlavailabilityreplica)|建立新的可用性複本。 您可以使用 **-AsTemplate** 參數，針對每個新的可用性複本建立記憶體內部可用性複本物件。|裝載主要複本的伺服器執行個體|  
 |[**Join-SqlAvailabilityGroup**](/powershell/module/sqlserver/join-sqlavailabilitygroup)|將次要複本聯結至可用性群組。|裝載次要複本的伺服器執行個體|  
@@ -101,7 +98,7 @@ ms.locfileid: "34769214"
   
 ##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
-|指令程式|描述|支援的項目|  
+|指令程式|Description|支援的項目|  
 |-------------|-----------------|------------------|  
 |[**Add-SqlAvailabilityDatabase**](/powershell/module/sqlserver/add-sqlavailabilitydatabase)|在主要複本上，將資料庫加入至可用性群組。<br /><br /> 在次要複本上，將次要資料庫聯結至可用性群組。|裝載可用性複本的任何伺服器執行個體 (主要和次要複本的行為有所不同)|  
 |[**Remove-SqlAvailabilityDatabase**](/powershell/module/sqlserver/remove-sqlavailabilitydatabase)|在主要複本上，從可用性群組中移除資料庫。<br /><br /> 在次要複本上，從本機次要複本中移除本機次要資料庫。|裝載可用性複本的任何伺服器執行個體 (主要和次要複本的行為有所不同)|  
@@ -114,7 +111,7 @@ ms.locfileid: "34769214"
 > [!IMPORTANT]  
 >  您必須擁有 CONNECT、VIEW SERVER STATE 和 VIEW ANY DEFINITION 權限，才能執行這些指令程式。  
   
-|指令程式|描述|支援的項目|  
+|指令程式|Description|支援的項目|  
 |------------|-----------------|------------------|  
 |[**Test-SqlAvailabilityGroup**](/powershell/module/sqlserver/test-sqlavailabilitygroup)|透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性群組的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  
 |[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性複本的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  

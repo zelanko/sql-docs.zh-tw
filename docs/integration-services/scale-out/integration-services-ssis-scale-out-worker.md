@@ -6,20 +6,17 @@ ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2949f0aabaf4f59d6d2fc6635991f8eb0a921ca6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 317e38cab16de2cbfc5f3688d5f555123288eb93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624796"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 相應放大背景工作
 
@@ -28,10 +25,10 @@ Scale Out Worker 會執行 Scale Out Worker 服務，以從 Scale Out Master 提
 ## <a name="configure-the-scale-out-worker-service"></a>設定 Scale Out Worker 服務
 您可以使用 ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 檔案來設定 Scale Out Worker 服務。 更新設定檔之後，必須重新啟動服務。
 
-組態  |描述  |預設值  
+組態  |Description  |預設值  
 ---------|---------|---------
 DisplayName|相應放大背景工作的顯示名稱。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|電腦名稱         
-描述|相應放大背景工作的描述。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|Empty         
+Description|相應放大背景工作的描述。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|Empty         
 MasterEndpoint|要連接到相應放大主機的端點。|在相應放大背景工作安裝期間設定的端點         
 MasterHttpsCertThumbprint|驗證相應放大主機所使用的用戶端 SSL 憑證指紋|在相應放大背景工作安裝期間指定的用戶端憑證指紋。          
 WorkerHttpsCertThumbprint|相應放大主機驗證相應放大背景工作所使用的憑證指紋。|在相應放大背景工作安裝期間自動建立並安裝的憑證指紋          

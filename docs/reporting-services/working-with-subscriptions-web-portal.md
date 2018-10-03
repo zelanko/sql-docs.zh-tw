@@ -4,17 +4,16 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c89bda3d26417b69bc5163d09d329f2b08d3e65
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d0ca85ac478ee47500aaa948da5b0cceeac13bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614556"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
 

@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificates method
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 710f7ab21d527647f65a911977fb492203f09eeb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 866307753cb23d2a7a95ae02a260cc625cf879a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664496"
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>ConfigurationSetting 方法 - ListSSLCertificates
   傳回報表伺服器電腦上的憑證清單。  

@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - RSPrintClient control
 - print controls [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eef2cedf56fd314244a598ddc77df391f44237ca
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 83cb62f98da8022ee1d0eced56e03d20b2569a11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614326"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印] 對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  

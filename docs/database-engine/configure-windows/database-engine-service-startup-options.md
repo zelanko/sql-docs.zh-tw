@@ -5,9 +5,7 @@ ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab08ae1055d18b036f34791cbb90ccc95071e16e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639956"
 ---
 # <a name="database-engine-service-startup-options"></a>Database Engine 服務啟動選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +49,14 @@ ms.locfileid: "32869733"
   
 ## <a name="list-of-startup-options"></a>啟動選項清單  
 ### <a name="default-startup-options"></a>預設啟動選項  
-|選項。|描述|  
+|選項。|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master 資料庫檔案的完整路徑 (通常是 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf)。 如果不提供這個選項，會使用現有的登錄參數。|  
 |**-e**  *error_log_path*|這是錯誤記錄檔的完整路徑 (通常是 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG)。 如果不提供這個選項，會使用現有的登錄參數。|  
 |**-l**  *master_log_path*|master 資料庫記錄檔的完整路徑 (通常是 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf)。 如果不指定這個選項，就會使用現有的登錄參數。|  
   
 ### <a name="other-startup-options"></a>其他啟動選項   
-|選項。 |描述|   
+|選項。 |Description|   
 |---------------------------|-----------------|  
 |**-c**|縮短從命令提示字元啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的啟動時間。 一般而言， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會呼叫「服務控制管理員」，以服務方式啟動。 因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 從命令提示字元啟動時不會以服務方式啟動，所以請使用 **-c** 略過這個步驟。|  
 |**-f**|啟動只含最小組態的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果組態值設定 (如過度調配記憶體) 造成伺服器無法啟動，這就很有用。 以最低組態模式啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 放在單一使用者模式下。 如需詳細資訊，請參閱後續的 **-m** 描述。|  

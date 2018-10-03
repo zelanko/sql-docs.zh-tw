@@ -1,14 +1,11 @@
 ---
-title: SqlServiceAdvancedProperty 類別 |Microsoft 文件
+title: SqlServiceAdvancedProperty 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SqlServiceAdvancedProperty Class
@@ -18,16 +15,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServiceAdvancedProperty class
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1ec3b9a9bcf17ef5f18087af64950ffba0bca6f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb62dee3cd772d3b4e4e699fc4ab340f7f36dbbf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603636"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +31,9 @@ ms.locfileid: "33011575"
   
  [AdvancedProperties 屬性 （SqlService 類別）](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md)參考的陣列[SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)物件。  
   
- [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)類別代表對於服務特有的屬性。 這些屬性不與相關聯的屬性清單[SqlService 類別](http://technet.microsoft.com/library/ms186497.aspx)類別。 [SqlServiceAdvancedProperty 類別](http://technet.microsoft.com/library/ms182447.aspx)類別允許字串、 數值或布林屬性的表示法。 您可以使用這個類別來檢視指定之服務的唯一屬性。  
+ [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)類別代表對於服務特有的屬性。 這些屬性不在清單中的相關聯的屬性[SqlService 類別](http://technet.microsoft.com/library/ms186497.aspx)類別。 [SqlServiceAdvancedProperty 類別](http://technet.microsoft.com/library/ms182447.aspx)類別允許字串、 數值或布林值屬性的表示法。 您可以使用這個類別來檢視指定之服務的唯一屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動、 停止和暫停服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [開始、 停止和暫停服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

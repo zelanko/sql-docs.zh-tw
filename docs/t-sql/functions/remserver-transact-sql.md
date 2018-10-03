@@ -5,9 +5,7 @@ ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@REMSERVER'
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], logins
 - '@@REMSERVER function'
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b8d3ff79467cd38f8057e121d151c8e765794b1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: edc51e80ac7e0753ff110f690566489225b7c1b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688546"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

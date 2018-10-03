@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/19/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - logon triggers
@@ -17,12 +15,12 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 29cfdc2d38612ee91f73d117bce862d16b975cf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729186"
 ---
 # <a name="logon-triggers"></a>登入觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

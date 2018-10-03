@@ -5,21 +5,18 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
-caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5614a15df481602ee0bdaa755afd53b522e79e47
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 85b3388be32ac33382ad34f12ec135e84313cb33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687439"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

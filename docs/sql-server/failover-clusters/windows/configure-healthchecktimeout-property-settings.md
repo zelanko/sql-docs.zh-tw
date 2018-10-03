@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2ba9869ec0cb5760c3c4aff4e055c11a61a78a8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4de76b94a97cb654f82d417fd707b10217100f59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698749"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

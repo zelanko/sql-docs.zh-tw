@@ -5,9 +5,7 @@ ms.date: 12/15/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Remote WinSock
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Microsoft Proxy Server [SQL Server]
 - local address tables [SQL Server]
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ea68a2c59658f6edf44cd6d0d3edfccfd9d0bb82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 187004d1ff87fdc1b22ab62537cbe06f5d56c706
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863593"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631026"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>經由 Proxy 伺服器連接至 SQL Server (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

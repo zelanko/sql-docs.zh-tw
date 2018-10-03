@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 360fd0262fdfad643e86fa7c8fd9eb075300c682
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c90585a56eec991a50285df3b82218a53d81863
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597606"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>自主資料庫的安全性最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

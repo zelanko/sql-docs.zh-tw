@@ -5,26 +5,23 @@ ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65558
 - vdtsql.chm:69657
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20b701f34d338baa542e8da2d6f3518b48c45abe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9e10bb43295df9fac711792f65ed22e4b55a1605
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628915"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>資料表資料行屬性 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a8b7e7fdc732376e58d9b7923f2889a0ebc055e1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672256"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用組態檔安裝 SQL Server
 

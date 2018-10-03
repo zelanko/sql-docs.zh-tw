@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 76
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 5532f6870e19e830a4d8925fbfca68862493fa6a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e772a5afba4129d90ae7ab26fb051db7fd8113bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262638"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597777"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,10 +114,10 @@ DBCC CHECKALLOC 利用內部資料庫快照集來提供執行這些檢查所需�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息  
 DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
   
-|State|描述|  
+|State|Description|  
 |---|---|  
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|  
-|@shouldalert|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
+|1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
 |2|修復緊急模式資料庫期間發生失敗。|  
 |3|這表示中繼資料損毀使 DBCC 命令終止。|  
 |4|偵測到判斷提示或存取違規。|  
@@ -137,7 +134,7 @@ DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
 ## <a name="result-sets"></a>結果集  
 下表說明 DBCC CHECKALLOC 傳回的資訊。
   
-|項目|描述|  
+|項目|Description|  
 |---|---|  
 |FirstIAM|僅供內部使用。|  
 |Root|僅供內部使用。|  
@@ -147,7 +144,7 @@ DBCC CHECKALLOC 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes
   
 另外，DBCC CHECKALLOC 也會報告每個檔案中各個索引和資料分割的配置摘要。 這份摘要描述資料的散發。
   
-|項目|描述|  
+|項目|Description|  
 |---|---|  
 |保留的頁面|配置給索引的頁面，以及配置範圍中未使用的頁面。|  
 |使用的頁面|索引所配置且使用中的頁面。|  
@@ -231,7 +228,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  

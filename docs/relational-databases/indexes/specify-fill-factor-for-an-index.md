@@ -5,25 +5,22 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fill factor [SQL Server]
 - page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 251c250306d01eb14cdde76ce09cfd9b81fdf203
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c2ff2cff49acefb568a0d052b00e4ec8d7e838f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630407"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>指定索引的填滿因素
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

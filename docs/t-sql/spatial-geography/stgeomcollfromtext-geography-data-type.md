@@ -5,9 +5,7 @@ ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeomCollFromText_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromText method
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2a32171b109f4eb55988ca595d7617c468ae0f8
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: de09bc9bff3cc383d34e11a5429ae7e267755a4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36259240"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683676"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

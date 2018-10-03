@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0fd6f3ffe5a30688f24e562e4d536cd3ecd8353
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 32d755dbf79a57552c73a79a3c8a1daad60dd208
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608376"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
   傳回數值運算式的平方根。  

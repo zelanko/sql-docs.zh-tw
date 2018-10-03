@@ -5,12 +5,8 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ce8ddbf21744900e09f27779621d2d31e2f30de
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 7ac9abe2be8227d6df1fc5dbb3d14b8953aab6ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672436"
 ---
 # <a name="enabling-logging-programmatically"></a>以程式設計的方式啟用記錄
   執行階段引擎提供 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 物件的集合，允許在封裝驗證和執行期間擷取事件特定資訊。 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 物件可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer> 物件使用，包括 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>、<xref:Microsoft.SqlServer.Dts.Runtime.Package>、<xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 物件。 在個別容器或是整個封裝上啟用記錄。  
@@ -49,7 +44,7 @@ ms.locfileid: "35312647"
   
  下列表格列出可用的記錄提供者、其說明及其 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 資訊。  
   
-|提供者|描述|ConfigString 屬性|  
+|提供者|Description|ConfigString 屬性|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|產生可能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 中擷取和檢視的 SQL 追蹤。 此提供者的預設副檔名為 .trc。|不需要組態。|  
 |[SQL Server]|將事件記錄項目寫入任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 **sysssislog** 資料表中。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者需要指定連至資料庫的連接，還須指定目標資料庫名稱。|  

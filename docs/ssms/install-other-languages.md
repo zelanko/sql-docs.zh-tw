@@ -5,19 +5,17 @@ ms.custom: ''
 ms.date: 12/08/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74cda5bc234b468e89d70b5289a5a70478328b11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: febb1feb9a26f4f9e969d568975b331bc522c14b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722866"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安裝非英文語言版本的 SQL Server Management Studio (SSMS) 
 

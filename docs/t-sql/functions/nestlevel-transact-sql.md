@@ -5,9 +5,7 @@ ms.date: 09/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@NESTLEVEL'
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - nesting stored procedures
 - stored procedure nesting levels [SQL Server]
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06b515defbcfca57bac7f005957ab18c2a9b12dc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6ff57e8fc662f4ecdd524d8203e0f9fc9a5e6e37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787761"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596896"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

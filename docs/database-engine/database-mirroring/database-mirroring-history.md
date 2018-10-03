@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 61eb214df285ef51e20dd8308b430d0b43f22417
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 3f1fe2b0079d761a0fc599377ee82714227cdb73
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724316"
 ---
 # <a name="database-mirroring-history"></a>資料庫鏡像記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ ms.locfileid: "35311667"
  **記錄**  
  顯示記錄清單。 按一下資料行標題，就會依據該資料行排序方格。 此清單包含下列資料行：  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |**記錄的時間**|記錄資料列的時間戳記。|  
 |**角色**|對這個資料庫而言，伺服器執行個體目前的鏡像角色，可為 [主體] 或 [鏡像]。|  

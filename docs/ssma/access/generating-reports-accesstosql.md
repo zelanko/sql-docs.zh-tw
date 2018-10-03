@@ -1,72 +1,66 @@
 ---
-title: 產生報表 (AccessToSQL) |Microsoft 文件
+title: 產生報表 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 847fe8d703c003dd977945f1177bcaad9dae5185
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 412cbe1e8c3f3f068d7b397302ba72b89e233195
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773554"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605296"
 ---
 # <a name="generating-reports-accesstosql"></a>產生報表 (AccessToSQL)
-使用命令來執行特定活動的報表會在物件樹狀目錄層級的 SSMA 主控台產生。  
+使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
   
-使用下列程序來產生報表：  
+您可以使用下列程序來產生報表：  
   
-1.  指定**寫入摘要的報表-對**參數。 （如果有指定），將會儲存為檔案名稱的相關的報表，或在您指定的資料夾中。 檔案名稱是系統預先定義的位置下, 表中所述**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
+1.  指定**寫入-摘要-報表-以**參數。 （如果有指定），將會儲存為檔案名稱的相關的報表，或在您指定的資料夾中。 檔案名稱是系統預先定義的位置，如下表所述**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
-    報表 vis-à-vis 命令如下：  
+    報表 vis-相對-vis 命令如下：  
   
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**Command**|**報表標題**|  
-    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|移轉資料|DataMigrationReport&lt;n&gt;。XML|  
     |4|同步處理目標|TargetSynchronizationReport&lt;n&gt;.XML|  
     |5|從資料庫重新整理|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
-    > 輸出報表與不同評估報表項目。 前者是一種報表執行的命令時的效能，後者是以程式設計方式使用的 XML 報表。  
+    > 輸出報表與不同評定報告。 前者是一種報表執行的命令時的效能，後者是以程式設計方式使用的 XML 報表。  
   
-    命令選項的輸出報告 （從 Sl。 資料分割 2-4 上面)，請參閱[執行 SSMA 主控台&#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md) > 一節。  
+    如需命令選項，輸出報告 （從 Sl。 資料分割 上述的 2-4)，請參閱[執行 SSMA 主控台&#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md)一節。  
   
-2.  表示您想要輸出報表使用報表詳細等級設定的詳細程度：  
+2.  表示您想要輸出報表使用報表的詳細資訊設定的詳細資料程度：  
   
     ||||  
     |-|-|-|  
-    |**Sl。[否]。**|**命令和參數**|**輸出說明**|  
-    |@shouldalert|verbose=”false”|產生之活動的摘要的報告。|  
+    |**Sl。[否]。**|**命令與參數**|**輸出描述**|  
+    |1|verbose=”false”|產生之活動的摘要的報告。|  
     |2|verbose=”true”|產生每個活動的摘要和詳細狀態報告。|  
   
     > [!NOTE]  
-    > 使用上述指定的報表詳細等級設定也適用於產生評估報告、 轉換結構描述、 資料移轉命令。  
+    > 上面指定的報表詳細等級設定時產生評估報表、 轉換結構描述移轉資料的命令。  
   
-3.  表示您想要使用錯誤報告設定的錯誤報表中的詳細程度：  
+3.  表示您想要在錯誤報表中使用錯誤報告設定的詳細資料程度：  
   
     ||||  
     |-|-|-|  
-    |**Sl。[否]。**|**命令和參數**|**輸出說明**|  
-    |@shouldalert|report-errors=”false”|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
+    |**Sl。[否]。**|**命令與參數**|**輸出描述**|  
+    |1|report-errors=”false”|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
     |2|report-errors=”true”|詳細的錯誤 / 警告 / 資訊訊息。|  
   
     > [!NOTE]  
-    > 錯誤報告設定上述指定也適用於產生評估報告、 轉換結構描述、 資料移轉命令。  
+    > 錯誤報告設定上述指定時產生評估報表、 轉換結構描述移轉資料的命令。  
   
 **範例：**  
   
@@ -91,9 +85,9 @@ ms.locfileid: "34773554"
 ```  
   
 ### <a name="synchronize-target"></a>同步處理目標：  
-命令**同步處理目標**具有**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
+命令**同步處理目標**已**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，依名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
-**注意：** 如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
+**注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數變成選擇性的命令' 同步處理目標 ' 屬性。  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -108,9 +102,9 @@ ms.locfileid: "34773554"
   
 />  
 ```  
-**物件名稱：** 指定同步處理 （它也可以有 indivdual 物件名稱或群組的物件名稱） 被視為物件。  
+**物件名稱：** 指定視為 （它也可以有個別的物件名稱或群組的物件名稱） 的同步處理的物件。  
   
-**-錯誤：** 指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
+**錯誤：** 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
 -   報表-總計-為-警告  
   
@@ -119,9 +113,9 @@ ms.locfileid: "34773554"
 -   失敗指令碼  
   
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
-命令**從資料庫重新整理**具有**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
+命令**從資料庫重新整理**已**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，依名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
-**注意：** 如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
+**注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數變成選擇性的命令' 同步處理目標 ' 屬性。  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -138,9 +132,9 @@ ms.locfileid: "34773554"
   
 />  
 ```  
-**物件名稱：** 指定重新整理 （它也可以有 indivdual 物件名稱或群組的物件名稱） 被視為物件。  
+**物件名稱：** 指定視為重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 的物件。  
   
-**-錯誤：** 指定是否要指定重新整理錯誤視為警告或錯誤。 在錯誤的可用選項：  
+**錯誤：** 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
 -   報表-總計-為-警告  
   
@@ -149,5 +143,5 @@ ms.locfileid: "34773554"
 -   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 (Access)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

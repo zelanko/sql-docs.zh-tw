@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updateable transactional subscriptions, T-SQL
 ms.assetid: a6e80857-0a69-4867-b6b7-f3629d00c312
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3e9eb6a8884de54c73f3edc4fb20352ff61b0a5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e8150c81a52efb13a26b8fa0706d58fc0b6ee289
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713796"
 ---
 # <a name="create-updatable-subscription-to-transactional-publication"></a>建立交易式發行集的可更新訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

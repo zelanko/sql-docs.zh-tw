@@ -3,7 +3,6 @@ title: 備份與還原 Reporting Services 加密金鑰 | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62cd2e82828edbfcc9ab2cb21a579be0000f30ca
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c6c7dd24c716849d6d36ca28908d57c0e715f17c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645096"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

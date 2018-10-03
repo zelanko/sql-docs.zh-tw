@@ -5,23 +5,20 @@ ms.date: 02/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f90a8b24e68d225cb929d4139b8efc42642e1a22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b48e24103956da8e972913945091e8c77ba34a96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622736"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>預覽資料對話方塊 (SQL Server 匯入和匯出精靈)
   指定您想要複製的資料之後，即可選擇性地按一下 [預覽]  開啟 [預覽資料]  對話方塊。 在此頁面上，您最多可以預覽 200 筆資料來源的取樣資料列。 這會確認精靈即將複製您想要複製的資料。
