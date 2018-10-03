@@ -5,20 +5,17 @@ ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 31393f359faccf940178fd1d1a6b9d2e60d4b9e5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 53235c3c95c6c943ac340aecfaa8a62ff347a753
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659756"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 管理員
 

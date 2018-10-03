@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf0953bf3b5de20f697ca5b8c4ba15235b3e4b20
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 536dbcddf73d8b6af5e1106a7eb279cc1db22f47
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085040"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655886"
 ---
 # <a name="connected-database-development"></a>連接的資料庫開發
 本節將說明 SQL Server Data Tools 所提供用於設計及查詢連接的資料庫的功能。  

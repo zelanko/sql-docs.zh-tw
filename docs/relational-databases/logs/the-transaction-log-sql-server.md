@@ -5,25 +5,22 @@ ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664686"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,10 +102,10 @@ ms.locfileid: "32948073"
   
  實際上，記錄截斷可能會因為各種原因而延遲。 查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行，了解是否有任何原因導致無法進行記錄截斷。 下表描述這些資料行的值。  
   
-|log_reuse_wait 值|log_reuse_wait_desc 值|描述|  
+|log_reuse_wait 值|log_reuse_wait_desc 值|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|目前有一或多個可重複使用的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|  
-|@shouldalert|CHECKPOINT|自從上次記錄截斷後尚未出現任何檢查點，或是記錄標頭尚未移到[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 的範圍之外。 (所有復原模式)<br /><br /> 這是延遲記錄截斷的一般原因。 如需詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
+|1|CHECKPOINT|自從上次記錄截斷後尚未出現任何檢查點，或是記錄標頭尚未移到[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 的範圍之外。 (所有復原模式)<br /><br /> 這是延遲記錄截斷的一般原因。 如需詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
 |2|LOG_BACKUP|在截斷交易記錄前，需要進行記錄備份。 (僅限完整或大量記錄復原模式)<br /><br /> 當下一個記錄備份完成後，某些記錄空間可能就可以重複使用。|  
 |3|ACTIVE_BACKUP_OR_RESTORE|正在進行資料備份或還原 (所有復原模式)。<br /><br /> 如果資料備份阻礙截斷記錄，則取消備份作業可能有助於化解眼前的問題。|  
 |4|ACTIVE_TRANSACTION|交易在使用中 (所有復原模式)：<br /><br /> 長時間執行的交易可能存在於記錄備份的開頭。 在此情況下，釋出空間可能需要另一個記錄備份。 請注意，長時間執行的交易會避免所有復原模式下的記錄截斷，包括簡單復原模式，在該模式下，通常會在每一個自動檢查點截斷交易記錄。<br /><br /> 延遲交易。 *「延遲交易」* 實際上是回復遭到封鎖的使用中交易 (因為某些無法使用的資源所造成)。 如需有關延遲交易的原因以及如何將延遲交易移出延遲狀態的詳細資訊，請參閱[延遲交易 &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。<br /> <br /> 長時間執行的交易可能也會填滿 tempdb 的交易記錄。 內部物件的使用者交易會隱含地使用 tempdb，例如進行排序的工作資料表、進行雜湊處理的工作檔案、資料指標工作資料表，以及資料列版本設定。 即使使用者交易只包括讀取資料 (`SELECT` 查詢)，還是可以在使用者交易下建立和使用內部物件。 因此，可能會填滿 tempdb 交易記錄。|  

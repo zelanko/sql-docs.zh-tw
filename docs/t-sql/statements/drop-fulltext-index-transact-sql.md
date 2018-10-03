@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_FULLTEXT_INDEX_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - DROP FULLTEXT INDEX statement
 - dropping full-text indexes
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cb5ff7ff811ad7e05d6f8fdc1e54ca6423d7622a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b1a3c7aa59a3b7c69c0f0483f51227e34a550a9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661716"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="remarks"></a>Remarks  
  在使用 DROP FULLTEXT INDEX 命令之前，您不需要從全文檢索索引中卸除所有資料行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  使用者必須具有資料表或索引檢視的 ALTER 權限，或必須是 **sysadmin** 固定伺服器角色的成員，或是 **db_owner** 或 **db_ddladmin** 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  
