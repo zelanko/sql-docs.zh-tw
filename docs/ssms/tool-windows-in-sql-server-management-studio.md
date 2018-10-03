@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tool windows
 - tool windows [SQL Server Management Studio]
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5ba9b644ab7712b6ac52c26761e1a15435be1fa
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ad294613de972bd2e183d22499f852a2796ed520
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649419"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

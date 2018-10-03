@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.asprocessingtask.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5a4a205f1e1cd89b86bcfc0929d95a638cd24d78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609529"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 處理」工作會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件，例如表格式模型、Cube、維度及採礦模型。  
@@ -119,7 +116,7 @@ ms.locfileid: "35333472"
  **相關主題：** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)、 [加入 Analysis Services 連接管理員對話方塊 UI 參考](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **物件清單**  
- |屬性|描述|  
+ |屬性|Description|  
 |--------------|-----------------|  
 |**Object Name**|列出指定的物件名稱。|  
 |**型別**|列出指定的物件類型。|  
@@ -138,7 +135,7 @@ ms.locfileid: "35333472"
  **相關主題：**[影響分析對話方塊 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **批次設定摘要**  
- |屬性|描述|  
+ |屬性|Description|  
 |--------------|-----------------|  
 |**處理順序**|指定循序地或在批次中處理物件；如果使用平行處理，請指定要並行處理的物件數目。|  
 |**交易模式**|指定循序處理的交易模式。|  

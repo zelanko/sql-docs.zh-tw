@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74e29fb8dba47af077332536fe719922a22983d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bcc78ff386997d445d4bc23bb452179853565686
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645227"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用鑽研建立索引標籤式的行動報表
 了解如何使用鑽研報表和參數建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，使其外觀和行為類似索引標籤式報表。

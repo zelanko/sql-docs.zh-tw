@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: import-export
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdfbae15fe3a8bad561bcc96e30739ee3ed2b96d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bd8995c954d88a90b5e1c5cd8802f69d96b33186
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627286"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定欄位長度 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +66,7 @@ ms.locfileid: "43072348"
 |**nvarchar**|該資料行定義長度的兩倍|  
 |**Text**|0|  
 |**ntext**|0|  
-|**bit**|@shouldalert|  
+|**bit**|1|  
 |**binary**|該資料行定義長度的兩倍 + 1|  
 |**varbinary**|該資料行定義長度的兩倍 + 1|  
 |**image**|0|  
@@ -104,7 +100,7 @@ ms.locfileid: "43072348"
   
 |資料類型|預設長度 (字元)|  
 |---------------|-----------------------------------|  
-|**bit**|@shouldalert|  
+|**bit**|1|  
 |**binary**|該資料行的定義長度|  
 |**varbinary**|該資料行的定義長度|  
 |**image**|0|  
@@ -115,7 +111,7 @@ ms.locfileid: "43072348"
 |**int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
-|**tinyint**|@shouldalert|  
+|**tinyint**|1|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  

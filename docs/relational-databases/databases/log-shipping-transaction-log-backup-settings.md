@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: log-shipping
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60ceeadd0f4608d241b9609bf050bc97de264e98
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 880dbc43daf8e236f1e424968b5ec4ff9d8b0107
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642056"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>記錄傳送交易記錄備份設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STEquals_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEquals method
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ace2aa0e193696b9b8479ede09ef23d408f5cc6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dceff73f5af775f6785db8b922d719e005d65a21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38048886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605526"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

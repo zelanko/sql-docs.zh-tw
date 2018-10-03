@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 741c377f848c67a71dc34b0191a892e3e1389426
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 80544535b3a45fa11be346b1b35714148f2bd434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624486"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>在已發行的報表上設定參數 - SharePoint 整合模式
   參數化報表是指可接受輸入值的報表，而這些輸入值會在您執行報表時用來篩選資料。 參數是在報表建立時定義的。 根據報表參數在報表定義中的定義方式，它可能會接受單一值、多個值或動態值，而這些值會變更以便回應之前的選取項目 (例如，當您選取產品類別目錄時，下一個選取項目可能是來自該類別目錄的特定產品)。 參數可能會有預設值，而且此值可用來自動執行已篩選的報表版本或可能由不同的值取代。  

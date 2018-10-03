@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e417d14e4c46172fc93eb4f0e386d4e211dee989
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c93c32d70ccc2cf1180b44e16c5983d584b2b19b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616067"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>將報表繫結至共用資料來源 (SSRS)
   在某些情況下 (例如，將報表從測試伺服器移到生產環境伺服器時)，您可能想先將檔案儲存在本機電腦，然後再上傳到不同的報表伺服器。 當您將報表上傳到新伺服器時，您必須將它重新繫結至新報表伺服器上儲存的共用資料來源。 如果不重新繫結報表，從新報表伺服器存取該報表時將無法正常運作。  

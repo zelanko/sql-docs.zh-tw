@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a25fcf08c76a509e71a3bfdefbaf3c683854d07b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605156"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +126,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>設定資料分割選項  
  依據「訂閱者」共用已篩選資料表中資料之方式，您可以建立發行項時為 **資料分割選項** 屬性指定一個值。 您可以使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)和 **[發行項屬性]** 對話方塊，將這個屬性設為四個值的其中一個。 使用 **[加入篩選]** 或 **[編輯篩選]** 對話方塊 (在「新增發行集精靈」和 **[發行集屬性]** 對話方塊中可用) 可以將屬性設定為兩個值中的其中之一。 下表簡單說明了可用值：  
   
-|描述|「加入篩x」和「編輯篩選」中的值|「發行項屬性」中的值|預存程序中的值|  
+|Description|「加入篩x」和「編輯篩選」中的值|「發行項屬性」中的值|預存程序中的值|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |資料分割中的資料為重疊，「訂閱者」可以更新參數化篩選中參考的資料行。|**這個資料表中的一個資料列會提供給多個訂閱**|**重疊**|**0**|  
 |資料分割中的資料為重疊，「訂閱者」不能更新參數化篩選中參考的資料行。|N/A*|**重疊，不允許變更資料分割外的資料**|**1**|  

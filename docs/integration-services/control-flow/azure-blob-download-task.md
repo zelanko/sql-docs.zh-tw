@@ -5,24 +5,21 @@ ms.date: 07/25/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpblobdltask.f1
 - sql14.dts.designer.afpblobdltask.f1
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7c337f94adcfec85600b0a1aa2f5bca4454d5ce
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 633422f298418f3b2fdf95aea7aca7b604bfce6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400100"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637526"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下載工作
 Azure Blob 下載工作可讓 SSIS 封裝能從 Azure Blob 儲存體下載檔案。

@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 152e4709c7998a5ba62b81eaf5383597c2c97e57
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5ef5f5304d9af3459c55e020cb0ca3a5fc8256e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611076"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>課程 3-1 - 複製部署配套
 在這項工作中，您會將部署配套複製到目的地電腦。  
@@ -39,7 +34,7 @@ ms.locfileid: "35329472"
 3.  在目標電腦上找到您要複製此資料夾的公用共用，然後按一下 [貼上]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 2：執行封裝安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+[步驟 2：執行套件安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
   
   

@@ -5,21 +5,18 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60b994027d5b135e3e1008992d159c3941ea970e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6465c5ccfc10847ac011274ed4b25cdb7f52b978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863563"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625646"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>設定遠端資料封存伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,10 +25,10 @@ ms.locfileid: "32863563"
   
  [遠端資料封存] 選項可以有下列值。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|無法在伺服器上啟用資料庫和資料表進行「延伸」。|  
-|@shouldalert|可以在伺服器上啟用資料庫和資料表進行「延伸」。|  
+|1|可以在伺服器上啟用資料庫和資料表進行「延伸」。|  
   
  執行 **sp_configure** 以設定 [遠端資料封存] 選項的值需要 sysadmin 或 serveradmin 權限。  
   

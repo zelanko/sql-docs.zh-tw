@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.oledbdest.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91ef4d0595ea468f9b6fdd2bfb43bbd9dacad6ed
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 52db780f2e19862110b274b97c2ce616b1503301
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636877"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -93,7 +90,7 @@ ms.locfileid: "35406910"
   
  除了 [OLE DB 目的地編輯器] 對話方塊中公開的快速載入選項以外，您還可以在 [進階編輯器] 對話方塊的 FastLoadOptions 屬性中輸入選項，將 OLE DB 目的地設定為使用下列大量載入選項。  
   
-|快速載入選項|描述|  
+|快速載入選項|Description|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項的格式為 **KILOBYTES_PER_BATCH** = \<正整數值**>**。|  
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
@@ -140,7 +137,7 @@ ms.locfileid: "35406910"
  **資料存取模式**  
  指定將資料載入目的地的方法。 請注意，雙位元組字集 (DBCS) 資料需要使用其中一種快速載入選項。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)＞。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |資料表或檢視|將資料載入 OLE DB 目的地中的資料表或檢視。|  
 |資料表或檢視 - 快速載入|將資料載入 OLE DB 目的地中的資料表或檢視，並使用快速載入選項。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)＞。|  

@@ -4,7 +4,6 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4eeee0ba266c99fbb74b926d7fcf258843ad302
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 79b79cd7b7e179413cbf5338a98ffa832f6a6b6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600366"
 ---
 # <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 方法 - SetServiceState
   開啟和關閉報表伺服器 Windows 與 Web 服務。  

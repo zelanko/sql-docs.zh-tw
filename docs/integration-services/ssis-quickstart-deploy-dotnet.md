@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e1ef56dc0d535cde833f1267c681f9a33e14c98
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: afda9b829587faf3e79fa99878304cebb5f12b0d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405500"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629256"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼部署 SSIS 專案
 本快速入門示範如何撰寫 C# 程式碼，來連線至資料庫伺服器並部署 SSIS 專案。

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed55836b8ff145202eaba91b70a11426b043b9c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 80266fb75780e3d1797c2609576ba84dc437d3f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618416"
 ---
 # <a name="audit-fulltext-event-class"></a>稽核全文檢索事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43106972"
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 |**TargetLoginName**|**int**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的名稱。|42|是|  
 |**TargetLoginSid**|**int**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的安全性識別碼 (SID)。|43|是|  
-|**TextData**|**ntext**|全文檢索事件的文字資訊。 通常，此欄位提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序和全文檢索篩選背景程式處理序之間連接的資訊。|@shouldalert|是|  
+|**TextData**|**ntext**|全文檢索事件的文字資訊。 通常，此欄位提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序和全文檢索篩選背景程式處理序之間連接的資訊。|1|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../../relational-databases/extended-events/extended-events.md)   

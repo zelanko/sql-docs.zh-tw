@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-solutions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 6187b1c9ed2153342f90fc5752e7f34b1e189442
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42773917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643136"
 ---
 # <a name="create-a-new-solution"></a>建立新方案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

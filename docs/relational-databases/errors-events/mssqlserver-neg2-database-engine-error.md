@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - "-2"
 helpviewer_keywords:
 - -2 (Database Engine error)
 ms.assetid: f37a7b7d-26e1-4b9e-bcb4-57f7805393d2
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4304576902748de3cfc83e6fb2a9cf9a0b9b91e2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7d4db0209e372e1a228e283252c8d233377d4be7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34325559"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596995"
 ---
 # <a name="mssqlserver-2"></a>MSSQLSERVER_-2
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

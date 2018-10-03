@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 918de92a88795c98564e8f797e092627af20fbde
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 239cd199e97fffdb3254a3fb5817f3922d28b661
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621086"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>驗證預存程序 (Master Data Services)
 
@@ -59,7 +56,7 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 ## <a name="parameters"></a>參數  
  此處理序的參數如下：  
   
-|參數|描述|  
+|參數|Description|  
 |---------------|-----------------|  
 |UserID|使用者識別碼。|  
 |Model_ID|模型識別碼。|  

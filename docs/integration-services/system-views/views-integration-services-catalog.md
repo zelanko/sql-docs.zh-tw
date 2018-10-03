@@ -5,23 +5,20 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - views [Integration Services]
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 359edf53a9410f199ac3cb0ea76df53fec7e4a5d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 59019aa0923d30bf45f26259680e39cf8f8ed114
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608666"
 ---
 # <a name="views-integration-services-catalog"></a>檢視 (Integration Services 目錄)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

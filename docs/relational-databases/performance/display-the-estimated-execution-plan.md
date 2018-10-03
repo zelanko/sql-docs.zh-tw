@@ -5,9 +5,7 @@ ms.date: 08/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - zoom [SQL Server]
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - modifying execution plan display
 - custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 446a1725da6d24c354a0c0789180e84a90e8ac5c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 94191f5127e5236d106dd9061f52bb7285debd39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43092565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606728"
 ---
 # <a name="display-the-estimated-execution-plan"></a>顯示估計的執行計畫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

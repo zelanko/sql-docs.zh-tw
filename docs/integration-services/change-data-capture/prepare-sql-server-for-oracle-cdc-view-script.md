@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7b26d09b73a24b38788d910792b40edc677e925
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f693b2a897d0c1baa203f7892bccb140bef4ac3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631543"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>為 Oracle CDC 檢視指令碼準備 SQL Server
   此對話方塊會顯示建立 MSXDBCDC 資料庫的「準備 SQL」指令碼。 這個資料庫必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，才能搭配 Oracle CDC for SQL Server 使用。  

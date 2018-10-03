@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], deleting
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5c7a84c669909c44f4e862576d26c960364a842
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 3739277da5fa62a1fdafb596e44c85d8e9258fac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349920"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625166"
 ---
 # <a name="delete-a-publication"></a>刪除發行集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

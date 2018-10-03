@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2913492a72dc0c384fa6885664db1038a178e64e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 19d117028e03fb3223ee3448ca555531ad47d94d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331372"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633886"
 ---
 # <a name="file-system-task"></a>檔案系統工作
   「檔案系統」工作會在檔案系統中的檔案和目錄上執行作業。 例如，封裝可使用「檔案系統」工作建立、移動或刪除目錄和檔案。 您也可以使用「檔案系統」工作設定檔案和目錄的屬性。 例如，「檔案系統」工作可將檔案設為隱藏或唯讀。  
@@ -36,7 +33,7 @@ ms.locfileid: "35331372"
 ## <a name="predefined-file-system-operations"></a>預先定義的檔案系統作業  
  「檔案系統」工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|作業|描述|  
+|作業|Description|  
 |---------------|-----------------|  
 |複製目錄|將資料夾從一個位置複製到另一個。|  
 |複製檔案|將檔案從一個位置複製到另一個。|  
@@ -58,7 +55,7 @@ ms.locfileid: "35331372"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>檔案系統工作上可用的自訂記錄項目  
  下表描述「檔案系統」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|描述|  
+|記錄項目|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|報告工作執行的作業。 記錄項目會在檔案系統作業開始時寫入，項目中包含有關來源和目的地的資訊。|  
   
@@ -99,7 +96,7 @@ ms.locfileid: "35331372"
  **IsDestinationPathVariable**  
  指出目的地路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取這個值會顯示動態選項 [DestinationVariable]。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationConnection]。|  
@@ -119,7 +116,7 @@ ms.locfileid: "35331372"
  **運算**  
  選取要執行的檔案系統作業。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**複製目錄**|複製目錄。 選取此值會顯示來源與目的地的動態選項。|  
 |**複製檔案**|複製檔案。 選取此值會顯示來源與目的地的動態選項。|  
