@@ -1,13 +1,11 @@
 ---
-title: 執行，請重新查詢，並清除方法範例 （VC + +） |Microsoft 文件
+title: Execute、 Requery 和 Clear 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef62e7ad551b0e94642348c09b743eeb0bec8925
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 013df1f64ab3d19869f5ca18121610fc0e960e89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655407"
 ---
-# <a name="execute-requery-and-clear-methods-example-vc"></a>執行，請重新查詢，並清除方法範例 （VC + +）
-這個範例會示範**Execute**方法執行時同時從[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前資料中的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除的內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 若要執行這個範例需要的 ExecuteCommand 和 PrintOutput 函式。  
+# <a name="execute-requery-and-clear-methods-example-vc"></a>Execute、 Requery 和 Clear 方法範例 （VC + +）
+此範例示範**Execute**方法時執行兩個[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前的資料，在[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 若要執行此範例需要的 ExecuteCommand 和 PrintOutput 函式。  
   
 ```  
 // Execute_Requery_Clear_Method_Sample.cpp  
@@ -193,9 +190,9 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>另請參閱  
  [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [錯誤集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Execute 方法 （ADO 命令中）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Execute 方法 （ADO 連接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Execute 方法 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute 方法 (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)

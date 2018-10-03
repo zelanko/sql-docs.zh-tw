@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3a2632fee35166a4e272ba801cc6357914b9932
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 057320ea2d739b89675a253f4dad80b0f78357f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784466"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>針對合併發行項實作自訂衝突解析程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "37353470"
   
 1.  在發行集或 **msdb** 資料庫的發行者上，建立新的系統預存程序，以實作下列必要的參數：  
   
-    |參數|資料類型|描述|  
+    |參數|資料類型|Description|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|**sysname**|解決衝突所針對之資料表的擁有者名稱。 這是發行集資料庫中資料表的擁有者。|  
     |**@tablename**|**sysname**|解決衝突所針對之資料表的名稱。|  

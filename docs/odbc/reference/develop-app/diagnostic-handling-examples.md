@@ -1,32 +1,29 @@
 ---
-title: 診斷處理範例 |Microsoft 文件
+title: 診斷處理範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85fb2641d4dc93ab5fe6a751a8fae7c8ece2200c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da271ace5dd8a55e6d5c444de7cff334ed60b6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908193"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648808"
 ---
-# <a name="diagnostic-handling-examples"></a>診斷的處理範例
-下列範例會顯示在 ODBC 連接的不同元件可能會產生診斷訊息和不同的驅動程式可能會傳回在應用程式的診斷**SQLGetDiagRec**。  
+# <a name="diagnostic-handling-examples"></a>診斷處理範例
+下列範例顯示的 ODBC 連接中的各種元件可能會產生診斷訊息和不同的驅動程式可能會傳回與應用程式診斷**SQLGetDiagRec**。  
   
 -   [以檔案為基礎的驅動程式診斷範例](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   

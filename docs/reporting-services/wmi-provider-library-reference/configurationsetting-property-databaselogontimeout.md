@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseLogonTimeout Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c4332dbac41d7bd69b0ed0dc9791b44f7d723d2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 250d954574f696a4731789c94a1e1c34c60f047e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782156"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>ConfigurationSetting 屬性 - DatabaseLogonTimeout
   指定嘗試登入報表伺服器資料庫失敗之前等候的秒數。 值為 **0** 表示無限的等候時間。 唯讀。  

@@ -1,30 +1,27 @@
 ---
-title: ODBC Jet 錯誤訊息 |Microsoft 文件
+title: ODBC Jet 錯誤訊息 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error messages (ODBC driver for oracle)
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f487fce920dd82fc36e460467733393ffdbbc36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901413"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620276"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 錯誤訊息
-資料來源中發生的錯誤，ODBC 驅動程式會傳回錯誤訊息傳回至它的 ODBC 檔案程式庫。 ODBC 驅動程式或驅動程式管理員中發生的錯誤，錯誤訊息會根據的文字，則驅動程式傳回 SQLSTATE 與相關聯。  
+資料來源中發生的錯誤，ODBC 驅動程式會傳回錯誤訊息傳回給它 ODBC 檔案程式庫。 對於 ODBC 驅動程式或驅動程式管理員中發生的錯誤，驅動程式會傳回錯誤訊息會根據文字相關聯的 SQLSTATE。  
   
  錯誤訊息的格式如下：  
   
@@ -32,7 +29,7 @@ ms.locfileid: "32901413"
 [vendor][ODBC-component][data-source]message-text  
 ```  
   
- 括號 ([]) 中的前置詞識別錯誤的位置。 當發生錯誤時的驅動程式管理員 中*資料來源*未指定。 當錯誤發生在資料來源，[*廠商*] 和 [*ODBC 元件*] 前置詞識別供應商並收到錯誤，資料來源的 ODBC 元件名稱。  
+ 括號 ([]) 中的前置詞會識別錯誤的位置。 當錯誤發生在驅動程式管理員 中，*資料來源*未指定。 當錯誤是發生在資料來源，[*廠商*] 和 [*ODBC 元件*] 前置詞識別供應商並收到錯誤，從資料來源的 ODBC 元件名稱。  
   
  下表顯示驅動程式管理員和驅動程式 ISAM 所傳回的錯誤訊息：  
   

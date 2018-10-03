@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], system views
 - system views [SQL Server], replication
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9215cc303d4a6541e958a86dbdd352802bd64bd9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d9e7b300d9bb794faa458b2eb1713378165beb2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721646"
 ---
 # <a name="replication-views-transact-sql"></a>複寫檢視表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

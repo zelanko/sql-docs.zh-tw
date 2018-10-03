@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.agdashboard.arp1rolehealthy.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efe3fa11a9f009e8251f9c559df5855717754c23
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 726dbfd9f3c16088af469de9745edfa454c6c00a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771564"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788796"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>可用性複本沒有健全的角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "34771564"
 |**類別目錄**|**嚴重**|  
 |**Facet**|可用性複本|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  這項原則檢查可用性複本的角色狀態。 當可用性複本的角色既不是主要也不是次要時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

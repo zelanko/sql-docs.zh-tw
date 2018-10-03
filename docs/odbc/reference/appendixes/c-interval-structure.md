@@ -1,32 +1,29 @@
 ---
-title: C 間隔結構 |Microsoft 文件
+title: C 間隔結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f3a2c8f0e3ad967b3c0b7b02255774c2603a1b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685716"
 ---
 # <a name="c-interval-structure"></a>C 間隔結構
-每個 C 間隔資料類型中所列[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)區段包含間隔資料使用相同的結構。 當**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是呼叫，此驅動程式傳回的資料到 SQL_INTERVAL_STRUCT 結構，會使用所指定的值應用程式的 C 資料類型 (在呼叫**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 來解譯 SQL_INTERVAL_STRUCT 的內容並於其中填入*interval_type*欄位具有結構*列舉*對應到 C 類型的值。 請注意，驅動程式不會讀取*interval_type*欄位來決定的間隔類型; 它們會擷取 SQL_DESC_CONCISE_TYPE 描述項欄位的值。 參數資料的使用結構時，驅動程式會使用 APD SQL_DESC_CONCISE_TYPE 欄位中的應用程式所指定的值解譯內容 SQL_INTERVAL_STRUCT，即使應用程式設定的值*interval_type*欄位設為不同的值。  
+每個 C 間隔資料類型中所列[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)區段以包含間隔的資料使用相同的結構。 當**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是呼叫，此驅動程式到 SQL_INTERVAL_STRUCT 結構會傳回資料，會使用所指定的值應用程式的 C 資料類型 (在呼叫**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 來解譯 SQL_INTERVAL_STRUCT 的內容並於其中填入*interval_type*結構欄位*enum* C 類型的對應值。 請注意，驅動程式不會讀取*interval_type*欄位來決定間隔的類型; 它們擷取 SQL_DESC_CONCISE_TYPE 描述項欄位的值。 參數資料的使用結構時，驅動程式會使用 APD SQL_DESC_CONCISE_TYPE 欄位中的應用程式所指定的值解譯內容 SQL_INTERVAL_STRUCT，即使應用程式設定的值*interval_type*欄位設為不同的值。  
   
  這個結構被定義，如下所示：  
   
@@ -73,4 +70,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- *Interval_type* SQL_INTERVAL_STRUCT 欄位指出應用程式等位中保留哪些結構和結構的成員也會相關。 *Interval_sign*欄位值 SQL_FALSE 如果間隔的開頭欄位是不帶正負號; 如果這是 SQL_TRUE，[前置] 欄位是負數。 前置欄位本身中的值一律是不帶正負號的值為何*interval_sign*。 *Interval_sign*欄位做為正負號位元。
+ *Interval_type* SQL_INTERVAL_STRUCT 欄位指出應用程式等位中保留哪些結構以及相關的結構成員項目。 *Interval_sign*欄位具有 SQL_FALSE 的值，如果間隔的開頭欄位是不帶正負號; 如果這是 SQL_TRUE，[前置] 欄位是負數。 前置欄位本身中的值一律是不帶正負號，不論值為何*interval_sign*。 *Interval_sign*欄位做為正負號位元。

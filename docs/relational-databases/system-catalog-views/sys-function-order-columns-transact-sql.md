@@ -1,14 +1,11 @@
 ---
-title: sys.function_order_columns (TRANSACT-SQL) |Microsoft 文件
+title: sys.function_order_columns & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - function_order_columns
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.function_order_columns catalog view
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e62ab7e719200f22cf90496c12fbf62af8f56d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643516"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "33180024"
   傳回一個資料列，每個資料行的一部分**順序**屬於 common language runtime (CLR) 資料表值函數的運算式。  
 
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|定義順序所在之物件的識別碼 (CLR 資料表值函式)。|  
 |**order_column_id**|**int**|排序資料行的識別碼。 **order_column_id**只有在是唯一**object_id**。<br /><br /> **order_column_id**表示此資料行的位置依順序排列。|  
@@ -49,6 +45,6 @@ ms.locfileid: "33180024"
   
 ## <a name="see-also"></a>另請參閱  
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;。TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

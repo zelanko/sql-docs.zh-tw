@@ -1,13 +1,11 @@
 ---
-title: GetPermissions 方法 (ADOX) |Microsoft 文件
+title: GetPermissions 方法 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -18,19 +16,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55a5d4f9096d5a75855d4b612a202afd034b11da
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648988"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
-傳回的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件或物件容器上。  
+傳回的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或是[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件或物件容器上。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +37,17 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**長**值，指定包含群組或使用者具有物件的權限的位元遮罩。 這個值可以是下列其中一個或多個[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常數。  
+ 傳回**長**值，指定包含使用者或群組具有物件的權限的位元遮罩。 這個值可以是一種或多種[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常數。  
   
 #### <a name="parameters"></a>參數  
  *[名稱]*  
  A **Variant**值，指定要設定權限的物件名稱。 設定*名稱*為 null 的值，如果您想要取得的物件容器的權限。  
   
  *ObjectType*  
- A**長**值可以是下列其中之一的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常數，指定要取得權限的物件類型。  
+ A**長**可以是其中一值的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常數，指定要取得權限的物件型別。  
   
  *ObjectTypeId*  
- 選擇性。 A **Variant** OLE DB 規格所定義的值，未指定提供者物件類型的 GUID。 這個參數是必要項，如果*ObjectType*設**adPermObjProviderSpecific**，否則不會使用它。  
+ 選擇性。 A **Variant** OLE DB 規格所定義的值，不指定提供者物件類型的 GUID。 如果此參數，則需要*ObjectType*設為**adPermObjProviderSpecific**，否則不會使用它。  
   
 ## <a name="applies-to"></a>適用於  
   

@@ -1,64 +1,61 @@
 ---
-title: HelloData： 簡單的 ADO 應用程式 |Microsoft 文件
+title: HelloData： 簡易 ADO 應用程式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624676"
 ---
-# <a name="hellodata-a-simple-ado-application"></a>HelloData： 簡單的 ADO 應用程式
-這個簡單的應用程式逐步執行每四個主要的 ADO 作業： 取得、 檢視、 編輯和更新的資料。 這些作業將會對 Microsoft® SQL Server 隨附 Northwind 範例資料庫。 若要將焦點放在 ADO 的基本概念，並防止程式碼雜亂，此範例中的錯誤處理是最小。  
+# <a name="hellodata-a-simple-ado-application"></a>HelloData：簡易 ADO 應用程式
+這個簡單的應用程式會逐步引導每四個主要的 ADO 作業： 取得、 檢查、 編輯和更新資料。 這些作業將會對 Microsoft® SQL Server 隨附 Northwind 範例資料庫。 若要專注於 ADO 的基本概念，並防止程式碼雜亂，此範例中的錯誤處理非常少。  
   
 ### <a name="to-run-hellodata"></a>若要執行 HelloData  
   
-1.  建立新的標準 EXE Visual Basic 專案參考 ADO 程式庫。 如需詳細資訊，請參閱[參考 ADO 庫](../../../ado/guide/referencing-the-ado-libraries.md)。  
+1.  建立新的標準 EXE Visual Basic 專案參考 ADO 程式庫。 如需詳細資訊，請參閱 <<c0> [ 參考 ADO 程式庫](../../../ado/guide/referencing-the-ado-libraries.md)。  
   
-2.  建立四個命令按鈕上方的表單，並設定**名稱**和**標題**屬性在本主題結尾的資料表中所顯示的值。  
+2.  建立四個命令按鈕，在表單上，設定頂端**名稱**並**標題**屬性，以顯示在本主題結尾的資料表中的值。  
   
-3.  下方的按鈕，加入**Microsoft DataGrid 控制項**(Msdatgrd.ocx)。 Msdatgrd.ocx 檔案隨附於 Visual Basic，而且位於 \windows\system32 或 \winnt\system32 目錄中。 若要加入 Visual Basic 的 [工具箱] 窗格中的 DataGrid 控制項，請選取**元件...** 從**專案**功能表。 旁邊核取方塊"Microsoft DataGrid 控制項 6.0 (SP3) (OLEDB) 」，然後按一下 **確定**。 若要將控制項加入至專案，DataGrid 控制項從工具箱拖曳至 Visual Basic 表單。  
+3.  下方的按鈕，加入**Microsoft DataGrid 控制項**(Msdatgrd.ocx)。 Msdatgrd.ocx 檔案隨附於 Visual Basic，而且位於 \windows\system32 或 \winnt\system32 目錄中。 若要加入 Visual Basic 的 [工具箱] 窗格中的 DataGrid 控制項，請選取**元件...** 從**專案**功能表。 然後核取方塊旁"Microsoft DataGrid 控制項 6.0 (SP3) (OLEDB) 」，然後按一下 **確定**。 若要將控制項加入專案，DataGrid 控制項從工具箱拖曳至 Visual Basic 表單。  
   
-4.  建立**文字方塊**表單下方方格上並設定其屬性，如下表所示。 當您完成時，表單應該類似下圖。  
+4.  建立**TextBox**格線下方的表單上並設定其屬性如下表所示。 當您完成時，格式應該類似下圖。  
   
-5.  最後，將複製程式碼中所列[HelloData 程式碼](../../../ado/guide/data/hellodata-code.md)，並將它貼到表單的程式碼編輯器視窗。 按**F5**執行的程式碼。  
+5.  最後，將複製中的程式碼[HelloData 程式碼](../../../ado/guide/data/hellodata-code.md)，並將它貼到表單的程式碼編輯器視窗。 按下**F5**執行程式碼。  
   
 > [!NOTE]
->  在下列範例中，而且指南，"MyId 「 密碼 」 123aBc"的使用者識別碼用來對伺服器進行驗證。 您應該為您的伺服器取代具有有效的登入認證這些值。 此外，取代"MySQLServer"的值與您的伺服器名稱。  
+>  在下列範例中，並在整個指南中，使用者識別碼"MyId"使用密碼的 「 123aBc 」 用來對伺服器進行驗證。 您應該為您的伺服器取代這些值，以有效的登入認證。 此外，替代成您伺服器的名稱取代"MySQLServer"值。  
   
  如需程式碼的詳細說明，請參閱[HelloData 的註解](../../../ado/guide/data/comments-on-hellodata.md)。  
   
  ![顯示 HelloData VB 應用程式的 Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|控制項類型|屬性|ReplTest1|  
+|控制項類型|屬性|值|  
 |------------------|--------------|-----------|  
-|表單|[屬性]|Form1|  
+|表單|名稱|Form1|  
 ||高度|6500|  
 ||寬度|6500|  
-|MS DataGrid|[屬性]|grdDisplay1|  
-|TextBox|[屬性]|txtDisplay1|  
+|MS DataGrid|名稱|grdDisplay1|  
+|TextBox|名稱|txtDisplay1|  
 ||多行|true|  
-|命令按鈕|[屬性]|cmdGetData|  
+|命令按鈕|名稱|cmdGetData|  
 ||Caption|取得資料|  
-|命令按鈕|[屬性]|cmdExamineData|  
+|命令按鈕|名稱|cmdExamineData|  
 ||Caption|檢查資料|  
-|命令按鈕|[屬性]|cmdEditData|  
+|命令按鈕|名稱|cmdEditData|  
 ||Caption|編輯資料|  
-|命令按鈕|[屬性]|cmdUpdateData|  
+|命令按鈕|名稱|cmdUpdateData|  
 ||Caption|更新資料|

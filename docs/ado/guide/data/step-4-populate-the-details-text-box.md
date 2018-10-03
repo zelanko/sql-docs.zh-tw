@@ -1,28 +1,25 @@
 ---
-title: 步驟 4： 填入 [詳細資料] 文字方塊中 |Microsoft 文件
+title: 步驟 4： 填入 [詳細資料] 文字方塊中 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da260e3dd3006a56e0be90c2b7e0c33ed0869781
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706835"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>步驟 4： 填入 [詳細資料] 文字方塊中
-若要填入 [詳細資料] 文字方塊中，建立新的副程式，名為**recFields**並插入下列程式碼：  
+# <a name="step-4-populate-the-details-text-box"></a>步驟 4：填入 [詳細資料] 文字方塊
+若要填入 [詳細資料] 文字方塊中，建立一個名為新的副程式**recFields**並插入下列程式碼：  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -48,7 +45,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- 此程式碼會填入`lstDetails`與欄位和簡單記錄傳遞給值`recFields`。 如果資源是文字檔案，從資源記錄開啟的文字資料流。 程式碼會判斷是否為 ASCII 字元集，和複製到資料流內容`txtDetails`。  
+ 此程式碼會填入`lstDetails`傳遞至簡單的資料錄的值欄位與`recFields`。 如果資源是文字檔，文字 Stream 會開啟資源記錄。 程式碼會判斷是否將字元集是 ASCII，並將複製 Stream 內容`txtDetails`。  
   
 ## <a name="see-also"></a>另請參閱  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   

@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitoraddmonitoring (TRANSACT-SQL) |Microsoft 文件
+title: sp_dbmmonitoraddmonitoring (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitoraddmonitoring
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef20d563325a2aebf5490c7b4a389042fa61a559
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5a4850b86366a74b0b65b6acddd334960ec12096
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615556"
 ---
 # <a name="spdbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +48,18 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  如果更新週期的設定值過低，則用戶端的回應時間可能會增加。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  這項程序要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 必須能在伺服器執行個體上執行，而且若要執行資料庫鏡像監視作業，就必須執行代理程式。  
   
- 如果資料庫鏡像已從啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **sp_dbmmonitoraddmonitoring**程序就會自動執行。 如果您開始鏡像使用 ALTER DATABASE 陳述式，以手動方式，來監視鏡像的資料庫的伺服器執行個體中，您必須執行**sp_dbmmonitoraddmonitoring**手動。  
+ 如果從啟動資料庫鏡像[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，則**sp_dbmmonitoraddmonitoring**程序就會自動執行。 如果您啟動鏡像功能的設定使用 ALTER DATABASE 陳述式，以手動方式，來監視鏡像的資料庫的伺服器執行個體中，您必須執行**sp_dbmmonitoraddmonitoring**以手動方式。  
   
 > [!NOTE]  
->  如果您執行**sp_dbmmonitoraddmonitoring**您設定資料庫鏡像之前，監視作業將會執行，但不是會更新狀態資料表中哪一個資料庫鏡像監視記錄。  
+>  如果您執行**sp_dbmmonitoraddmonitoring**設定資料庫鏡像之前，監視作業會執行，但不是會更新狀態資料表的資料庫中儲存鏡像監視記錄。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
@@ -77,9 +73,9 @@ EXEC sp_dbmmonitoraddmonitoring 3;
   
 ## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

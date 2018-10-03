@@ -1,35 +1,32 @@
 ---
-title: 連接屬性的範例 (VBScript) |Microsoft 文件
+title: Connect 屬性範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730746"
 ---
-# <a name="connect-property-example-vbscript"></a>連接屬性的範例 (VBScript)
+# <a name="connect-property-example-vbscript"></a>Connect 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此程式碼示範如何設定[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性在設計階段：  
+ 此程式碼示範如何設定[Connect](../../../ado/reference/rds-api/connect-property-rds.md)在設計階段的屬性：  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287397"
 </OBJECT>  
 ```  
   
- 下列範例示範如何設定**連接**VBScript 程式碼在執行階段屬性。  
+ 下列範例示範如何設定**Connect** VBScript 程式碼在執行階段的屬性。  
   
- 若要測試此範例中，剪下並貼上程式碼之間\<主體 > 和\</b > 標記以標準 HTML 文件並將其命名**ConnectVBS.asp**。 ASP 指令碼會找出您的伺服器。  
+ 若要測試此範例中，剪下並貼上程式碼之間\<主體 > 並\</b > 標記以正常的 HTML 文件並將它命名**ConnectVBS.asp**。 ASP 指令碼會識別您的伺服器。  
   
 ```  
 <!-- BeginConnectVBS -->  

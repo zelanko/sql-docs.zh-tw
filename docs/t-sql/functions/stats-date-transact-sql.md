@@ -5,9 +5,7 @@ ms.date: 12/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STATS_DATE_TSQL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - last time statistics updated
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7098cea7b473f24287e64c3adc6d3074de5124f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2755508185aa7c6bd5ddad4f628728ae8bcae71e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782246"
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

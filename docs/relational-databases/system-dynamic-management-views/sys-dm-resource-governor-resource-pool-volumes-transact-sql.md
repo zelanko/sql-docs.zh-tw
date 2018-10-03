@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_resource_pool_volumes_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_volumes
 - sys.dm_resource_governor_resource_pool_volumes
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c3cc7312978f313ed55147530c371bdde69675
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9ab74e76db2820d5a0242e386aa70130597e7e9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718536"
 ---
 # <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

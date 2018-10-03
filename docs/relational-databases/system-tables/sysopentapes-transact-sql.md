@@ -1,14 +1,11 @@
 ---
-title: p (TRANSACT-SQL) |Microsoft 文件
+title: sysopentapes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysopentapes
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - backup media [SQL Server], sysopentapes system table
 - sysopentapes system table
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6f368356df76c68594443ac5a981ebf8f20bec2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7ebbaef020fe1bc45b625d255523769bb1c54a4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677836"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +38,9 @@ ms.locfileid: "33260378"
 >  您無法卸除**sysopentapes**檢視。  
 
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**openTape**|**nvarchar(64)**|開啟的磁帶裝置的實體檔案名稱。 如需有關開啟和釋出磁帶裝置的詳細資訊，請參閱[備份&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md)和[還原&#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。|  
+|**openTape**|**nvarchar(64)**|開啟的磁帶裝置的實體檔案名稱。 如需有關開啟和釋出磁帶裝置的詳細資訊，請參閱 <<c0> [ 備份&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md)並[還原&#40;-&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。</c0>|  
   
 ## <a name="permissions"></a>Permissions  
  使用者需要伺服器的 VIEW SERVER STATE 權限。  

@@ -1,13 +1,11 @@
 ---
-title: CommandTimeout 屬性 (ADO) |Microsoft 文件
+title: CommandTimeout 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1addc5de70e53087cdcbaa77fea87211958cbcdc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5bb74384e043130ccfe4c3399b363b25d40737c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632156"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 屬性 (ADO)
-表示在終止嘗試並產生錯誤之前，執行命令時要等待的時間。  
+表示要在終止嘗試並產生錯誤之前，執行命令時的等候的時間。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**長**會表示，以秒為單位，等候執行命令的值。 預設值是 30。  
+ 設定或傳回**長**表示，以秒為單位，時間等候執行命令的值。 預設值為 30。  
   
 ## <a name="remarks"></a>備註  
- 使用**CommandTimeout**屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件或[命令](../../../ado/reference/ado-api/command-object-ado.md)物件以允許取消[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法呼叫，因為從網路流量或大量使用伺服器的延遲。 如果設定的間隔時間**CommandTimeout**屬性經過之前命令完成執行時，發生錯誤時，ADO 取消命令。 如果您將屬性設為零，ADO 會等候無限期地執行直到完成為止。 請確定您撰寫程式碼支援的提供者和資料來源**CommandTimeout**功能。  
+ 使用**CommandTimeout**屬性上的[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件或[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，以允許取消[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法呼叫，因為從網路流量或大量使用伺服器的延遲。 如果設定的間隔時間**CommandTimeout**屬性經過之前命令完成執行時，發生錯誤，並 ADO 取消命令。 如果您將屬性設為零，ADO 會等候無限期地執行直到完成為止。 請確定您撰寫程式碼支援的提供者和資料來源**CommandTimeout**功能。  
   
- **CommandTimeout**上設定**連接**物件沒有任何作用**CommandTimeout**上設定**命令**物件上相同**連接**; 也就是**命令**物件的**CommandTimeout**屬性不是繼承的值**連接**物件的**CommandTimeout**值。  
+ **CommandTimeout**上設定**連線**物件並不會影響**CommandTimeout**上設定**命令**物件上相同**連接**，亦即**命令**物件的**CommandTimeout**屬性不會繼承的值**連接**物件的**CommandTimeout**值。  
   
- 在**連接**物件**CommandTimeout**屬性會維持為讀取/寫入之後**連接**開啟。  
+ 在 **連接**物件， **CommandTimeout**屬性會維持讀取/寫入之後**連接**開啟。  
   
 ## <a name="applies-to"></a>適用於  
   

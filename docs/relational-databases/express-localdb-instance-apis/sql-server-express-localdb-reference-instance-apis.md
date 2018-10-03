@@ -1,28 +1,24 @@
 ---
-title: SQL Server Express LocalDB 執行個體 API 參考 |Microsoft 文件
+title: SQL Server Express LocalDB 執行個體 API 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 980b4c3de096cb9eaed8243a57c0f32a579206b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d79a4aa606d7e970ddbb9bbe0bb7a36a2948dc57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701906"
 ---
-# <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 參考-執行個體應用程式開發介面
+# <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB 參考 - 執行個體 API
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在傳統、服務架構的 SQL Server 環境中，安裝在單一電腦上的個別 SQL Server 執行個體實體上是分隔的；亦即，每個執行個體必須個別予以安裝及移除、具有獨立的一組二進位檔，以及在個別的服務處理序下執行。 SQL Server 執行個體名稱可用來指定使用者想要連接的 SQL Server 執行個體。  
   
@@ -30,7 +26,7 @@ ms.locfileid: "32939473"
   
  除非啟用執行個體共用，否則每個 LocalDB 執行個體一律只能由一位使用者所擁有，且只能透過此使用者的內容進行檢視及存取。  
   
- 雖然 LocalDB 執行個體在技術上與傳統的 SQL Server 執行個體不同，但是其用途很類似。 它們稱為*執行個體*來強調此相似性，並讓 SQL Server 使用者更直覺。  
+ 雖然 LocalDB 執行個體在技術上與傳統的 SQL Server 執行個體不同，但是其用途很類似。 在呼叫*執行個體*來強調這項相似性，並讓 SQL Server 使用者更具直覺性。  
   
  LocalDB 支援兩種執行個體：自動執行個體 (AI) 和具名執行個體 (NI)。 LocalDB 執行個體的識別碼是執行個體名稱。  
   
@@ -68,16 +64,16 @@ ms.locfileid: "32939473"
  每個具名執行個體具有相關聯的 LocalDB 版本；亦即指向一組指定的 LocalDB 二進位檔。 您可以在執行個體建立程序期間設定具名執行個體的版本。  
   
 ### <a name="named-instance-naming-rules"></a>具名執行個體命名規則  
- LocalDB 執行個體名稱最多可以包含共 128 個字元 (所加諸的限制是**sysname**資料類型)。 這與傳統的 SQL Server 執行個體名稱相較下十分不同，傳統的執行個體限制使用 16 個 ASCII 字元的 NetBIOS 名稱。 造成此差異的原因在於，LocalDB 將資料庫視為檔案，進而意味著以檔案為主的語意，因此使用者可以更自由地以直覺的方式選擇執行個體名稱。  
+ LocalDB 執行個體名稱最多可以包含共 128 個字元 (會加諸的限制**sysname**資料型別)。 這與傳統的 SQL Server 執行個體名稱相較下十分不同，傳統的執行個體限制使用 16 個 ASCII 字元的 NetBIOS 名稱。 造成此差異的原因在於，LocalDB 將資料庫視為檔案，進而意味著以檔案為主的語意，因此使用者可以更自由地以直覺的方式選擇執行個體名稱。  
   
- LocalDB 執行個體名稱可以在檔案名稱元件內包含合法的任何 Unicode 字元。 檔名元件中不合法的字元通常包含下列字元： ASCII/Unicode 字元 1 到 31，以及引號 （"）、 小於 (\<)、 大於 (>)、 直立線符號 (|)、 退格鍵 (\b)、 定位字元 (\t)、 冒號 （:）、 星號 （*）問號 （？）、 反斜線 (\\)，並正斜線 （/）。 請注意，由於 Null 字元 (\0) 用於字串結束字元，因此允許使用；將忽略第一個 Null 字元之後的所有字元。  
+ LocalDB 執行個體名稱可以在檔案名稱元件內包含合法的任何 Unicode 字元。 檔案名稱元件中不合法的字元通常包含下列字元： ASCII/Unicode 字元 1 到 31，以及引號 （"）、 小於 (\<)、 大於 (>)、 直立線符號 (|)、 退格鍵 (\b)、 定位字元 (\t)、 冒號 （:）、 星號 （*）問號 （？）、 反斜線 (\\)，並正斜線 （/）。 請注意，由於 Null 字元 (\0) 用於字串結束字元，因此允許使用；將忽略第一個 Null 字元之後的所有字元。  
   
 > [!NOTE]  
 >  不合法的字元清單可能取決於作業系統，並且可能在未來版本中變更。  
   
  執行個體名稱中的開頭及尾端空白會予以忽略並修剪。  
   
- 若要避免命名衝突，具名 LocalDB 執行個體名稱不能遵循命名模式自動執行個體，如前文所述 「 自動執行個體命名規則。 」 嘗試使用遵循自動執行個體命名模式有效的名稱建立具名執行個體建立的預設執行個體。  
+ 若要避免命名衝突，具名 LocalDB 執行個體名稱不能遵循命名模式自動執行個體，「 自動執行個體命名規則。 」 稍早所述 嘗試使用遵循自動執行個體命名模式有效的名稱建立具名執行個體建立的預設執行個體。  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>SQL Server Express LocalDB 參考主題  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

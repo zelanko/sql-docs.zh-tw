@@ -1,14 +1,11 @@
 ---
-title: backupmediaset (TRANSACT-SQL) |Microsoft 文件
+title: backupmediaset (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupmediaset
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21e327f7c630b106a52a0bd720cbf94f8b4a23fd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 831571621256a34611672ae6444379c375370f1a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679269"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,19 +32,19 @@ ms.locfileid: "33258404"
   每個備份組各含一個資料列。 這份資料表儲存在**msdb**資料庫。  
  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|唯一媒體集識別碼。 識別，主索引鍵。|  
-|**media_uuid**|**uniqueidentifier**|媒體集的 UUID。 所有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]媒體集都有一個 UUID。<br /><br /> 舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不過，如果媒體集包含僅由一個媒體家族**media_uuid**資料行可能是 NULL (**media_family_count**為 1)。|  
+|**media_uuid**|**uniqueidentifier**|媒體集的 UUID。 所有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]媒體集都有一個 UUID。<br /><br /> 對於較早版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不過，如果媒體集包含一個媒體家族**media_uuid**資料行可能為 NULL (**media_family_count**為 1)。|  
 |**media_family_count**|**tinyint**|媒體集中的媒體家族數目。 可以是 NULL。|  
-|**name**|**nvarchar(128)**|媒體集的名稱。 可以是 NULL。<br /><br /> 如需詳細資訊，請參閱 MEDIANAME 和 MEDIADESCRIPTION 中的[備份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
-|**描述**|**nvarchar(255)**|媒體集的文字描述。 可以是 NULL。<br /><br /> 如需詳細資訊，請參閱 MEDIANAME 和 MEDIADESCRIPTION 中的[備份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
+|**name**|**nvarchar(128)**|媒體集的名稱。 可以是 NULL。<br /><br /> 如需詳細資訊，請參閱 MEDIANAME 和 MEDIADESCRIPTION，在[BACKUP &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
+|**description**|**nvarchar(255)**|媒體集的文字描述。 可以是 NULL。<br /><br /> 如需詳細資訊，請參閱 MEDIANAME 和 MEDIADESCRIPTION，在[BACKUP &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**software_name**|**nvarchar(128)**|寫入媒體標籤的備份軟體名稱。 可以是 NULL。|  
 |**software_vendor_id**|**int**|寫入備份媒體標籤的軟體供應商識別碼。 可以是 NULL。<br /><br /> 值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是十六進位 0x1200。|  
 |**MTF_major_version**|**tinyint**|用來產生這個媒體集之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 的主要版本號碼。 可以是 NULL。|  
 |**mirror_count**|**tinyint**|媒體集中的鏡像數目。|  
 |**is_password_protected**|**bit**|這是指媒體集是否有密碼保護：<br /><br /> 0 = 無保護<br /><br /> 1 = 保護|  
-|**is_compressed**|**bit**|備份是否經過壓縮：<br /><br /> 0 = 未壓縮<br /><br /> 1 = 已壓縮<br /><br /> 期間**msdb**升級時，此值設為 NULL。 這表示非壓縮的備份。|  
+|**is_compressed**|**bit**|備份是否經過壓縮：<br /><br /> 0 = 未壓縮<br /><br /> 1 = 已壓縮<br /><br /> 期間**msdb**升級時，此值設定為 NULL。 這表示非壓縮的備份。|  
 |**is_encrypted**|**Bit**|備份是否經過加密：<br /><br /> 0 = 未加密<br /><br /> 1 = 已加密|  
   
 ## <a name="remarks"></a>備註  

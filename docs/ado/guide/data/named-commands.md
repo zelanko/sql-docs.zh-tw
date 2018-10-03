@@ -1,31 +1,28 @@
 ---
-title: 名為命令 |Microsoft 文件
+title: 名為命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670594"
 ---
-# <a name="named-commands"></a>具名的命令
-[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法執行命令。 還有另一個方法： 您可以讓一個具名的命令，然後呼叫這個具名命令直接依據**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 將名稱指派給命名命令表示**名稱**屬性**命令**物件。 例如，  
+# <a name="named-commands"></a>具名命令
+[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法來執行命令。 還有另一個方法： 您可以把它具名的命令，，，然後呼叫具名命令直接對這**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 命名命令表示指派名稱給**名稱**屬性**命令**物件。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -33,9 +30,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- 具名的命令行為會如同它是 「 自訂方法 > 上**連接**物件。 命令的結果會傳回做為 out 參數，此 「 自訂方法 」。  
+ 具名的命令行為會如同它是 「 自訂方法 」 上**連線**物件。 命令的結果會傳回為這個 「 自訂的方法 」 的 out 參數。  
   
- 下列範例說明這項功能。  
+ 下列範例會示範這項功能。  
   
 ```  
 'BeginNamedCmd  

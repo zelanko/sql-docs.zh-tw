@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONNECTIONPROPERTY_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0638fcbc1559507bffb478c559f53180dface974
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 36dc548ba4fe951920289a9362a92747ca478fd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782376"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ CONNECTIONPROPERTY ( property )
 *property*  
 連線的屬性。 *property* 可以是下列值之一：
   
-|ReplTest1|資料類型|描述|  
+|ReplTest1|資料類型|Description|  
 |---|---|---|
 |net_transport|**nvarchar(40)**|傳回此連線使用的實體傳輸通訊協定。 這個值不可為 Null。 可能的傳回值：<br /><br /> **HTTP**<br /> **具名管道**<br /> **工作階段**<br /> **共用記憶體**<br /> **SSL**<br /> **TCP**<br /><br /> 及<br /><br /> **VIA**<br /><br /> 注意：當連線同時啟用 Multiple Active Result Set (MARS) 和連線共用之後，一律會傳回**工作階段**。|  
 |protocol_type|**nvarchar(40)**|傳回裝載通訊協定型別。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  

@@ -1,32 +1,29 @@
 ---
-title: MaxRecords 屬性範例 （VC + +） |Microsoft 文件
+title: MaxRecords 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636906"
 ---
-# <a name="maxrecords-property-example-vc"></a>MaxRecords 屬性範例 （VC + +）
-這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性可開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)包含中成本最高的 10 個標題***標題***資料表。  
+# <a name="maxrecords-property-example-vc"></a>MaxRecords 屬性範例 (VC++)
+這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性可開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)包含在 10 個最昂貴的書籍***標題***資料表。  
   
 ## <a name="example"></a>範例  
   
@@ -171,15 +168,15 @@ void PrintComError(_com_error &e) {
   
  **前十個標題，依價格：**  
 **但它是使用者易記嗎？---22.95**  
-**21.59---電腦 Phobic 和非 Phobic 個人： 行為變化**  
-**Onions、 Leeks 和大蒜： 烹飪的地中海---20.95 秘密**  
-**矽谷---20.00 的機密資料**  
+**電腦 Phobic 且非恐懼症個人： 行為變化---21.59**  
+**Onions、 Leeks 和大蒜： 烹飪地中海---20.95 的祕密**  
+**矽谷---20.00 的祕密**  
 **忙碌的經理資料庫指南---19.99**  
-**電腦---19.99 的直線談談**  
+**電腦---19.99 的相關討論**  
 **矽谷 Gastronomic 視為---19.99**  
 **長時間的資料 Deprivation： 的四個案例研究---而 19.99**  
 **壽司，任何人？---14.99**  
-**Buckingham 明這些---11.95 五十個年份**   
+**Buckingham Palace 這些---11.95 五十個年份**   
 ## <a name="see-also"></a>另請參閱  
  [MaxRecords 屬性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

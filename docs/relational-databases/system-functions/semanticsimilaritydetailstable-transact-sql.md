@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritydetailstable (TRANSACT-SQL) |Microsoft 文件
+title: semanticsimilaritydetailstable & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31e23931b0b4b22df06cde0981209c28aecef373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7b6bdccdb0c9d84b7ad814c0342a6fe267522d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718056"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +72,13 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>傳回的資料表  
  下表說明此資料列集函式傳回的主要片語相關資訊。  
   
-|Column_name|型別|Description|  
+|Column_name|類型|描述|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|來源文件與比對文件中出現類似度的主要片語。|  
 |**score**|**REAL**|此主要片語與兩份文件中所有其他類似片語之關聯性的相對值。<br /><br /> 此值是 [0.0, 1.0] 範圍內的小數值，分數愈高表示權重愈高。1.0 為滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
- 如需詳細資訊，請參閱[尋找相似及相關文件使用語意搜尋](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 尋找相似及相關文件使用語意搜尋](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
  如需有關語意相似度擷取和母體擴展的詳細資訊和狀態，請查詢下列動態管理檢視：  
@@ -91,13 +87,13 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要建立全文檢索和語意索引之基底資料表的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會擷取所指定候選人之間相似度分數最高的 5 個主要片語**HumanResources.JobCandidate** AdventureWorks2012 範例資料庫的資料表。 @CandidateId和@MatchedID變數代表來自全文檢索索引之索引鍵資料行的值。  
+ 下列範例會擷取所指定候選人之間相似度分數最高的 5 個關鍵片語**HumanResources.JobCandidate** AdventureWorks2012 範例資料庫的資料表。 @CandidateId和@MatchedID變數代表來自全文檢索索引的索引鍵資料行的值。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

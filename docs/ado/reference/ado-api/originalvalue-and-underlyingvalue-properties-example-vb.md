@@ -1,13 +1,11 @@
 ---
-title: OriginalValue 和 UnderlyingValue 屬性範例 (VB) |Microsoft 文件
+title: OriginalValue 和 UnderlyingValue 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], Visual Basic example
 - OriginalValue property [ADO]
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6462ad84726dd040ee58ade823641ee1b0804d59
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 95e09a0b3618d88929a0474e7a611d4ea1680793
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688376"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 屬性範例 (VB)
-這個範例會示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)和[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)期間顯示訊息，如果某筆記錄的基礎資料的屬性變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新。  
+此範例示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)並[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)藉由顯示一則訊息，如果記錄的基礎資料的屬性已變更期間[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新。  
   
 ```  
 'BeginOriginalValueVB  

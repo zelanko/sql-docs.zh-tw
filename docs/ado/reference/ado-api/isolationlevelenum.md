@@ -1,13 +1,11 @@
 ---
-title: IsolationLevelEnum |Microsoft 文件
+title: IsolationLevelEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fbf9db6b578bc886862069ddc31bc07f18d673b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 366892f51207e7d89f643510f9becb664bb098c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684196"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
-指定的交易隔離層級[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
+指定的交易隔離層級[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adXactUnspecified**|-1|表示提供者會使用不同的隔離等級比指定，但無法判斷層級。|  
-|**adXactChaos**|16|表示暫止的變更，更高隔離性的交易不會覆寫。|  
-|**adXactBrowse**|256|表示，從某個交易您可以檢視未認可的變更在其他交易中。|  
+|**adXactUnspecified**|-1|表示提供者會使用不同的隔離等級，比指定，但無法判斷層級。|  
+|**adXactChaos**|16|表示暫止的變更從隔離程度更深的交易不會覆寫。|  
+|**adXactBrowse**|256|指出，從某個交易您可以檢視未認可的變更在其他交易中。|  
 |**adXactReadUncommitted**|256|與相同**adXactBrowse**。|  
-|**adXactCursorStability**|4096|表示，從某個交易您可以檢視變更在其他交易已認可之後，才。|  
+|**adXactCursorStability**|4096|指出，從某個交易您可以檢視變更在其他交易已認可之後，才。|  
 |**adXactReadCommitted**|4096|與相同**adXactCursorStability**。|  
-|**adXactRepeatableRead**|65536|表示從某個交易中，您無法看到在其他交易中，所做的變更，但是該查詢可以擷取新**資料錄集**物件。|  
+|**adXactRepeatableRead**|65536|表示從某個交易中，您無法看到在其他交易中，所做的變更，但該重新查詢可以擷取新**資料錄集**物件。|  
 |**adXactIsolated**|1048576|指出交易進行中的其他交易隔離。|  
 |**adXactSerializable**|1048576|與相同**adXactIsolated**。|  
   

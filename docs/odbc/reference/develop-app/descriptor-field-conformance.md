@@ -1,13 +1,11 @@
 ---
-title: 描述項欄位一致性 |Microsoft 文件
+title: 描述項欄位一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642306"
 ---
 # <a name="descriptor-field-conformance"></a>描述項欄位一致性
 下表指出每個 ODBC 描述項標頭欄位，這是妥善定義的一致性層級。  
@@ -50,8 +47,8 @@ ms.locfileid: "32911843"
 |SQL_DESC_CATALOG_NAME|層級 2|  
 |SQL_DESC_CONCISE_TYPE|核心|  
 |SQL_DESC_DATA_PTR|核心|  
-|SQL_DESC_DATETIME_INTERVAL_ 程式碼|核心 [1]|  
-|SQL_DESC_DATETIME_INTERVAL_ 有效位數|核心 [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ 程式碼|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ 有效位數|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|核心|  
 |SQL_DESC_FIXED_PREC_SCALE|核心|  
 |SQL_DESC_INDICATOR_PTR|核心|  
@@ -77,6 +74,6 @@ ms.locfileid: "32911843"
 |SQL_DESC_UNSIGNED|核心|  
 |SQL_DESC_UPDATABLE|核心|  
   
- [只有當驅動程式支援適用的資料類型需要 1] 支援這些記錄的欄位。  
+ [只有當驅動程式支援適用於資料類型時，才需要 1] 支援這些記錄的欄位。  
   
- [2] 的核心層級的一致性，驅動程式必須支援 SQL_PARAM_INPUT。 層級 2 介面一致性，驅動程式也必須支援 SQL_PARAM_INPUT_OUTPUT 和 SQL_PARAM_OUTPUT。
+ [2] 的核心層級的一致性，此驅動程式必須支援 SQL_PARAM_INPUT。 層級 2 介面一致性，SQL_PARAM_INPUT_OUTPUT 和 SQL_PARAM_OUTPUT，也必須支援此驅動程式。

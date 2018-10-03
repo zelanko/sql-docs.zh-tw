@@ -1,34 +1,31 @@
 ---
-title: GetString 方法範例 (VB) |Microsoft 文件
+title: GetString 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a5a2ac54d8a177669d94613a2b612f6ce65f8d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a7210c3680202a0e08e3096f7f58d32e876e1ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623136"
 ---
 # <a name="getstring-method-example-vb"></a>GetString 方法範例 (VB)
-這個範例會示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
+此範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
   
- 假設您正在偵錯資料存取問題，而且想快速、 簡單的方式，列印目前內容的一個小型的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 假設您正在偵錯資料存取問題，並想既快速又簡單的方式列印目前內容的小型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 ```  
 'BeginGetStringVB  

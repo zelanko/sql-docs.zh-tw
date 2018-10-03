@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_volume_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_volume_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5fcc94554408ed68988ddbdf34422078ca31dd4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670486"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +44,13 @@ sys.dm_os_volume_stats (database_id, file_id)
  資料庫的識別碼。 *database_id* 為沒有預設值的 **int**。 不能是 NULL。  
   
  *file_id*  
- 檔案識別碼。 *file_id*是**int**，沒有預設值。 不能是 NULL。  
+ 檔案識別碼。 *file_id*已**int**，沒有預設值。 不能是 NULL。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
 ||||  
 |-|-|-|  
-|**[資料行]**|**資料類型**|**說明**|  
+|**資料行**|**Data type**|**說明**|  
 |**database_id**|**int**|資料庫的識別碼。 不可為 null。|  
 |**file_id**|**int**|檔案識別碼。 不可為 null。|  
 |**volume_mount_point**|**nvarchar(512)**|磁碟區根目錄所在的掛接點。 可以傳回空字串。|  
@@ -67,7 +65,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|表示磁碟區目前是否標示成唯讀。 不可為 null。|  
 |**is_compressed**|**bit**|表示這個磁碟區目前是否已經壓縮。 不可為 null。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要 VIEW SERVER STATE 權限。  

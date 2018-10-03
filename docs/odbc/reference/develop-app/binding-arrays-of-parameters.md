@@ -1,47 +1,44 @@
 ---
-title: 繫結參數陣列 |Microsoft 文件
+title: 繫結參數陣列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2fe314ff1db42944ccd37dfa0c336f3ed218b6b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76f756b96a62a174e329614f9ab1baf634937522
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636867"
 ---
 # <a name="binding-arrays-of-parameters"></a>繫結參數陣列
 使用參數陣列的應用程式會將陣列中的 SQL 陳述式的參數繫結。 有兩種繫結樣式：  
   
--   將陣列繫結至每個參數。 每個資料結構 （陣列） 含有單一參數的所有資料。 這稱為*資料行取向的繫結*因為其繫結的資料行的單一參數的值。  
+-   將陣列繫結至每個參數。 每個資料結構 （陣列） 包含單一參數的所有資料。 這就叫做*資料行取向的繫結*因為它繫結的資料行的單一參數的值。  
   
--   定義的結構，保存參數資料的整組參數，將繫結這些結構的陣列。 每個資料結構，包含單一的 SQL 陳述式的資料。 這稱為*資料列取向的繫結*因為其繫結參數的資料列。  
+-   定義結構，以保存參數資料的一整組的參數，並繫結這些結構的陣列。 每個資料結構會包含單一的 SQL 陳述式的資料。 這就叫做*資料列取向的繫結*因為它繫結參數的資料列。  
   
- 因為當應用程式會將單一變數繫結至參數，它會呼叫**SQLBindParameter**繫結至參數的陣列。 唯一的差別是傳遞的位址是陣列位址，不會進行單一變數位址。 應用程式設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性，以指定是否使用資料行取向的 （預設值） 或資料列取向的繫結。 是否要使用資料行取向或資料列取向的繫結就是主要的應用程式喜好設定。 根據處理器存取記憶體的方式，資料列取向的繫結可能會比較快。 不過，差異很可能是微不足道除了非常大量的資料列的參數。  
+ 因為當應用程式會將單一的變數繫結至參數，它會呼叫**SQLBindParameter**繫結至參數的陣列。 唯一的差別是傳遞的位址陣列位址，不會進行單一變數位址。 應用程式設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性來指定它是否使用資料行取向的 （預設值） 或資料列取向的繫結。 是否要使用資料行取向或資料列取向的繫結就是大部分的應用程式喜好設定。 取決於處理器存取記憶體的方式，資料列取向的繫結可能會比較快。 不過，差異很可能就可以忽略除了非常大量的資料列的參數。  
   
-## <a name="column-wise-binding"></a>資料行取向繫結  
- 當使用資料行取向的繫結時，應用程式將一或兩個陣列繫結提供資料的每個參數。 第一個陣列保留的資料值，而第二個陣列會保留長度/指標緩衝區。 每個陣列包含多值參數的項目。  
+## <a name="column-wise-binding"></a>資料行取向的繫結  
+ 當使用資料行取向的繫結，應用程式繫結一或兩個陣列至提供資料的每個參數。 第一個陣列保存資料值，而第二個陣列包含長度/指標緩衝區。 每個陣列包含有參數值的項目數。  
   
- 資料行取向繫結預設值。 應用程式也可以變更從資料列取向的繫結至資料行取向的繫結藉由設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性。 下圖顯示如何以資料行的方式繫結。  
+ 資料行取向繫結預設值。 應用程式也可以從變更資料列取向的繫結至資料行取向的繫結藉由設定 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性。 下圖顯示如何以資料行繫結的運作方式。  
   
  ![示範如何資料行&#45;明智繫結運作](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
- 例如，下列程式碼將 10 個元素陣列繫結至參數的 PartID、 描述和價格的資料行，並執行陳述式來插入 10 個資料列。 它會使用資料行取向的繫結。  
+ 比方說，下列程式碼會將 10 個元素陣列繫結至 PartID、 描述和價格資料行的參數和執行陳述式來插入 10 個資料列。 它會使用資料行取向的繫結。  
   
 ```  
 #define DESC_LEN 51  
@@ -121,20 +118,20 @@ for (i = 0; i < ParamsProcessed; i++) {
 }  
 ```  
   
-## <a name="row-wise-binding"></a>資料列取向繫結  
- 當使用資料列取向的繫結時，應用程式會定義每個參數集的結構。 此結構包含一或兩個項目，每個參數。 第一個項目會保存參數值中，與第二個項目會保存之長度/指標緩衝區。 應用程式接著會配置這些結構的陣列，其中包含每個參數值的元素。  
+## <a name="row-wise-binding"></a>資料列取向的繫結  
+ 當使用資料列取向的繫結，應用程式會定義每個參數集的結構。 此結構包含一個或兩個項目，每個參數。 第一個項目會保存參數值，而第二個元素會保留長度/指標緩衝區。 接著，應用程式配置這些結構的陣列，其中包含每個參數的值的項目數。  
   
- 應用程式會宣告結構 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性具有驅動程式的大小。 應用程式將陣列的第一個結構中，繫結參數的位址。 因此，驅動程式可以計算特定資料列和資料行做為資料的位址  
+ 應用程式會宣告為 SQL_ATTR_PARAM_BIND_TYPE 陳述式屬性與驅動程式結構的大小。 應用程式可以繫結參數的位址陣列的第一個結構。 因此，驅動程式可以在其中計算特定資料列和資料行做為資料的位址  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset  
 ```  
   
- 其中資料列會從編號 1 參數集的大小。 位移，如果定義，是由 SQL_ATTR_PARAM_BIND_OFFSET_PTR 陳述式屬性指向的值。 下圖顯示如何以資料列的方式繫結。 參數可以放在任何順序中的結構，但是為了清楚起見的循序順序顯示。  
+ 其中的資料列編號 1 的參數集的大小。 位移值，如果有定義，是指向 SQL_ATTR_PARAM_BIND_OFFSET_PTR 陳述式屬性的值。 下圖顯示如何以資料列繫結的運作方式。 參數可以放在結構中，依任何順序，但為了清楚起見的循序順序顯示。  
   
- ![顯示資料列如何&#45;明智繫結運作](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![如何顯示資料列&#45;明智繫結運作](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
- 下列程式碼會建立結構，與要儲存在 PartID、 描述和價格的資料行之值的項目。 然後配置 10 個元素陣列這些結構，並將它繫結至 PartID、 描述和價格資料行，使用資料列取向的繫結的參數。 接著，它會執行陳述式，以插入 10 個資料列。  
+ 下列程式碼會建立結構，與要 PartID、 描述和價格資料行中儲存之值的項目。 然後配置這些結構的 10 個元素陣列，並將它繫結至 PartID、 描述和價格資料行，使用資料列取向的繫結的參數。 然後，它會執行陳述式來插入 10 個資料列。  
   
 ```  
 #define DESC_LEN 51  

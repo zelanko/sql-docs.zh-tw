@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobstepslogs (TRANSACT-SQL) |Microsoft 文件
+title: dbo.sysjobstepslogs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobstepslogs_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sysjobstepslogs system table
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fbc52d53154df6c4e2c844233dba8fcd57c0d5a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 537f40f96b70478833105d84960830469703565b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259834"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700786"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含設定來將作業步驟輸出寫入資料表中的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的作業步驟記錄。 這份資料表儲存在**msdb**資料庫。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|作業步驟記錄的識別碼。|  
 |**記錄檔**|**nvarchar(max)**|作業步驟記錄內容。|  
@@ -46,7 +42,7 @@ ms.locfileid: "33259834"
 |**step_uid**|**uniqueidentifier**|作業步驟的唯一識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_jobsteplog &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [sp_delete_jobsteplog &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
+ [sp_help_jobsteplog &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
   
   

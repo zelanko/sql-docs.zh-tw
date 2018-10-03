@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: quickstart
 dev_langs:
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - Hello World example [CLR integration]
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f5d4385a8f4687688a15029a898ccfecd2f9c44
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 862472365ceb729f7a93715caf65c0a3d90abe7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036580"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623526"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 整合使用者入門
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

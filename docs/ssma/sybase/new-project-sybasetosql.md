@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2fa535a8e6e59f7cde78ea73cc65699086b762a7
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 853483d2149cc159395fae9fda10f6f84a245151
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662886"
 ---
 # <a name="new-project-sybasetosql"></a>新增專案 (SybaseToSQL)
 使用**新的專案**對話方塊，即可建立新的 SSMA 專案。 若要存取**新的專案**對話方塊的 **檔案**功能表上，按一下 **新專案**。  

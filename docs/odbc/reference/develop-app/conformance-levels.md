@@ -1,13 +1,11 @@
 ---
-title: 一致性層級 |Microsoft 文件
+title: 一致性層級 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - conformance levels [ODBC]
 - conformance levels [ODBC], about conformance levels
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9342bbddb2e80f948922df5b26dee760662781a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4274188beb0b67fa5a49ce9e25b781c5b1cd95d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680572"
 ---
 # <a name="conformance-levels"></a>一致性層級
-ODBC 驅動程式可讓應用程式存取不同資料來源。 每個驅動程式可讓應用程式在執行階段決定哪些 ODBC 功能和哪些 SQL 文法的驅動程式，而且每個資料來源支援。 這不是設計來搭配單一驅動程式或一組小型、 已知的驅動程式，因為這些應用程式可以直接寫入該驅動程式或驅動程式的功能的應用程式的需求。 若要協助應用程式探索驅動程式和資料來源的功能，兩個區域的一致性是否可用： SQL 文法與 ODBC 介面。  
+ODBC 驅動程式會為不同資料來源中的應用程式的存取。 每個驅動程式可讓應用程式在執行階段判斷哪些 ODBC 功能，以及哪些 SQL 文法的驅動程式，而且每個資料來源支援。 這不是設計使用單一的驅動程式或一組小型且已知的驅動程式，因為該驅動程式或驅動程式的功能只可以寫入這些應用程式的應用程式的需求。 為了協助探索驅動程式和資料來源功能的應用程式，兩個區域的一致性可： SQL 文法與 ODBC 介面。  
   
  此章節包含下列主題。  
   

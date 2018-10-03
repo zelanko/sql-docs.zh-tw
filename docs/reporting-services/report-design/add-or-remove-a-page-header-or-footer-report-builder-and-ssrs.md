@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9228cd584a2db925f3092638ebf56aa4c678f84
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: be9b19dc11917de04b00592d1dbfdb22b54cd742
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268790"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790876"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>加入或移除頁首或頁尾 (報表產生器及 SSRS)
   您可以將靜態文字、影像、線條、矩形和框線加入至頁首或頁尾。 如果您想要在頁首或頁尾放入變數或計算的資料，可以在文字方塊中放置運算式和資料繫結影像。  

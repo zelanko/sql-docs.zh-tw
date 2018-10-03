@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft 文件
+title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16355eaa114c10a412db39940a8902d1b361d735
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700747"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +45,16 @@ sysmail_help_profileaccount_sp
   
 ## <a name="arguments"></a>引數  
  [ **@profile_id** =] *profile_id*  
- 這是要列出之設定檔的設定檔識別碼。 *profile_id*是**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+ 這是要列出之設定檔的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
  [ **@profile_name** = ] **'***profile_name***'**  
- 這是要列出之設定檔的設定檔名稱。 *profile_name*是**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+ 這是要列出之設定檔的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
  [ **@account_id** = ] *account_id*  
- 這是要列出的帳戶識別碼。 *account_id*是**int**，預設值是 NULL。 當*account_id*和*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
+ 這是要列出的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
   
  [ **@account_name** = ] **'***account_name***'**  
- 這是要列出的帳戶名稱。 *account_name*是**sysname**，預設值是 NULL。 當*account_id*和*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
+ 這是要列出的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -68,7 +64,7 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |**profile_id**|**int**|設定檔的設定檔識別碼。|  
 |**profile_name**|**sysname**|設定檔的名稱。|  
 |**account_id**|**int**|帳戶的帳戶識別碼。|  
@@ -76,15 +72,15 @@ sysmail_help_profileaccount_sp
 |**sequence_number**|**int**|帳戶在設定檔內的序號。|  
   
 ## <a name="remarks"></a>備註  
- 若未*profile_id*或*profile_name*指定，此預存程序會傳回執行個體中的每個設定檔的資訊。  
+ 若未*profile_id*或是*profile_name*指定，此預存程序會傳回執行個體中的每個設定檔的資訊。  
   
- 預存程序**sysmail_help_profileaccount_sp**處於**msdb**資料庫，擁有者是**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程序**sysmail_help_profileaccount_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
   
 ## <a name="permissions"></a>Permissions  
  執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
   
 ## <a name="examples"></a>範例  
- **A.依名稱列出特定設定檔的帳戶**  
+ **A.依名稱列出特定設定檔帳戶**  
   
  下列範例會顯示如何指定設定檔名稱來列出 `AdventureWorks Administrator` 設定檔的資訊。  
   
@@ -102,7 +98,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B.列出特定的設定檔的設定檔識別碼的帳戶**  
+ **B.特定的設定檔依設定檔識別碼列出的帳戶**  
   
  下列範例會顯示如何指定設定檔的設定檔識別碼來列出 `AdventureWorks Administrator` 設定檔的資訊。  
   

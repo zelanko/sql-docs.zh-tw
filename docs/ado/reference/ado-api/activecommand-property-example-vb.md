@@ -1,34 +1,31 @@
 ---
-title: ActiveCommand 屬性範例 (VB) |Microsoft 文件
+title: ActiveCommand 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30e70c09826344db57ea9152447d2d197bb33ef7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617146"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 屬性範例 (VB)
-這個範例會示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
+此範例示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。  
   
- 指定副程式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，其**ActiveCommand**屬性用來顯示命令文字和參數建立**資料錄集**。  
+ 有一個副程式[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，其**ActiveCommand**屬性用來顯示命令文字和參數，建立**資料錄集**。  
   
 ```  
 'BeginActiveCommandVB  
@@ -94,11 +91,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**常式只會指定**資料錄集**物件，但它必須列印命令文字和參數建立**資料錄集**。 因為可以完成這**資料錄集**物件的**ActiveCommand**屬性產生關聯[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+ **ActiveCommandXprint**常式提供只**資料錄集**物件，但它必須列印命令文字和參數，建立**資料錄集**。 因為可以完成這**Recordset**物件的**ActiveCommand**屬性會產生相關聯[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
   
- **命令**物件的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性產生的建立參數化的命令**資料錄集**。 **命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合會產生已取代為命令的參數預留位置的值 ("**？**")。  
+ **命令**物件的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性會產生建立參數化的命令**資料錄集**。 **命令**物件的[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合產生的已取代為命令的參數預留位置的值 ("**？**")。  
   
- 最後，會列印錯誤訊息或作者名稱和識別碼。  
+ 最後，會列印錯誤訊息或作者的名稱和識別碼。  
   
 ```  
 'BeginActiveCommandPrintVB  
@@ -126,5 +123,5 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [ActiveCommand 屬性 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

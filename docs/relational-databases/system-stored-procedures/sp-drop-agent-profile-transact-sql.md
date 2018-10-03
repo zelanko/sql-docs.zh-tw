@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_drop_agent_profile
 - sp_drop_agent_profile_TSQL
 helpviewer_keywords:
 - sp_drop_agent_profile
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8f83bae6ee7d3d46b8befd1dafb06d41c200a05
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 44eae50b2d908d684113c6c8d3f251d86d9b604e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038038"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658456"
 ---
 # <a name="spdropagentprofile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

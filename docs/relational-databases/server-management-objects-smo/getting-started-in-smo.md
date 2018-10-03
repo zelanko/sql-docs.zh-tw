@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Objects, about SQL Server Management Objects
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bfb8440493c29c9abf23d7155d1c98709c549d7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: da9dc2db66bd61bc89796d85cd7c83bb4fd035d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715992"
 ---
 # <a name="getting-started-in-smo"></a>SMO 使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.locfileid: "43064411"
 ## <a name="object-model"></a>物件模型  
 [物件模型](../../relational-databases/server-management-objects-smo/smo-object-model.md)描述 SMO 物件階層以及物件與彼此的關聯。  
   
-## <a name="programming-languages"></a>程式語言  
+## <a name="programming-languages"></a>程式語言：  
 [程式設計語言](../../relational-databases/server-management-objects-smo/smo-programming-languages.md)描述程式設計環境，並包含開始使用 C# 中撰寫 SMO 程式的詳細程序。  
   
 ## <a name="general-programming-in-smo"></a>SMO 中的一般程式設計  

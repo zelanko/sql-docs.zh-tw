@@ -1,13 +1,11 @@
 ---
-title: 時間和日期函式 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+title: 時間和日期函式 (Visual FoxPro ODBC Driver) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644326"
 ---
-# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時間和日期函式 （Visual FoxPro ODBC 驅動程式）
-下表列出 Visual FoxPro ODBC 驅動程式; 支援 ODBC 時間和日期函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
+# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時間和日期函式 (Visual FoxPro ODBC Driver)
+下表列出支援的 Visual FoxPro ODBC Driver; ODBC 日期和時間函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
   
 |ODBC 文法|Visual FoxPro 文法|  
 |------------------|---------------------------|  
@@ -39,14 +36,14 @@ ms.locfileid: "32908703"
 |DAYOFMONTH (*date_exp)*|天 *（)*|  
 |小時 *(time_exp)*||  
 |分鐘 *(time_exp)*||  
-|月份 *(time_exp)*||  
+|月 *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
 |現在 *（)*|DATETIME *（)*|  
 |第二個 *(time_exp)*|秒 *(time_exp)*|  
 |週 *(date_exp)*||  
-|年份 *(date_exp)*||  
+|年 *(date_exp)*||  
   
- 不支援下列日期和時間函數：  
+ 不支援下列的日期和時間函數：  
   
  DAYOFYEAR *(date_exp)*  
   
@@ -64,7 +61,7 @@ ms.locfileid: "32908703"
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- 在此語法中， **d**表示*值*是中的日期*yyyy-mm-dd*格式和**ts**表示*值*是時間戳記在*yyyy-mm-dd hh: mm:*[。*f...*] 格式。 日期和時間戳記資料的速記語法如下所示：  
+ 在這個語法中， **d**指出*值*是中的日期*yyyy-mm-dd 的-* 格式和**ts**表示*值*是在一個時間戳記*yyyy 為 yyyy-mm-dd hh: mm:*[。*f...*] 格式。 日期和時間戳記資料的速記語法如下所示：  
   
 ```  
 {d 'value'}  
@@ -84,4 +81,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>備註  
- 如需逸出序列的詳細資訊，請參閱[ODBC 中的逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)中*ODBC 程式設計人員參考*。
+ 如需詳細資訊逸出序列的詳細資訊，請參閱[ODBC 中的逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)中*ODBC 程式設計人員參考*。
