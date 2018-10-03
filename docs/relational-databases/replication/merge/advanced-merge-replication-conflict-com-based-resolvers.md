@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56fc50cfa8f60385f2050d757df6b99f0b17261b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 6a9994984f833fcfc098a2c27e782bc8c058bc25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807906"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>進階合併式複寫衝突 - 以 COM 為基礎的解析程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "37356820"
   
  下表說明了各解決器的屬性。  
   
-|[屬性]|必要輸入|描述|註解|  
+|[屬性]|必要輸入|Description|註解|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 相加衝突解決器|要加總的資料行名稱。 它必須要有算術資料類型 (例如 **int**、 **smallint**、 **numeric**，等等)。|衝突成功者是由優先權值決定的。 指定設定為來源與目的地資料行值總和的資料行值。 如果其中有一個資料行設為 NULL，則結果資料行值即被設為另一資料行的值。|支援更新衝突，僅限資料行追蹤。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平均衝突解決器|要取平均值的資料行名稱。 它必須要有算術資料類型 (例如 **int**、 **smallint**、 **numeric**，等等)。|衝突成功者是由優先權值決定的。 結果資料行值設定為來源與目的地資料行值的平均值。 如果其中有一個資料行設為 NULL，則結果資料行值即被設為另一資料行的值。|支援更新衝突，僅限資料行追蹤。|  

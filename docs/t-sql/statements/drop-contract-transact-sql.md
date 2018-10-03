@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_CONTRACT_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - contracts [Service Broker], dropping
 - DROP CONTRACT statement
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 58adbb48cc2aab8df98d637a4d9956f2ddfa0978
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2d43c52920c3b868c06d2369f718a0b0fa5fd4e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800046"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

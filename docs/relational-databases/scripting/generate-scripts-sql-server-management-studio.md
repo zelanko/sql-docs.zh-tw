@@ -6,21 +6,18 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
 ms.reviewer: mathoma
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23fd3c7c3740f9c54952f402522ca1b01be1b6fa
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9db7b2d47877185f82279d9b3e126ddcf25720da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077231"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796546"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

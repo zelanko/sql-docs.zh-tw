@@ -5,9 +5,7 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STNumGeometries (geometry Data Type)
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumGeometries (geometry Data Type)
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a34980aaad2ed7e78cb6b5058d792dd608d176f
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1c48a3560f960c90e8426a67e5b1b85af933d2ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804691"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

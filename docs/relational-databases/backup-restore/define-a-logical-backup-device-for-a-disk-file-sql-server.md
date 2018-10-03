@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup devices [SQL Server], defining
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database backups [SQL Server], disks
 - backing up databases [SQL Server], disks
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 595a8f5849388ce08ec2a373187eec014c243de9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4766fc9d680bc90a6017424162aa72a50b516c43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797416"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>定義磁碟檔案的邏輯備份裝置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de9cc2a589a7dbf9f8322a02841688f551de3f7a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1648487c3ed1354b2b50d59b123fd57b236172f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797276"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>錯誤和事件參考 (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "34321849"
   
  下表會連結到這些資源並提供說明。  
   
-|資源|描述|  
+|資源|Description|  
 |--------------|-----------------|  
 |[SQL Server 社群](http://go.microsoft.com/fwlink/?LinkId=42455)|這個網站包含由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群所監控之新聞群組和論壇的連結。 它還會列出社群資訊來源，例如網誌或網站。 雖然不保證一定有答案，不過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群對於解答問題有很大的幫助。|  
 |[SQL Server 程式開發人員中心社群](http://go.microsoft.com/fwlink/?LinkId=42456)|此網站著重在新聞群組、論壇及其他社群資源，這些資訊對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員很有用。|  

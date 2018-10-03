@@ -5,10 +5,8 @@ ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - 何謂主要資料
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 638027d75f14f93b19085700a20360d30b7df402
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d43eed309999e39df61bd0ba0bb23cba29ce1c52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333752"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806546"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概觀 (MDS)
 

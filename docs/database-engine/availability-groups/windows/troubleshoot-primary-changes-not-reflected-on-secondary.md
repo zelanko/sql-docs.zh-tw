@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-caps.latest.revision: 9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b2d5d93ccd17abadaf702316fbad2a382ebc6495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3604871a67e4d5f642015eab07ca11e301ae286c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803082"
 ---
 # <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>疑難排解：對主要複本的變更未反映在次要複本上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

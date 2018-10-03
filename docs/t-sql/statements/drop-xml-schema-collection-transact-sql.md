@@ -5,9 +5,7 @@ ms.date: 11/25/2015
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP XML SCHEMA COLLECTION
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - dropping XML schema collections
 - DROP XML SCHEMA COLLECTION statement
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52449a89ac93ea9137e4314c4050573eafb1e28a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999960"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804486"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

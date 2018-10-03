@@ -5,9 +5,7 @@ ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - logins [SQL Server], denying access
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4708a0e878b4272fe3d482223ae8919576ce8cba
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 6435471a8913135ecc59388c6b5de559d7ab3582
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941034"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804296"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY 伺服器主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +109,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  對於登入，需要登入的 CONTROL 權限或伺服器的 ALTER ANY LOGIN 權限。  
   
  對於伺服器角色，需要伺服器角色的 CONTROL 權限或伺服器的 ALTER ANY SERVER ROLE 權限。  

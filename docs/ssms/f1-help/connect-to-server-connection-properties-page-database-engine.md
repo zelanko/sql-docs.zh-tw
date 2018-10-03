@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-f1
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connecttoce.connectionproperties.f1
 - sql13.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 420fdd127b50a21dda67b681976462e553d9882e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 890729b400328edaa8a0bdb8904ee7c0b64f2482
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797404"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

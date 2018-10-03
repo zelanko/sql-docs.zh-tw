@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 490cb15cd19e92bc2fe26330b3c6a667bf130b73
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 61d3766c69141a7fdaddb9a98f07ea86b82af03a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796366"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>將固定的查詢計畫套用至計畫指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

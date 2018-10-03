@@ -4,10 +4,7 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -18,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c60148777a2dff9b0ae35df549f690e5e32e9cef
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 936cc6417a1af8b38b548b321486d233fa086363
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281089"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800026"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>使用 URL 存取整合 Reporting Services - Web 應用程式
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 存取是特別針對可透過網路存取個別報表所設計。 這種類型的存取最適於將報表檢視與導覽整合到自訂 Web 應用程式。 若要在 Web 應用程式中使用 URL 存取，您可以：  

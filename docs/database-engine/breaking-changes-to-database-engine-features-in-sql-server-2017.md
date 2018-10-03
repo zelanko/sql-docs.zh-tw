@@ -4,28 +4,24 @@ description: SQL Server 2017 資料庫引擎功能的重大變更
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - breaking changes 2017 [SQL Server]
 ms.assetid: ''
-caps.latest.revision: 1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d0477ddabf1a2691ef444e99dc7ca662a05abb1b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8a949009b200b80ad9d911c606e480d2e407da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803536"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 資料庫引擎功能的重大變更
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column names [SQL Server]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b272d87263827e5fb6a1d3c99f568ffff2f43975
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 68ebbb8c9a4b0ed87e9ec522c9fa78eb75a84711
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797326"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>在圖表窗格中顯示資料行名稱 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

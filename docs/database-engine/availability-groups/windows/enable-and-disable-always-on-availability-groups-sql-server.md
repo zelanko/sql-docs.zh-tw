@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd987a0428cc341cd4a3191d1c1af418a0942d39
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bcd22dedf4d70734098f0fac9886e99c89169eba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769724"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806865"
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>啟用和停用 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

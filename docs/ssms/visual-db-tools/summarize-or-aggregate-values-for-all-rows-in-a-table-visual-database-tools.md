@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4921dc12b4eb6532d89b9231fb707b411af8aec4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e8d82ed31033d32c714889a2835df95a70bf589
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808546"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>摘要或彙總資料表中所有資料列的值 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
