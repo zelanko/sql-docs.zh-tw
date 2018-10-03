@@ -5,25 +5,22 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
 - creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f94ba76faa316e4acb8e40a68d03b00e6b26fc34
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0e74d369ccc79bead39e3214fa73be5333ede070
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854806"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>建立文字屬性 (Master Data Services)
 
@@ -43,12 +40,12 @@ ms.locfileid: "35403170"
 ## <a name="attribute-information"></a>屬性資訊  
  針對每個建立的屬性，會將含有七個資料行的資料列加入方格中。 下表描述該資料行。  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |[狀態]|屬性狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新屬性。<br /><br /> 如果建立或編輯屬性時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |[屬性]|屬性名稱。|  
 |顯示名稱|屬性的顯示名稱。|  
-|描述|屬性描述。|  
+|Description|屬性描述。|  
 |顯示像素寬度|屬性的寬度。|  
 |類型和屬性|屬性的類型和資料類型資訊。|  
 |啟用變更追蹤|指定屬性是否已啟用變更追蹤，並在括弧中顯示群組編號。|  

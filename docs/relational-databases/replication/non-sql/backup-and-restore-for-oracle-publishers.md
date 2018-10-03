@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], Oracle publishing
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Oracle publishing [SQL Server replication], backup and restore
 - restoring [SQL Server replication], Oracle publishing
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7daa8da6e98eaebb3d448124754a2a5184c41798
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 21b2de27362455291c75e64c93ad6cf7e3529ca8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833346"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 發行者的備份與還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

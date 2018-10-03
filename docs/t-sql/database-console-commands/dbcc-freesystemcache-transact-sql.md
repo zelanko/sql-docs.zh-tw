@@ -5,9 +5,7 @@ ms.date: 07/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FREESYSTEMCACHE_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - freeing unused cache entries
 - cleaning unused cache entries
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-caps.latest.revision: 35
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 75c98aca474af0ebf02fd446cf9645fdb7c20373
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 20b127cc0eccdf98ef81e8f7df476a78b69eca02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855736"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

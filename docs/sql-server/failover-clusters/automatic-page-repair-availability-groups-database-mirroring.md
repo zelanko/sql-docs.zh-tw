@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76ab4cee846252b749a664619d1117eacd4aa93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844640"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自動修復頁面 (可用性群組：資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "33036695"
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  資料庫鏡像的自動修復頁面僅會嘗試修復在操作資料檔案時，因為下表列出的其中一個錯誤而失敗的頁面。  
   
-|錯誤號碼|描述|造成嘗試自動修復頁面的執行個體|  
+|錯誤號碼|Description|造成嘗試自動修復頁面的執行個體|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|只有當作業系統在資料上執行循環冗餘檢查 (CRC) 失敗時，才會採取動作。|ERROR_CRC。 這項錯誤的作業系統值為 23。|  
 |824|邏輯錯誤。|邏輯資料錯誤，例如，分次寫入或頁面總和檢查碼錯誤。|  

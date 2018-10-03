@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: a5550c9a6df1ae646d4960a0d9eca8bd5a43bec4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c06b0b8a55be4d231ce6593538168fad440f08c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955513"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852169"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "32955513"
 
 下表描述 **SQL Server XTP Databases** 計數器。
 
-|計數器|描述| 
+|計數器|Description| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size**|交易區段大型資料內容的平均大小。 這是層級非常低的計數器，非供客戶使用。|
 |**Avg Transaction Segment Size**|交易區段內容的平均大小。 如果這個值會變成零，則會從後端配置器配置更多頁面。 這是層級非常低的計數器，非供客戶使用。|

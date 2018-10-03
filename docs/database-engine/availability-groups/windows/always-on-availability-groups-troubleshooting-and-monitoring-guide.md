@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32861693"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841006"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性群組疑難排解和監視指南
  本指南將協助您開始監視 Always On 可用性群組，並且對可用性群組中的某些常見的問題進行疑難排解。 本指南將提供在其他位置已發佈的有用資訊的原始內容和登陸頁面。 雖然本指南無法完整討論在可用性群組大範圍中發生的所有問題，但是可以為您指出根本原因分析和問題解決的正確方向。 
@@ -30,7 +27,7 @@ ms.locfileid: "32861693"
 ##  <a name="BKMK_SCENARIOS"></a> 疑難排解案例  
  下表包含可用性群組的常見疑難排解案例的連結。 這些案例依案例類型分類，例如設定、用戶端連接性、容錯移轉及效能。  
   
-|狀況|案例類型|描述|  
+|狀況|案例類型|Description|  
 |--------------|-------------------|-----------------|  
 |[疑難排解 Always On 可用性群組組態 &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|組態|提供資訊以協助您針對設定可用性群組的伺服器執行個體時常遇到的問題進行疑難排解。 一般組態問題包含可用性群組未啟用、不正確地設定帳戶、資料庫鏡像端點不存在、端點無法存取 (SQL Server 錯誤 1418)、網路存取不存在，以及聯結資料庫命令失敗 (SQL Server 錯誤 35250)。|  
 |[疑難排解失敗的加入檔案作業 &#40;Always On 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|組態|加入檔案作業會造成次要資料庫暫止並處於 NOT SYNCHRONIZING 狀態。|  
@@ -44,7 +41,7 @@ ms.locfileid: "32861693"
 ##  <a name="BKMK_TOOLS">對疑難排解有助益的工具</a>  
  設定或執行可用性群組時，不同的工具可協助您診斷不同類型的問題。 下表提供與工具相關的有用資訊連結。  
   
-|工具|描述|  
+|工具|Description|  
 |----------|-----------------|  
 |[使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|在方便使用的介面中，報告可用性群組健康情況的摘要檢視。|  
 |[Always On 原則](always-on-policies.md)|由 Always On 儀表板使用。|  
@@ -64,7 +61,7 @@ ms.locfileid: "32861693"
   
  下表會將您導向至可協助您監視可用性群組解決方案健康情況的主題。  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)|描述可用性群組的資料同步處理程序、流量控制閘道，以及監視可用性群組時的實用計量，同時也顯示如何收集 RTO 和 RPO 計量。|  
 |[監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|提供監視可用性群組的工具資訊。|  

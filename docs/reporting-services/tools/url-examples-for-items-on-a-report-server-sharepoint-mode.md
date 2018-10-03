@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839556"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>報表伺服器上的項目 URL 範例 - SharePoint 模式
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  

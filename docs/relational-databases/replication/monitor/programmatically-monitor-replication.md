@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,16 +26,15 @@ helpviewer_keywords:
 - merge replication monitoring [SQL Server replication]
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0212edfaa4160bd0fbc0da9df6861cfa46056ed3
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e8f0c7e434fc4b47e332b9340cead5c24581b9ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841282"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -272,7 +268,7 @@ ms.locfileid: "37350020"
   
     -   *metricID* - <xref:System.Int32> 值，代表來自下列資料表的監視臨界值標準：  
   
-        |ReplTest1|描述|  
+        |ReplTest1|Description|  
         |-----------|-----------------|  
         |@shouldalert|**expiration** - 監視交易式發行集的訂閱是否即將到期。|  
         |2|**latency** - 監視交易式發行集的訂閱效能。|  

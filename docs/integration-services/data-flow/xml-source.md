@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa529b30c25b4a21edd8d34a74c7fdfb5f8bdd64
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 977a4c0b0406a3da51d7f36210e797fc2024d77b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854986"
 ---
 # <a name="xml-source"></a>XML 來源
   XML 來源會讀取 XML 資料檔案，並將資料填入來源輸出中的資料行。  
@@ -97,7 +94,7 @@ ms.locfileid: "35409570"
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
 |來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

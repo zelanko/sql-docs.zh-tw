@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - report history [Reporting Services], methods
 - historical data [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0cce63443813f120187b4721bb3ef056b9461b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7e6e1f0b01e02c714aa4311e45bcbe6667b3af79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848066"
 ---
 # <a name="report-history-methods"></a>報表記錄方法
   您可以使用這些方法建立並管理項目記錄快照集。  
