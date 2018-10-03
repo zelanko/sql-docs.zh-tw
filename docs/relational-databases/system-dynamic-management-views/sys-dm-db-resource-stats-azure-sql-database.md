@@ -5,10 +5,7 @@ ms.date: 08/14/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d34b4a21b96554860a4e54abe0f274e7fb95aeda
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: f00a7e8db9e5b91e5b722598c991c7a8dbc2e67c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596116"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

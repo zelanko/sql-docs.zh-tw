@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Converting Database Objects
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0ab4bb272f83a16cf8f5be009424499bc4e054c4
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 9298a094187b38cf005928dfc4832fc529222b1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396455"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601780"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>轉換的 SAP ASE 資料庫物件 (SybaseToSQL)
 您已經連接到 SAP Adaptive Server Enterprise (ASE) 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 和設定專案和對應的資料選項，您可以將轉換至 SAP Adaptive Server Enterprise (ASE) 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL database物件。  

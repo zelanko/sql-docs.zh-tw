@@ -1,34 +1,31 @@
 ---
-title: onError 事件 (RDS) |Microsoft 文件
+title: onError 事件 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - onError event [ADO]
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 470ed14f132233eb4bec6d58ac17c4d3c492b94e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ccc57f9c034bfc0bd07d2e88394d09b7c766153a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648056"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
-**OnError**作業期間發生錯誤時，會呼叫事件。  
+**OnError**每當作業期間發生錯誤，會呼叫事件。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +45,7 @@ onError SCode, Description, Source, CancelDisplay
  A**字串**表示的查詢或造成錯誤的命令。  
   
  *CancelDisplay*  
- A**布林**值，在設定為**True**，可避免在對話方塊中顯示錯誤。  
+ A**布林**值，如果設定為 **，則為 True**，這樣可防止錯誤顯示在對話方塊中。  
   
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

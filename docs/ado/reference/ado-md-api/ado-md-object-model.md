@@ -1,41 +1,38 @@
 ---
-title: ADO MD 物件模型 |Microsoft 文件
+title: ADO MD 物件模型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, object model
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0b7a7213732cc9d244cc59244def04e1f302861
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9e1c5cfeece57c200763402a1300a0f00afb92aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615196"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 物件模型
-本主題描述如何表示和 ADO MD 中相關物件  
+本主題描述表示和 ADO MD 中相關物件的方式  
   
  ![ADO MD 物件模型](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
   
- [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)和[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)每個物件具有[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合。  
+ [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)並[資料格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)每個物件具有[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)集合。  
   
- [層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)和[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)每個物件具有[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合。  
+ [層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)並[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)每個物件具有[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合。  
   
- [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，[儲存格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)， [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)，[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)，和[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)每個物件具有標準 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+ [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，[資料格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)， [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)， [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)，[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)，以及[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)每個物件都有標準的 ADO[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO MD 應用程式開發介面參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [ADO MD API 參考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 程式碼範例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 集合](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [ADO MD 列舉常數](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
@@ -43,5 +40,5 @@ ms.locfileid: "35283217"
  [ADO MD 物件](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD 屬性](../../../ado/reference/ado-md-api/ado-md-properties.md)   
  [ADO （多維度） (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [多維度結構描述和資料的概觀](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+ [多維度的結構描述和資料的概觀](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

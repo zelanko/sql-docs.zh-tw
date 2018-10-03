@@ -1,38 +1,35 @@
 ---
-title: 移動方法範例 (VBScript) |Microsoft 文件
+title: Move 方法範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602516"
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法範例 (VBScript)
-這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，將記錄指標，以根據使用者輸入。  
+這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，以將記錄指標，根據使用者輸入。  
   
- 動態伺服器網頁 (ASP) 中使用下列的範例。 若要檢視此功能完整的範例，您必須擁有資料來源位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb （與 SDK 一起安裝） AdvWorks.mdb 或編輯以反映的範例程式碼中的路徑此檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
+ Active Server Page (ASP) 中使用下列的範例。 若要檢視這個功能完整的範例，您必須擁有來源 AdvWorks.mdb （與 SDK 一起安裝） 位於 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或編輯範例程式碼，以反映路徑的資料此檔案的實際位置。 這是 Microsoft Access 資料庫檔案。  
   
- 使用**尋找**找出 Adovbs.inc 的檔案，並將它放在您打算使用的目錄中。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**MoveVBS.asp**。 您可以在任何瀏覽器中檢視結果。  
+ 使用 **尋找**找出檔案 Adovbs.inc，並將它放在您打算使用的目錄。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**MoveVBS.asp**。 您可以在任何瀏覽器中檢視結果。  
   
- 請嘗試輸入字母或非整數，以查看錯誤處理工作。  
+ 請嘗試輸入以字母或非整數，以查看錯誤處理工作。  
   
 ```  
 <!-- BeginMoveVBS -->  

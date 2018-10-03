@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_addmergearticle
 - sp_addmergearticle_TSQL
@@ -22,12 +17,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb4cc8e1561736ffd38b044af658f6ea7390456c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f64a1719ea74448c6c4cc7402f2e6b1afd2be185
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653316"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

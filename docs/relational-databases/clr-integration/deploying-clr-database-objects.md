@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -13,16 +12,15 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e0fe80642941daa8604aff9a169eb4cba601af5
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 6b2fa1bdf96693a29f0e4e7b5d2d27b35a83c122
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639306"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,14 +1,11 @@
 ---
-title: sys.dm_database_copies （SQL Azure 資料庫） |Microsoft 文件
+title: sys.dm_database_copies （SQL Azure 資料庫） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_database_copies_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9b2e5b7b257ea0a22cf847f4e28f58c3c89a2d68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d11f152d4d3d929baeab04cbf44e3a4b2848f456
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640466"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
