@@ -5,24 +5,21 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edefc6d0a5459b53e220ddd22afe1504baaad3ee
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 82d306e1359b9f36340ad5084edebc730c5d8e9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43100332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635606"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

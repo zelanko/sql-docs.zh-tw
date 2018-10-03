@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_session_wait_stats
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d5932d5fa878f3816c636b6106c2723a40834be
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d99f844a83ee112dbd66f6e4c2110035d70658a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681126"
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

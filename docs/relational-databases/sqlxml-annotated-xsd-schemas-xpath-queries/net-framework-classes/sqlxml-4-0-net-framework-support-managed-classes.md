@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - .NET Framework [SQLXML], Managed Classes
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLXML Managed Classes
 - SQLXML, Managed Classes
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d8ee658bf1abe1920dd91daa9e7086696c8d4e03
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b59a1f31f1dbf9e9ebb185b2ad0bb84ef66e52cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070911"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617966"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 .NET Framework 支援 - 受控類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

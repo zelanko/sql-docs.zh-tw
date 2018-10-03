@@ -5,21 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 619f05edc821d419f95778c4493d3517a36c9570
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1df7792f5850ad9d312baefc374bcb9f99e904c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070282"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618266"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

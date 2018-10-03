@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_set (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_update_collection_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702736"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,47 +57,47 @@ sp_syscollector_update_collection_set
   
 ## <a name="arguments"></a>引數  
  [ **@collection_set_id =** ] *collection_set_id*  
- 這是收集組的唯一本機識別碼。 *collection_set_id*是**int**而且必須具有值，如果*名稱*是 NULL。  
+ 這是收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**而且必須具有值，如果*名稱*是 NULL。  
   
  [ **@name =** ] '*name*'  
- 這是收集組的名稱。 *名稱*是**sysname**而且必須具有值，如果*collection_set_id*是 NULL。  
+ 這是收集組的名稱。 *名稱*已**sysname**而且必須具有值，如果*collection_set_id&lt*是 NULL。  
   
  [ **@new_name =** ] '*new_name*'  
- 這是收集組的新名稱。 *new_name*是**sysname**，而且如果使用，不能是空字串。 *new_name*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
+ 這是收集組的新名稱。 *new_name*已**sysname**，而且如果，不能是空字串。 *new_name*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
   
  [  **@target =** ] '*目標*'  
  保留供日後使用。  
   
  [ **@collection_mode =** ] *collection_mode*  
- 這是要使用的資料收集類型。 *collection_mode*是**smallint** ，而且可以有下列值之一：  
+ 這是要使用的資料收集類型。 *collection_mode*已**smallint** ，而且可以有下列值之一：  
   
  0 - 快取模式。 資料收集和上傳會依照不同的排程。 指定連續收集的快取模式。  
   
  1 - 非快取模式。 資料收集和上傳位於相同的排程上。 針對特定收集或快照集收集指定非快取模式。  
   
- 如果從非快取模式變更為快取模式 (0)，您也必須指定*schedule_uid*或*schedule_name*。  
+ 如果從非快取模式變更為快取模式 (0)，您也必須指定*schedule_uid*或是*schedule_name&lt*。  
   
  [ **@days_until_expiration=** ] *days_until_expiration*  
- 這是已收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*是**smallint**。 *days_until_expiration*必須是 0 或正整數。  
+ 這是已收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*已**smallint**。 *days_until_expiration*必須是 0 或正整數。  
   
  [ **@proxy_id =** ] *proxy_id*  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的唯一識別碼。 *proxy_id*是**int**。  
+ 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的唯一識別碼。 *proxy_id*已**int**。  
   
  [ **@proxy_name =** ] '*proxy_name*'  
- 這是 Proxy 的名稱。 *proxy_name*是**sysname**而且可為 null。  
+ 這是 Proxy 的名稱。 *proxy_name*已**sysname**而且可為 null。  
   
  [ **@schedule_uid** = ] '*schedule_uid*'  
- 這是指向排程的 GUID。 *schedule_uid*是**uniqueidentifier**。  
+ 這是指向排程的 GUID。 *schedule_uid*已**uniqueidentifier**。  
   
  若要取得*schedule_uid*，查詢 sysschedules 系統資料表。  
   
- 當*collection_mode*設為 0， *schedule_uid*或*schedule_name*必須指定。 當*collection_mode*設為 1， *schedule_uid*或*schedule_name*如果指定，會被忽略。  
+ 當*collection_mode*設定為 0， *schedule_uid*或是*schedule_name&lt*必須指定。 當*collection_mode*設定為 1， *schedule_uid*或*schedule_name&lt*如果指定，會被忽略。  
   
- [  **@schedule_name =** ] '*schedule_name*'  
- 這是排程的名稱。 *schedule_name*是**sysname**而且可為 null。 如果指定， *schedule_uid*必須是 NULL。 若要取得*schedule_name*，查詢 sysschedules 系統資料表。  
+ [  **@schedule_name =** ] '*schedule_name&lt*'  
+ 這是排程的名稱。 *schedule_name&lt*已**sysname**而且可為 null。 如果指定， *schedule_uid*必須是 NULL。 若要取得*schedule_name&lt*，查詢 sysschedules 系統資料表。  
   
  [ **@logging_level =** ] *logging_level*  
- 這是記錄層級。 *logging_level*是**smallint**具有下列值之一：  
+ 這是記錄層級。 *logging_level*已**smallint**具有下列值之一：  
   
  0 - 記錄執行資訊和追蹤的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件：  
   
@@ -121,10 +117,10 @@ sp_syscollector_update_collection_set
   
  2 - 層級 1 記錄和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的詳細事件資訊。  
   
- 預設值為*logging_level*為 1。  
+ 預設值*logging_level*為 1。  
   
  [  **@description =** ] '*描述*'  
- 這是收集組的描述。 *描述*是**nvarchar （4000)**。  
+ 這是收集組的描述。 *描述*已**nvarchar(4000)**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -132,9 +128,9 @@ sp_syscollector_update_collection_set
 ## <a name="remarks"></a>備註  
  sp_syscollector_update_collection_set 必須在 msdb 系統資料庫的內容中執行。  
   
- 任一*collection_set_id*或*名稱*必須有值，不能同時為 NULL。 若要取得這些值，請查詢 syscollector_collection_sets 系統檢視表。  
+ 任一*collection_set_id&lt*或是*名稱*必須具有值，兩者都不能是 NULL。 若要取得這些值，請查詢 syscollector_collection_sets 系統檢視表。  
   
- 如果收集組正在執行，您只能更新*schedule_uid*和*描述*。 若要停止此收集組，使用[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
+ 如果收集組正在執行，您只能更新*schedule_uid*並*描述*。 若要停止此收集組，使用[sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要 dc_admin 或 dc_operator (具有 EXECUTE 權限) 固定資料庫角色中的成員資格，才能執行此程序。 雖然 dc_operator 可以執行此預存程序，但是這個角色的成員會受限於他們可以變更的屬性。 下列屬性只能由 dc_admin 變更：  
@@ -198,7 +194,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [syscollector_collection_sets &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [dbo.sysjobschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

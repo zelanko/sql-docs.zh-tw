@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stored_procedures_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 001a3476555b82c5262af4ff59cd70f5b88a0c5e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636896"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

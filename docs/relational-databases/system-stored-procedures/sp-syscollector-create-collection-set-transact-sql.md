@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3fc1e3d8db223173fcd5d9ac55f608ddeffa3aa3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688246"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

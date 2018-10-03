@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e4e33ea07151ba6c8d5162e6bbcaf6105b21b2f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3a0db5aab684503cd59982eb0efd50ef533d4da0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080604"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685156"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

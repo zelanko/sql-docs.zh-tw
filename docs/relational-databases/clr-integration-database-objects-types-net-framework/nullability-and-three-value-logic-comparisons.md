@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - precision [CLR integration]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4a01f167900a0aa64759297f6a3b4b2d2c81cf86
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e29b2ad4c4049890bef1ee319d37847a0e21cacd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676143"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 屬性和三值邏輯比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

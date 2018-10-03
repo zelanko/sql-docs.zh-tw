@@ -1,14 +1,11 @@
 ---
-title: sp_delete_backuphistory (TRANSACT-SQL) |Microsoft 文件
+title: sp_delete_backuphistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_backuphistory
@@ -18,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_backuphistory
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71328851b00cff137f909ae9eb7854f0762b8d19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fc910b5ca726e50596dc17612b19f4851a51b48c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636654"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  刪除指定日期之前備份組的項目，以縮減備份和還原記錄資料表的大小。 或其他資料列加入至備份和還原記錄資料表，每次備份之後執行還原作業。因此，我們建議您定期執行**sp_delete_backuphistory**。  
+  刪除指定日期之前備份組的項目，以縮減備份和還原記錄資料表的大小。 其他的資料列新增到備份和還原記錄資料表之後每個備份, 或還原作業;因此，我們建議您定期執行**sp_delete_backuphistory**。  
   
 > [!NOTE]  
->  備份和還原歷程記錄資料表位於**msdb**資料庫。  
+>  備份和還原記錄資料表位於**msdb**資料庫。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +44,16 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
   
 ## <a name="arguments"></a>引數  
  [  **@oldest_date=** ] **'***oldest_date***'**  
- 這是備份和還原記錄資料表中所保留的最舊日期。 *oldest_date*是**datetime**，沒有預設值。  
+ 這是備份和還原記錄資料表中所保留的最舊日期。 *oldest_date*已**datetime**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
- **sp_delete_backuphistory**必須從執行**msdb**資料庫中，而且會影響下列資料表：  
+ **sp_delete_backuphistory**必須從執行**msdb**資料庫，並會影響下列資料表：  
   
 -   [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
   
@@ -89,7 +86,7 @@ EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_database_backuphistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+ [sp_delete_database_backuphistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [備份記錄與標頭資訊 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

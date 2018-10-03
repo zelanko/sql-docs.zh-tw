@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nesting XML results
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad7b557ccd0fc68a7a2b7659dae22180cf9aafc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 79ccd8f7126be2bb52563e2f6f6b4e75db35b1e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685056"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

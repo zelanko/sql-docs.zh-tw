@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_schedule
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_detach_schedule
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 708dea0c3ba2c3abc9ca0827caa9f5c548c56902
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9a7ba1ee6a8fae84d0371c30758fcd2be1098b60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649266"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

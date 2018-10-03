@@ -1,31 +1,28 @@
 ---
-title: Visual Basic 範例資料成形 |Microsoft 文件
+title: Visual Basic 範例中的資料成形 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e6f7fd8431a189a031b44206b13c711ea74e7b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645636"
 ---
-# <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 範例資料成形
+# <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 的資料成形範例
 ```  
 ' This application makes use of Microsoft Hierarchical FlexGrid  
 ' Control, which is named as MSHFLexGrid.  
@@ -94,16 +91,16 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>試試看吧 ！  
+#### <a name="try-it"></a>試試看 ！  
   
 1.  建立 Visual Basic 標準 EXE 應用程式專案  
   
-2.  選取**元件**從**專案**Visual Studio 中的功能表  
+2.  選取 **元件**從**專案**Visual Studio 中的功能表  
   
 3.  從選取"Microsoft 階層式 FlexGrid 控制項 6.0 (OLEDB)"**元件**快顯視窗，然後按一下**儲存**。  
   
-4.  按兩下 FlexGrid 控制項從 [工具箱] 窗格 [Visual Basic] 工作區中。 將這個執行個體的名稱變更為 MSHFLEXGRID。  
+4.  按兩下 FlexGrid 控制項從 [工具箱] 窗格，在 Visual Basic 工作區中。 將這個執行個體的名稱變更為 MSHFLEXGRID。  
   
-5.  複製上述的程式碼，並將它貼入**程式碼**取代任何現有的程式碼的頁面。  
+5.  複製上述程式碼，並將它貼至**程式碼**取代任何現有的程式碼的頁面。  
   
-6.  選取**啟動**從**執行**執行應用程式的功能表。
+6.  選取 **開始**從**執行**功能表來執行應用程式。

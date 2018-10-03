@@ -1,30 +1,27 @@
 ---
-title: SET 重新處理命令 |Microsoft 文件
+title: SET REPROCESS 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7dbfee063d403605fe2a72efada88ecf0d84e34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41877986d5d0e8afdfb30841860df360efd26da0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903583"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649682"
 ---
-# <a name="set-reprocess-command"></a>SET 重新處理命令
-指定多少次，或如何的長度，鎖定的嘗試失敗後鎖定檔案或記錄。  
+# <a name="set-reprocess-command"></a>SET REPROCESS 命令
+指定多少時間，或如何鎖定的嘗試失敗後的檔案或記錄長時間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,26 +32,26 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="arguments"></a>引數  
  若要*nAttempts*[秒]  
- 指定的次數或嘗試鎖定記錄或檔案失敗的初始嘗試之後的秒數。 預設值是 0;最大值是 32000。  
+ 指定的次數或嘗試失敗的初始嘗試之後鎖定記錄或檔案的秒數。 預設值是 0;最大值是 32000。  
   
- 秒數指定 Visual FoxPro 嘗試鎖定的檔案或記錄*nAttempts*秒。 它是只有*nAttempts*大於零。  
+ 秒數可讓您指定 Visual FoxPro 嘗試鎖定的檔案或記錄*nAttempts*秒。 它是時才可使用*nAttempts*是小於或等於零。  
   
- 例如，如果*nAttempts*為 30，Visual FoxPro 會嘗試鎖定記錄或檔案高達 30 倍。 如果您也會包含秒 （設定重新處理至 30 秒為單位），Visual FoxPro 會持續嘗試鎖定最多 30 秒的記錄或檔案。  
+ 例如，如果*nAttempts*為 30、 Visual FoxPro 嘗試鎖定記錄或檔案最多 30 倍。 如果您也會包含秒 （設定重新處理到 30 秒），Visual FoxPro 會持續嘗試鎖定記錄或檔案，最多 30 秒。  
   
- 如果 ON 錯誤常式作用中，如果鎖定記錄或檔案的命令的嘗試不成功，則會執行 ON 錯誤常式。 不過，如果函式會嘗試鎖定，ON 錯誤常式未執行，此函數會傳回 False (。F.)。  
+ 如果 ON ERROR 」 常式處於作用中和鎖定記錄或檔案的命令的嘗試未成功，則會執行 ON ERROR 常式。 不過，如果函式會嘗試鎖定，ON ERROR 」 常式不會執行，則函數會傳回 False (。F.) 中。  
   
- 如果 ON 錯誤常式不是作用中，命令會嘗試鎖定記錄或檔案，且無法鎖定，會產生錯誤。 如果函式所要放置鎖定，不會顯示警示，而且函數會傳回 False (。F.)。  
+ 如果 ON ERROR 」 常式沒有作用，命令會嘗試鎖定記錄或檔案，而且無法在鎖定，則會產生錯誤。 如果函式會嘗試讓鎖定，不會顯示警示，則函數會傳回 False (。F.) 中。  
   
- 如果*nAttempts*是 0 （預設值），而且您發出的命令或嘗試鎖定記錄或檔案的函式，Visual FoxPro 嘗試鎖定記錄或無限期檔案。 如果記錄或檔案會變成可用於鎖定等候期間，會放置鎖定，並清除系統訊息。 如果函式試圖放置鎖定，函數會傳回 True (。T)。  
+ 如果*nAttempts*為 0 （預設值） 和您發出的命令或嘗試鎖定記錄或檔案的函式、 Visual FoxPro 嘗試鎖定記錄，或無限期地檔案。 如果記錄或檔案會變成可用於鎖定在等候時，會放置鎖定，並清除系統訊息。 如果函式會嘗試放置鎖定，此函數會傳回 True (。T)。  
   
- 如果 ON 錯誤常式作用中，命令會嘗試鎖定記錄或檔案，ON 錯誤常式優先於其他嘗試来鎖定的記錄或檔案。 ON 錯誤常式便會立即執行。 Visual FoxPro 不會嘗試其他的記錄或檔案鎖定，並不會顯示系統訊息。  
+ 如果 ON ERROR 」 常式處於作用中，命令會嘗試鎖定記錄或檔案的 ON ERROR 」 常式優先於其他嘗試鎖定記錄或檔案。 ON ERROR 常式便會立即執行。 Visual FoxPro 不會嘗試其他記錄或檔案鎖定，並不會顯示系統訊息。  
   
- 如果*nAttempts*為 1、 Visual FoxPro 嘗試鎖定記錄或無限期檔案和 ON 錯誤常式未執行。  
+ 如果*nAttempts*為 1、 Visual FoxPro 嘗試鎖定記錄，或無限期地檔案和 ON ERROR 」 常式不會執行。  
   
- 如果已將鎖定放另一位使用者的記錄或您嘗試要鎖定的檔案，您必須等到使用者釋放鎖定。  
+ 如果鎖定已放在記錄或您正嘗試將鎖定的檔案上的另一位使用者，您必須等到使用者解除鎖定。  
   
  為自動  
- 指定 Visual FoxPro 嘗試鎖定記錄或無限期檔案。 （-2 組重新處理是對應的命令）。  
+ 指定 Visual FoxPro 嘗試鎖定記錄，或無限期地檔案。 （設定為-2 的重新處理是對等的命令）。  
   
 ## <a name="remarks"></a>備註  
- 第一次嘗試鎖定記錄或檔案不一定會成功。 經常的記錄或檔案已在網路上的另一位使用者被鎖定。 設定重新處理決定 Visual FoxPro 是否會鎖定記錄或檔案的初始嘗試失敗時的其他嘗試。 您可以指定其他嘗試進行，或進行多久嘗試多少次。 ON 錯誤常式會影響如何成功處理嘗試的鎖定。
+ 第一次嘗試鎖定記錄或檔案不一定會成功。 通常，記錄或檔案已在網路上的另一位使用者被鎖定。 設定重新處理，以判斷是否 Visual FoxPro 可讓其他嘗試鎖定記錄或檔案，當初始嘗試失敗時。 您可以指定額外的嘗試進行，或進行多久嘗試次數。 ON ERROR 」 常式會影響如何成功處理嘗試的鎖定。

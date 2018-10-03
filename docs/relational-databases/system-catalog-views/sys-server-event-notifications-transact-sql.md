@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_event_notifications
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91e033b5931f00761cb79e208287c784cf3ecd5e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b985d915d3d7bb6b3130ccb63a400f314fa05a38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646482"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 19e73b1dfa4ced0c987f2bc8c78a020b29f7b7a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dc6d12a52c20bf3269f52fcc8d2ef87c4366061f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626527"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>適用於 Ubuntu 的範例： 無人看管的 SQL Server 安裝指令碼
 

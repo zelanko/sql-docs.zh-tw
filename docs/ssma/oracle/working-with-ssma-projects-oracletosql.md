@@ -4,23 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Customizing Project Settings
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 76dd1388f5abdc2219270f0745c03fcdb0334030
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bc0bdfac0ed1f1c4f992db8ef833d6f092b3fb53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677912"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 專案 (OracleToSQL)
 若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  

@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 06/19/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b098d59bfbc30d5273e46ccef24b62fcb82dbf8
-ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
+ms.openlocfilehash: c39ecc5693297070d47afc9b989de795eb9af2c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40393367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676546"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安裝和設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

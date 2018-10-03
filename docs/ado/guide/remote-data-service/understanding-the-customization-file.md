@@ -1,35 +1,32 @@
 ---
-title: 了解的自訂檔案 |Microsoft 文件
+title: 了解自訂檔案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a80667371709c4035a4a45fa4e322d59f03f5bc7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce87954d2cb6e436af9ab990eb93dc1e5a91e8f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678466"
 ---
-# <a name="understanding-the-customization-file"></a>了解自訂檔
-方括號所組成的自訂檔案中的每個區段標頭 (**[]**) 包含型別和參數。 四個區段類型以常值字串**連接**， **sql**， **userlist**，或**記錄**。 常值字串、 預設值，指定使用者的識別項，或不提供參數。  
+# <a name="understanding-the-customization-file"></a>了解自訂檔案
+在自訂檔案中的每個區段標頭包含方括號 (**[]**) 包含型別和參數。 四個區段類型會以常值字串**連接**， **sql**， **userlist**，或**記錄**。 參數是常值字串、 預設值、 使用者指定的識別項，或執行任何動作。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 因此，每個區段會標示下列區段標頭的其中一個：  
+ 因此，每個區段已標記使用其中一個下列的區段標頭：  
   
 ```  
   
@@ -48,33 +45,33 @@ identifier
 |部分|描述|  
 |----------|-----------------|  
 |**connect**|修改連接字串常值字串。|  
-|**sql**|修改命令字串常值字串。|  
-|**userlist**|常值字串，以修改特定使用者的存取權限。|  
-|**logs**|常值字串，指定記錄作業的錯誤記錄檔。|  
+|**sql**|可修改命令字串常值的字串。|  
+|**userlist**|常值的字串，以修改特定使用者的存取權限。|  
+|**logs**|常值的字串，指定記錄作業的錯誤記錄檔。|  
 |**default**|如果指定或找到沒有識別項會使用常值字串。|  
-|*identifier*|比對字串中的字串**連接**或**命令**字串。<br /><br /> -使用此區段，如果區段標頭包含**連接**，且連接字串中找到的識別項字串。<br />-使用此區段，如果區段標頭包含**sql**和命令字串中找到的識別項字串。<br />-使用此區段，如果區段標頭包含**userlist**和識別項字串符合**連接**區段識別項。|  
+|*identifier*|符合的字串的字串**連接**或是**命令**字串。<br /><br /> -使用本節中，如果區段標頭包含**連線**和連接字串中找到的識別項字串。<br />-使用本節中，如果區段標頭包含**sql**和命令字串中找到的識別項字串。<br />-使用本節中，如果區段標頭包含**userlist**和 [識別碼] 字串比對**連線**區段識別項。|  
   
- **DataFactory**呼叫處理常式，並傳遞用戶端的參數。 此處理常式中搜尋符合適當的區段標頭中的識別項的用戶端參數中的整個字串。 如果找到相符項目，該區段的內容會套用至用戶端參數。  
+ **DataFactory**呼叫的處理常式中，然後再將用戶端參數傳遞。 處理常式會搜尋比對識別碼在適當的區段標頭中的用戶端參數中的整個字串。 如果找到相符項目，則該區段的內容會套用至用戶端參數。  
   
- 在下列情況下，請使用特定區段：  
+ 在下列情況下，使用特定的區段：  
   
--   A**連接**區段的用戶端的值部分連接字串關鍵字，如果使用"**資料來源 = * * * 值*"，符合**連接**區段識別項 *.*  
+-   A**連接**區段用在用戶端的值部分連接字串關鍵字，如果"**資料來源 = * * * 值*"，符合**連接**區段識別碼 *.*  
   
--   **Sql**區段用戶端命令字串包含符合的字串，如果**sql**區段識別項。  
+-   **Sql**如果用戶端命令字串包含符合的字串，就會使用 區段**sql**區段識別項。  
   
--   A**連接**或**sql**如果沒有相符識別項，會使用預設參數區段。  
+-   A**連接**或是**sql**如果沒有任何相符的識別項，會使用有預設參數區段。  
   
--   A **userlist**區段用如果**userlist**區段識別項相符項目**連接**區段識別項。 如果沒有相符項目，內容**userlist**區段會套用至所控管連接**連接**> 一節。  
+-   A **userlist**一節會使用**userlist**區段識別項相符項目**連接**區段識別項。 如果沒有相符項目的內容**userlist**一節會套用至所控管連接**連線**一節。  
   
--   如果連接或命令字串中的字串不符合任何識別碼**連接**或**sql**區段標頭，而且沒有任何**連接**或**sql**區段標頭的預設參數，則用戶端字串會使用不需要修改。  
+-   如果連接或命令字串中的字串不符合任何識別項**連接**或**sql**區段標頭，而且沒有任何**連接**或**sql**區段標頭，使用預設參數，則用戶端會使用字串而不需修改。  
   
--   **記錄**區段用每當**DataFactory**在作業。  
+-   **記錄檔**區段用每當**DataFactory**正在運作中。  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂檔案連接 > 一節](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自訂檔案記錄檔 > 一節](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [自訂檔案 SQL > 一節](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [自訂檔案 UserList > 一節](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [自訂檔案 Connect 區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [自訂檔案 Logs 區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [自訂檔案 SQL 區段](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [自訂檔案 UserList 區段](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory 自訂](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必要的用戶端設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [撰寫您自己的自訂處理常式](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)

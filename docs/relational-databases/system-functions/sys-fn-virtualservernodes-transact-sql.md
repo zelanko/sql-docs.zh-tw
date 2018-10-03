@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualservernodes
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - fn_virtualservernodes function
 - sys.fn_virtualservernodes function
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aaad746b7884b45709cab2c2c036f64c6f38dcc8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2150616e327420a2fb9bb432eb40b5ef1a590c9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079529"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666686"
 ---
 # <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

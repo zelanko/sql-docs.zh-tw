@@ -1,13 +1,11 @@
 ---
-title: XactAttributeEnum |Microsoft 文件
+title: XactAttributeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,24 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - XactAttributeEnum enumeration [ADO]
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c99e449171b347290f832950f265c6579ba6a630
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2098830a06f8e5c2ddc38b12f0c035ec513433ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678416"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-指定的交易屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
+指定的交易屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262144|藉由呼叫執行保留中止[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)自動啟動新交易。 並非所有提供者支援這個行為。|  
-|**adXactCommitRetaining**|131072|會保留認可執行藉由呼叫[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)自動啟動新交易。 並非所有提供者支援這個行為。|  
+|**adXactAbortRetaining**|262144|會保留中止執行藉由呼叫[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)自動啟動新的交易。 並非所有提供者支援這個行為。|  
+|**adXactCommitRetaining**|131072|藉由呼叫執行保留認可[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)自動啟動新的交易。 並非所有提供者支援這個行為。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  

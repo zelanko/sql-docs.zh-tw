@@ -6,19 +6,17 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 08/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: cbdcbe160e585fc1d5dfc30c51f511f32d4a0be9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627109"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 資料庫目錄
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -46,22 +44,22 @@ WideWorldImportersDW 中的資料，因此鏡像 WideWorldImporters 中的資料
 
 WideWorldImportersDW 有下列維度資料表。 描述包含 WideWorldImporters 資料庫中的來源資料表的關聯性。
 
-|Table|來源資料表|
+|資料表|來源資料表|
 |-----------------------------|---------------------|
 |[縣/市]|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |客戶|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |date|新的資料表的資訊包括會計年度的日期 (根據年 11 月 1 日的會計年度開始)。|
-|員工|`Application.People`。|
+|員工|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供應商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`。|
-|TransactionType|`Application.TransactionTypes`。|
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`.|
 
 ### <a name="fact-tables"></a>事實資料表
 
 WideWorldImportersDW 有以下的事實資料表。 描述會包含來源資料表的關聯性，WideWorldImporters 資料庫，以及分析/報告的查詢，每個事實資料表一般會搭配使用的類別。
 
-|Table|來源資料表|範例分析|
+|資料表|來源資料表|範例分析|
 |-----------------------------|---------------------|---------------------|
 |單|`Sales.Orders` 和 `Sales.OrderLines`|銷售人員 」、 「 選擇器/packer 產能，，和在時間中挑選訂單。 此外，短的內建的情況下導致回訂單。|
 |銷售|`Sales.Invoices` 和 `Sales.InvoiceLines`|銷售日期、 傳遞日期、 經過一段時間的獲利率、 銷售人員的獲利率。|

@@ -1,13 +1,11 @@
 ---
-title: EventReasonEnum |Microsoft 文件
+title: EventReasonEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,36 +13,35 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644637"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 指定造成事件發生的原因。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|@shouldalert|作業會加入新的記錄。|  
-|**adRsnClose**|9|關閉作業**資料錄集**。|  
-|**adRsnDelete**|2|作業會刪除記錄。|  
+|**adRsnAddNew**|1|作業會加入新的記錄。|  
+|**adRsnClose**|9|作業已關閉**資料錄集**。|  
+|**adRsnDelete**|2|作業已刪除的記錄。|  
 |**adRsnFirstChange**|11|作業會對記錄中的第一項變更。|  
 |**adRsnMove**|10|作業移動中的記錄指標**資料錄集**。|  
-|**adRsnMoveFirst**|12|作業移至第一筆記錄的記錄指標**資料錄集**。|  
-|**adRsnMoveLast**|15|作業移至最後一筆記錄的記錄指標**資料錄集**。|  
+|**adRsnMoveFirst**|12|作業移到中的第一筆記錄的記錄指標**資料錄集**。|  
+|**adRsnMoveLast**|15|作業移到中的最後一個記錄的記錄指標**資料錄集**。|  
 |**adRsnMoveNext**|13|作業移至下一筆記錄的記錄指標**資料錄集**。|  
-|**adRsnMovePrevious**|14|作業移至前一個記錄中的記錄指標**資料錄集**。|  
-|**adRsnRequery**|7|作業重新查詢[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
-|**adRsnResynch**|8|重新同步處理作業**資料錄集**與資料庫。|  
-|**adRsnUndoAddNew**|5|作業會反轉加入新的記錄。|  
-|**adRsnUndoDelete**|6|作業會反轉刪除記錄。|  
-|**adRsnUndoUpdate**|4|作業會反轉一筆記錄的更新。|  
+|**adRsnMovePrevious**|14|作業移到在上一筆記錄的記錄指標**資料錄集**。|  
+|**adRsnRequery**|7|查詢作業[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
+|**adRsnResynch**|8|重新同步處理的作業**資料錄集**與資料庫。|  
+|**adRsnUndoAddNew**|5|作業會回復新記錄的新增。|  
+|**adRsnUndoDelete**|6|作業會反轉記錄的刪除。|  
+|**adRsnUndoUpdate**|4|作業會回復為記錄的更新。|  
 |**adRsnUpdate**|3|作業會更新現有的記錄。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  

@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2214b61d0ef352860f30181f2777a6f2b4ba4371
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3c8a474665e65588b2aead4aa6f21394ec76770c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111554"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656466"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API 對日期和時間增強功能的支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

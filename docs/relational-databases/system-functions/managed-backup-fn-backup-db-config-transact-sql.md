@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smart_admin.fn_backup_db_config
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - smart_admin.fn_backup_db_config
 - fn_backup_db_config
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d731c5fbb7a90e69b7e1b1502411f57e80219892
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687226"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |Encryptor_type|NCHAR(15)|傳回加密程式設定：憑證或非對稱金鑰。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|憑證或非對稱金鑰的名稱。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要的成員資格**db_backupoperator**資料庫角色**ALTER ANY CREDENTIAL**權限。 使用者不應被拒絕**VIEW ANY DEFINITION**權限。  

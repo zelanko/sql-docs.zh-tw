@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - building database objects [CLR integration], user-defined functions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database objects [CLR integration], user-defined functions
 - user-defined functions [CLR integration]
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
-caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15e5ab9bf993150d7ecb9c1439ee75dfeccb5302
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: de5d1979d05899711d708e166b9659db0bb3bde0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695726"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

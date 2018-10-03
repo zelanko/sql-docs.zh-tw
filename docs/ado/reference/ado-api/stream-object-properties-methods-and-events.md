@@ -1,31 +1,28 @@
 ---
-title: 物件屬性、 方法和事件資料流 |Microsoft 文件
+title: Stream 物件屬性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 309dc7655ed7d586deace8869b2ebc245312ec6b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7f775bf1d77ed23e153610f7b6d6cbf5c17ce544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282713"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697191"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>資料流物件屬性、 方法和事件
+# <a name="stream-object-properties-methods-and-events"></a>Stream 物件屬性、 方法和事件
 ## <a name="properties"></a>屬性  
- [字元集屬性](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Charset 屬性](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS 屬性](../../../ado/reference/ado-api/eos-property.md)  
   
@@ -33,7 +30,7 @@ ms.locfileid: "35282713"
   
  [模式屬性](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [位置屬性](../../../ado/reference/ado-api/position-property-ado.md)  
+ [Position 屬性](../../../ado/reference/ado-api/position-property-ado.md)  
   
  [Size 屬性 (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   

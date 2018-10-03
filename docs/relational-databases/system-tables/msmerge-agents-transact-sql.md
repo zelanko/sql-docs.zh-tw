@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSmerge_agents
 - MSmerge_agents_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23204288fc2bfb3358feb11ccb77c59a393c68b5
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: a8df66853b124d8f6965e9fe46e4e19ec9ff5584
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677806"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

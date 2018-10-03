@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_virtual_address_dump
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_virtual_address_dump dynamic management view
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6684035fb2aa0fcf2debe9d139c68a46080b8305
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b12c9e533d404b01f896dd66ee046c9a9cd110d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659676"
 ---
 # <a name="sysdmosvirtualaddressdump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

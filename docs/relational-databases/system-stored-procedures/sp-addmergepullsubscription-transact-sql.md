@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_addmergepullsubscription_TSQL
 - sp_addmergepullsubscription
@@ -22,12 +17,12 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 247d32980a54656c0baa7e2869d6218a2e85946a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4e6e3a2ddd7c046051b0d7f89097c7c0a075ca6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659009"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

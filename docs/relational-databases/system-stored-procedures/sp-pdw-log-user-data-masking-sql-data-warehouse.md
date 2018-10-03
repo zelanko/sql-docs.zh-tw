@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 16de9489583cce2e696a94c75c7e5fd3ac1c0fe1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630236"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

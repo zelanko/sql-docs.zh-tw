@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e787c487e2fb03619346de73234427c3499ef5f4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396519"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681746"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

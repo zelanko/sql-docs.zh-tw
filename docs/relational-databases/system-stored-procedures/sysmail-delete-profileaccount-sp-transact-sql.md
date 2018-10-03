@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_profileaccount_sp (TRANSACT-SQL) |Microsoft 文件
+title: sysmail_delete_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f90e939bf47154850c2183261af4cb541b19538d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677156"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +42,22 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
 ## <a name="arguments"></a>引數  
  [ **@profile_id** =] *profile_id*  
- 要刪除之設定檔的設定檔識別碼。 *profile_id*是**int**，預設值是 NULL。 任一*profile_id*或*profile_name*可指定。  
+ 要刪除之設定檔的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
  [ **@profile_name** = ] **'***profile_name***'**  
- 要刪除之設定檔的設定檔名稱。 *profile_name*是**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*可指定。  
+ 要刪除之設定檔的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
  [ **@account_id** = ] *account_id*  
- 要刪除的帳戶識別碼。 *account_id*是**int**，預設值是 NULL。 任一*account_id*或*account_name*可指定。  
+ 要刪除的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 任一*account_id*或*account_name*可能指定。  
   
  [ **@account_name** = ] **'***account_name***'**  
- 要刪除的帳戶名稱。 *account_name*是**sysname**，預設值是 NULL。 任一*account_id*或*account_name*可指定。  
+ 要刪除的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 任一*account_id*或*account_name*可能指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  如果指定的帳戶與指定的設定檔無關，便會傳回一則錯誤。  
@@ -70,7 +66,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  當指定了設定檔，但沒有指定帳戶時，這個預存程序會從指定的設定檔中移除所有帳戶。 例如，如果您在變更設定檔所用的 SMTP 伺服器，從設定檔中移除所有帳戶，再依照需要來加入新帳戶，可能會很方便。  
   
- 預存程序**sysmail_delete_profileaccount_sp**處於**msdb**資料庫，擁有者是**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程序**sysmail_delete_profileaccount_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
   
 ## <a name="permissions"></a>Permissions  
  執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  

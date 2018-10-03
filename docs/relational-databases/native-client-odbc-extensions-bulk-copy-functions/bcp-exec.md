@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_exec
@@ -17,17 +15,16 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2592a8a2b15369ecd15185cd3ccb9b9d6bd13356
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 762384c9bd57db037b894e8522f0eb0d4b5d2392
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077999"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627296"
 ---
 # <a name="bcpexec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

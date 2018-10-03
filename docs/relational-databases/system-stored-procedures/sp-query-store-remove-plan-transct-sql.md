@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.SP_QUERY_STORE_REMOVE_PLAN_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - sys.sp_query_store_remove_plan
 - sp_query_store_remove_plan
 ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fe4d7591fa9234c5e6335972116fa71efdf70db
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 03c202a44587511e976c9315b56c2d42dc2578e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660088"
 ---
 # <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

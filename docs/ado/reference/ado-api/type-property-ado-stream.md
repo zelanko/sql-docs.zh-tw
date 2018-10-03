@@ -1,13 +1,11 @@
 ---
-title: 型別屬性 （ADO 資料流） |Microsoft 文件
+title: 型別屬性 (ADO Stream) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,27 +15,26 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO Stream]
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b334a6f6feab4e8a9a491624a5a3a43d2bd333ff
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8e4df670c5fe6ca42015e7e85445dafde47738f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282767"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637036"
 ---
-# <a name="type-property-ado-stream"></a>型別屬性 （ADO 資料流）
-表示包含的資料類型[資料流](../../../ado/reference/ado-api/stream-object-ado.md)（二進位或文字）。  
+# <a name="type-property-ado-stream"></a>Type 屬性 (ADO Stream)
+指示中所包含的資料類型[Stream](../../../ado/reference/ado-api/stream-object-ado.md) （二進位或文字）。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回[StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md)值，指定包含的資料類型**資料流**物件。 預設值是**adTypeText**。 不過，如果一開始，將二進位資料寫入至新，空白**資料流**、**類型**就會變更為**adTypeBinary**。  
+ 設定或傳回[StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md)值，指定包含的資料類型**Stream**物件。 預設值是**adTypeText**。 不過，如果二進位資料一開始寫入至新時，空**Stream**，則**型別**就會變更為**adTypeBinary**。  
   
 ## <a name="remarks"></a>備註  
- **類型**屬性是讀取/寫入時，才目前位置的開頭**資料流**([位置](../../../ado/reference/ado-api/position-property-ado.md)為 0)，且唯讀的任何其他位置。  
+ **型別**屬性是讀取/寫入，只有在目前的位置是在開頭時，才**Stream** ([位置](../../../ado/reference/ado-api/position-property-ado.md)為 0)，且為唯讀狀態的任何其他位置。  
   
- **類型**屬性會決定哪些方法應用於讀取和寫入**資料流**。 文字**資料流**，使用[ReadText](../../../ado/reference/ado-api/readtext-method.md)和[WriteText](../../../ado/reference/ado-api/writetext-method.md)。 二進位**資料流**，使用[讀取](../../../ado/reference/ado-api/read-method.md)和[寫入](../../../ado/reference/ado-api/write-method.md)。  
+ **型別**屬性會決定哪些方法應用於讀取和寫入**Stream**。 文字**資料流**，使用[ReadText](../../../ado/reference/ado-api/readtext-method.md)並[WriteText](../../../ado/reference/ado-api/writetext-method.md)。 二進位**資料流**，使用[讀取](../../../ado/reference/ado-api/read-method.md)並[撰寫](../../../ado/reference/ado-api/write-method.md)。  
   
 ## <a name="applies-to"></a>適用於  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IRowsetFastLoad::InsertRow (OLE DB)
@@ -15,17 +13,16 @@ apitype: COM
 helpviewer_keywords:
 - InsertRow method
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6ebdd2f1530b658969967c51911fb104391c3d8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 01d3a12aa4dbdc830fa10867995ee2f6c24241fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654296"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

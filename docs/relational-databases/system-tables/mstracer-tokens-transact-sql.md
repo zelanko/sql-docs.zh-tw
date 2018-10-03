@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MStracer_tokens_TSQL
 - MStracer_tokens
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MStracer_tokens system table
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25a5d05c3c4ad81da0856d4e073f7aeb462109e7
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 55140e134876870179c0a13208e85ee55414ca8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628932"
 ---
 # <a name="mstracertokens-transact-sql"></a>MStracer_tokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

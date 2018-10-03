@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|ODBC
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - asynchronous operations [SQL Server Native Client]
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - ODBC applications, asynchronous operations
 - SQL Server Native Client ODBC driver, asynchronous mode
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c123cc50f2d79c3437526dd5ee8ae9405f99a26
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5249ce2ee956b7403a2ba10a6a4b7b84c5945615
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624626"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>建立驅動程式應用程式 - 非同步模式和 SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

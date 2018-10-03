@@ -5,9 +5,7 @@ ms.date: 03/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_active_transactions
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_transactions dynamic management view
 ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17d6e070d858ccc4e77ca4c4d72cf0adc102810b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0b940db47793a5b56c952970c4f12e4a7f15f92e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674806"
 ---
 # <a name="sysdmtranactivetransactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -1,28 +1,24 @@
 ---
-title: sys.fn_db_backup_file_snapshots & Amp;#40;transact-SQL&AMP;#41; |Microsoft 文件
+title: sys.fn_db_backup_file_snapshots & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
-caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 085bf32115bfe84b00471de27e1fd9c11b3a1ab9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7845ef36347d9131ed6991674b4e09b23ee34155
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670427"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679629"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   傳回結果集，其中包含未宣告的參數中的相關中繼資料[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 會考量用於每個參數 **\@tsql**批次，但未在宣告 **\@params**。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 此程序會傳回空的結果集，如果 **\@tsql**輸入批次沒有任何參數，除了中所宣告 **\@params**。  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
+ [  **\@tsql =** ] **'**_TRANSACT-SQL\_批次_**'**  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (**_n_**)** 或是**nvarchar （max)**。  
   
- [  **\@params =** ] **N'***參數***'**  
- \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，同樣地方式 sp_executesql 運作方式。 *參數*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
+ [  **\@params =** ] **N'**_參數_**'**  
+ \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，同樣地方式 sp_executesql 運作方式。 *參數*可能**nvarchar (**_n_**)** 或是**nvarchar （max)**。  
   
  是一個字串，其中包含已內嵌在的所有參數的定義*Transact SQL_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果 TRANSACT-SQL 陳述式或批次陳述式中的不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   如果輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次中宣告的參數，宣告相同名稱的本機變數\@params。  
   
--   如果陳述式參考暫存資料表。  
+- 如果陳述式參考暫存資料表。
   
  如果\@tsql 沒有任何參數，除了中所宣告\@params 中，程序會傳回空的結果集。  
   

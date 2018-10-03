@@ -1,32 +1,29 @@
 ---
-title: 屬性的屬性範例 （VC + +） |Microsoft 文件
+title: 屬性的屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0372befbf0c69beaf036228d97e217766f99d480
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633506"
 ---
-# <a name="attributes-property-example-vc"></a>屬性的屬性範例 （VC + +）
-這個範例會示範[屬性](../../../ado/reference/adox-api/attributes-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)。 將它設定為**adColNullable**可讓使用者設定的值[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)[欄位](../../../ado/reference/ado-api/field-object.md)為空字串。 在此情況下，使用者可以區分資料未知的記錄資料不會套用記錄。  
+# <a name="attributes-property-example-vc"></a>Attributes 屬性範例 (VC++)
+此範例示範[屬性](../../../ado/reference/adox-api/attributes-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)。 將它設定為**adColNullable**可讓使用者設定的值[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [欄位](../../../ado/reference/ado-api/field-object.md)設為空字串。 在此情況下，使用者可以區別不知道資料的記錄和記錄資料不會套用。  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -207,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性的內容 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [Attributes 屬性 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column 物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

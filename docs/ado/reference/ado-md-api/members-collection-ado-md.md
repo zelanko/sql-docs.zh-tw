@@ -1,13 +1,11 @@
 ---
-title: 成員集合 (ADO MD) |Microsoft 文件
+title: Members 集合 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,34 +15,33 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6b4a6902ebf9efae5b02eccb14f1d06e9279cc6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 541e1098dfd18210e7c07a0718ecd3add758c8a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616946"
 ---
-# <a name="members-collection-ado-md"></a>成員集合 (ADO MD)
-包含[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件層級或沿座標軸的位置。  
+# <a name="members-collection-ado-md"></a>Members 集合 (ADO MD)
+包含[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件從一個層級或沿著座標軸的位置。  
   
 ## <a name="remarks"></a>備註  
  A**成員**集合用來包含下列類型的成員：  
   
--   構成 cube 中的層級的成員。 包含在**成員**集合[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件。 例如，使用從範例[概觀的多維度結構描述和資料](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)，國家 （地區） 層級的四個成員是加拿大、 美國、 英國及德國。  
+-   構成 cube 中的層級的成員。 這些包含在**成員**的集合[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)物件。 例如，使用 從範例[概觀的多維度結構描述和資料](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)，國家 （地區） 層級的四個成員是加拿大、 美國、 英國和德國。  
   
--   在階層中的特定成員子系的成員。 這些成員會傳回由[子系](../../../ado/reference/ado-md-api/children-property-ado-md.md)屬性之父代**成員**物件。 例如，一次使用相同的範例，兩個的子系 Canada 成員是加拿大東部和加拿大西部。  
+-   成員的階層內的特定成員子系。 這些成員會傳回[子系](../../../ado/reference/ado-md-api/children-property-ado-md.md)屬性之父代**成員**物件。 比方說，一次使用相同的範例，兩個的子系 Canada 成員是加拿大東部及加拿大-西部。  
   
--   定義座標軸上的特定位置的成員[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。 使用 從資料格集[使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)為例，x 軸上的第一個位置的兩個成員都情人和西雅圖。 包含在這些成員**成員**集合[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件。  
+-   定義座標軸上的特定位置的成員[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。 使用從 cellset[使用多維度資料](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)做為範例，在 x 軸上的第一個位置的兩個成員是情人節和西雅圖。 這些成員包含所**成員**的集合[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)物件。  
   
- **成員**是標準的 ADO 集合。 具有屬性和方法的集合，您可以執行下列作業：  
+ **成員**是標準的 ADO 集合。 使用屬性和集合的方法，您可以執行下列作業：  
   
--   取得集合中的物件數目[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性。  
+-   取得集合中具有的物件數目[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性。  
   
--   傳回物件集合中具有預設[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性。  
+-   傳回集合中具有預設值的物件[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性。  
   
 -   更新的提供者從集合中的物件[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
   
@@ -53,5 +50,5 @@ ms.locfileid: "35284623"
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [成員範例 (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
+ [Members 範例 (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

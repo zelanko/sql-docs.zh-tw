@@ -1,14 +1,11 @@
 ---
-title: s (TRANSACT-SQL) |Microsoft 文件
+title: syscollector_config_store (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_config_store_TSQL
@@ -19,23 +16,22 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1016cc3a02bb4279db9c8b5f5afe03de36712ec5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681406"
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回套用至整個資料收集器 (而非收集集合執行個體) 的屬性。 這個檢視中的每個資料列都會描述特定資料收集器屬性，例如管理資料倉儲的名稱，以及管理資料倉儲所在的執行個體名稱。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|屬性的名稱。 不可為 Null。|  
 |parameter_value|**sql_variant**|屬性的實際值。 可為 Null。|  
@@ -46,10 +42,10 @@ ms.locfileid: "33221329"
 ## <a name="remarks"></a>備註  
  可用屬性的清單是固定的，而且您只能使用適當的預存程序來變更其值。 下表說明可透過這個檢視公開的屬性。  
   
-|屬性名稱|Description|  
+|屬性名稱|描述|  
 |-------------------|-----------------|  
 |CacheDirectory|收集器類型封裝在檔案系統中儲存暫存資訊的目錄名稱。<br /><br /> NULL = 使用預設的暫存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄。|  
-|CacheWindow|指出失敗的資料上傳的快取目錄資料保留原則。<br /><br /> -1 = 保留所有上傳失敗的資料。<br /><br /> 0 = 不要保留任何上傳失敗的資料。<br /><br /> *n* = 保留資料 從*n*次先前上傳失敗，其中*n* > = 1。<br /><br /> 您可以使用 sp_syscollector_set_cache_window 預存程序來變更此值。|  
+|CacheWindow|指出失敗的資料上傳的快取目錄資料保留原則。<br /><br /> -1 = 保留所有上傳失敗的資料。<br /><br /> 0 = 不要保留任何上傳失敗的資料。<br /><br /> *n* = 保留資料，從*n*次先前上傳失敗，其中*n* > = 1。<br /><br /> 您可以使用 sp_syscollector_set_cache_window 預存程序來變更此值。|  
 |CollectorEnabled|指出資料收集器的狀態。<br /><br /> 0 = 已停用<br /><br /> 1 = 已啟用<br /><br /> 您可以使用 sp_syscollector_enable_collector 或 sp_syscollector_disable_collector 預存程序來變更此值。|  
 |MDWDatabase|管理資料倉儲的名稱。 您可以使用 sp_syscollector_set_warehouse_database_name 預存程序來變更此值。|  
 |MDWInstance|管理資料倉儲之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 您可以使用 sp_syscollector_set_warehouse_instance_name 預存程序來變更此值。|  
@@ -68,8 +64,8 @@ FROM msdb.dbo.syscollector_config_store;
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [sp_syscollector_set_warehouse_database_name &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
- [sp_syscollector_set_warehouse_instance_name &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
+ [sp_syscollector_set_warehouse_database_name &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
+ [sp_syscollector_set_warehouse_instance_name &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
  [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

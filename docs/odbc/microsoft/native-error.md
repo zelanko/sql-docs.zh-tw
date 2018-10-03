@@ -1,29 +1,26 @@
 ---
-title: 原生錯誤 |Microsoft 文件
+title: 原生錯誤 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - negative error codes [ODBC]
 - native error codes [ODBC]
 - positive error codes [ODBC]
 ms.assetid: b662fab5-c236-4895-a64f-00c9c6c652c2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eee01ee91910f0cb17375cbc385040fa54e2d0f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e1c09d9a90b94201642bcad5b3e0c3dbb20ef45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667946"
 ---
 # <a name="native-error"></a>原生錯誤
-正由桌面資料庫驅動程式所產生的原生錯誤碼。 由 Microsoft Jet 產生負數錯誤碼。 如需詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。
+桌面資料庫驅動程式會產生正面的原生錯誤碼。 Microsoft Jet 會產生負面的錯誤碼。 如需詳細資訊，請參閱 < *Microsoft Jet Database Engine 程式設計人員指南*。

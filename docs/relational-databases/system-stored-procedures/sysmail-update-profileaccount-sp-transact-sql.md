@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b81459e3c11c2ce17b133359074a921ddc1e1b66
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c3a8e3db9e0e66f3a3e300e972ca1d2f02f1d03b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615526"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

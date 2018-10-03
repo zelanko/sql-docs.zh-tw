@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: ''
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_files
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b682cbaff77f4cc5dbe5c6267c360a28241f8a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a237a562b747922fba4c294330bc9db067822242
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689956"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

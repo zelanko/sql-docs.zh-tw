@@ -1,13 +1,11 @@
 ---
-title: '集合 （Visual c + + 語法索引與 #import） |Microsoft 文件'
+title: '集合 （Visual c + + 語法索引與 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276527"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662656"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>集合 （Visual c + + 語法索引與 #import）
-它是很有幫助集合繼承某些常用的方法和屬性。  
+您最好知道集合繼承某些常用的方法和屬性。  
   
- 所有集合都繼承**計數**屬性和**重新整理**方法和所有集合加入**項目**屬性。 **錯誤**集合加入**清除**方法。 **參數**集合繼承**附加**和**刪除**方法，而**欄位**集合加入**附加**，**刪除**，和**更新**方法。  
+ 所有集合都繼承**計數**屬性並**重新整理**方法，以及所有集合加入**項目**屬性。 **錯誤**集合加入**清除**方法。 **參數**集合繼承**附加**並**刪除**方法，而**欄位**集合加入**Append**，**刪除**，和**更新**方法。  
   
 ## <a name="properties-collection"></a>屬性集合  
   
@@ -101,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [錯誤集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

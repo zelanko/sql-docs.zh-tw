@@ -1,13 +1,11 @@
 ---
-title: 搜尋方法和索引屬性範例 (VB) |Microsoft 文件
+title: Seek 方法和 Index 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661466"
 ---
-# <a name="seek-method-and-index-property-example-vb"></a>搜尋方法和索引屬性範例 (VB)
-這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[搜尋](../../../ado/reference/ado-api/seek-method.md)方法和[索引](../../../ado/reference/ado-api/index-property.md)屬性搭配給定***員工識別碼***，以找出中的員工的姓名***員工***Nwind.mdb 資料庫資料表。  
+# <a name="seek-method-and-index-property-example-vb"></a>Seek 方法和 Index 屬性範例 (VB)
+這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[Seek](../../../ado/reference/ado-api/seek-method.md)方法並[索引](../../../ado/reference/ado-api/index-property.md)搭配屬性指定***員工識別碼***，以找出員工的姓名***員工***Nwind.mdb 資料庫資料表。  
   
 ```  
 'BeginSeekVB  

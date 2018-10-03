@@ -1,33 +1,30 @@
 ---
-title: 參數值的陣列 |Microsoft 文件
+title: 參數值的陣列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 350e6221601899dcc119f875c22b341203c17c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686326"
 ---
-# <a name="arrays-of-parameter-values"></a>參數值的陣列
-通常會很有用的應用程式，以傳遞的參數陣列。 例如，使用參數和參數化的陣列**插入**陳述式中，應用程式可以一次插入的資料列數目。 有數個優點，以使用陣列。 首先，因為在單一封包中傳送多個陳述式的資料 （如果資料來源原生支援的參數陣列） 可以降低網路流量。 第二，某些資料來源可執行速度比執行相同數目的不同的 SQL 陳述式使用陣列的 SQL 陳述式。 最後，當資料儲存在陣列中，通常都是螢幕資料的情況時，應用程式可以繫結所有資料列的單一呼叫之特定資料行中**SQLBindParameter**並執行單一陳述式來加以更新。  
+# <a name="arrays-of-parameter-values"></a>參數值陣列
+它通常是用於將參數陣列的應用程式。 例如，使用參數和參數化的陣列**插入**陳述式中，應用程式可以一次插入的資料列數目。 有數個優點，來使用陣列。 首先，因為 （如果資料來源原生支援的參數陣列），將會傳送單一封包中的多個陳述式的資料可以降低網路流量。 第二，某些資料來源，可以執行速度比執行相同數目的個別 SQL 陳述式使用陣列的 SQL 陳述式。 最後，當資料儲存在陣列中，通常就是螢幕資料的情況，應用程式可以繫結所有資料列中的單一呼叫的特定資料行**SQLBindParameter**並執行單一陳述式來更新它們。  
   
- 不幸的是，不多的資料來源都支援參數陣列。 不過，驅動程式可以執行一次的參數值的每一組 SQL 陳述式來模擬參數陣列。 這可能會造成速度增加，因為驅動程式可以接著準備計劃要執行一次針對每個參數集的陳述式。 它也可能會導致更簡單的應用程式程式碼。  
+ 不幸的是，不多的資料來源都支援參數陣列。 不過，驅動程式可以模擬參數陣列執行的 SQL 陳述式，針對每一組參數值執行一次。 這可能會導致速度因為驅動程式可以接著準備計劃要執行一次針對每個參數集的陳述式。 它也可能會導致更簡單的應用程式程式碼。  
   
  此章節包含下列主題。  
   

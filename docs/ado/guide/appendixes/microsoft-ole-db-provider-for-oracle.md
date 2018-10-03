@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for Oracle
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66e2994479c222c5f050ce13e19eb3a9ed5c01e8
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 572920ccf63f35c74e39cd02a4b32c4fd85b0550
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698576"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]

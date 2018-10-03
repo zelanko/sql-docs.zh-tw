@@ -1,15 +1,12 @@
 ---
-title: PropertyName 屬性 （ServerNetworkProtocolProperty 類別） |Microsoft 文件
+title: PropertyName 屬性 （ServerNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - PropertyName Property (ServerNetworkProtocolProperty Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyName property
 ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b53b26572eddc59f5b4d433d4abee3ab2b9fb2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a9c28f36217e476b90f29b860e4d63d14a381f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638416"
 ---
 # <a name="propertyname-property-servernetworkprotocolproperty-class"></a>PropertyName 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.PropertyName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  A [ServerNetworkProtocolProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)物件，表示執行個體上網路通訊協定的屬性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 284aca27c2c75cb23d489e915acf1ef48a082c7a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019484"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650226"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

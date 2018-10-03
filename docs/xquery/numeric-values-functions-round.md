@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:round function
 - round function [XQuery]
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69c9e11d9cb6dda3aa50a2d49e3eb9c55b99a57b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eb480cfe18a7f58dfb86a943a4cbdd34fa801138
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683656"
 ---
-# <a name="numeric-values-functions---round"></a>數值函式-round
+# <a name="numeric-values-functions---round"></a>數值函式 - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回最接近引數且去掉小數部份的數字。 如果這樣的數字不止一個，則傳回最接近正無限數的那一個。 例如：  
