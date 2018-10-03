@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring database mirroring [SQL Server]
 - Database Mirroring Monitor [SQL Server], starting
 - database mirroring [SQL Server], monitoring
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: babdb33ab1d1c08fd0640fca103d03a5a916885b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 647ec47952f11f926c95a1f84ededdd0ad9fad75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836948"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>啟動資料庫鏡像監視器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

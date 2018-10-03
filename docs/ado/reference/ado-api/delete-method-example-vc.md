@@ -1,32 +1,29 @@
 ---
-title: 刪除方法的範例 （VC + +） |Microsoft 文件
+title: Delete 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Delete method [ADO], VC++ example
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a49f9bd940a1a5fb28cfd913366d8a7352ac8462
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 975140d00a0566f1776e7a3743d82fc3077b43ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835396"
 ---
-# <a name="delete-method-example-vc"></a>刪除方法的範例 （VC + +）
-這個範例會使用[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法中移除指定的記錄從[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+# <a name="delete-method-example-vc"></a>Delete 方法範例 (VC++)
+這個範例會使用[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法，移除指定的記錄，從[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -269,7 +266,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>輸入範例  
+## <a name="sample-input"></a>範例輸入  
   
 ```  
 TC4203  
@@ -298,5 +295,5 @@ BU7832
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Delete 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Delete 方法 (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

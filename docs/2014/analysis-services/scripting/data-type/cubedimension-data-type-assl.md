@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimension data type
 ms.assetid: 128ac790-65a1-4e35-b909-8dba2a61b24c
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02ef89f5dac200450faf8151a71aeae703e8b35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3ea688681749a2b22f8c457fb9a5eb8ee39d8eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059517"
 ---
 # <a name="cubedimension-data-type-assl"></a>CubeDimension 資料類型 (ASSL)
   定義代表維度與 Cube 之間關聯性的基本資料類型。  
@@ -58,14 +55,14 @@ ms.locfileid: "37220318"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[AllMemberAggregationUsage](../properties/aggregationusage-element-assl.md)，[註解](../collections/annotations-element-assl.md)，[屬性](../collections/attributes-element-assl.md)， [DimensionID](../properties/id-element-assl.md)，[階層](../collections/hierarchies-element-assl.md)， [HierarchyUniqueNameStyle](../properties/hierarchyuniquenamestyle-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [MemberUniqueNameStyle](../properties/memberuniquenamestyle-element-assl.md)，[名稱](../properties/name-element-assl.md)，[可見](../properties/visible-element-assl.md)，[翻譯](../collections/translations-element-assl.md)|  
 |衍生的元素|[維度](../objects/dimension-element-assl.md)([維度](../collections/dimensions-element-assl.md)的集合[Cube](../objects/cube-element-assl.md))|  
   

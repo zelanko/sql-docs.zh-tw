@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_changedistributiondb_TSQL
 - sp_changedistributiondb
 helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4056a3cc6e8dada73358a896dbe8925b09363166
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c2eaa7c6733e4c5354cf89fc5181290e77177cf4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743356"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

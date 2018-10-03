@@ -1,13 +1,11 @@
 ---
-title: 資料錄集和 SourceRecordset 屬性範例 (VBScript) |Microsoft 文件
+title: Recordset 和 SourceRecordset 屬性範例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cce066348b8bf711993f4296fcc38fec285e91a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 325b6f9a6adb53752b8f0229a0333934f179042a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288497"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737286"
 ---
-# <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>資料錄集和 SourceRecordset 屬性範例 (VBScript)
+# <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 和 SourceRecordset 屬性範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  下列範例示範如何設定必要的參數[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)預設商務物件，在執行階段。  
   
- 若要測試此範例中，剪下並貼上這段程式碼之間\<主體 > 和\</b > 標記以標準 HTML 文件並將其命名**RecordsetVBS.asp**。 ASP 指令碼會找出您的伺服器。  
+ 若要測試此範例中，剪下並貼上此程式碼之間\<主體 > 並\</b > 標記以正常的 HTML 文件並將它命名**RecordsetVBS.asp**。 ASP 指令碼會識別您的伺服器。  
   
 ```  
 <!-- BeginRecordSetVBS -->  

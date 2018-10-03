@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5628a706bd8de4a57f3539a934fa026048280bcc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 910b511796411207151b40933cf82c8ea06b9dab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821346"
 ---
 # <a name="set-domain-properties"></a>設定定義域屬性
 

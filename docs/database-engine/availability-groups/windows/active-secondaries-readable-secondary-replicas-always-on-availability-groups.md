@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 972b7bffab1ff6b4bf0710078d5c64a299ffe793
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 2aaca4afa75981ce56f68c4408f4dd9d820a4939
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777186"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

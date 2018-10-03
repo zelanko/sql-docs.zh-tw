@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65c6b32da5be52553d5a1485a6de653b2410c8ad
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 06d859b254c31d17b7b82ce24638ee6c16ca437c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854716"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>刪除資料列 (適用於 Excel 的 MDS 增益集)
 

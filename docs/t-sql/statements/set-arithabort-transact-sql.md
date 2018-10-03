@@ -5,9 +5,7 @@ ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ARITHABORT_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - ending queries [SQL Server]
 - stopping queries
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61494caca256096088290ba2f02da24205628ede
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8c00302049a1831a7126484e953fc2ce384724bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068401"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841486"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

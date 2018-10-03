@@ -1,40 +1,37 @@
 ---
-title: SELECT 陳述式的限制 |Microsoft 文件
+title: SELECT 陳述式的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, SELECT statement limitations
 - SELECT statement limitations [ODBC]
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00490256cb4da90fc9384f696435419266a1a3d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26bf17596dbd3279498df2edcee7636db95ae139
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767216"
 ---
-# <a name="select-statement-limitations"></a>SELECT 陳述式的限制
-無法混合的彙總函式的資料行具有非彙總資料行中的 SELECT 陳述式。  
+# <a name="select-statement-limitations"></a>SELECT 陳述式限制
+彙總函式資料行不能混合具有非彙總資料行的 SELECT 陳述式。  
   
- 有 GROUP BY 子句的 SELECT 陳述式的選取清單只能有 GROUP BY 子句中的運算式或設定函式。  
+ 中有 GROUP BY 子句的 SELECT 陳述式的選取清單只能有 GROUP BY 子句中的運算式或集合函數。  
   
- 不支援使用星號 （以選取所有資料行） 中包含 GROUP BY 子句的 SELECT 陳述式。 您必須指定要選取的資料行名稱。  
+ 不支援以星號 （選取所有資料行） 包含 GROUP BY 子句的 SELECT 陳述式中使用。 必須指定要選取的資料行的名稱。  
   
- 不支援的垂直列在 SELECT 陳述式中使用。 如果您需要參考到包含直條的資料值，請使用 SELECT 陳述式中的參數。  
+ 不支援垂直列在 SELECT 陳述式中使用。 如果您需要參考到包含直條的資料值，請使用 SELECT 陳述式中的參數。  
   
- 當 SELECT 陳述式中使用的資料行別名，"as"這個字必須在前面的別名。 例如，"做為 SELECT col1 從 b。 」 不含"於"陳述式會傳回錯誤。  
+ 當 SELECT 陳述式中使用的資料行別名，"as"這個字必須在前面的別名。 例如，"做為 SELECT col1 b。 」 不含"於"陳述式會傳回錯誤。  
   
- 如果輸入了不正確的資料行名稱是 SELECT 陳述式，將 SQLSTATE 07001，「 錯誤數目的參數，"會傳回錯誤而 SQLSTATE S0022 錯誤，「 資料行找不到。 」  
+ 如果 SELECT 陳述式輸入了不正確的資料行名稱，則 SQLSTATE 07001，「 錯誤號碼的參數，"會傳回錯誤而非 SQLSTATE S0022 錯誤，「 資料行找不到。 」  
   
- 使用 Microsoft Excel 驅動程式時，如果空字串插入資料行，則為空字串會轉換成 null 值;搜尋 SELECT 陳述式執行時以空字串的 WHERE 子句中該資料行上，將會失敗。
+ 使用 Microsoft Excel 驅動程式時，如果空字串插入資料行，則為空字串會轉換成 null 值;搜尋的 SELECT 陳述式，會用 WHERE 子句中的空字串執行在該資料行，將會失敗。

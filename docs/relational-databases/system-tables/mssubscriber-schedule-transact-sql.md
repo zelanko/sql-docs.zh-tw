@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriber_schedule
@@ -19,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1424947221413447e0277df4c10b17c0ea08d8b2
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 91b04c358adcce0aa1cb02b702096d215298a11a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856486"
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

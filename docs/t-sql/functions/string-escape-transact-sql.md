@@ -5,9 +5,7 @@ ms.date: 02/25/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STRING_ESCAPE
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STRING_ESCAPE function
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75eaf0510fc4c897d6ecb473660a71bf31842e7a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8328c6bc65d7b0f05e9ce38f908b4f3d64b25b82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755203"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

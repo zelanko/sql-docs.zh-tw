@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ICommand [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: dda8cc2a950d8fc699960387e2a4d5033985cf4c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0b11b890f89ba136de9f22a9256acd1069b97a49
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038511"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721096"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

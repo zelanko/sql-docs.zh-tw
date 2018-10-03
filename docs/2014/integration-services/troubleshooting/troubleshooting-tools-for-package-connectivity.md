@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15f2e78fd2a3cbc88f1d3668fde27c5cdb88924
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e8059fcb984b4b2d6450cefaa20e5e01e06fb0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178075"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051198"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>疑難排解工具封裝連接
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的功能及工具，可以讓您用於疑難排解封裝與封裝擷取及載入資料之資料來源之間的連接。  

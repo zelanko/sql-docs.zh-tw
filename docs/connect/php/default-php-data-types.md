@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5778bdbfa00d3280e6257572a6c5357b23945b9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754660"
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

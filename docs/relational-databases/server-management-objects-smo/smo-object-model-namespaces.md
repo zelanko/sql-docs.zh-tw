@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - object models [SMO]
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - namespaces [SMO]
 - SQL Server Management Objects, namespaces
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b7756aa45e1b950812f8cff17fecb29b3693a12
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 717b2171b535405cc0bc075ceafd50107fb68bed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632646"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 物件模型命名空間
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - VPNs [SQL Server replication]
 - Web publishing [SQL Server replication], VPNs
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b26f84367d85a1f9e2a3d210b35d6c94b1aa15d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c8e44747c3c59a76fe5bd9947eec0bb569926d7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648516"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 透過網際網路發行資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

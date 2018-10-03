@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049580"
 ---
 # <a name="event-notifications"></a>事件通知
   事件通知會傳送事件的詳細資訊給 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務。 事件通知會將這些事件的資訊傳送給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服務，以回應各種 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料定義語言 (DDL) 陳述式和 SQL 追蹤事件。  

@@ -1,12 +1,10 @@
 ---
-title: 擴充的事件動態管理檢視 |Microsoft 文件
+title: 擴充的事件動態管理檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - extended events [SQL Server], dynamic management objects
 - dynamic management objects (SQL Server)
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5825b80de77d10d74a193cb4f07a33e720c6fa6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ccab5287b4c986bdb6f22a34b80d3736a1f967d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804209"
 ---
 # <a name="extended-events-dynamic-management-views"></a>擴充的事件動態管理檢視
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

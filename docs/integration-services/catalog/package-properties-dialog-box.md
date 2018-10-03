@@ -5,24 +5,21 @@ ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.ispackageprop.general.f1
 - sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47fac0923182e5c081f5c7ec76f3e51d17fff5b8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5d13838dc09757cecc03fd3520ad327546a85e10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753466"
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
   使用 [封裝屬性] 對話方塊，檢視儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上之封裝的屬性。  

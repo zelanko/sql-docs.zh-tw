@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1eddc05cffbeb9fec926a47e4a9816b54434d48e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 07cb22de2483722af05324aa3c3524c2ee7a01c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40396238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053451"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>準備實作資料處理延伸模組
   在您實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之前，應該定義要實作的介面。 您可能會想要提供整組介面的延伸模組特定實作，或者您可能會直接將實作的集點放在子集上，例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 與 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 介面，其中用戶端主要會與作為 **DataReader** 物件的結果集互動，而且將使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理延伸模組作為結果集與資料來源之間的橋樑。  

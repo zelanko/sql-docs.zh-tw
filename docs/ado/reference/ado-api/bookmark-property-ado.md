@@ -1,13 +1,11 @@
 ---
-title: 書籤屬性 (ADO) |Microsoft 文件
+title: Bookmark 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,39 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e645300f604e1880f98fd8d99cea8599062f72f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 61fa4619bd70b170f13dbc879748364f019f8bdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716296"
 ---
-# <a name="bookmark-property-ado"></a>書籤 屬性 (ADO)
-指出目前的記錄中的唯一識別書籤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件或設定目前資料錄**資料錄集**有效書籤所識別的記錄中的物件。  
+# <a name="bookmark-property-ado"></a>Bookmark 屬性 (ADO)
+表示唯一識別目前的記錄中的書籤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，或設定目前資料錄**資料錄集**物件的有效書籤所識別的記錄。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回**Variant**評估為有效的書籤的運算式。  
   
 ## <a name="remarks"></a>備註  
- 使用**書籤**儲存目前記錄的位置並隨時返回至該記錄的屬性。 只在可用的書籤**資料錄集**支援書籤功能的物件。  
+ 使用**書籤**儲存目前記錄的位置，並隨時返回至該記錄的屬性。 書籤是僅適用於**資料錄集**支援書籤功能的物件。  
   
- 當您開啟**資料錄集**物件，其記錄的每個都有唯一的書籤。 若要儲存目前的資料錄的書籤，來指定的值**書籤**變數的屬性。 若要快速回到該記錄移動到不同記錄之後，任何時候，設定**資料錄集**物件的**書籤**屬性設為該變數的值。  
+ 當您開啟**資料錄集**物件，其記錄的每個都有唯一的書籤。 若要儲存目前的資料錄的書籤，請將指派的值**書籤**給變數的屬性。 若要快速移至不同的記錄之後隨時返回至該記錄，將**Recordset**物件的**書籤**屬性設為該變數的值。  
   
- 使用者可能無法檢視書籤的值。 此外，使用者不應預期要直接比較，因為兩個參考同一筆記錄的書籤可能有不同的值的書籤。  
+ 使用者可能無法檢視書籤的值。 此外，使用者不應該指望書籤，以相當直接，因為兩個參考同一筆記錄的書籤可能會有不同的值。  
   
- 如果您使用[複製](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立一份**資料錄集**物件**書籤**原始和重複的屬性設定**資料錄集**物件相同，且您可以交換使用。 不過，您無法使用從不同的書籤**資料錄集**物件交替使用，即使它們已建立從相同來源或命令。  
+ 如果您使用[複製品](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立一份**資料錄集**物件**書籤**的原始和重複的屬性設定**資料錄集**物件相同，且您可以交換使用。 不過，您無法使用從不同的書籤**資料錄集**交替，物件，即使它們已建立從相同的原始碼或命令。  
   
 > [!NOTE]
->  **遠端資料服務使用量**使用用戶端時**資料錄集**物件**書籤**屬性一律為可用。  
+>  **遠端資料服務使用量**用戶端上使用時**資料錄集**物件**書籤**屬性一律會是可用。  
   
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [BOF、 EOF 和書籤屬性範例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF、 EOF 和書籤屬性範例 （VC + +）](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF、 EOF 和 Bookmark 屬性範例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF、 EOF 和 Bookmark 屬性範例 （VC + +）](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
  [Supports 方法](../../../ado/reference/ado-api/supports-method.md)

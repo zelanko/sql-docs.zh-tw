@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9108ab6ac330086acab16a73550d5fcab5d3970
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 7650a51e21cd6d1b6a8d4bbacddf6cabdb9cc1e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627906"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>增進 JDBC 驅動程式的效能與可靠性
 

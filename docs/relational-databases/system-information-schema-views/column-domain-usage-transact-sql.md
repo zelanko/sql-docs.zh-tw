@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLUMN_DOMAIN_USAGE_TSQL
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.COLUMN_DOMAIN_USAGE view
 - COLUMN_DOMAIN_USAGE view
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
-caps.latest.revision: 37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0edc7373b10ae9819858f65a703a86792cf14b2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ddbb3a6e65bbd8e94f9d827a804986ae817c2f00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752217"
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

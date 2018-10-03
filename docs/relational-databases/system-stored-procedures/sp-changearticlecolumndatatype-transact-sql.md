@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_changearticlecolumndatatype
 - sp_changearticlecolumndatatype_TSQL
@@ -22,12 +17,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 017131fd7bda406fdee178d8e36ab5443c487d4d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d9f24f814b7ca4b160c51783f7923274fa33614e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734936"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

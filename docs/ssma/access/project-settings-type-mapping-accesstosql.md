@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access data types
 - data types, default mappings
@@ -19,16 +14,15 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 052681d249d3c93e54c23ebcf2b42cadf5724f2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855106"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 （類型對應） (AccessToSQL)
 型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱 <<c0> [ 對應來源和目標資料型別](mapping-source-and-target-data-types-accesstosql.md)。  

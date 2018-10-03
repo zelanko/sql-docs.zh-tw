@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3a96ad7621c8db45d53c211976b24a088376dcd8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 156b4e773a56095a3f205017aabca8514e3bbbcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836696"
 ---
 # <a name="merge-conflicts-master-data-services"></a>合併衝突 (Master Data Services)
 

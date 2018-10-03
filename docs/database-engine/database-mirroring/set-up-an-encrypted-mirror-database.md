@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cryptography [SQL Server], database mirroring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - mirror database [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b8ac0e68b60e44dcb18e342418dffa10365e17e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 1a76f15ff644a23617c006bfa282ec609640891b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784436"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>設定加密鏡像資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

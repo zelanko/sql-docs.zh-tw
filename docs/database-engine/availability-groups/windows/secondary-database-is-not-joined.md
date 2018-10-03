@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.agdashboard.drp2joined.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3a8fc17f8d7d33cba324dba3802dd376224a750
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ea90846cec7e49142ea0ee11faa21c1b1cc833bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675872"
 ---
 # <a name="secondary-database-is-not-joined"></a>次要資料庫未加入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "34768544"
 |**類別目錄**|**警告**|  
 |**Facet**|可用性資料庫|  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  此原則會檢查次要資料庫 (也稱為「次要資料庫複本」) 的聯結狀態。 當資料庫複本未聯結時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server]
 - .NET Framework [SQL Server]
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
-caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: df157328c0718a55dae569503e1e5f6bd424131e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a3128f207468fb0b9c5c4f4b4ee5ffbc51243bad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768935"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Common Language Runtime (CLR) 整合程式設計概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

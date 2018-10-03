@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], about encryption
 - security [SQL Server], encryption
 - cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-caps.latest.revision: 16
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 75b06f99fc9aee1f28c014b3ce048302d770ebd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5838d497808e9a251522536a00d590403674eda
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053768"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
   加密是透過金鑰或密碼的使用讓資料模糊化的程序。 這樣可以讓資料變成毫無用處，而不需要對應的解密金鑰或密碼。 加密並不能解決存取控制問題。 但是，若發生存取控制失靈的情形，加密可限縮資料遺失的風險以增強安全性。 例如，只要資料已加密，即使資料庫主機電腦設定不當而遭駭客取得敏感性資料，失竊的資訊就可能毫無用處。  

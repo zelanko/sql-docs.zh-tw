@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c275128a8e3c2bbce6165486e256fc5b34d402d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 87093ee870549307e9395c013b2f8727f047ae4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811286"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  **Sp_attach_db**先前卸離資料庫伺服器使用明確的資料庫上應該只執行預存程序**sp_detach_db**作業或對已複製的資料庫。 如果您必須指定 16 個以上的檔案，請使用 CREATE DATABASE *database_name* FOR ATTACH 或 CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  

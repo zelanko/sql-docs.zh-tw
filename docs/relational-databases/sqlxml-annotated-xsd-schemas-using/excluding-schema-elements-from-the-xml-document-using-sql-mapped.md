@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c58a836888d5738040710a00cd383e3a80779eaa
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a93d62917efb4bb53c1d5a699109844e1d358bb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837096"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>使用 sql:mapped 從 XML 文件排除結構描述項目
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

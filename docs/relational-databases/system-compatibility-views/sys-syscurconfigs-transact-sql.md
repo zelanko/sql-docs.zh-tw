@@ -1,14 +1,11 @@
 ---
-title: sys.syscurconfigs (TRANSACT-SQL) |Microsoft 文件
+title: sys.syscurconfigs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscurconfigs
@@ -21,25 +18,25 @@ helpviewer_keywords:
 - sys.syscurconfigs compatibility view
 - syscurconfigs system table
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74245c3062a8ee778de5fa8ad478109e4779e576
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ef0f49229ab374a0ca9e2dce12d7fa6ea5f59bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757690"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含每個目前組態選項各一個項目。 同時，此檢視表含有描述組態結構的四個項目。 **syscurconfigs** ，會動態建立當使用者查詢。 如需詳細資訊，請參閱[sys.sysconfigures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)。  
+  包含每個目前組態選項各一個項目。 同時，此檢視表含有描述組態結構的四個項目。 **syscurconfigs** ，會動態建立當使用者查詢。 如需詳細資訊，請參閱 < [sys.sysconfigures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**value**|**int**|使用者可以修改的變數值。 只有在執行 RECONFIGURE 時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 才會使用這個項目。|  
 |**config**|**smallint**|組態變數號碼。|  

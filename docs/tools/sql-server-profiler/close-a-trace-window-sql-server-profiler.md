@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - trace window [SQL Server]
 - closing trace window
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47dc73850a63a293b69466d42284e54a8ffdb79e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4aa8ac7d352a7c89d79f8c97cfd480a482da7a4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38048317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681166"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>關閉追蹤視窗 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

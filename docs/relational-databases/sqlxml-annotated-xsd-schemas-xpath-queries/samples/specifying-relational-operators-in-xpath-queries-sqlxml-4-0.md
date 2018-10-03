@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], relational operators
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - XPath operators [SQLXML]
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7649838a15e351d0e21953df754ecf8acaa98cc1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a3b14d72f484ec83b48f0f02b07dc80b923fc0b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837126"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

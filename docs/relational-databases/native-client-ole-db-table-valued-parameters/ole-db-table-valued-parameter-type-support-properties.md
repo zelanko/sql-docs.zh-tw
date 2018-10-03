@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85a20c719b2e1e01be1b11bfc40c78a576268f12
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a844bf7f3e8ab474b9eb9c0cfa85b2b75ffcadc7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776216"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737256"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC Driver 的版本資訊
 
@@ -114,7 +111,8 @@ Microsoft JDBC Driver 6.4 for SQL Server 是完全符合 JDBC 規格 4.1 和 4.2
 
 JDBC 驅動程式現在支援搭配 SQL Server 的 sql_variant 資料類型。 Sql_variant 也支援功能，例如資料表值參數 (TVP) 和大量複製具有以下限制：
 
-1. 日期值： 當使用 TVP 填入資料表，其中包含儲存在 sql_variant 資料行中的 datetime/smalldatetime/date 值，對結果集呼叫 Getdatetime 方法無效，且會擲回下列例外狀況： `java java.lang.String cannot be cast to java.sql.Timestamp`因應措施： 請改用 「 getstring （）"或"getobject （）"的方法。
+1. 日期值： 當使用 TVP 填入資料表，其中包含儲存在 sql_variant 資料行中的 datetime/smalldatetime/date 值，對結果集呼叫 Getdatetime 方法無效，且會擲回下列例外狀況： `java java.lang.String cannot be cast to java.sql.Timestamp`
+    因應措施：請改用 "getString()" 或 "getObject()"。
 
 2. 針對 Null 值搭配 SQL 變數使用 TVP
 

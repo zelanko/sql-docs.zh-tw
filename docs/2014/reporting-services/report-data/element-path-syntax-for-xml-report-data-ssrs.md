@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcb0036fbf6d0c3f5af18d044d389bc8673cd5ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e43bf28f3908c50bb22fb1d426c84c943321c376
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058888"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
   在「報表設計師」中，可藉由定義區分大小寫的元素路徑來指定要用於 XML 資料來源中之報表的資料。 元素路徑會指出在 XML 資料來源中周遊 XML 階層式節點及其屬性的方法。 若要使用預設的元素路徑，請將資料集查詢或 XML `ElementPath` (屬於 XML `Query`) 保留空白。 由 XML 資料來源擷取資料時，具有文字值的元素節點以及元素節點屬性會變成結果集內的資料行。 執行查詢時，節點及屬性的值會變成資料列資料。 這些資料行會以資料集欄位集合的方式顯示在 [報表資料] 窗格中。 此主題描述元素路徑語法。  
@@ -100,7 +97,7 @@ XMLLocalName :: =
     |單|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
     |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-    |Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
+    |資料表|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
     |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
     |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
@@ -125,7 +122,7 @@ XMLLocalName :: =
     |單|Qty|  
     |-----------|---------|  
     |Chair|6|  
-    |Table|1|  
+    |資料表|1|  
     |Sofa|2|  
     |EndTables|2|  
   

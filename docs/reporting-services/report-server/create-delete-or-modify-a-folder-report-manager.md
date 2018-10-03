@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8bc029591a9c693016cfd512190bb5128fc8b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 437116ae427f9d5ed6492962ad290b496f7b1090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666836"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>建立、刪除或修改資料夾 (報表管理員)
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
@@ -34,7 +33,7 @@ ms.locfileid: "43279980"
   
      [新增資料夾] 頁面隨即開啟。  
   
-3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：; ? : \@ & = + , $ / * < > |。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
+3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：\;\? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
   
 4.  選擇性地輸入描述。  
   

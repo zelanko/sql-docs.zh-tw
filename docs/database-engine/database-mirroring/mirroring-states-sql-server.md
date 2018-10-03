@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SUSPENDED state
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c28160ced7c7d4d038bf6bb388f0b980cffc8171
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 6b92cc60a6a5d84eb2971b5f03f506688310db86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798487"
 ---
 # <a name="mirroring-states-sql-server"></a>鏡像狀態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "35311957"
   
  可能的資料庫鏡像狀態如下：  
   
-|鏡像狀態|描述|  
+|鏡像狀態|Description|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|鏡像資料庫的內容落後於主體資料庫的內容。 主體伺服器將記錄檔記錄傳送至鏡像伺服器，將所做的變更套用到鏡像資料庫來向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，資料庫處於 SYNCHRONIZING 狀態。 主體伺服器正為資料庫提供服務，而鏡像伺服器則試圖趕上。|  
 |SYNCHRONIZED|當鏡像伺服器足以追趕上主體伺服器時，鏡像狀態就會變更為 SYNCHRONIZED。 只要主體伺服器繼續傳送變更到鏡像伺服器，而鏡像伺服器也繼續將變更套用到鏡像資料庫，資料庫便會保持在這種狀態。<br /><br /> 如果交易安全性設定為 FULL，SYNCHRONIZED 狀態將可同時支援自動容錯移轉和手動容錯移轉，而且容錯移轉之後不會遺失任何資料。<br /><br /> 如果關閉交易安全性，永遠都有可能遺失部分資料，即使是在 SYNCHRONIZED 狀態也是如此。|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa09e2c86581214a1ae001c90dba640276920aba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e612fefcebd0537d13a4377484bbaddc04d086a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064518"
 ---
 # <a name="analysis-of-data-flow"></a>資料流程分析
   您可以使用[catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`資料庫檢視，分析封裝的資料流程。 每當資料流程元件傳送資料至下游元件，此檢視就會顯示一個資料列。 您可以使用這項資訊深入了解傳送至每個元件的資料列。  

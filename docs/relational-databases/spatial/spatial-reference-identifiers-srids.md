@@ -4,29 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Spatial Reference Identifiers (SRIDs)
 - geodetic spatial data [SQL Server], identifiers
 - SRID
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5a4713a4376b2c37f7600c69741e315c8cf982c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6d56b3cb3291d4b4d403d6a6983b58953aa49af5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779067"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>空間參考識別碼 (SRID)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

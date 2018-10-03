@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], solutions
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b307be56b6711f4c51b6bf7b96d03d946296e57
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061258"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>從原始檔控制中開啟方案和專案
   您可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]直接從原始檔控制開啟方案或專案。 當您從原始檔控制中開啟方案時，[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境會自動擷取方案的最後版本，將它複製到您指定的位置中。  

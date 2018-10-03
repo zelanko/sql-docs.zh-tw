@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29a67f467efeae2e196589c1524c55ae07799bab
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 29395aef09da3ba92d5c096266bbf11f9a439350
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839316"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 記錄檔和來源
   報表伺服器和報表伺服器環境會使用各種記錄目的地，以記錄有關伺服器作業與狀態的資訊。 記錄有兩個基本的類別目錄，也就是執行記錄和追蹤記錄。 執行記錄包含有關報表執行統計資料、稽核、效能診斷與最佳化的資訊。 追蹤記錄是有關錯誤訊息與一般診斷的資訊。  

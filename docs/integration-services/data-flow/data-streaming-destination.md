@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc33ebe8c38299e8b3375cc6f19aec47d859c76f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332802"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771576"
 ---
 # <a name="data-streaming-destination"></a>資料流目的地
   **資料流目的地** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目的地元件，可讓 **OLE DB Provider for SSIS** 取用 SSIS 封裝的輸出做為表格式結果集。 您可以建立連結的伺服器來使用 OLE DB Provider for SSIS，然後在連結的伺服器上執行 SQL 查詢來顯示 SSIS 封裝所傳回的資料。  
@@ -71,7 +68,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>[元件屬性] 索引標籤  
  此索引標籤具有以下可以編輯的欄位：  
   
-|欄位|描述|  
+|欄位|Description|  
 |-----------|-----------------|  
 |[屬性]|封裝中資料流目的地元件的名稱。|  
 |ValidateExternalMetadata|指出元件是否在設計階段就使用外部資料來源驗證。 如果設定為 false，對外部資料來源的驗證會延遲到執行階段。|  

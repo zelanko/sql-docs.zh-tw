@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 'TM: Save Tran Starting event class'
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09867cd1b9ed15d5f42ac120bf97dbdf81000170
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 75c263439a5da45e4a6c751d3a669350b29f153f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821726"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "43076188"
 |SessionLoginName|**nvarchar**|引發工作階段的使用者登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|**datetime**|事件的開始時間 (如果可以取得的話)。|14|是|  
-|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|TextData|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |TransactionID|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|**bigint**|描述目前交易的 Token。|50|是|  
   

@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86a841e4e60e0c049bfe1aec0d09960298bb58f0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 22511322e7480b5123b05d2888a90a6032f86b74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668856"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>針對 Reporting Services 報表問題進行疑難排解
 本主題可協助您對下列問題進行疑難排解： [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] 報表設計、預覽報表、以原生模式或 SharePoint 模式將報表發行至報表伺服器、在報表伺服器上檢視報表，或是將報表匯出為不同的檔案格式。  

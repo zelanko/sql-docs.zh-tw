@@ -5,23 +5,20 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94aec2383d5e52a07b446074401da7ec12545c99
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 617eb6525d4f4249918f36d12f87d55788a6e80c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695776"
 ---
 # <a name="data-type-functions-transact-sql"></a>資料類型函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

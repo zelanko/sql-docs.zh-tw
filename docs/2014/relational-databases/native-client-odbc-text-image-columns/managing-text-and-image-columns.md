@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - text columns [ODBC]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0989157eabe987ae8d1bdac22deb25ad2c6d028
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052032"
 ---
 # <a name="managing-text-and-image-columns"></a>管理 Text 和 Image 資料行
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **文字**， **ntext**，以及**映像**資料 （也稱為 long 資料） 是字元或二進位字串資料類型，可保留資料值太大而無法放入**char**， **varchar**，**二進位**，或**varbinary**資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **文字**資料類型會對應到 ODBC SQL_LONGVARCHAR 資料類型;**ntext**對應到 SQL_WLONGVARCHAR; 並**映像**對應到 SQL_LONGVARBINARY。 某些資料項目 (例如長篇的文件或大型的點陣圖) 可能太大，而無法適當地儲存到記憶體中。 若要擷取 long 資料，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]循序分批[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式可讓應用程式呼叫[SQLGetData](../native-client-odbc-api/sqlgetdata.md)。 若要傳送循序部分的 long 資料，應用程式可以呼叫[SQLPutData](../native-client-odbc-api/sqlputdata.md)。 在執行時間傳送資料所使用的參數就是所謂的資料執行中參數。  

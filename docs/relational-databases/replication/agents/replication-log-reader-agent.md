@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1bca3b8acd26a4e2527b8e721a7da3a073ee4c0
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1f269ce06c4ebc8f3433f21b57f1bac1b2d237cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854746"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +97,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  這是建立連接時，記錄讀取器代理程式所使用的安全通訊端層 (SSL) 加密層級。  
   
-|EncryptionLevel 值|描述|  
+|EncryptionLevel 值|Description|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
@@ -115,7 +111,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  指定在記錄讀取器作業期間記錄的記錄量。 您可以透過選取 1，盡量減少記錄作業的效能影響。  
   
-|HistoryVerboseLevel 值|描述|  
+|HistoryVerboseLevel 值|Description|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|預設值。 一律更新相同狀態的上一個記錄訊息 (啟動、進度、成功等等)。 如果沒有任何具有相同狀態的上一筆記錄存在，便插入新的記錄。|  
@@ -147,7 +143,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  指定輸出是否應該詳細。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|僅列印錯誤訊息。|  
 |**1**|列印所有代理程式進度報表訊息。|  

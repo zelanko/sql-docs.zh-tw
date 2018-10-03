@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11713e07fed3cc9d80e3e163e8b78551e75a6166
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 954d386de15ffe36236e2023e72e70bfc8a22357
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062048"
 ---
 # <a name="additional-script-component-examples"></a>額外的指令碼元件範例
   指令碼元件是您可以在封裝的資料流程中使用的可設定工具，幾乎可滿足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的來源、轉換和目的地未能達成的任何需求。 本節包含指令碼元件程式碼範例，以示範各種類型的可用功能。  

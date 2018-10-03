@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/18/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef404cccb5dfa1430c36e0bd495b0b6889e82ff2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d1779b8269cb0d30253dc8a2bfde1c1d95ca1115
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822576"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>資料庫和檔案目錄檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

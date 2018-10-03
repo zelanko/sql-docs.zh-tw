@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_policy_execution_history_details
@@ -21,12 +18,12 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 252c61b6fbaf5635361df79f89a4f9ec7ec66e50
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5020ae49c3b923c04ded1469915f2e5e5c1e412f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031834"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844616"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 07/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC HELP
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - DBCC statement syntax information
 - DBCC HELP statement
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
-caps.latest.revision: 33
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 83411da2404093e7187bedc26cfd72ddb3dc4341
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6f12c565bfb53c5d22dcb4255482d7e1c1713838
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797336"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

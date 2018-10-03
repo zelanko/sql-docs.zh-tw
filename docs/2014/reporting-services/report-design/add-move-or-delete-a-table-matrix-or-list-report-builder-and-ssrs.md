@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b6154cae9ce3fcc2878797bce63ccf1e1f59edd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f22f6ee3509619e1e9ad44959684eda90952c2f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065068"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
   資料區會顯示報表資料集中的資料。 資料區包括資料表、矩陣、清單、圖表和量測計。 若要讓某個資料區以巢狀結構的方式置於另一個資料區內，請個別加入每一個資料區，然後將子資料區拖曳到父資料區。  

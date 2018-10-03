@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d559e91fc27a3c16383efed9de78edeaf70aa82
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ec27288ab12d74dd89a34f5c238d77c507913cf1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847716"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting 方法 - SetVirtualDirectory
   針對給定的應用程式設定虛擬目錄的名稱。  

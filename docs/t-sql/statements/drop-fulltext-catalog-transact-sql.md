@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_FULLTEXT_CATALOG_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - deleting full-text catalogs
 - DROP FULLTEXT CATALOG statement
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 977cfb891fcdb7ddb3c6bac5739c2a10ff7286f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bcaaf027081bbd8713d52cc2642e1bacb460278c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847356"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,29 +1,26 @@
 ---
-title: 在執行階段建構 SQL 陳述式 |Microsoft 文件
+title: 在執行階段建構 SQL 陳述式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - run time constructed SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18f5a02bdcec575ac1362d3f656480eb0ab9b4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914293"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848096"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>在執行階段建構 SQL 陳述式
 通常執行臨機操作分析的應用程式在執行階段建立 SQL 陳述式。 例如，試算表可能會允許使用者選取要從中擷取資料的資料行：  
@@ -72,8 +69,8 @@ int main() {
 }  
 ```  
   
- 應用程式通常在執行階段建構 SQL 陳述式的另一個類別是應用程式開發環境。 不過，在建構陳述式是硬式編碼它們正在建置，其中它們可以通常最佳化和測試應用程式中。  
+ 應用程式通常在執行階段建構 SQL 陳述式的另一個類別是應用程式開發環境。 不過，在建構陳述式是硬式編碼在自己進行建置，其中它們通常最佳化並測試應用程式中。  
   
- 在執行階段建構 SQL 陳述式的應用程式可以向使用者提供極大的彈性。 可以從上述的範例中，即使不支援這類常見的作業為看出**其中**子句， **ORDER BY**子句，或是聯結，在執行階段建構 SQL 陳述式是相當複雜比硬式編碼的陳述式。 此外，測試這類應用程式會有問題因為它們可以建立任意數目的 SQL 陳述式。  
+ 在執行階段建構 SQL 陳述式的應用程式可以向使用者提供極大的彈性。 從上述的範例中，即使不支援這類常見作業中可以看出**何處**子句， **ORDER BY**子句或在執行階段建構 SQL 陳述式的聯結會大幅提高複雜比硬式編碼的陳述式。 此外，測試這類應用程式會有問題因為它們可以建構任意數目的 SQL 陳述式。  
   
- 在執行階段建構 SQL 陳述式的潛在缺點是，花費更多的時間比使用硬式編碼的陳述式建構的陳述式。 幸運的是，這是很少的問題。 這類應用程式通常是大量的使用者介面資源，以及應用程式花的時間建構 SQL 陳述式是通常只有少量相較於使用者耗費輸入準則的時間。
+ 在執行階段建構 SQL 陳述式的潛在缺點是它需要更多的時間，來建構陳述式，比使用硬式編碼的陳述式。 幸運的是，這並不是問題。 這類應用程式通常處理大量的使用者介面，且應用程式花時間建構 SQL 陳述式通常很小相較於是使用者耗費輸入準則的時間。

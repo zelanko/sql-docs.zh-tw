@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - dropping tables
 - queries [SQL Server], tables
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fba7411b5e78b42076fbba1e5dcb3e576a6c68b
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3fecaa0fb1b4bb68ee2decddd50e1410313f17fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056198"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>移除查詢的資料表 (Visual Database Tools)
   您可以從查詢移除資料表或任何資料表值物件。  

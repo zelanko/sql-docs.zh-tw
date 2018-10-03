@@ -5,13 +5,8 @@ ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- Azure SQL Database
-- SQL Server (starting with 2008)
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - DENY statement, XML schema collections
 - schema collections [SQL Server], permissions
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6ee6b5fdd1ac8d692438bcb6de07dc7240b6032
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 0fb17be22b1dc970b83ca28d1fec44afd4e80f9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36245270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781297"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,7 +108,7 @@ DENY permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 XML 結構描述集合的 CONTROL。 如果使用 AS 選項，指定的主體必須擁有 XML 結構描述集合。  
   
 ## <a name="examples"></a>範例  

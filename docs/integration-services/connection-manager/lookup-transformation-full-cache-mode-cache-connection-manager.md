@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 54802ce4096caf85d2d5a33eb1e122b7e82057bc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bdf93e2f4da62ffa7a1cfd6edac11955f3bd757f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853577"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  

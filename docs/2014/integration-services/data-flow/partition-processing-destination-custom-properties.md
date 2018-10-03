@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c8eda0dd112471cdc156a530cf750a55fabd3b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9139ff2af92d861f356514e9e78073c3e858ab81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048588"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>資料分割處理目的地自訂屬性
   資料分割處理目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  

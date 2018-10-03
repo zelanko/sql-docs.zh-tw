@@ -5,8 +5,6 @@ ms.date: 07/06/2017
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], renaming
@@ -16,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3eb3d13f640f8c4049f36225bf8a59434cd6ed
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7d32abef9d8e9a80400dc6136aaecd9cfe168eb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058721"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712576"
 ---
 # <a name="rename-a-stored-procedure"></a>重新命名預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

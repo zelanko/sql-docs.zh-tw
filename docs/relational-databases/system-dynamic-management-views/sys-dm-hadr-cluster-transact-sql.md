@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_cluster (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_hadr_cluster (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_cluster
@@ -20,30 +18,30 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bbdbf9cf7e51371568ad160b1dd8c1f5d05a1c0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2c4e66ed6471ec0959cfece477af4b939fb129c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748236"
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果 Windows Server 容錯移轉叢集 (WSFC) 節點所裝載的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟用[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]有 WSFC 仲裁， **sys.dm_hadr_cluster**傳回一個資料列會公開叢集名稱以及資訊有關此仲裁。 如果 WSFC 節點沒有仲裁，則不傳回任何資料列。  
+  如果 Windows Server 容錯移轉叢集 (WSFC) 節點所裝載的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已啟用[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]有 WSFC 仲裁**sys.dm_hadr_cluster**傳回一個資料列會公開叢集名稱和資訊有關此仲裁。 如果 WSFC 節點沒有仲裁，則不傳回任何資料列。  
  > [!TIP]
- > 從開始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，這個動態管理檢視支援 Alwayson 容錯移轉叢集執行個體除了 Alwayson 可用性群組。
+ > 從開始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，此動態管理檢視支援 Alwayson 容錯移轉叢集執行個體除了 Always On 可用性群組。
 
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|WSFC 叢集的名稱，該叢集會裝載啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 執行個體。|  
 |**quorum_type**|**tinyint**|這個 WSFC 叢集所使用的仲裁類型，可為下列其中一個值：<br /><br /> 0 = 節點多數。 此仲裁設定可維持一半節點的失敗數 (四捨五入) 減一。 例如，在七個節點的叢集上，這個仲裁設定可以維持三個節點失敗數。<br /><br /> 1 = 節點與磁碟多數。 如果磁碟見證依然在線上，此仲裁設定可維持一半節點的失敗數 (四捨五入)。 例如，如果在六個節點的叢集中，有磁碟見證處於線上，則可維持三個節點失敗數。 如果磁碟見證離線或失敗，此仲裁設定可維持一半節點的失敗數 (四捨五入) 減一。 例如，如果在六個節點的叢集中，有失敗的磁碟見證，則可維持兩個節點 (3-1=2) 失敗數。<br /><br /> 2 = 節點與檔案共用多數。 此仲裁設定的運作方式類似於「節點與磁碟多數」，但是會使用檔案共用見證，而非磁碟見證。<br /><br /> 3 = 無多數，僅限磁碟。 如果仲裁磁碟在線上，此仲裁設定可維持所有節點的失敗數，除了一以外。|  
-|**quorum_type_desc**|**varchar(50)**|描述**quorum_type**，下列其中一個的：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY|  
+|**quorum_type_desc**|**varchar(50)**|Popis **quorum_type**，下列其中一個的：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY|  
 |**quorum_state**|**tinyint**|WSFC 仲裁的狀態，下列其中一個值：<br /><br /> 0 = 未知仲裁狀態<br /><br /> 1 = 正常仲裁<br /><br /> 2 = 強制仲裁|  
-|**quorum_state_desc**|**varchar(50)**|描述**quorum_state**，下列其中一個的：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
+|**quorum_state_desc**|**varchar(50)**|Popis **quorum_state**，下列其中一個的：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 可用性群組目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [監視可用性群組 & #40;TRANSACT-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [監視可用性群組 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

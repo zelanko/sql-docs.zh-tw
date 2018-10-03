@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7af2534c6406c50a92abdb8bfbc87f2c8a9e20f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 21a9d96d54f1a5afcce2d5e2671b30460350cd76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694541"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>建立主資料管理員 Web 應用程式 (Master Data Services)
 

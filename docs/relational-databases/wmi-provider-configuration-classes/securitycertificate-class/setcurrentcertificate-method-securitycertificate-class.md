@@ -1,15 +1,12 @@
 ---
-title: SetCurrentCertificate 方法 （SecurityCertificate 類別） |Microsoft 文件
+title: SetCurrentCertificate 方法 （SecurityCertificate 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetCurrentCertificate Method (SecurityCertificate Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: faae2dafe6204d35c48df57b1b9816582f96d7ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3eb78523b3251842d6a2877ca460da46f7874f99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007105"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824036"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate 方法 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +38,12 @@ object.SetCurrentCertificate(SHA , SQLInstance)
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表安全性憑證的 [SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*SHA*|針對必要安全性憑證指定安全雜湊演算法 (SHA) 指模的字串值。|  
 |*SQLInstance*|指定需要憑證之執行個體的字串值。|  

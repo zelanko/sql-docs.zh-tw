@@ -1,14 +1,11 @@
 ---
-title: sys.syslockinfo (TRANSACT-SQL) |Microsoft 文件
+title: sys.syslockinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslockinfo_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e47eefe7a096664068d0762f43478881b532f815
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780876"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +37,12 @@ ms.locfileid: "33222050"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  這項功能已變更，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同。 如需詳細資訊，請參閱[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  這項功能已變更，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同。 如需詳細資訊，請參閱 < [SQL Server 2016 中的 Database Engine 功能的突破性變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|鎖定資源的文字描述。 包含鎖定資源的一部份。|  
-|**rsc_bin**|**binary(16)**|二進位鎖定資源。 包含內含於鎖定管理員的實際鎖定資源。 此資料行是包含的工具，可了解產生的鎖定資源格式他們自己的格式化鎖定資源，並執行自我聯結上**syslockinfo**。|  
+|**rsc_bin**|**binary(16)**|二進位鎖定資源。 包含內含於鎖定管理員的實際鎖定資源。 了解鎖定資源的格式來產生自己的工具格式化鎖定資源，包含這個資料行，並執行自我聯結上**syslockinfo**。|  
 |**rsc_valblk**|**binary(16)**|鎖定值區塊。 某些資源類型可能會將其他資料併入某鎖定資源中，而該鎖定資源並非由鎖定管理員雜湊以決定特定鎖定資源的擁有權。 例如，頁面鎖定不是由特定物件識別碼擁有。 適用於鎖定擴大和其他用途。 不過，頁面鎖定的物件識別碼可以併入鎖定值區塊中。|  
 |**rsc_dbid**|**smallint**|資源所關聯的資料庫識別碼。|  
 |**rsc_indid**|**smallint**|資源所關聯的索引識別碼 (如果適用的話)。|  
@@ -61,7 +57,7 @@ ms.locfileid: "33222050"
 |**req_spid**|**int**|內部[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]要求鎖定之工作階段的處理序識別碼。|  
 |**req_ecid**|**int**|執行內容識別碼 (ECID)。 用來指出平行作業中的哪個執行緒擁有特定鎖定。|  
 |**req_ownertype**|**smallint**|關聯於鎖定的物件類型。<br /><br /> 1 = 交易<br /><br /> 2 = 資料指標<br /><br /> 3 = 工作階段<br /><br /> 4 = ExSession<br /><br /> 請注意，3 和 4 分別代表特殊版本的工作階段鎖定、追蹤資料庫和檔案群組鎖定。|  
-|**req_transactionID**|**bigint**|唯一交易識別碼用於**syslockinfo**和 profiler 事件中|  
+|**req_transactionID**|**bigint**|唯一識別碼中所使用的交易**syslockinfo**和 profiler 事件中|  
 |**req_transactionUOW**|**uniqueidentifier**|識別 DTC 交易的工作單位識別碼 (UOW)。 如果是非 MS DTC 交易，UOW 設為 0。|  
   
 ## <a name="permissions"></a>Permissions  

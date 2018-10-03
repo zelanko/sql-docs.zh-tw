@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, AlwaysOn Availability Groups
 - TDE, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07c2225a00fcd9fbccd8517248ebe44f29b955d1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 12ee0cb358d64b0f81872c8c1d0d3fcf36d3a815
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784756"
 ---
 # <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>加密的資料庫與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

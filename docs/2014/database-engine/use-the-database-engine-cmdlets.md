@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], Decode-Sqlname
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e06c46020f0e3e04e81b3f46fada587ab55f7b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e2d11a6cb32759d32c95ddf5cd059071ea46eb6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052978"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用 Database Engine Cmdlet
   Windows PowerShell Cmdlet 是單一功能的命令，通常具有動詞-名詞命名慣例，例如 **Get-Help** 或 **Set-MachineName**。 適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]特有的指令程式。  

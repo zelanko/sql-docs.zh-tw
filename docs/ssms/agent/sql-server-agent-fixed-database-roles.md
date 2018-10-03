@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1b19933b6ed5deecfde24fdaed9be3884fdb998
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 0badaa56c5df96d1023e8fca66f773c8427fa27f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748086"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server Agent 固定資料庫角色
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

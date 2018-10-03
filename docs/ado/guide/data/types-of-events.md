@@ -1,13 +1,11 @@
 ---
-title: 事件類型 |Microsoft 文件
+title: 類型的事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EventComplete event [ADO]
@@ -16,30 +14,29 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2438d332e7276dcd06de0bf15984329d7c34469
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b324857816df774486716978425d1332a695952a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708466"
 ---
-# <a name="types-of-events"></a>事件類型
-有兩種事件的基本類型。 「 將事件 」 呼叫作業開始之前，通常包含在其名稱中的 」 將"— 比方說， **WillChangeRecordset**或**WillConnect**。 通常已經完成事件後呼叫的事件其名稱中包含 「 完成 」 — 比方說， **RecordChangeComplete**或**ConnectComplete**。 例外狀況存在 — 例如**InfoMessage** — 但相關聯的作業已完成之後，這些會發生。  
+# <a name="types-of-events"></a>事件的類型
+有兩種基本的事件。 「 將事件 」 作業啟動之前呼叫它，通常是名稱中包含 「 將 」 — 比方說， **WillChangeRecordset**或**WillConnect**。 通常已完成事件後，會呼叫的事件其名稱中包含 「 完成 」 — 例如， **RecordChangeComplete**或是**ConnectComplete**。 例外狀況，例如**InfoMessage** — 但相關聯的作業完成後，會發生這些情況。  
   
 ## <a name="will-events"></a>將事件  
- 在作業開始提供您有機會檢查或修改的作業參數，然後取消作業，或允許它在完成之前，就會呼叫事件處理常式。 這些事件處理常式通常會有的名稱格式 **將*事件 * * *。  
+ 作業開始提供您機會檢查或修改作業的參數，然後取消作業，或讓其完成之前，就會呼叫事件處理常式。 這些事件處理常式通常會有名稱格式 **將*事件 * * *。  
   
 ## <a name="complete-events"></a>完成事件  
- 作業完成之後呼叫的事件處理常式可以通知您的應用程式的作業已經結束。 這類事件處理常式也會將事件處理常式取消暫止的作業時收到通知。 這些事件處理常式通常會有的名稱格式 ***事件 * 完成**。  
+ 作業完成之後呼叫的事件處理常式可以通知您作業已完成的應用程式。 將事件處理常式取消暫止的作業時，這類事件處理常式也會收到通知。 這些事件處理常式通常會有名稱格式 ***事件 * 完成**。  
   
- 將和完成的事件通常用於配對。  
+ 將完整的事件通常會使用和成對。  
   
 ## <a name="other-events"></a>其他事件  
- 其他事件處理常式，也就是事件的名稱不是表單的**將 * 事件*** 或 ***事件 * 完成**— 在作業完成之後，才會呼叫。 這些事件是**中斷連線**， **EndOfRecordset**，和**InfoMessage**。  
+ 其他事件處理常式 — 也就是事件名稱不是表單**將 * 事件*** 或 ***事件 * 完成**— 只有在作業完成之後，才會呼叫。 這些事件**中斷連線**， **EndOfRecordset**，並**InfoMessage**。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   

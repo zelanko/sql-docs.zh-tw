@@ -1,13 +1,11 @@
 ---
-title: 命令和 CommandText 屬性範例 （VC + +） |Microsoft 文件
+title: Command 和 CommandText 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - CommandText property [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69d06e6c85adbcff80d418419d8d081d8cf33134
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e947fbc490769379392e1dcef80ad4cd2818d510
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755896"
 ---
-# <a name="command-and-commandtext-properties-example-vc"></a>命令和 CommandText 屬性範例 （VC + +）
+# <a name="command-and-commandtext-properties-example-vc"></a>Command 和 CommandText 屬性範例 (VC++)
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)来更新的程序文字屬性。  
   
 ```  

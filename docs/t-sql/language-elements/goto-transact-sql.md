@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GOTO
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - statements [SQL Server], skipping
 - GOTO statement
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf4b49d671ea420bae187066d3c055e01893b726
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: d171b3907a5fc4b03efba41d4ab1574dc683aeb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753508"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ GOTO label
 ## <a name="remarks"></a>Remarks  
  GOTO 可以在條件式流程控制陳述式、陳述式區塊或程序內，但它不能移至批次之外的標籤。 GOTO 分支可以移至定義在 GOTO 之前或之後的標籤。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  GOTO 權限預設會授與任何有效的使用者。  
   
 ## <a name="examples"></a>範例  

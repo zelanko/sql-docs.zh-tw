@@ -1,14 +1,11 @@
 ---
-title: syscollector_execution_log (TRANSACT-SQL) |Microsoft 文件
+title: syscollector_execution_log (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
@@ -19,23 +16,22 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25ceaeee0a5fd46c6e30446f0bc4a5c23a7795f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e982c086bdae807220a2c9cf1c9e3260d0d66a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221299"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773489"
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   根據收集組或封裝的執行記錄，提供相關資訊。   
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|識別每個收集組執行。 用來聯結此檢視與其他詳細記錄。 不可為 Null。|  
 |parent_log_id|**bigint**|識別父封裝或收集組。 不可為 Null。 這些識別碼會以父子式關聯性鏈結，可讓您判斷哪個收集組啟動哪個封裝。 這個檢視會依據父子式連結分組這些記錄項目，並縮排封裝的名稱，以便清楚地顯示呼叫鏈結。|  
@@ -50,7 +46,7 @@ ms.locfileid: "33221299"
 |package_id|**uniqueidentifier**|識別產生這個記錄的收集組或封裝。 可為 Null。|  
 |package_name|**nvarchar(4000)**|產生此記錄檔的封裝名稱。 可為 Null。|  
 |package_execution_id|**uniqueidentifier**|提供 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 記錄資料表的連結。 可為 Null。|  
-|failure_message|**nvarchar(2048)**|如果收集組或封裝失敗，則為該元件的最新錯誤訊息。 可為 Null。 若要取得更詳細的錯誤資訊，請使用[f &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函式。|  
+|failure_message|**nvarchar(2048)**|如果收集組或封裝失敗，則為該元件的最新錯誤訊息。 可為 Null。 若要取得更詳細的錯誤資訊，請使用[fn_syscollector_get_execution_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函式。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 dc_operator 的 SELECT 權限。  

@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.derivedcolumntrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa667694b45c4a784c74ad3ca7b0e5689f491138
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5b1c27ff60b3e1c4dc99478d2df0377ae05a77f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333292"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713556"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
   「衍生的資料行」轉換會將運算式套用至轉換輸入資料行，藉此建立新的資料行值。 運算式可包含來自轉換輸入之變數、函數、運算子和資料行的任意組合。 結果可加入做為新的資料行，或插入現有資料行做為取代值。 「衍生的資料行」轉換可定義多個衍生的資料行，且任何變數或輸入資料行都可在多個運算式中出現。  

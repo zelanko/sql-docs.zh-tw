@@ -3,22 +3,20 @@ title: SQL Server Native Client |Microsoft Docs
 ms.date: 04/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1f60dff72b14e29572a4d255ad8473d6ed1672d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43081950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627406"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

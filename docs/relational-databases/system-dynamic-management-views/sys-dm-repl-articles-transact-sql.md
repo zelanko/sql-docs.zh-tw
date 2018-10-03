@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -18,33 +16,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12a9e842c8ff0ebbf74e9d1126de52224980b473
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791068"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳送有關在複寫拓撲中以發行項發行之資料庫物件的資訊。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**artcache_db_address**|**varbinary(8)**|發行集資料庫之快取資料庫結構的記憶體中位址。|  
 |**artcache_table_address**|**varbinary(8)**|已發行之資料表發行項的快取資料表結構的記憶體中位址。|  
 |**artcache_schema_address**|**varbinary(8)**|已發行之資料表發行項的快取發行項結構描述結構的記憶體中位址。|  
 |**artcache_article_address**|**varbinary(8)**|已發行之資料表發行項的快取發行項結構的記憶體中位址。|  
-|**artid**|**bigint**|唯一識別這份資料表內的每一個項目。|  
+|**artid&lt**|**bigint**|唯一識別這份資料表內的每一個項目。|  
 |**artfilter**|**bigint**|用來水平篩選發行項之預存程序的識別碼。|  
 |**artobjid**|**bigint**|已發行物件的識別碼。|  
 |**artpubid**|**bigint**|發行集所屬發行集的識別碼。|  
-|**artstatus**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **1** = 發行項在使用中。<br /><br /> **8** = 資料行名稱包括在 INSERT 陳述式。<br /><br /> **16** = 使用參數化陳述式。<br /><br /> **24** = 這包括在 INSERT 陳述式的資料行名稱，並使用參數化陳述式。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
-|**arttype**|**tinyint**|發行項類型：<br /><br /> **1** = 記錄式發行項。<br /><br /> **3** = 含有手動篩選記錄檔為基礎的發行項。<br /><br /> **5** = 含有手動檢視的記錄式發行項。<br /><br /> **7** = 含有手動篩選和手動檢視的記錄式發行項。<br /><br /> **8** = 預存程序執行。<br /><br /> **24** = 可序列化的預存程序執行。<br /><br /> **32** = 預存程序 （僅限結構描述）。<br /><br /> **64** = 檢視 （僅限結構描述）。<br /><br /> **128** = 函式 （僅限結構描述）。|  
+|**artstatus**|**tinyint**|發行項選項和狀態的位元遮罩，它可能是一或多個這些值的位元邏輯 OR 結果：<br /><br /> **1** = 發行項在使用。<br /><br /> **8** = 包含 INSERT 陳述式中的資料行名稱。<br /><br /> **16** = 使用參數化陳述式。<br /><br /> **24** = 同時包含 INSERT 陳述式中的資料行名稱，並使用參數化陳述式。<br /><br /> 例如，對於使用參數化陳述式的使用中發行項，這個資料行的值是 17。 0 值表示發行項不在使用中，且未定義任何其他屬性。|  
+|**arttype**|**tinyint**|發行項類型：<br /><br /> **1** = 記錄式發行項。<br /><br /> **3** = 含有手動篩選的記錄式發行項。<br /><br /> **5** = 含有手動檢視的記錄式發行項。<br /><br /> **7** = 含有手動篩選和手動檢視的記錄式發行項。<br /><br /> **8** = 預存程序執行。<br /><br /> **24** = 可序列化的預存程序執行。<br /><br /> **32** = 預存程序 （僅限結構描述）。<br /><br /> **64** = 檢視 （僅限結構描述）。<br /><br /> **128** = 函式 （僅限結構描述）。|  
 |**wszArtdesttable**|**nvarchar(514)**|目的地的已發行物件名稱。|  
 |**wszArtdesttableowner**|**nvarchar(514)**|目的地的已發行物件擁有者。|  
 |**wszArtinscmd**|**nvarchar(510)**|用於插入的命令或預存程序。|  
@@ -66,7 +64,7 @@ ms.lasthandoff: 05/23/2018
 |**artgendel2cmd**|**nvarchar(510)**|在並行快照集處理期間，重新調整發行項時使用的 DELETE 命令範本。|  
 |**fInReconcile**|**tinyint**|指出在並行快照集處理期間，目前是否重新調整發行項。|  
 |**fPubAllowUpdate**|**tinyint**|指出發行集是否允許更新訂閱。|  
-|**intPublicationOptions**|**bigint**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用端對端複寫。<br /><br /> **0x2** -只發行本機變更。<br /><br /> **0x4** -已啟用的非 SQL Server 訂閱者。|  
+|**intPublicationOptions**|**bigint**|指定其他發行選項的點陣圖，位元選項值如下：<br /><br /> **0x1** -啟用對等複寫。<br /><br /> **0x2** -只發行本機變更。<br /><br /> **0x4** -已啟用針對非 SQL Server 訂閱者。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 VIEW DATABASE STATE 權限在發行集資料庫上的呼叫**dm_repl_articles**。  

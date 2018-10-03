@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-caps.latest.revision: 28
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063838"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>在 SQL Server 2014 中停止 SQL Server 的功能
   本主題描述升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後無法再使用的功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中沒有已停止的功能。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>不再提供的 Active Directory Helper 服務  
  已移除 Active Directory Helper 服務和相關元件。 下表列出因此一併移除的相關聯元件：  

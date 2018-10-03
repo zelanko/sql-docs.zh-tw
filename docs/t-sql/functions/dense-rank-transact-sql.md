@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DENSE_RANK_TSQL
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba026c4b81934b5915678c4f019f0c8d44454b85
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 39fc8df8126858b6114297a1c8bfb75bd5340850
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668096"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,11 +158,11 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4557045.0459|98027|  
-|Linda|Mitchell|2|@shouldalert|@shouldalert|@shouldalert|5200475.2313|98027|  
-|Jillian|Carson|3|@shouldalert|@shouldalert|@shouldalert|3857163.6332|98027|  
-|Garrett|Vargas|4|@shouldalert|@shouldalert|@shouldalert|1764938.9859|98027|  
-|Tsvi|Reiter|5|@shouldalert|@shouldalert|2|2811012.7151|98027|  
+|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
+|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
+|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
+|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
+|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
 |Shu|Ito|6|6|2|2|3018725.4858|98055|  
 |José|Saraiva|7|6|2|2|3189356.2465|98055|  
 |David|Campbell|8|6|2|3|3587378.4257|98055|  

@@ -5,20 +5,17 @@ ms.custom: tools|sos
 ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
-ms.suite: sql
 ms.prod_service: sql-tools
-ms.component: sqlpackage
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 7d05ec161b89e548cf529bc82c6d714a1960fb0f
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754328"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 版本資訊
 

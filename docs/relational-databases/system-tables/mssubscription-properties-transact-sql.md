@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSsubscription_properties
 - MSsubscription_properties_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 922651f78062b43bac1262415530068ebde4c7b4
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: ec118a8eeab5753b1b6df3f917afd26a5b375807
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837887"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

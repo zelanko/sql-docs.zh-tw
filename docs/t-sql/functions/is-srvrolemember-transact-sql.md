@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_SRVROLEMEMBER_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6e72a58e17eb584cd0420f04ec10e2b479069fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 43087fe361e611d3cca013bdbe9aa222a5fc99d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781649"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748076"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,10 +61,10 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-|傳回值|描述|  
+|傳回值|Description|  
 |------------------|-----------------|  
 |0|*login* 不是 *role* 的成員。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，這個陳述式一律會傳回 0。|  
-|@shouldalert|*login* 為 *role* 的成員。|  
+|1|*login* 為 *role* 的成員。|  
 |NULL|*role* 或 *login* 無效，或是您沒有檢視角色成員資格的權限。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -92,7 +89,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="related-functions"></a>相關函數  
  若要判斷目前使用者是否為指定之 Windows 群組或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色的成員，請使用 [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)。 若要判斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入是否為資料庫角色的成員，請使用 [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要伺服器角色的 VIEW DEFINITION 權限。  
   
 ## <a name="examples"></a>範例  

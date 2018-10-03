@@ -5,25 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a73b3d01f953abc1863d836c134c4425ad6168f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 0569a8f94232ec31e96024e798da6027e0c695a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311567"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742316"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

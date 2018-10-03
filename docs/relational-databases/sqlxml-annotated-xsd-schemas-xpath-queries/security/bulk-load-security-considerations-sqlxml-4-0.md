@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf22d915f7ff4b4e1196a4047c6e5eb285f91ea9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7f33298b28971e301118f92a06e9a8115daf7cb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43086849"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814776"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大量載入安全性考量 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

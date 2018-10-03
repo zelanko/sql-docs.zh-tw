@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - saving trace template
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80d968795e5201813f9f53f558b87f7ca2e3804b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a6ca4014bd8bbaed28afad2bf7f87ebab5007004
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777156"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>建立追蹤範本 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

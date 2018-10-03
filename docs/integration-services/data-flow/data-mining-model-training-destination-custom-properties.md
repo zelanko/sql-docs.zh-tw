@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4d032c5cd57d17f1e4cff4177626cf7c7292447
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f7e2c9daf0e9bfdd070102aee93a762c16db5149
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825565"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>資料採礦模型定型目的地自訂屬性
   資料採礦模型定型目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
  下表描述的是資料採礦模型定型目的地的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性|資料類型|描述|  
+|屬性|資料類型|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|連接管理員的唯一識別碼。|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的連接字串。|  

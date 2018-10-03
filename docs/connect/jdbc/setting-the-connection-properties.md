@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
-caps.latest.revision: 154
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68589b97ee41bb740e0b42affefad3ed6a32ac9d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 273a8d6893caf5552dc2945561e51cf4c5170f2d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783886"
 ---
 # <a name="setting-the-connection-properties"></a>設定連接屬性
 

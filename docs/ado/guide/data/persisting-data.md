@@ -1,13 +1,11 @@
 ---
-title: 保存資料 |Microsoft 文件
+title: 保存的資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,29 +13,28 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722986"
 ---
 # <a name="persisting-data"></a>保存資料
-可攜式電腦 （例如，使用膝上型電腦） 已產生可以在連線或中斷連線狀態中執行的應用程式的需求。 ADO 已新增對此支援，讓開發人員能夠儲存用戶端資料指標**資料錄集**至磁碟，並稍後重新載入它。  
+可攜式電腦運算 （例如，使用膝上型電腦），已產生可以在連線或中斷連線的狀態下執行的應用程式的需求。 ADO 已新增這個的支援，讓開發人員能夠儲存用戶端資料指標**資料錄集**到磁碟，稍後再重新載入它。  
   
  有幾種的情況中，您可以使用這種類型的功能，包括下列：  
   
--   **出差：** 旅進行應用程式，務必提供了可進行變更，並加入新的記錄，然後可以稍後重新連線到資料庫並認可。  
+-   **旅行：** 道路上應用程式時，務必提供能夠進行變更，並新增新的記錄，則可以稍後重新連線到資料庫和認可。  
   
--   **不常更新查閱：** 通常應用程式中，資料表做為查閱 — 例如，狀態稅資料表。 它們不常更新，且處於唯讀狀態。 而不是這項資料從伺服器重新讀取每次啟動應用程式時，應用程式可以直接將資料載入本機保存從**資料錄集**。  
+-   **不常更新查閱：** 通常應用程式中，資料表做為查閱 — 例如，州稅資料表。 它們不常更新，並處於唯讀狀態。 而非重新讀取來自伺服器的此資料每次啟動應用程式時，應用程式可以直接將資料從載入本機保存**資料錄集**。  
   
- 在 ADO 中，來儲存及載入**資料錄集**，使用**Recordset.Save**和**Recordset.Open(,,,adCmdFile)** 方法上之 ADO**資料錄集**物件。  
+ 在 ADO 中，來儲存及載入**資料錄集**，使用**Recordset.Save**並**Recordset.Open(,,,adCmdFile)** ado 方法**資料錄集**物件。  
   
- 您可以使用**資料錄集儲存**方法，將您的 ADO**資料錄集**至磁碟上的檔案。 (您也可以儲存**資料錄集**至 ADO**資料流**物件。 **資料流**本指南稍後會討論的物件。)稍後，您可以使用**開啟**方法，以重新開啟**資料錄集**當您準備好使用它。 根據預設，儲存 ADO**資料錄集**成專屬 Microsoft 進階資料 TableGram (ADTG) 格式。 使用指定此二進位格式**adPersistADTG PersistFormatEnum**值。 或者，您可以選擇要儲存您**資料錄集**出為 XML，而非使用**adPersistXML**。 如需有關儲存為 XML 資料錄集的詳細資訊，請參閱[XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
+ 您可以使用**錄儲存**方法，將您的 ADO**資料錄集**磁碟上的檔案。 (您也可以儲存**Recordset** ado **Stream**物件。 **Stream**稍後本指南會討論物件。)稍後，您可以使用**開放**方法來重新開啟**資料錄集**當您準備好使用它。 根據預設，儲存 ADO**資料錄集**的專屬的 Microsoft 進階資料 TableGram (ADTG) 格式。 使用指定此二進位格式**adPersistADTG PersistFormatEnum**值。 或者，您可以選擇儲存您**Recordset**改為使用 XML 作為**adPersistXML**。 如需將資料錄集儲存為 XML 的詳細資訊，請參閱[保存的記錄，以 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
   
  語法**儲存**方法如下所示：  
   
@@ -49,25 +46,25 @@ Destination, PersistFormat
   
 ```  
   
- 第一次儲存**資料錄集**，則可以指定選擇性*目的地*。 如果您省略*目的地*，將會使用設定為值的名稱建立新檔案[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性**資料錄集**。  
+ 第一次您儲存**Recordset**，選擇性地指定*目的地*。 如果您省略*目的地*，將會設定為值的名稱建立新的檔案[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)屬性**資料錄集**。  
   
- 省略*目的地*當您後續呼叫**儲存**第一次儲存或執行階段錯誤發生之後。 如果您後續呼叫**儲存**與新*目的地*、**資料錄集**儲存至新的目的地。 不過，新的目的地和的原始目的端會同時為開啟。  
+ 省略*目的地*當您後續呼叫**儲存**之後會發生第一次儲存或執行階段錯誤。 如果您後續呼叫**儲存**的新*目的地*，則**資料錄集**儲存到新的目的地。 不過，新的目的地和原始目的地將會同時開啟。  
   
- **儲存**不會關閉**資料錄集**或*目的地*，因此您可以繼續使用**資料錄集**並儲存最新變更。 *目的地*維持開啟直到**資料錄集**已關閉，請在這段期間，其他應用程式可以讀取但無法寫入*目的地*。  
+ **儲存**不會關閉**Recordset**或*目的地*，因此您可以繼續使用**資料錄集**並儲存您最新的變更。 *目的地*保持開啟，直到**Recordset**已關閉，在這段期間，其他應用程式可以讀取但不是能寫入*目的地*。  
   
- 基於安全性，**儲存**方法允許只使用執行 Microsoft Internet explorer 的指令碼的低和自訂安全性設定。  
+ 基於安全性，原因**儲存**方法允許只使用執行 Microsoft Internet explorer 的指令碼的低和自訂安全性設定。  
   
- 如果**儲存**時的非同步呼叫方法**資料錄集**擷取、 執行、 或更新作業正在進行中，**儲存**等到非同步作業完成。  
+ 如果**儲存**時的非同步呼叫方法**Recordset**提取、 執行，或更新作業正在進行中，**儲存**會等到非同步作業完成。  
   
- 開頭的第一列儲存記錄**資料錄集**。 當**儲存**方法完成後，目前的資料列位置移至第一個資料列**資料錄集**。  
+ 記錄會儲存開頭的第一個資料列**資料錄集**。 當**儲存**方法執行完成後，目前的資料列位置移至第一個資料列**資料錄集**。  
   
- 為獲得最佳結果，設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性**adUseClient**與**儲存**。 如果您的提供者不支援的功能來儲存所需的所有**資料錄集**物件指標服務會提供該功能。  
+ 為了獲得最佳結果，請設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**具有**儲存**。 如果您的提供者不支援的功能來儲存所需的所有**資料錄集**物件，資料指標服務會提供該功能。  
   
- 當**資料錄集**保存在一起**CursorLocation**屬性設定為**adUseServer**，更新功能**資料錄集**限制。 一般而言，只更新單一資料表、 插入和刪除允許 （取決於提供者功能）。 [重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法也是在此組態中無法使用。  
+ 當**資料錄集**與一起保存**CursorLocation**屬性設定為**adUseServer**，更新功能，如**資料錄集**限制。 一般而言，只有單一資料表更新、 插入和刪除允許 （取決於提供者功能）。 [Resync](../../../ado/reference/ado-api/resync-method.md)方法也會在此組態中無法使用。  
   
- 因為*目的地*參數可以接受支援的 OLE DB 的任何物件**IStream**介面，您可以儲存**資料錄集**直接為 ASP **回應**物件。  
+ 因為*目的地*參數可以接受任何支援的 OLE DB 的物件**IStream**介面，您可以將已儲存**資料錄集**直接與 ASP **回應**物件。  
   
- 在下列範例中，**儲存**和**開啟**方法用來保存**資料錄集**並稍後重新開啟它：  
+ 在下列範例中，**儲存**並**開放**方法用來保存**資料錄集**並稍後再重新開啟它：  
   
 ```  
 'BeginPersist  

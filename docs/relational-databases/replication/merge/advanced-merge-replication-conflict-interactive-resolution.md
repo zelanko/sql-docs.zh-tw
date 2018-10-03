@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interactive conflict resolution [SQL Server replication]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6e08fc5617d475196b6ce635f256348f92b0a5e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c701e9fb98bbabe013632a3fd93f91d368ec2784
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352100"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849226"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>進階合併式複寫衝突 - 互動式解決方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

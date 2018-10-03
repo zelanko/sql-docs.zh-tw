@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], removing
 - removing database mirroring [SQL Server]
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4375634da498c0290f7bca909d0a3aac2b80808a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: a1f53c1b2e46c7b52536cff0496c7e9aed065a90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644954"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>移除資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

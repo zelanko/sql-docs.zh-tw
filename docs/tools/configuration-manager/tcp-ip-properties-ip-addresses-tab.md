@@ -5,24 +5,21 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c17fba2f6b8745cb58d829f1c9ac9e28cd682cd
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 97cbd6c44c9d06381cbb91f860c3be75550bb4de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784904"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780086"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 屬性 (IP 位址索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

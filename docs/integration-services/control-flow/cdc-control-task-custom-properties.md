@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18c212529f41739f1e2562b9d21e078a7915d8ef
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c0eb2d790181b73f948e04a0e25f9d9702c6c62e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761886"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
   下表描述 CDC 控制工作的自訂屬性。 所有屬性都是可讀寫的。  
   
-|屬性名稱|資料類型|描述|  
+|屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
 |連接|ADO.NET 連接|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 資料庫的 ADO.NET 連接，以存取變更資料表和 CDC 狀態 (如果儲存在相同的資料庫中)。<br /><br /> 此連接必須指向啟用 CDC 而且包含選取之變更資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |TaskOperation|整數 (列舉)|CDC 控制工作的選定作業。 可能值為 **[標記初始載入開始]**、 **[標記初始載入結束]**、 **[標記 CDC 開始]**、 **[取得處理範圍]**、 **[標記處理的範圍]** 和 **[重設 CDC 狀態]**。<br /><br /> 如果您在 **CDC (亦即，非 Oracle) 上工作時選取了**MarkCdcStart **、** MarkInitialLoadStart **或** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，連線管理員中指定的使用者就必須是  **db_owner** 或 **系統管理員**。<br /><br /> 如需有關這些作業的詳細資訊，請參閱＜ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) ＞和＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞。|  

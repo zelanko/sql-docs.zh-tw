@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], space
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - space allocation [SQL Server], displaying
 - data space [SQL Server]
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cf9ac822df456439a9df7ef60b15f33d6c93b3e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cc0e118f18addcfa52954225fa0d608896377355
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638506"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>顯示資料庫的資料和記錄空間資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

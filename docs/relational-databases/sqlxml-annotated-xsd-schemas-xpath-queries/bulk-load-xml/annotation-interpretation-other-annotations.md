@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - url-encode annotation
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58704a664987950a22a1c6f8c9ce1e7869c54a60
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 37b1505d0d35300fcf088e78d4c46ae2f69f4aa6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058101"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733466"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>註解解譯 - 其他註解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

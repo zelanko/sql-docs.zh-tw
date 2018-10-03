@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050148"
 ---
-# <a name="options-text-editorxmltabs-page"></a>選項 （文字編輯器： XML:Tabs 頁面）
+# <a name="options-text-editorxmltabs-page"></a>選項 (文字編輯器：XML：定位點頁面)
   這個對話方塊可以讓您變更在 XML 編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]** 資料夾，展開 **[XML]** 子資料夾，然後按一下 **[定位點]**。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多個位置設定選項  

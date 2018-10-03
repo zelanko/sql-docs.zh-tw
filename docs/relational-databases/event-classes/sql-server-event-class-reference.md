@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], event classes
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - SQL Server event classes, listed
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca669e577e2cc54ba8fa579ff3f0e829e1c31c59
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8adc2e8a3e5cc087d10deaaf562f044d938c2e18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815286"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 事件類別參考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

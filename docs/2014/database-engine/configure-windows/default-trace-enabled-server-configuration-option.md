@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], traces
 - traces [SQL Server], logs
 - default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 478b528634ee413683c4b5b4d2d41cec2cfe072c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd10a3dade8cb85b2be1f5087238f9ff6f261dde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063288"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>預設追蹤已啟用伺服器組態選項
   使用 **default trace enabled** 選項，啟用或停用預設的追蹤記錄檔。 預設追蹤功能可針對主要與組態選項相關的活動和變更提供豐富、永續的記錄檔。  

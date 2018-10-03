@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.resumedatamove.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a0d20aec4a3c59c2b025cf3614f4e7c7840c3e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 608106f70ab12353efd0f5315e4edd0951df7273
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642516"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>繼續可用性資料庫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

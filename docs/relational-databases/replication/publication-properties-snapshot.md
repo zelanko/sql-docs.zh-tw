@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce4d508cb5ef08f8a2b24437fbbd39ccc60e454b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: fbe678e1cb6e89d366a6f39cc0ab44ee9751e5d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706648"
 ---
 # <a name="publication-properties-snapshot"></a>發行集屬性，快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

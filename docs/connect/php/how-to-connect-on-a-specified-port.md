@@ -5,23 +5,20 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, specifying a port
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6dd90c68aa47f21c35c2f566a2a8206ba421ace6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b4d19077a4a0b676875a9b82acf529cc8720f31f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033023"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680017"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>如何：在指定的通訊埠上連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

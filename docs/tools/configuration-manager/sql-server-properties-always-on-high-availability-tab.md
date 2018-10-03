@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: cfa08dbf9b1fd632c15ede1776055af0e06f8834
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: af634dbcd988725119068a660cbdca96013b3b33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785459"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803166"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

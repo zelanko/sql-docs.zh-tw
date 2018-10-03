@@ -1,32 +1,29 @@
 ---
-title: CacheSize 屬性範例 （VC + +） |Microsoft 文件
+title: CacheSize 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CacheSize property [ADO], VC++ example
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d388e259545c86dfa5ad700de1b192ec071d132f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802906"
 ---
-# <a name="cachesize-property-example-vc"></a>CacheSize 屬性範例 （VC + +）
-這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性，以顯示作業的效能差異執行逾時或無 30 記錄快取。  
+# <a name="cachesize-property-example-vc"></a>CacheSize 屬性範例 (VC++)
+這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性以顯示作業的效能差異執行，而 30 記錄快取。  
   
 ```  
 // CacheSize_Property_Sample.cpp  

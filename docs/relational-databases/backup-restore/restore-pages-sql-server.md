@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restorepage.general.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d62309de45f34f341857c806051df372145e1e64
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: de03858d60e5a8ad21232b2f13d17b880f106ed2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761986"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], running
 - scripts [SQL Server], traces
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b2612d34dcd7796721ec4822cee42db7829a3220
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 88e21aa7d02dfbf1a54f11e800e165f7055d2892
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38048300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670386"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>建立 Transact-SQL 指令碼以執行追蹤 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

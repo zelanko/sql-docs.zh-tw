@@ -5,21 +5,18 @@ ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
 ms.custom: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2af1f3f516c6cc13684ee67954017c5f5cb6a47c
-ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
+ms.openlocfilehash: 6be7f71593fba0347438a953ffa0732d3f499ae4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764462"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>管理 SQL Server Integration Services Scale Out 的憑證
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_geteventinfo
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.fn_trace_geteventinfo function
 - status information [SQL Server], events
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c67450da61537edbf8164e343be2f279aa6ac44
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d5bcb1856b9ee6206040b292ecd4642bac3066f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781866"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

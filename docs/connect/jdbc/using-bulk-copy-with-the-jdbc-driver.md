@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9237bf9ed3b729629a9bd8a9f0c4c215385e9b1
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741756"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用大量複製
 

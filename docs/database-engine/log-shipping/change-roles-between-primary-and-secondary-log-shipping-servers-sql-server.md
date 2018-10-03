@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], role changes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3331f9179c40c6108a553a75814bb5ecdf039e51
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 425fd1f945995b63b66fa105c96b36629c595941
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852066"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>變更主要與次要記錄傳送伺服器間的角色 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,22 +5,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-caps.latest.revision: 18
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: c4ded7c0074eb7086e555882fecd0a95d4107225
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: faaad41d3a7ef023fcb0b65c141611e1f7766290
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775777"
 ---
 # <a name="discontinued-master-data-services-features"></a>已停止的 Master Data Services 功能
 

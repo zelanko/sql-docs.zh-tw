@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0135010c073ad241d1998ee9eeecf9f1c4782f25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6996316ebf9a7b906eac46b8b14aee730e67fdc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065128"
 ---
 # <a name="view-page-resources-report-manager"></a>檢視頁面，資源 (報表管理員)
   使用資源的 [檢視] 頁面來檢視資源。 資源是在報表伺服器上儲存和管理，但是不在報表伺服器上處理的項目 (報表伺服器只處理報表和模型)。 當您想要儲存伺服器不處理的任意文件、影像或其他檔案時，就可以使用資源。 可以在「報表管理員」的 [檢視] 頁面中檢視多數的影像檔 (例如 JPG、GIF 和 PNG 檔案)。 其他資源則在個別的應用程式視窗中開啟。  

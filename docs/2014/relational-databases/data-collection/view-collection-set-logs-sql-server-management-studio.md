@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], viewing
 - collection sets [SQL Server], viewing logs
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6641bf65608e989c6bd74448b99686b76ec7ffce
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cf1f9e487d3ce42f1a3fd039b01b5f996f28ed04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060842"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>檢視收集組記錄 (SQL Server Management Studio)
   您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]檢視所有的收集組記錄或個別的收集組記錄。  

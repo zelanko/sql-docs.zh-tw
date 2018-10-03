@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b66a303e225f5bb6126ab226eba0ea254def519
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ccf893e78afdd01a001a513bd266f60c3b8b607c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788546"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
   工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  

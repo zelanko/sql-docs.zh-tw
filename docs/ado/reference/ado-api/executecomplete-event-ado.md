@@ -1,13 +1,11 @@
 ---
-title: ExecuteComplete 事件 (ADO) |Microsoft 文件
+title: ExecuteComplete 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0af3666e4f5aecf897bdd6b93f756c2d251fa40
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ec656a49963eb02cb204d5be96d403726bba8c56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657726"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
-**ExecuteComplete**命令已完成執行之後，會呼叫事件。  
+**ExecuteComplete**命令已完成執行之後，系統會呼叫事件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,24 +39,24 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  A**長**值，指出受到該命令的記錄數目。  
   
  *pError*  
- [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它描述如果發生之錯誤的值**adStatus**是**adStatusErrorsOccurred**; 否則它不會設定。  
+ [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它說明如果發生錯誤的值**adStatus**是**adStatusErrorsOccurred**; 否則它不會設定。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。 當呼叫這個事件時，這個參數會設定為**adStatusOK**如果造成事件的作業成功，或**adStatusErrorsOccurred**作業失敗。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。 呼叫此事件時，此參數設為**adStatusOK**造成事件的作業已順利完成，還是要**adStatusErrorsOccurred**如果作業失敗。  
   
  這個事件會傳回之前，請將此參數設定為**adStatusUnwantedEvent**以避免後續的通知。  
   
  *pCommand*  
- [命令](../../../ado/reference/ado-api/command-object-ado.md)上次執行所執行的物件。 包含**命令**物件呼叫，即使**Connection.Execute**或**Recordset.Open**而不需要明確建立**命令**在哪些情況下**命令**物件由 ADO 在內部建立。  
+ [命令](../../../ado/reference/ado-api/command-object-ado.md)已執行的物件。 包含**命令**物件呼叫，即使**Connection.Execute**或是**Recordset.Open**而不需要明確建立**命令**在哪些情況下**命令**物件在內部 ADO 來建立。  
   
  *pRecordset*  
- A[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)所執行的命令的結果物件。 這**資料錄集**可能是空的。 您應該永遠不會終結資料錄集物件從這個事件處理常式內。 這樣會導致存取違規，當 ADO 嘗試存取不存在的物件。  
+ A[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件執行命令的結果。 這**資料錄集**可能是空的。 您應該永遠不會終結從這個資料錄集物件，此事件處理常式內。 這樣會導致存取違規，當 ADO 嘗試存取不存在的物件。  
   
  *pConnection*  
- A[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 作業已執行的連接。  
+ A[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。 作業已執行連接。  
   
 ## <a name="remarks"></a>備註  
- **ExecuteComplete**事件可能會發生因為**連線。**[執行](../../../ado/reference/ado-api/execute-method-ado-connection.md)，**命令。**[執行](../../../ado/reference/ado-api/execute-method-ado-command.md)，**資料錄集。**[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**資料錄集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或**資料錄集。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
+ **ExecuteComplete**事件可能是由於**連線。**[執行](../../../ado/reference/ado-api/execute-method-ado-connection.md)，**命令。**[執行](../../../ado/reference/ado-api/execute-method-ado-command.md)，**資料錄集。**[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)，**資料錄集。**[Requery](../../../ado/reference/ado-api/requery-method.md)，或**資料錄集。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

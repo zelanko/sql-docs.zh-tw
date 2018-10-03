@@ -5,25 +5,22 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP XML INDEX statement
 dev_langs:
 - TSQL
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd9451c27742968f9af6e145ac494995e0e1ca80
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db937bd1a5ce723e071acb5077059235a9261193
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739449"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選擇性 XML 索引)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASSEMBLY
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 94
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 44c9ba8b3514c1a28ef2bbe800e0bec0c41b1bba
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5e2d991d6473908400085148da73c242c749c306
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621387"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -114,7 +111,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  如需有關組件權限集合的詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  CREATE ASSEMBLY 會上傳之前從 Managed 程式碼編譯為 .dll 檔、用於 SQL Server 執行個體內部的組件。  
  
 啟用時，會在執行階段忽略 `CREATE ASSEMBLY` 和 `ALTER ASSEMBLY` 陳述式中的 `PERMISSION_SET` 選項，但在中繼資料中會保留 `PERMISSION_SET` 選項。 忽略此選項可將中斷現有程式碼陳述式最小化。
@@ -136,7 +133,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   以 SAFE 或 EXTERNAL ACCESS 權限集合加以建立的組件：  
   
-    -   組件程式碼應該是類型安全的程式碼。 類型安全性是透過對組件執行 Common Language Runtime 驗證器而完成的。  
+    -   組件程式碼應該是類型安全的程式碼。 類型安全性是藉由對組件執行 Common Language Runtime 驗證器而完成的。  
   
     -   除非被標示為唯讀，否則組件的類別不應包含任何靜態資料成員。  
   
@@ -152,7 +149,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  如需詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  需要 CREATE ASSEMBLY 權限。  
   
  如果指定 PERMISSION_SET = EXTERNAL_ACCESS，則需要伺服器的 **EXTERNAL ACCESS ASSEMBLY** 權限。 如果未指定 PERMISSION_SET = UNSAFE，則伺服器上需要 **UNSAFE ASSEMBLY** 權限。  

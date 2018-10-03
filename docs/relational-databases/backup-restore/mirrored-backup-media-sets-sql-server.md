@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server], mirrored backups
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - media sets [SQL Server], mirrored backup media sets
 - backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 19a85e14df3eba30b21edee53c8ff5f3fe446cde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce1303c580bb8eabca7fa3fcdb15ed821ff827a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919453"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626296"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>鏡像備份媒體集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

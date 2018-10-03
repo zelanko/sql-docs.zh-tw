@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying backup content
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - viewing backup properties
 - database backups [SQL Server], properties
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 191eefe8086c7f093a6f21b6283d912d8061ee67
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01b525c7e858ed76a6526f8a109ba0bb8bef1a6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920963"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648856"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>檢視邏輯備份裝置的屬性和內容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

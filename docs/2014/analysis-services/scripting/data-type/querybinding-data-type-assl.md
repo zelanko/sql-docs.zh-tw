@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - QueryBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4a268248d730711dc7fb64500445c04fd6146d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71e00b6810d777563855f3016d9fa129010a08ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059648"
 ---
 # <a name="querybinding-data-type-assl"></a>QueryBinding 資料類型 (ASSL)
   定義衍生的資料類型表示的關聯[DataSource](../objects/datasource-element-assl.md)項目[QueryDefinition](../properties/querydefinition-element-assl.md)項目。  
@@ -51,13 +48,13 @@ ms.locfileid: "37169669"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[TabularBinding](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[DataSourceID](../properties/id-element-assl.md)， [QueryDefinition](../properties/querydefinition-element-assl.md)|  
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   

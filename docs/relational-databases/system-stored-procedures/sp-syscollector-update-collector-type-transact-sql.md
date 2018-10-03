@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collector_type (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_update_collector_type (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9013eb0eccd260c2f90d8f2858ab9ae2871a6c6f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830066"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +46,19 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 ## <a name="arguments"></a>引數  
  [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- 這是收集器類型的 GUID。 *collector_type_uid 是否*是**uniqueidentifier**，而且如果它是的 NULL，它會自動建立並當做 OUTPUT 傳回。  
+ 這是收集器類型的 GUID。 *collector_type_uid 是否*已**uniqueidentifier**，而且如果它是的 NULL，它會自動建立並當做 OUTPUT 傳回。  
   
  [ **@name =** ] **'***name***'**  
- 這是收集器類型的名稱。 *名稱*是**sysname**必須加以指定。  
+ 這是收集器類型的名稱。 *名稱*已**sysname**必須加以指定。  
   
  [ **@parameter_schema =** ] **'***parameter_schema***'**  
- 這是此收集器類型的 XML 結構描述。 *parameter_schema*是**xml**而可能需要特定收集器類型。 如果它不是必要項目，這個引數就可能是 NULL。  
+ 這是此收集器類型的 XML 結構描述。 *parameter_schema*已**xml** ，且可能會需要特定收集器類型。 如果它不是必要項目，這個引數就可能是 NULL。  
   
  [ **@collection_package_id =** ] *collection_package_id*  
- 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集封裝的本機唯一識別碼。 *collection_package_id*是**uniqueidentifier** ，而且需要。 若要取得的值*collection_package_id*，查詢 msdb 資料庫中的 dbo.syscollector_collector_types 系統檢視。  
+ 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集封裝的本機唯一識別碼。 *collection_package_id*已**uniqueidentifier** ，且需要。 若要取得的值*collection_package_id*，查詢 msdb 資料庫中的 dbo.syscollector_collector_types 系統檢視。  
   
  [ **@upload_package_id =** ] *upload_package_id*  
- 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上傳封裝的本機唯一識別碼。 *upload_package_id*是**uniqueidentifier** ，而且需要。 若要取得的值*upload_package_id*，查詢 msdb 資料庫中的 dbo.syscollector_collector_types 系統檢視。  
+ 這是指向收集組所使用之 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上傳封裝的本機唯一識別碼。 *upload_package_id*已**uniqueidentifier** ，且需要。 若要取得的值*upload_package_id*，查詢 msdb 資料庫中的 dbo.syscollector_collector_types 系統檢視。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -112,6 +108,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

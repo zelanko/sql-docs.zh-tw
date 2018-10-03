@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - REVOKE statement, system objects
 - permissions [SQL Server], system objects
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
-caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a1c6160393b299aa70ef96465f34b711d1da3201
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6009e17ed735ab9a2f8aa93bc460a78bbef06119
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755326"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE 系統物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 04/13/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - 伺服器組態 (SQL Server)
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af328924116f1409fa6507c30353c74dca93504f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7388c5c768c9ffe6865a46f4513090cc1716c59e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40411796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837432"
 ---
 # <a name="server-configuration-options-sql-server"></a>伺服器組態選項 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,32 +74,32 @@ ms.locfileid: "40411796"
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
-    |[ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[ad hoc distributed queries](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) (A、RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A，只能在 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上使用)|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
     |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) (A、RR)，只能用於 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|@shouldalert|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時將變成 1。 如果在安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定為自動啟動，預設值就是 0)。|  
-    |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (已過時。 請勿使用。 否則會在重新設定期間導致錯誤)。|0|@shouldalert|0|  
-    |[停用自動軟體 NUMA](soft-numa-sql-server.md)|0|@shouldalert|0|  
-    |[備份總和檢查碼預設](../../database-engine/configure-windows/backup-checksum-default.md)|0|@shouldalert|0|  
-    |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|@shouldalert|0| 
+    |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時將變成 1。 如果在安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定為自動啟動，預設值就是 0)。|  
+    |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (已過時。 請勿使用。 否則會在重新設定期間導致錯誤)。|0|1|0|  
+    |[停用自動軟體 NUMA](soft-numa-sql-server.md)|0|1|0|  
+    |[備份總和檢查碼預設](../../database-engine/configure-windows/backup-checksum-default.md)|0|1|0|  
+    |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0| 
     |[已封鎖的處理序臨界值](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
-    |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
-    |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|@shouldalert|0|  
-    |[CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|@shouldalert|0|  
-    |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
-    |[自主資料庫驗證](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|@shouldalert|0|  
+    |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A、RR)|0|1|0|  
+    |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
+    |[CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|1|0|  
+    |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A、RR)|0|1|0|  
+    |[自主資料庫驗證](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[平行處理原則的成本臨界值](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
-    |[cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)|0|@shouldalert|0|  
+    |[cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
     |[資料指標臨界值](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
-    |[Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
     |[預設全文檢索語言](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
     |[default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)|0|9999|0|  
-    |[預設追蹤已啟用](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|@shouldalert|@shouldalert|  
-    |[不允許來自觸發程序的結果](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|@shouldalert|0|  
-    |[啟用外部指令碼](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|@shouldalert|0|  
+    |[預設追蹤已啟用](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
+    |[不允許來自觸發程序的結果](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
+    |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
+    |[啟用外部指令碼](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
     |ft crawl bandwidth (max)，請參閱 [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -111,7 +108,7 @@ ms.locfileid: "40411796"
     |ft notify bandwidth (min)，請參閱 [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |[index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A、SC)|704|2147483647|0|  
     |[in-doubt xact resolution](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
-    |[lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
+    |[lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A、RR)|0|1|0|  
     |[locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) (A、RR、SC)|5000|2147483647|0|  
     |[max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
@@ -121,35 +118,35 @@ ms.locfileid: "40411796"
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  
-    |[巢狀觸發程序](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)|0|@shouldalert|@shouldalert|  
+    |[巢狀觸發程序](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
     |[network packet size](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
-    |[Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[Ole Automation Procedures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A、RR，已過時)|0|2147483647|0|  
-    |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|@shouldalert|3600|60|  
+    |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
+    |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
     |[PolyBase Hadoop and Azure blob storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|7|0|   
-    |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
+    |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
+    |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
     |[query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  
     |[recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md) (A、SC)|0|32767|0|  
-    |[remote access](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md) (RR)|0|@shouldalert|@shouldalert|  
-    |[remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)|0|@shouldalert|0|  
-    |[遠端資料封存](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)|0|@shouldalert|0|  
+    |[remote access](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
+    |[remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)|0|1|0|  
+    |[遠端資料封存](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)|0|1|0|  
     |[remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
-    |[remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)|0|@shouldalert|0|  
+    |[remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
     |[remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
-    |[Replication XPs Option](../../database-engine/configure-windows/replication-xps-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
-    |[server trigger recursion](../../database-engine/configure-windows/server-trigger-recursion-server-configuration-option.md)|0|@shouldalert|@shouldalert|  
-    |[set working set size](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md) (A、RR，已過時)|0|@shouldalert|0|  
-    |[show advanced options](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)|0|@shouldalert|0|  
-    |[SMO and DMO XPs](../../database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md) (A)|0|@shouldalert|@shouldalert|  
-    |[transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[Replication XPs Option](../../database-engine/configure-windows/replication-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md) (A、RR)|0|1|0|  
+    |[server trigger recursion](../../database-engine/configure-windows/server-trigger-recursion-server-configuration-option.md)|0|1|1|  
+    |[set working set size](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md) (A、RR，已過時)|0|1|0|  
+    |[show advanced options](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)|0|1|0|  
+    |[SMO and DMO XPs](../../database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
+    |[transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
     |[two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
     |[user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md) (A、RR、SC)|0|32767|0|  
     |[user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)|0|32767|0|  
-    |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

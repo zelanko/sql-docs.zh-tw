@@ -4,7 +4,6 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
@@ -12,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5452e24762772f202a0081cce1cec74b9156e6ce
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 79bf8462483347964fc1dece4486167d44f67d1f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668708"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 使用者的資料警示管理員
 

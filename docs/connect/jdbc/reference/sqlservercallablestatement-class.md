@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dca164af73506119cfaef376bcb7776708f76df
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 38d85e88e8095cc5e2f41af045c36f230fbd43de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810156"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

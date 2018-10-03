@@ -4,10 +4,7 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
 - impersonation [Reporting Services]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78da917a51e524aa842639661befbb15d88a658d
-ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
+ms.openlocfilehash: ad273d61c480211e50ad86122a4616a212804f4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46361981"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830197"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>使用 SOAP 整合 Reporting Services - Web 應用程式
   您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 因為它是一種 Web 服務，所以可以輕易地存取 SOAP API，以提供企業報表功能給自訂商務應用程式。 您可以從 Web 應用程式存取報表伺服器 Web 服務，這與從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式存取 SOAP API 非常類似。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，您就可以產生公開報表伺服器 Web 服務的屬性與方法之 Proxy 類別，而且可讓您使用熟悉的基礎結構與工具，建置以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技術為基礎的商務應用程式。  

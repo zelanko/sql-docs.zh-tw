@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9875648b34bd707859a8f5289143e8fd34aaf1d9
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750106"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 

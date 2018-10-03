@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REMOTE_PROC_TRANSACTIONS_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - REMOTE_PROC_TRANSACTIONS option
 - active transactions
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
-caps.latest.revision: 37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cdb62fedff68073455160bddeaf6d7c7787b02cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ddb45f9c1767e65e39870ecf32d12e3ac1f80658
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767916"
 ---
 # <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

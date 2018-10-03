@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30129e6d3dce18dbfcba89f5bf7ad440819168e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776556"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 10/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
@@ -137,17 +134,16 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: becf0ffa2b44cb69db191bbdacf13ab72e379b04
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 203de7b4d8ca3e101650619445ccc9ede82fa2a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799116"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

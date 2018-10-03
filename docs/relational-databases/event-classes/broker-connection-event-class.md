@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker:Connection event class
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05623fe92845dbfe515e087bfc9cc3bcc9ed8421
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b623db9213ef2d7b763fd38c09d49cb5ed564b9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657836"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "43096452"
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|**ntext**|與此事件相關的錯誤訊息文字。 對於未報告錯誤的事件，此欄位是空白的。 錯誤訊息有可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息或是 Windows 錯誤訊息。|@shouldalert|是|  
+|**TextData**|**ntext**|與此事件相關的錯誤訊息文字。 對於未報告錯誤的事件，此欄位是空白的。 錯誤訊息有可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息或是 Windows 錯誤訊息。|1|是|  
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
 ## <a name="see-also"></a>另請參閱  

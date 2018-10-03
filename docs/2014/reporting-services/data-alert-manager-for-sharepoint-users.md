@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e09359864b17d3d354df518d43395253b711ab6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 859a0ba0757b141bbcba6869d1138c7a3862a3c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049054"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 使用者的資料警示管理員
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 為 SharePoint 資訊工作者提供了 [資料警示管理員] 以管理資料警示。 資訊工作者可以檢視自己所建立警示的資訊、刪除警示、開啟警示定義進行編輯，以及視需要執行警示。 他們可以選擇僅檢視單一報表的警示，或是所有報表的警示。 下圖說明 [資料警示管理員] 中可供資訊工作者使用的功能。  

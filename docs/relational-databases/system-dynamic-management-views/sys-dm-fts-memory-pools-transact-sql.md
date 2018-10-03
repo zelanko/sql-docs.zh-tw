@@ -5,9 +5,7 @@ ms.date: 03/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_memory_pools_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_memory_pools dynamic management view
 ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53ed99ee03ad90027e2252837a9f2755d0c9b354
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b35b163b8c0da00b571e330a9244403e80d40322
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820366"
 ---
 # <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

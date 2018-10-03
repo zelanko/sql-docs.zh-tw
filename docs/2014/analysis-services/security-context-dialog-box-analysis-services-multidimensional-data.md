@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.securitycontext.f1
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 038f01f4603ed4724b095e5a1593d788fcf93796
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b959a34d9f50a539b14c9c54d77c1dfc696e16ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049180"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>安全性內容對話方塊 (Analysis Services - 多維度資料)
   使用 **的** [安全性內容] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可變更用來檢查 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件之資料或中繼資料的使用者和角色。 在 Cube 設計師的 **[計算]** 索引標籤或 **[瀏覽器]** 索引標籤上，按一下 **[工具列]** 窗格的 **[安全性內容]** ，即可顯示 **[安全性內容]** 對話方塊。  
@@ -35,7 +32,7 @@ ms.locfileid: "37310358"
   
  使用者或群組的網域和名稱會使用下列格式：  
   
- *\<網域名稱 >* ** \\ ** *\<使用者帳戶名稱 >*  
+ *\<網域名稱 >* **\\** *\<使用者帳戶名稱 >*  
   
  **角色**  
  選取即可使用一個或多個指定的角色，來檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的資料和中繼資料。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中有定義多個角色，您就可以選取要使用的角色。  

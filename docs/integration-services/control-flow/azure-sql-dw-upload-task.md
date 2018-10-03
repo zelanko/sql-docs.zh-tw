@@ -5,24 +5,21 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 2263cf41c9e5b4f4a629db6f824b0d9198a03a55
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710616"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
 
@@ -46,7 +43,7 @@ ms.locfileid: "37891069"
 
 ### <a name="filesystem"></a>FileSystem
 
-欄位|描述
+欄位|Description
 -----|-----------
 LocalDirectory|指定包含要上傳之資料檔案的本機目錄。
 Recursively|指定是否要以遞迴方式搜尋子目錄。
@@ -67,7 +64,7 @@ HashColumnName|指定用於雜湊表發佈的資料行。 如果為 **TableDistr
 
 ### <a name="blobstorage"></a>BlobStorage
 
-欄位|描述
+欄位|Description
 -----|-----------
 AzureStorageConnection|指定 Azure 儲存體連線管理員。
 BlobContainer|指定來源資料所在的 Blob 容器名稱。

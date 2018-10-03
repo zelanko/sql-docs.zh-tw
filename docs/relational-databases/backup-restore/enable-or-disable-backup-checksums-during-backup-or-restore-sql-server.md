@@ -5,25 +5,22 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup checksums [SQL Server]
 - disabling checksums
 - checksums [SQL Server]
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 62e5678d459a3970bbb8a68aee205477c58764e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb922b535966a52ab3395533ef44277b5c382a04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920523"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680286"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在備份或還原期間啟用或停用備份總和檢查碼 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

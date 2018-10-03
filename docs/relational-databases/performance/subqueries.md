@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 02/18/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Subquery
@@ -14,17 +12,16 @@ helpviewer_keywords:
 - subqueries [SQL Server], correlated
 - subqueries [SQL Server], types
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ae4e084911158fc56705d4b09e1e60d50ffb95a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 42ea4207746b3933c550ab1e93a3cc3666a060dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835506"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

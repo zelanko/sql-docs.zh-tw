@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL job step
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95803b55dcc2dcb1dcbd8f6d79990695eb3f3061
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: fb9a65c663c7e9d753cab66bad98d880e6b9ef34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42776204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846666"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

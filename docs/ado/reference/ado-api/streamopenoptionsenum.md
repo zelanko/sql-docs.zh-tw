@@ -1,13 +1,11 @@
 ---
-title: StreamOpenOptionsEnum |Microsoft 文件
+title: StreamOpenOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5aca6380229e55ed29c99ea51592e1e618ce0058
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730276"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
-指定選項，開啟[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以與 OR 運算結合。  
+指定選項，開啟[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。 值可以結合 OR 運算。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adOpenStreamAsync**|@shouldalert|開啟**資料流**處於非同步模式下的物件。|  
-|**adOpenStreamFromRecord**|4|識別的內容*來源*參數必須為已開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 預設行為是將視為*來源*為直接指向的節點在樹狀結構中的 URL。 會開啟與該節點相關聯的預設資料流。|  
-|**adOpenStreamUnspecified**|-1|預設值。 指定開啟**資料流**預設選項的物件。|  
+|**adOpenStreamAsync**|1|會開啟**Stream**處於非同步模式下的物件。|  
+|**adOpenStreamFromRecord**|4|識別的內容*來源*已開啟的參數[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 預設行為是將*來源*做為直接指向的節點樹狀結構中的 URL。 開啟與該節點相關聯的預設資料流。|  
+|**adOpenStreamUnspecified**|-1|預設值。 指定左**Stream**物件使用預設選項。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- 這些常數沒有 ADO/WFC 對等項目。  
+ 這些常數不需要 ADO/WFC 對等項目。  
   
 ## <a name="applies-to"></a>適用於  
  [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)

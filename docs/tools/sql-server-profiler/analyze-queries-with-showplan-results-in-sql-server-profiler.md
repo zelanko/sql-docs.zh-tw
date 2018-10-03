@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], Showplan
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26e3fcd0f7959f5b659468f943a321d30c75cce9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ca9bef932db98bc4bcfef6d0b9a8ca58249abd6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798536"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

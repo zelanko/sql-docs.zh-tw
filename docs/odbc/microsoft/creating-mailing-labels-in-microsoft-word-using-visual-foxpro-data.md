@@ -1,13 +1,11 @@
 ---
-title: 建立郵件使用 Visual FoxPro 資料的 Microsoft Word 中的標籤 |Microsoft 文件
+title: 建立郵件使用 Visual FoxPro 資料的 Microsoft Word 中的標籤 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data [ODBC], mailing labels
@@ -16,48 +14,47 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858379b3aa670a4e6bb8776303e2d16c85c9d30b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778570"
 ---
-# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>建立郵件使用 Visual FoxPro 資料的 Microsoft Word 中的標籤
-您可以使用 Microsoft Word 中的 Visual FoxPro 資料 Windows 95 或 Windows 98 的文件。 例如，您可能要從 Visual FoxPro 資料表中儲存的客戶資訊建立郵寄標籤。  
+# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>使用 Visual FoxPro 資料在 Microsoft Word 中建立郵件標籤
+您可以使用 Visual FoxPro 資料在 Microsoft Word 中，Windows 95 或 Windows 98 的文件。 比方說，您可以從 Visual FoxPro 資料表中儲存的客戶資訊建立郵寄標籤。  
   
-### <a name="to-create-mailing-labels"></a>若要建立郵寄標籤  
+### <a name="to-create-mailing-labels"></a>建立郵件標籤  
   
 1.  在 Microsoft Word 中，建立新的空白文件。  
   
 2.  從 [工具] 功能表中，選擇 [合併]。  
   
-3.  在合併的協助程式，選擇 建立，然後選取郵寄標籤。  
+3.  在 合併列印中，選擇 建立，然後選取郵寄標籤。  
   
-4.  在主要文件中，選擇 使用中視窗。  
+4.  主要的文件，選擇 使用中視窗。  
   
-5.  資料來源 下選擇 取得資料，然後選取 開啟資料來源。  
+5.  資料來源 下選擇取得資料，然後選取開啟資料來源。  
   
 6.  在開啟資料來源] 對話方塊中，選擇 [MS 查詢。  
   
-7.  在 選取資料來源 對話方塊中，選取 Visual FoxPro 資料來源，然後按一下 使用。  
+7.  在 [選取資料來源] 對話方塊中，選取 Visual FoxPro 資料來源，然後按一下使用。  
   
-8.  如果您的資料來源來存取資料庫所包含的資料表，請從 [加入資料表] 對話方塊中選取資料表。 Microsoft 查詢會顯示加入的資料表中的查詢設計工具的上半部。  
+8.  如果您的資料來源來存取資料庫所包含的資料表，請從 [加入資料表] 對話方塊中選取資料表。 Microsoft 查詢會顯示在上半部的查詢設計工具中加入的資料表。  
   
 9. 選取查詢的欄位拖曳到資料表中較低的設計工具 的下半部。  
   
-10. 從 檔案 功能表中，選擇 傳回資料至 Microsoft Word。 Microsoft 查詢隨即關閉，且可供合併文件中使用您選取的資料。  
+10. 從 檔案 功能表中，選擇 將資料傳回至 Microsoft Word。 Microsoft 查詢關閉時，與您所選取的資料可供使用合併列印文件中。  
   
-11. 在主要文件中，選擇 安裝程式。  
+11. 主要的文件，請選擇 [安裝]。  
   
-12. 在 [標籤選項] 對話方塊中，選取印表機及標籤資訊然後按一下 [確定]。  
+12. 在標籤選項 對話方塊中，選取您想要，然後按一下 確定 的印表機及標籤資訊。  
   
-13. 在建立標籤 對話方塊中，選取您想要列印郵寄標籤上，然後按一下 確定 的欄位。  
+13. 在建立標籤 對話方塊中，選取您想要列印在郵寄標籤上，然後按一下 確定 的欄位。  
   
-14. 在合併的協助程式，在 合併的資料與文件中，按一下合併。  
+14. 在合併的協助程式，在 合併的資料與文件，按一下 合併。  
   
-15. 在 合併 對話方塊中，選取您想要然後按一下 合併的選項。
+15. 在 [合併] 對話方塊中，選取您想要的選項然後按一下 [合併]。

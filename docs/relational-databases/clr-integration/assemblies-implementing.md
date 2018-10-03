@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bcba39dba6f5a9cffa9f6f961d29aa20cebc527b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799971"
 ---
 # <a name="assemblies---implementing"></a>組件 - 實作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

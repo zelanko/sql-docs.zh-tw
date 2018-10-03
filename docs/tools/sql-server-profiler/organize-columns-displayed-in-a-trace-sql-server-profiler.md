@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38a7e0a75dc850b5f4ef883d44c6ceb4d426b651
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f7e3f2a66fd4963de77fa3545247f9d81690ddec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980960"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734536"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>組織追蹤內顯示的資料行 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "37980960"
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|稽核登入|648|  
-|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   只選擇一個資料行來進行群組，則可群組並彙總追蹤事件。 當您只選擇一個資料行來進行群組時，追蹤視窗會根據該資料行的值來群組並顯示事件，並將其下的所有事件都摺疊起來。 在您選擇用來進行群組的資料行中，事件左邊會出現一個加號 (**+**)，而其下已摺疊的事件數目，則會顯示在事件右邊的括弧內。 下列範例顯示如果只選擇 **EventClass** 資料行來進行群組，追蹤視窗方格將如何顯示。 請注意，所有事件都會組識在 **EventClass** 資料行之下。 若要檢視所有事件，請按一下加號，展開並顯示該類型的所有事件類別。  

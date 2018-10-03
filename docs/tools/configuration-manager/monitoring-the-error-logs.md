@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server]
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - error logs [SQL Server]
 - logs [SQL Server], Windows application logs
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 5e4449d8e8bc1006833d79c914a1208528a08893
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d9da74a8eeea03466fe496146cc98978714126ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784027"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660277"
 ---
 # <a name="monitoring-the-error-logs"></a>監視錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

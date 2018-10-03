@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitordropalert (TRANSACT-SQL) |Microsoft 文件
+title: sp_dbmmonitordropalert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitordropalert_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06db1e7cfdd158bb6097d13cc51ccd75d0413d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d21b966df55cc796fb97c3994e37b87ba62501d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708046"
 ---
 # <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_dbmmonitordropalert database_name
  *alert_id*  
  識別要發出之警告的整數值。 如果省略這個引數，將會發出資料庫上的所有警告。 若要發出特定效能標準的警告，請指定下列其中一個值：  
   
-|Value|效能標準|警告臨界值|  
+|值|效能標準|警告臨界值|  
 |-----------|------------------------|-----------------------|  
 |1|最舊尚未傳送的交易|指定在主體伺服器執行個體上產生警告之前，傳送佇列中可以累積的交易分鐘數。 這項警告有助於根據時間來衡量可能的資料遺失，而且與高效能模式特別有相關性。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|  
 |2|未傳送的記錄|指定會在主體伺服器執行個體上產生警告之未傳送記錄的 KB 數。 這項警告有助於根據 KB 來衡量可能的資料遺失，而且與高效能模式特別有相關性。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|  
@@ -63,13 +59,13 @@ sp_dbmmonitordropalert database_name
 > [!NOTE]  
 >  此程序會卸除的警告臨界值，不論它們是否已指定使用**sp_dbmmonitorchangealert**或資料庫鏡像監視器。  
   
- 如需這些警告相對應的事件識別碼資訊，請參閱[使用警告臨界值與警示鏡像效能標準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
+ 如需這些警告相對應的事件識別碼資訊，請參閱[使用警告臨界值與鏡像效能計量警示的&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  

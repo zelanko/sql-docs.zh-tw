@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sys.dm_db_page_info
@@ -22,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04a301601d9313f3b7cfe38b7914e12984bdc235
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 9f2e2d0b49f58eff2eac52103bddc6fda818aeb3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849276"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

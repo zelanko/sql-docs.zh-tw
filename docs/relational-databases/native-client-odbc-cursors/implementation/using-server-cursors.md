@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, cursors
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - ODBC cursors, server cursors
 - server cursors [SQL Server]
 ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bab91e4b952b808564da4d04b1ce400bf448c14
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e7c49926705e0e2b7dc189ae46dda7b8ec2a9ff1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832536"
 ---
 # <a name="using-server-cursors"></a>使用伺服器資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

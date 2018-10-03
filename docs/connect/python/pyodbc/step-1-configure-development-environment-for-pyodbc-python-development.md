@@ -5,21 +5,18 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f588174ea80677066628cb3e756d7c38bd42fba
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: e9119883fb96c2ef635cd971f5f598ea625e15d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42784908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732876"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步驟 1︰設定 pyodbc Python 開發的開發環境
 

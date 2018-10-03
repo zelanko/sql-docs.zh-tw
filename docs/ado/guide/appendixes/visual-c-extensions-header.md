@@ -1,13 +1,11 @@
 ---
-title: Visual c + + 擴充功能的標頭 |Microsoft 文件
+title: Visual c + + 延伸模組標頭 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d4b5c823cb992d6b3895740d4c227ae82b30c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4dd004d781f267fdc9872dbab32fefe4352558cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741286"
 ---
-# <a name="visual-c-extensions-header"></a>Visual c + + 擴充功能的標頭
-下列標頭， **icrsint.h**，詳細資料的介面可讓用戶端擷取欄位從**資料錄集**到衍生自的類別中定義的變數**CADORecordBinding**. 您必須指定您想要存取每個欄位 ADO 繫結巨集。  
+# <a name="visual-c-extensions-header"></a>Visual C++ Extensions 標題
+下列標頭中， **icrsint.h**，允許擷取欄位的用戶端的介面將詳細說明**資料錄集**為衍生自的類別中定義的變數**CADORecordBinding**. 您必須指定您想要存取每個欄位的 ADO 繫結巨集。  
   
 ```  
 #ifndef _ICRSINT_H_  
@@ -212,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual c + + 擴充功能範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Visual c + + 延伸模組範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [使用 Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)

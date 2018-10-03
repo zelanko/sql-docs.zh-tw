@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6bd21f53560997b9498f12026777ad42c432e16
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 37e3a3fefcbd604774254467e3bc8516716fbcef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701296"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>發行集資訊，所有訂閱 (快照式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

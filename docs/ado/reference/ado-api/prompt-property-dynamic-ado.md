@@ -1,42 +1,39 @@
 ---
-title: 提示屬性動態 (ADO) |Microsoft 文件
+title: Prompt 動態屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Prompt property [ADO]
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7b5c0637f7befb1419f5cb96bbcd421d59cc7b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fc11f2691613848865219f80b82a7d082803fa04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752346"
 ---
-# <a name="prompt-property-dynamic-ado"></a>提示屬性動態 (ADO)
-指定的 OLE DB 提供者是否應提示使用者輸入的初始化資訊。  
+# <a name="prompt-property-dynamic-ado"></a>Prompt 動態屬性 (ADO)
+指定的 OLE DB 提供者是否應該提示使用者提供初始化資訊。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定並傳回[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)值。  
+ 設定，並傳回[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)值。  
   
 ## <a name="remarks"></a>備註  
- **提示**是動態屬性，可能會附加至[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)OLE DB 提供者的集合。 若要初始化資訊的提示，OLE DB 提供者通常會顯示對話方塊給使用者。  
+ **提示**是動態屬性，可以附加[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件的[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)OLE DB 提供者的集合。 若要提示初始化資訊，OLE DB 提供者通常會顯示一個對話方塊給使用者。  
   
- 動態屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件時，遺失了**連接**已關閉。 **提示**必須重設屬性，然後再重新開啟**連接**使用預設值以外的值。  
+ 動態屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件時，遺失了**連線**已關閉。 **提示**必須重設屬性，然後再重新開啟**連線**使用預設值以外的值。  
   
 > [!NOTE]
->  請勿指定提供者應該會提示使用者在案例中的使用者將無法回應 對話方塊中。 比方說，使用者將無法在使用者的用戶端，而不是伺服器系統上執行應用程式，或是在系統上沒有使用者登入以執行應用程式回覆。 在這些情況下，應用程式將會無限期地等候回應，並看上去可以鎖定。  
+>  未指定提供者應該會提示使用者在所在的使用者將無法回應 對話方塊中的案例中。 例如，使用者將無法回應，如果使用者的用戶端，而不是伺服器系統上執行應用程式，或在系統上執行應用程式使用沒有使用者登入。 在這些情況下，將會無限期地等待回應的應用程式，並將其似乎鎖定中。  
   
 ## <a name="usage"></a>使用方式  
   

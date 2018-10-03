@@ -5,9 +5,7 @@ ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IsNull (geometry Data Type)
@@ -16,16 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IsNull (geometry Data Type)
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77e3ba98c47cca4e1463f256dc3763710ea0ba50
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 89bbf3581f8a62750338d1d7ea360fc46ea36479
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682026"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

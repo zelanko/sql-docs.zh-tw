@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c53e405bad7e81b4ea0344eea857f5dd2e067151
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c58a8a9b8f476c55ebce54e8284051fe89d882a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064288"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>使用 PowerShell 將多個資料庫備份至 Windows Azure Blob 儲存體服務
   本主題提供範例指令碼，可讓您使用 PowerShell 指令程式，自動執行 Windows Azure BLOB 儲存體服務的備份作業。  

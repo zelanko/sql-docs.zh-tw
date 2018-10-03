@@ -5,25 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ffbb59250f7038ce235b959dd5ea183133d0bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790796"
 ---
 # <a name="database-mirroring-monitor-overview"></a>資料庫鏡像監視器概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "35311947"
   
 -   各夥伴最後的已知角色 (主體或鏡像)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要監視資料庫鏡像，您必須是伺服器執行個體上 **系統管理員** 固定伺服器角色或 **msdb** 資料庫之 **dbm_monitor** 固定資料庫角色的成員。 如果您只是其中一個夥伴伺服器執行個體上 **系統管理員** 或 **dbm_monitor** 的成員，則監視器只能連接到該夥伴，不能從其他夥伴那裡擷取資訊。  
   
  如果您只是某個伺服器執行個體上 **dbm_monitor** 的成員，則您在該伺服器執行個體上將只具備有限的權限。 您只能檢視最近的狀態資料列。 如果您使用 **dbm_monitor** 權限連接到伺服器執行個體，則「資料庫鏡像監視器」會通知您，您的權限有限。  
@@ -58,7 +55,7 @@ ms.locfileid: "35311947"
  \<狀態>  
  可能的狀態及其相關聯的圖示如下所示：  
   
-|圖示|[狀態]|描述|  
+|圖示|[狀態]|Description|  
 |----------|------------|-----------------|  
 |警告圖示|**Unknown**|監視器未連接到任何一個夥伴。 唯一的可用資訊就是監視器所快取的內容。|  
 |警告圖示|**正在同步處理**|鏡像資料庫內容延遲在主體資料庫的內容之後。 主體伺服器執行個體正在將記錄傳送到鏡像伺服器執行個體，這時會將變更套用至鏡像資料庫，以便向前復原。<br /><br /> 在資料庫鏡像工作階段開始時，鏡像資料庫和主體資料庫都是處於這個狀態。|  
@@ -91,14 +88,14 @@ ms.locfileid: "35311947"
 ## <a name="action-menu"></a>動作功能表  
  [動作] 功能表一定會包含下列命令：  
   
-|命令|描述|  
+|命令|Description|  
 |-------------|-----------------|  
 |**註冊鏡像資料庫...**|開啟 [註冊鏡像資料庫] 對話方塊。 使用這個對話方塊可在特定的伺服器執行個體上註冊一或多個鏡像資料庫，只要將資料庫加入至「資料庫鏡像監視器」即可。 加入資料庫之後，「資料庫鏡像監視器」就會在本機快取有關資料庫、其夥伴以及如何連接到夥伴的資訊。|  
 |**管理伺服器執行個體連接...**|當您選取這個命令時，便會開啟 [管理伺服器連接] 對話方塊。 您可以在這個對話方塊中選擇您要指定認證的伺服器執行個體，以供監視器連接到特定夥伴時使用。<br /><br /> 若要編輯夥伴的認證，請在 [伺服器執行個體] 方格中找到其項目，然後按一下該資料列上的 [編輯]。 [連接到伺服器] 對話方塊隨即顯示，而且會固定伺服器執行個體的名稱，並且將認證控制項初始化為目前的快取值。 視需要變更驗證資訊，然後按一下 [連接]。 如果認證具有足夠的權限，就會以新的認證更新 [連接方式]  資料行。|  
   
  如果您選取資料庫，則 [動作] 功能表還會包含下列命令。  
   
-|命令|描述|  
+|命令|Description|  
 |-------------|-----------------|  
 |**取消註冊此資料庫**|從「資料庫鏡像監視器」中移除選取的資料庫。|  
 |**設定警告臨界值...**|開啟 [設定警告臨界值] 對話方塊。 系統管理員可以在這個對話方塊中啟用或停用各個夥伴上的資料庫警告，也可以變更各個警告的臨界值。 建議您針對兩個夥伴上的特定警告都設定臨界值，以確保如果資料庫發生容錯移轉時，警告都能持續顯示。 適合於每個夥伴的臨界值需視該夥伴系統的效能功能而定。<br /><br /> 在更新狀態資料表時，只有當效能值達到或超過臨界值時，才會將事件寫入該效能的事件記錄檔中。 如果尖峰值只在兩次狀態更新之間短暫達到臨界值，則會遺漏該尖峰值。|  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
 - queued updating subscriptions [SQL Server replication]
 - viewing conflict information
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4dc4c42c18429c5fa05cfe42fc72c5b511e488b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4a2f9a8927b5cf6a1a93f66f075a2600c3f98e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052948"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>檢視交易式發行集的資料衝突 (SQL Server Management Studio)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 複寫衝突檢視器可讓您檢視點對點異動複寫和具有佇列更新訂閱之異動複寫的衝突。 如需如何偵測和解決衝突的資訊，請參閱[點對點複寫中的衝突偵測](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)和[設定佇列更新衝突解決選項 &#40;SQL Server Management Studio&#41;](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)。  

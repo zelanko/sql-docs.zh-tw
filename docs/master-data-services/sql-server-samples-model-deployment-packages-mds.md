@@ -5,25 +5,22 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - Master Data Services
 - 範例
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
-caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8830a221661c6af2b1721b5146ed3d76c2db92cc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b5b07e836d2e1f23f89c6dc992a080b8ab0e85fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843156"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 範例：模型部署套件 (MDS)
 

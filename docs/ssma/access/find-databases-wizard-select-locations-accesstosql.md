@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ea7f401e2f78d954f92395069b7b53167294662d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393390"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812066"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>尋找資料庫精靈 （選取位置） (AccessToSQL)
 在 [尋找資料庫精靈] 的 [選取位置] 頁面中，您可以輸入的搜尋參數來尋找存取資料庫。  

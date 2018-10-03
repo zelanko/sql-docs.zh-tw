@@ -6,25 +6,22 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file extensions [SQL Server]
 - associating file extensions [SQL Server]
 - Query Editor [SQL Server Management Studio], associating file extensions
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd04cf03c1cd6cd768c6532fc38a2f0a210a3ccf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5556688b18f833d291bd3880f1be866cd11c4802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689146"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>使副檔名與程式碼編輯器相關聯
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

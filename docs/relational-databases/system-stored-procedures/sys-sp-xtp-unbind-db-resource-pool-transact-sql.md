@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xtp_unbind_db_resource_pool_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 852d8db43c417d828678929f46ee28f12623a4af
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 673b1e914c63f0edd191b29dbd7c05af5e63f6fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743526"
 ---
 # <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - KILL STATS JOB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - KILL STATS JOB statement
 - statistics update jobs [SQL Server]
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fcc037b0baccacac2676f11f04c6b36125e2da9
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: dd7b4165ae08bee50d8e236c91458927798c0954
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36247190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845056"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ KILL STATS JOB job_id
 ## <a name="remarks"></a>Remarks  
  job_id 與 session_id 或其他格式的 KILL 陳述式所用的工作單位沒有關聯。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  使用者必須具備 VIEW SERVER STATE 權限，才能存取來自 sys.dm_exec_background_job_queue 動態管理檢視的資訊。  
   
  KILL STATS JOB 權限預設會授與系統管理員 (sysadmin) 和處理序管理員 (processadmin) 固定資料庫角色的成員，無法轉輸。  

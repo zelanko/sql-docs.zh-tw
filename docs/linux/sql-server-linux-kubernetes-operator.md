@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d5699ae16a02346f9dded732180b16615087d16
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759356"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On 可用性群組 Kubernetes 運算子的參數
 

@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cba0246f57157488b4e62ab2cdcbc80b2aea71e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0095293db694c746dac1749b35d9de29c5fbd592
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809836"
 ---
 # <a name="handling-errors-and-warnings"></a>處理錯誤和警告
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

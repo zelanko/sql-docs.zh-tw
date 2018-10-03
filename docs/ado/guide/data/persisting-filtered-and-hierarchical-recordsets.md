@@ -1,13 +1,11 @@
 ---
-title: 保存篩選與階層式資料錄集 |Microsoft 文件
+title: 保存篩選與階層式資料錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered Recordset persistence [ADO]
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da1d0d1538d86738e576b01aa176ffde206a9cdb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 53e28fdfbc49b53c4927bbcc0d5a6a8dc44b3d6d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811916"
 ---
-# <a name="persisting-filtered-and-hierarchical-recordsets"></a>保存篩選與階層式資料錄集
-如果[篩選](../../../ado/reference/ado-api/filter-property.md)屬性實際上是針對**資料錄集**，儲存的資料列篩選器下存取。 如果**資料錄集**為階層式，目前的子系**資料錄集**和其子系會儲存包括父系**資料錄集**。 如果**儲存**方法的子系**資料錄集**是呼叫，都儲存在子系及其所有子系，但不是父代。 如需有關階層式**資料錄集**，請參閱[資料成形](../../../ado/guide/data/data-shaping.md)。  
+# <a name="persisting-filtered-and-hierarchical-recordsets"></a>保存篩選過的階層式資料錄集
+如果[篩選條件](../../../ado/reference/ado-api/filter-property.md)屬性實際上是針對**資料錄集**，儲存的資料列篩選器之下存取。 如果**Recordset**為階層式，目前的子系**資料錄集**和儲存及其子系，包括父代**資料錄集**。 如果**儲存**方法的子系**資料錄集**是呼叫，子系和所有子系都會儲存，但不是父代。 如需有關階層**資料錄集**，請參閱[資料成形](../../../ado/guide/data/data-shaping.md)。  
   
 > [!NOTE]
->  儲存階層式時，某些限制適用於**資料錄集**（資料圖形） 以 XML 格式。 如需詳細資訊，請參閱[XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)。
+>  儲存階層式時，適用某些限制**資料錄集**（資料圖形） 以 XML 格式。 如需詳細資訊，請參閱 <<c0> [ 保存的記錄，以 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)。

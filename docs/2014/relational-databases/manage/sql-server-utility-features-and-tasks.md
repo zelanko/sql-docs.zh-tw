@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0de7b600ddd01130df7876cab66e075b0cb176dc
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 81d816d58780f32eeaca64c1d90257eef1a8aaff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056700"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶有一項需求，也就是以整體方式管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境，這項需求會在這一版中透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內應用程式和多伺服器管理的概念來滿足。  

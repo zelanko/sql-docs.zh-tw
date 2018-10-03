@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 74f69428a6ef2133ee5a0fed2676711dc583a859
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a551b6961664b8a2d068fd6a09d3c998ec621ae3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654858"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>將成員加入至集合 (Master Data Services)
 

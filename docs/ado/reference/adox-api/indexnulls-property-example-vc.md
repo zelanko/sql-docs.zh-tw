@@ -1,32 +1,29 @@
 ---
-title: IndexNulls 屬性範例 （VC + +） |Microsoft 文件
+title: IndexNulls 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a401cd927223e38a21ce496ed771cd0e56248635
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f83c87cc62ddbdd7fa7019595e5f7aeeed9a43b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835996"
 ---
-# <a name="indexnulls-property-example-vc"></a>IndexNulls 屬性範例 （VC + +）
-這個範例會示範[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的索引，並將值設定**IndexNulls**根據使用者輸入。 然後，**索引**附加至**員工**[資料表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**套用至[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據**員工**資料表，而**資料錄集**開啟。 若要加入新的記錄**員工**資料表，與**Null**中編製索引欄位的值。 是否要顯示這個新的記錄，取決於設定的**IndexNulls**屬性。  
+# <a name="indexnulls-property-example-vc"></a>IndexNulls 屬性範例 (VC++)
+此範例示範[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)屬性[Index](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的索引，並設定的值**IndexNulls**根據使用者輸入。 然後， **Index**附加至**員工**[資料表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**套用至[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據**員工**資料表，而**資料錄集**開啟。 新的記錄新增至**員工**資料表中，使用**Null**中索引欄位的值。 這個新的記錄顯示與否取決於設定**IndexNulls**屬性。  
   
 ```  
 // BeignIndexNullCpp.cpp  

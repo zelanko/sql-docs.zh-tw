@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ac999e58a6c88d8a121d7708b6fc9e954cf7419
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a17ec458ffe1094691932fee6661e38551012b54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749447"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +92,7 @@ sp_create_removable
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  如果您要在抽取式媒體 (如光碟) 上建立資料庫的副本，而且要將資料庫散發給其他使用者，請使用這個預存程序。  

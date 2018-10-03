@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSdistributor
 - MSdistributor_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSdistributor system table
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a318e37567d5d6da707fd95328f1d534e853a79
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 07c15a7176f35efc7c5a53489ef2647596ff0c26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743435"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

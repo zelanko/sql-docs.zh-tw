@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3dece5bf18661e6f6bfa42e81c3038dd44b0c8
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 31faa17eda4fbff14d65a18ddc234c5124f72011
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851546"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 支援對照表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

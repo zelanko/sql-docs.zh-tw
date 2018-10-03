@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f55cbf6-0db4-4cb4-a0f5-e27441873d4f
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c73081ff9bb72684192ea17d0247b38bc4f7d64e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f762b6c561f96f8ced9f8fe977dceb3b9208d01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048518"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>建立預測結構和模型 (中繼資料採礦教學課程)
   接下來，您將使用資料採礦精靈，根據您剛建立的資料來源檢視建立新的採礦結構和採礦模型。 在這項工作中，您將指定採礦模型應使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法。  

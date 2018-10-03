@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application roles [SQL Server], about application roles
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 - groups [SQL Server], roles
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
-caps.latest.revision: 31
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f5419182c6da233e2d9aa55de7fa062a2bf5fe0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43110604"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792086"
 ---
 # <a name="application-roles"></a>應用程式角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

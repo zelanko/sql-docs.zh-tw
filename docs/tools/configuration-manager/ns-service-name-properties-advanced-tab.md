@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: cf7b93a4cdb111c655f4b3c57211d53f79a6d8d1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 86cafa8d0eddb0e1c729d091fda974b901ebc49d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784382"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690206"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;服務名稱&gt; 屬性 ([進階] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DatabaseID Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13d1969af83e4fa4bfba07eead0f822c5a81ad43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066928"
 ---
 # <a name="databaseid-element-assl"></a>DatabaseID 元素 (ASSL)
   識別[資料庫](../objects/database-element-assl.md)元素相關聯的行外[繫結](../data-type/binding-data-type-assl.md)項目。  
@@ -49,7 +46,7 @@ ms.locfileid: "37161129"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只能出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -57,7 +54,7 @@ ms.locfileid: "37161129"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttributeBinding](../data-type/dimensionattributebinding-data-type-out-of-line-assl.md)， [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  如需程式碼外部繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  

@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eedf5863ff9c9ad04467771264a476a56647f22
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7509dbd825679377b9284928efd8720a9579793c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750328"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>原生編譯的 T-SQL 模組支援的功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

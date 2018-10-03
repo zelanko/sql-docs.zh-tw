@@ -4,19 +4,18 @@ ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c6a19bc699a048cf6ac80228caa2a1ca442b266
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 498bc994828c4ed7089a4aa223659f70d1c612b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663892"
 ---
 # <a name="server-properties-history-page"></a>伺服器多個屬性 (記錄頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 的這個 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 頁面，即可設定要保留之報表記錄副本數目的預設值。 預設值會提供建立所有報表之報表記錄限制的初始設定。 您可以針對個別報表更改這些設定。  

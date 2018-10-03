@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_revokelogin
@@ -21,12 +18,12 @@ ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d983e3d8dba96bf7527254e28f63b7fedebd4fb9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e7996e3f5d91c78a83266c6d5b23ce8b3d381064
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767936"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

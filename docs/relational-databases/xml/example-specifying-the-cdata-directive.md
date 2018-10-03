@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ef7f226a273ed90c8c667947da783df328cffd6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 604fce70ed6b03b3a3d752ec1ee75eda6aed0a2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005229"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725496"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>範例：指定 CDATA 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

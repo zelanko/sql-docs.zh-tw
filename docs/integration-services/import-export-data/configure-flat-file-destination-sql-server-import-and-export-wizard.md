@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694146"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
   若已選取一般檔案目的地，則在指定要複製整個資料表或提供查詢之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入及匯出精靈] 會顯示 [設定一般檔案目的地]。 在此頁面上，您可以指定目的地一般檔案的格式化選項。 (選擇性) 您可以檢閱個別資料行的對應，並預覽範例資料。  
@@ -44,7 +41,7 @@ ms.locfileid: "35408520"
  **資料列分隔符號**  
  從分隔符號清單中選取分隔符號，以分隔輸出中的資料列。 沒有選項可用於指定*自訂*的資料列分隔符號。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是使用歸位/換行字元組合進行分隔。|  
 |**{CR}**|資料列是使用歸位字元進行分隔。|  
@@ -58,7 +55,7 @@ ms.locfileid: "35408520"
  **資料行分隔符號**  
  從分隔符號清單中選取分隔符號，以分隔輸出中的資料行。 沒有選項可用於指定*自訂*的資料行分隔符號。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是使用歸位/換行字元組合進行分隔。|  
 |**{CR}**|資料行是使用歸位字元進行分隔。|  

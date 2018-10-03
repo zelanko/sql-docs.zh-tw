@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 497b3eba195976fdb530479d810e6a3ce1ed813c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 52bc9d57540cdf3bd57e77e3da039e5e9c6d8e50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838806"
 ---
 # <a name="data-sources-and-connection-methods"></a>資料來源和連接方法
   您可以使用這些方法來設定和管理資料來源連接與認證。  

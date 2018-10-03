@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.backupencryptionkey.F1
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89d5ffa496220bc14b963ebbad08b89b919eec3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db573e1a070b110ff0f5224a6d079f3fe7c377ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061688"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>備份加密金鑰 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 您可以使用 加密金鑰來保護儲存在報表伺服器資料庫中的機密資料。 擁有此金鑰的備份對於確保對加密連接字串和認證的持續存取權非常重要。 如果您要將報表伺服器資料庫移到另一部電腦，或是您要變更報表伺服器服務帳戶的使用者名稱或密碼，您必須擁有此金鑰的備份副本。 這兩個作業都需要從您之前建立的備份副本還原此金鑰。  

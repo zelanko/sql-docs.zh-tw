@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_SECURITY_POLICY_TSQL
@@ -19,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - DROP SECURITY POLICY statement
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0cec212b2fed6269c18c4a6583078e4f8adf3e69
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e8505e3d4dd2d7bf6768a021935dcedfec743e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625126"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, permissions
 - security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 313ddda23b53fc0a4458ee2f12926a47cf0b3830
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 695870ff131cb265470173a1bc76b6e2ee96bcf2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757036"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>執行 SQL Server Profiler 所需的權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

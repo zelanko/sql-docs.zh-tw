@@ -4,24 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1c2b325e10223cf30d233facb3de3e3282eaa7b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782066"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>開始使用 SSMA for Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for Oracle 可讓您快速轉換至 Oracle 資料庫結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

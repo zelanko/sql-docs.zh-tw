@@ -1,13 +1,11 @@
 ---
-title: setFetchSize 方法 (SQLServerResultSet) |Microsoft 文件
+title: setFetchSize 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.setFetchSize
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32e6999e9cdfadb8ca05bba46325ee722cbc6fd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4ab8221e52cc5e3510a70a0e9affa290374330a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843193"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814346"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +43,7 @@ public void setFetchSize(int rows)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setFetchSize 方法是由 java.sql.ResultSet 介面中的 setFetchSize 方法指定。  
   
  如果指定的提取大小為零，則 JDBC 驅動程式會忽略此值，並預估應有的提取大小。 預設值由建立結果集的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件設定。 提取大小可以隨時變更。  

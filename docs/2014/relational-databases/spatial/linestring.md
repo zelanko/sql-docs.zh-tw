@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059748"
 ---
 # <a name="linestring"></a>LineString
   `LineString` 是代表一連串的點及連接這些點之線段的一維度物件。  

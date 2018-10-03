@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c69e308ffc45e7518e60950b4711c4b29d64f13
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f4da9cc5647d07011c0c063ae0c7c7dce42d1f45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060831"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786926"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定中斷點條件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - templates [SQLXML]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eea82b2b4ef26b7764106cc65d70e07c621db682
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d6b2ebdd276d2ca5f896432d8f42f1a67e626299
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662876"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>執行包含 SQL 查詢的範本 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

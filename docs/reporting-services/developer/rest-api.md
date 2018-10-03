@@ -5,17 +5,16 @@ ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: developer
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b2094b632ce71498f2eb9f88d1685e2b667616f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a2a5a77918b525bc0a406f8508187017853e093b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627146"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 

@@ -1,32 +1,29 @@
 ---
-title: 狀態屬性範例 (VB) |Microsoft 文件
+title: 狀態屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - State property [ADO], Visual Basic example
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f3f7126a9da116dd34ef2c0e99559eeb7dc122e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a834754a83339a989484ea6c0c0b94e313699023
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753721"
 ---
 # <a name="state-property-example-vb"></a>State 屬性範例 (VB)
-這個範例會使用[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性來顯示一則訊息，而非同步連接所開啟，並執行非同步命令。  
+這個範例會使用[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性，以顯示一則訊息，而非同步連接所開啟，並執行非同步命令。  
   
 ```  
 'BeginStateVB  

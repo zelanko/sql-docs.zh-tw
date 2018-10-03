@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cycling SQL Server error log
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - displaying SQL Server error log
 - logs [SQL Server], SQL Server error logs
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 431770b06fa7919e3ca65d45876f6d5e6b73b1d5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 85507ac52f43d3496d73ae2aed88dd7f8b693b99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718736"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>檢視 SQL Server 錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

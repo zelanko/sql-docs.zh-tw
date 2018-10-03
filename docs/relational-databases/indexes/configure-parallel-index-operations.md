@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index parallel operations [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - MAXDOP index option, parallel index operations
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: babb2fdc459d983321343b0a5570d957ede2b62e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 27b81b026c2ab0683ef28fe9284e61d7096e49c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773286"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.locfileid: "43074345"
     |ReplTest1|Description|  
     |-----------|-----------------|  
     |0|指定伺服器會根據目前的系統工作負載來決定所使用的 CPU 數目。 這是預設值且為建議的設定。|  
-    |@shouldalert|隱藏平行計畫的產生。 作業必須循序執行。|  
+    |1|隱藏平行計畫的產生。 作業必須循序執行。|  
     |2-64|將處理器的數目限制成指定的值。 視目前的工作負載而定來使用較少的處理器。 如果指定的值大於可用的 CPU 個數，就會使用實際可用的 CPU 個數。|  
   
 -   平行索引執行與 MAXDOP 索引選項適用於下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  

@@ -1,13 +1,11 @@
 ---
-title: GetPermissions 和 SetPermissions 方法範例 （VC + +） |Microsoft 文件
+title: GetPermissions 和 SetPermissions 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], VC++ example
 - GetPermissions method [ADOX], VC++ example
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 041543140a1bf6b434d88773259ff4dff12e293b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 829b8df79c726e047576de0e845f2e3f5543352f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655466"
 ---
-# <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions 和 SetPermissions 方法範例 （VC + +）
-這個範例會示範[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下列程式碼可讓系統管理員使用者 Orders 資料表的完整存取。  
+# <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions 和 SetPermissions 方法範例 (VC++)
+此範例示範[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)並[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下列程式碼可讓 「 訂單 」 資料表來管理使用者完整存取權。  
   
 ```  
 // BeginGrantPermissionCpp.cpp  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2f1fd02985216d5f6f6ef7360bc08312cf79ccbd
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 7217be66fa41328d2483bc42fa66f2f71fcc1beb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789036"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

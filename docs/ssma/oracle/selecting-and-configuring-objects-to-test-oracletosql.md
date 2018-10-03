@@ -1,86 +1,83 @@
 ---
-title: 選取和設定物件以測試 (OracleToSQL) |Microsoft 文件
+title: 選取並設定測試 (OracleToSQL) 的物件 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9069ec981e944118b649f1dd0d0dd326e2c217db
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777864"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705169"
 ---
-# <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選取和設定測試 (OracleToSQL) 的物件
-在這個步驟中選取測試，並設定設定值比較程序和函式的輸出參數，以及函式的傳回值的物件。  
+# <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選取及設定要測試的受影響物件 (OracleToSQL)
+在此步驟中，您選取測試，並設定為比較程序的函式的輸出參數，以及函式的傳回值的物件。  
   
 ## <a name="selection-of-objects-to-test"></a>要測試之物件的選取範圍  
-在 Oracle 物件樹狀目錄，位於視窗的左半部，請檢查您想要在測試過程中叫用的物件。 請參閱中的可測試物件的完整清單[測試移轉的資料庫物件&#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)主題。  
+在 Oracle 物件樹狀結構，位於視窗的左側，核取您想要在測試過程中叫用的物件。 請參閱中的可測試物件的完整清單[測試移轉的資料庫物件&#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)主題。  
   
-如果 SSMA Tester 不支援任何測試選取的物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視的理由為何無法測試這些物件，並清除選取錯誤的物件。  
+如果 SSMA Tester 不支援任何測試所選取的物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視這些物件無法測試為何的原因，並清除選取錯誤的物件。  
   
-在右側，您可以檢視數個頁面**SQL**頁面會顯示目前的物件定義。 **參數**頁面列出的參數，如果物件是預存程序或函式。 **屬性**頁面會顯示物件的其他特性。 請參閱描述**參數比較**和**呼叫值**頁面下方。  
+在右側，您可以檢視數頁**SQL**頁面會顯示目前的物件定義。 **參數**頁面列出的參數，如果物件為預存程序或函式。 **屬性**頁面會顯示物件的其他特性。 請參閱的說明**參數比較**並**呼叫值**下方頁面。  
   
 ## <a name="parameter-comparison-settings"></a>參數比較設定  
-建立輸出參數的比較規則，並傳回值中的**參數比較**頁面。 您可以進行下列設定。  
+建立輸出參數的比較規則，並傳回值**參數比較**頁面。 您可以進行下列設定。  
   
-### <a name="use-during-test-comparisons"></a>在進行比較測試的使用  
-使用測試結果比較在所選取的參數來啟用。  
+### <a name="use-during-test-comparisons"></a>測試比較期間使用  
+使用的測試結果相較之下選取的參數來啟用。  
   
--   如果您選擇**True**，SSMA 會比較之後在 Oracle 上執行程序與 SQL Server 上的對應值的輸出值，這個參數。
+-   如果您選擇 **，則為 True**，SSMA 會比較在 Oracle 上執行的程序，與 SQL Server 上的對應值後的輸出值，這個參數。
   
--   如果您選擇**False**，驗證結果將會排除參數。  
+-   如果您選擇**False**，參數將會排除驗證結果。  
   
-### <a name="use-custom-scale"></a>使用自訂縮放比例  
-對於數值資料型別參數，您可以設定自訂的縮放比例進行比較。  
+### <a name="use-custom-scale"></a>使用自訂的小數位數  
+對於數值資料型別參數，您可以設定自訂的小數位數，比較。  
   
--   如果您選擇**True**，數字的值會捨入根據**比較小數位數**值之前在進行比較。  
+-   如果您選擇 **，則為 True**，會捨入數字值，根據**比較擴展**值之前它們進行比較。  
   
--   如果您選擇**False**，數值比較，都會是精確。  
+-   如果您選擇**False**，數字的比較會精確。  
   
 ### <a name="comparing-scale"></a>比較小數位數  
-適用於只有當**使用自訂縮放**選項設定為**True**。 這是數值比較的有效位數。  
+適用於只有當**使用自訂縮放**選項設定為 **，則為 True**。 這是數值比較的有效位數。  
   
 ### <a name="date-time-comparing"></a>日期時間比較  
 定義如何日期/時間值進行比較。  
   
--   如果您選取**比較整個日期**，將會執行完整的值從兩個平台比較。  
+-   如果您選取**比較整個日期**，將會執行完整的兩個平台的值比較。  
   
--   如果您選取**只比較日期**、 部分將會略過的時間。  
+-   如果您選取**只比較日期**、 組件將被略過的時間。  
   
--   如果您選取**只有比較時間**、 組件將會忽略的日期。  
+-   如果您選取**只比較時間**、 組件將會忽略日期。  
   
--   如果您選取**忽略毫秒**，結果將會比較最多秒數。  
+-   如果您選取**忽略毫秒**，結果會比較最多秒數。  
   
--   如果您選取**忽略日期和毫秒**，結果會是第二個比較僅由時間部分，並忽略小數部分。  
+-   如果您選取**忽略的日期和毫秒**，結果會是比較，只有時間部分並略過的秒的小數部分。  
   
-### <a name="ignore-strings-case"></a>忽略字串的大小寫  
+### <a name="ignore-strings-case"></a>忽略字串大小寫  
 控制比較區分大小寫。  
   
--   如果您選擇**True**，比較會區分大小寫。  
+-   如果您選擇 **，則為 True**，比較會區分大小寫。  
   
 -   如果您選擇**False**，比較會區分大小寫。  
   
 ### <a name="ignore-trailing-spaces"></a>忽略尾端空白  
 控制如何尾端的空格會被視為在比較時。  
   
--   如果您選擇**True**，比較的字串右邊修剪再將比較。  
+-   如果您選擇 **，則為 True**，比較的字串會是右邊修剪比較之前。  
   
 -   如果您選擇**False**，比較的字串將會保留尾端空白。  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>指定輸入的值的程序和函式 （呼叫值）  
-您可以指定輸入的參數值在**呼叫值**頁面。 **加入呼叫**按鈕會將新的呼叫，以空的參數值。 **移除呼叫**按鈕會移除目前的呼叫。  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>指定輸入的值的程序和函式 （呼叫的值）  
+您可以指定輸入的參數值**呼叫值**頁面。 **新增呼叫**按鈕會將新的呼叫使用空白參數值。 **移除呼叫**按鈕會移除目前的呼叫。  
   
 ## <a name="next-step"></a>下一個步驟  
 [選取並設定受影響的物件&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  

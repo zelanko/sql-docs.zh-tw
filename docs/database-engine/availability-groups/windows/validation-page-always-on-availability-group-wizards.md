@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.addreplicawizard.validation.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - ', listeners'
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3fa76ae69b35257d1419a6ce664677287e333180
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ff7bb0be3ecc9ef02e38994bebda675c016ef8b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847706"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>驗證頁面 (AlwaysOn 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.locfileid: "34771276"
  **結果**  
  顯示下列其中一個超連結文字。 如需有關給定驗證步驟之結果的詳細資訊，請按一下超連結。  
   
-|結果|描述|  
+|結果|Description|  
 |------------|-----------------|  
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
 |**已略過**|表示已略過驗證步驟，因為您的選項不需要驗證。 按一下連結可檢視略過步驟的原因。|  

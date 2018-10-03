@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 36ff39355b369ea60a7a05831fe13aa43f77bf24
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: f84056bcfcaab50f385a9372cb882746c8c6bd2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36915009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849946"
 ---
 # <a name="install-distributed-replay"></a>安裝 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +154,7 @@ ms.locfileid: "36915009"
   
  您可以使用下表中的參數來開發安裝的命令列指令碼。  
   
-|參數|描述|支援的值|  
+|參數|Description|支援的值|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **選擇性**|Distributed Replay Controller 服務的服務帳戶。|檢查帳戶和密碼|  
 |/CTLRSVCPASSWORD<br /><br /> **選擇性**|Distributed Replay Controller 服務帳戶的密碼。|檢查帳戶和密碼|  

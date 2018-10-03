@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f152e497fd1a19924321580280e520598773081d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 411f5901d1eb5e0a68a56324f481682f12e79e76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43018036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810786"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 使用者定義型別
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

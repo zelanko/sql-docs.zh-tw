@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2711bfe4568255d50d9438653bacb0ae7807e2c1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 20fad19ffa9d5d82c83321f63236b066e3e1c781
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849836"
 ---
 # <a name="create-an-index-master-data-services"></a>建立索引 (Master Data Services)
 
@@ -55,7 +52,7 @@ ms.locfileid: "35402060"
   
  對於每個建立的索引，含有四個資料行的資料列會加入格線中。 下表描述該資料行。  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |[狀態]|索引狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新索引。<br /><br /> 如果建立或編輯索引時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |[屬性]|索引名稱。|  

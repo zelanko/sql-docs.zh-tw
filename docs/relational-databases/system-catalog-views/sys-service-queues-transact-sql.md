@@ -1,14 +1,11 @@
 ---
-title: sys.service_queues (TRANSACT-SQL) |Microsoft 文件
+title: sys.service_queues (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.service_queues
@@ -20,28 +17,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_queues catalog view
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd452ced7da739beeb01b9295c8843473be202f5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 073329c4c2da31e3defb6a2e2dcaa77d6109228e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221709"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762906"
 ---
 # <a name="sysservicequeues-transact-sql"></a>sys.service_queues (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含一個資料列，每個資料庫中的物件，為服務佇列與**sys.objects.type** = SQ。  
+  包含每個資料庫中的物件，為服務佇列與一個資料列**sys.objects.type** = SQ。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<繼承資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<繼承資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱 < [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**max_readers**|**smallint**|佇列所能接受的最大並行讀取器數。|  
 |**activation_procedure**|**nvarchar(776)**|啟用程序的三部份名稱。|  
-|**execute_as_principal_id**|**int**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 指定主體 if 的識別碼執行 AS SELF EXECUTE AS\<主體 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 指定的主體 if 的識別碼執行 AS SELF EXECUTE AS\<主體 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**is_activation_enabled**|**bit**|1 = 啟用啟動。|  
 |**is_receive_enabled**|**bit**|1 = 啟用接收。|  
 |**is_enqueue_enabled**|**bit**|1 = 啟用加入佇列。|  
@@ -53,6 +49,6 @@ ms.locfileid: "33221709"
   
 ## <a name="see-also"></a>另請參閱  
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;。TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

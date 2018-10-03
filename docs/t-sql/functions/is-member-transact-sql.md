@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_MEMBER
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - groups [SQL Server], members
 - members [SQL Server], verifying
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04999f3f86c26948aec5e8d3a4ea0910fa5b94c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 654cd8331398746213afa892e8bf0c6acc86c269
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076101"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735506"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +67,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 |傳回值|Description|  
 |------------------|-----------------|  
 |0|目前使用者不是 *group* 或 *role* 的成員。|  
-|@shouldalert|目前使用者是 *group* 或 *role* 的成員。|  
+|1|目前使用者是 *group* 或 *role* 的成員。|  
 |NULL|任一 *group* 或 *role* 無效。 透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或使用應用程式角色的登入進行查詢時，針對 Windows 群組傳回 NULL。|  
   
  IS_MEMBER 會檢查 Windows 所建立的存取 Token 來判斷 Windows 群組成員資格。 存取 Token 不會反映在使用者連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後，所進行的群組成員資格變更。 Windows 群組成員資格無法透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式角色進行查詢。  

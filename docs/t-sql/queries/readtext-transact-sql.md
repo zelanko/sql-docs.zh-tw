@@ -5,9 +5,7 @@ ms.date: 10/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - READTEXT_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e98fba7617c3b1a46b64d07f2b7efa0e51b9ad2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3046b1d01ec7d005b32c4bd71598fe07e2b3b1b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798416"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

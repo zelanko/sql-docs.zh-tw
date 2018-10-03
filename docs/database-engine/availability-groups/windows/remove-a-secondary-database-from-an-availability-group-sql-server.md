@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.unjoindb.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], removing
 - Availability Groups [SQL Server], databases
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 158c445617814900add28cf98c1ee5e90072f0bd
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 40f08d9b924f8bfd223490694de0f6160f5f9962
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632676"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>將次要資料庫從可用性群組移除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

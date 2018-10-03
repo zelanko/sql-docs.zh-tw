@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.security.QRA.f1
 helpviewer_keywords:
 - Queue Reader Agent Security dialog box
 ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc42b1cbdef5cba58e333f5eb597b55d4c7000ae
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a2129289ae91688527156772c43d093851f52190
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754377"
 ---
 # <a name="queue-reader-agent-security"></a>佇列讀取器代理程式安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

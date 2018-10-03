@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 84274a1c09dd38ada58b45d4242e2599d6704dcd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5e33eca3c4be7d766d85862ccb66a4ab76a9d17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066328"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的套件是一個 XML 檔案，其中包含可部署的模型結構，以及模型中的資料 (選擇性)。 使用模型封裝將模型的副本從一個 MDS 環境移到另一個 MDS 環境，或在現有的 MDS 環境中建立新的模型。  

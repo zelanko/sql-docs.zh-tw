@@ -1,14 +1,11 @@
 ---
-title: sp_trace_generateevent (TRANSACT-SQL) |Microsoft 文件
+title: sp_trace_generateevent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 398fb058ae7be57cf0c26b26e77d6e82aafd0df3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826546"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立使用者定義事件。  
   
->**注意：** 這個預存程序是**不**已被取代。 所有其他與追蹤相關的預存程序都已被取代。  
+>**注意︰** 此預存程序**不**已被取代。 所有其他與追蹤相關的預存程序都已被取代。  
   
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -50,18 +46,18 @@ sp_trace_generateevent [ @eventid = ] event_id
   
 ## <a name="arguments"></a>引數  
  [ **@eventid=**] *event_id*  
- 這是要開啟的事件識別碼。 *event_id*是**int**，沒有預設值。 識別碼必須是從 82 到 91，表示為資料集的使用者定義事件的事件編號[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
+ 這是要開啟的事件識別碼。 *event_id*已**int**，沒有預設值。 識別碼必須是從 82 到 91，為資料集代表使用者定義事件的事件編號[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
  [ **@userinfo**=] **'***user_info***'**  
- 這是用來識別事件原因的選擇性使用者定義字串。 *user_info*是**nvarchar （128)**，預設值是 NULL。  
+ 這是用來識別事件原因的選擇性使用者定義字串。 *user_info*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
   
  [ **@userdata**=] *user_data*  
- 這是選擇性的使用者指定事件資料。 *user_data*是**varbinary （8000)**，預設值是 NULL。  
+ 這是選擇性的使用者指定事件資料。 *user_data*已**varbinary(8000)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  下表描述在預存程序完成之後，使用者可能得到的代碼值。  
   
-|傳回碼|Description|  
+|傳回碼|描述|  
 |-----------------|-----------------|  
 |**0**|沒有錯誤。|  
 |**1**|未知的錯誤。|  
@@ -69,7 +65,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**13**|記憶體用完。 當沒有足夠的記憶體可以執行指定的動作時，便傳回這個代碼。|  
   
 ## <a name="remarks"></a>備註  
- **sp_trace_generateevent**都會執行許多由先前執行的動作**xp_trace_\*** 擴充預存程序。 使用**sp_trace_generateevent**而不是**xp_trace_generate_event**。  
+ **sp_trace_generateevent**會執行許多先前執行的動作**xp_trace_\*** 擴充預存程序。 使用**sp_trace_generateevent**而不是**xp_trace_generate_event**。  
   
  可搭配使用的使用者定義的事件只有識別碼**sp_trace_generateevent**。 如果使用其他事件識別碼，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會發生錯誤。  
   
@@ -103,7 +99,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_trace_geteventinfo &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   

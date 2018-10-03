@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396066"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050073"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
   使用 **[備份資料庫]** 對話方塊上的 **[一般]** 頁面，檢視或修改資料庫備份作業設定。  

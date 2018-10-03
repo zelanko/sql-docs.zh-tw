@@ -5,9 +5,7 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STIsClosed_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsClosed (geometry Data Type)
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4e67e65363787062af8c22894c29c99092da842
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5be28fe6b1533c6920c83171130a2d4104784fe2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38043299"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779139"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

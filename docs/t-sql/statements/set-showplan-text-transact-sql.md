@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHOWPLAN_TEXT
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-caps.latest.revision: 26
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbeb752920a1d3cab1be4a52e2b9abf213b7b119
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2fd5f24cf6effcac0682026ae49b933256176afe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38014214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834786"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

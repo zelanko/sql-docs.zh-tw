@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - '&& (logical AND)'
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0185c28d970a1698a4159daefbbca9338b2a66cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a59545c26427afa1677eca78e4c00263e663dded
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302258"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065529"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (邏輯 AND) (SSIS 運算式)
   執行邏輯 AND 運算。 如果所有條件均為 TRUE，則運算式的評估結果為 TRUE。  

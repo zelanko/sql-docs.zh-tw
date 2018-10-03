@@ -1,14 +1,11 @@
 ---
-title: 全文檢索搜尋和語意搜尋目錄檢視 (TRANSACT-SQL) |Microsoft 文件
+title: 全文檢索搜尋和語意搜尋目錄檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], catalog views
 - full-text indexes [SQL Server], catalog views
 ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce32b848982bb16155d7f2661bdec0067b984717
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9a6785c198bedb99ea0fd5b42f54cab431535527
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180134"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735026"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>全文檢索搜尋和語意搜尋目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,6 +76,6 @@ ms.locfileid: "33180134"
 ## <a name="see-also"></a>另請參閱  
  [系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [全文檢索搜尋和語意搜尋動態管理檢視與函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [全文檢索搜尋和語意搜尋動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

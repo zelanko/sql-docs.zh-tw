@@ -1,14 +1,11 @@
 ---
-title: sys.fn_get_sql (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_get_sql (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842056"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33236160"
   傳回指定 SQL 控制代碼之 SQL 陳述式的文字。  
   
 > [!IMPORTANT]  
->  未來的 Microsoft SQL Server 版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 sys.dm_exec_sql_text。 如需詳細資訊，請參閱[sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
+>  未來的 Microsoft SQL Server 版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用 sys.dm_exec_sql_text。 如需詳細資訊，請參閱 < [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
   
  
   
@@ -56,11 +52,11 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>引數  
  *SqlHandle*  
- 控制代碼值。 *SqlHandle*是**varbinary(64)** 沒有預設值。  
+ 控制代碼值。 *Sqlhandle&lt*已**varbinary(64)** 沒有預設值。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|資料庫識別碼。 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。|  
 |objectid|**int**|資料庫物件的識別碼。 特定 SQL 陳述式的這個值是 NULL。|  
@@ -75,7 +71,7 @@ sys.fn_get_sql ( SqlHandle )
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]無法快取某些[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，例如大量複製陳述式和字串常值大於 8 KB 的陳述式。 這些陳述式的控制代碼無法利用 fn_get_sql 來擷取。  
   
- **文字**篩選結果集的資料行可能包含密碼的文字。 如需儲存資訊之安全性相關的程序未受監視，請參閱[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)。  
+ **文字**結果集的資料行的篩選出可能含有密碼的文字。 如需儲存之安全性相關資訊的程序未受監視，請參閱[篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)。  
   
  Fn_get_sql 函數會傳回類似的資訊[DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)命令。 以下是何時因無法使用 DBCC INPUTBUFFER 而能夠使用 fn_get_sql 函數的範例：  
   

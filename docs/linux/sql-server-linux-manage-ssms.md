@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.openlocfilehash: 5016bbd8d461ce4b165b645f79c0b6c6865bcb8b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723196"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 SQL Server Management Studio，來管理 SQL Server on Linux
 
@@ -135,7 +133,7 @@ SSMS for SQL Server，包括工具，可提供一組廣泛的開發和管理功�
 
 活動監視器顯示展開及摺疊的窗格，以下列資訊：
 
-- 概觀
+- 總覽
 - 處理序
 - 資源等候
 - 資料檔案 I/O

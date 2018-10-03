@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobschedule
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobschedule
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 456295211427b07e0f6bbda7069e3d645b31286a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5e5dc7d93b411834ae127d5bce7f775b78dc36ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815346"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -5,22 +5,19 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc5ea7bc6deea3aa33a70b5b956a5d025349fe32
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 04ca2c0792b1b10ffd4baf182ac8aa12fb5c1f04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43100172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810431"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

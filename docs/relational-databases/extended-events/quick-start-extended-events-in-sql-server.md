@@ -5,22 +5,19 @@ ms.date: 09/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xevents
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c4b03ed51beaa77ae1afc9ea07d950300a7b6d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9636e10649dc9a8b297e2397e07fbc4629f2cdf2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673726"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

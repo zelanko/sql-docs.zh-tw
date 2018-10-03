@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7cc7b1450f6e1d115b44a2c703516f2c562b90ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8ee7c9665186648217f522ce1642cc791274ad0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053568"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或刪除資料列 (報表產生器及 SSRS)
   您可以在 Tablix 資料區中加入或刪除資料列。 Tablix 資料區可以是資料表、矩陣或清單。 下列程序不適用於圖表和量測計資料區域。  
@@ -39,7 +36,7 @@ ms.locfileid: "37216578"
   
 -   以滑鼠右鍵按一下您想要插入資料列的資料列控制代碼，按一下 [插入資料列]，然後按一下 [上方] 或 [下方]。  
   
-     \- 或 -  
+     \-或-  
   
 -   在您想要插入資料列的資料區中，以滑鼠右鍵按一下資料格，按一下 [插入資料列]，然後按一下 [上方] 或 [下方]。  
   
@@ -47,7 +44,7 @@ ms.locfileid: "37216578"
   
 -   選取要刪除的一個或多個資料列，以滑鼠右鍵按一下所選資料列之任一資料列的控制代碼，然後按一下 [刪除資料列]。  
   
-     \- 或 -  
+     \-或-  
   
 -   在您想要刪除資料列的資料區中，以滑鼠右鍵按一下資料格，然後按一下 [刪除資料列]。  
   

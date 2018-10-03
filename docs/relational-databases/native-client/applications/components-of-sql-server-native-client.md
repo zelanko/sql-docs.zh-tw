@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, about SQL Server Native Client ODBC driver
@@ -14,17 +12,16 @@ helpviewer_keywords:
 - components [SQL Server Native Client]
 - SQLNCLI, about SQL Server Native Client
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3829f6693968cc988cb7bb4df7a444f61e7ef342
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 60dc57c4078e580cfae3918c42721ddc49089af2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633336"
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client 的元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

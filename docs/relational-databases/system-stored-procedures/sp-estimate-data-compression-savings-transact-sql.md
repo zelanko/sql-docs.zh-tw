@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70efe047d1fae61f9755c2dbeecf9627de5b5a79
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743516"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

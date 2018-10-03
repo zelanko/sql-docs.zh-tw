@@ -1,13 +1,11 @@
 ---
-title: 集合 (ADO-WFC 語法) |Microsoft 文件
+title: 集合 (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - collections [ADO], ADO/WFC syntax
 - ADO/WFC syntax index [ADO]
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd7be8ac8341ca6386661b3408dc98c4bf800f5c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4c5a2e9ae543f7ebbbefb6286835906626a6285
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831196"
 ---
-# <a name="collections-ado---wfc-syntax"></a>集合 (ADO-WFC 語法)
+# <a name="collections-ado---wfc-syntax"></a>Collections (ADO - WFC 語法)
 **封裝 com.ms.wfc.data**  
   
 ## <a name="parameters"></a>參數  
@@ -87,6 +84,6 @@ public int getCount()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [錯誤集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

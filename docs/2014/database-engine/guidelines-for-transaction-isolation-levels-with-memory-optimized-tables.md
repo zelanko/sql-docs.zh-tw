@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 456922a60eb0d5544c2cdb7992979fea59c3da66
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050030"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>搭配記憶體最佳化的資料表使用交易隔離等級的方針
   在許多情況下，您必須指定交易隔離等級。 記憶體最佳化資料表的交易隔離不同於磁碟基礎的資料表。  

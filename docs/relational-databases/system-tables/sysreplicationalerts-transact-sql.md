@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysreplicationalerts_TSQL
 - sysreplicationalerts
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dbc1aa2be529d00d2dfd453b181a72ea116809a2
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 1932ad1a889d32cd3bef1c26916e79960370b52f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103006"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783366"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

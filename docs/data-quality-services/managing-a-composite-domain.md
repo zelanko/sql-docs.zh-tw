@@ -5,22 +5,19 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec3a5237a00a8c3e4a88010d4bf5a70c24aa2954
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 959b778d613376197774a01de8efb6fa031cee14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621856"
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
 

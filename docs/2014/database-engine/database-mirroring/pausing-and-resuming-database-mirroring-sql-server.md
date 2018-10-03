@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e19f9d4ea6220c324680ac13305bad818fd551e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284034"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061459"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暫停與繼續資料庫鏡像 (SQL Server)
   資料庫擁有者隨時都可以先暫停資料庫鏡像工作階段，稍後再繼續。 暫停會保留工作階段狀態，同時暫停鏡像。 發生瓶頸時，暫停可能會對改進主體伺服器的效能有所幫助。  

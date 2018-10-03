@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 30484eb52561d3bf8006af7ee991c3e2c1619e48
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3c40ef7b0115dea0c0167729676e2203f62d2ea1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633906"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-iSCSI-Linux 上的 SQL Server
 

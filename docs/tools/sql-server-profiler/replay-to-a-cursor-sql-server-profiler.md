@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replaying cursors
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ead2018ba30ca61703fe266ee3cbbe88129fa444
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5956e4872695f796ac0367ad45f90cbc20a91e1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732146"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重新執行至資料指標處 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

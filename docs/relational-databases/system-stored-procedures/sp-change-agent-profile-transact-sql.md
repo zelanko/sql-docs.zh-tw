@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_change_agent_profile
 - sp_change_agent_profile_TSQL
 helpviewer_keywords:
 - sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 441877f6212af070da39b828e5aaaae40e6a3ed7
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f570e8541c2cb2311638158674259c0db2c1ec27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828913"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

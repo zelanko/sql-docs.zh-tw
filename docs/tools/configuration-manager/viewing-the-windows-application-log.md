@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application logs [SQL Server]
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - displaying Windows application logs
 - logs [SQL Server], Windows application logs
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0064917fe9b6dd340d33596f9c37851357cbb459
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0beb6675866e84398b19d04321f075736497dfc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766712"
 ---
 # <a name="viewing-the-windows-application-log"></a>檢視 Windows 應用程式記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

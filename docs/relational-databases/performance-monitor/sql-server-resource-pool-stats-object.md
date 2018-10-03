@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reosurce Pool Stats object
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26a4d2ab7c1a39b2cdaa2865f6f5cc025d59a886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0866673feed877c1eb48d282ebb1cdef2edac50d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802956"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32953423"
   
  每個作用中資源集區都會建立 SQLServer:Resource Pool Stats 效能物件的執行個體，而且此執行個體的名稱與資源管理員資源集區名稱相同。 下表描述這個執行個體支援的計數器。  
   
-|計數器名稱|描述|  
+|計數器名稱|Description|  
 |------------------|-----------------|  
 |**Active memory grant amount (KB)**|目前授與記憶體的總數量 (以 KB 為單位)。 您也可以在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中取得這項資訊。| 
 |**Active memory grants count**|目前的記憶體授權總計數。 您也可以在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中取得這項資訊。|  

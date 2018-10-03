@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
-caps.latest.revision: 12
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 24f1a371cf69c825d9ec251fa4271c5c8d596210
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91aedc290389f317a04263a1bbdde2bb086226a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062658"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
   使用**AlwaysOn 高可用性**索引標籤**SQL Server 屬性** 對話方塊中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員來啟用或停用 AlwaysOn 可用性群組功能，在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 啟用 AlwaysOn 可用性群組是的執行個體的必要條件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可用性群組做為高可用性和災害復原方案。  

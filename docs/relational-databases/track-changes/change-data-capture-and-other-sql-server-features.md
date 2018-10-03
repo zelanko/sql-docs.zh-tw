@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: track-changes
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9017c99b8629e63c54fc74eb3507bb0092e14c30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661451"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758286"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

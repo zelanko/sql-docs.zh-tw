@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47a04d8e37b57d3a7496aaf55909a91de4881a92
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a3a71b93887b604dcd258143fde9e78dffb09cd3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851969"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>管理點對點拓撲 (複寫 Transact-SQL 程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

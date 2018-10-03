@@ -1,10 +1,8 @@
 ---
-title: ADO 簡介 |Microsoft 文件
+title: ADO 簡介 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2b3e0a8f9249abd76ccaf69bdd9f2311bcff2e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723836"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概觀和優點
-ActiveX Data Objects (ADO) 是高階、 以方便使用 OLE DB 介面。 OLE DB 是各種資料存放區的低層級、 高效能介面。 ADO 和 OLE DB 使用關聯式 （表格式） 與非關聯式 (階層式或資料流) 資料。
+ActiveX Data Objects (ADO) 是 OLE DB 的高層級、 簡單易用介面。 OLE DB 是各種不同的資料存放區的低層級、 高效能的介面。 ADO 和 OLE DB 可以使用關聯式 （表格式） 與非關聯式 (階層式或資料流) 資料。
 
- ADO 提供用戶端或中介層應用程式與低層級的 OLE DB 介面之間的抽象層。 ADO 使用較少的 Automation 物件為 OLE DB 提供既簡單又有效率的介面。 這個介面，可以讓 ADO 很不錯的選擇中較高的層級語言，例如 Visual Basic 和 VBScript，想要開發人員不需要了解複雜的 COM 和 OLE DB 存取的資料。
+ ADO 提供用戶端或中介層應用程式之間的低層級的 OLE DB 介面的抽象層。 ADO 使用較少的 Automation 物件為 OLE DB 提供既簡單又有效率的介面。 此介面可讓 ADO 不錯的選擇適用於開發人員在更高的層級語言，例如 Visual Basic 和 VBScript，想要存取而不需要了解複雜的 COM 和 OLE DB 的資料。
 
  此章節包含下列主題。
 

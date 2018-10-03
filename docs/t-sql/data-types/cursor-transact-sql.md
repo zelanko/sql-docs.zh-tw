@@ -5,25 +5,22 @@ ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - cursor data type
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 761ec22ef2feddf0e1e681e78e26087f2dc1dd01
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fad8c8929d0bf1ace5fdecb570730658dd193b1f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666866"
 ---
 # <a name="cursor-transact-sql"></a>資料指標 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

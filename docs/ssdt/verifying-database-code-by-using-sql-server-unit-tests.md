@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c0953156c0f3c002ea3f08ab7e18d6544eb667b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: de8aa400d6dfaa6f098ced68c8ed3ad01b435923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773626"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>使用 SQL Server 單元測試驗證資料庫程式碼
 您可以使用 SQL Server 單元測試建立資料庫的基準狀態，然後驗證您對資料庫物件所做的任何後續變更。  

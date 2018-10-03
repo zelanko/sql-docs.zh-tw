@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
-ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
+ms.openlocfilehash: f9da27595423d85ddb2769ea66b6ac4b4e26cb05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40406044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802286"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "40406044"
 |||||  
 |-|-|-|-|  
 |**序列**|**步驟描述**|**註解**|**實用的計量**|  
-|@shouldalert|記錄檔產生|記錄檔資料會排清至磁碟。 此記錄檔必須複寫到次要複本。 記錄檔記錄會進入傳送佇列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|1|記錄檔產生|記錄檔資料會排清至磁碟。 此記錄檔必須複寫到次要複本。 記錄檔記錄會進入傳送佇列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|擷取|這會擷取每個資料庫的記錄檔並傳送至對應的夥伴佇列 (每個資料庫複本組一個)。 只要已連接可用性複本且資料移動未因任何原因暫停，此擷取程序就會持續執行，且資料庫複本組會顯示為「同步處理中」或「已同步處理」兩者之一。 如果擷取程序掃描訊息並將它加入佇列的速度不夠快，則會建立記錄檔傳送佇列。|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，這是針對該可用性複本排入佇列的所有資料庫訊息總和彙總。<br /><br /> 主要複本上為 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/秒)。|  
 |3|Send|這會清除每個資料庫複本佇列中的訊息佇列，並跨線路傳送到個別的次要複本。|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (毫秒)|  
 |4|接收並快取|每個次要複本會接收並快取訊息。|效能計數器 [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  

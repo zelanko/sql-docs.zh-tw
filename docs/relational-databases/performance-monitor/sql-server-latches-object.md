@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Latches object
 - SQLServer:Latches
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdcc19275cc073da2a1ef8b133dc30fa09a297e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b840a05c741b91064f435663a9a423eb9b035283
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821076"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server 的 Latches 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32950603"
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Latches** 計數器。  
   
-|SQL Server 的 Latches 計數器|描述|  
+|SQL Server 的 Latches 計數器|Description|  
 |---------------------------------|-----------------|  
 |**Average Latch Wait Time (ms)**|必須等候之閂鎖要求的平均閂鎖等候時間 (以毫秒為單位)。|  
 |**Average Latch Wait Time Base**|僅供內部使用。| 

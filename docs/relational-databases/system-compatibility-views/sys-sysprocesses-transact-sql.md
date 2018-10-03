@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysprocesses_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f63aeb2b2a898335037f8a9df4b36186b66900f8
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2e1beebcb250f6a12ba612784ccb335c7b036774
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780326"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

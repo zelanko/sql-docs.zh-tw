@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7401d566d5580895452dd4771782217ca9406dfa
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: f284273004cd01c927473b9114ed06742f3fe794
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240730"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804616"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +97,7 @@ FETCH
   
  @@FETCH_STATUS 函數會報告最後一個 FETCH 陳述式的狀態。 相同的資訊記錄在 sp_describe_cursor 傳回之資料指標的 fetch_status 資料行中。 試圖在 FETCH 陳述式傳回的資料上執行任何作業之前，您應該先利用這個狀態資訊來判斷這項資料是否有效。 如需詳細資訊，請參閱 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  FETCH 權限預設會授與任何有效的使用者。  
   
 ## <a name="examples"></a>範例  

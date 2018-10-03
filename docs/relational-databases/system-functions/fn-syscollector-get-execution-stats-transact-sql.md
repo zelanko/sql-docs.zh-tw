@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_stats (TRANSACT-SQL) |Microsoft 文件
+title: fn_syscollector_get_execution_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_stats
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a80d59325234108f16a75c081f94d4102c44154
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811198"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +43,11 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="arguments"></a>引數  
  *log_id*  
- 執行記錄的本機唯一識別碼。 *g _ i d*是**int**。  
+ 執行記錄的本機唯一識別碼。 *g _ i d*已**int**。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |avg_row_count_in|**int**|進入封裝之資料流程工作的平均資料列數目。<br /><br /> 注意： 資料流程工作是[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]處理資料的元件。 這些資料為關聯式格式，所以其輸入資料集是由資料列所組成。 這是進入此工作的資料列數目。 在轉換資料之後，這些資料會當做由資料列組成的結果集輸出。 資料流程工作會轉換資料，並輸出由資料列組成的結果集。 這個輸出是結束工作的資料列數目。|  
 |min_row_count_in|**int**|進入封裝之資料流程工作的最小資料列數目。|  
@@ -67,7 +63,7 @@ fn_syscollector_get_execution_stats ( log_id )
  需要 SELECT **dc_operator**。  
   
 ## <a name="see-also"></a>另請參閱  
- [syscollector_execution_stats &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [syscollector_execution_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

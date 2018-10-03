@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 731004301f0419d3ce4229e2e901bf9b3bd0507e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c193e3cddf5e7446f38b7cf6bd78630522a708fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800266"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER ENDPOINT
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - modifying endpoints
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-caps.latest.revision: 56
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 972788ef2369c8b885e9c736b2b2e71ebc89470c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a7f6c4caca64f53dd08b4f13a46dd94b266f5df7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840073"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

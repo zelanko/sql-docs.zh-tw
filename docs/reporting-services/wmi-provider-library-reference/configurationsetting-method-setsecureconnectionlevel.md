@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4884c931082b16793f08d314c15b539925f35f36
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9d28e2a460340985d771924d1c8c88559dfd08cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267509"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759741"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting 方法 - SetSecureConnectionLevel
   設定報表伺服器的安全連接層級。  
