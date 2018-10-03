@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 08498f8015d1969a091615fc74df61f4b7c9d0d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc7e6ee268694844f88f957f0aaf6d1addecd8f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217418"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>Reporting Services SharePoint 模式和原生模式的命令提示字元安裝
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援從 SQL Server 安裝程式進行命令列安裝。 本主題包含數個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的命令列安裝範例。 如需所有 SQL Server 元件之可用的命令列選項的完整描述，請參閱 <<c0> [ 從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。 本主題不會就 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的命令列選項進行說明。 如需增益集的命令安裝相關資訊，請參閱[使用安裝檔 rsSharePoint.msi 安裝增益集](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)。  

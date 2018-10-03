@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.response.f1
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fe8274392d3b2b52e0a37c5a9ed3647508ea8e6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217878"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警示屬性-新增警示 （回應頁面）
   使用此頁面可指定您想要執行的作業，以及取得要通知的操作員清單來回應 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  

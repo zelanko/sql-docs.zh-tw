@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Backup Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a571681f52fb34e55df238229f659aa883bc84ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59efda960de14ae96b0c7c948b66c89980d8f990
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216496"
 ---
 # <a name="backup-element-xmla"></a>Backup 元素 (XMLA)
   備份[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫備份至備份檔案。  
@@ -59,8 +56,8 @@ ms.locfileid: "37215648"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

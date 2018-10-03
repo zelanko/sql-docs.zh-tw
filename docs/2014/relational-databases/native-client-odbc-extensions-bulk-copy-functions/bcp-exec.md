@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_exec
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a470efbed24dd15b4ebf45f2b5db8000f2e7e947
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214218"
 ---
 # <a name="bcpexec"></a>bcp_exec
   在資料庫資料表和使用者檔案間執行資料的完整大量複製。  

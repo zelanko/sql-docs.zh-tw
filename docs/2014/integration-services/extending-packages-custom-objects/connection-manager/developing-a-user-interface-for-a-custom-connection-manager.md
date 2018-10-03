@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55289eb7ca5455495133563de383bc5c335d67e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: beadb88c8423c88ac7a412ca1f234694fb095665
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216758"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>開發自訂連接管理員的使用者介面
   在您覆寫基底類別的屬性與方法的實作，以提供自訂功能之後，可能會想要建立連接管理員的自訂使用者介面。 如果您不建立自訂使用者介面，使用者只能透過使用 [屬性] 視窗設定您的連接管理員。  

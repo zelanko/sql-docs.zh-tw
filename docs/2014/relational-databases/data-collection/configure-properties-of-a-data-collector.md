@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollectionprop.advanced.f1
 - sql12.swb.dc.datacollectionprop.general.f1
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f79a7826c593410f8dc6879f2b245f5a577e45b
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8c81bc583677375ac14f251c6bd59eabc053fcfb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212638"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>設定資料收集器的屬性
   本主題討論如何設定資料收集器的屬性。  

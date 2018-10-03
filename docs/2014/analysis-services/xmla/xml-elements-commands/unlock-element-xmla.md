@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Unlock Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Unlock command
 ms.assetid: 46425b33-baa2-41ad-803a-34d2fb4b2cab
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5703789c49d77dc6f95cfdc590f8a8d3586dc000
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e6aa09ed7be7d07dc4cdfb9d6fe5122c8d3271fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213791"
 ---
 # <a name="unlock-element-xmla"></a>Unlock 元素 (XMLA)
   選項指定的鎖定上解除鎖定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
@@ -52,8 +49,8 @@ ms.locfileid: "37328508"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

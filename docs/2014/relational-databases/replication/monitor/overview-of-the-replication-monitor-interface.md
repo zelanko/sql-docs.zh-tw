@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3dce1a84dda8b5f26dbb469ed6d7e1fa0c1e1a38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c32d48446c549fbc73913497ec78018292e58074
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215348"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>複寫監視器介面概觀
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」採用兩個窗格的格式，呈現所有複寫活動以「發行者」或「散發者」為焦點的檢視。 您可將發行者加入監視器的左窗格中，監視器的右窗格便會顯示關於發行者及其發行集、這些發行集的訂閱，以及各種複寫代理程式的資訊。 除了呈現複寫拓撲的資訊外，「複寫監視器」還可讓您執行一些工作，例如啟動和停止代理程式，以及驗證資料。  

@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_changelogreader_agent
 - sp_changelogreader_agent_TSQL
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 607f6473b8e0a56d33c380a21cd560ba5834ba24
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b1aa7ccf655713759f40733c701e808c1cff076f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828419"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3eb2aa1b151866166e77ea89eda4ba98c2866a53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166089"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215528"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或刪除角色指派 (報表管理員)
   角色指派會將某個群組或使用者帳戶對應至包含可執行之工作的預先定義角色定義。 它會決定某位使用者可執行的作業類型，包括資料夾、報表、模型或其他內容類型。 若要建立、修改或刪除角色指派，您可以使用報表管理員。 針對特定使用者或群組建立角色指派之後，您之後可以透過選取不同的角色，修改此指派。 如果您想要撤銷報表伺服器的權限，可以從報表伺服器中刪除角色指派。  

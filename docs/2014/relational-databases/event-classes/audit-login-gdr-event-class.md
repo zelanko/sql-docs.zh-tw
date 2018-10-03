@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login GDR event class
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f414ee70272654c2b28b00fb346b80a2cd7adcf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac1c10bcd56489f9d98415560179b7cf84db0e10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254220"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217558"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 事件類別
   只要加入或移除 **Windows 登入權限，就會發生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件類別。 此事件類別供 **sp_grantlogin**、 **sp_revokelogin**和 **sp_denylogin** 預存程序使用。  

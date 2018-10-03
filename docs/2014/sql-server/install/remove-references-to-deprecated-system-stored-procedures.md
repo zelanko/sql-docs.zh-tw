@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system stored procedures [SQL Server]
 - system stored procedures [SQL Server]
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a588f8ec25301d3c8a4343e6c7f0d77eebdfe75
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc0dbcc5296ad9ef0e8df6e94b1978fe10792c4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183351"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>移除已被取代之系統預存程序的參考
   Upgrade Advisor 偵測到陳述式參考了未記載的系統預存程序和擴充預存程序，而這些預存程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中已無法使用。 參考這些物件的陳述式會失敗。 請勿使用未記載的系統物件或 API，因為這些功能在未來的版本中會變更或移除，而不另行通知。  

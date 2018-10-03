@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 9992 (Database Engine error)
 ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dcb697263dee7f5fca3904dcda8434a46a91c056
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f452da206afd91c2db49d32600c34397ef7b2609
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212758"
 ---
 # <a name="mssqlserver30089"></a>MSSQLSERVER_30089
     

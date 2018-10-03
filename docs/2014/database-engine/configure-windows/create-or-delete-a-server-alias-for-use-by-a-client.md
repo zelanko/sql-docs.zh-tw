@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - server alias
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - aliases [SQL Server], deleting
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad94dc1af7f5725e0f32f5a3d6789122f1ca129c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3927bc1b414a30bb86148fa6c00c3e0bcb2316a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213140"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>建立或刪除用戶端使用的伺服器別名 (SQL Server 組態管理員)
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立或刪除伺服器別名。 別名是可用於進行連接的替代名稱。 別名會封裝連接字串的必要元素，並以使用者選擇的名稱來公開這些元素。 別名可用於任何用戶端應用程式。 藉由建立伺服器別名，用戶端電腦可使用不同網路通訊協定來連接到多個伺服器，而不必指定每一個伺服器的通訊協定和連接詳細資料。 此外，您也可以一直啟用不同的網路通訊協定，即使您只需要偶而使用它們。 若您已設定伺服器在非預設通訊埠編號或具名管道上接聽，且您已停用 SQL Server Browser 服務，請建立指定新通訊埠編號或具名管道的別名。  

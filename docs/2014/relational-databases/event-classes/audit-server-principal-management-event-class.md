@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Principal Management event class
 ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b10ddece7d37ce0ff447b31a6ca5a1f3b76b7a35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f40b905f3568c88555f40cfb95e0914d5434c7ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213848"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management 事件類別
   在建立、改變或卸除伺服器主體時，會發生 **Audit Server Principal Management** 事件類別。  

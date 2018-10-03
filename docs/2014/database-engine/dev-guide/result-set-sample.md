@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb38a6a9dfb411152ba17fdcf29e5a096a1c7ec2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1feeffea47ae383168f06edc357c7dbe69aaefe4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212388"
 ---
 # <a name="result-set-sample"></a>結果集範例
   有時，在閱讀查詢結果時，它對能夠在不開啟新連接也不將所有結果讀取到記憶體中的情況下執行命令會很有用。 ADO.NET 2.0 中的 Multiple Active Result Set (MARS) 功能是一種可以協助您實現此目的之技術。 目前，不會對用於伺服器端程式設計的同處理序提供者實作 MARS。 若要解決此限制，您可以使用伺服器端指標。 此範例示範如何使用伺服器端指標解決伺服器端程式設計不支援 MARS 的問題。  

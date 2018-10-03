@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13184d6de8612a2b86492854e755961008e3f3ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8bd30b84643032cf68796b9ebc14bf0407d76427
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329851"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215628"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立及套用初始快照集。 使用參數化篩選的合併式發行集需要一個兩段式快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  

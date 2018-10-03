@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cycling SQL Server error log
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - displaying SQL Server error log
 - logs [SQL Server], SQL Server error logs
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b052500749f5e1ea6c4bcc22b5fc76da2e3407a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1c12f38d67b27280eda42115524f5b7d1ec4d4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212888"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>檢視 SQL Server 錯誤記錄
   您可以檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔，確定處理序已順利完成 (例如，備份與還原作業、批次命令或其他指令碼和處理序)。 這有助於偵測任何目前的或潛在的問題區域，包括自動復原訊息 (尤其是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體已停止又重新啟動時)、核心訊息或其他伺服器層級的錯誤訊息。  

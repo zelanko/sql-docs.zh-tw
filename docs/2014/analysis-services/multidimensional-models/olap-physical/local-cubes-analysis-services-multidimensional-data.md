@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], local
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cc1e27115d898cc2ba839fb14d2f7edfa8c560f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216648"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本機 Cube (Analysis Services - 多維度資料)
   若要建立、更新或刪除本機 Cube，您必須撰寫及執行 ASSL 指令碼或 AMO 程式。  
@@ -73,7 +70,7 @@ ms.locfileid: "37149279"
   
 -   只有依賴加入至本機 Cube 之量值與維度的這些導出成員、命名集和指派會顯示在本機 Cube 中。 系統將自動排除無效的導出成員、命名集和指派。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  為了讓使用者從伺服器 cube 建立本機 cube，必須授與使用者**鑽研和本機 Cube**伺服器 cube 的權限。 如需詳細資訊，請參閱 <<c0> [ 授與 cube 或模型權限&#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。</c0>  
   
  使用伺服器 Cube 等角色時，本機 Cube 不會受到保護。 擁有本機 Cube 檔案之檔案層級存取權的任何人都可以查詢其中的 Cube。 您可以使用本機 Cube 檔案的 `Encryption Password` 連接屬性來設定本機 Cube 檔案的密碼。 如果設定本機 Cube 檔案的密碼，就會要求本機 Cube 檔案的所有未來連接都要使用此密碼，才能查詢檔案。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1853823b4a6fe6c2295dd458980625a326a4ebd3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfa5601a449d217a171b69748a812cf4665f107c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215088"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>以程式設計的方式連接資料流程元件
   在將元件加入資料流程工作後，就可以連接元件以建立執行樹狀目錄，以代表從來源經過轉換到目的地的資料流程。 您使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件以連接資料流程中的元件。  

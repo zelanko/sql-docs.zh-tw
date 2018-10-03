@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - building database objects [CLR integration]
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: 47
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72d68e213d240e3c6182f99e8c1637c1f1ebedfb
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351010"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217548"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
   您可以建置使用的資料庫物件[!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]稱為 「 CLR 常式 」。 這些常式包括：  

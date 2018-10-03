@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
-caps.latest.revision: 68
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69aea0ec22ec03f05f05f10998e955d7f19bffd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216158"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」*) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  

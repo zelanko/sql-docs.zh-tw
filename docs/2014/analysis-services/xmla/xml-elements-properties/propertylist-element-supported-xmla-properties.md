@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04e2b96df0cc549acadd50d80356a62bf327b7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d7898c0f7263bf5355934ec072511bfd8483028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243958"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215918"
 ---
 # <a name="supported-xmla-properties-xmla"></a>支援的 XMLA 屬性 (XMLA)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援下表所列的屬性。 使用這些列出的屬性，用於[屬性](properties-element-xmla.md)項目[Discover](../xml-elements-methods-discover.md)並[Execute](../xml-elements-methods-execute.md)方法。  

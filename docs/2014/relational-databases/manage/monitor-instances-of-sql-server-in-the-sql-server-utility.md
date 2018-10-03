@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ca851a07-e4e5-439c-8da5-d8e97aaf4873
-caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b876e35dc07192664446afe33738122da8b1adb3
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c04bf213db416c702aa1ac479cef4f73d8de6986
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212618"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>監視 SQL Server 公用程式中的 SQL Server 執行個體
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - static database views
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c478f8a5d60d2604b95146fc1a712742e3f3420
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 475a631c3155d116ef0530992503d3f7fd7cbfc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213918"
 ---
 # <a name="database-snapshots-sql-server"></a>資料庫快照集 (SQL Server)
   資料庫快照集是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫 (「來源資料庫」) 的唯讀、靜態檢視。 資料庫快照集會與快照集建立時的來源資料庫維持交易的一致性。 資料庫快照集一律會與其來源資料庫位於相同的伺服器執行個體上。 當來源資料庫更新時，資料庫快照集也會更新。 因此，資料庫快照集存在越久，就越有可能用光其可用的磁碟空間。  
