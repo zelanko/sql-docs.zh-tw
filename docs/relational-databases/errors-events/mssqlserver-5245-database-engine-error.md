@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 5245 (Database Engine error)
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39a3509bb6f827ad20bd05594410da0e09989680
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: a5a1c3882a310a5fb0debb52ccfc7c0e7cdd35de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324439"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825539"
 ---
 # <a name="mssqlserver5245"></a>MSSQLSERVER_5245
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

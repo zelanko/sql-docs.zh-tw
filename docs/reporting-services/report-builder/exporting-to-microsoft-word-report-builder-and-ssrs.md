@@ -4,17 +4,16 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7caedeed8680e6a4f3ef57c70bdac340cba2082e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f8f075036f83ae12f3bede71c838e0a408836d4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826127"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 

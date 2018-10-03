@@ -3,7 +3,6 @@ title: 驗證 Reporting Services 安裝 | Microsoft Docs
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd9c21493baf9d81cd4d980ec067150ed4a087f2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6373efd4d6bed20b823c931ea20041de5f7f05dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828108"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器：原生或 SharePoint。 確認安裝所應遵循的步驟會視報表伺服器模式而定。  

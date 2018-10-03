@@ -5,9 +5,7 @@ ms.date: 08/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML query plans [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - execution plans [SQL Server], saving
 - saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d04a5c4a1815472aa897bd5e14973ae24db94d16
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9f3237d32b7d76469667ad00ec30ed932f3f3d22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827226"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

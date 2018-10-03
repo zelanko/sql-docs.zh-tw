@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f1c740590fc7d965cd1a95b352e27a08a27182
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d5221b1474d6880cd7fdac56f5ae13a5f50514c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827166"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
   「詞彙查閱」轉換會比對從轉換輸入資料行的文字中擷取的詞彙，以及參考資料表中的詞彙。 然後，它會計算查閱資料表中的詞彙在輸入資料集中出現的次數，並將計數與參考資料表的詞彙一起寫入轉換輸出中的資料行。 此轉換包括單字頻率統計資料，對基於輸入文字建立自訂單字清單很有用處。  

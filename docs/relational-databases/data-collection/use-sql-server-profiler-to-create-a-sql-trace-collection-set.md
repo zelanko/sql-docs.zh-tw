@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77d12f8026e33eecb3288ef462b4ce6e91d7f2c8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 37f635820ea402c28cf35338d4575a6e8a2e7376
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145219"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825312"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 建立 SQL 追蹤收集組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

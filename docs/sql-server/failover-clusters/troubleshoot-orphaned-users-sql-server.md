@@ -5,9 +5,7 @@ ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - orphaned users [SQL Server]
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f39094bc2233fe296443605870e8c12eca2c473
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d158cff3a2761ae27357088488075e50381145b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825886"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>被遺棄使用者疑難排解 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

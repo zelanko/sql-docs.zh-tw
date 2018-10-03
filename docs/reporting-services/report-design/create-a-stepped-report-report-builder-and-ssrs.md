@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92a07f432bccc41b6f8e6ff301c906227521fb5a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 12b769f09f89f0d844b090c9ad8fc00863e9ab81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831453"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>建立階梯狀報表 (報表產生器及 SSRS)
 階梯狀報表是一種  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表類型，會在相同的資料行中，顯示父群組底下縮排的詳細資料列或子群組，如以下範例所示：  

@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publishersettings.f1
 helpviewer_keywords:
 - Publisher Settings dialog box
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff8811b490c923c6c815aaa1b049df2083f42c3
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9bfb4b85bddf33ee4631f2fa2f1799fa8cb593cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827353"
 ---
 # <a name="publisher-settings"></a>發行者設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

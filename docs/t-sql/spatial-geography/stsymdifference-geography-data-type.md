@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STSymDifference (geography Data Type)
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSymDifference (geography Data Type)
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4dc604d7e30288f71d5f84acce52aee8ee0c5c54
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 9767a72fea55abb732da9351c3a9c7fb242e5447
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825846"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
