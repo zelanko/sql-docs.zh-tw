@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - SQL Server Integration Services packages, running
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49b831eefc250762673ec240c60766c6259ac38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a0d9551f4ad6984ec67bc51e636144195f20b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211208"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中執行套件
   在開發、偵錯和測試封裝期間，您通常會在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中執行封裝。 當您從「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」執行封裝時，封裝一定會立即執行。  

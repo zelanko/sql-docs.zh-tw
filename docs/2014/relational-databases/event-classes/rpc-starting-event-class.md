@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - RPC:Starting event class
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c57b2a229940f949740a82a193e4c666443b3f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a162dc259e79c9704e30f251ce72c5f9c221601a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209168"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting 事件類別
   RPC:Starting 事件類別表示已經啟動遠端程序呼叫。  

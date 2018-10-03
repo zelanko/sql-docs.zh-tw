@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0e371ceef793daea080e3a588f6b87161083a6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208478"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是由 Internet Information Services (IIS) 裝載的 Web 應用程式。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 只在 Internet Explorer (IE) 7 或更新版本的運作方式。 不支援 IE 7 及更新版本、Microsoft Edge 和 Chrome。  
@@ -51,7 +48,7 @@ ms.locfileid: "37205678"
   
 ||  
 |-|  
-|網頁伺服器<br /><br /> 一般 HTTP 功能<br /><br /> 靜態內容<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 應用程式開發<br /><br /> ASP.NET<br /><br /> .NET 擴充性<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> Security<br /><br /> Windows 驗證<br /><br /> 要求篩選<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 管理工具<br /><br /> IIS 管理主控台|  
+|網頁伺服器<br /><br /> 一般 HTTP 功能<br /><br /> 靜態內容<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 應用程式開發<br /><br /> ASP.NET<br /><br /> .NET 擴充性<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 安全性<br /><br /> Windows 驗證<br /><br /> 要求篩選<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 管理工具<br /><br /> IIS 管理主控台|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>角色和角色服務 (Windows Server 2012 或 Windows 8 作業系統)  
  在 Windows Server 2012 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 **[伺服器管理員]** 來安裝 **[網頁伺服器 (IIS)]** 角色及下列必要的角色服務。  
@@ -61,7 +58,7 @@ ms.locfileid: "37205678"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [注意：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> Security<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
+|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [注意：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>功能 (Windows Server 2008 或 Windows Server 2008 R2、Windows 7 作業系統)  
  在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]或 Windows Server 2008 R2，您可以使用**伺服器管理員**來安裝下列必要的功能。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourceselection.f1
 ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34ddd344b2fa9116c1ecc0ea7dd1cc45ec44f82b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5f82386128c8b4cac8e8a68719d4ece3f3489ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210018"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>選取資料來源檢視 (Cube 精靈)
   使用 **[選取資料來源檢視]** 頁面，即可針對空白 Cube 選取資料來源檢視。  

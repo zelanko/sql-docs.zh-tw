@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Error Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b9b961a0d8d5a33cb0869b72e0250dee5456ca7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210148"
 ---
 # <a name="error-element-xmla"></a>Error 元素 (XMLA)
   包含的執行個體所傳回之錯誤的相關資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -67,8 +64,8 @@ ms.locfileid: "37273734"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -81,7 +78,7 @@ ms.locfileid: "37273734"
   
 |Ancestor|子元素|  
 |--------------|--------------------|  
-|[Message](message-element-xmla.md)|無|  
+|[Message](message-element-xmla.md)|None|  
 |[儲存格](cell-element-mddataset-xmla.md)，[資料列](description-element-xmla.md)， [ErrorCode](errorcode-element-xmla.md)， [HelpFile](file-element-xmla.md)，[來源](source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>屬性  

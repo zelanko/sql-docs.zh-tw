@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClassifiedColumns Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38436c97f74adef2af6d5645aea6547682740894
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e2624c2d944af873fe6a34cbd9ca3684050bf92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209828"
 ---
 # <a name="classifiedcolumns-element-assl"></a>ClassifiedColumns 元素 (ASSL)
   包含相關的資料行所分類的集合[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)項目。  
@@ -52,8 +49,8 @@ ms.locfileid: "37286044"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
