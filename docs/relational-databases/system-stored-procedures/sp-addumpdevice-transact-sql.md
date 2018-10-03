@@ -1,14 +1,11 @@
 ---
-title: sp_addumpdevice (TRANSACT-SQL) |Microsoft 文件
+title: sp_addumpdevice (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbf23913e95b53e490d55099cde44b5ab60d3141
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649856"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,22 +49,22 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="arguments"></a>引數  
  [ **@devtype=** ] **'***device_type***'**  
- 這是備份裝置的類型。 *device_type*是**varchar （20)**，沒有預設值，它可以是下列值之一。  
+ 這是備份裝置的類型。 *device_type&lt*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**disk**|做為備份裝置的硬碟檔。|  
 |**磁帶**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
   
  [ **@logicalname =** ] **'***logical_name***'**  
- 這是 BACKUP 和 RESTORE 陳述式所用之備份裝置的邏輯名稱。 *logical_name*是**sysname**，沒有預設值，不能是 NULL。  
+ 這是 BACKUP 和 RESTORE 陳述式所用之備份裝置的邏輯名稱。 *logical_name*已**sysname**，沒有預設值，不能是 NULL。  
   
  [ **@physicalname =** ] **'***physical_name***'**  
- 這是備份裝置的實體名稱。 實體名稱必須遵照作業系統檔案名稱或網路裝置通用命名慣例的規則，且必須包括完整路徑。 *physical_name*是**nvarchar （260)**，沒有預設值的值，而且不能是 NULL。  
+ 這是備份裝置的實體名稱。 實體名稱必須遵照作業系統檔案名稱或網路裝置通用命名慣例的規則，且必須包括完整路徑。 *physical_name*已**nvarchar(260)**，沒有預設值，而且不能是 NULL。  
   
  當在遠端網路位置建立備份裝置時，請確定用來啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的名稱有遠端電腦的適當寫入功能。  
   
- 如果您加入磁帶裝置時，這個參數必須是由 Windows; 指派給本機磁帶裝置，實體名稱例如，  **\\ \\。 \TAPE0**第一個磁帶裝置的電腦上。 磁帶裝置必須連接到伺服器電腦，不能在遠端使用。 請用引號括住包含非英數字元的名稱。  
+ 如果您加入磁帶裝置時，這個參數必須是由 Windows; 指派給本機磁帶裝置的實體名稱例如，  **\\ \\。 \TAPE0**在電腦上的第一個磁帶裝置。 磁帶裝置必須連接到伺服器電腦，不能在遠端使用。 請用引號括住包含非英數字元的名稱。  
   
 > [!NOTE]  
 >  此程序將指定的實體名稱輸入目錄中。 此程序不會試著存取或建立裝置。  
@@ -83,10 +79,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
- **sp_addumpdevice**新增到備份裝置**sys.backup_devices**目錄檢視。 可在 BACKUP 和 RESTORE 陳述式中以邏輯方式參照裝置。 **sp_addumpdevice**不會執行任何存取權的實體裝置。 只有在執行 BACKUP 或 RESTORE 陳述式時，才對指定的裝置進行存取。 建立邏輯備份裝置可簡化 BACKUP 和 RESTORE 陳述式，其中指定裝置名稱是使用 "TAPE =" 或 "DISK =" 子句指定裝置路徑的替代方法。  
+ **sp_addumpdevice**加入備份裝置**sys.backup_devices**目錄檢視。 可在 BACKUP 和 RESTORE 陳述式中以邏輯方式參照裝置。 **sp_addumpdevice**不會執行任何存取權的實體裝置。 只有在執行 BACKUP 或 RESTORE 陳述式時，才對指定的裝置進行存取。 建立邏輯備份裝置可簡化 BACKUP 和 RESTORE 陳述式，其中指定裝置名稱是使用 "TAPE =" 或 "DISK =" 子句指定裝置路徑的替代方法。  
   
  擁有權和權限問題可能會干擾磁碟或檔案備份裝置的使用。 請確定用來啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 Windows 帳戶已取得適當的檔案權限。  
   
@@ -96,7 +92,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  **sp_addumpdevice**無法在交易內執行。  
   
- 若要刪除裝置，請使用[sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)或[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)。  
+ 若要刪除裝置，請使用[sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)或是[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **diskadmin** 固定伺服器角色的成員資格。  

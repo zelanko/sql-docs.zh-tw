@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f620c9fbf9ad7f1233236f9da193ecf730144f06
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e2bb0f1a92ffd45e4929ed97a5f73f205d3ccf2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407490"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732416"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
@@ -33,7 +30,7 @@ ms.locfileid: "35407490"
   
  下列作業會處理初始載入和變更處理的同步處理：  
   
-|作業|描述|  
+|作業|Description|  
 |---------------|-----------------|  
 |ResetCdcState|此作業是用來重設與目前 CDC 內容相關聯的永續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。|  
 |MarkInitialLoadStart|在初始載入封裝開始時使用此作業，以便在初始載入封裝開始讀取來源資料表之前記錄來源資料庫中目前的 LSN。 這需要來源資料庫的連接，以呼叫 `sys.fn_cdc_get_max_lsn`。<br /><br /> 如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即，非 Oracle) 上工作時選取了 MarkInitialLoadStart，連線管理員中指定的使用者就必須是 db_owner 或系統管理員。|  
@@ -42,7 +39,7 @@ ms.locfileid: "35407490"
   
  下列作業用來管理處理範圍：  
   
-|作業|描述|  
+|作業|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|此作業是在叫用使用 CDC 來源資料流程的資料流程之前使用。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。<br /><br /> 如需儲存之狀態的詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。|  
 |MarkProcessedRange|在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  

@@ -1,33 +1,30 @@
 ---
-title: 資料提供者 |Microsoft 文件
+title: 資料提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data providers [ADO]
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26f220f166e2269e59665a64c6e69504f298c5a9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692936"
 ---
 # <a name="data-providers"></a>資料提供者
-資料提供者會代表不同來源的資料，例如 SQL 資料庫、 編製索引循序性的檔案、 試算表、 文件儲存與郵件檔案。 提供者會公開一致地使用一般的抽象概念，稱為資料列集的資料。  
+資料提供者會代表不同來源的資料，例如 SQL 資料庫、 編製索引-循序檔案、 試算表、 文件存放區和郵件檔。 提供者會公開一致地使用常見的抽象概念，稱為資料列集的資料。  
   
- ADO 是功能強大且靈活，因為它可以連接到數個不同的資料提供者，仍會公開相同的程式設計模型，不論任何給定的提供者的特定功能。 不過，每個資料提供者是唯一的因為您的應用程式搭配 ADO 互動的方式會因資料提供者。  
+ ADO 是功能強大且靈活的因為它可以連線到任何數個不同的資料提供者，並仍會公開相同的程式設計模型，不論任何指定的提供者的特定功能。 不過，因為每個資料提供者是唯一的您的應用程式與 ADO 之間的互動方式會因資料提供者。  
   
- 比方說，用來存取 Microsoft SQL Server 資料庫，SQL Server 的 OLE DB 提供者的功能是大幅不同的 Microsoft OLE DB Provider for Internet Publishing，用來存取檔案在 Web 伺服器上的存放區。
+ 比方說，功能的 OLE DB Provider for SQL Server，用來存取 Microsoft SQL Server 資料庫，是相當不同的 Microsoft OLE DB Provider for Internet Publishing，用來存取檔案在 Web 伺服器上的存放區。

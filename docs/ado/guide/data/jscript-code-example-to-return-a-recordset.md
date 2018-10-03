@@ -1,31 +1,28 @@
 ---
-title: 傳回一個資料錄集的 JScript 程式碼範例 |Microsoft 文件
+title: 若要傳回的資料錄集的 JScript 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59cfb19d1d3ee3e8b603cbb897a8e55c2b74128
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2dc86d8f454b67c00073508a4ed6d7e8fc0d033e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707176"
 ---
-# <a name="jscript-code-example-to-return-a-recordset"></a>JScript 程式碼範例會傳回一個資料錄集
+# <a name="jscript-code-example-to-return-a-recordset"></a>可傳回資料錄集的 JScript 程式碼範例
 ## <a name="jscript-code-rsjs"></a>JScript 程式碼 (rs.js)  
   
 ```  
@@ -83,10 +80,10 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>試試看吧 ！  
+#### <a name="try-it"></a>試試看 ！  
   
-1.  將上方的程式碼儲存到文字檔。 將檔案儲存為 rs.js。  
+1.  將上述程式碼儲存到文字檔中。 將檔案儲存為 rs.js 中。  
   
-2.  開啟 命令提示字元中 cd JScript 檔案 (rs.js) 的儲存位置的目錄。  
+2.  開啟命令提示字元，切換至 JScript 檔 (rs.js) 的儲存位置的目錄。  
   
 3.  型別`CScript rs.js`從命令提示字元。

@@ -1,28 +1,25 @@
 ---
-title: 將更新傳送： UpdateBatch 方法 |Microsoft 文件
+title: 傳送更新： UpdateBatch 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a791806a21a2e1260a39dcadad62894e7eb85cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655616"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>將更新傳送： UpdateBatch 方法
-下列程式碼的 LockType 屬性設定為 Adlockpessimistic 和至 adUseClient CursorLocation 在批次模式中開啟資料錄集。 它會將兩個新的記錄加入和變更現有資料錄，儲存原始值，欄位的值，然後呼叫 UpdateBatch 傳送回資料來源所做的變更。  
+# <a name="sending-the-updates-updatebatch-method"></a>傳送更新：UpdateBatch 方法
+下列程式碼藉由 LockType 屬性設定為 Adlockpessimistic 和以 adUseClient CursorLocation 批次模式中開啟資料錄集。 它將加入兩筆新記錄和變更在現有的記錄儲存到原始值欄位的值，然後呼叫 UpdateBatch 傳送回資料來源所做的變更。  
   
 ## <a name="remarks"></a>備註  
   
@@ -56,7 +53,7 @@ ms.locfileid: "35272477"
 'EndBatchUpdate  
 ```  
   
- 如果您正在編輯目前的記錄或加入新的記錄，當您呼叫 UpdateBatch 方法，ADO 會自動呼叫 Update 方法來儲存目前的記錄傳送給提供者的批次的變更前任何暫止的變更。  
+ 如果您正在編輯目前的記錄，或當您呼叫 UpdateBatch 方法時，請新增新的記錄，ADO 會自動呼叫 Update 方法，再傳輸到提供者的批次的變更時，將任何暫止的變更儲存至目前的記錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [批次模式](../../../ado/guide/data/batch-mode.md)

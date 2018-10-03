@@ -5,9 +5,7 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDimension_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDimension (geometry Data Type)
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e5fb3aa53e78f55a73e729f536585ee4fb87081
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: e1815200bd64ce225ce9100b66efc1340f877174
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36250430"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710826"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ FROM @temp;
 |NAME|dim|  
 |----------|---------|  
 |點|0|  
-|LineString|@shouldalert|  
+|LineString|1|  
 |多邊形|2|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,31 +1,28 @@
 ---
-title: 參數物件屬性、 方法和事件 |Microsoft 文件
+title: Parameter 物件屬性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Parameter object [ADO], members
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc627b0bacd523a05e02ede96d2c4283db707c3e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45cf2031d9b87b569f206364f984db17633b7a5e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659689"
 ---
-# <a name="parameter-object-properties-methods-and-events"></a>參數物件屬性、 方法和事件
-## <a name="propertiescollections"></a>/ 屬性的集合  
- [屬性的內容](../../../ado/reference/ado-api/attributes-property-ado.md)  
+# <a name="parameter-object-properties-methods-and-events"></a>Parameter 物件屬性、 方法和事件
+## <a name="propertiescollections"></a>屬性/集合  
+ [Attributes 屬性](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Direction 屬性](../../../ado/reference/ado-api/direction-property.md)  
   
@@ -39,7 +36,7 @@ ms.locfileid: "35280517"
   
  [Size 屬性](../../../ado/reference/ado-api/size-property-ado-parameter.md)  
   
- [Type 屬性](../../../ado/reference/ado-api/type-property-ado.md)  
+ [類型屬性](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [Value 屬性](../../../ado/reference/ado-api/value-property-ado.md)  
   

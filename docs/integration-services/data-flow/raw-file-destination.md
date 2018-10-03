@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06d5bffa202a2193ad0ba29dfa06843277687fd1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 75f4110c964dc22f1340d0f5ed742673874033b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723226"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   「原始檔案」目的地會將原始資料寫入檔案。 由於資料的格式對於目的地而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」目的地可比其他目的地更快地寫入資料，例如「一般檔案」和 OLE DB 目的地。  
@@ -59,7 +56,7 @@ ms.locfileid: "35403420"
   
  下表描述 WriteOption 屬性的可用選項。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |附加|將資料附加至現有檔案。 附加資料的中繼資料必須符合檔案格式。|  
 |永遠建立|永遠建立新檔案。|  

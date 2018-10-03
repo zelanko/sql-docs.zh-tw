@@ -5,9 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c70f744427da1b6e7d10ce061bcd3640ca86cfa
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d8ece192518501869f9d4d8d11934fc4dbaaaf78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728166"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>數值、字串及布林常值
  運算式可以包含數值、字串及布林常值。 運算式評估工具支援各種不同的數值常值，例如整數、小數以及浮點常數。 運算式評估工具亦支援長尾碼和浮點尾碼，其指定運算式評估工具處理值的方式，以及數值常值中的科學記號。  
@@ -38,7 +35,7 @@ ms.locfileid: "35408910"
   
  下表列出數值常值的後置詞。  
   
-|後置詞|描述|  
+|後置詞|Description|  
 |------------|-----------------|  
 |L 或 l|長數值常值。|  
 |U 或 u|不帶正負號的數值常值。|  
@@ -46,7 +43,7 @@ ms.locfileid: "35408910"
   
  下表列出數值運算式元素及其規則運算式。  
   
-|運算式元素|規則運算式|描述|  
+|運算式元素|規則運算式|Description|  
 |------------------------|------------------------|-----------------|  
 |以 D 表示的位數。|[0-9]|任何位數。|  
 |以 E 表示的科學記號。|[Ee][+-]?{D}+|大寫或小寫 e、選擇性的 + 或 -，以及 D 中定義的一或多個位數。|  
@@ -56,7 +53,7 @@ ms.locfileid: "35408910"
   
  下表描述使用規則運算式語言的有效數值常值。  
   
-|規則運算式|描述|  
+|規則運算式|Description|  
 |------------------------|-----------------|  
 |{D}+{IS}|至少有一位數 (D) 的整數數值常值，以及選擇性的長尾碼和 (或)不帶正負號的尾碼 (IS)。  例如：457、785u、986L 和 7945ul。|  
 |{D}+{E}{FS}|至少有一位數 (D) 的非整數數值常值、科學記號，以及長尾碼或浮點尾碼。  例如：4E8l、13e-2f 和 5E+L。|  
@@ -80,7 +77,7 @@ ms.locfileid: "35408910"
   
     |後置詞|結果類型|  
     |------------|-----------------|  
-    |無|DT_I4|  
+    |None|DT_I4|  
     |u|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
@@ -100,7 +97,7 @@ ms.locfileid: "35408910"
   
  字串可包含其他需要逸出序列的字串。 下表列出字串常值的逸出序列。  
   
-|逸出序列|描述|  
+|逸出序列|Description|  
 |---------------------|-----------------|  
 |\a|警示|  
 |\b|退格鍵|  

@@ -1,37 +1,34 @@
 ---
-title: 選取並設定受影響的物件 (OracleToSQL) |Microsoft 文件
+title: 選取並設定受影響的物件 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0db1a6e426c7ca889b9805850ec81f5de120b0a5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688296"
 ---
-# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取並設定受影響的物件 (OracleToSQL)
-在此頁面中，您可以選取資料表和外部索引鍵，在其中變更應該比較當 SSMA 確認上一個步驟中所選擇的物件執行的結果。 此外，您可以自訂的驗證參數。  
+# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取及設定受影響的物件 (OracleToSQL)
+在此頁面中，您可以選取資料表和 SSMA 確認在上一個步驟中選擇之物件的執行結果時，所要比較的外部索引鍵，在其中變更。 此外，您可以自訂的驗證參數。  
   
 ## <a name="selection-of-affected-objects"></a>選取受影響的物件  
-在 Oracle 物件樹狀目錄，位於視窗的左半部，請檢查資料表和外部索引鍵，在其中變更應該比較的完全相同。  
+在 Oracle 物件樹狀結構，位於視窗的左側，核取的資料表和外部索引鍵，在其中變更應該要比對完全相同。  
   
-如果 SSMA 軟體測試人員無法驗證任何這些物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視的理由為何無法比較這些物件，並清除選取錯誤的物件。  
+如果 SSMA 軟體測試人員無法驗證任何這些物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視為什麼無法比較這些物件的原因，並清除選取錯誤的物件。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>資料表  
 [資料表] 索引標籤包含方格檢視選取的資料表。 方格包含選取之資料表的下列資訊：  
   
 -   資料行名稱  
@@ -51,63 +48,63 @@ ms.locfileid: "34777984"
 -   可為 Null  
   
 ## <a name="sql"></a>Sql  
-SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。  
+SQL 索引標籤包含 「 建立資料表 」 中所選取資料表的 SQL。  
   
 ## <a name="data"></a>data  
-資料索引標籤會顯示選取的資料表中存在的資料。  
+資料索引標籤會顯示選取之資料表中的資料。  
   
 ## <a name="properties"></a>屬性  
-屬性索引標籤會顯示選取之資料表的屬性。 下列欄位會出現在 [屬性] 索引標籤：  
+屬性索引標籤會顯示所選資料表的屬性。 下列欄位會出現在 [屬性] 索引標籤：  
   
 -   建立或上次修改  
   
 -   Object Name  
   
 ## <a name="columns-comparison-settings"></a>資料行比較設定  
-上所建立的資料表資料行的比較規則**資料行比較**頁面。 您可以進行下列設定。  
+在 建立資料表的資料行的比較規則**資料行比較**頁面。 您可以進行下列設定。  
   
-### <a name="use-during-test-comparisons"></a>在進行比較測試的使用  
-決定此資料行的測試結果驗證將會參與。  
+### <a name="use-during-test-comparisons"></a>測試比較期間使用  
+決定這個資料行的測試結果驗證將會參與。  
   
--   如果您選擇**True**，SSMA 會比較此資料行的內容在 Oracle 上執行測試，SQL Server 中的資料行的內容之後。 
+-   如果您選擇 **，則為 True**，SSMA 會比較此資料行的內容之後在 Oracle 上執行測試，SQL Server 中的資料行的內容。 
   
 -   如果您選擇**False**，驗證結果將會排除資料行。  
   
-### <a name="use-custom-scale"></a>使用自訂縮放比例  
+### <a name="use-custom-scale"></a>使用自訂的小數位數  
 數值資料類型的資料行，您可以設定自訂的縮放比例進行比較。  
   
--   如果您選擇**True**，數字的值會捨入根據**比較小數位數**值之前在進行比較。  
+-   如果您選擇 **，則為 True**，會捨入數字值，根據**比較擴展**值之前它們進行比較。  
   
--   如果您選擇**False**，數值比較，都會是精確。  
+-   如果您選擇**False**，數字的比較會精確。  
   
 ### <a name="comparing-scale"></a>比較小數位數  
   
--   適用於只有當**使用自訂縮放**選項設定為**True**。 這是數值比較的有效位數。  
+-   適用於只有當**使用自訂縮放**選項設定為 **，則為 True**。 這是數值比較的有效位數。  
   
 ### <a name="date-time-comparing"></a>日期時間比較  
 定義如何日期/時間值進行比較。  
   
--   如果您選取**比較整個日期**，將會執行完整的值從兩個平台比較。  
+-   如果您選取**比較整個日期**，將會執行完整的兩個平台的值比較。  
   
--   如果您選取**只比較日期**、 部分將會略過的時間。  
+-   如果您選取**只比較日期**、 組件將被略過的時間。  
   
--   如果您選取**只有比較時間**、 組件將會忽略的日期。  
+-   如果您選取**只比較時間**、 組件將會忽略日期。  
   
--   如果您選取**忽略毫秒**，結果將會比較最多秒數。  
+-   如果您選取**忽略毫秒**，結果會比較最多秒數。  
   
--   如果您選取**忽略日期和毫秒**，結果會是第二個比較僅由時間部分，並忽略小數部分。  
+-   如果您選取**忽略的日期和毫秒**，結果會是比較，只有時間部分並略過的秒的小數部分。  
   
-### <a name="ignore-strings-case"></a>忽略字串的大小寫  
+### <a name="ignore-strings-case"></a>忽略字串大小寫  
 控制比較區分大小寫。  
   
--   如果您選擇**True**，比較會區分大小寫。  
+-   如果您選擇 **，則為 True**，比較會區分大小寫。  
   
--   如果您選擇**False**，比較將負責字母大小寫。  
+-   如果您選擇**False**，比較會負責處理字母大小寫。  
   
 ## <a name="comparing-sql"></a>比較 SQL  
-您可以檢視 SELECT 陳述式上產生的 SSMA Tester**比較 SQL**頁面。 測試人員將會比較為基礎的資料列的資料列的這些陳述式的結果集。 Oracle 結果集的每個下一個資料列應該會等於在 SQL Server 產生的結果集的下一個資料列。
+您可以檢視 SELECT 陳述式上產生的 SSMA Tester**比較 SQL**頁面。 測試人員將會比較這些陳述式逐列為基礎的結果集。 Oracle 結果集的每個下一個資料列應該等於在 SQL Server 中產生的結果集的下一個資料列。
   
-您可以編輯這些 SELECT 陳述式，以提供自訂驗證。 若要儲存變更，Oracle 和 SQL Server 陳述式中，使用**套用**跟著按鈕底下的來源和目標 SQL。  
+您可以編輯這些 SELECT 陳述式，以提供自訂的驗證。 若要在 Oracle 和 SQL Server 陳述式中，請儲存變更，請使用**套用**對應來源與目標 SQL，下方按鈕。  
   
 ## <a name="next-step"></a>下一個步驟  
 [自訂呼叫順序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  

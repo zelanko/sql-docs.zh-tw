@@ -1,14 +1,11 @@
 ---
-title: sp_delete_targetserver 來 (TRANSACT-SQL) |Microsoft 文件
+title: sp_delete_targetserver 來 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b67e059a70c7edfda838d325928a95a8f4b43ab0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250833"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692240"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +43,22 @@ sp_delete_targetserver [ @server_name = ] 'server'
   
 ## <a name="arguments"></a>引數  
  [ **@server_name=** ] **'***server***'**  
- 做為可用的目標伺服器，將予以移除的伺服器名稱。 *伺服器*是**nvarchar （30)**，沒有預設值。  
+ 做為可用的目標伺服器，將予以移除的伺服器名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。  
   
  [  **@clear_downloadlist=** ] *clear_downloadlist*  
- 指定是否要清除目標伺服器的下載清單。 *clear_downloadlist*是型別**元**，預設值是**1**。 當*clear_downloadlist*是**1**，程序刪除伺服器之前，清除伺服器的下載清單。 當*clear_downloadlist*是**0**，不會清除下載清單。  
+ 指定是否要清除目標伺服器的下載清單。 *clear_downloadlist*是型別**位元**，預設值是**1**。 當*clear_downloadlist*是**1**，程序刪除伺服器之前，清除伺服器的下載清單。 當*clear_downloadlist*是**0**，則不會清除下載清單。  
   
- [  **@post_defection=** ] *post_defection*  
- 指定是否要將脫離指示公佈至目標伺服器。 *post_defection*是型別**元**，預設值是 1。 當*post_defection*是**1**，程序將脫離指示公佈至目標伺服器刪除伺服器之前。 當*post_defection*是**0**，程序不會不將脫離指示公佈至目標伺服器。  
+ [  **@post_defection=** ] *post_defection&lt*  
+ 指定是否要將脫離指示公佈至目標伺服器。 *post_defection&lt*是型別**元**，預設值是 1。 當*post_defection&lt*是**1**，程序將脫離指示公佈至目標伺服器之前先刪除伺服器。 當*post_defection&lt*是**0**，程序不會不脫離指示公佈至目標伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
- 刪除目標伺服器的正常方式是呼叫**sp_msx_defect**在目標伺服器。 使用**sp_delete_targetserver 來**手動脫離時才需要。  
+ 刪除目標伺服器的一般方法是呼叫**sp_msx_defect**在目標伺服器。 使用**sp_delete_targetserver 來**手動脫離時才需要。  
   
 ## <a name="permissions"></a>Permissions  
  若要執行這個預存程序，使用者必須授與**sysadmin**固定的伺服器角色。  
@@ -80,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_targetserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_help_targetserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

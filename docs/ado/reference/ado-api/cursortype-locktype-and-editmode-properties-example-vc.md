@@ -1,13 +1,11 @@
 ---
-title: CursorType、 LockType 和 EditMode 屬性範例 （VC + +） |Microsoft 文件
+title: CursorType、 LockType、 和 EditMode 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726a7b346052cd847c599f4389480007b6698999
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696356"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、 LockType 和 EditMode 屬性範例 （VC + +）
-此範例示範設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性之前開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它也會顯示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各種情況下的屬性。 若要執行此程序需要 EditModeOutput 函式。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、 LockType、 和 EditMode 屬性範例 （VC + +）
+此範例示範如何設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)並[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)的屬性，才能開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它也會顯示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各種情況下的屬性。 若要執行此程序需要 EditModeOutput 函式。  
   
 ## <a name="example"></a>範例  
   

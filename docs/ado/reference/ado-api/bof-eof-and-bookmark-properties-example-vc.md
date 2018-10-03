@@ -1,13 +1,11 @@
 ---
-title: BOF、 EOF 和書籤屬性範例 （VC + +） |Microsoft 文件
+title: BOF、 EOF 和 Bookmark 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276077"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659526"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、 EOF 和書籤屬性範例 （VC + +）
-在此範例中第一個函式會使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性，以顯示一則訊息，如果使用者嘗試移動超過的第一個或最後一筆資料錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)屬性讓使用者加上旗標中的記錄**資料錄集**並於稍後返回。  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、 EOF 和 Bookmark 屬性範例 （VC + +）
+在此範例中的第一個函式會使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)並[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性，以顯示一則訊息，如果使用者嘗試移動超過的第一個或最後一筆資料錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它會使用[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)屬性，讓使用者加上旗標中的記錄**資料錄集**並於稍後返回。  
   
- 第二個函式會使用書籤] 屬性，將**書籤**中的資料錄的**資料錄集**到陣列，然後按一下 [篩選資料錄集使用陣列。  
+ 第二個函式會使用書籤] 屬性，將**書籤**中的資料錄的**資料錄集**到陣列中，然後按一下 [篩選資料錄集使用陣列。  
   
 ## <a name="example"></a>範例  
   
@@ -210,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [BOF，EOF 屬性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [BOF、 EOF 屬性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [書籤 屬性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

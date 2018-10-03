@@ -3,7 +3,6 @@ title: 移轉 Reporting Services 安裝 (原生模式) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1dee4b1638ffe462220923fe58c8c874a7ad8934
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5fc7a284a00a60e637cddf04e6c02389de5dfa9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720296"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 

@@ -1,13 +1,11 @@
 ---
-title: 參數集合 (ADO) |Microsoft 文件
+title: 參數集合 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,36 +15,35 @@ f1_keywords:
 helpviewer_keywords:
 - Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657846"
 ---
-# <a name="parameters-collection-ado"></a>參數集合 (ADO)
-包含所有[參數](../../../ado/reference/ado-api/parameter-object.md)物件[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
+# <a name="parameters-collection-ado"></a>Parameters 集合 (ADO)
+包含所有[參數](../../../ado/reference/ado-api/parameter-object.md)的物件[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
   
 ## <a name="remarks"></a>備註  
- A**命令**物件具有**參數**集合組成**參數**物件。  
+ A**命令**物件具有**參數**組成的集合**參數**物件。  
   
- 使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法**命令**物件的**參數**集合擷取提供者的預存程序或參數化的查詢的參數資訊指定在**命令**物件。 某些提供者不支援預存程序呼叫或參數化的查詢。呼叫**重新整理**方法**參數**集合時使用這類提供者會傳回錯誤。  
+ 使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法**命令**物件的**參數**集合擷取提供者的預存程序或參數化的查詢的參數資訊中指定**命令**物件。 某些提供者不支援預存程序呼叫或參數化的查詢;呼叫**重新整理**方法**參數**集合時使用這類提供者會傳回錯誤。  
   
- 如果您還沒有定義您自己**參數**物件，以及存取**參數**集合，然後再呼叫**重新整理**自動呼叫方法時，ADO 會方法，並填入您的集合。  
+ 如果您還沒有定義您自己**參數**物件，並存取**參數**集合，然後再呼叫**重新整理**方法，ADO 會自動會呼叫方法並填入您的集合。  
   
- 您可以呼叫提供者來改善效能，如果預存程序相關聯的參數屬性，或參數化查詢，您知道您想要呼叫降至最低。 使用[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來建立**參數**具有適當的屬性設定和使用物件[附加](../../../ado/reference/ado-api/append-method-ado.md)方法將其新增至**參數**集合。 這可讓您設定和傳回參數值，而不必呼叫提供者之參數資訊。 如果您要寫入的提供者，並不提供參數資訊，您必須手動將填入**參數**使用這個方法無法完全使用參數的集合。 使用[刪除](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法移除**參數**物件從**參數**如有必要的集合。  
+ 您可以呼叫提供者來改善效能，如果您知道參數的屬性相關聯的預存程序或參數化查詢您想要呼叫降至最低。 使用  [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法來建立**參數**具有適當的屬性設定和使用物件[附加](../../../ado/reference/ado-api/append-method-ado.md)方法，將其新增至**參數**集合。 這可讓您設定和傳回參數值，而不需要呼叫提供者之參數資訊。 如果您要寫入未提供參數資訊的提供者，您必須手動將填入**參數**使用此方法可以完全使用參數的集合。 使用[刪除](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)方法來移除**參數**物件**參數**如有必要的集合。  
   
- 中的物件**參數**集合**資料錄集**超出範圍 （因此變成無法使用） 時**資料錄集**已關閉。  
+ 中的物件**參數**的集合**Recordset**移超出範圍 （因此變成無法使用） 時**資料錄集**已關閉。  
   
  呼叫預存程序時**命令**，擷取預存程序的傳回值/輸出參數，如下所示：  
   
-1.  當呼叫預存程序，沒有任何參數，**重新整理**方法**參數**集合應該會在呼叫之前呼叫**Execute**方法**命令**物件。  
+1.  呼叫預存程序，沒有任何參數，當**重新整理**方法**參數**呼叫之前，應該呼叫集合**Execute**方法**命令**物件。  
   
-2.  當呼叫預存程序使用參數和明確附加到參數**參數**集合**附加**，傳回值/輸出參數應該附加至**參數**集合。 傳回值必須先附加至**參數**集合。 使用**附加**來加入其他參數到**參數**以定義順序的集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，是輸入的參數定義為 adVarChar (20)，而第二個參數*OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取下列程式碼的傳回值/輸出參數。  
+2.  當呼叫預存程序使用參數和明確附加的參數**參數**集合**附加**，傳回的值/輸出參數應該附加至**參數**集合。 傳回的值必須先附加至**參數**集合。 使用**Append**新增到其他的參數**參數**定義順序的集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，並輸入的參數定義為 adVarChar (20)，第二個參數， *OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取傳回值/輸出參數為下列程式碼。  
   
     ```  
     ' Open Connection Conn  
@@ -67,7 +64,7 @@ ms.locfileid: "35280653"
   
     ```  
   
-3.  當呼叫預存程序使用參數和設定的參數，藉由呼叫**項目**方法**參數**集合，預存程序的傳回值/輸出參數可以從擷取**參數**集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，是輸入的參數定義為 adVarChar (20)，而第二個參數*OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取下列程式碼的傳回值/輸出參數。  
+3.  當呼叫預存程序使用參數和設定的參數，藉由呼叫**項目**方法**參數**集合，預存程序的傳回值/輸出參數可以從擷取**參數**集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，並輸入的參數定義為 adVarChar (20)，第二個參數， *OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取傳回值/輸出參數為下列程式碼。  
   
     ```  
     ' Open Connection Conn  
@@ -86,7 +83,7 @@ ms.locfileid: "35280653"
   
  本章節包含下列主題。  
   
--   [參數集合的屬性、 方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Parameters 集合屬性、 方法和事件](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   

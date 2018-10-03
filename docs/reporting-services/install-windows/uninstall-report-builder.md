@@ -3,17 +3,16 @@ title: 將報表產生器解除安裝 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 48e25799954174e5e452f56dc0c1631f6385be27
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8d498b813bb85c99a5af73fda90f96357d42db08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733336"
 ---
 # <a name="uninstall-report-builder"></a>將報表產生器解除安裝
 

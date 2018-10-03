@@ -3,19 +3,18 @@ title: URL 保留項目語法 (SSRS 設定管理員) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2aba888fd9dee3c96cf87310e1987edd851884c5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 585a2a14d94382a6b4f7923e8563ddd4d8cae570
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724696"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 保留項目語法 (SSRS 組態管理員)
   本主題描述報表伺服器 Web 服務和報表管理員的 URL 字串部分。 儲存於內部的 URL 字串結構與您在瀏覽器視窗的網址列中輸入的 URL 不同。 當您設定 URL 而且它位於 RSReportServer.config 檔案中時，URL 保留項目字串會出現在 Reporting Services 組態工具的 [結果] 視窗中。 如果您要排除 URL 保留項目問題或是查詢 HTTP.SYS 來檢視伺服器上所定義的內部 URL 保留項目，知道 URL 字串如何定義將會很有幫助。  

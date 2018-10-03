@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 f1_keywords:
 - sql13.swb.assemblies.general.f1
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
-caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4efc892d633698dd9ce1ea08edcb2f563ac20ea7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 5983223e1f945cc9f09ceee08a07230847c5f869
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735486"
 ---
-# <a name="assemblies---properties"></a>組件-屬性
+# <a name="assemblies---properties"></a>組件 - 屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用此頁面來檢視或修改組件的屬性。  
   

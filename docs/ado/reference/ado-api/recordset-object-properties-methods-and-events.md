@@ -1,30 +1,27 @@
 ---
-title: 資料錄集物件屬性、 方法和事件 |Microsoft 文件
+title: 資料錄集物件屬性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691316"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>資料錄集物件屬性、 方法和事件
-## <a name="propertiescollections"></a>/ 屬性的集合  
+## <a name="propertiescollections"></a>屬性/集合  
  [AbsolutePage 屬性](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
  [AbsolutePosition 屬性](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  

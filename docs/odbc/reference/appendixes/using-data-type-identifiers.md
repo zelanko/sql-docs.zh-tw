@@ -1,42 +1,39 @@
 ---
-title: 使用資料類型識別項 |Microsoft 文件
+title: 使用資料型別識別項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a43271157667e98dd9157edb3a2cfd0e85eeee4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6b8fa49f509c3442c83488ba1e0a5e4a2359d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654943"
 ---
 # <a name="using-data-type-identifiers"></a>使用資料類型識別碼
-應用程式使用資料類型識別碼有兩種： 描述其緩衝區，以驅動程式，以及擷取的結果集從驅動程式，以便決定要用來儲存資料緩衝處理的 C 類型相關的中繼資料。 應用程式呼叫下列函數來執行這些工作：  
+應用程式會將資料型別識別項用於兩種方式： 來描述驅動程式，其緩衝區，以及擷取的結果集從驅動程式，好讓它們可以判斷要用來儲存資料緩衝處理的 C 類型相關的中繼資料。 應用程式呼叫下列函式，執行下列工作：  
   
--   **SQLBindParameter**， **SQLBindCol**，和**SQLGetData** — 來描述應用程式緩衝區的 C 資料類型。  
+-   **SQLBindParameter**， **SQLBindCol**，以及**SQLGetData** — 來描述應用程式緩衝區的 C 資料類型。  
   
 -   **SQLBindParameter** — 來描述 SQL 資料類型的動態參數。  
   
--   **SQLColAttribute**和**SQLDescribeCol** -擷取 SQL 資料類型的結果集資料行。  
+-   **SQLColAttribute**並**SQLDescribeCol** — 若要擷取結果集資料行的 SQL 資料類型。  
   
 -   **SQLDescribeParameter** -擷取 SQL 資料類型的參數。  
   
--   **SQLColumns**， **SQLProcedureColumns**，和**SQLSpecialColumns** -擷取 SQL 資料類型的各種不同的結構描述資訊  
+-   **SQLColumns**， **SQLProcedureColumns**，以及**SQLSpecialColumns** -擷取 SQL 資料類型的各種不同的結構描述資訊  
   
--   **SQLGetTypeInfo** — 若要擷取的清單支援的資料類型  
+-   **SQLGetTypeInfo** -擷取一份支援的資料類型  
   
- 資料類型識別碼會儲存在 SQL_DESC_CONCISE_TYPE 欄位描述元。 描述元函式**SQLSetDescField**和**SQLSetDescRec**可以適當的型別與用來執行上述清單中所列的工作。 如需詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。
+ 資料型別識別項會儲存在 SQL_DESC_CONCISE_TYPE 欄位描述元。 描述元函式**SQLSetDescField**並**SQLSetDescRec**可以搭配適當的類型來執行上述清單中所列的工作。 如需詳細資訊，請參閱 < [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。

@@ -1,13 +1,11 @@
 ---
-title: 彙總函式、 CALC 函式和 NEW 關鍵字 |Microsoft 文件
+title: 彙總函式、 CALC 函式和 NEW 關鍵字 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], functions
@@ -15,46 +13,45 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271547"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625926"
 ---
-# <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、 CALC 函式和 NEW 關鍵字
-資料成形支援下列函數。 要處理指派章節包含的資料行的名稱是*章別名*。  
+# <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、CALC 函式和 NEW 關鍵字
+資料成形支援下列函數。 指派給包含的資料行的章節，以操作的名稱是*章別名*。  
   
- 章別名可以是完整，導致章節包含每個章節資料行名稱所組成*資料行名稱，* 以句號分隔。 例如，如果父章 chap1，包含子章節，chap2，都具有 amount 資料行時，amt，就限定的名稱會是 chap1.chap2.amt。  
+ 章別名可以是完整，導致一章包含每個章節資料行名稱所組成*資料行名稱*以句號分隔。 比方說，如果父本章 chap1，包含子章節，chap2，具有 amount 資料行時，amt，則限定的名稱會是 chap1.chap2.amt。  
   
 |彙總函式|描述|  
 |-------------------------|-----------------|  
 |SUM (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的總和。|  
 |AVG (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的平均值。|  
 |最大值 (*章別名*。*資料行名稱*)|計算指定的資料行中的最大值。|  
-|MIN (*章別名*。*資料行名稱*)|計算指定的資料行中的最小值。|  
-|計數 (*章別名*[。*資料行名稱*])|計算指定的別名中的資料列數目。 如果指定資料行，則該資料行的非 Null 唯一資料列會包含在計數中。|  
-|Stdev 函數 (*章別名*。*資料行名稱*)|計算標準差，指定資料行中。|  
-|任何 (*章別名*。*資料行名稱*)|指定的資料行的值。 任何在資料行的值是相同的章節中的所有資料列時，才有可預測的值。<br /><br /> **請注意**資料行不包含所有一章中的資料列的相同值，如果 SHAPE 命令任意傳回其中一個值的任何函式的值。|  
+|最小值 (*章別名*。*資料行名稱*)|計算指定的資料行中的最小值。|  
+|計數 (*章別名*[。*資料行名稱*])|計算指定的別名中的資料列數目。 如果指定的資料行，則該資料行的非 Null 唯一資料列會包含在計數中。|  
+|Stdev 函數 (*章別名*。*資料行名稱*)|計算指定的資料行中的標準差。|  
+|任何 (*章別名*。*資料行名稱*)|指定的資料行的值。 任何具有可預測的值，只有資料行的值相同時一章中的所有資料列。<br /><br /> **請注意**如果資料行不包含所有一章中的資料列的相同值，SHAPE 命令任意傳回其中一個值的任何函式的值。|  
   
-|計算的運算式|描述|  
+|導出的運算式|描述|  
 |---------------------------|-----------------|  
-|CALC(*expression*)|計算的任意的運算式，但只能出現在資料列**資料錄集**包含 CALC 函式。 使用這些任何運算式[Visual Basic for Applications (VBA) 函數](../../../ado/guide/data/visual-basic-for-applications-functions.md)允許。|  
+|CALC(*expression*)|計算的任意的運算式，但只能出現在資料列**資料錄集**包含 CALC 函式。 使用這些方法的任何運算式[Visual Basic for Applications (VBA) 函式](../../../ado/guide/data/visual-basic-for-applications-functions.md)允許。|  
   
-|NEW 關鍵字|描述|  
+|新的關鍵字|描述|  
 |-----------------|-----------------|  
-|新*欄位類型*[(*寬度* &#124; *標尺* &#124; *精確度* &#124; *錯誤*[，*標尺* &#124; *錯誤*])]|加入空白資料行指定的型別**資料錄集**。|  
+|新*欄位型別*[(*寬度* &#124; *擴展* &#124; *精確度* &#124; *錯誤*[，*擴展* &#124; *錯誤*])]|加入空白資料行指定型別的**資料錄集**。|  
   
- *欄位類型*傳遞包含新的關鍵字可以是任何一個下列資料類型。  
+ *欄位類型*傳遞包含新的關鍵字可以是任何下列資料類型。  
   
 |OLE DB 資料類型|ADO 資料類型 equivalent(s)|  
 |-----------------------|-----------------------------------|  
 |DBTYPE_BSTR|adBSTR|  
-|DBTYPE_BOOL|AdBoolean|  
+|DBTYPE_BOOL|adBoolean|  
 |DBTYPE_DECIMAL|adDecimal|  
 |DBTYPE_UI1|adUnsignedTinyInt|  
 |DBTYPE_I1|adTinyInt|  
@@ -78,5 +75,5 @@ ms.locfileid: "35271547"
   
 ## <a name="see-also"></a>另請參閱  
  [資料成形範例](../../../ado/guide/data/data-shaping-example.md)   
- [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [正式 Shape 文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

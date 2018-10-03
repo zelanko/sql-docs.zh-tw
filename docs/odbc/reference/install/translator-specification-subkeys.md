@@ -1,13 +1,11 @@
 ---
-title: 轉譯器規格子機碼 |Microsoft 文件
+title: 轉譯程式規格子機碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - translator subkey [ODBC]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - translator specification subkeys [ODBC]
 - subkeys [ODBC], translator specification subkeys
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 163add6fac863912f05378f2e799596f3ad41533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618916"
 ---
-# <a name="translator-specification-subkeys"></a>轉譯器規格子機碼
-ODBC 轉譯子機碼中所列每個轉譯器都有自己的子機碼。 這個子機碼具有 ODBC 轉譯子機碼下的對應值相同的名稱。 這個子機碼下的值清單之轉譯器轉譯程式安裝 Dll 並使用計數的完整路徑。 值的格式是下表所示。  
+# <a name="translator-specification-subkeys"></a>轉譯程式規格子機碼
+ODBC 轉譯程式子機碼中所列每 translator 都有自己的子機碼。 這個子機碼具有相同名稱做為 ODBC 轉譯程式子機碼下對應的值。 這個子機碼底下的值清單轉譯器轉譯程式安裝程式 Dll 並使用計數的完整的路徑。 值的格式是下表所示。  
   
-|名稱|資料類型|資料|  
+|名稱|資料類型|data|  
 |----------|---------------|----------|  
 |轉譯程式|REG_SZ|*轉譯程式 DLL 路徑*|  
 |安裝程式|REG_SZ|*安裝程式 DLL 路徑*|  
@@ -37,9 +34,9 @@ ODBC 轉譯子機碼中所列每個轉譯器都有自己的子機碼。 這個�
   
  如需使用方式計數資訊，請參閱[使用量計算](../../../odbc/reference/install/usage-counting.md)稍早在這一節。  
   
- 應用程式不應該設定的使用計數。 ODBC 會維護這個計數。  
+ 應用程式不應該設定的使用計數。 ODBC 會維護此計數。  
   
- 例如，假設 Microsoft 程式碼頁面轉譯器具有名為 Mscpxl32.dll 轉譯器的安裝程式函式位於相同的 DLL，DLL 的翻譯和轉譯程式確認已安裝三次。 Microsoft 的程式碼頁面轉譯器的子機碼下的值可能如下所示：  
+ 例如，假設 Microsoft 程式碼頁面轉譯器具有名為 Mscpxl32.dll，轉譯器設定函式位於相同的 DLL，DLL 的翻譯，而且此轉譯程式，已安裝三次。 Microsoft 的程式碼頁面轉譯程式子機碼下的值可能如下所示：  
   
 ```  
 Translator : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL  

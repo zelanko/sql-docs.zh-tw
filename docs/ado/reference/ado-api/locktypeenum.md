@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4137ced62a083bb355a685222a044fdd9efacdf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625936"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
-指定在編輯期間鎖定記錄類型。  
+指定在編輯期間鎖定記錄的型別。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adLockBatchOptimistic**|4|表示開放式批次更新。 所需的批次更新模式。|  
-|**adLockOptimistic**|3|表示開放式鎖定、 記錄。 提供者會使用開放式鎖定，鎖定資料錄，只有當您呼叫[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
-|**adLockPessimistic**|2|指出封閉式鎖定、 記錄。 提供者沒有什麼是為了確保成功編輯記錄，通常藉由編輯之後，立即鎖定記錄在資料來源。|  
-|**adLockReadOnly**|@shouldalert|表示唯讀的記錄。 您無法變更資料。|  
-|**adLockUnspecified**|-1|未指定鎖定的類型。 複製程式碼，是使用相同的鎖定類型與原始建立複製。|  
+|**adLockBatchOptimistic**|4|表示開放式的批次更新。 批次更新模式的必要項。|  
+|**adLockOptimistic**|3|表示開放式鎖定、 記錄。 提供者會使用開放式鎖定，鎖定資料錄，只有當您呼叫時，才[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
+|**adLockPessimistic**|2|表示封閉式鎖定，記錄。 提供者會執行什麼是為了確保成功編輯的記錄，通常藉由編輯之後，立即鎖定在資料來源的記錄。|  
+|**adLockReadOnly**|1|表示唯讀的記錄。 您無法改變的資料。|  
+|**adLockUnspecified**|-1|未指定鎖定的類型。 複製程式碼，會使用相同的鎖定類型，與原始建立複製。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  
