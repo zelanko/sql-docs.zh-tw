@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052350"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>FORMATED_VALUE 上的 LANGUAGE 及 FORMAT_STRING
   FORMATTED_VALUE 屬性是根據資料格中 VALUE、FORMAT_STRING 和 LANGUAGE 屬性的互動而建立。 本主題將說明這些屬性如何互動，以便建立 FORMATTED_VALUE 屬性。  
@@ -82,7 +79,7 @@ ms.locfileid: "37319268"
   
 |成員|FORMATTED_VALUE|說明|  
 |------------|----------------------|-----------------|  
-|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|$5,040.00|FORMAT_STRING 設定為 `Currency` 而且 LANGUAGE 為 `1033`(從系統地區設定值繼承而來)。|  
+|A|$5,040.00|FORMAT_STRING 設定為 `Currency` 而且 LANGUAGE 為 `1033`(從系統地區設定值繼承而來)。|  
 |B|5.040,00|FORMAT_STRING 設定為 `Currency` (繼承自 A) 而且 LANGUAGE 明確設定為 `1034` (西班牙)，因此是歐元符號、不同的小數分隔符號和不同的千位分隔符號。|  
 |c|$5.040,00|FORMAT_STRING 設定為 `$#,##0.00` (從 A 覆寫貨幣)，而且 LANGUAGE 明確設定為 `1034` (西班牙)。 因為 FORMAT_STRING 屬性明確將貨幣符號設定為 $，所以會使用 $ 符號表示 FORMATTED_VALUE。 但是，因為 `.` (點) 和 `,` (逗號) 分別為小數分隔符號和千位分隔符號的預留位置，所以語言規格會影響它們產生針對小數分隔符號和千位分隔符號所當地語系化的輸出。|  
 |D|5.04E+03|FORMAT_STRING 設定為 `Scientific` 而且 LANGUAGE 設定為 `1033`(從系統地區設定值繼承而來)，因此 `.` (點) 是小數分隔符號。|  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - system_columns_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_columns catalog view
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80cf322c0a5835274afffc8d8c48e217b63d75dd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2bc916f827fb190142dd07b56485b8a9d6005d94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775256"
 ---
 # <a name="syssystemcolumns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

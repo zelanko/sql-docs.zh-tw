@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic cell properties [MDX]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - cell properties [MDX]
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ba678db945252692d72901aab725224a6dfb503
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8aa9168e6272522bc773cb61166cb888d988c009
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082808"
 ---
 # <a name="using-cell-properties-mdx"></a>使用資料格屬性 (MDX)
   多維度運算式 (MDX) 的資料格屬性包含有關多維度資料來源 (如 Cube) 中資料格的內容及格式的資訊。  

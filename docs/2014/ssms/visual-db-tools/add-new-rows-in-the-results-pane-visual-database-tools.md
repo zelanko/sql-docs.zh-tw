@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - adding rows
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ce2907ba9ce510239d62dc6e9db35b2c4360d89
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5173508fa87f76e4bff8047165bcd97f735e6b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127998"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
   您可以利用輸入或是從其他諸如「記事本」或 Excel 程式貼上的方式，加入新的資料。 要貼上資料列必須要有與貼入的資料表完全相同的資料行數目和類型。 多重資料列可一併貼上至 [結果] 窗格。  

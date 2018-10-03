@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - DatabaseServerName Property
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseServerName property
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b2eb84f2bbcc7ae8adce33da7a5c4607c4108d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e0c8983e0e1e8f6407077b5927852c4165b702b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114258"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>DatabaseServerName 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定安裝報表伺服器資料庫之伺服器的名稱。 讀取/寫入  

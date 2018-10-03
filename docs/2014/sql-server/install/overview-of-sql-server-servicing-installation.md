@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
-caps.latest.revision: 29
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7906a576bab6ad6dd35da0f863a20ad02e56d342
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f672002f73600d74043f2b38bcfc88df508977
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070158"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服務安裝概觀
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服務更新，將更新套用至任何已安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件。 如果現有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的版本層級比更新版本層級還新，則安裝程式會將其排除在更新作業外。 如需有關套用服務更新，請參閱[安裝 SQL Server 2014 服務更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)。  

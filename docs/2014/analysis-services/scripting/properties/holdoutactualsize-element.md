@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f74b11b9032285bf45bc8b7705953adf6d58f04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8610024c3eb0b3460883fc5eeddb80f057aff86b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096408"
 ---
 # <a name="holdoutactualsize-element"></a>HoldoutActualSize 元素
   表示處理之後，鑑效組資料分割，其中包含的測試集的實際大小， [MiningStructure](../objects/miningstructure-element-assl.md)項目。 資料集內的其餘案例將用於培訓。 此屬性是唯讀的。  
@@ -55,7 +52,7 @@ ms.locfileid: "37297278"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  值`HoldoutActualSize`取決於資料來源，以及值[HoldoutMaxCases](holdoutmaxcases-element.md)， [HoldoutMaxPercent](holdoutmaxpercent-element.md)，和[HoldoutSeed](holdoutseed-element.md)。 因此，您要等到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 處理採礦結構之後才會取得 `HoldoutActualSize` 的值。  

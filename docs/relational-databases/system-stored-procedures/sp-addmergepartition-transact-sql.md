@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_addmergepartition
 - sp_addmergepartition_TSQL
@@ -22,12 +17,12 @@ ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6087f6ee00305eae2ccbef0aef496377f2c9a57e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: cd85b99afcbab5316f7a7dcc0cccd69eb7d5f0c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852226"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

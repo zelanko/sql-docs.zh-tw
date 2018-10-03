@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc1a0529482b9c976ca13ce3015352e2f8578fca
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
-ms.translationtype: MT
+ms.openlocfilehash: 6df953eed1226e6be62ba694651f3b3244736a5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626166"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On 可用性群組的 SQL Server 容器
 

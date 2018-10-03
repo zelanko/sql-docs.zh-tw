@@ -1,28 +1,24 @@
 ---
-title: 了解用於組態管理的 WMI 提供者 |Microsoft 文件
+title: 了解組態管理的 WMI 提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI Provider for Configuration Management, operations supported
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6c71b51ad2d681d64ec926878c81502acf599031
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c19e95b895283e0f2530925fbbcfcd3eee94a522
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010625"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740276"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>了解用於組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +43,12 @@ ms.locfileid: "33010625"
  查詢處理  
  根據篩選器列舉類別類型的執行個體。  
   
- 如需使用 WMI Provider for Configuration Management 的管理應用程式的範例，請參閱[使用 WQL 和組態管理的 WMI 提供者的指令碼語言](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)。  
+ 如需使用組態管理的 WMI 提供者的管理應用程式的範例，請參閱[使用 WQL 與指令碼與組態管理的 WMI 提供者的語言](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)。  
   
- 如需程式設計管理應用程式使用 WMI 提供者的詳細資訊，請參閱 WMI 文件中的[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework SDK。  
+ 如需有關如何使用 WMI 提供者的管理應用程式的程式設計的詳細資訊，請參閱 WMI 文件中的[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework SDK。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用組態管理的 WMI 提供者](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
- [使用 WQL 與指令碼語言與組態管理的 WMI 提供者](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
+ [搭配組態管理的 WMI 提供者使用 WQL 與指令碼語言](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   
   

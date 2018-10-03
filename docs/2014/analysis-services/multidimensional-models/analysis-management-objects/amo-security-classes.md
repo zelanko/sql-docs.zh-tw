@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Management Objects, security
 - security [AMO]
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de0adbcc122e87ef95a349b357f0cfd173bd98a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8ce9352890b4e1113278148a92c4802074f0d25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047828"
 ---
 # <a name="amo-security-classes"></a>AMO 安全性類別
   

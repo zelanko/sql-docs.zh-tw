@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: sqlxml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], axes
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c40cadaf026f124d7a2cc734d812aa1f2e48f41c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c35a9ea5f34b8c05e1724f232de18536489a3a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43109796"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809928"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定軸 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

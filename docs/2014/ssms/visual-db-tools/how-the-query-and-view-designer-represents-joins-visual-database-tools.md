@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL pane [Visual Database Tools]
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7eaee902e0bd199d969f60544e7d5bd86fdb1c3a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1e03e7ef3899b4f01b0844d5d721fa3a86eb6d4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100102"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查詢和檢視設計工具表示聯結的方式 (Visual Database Tools)
   如果資料表是聯結的， [查詢和檢視表設計工具](visual-database-tools.md) 將在 [圖表窗格](diagram-pane-visual-database-tools.md) 中以圖形表示該聯結，並在 [SQL 窗格](sql-pane-visual-database-tools.md)中使用 SQL 語法。  

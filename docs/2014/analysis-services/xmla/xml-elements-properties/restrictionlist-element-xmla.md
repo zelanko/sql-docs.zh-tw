@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RestrictionList Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - RestrictionList element
 ms.assetid: 2297c005-381e-49a4-a207-826f7f9ea93a
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 045c5644608c7f9537124450ef2c5637eebbb796
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cad57213c69c63dbc45e476d0163a46c111bc8a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067948"
 ---
 # <a name="restrictionlist-element-xmla"></a>RestrictionList 元素 (XMLA)
   包含 [Discover](../xml-elements-methods-discover.md) 方法所使用之限制資料行和值的集合。  
@@ -52,8 +49,8 @@ ms.locfileid: "37314588"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

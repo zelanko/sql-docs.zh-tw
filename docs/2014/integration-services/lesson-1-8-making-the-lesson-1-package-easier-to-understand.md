@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1adf7606b40f4665aae9e264c30d17038da0193a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e549018c7f0654ba40ddd486149059b37ddd46e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296778"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072528"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步驟 8：使第 1 課的封裝更容易了解
   現在您已完成第 1 課封裝的組態，不妨整理一下封裝配置。 如果控制流程配置和資料流程配置中的形狀是隨機大小，或形狀沒有對齊或分組，則封裝功能可能更難以了解。  

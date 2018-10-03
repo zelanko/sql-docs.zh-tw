@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e70d5088b4b17eb037317b9eccf6afba53e5b5f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052489"
 ---
 # <a name="viewing-tuning-recommendations"></a>檢視微調建議
   這項工作使用您先前在[微調工作負載](lesson-1-1-tuning-a-workload.md)中所建立的微調工作階段。 利用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼微調好 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之後，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會在 [建議] 索引標籤中顯示其結果。下列工作將介紹 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 圖形化使用者介面 (GUI) 的 [建議] 索引標籤，並引導您探索它針對微調工作階段結果所提供的相關資訊。  
@@ -50,7 +47,7 @@ ms.locfileid: "37157709"
   
 8.  型別`EvaluateMySession`新**工作階段名稱**，然後按一下**開始分析**工具列上的按鈕。 您可以針對這個新的微調工作階段，重複步驟 2 和 3 來檢視它的建議。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  您已檢視 MySession 微調工作階段的 [建議] 索引標籤內容，且已在新的 EvaluateMySession 微調工作階段中評估了它的部分建議。  
   
  如果您在執行工作階段之後，覺得必須變更微調選項，您可能需要評估部分微調建議。 例如，如果您要求 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 在指定工作階段的微調選項時考慮索引檢視表，但在產生建議之後，又決定不用索引檢視表。 此時，您可以利用 [動作] 功能表的 [評估建議] 選項，使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 在不考慮索引檢視表的情況下，重新評估工作階段。 當您使用 [評估建議] 選項時，會以假設的方式，將先前產生的建議套用在目前的實體設計上，以達成第二個微調工作階段的實體設計。  

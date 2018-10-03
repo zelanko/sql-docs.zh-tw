@@ -1,13 +1,11 @@
 ---
-title: 深入了解資料錄集持續性 |Microsoft 文件
+title: 深入了解資料錄集的持續性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,54 +13,53 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4bf42cb3b915f66cd3c9249ada5fffa7f5da6d7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846856"
 ---
-# <a name="more-about-recordset-persistence"></a>深入了解資料錄集持續性
-ADO 資料錄集物件支援儲存內容**資料錄集**使用檔案中的物件及其[儲存](../../../ado/reference/ado-api/save-method.md)方法。 持續儲存的檔案可能存在於本機磁碟機，伺服器，或做為 URL 在 Web 上站台。 更新版本中，還原檔案，其中一種[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**資料錄集**物件或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
+# <a name="more-about-recordset-persistence"></a>深入了解資料錄集的保存
+ADO 資料錄集物件支援將儲存的內容**Recordset**使用檔案中的物件及其[儲存](../../../ado/reference/ado-api/save-method.md)方法。 持續儲存的檔案可能位於本機磁碟機，伺服器上，或做為 URL，在 Web 上站台。 更新版本中，還原檔案與[開放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**資料錄集**物件或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
   
- 此外， [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法轉換**資料錄集**表單中的資料行和資料列會以您指定的字元分隔的物件。  
+ 颾魤 ㄛ [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法將**資料錄集**至表單的資料行和資料列有您指定的字元所分隔的物件。  
   
- 保存**資料錄集**，開始將它轉換成可儲存在檔案中的表單。 **資料錄集**物件可以儲存在專屬的進階資料 TableGram (ADTG) 格式或開啟的可延伸標記語言 (XML) 格式。 ADTG 範例會顯示在下一節。 如需有關 XML 持續性的詳細資訊，請參閱[XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
+ 若要保存**資料錄集**，開始將它轉換成可以儲存在檔案中的表單。 **資料錄集**物件可以儲存在專屬的進階資料 TableGram (ADTG) 格式或開放式可延伸標記語言 (XML) 格式。 ADTG 範例會顯示在下一節。 如需有關 XML 持續性的詳細資訊，請參閱 <<c0> [ 保存的記錄，以 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
   
- 將任何暫止變更儲存在保存檔案。 這樣做可讓您發出查詢，傳回**資料錄集**物件、 編輯**資料錄集**、 將它與暫止的變更儲存、 稍後還原**資料錄集**，然後按一下更新資料來源，將儲存暫止的變更。  
+ 將任何暫止的變更儲存在保存的檔案中。 執行此動作可讓您發出的查詢會傳回**Recordset**物件、 編輯**資料錄集**儲存它，並暫止的變更，稍後再還原**資料錄集**，，然後更新資料來源，將儲存暫止的變更。  
   
- 如需持續儲存資訊**資料流**物件，請參閱[資料流和持續性](../../../ado/guide/data/streams-and-persistence.md)。  
+ 如需持續儲存資訊**Stream**物件，請參閱[資料流和保存](../../../ado/guide/data/streams-and-persistence.md)。  
   
- 如需**資料錄集**持續性，請參閱 < XML 資料錄集持續性案例。  
+ 如需**資料錄集**持續性，請參閱 < XML 資料錄集保存案例。  
   
 ## <a name="example"></a>範例  
   
-### <a name="save-a-recordset"></a>儲存資料錄集：  
+### <a name="save-a-recordset"></a>將儲存的資料錄集：  
   
 ```  
 Dim rs as New ADODB.Recordset  
 rs.Save "c:\yourFile.adtg", adPersistADTG  
 ```  
   
-### <a name="open-a-persisted-file-with-recordsetopen"></a>開啟 Recordset.Open 保存的檔：  
+### <a name="open-a-persisted-file-with-recordsetopen"></a>開啟 Recordset.Open 保存的檔案：  
   
 ```  
 Dim rs as New ADODB.Recordset  
 rs.Open "c:\yourFile.adtg", "Provider=MSPersist",,,adCmdFile  
 ```  
   
- （選擇性） 如果**資料錄集**並沒有作用中連線，您可以接受所有預設值，並在下列程式碼：  
+ （選擇性） 如果**資料錄集**會沒有作用中連線，您可以接受所有預設值，並撰寫下列程式碼：  
   
 ```  
 Dim rs as New ADODB.Recordset  
 rs.Open "c:\yourFile.adtg"  
 ```  
   
-### <a name="open-a-persisted-file-with-connectionexecute"></a>開啟 Connection.Execute 保存的檔：  
+### <a name="open-a-persisted-file-with-connectionexecute"></a>開啟 Connection.Execute 保存的檔案：  
   
 ```  
 Dim conn as New ADODB.Connection  
@@ -71,8 +68,8 @@ conn.Open "Provider=MSPersist"
 Set rs = conn.execute("c:\yourFile.adtg")  
 ```  
   
-### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>開啟.rds 之保存的檔案DataControl:  
- 在此情況下，**伺服器**屬性未設定。  
+### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>使用 RDS 開啟持續性的檔案DataControl:  
+ 在此情況下， **Server**屬性未設定。  
   
 ```  
 Dim dc as New RDS.DataControl  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2244f9c73d48946628c063d22a1f0645182a73ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086338"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>建立採礦結構 (SQL Server 資料採礦增益集)
   ![建立採礦結構 按鈕，資料採礦功能區](media/dmc-createstruct.gif "Create Mining Structure] 按鈕，[資料採礦功能區")  
@@ -113,7 +110,7 @@ ms.locfileid: "37244048"
   
      如果您不確定是否需要使用某資料行，可以將該資料行包含在採礦結構中，然後建立不使用該資料行的採礦模型。 例如，您可以在資料中包含電話號碼資料行以供稍後參考，但建立忽略電話號碼的群集模型。 在建立該群集後，可以建立查詢以傳回屬於特定群集之人員的電話號碼。  
   
--   所有的演算法需要**金鑰**資料行。 索引鍵資料行中的值必須是唯一的。 A **Key Time**資料行是只需要預測或時間序列模型。 執行個體時提供 SQL Server 登入。  
+-   所有的演算法需要**金鑰**資料行。 索引鍵資料行中的值必須是唯一的。 A **Key Time**資料行是只需要預測或時間序列模型。 .  
   
 ### <a name="requirements"></a>需求  
  若要建立資料採礦結構，您必須具有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 即使您使用暫時性結構，還是需要連接。 如需如何建立或變更連線的詳細資訊，請參閱[連接至來源的資料&#40;適用於 Excel 的資料採礦用戶端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  

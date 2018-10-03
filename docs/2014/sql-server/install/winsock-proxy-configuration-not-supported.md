@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Winsock proxy configuration [SQL Server]
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c7f0d97b2a6b0c5a853b36d9269c8237df08095
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7552218608ff06c7b9f0bd828c97faf1f7e0998a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108108"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>不支援 Winsock Proxy 組態
   無法使用設定 Winsock proxy [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具。  

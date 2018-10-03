@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], System Monitor
 - System Monitor [SQL Server], replication
 - performance counters [SQL Server replication]
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 396b42a8666ec6c4d775cf06c5a873a012b887ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ebe259824ab5c5efb2d85cda72e32bc15df429d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072178"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系統監視器監視複寫
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系統監視器」可讓您使用圖形、圖表和報告來量測電腦的效率、識別和排除可能的問題 (例如不平衡的資源用量、硬體不足或不良的程式設計)，以及規劃其他硬體需求。 如需詳細資訊，請參閱[監視資源使用狀況 &#40;系統監視器&#41;](../../performance-monitor/monitor-resource-usage-system-monitor.md)。  

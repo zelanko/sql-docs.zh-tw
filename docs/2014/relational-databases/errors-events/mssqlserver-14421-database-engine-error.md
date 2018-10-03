@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 14421 (Database Engine error)
 ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29efb64c800d74a2e9c88db06d40c55a229d731d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a6db88a8bb5e44090e5201220fee36a432b69767
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092878"
 ---
 # <a name="mssqlserver14421"></a>MSSQLSERVER_14421
     

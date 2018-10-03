@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122348"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
   空間索引可以更有效率地執行特定作業的資料行上`geometry`或是`geography`資料類型 (*空間資料行*)。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  

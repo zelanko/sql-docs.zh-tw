@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9104dc7cb2a569061760acacdbbc385e10b1f817
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096478"
 ---
 # <a name="mssqlserver30053"></a>MSSQLSERVER_30053
     

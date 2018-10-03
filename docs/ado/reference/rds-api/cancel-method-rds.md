@@ -1,34 +1,31 @@
 ---
-title: Cancel 方法 (RDS) |Microsoft 文件
+title: Cancel 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Cancel method [RDS]
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80949ad39f2b4befb6f050d7a664f4c4f9dcbd4e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: be5ff99397e73f1098f4c11b57a636b08bfa5921
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747316"
 ---
 # <a name="cancel-method-rds"></a>Cancel 方法 (RDS)
 取消執行暫止狀態，非同步方法呼叫。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,13 +35,13 @@ RDS.DataControl.Cancel
 ```  
   
 ## <a name="remarks"></a>備註  
- 當您呼叫**取消**， [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)會自動設為**adcReadyStateLoaded**，而[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)會是空白。  
+ 當您呼叫**取消**， [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)會自動設為**adcReadyStateLoaded**，而[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)會是空的。  
   
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [取消方法範例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
+ [Cancel 方法範例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Cancel 方法 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [CancelBatch 方法 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   

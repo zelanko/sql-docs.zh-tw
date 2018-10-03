@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 107da5c6037988987beed9794ee1ef172ed17e4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097288"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>地圖平行屬性對話方塊、標籤
   使用**MapParallel 屬性**對話方塊來變更地圖檢視區中水平格線的標籤選項。 根據指定之檢視區的座標系統，平行表示下列值：  

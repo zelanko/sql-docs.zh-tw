@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f1455d25c0a3ea344c5104053358b2d4fed0c65b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 33ee909d2127717d7fa061897f12879c3a79bd08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833386"
 ---
 # <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

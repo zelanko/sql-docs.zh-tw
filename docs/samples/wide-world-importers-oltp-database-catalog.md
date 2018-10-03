@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35228d6773e576b2d8b062c94aa8797d07f00809
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798035"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 資料庫目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +65,7 @@ WideWorldImporters 用於不同的用途，例如儲存資料、 定義使用者
 
 參數和使用者 （使用者和連絡人），以及常見的參考資料表 （這常見於多個其他結構描述） 的詳細資料。
 
-|Table|描述|
+|資料表|描述|
 |-----------------------------|---------------------|
 |SystemParameters|包含全系統的可設定的參數。|
 |人員|包含使用者名稱，所有使用應用程式，及 Wide World Importers 會處理在客戶組織之人員的連絡資訊。 這包括員工、 客戶、 供應商和其他的任何連絡人。 已授與使用的系統或網站的權限的人員，資訊會包括登入詳細資料。|
@@ -82,7 +80,7 @@ WideWorldImporters 用於不同的用途，例如儲存資料、 定義使用者
 
 供應商和的股票項目購買的詳細資料。
 
-|Table|描述|
+|資料表|描述|
 |-----------------------------|---------------------|
 |Suppliers|供應商 （組織） 的主要實體資料表|
 |SupplierCategories|類別目錄的供應商 （例如 novelties、 玩具、 衣服、 封裝、 等等。）|
@@ -95,7 +93,7 @@ WideWorldImporters 用於不同的用途，例如儲存資料、 定義使用者
 
 客戶、 銷售人員，以及股票項目銷售詳細資料。
 
-|Table|描述|
+|資料表|描述|
 |-----------------------------|---------------------|
 |客戶|客戶 （組織或個人） 的主要實體資料表|
 |CustomerCategories|類別 （亦即新奇存放區、 超級市場等） 的客戶|
@@ -111,7 +109,7 @@ WideWorldImporters 用於不同的用途，例如儲存資料、 定義使用者
 
 內建的項目、 其 holdings 和交易的詳細資料。
 
-|Table|描述|
+|資料表|描述|
 |-----------------------------|---------------------|
 |StockItems|主要實體資料表的內建的項目|
 |StockItemHoldings|內建的項目有非時態性的資料行。 這些是經常更新的資料行。|

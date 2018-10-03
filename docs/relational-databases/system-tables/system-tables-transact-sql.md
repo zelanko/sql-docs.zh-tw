@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - system tables [SQL Server], retrieving information from
 - retrieving system table information
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b127fb908fc37ccfba53e57fe388e7c4815854f6
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 0d98b70e848a00cd2f1675b3e1ca93efa0ca9a5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783236"
 ---
 # <a name="system-tables-transact-sql"></a>系統資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

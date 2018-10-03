@@ -1,13 +1,11 @@
 ---
-title: CompareEnum |Microsoft 文件
+title: CompareEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,23 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - CompareEnum enumeration [ADO]
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c458b18e4270acecb4abd573a5996442f3f9ef4d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1f28a5dfc7e8abb15d1adf2f457ab49b4fbdd9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839598"
 ---
 # <a name="compareenum"></a>CompareEnum
-指定兩筆記錄，其書籤所代表的相對位置。  
+指定兩筆記錄由其書籤的相對位置。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|@shouldalert|指出書籤相等。|  
+|**adCompareEqual**|1|表示書籤相等。|  
 |**adCompareGreaterThan**|2|指出第一個書籤之後，第二個。|  
 |**adCompareLessThan**|0|表示第一個書籤前，第二個。|  
 |**adCompareNotComparable**|4|表示書籤無法進行比較。|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36584cce341bdbe0e13b917cbe1bcc47469d0deb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114448"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定義父子式階層中父屬性 (Attribute) 的屬性 (Property)
   父子式階層是指維度中以兩個資料表資料行為基礎的階層。 這些資料行會一起定義維度成員之間的階層式關聯性。 第一個名稱為「成員索引鍵資料行」的資料行會識別每個維度成員。 另一個名稱為「父資料行」資料行則會識別每個維度成員的父系。 父屬性的 **NamingTemplate** 屬性決定父子式階層中每個層級的名稱，而 **MembersWithData** 屬性則決定是否應該顯示父成員的資料。  

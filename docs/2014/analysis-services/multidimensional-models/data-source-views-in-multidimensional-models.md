@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e11f6d77229b81bd2ccb3fb6eebad16da7731ce8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126108"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多維度模型中的資料來源檢視
   資料來源檢視 (DSV) 是關聯式資料來源的摘要，其會成為您在多維度專案中建立之 Cube 與維度的根據。 DSV 的用途是可讓您控制專案所用的資料結構，以及與基礎資料來源分開運作 (例如，重新命名或串連資料行而不需要直接修改原始資料來源的能力)。  

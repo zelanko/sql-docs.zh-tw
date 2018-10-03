@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d731139c23e42dc23bdd744ae20ed2aa6508278f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2c134fdcec69ad9f809ccfbfb8fbafc4c60c04a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176135"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058608"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  

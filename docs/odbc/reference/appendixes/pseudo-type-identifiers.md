@@ -1,28 +1,25 @@
 ---
-title: 虛擬型別識別項 |Microsoft 文件
+title: 虛擬類型識別碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42b484bd6d879787c8322a1586dcbce9192318a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e197f6054e417a01f8d7e352cffb40328de69e9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801890"
 ---
-# <a name="pseudo-type-identifiers"></a>虛擬型別識別項
-應用程式設計的方便起見，如 ODBC 定義虛擬類型識別項的數的字。 這些識別項實際上未對應到實際的資料類型，但相反地，視情況，解析為現有的資料類型。  
+# <a name="pseudo-type-identifiers"></a>虛擬類型識別碼
+為了方便起見應用程式設計，ODBC 會定義數個虛擬類型識別碼。 這些識別項實際上並未對應到實際的資料類型，但相反地，視情況而定，解決對現有資料類型。  
   
  此章節包含下列主題。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.connectionmanager.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-caps.latest.revision: 19
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88bbe341af005344a6c7e8984b2fa668291973fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096048"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 來源編輯器 (連接管理員頁面)
   使用 **[XML 來源編輯器]** 的 **[連接管理員]** 頁面，來指定 XML 檔案和轉換 XML 資料的 XSD。  

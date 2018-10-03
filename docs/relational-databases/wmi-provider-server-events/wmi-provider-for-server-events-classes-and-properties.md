@@ -1,30 +1,26 @@
 ---
-title: WMI Provider for Server Events 類別和屬性 |Microsoft 文件
+title: WMI Provider for Server Events 類別和屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event classes [WMI]
 - WMI Provider for Server Events, events listed
 - classes [WMI]
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3514bd676b6b84436141cdcf669cc6c8f33598e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b4c980a70772ed8e63065cc741326b8d497a29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762056"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>伺服器事件類別和屬性的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +28,12 @@ ms.locfileid: "33011315"
   
  若要得知可以從事件或事件群組查詢哪些屬性，請參考事件結構描述。 根據預設，事件結構描述會安裝在以下目錄：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 另外，您可以在發行的事件結構描述參考[ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100)。  
+ 或者，您可以參考在發行的事件結構描述[ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100)。  
   
- 例如，藉由參考 ALTER_DATABASE 事件，您將學習它的父事件為 DDL_SERVER_LEVEL_EVENTS，而其屬性可以**TSQLCommand**和**DatabaseName**。 事件也會繼承內容**SQLInstance**， **PostTime**， **ComputerName**， **SPID**，和**LoginName**. 此事件沒有任何子事件。  
+ 例如，藉由參考 ALTER_DATABASE 事件，您將了解它的父事件為 DDL_SERVER_LEVEL_EVENTS，而其屬性可以**TSQLCommand**並**DatabaseName**。 事件也會繼承的屬性**SQLInstance**， **PostTime**， **ComputerName**， **SPID**，和**LoginName**. 此事件沒有任何子事件。  
   
 > [!NOTE]  
->  執行類似 DDL 作業的系統預存程序也可以引發事件通知。 請測試事件通知以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式和**sp_addtype**預存程序都會引發在 CREATE_TYPE 事件建立的事件通知。 如需詳細資訊，請參閱[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
+>  執行類似 DDL 作業的系統預存程序也可以引發事件通知。 請測試事件通知以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式及**sp_addtype**預存程序都會引發在 CREATE_TYPE 事件建立的事件通知。 如需詳細資訊，請參閱 <<c0> [ DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
   
  **資料定義語言事件和事件群組**  
   

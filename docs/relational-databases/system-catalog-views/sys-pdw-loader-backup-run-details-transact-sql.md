@@ -4,26 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d749acc32be0f871a670dff0284b719d1350c1c9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76c6b3030ba8701e5d5bb1753a09b1390a713e07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727967"
 ---
 # <a name="syspdwloaderbackuprundetails-transact-sql"></a>sys.pdw_loader_backup_run_details & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

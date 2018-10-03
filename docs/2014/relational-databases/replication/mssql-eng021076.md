@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021076 error
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 835233321589b9560b8933632dd82fdccf4206d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6804aac0a6212bf8c80762f44e88fdf9de2d28d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190045"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075568"
 ---
 # <a name="mssqleng021076"></a>MSSQL_ENG021076
     

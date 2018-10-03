@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - BINARY BASE64 directive
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - FOR XML clause, syntax
 - FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bdee30a86425db3d0d603dd4c134a098c2d24f88
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 9216eca73e0251b20f28793020a3d05e9bd20310
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053958"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本語法
   FOR XML 模式可以是 RAW、AUTO、EXPLICIT 或 PATH。 它可以決定產生 XML 的外觀。  

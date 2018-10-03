@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b824314b292f168ab597b8f0fa64cf7f0f0cb9c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7eaad112f18c340f28e85cb68691693d36c1e273
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050218"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
   資料錄集目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  

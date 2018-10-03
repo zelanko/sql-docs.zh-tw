@@ -1,38 +1,35 @@
 ---
-title: RDS 程式碼範例 |Microsoft 文件
+title: RDS 程式碼範例 |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS samples [ADO]
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8807130156a9e7ff6a6bd8bd830078debca09794
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d727e31bfc26bf7c52043043c8c26dbaa19c6e21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616506"
 ---
-# <a name="rds-code-examples"></a>RDS 的程式碼範例
+# <a name="rds-code-examples"></a>RDS 程式碼範例
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 使用下列程式碼範例以了解如何使用 RDS 物件、 方法、 屬性和事件。  
+ 您可以使用下列程式碼範例，了解如何使用 RDS 物件、 方法、 屬性和事件。  
   
- **請注意**貼入您的程式碼編輯器中整個程式碼範例。 如果使用部分的範例，或遺失段落格式時，此範例可能無法正確執行。  
+ **請注意**到您的程式碼編輯器中貼上整個程式碼範例。 如果使用部分的範例，或遺失段落格式時，此範例可能無法正確執行。  
   
--   [RDS 的程式碼範例在 Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [Microsoft Visual Basic 中的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
   
--   [RDS 的程式碼範例在 Microsoft Visual Basic Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [在 Microsoft Visual Basic Scripting Edition 的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
--   [RDS Microsoft Visual c + + 中的程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [Microsoft Visual c + + 中的 RDS 程式碼範例](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  

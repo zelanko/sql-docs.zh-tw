@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 10533 (Database Engine error)
 ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53f2c52e843e899da366b1f7a61697df2b1c5e2f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 86bd82dfd095baeacb35f8454859adb938123f52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066338"
 ---
 # <a name="mssqlserver10533"></a>MSSQLSERVER_10533
     

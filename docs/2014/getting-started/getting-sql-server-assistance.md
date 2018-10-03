@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - SQL Server assistance
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 416540095fe08c5777b453db5875212fbea80989
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393380"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064878"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  

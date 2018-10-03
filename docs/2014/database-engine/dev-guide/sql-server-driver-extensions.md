@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, extensions
 - driver extensions [ODBC]
 - ODBC, driver extensions
 ms.assetid: 1043bc93-965d-4939-bd1c-21e9d8d3e9ac
-caps.latest.revision: 31
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9898ad46d110b368b7be8fc775be4ba125bcb48b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b7cdf207cce1759c2320fd76eb2364bba54fa09
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066088"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server 驅動程式延伸模組
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會實作驅動程式特有的函數，以便允許 ODBC 應用程式存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  

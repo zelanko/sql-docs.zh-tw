@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e635ff34d280affd22d5f0d7854b3c8d7f1a717d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a15a70999431af9969589a8d4ca771f0d92463d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257336"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062248"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件類別
   **Database Mirroring State Change** 事件類別指出鏡像資料庫狀態的變更。 請在監視鏡像資料庫狀況的追蹤中包含此事件類別。  

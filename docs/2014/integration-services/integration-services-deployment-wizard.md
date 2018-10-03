@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-caps.latest.revision: 10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b5a86bd0c7baa64403640698ab5b94cdb4f2977
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086294"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 部署精靈
   「[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 部署精靈」會使用專案部署模型，將專案部署至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 SSISDB 目錄。  

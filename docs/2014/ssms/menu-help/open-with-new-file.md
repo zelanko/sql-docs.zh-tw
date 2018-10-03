@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89d4d09713717d74a5116b7295523be3f24e7cfa
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f7ea982dcc8a3f1d0cc16857e657003c63c60f94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065799"
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
   按一下 [檔案] 功能表上的 [開啟]，然後按一下 [檔案]，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案] 對話方塊中選取檔案，按一下 [開啟] 箭頭，然後按一下 [開啟方式]。 在 [開啟方式] 對話方塊的 [選取要開啟的程式] 清單中，按一下慣用的程式，然後按一下 [開啟]。  

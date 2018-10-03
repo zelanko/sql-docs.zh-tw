@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -19,21 +17,20 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d554173e6341f4f733cdc3e48af587bb4e544be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27b487c787a82f67fc861153939eb5838373fca1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107998"
 ---
 # <a name="graphical-query-designer-user-interface"></a>圖形化查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同時提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具來建立查詢，以便從關聯式資料庫中擷取資料作為報表設計師中的報表資料集。 使用圖形化查詢設計工具，可透過互動方式建立查詢及檢視 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 資料來源類型的結果。 使用以文字為基礎的查詢設計工具，可指定多個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式、複雜查詢或命令語法以及以運算式為基礎的查詢。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](../text-based-query-designer-user-interface.md)。 如需有關使用特定的資料來源類型的詳細資訊，請參閱[將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)。  
   
- 執行個體時提供 SQL Server 登入。  
+ .  
   
 ## <a name="graphical-query-designer"></a>圖形化查詢設計工具  
  此圖形化查詢設計工具支援三種查詢命令：**Text**、**StoredProcedure** 或 **TableDirect**。 在您為資料集建立查詢之前，您必須先在 [ [資料集屬性](../dataset-properties-dialog-box-query.md) ] 對話方塊的 [查詢] 頁面上選取命令類型選項。  

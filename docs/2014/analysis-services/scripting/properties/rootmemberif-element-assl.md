@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RootMemberIf Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb10d62b14c5f13fbc26de23d832d77b724bebc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118698"
 ---
 # <a name="rootmemberif-element-assl"></a>RootMemberIf 元素 (ASSL)
   決定如何識別父屬性的根成員。  
@@ -59,7 +56,7 @@ ms.locfileid: "37280294"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  值`RootMemberIf`項目僅供父屬性 (亦即的值[使用量](usage-element-dimensionattribute-assl.md)項目`DimensionAttribute`父項目設定為*父*) 來判斷根 （父子式階層最上層） 成員。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 423b4281691b4be9bef3305bdb6599f1c75b5804
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b9cf146720502f31a030cb5be63c0a238e460c41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646946"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Alwayson 可用性群組動態管理檢視-函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

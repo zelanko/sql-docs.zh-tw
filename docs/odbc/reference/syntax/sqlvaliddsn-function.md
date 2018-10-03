@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLValidDSN
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQLValidDSN [ODBC]
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d3dfd7e2b019626e98f8a93611880411e74b86a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 2e376d10f21fa00c6bbe86fc692b0185f3c8d8d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642846"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函式
 **合規性**  

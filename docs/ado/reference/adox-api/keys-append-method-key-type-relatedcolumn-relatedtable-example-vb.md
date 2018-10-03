@@ -1,13 +1,11 @@
 ---
-title: 建立新外部索引鍵之間的關聯性的資料表範例 (VB) |Microsoft 文件
+title: 建立新外部索引鍵之間的關聯性的資料表範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d62296909a1d55a908d9ee22c06deea3cd36379c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602037"
 ---
-# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>索引鍵附加方法、 金鑰類型、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)
-下列程式碼示範如何建立兩個現有的資料表，名為新的外部索引鍵關係**客戶**和**訂單**。  
+# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append 方法、Key Type、RelatedColumn、RelatedTable 和 UpdateRule 屬性範例 (VB)
+下列程式碼示範如何建立在兩個現有的資料表，名為新的外部索引鍵關係**客戶**並**訂單**。  
   
 ```  
 ' BeginCreateKeyVB  
@@ -77,17 +74,17 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 （ADOX 索引鍵）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Append 方法 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法 (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [資料行物件 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [資料行集合 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [索引鍵的物件 (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
- [索引鍵集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
+ [Keys 集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Name 屬性 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [RelatedColumn 屬性 (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
  [RelatedTable 屬性 (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
  [Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [資料表集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [型別屬性 (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [Tables 集合 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Type 屬性 (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [UpdateRule 屬性 (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)

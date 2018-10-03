@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - flat files
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec1c7e64e2d1c79d42cb576e74ed8d4b35e7bd85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c33e25a9fde0a410773de9c2070d0ded53962d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088958"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>以指令碼工作偵測空的一般檔案
   一般檔案來源不會在嘗試處理一般檔案之前，判斷它是否包含資料列。 您可能會想要略過不包含任何資料列的檔案，藉以改善封裝的效率，尤其是逐一查看許多一般檔案的封裝。 指令碼工作可以在封裝開始處理資料流程之前，尋找空白的一般檔案。  

@@ -1,31 +1,28 @@
 ---
-title: SQLRateConnection 函式 |Microsoft 文件
+title: SQLRateConnection 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f6db1bd9703229ba6e2833865bad44494b9ecc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f3d0058e798fe9bdbcbfcbc1ed3adea8e405a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776386"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 函式
-**一致性**  
- 版本引進了： ODBC 3.81 標準相容性： ODBC  
+**合規性**  
+ 版本導入： ODBC 3.81 標準相容性： ODBC  
   
  **摘要**  
  **SQLRateConnection**判斷驅動程式可以重複使用現有的連接，連接集區中。  
@@ -43,19 +40,19 @@ SQLRETURN  SQLRateConnection(
   
 ## <a name="arguments"></a>引數  
  *hRequest*  
- [輸入]語彙基元的控制代碼，代表新的應用程式連線要求。  
+ [輸入]語彙基元的控制代碼，表示新的應用程式連線要求。  
   
  *hCandidateConnection*  
  [輸入]連接集區中現有的連接。 連接必須為開啟狀態。  
   
  *fRequiredTransactionEnlistment*  
- [輸入]如果為 TRUE，重複使用現有的連接*hCandidateConnection*的新連線要求 (*hRequest*) 需要額外的編列。  
+ [輸入]如果為 TRUE，重複使用現有的連接*hCandidateConnection*的新連線要求 (*hRequest*) 需要額外的登錄。  
   
  *transId*  
- [輸入]如果*fRequiredTransactionEnlistment*為 TRUE， *transId*代表會登記要求的 DTC 交易。 如果*fRequiredTransactionEnlistment*為 FALSE， *transId*會被忽略。  
+ [輸入]如果*fRequiredTransactionEnlistment*為 TRUE 時， *transId*代表要求將會登錄在 DTC 交易。 如果*fRequiredTransactionEnlistment*為 FALSE 時， *transId*將會被忽略。  
   
  *pRating*  
- [輸出]*hCandidateConnection*的重複使用評等來*hRequest*。 此分級會是 0 和 100 （含） 之間。  
+ [輸出]*hCandidateConnection*的重複使用評等來*hRequest*。 此評等會介於 0 到 100 （含） 之間。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -64,27 +61,27 @@ SQLRETURN  SQLRateConnection(
  驅動程式管理員不會處理此函式所傳回的診斷資訊。  
   
 ## <a name="remarks"></a>備註  
- **SQLRateConnection**會產生介於 0 到 100 （含），表示現有的連線與要求的相符程度的分數。  
+ **SQLRateConnection**會產生介於 0 到 100 （含） 表示現有的連線與要求的相符程度的分數。  
   
 |分數|（當都會傳回 SQL_SUCCESS） 的意義|  
 |-----------|-----------------------------------------------|  
-|0|*hCandidateConnection*不得重複使用於*hRequest*。|  
-|介於 1 到 98 （含） 之間的任何值|分數越高，越接近， *hCandidateConnection*符合*hRequest*。|  
-|99|無意義的屬性有只不符。  驅動程式管理員應該先停止分級迴圈。|  
-|100|完美的相符項目。  驅動程式管理員應該先停止分級迴圈。|  
-|大於 100 的任何其他值|*hCandidateConnection*標示為寄不出，而且將不會重複使用即使是在未來的連線要求。|  
+|0|*hCandidateConnection*不會重複用於*hRequest*。|  
+|介於 1 和 98 （含） 之間的任何值|分數越高，愈接近所*hCandidateConnection*符合*hRequest*。|  
+|99|無意義的屬性有只不相符。  驅動程式管理員應該停止的評等的迴圈。|  
+|100|完美的相符項目。  驅動程式管理員應該停止的評等的迴圈。|  
+|大於 100 的任何其他值|*hCandidateConnection*標示為無效信件和它將不會重複使用即使在未來的連線要求。|  
   
- 如果傳回的程式碼 （包括 SQL_SUCCESS_WITH_INFO） 的 SQL_SUCCESS 以外的任何或評等大於 100，驅動程式管理員會將標示為寄不出的連接。 無作用連接不能重複使用 （即使在未來的連線要求），將最後會逾時之後 CPTimeout 傳遞。 驅動程式管理員，仍找不到另一個連接從集區，以進行評價。  
+ 如果傳回的程式碼 （包括 SQL_SUCCESS_WITH_INFO） 的 SQL_SUCCESS 以外的任何項目或評等會大於 100，則驅動程式管理員會將標示為無效的連接。 該無作用的連線不能重複使用 （即使在未來的連線要求），以及將最終會逾時 CPTimeout 經過後。 驅動程式管理員會繼續尋找另一個連接從集區的速率。  
   
- 如果驅動程式管理員重複使用其分數會嚴格小於 100 （含 99） 的連接，驅動程式管理員會呼叫 SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) 重設回應用程式所要求的狀態連線。 驅動程式應該不會重設這個函式呼叫中的連接。  
+ 如果驅動程式管理員會重複使用其分數會嚴格小於 100 （含 99） 的連接，驅動程式管理員會呼叫 SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) 以重設回應用程式所要求的狀態連線。 驅動程式不應該重設此函式呼叫中的連接。  
   
- 如果*fRequiredTransactionEnlistment*為 TRUE，重複使用*hCandidateConnection*需要額外的登錄 (*transId* ！ = NULL) 或 unenlistment (*transId* = = NULL)。 這表示重複使用的連接和驅動程式是否應該登錄 / 取消登錄的連接，如果要重複使用連接的成本。 如果*fRequireTransactionEnlistment*為 FALSE，驅動程式應忽略的值*transId*。  
+ 如果*fRequiredTransactionEnlistment*為 TRUE，重複使用*hCandidateConnection*需要額外的登錄 (*transId* ！ = NULL) 或 unenlistment (*transId* = = NULL)。 這表示重複使用的連接和驅動程式是否應該登錄 / 取消登錄的連線，如果要重複使用連線的成本。 如果*fRequireTransactionEnlistment*為 FALSE 時，驅動程式應忽略的值*transId*。  
   
- 驅動程式管理員可確保 HENV 處理的父系*hRequest*和*hCandidateConnection*都相同。 驅動程式管理員可以保證與都有相關聯的集區識別碼*hRequest*和*hCandidateConnection*都相同。  
+ 驅動程式管理員可確保 HENV 處理的父系*hRequest*並*hCandidateConnection*都相同。 驅動程式管理員可確保與都有相關聯的集區識別碼*hRequest*並*hCandidateConnection*都相同。  
   
- 應用程式不應該直接呼叫此函式。 支援可感知驅動程式的連接集區的 ODBC 驅動程式必須實作此函式。  
+ 應用程式不應該直接呼叫此函式。 支援可感知驅動程式的連接共用的 ODBC 驅動程式必須實作此函式。  
   
- 包含 sqlspi.h ODBC 驅動程式開發。  
+ 包含 ODBC 驅動程式開發的 sqlspi.h。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

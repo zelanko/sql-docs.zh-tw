@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.system_views_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_views catalog view
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a079e29d0357110c2ac9eec68098d14f262899b0
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 13568aae4723a695dd2ce3e611d5e92f96deffb7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714896"
 ---
 # <a name="syssystemviews-transact-sql"></a>sys.system_views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

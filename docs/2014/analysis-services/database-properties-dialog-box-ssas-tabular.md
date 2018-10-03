@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.DatabaseProperties.f1
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31f4e6201246467517cf3fdd39bb03906b3bde24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105688"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>資料庫屬性對話方塊 (SSAS - 表格式)
   此對話方塊提供時間戳記和其他描述性資訊，再加上決定資料庫是否使用快取資料的可自訂屬性。 其他可自訂屬性包含變更資料庫名稱和指定模擬選項。  

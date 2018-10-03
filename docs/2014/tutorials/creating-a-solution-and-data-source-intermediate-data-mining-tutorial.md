@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad99c202d858bbdf5de47a21fe26070328e2de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119628"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>建立方案與資料來源 (中繼資料採礦教學課程)
   若要使用資料採礦，您必須先建立的專案中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]使用此範本中， **Analysis Services 多維度和資料採礦專案**。 當您開啟範本時，它會自動將您進行資料採礦可能需要的所有結構描述載入設計師中：資料來源、採礦結構和資料模型，甚至是 Cube (如果您的採礦結構使用多維度資料)。  

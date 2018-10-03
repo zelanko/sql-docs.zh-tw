@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea88c4e37cb7c062beec1db9b05549446585cc33
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7ea148b3a17f11ce0993beff82dfb38701af251f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075228"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>在原生編譯預存程序中使用 Try..Catch
   您可以在原生編譯預存程序內使用 try..catch 區塊。 以下為支援的結構：  

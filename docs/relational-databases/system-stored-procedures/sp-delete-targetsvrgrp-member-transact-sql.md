@@ -1,14 +1,11 @@
 ---
-title: sp_delete_targetsvrgrp_member (TRANSACT-SQL) |Microsoft 文件
+title: sp_delete_targetsvrgrp_member (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetsvrgrp_member_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetsvrgrp_member
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb2b4ce1e6013e7bd0499a0bd242609d638b1899
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c73ad5d550244306d2672120cfa32c9a3ed37bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755766"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +41,16 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
   
 ## <a name="arguments"></a>引數  
  [ **@group_name=** ] **'***group_name***'**  
- 群組的名稱。 *group_name*是**sysname**，沒有預設值。  
+ 群組的名稱。 *group_name*已**sysname**，沒有預設值。  
   
  [ **@server_name=** ] **'***server_name***'**  
- 這是要從指定群組中移除的伺服器名稱。 *server_name*是**nvarchar （30)**，沒有預設值。  
+ 這是要從指定群組中移除的伺服器名稱。 *server_name*已**nvarchar(30)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="permissions"></a>Permissions  
  若要執行這個預存程序，使用者必須授與**sysadmin**固定的伺服器角色。  
@@ -73,7 +69,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_targetsvrgrp_member &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
+ [sp_add_targetsvrgrp_member &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

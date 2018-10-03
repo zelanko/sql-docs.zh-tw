@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 588e945d95aca8946e327c0fff98e78c21dae8aa
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107758"
 ---
 # <a name="open-solutions-from-source-control"></a>從原始檔控制開啟方案
   您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，直接從原始檔控制中開啟方案。 當您執行這個動作時，Studio 環境會在您指定的位置上，建立方案檔最新版本的副本。  

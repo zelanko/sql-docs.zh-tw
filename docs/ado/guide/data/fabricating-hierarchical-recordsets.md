@@ -1,13 +1,11 @@
 ---
-title: Fabricating 階層式資料錄集 |Microsoft 文件
+title: 產生階層式資料錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271527"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770886"
 ---
-# <a name="fabricating-hierarchical-recordsets"></a>Fabricating 階層式資料錄集
-下列範例示範如何使用資料的形式來定義資料行的父系、 子群組和孫系文法由此沒有基礎資料來源的階層式資料錄集**資料錄集**。  
+# <a name="fabricating-hierarchical-recordsets"></a>產生階層式資料錄集
+下列範例示範如何使用資料成形文法定義父系、 子節點及孫系的資料行建立階層式資料錄集，而不需要基礎資料來源**資料錄集**。  
   
- 要由此階層式**資料錄集**，您必須指定[Microsoft Data Shaping Service 的 OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape)，而且您可以指定 NONE 中的資料提供者值連接字串參數的[開啟](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 如需詳細資訊，請參閱[所需的提供者資料成形](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
+ 若要建立階層式**資料錄集**，您必須指定[Microsoft Data Shaping Service 的 OLE DB （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape)，而且您可以指定資料提供者值為 NONE 中連接字串參數[開放](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。 如需詳細資訊，請參閱 <<c0> [ 的資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,11 +53,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- 只要**資料錄集**已傳遞，它可以是填入、 操作，或保存至檔案。  
+ 一旦**資料錄集**已傳遞，它可以是填入、 操作，或保存至檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [型式圖形文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [提供者所需的資料成形](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [圖形 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
+ [存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [正式 Shape 文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [資料成形所需的提供者](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
  [一般 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

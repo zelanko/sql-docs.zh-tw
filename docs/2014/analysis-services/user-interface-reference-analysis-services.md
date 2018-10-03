@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30af448de7f7db1338e6d29396bb79965a35d678
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068048"
 ---
 # <a name="user-interface-reference-analysis-services"></a>使用者介面參考 (Analysis Services)
   本節包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的說明主題。 在使用者介面的環境中按一下 F1 鍵，或在精靈頁面上、設計師和對話方塊中按一下 [說明]，亦可取得這些主題。  

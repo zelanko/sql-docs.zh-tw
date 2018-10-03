@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_health_status_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - smart_admin.fn_get_health_status
 - fn_get_health_status
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0fa9a510f2be08329173898b7e0e6794458ea8fe
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 98ebc20d497165d4e2d80438bcd711490fd6bc8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799366"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +66,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 ## <a name="best-practices"></a>最佳作法  
  這些彙總計算可用來監視系統健全狀況。 例如，如果 number_of_retention_loops 資料行在 30 分鐘內為 0，則保留管理可能需要耗費長時間運作，或甚至運作不正確。 非零的錯誤資料行可能表示出現問題，應檢查擴充事件記錄來了解任何問題。 或者，使用預存程序**managed_backup.sp_get_backup_diagnostics**以取得尋找錯誤的詳細資料的擴充事件的清單。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要**選取**函式的權限。  

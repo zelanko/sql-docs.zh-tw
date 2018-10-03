@@ -1,14 +1,11 @@
 ---
-title: 資料收集器預存程序 (TRANSACT-SQL) |Microsoft 文件
+title: 資料收集器預存程序 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e004af91b72dfe3ffe1fb1731797036d42f82512
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dfd5f07cafacf5817f6fbef90b140b01c00e622f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239758"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741886"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>資料收集器預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

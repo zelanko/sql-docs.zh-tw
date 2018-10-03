@@ -1,39 +1,36 @@
 ---
-title: 在 XML 中的階層式資料錄集 |Microsoft 文件
+title: 在 XML 中的階層式資料錄集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 06725d50662500000921c541b2066302a4de918a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615956"
 ---
-# <a name="hierarchical-recordsets-in-xml"></a>在 XML 中的階層式資料錄集
-ADO 允許為 XML 持續性的階層式資料錄集物件。 使用階層式資料錄集物件，在父資料錄集欄位的值會是另一個資料錄集。 這類欄位會表示為 XML 資料流，而不是屬性中的子項目。  
+# <a name="hierarchical-recordsets-in-xml"></a>XML 中的階層式資料錄集
+ADO 可讓持續性的階層式資料錄集物件為 XML。 使用階層式資料錄集物件，在父資料錄集欄位的值會是另一個資料錄集。 這類欄位會表示為 XML 資料流，而不是屬性的子項目。  
   
 ## <a name="remarks"></a>備註  
- 下列範例將示範此情況下：  
+ 下列範例示範此案例：  
   
 ```  
 Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select stor_id, ord_num, ord_date, qty from sales} AS rsSales RELATE stor_id TO stor_id)", "Provider=MSDataShape;DSN=pubs;Integrated Security=SSPI;"  
 ```  
   
- 以下是 XML 格式的保存資料錄集：  
+ 以下是 XML 格式保存資料錄集：  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
@@ -108,25 +105,25 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 </xml>   
 ```  
   
- 保存以這種方式時，在父資料錄集資料行的確切順序不明顯。 父系中的任何欄位可能包含子資料錄集。 持續性提供者保存出第一個程式屬性的所有純量資料行，並且再保存為子項目的父資料列的 出所有子資料錄集 」 的資料行 」。 父欄位的序數位置可以藉由查看結構描述定義的資料錄集取得資料錄集。 每個欄位都包含該欄位的序數號碼的資料錄集結構描述命名空間中定義的 OLE DB 屬性 rs： 數字。  
+ 中的父資料錄集的資料行的正確順序不明顯，當它保存在這種方式。 父項中的任何欄位可能包含子資料錄集。 持續性提供者持續發生，先為屬性的所有純量資料行，然後保存為子項目的父資料列的 所有子資料錄集 」 資料行"。 欄位的父項中的序數位置可取得資料錄集，藉由查看資料錄集的結構描述定義。 每個欄位都包含該欄位序數的資料錄集結構描述命名空間中定義的 OLE DB 屬性 rs： 數字。  
   
- 中的子資料錄集的所有欄位的名稱會串連的父資料錄集，其中包含此子系中的欄位名稱。 這是為了確保在父和子資料錄集這兩個包含的欄位，取得兩個不同資料表，但是權責名為的情況下沒有名稱衝突。  
+ 中的子資料錄集的所有欄位的名稱會串連的父資料錄集，其中包含這個子中的欄位名稱。 這是為了確保在父和子資料錄集這兩個包含的欄位取自兩個不同資料表，但名為瞄準單一的情況下沒有名稱衝突。  
   
- 當將階層式資料錄集儲存成 XML 時，您應該注意下列限制在 ADO 中：  
+ 在階層式資料錄集儲存為 XML 時，您應該注意下列限制在 ADO 中：  
   
--   階層式資料錄集具有擱置更新無法保存為 XML。  
+-   階層式資料錄集與擱置的更新無法保存為 XML。  
   
--   無法保存以參數化的形狀命令所建立的階層式資料錄集 （以 XML 或 ADTG 格式）。  
+-   使用參數化的圖形命令建立的階層式資料錄集無法保存 （格式為 XML 或 ADTG）。  
   
--   ADO 目前會儲存為二進位大型物件 (BLOB) 的父系和子資料錄集之間的關聯性。 XML 標記來描述此關聯性具有尚未定義資料列集結構描述命名空間中。  
+-   ADO 目前會儲存為二進位大型物件 (BLOB) 的父代和子資料錄集之間的關聯性。 XML 標記來描述此關聯性具有尚未定義的資料列集結構描述命名空間中。  
   
--   儲存階層式資料錄集時，所有的子資料錄集會一起儲存它。 如果目前資料錄集是另一個資料錄集的子系，則其父代不會儲存。 所有子系會儲存目前資料錄集的子樹狀結構的資料錄集。  
+-   儲存階層式資料錄集時，所有的子資料錄集也會一起儲存它。 如果目前資料錄集是另一個資料錄集的子系，則其父代不會儲存。 所有的子系會儲存目前資料錄集的子樹狀結構的資料錄集。  
   
- 當階層式資料錄集重新開啟從其 XML 保存的格式，您必須注意下列限制：  
+ 當階層式資料錄集重新開啟時從 XML 保存格式，您必須注意下列限制：  
   
--   如果子記錄包含沒有對應的父記錄會的記錄，這些資料列不會寫出的階層式資料錄集的 XML 表示中。 因此，這些資料列將會遺失資料錄集重新開啟從持續性的位置時。  
+-   如果子記錄包含針對有沒有對應的父記錄的記錄，這些資料列不會寫出在階層式資料錄集的 XML 表示法。 因此，這些資料列將會遺失從持續性位置重新開啟資料錄集時。  
   
--   如果子記錄中有一個以上的父記錄的參考，然後在重新開啟資料錄集時，子資料錄集可能包含重複的記錄。 不過，這些重複項目才會顯示如果使用者直接使用基礎的子資料列集。 如果章用於巡覽資料錄集 （亦即透過 ADO 來瀏覽的唯一方式） 的子系，請重複的項目不會顯示。  
+-   如果子記錄有一個以上的父記錄的參考，然後在重新開啟資料錄集，子資料錄集可能包含重複的記錄。 不過，這些重複項目才會顯示如果使用者會直接使用基礎的子資料列集。 如果一個章節來巡覽資料錄集 （也就是唯一的方式來瀏覽 ADO） 的子系，重複的項目不會顯示。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

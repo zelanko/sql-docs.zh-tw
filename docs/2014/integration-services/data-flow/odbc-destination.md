@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f19732c1287b1c915f8a49adc9f12938ebb9a744
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079138"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  

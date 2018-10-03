@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/11/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e027535f9b70acc518bd6fa3e3f4324007021311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 704897c5da43f3f48479e155d1679a002b586866
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086570"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
   當您執行線上索引作業時，下列指導方針將適用：  

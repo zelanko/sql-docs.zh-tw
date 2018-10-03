@@ -1,56 +1,53 @@
 ---
-title: ADO 事件模型範例 （VC + +） |Microsoft 文件
+title: ADO 事件模型範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614446"
 ---
-# <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 （VC + +）
-Visual c + + 部分[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)如何具現化 ADO 事件模型的一般說明。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  
+# <a name="ado-events-model-example-vc"></a>ADO 事件模型範例 (VC++)
+Visual c + + 那段[ADO 事件具現化語言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供如何具現化 ADO 事件模型的一般描述。 以下是具現化所建立的環境內的事件模型的特定範例 **#import**指示詞。  
   
- 使用的一般描述**adoint.h**方法簽章的參考。 不過，少數的詳細資料中的一般描述變更稍微使用 **#import**指示詞：  
+ 一般的描述會使用**adoint.h**方法簽章的參考。 不過，一般的描述中的一些詳細資料而稍微藉由使用 **#import**指示詞：  
   
--   **#Import**指示詞解析**typedef**的方法簽章資料類型和修飾詞，以其基本形式。  
+-   **#Import**指示詞會解析**typedef**的方法簽章資料類型和修飾詞，以其基本形式。  
   
--   必須覆寫的純虛擬方法都會所有加上"**raw_**"。  
+-   必須覆寫的純虛擬方法都會全部加上"**raw_**"。  
   
  部分程式碼只會反映程式碼撰寫樣式。  
   
--   將指標**IUnknown**使用**Advise**方法呼叫會明確地取得**QueryInterface**。  
+-   指標**IUnknown**供**Advise**方法會明確呼叫取得**QueryInterface**。  
   
--   您不需要明確的程式碼中的類別定義解構函式。  
+-   您不需要明確撰寫程式碼中的類別定義解構函式。  
   
--   您可以在程式碼更強固的 QueryInterface、 AddRef 及發行的實作。  
+-   若要撰寫程式碼更強固的 QueryInterface，AddRef 和實作版本。  
   
--   **__Uuidof()** 指示詞會廣泛地用來取得介面識別碼。  
+-   **__Uuidof()** 指示詞廣泛使用，以取得的介面識別碼。  
   
- 最後，此範例包含一些運作的程式碼。  
+ 最後，此範例包含一些工作程式碼。  
   
--   此範例會寫入成為主控台應用程式。  
+-   此範例會寫入做為主控台應用程式。  
   
--   您應該插入您自己的程式碼在註解中，「`// Do some work`"。  
+-   您應該將自己的程式碼註解，在 「`// Do some work`"。  
   
--   所有的事件處理常式預設不進行任何動作，並取消進一步通知。 您應該將適當的程式碼插入您的應用程式，並視需要允許通知。  
+-   所有事件處理常式預設不進行任何動作，並進一步取消通知。 您應該將適當的程式碼插入您的應用程式，並視需要允許通知。  
   
 ```  
 // ADO_Events_Model_Example.cpp  

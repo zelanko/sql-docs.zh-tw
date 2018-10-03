@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d93967a9f35c7c6817326293f6b2dd12e23780e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed0ba22087a12f08e7a951a89a7ca989bb6487f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110589"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，類神經網路模型的內容查詢可以擷取模型中繼資料，例如，隱藏層的數目。 或者，預測查詢可以根據輸入建議分類，並選擇性地提供每個分類的機率。  

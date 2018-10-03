@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa99c86b6e4cc6705a04f0b1eecd1695033f50de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a3547d10f325e047174f7106267b480084e88df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062029"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
   指定您要對其 Database Engine Tuning Advisor 評估假設性組態的資料庫 (所指定`Configuration`項目)。  

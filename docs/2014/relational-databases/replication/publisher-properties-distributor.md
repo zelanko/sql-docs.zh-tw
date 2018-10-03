@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distpubproperties.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: ab6ada76-0f99-43fe-b524-baac7b1bc483
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 721b2030285f50ca2f7a1212b8589ebcb05957cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0b1cddd1c5849f43aac7f41a2f4b679af21760b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057958"
 ---
 # <a name="publisher-properties---distributor"></a>發行者屬性 - 散發者
   **[發行者屬性]** 對話方塊可讓您檢視和修改與發行者及其散發者之間的關聯性相關聯的屬性。  

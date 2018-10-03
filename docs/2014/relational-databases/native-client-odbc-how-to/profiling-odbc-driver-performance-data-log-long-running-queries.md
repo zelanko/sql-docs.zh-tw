@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 81b10966cd87a57de50e89f5a8327b2e19424ba0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095428"
 ---
 # <a name="log-long-running-queries-odbc"></a>記錄長時間執行的查詢 (ODBC)
   此範例會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，用以記錄長時間執行的查詢。 執行時，此範例會建立 Odbcqry.log，其中包含執行超過應用程式設定之間隔的查詢清單。 IA64 不支援此範例。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
@@ -36,7 +33,7 @@ ms.locfileid: "37431137"
   
 3.  按一下記錄長時間執行之查詢的資料來源。  
   
-4.  按一下 **設定**。  
+4.  按一下**設定**。  
   
 5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至頁面**記錄檔儲存長時間執行的查詢**。  
   

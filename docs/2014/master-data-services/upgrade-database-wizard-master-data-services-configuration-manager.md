@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d19c17410c5cf6511db7b53ccf0de758dfefc0aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ce9dd246ed810f1b7e04f22b43f9dec34f26ab1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050035"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升級資料庫精靈 (Master Data Services 組態管理員)
   使用 [升級資料庫精靈] 升級 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  

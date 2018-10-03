@@ -1,13 +1,11 @@
 ---
-title: 附加和 CreateParameter 方法範例 (JScript) |Microsoft 文件
+title: 附加和 CreateParameter 方法範例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d93d5b956576a9e2b66359ae4aef0b4d8b1e5223
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827616"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>附加和 CreateParameter 方法範例 (JScript)
-這個範例會使用[附加](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)執行預存程序的輸入參數的方法。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**AppendJS.asp**。  
+這個範例會使用[Append](../../../ado/reference/ado-api/append-method-ado.md)並[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)執行預存程序輸入參數的方法。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AppendJS.asp**。  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -149,5 +146,5 @@ body {
  [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 方法 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field 物件](../../../ado/reference/ado-api/field-object.md)   
- [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)

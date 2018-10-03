@@ -1,32 +1,29 @@
 ---
-title: OpenSchema 方法範例 (VB) |Microsoft 文件
+title: OpenSchema 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2ebcb40cc91f93c7810223304e0dde2ed45a21a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279941"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778986"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 方法範例 (VB)
-這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法顯示的名稱和型別中每個資料表***Pubs***資料庫。  
+這個範例會使用[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法，以顯示每個資料表中的類型與名稱***Pubs***資料庫。  
   
 ```  
 'BeginOpenSchemaVB  
@@ -82,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- 這個範例會指定 TABLE_TYPE 查詢條件約束中的**OpenSchema**方法***準則***引數。 如此一來，只有結構描述資訊檢視指定在***Pubs***資料庫會傳回。 此範例接著會顯示的名稱和每個資料表的類型。  
+ 這個範例會指定中的 TABLE_TYPE 查詢條件約束**OpenSchema**方法***準則***引數。 如此一來，只檢視的結構描述資訊所述***Pubs***資料庫會傳回。 此範例接著會顯示每個資料表的類型與名稱。  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

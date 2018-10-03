@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd29d0d9c3a49712cdb14f219070f071a8575eae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106768"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署公用程式的部署模型方案
-   **Microsoft.AnalysisServices.Deployment** 公用程式可讓您在命令提示字元之下啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署引擎。 這個公用程式利用在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案所產生的 XML 輸出檔來作為輸入檔。 您可以輕易地修改這些輸入檔來自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
+  **Microsoft.AnalysisServices.Deployment** 公用程式可讓您在命令提示字元之下啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署引擎。 這個公用程式利用在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案所產生的 XML 輸出檔來作為輸入檔。 您可以輕易地修改這些輸入檔來自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
   
 ## <a name="syntax"></a>語法  
   

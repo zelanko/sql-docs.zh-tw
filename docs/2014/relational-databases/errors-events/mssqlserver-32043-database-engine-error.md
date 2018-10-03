@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 32043 (Database Engine error)
 ms.assetid: a0c48ae3-4c8c-419c-afb5-579fcefac01d
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0739195907b864d2509676ee2e250bc2b53381bc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b8892eb88a943176a5d99bdada398d004e983658
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098738"
 ---
 # <a name="mssqlserver32043"></a>MSSQLSERVER_32043
     

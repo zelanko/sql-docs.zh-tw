@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 783be63a0aaf016c5f35645f3cd43909f6856faa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c6e49e9c5c5306ba5d1986c7fd8e09ea463c8b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129018"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor 會分析的設定已安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件，然後產生問題，您必須解決才能確保升級成功的報表。  

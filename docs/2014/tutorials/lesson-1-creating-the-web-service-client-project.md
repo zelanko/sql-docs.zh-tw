@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-caps.latest.revision: 30
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9799bfa53aeaa5557177fe619c6ed378db58683a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf5a2f15aaed3c50c456eb635b34a19973a51f21
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080798"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>第 1 課：建立 Web 服務用戶端專案
   在這個逐步解說中，您會建立存取報表伺服器 Web 服務的簡單主控台應用程式。 這個逐步解說假設您是在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中進行開發工作。  

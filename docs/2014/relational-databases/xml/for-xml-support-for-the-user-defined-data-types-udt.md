@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - UDTs [SQL Server], XML
 - user-defined types [SQL Server], XML
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e608244e1d22e4482534c1658006cba4650d0083
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 275c6a13b0351bfa95e3d9ac642b1300f88e5c22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086178"
 ---
 # <a name="for-xml-support-for-the-user-defined-data-types-udt"></a>使用者自訂資料類型 (UDT) 的 FOR XML 支援
   FOR XML 不支援 Common Language Runtime (CLR) 使用者定義資料類型 (UDT)。  

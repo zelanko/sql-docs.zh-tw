@@ -4,13 +4,8 @@ ms.custom: ''
 ms.date: 09/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server 2014
 f1_keywords:
 - sql12.swb.roleproperties.database.f1
 - sql12.swb.roleproperties.general.f1
@@ -42,12 +37,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 814b585d1ac15af1b083a3191ca44c32fe29e15e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027681"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104115"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
   為了輕鬆管理資料庫中的權限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了幾個 *「角色」* (Role)，這些角色是分組其他主體的安全性主體。 它們就像是 ***Windows 作業系統中的*** 群組 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 資料庫層級角色的權限範圍為整個資料庫。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NamingTemplateTranslations Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1c7accfde72c3e64b3845f720c33fce5b55711e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099399"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>NamingTemplateTranslations 元素 (ASSL)
   提供當地語系化翻譯的集合[NamingTemplate](../properties/namingtemplate-element-assl.md)項目之父[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)。  
@@ -52,8 +49,8 @@ ms.locfileid: "37204398"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

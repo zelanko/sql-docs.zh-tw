@@ -1,29 +1,26 @@
 ---
-title: 一般與內容連接 |Microsoft Docs
+title: 一般連線與內容連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ba21a813e019b94a51ad6a43e45faf64cd9f7b2
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8271f3593da39727dc70c71b17cc032bdb0877e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097188"
 ---
-# <a name="regular-vs-context-connections"></a>一般與內容連接
+# <a name="regular-vs-context-connections"></a>一般連線與內容連接
   如果您要連接到遠端伺服器，請務必使用正常連接而非內容連接。 如果您需要連接到執行預存程序或函數的相同伺服器，在大部分的情況下，請使用內容連接。 其優點包含可在相同的交易空間執行，以及不必重新驗證等等。  
   
  此外，使用內容連接通常會使效能更好，而且資源的使用量更少。 內容連接是一種僅限同處理序的連接，因此，它可以略過網路通訊協定與傳輸層來傳送 Transact-SQL 陳述式並接收結果，藉以「直接」與伺服器聯繫。 系統也會略過驗證處理序。 下圖顯示 `SqlClient` Managed 提供者的主要元件，以及使用正常連接或內容連接時，不同的元件分別如何與彼此互動。  

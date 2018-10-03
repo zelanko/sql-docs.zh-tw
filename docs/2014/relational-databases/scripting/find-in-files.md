@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.findinfiles
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56fd7e36c7ceee6d3a257bc1b5ad2d71d46d689a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 882e13938e85db653dbe43e859bbc582833d68d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114058"
 ---
 # <a name="find-in-files"></a>檔案中尋找
   [尋找和取代] 視窗的 [檔案中尋找] 索引標籤，可以讓您在指定檔案集的程式碼中搜尋字串或運算式。 找到的相符結果與採取的動作會列在 [結果選項] 所選取的 [尋找結果] 視窗中。  

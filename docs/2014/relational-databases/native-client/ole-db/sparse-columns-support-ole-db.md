@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e545872853953c426504ed22c0972975a9d5c3db
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b286ba7bde145a9a3676f38f329a8efbd932a4cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106380"
 ---
 # <a name="sparse-columns-support-ole-db"></a>疏鬆資料行支援 (OLE DB)
   本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 對於疏鬆資料行支援的相關資訊。 如需有關疏鬆資料行的詳細資訊，請參閱 < [SQL Server Native Client 中的疏鬆資料行支援](../features/sparse-columns-support-in-sql-server-native-client.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行的目錄中繼資料&#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
@@ -55,7 +52,7 @@ ms.locfileid: "37418627"
 |IColumnsInfo::GetColumnsInfo|新 DBCOLUMNFLAGS 旗標的值會設定 DBCOLUMNFLAGS_SS_ISCOLUMNSET`column_set`中的資料行*dwFlags*。<br /><br /> `column_set` 資料行會設定 DBCOLUMNFLAGS_WRITE。|  
 |IColumsRowset::GetColumnsRowset|在 DBCOLUMN_FLAGS 中，系統會設定 `column_set` 資料行的新 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。<br /><br /> DBCOLUMN_COMPUTEMODE 會針對 `column_set` 資料行，設定為 DBCOMPUTEMODE_DYNAMIC。|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 會傳回兩個新的資料行：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 僅會傳回不屬於疏鬆 `column_set` 成員的資料行。<br /><br /> 系統已加入兩個新的結構描述資料列集：DBSCHEMA_COLUMNS_EXTENDED 將會傳回所有資料行，而不管 `column_set` 成員資格的疏鬆度。 DBSCHEMA_SPARSE_COLUMN_SET 僅會傳回屬於 `column_set` 成員的資料行。 這些新的資料列集與 DBSCHEMA_COLUMNS 的資料行和限制相同。|  
-|IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 會納入可用的結構描述資料列集的清單中的新資料列集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 Guid。|  
+|IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas 在可用結構描述資料列集的清單中，包含用於新資料列集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 GUID。|  
 |ICommand::Execute|如果**選取 \*從***表格*是使用，它會傳回所有不屬於疏鬆的資料行`column_set`，再加上包含的所有非 null 資料行值的 XML 資料行成員的疏鬆`column_set`，如果有的話。|  
 |IOpenRowset::OpenRowset|傳回使用 icommand:: Execute，相同的資料行的資料列集 iopenrowset:: Openrowset**選取  \*** 相同資料表上的查詢。|  
 |ITableDefinition|對於疏鬆資料行或 `column_set` 資料行的這個介面，則沒有任何變更。 需要修改結構描述的應用程式必須直接執行適當的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  

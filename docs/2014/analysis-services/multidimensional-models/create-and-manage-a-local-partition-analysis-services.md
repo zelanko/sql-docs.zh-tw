@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5665db92828c5a6ea6a6d94587414dc6b411a01b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091298"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>建立及管理本機分割區 (Analysis Services)
   您可以建立其他分割區，讓量值群組能夠改善處理效能。 擁有多個分割區可讓您在本機和遠端伺服器上，跨對應數目的實體資料檔案以配置事實資料。 在 Analysis Services 中，分割區可以獨立及平行處理，讓您在伺服器上處理工作負載時，能夠有更強的控制力。  

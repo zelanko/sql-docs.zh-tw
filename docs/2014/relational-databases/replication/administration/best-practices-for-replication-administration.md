@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6792475636bc5e265b429f1d3243ba34cfd18db2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254360"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079278"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
   設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照此主題中呈現的最佳做法指導以外，請考慮閱讀常見問答集，以更加熟悉一般問題：[複寫管理員的常見問題集](frequently-asked-questions-for-replication-administrators.md)。  

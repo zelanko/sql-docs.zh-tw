@@ -4,15 +4,9 @@ ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- Azure SQL Database
-- SQL Server 2016 Preview
 f1_keywords:
 - column_master_key_definitions_TSQL
 - column_master_key_definitions
@@ -32,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711006"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

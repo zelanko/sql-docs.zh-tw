@@ -1,13 +1,11 @@
 ---
-title: BeginTrans、 CommitTrans 和 RollbackTrans 方法範例 (VB) |Microsoft 文件
+title: BeginTrans、 CommitTrans 和 RollbackTrans 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - CommitTrans method [ADO], Visual Basic example
 - BeginTrans method [ADO], Visual Basic example
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72defd0f6467f432be5ee5f41e5b3d57b97ade9b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 51c616882d3655e1c7b16411c6de8d5bb2fcf94c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276037"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633686"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、 CommitTrans 和 RollbackTrans 方法範例 (VB)
-這個範例會變更活頁簿的類型中所有的心理書籍***標題***資料庫資料表。 之後[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會啟動的交易隔離所做的所有變更，***標題***資料表[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法儲存的變更。 您可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法來復原使用儲存的變更[更新](../../../ado/reference/ado-api/update-method.md)方法。  
+這個範例會變更活頁簿的類型中的所有的心理書籍***標題***資料庫資料表。 之後[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會啟動交易，隔離所做的所有變更***標題***資料表[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會將儲存所做的變更。 您可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法，以使用儲存的變更復原[更新](../../../ado/reference/ado-api/update-method.md)方法。  
   
 ```  
 'BeginBeginTransVB  

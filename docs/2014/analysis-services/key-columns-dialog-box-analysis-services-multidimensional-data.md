@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
 helpviewer_keywords:
 - DataItem Collection dialog box
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fbd5ef14875e11cef4144286d82c2b733f4fa2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049050"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>索引鍵資料行對話方塊 (Analysis Services - 多維度資料)
   使用 [索引鍵資料行] 對話方塊，即可變更屬性 (Attribute) 的 **KeyColumns** 屬性 (Property)。 如需詳細資訊，請參閱[修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  

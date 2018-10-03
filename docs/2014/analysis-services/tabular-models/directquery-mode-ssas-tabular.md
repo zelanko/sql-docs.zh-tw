@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b0badf00027259bb2203828e075a8d009deb8d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 183719983a6ea95ab545888d009d5226fe24b7dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106498"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式 (SSAS 表格式)
   Analysis Services 可讓您擷取資料，並從表格式模型中建立報表，藉由擷取資料和彙總，直接從關聯式資料庫系統，使用*DirectQuery 模式*。 此主題介紹僅存在於記憶體中的標準表格式模型和可查詢關聯式資料來源的表格式模型之間的差異，並且說明如何撰寫和部署要在 DirectQuery 模式下使用的模型。  

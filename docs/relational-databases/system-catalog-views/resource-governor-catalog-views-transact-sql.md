@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,12 +16,12 @@ ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4f9e1edf2afe61ebd458eca515a7b0aff7287209
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9d85238d497816c7e274283bfb1f8ae1a32c0283
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027767"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768866"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>資源管理員目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

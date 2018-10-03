@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PerspectiveCalculation Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b4f56077a784a26617946dd1179738f838b2db3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185145"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126084"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation 資料類型 (ASSL)
   定義代表計算之間的關聯性的基本資料類型和[觀點來看](../objects/perspective-element-assl.md)項目。  
@@ -50,14 +47,14 @@ ms.locfileid: "37185145"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[註釋](../collections/annotations-element-assl.md)，[名稱](../properties/name-element-assl.md)，[類型](../properties/type-element-perspectivecalculation-assl.md)|  
 |衍生的元素|[計算](../objects/calculation-element-assl.md)([計算](../collections/calculations-element-assl.md)的集合[觀點來看](../objects/perspective-element-assl.md))|  
   

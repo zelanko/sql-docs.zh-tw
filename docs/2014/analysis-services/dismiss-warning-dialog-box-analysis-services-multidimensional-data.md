@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dismisswarningdialog.f1
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 00ef76ad911516ee8f2c2d73911fb4a7fd9fe949
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb9ad70b14298c602ca1af3fc60b66bbe5c9af43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059420"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>解除警告對話方塊 (Analysis Services - 多維度資料)
   使用 **[解除警告]** 對話方塊，即可解除特定警告的執行個體。  

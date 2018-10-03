@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142606e6d344fc1431bc287771fc429d6e05e056
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b254c1e7d814af64117343d98d3275e5ac66d64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198825"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128988"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  

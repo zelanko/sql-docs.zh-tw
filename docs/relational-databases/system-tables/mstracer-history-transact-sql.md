@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MStracer_history
 - MStracer_history_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MStracer_history system table
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6530c5da824206efb907999ffc3ae16e77399fca
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 439a40ad6362c0cb39e8559c267c7d62d1218f9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782076"
 ---
 # <a name="mstracerhistory-transact-sql"></a>MStracer_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

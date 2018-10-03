@@ -1,13 +1,11 @@
 ---
-title: AbsolutePage、 PageCount 和 PageSize 屬性範例 （VC + +） |Microsoft 文件
+title: AbsolutePage、 PageCount、 和 PageSize 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], VC++ example
 - PageSize property [ADO], VC++ example
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3ebfacd674d2b4c1815445712e60484c75f9844
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617096"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 （VC + +）
-這個範例會使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)， [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)，和[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)屬性，以顯示名稱和雇用日期***員工***資料表中，一次的五筆記錄。  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、 PageCount、 和 PageSize 屬性範例 （VC + +）
+這個範例會使用[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)， [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)，並[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)屬性，以顯示名稱和雇用日期從***員工***資料表中，一次的五筆記錄。  
   
 ```  
 // BeginAbsolutePageCpp.cpp  

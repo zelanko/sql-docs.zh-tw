@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG003724 error
 ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec8993766740639ac6f5c14dd4eca3b0c1943247
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62c5300561cf70462402692d03f53f2de860781a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131178"
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
     

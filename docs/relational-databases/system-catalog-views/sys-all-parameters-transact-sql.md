@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - all_parameters_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.all_parameters catalog view
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac26fb33cf6225b5d4ea37c3fd75c3ce0fae1d35
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4365ad34102965e163d18d26b3f9a139e6025bb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820396"
 ---
 # <a name="sysallparameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 384fb583feea0d87da40947adfc973378123d98f
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: bcd6d8cb39405e525b779678e0b203ca1246e1af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065306"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
   如果查詢主要只是針對少數的元素和屬性值來執行，您可能會想要將那些量升級至關聯式資料行。 若已擷取整個 XML 執行個體，但您只是要針對小部分的 XML 資料來發出查詢要求時，這是很有幫助的。 您不需要在 XML 資料行上建立 XML 索引， 即可為升級的資料行建立索引。 您必須撰寫查詢來使用升級的資料行。 意即，查詢最佳化工具不再將 XML 資料行查詢的目標放在升級的資料行。  

@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 2a4d4eed76e57d8ae8ebe7886ca8796a6e5e8ea7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720866"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 

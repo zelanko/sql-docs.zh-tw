@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117364"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>屬性資料翻譯對話方塊 (Analysis Services - 多維度資料)
   使用 [屬性資料翻譯] 對話方塊，即可設定包含翻譯標題資料的資料行，以及要用於翻譯資料的定序和排序次序。 您可依下列方式顯示 [屬性資料翻譯] 對話方塊：  

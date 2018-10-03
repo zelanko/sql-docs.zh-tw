@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], server activity
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae558dfd1f87deef2dd42af040bd804457e3b85e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 691de067aca3b97dab69b0b1f28784305cd39c0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062170"
 ---
 # <a name="system-data-collection-set-reports"></a>系統資料收集組報表
   資料收集器會針對每個系統資料收集組提供歷程記錄報表。 下列每份報表都會使用儲存在管理資料倉儲中的資料：  

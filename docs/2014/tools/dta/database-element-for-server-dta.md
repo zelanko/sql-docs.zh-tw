@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Database element
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9aaf9d744ad51a6d59a3c69b1f5a30fe77a59edc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 341c267b686a56a37390e0ee774df0aa20e73fd8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049818"
 ---
 # <a name="database-element-for-server-dta"></a>伺服器的 Database 元素 (DTA)
   指定特定伺服器中需要微調的資料庫。  

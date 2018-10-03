@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetDefaults Method (SInstance Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b024fe7394db608a41de18c07f88cc653c7dfd57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44c401174bd196768573b3c5dcc32d41acec9fef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109268"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 方法 (SInstance 類別)
   設定執行個體的所有預設值[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]覆寫現有資料的選項。  

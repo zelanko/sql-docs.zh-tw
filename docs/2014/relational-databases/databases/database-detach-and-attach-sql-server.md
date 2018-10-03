@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: 96
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3d3850e98bce1031d285388b6f5fbe75737e37b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107333"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)
   您可以將資料庫的資料和交易記錄檔卸離，然後再重新附加至相同或不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 若要將資料庫變更至同一台電腦上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或要移動資料庫，卸離和附加資料庫相當有用。  

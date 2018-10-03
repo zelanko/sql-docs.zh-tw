@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Transact-SQL identifiers
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8e78ebf44a325490e937bea070cb4fc4d59178
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1436ad20cf3fc22f8f070f2422904fca79c21595
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231258"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133268"
 ---
 # <a name="database-identifiers"></a>資料庫識別碼
   資料庫物件名稱又稱為識別碼。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每一個物件都具有識別碼。 伺服器、資料庫與資料庫物件 (如資料表、檢視、資料行、索引、觸發程序、程序、條件約束、規則) 都可以有識別碼。 大多數物件都需要識別碼，但對部分物件如條件約束，則是選擇性的需求。  

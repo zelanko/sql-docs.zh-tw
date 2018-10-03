@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Isolation Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Isolation element
 ms.assetid: 28c98c6f-668e-4547-8d25-127cc3995a7d
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a21593d360342dc703e1da45d50b4ddff74241a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23abd455717c5eb6ae9e32c4ad9309e52f3841e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121358"
 ---
 # <a name="isolation-element-assl"></a>Isolation 元素 (ASSL)
   指出衍生自元素的隔離等級[DataSource](../data-type/datasource-data-type-assl.md)資料型別。  
@@ -57,7 +54,7 @@ ms.locfileid: "37257224"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DataSource](../data-type/datasource-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

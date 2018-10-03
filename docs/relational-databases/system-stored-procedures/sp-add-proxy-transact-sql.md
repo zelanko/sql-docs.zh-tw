@@ -1,14 +1,11 @@
 ---
-title: sp_add_proxy (TRANSACT-SQL) |Microsoft 文件
+title: sp_add_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_proxy
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6b46ca35bc88c0e8d1677ca83bcb1da9af1e640
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811446"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +48,19 @@ sp_add_proxy
   
 ## <a name="arguments"></a>引數  
  [ **@proxy_name**= ] **'***proxy_name***'**  
- 要建立的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 當*proxy_name*是 NULL 或空字串，則 proxy 會預設為名稱*user_name*提供。  
+ 要建立的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 當*proxy_name*為 NULL 或空字串，則 proxy 會預設為名稱*user_name*提供。  
   
  [ **@enabled** = ] *is_enabled*  
- 指定是否啟用 Proxy。 *Is_enabled*旗標是**tinyint**，預設值是 1。 當*is_enabled*是**0**，proxy 未啟用，並無法供作業步驟。  
+ 指定是否啟用 Proxy。 *Is_enabled&lt*旗標**tinyint**，預設值是 1。 當*is_enabled&lt*是**0**，proxy 未啟用，並無法供作業步驟。  
   
  [ **@description**=] **'***描述***'**  
- Proxy 的描述。 描述是**nvarchar （512)**，預設值是 NULL。 您可以利用這項描述來建立 Proxy 的文件，但並不供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 因此，這個引數是選擇性的。  
+ Proxy 的描述。 描述**nvarchar(512)**，預設值是 NULL。 您可以利用這項描述來建立 Proxy 的文件，但並不供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 因此，這個引數是選擇性的。  
   
  [ **@credential_name** =] **'***credential_name***'**  
- Proxy 的認證名稱。 *Credential_name*是**sysname**，預設值是 NULL。 任一*credential_name*或*credential_id*必須指定。  
+ Proxy 的認證名稱。 *Credential_name*是**sysname**，預設值是 NULL。 任一*credential_name*或是*credential_id*必須指定。  
   
  [ **@credential_id** = ] *credential_id*  
- Proxy 的認證識別碼。 *Credential_id*是**int**，預設值是 NULL。 任一*credential_name*或*credential_id*必須指定。  
+ Proxy 的認證識別碼。 *Credential_id*是**int**，預設值是 NULL。 任一*credential_name*或是*credential_id*必須指定。  
   
  [ **@proxy_id**=]*識別碼*輸出  
  如果 Proxy 建立成功時，便指派給 Proxy 的 Proxy 識別碼。  
@@ -73,20 +69,20 @@ sp_add_proxy
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
- 這個預存程序都必須在執行**msdb**資料庫。  
+ 這個預存程序都必須執行**msdb**資料庫。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 會管理包含非 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系統之作業步驟的安全性。 每個 Proxy 都對應於一個安全性認證。 Proxy 可能會有任意數目之子系統的存取權。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的安全性角色可以執行此程序。  
   
- 成員**sysadmin**固定的安全性角色才能建立使用任何 proxy 的作業步驟。 使用預存程序[sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)授與其他的登入存取權的 proxy。  
+ 成員**sysadmin**固定的安全性角色，可建立使用任何 proxy 的作業步驟。 使用預存程序[sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)授與其他登入存取的 proxy。  
   
 ## <a name="examples"></a>範例  
- 這個範例會建立 `CatalogApplicationCredential` 認證的 Proxy。 程式碼假設認證已經存在。 如需有關認證的詳細資訊，請參閱[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)。  
+ 這個範例會建立 `CatalogApplicationCredential` 認證的 Proxy。 程式碼假設認證已經存在。 如需有關認證的詳細資訊，請參閱 < [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)。  
   
 ```  
 USE msdb ;  

@@ -1,24 +1,21 @@
 ---
-title: LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED |Microsoft 文件
+title: LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9b6192c0d05df41e9d6a3256df237f17dd0411
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 84935f1f6baa297ac775a5c8be4b6b42681716c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34325059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724326"
 ---
 # <a name="localdberrorsqlserverstartupfailed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +24,7 @@ ms.locfileid: "34325059"
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|266|  
 |事件來源|SQL Server 本機資料庫執行階段 12.0|  
 |元件|本機資料庫執行階段 API|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, passwords
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - modifying passwords
 - SQLAllocHandle function
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b061a321290a8e01403a90f3c760e5404afa802
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132900"
 ---
 # <a name="allocating-a-connection-handle"></a>配置連接控制代碼
   在應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼。 這是藉由呼叫**SQLAllocHandle**具有*HandleType*參數設定為 SQL_HANDLE_DBC 並*InputHandle*指向初始化的環境控制代碼。  

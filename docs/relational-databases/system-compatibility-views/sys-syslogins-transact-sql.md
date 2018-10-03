@@ -1,14 +1,11 @@
 ---
-title: sys.syslogins (TRANSACT-SQL) |Microsoft 文件
+title: sys.syslogins (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslogins_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924ae2b530c719085e21d7b045e4a872255b3009
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 599781eb8d06ac08a1c13af1b17523b56b39cf2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755197"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "33221729"
   
 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**sid**|**varbinary(85)**|安全性識別碼。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -55,7 +51,7 @@ ms.locfileid: "33221729"
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|使用者的登入名稱。|  
-|**dbname**|**sysname**|當建立連接時，使用者的預設資料庫名稱。|  
+|**資料庫名稱**|**sysname**|當建立連接時，使用者的預設資料庫名稱。|  
 |**password**|**nvarchar(128)**|傳回 NULL。|  
 |**語言**|**sysname**|使用者的預設名稱。|  
 |**denylogin**|**int**|1 = 登入是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組，已被拒絕存取。|  
@@ -63,14 +59,14 @@ ms.locfileid: "33221729"
 |**isntname**|**int**|1 = 登入是 Windows 使用者或群組。<br /><br /> 0 = 登入為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。|  
 |**isntgroup**|**int**|1 = 登入是 Windows 群組。|  
 |**isntuser**|**int**|1 = 登入是 Windows 使用者。|  
-|**sysadmin**|**int**|1 = 登入屬於**sysadmin**伺服器角色。|  
-|**securityadmin**|**int**|1 = 登入屬於**securityadmin**伺服器角色。|  
-|**serveradmin**|**int**|1 = 登入屬於**serveradmin**固定的伺服器角色。|  
-|**setupadmin**|**int**|1 = 登入屬於**setupadmin**固定的伺服器角色。|  
-|**processadmin**|**int**|1 = 登入屬於**processadmin**固定的伺服器角色。|  
-|**diskadmin**|**int**|1 = 登入屬於**diskadmin**固定的伺服器角色。|  
-|**dbcreator**|**int**|1 = 登入屬於**dbcreator**固定的伺服器角色。|  
-|**bulkadmin**|**int**|1 = 登入屬於**bulkadmin**固定的伺服器角色。|  
+|**sysadmin**|**int**|1 = 登入是隸屬**sysadmin**伺服器角色。|  
+|**securityadmin**|**int**|1 = 登入是隸屬**securityadmin**伺服器角色。|  
+|**serveradmin**|**int**|1 = 登入是隸屬**serveradmin**固定的伺服器角色。|  
+|**setupadmin**|**int**|1 = 登入是隸屬**setupadmin**固定的伺服器角色。|  
+|**processadmin**|**int**|1 = 登入是隸屬**processadmin**固定的伺服器角色。|  
+|**diskadmin**|**int**|1 = 登入是隸屬**diskadmin**固定的伺服器角色。|  
+|**dbcreator**|**int**|1 = 登入是隸屬**dbcreator**固定的伺服器角色。|  
+|**bulkadmin**|**int**|1 = 登入是隸屬**bulkadmin**固定的伺服器角色。|  
 |**loginname**|**nvarchar(128)**|使用者的登入名稱。 提供這個項目的目的，是為了與舊版相容。|  
   
 ## <a name="see-also"></a>另請參閱  

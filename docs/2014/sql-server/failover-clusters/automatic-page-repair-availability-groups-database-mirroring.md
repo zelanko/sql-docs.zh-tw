@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d4d9a3c2efa2bfcb8e3b1db44f43d525f0b067
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070580"
 ---
-# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>（適用於可用性群組和資料庫鏡像） 自動修復頁面
+# <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>自動修復頁面 (適用於可用性群組和資料庫鏡像)
   資料庫鏡像與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 都支援自動修復頁面。 在頁面因為某些錯誤類型而損毀、無法讀取之後，資料庫鏡像夥伴 (主體或鏡像) 或可用性複本 (主要或次要) 會嘗試自動復原頁面。 無法讀取頁面的夥伴/複本會向其夥伴或另一個複本要求一個全新頁面副本。 如果這個要求成功，無法讀取的頁面就會被可讀取的副本取代，而這通常會解決錯誤。  
   
  一般來說，資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 會以相等方式處理 I/O 錯誤。 幾個差異會在這裡明確標註。  

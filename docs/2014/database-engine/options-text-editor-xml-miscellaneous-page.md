@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126668"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>選項 (文字編輯器 - XML - 其他頁面)
   [選項] 對話方塊，可以讓您變更 XML 編輯器的自動完成和結構描述設定。 在 [工具] 功能表上，按一下 [選項]，展開 [文字編輯器] 資料夾，按一下 [XML]，然後按一下 [其他]，即可使用這些設定。  

@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 756571974b052b6a6b63db0a2969c19f05a8d038
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 592dc044f15ba1063370ca5bf42f51bf45e69265
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730436"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>建立、改變和移除使用者定義函數
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +66,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>在 Visual C# 中建立純量使用者定義函數  
- 此程式碼範例示範如何建立和移除的純量使用者定義函式具有輸入<xref:System.DateTime>物件參數和整數傳回類型[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 使用者定義函式上建立[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]資料庫。 本範例會建立使用者定義函數。 `ISOweek`。 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
+ 此程式碼範例示範如何建立和移除的純量使用者定義函式具有輸入<xref:System.DateTime>物件參數和整數傳回類型[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 使用者定義函式上建立[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]資料庫。 本範例會建立使用者定義函數。 `ISOweek`. 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
   
 ```csharp  
 {  
@@ -106,7 +102,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>在 PowerShell 中建立純量使用者定義函數  
- 此程式碼範例示範如何建立和移除的純量使用者定義函式具有輸入<xref:System.DateTime>物件參數和整數傳回類型[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 使用者定義函式上建立[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]資料庫。 本範例會建立使用者定義函數。 `ISOweek`。 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
+ 此程式碼範例示範如何建立和移除的純量使用者定義函式具有輸入<xref:System.DateTime>物件參數和整數傳回類型[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 使用者定義函式上建立[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]資料庫。 本範例會建立使用者定義函數。 `ISOweek`. 這個函數採用日期引數並計算 ISO 週數。 為了讓這個函數能夠正確計算，必須先將資料庫 `DATEFIRST` 選項設定為 `1` ，才能呼叫該函數。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

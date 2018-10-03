@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a541567ac5b6f6b76116dcd98a9a53cddd10238
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064658"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
   將一個資料流程元件的輸出與另一元件的輸入連接，路徑可連接資料流程中的兩個元件。 路徑具有一個來源和一個目的地。 例如，如果路徑連接 OLE DB 來源和「排序」轉換，則 OLE DB 來源是路徑的來源，而「排序」轉換是路徑的目的地。 來源是路徑開始處的元件，而目的地是路徑結束處的元件。  

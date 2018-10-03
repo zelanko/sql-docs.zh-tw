@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], URLs
 - URL access [Reporting Services], device information settings
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a77fe212fc4637c384a8328aa1094db91b9a8d11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 061fc6edeec6e3970ade638115b3d28389218a3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255570"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067818"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>在 URL 中指定裝置資訊設定
   裝置資訊設定是傳遞給轉譯延伸模組的參數。 如果您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 報表伺服器 Web 服務的方法來轉譯報表，則會將 `DeviceInfo` XML 元素以輸入參數來傳遞。 子項目的`DeviceInfo`項目特有的不同的轉譯延伸模組的裝置資訊設定。 您可以使用 *rc:tag=value* 參數字串，來包括 URL 中的裝置資訊設定，其中 *tag* 是要存取之裝置資訊設定元素的名稱。 如需詳細資訊中的裝置資訊設定的相關[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱[將裝置資訊設定傳遞至轉譯延伸模組](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b64670149896849650bc2605dff7f2276fdfe27
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 58d35a101994c94b695ce1cb2443486af632fcf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071508"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>選項對話方塊 F1 說明
   此章節包含在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中按一下 [工具] 功能表上的 [選項] 時，可用之對話方塊的 F1 說明。  

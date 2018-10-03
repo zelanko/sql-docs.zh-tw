@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - object models [SMO]
 - SMO [SQL Server], object model
 - SQL Server Management Objects, object model
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dc54f13f4cd16f4dc5db9d16e0c9ec1a85544ce
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b9e2178b40d431f242f2270c24317e6b76a5e876
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068525"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846576"
 ---
 # <a name="smo-object-model"></a>SMO 物件模型
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

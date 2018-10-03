@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.finish.f1
 ms.assetid: 68a4dd5d-94d9-4a02-be31-949a6da0ef51
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 063863ec6ac25fcc698bbaa5514cf4c578235c66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 150007626cab59ab7905d369e8e50d7f1b001982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167659"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102220"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>正在完成精靈 (資料分割精靈)
   使用 [正在完成精靈] 頁面，即可命名資料分割、定義資料分割的彙總設計，以及在完成資料分割精靈之後選擇性地部署和處理資料分割。  

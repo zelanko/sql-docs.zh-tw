@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f58288d90c1a3158f4757856b51b7374ee07f167
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7d85b45ff292d4262393542909566b233de882d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074412"
 ---
 # <a name="table-element-for-schema-dta"></a>結構描述的 Table 元素 (DTA)
   指定要微調的資料表。  

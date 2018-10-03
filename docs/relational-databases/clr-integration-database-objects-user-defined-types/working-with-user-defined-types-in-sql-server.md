@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined types [CLR integration], queries
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], Transact-SQL
 - queries [CLR integration]
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a16dc823d7428f61391d44e6e0511e07667a3f23
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: cee05f0429ae267ace66f32b3b6961da1765f29d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814188"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>使用 SQL Server 中的使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196698"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075088"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中進行分析 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   **[在 Excel 中進行分析]** 提供 Cube 開發人員一種方式，可快速檢閱使用者所看到的專案外觀。 **[在 Excel 中進行分析]** 功能可開啟 Microsoft Excel、建立工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 此功能取代舊版 [瀏覽器] 索引標籤中提供內嵌樞紐分析表的 Office Web 元件。  

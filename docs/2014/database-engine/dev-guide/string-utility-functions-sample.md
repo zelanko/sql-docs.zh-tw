@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 892a950795569b87f5a09d4b30aa5b171b26321e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5fa9fa472541b764a046e418f99b15028b81b56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089208"
 ---
 # <a name="string-utility-functions-sample"></a>字串公用程式函數範例
   這個「字串公用程式」範例包含以 Visual C# 和 Visual Basic 撰寫的資料流資料表值函式，它會將逗號分隔字串分割成具有一個資料行的資料表。 它也包含彙總函式，可將字串資料行轉換為逗號分隔字串。  另外還實作純量函數和資料表值函式，它們提供規則運算式取代和規則運算式搜尋功能。  

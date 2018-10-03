@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_batch
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee208e08edd8c68e204f8ac531758850366e8687
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049558"
 ---
 # <a name="bcpbatch"></a>bcp_batch
   認可所有資料列先前大量複製從程式變數，並且傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所[bcp_sendrow](bcp-sendrow.md)。  

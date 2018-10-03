@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b74755c73982bb4ed0380209b34278e68b2309e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 655c12a8b3f055adb6dc61164046e3059216ed19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082468"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
   此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，使用 CommandTextproperty。 而不是做為 CommandText 值，指定 SQL 或 XPath 查詢，您可以指定檔案名稱的值。 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.TemplateFile。  

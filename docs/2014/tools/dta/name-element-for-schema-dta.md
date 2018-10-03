@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 535318641619abe8cc77c72bd9554b653bb1c717
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb954856e5d48a458652de15e7445c9232889b29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096218"
 ---
 # <a name="name-element-for-schema-dta"></a>結構描述的 Name 元素 (DTA)
   包含結構描述的名稱。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [AMO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - AMO, data sources
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55c1b94f30b21b71a6290e7b782e2eeb411d14f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0235bfcba38e803933fdbf2eb67802df506c0130
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067130"
 ---
 # <a name="amo-fundamental-classes"></a>AMO 基礎類別
   基礎類別是使用分析管理物件 (AMO) 的起點。 透過這些類別，就可以為應用程式內將使用的其餘物件建立環境。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。  
@@ -53,7 +50,7 @@ ms.locfileid: "37270024"
   
 -   中繼資料管理：UpdateObjects 和 Validate。  
   
- 若要連接到伺服器，您需要像在 ADOMD.NET 和 OLEDB 中使用的標準連接字串。 如需詳細資訊，請參閱<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>。 可以將伺服器的名稱指定為連接字串，而不需要使用連接字串格式。  
+ 若要連接到伺服器，您需要像在 ADOMD.NET 和 OLEDB 中使用的標準連接字串。 如需詳細資訊，請參閱 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>。 可以將伺服器的名稱指定為連接字串，而不需要使用連接字串格式。  
   
  如需有關可用之方法和屬性的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Server>＞中的＜<xref:Microsoft.AnalysisServices>＞。  
   

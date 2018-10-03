@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.disableindexes.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - index disabling [SQL Server]
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2c263fd657d28d00904fbe73ae0219a1be64372
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050560"
 ---
 # <a name="disable-indexes-and-constraints"></a>停用索引和條件約束
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用索引或條件約束。 停用索引會防止使用者存取索引，而停用叢集索引則會防止存取基礎資料表資料。 索引定義會保留在中繼資料內，而索引統計資料會保留在非叢集索引上。 停用檢視上的非叢集或叢集索引，實際上會刪除索引資料。 停用資料表上的叢集索引，則會防止存取資料；這些資料仍留在資料表中，但無法用於資料操作語言 (DML) 作業，除非卸除或重建索引。  

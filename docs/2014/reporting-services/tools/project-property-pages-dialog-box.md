@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b4125342c0c85f053d3f7e85124be79766a06c3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122368"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
   使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 [專案] 功能表按一下 [*\<報表專案名稱>* 屬性]。  
@@ -78,7 +75,7 @@ ms.locfileid: "37238378"
   
  發行到以原生模式執行的報表伺服器時，請使用報表伺服器虛擬目錄的 URL。 例如 http://\<伺服器 > / reportserver。 這是報表伺服器的虛擬目錄，而非報表管理員。 依預設，報表伺服器會安裝在名稱為 [reportserver] 的虛擬目錄中。  
   
- 發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如 http://\<*伺服器名稱 >*，http://&lt*servername*/\<*站台 >* 或 http://\<*伺服器名稱 >*/\<*站台 >*/\<*子網站 >*。  
+ 發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 若未指定網站，則會使用預設的最上層網站。 例如 http://\<*伺服器名稱 >*， http://&lt*servername*/\<*站台 >* 或 http://\<*伺服器名稱 >*/\<*站台 >*/\<*子網站 >*。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行報表](../publish-reports.md)   

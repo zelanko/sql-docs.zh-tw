@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server], passwords
@@ -20,12 +18,12 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075728"
 ---
 # <a name="strong-passwords"></a>增強式密碼
   密碼會是伺服器安全性部署中最薄弱的連結。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  
@@ -54,7 +52,7 @@ ms.locfileid: "43025925"
   
 -   以 $ 或 \@ 字元開始。  
   
- 如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! \@。 這些字元是用來初始化連接或分隔連接值。  
+ 如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! \@. 這些字元是用來初始化連接或分隔連接值。  
   
 ## <a name="related-content"></a>相關內容  
  [密碼原則](password-policy.md)  

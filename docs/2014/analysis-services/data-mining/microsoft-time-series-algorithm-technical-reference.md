@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13bbcae47cddd6b44b863b75884cd919003dfe80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089138"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 時間序列演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法包括兩種不同的演算法來分析時間序列：  
@@ -145,7 +142,7 @@ ms.locfileid: "37323618"
 |*MINIMUM_SERIES_VALUE*|指定可以預測的最小值。 這個參數會與 *MAXIMUM_SERIES_VALUE*一起使用，將預測限制為某個預期的範圍。 例如，您可以指定預期銷售數量絕對不能是負數。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
 |*MINIMUM_SUPPORT*|指定要在每一個時間序列樹中產生分割所需之時間配量的最小數目。 預設值是 10。|  
 |*MISSING_VALUE_SUBSTITUTION*|指定如何填滿歷程記錄資料中的間距。 根據預設，資料中不允許有間隔。 如果資料包含多個數列，數列也不能有不完全的邊緣。 也就是說，所有的數列都應該有相同的起點和終點。 當您在時間序列模型上執行 `PREDICTION JOIN` 時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也會使用這個參數值來填滿新資料中的間距。 下表列出此參數的可能值：<br /><br /> None： 預設值。 使用沿著定型模型曲線所繪製的值來取代遺漏的值。<br /><br /> 上一步： 重複先前時間配量中的值。<br /><br /> 平均： 使用定型中所使用的時間配量的移動平均。<br /><br /> 數值常數：使用指定的數目來取代所有遺漏的值。|  
-|*PERIODICITY_HINT*|提供演算法關於資料週期性的提示。 例如，若每年銷售不同，而且數列中的度量單位是月，則週期性是 12。 此參數採用 {n [, n]} 的格式，其中 n 為任意正數。<br /><br /> 方括弧 [] 內的 n 是選擇性的，可以視需要而重複。 例如，若要針對每個月提供的資料來提供多個週期性提示，您可輸入 {12, 3, 1} 來偵測年、季和月的模式。 但是，週期性對於模型的品質有很大的影響。 如果您所給的提示與實際週期性不同，對結果會有負面影響。<br /><br /> 預設值為 {1}。<br /><br /> 注意： 大括號是必要的。 而且，這個參數具有字串資料類型。 因此，如果您在資料採礦延伸模組 (DMX) 陳述式中輸入這個參數，您必須以引號括住數字和大括號。|  
+|*PERIODICITY_HINT*|提供演算法關於資料週期性的提示。 例如，若每年銷售不同，而且數列中的度量單位是月，則週期性是 12。 此參數採用 {n [, n]} 的格式，其中 n 為任意正數。<br /><br /> 方括弧 [] 內的 n 是選擇性的，可以視需要而重複。 例如，若要針對每個月提供的資料來提供多個週期性提示，您可輸入 {12, 3, 1} 來偵測年、季和月的模式。 但是，週期性對於模型的品質有很大的影響。 如果您所給的提示與實際週期性不同，對結果會有負面影響。<br /><br /> 預設為 {1}。<br /><br /> 注意： 大括號是必要的。 而且，這個參數具有字串資料類型。 因此，如果您在資料採礦延伸模組 (DMX) 陳述式中輸入這個參數，您必須以引號括住數字和大括號。|  
 |*PREDICTION_SMOOTHING*|指定應該如何混合模型來讓預測最佳化。 只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中才可使用這個參數。 您可以輸入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 與 1 之間的任何值，或是使用下列其中一個值：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]： 指定預測只能使用 ARTXP。 已針對較少的預測數而最佳化預測。<br /><br /> 0.5: （預設值） 指定應使用這兩個演算法的預測，而且應該混合結果。<br /><br /> 1：指定預測只能使用 ARIMA。 已針對許多的預測數而最佳化預測。<br /><br /> <br /><br /> 注意： 使用*FORECAST_METHOD*參數來控制定型。|  
   
 ### <a name="modeling-flags"></a>模型旗標  

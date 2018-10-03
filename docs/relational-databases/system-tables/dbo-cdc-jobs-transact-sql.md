@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc_jobs
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - dbo.cdc_jobs
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55bbf5390a79f762c7e247c65c38e58a4bdb35de
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 321e6b1809f6dc8f30710c98665316c50a6ab50a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719749"
 ---
 # <a name="dbocdcjobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

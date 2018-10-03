@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - QName [XQuery]
 - predefined namespaces [XML in SQL Server]
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f3c1b32f4fc987c22dfe4660525f5e45d341bbd9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990007"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777276"
 ---
 # <a name="sequence-and-qnames-xquery"></a>順序和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +148,7 @@ WHERE ProductModelID=7;
  您所建立的每個資料庫都**sys** XML 結構描述集合。 此集合會保留這些結構描述，所以從使用者建立的任何 XML 結構描述集合都能存取這些結構描述。  
   
 > [!NOTE]  
->  此實作不支援`local`前置詞中的 XQuery 規格中所述http://www.w3.org/2004/07/xquery-local-functions。  
+>  此實作不支援`local`前置詞中的 XQuery 規格中所述 http://www.w3.org/2004/07/xquery-local-functions。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)  

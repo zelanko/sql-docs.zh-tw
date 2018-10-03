@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: graphs
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
 ms.assetid: ''
-caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
-ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
+ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47058897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695897"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

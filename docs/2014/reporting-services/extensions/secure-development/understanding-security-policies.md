@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de381c37c5ee461c3e7a813c524e317b3d93e348
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8871e43e88d042d4afc89a83dfd035a3709687e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188075"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061946"
 ---
 # <a name="understanding-security-policies"></a>了解安全性原則
   報表伺服器所執行的任何程式碼都必須屬於特定程式碼存取安全性原則的一部分。 這些安全性原則包含將辨識項對應至一組具名使用權限集合的程式碼群組。 通常，程式碼群組會與為該群組中程式碼指定允許權限的具名使用權限集合產生關聯。 執行階段會使用受信任主應用程式或載入程式所提供的辨識項來決定程式碼所屬的程式碼群組，以及因此授與程式碼的權限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會遵守 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 所定義的安全性原則架構。 下列各節將描述 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各種程式碼類型以及與它們相關聯的原則規則。  

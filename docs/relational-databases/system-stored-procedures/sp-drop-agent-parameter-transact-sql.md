@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_drop_agent_parameter_TSQL
 - sp_drop_agent_parameter
 helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e97721099ee3abe6d6afc9e9dabaa363e9842d9a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9e700b5a6075a225eebf4d8a03bb52c62c536885
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835456"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 38222658d4502b18c47458c9cff44bf229dfc315
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 77017535386e9f0fb53ad507f3e05a55e77709a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813364"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061378"
 ---
 # <a name="device-not-ready-error"></a>裝置未就緒錯誤
   這個規則會檢查系統事件記錄檔中是否有 EventId 15。 這個錯誤是因為 SCSI 主機配接器組態問題或是相關問題所造成。  

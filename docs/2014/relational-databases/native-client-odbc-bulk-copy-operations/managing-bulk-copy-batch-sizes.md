@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, bulk copy
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - batches [ODBC]
 - bulk copy [ODBC], batch sizes
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8920de490e855789ea82c2b0df8b31633c8d293
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 07f87bf0f231419e4f1345369211ba6ceebf1d12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093388"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>管理大量複製批次大小
   大量複製作業中批次的主要用途是定義交易的範圍。 如果沒有設定批次大小，則大量複製函數會將整個大量複製作業視為一筆交易。 如果有設定批次大小，則每一個批次都構成一筆在批次完成時認可的交易。  

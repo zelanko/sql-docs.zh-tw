@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdb4e44e946ce4f46dc20d344693342162d81731
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116877"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
   Database Engine Tuning Advisor 微調資料庫時，會建立摘要、建議、報表和微調記錄。 您可以使用微調記錄輸出針對 Database Engine Tuning Advisor 的微調工作階段進行疑難排解。 您可以使用摘要、建議和報表來判定是否要實作微調建議，或繼續微調，直到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的查詢效能改進達到所需的程度為止。 如需有關如何使用 Database Engine Tuning Advisor 來建立工作負載及微調資料庫的詳細資訊，請參閱＜ [啟動及使用 Database Engine Tuning Advisor](database-engine-tuning-advisor.md)＞。  

@@ -1,13 +1,11 @@
 ---
-title: 預設驅動程式的子機碼 |Microsoft 文件
+title: 預設驅動程式子機碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default subkey [ODBC]
@@ -15,31 +13,30 @@ helpviewer_keywords:
 - subkeys [ODBC], default subkey
 - drivers subkey [ODBC]
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6563627087ce8516f74f478b35f0f6a896aa025b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856256"
 ---
-# <a name="default-driver-subkey"></a>預設驅動程式的子機碼
+# <a name="default-driver-subkey"></a>預設驅動程式子機碼
 預設子機碼包含描述的預設資料來源所使用的驅動程式的單一值。 下表顯示此值的格式。  
   
-|名稱|資料類型|資料|  
+|名稱|資料類型|data|  
 |----------|---------------|----------|  
-|**驅動程式**|REG_SZ|*預設驅動程式說明*|  
+|**驅動程式**|REG_SZ|*預設驅動程式描述*|  
   
- *預設驅動程式描述*名稱是描述驅動程式的 ODBC 驅動程式子機碼下值的名稱相同。  
+ *預設驅動程式描述*名稱等同於底下說明驅動程式的 ODBC 驅動程式子機碼值的名稱。  
   
- 例如，如果預設的資料來源會使用 SQL Server 驅動程式，可能是預設子機碼下的值：  
+ 比方說，如果預設的資料來源使用的 SQL Server 驅動程式，可能會將預設子機碼下的值：  
   
 ```  
 Driver : REG_SZ : SQL Server  
 ```  
   
 > [!NOTE]  
->  預設子機碼中包含的預設驅動程式可以參考的預設使用者 DSN 或預設的系統 DSN。 如果預設使用者 DSN 與預設系統 DSN 尚未建立，預設的驅動程式取決於 DSN 建立最後，因此它可能不會先建立資料來源名稱的有效項目。
+>  預設的預設子機碼中包含的驅動程式可以參考的預設使用者 DSN 或預設系統 DSN。 如果預設的使用者 DSN 與預設系統尚未建立 DSN，預設的驅動程式取決於最後，建立 DSN 因此，可能不需要先建立資料來源名稱的有效項目。

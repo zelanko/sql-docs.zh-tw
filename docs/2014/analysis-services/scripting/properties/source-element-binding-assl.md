@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (Binding)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 1032558c-7546-4ca7-888d-8139df23cb62
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54257415a19530a82b27e759dea03a4e41dcb0cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2600803402d87e880ad479be660de98ff5d32f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061328"
 ---
 # <a name="source-element-binding-assl"></a>Source 元素 (Binding) (ASSL)
   識別父元素所繫結的資料來源。  
@@ -51,7 +48,7 @@ ms.locfileid: "37257236"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|請參閱下的資料型別表|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
  **資料類型和長度**  
@@ -76,7 +73,7 @@ ms.locfileid: "37257236"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[AggregationInstance](../objects/aggregationinstance-element-assl.md)， [AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md)， [Cube](../objects/cube-element-assl.md)， [DataItem](../data-type/dataitem-data-type-assl.md)，[維度](../objects/dimension-element-assl.md)， [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)， [MeasureGroup](../objects/group-element-assl.md)， [MeasureGroupDimension](../data-type/dimension-data-type-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)，[資料分割](../objects/partition-element-assl.md)， [ProactiveCaching](../objects/proactivecaching-element-assl.md)。|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  在 `Source` 元素中，允許用於 `Binding` 元素的衍生 `DataItem` 資料類型會因 `DataItem` 元素的父系而不同。  

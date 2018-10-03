@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4e721c7dfddb953dd82952aa51c20550e5e60eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061248"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
   運算式語言包含一組可在運算式中使用的函數。 運算式可使用單一函數，但通常運算式會結合函數與運算子，並使用多個函數。  
@@ -51,7 +48,7 @@ ms.locfileid: "37171029"
 |[LN &#40;SSIS 運算式&#41;](ln-ssis-expression.md)|傳回數值運算式的自然對數。|  
 |[記錄&#40;SSIS 運算式&#41;](log-ssis-expression.md)|傳回數值運算式以 10 為底的對數。|  
 |[POWER &#40;SSIS 運算式&#41;](power-ssis-expression.md)|傳回數值運算式的乘冪結果。|  
-|[ROUND &#40;SSIS 運算式&#41;](round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 執行個體時提供 SQL Server 登入。|  
+|[ROUND &#40;SSIS 運算式&#41;](round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 .|  
 |[標誌&#40;SSIS 運算式&#41;](sign-ssis-expression.md)|傳回數值運算式的正 (+)、負 (-) 或零 (0) 符號。|  
 |[正方形&#40;SSIS 運算式&#41;](square-ssis-expression.md)|傳回數值運算式的平方。|  
 |[SQRT &#40;SSIS 運算式&#41;](sqrt-ssis-expression.md)|傳回數值運算式的平方根。|  

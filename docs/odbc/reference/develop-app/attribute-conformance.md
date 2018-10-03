@@ -1,13 +1,11 @@
 ---
-title: 屬性的一致性 |Microsoft 文件
+title: 屬性一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c765982a35fd41fc36fdc82ddbd3434b2d90c07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818837"
 ---
-# <a name="attribute-conformance"></a>屬性的一致性
-下表指出這是妥善定義的每一個 ODBC 的環境屬性的一致性層級。  
+# <a name="attribute-conformance"></a>屬性一致性
+下表指出這是妥善定義的每個 ODBC 環境屬性的一致性層級。  
   
 |函數|一致性層級|  
 |--------------|-----------------------|  
@@ -36,14 +33,14 @@ ms.locfileid: "32913733"
 |SQL_ATTR_ODBC_VER|核心|  
 |SQL_ATTR_OUTPUT_NTS|--[1]|  
   
- [1] 這是選擇性的功能，因此不是一致性層級的一部分。  
+ [1] 這是選用的功能，並因此不是一致性層級的一部分。  
   
  下表指出這是妥善定義的每個 ODBC 連接屬性的一致性層級。  
   
 |函數|一致性層級|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|核心|  
-|SQL_ATTR_ASYNC_ENABLE|層級 1/層級 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE 設定|層級 1/層級 2 [1]|  
 |SQL_ATTR_AUTO_IPD|層級 2|  
 |SQL_ATTR_AUTOCOMMIT|層級 1|  
 |SQL_ATTR_CONNECTION_DEAD|層級 1|  
@@ -59,9 +56,9 @@ ms.locfileid: "32913733"
 |SQL_ATTR_TRANSLATE_OPTION|核心|  
 |SQL_ATTR_TXN_ISOLATION|層級 1/層級 2 [2]|  
   
- [1] 的應用程式支援 （需要層級 1） 的連接層級會標必須支援這個屬性設定為 SQL_TRUE，藉由呼叫**SQLSetConnectAttr**; 屬性不需要為其預設值以外的值可設定透過值**SQLSetStmtAttr**。 支援陳述式層級 （所需層級 2） 的非同步應用程式必須支援這個屬性設為 SQL_TRUE，使用其中一個函式。  
+ [1] 的應用程式支援連接層級非同步 （所需的層級 1） 必須支援此屬性設定為 SQL_TRUE，藉由呼叫**SQLSetConnectAttr**; 屬性不需要可為其預設值以外的值透過值**SQLSetStmtAttr**。 支援陳述式層級非同步 （所需的層級 2） 的應用程式必須支援將這個屬性設定為 SQL_TRUE，使用其中一個函式。  
   
- [2] 層級 1 介面一致性，驅動程式必須支援除了驅動程式定義的預設值的一個值 (可透過呼叫**SQLGetInfo** SQL_DEFAULT_TXN_ISOLATION 選項)。 層級 2 介面一致性，驅動程式也必須支援 sql_txn_serializable 的情況。  
+ [2] 的層級 1 介面一致性，此驅動程式必須支援除了驅動程式定義的預設值的一個值 (可透過呼叫**SQLGetInfo** SQL_DEFAULT_TXN_ISOLATION 選項)。 層級 2 介面一致性，驅動程式也必須支援 sql_txn_serializable 的情況。  
   
  下表指出這是妥善定義的每個 ODBC 陳述式屬性的一致性層級。  
   
@@ -69,7 +66,7 @@ ms.locfileid: "32913733"
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|核心|  
 |SQL_ATTR_APP_ROW_DESC|核心|  
-|SQL_ATTR_ASYNC_ENABLE|層級 1/層級 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE 設定|層級 1/層級 2 [1]|  
 |SQL_ATTR_CONCURRENCY|層級 1/層級 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|層級 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|層級 2|  
@@ -101,8 +98,8 @@ ms.locfileid: "32913733"
 |SQL_ATTR_SIMULATE_CURSOR|層級 2|  
 |SQL_ATTR_USE_BOOKMARKS|層級 2|  
   
- [1] 的應用程式支援 （需要層級 1） 的連接層級會標必須支援這個屬性設定為 SQL_TRUE，藉由呼叫**SQLSetConnectAttr**; 屬性不需要為其預設值以外的值可設定透過值**SQLSetStmtAttr**。 支援陳述式層級 （所需層級 2） 的非同步應用程式必須支援這個屬性設為 SQL_TRUE，使用其中一個函式。  
+ [1] 的應用程式支援連接層級非同步 （所需的層級 1） 必須支援此屬性設定為 SQL_TRUE，藉由呼叫**SQLSetConnectAttr**; 屬性不需要可為其預設值以外的值透過值**SQLSetStmtAttr**。 支援陳述式層級非同步 （所需的層級 2） 的應用程式必須支援將這個屬性設定為 SQL_TRUE，使用其中一個函式。  
   
- [2] 層級 2 介面一致性，驅動程式必須支援 SQL_CONCUR_READ_ONLY 和至少一個其他值。  
+ [2] 的層級 2 介面一致性，驅動程式必須支援 SQL_CONCUR_READ_ONLY 和至少一個其他的值。  
   
- [3] 的層級 1 介面一致性，驅動程式必須支援 SQL_CURSOR_FORWARD_ONLY 和至少一個其他值。 層級 2 介面一致性，驅動程式必須支援此文件中定義的所有值。
+ [3] 的層級 1 介面一致性，驅動程式必須支援 SQL_CURSOR_FORWARD_ONLY 和至少一個其他的值。 層級 2 介面一致性，驅動程式必須支援此文件中定義的所有值。

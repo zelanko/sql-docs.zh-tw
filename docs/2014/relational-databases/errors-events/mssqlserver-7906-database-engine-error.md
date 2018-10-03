@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7906 (Database Engine error)
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 026dc6b3f64aee98537fbeeb62d240612d670364
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101698"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
     

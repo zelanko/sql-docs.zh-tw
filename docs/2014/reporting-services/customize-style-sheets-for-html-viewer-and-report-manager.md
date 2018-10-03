@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6baf2dbbb100711b9665d5d705bce6399e3c754b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7903489a3fc34900ed8f717cc5a292f9af686af0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076978"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>自訂 HTML 檢視器及報表管理員的樣式表
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供預設的階層式樣式表 (.css) 檔案會定義樣式**報表**工具列在 HTML 檢視器和報表管理員。 如果您是 Web 開發者，或您有建立階層式樣式表的專業知識，您可以修改預設樣式 (自行負責風險)，來變更工具列或報表管理員的色彩、字型和配置。 此版本未收錄預設樣式表或樣式表的修改指示。  

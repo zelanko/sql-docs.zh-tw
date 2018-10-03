@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 268076a82d9c31c8a9def4593ada10ed33222994
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bbacb8630acf10b5c9d20c50ad40cfba3f036a7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677452"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>在 Linux 上設定 SQL Server 可用性群組的讀取級別
 

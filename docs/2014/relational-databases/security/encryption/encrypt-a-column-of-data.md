@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], columns
 - cryptography [SQL Server], columns
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 25
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: eba133468595b17cb79c1c1e713bcabbddb3f196
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181685"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066502"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過對稱加密來加密資料行。  

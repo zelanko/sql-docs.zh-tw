@@ -1,37 +1,34 @@
 ---
-title: 在 Visual Basic，Scripting Edition ADO MD 程式碼範例 |Microsoft 文件
+title: 在 Visual Basic Scripting Edition 中的 ADO MD 程式碼範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2aefeda6b4ddc08bce593d7c868dee304b7a25c9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c6060d9f2dfecb82e425fc78f3b8cf05c000ad4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733346"
 ---
-# <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>在 Visual Basic，Scripting Edition ADO MD 程式碼範例
-此範例需要 Microsoft 網際網路資訊伺服器 4.0 的 Microsoft Active Server Pages (ASP)。  
+# <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition 中的 ADO MD 程式碼範例
+下列範例會要求 Microsoft 網際網路資訊伺服器 4.0 的 Microsoft Active Server Pages (ASP)。  
   
 > [!NOTE]
 >  貼上整個程式碼範例中，從開頭至結尾，您的程式碼編輯器中。 如果使用部分的範例，或遺失段落格式時，此範例可能無法正確執行。  
   
--   [軸範例](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
+-   [Axis 範例](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
   
 -   [成員範例](../../../ado/reference/ado-md-api/members-example-vbscript.md)  
   

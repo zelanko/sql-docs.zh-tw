@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94d8663f92a68bb210d093d4d10d034b753d1ee0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a31491b56e5b5cd700e744be2b7a84f10f1e0121
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415071"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086358"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>資料表值參數組成資料行的描述項欄位
   這一節所述的資料表值參數描述項欄位由使用操作[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)並[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)搭配實作參數描述項 （的控制代碼IPD)。  

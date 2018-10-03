@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], autotranslating character data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7921d0bc0c41fc5053ceb0fbcd95e56dc4b4fd5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076698"
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
   字元資料，例如 ANSI 字元，利用 SQL_C_CHAR 宣告的變數或資料儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**char**， **varchar**，或**文字**資料型別，可以代表只在有限的字元。 每個字元使用一個位元組儲存的字元資料僅能代表 256 個字元。 儲存在 SQL_C_CHAR 變數中的值會使用用戶端電腦的 ANSI 字碼頁 (ACP) 解譯。 使用儲存的值**char**， **varchar**，或**文字**伺服器上的資料類型會使用伺服器的 ACP 進行評估。  

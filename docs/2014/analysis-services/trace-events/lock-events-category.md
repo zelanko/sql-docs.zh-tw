@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a3fc63269fdaff254ef2dfd412ef3a706abb09d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2153de0275255f55928f10c0d6d21c0350064a1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056358"
 ---
 # <a name="lock-events-category"></a>Lock 事件類別目錄
   鎖定事件的事件類別目錄具有下表所描述的事件類別。  

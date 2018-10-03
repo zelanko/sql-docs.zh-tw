@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeHierarchyEnabled Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeHierarchyEnabled element
 ms.assetid: 1e95307f-530e-4e98-a0e1-2b0462d330a3
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab14a4adf69281ec919811270c3d2220a76682e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adcb11beda15b6ab4fc27357cb52134cb53b501b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079328"
 ---
 # <a name="attributehierarchyenabled-element-assl"></a>AttributeHierarchyEnabled 元素 (ASSL)
   決定是否針對此屬性啟用屬性階層。  
@@ -59,7 +56,7 @@ ms.locfileid: "37250866"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CubeAttribute](../data-type/cubeattribute-data-type-assl.md)， [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `AttributeHierarchyEnabled`元素會決定是否產生屬性階層[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]屬性。 如果屬性階層未啟用，則不能在使用者自訂階層中使用該屬性，也不能在多維度運算式 (MDX) 陳述式中參考屬性階層。  

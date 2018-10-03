@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.dts.f1
 ms.assetid: b586b736-344b-4e42-83ee-96f66ad433a5
-caps.latest.revision: 34
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15e697225ba6155712cb7f5e48901ca98b37e041
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056862"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>新增或編輯伺服器註冊 (一般索引標籤) (SSIS)
   註冊 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 時，使用這個索引標籤指定選項。  

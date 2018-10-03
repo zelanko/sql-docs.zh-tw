@@ -3,23 +3,19 @@ title: SQL Server Always On 可用性群組部署模式 |Microsoft Docs
 ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql
-ms.component: ''
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: linux
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c37cba83ebea7fbced662c3e909ee4007f57225f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798936"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性和資料保護
 

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d489965584903f10b613a40a073357c51b1b9aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e72a4e076cad8b939e6f40d3332d4c80fa27887
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112835"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
   複寫課程包含可用來學習如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]設定及執行複寫拓撲的教學課程。  

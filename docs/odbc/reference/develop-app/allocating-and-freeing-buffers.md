@@ -1,32 +1,29 @@
 ---
-title: 配置及釋放緩衝區 |Microsoft 文件
+title: 配置及釋放緩衝區 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], allocating and freeing
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85c2ab4ad25501637ccba2206f85c7895440ade
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907963"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682826"
 ---
 # <a name="allocating-and-freeing-buffers"></a>配置及釋放緩衝區
-所有緩衝區配置及釋放應用程式。 如果緩衝區未延後，它必須只存在於呼叫的函式的持續時間。 例如， **SQLGetInfo**傳回中所指向之緩衝區的特定選項相關聯的值*InfoValuePtr*引數。 可以呼叫之後立即釋放此緩衝區**SQLGetInfo**，如下列程式碼範例所示：  
+所有緩衝區配置及釋放應用程式。 如果未延遲的緩衝區，它需要只存在於函式呼叫的持續時間。 例如， **SQLGetInfo**中所指向緩衝區的特定選項相關聯的值會傳回*InfoValuePtr*引數。 可以釋放這個緩衝區，以在呼叫之後立即**SQLGetInfo**，如下列程式碼範例所示：  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -38,7 +35,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- 因為延後的緩衝區是一個函式中指定，而且在另一個使用，所以應用程式的程式設計錯誤驅動程式仍需要其存在時，釋放延後的緩衝區。 例如，位址\* *ValuePtr*緩衝區傳遞至**SQLBindCol**供稍後使用**SQLFetch**。 無法釋放此緩衝區，直到資料行解除繫結時，例如藉由呼叫**SQLBindCol**或**SQLFreeStmt**如下列程式碼範例所示：  
+ 因為延後的緩衝區會指定一個函式，並用於另一個，它會是應用程式程式設計錯誤釋放延後的緩衝區，而驅動程式仍需要它的存在。 例如的地址\* *ValuePtr*緩衝區傳遞給**SQLBindCol**供稍後使用**SQLFetch**。 無法釋放這個緩衝區，直到資料行解除繫結時，例如藉由呼叫**SQLBindCol**或是**SQLFreeStmt**如下列程式碼範例所示：  
   
 ```  
 SQLRETURN    rc;  
@@ -63,7 +60,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- 這類錯誤輕鬆地透過宣告的函式; 中的本機緩衝區當應用程式會保留函式，會釋放緩衝區。 例如，下列程式碼會造成驅動程式中定義，而且可能是嚴重的行為：  
+ 這類錯誤輕鬆藉由宣告函式; 在本機緩衝區當應用程式離開函式時，會釋放緩衝區。 例如，下列程式碼會導致驅動程式中定義，而且可能嚴重的行為：  
   
 ```  
 SQLRETURN   rc;  

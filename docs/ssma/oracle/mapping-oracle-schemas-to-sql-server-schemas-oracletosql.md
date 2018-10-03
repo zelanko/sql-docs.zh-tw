@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5e231fd84b85a44392527e7f082b55da1c7826ac
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ecc3f711c90f46c17de54a6c3659d84b7756b25e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773896"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>將 Oracle 結構描述對應到 SQL Server 結構描述 (OracleToSQL)
 在 Oracle 中，每個資料庫會有一或多個結構描述。 根據預設，SSMA 會移轉 Oracle 結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名為結構描述的資料庫。 不過，您可以自訂 Oracle 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  

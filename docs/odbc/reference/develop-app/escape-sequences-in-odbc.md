@@ -1,44 +1,41 @@
 ---
-title: 逸出序列在 ODBC |Microsoft 文件
+title: 逸出序列，在 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC]
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a62b9712801d2412385cc191b0649bae69be74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33259a56faa19dda2403996b6d6d8930ec2a87be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705996"
 ---
-# <a name="escape-sequences-in-odbc"></a>在 ODBC 中的逸出序列
-數字的語言功能，例如外部聯結和純量函式呼叫，通常是由 Dbms 實作。 不過，這些功能的語法通常 DBMS 專屬的即使標準語法定義各種標準組織所。 因為這個緣故，ODBC 會定義包含下列語言功能的標準語法的逸出序列：  
+# <a name="escape-sequences-in-odbc"></a>ODBC 中的逸出序列
+語言功能，例如外部聯結和純量函式呼叫的數目通常是由 Dbms 實作。 不過，這些功能的語法通常 DBMS 而異，即使是標準的語法由各種不同的標準內文。 因為這個緣故，ODBC 會定義包含下列語言功能的標準語法的逸出序列：  
   
--   日期、 時間、 時間戳記和日期時間間隔的常值  
+-   日期、 時間、 時間戳記和日期時間間隔常值  
   
--   純量函數，例如數字、 字串和資料類型轉換函式  
+-   純量函式，例如包含數字、 字串和資料類型轉換函式  
   
--   喜歡述詞的逸出字元  
+-   讓述詞逸出字元  
   
 -   外部聯結  
   
 -   程序呼叫  
   
- ODBC 所使用的逸出順序如下所示：  
+ ODBC 使用的逸出序列如下所示：  
   
 ```  
   
@@ -47,18 +44,18 @@ ms.locfileid: "32911353"
 ```  
   
 ## <a name="remarks"></a>備註  
- 逸出序列會辨識並剖析驅動程式，逸出序列取代特定 DBMS 的文法。 如需逸出序列語法的詳細資訊，請參閱[ODBC 逸出序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附錄 c: SQL 文法中。  
+ 逸出序列會辨識並剖析驅動程式，逸出序列取代為特定 DBMS 的文法。 如需逸出序列語法的詳細資訊，請參閱[ODBC 逸出序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附錄 c: SQL 文法中。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*，這是標準語法的逸出序列: **-(\*廠商 (***廠商名稱***)，產品 (***產品名稱***) * * * 延伸模組* **\*)--**  
+>  在 ODBC 2。*x*，這是逸出序列的標準語法: **-(\*廠商 (***廠商名稱***)，產品 (***產品名稱***) * * * 延伸模組* **\*)--**  
 >   
->  除了這個語法中，縮寫語法已定義的表單： **{***延伸***}**  
+>  這個語法中，除了速記語法定義的格式： **{***延伸模組***}**  
 >   
->  在 ODBC 3。*x*逸出序列的完整格式已被取代，且以獨佔方式使用的簡短形式。  
+>  在 ODBC 3。*x*、 逸出序列的完整格式已被取代，，和以獨佔方式使用簡短形式。  
   
- 驅動程式新增至 DBMS 特定語法的逸出序列來對應，因為應用程式可以使用的逸出序列 」 或 「 DBMS 特有的語法。 不過，使用 DBMS 特定語法的應用程式將無法互通。 當使用逸出序列時，應用程式應該要確定，SQL_ATTR_NOSCAN 陳述式屬性已關閉，這是預設值。 否則，逸出序列將會直接傳送至資料來源，其中它通常會造成語法錯誤。  
+ 因為逸出序列會對應特定 DBMS 的語法來驅動程式，應用程式可以使用的逸出序列 」 或 「 特定 DBMS 的語法。 不過，使用的 DBMS 特定語法的應用程式將無法互通。 當使用逸出序列時，應用程式應該要確定，SQL_ATTR_NOSCAN 陳述式屬性已關閉，這是預設值。 否則，逸出序列會直接傳送到資料來源，其中它通常會導致語法錯誤。  
   
- 驅動程式支援它們可以將對應至基礎的語言功能的逸出序列。 比方說，如果資料來源不支援外部聯結，兩者都不會將驅動程式。 若要判斷支援哪些逸出序列，應用程式呼叫**SQLGetTypeInfo**和**SQLGetInfo**。 如需詳細資訊，請參閱下節中，[日期、 時間和時間戳記常值](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
+ 驅動程式支援它們可以對應到基礎的語言功能的逸出序列。 比方說，如果資料來源不支援外部聯結，兩者都不會將驅動程式。 若要判斷支援的逸出序列，應用程式會呼叫**SQLGetTypeInfo**並**SQLGetInfo**。 如需詳細資訊，請參閱下一步 區段中，[日期、 時間和時間戳記常值](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)。  
   
  此章節包含下列主題。  
   

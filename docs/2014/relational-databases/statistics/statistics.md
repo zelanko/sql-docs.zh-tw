@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
@@ -25,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f69e594b1359e3d569c624243c15de2354468be1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063748"
 ---
 # <a name="statistics"></a>Statistics
   查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  

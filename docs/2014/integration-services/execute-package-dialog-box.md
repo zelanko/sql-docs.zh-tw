@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageexecute.f1
 - sql12.ssis.ssms.executepackage.f1
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
-caps.latest.revision: 21
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78002ac1a5ada63523c414b9ea328bc50c731ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129878"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   使用 **[執行封裝]** 對話方塊，即可執行儲存在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的封裝。  

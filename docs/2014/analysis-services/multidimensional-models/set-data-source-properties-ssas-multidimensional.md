@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceproperties.f1
 helpviewer_keywords:
 - Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb4fcd1e2945e01b5e81d38542b0b8c7950c1fcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42a1ace1db816760fc6c889491fa264ec2a55008
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082948"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>設定資料來源屬性 (SSAS 多維度)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料來源物件會指定提供資料給多維度模型之外部資料倉儲或關聯式資料庫的連接。 資料來源屬性決定連接字串、逾時間隔、最大連接數目及交易隔離等級。  

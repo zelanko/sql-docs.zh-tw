@@ -1,32 +1,29 @@
 ---
-title: 移動方法範例 (VB) |Microsoft 文件
+title: Move 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method [ADO], Visual Basic example
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d19dbb751c925f1f747c054d7ffaf15ab3c598ca
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cfa592fa02d966002bf94d02e81ecc02b691c3c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679368"
 ---
 # <a name="move-method-example-vb"></a>Move 方法範例 (VB)
-這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)來定位資料錄指標的方法會根據使用者輸入。  
+這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，以記錄指標位置會根據使用者輸入。  
   
 ```  
 'BeginMoveVB  

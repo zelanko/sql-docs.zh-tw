@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.selectdataconnection.f1
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74438c1591c5035117d974c838ca38cf2174b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f425112a324cbef3bc18ea6ddabf671d5bcd20c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133388"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>選取如何定義連接 (資料來源精靈) (Analysis Services)
   使用 **[選取如何定義連接]** 頁面，來建立或選取資料來源的資料連接。  

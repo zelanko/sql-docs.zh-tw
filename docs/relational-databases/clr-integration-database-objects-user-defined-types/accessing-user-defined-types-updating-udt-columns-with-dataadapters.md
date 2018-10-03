@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -22,18 +20,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bdb8993d93c438dcfc47dd28c3ac90cfd5fcc0d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 96c6b56673b7423629821f588eafb7a6f46591f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657416"
 ---
-# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>存取使用者定義型別-使用 Dataadapter 更新 UDT 資料行
+# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>存取使用者定義型別 - 使用 DataAdapter 更新 UDT 資料行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用支援使用者定義型別 (Udt) 的**System.Data.DataSet**並**System.Data.SqlClient.SqlDataAdapter**來擷取和修改資料。  
   

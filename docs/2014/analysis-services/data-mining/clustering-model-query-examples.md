@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087488"
 ---
 # <a name="clustering-model-query-examples"></a>叢集模型查詢範例
   當您根據資料採礦模型建立查詢時，可以擷取有關模型的中繼資料或建立內容查詢，以提供有關在分析中所發現之模式的詳細資料。 或者，您可以建立預測查詢，這會使用模型中的模式對新資料進行預測。 每種查詢都會提供不同的資訊。 例如，內容查詢可能會提供有關所找到群集的詳細資料，預測查詢則會告訴您最可能包含新資料點的群集。  
@@ -287,7 +284,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
+ 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
   
  PredictCaseLikelihood 函數傳回的數字是機率，因此一定會介於 0 和 1 之間，.5 的值則代表隨機結果。 因此，小於 .5 的分數代表預測的案例在模型已知時不太可能發生，而超過 .5 的分數則代表預測的案例較符合模型的預測。  
   

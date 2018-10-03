@@ -1,14 +1,11 @@
 ---
-title: sys.sysconfigures (TRANSACT-SQL) |Microsoft 文件
+title: sys.sysconfigures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysconfigures
@@ -21,26 +18,25 @@ helpviewer_keywords:
 - sys.sysconfigures compatibility view
 - sysconfigures system table
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b1fc8a1db24d767ef394cb4b3c1b1cda1304b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 61936891ecd31b3bf5421a8cac49aad9f0dd37f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635316"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對使用者所設定的每個組態選項，各包含一個資料列。 **sysconfigures**包含最近啟動之前所定義的組態選項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，加上設定的任何動態組態選項。  
+  針對使用者所設定的每個組態選項，各包含一個資料列。 **sysconfigures**包含最近啟動之前所定義的組態選項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，以及任何動態組態選項。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**value**|**int**|使用者可以修改的變數值。 只有在執行 RECONFIGURE 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 才會使用這個項目。|  
 |**config**|**int**|組態變數號碼。|  

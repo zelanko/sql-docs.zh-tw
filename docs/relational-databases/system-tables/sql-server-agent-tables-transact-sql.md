@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Agent, system tables
 - system tables [SQL Server], SQL Server Agent
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f45847235f549eb80404236633111f5678f53825
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1bdab681e7946df0845193ebcd183e392e000c74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794906"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server Agent 資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
