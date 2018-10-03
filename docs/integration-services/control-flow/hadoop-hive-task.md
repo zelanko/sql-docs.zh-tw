@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff68c0634886c148325129a9c17394ba1dc43802
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ba25c8b70ad39c073c713a79381b058ece4599ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749770"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive 工作
   使用 Hadoop Hive 工作在 Hadoop 叢集上執行 Hive 指令碼。  
@@ -33,7 +30,7 @@ ms.locfileid: "35401470"
 ## <a name="options"></a>選項。  
  在 [Hadoop Hive 工作編輯器] 對話方塊中設定下列選項。  
   
-|欄位|描述|  
+|欄位|Description|  
 |-----------|-----------------|  
 |**Hadoop 連接**|指定現有的 Hadoop 連接管理員或建立新的連接管理員。 此連接管理員會指出 WebHCat 服務的裝載位置。|  
 |**SourceType**|指定查詢的來源類型。 可用的值為 **ScriptFile** 和 **DirectInput**。|  

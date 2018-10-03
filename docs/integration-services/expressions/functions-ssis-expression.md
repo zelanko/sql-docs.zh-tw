@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cd8bd35a642d72a0d3b1b934dbdc1587bd96996
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 38729c2588ce7f779951403e72470b5ab0744e14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409650"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816936"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
   運算式語言包含一組可在運算式中使用的函數。 運算式可使用單一函數，但通常運算式會結合函數與運算子，並使用多個函數。  
@@ -42,7 +39,7 @@ ms.locfileid: "35409650"
   
  運算式語言提供下列數學函數。  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 運算式&#41;](../../integration-services/expressions/abs-ssis-expression.md)|傳回數值運算式的絕對正數值。|  
 |[EXP &#40;SSIS 運算式&#41;](../../integration-services/expressions/exp-ssis-expression.md)|傳回做為指定運算式中 e 之基底的指數。|  
@@ -58,7 +55,7 @@ ms.locfileid: "35409650"
   
  運算式評估工具提供下列字串函數。  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 運算式&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|傳回字元運算式最左邊字元的 Unicode 字碼值。|  
 |[FINDSTRING &#40;SSIS 運算式&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|傳回運算式中，所指定字元字串出現位置的以 1 為基底的索引。|  
@@ -78,7 +75,7 @@ ms.locfileid: "35409650"
   
  運算式評估工具提供下列日期和時間函數。  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS 運算式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|藉由將日期或時間間隔加入至指定的日期，傳回新的 DT_DBTIMESTAMP 值。|  
 |[DATEDIFF &#40;SSIS 運算式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|傳回跨越兩個指定日期的日期和時間界線數目。|  
@@ -91,7 +88,7 @@ ms.locfileid: "35409650"
   
  運算式評估工具提供下列 Null 函數。  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|依據運算式是否為 Null 來傳回布林結果。|  
 |[NULL &#40;SSIS 運算式&#41;](../../integration-services/expressions/null-ssis-expression.md)|傳回所要求資料類型的 Null 值。|  

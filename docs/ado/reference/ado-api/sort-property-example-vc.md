@@ -1,31 +1,28 @@
 ---
-title: 排序屬性範例 （VC + +） |Microsoft 文件
+title: 排序屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 115c3565edfa128d0d9650c3512357caf7d3bebb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 623afddc5f9490afd1b0e162025641112fb36300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762036"
 ---
-# <a name="sort-property-example-vc"></a>排序屬性範例 （VC + +）
+# <a name="sort-property-example-vc"></a>Sort 屬性範例 (VC++)
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[排序](../../../ado/reference/ado-api/sort-property.md)屬性，以重新排序的資料列**資料錄集**衍生自***作者***資料表**Pubs**資料庫。 次要的公用程式常式會列印每個資料列。  
   
 ```  

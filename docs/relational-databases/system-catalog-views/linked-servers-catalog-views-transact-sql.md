@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,12 +16,12 @@ ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c2a6043b77ca81db078818a006440598d167ad5
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 71fb44a3ce93e4fbb9a315cc7f0a571295254ce0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028856"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853646"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>連結伺服器目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

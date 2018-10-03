@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a60cfaaf58e3ea3815955caefd33475803abf637
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8f7e9df6417334b814e71664b2a164dd76a9642
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060361"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多維度模型中建立量值和量值群組
   *「量值」* (measure) 是數值資料值的彙總，包括總和、計數、最小值、最大值、平均值或您建立的自訂 MDX 運算式。 *「量值群組」* (measure group) 是包含一個或多個量值的容器。 所有量值都存在量值群組中，即使只有一個量值。 Cube 必須具有至少一個量值與量值群組。  

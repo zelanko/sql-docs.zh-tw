@@ -1,13 +1,11 @@
 ---
-title: 儲存並開啟方法的範例 (VB) |Microsoft 文件
+title: Save 和 Open 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828846"
 ---
-# <a name="save-and-open-methods-example-vb"></a>儲存並開啟方法的範例 (VB)
-這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)和[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法可以一起使用。  
+# <a name="save-and-open-methods-example-vb"></a>Save 和 Open 方法範例 (VB)
+這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)並[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法可以一起使用。  
   
- 假設您要在出差，而且想要帶資料庫中的資料表。 您繼續之前，您存取資料做為[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)並將它儲存在傳輸的表單。 當您抵達目的地時，存取**資料錄集**做為本機，中斷連接**資料錄集**。 您對進行變更**資料錄集**，然後重新儲存。 最後，當返回首頁，再次連接到資料庫並更新您所做的變更旅。  
+ 假設您即將在出差，而且想要採取沿著從資料庫資料表。 您繼續之前，您存取資料，當做[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)並將它儲存在容易進行傳輸的表單。 當您抵達您的目的地時，存取**Recordset**為本機，中斷連接**資料錄集**。 若要變更**資料錄集**，然後重新儲存。 最後，當您重返首頁，再連接到資料庫並更新您所做的變更在路上。  
   
- 首先，存取及儲存***作者***資料表。  
+ 首先，存取並儲存***作者***資料表。  
   
 ```  
 'BeginSaveVB  
@@ -88,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- 此時，您已到達您的目的地。 您將會存取***作者***資料表做為本機，中斷連接**資料錄集**。 您必須擁有**MSPersist**用來存取儲存的檔案，在電腦上的提供者 a:\Pubs.xml。  
+ 此時，您已到達目的地。 您將會存取***作者***資料表中的做為本機、 中斷連線**資料錄集**。 您必須擁有**MSPersist**用來存取儲存的檔案，在電腦上的提供者 a:\Pubs.xml。  
   
 ```  
 Attribute VB_Name = "Save"  
@@ -101,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [深入了解資料錄集持續性](../../../ado/guide/data/more-about-recordset-persistence.md)   
+ [深入了解資料錄集的持續性](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

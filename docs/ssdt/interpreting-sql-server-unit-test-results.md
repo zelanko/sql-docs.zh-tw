@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1709d7ca64eedf5e4f0dd170606082e7f99f3e31
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 50f98e5ba8905a3e97ca401b5ff49a87e9a2ecfc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736506"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>解譯 SQL Server 單元測試結果
 當您執行 SQL Server 單元測試時，會自動產生測試結果、將其儲存到磁碟，並於 [測試結果] 視窗中摘要列出。 啟動測試回合之後，[測試結果] 視窗隨即出現並顯示測試回合的進度。 這個顯示畫面包括執行中的測試以及已完成的測試。  

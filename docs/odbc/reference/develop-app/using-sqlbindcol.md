@@ -1,44 +1,41 @@
 ---
-title: 使用 SQLBindCol |Microsoft 文件
+title: 使用 SQLBindCol |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776406"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
-藉由呼叫應用程式繫結的資料行**SQLBindCol**。 此函式會將一個資料行繫結一次。 有了它，應用程式指定下列工作：  
+藉由呼叫應用程式繫結的資料行**SQLBindCol**。 此函式會將一個資料行繫結一次。 有了它，應用程式則指定下列項目：  
   
--   資料行編號。 資料行 0 是書籤資料行中;部分結果集不是包含此資料行。 所有其他資料行編號從數字 1 開始。 它會繫結編號較高的資料行，比結果集; 中的資料行發生錯誤此錯誤無法偵測到之前建立的結果集之後，所以它會傳回由**SQLFetch**，而非**SQLBindCol**。  
+-   資料行編號。 資料行 0 是書籤資料行中;此資料行不會納入一些結果集。 所有其他資料行編號從數字 1 開始。 它會多於可用資料行的結果集; 繫結的編號較高的資料行發生錯誤此錯誤無法偵測到之前已建立結果集，因此它由**SQLFetch**，而非**SQLBindCol**。  
   
--   C 資料類型、 位址及位元組長度的變數繫結至資料行。 它是以指定的資料行的 SQL 資料類型無法轉換; C 資料類型錯誤這個錯誤可能無法偵測之前已建立結果集，所以它會傳回由**SQLFetch**，而非**SQLBindCol**。 如需支援的轉換，請參閱[轉換資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d： 資料型別中。 位元組長度的相關資訊，請參閱[資料緩衝區長度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
+-   C 資料類型、 位址和位元組長度的變數繫結至資料行。 它會指定 C 資料類型的資料行的 SQL 資料類型無法轉換; 發生錯誤此錯誤可能無法偵測之前已建立結果集，因此它由**SQLFetch**，而非**SQLBindCol**。 如需支援的轉換，請參閱[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d： 資料型別中。 如需位元組長度的資訊，請參閱[的資料緩衝區長度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
   
--   長度/指標緩衝區的位址。 長度/指標緩衝區是選擇性的。 它用來傳回二進位或字元資料或傳回 SQL_NULL_DATA 的位元組長度，如果資料為 NULL。 如需詳細資訊，請參閱[使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
+-   長度/指標緩衝區的位址。 長度/指標緩衝區是選擇性的。 它用來傳回二進位或字元資料或傳回 SQL_NULL_DATA 的位元組長度，如果資料為 NULL。 如需詳細資訊，請參閱 <<c0> [ 使用長度/指標值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
- 當**SQLBindCol**是呼叫，驅動程式將這項資訊的陳述式。 會擷取每個資料列，它會將每個資料行的資料繫結應用程式變數中使用的資訊。  
+ 當**SQLBindCol**是呼叫，此驅動程式將這項資訊與陳述式。 會擷取每個資料列，它會使用資訊來將每個資料行的資料放在繫結的應用程式變數中。  
   
- 例如，下列程式碼會繫結變數的銷售人員和 CustID 資料行。 資料行的資料將會傳回*業務員*和*CustID*。 因為*業務員*是字元緩衝區中，應用程式指定的位元組長度 (11)，讓驅動程式可以判斷是否要截斷的資料。 傳回的位元組長度的標題，或是否為 NULL，將會傳回*SalesPersonLenOrInd*。  
+ 例如，下列程式碼會繫結變數的銷售人員和 CustID 資料行。 資料行的資料將會傳回*SalesPerson*並*CustID*。 因為*業務員*是字元的緩衝區中，應用程式指定的位元組長度 (11)，好讓驅動程式可以判斷是否要截斷的資料。 傳回的位元組長度的連結，或者是否為 NULL，將會傳回*SalesPersonLenOrInd*。  
   
- 因為*CustID*整數變數，且具有固定長度，不需要指定其位元組長度，則驅動程式會假設它是**sizeof (** SQLUINTEGER **)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為位元組長度一律為**sizeof (** SQLUINTEGER **)**。  
+ 因為*CustID*是一個整數變數，並有固定的長度，則不需要指定它的位元組長度; 驅動程式會假設它是**sizeof (** SQLUINTEGER **)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為永遠是位元組長度**sizeof (** SQLUINTEGER **)**。  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -74,7 +71,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- 下列程式碼執行**選取**使用者輸入陳述式，並列印每個結果集內的資料列。 因為應用程式無法預測結果的外觀設定由建立**選取**陳述式，它無法變數繫結硬式編碼至結果集，如上述範例所示。 相反地，應用程式會保存資料的緩衝區和長度/指標緩衝區配置的該資料列中的每個資料行。 每個資料行，它會計算的位移開始的資料行的記憶體，並調整此位移為對齊界限上開始資料行的資料和長度/指標緩衝區。 它會接著繫結至資料行位移處開始的記憶體。 從驅動程式的觀點來看，此記憶體位址是區別在上述範例中的繫結變數的位址。 如需對齊的詳細資訊，請參閱[對齊](../../../odbc/reference/develop-app/alignment.md)。  
+ 下列程式碼執行**選取**使用者輸入陳述式，並列印每個結果集內的資料列。 因為應用程式無法預測結果的圖形設定所建立**選取**陳述式，所以無法繫結硬式編碼的變數至結果集，如上述範例所示。 相反地，應用程式會保存資料的緩衝區和長度/指標緩衝區配置該資料列中的每一個資料行。 每個資料行，它會計算資料行的記憶體開頭的位移，並調整此位移為對齊界限上的資料行的資料和長度/指標緩衝區啟動。 然後，它繫結至資料行位移開始的記憶體。 從驅動程式的觀點來看，這個記憶體位址是區別繫結在上述範例中，變數的位址。 如需對齊的詳細資訊，請參閱[對齊](../../../odbc/reference/develop-app/alignment.md)。  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

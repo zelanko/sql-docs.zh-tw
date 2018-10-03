@@ -4,17 +4,16 @@ ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac39aa9d781b8f77b020b6f275a775b57bc22f22
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774396"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的資料
   

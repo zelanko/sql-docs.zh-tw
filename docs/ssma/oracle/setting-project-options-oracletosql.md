@@ -4,23 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Configuration Options and Modes
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: adb90f3de86471a9aa09199c4b97d8d44199437e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753926"
 ---
 # <a name="setting-project-options-oracletosql"></a>設定專案選項 (OracleToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，確認組態選項都適用於專案。  
@@ -48,7 +45,7 @@ SSMA 會有五種專案設定：
   
 -   完整  
   
--   Custom  
+-   自訂  
   
 預設模式被建議用於大部分的使用者。 開放式模式能夠保留更多目前的 Oracle 語法，而且容易讀取。 不過，保留目前的語法可能不正確。 如果 Oracle 語法必須轉換為對等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]完整模式的語法不會執行最完整的轉換，但產生的程式碼可能會較難閱讀。 在 [自訂] 模式中，您可以設定選項。  
   

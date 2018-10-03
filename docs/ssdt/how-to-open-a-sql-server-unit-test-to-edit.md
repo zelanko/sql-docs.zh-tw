@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c2a7dfd1d5e9bafd023d2289c801758e9670629
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787426"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>HOW TO：開啟要編輯的 SQL Server 單元測試
 在建立 SQL Server 單元測試之後，您可以使用 [SQL Server 單元測試設計工具] 加入 Transact\-SQL 陳述式和測試條件。 使用設計工具所建立的測試會產生 Visual C# 或 Visual Basic 程式碼。 此程式碼是測試執行時所執行的程式碼。  

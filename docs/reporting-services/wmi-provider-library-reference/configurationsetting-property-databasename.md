@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseName Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca0762f06560bc7f6e4d6050754105b8842572d0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7dcaf8dbc93d0f418d34f3b412616d59f3b98ae4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281260"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850876"
 ---
 # <a name="configurationsetting-property---databasename"></a>ConfigurationSetting 屬性 - DatabaseName
   指定主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 唯讀。  

@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_FORCEPLAN_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], optimizing process
 - overriding query optimizer process
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2b52ce303c0d4fe2cb1fdd9338426400656e5e5d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 424f595b2a1fa5d1c55afd003d10fa42ba5b130e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781139"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800116"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ SET FORCEPLAN { ON | OFF }
   
  SET FORCEPLAN 是在執行階段進行套用，而不是在剖析階段進行套用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  SET FORCEPLAN 權限預設給所有使用者。  
   
 ## <a name="examples"></a>範例  

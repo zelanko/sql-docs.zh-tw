@@ -5,9 +5,7 @@ ms.date: 05/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DISABLE_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - triggers [SQL Server], disabling
 - disabling triggers
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-caps.latest.revision: 45
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 844d13eb236d34de1c808f2f396d3dcf18c8b3fc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 0ce241446bdcb928b0edc976117731e78dca7f9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737747"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +77,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  當您使用 **ALTER TRIGGER** 陳述式來變更觸發程序時，會啟用觸發程序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要停用 DML 觸發程序，使用者至少要對建立該觸發程序的資料表或檢視，具備 ALTER 權限。  
   
  若要停用伺服器範圍 (ON ALL SERVER) 的 DDL 觸發程序或登入觸發程序，使用者必須有伺服器的 CONTROL SERVER 權限。 若要停用以資料庫範圍 (ON DATABASE) 定義的 DDL 觸發程序，使用者至少要在目前資料庫中具備 ALTER ANY DATABASE DDL TRIGGER 權限。  

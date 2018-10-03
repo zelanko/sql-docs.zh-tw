@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4e735719ecf352b1ceadf6ab35931359187ee5e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9235e945a9733767c2dbf9ca7c507f516b5b0dac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850453"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>報表產生器函式 - Multilookup 函式
   從包含名稱/值組的資料集傳回第一組符合指定之名稱集合的值。  

@@ -1,14 +1,11 @@
 ---
-title: backupfilegroup (TRANSACT-SQL) |Microsoft 文件
+title: backupfilegroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 040e55c50c91ed40b7e43bfc71d8ea5fbca0273c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832976"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +32,9 @@ ms.locfileid: "33259228"
   針對備份時在資料庫中的每個檔案群組，各包含一個資料列。 **backupfilegroup**會儲存在**msdb**資料庫。  
   
 > [!NOTE]  
->  **Backupfilegroup**表格顯示的資料庫，而不是備份組的檔案群組組態。 若要識別是否在備份組中包含的檔案，請使用**is_present**資料行[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)資料表。  
+>  **Backupfilegroup**表顯示的資料庫，而不是備份組的檔案群組設定。 若要識別是否檔案包含在備份組，使用**is_present**資料行[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)資料表。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|包含這個檔案群組的備份組。|  
 |**name**|**sysname**|檔案群組的名稱。|  
@@ -53,7 +49,7 @@ ms.locfileid: "33259228"
 ## <a name="remarks"></a>備註  
   
 > [!IMPORTANT]  
->  相同的檔案群組名稱可以出現在不同的資料庫中；每個檔案群組都有它自己的 GUID。 因此， **(backup_set_id，filegroup_guid)** 識別中的檔案群組為唯一索引鍵**backupfilegroup**。  
+>  相同的檔案群組名稱可以出現在不同的資料庫中；每個檔案群組都有它自己的 GUID。 因此， **(backup_set_id，filegroup_guid)** 是可識別中的檔案群組的唯一索引鍵**backupfilegroup**。  
   
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY 會的資料行**backupmediaset**媒體集標頭的適當值的資料表。  
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDimension (geography Data Type)
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDimension method
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5e234bfd63ffe6488641206af3ee6a89a076f4c
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 20103774beb936ede7ab6a3b56201230b18cbd3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801096"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ FROM @temp;
 |NAME|dim|  
 |----------|---------|  
 |點|0|  
-|LineString|@shouldalert|  
+|LineString|1|  
 |多邊形|2|  
   
 ## <a name="see-also"></a>另請參閱  

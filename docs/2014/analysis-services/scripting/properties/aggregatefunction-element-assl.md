@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregateFunction Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregateFunction element
 ms.assetid: 880b6bd0-d62a-4221-831c-39f748ee84f2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2eccf4ca6e41ffba52424c4f45edb71c9c1c46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c40f1767de94515d11229e5dce13f6cb94c9334
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055308"
 ---
 # <a name="aggregatefunction-element-assl"></a>AggregateFunction 元素 (ASSL)
   定義所使用的彙總函式的型別[量值](../objects/measure-element-assl.md)項目。  
@@ -59,7 +56,7 @@ ms.locfileid: "37261204"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[量值](../objects/measure-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

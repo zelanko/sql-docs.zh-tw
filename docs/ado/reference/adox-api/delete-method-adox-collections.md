@@ -1,13 +1,11 @@
 ---
-title: Delete 方法 （ADOX 集合） |Microsoft 文件
+title: Delete 方法 (ADOX Collections) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -30,19 +28,18 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 90f9aa6a788296ff5fef05e96b7f46b56729ded9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811078"
 ---
-# <a name="delete-method-adox-collections"></a>Delete 方法 （ADOX 集合）
-從集合中移除物件。  
+# <a name="delete-method-adox-collections"></a>Delete 方法 (ADOX Collections)
+從集合移除的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,12 +50,12 @@ Collection.Delete Name
   
 #### <a name="parameters"></a>參數  
  *[名稱]*  
- A **Variant**指定之名稱或要刪除之物件的序數位置 （索引）。  
+ A **Variant**指定之名稱或序數位置 （索引），要刪除的物件。  
   
 ## <a name="remarks"></a>備註  
  如果發生錯誤，將*名稱*不存在於集合中。  
   
- 如[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)和[使用者](../../../ado/reference/adox-api/users-collection-adox.md)集合，會發生錯誤，如果提供者不支援刪除的資料表或使用者，分別。 如[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)和[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合**刪除**如果提供者不支援持續性命令將會失敗。  
+ 針對[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)並[使用者](../../../ado/reference/adox-api/users-collection-adox.md)集合，會發生錯誤，如果提供者不支援刪除的資料表或使用者，分別。 針對[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)並[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合**刪除**如果提供者不支援保存的命令將會失敗。  
   
 ## <a name="applies-to"></a>適用於  
   
@@ -69,5 +66,5 @@ Collection.Delete Name
 |[Users 集合 (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>另請參閱  
- [程序刪除方法的範例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Procedures Delete 方法範例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete 方法範例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

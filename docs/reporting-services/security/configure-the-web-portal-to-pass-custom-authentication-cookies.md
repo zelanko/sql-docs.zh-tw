@@ -4,7 +4,6 @@ ms.date: 04/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - authentication [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 990947c9c45445a04563cccf0df2e3a4179c6df2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b538523839be0260eda33934a18e682579aaa3f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810216"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>設定入口網站傳遞自訂驗證 Cookie
 

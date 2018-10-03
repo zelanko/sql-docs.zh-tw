@@ -7,19 +7,17 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: f0c6e0e8b6999ce2ebcce009a4ac1c298ededdff
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766588"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>將 Linux 上的 SQL Server 連線加密
 
@@ -39,7 +37,7 @@ ms.locfileid: "46712120"
 
 應該命名為這些符號連結`libcrypto.so`並`libssl.so`並放置在`/opt/mssql/lib/`目錄。
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如果設定正確，TLS 提供隱私權和資料完整性，以用戶端與伺服器之間的通訊。  用戶端起始伺服器可以是 TLS 連線。 
 
 ## <a name="client-initiated-encryption"></a>用戶端起始加密 

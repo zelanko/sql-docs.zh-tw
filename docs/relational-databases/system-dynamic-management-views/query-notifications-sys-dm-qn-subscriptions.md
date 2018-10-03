@@ -1,12 +1,10 @@
 ---
-title: sys.dm_qn_subscriptions (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_qn_subscriptions & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,34 +16,34 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834706"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>查詢通知-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回有關伺服器之使用中查詢通知訂閱的資訊。 您可以使用這個檢視，檢查伺服器或指定資料庫中是否有使用中的訂閱，或檢查指定的伺服器主體。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|訂閱的識別碼。|  
 |**database_id**|**int**|執行通知查詢的資料庫識別碼。 這個資料庫會儲存與這項訂閱有關的資訊。|  
 |**sid**|**varbinary(85)**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
 |**object_id**|**int**|儲存訂閱參數相關資訊的內部資料表識別碼。|  
 |**建立**|**datetime**|建立訂閱的日期和時間。|  
-|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 附註： 實際的引發時間可能大於指定的逾時。不過，如果在指定的逾時時間之後，但在訂閱引發之前，執行一項變更讓訂閱無效，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會讓引發作業發生在變更時。|  
+|**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 注意： 實際的引發時間可能會大於指定的逾時。不過，如果在指定的逾時時間之後，但在訂閱引發之前，執行一項變更讓訂閱無效，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會讓引發作業發生在變更時。|  
 |**status**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
-|來源|若要|開啟|型別|  
+|來源|若要|開啟|類型|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多對一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多對一|  
@@ -58,7 +56,7 @@ ms.lasthandoff: 05/23/2018
 |程式碼|次要狀態|資訊|  
 |----------|------------------|----------|  
 |65798|因為資料變更所以引發訂閱|插入觸發的訂閱|  
-|65799|因為資料變更所以引發訂閱|Delete|  
+|65799|因為資料變更所以引發訂閱|DELETE|  
 |65800|因為資料變更所以引發訂閱|Update|  
 |65801|因為資料變更所以引發訂閱|合併式|  
 |65802|因為資料變更所以引發訂閱|截斷資料表|  

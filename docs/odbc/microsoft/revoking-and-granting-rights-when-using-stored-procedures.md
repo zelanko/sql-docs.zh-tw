@@ -1,39 +1,36 @@
 ---
-title: 撤銷及授與權限，當使用預存程序 |Microsoft 文件
+title: 撤銷和授與權限，當使用預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ed3fa04ffbb67f0c6ddeba677a411c9c99c4768
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792226"
 ---
-# <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>撤銷與授與權限時使用預存程序
+# <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>在使用預存程序時撤銷和授與權限
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用由 Oracle 提供的 ODBC 驅動程式。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- 當使用者權限授與，而被撤銷預存程序所存取的資料表上，Microsoft ODBC Driver for Oracle 傳回下列錯誤訊息：  
+ Microsoft ODBC Driver for Oracle 授與且然後撤銷預存程序所存取的資料表上的使用者權限時，會傳回下列錯誤訊息：  
   
  SQL_ERROR = 1  
   
- szErrorMsg ="[Microsoft] [oracle 的 ODBC 驅動程式] 的參數數目錯誤 」  
+ szErrorMsg ="[Microsoft] [ODBC driver for Oracle] 參數數目不正確 」  
   
- szErrorMsg = 「 [Microsoft] [oracle 的 ODBC 驅動程式] 語法錯誤或存取違規 」  
+ szErrorMsg ="[Microsoft] [ODBC driver for Oracle] 語法錯誤或存取違規 」  
   
- 呼叫 Oracle OCI 函式 Odessp() 無法在此案例中，但會需要實作預設參數。 修改基礎資料表的權限之後，就必須重新編譯預存程序之前執行一次。
+ 呼叫 Oracle OCI 函式 Odessp() 在此情況下失敗，但會需要實作預設參數。 修改基礎資料表的權限之後，就必須重新編譯預存程序才能再次執行它。

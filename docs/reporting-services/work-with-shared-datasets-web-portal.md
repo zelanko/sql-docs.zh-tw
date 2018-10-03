@@ -4,17 +4,16 @@ ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 87cc9b9f95451c0ec5823b05c99d315bfcb93d8b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 76448fc4a919b9931ea97712038be9ba0f2c2da2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747536"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>使用共用資料集 - Web 入口網站
 

@@ -5,9 +5,7 @@ ms.date: 7/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Reparent_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Reparent [Database Engine]
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 440444150cdc9979608ff3ce898fd95b091fc8bb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f1c1f7c877b1f0897e8bcdb3e69162dc0355756a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422597"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762316"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

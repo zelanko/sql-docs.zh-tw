@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LogFileRollover Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LogFileRollover element
 ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ed8df0217baeb5f760273ad6998e2344f4fbb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c9c07dd08cacfbc273f2b0e691b178d4953ce42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054848"
 ---
 # <a name="logfilerollover-element-assl"></a>LogFileRollover 元素 (ASSL)
   指定的記錄[追蹤](../objects/trace-element-assl.md)輸出應該換到新的檔案，或應該在中指定的最大記錄檔大小的停止[LogFileSize](logfilesize-element-assl.md)為止。  
@@ -59,7 +56,7 @@ ms.locfileid: "37299018"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[追蹤](../objects/trace-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  如果 `LogFileRollover` 元素的值設定為 True，當記錄檔的大小超過 `LogFileSize` 父元素之 `Trace` 元素中指定的值時，就會啟動新的檔案，否則記錄便停止。  

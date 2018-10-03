@@ -5,24 +5,21 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9a309694db3d06deae0892e9b2c59ad82752bda3
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 6cce05ab1b3511dca7258dd1ec5dfc61e965715b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787195"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>建立資料庫精靈 (Master Data Services 組態管理員)
 
@@ -33,7 +30,7 @@ ms.locfileid: "35329582"
 ## <a name="database-server"></a>資料庫伺服器  
  指定資訊來連接本機或遠端 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體，以主控 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。 若要連接到遠端執行個體，它必須先啟用遠端連接。  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |**SQL Server 執行個體**|指定您想要主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 這可以是本機或遠端電腦上的預設或具名執行個體。 輸入以下項目來指定資訊：<br /><br /> 句點 (.)，可連接到您本機電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，可連接到指定之本機或遠端電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，以及連接到指定之本機或遠端電腦上具名執行個體的執行個體名稱。 使用以下格式指定這項資訊： *server_name*\\*instance_name*。|  
 |**驗證類型**|選取連接到指定的 SQL Server 執行個體時所要使用的驗證類型。 您用來連接的認證必須屬於指定之 **執行個體的** 系統管理員 (sysadmin) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器角色。 如需系統管理員角色的詳細資訊，請參閱 [伺服器層級角色](../relational-databases/security/authentication-access/server-level-roles.md)。<br /><br /> 驗證類型包括：<br /><br /> **目前使用者 - 整合式安全性**：使用 [整合式 Windows 驗證]，透過目前 Windows 使用者帳戶的認證來連接。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 會使用登入電腦及開啟應用程式之使用者的 Windows 認證。 您不能在應用程式中指定不同的 Windows 認證。 如果您想要使用不同的 Windows 認證來連接，您必須以該使用者的身分登入電腦，然後開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。<br /><br /> **SQL Server 帳戶**：使用 SQL Server 帳戶來連接。 當您選取這個選項時，將會啟用 [使用者名稱] 和 [密碼] 欄位，而且您必須為指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  
@@ -44,7 +41,7 @@ ms.locfileid: "35329582"
 ## <a name="database"></a>[資料庫]  
  為新的資料庫指定資料庫名稱和定序選項。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 char 和 varchar) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 如需資料庫定序的詳細資訊，請參閱 [定序和 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)。  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |**資料庫名稱**|為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫指定名稱。|  
 |**SQL Server 預設定序**|選取此選項可針對新的資料庫使用指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的目前資料庫定序設定。|  
@@ -52,7 +49,7 @@ ms.locfileid: "35329582"
   
 ## <a name="administrator-account"></a>系統管理員帳戶  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |**User name**|指定預設的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]進階使用者。 進階使用者具有所有功能區域的存取權，並可新增、刪除及更新所有模型。 如需 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中的進階使用者權限和其他管理員類型的資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。|  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, backward compatibility
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], backward compatibility
 - compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
-caps.latest.revision: 56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9df1593cd21e8bcc1e230f2806bbafd7bc2077ff
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 6cb6dcc8423f3480887540596bd963325c0133e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779357"
 ---
 # <a name="replication-backward-compatibility"></a>複寫回溯相容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

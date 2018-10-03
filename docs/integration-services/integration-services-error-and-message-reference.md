@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bedb049d518775144b53da2ead7fc1eee5392669
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800736"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -2271,7 +2268,7 @@ ms.locfileid: "39087860"
   
 |十六進位碼|十進位碼|符號名稱|Description|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|不正確的函數。|  
+|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|不正確的函數。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系統找不到指定的檔案。|  
 |0x100|256|DTS_MSG_SERVER_STARTING|正在啟動 Microsoft SSIS 服務。<br /><br /> 伺服器版本 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 服務已啟動。<br /><br /> 伺服器版本 %1|  

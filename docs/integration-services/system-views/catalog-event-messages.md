@@ -5,28 +5,25 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de53ddb2b38e2a3423ea15acab63169e38b9d4e3
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ac1c56583d59c44d77a3fe6e35454f0527d94c30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808776"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   顯示作業期間所記錄的訊息資訊。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|事件訊息的唯一識別碼。|  
 |Operation_id|BIGINT|作業的類型。<br /><br /> 如需作業類型的清單，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。|  
@@ -48,7 +45,7 @@ ms.locfileid: "35330432"
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示下列訊息來源類型。  
   
-|**message_source_type**|描述|  
+|**message_source_type**|Description|  
 |-------------------------------|-----------------|  
 |10|項目 API，例如 T-SQL 和 CLR 預存程序|  
 |20|用來執行封裝的外部處理序 (ISServerExec.exe)|  
@@ -57,7 +54,7 @@ ms.locfileid: "35330432"
 |50|控制流程容器|  
 |60|資料流程工作|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   作業的 READ 權限  

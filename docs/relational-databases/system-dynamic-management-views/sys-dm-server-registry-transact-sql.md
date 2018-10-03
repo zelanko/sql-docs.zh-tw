@@ -1,12 +1,10 @@
 ---
-title: sys.dm_server_registry (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_server_registry (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_registry_TSQL
@@ -18,28 +16,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4207ee898acec0d0f5f2f00594835ffcef40e9d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788616"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回儲存在目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 Windows 登錄中的組態和安裝資訊。 針對每個登錄機碼各傳回一個資料列。 使用動態管理檢視傳回所需資訊 (例如主機上可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路組態值。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|登錄機碼名稱。 可為 Null。|  
 |value_name|**nvarchar(256)**|機碼值名稱。 這是所示的項目**名稱**資料行的登錄編輯程式。 可為 Null。|  
-|value_data|**sql_variant**|索引鍵資料的值。 這是所顯示的值**資料**資料行的登錄編輯程式的指定項目。 可為 Null。|  
+|value_data|**sql_variant**|索引鍵資料的值。 這是所顯示的值**資料**資料行的指定項目 登錄編輯器。 可為 Null。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  
@@ -92,6 +90,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_server_services &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [sys.dm_server_services &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

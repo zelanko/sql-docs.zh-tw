@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27e3a36850dcf0d314398e994485d5e7410f9a8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051388"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 資料列集
   傳回有關 (表格式或多維度) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料模型的資訊，提供 CSDLBI (概念結構定義語言商業智慧註解) 格式的模型定義。 CSDLBI 是以 CSDL 為基礎，它是實體資料架構所使用的 XML 結構描述，用於 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器與 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 用戶端之間的通訊。 商業智慧 (BI) 註解提供了有關表格式模型和其中所含物件的其他中繼資料。 如需表格式資料模型的詳細資訊，請參閱[商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  

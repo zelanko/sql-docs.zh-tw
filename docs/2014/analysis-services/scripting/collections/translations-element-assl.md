@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Translations Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Translations element
 ms.assetid: 7f6b8ff2-e834-44d3-a176-216203158a8d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 215928497bdaaf85a0672f05e94d69baae56eabb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7ea3c98e2263b78f947d75c5b225d2a3a63ef40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061228"
 ---
 # <a name="translations-element-assl"></a>Translations 元素 (ASSL)
   包含的集合[翻譯](../objects/translation-element-assl.md)元素與父元素相關聯。  
@@ -56,8 +53,8 @@ ms.locfileid: "37210138"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

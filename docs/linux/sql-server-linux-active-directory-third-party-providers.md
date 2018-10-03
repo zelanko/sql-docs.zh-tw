@@ -7,18 +7,16 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: 288f46a2084166a1b7164ff8f0c0ef82b81fb16b
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: beb342156098ebb5516466ad7fd4a771cc5a0616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381501"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787283"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>使用 Linux 上的 SQL Server 中的第三方 Active Directory 提供者
 

@@ -1,31 +1,28 @@
 ---
-title: 檢視物件屬性、 方法和事件 |Microsoft 文件
+title: 檢視物件屬性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View object [ADOX], members
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ff0d1596b8296576a001339f4cc7cc09f9f8c9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6b0281821ff073b09de1158b9c88ec126702b5db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822117"
 ---
-# <a name="view-object-properties-methods-and-events"></a>檢視物件屬性、 方法和事件
+# <a name="view-object-properties-methods-and-events"></a>View 物件屬性、方法和事件
 ## <a name="properties"></a>屬性  
- [命令屬性](../../../ado/reference/adox-api/command-property-adox.md)  
+ [Command 屬性](../../../ado/reference/adox-api/command-property-adox.md)  
   
  [DateCreated 屬性](../../../ado/reference/adox-api/datecreated-property-adox.md)  
   

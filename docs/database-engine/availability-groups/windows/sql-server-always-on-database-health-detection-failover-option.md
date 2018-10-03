@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -17,16 +13,15 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85fcf4c5f16093b51da9ec8cab3cf3da7b16bdc2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 649ebf4f39013ccc44b26c74acd311fe4f712f9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769964"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730868"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +98,7 @@ select name, db_failover from sys.availability_groups
 
 NAME  |  db_failover
 ---------|---------
-| Contoso-ag |  @shouldalert  |
+| Contoso-ag |  1  |
 
 ### <a name="errorlog"></a>ErrorLog
 可用性群組已因資料庫層級健全狀況偵測檢查而容錯移轉時，SQL Server 錯誤記錄檔 (或來自 sp_readerrorlog 的文字) 會顯示錯誤訊息 41653。
@@ -156,7 +151,7 @@ GO
 
 欄位的說明：
 
-|資料行資料    | 描述
+|資料行資料    | Description
 |---------|---------
 |availability_group_id  |可用性群組的識別碼。
 |availability_group_name    |可用性群組的名稱。
@@ -179,7 +174,7 @@ GO
 |availability_replica_name |    SQLSERVER-1
 |database_name |    AutoHa-Sample2
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  @shouldalert
+|failover_ready_replicas |  1
 |fault_type |   2
 |is_critical    | True
 

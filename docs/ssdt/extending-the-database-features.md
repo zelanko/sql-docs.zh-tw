@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42e420a042d0627faf5e2c436ff7ba0ea38a0a5c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0e1efe0db32b167214521e1af3b9a1e941480d2d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764256"
 ---
 # <a name="extending-the-database-features"></a>擴充資料庫功能
 您可以建立擴充功能，讓您擴充單元測試和資料庫程式碼分析這類功能。 如需詳細資訊，請參閱下列主題：  

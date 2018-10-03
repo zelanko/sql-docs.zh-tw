@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10c4c8373dd34e07651f83bd13434a1043ab31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d16a701ee01d754c07577d44c4471477c297ba3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729086"
 ---
 # <a name="properties-window-management-studio"></a>屬性視窗 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "33043195"
   
 ## <a name="options"></a>選項。  
   
-|元素|描述|  
+|元素|Description|  
 |-----------|---------------|  
 |**物件名稱**|列出目前選取的物件。 只有來自使用中編輯器或設計師的物件才可見。|  
 |**類別目錄**|依類別目錄列出已選取物件的全部屬性和屬性值。 您可以摺疊類別目錄，以減少可見屬性的數目。 當您展開或摺疊類別目錄時，類別目錄名稱左側會出現加號 (+) 或減號 (-)。 類別目錄依字母順序來排列。|  

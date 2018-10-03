@@ -1,13 +1,11 @@
 ---
-title: StayInSync 屬性 |Microsoft 文件
+title: StayInSync 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - StayInSync property
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ccd1cf14eddb9fb0b7b440defb0eb700b2fb354
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50cf569f6e0af5e753cca7fba030b8fc2caa4a86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282497"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805775"
 ---
 # <a name="stayinsync-property"></a>StayInSync 屬性
-表示以階層式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是否基礎的子記錄的參考 (也就是*章*) 變更，當父資料列變更時。  
+表示以階層式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件是否基礎的子記錄的參考 (也就是*章*) 的父資料列位置變更時的變更。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定或傳回**布林**值。 預設值為 **True**。 如果**True**，章節，將會更新父系**資料錄集**物件變更資料列位置; 如果**False**，本章將繼續參考至前一章中的資料即使父**資料錄集**物件已變更的資料列位置。  
+ 設定或傳回**布林**值。 預設值為 **True**。 如果 **，則為 True**，將更新的章節，如果父代**資料錄集**物件變更資料列位置; 如果**False**，本章將繼續參考前一章中的資料即使父代**資料錄集**物件已變更的資料列位置。  
   
 ## <a name="remarks"></a>備註  
- 這個屬性會套用至階層式資料錄集，例如支援的[Microsoft Data Shaping Service 的 OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，和必須在父系上設定**資料錄集**子系之前**資料錄集**擷取。 這個屬性可簡化瀏覽階層式資料錄集。  
+ 此屬性會套用至階層式資料錄集的郵件，例如支援[Microsoft Data Shaping Service 的 OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)，而且必須設定其父系**資料錄集**子系之前**資料錄集**擷取。 這個屬性可簡化瀏覽階層式資料錄集。  
   
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

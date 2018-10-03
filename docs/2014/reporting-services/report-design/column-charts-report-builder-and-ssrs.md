@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056438"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 直條圖適合顯示一段時間的資料變更，或圖解項目之間的比較。 一般直條圖與橫條圖相當有關聯，後者會將數列顯示為一組水平橫條，而範圍直條圖則會將數列顯示為一組垂直線，其中包含各種起點與終點。 如需詳細資訊，請參閱 <<c0> [ 橫條圖&#40;報表產生器及 SSRS&#41; ](charts-report-builder-and-ssrs.md)並[範圍圖表&#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)。</c0>  
@@ -39,9 +36,9 @@ ms.locfileid: "37246189"
   
 -   **立體圓柱圖**： 其直條形狀類似立體圖表圓柱的直條圖。  
   
--   `Histogram`。 圖表會執行計算，讓其直條以常態分佈排列的直條圖。  
+-   `Histogram`. 圖表會執行計算，讓其直條以常態分佈排列的直條圖。  
   
--   `Pareto`。 其直條從高而低排列的直條圖。  
+-   `Pareto`. 其直條從高而低排列的直條圖。  
   
 ## <a name="data-considerations-for-a-column-chart"></a>直條圖的資料考量  
   

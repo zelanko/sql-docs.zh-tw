@@ -1,35 +1,29 @@
 ---
-title: 自訂呼叫順序 (SybaseToSQL) |Microsoft 文件
+title: 自訂呼叫順序 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Customizing Calls Order
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a8eb95cd6f3cf385bd349e9cec5909ace286dd9
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744516"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>自訂呼叫順序 (SybaseToSQL)
 在此步驟中，您選取要測試的物件將會在其中叫用的順序。  
   
 ## <a name="customizing-order"></a>自訂順序  
-使用按鈕放格線，內含要置於正確的順序物件的物件清單的頂端。 或者，您可以使用按鈕出現在右何時會成為選取的資料列。  
+使用按鈕放頂端方格中，要將物件放在正確的順序物件的清單。 或者，您可以使用按鈕出現在正確的何時會變成選取的資料列。  
   
 ## <a name="next-step"></a>下一個步驟  
 [完成測試案例準備&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

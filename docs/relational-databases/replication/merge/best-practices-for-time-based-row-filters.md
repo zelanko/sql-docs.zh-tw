@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c66f26fd27bd0f36161866ec0cf6e69b03bc752
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755877"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|Reception|112|2006-10-04|@shouldalert|  
+|1|Reception|112|2006-10-04|1|  
 |2|Dinner|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
@@ -89,10 +85,10 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|@shouldalert|  
-|3|Party|112|2006-10-11|@shouldalert|  
-|4|Wedding|112|2006-10-12|@shouldalert|  
+|1|Reception|112|2006-10-04|0|  
+|2|Dinner|112|2006-10-10|1|  
+|3|Party|112|2006-10-11|1|  
+|4|Wedding|112|2006-10-12|1|  
   
  下一週的事件現在會標幟為複寫準備就緒。 下次合併代理程式針對事件協調者 112 所使用的訂閱而執行時，資料列 2、3 及 4 將會下載至訂閱者，並且資料列 1 將會從訂閱者移除。  
   

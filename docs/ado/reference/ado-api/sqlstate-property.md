@@ -1,13 +1,11 @@
 ---
-title: SQLState 屬性 |Microsoft 文件
+title: SQLState 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQLState property
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97aa3d77696162e99f94876a19083ce96d5773e5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00ab80a10b2c7c411cee0fb6061467d67cfbd4a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281927"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822136"
 ---
 # <a name="sqlstate-property"></a>SQLState 屬性
 表示 SQL 狀態給定[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  
@@ -35,11 +32,11 @@ ms.locfileid: "35281927"
  傳回五字元**字串**遵循 ANSI SQL 標準，並指出錯誤的程式碼的值。  
   
 ## <a name="remarks"></a>備註  
- 使用**SQLState**讀取提供者會傳回 SQL 陳述式的處理期間發生錯誤時的五個字元的錯誤程式碼的屬性。 例如，當 Microsoft OLE DB Provider for ODBC 使用 Microsoft SQL Server 資料庫，SQL 狀態錯誤碼源自 ODBC，根據 ODBC 相關的錯誤或錯誤，是來自 Microsoft SQL Server，並接著會對應到 ODBC發生錯誤。 這些錯誤碼會記載於 ANSI SQL 標準，但可能由不同的資料來源以不同的方式實作。  
+ 使用**SQLState**讀取提供者會傳回 SQL 陳述式處理期間發生錯誤時的五個字元的錯誤程式碼的屬性。 比方說，當使用 Microsoft OLE DB Provider for ODBC，與 Microsoft SQL Server 資料庫，SQL 狀態錯誤碼源自 ODBC，根據特定 ODBC 錯誤或錯誤，源自於 Microsoft SQL Server，並接著會對應到 ODBC錯誤。 這些錯誤碼都記載於 ANSI SQL 標準，但可能由不同的資料來源以不同的方式實作。  
   
 ## <a name="applies-to"></a>適用於  
  [Error 物件](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [描述、 HelpContext、 說明檔案、 NativeError、 數字、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   

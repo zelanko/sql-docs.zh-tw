@@ -5,9 +5,7 @@ ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Write_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Write [Database Engine]
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5976050ef20e2f6d63aa6e6d121a7b05229d724
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8767ac33fc1f24f266e45d6eac45de9dcfc65e18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429748"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830277"
 ---
 # <a name="write-database-engine"></a>Write (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

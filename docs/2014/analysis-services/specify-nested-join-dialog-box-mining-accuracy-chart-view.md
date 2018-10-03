@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.specifynestedjoin.f1
 helpviewer_keywords:
 - Specify Nested Join dialog box
 ms.assetid: e6dd5c26-d6ba-4fcb-8c03-c012fea760f1
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01bbd11cc9aaf547a204935ca6f55c4927fe2bdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cab25b1e9501cf1081d0885fa2bf81a9b1065012
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051698"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>指定巢狀聯結對話方塊 (採礦精確度圖表檢視)
   [指定巢狀聯結] 對話方塊會在巢狀資料表和案例資料表之間建立關聯性。 若要開啟 [指定巢狀聯結] 對話方塊，選取巢狀資料表，然後按一下 [修改聯結]。  

@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases
 - Access databases, exporting metadata
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746446"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出 Access 清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以匯出專案中的所有存取資料庫的詳細目錄。 您可以檢閱，然後查詢庫存中繼資料，以判斷哪一個資料庫和那些要移轉的資料庫內的物件。 此清查可讓您快速尋找解答，如下所示：  

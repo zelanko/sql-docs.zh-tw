@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.executeprocedure.f1
@@ -21,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d39b6c827713e81e4b8afd838673e36d3b650bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057485"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
@@ -151,7 +149,7 @@ ms.locfileid: "37311388"
      **傳遞 Null 值**  
      傳遞 NULL 作為參數的值。  
   
-     **ReplTest1**  
+     **值**  
      呼叫程序時輸入參數的值。  
   
 5.  若要執行預存程序，請按一下 **[確定]**。  

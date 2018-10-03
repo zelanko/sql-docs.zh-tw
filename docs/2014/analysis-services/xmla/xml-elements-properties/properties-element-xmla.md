@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Properties Element
@@ -24,16 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - Properties element
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99cb1b43ad7629fd87759d5ea724e068319152b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83234d39c39ec4e52d387f074a3f2d753ef323d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054838"
 ---
 # <a name="properties-element-xmla"></a>Properties 元素 (XMLA)
   包含 XML for Analysis (XMAL) 屬性，供[Discover](../xml-elements-methods-discover.md)並[Execute](../xml-elements-methods-execute.md)方法。  
@@ -55,8 +52,8 @@ ms.locfileid: "37237228"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

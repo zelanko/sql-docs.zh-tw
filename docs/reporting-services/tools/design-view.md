@@ -4,7 +4,6 @@ ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.layoutview.f1
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9385347fde1964cab65e3ade5d40f1c39b33c744
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b419975238a2e6031a8fdc6c2ec67b608dbbcc64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277519"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752366"
 ---
 # <a name="design-view"></a>設計檢視
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表設計師中，使用 [設計] 檢視，即可排列報表中的報表項目。 [設計] 檢視有時稱為設計介面或配置檢視。  

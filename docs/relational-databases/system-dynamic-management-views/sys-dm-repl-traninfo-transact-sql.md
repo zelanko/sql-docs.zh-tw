@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_traninfo (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_repl_traninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_traninfo
@@ -18,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20a15bd329da102b45b3f611a9cbe86651ba2b3d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795026"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回每一項複寫交易或異動資料擷取交易的資訊。  
 
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|如果交易是在資料庫中，則使用點對點異動複寫進行發行。 若為 True，該值為 1；否則為 0。|  
 |**db_ver**|**int**|資料庫版本。|  
@@ -65,8 +63,8 @@ ms.lasthandoff: 05/23/2018
 |**max_cmds_in_tran**|**int**|邏輯交易中的命令數目上限，如記錄讀取器代理程式所指定。|  
 |**begin_time**|**datetime**|交易開始的時間。|  
 |**commit_time**|**datetime**|認可交易的時間。|  
-|**session_id**|**int**|異動資料擷取記錄檔掃描工作階段的識別碼。 這個資料行會對應到**session_id**中的資料行[session_id](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)。|  
-|**session_phase**|**int**|指出發生錯誤時工作階段所處階段的編號。 這個資料行會對應到**sys.dm_cdc_errors**中的資料行[sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)。|  
+|**session_id**|**int**|異動資料擷取記錄檔掃描工作階段的識別碼。 此資料行對應到**session_id**中的資料行[sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)。|  
+|**session_phase**|**int**|指出發生錯誤時工作階段所處階段的編號。 此資料行對應到**sys.dm_cdc_errors**中的資料行[sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)。|  
 |**is_known_cdc_tran**|**bit**|指出交易是由異動資料擷取所追蹤。<br /><br /> 0 = 交易複寫交易。<br /><br /> 1 = 異動資料擷取交易。|  
 |**error_count**|**int**|發生的錯誤數目。|  
   

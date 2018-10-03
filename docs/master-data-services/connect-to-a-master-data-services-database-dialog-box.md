@@ -5,24 +5,21 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.srvconnect.f1
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1fc8f606319a825855b404da45e85782ba29bc2e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ea0b09960617a8e23e69380b6a26092bae380242
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846076"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>連接到 Master Data Services 資料庫對話方塊
 
@@ -39,7 +36,7 @@ ms.locfileid: "35401460"
 ## <a name="select-database"></a>選取資料庫  
  指定資訊來連接本機或遠端 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體，以主控 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。 若要連接到遠端執行個體，它必須先啟用遠端連接。  
   
-|控制項名稱|描述|  
+|控制項名稱|Description|  
 |------------------|-----------------|  
 |**SQL Server 執行個體**|指定您想要主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 這可以是本機或遠端電腦上的預設或具名執行個體。 輸入以下項目來指定資訊：<br /><br /> 句點 (.)，可連接到您本機電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，可連接到指定之本機或遠端電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，以及連接到指定之本機或遠端電腦上具名執行個體的執行個體名稱。 使用以下格式指定這項資訊： *server_name*\\*instance_name*。|  
 |**驗證類型**|選取連接到指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時所要使用的驗證類型。 您用來連接的認證會決定顯示在 [Master Data Services 資料庫] 下拉式清單中的資料庫。<br /><br /> 驗證類型包括：<br /><br /> **目前使用者 - 整合式安全性**：使用 [整合式 Windows 驗證]，透過目前 Windows 使用者帳戶的認證來連接。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 會使用登入電腦及開啟應用程式之使用者的 Windows 認證。 您不能在應用程式中指定不同的 Windows 認證。 如果您想要使用不同的 Windows 認證來連接，您必須以該使用者的身分登入電腦，然後開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。<br /><br /> **SQL Server 帳戶**：使用 SQL Server 帳戶來連接。 當您選取這個選項時，將會啟用 [使用者名稱] 和 [密碼] 欄位，而且您必須為指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  

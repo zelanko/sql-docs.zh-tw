@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42b51f28682ea7c53b5aa6f33ac2e6aa61a121ed
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 71c4af08573f54b5a33a95f0c821dfdb81b4f0a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765588"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 
@@ -25,7 +23,7 @@ ms.locfileid: "46714956"
 
 本文說明如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)。 Linux 上的 PMEM 支援是在 SQL Server 2019 CTP 2.0 引進。
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 
 SQL Server 2016 導入靜態的 Dimm、 支援及最佳化稱為[NVDIMM-N 上的記錄檔快取結尾]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)，縮短的強化記錄緩衝區永續性儲存體所需的作業數量。 這會運用 Windows Server 能夠直接存取持續性記憶體裝置，在 DAX 的模式。
 

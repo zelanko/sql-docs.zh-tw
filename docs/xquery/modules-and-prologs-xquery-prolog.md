@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,18 +16,17 @@ helpviewer_keywords:
 - namespaces [XQuery]
 - default namespace declarations
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d496a846c49c002e77f0f8bc3bde13fad24755a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974551"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854756"
 ---
-# <a name="modules-and-prologs---xquery-prolog"></a>模組和初構-XQuery 初構
+# <a name="modules-and-prologs---xquery-prolog"></a>模組和初構 - XQuery 初構
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 查詢是由初構及主體所組成。 XQuery 初構是一系列的宣告和定義，由這二者共同建立查詢處理所需的環境。 在 SQL Server 中，XQuery 初構可以包含命名空間宣告。 XQuery 主體則由一系列的運算式所組成，可指定所想要得到的查詢結果。  

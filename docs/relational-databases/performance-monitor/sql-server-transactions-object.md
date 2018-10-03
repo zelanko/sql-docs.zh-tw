@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f28b5a581bf784f67ffdd1d90e84fb12a33c51c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3a3087a98bfd56a68313003103e92cab7eb64d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766147"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server 的 Transactions 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "32952520"
   
  下表描述 **SQLServer:Transactions** 計數器。  
   
-|SQL Server Transactions 計數器|描述|  
+|SQL Server Transactions 計數器|Description|  
 |--------------------------------------|-----------------|  
 |**Free Space in tempdb (KB)**|**tempdb**中可用的空間量 (以 KB 為單位)。 必須有足夠的可用空間，以容納快照隔離等級版本存放區和這個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中建立的所有新暫存物件。|  
 |**Longest Transaction Running Time**|自交易啟動以來的時間長度 (以秒為單位)，此交易在其他任何目前的交易中維持最久的使用狀態。 當資料庫是在讀取認可快照隔離層級之下時，此計數器只會顯示活動。 如果資料庫是在其他任何隔離等級中，則不會記錄任何活動。|  

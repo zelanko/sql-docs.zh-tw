@@ -5,9 +5,7 @@ ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 51
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: da4393aecd4371afc5a9a3cba0725b7bfa55b34c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd0df0cb932778164dfe4c97027c19e591439fd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805426"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 DBCC INPUTBUFFER 會傳回含有下列資料行的資料列集。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|事件類型。 這可能會是「RPC 事件」或「語言事件」。 如果未偵測到上一個事件，輸出將為「無事件」。|  
 |**參數**|**smallint**|0 = 文字<br /><br /> 1- *n* = 參數|  
@@ -91,7 +88,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始，請使用 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 來傳回提交至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體的相關陳述式資訊。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，需要下列其中之一：
 -   使用者必須是系統管理員 **sysadmin** 固定伺服器角色的成員。  
 -   使用者必須擁有 VIEW SERVER STATE 權限。  
