@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_SHRINKDATABASE_TSQL
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - logs [SQL Server], shrinking
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
-caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 9e2c6d0dff9606ec3e199d168ed70cd9f4a050ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34236409"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670186"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +78,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資料行。
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的資料庫識別碼。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的識別碼。|  
@@ -150,7 +147,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   結束壓縮作業。 所有已完成的工作都會保留。  
 -   不執行任何動作，並允許壓縮作業等到封鎖交易完成。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

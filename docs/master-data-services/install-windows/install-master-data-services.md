@@ -5,21 +5,18 @@ ms.date: 03/24/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 32
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7a1c9515612719a749dedd5a796a57c5d25b4d82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfb63472c5132ad37abbe8832929e10f694f84f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32894965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689406"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安裝工作
 

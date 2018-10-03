@@ -5,9 +5,7 @@ ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], permissions
 - GRANT statement, assemblies
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e703ec003d953802cf472e02872f5dc3af423a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1b1c6938730ff21e70790dddbcb20653878c53e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678976"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT 組件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

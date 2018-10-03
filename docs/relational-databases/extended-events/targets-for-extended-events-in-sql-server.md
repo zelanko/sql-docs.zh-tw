@@ -5,22 +5,19 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xevents
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 6f5eeb47852da17222c8c749bf7c83c1435ccf5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680256"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

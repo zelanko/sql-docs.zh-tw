@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
-caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: baa79f3caab1105b7cf6d7849bd5ef993d72d7f6
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706136"
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>將增強資料庫容錯移轉新增至可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ SQL Server 2016 引進名為「增強資料庫容錯移轉」的新選擇性行�
 
 增強資料庫容錯移轉可以使用 SQL Server Management Studio 或 Transact-SQL 進行設定。 PowerShell Cmdlet 目前沒有這項功能。 預設會停用增強資料庫容錯移轉。
 
-### <a name="sql-server-management-studio"></a>Transact-SQL
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 在使用 SQL Server Management Studio 建立協助工具群組期間，可以啟用增強資料庫容錯移轉。 可用性群組在建立之後的唯一停用或啟用方式是使用 Transact-SQL。
 

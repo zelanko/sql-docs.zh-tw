@@ -5,31 +5,28 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.effective_object_permissions views [Integration Services]
 - effective_object_permissions view [Integration Services]
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4e9162cdcaca28f3f5d410a423fc1fb4dc3945b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ebf6acca8381d0443abbd00a5583284e1d889465
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697576"
 ---
 # <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的所有物件顯示目前主體的有效權限。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|安全性實體物件的類型。 安全性實體物件類型包括資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。|  
 |object_id|**bigint**|物件的唯一識別碼 (ID) 或主索引鍵。|  
@@ -60,7 +57,7 @@ ms.locfileid: "35331602"
   
 -   主體在群組中的成員資格  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  使用者只可以看到本身和具有成員資格之角色的有效權限。  
   
   

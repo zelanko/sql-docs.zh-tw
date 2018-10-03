@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694497"
 ---
 # <a name="configure-distributed-availability-group"></a>設定分散式的可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "43348199"
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>建立接聽所有 IP 位址的接聽程式
 
-例如，下列指令碼會在 TCP 連接埠 5022 上建立接聽程式端點，接聽所有 IP 位址。  
+例如，下列指令碼會在 TCP 通訊埠 5022 上建立接聽程式端點，接聽所有 IP 位址。  
 
 ```sql
 CREATE ENDPOINT [aodns-hadr] 
@@ -135,7 +132,7 @@ GO
 ```  
   
 > [!NOTE]  
-> 次要可用性群組必須使用相同的資料庫鏡像端點 (在本範例中為連接埠 5022)。 否則在執行本機容錯移轉後將會停止複寫。  
+> 次要可用性群組必須使用相同的資料庫鏡像端點 (在本範例中為通訊埠 5022)。 否則在執行本機容錯移轉後將會停止複寫。  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>將次要複本聯結至次要可用性群組  
  在此範例中，系統會在次要複本 `server4`執行下列命令，以聯結 `ag2` 可用性群組。 接著會允許可用性群組在次要複本上建立資料庫，以支援直接植入。  
@@ -180,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** 會指定每個可用性群組的接聽程式，以及可用性群組的資料庫鏡像端點。 在此範例中，其為連接埠 `5022` (非用於建立接聽程式的連接埠 `60173` )。 如果您要使用負載平衡器 (例如在 Azure 中)，則請[新增分散式可用性群組連接埠的負載平衡規則](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 除了 SQL Server 執行個體連接埠之外，還需要新增接聽程式連接埠的規則。 
+>  **LISTENER_URL** 會指定每個可用性群組的接聽程式，以及可用性群組的資料庫鏡像端點。 在此範例中，其為通訊埠 `5022` (非用於建立接聽程式的通訊埠 `60173` )。 如果您要使用負載平衡器 (例如在 Azure 中)，則請[新增分散式可用性群組連接埠的負載平衡規則](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 除了 SQL Server 執行個體連接埠之外，還需要新增接聽程式連接埠的規則。 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>將分散式可用性群組加入第二個叢集  
  然後在第二個 WSFC 上聯結分散式可用性群組。  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,16 +15,15 @@ helpviewer_keywords:
 - distribution databases [SQL Server replication], viewing replicated commands
 - viewing replicated commands
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5a3c649f60f10ed966bb24d7307947c165d20bf
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d332096aee2c38f2cd16c4fa90296ef80b2b15e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701146"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>檢視散發資料庫中複寫的命令和資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2349e70ca346a28743b5161ff1d2d554b4914c44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33d2a7332bc4c096fcd53a8d37e16ff7698e89f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677767"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "32955573"
   
  下表描述 SQL Server **Databases** 計數器。  
   
-|SQL Server Databases 計數器|描述|  
+|SQL Server Databases 計數器|Description|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|資料庫的使用中交易數。|  
 |**Avg Dist From EOL/LP Request**|從每個記錄集區要求的記錄檔結尾之平均距離 (以位元組為單位)，供最後一個 VLF 中的要求之用。| 

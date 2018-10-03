@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 407716195293b4ff362019b3becf9887f3dffe82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700656"
 ---
 # <a name="integration-services-containers"></a>整合服務容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的物件，可提供結構給封裝，並提供服務給工作。 它們支援封裝中的重複控制流程，且會將工作和容器分組成有意義的工作單位。 除了工作外，容器還可包含其他容器。  
@@ -41,7 +38,7 @@ ms.locfileid: "35333272"
 ## <a name="container-types"></a>容器類型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供四種用於建立封裝的容器類型。 下表列出這些容器類型。  
   
-|容器|描述|  
+|容器|Description|  
 |---------------|-----------------|  
 |[Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)|使用列舉值重複執行控制流程。|  
 |[For 迴圈容器](../../integration-services/control-flow/for-loop-container.md)|藉由測試條件重複執行控制流程。|  
@@ -53,7 +50,7 @@ ms.locfileid: "35333272"
 ### <a name="summary-of-container-properties"></a>容器屬性摘要  
  所有容器類型都有通用的屬性集。 如果您使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的圖形工具建立封裝，[屬性] 視窗會列出下列「Foreach 迴圈」、「For 迴圈」以及「時序」容器的屬性。 工作主機容器屬性會做為設定該工作主機封裝之工作的一部分來設定。 在您設定工作時，可同時設定「工作主機」屬性。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|布林值，指出是否延遲至執行階段才驗證容器。 這個屬性的預設值為 **False**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>為止。|  
 |**說明**|容器描述。 該屬性包含字串，但可能空白。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>為止。|  

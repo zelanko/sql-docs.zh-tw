@@ -5,21 +5,18 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c9fe744ddf5bd21fc6d2fffa5c92b41e3ca935f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692186"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 

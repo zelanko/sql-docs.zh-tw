@@ -4,7 +4,6 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbeb404097ec1e90177a845daaa27b6bc2cec1f9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: af92398373dbb3ff3afe8c05263ccf692937c705
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676256"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
 

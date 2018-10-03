@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PWDENCRYPT
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - PWDENCRYPT function [Transact-SQL]
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7efafcbc18e0be56a4941076f93b63837be3db1
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: aca4425147998df6679c503436b90e208e22ea16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37780969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675426"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ PWDENCRYPT ( 'password' )
 ## <a name="return-types"></a>傳回類型  
  **varbinary(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  PWDENCRYPT 可以公開使用。  
   
 ## <a name="see-also"></a>另請參閱  

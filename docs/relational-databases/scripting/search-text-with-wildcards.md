@@ -5,8 +5,6 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.wildcards
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], wildcard searches
 - wildcard options [SQL Server Management Studio]
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef0d6c7e298e7a1bac3cbf3bb23c4d8a6189a817
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 629a79e014c6b42be4eee3c9c54e80d53fb524d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683036"
 ---
 # <a name="search-text-with-wildcards"></a>使用萬用字元搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

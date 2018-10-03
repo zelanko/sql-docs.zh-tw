@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 407c435fab3fc1dc43ddb2eddccf1a81ba15dcc9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f3a47492ab278ec37480eb3e533803626e94fff9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687386"
 ---
 # <a name="edit-instance-properties"></a>編輯執行個體屬性
   使用屬性編輯器，在您建立初始組態之後變更 CDC 執行個體。 您可以在屬性編輯器中執行以下動作。  

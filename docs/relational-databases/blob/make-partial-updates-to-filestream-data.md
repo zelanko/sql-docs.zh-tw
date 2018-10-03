@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT
 - FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT
 ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23bd3b82da83b466a137eaba15da2e1998df4ca3
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: f088dec7234ccbd3dea1843908614fb7d3c9e61d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690516"
 ---
 # <a name="make-partial-updates-to-filestream-data"></a>對 FILESTREAM 資料進行部分更新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

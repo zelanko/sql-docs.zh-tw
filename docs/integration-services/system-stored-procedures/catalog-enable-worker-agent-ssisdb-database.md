@@ -5,21 +5,18 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f455f6acafbc80efc1b88c5e71a5d14fcc7610c7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4e239856f74d9b4ad7f13b9a10eaeb3b3daba259
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700296"
 ---
 # <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +49,9 @@ GO
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
   
 -   **ssis_admin** 資料庫角色的成員資格  

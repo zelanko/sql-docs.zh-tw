@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 9749469dcec6b15c25f8c517d27b0817ba21c893
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a35437442460a8f987921f17da26e40d67f02a8e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685576"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server 的 Batch Resp Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951663"
 下表說明 SQL Server **Batch Resp Statistics** 效能物件。
 
 
-|**SQL Server Batch Resp Statistics 計數器**|描述|  
+|**SQL Server Batch Resp Statistics 計數器**|Description|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|回應時間大於或等於 0 毫秒但小於 1 毫秒的 SQL 批次數目|
 |**Batches >=000001ms & \<000002ms**|回應時間大於或等於 1 毫秒但小於 2 毫秒的 SQL 批次數目|
@@ -54,7 +50,7 @@ ms.locfileid: "32951663"
 
 物件中的每個計數器均包含下列執行個體：  
   
-|項目|描述|  
+|項目|Description|  
 |----------|-----------------|  
 |**CPU Time:Requests**|CPU 花費在要求上的時間。|  
 |**CPU Time:Total(ms)**|CPU 花費在批次上的時間總計。|  

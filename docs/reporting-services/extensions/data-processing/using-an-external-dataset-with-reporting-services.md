@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8963d289b2d99e494fb53a9f42d23fc38fb2a038
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c8a2e36f2a897be3c9ea7f37077ae5e947ace9bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685306"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>透過 Reporting Services 使用外部資料集
   **DataSet** 物件是支援 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 已中斷連線之分散式資料案例的關鍵。 **DataSet** 物件是常駐記憶體的資料表示，可提供與資料來源無關的一致性關聯式程式設計模型。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **DataSet** 物件表示一組完整的資料，包括相關資料表、條件約束及資料表間的關聯性。 因為 **DataSet** 物件具有儲存和公開資料的多樣性，所以通常會在報告您的資料之前，先將該資料處理和轉換成 **DataSet** 物件。  
