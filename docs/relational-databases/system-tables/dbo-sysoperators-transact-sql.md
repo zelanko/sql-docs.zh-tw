@@ -1,14 +1,11 @@
 ---
-title: dbo.sysoperators (TRANSACT-SQL) |Microsoft 文件
+title: dbo.sysoperators (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysoperators
@@ -20,27 +17,26 @@ dev_langs:
 helpviewer_keywords:
 - sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a19301b897480e71fbaf62d502709e082d57da05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3796714cbdfb55900447bf23904136ac5abefa9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678913"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員，各包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作員的識別碼。|  
 |**name**|**sysname**|操作員的名稱。|  
-|**enabled**|**tinyint**|警示通知的狀態 (布林)。 如果**1**，這個運算子可以在發生警示時收到通知。|  
+|**enabled**|**tinyint**|警示通知的狀態 (布林)。 如果**1**，發生警示時，這位操作員可以收到通知。|  
 |**email_address**|**nvarchar(100)**|這位操作員的電子郵件地址。|  
 |**last_email_date**|**int**|這位操作員前次收到電子郵件警示通知的日期。|  
 |**last_email_time**|**int**|這位操作員前次收到電子郵件警示通知的日期時間。|  

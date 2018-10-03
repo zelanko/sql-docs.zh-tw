@@ -1,31 +1,28 @@
 ---
-title: 繫結資料行 |Microsoft 文件
+title: 繫結資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b78a87884e075e4cbe3dcb914335994aba2e4159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035e525116622a3c55e50547958b86fc2ee9bdb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678356"
 ---
 # <a name="binding-columns"></a>繫結資料行
-從資料來源提取的資料會傳回到應用程式已配置給此用途的變數中的應用程式。 作法是，應用程式必須產生關聯，或*繫結*，設定這些變數的結果資料行; 在概念上，此程序與應用程式變數繫結至陳述式參數相同。 當應用程式繫結至變數的結果集資料行時，它描述該變數，地址、 資料類型等 — 驅動程式。 驅動程式會將此資訊儲存在結構中，它會維持為該陳述式，並使用的資訊來從資料行傳回的值，在擷取資料列。  
+從資料來源提取的資料會傳回在變數中，針對此目的已配置的應用程式的應用程式。 這可以完成之前，必須建立應用程式的關聯，或*繫結*，設定這些變數的結果資料行; 就概念而言，此程序等同於應用程式變數繫結至陳述式參數。 當應用程式繫結至變數的結果集資料行，它會描述該變數，地址、 資料類型等等 — 驅動程式。 驅動程式會將此資訊儲存在結構中，它會維護該陳述式，並在擷取資料列，從資料行傳回值使用的資訊。  
   
  此章節包含下列主題。  
   

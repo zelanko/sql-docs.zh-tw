@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 21a9ede5ef83169d312bb59e84bfd3f33619dafb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099028"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服務 URL (SSRS 原生模式)
   使用 [Web 服務 URL] 頁面可設定或修改用來存取報表伺服器的 URL。 將會根據您指定的 URL 來建立 *「URL 保留項目」* 。 此 URL 保留項目會針對後續可用來存取報表伺服器 Web 服務的所有 URL 來定義語法和規則。 它會針對此報表伺服器 Web 服務指定前置詞、主機、通訊埠和虛擬目錄。 根據您指定主機的方式而定，單一保留項目可能會有多個 URL。 主機的預設值會指定強式萬用字元， 強式萬用字元可讓您在 URL 中指定任何可解析為主控報表伺服器之電腦的主機名稱。 如需有關 URL 組態和保留的詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)並[設定報表伺服器 Url &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

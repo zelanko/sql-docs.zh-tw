@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.reportserver.f1
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
-caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0e97f33382a5d61c6b8941fd51fbd23c5d1ed21
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063408"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>新增或編輯伺服器註冊 (一般索引標籤) (Reporting Services)
   當您註冊 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  

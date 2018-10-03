@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a64b07754533a5916fbf3a4e860d9cbcfceee721
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 208687bdc243b596b4b47d1696fdcea472552af3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419777"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115098"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**用來擷取結果集資料，而不繫結資料行的值。 **SQLGetData**可以在呼叫相同的資料行，即可擷取大量資料的資料行從**文字**， **ntext**，或**映像**資料型別。  

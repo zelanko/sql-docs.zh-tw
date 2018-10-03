@@ -1,14 +1,11 @@
 ---
-title: 'sys.xml_schema_namespaces: (TRANSACT-SQL) |Microsoft 文件'
+title: sys.xml_schema_namespaces (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.xml_schema_namespaces_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_namespaces catalog view
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d5cbc117bdaf684e9240f676a77a1f18486065
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 21fe5b26035bc07f81e8112e530588230e34b168
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794196"
 ---
 # <a name="sysxmlschemanamespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對每一個 XSD 定義的 XML 命名空間，各傳回一個資料列。 下列 tuple 是唯一： **collection_id**， **namespace_id**，和**collection_id**，和**名稱**。  
+  針對每一個 XSD 定義的 XML 命名空間，各傳回一個資料列。 下列 tuple 是唯一： **collection_id**， **namespace_id**，並**collection_id**，以及**名稱**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|含有這個命名空間的 XML 結構描述集合識別碼。|  
 |**name**|**nvarchar(4000)**|XML 命名空間的名稱。 空白**名稱**表示沒有目標命名空間。|  
@@ -47,6 +43,6 @@ ms.locfileid: "33221429"
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML 結構描述&#40;XML 類型系統&#41;目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [XML 結構描述&#40;XML 型別系統&#41;目錄檢視&#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

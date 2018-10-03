@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Scan:Started event class
 ms.assetid: 9a0cc475-e6ee-430c-975c-73716d81d563
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 52a0f0c978990bf4e602e0944d4e8f55fad920c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 239943941ed2c260253a6d3c155d500b1285eeef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109458"
 ---
 # <a name="scanstarted-event-class"></a>Scan:Started 事件類別
   啟動資料表或索引掃描時，會發生 Scan:Started 事件類別。  

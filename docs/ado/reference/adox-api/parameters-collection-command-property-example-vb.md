@@ -1,31 +1,28 @@
 ---
-title: 參數集合中，命令屬性範例 (VB) |Microsoft 文件
+title: Parameters 集合、 Command 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38b389c04a6f9c4842c700aac0d87e14299ed31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826780"
 ---
-# <a name="parameters-collection-command-property-example-vb"></a>參數集合中，命令屬性範例 (VB)
+# <a name="parameters-collection-command-property-example-vb"></a>Parameters 集合、Command 屬性範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)擷取程序的參數資訊的物件。  
   
 ```  
@@ -81,7 +78,7 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command 屬性 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

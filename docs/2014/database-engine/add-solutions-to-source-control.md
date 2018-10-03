@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding solutions
 - solutions [SQL Server Management Studio], adding
 ms.assetid: b9e36569-616d-4e47-9140-0978a9bfe923
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f54908047eab75e80719d9afc51ca1d04a0c49c6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120535"
 ---
 # <a name="add-solutions-to-source-control"></a>將方案加入原始檔控制
   當您將方案加入原始檔控制中，您通常會想加入整個方案及其包含的所有專案。 您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，將方案加入原始檔控制中。  

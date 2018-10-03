@@ -1,14 +1,11 @@
 ---
-title: sp_manage_jobs_by_login (TRANSACT-SQL) |Microsoft 文件
+title: sp_manage_jobs_by_login (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59f79ac7f0dfa72be2f63d0c3e711969f92ea93d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742436"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +44,19 @@ sp_manage_jobs_by_login
   
 ## <a name="arguments"></a>引數  
  [  **@action=** ] **'***動作***'**  
- 針對指定登入所採取的動作。 *動作*是**varchar （10)**，沒有預設值。 當*動作*是**刪除**， **sp_manage_jobs_by_login**刪除所擁有的所有工作*current_owner_login_name*。 當*動作*是**重新指派**，所有作業都會都指派給*new_owner_login_name*。  
+ 針對指定登入所採取的動作。 *動作*已**varchar(10)**，沒有預設值。 當*動作*是**刪除**， **sp_manage_jobs_by_login**所擁有的所有作業會都刪除*current_owner_login_name*。 當*動作*是**重新指派**，所有作業都會都指派給*new_owner_login_name*。  
   
  [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- 目前作業擁有者的登入名稱。 *current_owner_login_name*是**sysname**，沒有預設值。  
+ 目前作業擁有者的登入名稱。 *current_owner_login_name*已**sysname**，沒有預設值。  
   
  [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- 新作業擁有者的登入名稱。 使用此參數只有當*動作*是**重新指派**。 *new_owner_login_name*是**sysname**，預設值是 NULL。  
+ 新作業擁有者的登入名稱。 使用此參數才*動作*是**重新指派**。 *new_owner_login_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="permissions"></a>Permissions  
  若要執行這個預存程序，使用者必須授與**sysadmin**固定的伺服器角色。  
@@ -80,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

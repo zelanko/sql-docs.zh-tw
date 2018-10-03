@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
-caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 77a51ea896e6880ba373042b8201c55e5dec26eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6f8fc7193539ab411ea81bdfa6621e5c480029a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091058"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>第 1 課：視需要評估最佳做法
   您可以使用原則評估的視需要 (或「特定」) 方法快速評估最佳作法原則，以判斷 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體是否符合最佳作法指導方針與建議。  

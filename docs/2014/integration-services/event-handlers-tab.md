@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-caps.latest.revision: 21
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83fb3a3e736e91b1c47fa3dffff5bbe9bfa4a940
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a258c768f46e2310095c6aadc0c57c65cea2bac6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131138"
 ---
 # <a name="event-handlers-tab"></a>事件處理常式索引標籤
   使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [事件處理常式] 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。 執行事件處理常式以回應封裝所引發的事件，或回應封裝中的工作或容器所引發生的事件。  

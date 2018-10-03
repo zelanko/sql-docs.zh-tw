@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.aggregationdesignwizard.reviewusage.f1
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c0027b2bceada8bfe84f0ee835395dd62686d16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10968a24c858f2523ff8b816bf153b9dc5dc2a8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113488"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>檢閱彙總使用方式 (彙總設計精靈)
   使用 **[檢閱彙總使用方式]** 頁面，即可設定彙總使用方式設定。  

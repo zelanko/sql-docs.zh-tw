@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
 - Analysis Services Data Mining Wizard
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d309e9ce8d0ccfd48402be1bf6ce8f3f2ff2c3f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099228"
 ---
 # <a name="data-mining-wizards"></a>資料採礦精靈
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供精靈以用於[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  

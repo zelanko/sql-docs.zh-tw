@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_upload_collection_set (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_upload_collection_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_upload_collection_set
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_upload_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 081a5eccfdec4ea8582efb00f6c5f2e74e7f510e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9017209ef2e4b500ee6a90e14830b520ed2a588d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249650"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780897"
 ---
 # <a name="spsyscollectoruploadcollectionset-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +46,16 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
   
 ## <a name="arguments"></a>引數  
  [ **@collection_set_id =** ] *collection_set_id*  
- 這是收集組的唯一本機識別碼。 *collection_set_id*是**int**而且必須具有值，如果*名稱*是 NULL。  
+ 這是收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**而且必須具有值，如果*名稱*是 NULL。  
   
  [ **@name =** ] **'***name***'**  
- 這是收集組的名稱。 *名稱*是**sysname**而且必須具有值，如果*collection_set_id*是 NULL。  
+ 這是收集組的名稱。 *名稱*已**sysname**而且必須具有值，如果*collection_set_id&lt*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- 任一*collection_set_id*或*名稱*必須具有值，不能同時為 NULL。  
+ 任一*collection_set_id&lt*或是*名稱*必須具有值，兩者都不能是 NULL。  
   
  這個程序可用於針對執行中的收集組啟動視需要的上傳。 它只能用於已設定快取模式資料收集和上傳的收集組。 如此可讓使用者取得要分析的資料，而不需要等候排定的上傳。  
   
@@ -77,6 +73,6 @@ EXEC sp_syscollector_upload_collection_set @name = 'Simple Collection Set' ;
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [資料收集](../../relational-databases/data-collection/data-collection.md)  
+ [[資料收集]](../../relational-databases/data-collection/data-collection.md)  
   
   

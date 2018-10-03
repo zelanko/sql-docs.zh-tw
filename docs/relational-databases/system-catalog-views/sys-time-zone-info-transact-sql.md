@@ -4,16 +4,9 @@ ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- Azure SQL Database
-- SQL Data Warehouse
-- SQL Server (starting with 2016)
 f1_keywords:
 - sys.time_zone_info
 - sys.time_zone_info_TSQL
@@ -22,23 +15,22 @@ f1_keywords:
 helpviewer_keywords:
 - sys.time_zone_info system table
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c1ab416ba44167a181f9ee34d46f6da9f091e73
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 595a6bdbe9dae11bcc30600d7826e7083387fa11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099797"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856545"
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2014-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-asdw-xxx-md.md)]
 
   傳回支援的時區資訊。 在電腦上安裝所有的時區會儲存在下列登錄區：  
-`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`。  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085720"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106728"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -1046,7 +1043,7 @@ ms.locfileid: "39085720"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|這個緩衝區已經被遺棄。 緩衝區管理員已關閉，留下尚未處理完畢的緩衝區，將不會清除緩衝區。 可能會發生記憶體遺漏或其他問題。|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|嘗試尋找名稱為 "%1" 的輸入資料行失敗，錯誤碼為 0x%2!8.8X!。 在輸入資料行集合中找不到指定的輸入資料行。|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|嘗試尋找歷程識別碼為 %1!d! 的輸入資料行失敗，錯誤碼為 0x%2!8.8X! 。 在輸入資料行集合中找不到此輸入資料行。|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|運算式包含無法辨識的 Token "%1"。 如果 "%1" 是變數，則必須以 "\@%1" 表示。 指定的 Token 無效。 如果權杖是變數的名稱，它應該在前面加上\@符號。|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|運算式包含無法辨識的 Token "%1"。 如果 "%1" 是變數，則必須以 "\@%1" 表示。 指定的 Token 無效。 如果 Token 要作為變數名稱，則必須以 \@ 符號為前置詞。|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|運算式包含無法辨識的 Token "#%1!d!"。|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|在 Variables 集合中找不到變數 "%1"。 變數可能不存在於正確的範圍中。|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|嘗試剖析運算式 "%1" 失敗。 運算式可能包含無效 Token、不完整的 Token 或無效元素， 可能是格式不正確，或遺漏部分必要元素，例如括號。|  
@@ -1093,7 +1090,7 @@ ms.locfileid: "39085720"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|元件 "%1" 無法快取執行階段物件參考追蹤程式集合，傳回錯誤碼 0x%2!8.8X!。|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|多個輸入資料行的名稱為 "%1"。 所要的輸入資料行必須唯一指定為 [Component Name].[%2]，或以歷程識別碼來參考。 目前，指定的輸入資料行存在於一個以上的元件中。|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|尋找名稱為 "[%1].[%2]" 的輸入資料行失敗，錯誤碼為 0x%3!8.8X!。 在輸入資料行集合中找不到此輸入資料行。|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|多個變數的名稱為 "%1"。 所要的變數必須唯一地指定為\@[namespace::%2]。 此變數存在於一個以上的命名空間中。|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|多個變數的名稱為 "%1"。 所要的變數必須唯一指定為 \@[Namespace::%2]。 此變數存在於一個以上的命名空間中。|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|資料流程引擎排程器無法縮減管線的執行計畫。 請將 OptimizedMode 屬性設定為 false。|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|函數 SQRT 無法用於負值，而且負值已傳遞至 SQRT 函數。|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|函數 LN 無法用於零或負值，而且零或負值已傳遞至 LN 函數。|  
@@ -1226,7 +1223,7 @@ ms.locfileid: "39085720"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|運算式包含非預期的等號 (=)。 當需要雙等號時 (==)，通常會發生這個錯誤。|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|指定了模糊不清的輸入資料行名稱。  資料行必須指定為 [Component Name].[Column Name] 或以歷程識別碼來參考。 當輸入資料行存在於一個以上的元件中時，就會發生這個錯誤，必須以其他元件名稱或歷程識別碼來區別。|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|在運算式中發現預留位置函數參數或運算元。 應該以實際參數或運算元取代。|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定了模稜兩可的變數名稱。 所要的變數必須指定為\@[namespace:: variable]。 當變數存在於一個以上的命名空間中時，就會發生這個錯誤。|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定了模稜兩可的變數名稱。 所要的變數必須指定為 \@[Namespace::Variable]。 當變數存在於一個以上的命名空間中時，就會發生這個錯誤。|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|對二進位運算的運算元而言，僅輸入資料行和轉換運算才支援資料類型 DT_STR。 非輸入資料行或轉換結果的 DT_STR 運算元，不能用於二進位運算。 若要執行此運算，必須使用轉換運算子，明確轉換運算元。|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|對條件運算子的運算元而言，僅輸入資料行和轉換運算才支援資料類型 DT_STR。 非輸入資料行或轉換結果的 DT_STR 運算元，不能用於條件運算。 若要執行此運算，必須使用轉換運算子，明確轉換運算元。|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|函數 FINDSTRING 的發生計數參數無效。 這個參數必須大於零。|  

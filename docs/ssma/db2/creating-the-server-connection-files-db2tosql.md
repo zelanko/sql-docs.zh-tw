@@ -1,30 +1,24 @@
 ---
-title: 建立伺服器連接檔案 (DB2ToSQL) |Microsoft 文件
+title: 建立伺服器連線檔案 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2502461d8f2f27a217cf03bcdbabb2d0aaf1d4f6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0a946e45efb35b3df9aaa111c2c2e3c372f6ee53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744986"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>建立伺服器連接檔案 (DB2ToSQL)
-指令碼檔案的 [伺服器] 區段中或在不同的伺服器連接檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果指令碼檔案和伺服器連接檔案中存在相同的伺服器識別碼，則會被視為指令碼檔案中的伺服器定義。  
+# <a name="creating-the-server-connection-files-db2tosql"></a>建立伺服器連線檔案 (DB2ToSQL)
+伺服器一節的指令碼檔案或不同的伺服器連線檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果存在於指令碼檔案與伺服器連線檔案相同的伺服器識別碼，則會視為在指令碼檔案中的伺服器定義。  
   
 **範例： 1**  
   
@@ -81,7 +75,7 @@ ms.locfileid: "34774574"
 ```  
   
 ## <a name="next-step"></a>下一個步驟  
-在操作主控台的下一個步驟是[執行 SSMA 主控台&#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+操作主控台的下一個步驟是[執行 SSMA 主控台&#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SSMA 主控台](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

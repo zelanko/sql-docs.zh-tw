@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24bd96137bc8edf7a64f777fc65c66a3a9d2e5f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 171c6e7893aa30a1fbdc6ed0c836ba0d1f8323c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128448"
 ---
 # <a name="uninstall-sql-server-2014"></a>解除安裝 SQL Server 2014
   遵循以下的主題完整地解除安裝現存的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，並將系統準備好可重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

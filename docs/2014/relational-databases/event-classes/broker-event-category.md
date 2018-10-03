@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Broker event category [SQL Server]
 - event classes [SQL Server], Broker event category
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da45f076ba427f2a0c69b7cf1a335049ce885e24
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db73daadcb32a64d308b4f223be133cd5de4bb9f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101558"
 ---
 # <a name="broker-event-category"></a>Broker 事件類別目錄
   **Broker** 事件類別目錄包含一般的 Service Broker 事件。  

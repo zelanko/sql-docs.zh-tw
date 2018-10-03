@@ -1,12 +1,10 @@
 ---
-title: '使用 irow:: Getcolumns 和 ISequentialStream 提取 BLOB 資料 |Microsoft Docs'
+title: 使用 IRow::GetColumns 和 ISequentialStream 擷取 BLOB 資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -14,19 +12,18 @@ helpviewer_keywords:
 - GetColumns method
 - BLOBs, fetching
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 566b843be0535cca2c5623cf23cb6595c030c155
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095841"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 資料
-  下列函式會使用**irow:: Getcolumns**並**ISequentialStream**來提取大型資料：  
+  下列函式會使用 **IRow::GetColumns** 和 **ISequentialStream** 來提取大型資料：  
   
 ```  
 void InitializeAndExecuteCommand()  

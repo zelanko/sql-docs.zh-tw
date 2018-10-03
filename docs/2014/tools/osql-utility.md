@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123700"
 ---
 # <a name="osql-utility"></a>osql 公用程式
   **osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  

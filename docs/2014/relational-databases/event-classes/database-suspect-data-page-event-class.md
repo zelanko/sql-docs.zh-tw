@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67265ee31ebf9f9a013546ccac631c2cd53f373
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50ee8a83c87ec6f2b14ac07caa77774b7a7c2d15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137900"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件類別
   **Database Suspect Data Page** 事件類別指出何時要將頁面加入 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 中的 [suspect_pages](../databases/msdb-database.md)資料表。 請在監視可疑頁面出現的追蹤中包含此事件類別。  

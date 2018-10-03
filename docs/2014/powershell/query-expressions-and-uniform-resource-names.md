@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4cb5529ad750a72fa2572edd62b6b63c20867e7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083960"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135738"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查詢運算式和統一的資源名稱
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元會使用與 XPath 運算式類似的兩種運算式字串類型。 查詢運算式是字串，其中指定一組用來列舉物件模型階層中之一個或多個物件的準則。 統一資源名稱 (URN) 是可唯一識別單一物件的特定查詢運算式字串類型。  
@@ -68,7 +65,7 @@ ms.locfileid: "39083960"
  例如，您可以指定 Server 來代表 **ServerCollection** 類別，或指定 Database 來代表 **DatabaseCollection** 類別。  
   
  \@*PropertyName*  
- 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須加上\@字元。 例如，指定\@針對 IsAnsiNull**資料庫**類別屬性**IsAnsiNull**。  
+ 指定與 *Object*中指定物件相關聯之類別的其中一個屬性名稱。 屬性的名稱必須以 \@ 字元當作前置詞。 例如，您可以指定 \@IsAnsiNull 來代表 **Database** 類別屬性 **IsAnsiNull**。  
   
  \@*BooleanPropertyName*=true()  
  列舉指定之布林屬性設定為 TRUE 的所有物件。  
@@ -76,7 +73,7 @@ ms.locfileid: "39083960"
  \@*BooleanPropertyName*=false()  
  列舉指定之布林屬性設定為 FALSE 的所有物件。  
   
- 包含 (\@*StringPropertyName*，'*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  列舉指定之字串屬性包含至少一個 '*PatternString*' 中指定之字元集的所有物件。  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -97,11 +94,11 @@ ms.locfileid: "39083960"
   
  您可以針對儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的任何日期格式，評估使用這種格式所指定的日期。  
   
- is_null (\@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  列舉指定之屬性具有 NULL 值的所有物件。  
   
  not(\<*PropertyExpression*>)  
- 執行 *PropertyExpression*評估值的否定運算，並且列舉不符合 *PropertyExpression*中指定之條件的所有物件。 比方說，不 (包含 (\@名稱，'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
+ 執行 *PropertyExpression*評估值的否定運算，並且列舉不符合 *PropertyExpression*中指定之條件的所有物件。 例如，not(contains(\@Name, 'xyz')) 會列舉名稱中沒有 xyz 字串的所有物件。  
   
 ## <a name="remarks"></a>備註  
  查詢運算式是列舉 SMO 模型階層中之節點的字串。 每個節點都具有指定準則的篩選運算式，用於決定要列舉位於該節點的哪些物件。 查詢運算式是以 XPath 運算式語言建立模型。 查詢運算式會實作 XPath 所支援之運算式的小型子集，而且也具有在 XPath 中找不到的某些延伸模組。 XPath 運算式是字串，其中指定一組用來列舉 XML 文件之一個或多個標記的準則。 如需有關 XPath 的詳細資訊，請參閱 [W3C XPath Language](http://www.w3.org/TR/xpath20/)(W3C XPath 語言)。  

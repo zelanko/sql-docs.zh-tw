@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - nested tables
 - tutorials [Data Mining]
 ms.assetid: 651eef38-772e-4d97-af51-075b1b27fc5a
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c03f8b54859a960479d78f1d0de7a0a30836347
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f31a323320487623339170043112fceb7ba65d3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255120"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109418"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>第 3 課：建立購物籃狀況 (中繼資料採礦教學課程)
   行銷部門[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]想改進公司網站，升級交叉銷售。 在更新網站時，他們想要能夠根據客戶線上購物籃中的其他產品來預測客戶可能會想購買的產品。 行銷部門也想要更了解客戶的購買行為，讓他們可以設計網站，將客戶想要同時購買的項目放在一起。 他們了解到資料採礦對於此種類型的 *「購物籃分析」* (Market Basket Analysis) 特別實用，要求您開發資料採礦模型。  

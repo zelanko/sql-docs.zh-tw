@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CalendarLanguage Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bcdf5c3f0955a3adb8994217eb10f3fd9447863
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c162d3b408949cfad542095f09bc94bdec4924bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126568"
 ---
 # <a name="calendarlanguage-element-assl"></a>CalendarLanguage 元素 (ASSL)
   定義所使用的日曆語言[TimeBinding](../data-type/binding-data-type-assl.md)項目。  
@@ -59,7 +56,7 @@ ms.locfileid: "37241378"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[TimeBinding](../data-type/binding-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這是建立維度成員名稱所使用的語言。 您應該使用整數式 LCID 代碼來定義標題的語言。 例如，預設值就代表美式英文 LCID。  

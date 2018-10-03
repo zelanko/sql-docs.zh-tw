@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - InvalidXmlCharacters Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - InvalidXmlCharacters element
 ms.assetid: 92b1210c-1075-4f2f-a2c4-dfdc6d7e5c05
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a3735beb602045bc4789d716bdf1cb5968af06f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0832f4138adc3f278af0d735b70251590fb3ba41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059634"
 ---
 # <a name="invalidxmlcharacters-element-assl"></a>InvalidXmlCharacters 元素 (ASSL)
   指定來源資料中無效 XML 字元的處理方法。  
@@ -59,7 +56,7 @@ ms.locfileid: "37229668"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

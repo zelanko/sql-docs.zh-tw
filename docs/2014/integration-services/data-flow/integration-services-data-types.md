@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265340"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129458"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
   當資料輸入封裝中的資料流程時，擷取資料的來源會將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 數值資料會指派為數值資料類型、字串資料指派為字元資料類型，而日期則是指派為日期資料類型。 其他資料，例如 GUID 和「二進位大型物件區塊 (BLOB)」也都會被指派適當的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如果資料的資料類型不能轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，則會發生錯誤。  
@@ -38,7 +35,7 @@ ms.locfileid: "37265340"
   
 |資料類型|描述|  
 |---------------|-----------------|  
-|DT_BOOL|布林值。|  
+|DT_BOOL|布林值 (Boolean)。|  
 |DT_BYTES|二進位資料值。 長度是變數，且最大長度為 8,000 個位元組。|  
 |DT_CY|貨幣值。 此資料類型是 8 位元且小數位數為 4 的帶正負號的整數，最大有效位數為 19。|  
 |DT_DATE|包含年、月、日、小時、分鐘、秒和小數秒的日期結構。  小數秒的固定有效位數為 7 位數字。<br /><br /> DT_DATE 資料類型需使用 8 位元組的浮點數加以實作。 日期是以累進整數來表示，從 1899 年 12 月 30 日開始，並以午夜做為零時。 小時值則以小數點後數字部分的絕對值來表示。 不過，浮點值不能代表所有實數值；因此，DT_DATE 可以呈現的日期範圍便有所限制。<br /><br /> 另一方面，DT_DBTIMESTAMP 是以內部包含年、月、日、時、分、秒及毫秒等個別欄位的結構來表示， 而且這種資料類型所能呈現的日期範圍具有較寬的限制。|  
@@ -64,7 +61,7 @@ ms.locfileid: "37265340"
 |DT_UI4|四位元組不帶正負號的整數。|  
 |DT_UI8|八位元組不帶正負號的整數。|  
 |DT_WSTR|最大長度為 4000 字元，以 Null 終止的 Unicode 字元字串。 如果資料行值包含額外的 Null 結束字元，字串就會在第一個 Null 出現時被截斷。|  
-|DT_IMAGE|大小上限為 2 的二進位值<sup>31</sup>-1 (2,147,483,647) 個位元組。 執行個體時提供 SQL Server 登入。|  
+|DT_IMAGE|大小上限為 2 的二進位值<sup>31</sup>-1 (2,147,483,647) 個位元組。 .|  
 |DT_NTEXT|最大長度為 2 的 Unicode 字元字串<sup>30</sup> -1 (1,073,741,823) 個字元。|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 字元字串的最大長度為 2<sup>31</sup>-1 (2,147,483,647) 個字元。|  
   

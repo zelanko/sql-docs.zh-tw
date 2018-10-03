@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IgnoreUnrelatedDimensions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - IgnoreUnrelatedDimensions element
 ms.assetid: c7d7a1cd-a8e0-4ae7-9464-a1d2a55a86ab
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c278a3109180dbd058bc7ed8212c7b05782ce3d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 400a1ef9f55d5696e2bbaeabbdd4a109c7a13587
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099338"
 ---
 # <a name="ignoreunrelateddimensions-element-assl"></a>IgnoreUnrelatedDimensions 元素 (ASSL)
   決定當查詢中包含與量值群組不相關的維度成員時，是否將不相關的維度強制在其最上層。  
@@ -59,7 +56,7 @@ ms.locfileid: "37295458"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MeasureGroup](../objects/group-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  當 `IgnoreUnrelatedDimensions` 為 `true` 時，系統就會將不相關的維度強制在其最上層。當此值為 `false` 時，系統不會將維度強制在其最上層。 這個屬性是以多維度運算式 (MDX) 類似[ValidMeasure](/sql/mdx/validmeasure-mdx)函式。  

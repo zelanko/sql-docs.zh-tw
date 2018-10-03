@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.exportpackage.f1
 helpviewer_keywords:
 - Export Package dialog box
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bb36260542709ad9c1776f8bd7f00ae037fa039
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90a098ce2c4ea006f33eb01034136bd92e7fe0b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116728"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
   使用 **[匯出封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中存取)，即可匯出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝到不同的位置，並選擇性地修改封裝的保護等級。  
@@ -32,7 +29,7 @@ ms.locfileid: "37269337"
  **封裝位置**  
  選取要用來儲存所匯出之封裝的儲存體類型。 下列是可以使用的選項：  
   
- **[SQL Server]**  
+ **SQL Server**  
   
  **[File System]**  
   

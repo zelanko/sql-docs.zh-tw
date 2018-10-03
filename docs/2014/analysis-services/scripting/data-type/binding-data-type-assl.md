@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Binding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Binding data type
 ms.assetid: 0a777219-b885-4961-ac66-b76faeb520db
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a34209ea08d1cdfd0100bd5e2402edc0f592f066
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e46d48f94035a59c54a3e9bb9c8ccb087226660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135898"
 ---
 # <a name="binding-data-type-assl"></a>Binding 資料類型 (ASSL)
   定義代表兩個物件之間相依關聯性的抽象基本資料類型，其中某個物件的資料或中繼資料相依於繫結物件的資料或中繼資料。  
@@ -46,16 +43,16 @@ ms.locfileid: "37169539"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
+|基底資料類型|None|  
 |衍生資料類型|[AttributeBinding](binding-data-type-assl.md)， [ColumnBinding](columnbinding-data-type-assl.md)， [CubeAttributeBinding](cubeattributebinding-data-type-assl.md)， [CubeDimensionBinding](dimensionbinding-data-type-assl.md)， [DataSourceViewBinding](datasourceviewbinding-data-type-assl.md)， [DimensionBinding](dimensionbinding-data-type-assl.md)， [InheritedBinding](inheritedbinding-data-type-assl.md)， [MeasureBinding](measurebinding-data-type-assl.md)， [MeasureGroupBinding](measuregroupbinding-data-type-assl.md)， [MeasureGroupDimensionBinding](measuregroupdimensionbinding-data-type-assl.md)， [ProactiveCachingBinding](proactivecachingbinding-data-type-assl.md)， [RowBinding](rowbinding-data-type-assl.md)， [TabularBinding](tabularbinding-data-type-assl.md)， [TimeAttributeBinding](timeattributebinding-data-type-assl.md)， [TimeBinding](timebinding-data-type-assl.md)， [UserDefinedGroupBinding](userdefinedgroupbinding-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
-|子元素|無|  
-|衍生的元素|無|  
+|父元素|None|  
+|子元素|None|  
+|衍生的元素|None|  
   
 ## <a name="remarks"></a>備註  
  在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Binding>。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074898"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查詢和篩選 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   Cube 設計師中的 [瀏覽器] 索引標籤區域包含查詢和篩選區域，以協助您從 Cube 選擇用於瀏覽或查詢的資料。 您可以加入所需的 Cube 物件數，然後在資料區域中檢視結果，或者使用 [在 Excel 中進行分析] 將結果匯出至報表，以視覺化使用者檢使用者使用者檢視資料的方式。  
@@ -38,7 +35,7 @@ ms.locfileid: "37250970"
  **Hierarchy**  
  選取要配量 Subcube 的階層。  
   
- **[運算子]**  
+ **運算子**  
  選取運算子，定義 [篩選運算式] 中的運算式如何套用至所選取階層。 下表描述可用的運算子。  
   
 |值|描述|  

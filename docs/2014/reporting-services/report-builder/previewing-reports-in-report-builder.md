@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6bb76e6e17562ae1ed16acba6a63f17d665ca05b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16a1f51e5dec779dc185f1f1e4012a3d26069a40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081078"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
   當您建立報表時，經常預覽報表以確認報表如預期般顯示相當有協助。 若要預覽報表，按一下 **[執行]**。 報表隨即在預覽模式下呈現。  

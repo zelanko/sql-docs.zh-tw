@@ -1,30 +1,27 @@
 ---
-title: 命令 (ADO-WFC 語法) |Microsoft 文件
+title: 命令 (ADO-WFC 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c57cd9a65cdbf3662f7ed7499d979753d9ecd0b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d6866423ba07ed79992ebd098b7b4f5e5eff91ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770816"
 ---
-# <a name="command-ado---wfc-syntax"></a>命令 (ADO-WFC 語法)
+# <a name="command-ado---wfc-syntax"></a>Command (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
@@ -48,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- **ExecuteUpdate**方法是一種特殊的案例方法呼叫基礎 ADO**執行**以特定參數的方法。 **ExecuteUpdate**方法不支援的傳回**資料錄集**物件，所以**執行**方法的*選項*參數以修改**AdoEnums.ExecuteOptions.NORECORDS**。 之後**執行**方法完成時，其更新*RecordsAffected*參數會傳遞回**executeUpdate**方法，最後會當成**int**。  
+ **ExecuteUpdate**方法是一種特殊的案例方法呼叫基礎 ADO**執行**以特定參數的方法。 **ExecuteUpdate**方法不支援的傳回**Recordset**物件，因此**執行**方法的*選項*參數使用修改**AdoEnums.ExecuteOptions.NORECORDS**。 在後**執行**方法完成，其更新*RecordsAffected*參數會傳遞回**executeUpdate**方法，最後會當成**int**。  
   
 ### <a name="properties"></a>屬性  
   

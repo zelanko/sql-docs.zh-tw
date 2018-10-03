@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139576"
 ---
 # <a name="query-options-execution-advanced-page"></a>查詢選項執行 (進階頁面)
   使用 **SET** 陳述式時，有許多選項可用。 使用此頁面來指定 **set** 選項，以執行 Microsoft SQL Server 查詢。 如需上述各選項的詳細資訊，請參閱《SQL Server 線上叢書》。  
@@ -73,7 +70,7 @@ GO
  **查詢執行後中斷連接**  
  如果選取此核取方塊，查詢完成後會結束 SQL Server 的連接。 依預設，會清除此選項。  
   
- **重設預設值**  
+ **重設為預設值**  
  將此頁面上的所有值重設為原始預設值。  
   
   

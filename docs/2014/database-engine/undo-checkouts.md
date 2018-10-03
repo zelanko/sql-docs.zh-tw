@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourcControl.UndoCheckDialog
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - checkout source controls [SQL Server]
 - undoing checkouts
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 273f7c1ccb5a9e55864df27939ff39e7f04787d5
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078316"
 ---
 # <a name="undo-checkouts"></a>復原簽出
   您可以使用**恢復簽出**命令來取消現有的簽出。 當您修改且儲存了某個檔案之後，又需要回復這些變更時，這尤其有用。  

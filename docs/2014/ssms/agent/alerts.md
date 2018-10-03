@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent alerts, event types
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Agent alerts, about alerts
 - alerts [SQL Server], names
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5233e3bcb0ce6b03c754819ead74eef7f014a3d0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e4b40106834927506b84959da54aed959c8993ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067008"
 ---
 # <a name="alerts"></a>警示
   事件會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生，並輸入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會讀取應用程式記錄檔，然後比較寫入其中的事件與您所定義的警示。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 找到相符項目時，即會發出警示，這是對事件的自動回應。 除了監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 還可以監視效能條件與 Windows Management Instrumentation (WMI) 事件。  

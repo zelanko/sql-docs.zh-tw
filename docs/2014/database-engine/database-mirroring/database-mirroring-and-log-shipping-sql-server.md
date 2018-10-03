@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97b618470bbf5fb95ed4817f17f48890a70a5990
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112108"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>資料庫鏡像和記錄傳送 (SQL Server)
   給定的資料庫可以進行鏡像或記錄傳送；它也可以同時進行鏡像和記錄傳送。 選擇使用的方式時，請考慮下列事項：  
@@ -68,7 +65,7 @@ ms.locfileid: "37269584"
   
  ![記錄傳送和資料庫鏡像](../media/logshipping-and-dbm-automatic-failover.gif "記錄傳送和資料庫鏡像")  
   
- 在鏡像容錯移轉後，次要伺服器上所定義的主要伺服器名稱不會變更。 執行個體時提供 SQL Server 登入。  
+ 在鏡像容錯移轉後，次要伺服器上所定義的主要伺服器名稱不會變更。 .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>資料庫鏡像對遠端監視執行個體的影響  
  當記錄傳送與遠端監視執行個體搭配使用時，若將記錄傳送工作階段與資料庫鏡像結合，將會影響到監視器資料表中的資訊。 主要監視器的相關資訊，來自於主體/主要監視器以及每部次要監視器所設定之監視器的資訊組合。  

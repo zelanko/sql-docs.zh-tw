@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1f9f48b1703719ce08ca2d1da4a5c9addaffc0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125492"
 ---
-# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新的日期和時間功能與舊版 SQL Server (OLE DB)
+# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
   使用增強型的日期和時間功能的用戶端應用程式進行通訊的版本時，本主題會說明預期的行為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，以及當編譯版本的用戶端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端早於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]將命令傳送到伺服器支援增強型日期和時間功能。  
   
 ## <a name="down-level-client-behavior"></a>下層用戶端行為  
@@ -41,7 +38,7 @@ ms.locfileid: "37420179"
 |DBTYPE_DBTIME||Time(7)|失敗 – 無效的時間間隔。|[確定]|  
 |DBTYPE_DBTIMESTAMP|||失敗 – 無效的時間間隔。|[確定]|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|[確定]|[確定]|  
-|DBTYPE_DBTIMESTAMP||Datetime2(7)|[確定]|[確定]|  
+|DBTYPE_DBTIMESTAMP||datetime2(7)|[確定]|[確定]|  
 |DBTYPE_DBDATE|Smalldatetime|date|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位為非零，IRowsetChange 將會因為字串截斷而失敗。|  
 |DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
@@ -169,6 +166,6 @@ ms.locfileid: "37420179"
  新的日期/時間類型允許使用所有比較運算子，因為它們會顯示為字串類型，而非日期/時間類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間改善&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和時間改善 &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

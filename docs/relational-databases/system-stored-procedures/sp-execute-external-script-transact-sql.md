@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864396"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script & Amp;#40;transact-SQL&AMP;#41;
 
@@ -102,8 +98,8 @@ sp_execute_external_script
  包含要傳回之資料的外部指令碼中指定的變數名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序呼叫完成時。 在 外部指令碼變數的資料類型會因語言而定。 針對 R，輸出必須是資料框架。 對於 Python，輸出必須是 pandas 資料框架。 *output_data_1_name*已**sysname**。  預設值是*OutputDataSet*。  
 
  [ **@parallel** = 0 | 1]  
- 藉由設定啟用平行執行 R 指令碼`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。 如果`@parallel = 1`和輸出串流直接至用戶端電腦，則`WITH RESULTS SETS`子句是必要的而且必須指定輸出結構描述。  
-  
+ 藉由設定啟用平行執行 R 指令碼`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。 如果`@parallel = 1`和輸出串流直接至用戶端電腦，則`WITH RESULT SETS`子句是必要的而且必須指定輸出結構描述。  
+
  + 針對未使用 RevoScaleR 函式，使用 R 指令碼`@parallel`參數可以是有幫助處理大型資料集，假設指令碼可透過極簡方式平行處理。 例如，當使用 R`predict`函式使用的模型，來產生新預測，請將設定`@parallel = 1`以做為查詢引擎的提示。 如果可以平行處理查詢，資料列會根據散發**MAXDOP**設定。  
   
  + 使用 RevoScaleR 函數的 R 指令碼，平行處理會自動處理，您不應指定`@parallel = 1`要**sp_execute_external_script**呼叫。  
@@ -121,7 +117,7 @@ sp_execute_external_script
 
 使用**sp_execute_external_script**執行支援的語言撰寫的指令碼。 目前，支援的語言是 SQL Server 2016 R Services，以及 Python 和 R 適用的 SQL Server 2017 Machine Learning 服務的 R。 
 
-根據預設，此預存程序所傳回的結果集是未命名的資料行的輸出。 在指令碼內使用的資料行名稱是本機指令碼環境，並不會反映在輸出的結果集。 若要命名結果集資料行，使用`WITH RESULTS SET`子句[ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)。
+根據預設，此預存程序所傳回的結果集是未命名的資料行的輸出。 在指令碼內使用的資料行名稱是本機指令碼環境，並不會反映在輸出的結果集。 若要命名結果集資料行，使用`WITH RESULT SET`子句[ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)。
   
  除了傳回的結果集，您可以傳回純量值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 OUTPUT 參數。 下列範例示範使用輸出參數傳回序列化的 R 模型來做為指令碼的輸入：  
   
@@ -281,7 +277,7 @@ END;
 GO
 ```
 
-由於系統不會將 Python 程式碼中使用的資料行標題輸出至 SQL Server，因此請使用 WITH RESULTS 陳述式指定要讓 SQL 使用的資料行名稱與資料類型。
+使用 Python 程式碼中的資料行標題不會輸出到 SQL Server;因此，使用與結果的陳述式來指定要使用的 sql 資料類型與資料行名稱。
 
 若要計分，您也可以使用原生 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函式，其會避免呼叫 Python 或 R 執行階段，因此一般來說速度更快。
 

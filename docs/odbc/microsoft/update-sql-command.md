@@ -1,32 +1,29 @@
 ---
-title: 更新-SQL 命令 |Microsoft 文件
+title: UPDATE-SQL 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - update [ODBC]
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 748a405ba63fb934eee162d3cc023b5935251cea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818306"
 ---
-# <a name="update---sql-command"></a>更新-SQL 命令
-新值來更新資料表中的記錄。  
+# <a name="update---sql-command"></a>UPDATE - SQL 命令
+使用新值更新資料表中的記錄。  
   
- Visual FoxPro ODBC 驅動程式支援的原生 Visual FoxPro 語言語法，此命令。 驅動程式特定資訊，請參閱**驅動程式註解**。  
+ Visual FoxPro ODBC Driver 支援原生 Visual FoxPro 語言語法，此命令。 驅動程式專屬資訊，請參閱**驅動程式備註**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,24 +39,24 @@ SET Column_Name1 = eExpression1
  更新 [ *DatabaseName1 ！*]*TableName1*  
  指定的新值更新記錄的資料表。  
   
- *DatabaseName1 ！* 指定包含資料表的資料來源所指定的資料庫以外的資料庫名稱。 您必須包括包含的資料表，如果資料庫不是目前資料庫的名稱。 在資料庫名稱之後和資料表名稱前面包含驚嘆號 （！） 分隔符號。  
+ *DatabaseName1 ！* 指定包含資料表的資料來源所指定的資料庫以外的資料庫名稱。 您必須包括包含的資料表，如果資料庫不是目前資料庫的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
   
  設定*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
- 指定更新的資料行和新的值。 如果您省略 WHERE 子句，資料行中的每個資料列會更新以相同的值。  
+ 指定更新的資料行和其新的值。 如果您省略 WHERE 子句，資料行中的每個資料列會更新以相同的值。  
   
- 其中*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
- 指定更新新值的記錄。  
+ 何處*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  
+ 指定的記錄，則會以新值更新。  
   
- *FilterCondition*指定記錄更新為新的值必須符合的準則。 您可以包含任意，使用 AND 篩選條件或 OR 運算子。 您也可以使用 NOT 運算子，若要反轉的邏輯運算式的值，或者您可以使用**空**（) 來檢查是否有空白的欄位。  
+ *FilterCondition*指定記錄必須符合使用新的值進行更新的準則。 例如，連接及篩選條件，您可以包含或 OR 運算子。 您也可以使用 NOT 運算子來反轉邏輯運算式的值，或者您可以使用**空**（) 來檢查是否有空白的欄位。  
   
 ## <a name="remarks"></a>備註  
- 更新-SQL 可以更新只能在單一資料表的記錄。  
+ 更新-SQL 可以更新只會在單一資料表中的記錄。  
   
- 不同於取代，更新-SQL 會使用記錄鎖定更新資料表中的多筆記錄開啟的共用存取時。 這會減少記錄競爭情況，在多使用者情況下，但可能會降低效能。 最大效能，請開啟資料表的獨佔使用，或使用**FLOCK**（) 來鎖定資料表。  
+ 不同於取代更新-SQL 會使用記錄鎖定更新資料表中的多筆記錄開啟的共用存取時。 這會減少記錄競爭情況，在多使用者的情況下，但可能會降低效能。 達到最佳效能，請開啟資料表的獨佔使用，或使用**FLOCK**（) 來鎖定資料表。  
   
-## <a name="driver-remarks"></a>驅動程式註解  
- 當您的應用程式會將 ODBC SQL 陳述式更新傳送至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換成 Visual FoxProUPDATE 命令，而不需轉譯中。  
+## <a name="driver-remarks"></a>驅動程式備註  
+ 當您的應用程式傳送至資料來源的 ODBC SQL 陳述式更新時，則 Visual FoxPro ODBC Driver 會將命令轉換 Visual FoxProUPDATE 命令，無需進行翻譯。  
   
 ## <a name="see-also"></a>另請參閱  
- [刪除 SQL 命令](../../odbc/microsoft/delete-sql-command.md)   
+ [DELETE-SQL 命令](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT - SQL 命令](../../odbc/microsoft/insert-sql-command.md)

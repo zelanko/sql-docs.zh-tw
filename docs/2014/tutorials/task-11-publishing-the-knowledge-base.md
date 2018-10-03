@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90a030f55e1fc21ef43caa27e6ad6389e48b4b3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b498a4ace8afe504d8257e4ecdb3bc155b269068
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137089"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>工作 11：發行知識庫
   在這項工作中，您會發行知識庫。 已發行的知識庫可用於清理或比對資料品質專案中的活動。  

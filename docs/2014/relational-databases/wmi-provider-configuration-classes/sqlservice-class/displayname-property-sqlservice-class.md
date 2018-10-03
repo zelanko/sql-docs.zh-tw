@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DisplayName Property (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DisplayName property
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2295409a459c9b5264876cc4201beb86cae9a356
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5438ccd554023f6a942f56b81d1c0ec0d9120bec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124558"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName 屬性 (SqlService 類別)
   取得服務的顯示名稱。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourcePermission Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d88f18a752e96e5081462056d831bc968dc605df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4130cd2a0eb83b32c8bcdf703d10ca6305af619
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087618"
 ---
 # <a name="datasourcepermission-element-assl"></a>DataSourcePermission 元素 (ASSL)
   定義中的預設權限[DataSource](../data-type/datasource-data-type-assl.md)特定的資料類型[角色](role-element-assl.md)項目。  
@@ -49,7 +46,7 @@ ms.locfileid: "37241358"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|[權限](../data-type/permission-data-type-assl.md)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-n：只能出現一次或出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -57,7 +54,7 @@ ms.locfileid: "37241358"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DataSourcePermissions](../collections/datasourcepermissions-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `DataSourcePermission` 物件只能針對資料庫所擁有的角色存在，而且任何角色都只能存在一個 `DataSourcePermission` 物件。  

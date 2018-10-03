@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4a764394b02379459dcf5b3a77396210c1e3f060
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44973c4366f6d88cf0a5a815e4a6dcdaf88e75ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081468"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services 中的授權
   授權這項程序可決定是否應該將要求的存取權類型授與某個識別，允許其對於報表伺服器資料庫中特定資源進行存取。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用以角色為基礎的授權架構，會根據應用程式的使用者角色指派，將使用者存取權授與指定的資源。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全性延伸模組包含授權元件的實作，是用以在使用者通過報表伺服器上的驗證之後，授與存取權給他們。 當使用者透過 SOAP API 與透過 URL 存取，嘗試在系統上或是報表伺服器項目執行作業時，就會叫用授權。 這麼做，可以透過安全性延伸模組介面**IAuthorizationExtension**。 如前所述，您所部署的任何延伸模組都會自 **IExtension** 繼承基底介面。 **IExtension**並**IAuthorizationExtension**屬於**Microsoft.ReportingServices.Interfaces**命名空間。  

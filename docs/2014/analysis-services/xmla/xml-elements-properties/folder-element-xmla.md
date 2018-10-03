@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Folder Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9bc961679619f15211689b4f118f511edbadac8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70c5258edefa19d2858c40648aa742f75a9a1e49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055123"
 ---
 # <a name="folder-element-xmla"></a>Folder 元素 (XMLA)
   包含更新的檔案系統儲存位置[位置](location-element-xmla.md)項目期間[還原](../xml-elements-commands/restore-element-xmla.md)或是[同步處理](../xml-elements-commands/synchronize-element-xmla.md)命令。  
@@ -55,8 +52,8 @@ ms.locfileid: "37283914"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

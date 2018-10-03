@@ -1,32 +1,29 @@
 ---
-title: 移動方法範例 （VC + +） |Microsoft 文件
+title: Move 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Move method [ADO], VC++ example
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6805360b98e694a3daf84a60d3f6757a12252e0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b9a158f5f31239a9e8c3dc791a86e4fdacceb8c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666228"
 ---
-# <a name="move-method-example-vc"></a>Move 方法的範例 （VC + +）
-這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)來定位資料錄指標的方法會根據使用者輸入。  
+# <a name="move-method-example-vc"></a>Move 方法範例 (VC++)
+這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，以記錄指標位置會根據使用者輸入。  
   
 ## <a name="example"></a>範例  
   
@@ -238,7 +235,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>輸入範例  
+## <a name="sample-input"></a>範例輸入  
   
 ```  
 1  

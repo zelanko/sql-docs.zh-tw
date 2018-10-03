@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4167456a5d1b59dd44451dda26f3ccb56e417a56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1ba661a0a00931f52aa7d38cc8d96730c685fa7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078309"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>使用組態檔安裝 Distributed Replay
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可讓您根據使用者輸入和系統預設值產生組態檔。 如指定要安裝管理工具，即可使用組態檔部署管理工具、Distributed Replay Controller 及 Distributed Replay Client 三項 Distributed Replay 元件。 這個組態檔支援安裝、修復和解除安裝 Distributed Replay 元件。  

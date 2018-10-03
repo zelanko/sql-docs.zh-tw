@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32d275fd784bac6d5c5ebefe36c640afe6e94726
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e462ad252406c6841bdd4fefa66aa3ff4bb249
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108738"
 ---
 # <a name="extended-events-tools"></a>擴充事件工具
   您可以使用下列工具來建立及管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件工作階段：  

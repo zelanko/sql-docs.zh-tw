@@ -1,46 +1,43 @@
 ---
-title: ADO 集合 |Microsoft 文件
+title: ADO 集合 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6eb94c92f9516333c6681691d470f626c10cb4b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b50f5245ed476fd09acd2556b4f7f5e2186fce10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275427"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756816"
 ---
 # <a name="ado-collections"></a>ADO 集合
-以表示這些集合與 ADO 物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
+在中表示這些集合和 ADO 物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
   
- 每個集合可以包含對應的物件。 例如，[錯誤](../../../ado/reference/ado-api/error-object.md)物件可以包含在[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 如需物件的詳細資訊，請參閱[ADO 物件](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)或特定物件的主題。  
+ 每個集合可以包含其對應的物件。 例如，[錯誤](../../../ado/reference/ado-api/error-object.md)物件中可包含[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 如需有關物件的詳細資訊，請參閱[ADO 物件](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)或特定物件的主題。  
   
 |||  
 |-|-|  
-|[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)|包含所有**錯誤**為了回應單一提供者相關的失敗所建立的物件。|  
-|[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)|包含所有**欄位**物件**資料錄集**物件。|  
-|[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含所有**參數**物件**命令**物件。|  
+|[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)|包含所有**錯誤**單一提供者相關的失敗回應所建立的物件。|  
+|[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)|包含所有**欄位**的物件**資料錄集**物件。|  
+|[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含所有**參數**的物件**命令**物件。|  
 |[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)|包含所有**屬性**物件的特定執行個體的物件。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO 應用程式開發介面參考](../../../ado/reference/ado-api/ado-api-reference.md)   
+ [ADO API 參考](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附錄 b: ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附錄 B:ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 方法](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   

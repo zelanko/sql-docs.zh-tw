@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6168efa2bf06ff29a0efe2ff843950cb13342011
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105928"
 ---
 # <a name="maximizing-query-editor"></a>將查詢編輯器最大化
   程式設計人員常常會問：「我要怎麼樣才能有更多空間來撰寫程式碼？」 答案是有兩種方式，都很簡單：將 [查詢編輯器] 視窗最大化以及隱藏未使用的工具視窗。  

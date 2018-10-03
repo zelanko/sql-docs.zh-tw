@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SMO]
 - SMO [SQL Server], samples
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
-caps.latest.revision: 41
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90dc94e906ff9b8e99e14bef4b6b0bd158d38f37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136988"
 ---
 # <a name="link-to-programming-samples"></a>程式設計範例連結
   下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目錄所提供的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理物件 (SMO) 程式設計範例。 這些範例都可以在[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  

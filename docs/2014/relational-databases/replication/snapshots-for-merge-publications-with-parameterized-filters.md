@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbe29e59ceb6665b481527dc872bc227e95f6da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 621966b18de4f7b1d8e48c755b9c52edfa5afe77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052037"
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>含參數化篩選之合併式發行集的快照集
   在合併發行集內使用參數化資料列篩選器時，覆寫會以兩段式的快照集來初始化每一個訂閱。 首先建立包含複寫所需之所有物件以及已發行物件之結構描述的結構描述快照集，但不含資料。 然後使用包含結構描述快照集中物件與結構描述以及訂閱之資料分割所屬資料的快照集，來初始化每個訂閱。 如果有多個訂閱收到給定的資料分割 (即收到相同的結構描述和資料)，該資料分割的快照集只會建立一次，多個訂閱均從同一快照集初始化。 如需參數化資料列篩選器的詳細資訊，請參閱＜ [參數化資料列篩選器](merge/parameterized-filters-parameterized-row-filters.md)＞。  

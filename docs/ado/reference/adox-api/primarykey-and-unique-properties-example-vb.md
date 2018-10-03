@@ -1,13 +1,11 @@
 ---
-title: PrimaryKey 和獨有的內容範例 (VB) |Microsoft 文件
+title: PrimaryKey 和 Unique 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fdb442faab89d88577449c136ba4ffb1cf2781f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730076"
 ---
-# <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和獨有的內容範例 (VB)
-這個範例會示範[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[Unique](../../../ado/reference/adox-api/unique-property-adox.md)屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的資料表具有兩個資料行。 **PrimaryKey**和**Unique**屬性用來讓一個資料行不允許重複的值是主索引鍵。  
+# <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 屬性範例 (VB)
+此範例示範[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)並[Unique](../../../ado/reference/adox-api/unique-property-adox.md)的屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的資料表，兩個資料行。 **PrimaryKey**並**Unique**屬性用來讓一個資料行不允許重複的值是主索引鍵。  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -117,6 +114,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [索引物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Index 物件 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [PrimaryKey 屬性 (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique 屬性 (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

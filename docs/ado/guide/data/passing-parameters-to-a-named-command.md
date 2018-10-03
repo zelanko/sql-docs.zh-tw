@@ -1,33 +1,30 @@
 ---
-title: 傳遞參數至具名命令 |Microsoft 文件
+title: 將參數傳遞給具名命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773386"
 ---
-# <a name="passing-parameters-to-a-named-command"></a>將參數傳遞至具名的命令
-就像命令的結果會當做傳遞*出*具名命令參數的變數參數化的命令可以針對已做為傳入的*中*具名命令的變數。  
+# <a name="passing-parameters-to-a-named-command"></a>傳遞參數給具名命令
+就如同命令的結果會當做傳遞*出*具名命令，也就是參數的變數參數化的命令可以針對已傳入作為*中*具名命令的變數。  
   
- 下列程式碼範例會嘗試擷取的所有訂單放置客戶其**CustomerID** "ALKFI"是從 Northwind 資料庫。 值**CustomerID**提供在具名的命令呼叫時的時間。  
+ 下列程式碼範例會嘗試擷取的所有訂單客戶所下的**CustomerID**取自 Northwind 資料庫中的"ALKFI 」。 值**CustomerID**會在呼叫具名的命令時的時間提供。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -80,13 +77,13 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 請注意，所有輸入的參數必須在前面的任何輸出變數的資料類型的參數必須符合或可以轉換成對應的欄位的。 下列陳述式：  
+ 請注意，所有輸入的參數必須在前面的任何輸出變數和參數資料類型必須符合或可以轉換為所對應的欄位。 下列陳述式：  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -因為必要的輸入的參數，會導致錯誤的資料類型不符，**字串**類型，不是**整數**型別。  
+ — 因為必要的輸入的參數是的會導致不相符的資料類型的錯誤**字串**型別，不是**整數**型別。  
   
  下列呼叫：  
   
@@ -94,7 +91,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- — 有效，但會產生空的結果集，因為沒有這類記錄存在於資料庫中。  
+ -有效，但會產生空的結果集，因為沒有這類記錄存在於資料庫中。  
   
 ## <a name="see-also"></a>另請參閱  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

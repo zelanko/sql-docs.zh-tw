@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding controls
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27c2a0a6d04c62e08afcaba030202d8a608d4268
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 54942936f01c7702432b531a17566caa05fa8ecc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110888"
 ---
 # <a name="use-the-toolbox"></a>使用工具箱
   您可以從 [工具箱] 中選取項目、文字和控制項，將它們拖曳到表單、頁面和設計師中；也可以從這些來源中，將項目拖回 [工具箱] 中，以便日後重複使用。 例如，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，您可以將工作拖回 [維護計畫] 中。  

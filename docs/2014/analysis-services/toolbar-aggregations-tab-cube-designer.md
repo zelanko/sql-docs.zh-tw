@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8741ff3e-44c3-4bfa-a56a-de590e01576e
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ae660a175024a52172475451436a5b2bd055982
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64b74086eb8c3005c6cc5d6ddfb3234a6dd222e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101946"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>工具列 (彙總索引標籤，Cube 設計師)
   使用 [工具列] 窗格，即可在 Cube 設計師的 [彙總] 索引標籤上執行一般動作。  

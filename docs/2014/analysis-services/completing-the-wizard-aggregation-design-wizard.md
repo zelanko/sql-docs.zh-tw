@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: deaa50661fb466dbe2048569e8d8971e9d527890
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc34ca4eb6e73233fc5302c154f5397bf44a81d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116839"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>正在完成精靈 (彙總設計精靈)
   使用 **[正在完成精靈]** 頁面，即可將彙總設計儲存至選取的資料分割。 在彙總設計精靈完成設計並儲存彙總之後，您也可以選擇性地部署和處理選取的資料分割。  

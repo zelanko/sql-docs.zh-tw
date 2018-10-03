@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7808c9270e0085c2f8fafb5262d6356f8c8d1e08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091548"
 ---
 # <a name="script-a-table"></a>編寫資料表的指令碼
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以建立指令碼來選取、插入、更新和刪除資料表，以及建立、變更、卸除或執行預存程序。  

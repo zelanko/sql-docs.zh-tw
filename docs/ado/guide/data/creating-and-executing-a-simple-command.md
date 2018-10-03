@@ -1,42 +1,39 @@
 ---
-title: 建立和執行簡單的命令，|Microsoft 文件
+title: 建立和執行簡單的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], creating and executing
 - commands [ADO], creating and executing
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270907"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811346"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>建立和執行簡單的命令
 簡單的命令是指未參數化，而且需要沒有持續性。 有三種方式，來建立和執行簡單的命令。  
   
 -   使用**命令**物件  
   
--   使用**連接**物件  
+-   使用**連線**物件  
   
 -   使用**資料錄集**物件  
   
 ## <a name="using-a-command-object"></a>使用命令物件  
- 若要建立簡單的命令使用**命令**物件，您必須指派的指示**CommandText**屬性**命令**物件，並設定適當的值**CommandType**屬性。 執行此命令需要開啟連接會指派給**ActiveConnection**屬性**命令**物件，接著呼叫**Execute**方法在**命令**物件。  
+ 若要建立簡單的命令，使用**命令**物件，您必須將指派的指示**CommandText**屬性**命令**物件，並設定適當的值**CommandType**屬性。 執行此命令需要開啟連接會指派給**ActiveConnection**屬性**命令**物件，然後呼叫**Execute**方法在 **命令**物件。  
   
- 下列程式碼片段示範基本的方法使用的**命令**物件針對資料來源執行命令。 這個範例會使用傳回的資料列的命令，並傳回做為命令執行的結果**資料錄集**物件。  
+ 下列程式碼片段顯示使用的基本方法**命令**對資料來源執行命令的物件。 此範例會使用傳回的資料列的命令，並傳回命令執行的結果**資料錄集**物件。  
   
 ```  
     'BeginBasicCmd  
@@ -112,7 +109,7 @@ End Function
 ```  
   
 ## <a name="using-a-recordset-object"></a>使用資料錄集物件  
- 您也可以做為文字字串和 pa 建立命令以**開啟**方法**資料錄集**物件時，命令類型 (adCmdText)，以及執行。 下列程式碼片段示範這點。  
+ 您也可以建立命令做為文字字串和 pa 才**開放**方法**資料錄集**物件時，命令類型 (adCmdText)，以及執行。 下列程式碼片段示範這種情況。  
   
 ```  
   
@@ -151,7 +148,7 @@ Set objRs = Nothing
 ```  
   
 ## <a name="using-a-connection-object"></a>使用連接物件  
- 您也可以開啟的連線物件上執行命令。 上述程式碼範例現在已成為此：  
+ 您也可以開啟的連線物件上執行命令。 上述程式碼範例現在會變成這樣：  
   
 ```  
 Const DS = "MySqlServer"  

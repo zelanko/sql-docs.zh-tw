@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 104fdfdebf01bece9f5a3762b33b9e31f40d06d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125328"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>工作 12：加入衍生的資料行轉換，以加入 MDS 需要的資料行
   在這項工作中，您會將衍生的資料行轉換加入至資料流程。 新增兩個衍生的資料行**ImportType**並**BatchTag**至記錄傳遞給這項轉換。 您應該先加入這兩個資料行，然後再將資料上傳至 MDS 中的暫存資料表。 這兩個是 MDS 中暫存資料表的必要資料行。 請參閱[分葉成員暫存資料表](../master-data-services/leaf-member-staging-table-master-data-services.md)如需詳細資訊。  

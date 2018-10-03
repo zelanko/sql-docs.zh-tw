@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/28/2018
 ms.prod: ''
 ms.prod_service: sql-database
-ms.component: ''
 ms.reviewer: carlrab, edmaca
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -24,12 +21,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 192300903c19913ff3762a744db9f999589e2c53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822181"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

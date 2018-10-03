@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 95c9c2b9bdbcbfb6573688ad220ab504dc89e337
-ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
+ms.openlocfilehash: 288348e1b18e5a20ec2b9890bfc54f613230436e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39415507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655209"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 

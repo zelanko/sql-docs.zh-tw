@@ -1,34 +1,31 @@
 ---
-title: 輸入屬性的範例 （屬性） （VC + +） |Microsoft 文件
+title: 輸入屬性範例 (Property) （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b62b3db629cabd77cea270cf41e76bd36c5b1cb4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: abb6e450e0a61b91fa0839e9efa8c32fdb00d730
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736746"
 ---
-# <a name="type-property-example-property-vc"></a>型別屬性範例 （屬性） （VC + +）
-這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是一種模型的公用程式清單的名稱和類型的集合，例如[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)，[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)等等。  
+# <a name="type-property-example-property-vc"></a>Type 屬性範例 (Property) (VC++)
+此範例示範[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性。 它是用於列出集合中的類型與名稱類似的公用程式模型[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)，[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，依此類推。  
   
- 我們不需要開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)存取其**屬性**集合; 它們消失時**資料錄集**物件具現化。 不過，設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性**adUseClient**新增數個動態屬性，**資料錄集**物件的**屬性**集合，讓範例更有趣。 基於說明目的，我們明確使用[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性來存取每個[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
+ 我們不需要開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)若要存取其**屬性**集合; 他們回到存在時**資料錄集**物件具現化。 不過，設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**數個動態將屬性加入至**資料錄集**物件的**屬性**集合，讓範例更有趣。 為了說明，我們明確地使用[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性來存取每個[屬性](../../../ado/reference/ado-api/property-object-ado.md)物件。  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -220,5 +217,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Property 物件 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type 屬性 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

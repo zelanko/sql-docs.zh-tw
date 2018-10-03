@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [data mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - query builder [data mining]
 - DMX
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c2ddae6582355e271488389d6e4005a5d235a74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079418"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>查詢 (SQL Server 資料採礦增益集)
   ![查詢模型按鈕、 資料採礦功能區](media/dmc-query.gif "查詢模型按鈕、 資料採礦功能區")  

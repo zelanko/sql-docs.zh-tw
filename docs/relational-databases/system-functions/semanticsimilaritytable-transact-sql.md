@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritytable (TRANSACT-SQL) |Microsoft 文件
+title: semanticsimilaritytable & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791176"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ SEMANTICSIMILARITYTABLE
   
  如果結果來自多個資料行，將會以每個資料行為單位傳回相符文件。  
   
-|Column_name|型別|Description|  
+|Column_name|類型|描述|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|用於尋找類似文件之來源文件的資料行識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
 |**matched_column_id**|**int**|從中找到類似文件之資料行的識別碼。<br /><br /> 如需如何從 column_id 擷取資料行名稱 (反之亦然) 的詳細資料，請參閱 COL_NAME 及 COLUMNPROPERTY 函數。|  
@@ -82,10 +78,10 @@ SEMANTICSIMILARITYTABLE
 |**score**|**REAL**|此文件與所有其他類似文件之間關聯性的相似度相對值。<br /><br /> 值是 [0.0, 1.0] 範圍內的小數值，分數愈高代表愈符合的相似度，1.0 是滿分。|  
   
 ## <a name="general-remarks"></a>一般備註  
- 如需詳細資訊，請參閱[尋找相似及相關文件使用語意搜尋](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 尋找相似及相關文件使用語意搜尋](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 您不能跨資料行查詢類似文件。 **SEMANTICSIMILARITYTABLE**函式只會擷取類似文件從相同的資料行的來源資料行，以識別**source_key**引數。  
+ 您不能跨資料行查詢類似文件。 **SEMANTICSIMILARITYTABLE**函式只會擷取類似文件從來源資料行，以識別相同的資料行**source_key**引數。  
   
 ## <a name="metadata"></a>中繼資料  
  如需有關語意相似度擷取和母體擴展的詳細資訊和狀態，請查詢下列動態管理檢視：  
@@ -94,7 +90,7 @@ SEMANTICSIMILARITYTABLE
   
 -   [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要建立全文檢索和語意索引之基底資料表的 SELECT 權限。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - forecasting [data mining]
 - time series [data mining]
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84860116150a802648e93686d3e8beb86c4ba037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106458"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>預測精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的關聯精靈](media/dmc-forecast.gif "資料採礦功能區中的關聯精靈")  

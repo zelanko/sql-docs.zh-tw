@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceviewproperties.f1
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25afba8b1e342595fd4777c9122aa474fada8f84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45543781aad4ea3997b0d62b238ddf348a3c8230
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110228"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>資料來源檢視屬性對話方塊 (SSAS)
   使用 **中的** [資料來源檢視屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之資料來源檢視的屬性。 您可以在物件總管中以滑鼠右鍵按一下資料來源檢視，然後選取 [屬性]，來顯示 [資料來源檢視屬性] 對話方塊。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f719a4dd11234a361856dcf170eebcd3856f66c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be8768c5d638904240cc1499a594b0d2c8a97aa7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128878"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>第 1 課：建立購物籃採礦結構
   在這一課，您將建立一個可讓您預測客戶可能同時購買哪些 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 產品的採礦結構。 如果您不熟悉採礦結構和資料採礦中的其角色，請參閱[採礦結構&#40;Analysis Services-Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  

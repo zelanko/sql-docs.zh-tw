@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IsAggregatable Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - IsAggregatable element
 ms.assetid: ed7dbe89-259c-4c5c-9660-b965c3af1573
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c19be225b4a0deadbd618e6012dc17ce2d2f9aa8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9974e3ad5f06073fd3aaab2aeaea5abfb6517544
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252920"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093048"
 ---
 # <a name="isaggregatable-element-assl"></a>IsAggregatable 元素 (ASSL)
   指定是否的值[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)元素可彙總。  
@@ -59,7 +56,7 @@ ms.locfileid: "37252920"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  對應至父系的元素`IsAggregatable`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - PathName Property
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - PathName property
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 817d03beeedd12b038d25a8b5ea81960bd97e027
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf4f59433b8f49ba21f6f23be42eea8716baf417
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255370"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132135"
 ---
 # <a name="pathname-property-wmi-msreportserverconfigurationsetting"></a>PathName 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定報表伺服器執行個體的安裝路徑。 唯讀。  

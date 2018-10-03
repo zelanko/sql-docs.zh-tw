@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configdbmsecurwiz.mirrorsrvr.f1
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff95a9e4e1b1b671e7f5053b958e9b0e44c02c25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83a92633a4c466e72c8cc2de0cc1c220e88e01bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079688"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>鏡像伺服器執行個體 (設定資料庫鏡像安全性精靈)
   使用此頁面來指定有關使用鏡像資料庫之伺服器執行個體的資訊。  

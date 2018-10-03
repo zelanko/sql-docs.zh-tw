@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3160ffa917a0f3eb3d6a80f81d6218c8f45525e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 775161751d9b2371f39f6f914f298c107407a023
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079388"
 ---
 # <a name="lock-events-data-columns"></a>鎖定事件資料行
   鎖定事件類別目錄含有下列事件類別：  

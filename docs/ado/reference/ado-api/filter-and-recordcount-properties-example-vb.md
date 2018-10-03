@@ -1,13 +1,11 @@
 ---
-title: 篩選器和 RecordCount 屬性範例 (VB) |Microsoft 文件
+title: Filter 和 RecordCount 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675416"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>篩選器和 RecordCount 屬性範例 (VB)
-此範例中開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中的 「 發行者 」 資料表上***Pubs***資料庫。 然後它會使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性來限制要在特定國家/地區中的這些 「 發行者 」 的可見記錄的數目。 **RecordCount**屬性用來顯示篩選和已篩選資料錄集之間的差異。  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Filter 和 RecordCount 屬性範例 (VB)
+此範例中開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中的發行者資料表***Pubs***資料庫。 然後它會使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性來限制要在特定國家/地區中的這些 「 發行者 」 的可見記錄的數目。 **RecordCount**屬性用來顯示篩選和已篩選資料錄集之間的差異。  
   
 ```  
 'BeginFilterVB  
@@ -112,7 +109,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  當您知道您想要選取的資料時，會開啟通常更有效率**資料錄集**SQL 陳述式。 這個範例會示範建立只有一個**資料錄集**，並從特定的國家/地區取得記錄。  
+>  當您知道您想要選取的資料時，會開啟通常更有效率**資料錄集**SQL 陳述式。 此範例會示範如何建立只有一個**資料錄集**，並從特定國家/地區取得記錄。  
   
 ```  
 Attribute VB_Name = "Filter"  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LastUpdate Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - LastUpdate element
 ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01429b3086f6de62b7ad0b921ad89f042c341891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 940c8dfb2bbd74d431024b70673a38bbc5fc7ee6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302778"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069327"
 ---
 # <a name="lastupdate-element-assl"></a>LastUpdate 元素 (ASSL)
   包含唯讀時間時間戳記，指出上次相關聯[資料庫](../objects/database-element-assl.md)或任何資料庫包含主要物件遭變更。  
@@ -49,7 +46,7 @@ ms.locfileid: "37302778"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|DateTime|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -57,7 +54,7 @@ ms.locfileid: "37302778"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[[資料庫]](../objects/database-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  在「分析管理物件」(AMO) 物件模型中對應至 `LastUpdate` 父系的元素是 <xref:Microsoft.AnalysisServices.Dimension>。  

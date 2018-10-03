@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0dc75044e2375bb21c0a2741f1efa499fafd7e68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083868"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>在 SQL Server 2014 中已被取代的管理工具功能
   本主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中仍然可用之已被取代的管理工具功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  

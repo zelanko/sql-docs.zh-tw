@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -17,22 +15,20 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9772140475683ed1c98dc228318d213c10f36ba4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7fe736aae767d9d3ec434c2f62deac4491e2126
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084648"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 範本
   您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 建立範本，用來定義追蹤中要包含的事件類別和資料行。 定義並儲存範本之後，即可執行追蹤，記錄您選取的每一個事件類別的資料。 您可將範本用在許多追蹤上；範本本身並不會執行。  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 提供預先定義的追蹤範本，可讓您輕鬆設定在特定追蹤上最需要的事件類別。 例如，Standard 範本可協助您建立用於記錄登入、登出、已完成批次及連接資訊的一般追蹤。 此範本不需修改即可用來執行追蹤，或者也可以做為範本建立起點，用來建立具有不同事件組態的其他範本。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 提供預先定義的追蹤範本，可讓您輕鬆設定在特定追蹤上最需要的事件類別。 例如，Standard 範本可協助您建立用於記錄登入、登出、已完成批次及連接資訊的一般追蹤。 此範本不需修改即可用來執行追蹤，或者也可以做為範本建立起點，用來建立具有不同事件組態的其他範本。  
   
 > [!NOTE]  
 >  除了從預先定義的範本建立追蹤， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 也可讓您從空白範本 (依預設不含任何事件類別) 建立追蹤。 當計畫中的追蹤與任何預先定義範本的組態都不相似時，使用空白追蹤範本就很有用。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - validating data mining models
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b0058e22e313d26ac5b2f806848e09dacfccb67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133484"
 ---
 # <a name="create-a-cross-validation-report"></a>建立交叉驗證報表
   此主題逐步解說如何在資料採礦設計師中使用 [精確度圖表] 索引標籤來建立交叉驗證報表。 如需交叉驗證報表外觀及其所含統計量值的一般資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)。  

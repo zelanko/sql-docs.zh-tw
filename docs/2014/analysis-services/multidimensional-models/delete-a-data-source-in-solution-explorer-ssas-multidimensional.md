@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.deleteobjects.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting data sources
 - removing data sources
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7be5e8a95a340794e2754f272a223c31a27e8a58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 648c974b1a23128c9d6c6e3977494291ef182510
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113340"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>在方案總管中刪除資料來源 (SSAS 多維度)
   您可以刪除資料來源物件，以便從 Analysis Services 多維度模型專案中將它永久移除。  

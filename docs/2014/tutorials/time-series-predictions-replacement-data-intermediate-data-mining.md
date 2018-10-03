@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120280"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>使用取代資料執行時間序列預測 (中繼資料採礦教學課程)
   在這項工作中，您將會根據全球銷售資料建立新的模型。 接著，您將會建立預測查詢，此查詢會將全球銷售模型套用到其中一個個別地區。  

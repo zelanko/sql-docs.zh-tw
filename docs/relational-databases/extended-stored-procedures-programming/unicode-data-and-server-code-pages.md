@@ -1,30 +1,26 @@
 ---
-title: Unicode 資料和伺服器字碼頁 |Microsoft 文件
+title: Unicode 資料和伺服器字碼頁 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - Unicode [SQL Server], extended stored procedures
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d38bf13ae6f80de24e9595d79042b8e3e40ef310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846136"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 資料和伺服器字碼頁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,20 +30,20 @@ ms.locfileid: "32934903"
   
  擴充預存程序 API 會針對 Unicode 資料而啟用，但不會針對 Unicode 中繼資料啟用。 #define Unicode 指示詞在擴充預存程序 API 上沒有任何效果。  
   
- 所有由擴充預存程序 API 所傳回的或藉由擴充預存程序應用程式而提供給擴充預存程序 API 的中繼資料，都假設位在伺服器多位元組字碼頁中。 擴充預存程序 API 伺服器應用程式的預設字碼頁是在電腦執行應用程式，可以藉由呼叫取得的 ANSI 字碼頁**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE。  
+ 所有由擴充預存程序 API 所傳回的或藉由擴充預存程序應用程式而提供給擴充預存程序 API 的中繼資料，都假設位在伺服器多位元組字碼頁中。 擴充預存程序 API 伺服器應用程式的預設字碼頁為的電腦上執行應用程式，可以藉由呼叫取得的 ANSI 字碼頁**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE。  
   
  如果擴充預存程序 API 應用程式已啟用 Unicode，則您必須先將 Unicode 中繼資料的資料行名稱、錯誤訊息等等轉換為多位元組資料，才能將此資料傳遞給擴充預存程序 API。  
   
 ## <a name="example"></a>範例  
  下列擴充預存程序提供所討論的 Unicode 轉換的範例。 請注意：  
   
--   資料行資料被當做 Unicode 資料**srv_describe**因為資料行描述為 srvnvarchar。  
+-   資料行的資料會以 Unicode 資料，以傳遞**srv_describe**因為資料行描述為 srvnvarchar。  
   
 -   資料行名稱中繼資料會傳遞至**srv_describe**以多位元組資料。  
   
-     擴充預存程序呼叫**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE，若要取得的多位元組字碼頁與[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     擴充預存程序呼叫**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE 取得的多位元組字碼頁[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   錯誤訊息會傳遞至**srv_sendmsg**以多位元組資料。  
+-   錯誤訊息會傳遞給**srv_sendmsg**以多位元組資料。  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

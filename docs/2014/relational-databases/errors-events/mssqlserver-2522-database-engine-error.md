@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 2522 (Database Engine error)
 ms.assetid: 19b9b00c-330f-4dd3-9052-9d88bce83849
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f1806fb57cc69f0827b031424303929ad0f2340
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 696a7d536dc3fbb64e08ae9ccef21adbc4d9954d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129679"
 ---
 # <a name="mssqlserver2522"></a>MSSQLSERVER_2522
     

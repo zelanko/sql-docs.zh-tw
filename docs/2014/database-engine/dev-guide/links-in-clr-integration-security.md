@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-access links [CLR integration]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - invocation links [CLR integration]
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32974fc138cb5bcd444af18d0854c7a07d8fdcad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067185"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 整合安全性中的連結
   本節將描述使用者程式碼片段如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其中一種 Managed 語言在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中彼此呼叫。 這些物件之間的關聯性稱為連結。  

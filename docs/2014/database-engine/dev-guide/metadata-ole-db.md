@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 - OLE DB, metadata
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47d727e52109aa19f9ebf21b2b93d82b91fce4a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f41bffff76ec2fb18341f1ff083c4f2f748847c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059718"
 ---
 # <a name="metadata-ole-db"></a>中繼資料 (OLE DB)
   本節描述參數中繼資料、結果集資料行中繼資料，以及結構描述資料列集中繼資料。  
@@ -36,6 +33,6 @@ ms.locfileid: "37263324"
  包含有關 OLE DB 結構描述資料列集更新的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間改善&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和時間改善 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

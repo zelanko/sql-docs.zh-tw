@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0164c0a426f0d317107178a5f7c2e7eb9e41c5b8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116787"
 ---
 # <a name="save-as"></a>另存新檔
   使用此對話方塊，即可以指定的檔案格式將目前項目的執行個體儲存在指定的位置。 若要顯示此對話方塊中，按一下**儲存** *\<檔案 >* **作為**上**檔案**功能表 (其中 *\<檔案 >* 是目前項目的名稱)，或按 ALT + F，A 在程式碼編輯器。  
