@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4febbc5a2a66fada8e83b4fb81ae35d6fdabcd15
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745106"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料
 您可以比較「來源」資料庫與「目標」資料庫的資料，以及指定應該比較的資料表。 您可以檢閱資料並決定要同步處理哪些變更。 然後您可以更新目標來同步處理資料庫，也可以將更新指令碼匯出至 Transact\-SQL 編輯器或檔案。  

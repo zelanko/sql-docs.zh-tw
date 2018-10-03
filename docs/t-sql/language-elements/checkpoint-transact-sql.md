@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKPOINT_TSQL
@@ -29,12 +27,12 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cde74c2a82ae77b1bc417ba9642dd3632c2f435
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: ba84c4df4af4c4bba82fb63a668ec2b57cf39c3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744556"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ CHECKPOINT [ checkpoint_duration ]
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  CHECKPOINT 權限預設會授與 **sysadmin** 固定伺服器角色及 **db_owner** 與 **db_backupoperator** 固定資料庫角色的成員，且無法轉讓。  
   
 ## <a name="see-also"></a>另請參閱  
