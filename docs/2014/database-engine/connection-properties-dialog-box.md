@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectionproperties.f1
 helpviewer_keywords:
 - Connection Properties dialog box
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a8c0f373d8327dd2b4a3f810264fa71925c5b533
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155898"
 ---
 # <a name="connection-properties-dialog-box"></a>連接屬性對話方塊
   使用此對話方塊來檢視目前的連接屬性。 當您在各個物件總管對話方塊中按一下 [檢視連接屬性]，就會出現此對話方塊。 此頁面上顯示的屬性是唯讀的。  

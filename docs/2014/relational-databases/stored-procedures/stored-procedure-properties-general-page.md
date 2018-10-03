@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spassistededitor.storedprocedure.f1
@@ -15,12 +13,12 @@ ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f9832df276f2cb1f490ae6694f1849acab246bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189248"
 ---
 # <a name="stored-procedure-properties-general-page"></a>預存程序屬性 (一般頁面)
   顯示預存程序的相關資訊。 所有資訊為唯讀。  

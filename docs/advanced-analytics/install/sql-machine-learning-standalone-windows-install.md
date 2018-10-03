@@ -9,26 +9,32 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7cf5cf2d78900c5bbd7607666afecc64aa98267f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 70fa652e876f1011bc2d74df56104671b33775b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187488"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>安裝 Machine Learning Server （獨立式） 或使用 SQL Server 安裝的 R Server （獨立式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 安裝程式包含**共用的功能**非感知執行個體，安裝選項執行 SQL Server 外部的獨立 machine learning 伺服器。 在 SQL Server 2016 中，這項功能稱為**R Server （獨立式）**。 在 SQL Server 2017 中，它會呼叫**Machine Learning Server （獨立式）** ，其中包括 R 和 Python。 
 
-為 SQL Server 安裝程式已安裝在獨立伺服器和非 SQL 品牌版本的功能上相當[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支援相同的使用案例和案例，包括遠端執行，運算化和 web 服務，以及一組完整的 RevoScaleR 與 revoscalepy 函式。
+為 SQL Server 安裝程式已安裝在獨立伺服器和非 SQL 品牌版本的功能上相當[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支援相同的使用案例和案例，包括：
+
++ 遠端執行，在同一個主控台中的本機和遠端工作階段之間切換
++ 使用 web 節點和計算節點的運算化
++ Web 服務部署： 若要封裝到 web 服務的 R 和 Python 指令碼的能力
++ 完整的 R 和 Python 函式程式庫
 
 與 SQL Server 分離的獨立伺服器，為 R 和 Python 環境的設定，保護及存取使用的基礎作業系統和獨立伺服器，而不是 SQL Server 中提供的工具。
 
-作為 SQL Server 的輔助，獨立伺服器是很有用，如果您要開發高效能的機器學習服務解決方案，可以使用遠端計算內容、 切換本機伺服器與 Spark 上遠端機器學習服務的伺服器之間的交換叢集化，或在另一個 SQL Server 執行個體上。
-  
+作為 SQL Server 的輔助，獨立伺服器是很有用，如果您要開發高效能機器學習服務可以使用遠端計算內容，以支援的資料平台的完整範圍的解決方案。 您可以移動執行從本機伺服器至遠端的 Machine Learning Server 或另一個 SQL Server 執行個體上的 Spark 叢集。
 
-## <a name="bkmk_prereqs"> </a> 預先安裝檢查清單
+<a name="bkmk_prereqs"> </a>
+
+## <a name="pre-install-checklist"></a>預先安裝檢查清單
 
 如果您已安裝舊的版本中，例如 SQL Server 2016 R Server （獨立式） 或 Microsoft R Server，解除安裝現有的安裝，之後才能繼續。
 
@@ -37,7 +43,9 @@ SQL Server 安裝程式包含**共用的功能**非感知執行個體，安裝�
 您的電腦上只能有一部獨立伺服器： SQL Server 2017 Machine Learning Server 或 SQL Server 2016 R Server （獨立式）。 您必須手動安裝不同版本之前解除安裝一個版本。
 
 ::: moniker range="=sql-server-2016"
- ###  <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求 
+<a name="bkmk_ga_instalpatch"></a> 
+
+ ###  <a name="install-patch-requirement"></a>安裝修補程式需求 
 
 只有 SQL Server 2016: Microsoft 發現特定版本的 SQL Server 所安裝的必要元件的 Microsoft VC + + 2013 Runtime 二進位檔有問題。 如果未安裝 VC Runtime 二進位檔的這項更新，SQL Server 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 之前，請先遵循 [SQL Server 版本資訊](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)的指示，查看您的電腦是否需要 VC Runtime 二進位檔的修補程式。  
 ::: moniker-end
@@ -133,6 +141,49 @@ R 和 Python 開發常會在同一部電腦上有多個版本。 安裝 SQL Serv
 |SQL Server 2017 Machine Learning 服務 （資料庫） |SQL Server 2017 安裝精靈中，使用 R 語言選項|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R Server （獨立式） |  SQL Server 2016 安裝精靈 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services （資料庫） |SQL Server 2016 安裝精靈|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>套用更新
+
+我們建議您將最新的累積更新套用至 database engine 和機器學習服務元件。 透過安裝程式安裝累計更新。 
+
+在連線網際網路的裝置，通常透過 Windows Update 套用累計更新，但您也可以使用下列步驟，針對受控制的更新。 在套用 database engine 的更新時，安裝程式會提取您在獨立伺服器安裝任何 R 或 Python 功能的累計更新。 
+
+在中斷連線的伺服器，則需要額外的步驟。 您必須取得 database engine 的累計更新，以及機器學習服務功能的 CAB 檔案。 所有檔案必須傳送到隔離的伺服器，並以手動方式套用。
+
+1. 啟動與基準的執行個體。 您只可以將累計更新套用到現有的安裝：
+
+  + 從 SQL Server 2017 初版的 machine Learning 伺服器 （獨立式）
+  + 從 SQL Server 2016 的最初發行版本、 SQL Server 2016 SP 1 或 SQL Server 2016 SP 2 的 R Server （獨立式）
+
+2. 在 網際網路連線的裝置，移至您的 SQL Server 版本的累積更新清單。
+
+  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 下載最新的累積更新。 這是可執行檔的檔案。
+
+4. 在連線網際網路的裝置，連按兩下.exe 以執行安裝程式並逐步執行精靈以接受授權條款、 檢閱受影響的功能，以及監視進度，直到完成為止。
+
+5. 在伺服器上沒有網際網路連線：
+
+   + 取得 R 和 Python 的相對應的封包檔。 如需下載連結，請參閱[下載 SQL Server 資料庫內分析上的累計更新的執行個體的封包](sql-ml-cab-downloads.md)。
+
+   + 將所有檔案、 主要可執行檔及封包檔，以離線的電腦上的資料夾。
+
+   + 按兩下.exe 以執行安裝程式。 沒有網際網路連線，在伺服器上安裝累計更新，系統會提示您選取的.cab 檔案的位置，對 R 和 Python。
+
+6. 後續安裝，您已啟用 web 節點和計算節點的運算化的伺服器上編輯**appsettings.json**，新增"MMLResourcePath 」 項目，直接在 「 MMLNativePath 」 底下：
+
+    ```json
+    "ScorerParameters": {
+        "MMLNativePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\",
+        "MMLResourcePath": "C:\Program Files\Microsoft SQL Server\140\R_SERVER\library\MicrosoftML\mxLibs\x64\"
+    }
+    ```
+
+7. [執行系統管理 CLI 公用程式](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)重新啟動網站，並計算節點。 如需步驟和語法，請參閱[監視器、 啟動，並停止 web 和計算節點](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)。
 
 ## <a name="development-tools"></a>開發工具
 

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - InstanceName Property (SInstance Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8de6e723d64d97352110c0508b52847050dcbf79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c5aea22290f618e8d99fce4c405a05a12b71bd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210868"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName 屬性 (SInstance 類別)
   取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的名稱。  

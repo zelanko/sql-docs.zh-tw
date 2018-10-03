@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodtsserver.login.f1
 - sql12.swb.connecttodts.login.f1
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95eac72a39ec2d110411fbae2d2494108e5cff41
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143139"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>連接到伺服器 (登入頁面) Integration Services
   連線到 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 時，可使用此索引標籤檢視或指定下列選項。  

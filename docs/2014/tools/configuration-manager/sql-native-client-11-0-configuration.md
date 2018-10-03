@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], SQL Server Native Client
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7d2397f64e5e987e2346938d5c4a9a4ad805482
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1278b552a02d74a0336a10e882f4c0220ab63eb3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122496"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 組態
   本節包含  組態管理員中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對話方塊的 F1 說明主題。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是用戶端電腦用來連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的網路程式庫，從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始。  

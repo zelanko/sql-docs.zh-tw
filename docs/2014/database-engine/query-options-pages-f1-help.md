@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Options pages [SQL Server Management Studio]
 ms.assetid: fad98caa-8a29-4b88-8464-f60a5c4fc00e
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3f103e35dbbedf40f3004d93ce37551b40fb94e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60f4b24bf5ce3f4fbc126a99159e64c83c4b5eff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130388"
 ---
 # <a name="query-options-pages-f1-help"></a>查詢選項頁面 F1 說明
   此章節包含 **中** [查詢選項] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]頁面的 F1 說明主題。  

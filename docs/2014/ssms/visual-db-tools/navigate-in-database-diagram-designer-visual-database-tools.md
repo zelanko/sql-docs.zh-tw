@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Diagram Designer
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d0c905f1f900fe0ff6ba2567445a161295e48d6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e7987cb3c2063e823d6b3ae946a7e7e8c17729c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194308"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>在資料庫圖表設計工具中導覽 (Visual Database Tools)
   您可使用鍵盤和滑鼠，在 [資料庫圖表設計工具] 中工作。 如需在 [資料庫圖表設計工具] 中所用的特定方法，請參閱下列資料表。  

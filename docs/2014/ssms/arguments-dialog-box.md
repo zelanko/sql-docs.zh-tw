@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Arguments dialog box
 - arguments [SQL Server Management Studio]
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edc7089dbb763fffff299eced7f5d962eb340b90
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a22f95aa77c47c62a1bed517d2dbe84724522d24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065814"
 ---
 # <a name="arguments-dialog-box"></a>引數對話方塊
   [引數] 對話方塊用來指定工具的新引數或現有引數。 當您啟動在 [外部工具] 對話方塊中選取了 [提示輸入引數] 選項的外部工具時，會出現這個對話方塊。  

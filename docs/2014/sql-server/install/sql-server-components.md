@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], component list
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
-caps.latest.revision: 41
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 546a9908791972564cd5cf749eb9e189753602c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098650"
 ---
 # <a name="sql-server-components"></a>SQL Server 元件
   您可以針對已在本機或遠端電腦執行 Upgrade Advisor 分析精靈[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安裝。 升級前分析的第一個步驟是識別要分析的電腦和元件。  

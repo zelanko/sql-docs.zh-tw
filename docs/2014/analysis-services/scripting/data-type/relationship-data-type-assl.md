@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4c5be48e7a5d4c5913a4bc881b6bd5b5c58ec57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 601cd7311cd3d78f1714ab881130d96231d60241
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165588"
 ---
 # <a name="relationship-data-type-assl"></a>Relationship 資料類型 (ASSL)
   定義代表維度中某個關聯性的基本資料類型。  
@@ -41,14 +38,14 @@ ms.locfileid: "37224038"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[ID](../properties/id-element-assl.md)，[可見](../properties/visible-element-assl.md)， [FromRelationshipEnd](relationshipend-data-type-assl.md)， [ToRelationshipEnd](relationshipend-data-type-assl.md)|  
 |衍生的元素||  
   

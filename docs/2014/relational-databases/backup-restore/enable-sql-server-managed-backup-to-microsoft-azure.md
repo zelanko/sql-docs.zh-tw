@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 436da2329cec73764cbeb73b34971352df83dfef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a80190c7a10ade3994fb9e12690b64b2e0e1b4df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124068"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>設定 SQL Server Managed Backup 到 Windows Azure
   本主題包含兩個教學課程：  

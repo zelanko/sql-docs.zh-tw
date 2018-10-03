@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-caps.latest.revision: 47
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38e20290eb9499191307c7afb146e9242603c3ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82d10d177de353736336d8cebd0a9a171ae4e9c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271344"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140649"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>設定優先順序條件約束的屬性
   若要設定優先順序條件約束的屬性，您可以使用下列其中一項工具：  

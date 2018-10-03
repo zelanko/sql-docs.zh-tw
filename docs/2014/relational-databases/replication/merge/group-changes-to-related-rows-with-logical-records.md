@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
-caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4520d56933b1f70402cf52372e8b7820d8fadc7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2fba7ca3af280beaea72e4055d29e9fc7e444c52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177188"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>使用邏輯記錄分組相關資料列的變更
     
@@ -45,7 +42,7 @@ ms.locfileid: "37194988"
   
  ![具有值的三個資料表邏輯記錄](../media/logical-records-02.gif "具有值的三個資料表邏輯記錄")  
   
- 若要定義發行項之間的邏輯記錄關聯性，請參閱＜ [Define a Logical Record Relationship Between Merge Table Articles](../publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
+ 若要定義發行項之間的邏輯記錄關聯性，請參閱＜ [定義合併資料表發行項之間的邏輯記錄關聯性](../publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
   
 ## <a name="benefits-of-logical-records"></a>邏輯記錄的優點  
  邏輯記錄功能具有兩個主要的優點：  

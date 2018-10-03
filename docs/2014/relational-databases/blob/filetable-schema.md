@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
@@ -14,12 +12,12 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67578dadba93af562732a6e0152e13a3c180195d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a5c2c2993b4c6ee002c2be0f8bbae28abaa2d87c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088508"
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述
   描述 FileTable 預先定義且固定的結構描述。  

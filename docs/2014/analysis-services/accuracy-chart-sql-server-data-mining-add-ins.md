@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining models, testing
 - lift [data mining]
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d331c1acb84b67a19eba2c6aacebfe68b947b217
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136794"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>精確度圖表 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的精確度圖表按鈕](media/dmc-accchart.gif "資料採礦功能區中的 [精確度圖表] 按鈕")  

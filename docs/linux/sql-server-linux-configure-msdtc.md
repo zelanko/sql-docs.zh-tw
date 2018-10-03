@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f8070b5910f5488d9aec9470adc088172d92ad1
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: b32b3465184d5a8be1ef07f42b6b764b0600940d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815546"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)
 
@@ -25,7 +23,7 @@ ms.locfileid: "47049629"
 
 本文說明如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSTDC)。 Linux 上的 MSDTC 支援是在 SQL Server 2019 CTP 2.0 引進。
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 
 在 Linux 上的 SQL Server 上已啟用分散式的交易，藉由引進 SQL Server 內的 MSDTC 和 RPC 端點對應程式功能。 根據預設，RPC 端點對應程序會接聽內送 RPC 要求的連接埠 135，而且將會路由傳送至適當的元件 （例如 MSDTC 服務）。 處理程序需要繫結至已知的通訊埠 （連接埠號碼小於 1024年），在 Linux 上的進階使用者權限。 若要避免以 RPC 端點對應程式處理序的根權限啟動 SQL Server，系統管理員必須使用 iptables 來建立將流量路由傳送至 SQL Server 的 RPC 端點對應處理序的連接埠 135 的 NAT 轉譯。
 

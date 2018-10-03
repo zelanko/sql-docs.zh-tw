@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Accounts Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Accounts element
 ms.assetid: 3ec62f58-c19b-4b15-b040-8941521a389b
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94e167c6eb804f3372fab6974403f0303f21a13a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d0dd0fabf7ebfc6ee020a533149b73e72f7a8a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126138"
 ---
 # <a name="accounts-element-assl"></a>Accounts 元素 (ASSL)
   包含帳戶類型中所定義的集合[資料庫](../objects/database-element-assl.md)項目。  

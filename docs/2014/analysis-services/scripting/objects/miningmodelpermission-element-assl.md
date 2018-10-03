@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningModelPermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningModelPermission element
 ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb714eb08fac3a6611669d48bf10aaee3580ee8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6bad2b1bda46fcc1437a5f4c967ced8a6c726f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176435"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113468"
 ---
 # <a name="miningmodelpermission-element-assl"></a>MiningModelPermission 元素 (ASSL)
   定義的權限成員[角色](role-element-assl.md)項目有針對個別[MiningModel](miningmodel-element-assl.md)項目。  
@@ -53,7 +50,7 @@ ms.locfileid: "37176435"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|[權限](../data-type/permission-data-type-assl.md)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

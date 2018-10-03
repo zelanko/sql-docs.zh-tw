@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1ea6363f2acb76d7c95fb6d2e8f7c0e9dbdbc6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108928"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器：原生或 SharePoint。 確認安裝所應遵循的步驟會視報表伺服器模式而定。  
@@ -95,7 +92,7 @@ ms.locfileid: "37272526"
   
 2.  開啟 [服務] 主控台應用程式，並確認報表伺服器服務正在執行中。 若要檢視報表伺服器服務的狀態，請按一下 [開始]，指向 [控制台]，並按兩下 [系統管理工具]，然後按兩下 [服務]。 當服務清單出現時，請捲動至 [報表伺服器 (MSSQLSERVER)]。 其狀態應該是 **[已啟動]**。  
   
-3.  開啟瀏覽器，並在位址列輸入報表伺服器 URL。 位址是由您在安裝期間對報表伺服器指定的伺服器名稱和虛擬目錄名稱所組成。 報表伺服器虛擬目錄的預設名稱為 **ReportServer**。 您可以使用下列 URL 來確認報表伺服器的安裝：http://\<電腦名稱>/ReportServer\<_執行個體名稱>。 如果您將報表伺服器安裝成具名執行個體，則需使用不同的 URL。 如需 URL 格式的詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 設定管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)。 如果您是 Windows Vista 或 Windows Server 2008 的本機系統管理員，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+3.  開啟瀏覽器，並在位址列輸入報表伺服器 URL。 位址是由您在安裝期間對報表伺服器指定的伺服器名稱和虛擬目錄名稱所組成。 報表伺服器虛擬目錄的預設名稱為 **ReportServer**。 您可以使用下列 URL 來確認報表伺服器的安裝： http://\<電腦名稱>/ReportServer\<_執行個體名稱>。 如果您將報表伺服器安裝成具名執行個體，則需使用不同的 URL。 如需 URL 格式的詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 設定管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)。 如果您是 Windows Vista 或 Windows Server 2008 的本機系統管理員，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 4.  執行報表來測試報表伺服器作業。 在此步驟中，您可以根據教學課程建立範例報表。 如需詳細資訊，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
   

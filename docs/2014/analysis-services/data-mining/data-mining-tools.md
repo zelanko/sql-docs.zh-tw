@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], tools
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
-caps.latest.revision: 47
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 810210c6c04cc0830c8c1586d82cb18c0ed5a02e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179085"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171548"
 ---
 # <a name="data-mining-tools"></a>資料採礦工具。
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會提供您可用來建立資料採礦方案的以下工具：  
@@ -67,7 +64,7 @@ ms.locfileid: "37179085"
   
  **如需詳細資訊：** [資料採礦設計師](data-mining-designer.md)  
   
-## <a name="sql-server-management-studio"></a>Transact-SQL  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  在您建立並將採礦模型部署到伺服器之後，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載資料採礦物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 您也可以繼續執行使用此模型的工作，例如瀏覽模型、處理新的資料和建立預測。  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也包含查詢編輯器，您可以用來設計及執行資料採礦延伸 (DMX) 查詢，或是透過 XMLA 來處理資料採礦物件。  

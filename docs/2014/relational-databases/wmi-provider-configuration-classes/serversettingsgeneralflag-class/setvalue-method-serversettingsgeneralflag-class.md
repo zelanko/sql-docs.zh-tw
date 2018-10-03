@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetValue Method (ServerSettingsGeneralFlag Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetValue method
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b83b0928027fcfadd095bac22c51a68a87776d8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2d503749231e28d07ee62dc4a55d52b042fc97f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175735"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197428"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 方法 (ServerSettingsGeneralFlag 類別)
   設定參考之旗標的所有值。  

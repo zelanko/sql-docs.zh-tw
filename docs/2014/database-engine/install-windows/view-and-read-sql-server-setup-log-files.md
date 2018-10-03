@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 365c5dca84514169082859900a1a3e065770f358
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91a3f00b2aeba382b31713104839d0f2fa2d8821
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101638"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
   每次執行安裝程式會建立的記錄檔都會建立與新時間戳記記錄檔資料夾，位於 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 % temp%\sqlsetup*.log 建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  
@@ -54,7 +51,7 @@ ms.locfileid: "37163349"
   
 ## <a name="summary-text"></a>摘要文字  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  此檔案會顯示安裝期間偵測到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件、作業系統環境、命令列參數值 (如果有指定)，以及已執行之每個 MSI/MSP 的整體狀態。  
   
  記錄檔組織成下列各區段：  
@@ -88,7 +85,7 @@ ms.locfileid: "37163349"
   
 ## <a name="summaryengine-baseyyyymmddhhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  summary_engine base 檔案與摘要檔案類似，而且是在主要工作流程期間產生的。  
   
 ### <a name="location"></a>位置  
@@ -96,7 +93,7 @@ ms.locfileid: "37163349"
   
 ## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  元件更新摘要記錄檔與摘要檔案類似，而且是在元件更新工作流程期間產生的。  
   
 ### <a name="location"></a>位置  
@@ -104,7 +101,7 @@ ms.locfileid: "37163349"
   
 ## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  全域規則摘要記錄檔與摘要檔案類似，而且是在全域規則工作流程期間產生的。  
   
 ### <a name="location"></a>位置  
@@ -112,7 +109,7 @@ ms.locfileid: "37163349"
   
 ## <a name="detailtxt"></a>Detail.txt  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  安裝或升級之類的主要工作流程會產生 Detail.txt，並提供執行的詳細資料。 針對安裝叫用每個動作時，檔案中的記錄會隨著時間而產生，並顯示執行動作的順序及其相依性。  
   
 ### <a name="location"></a>位置  
@@ -124,7 +121,7 @@ ms.locfileid: "37163349"
   
 ## <a name="detailcomponentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  元件更新工作流程會產生 Detail_ComponentUpdate.txt 檔，而且與 Detail.txt 類似。  
   
 ### <a name="location"></a>位置  
@@ -132,7 +129,7 @@ ms.locfileid: "37163349"
   
 ## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  全域規則執行會產生 Detail_GlobalRules.txt，而且與 Detail.txt 類似。  
   
 ### <a name="location"></a>位置  
@@ -140,7 +137,7 @@ ms.locfileid: "37163349"
   
 ## <a name="msi-log-files"></a>MSI 記錄檔  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  MSI 記錄檔會提供安裝套件程序的詳細資料。 在指定之套件的安裝期間，MSIEXEC 會產生這些記錄檔。  
   
  MSI 記錄檔的類型：  
@@ -158,7 +155,7 @@ ms.locfileid: "37163349"
   
 ## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  組態檔包含安裝期間提供的輸入設定。 該檔案可以用來重新啟動安裝，而不必手動輸入設定。 不過，帳號的密碼、PID 與某些參數不會儲存在組態檔中。 這些設定可以加入至檔案，或者使用命令列或安裝程式使用者介面提供。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014 使用組態檔](install-sql-server-using-a-configuration-file.md)。  
   
 ### <a name="location"></a>位置  
@@ -166,7 +163,7 @@ ms.locfileid: "37163349"
   
 ## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
   
-### <a name="overview"></a>概觀  
+### <a name="overview"></a>總覽  
  系統組態檢查報告包含每個已執行規則以及執行狀態的簡短描述。  
   
 ### <a name="location"></a>位置  

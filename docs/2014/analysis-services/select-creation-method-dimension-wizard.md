@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1450762e09481d4b8bfa5883c5c752d01216f29e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132318"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>選取建立方法 (維度精靈)
   使用 **[選取建立方法]** 頁面，即可選取建立維度的方式。  

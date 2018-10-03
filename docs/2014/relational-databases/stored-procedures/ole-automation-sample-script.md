@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE Automation [SQL Server], examples
@@ -14,12 +12,12 @@ ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66cdc46e024655dbb7c4409368fbb91763f5f945
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194068"
 ---
 # <a name="ole-automation-sample-script"></a>OLE Automation 範例指令碼
   此主題包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的範例，該批次使用 OLE Automation 預存程序建立並使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)]本機執行個體中的 SQL-DMO SQLServer 物件。 部分程式碼是用來當做 OLE Automation 系統預存程序參考主題的範例。  

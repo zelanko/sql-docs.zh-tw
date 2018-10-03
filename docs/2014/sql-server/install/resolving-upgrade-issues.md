@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - identifying upgrade issues
 - fixing upgrade issues [Upgrade Advisor]
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a428ddc49d047e9aac42f506917176eee977d0d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ade57dedae8d97cf4ab951c347e3a9ab84431017
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244063"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125308"
 ---
 # <a name="resolving-upgrade-issues"></a>解決升級問題
   本節中的主題描述可以偵測以及無法偵測但會影響升級或升級後續經驗的升級問題。 這些問題會依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件組織。  

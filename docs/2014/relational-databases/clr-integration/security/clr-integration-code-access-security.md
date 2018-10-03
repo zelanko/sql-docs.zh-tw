@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2e0d51e1c3268fd7399467f22fb833e77f14131
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075999"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
   Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜程式碼存取安全性＞一節。  
@@ -45,7 +42,7 @@ ms.locfileid: "37349880"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主機原則層級權限集合  
  由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機原則層級授與組件的程式碼存取安全性權限集合是由建立組件時指定的權限集合所決定。 有三個權限集合： `SAFE`，`EXTERNAL_ACCESS`並`UNSAFE`(使用指定**PERMISSION_SET**選項[CREATE ASSEMBLY &#40;-&#41;](/sql/t-sql/statements/create-assembly-transact-sql)).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此原則不適用於當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建立 CLR 執行個體時所生效的預設應用程式網域。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 此原則不適用於當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建立 CLR 執行個體時所生效的預設應用程式網域。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fixedpolicy 系統組件和使用者指定之原則的使用者組件。  
   

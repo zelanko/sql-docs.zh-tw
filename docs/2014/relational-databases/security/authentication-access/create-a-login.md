@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
@@ -24,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bc696a697c251bb8b800f22d948f1141a92ecae6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190488"
 ---
 # <a name="create-a-login"></a>建立登入
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
@@ -112,8 +110,7 @@ ms.locfileid: "43020510"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- 
-  **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
+ **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
   
 ### <a name="server-roles"></a>[伺服器角色]  
  **[伺服器角色]** 頁面列出所有可指派給新登入的可能角色。 下列是可以使用的選項：  

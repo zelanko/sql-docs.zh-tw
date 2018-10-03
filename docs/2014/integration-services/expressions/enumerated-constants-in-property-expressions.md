@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d000c77263a0448ff838bff42a5020b86a299a72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089655"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定`LoggingMode`屬性，您必須使用數值 2 來取代易記名稱 Disabled。  
@@ -461,7 +458,7 @@ ms.locfileid: "37221828"
   
 |DTSXMLDiffOptions 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
-|無|0|  
+|None|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,7 +488,7 @@ ms.locfileid: "37221828"
   
 |DatabaseSelection 中的易記名稱|數值|  
 |----------------------------------------|-------------------|  
-|無|0|  
+|None|0|  
 |All|1|  
 |系統|2|  
 |使用者|3|  
@@ -501,7 +498,7 @@ ms.locfileid: "37221828"
   
 |TableSelection 中的易記名稱|數值|  
 |-------------------------------------|-------------------|  
-|無|0|  
+|None|0|  
 |All|1|  
 |Specific|2|  
   
@@ -509,7 +506,7 @@ ms.locfileid: "37221828"
   
 |ObjectType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
-|Table|0|  
+|資料表|0|  
 |檢視|1|  
 |TableView|2|  
   
@@ -579,7 +576,7 @@ ms.locfileid: "37221828"
   
 |DTSForcedExecResult 中的易記名稱|數值|  
 |------------------------------------------|-------------------|  
-|無|-1|  
+|None|-1|  
 |成功|0|  
 |失敗|1|  
 |Completion|2|  

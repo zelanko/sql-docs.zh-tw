@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
 - query designers, Analysis Services
 ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
-caps.latest.revision: 18
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 691fc1b8ec1a0e32be5d3f1bf201e6fc5259e221
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26c645a134d962daff989e7f7a88b7ae9dcd67bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071458"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services MDX 查詢設計工具使用者介面 (報表產生器)
   Report Builder 提供了圖形化查詢設計工具，可用來建立適用於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，在處理報表時擷取資料。  
@@ -48,7 +45,7 @@ ms.locfileid: "37288514"
 |[中繼資料] 窗格|顯示在選取的 Cube 上定義之量值、關鍵效能指標 (KPI) 和維度的階層式清單。|  
 |[導出成員] 窗格|顯示目前已定義，可在查詢中使用的導出成員。|  
 |[篩選] 窗格|用來選擇維度和相關階層，以便篩選來源端的資料和限制傳回給報表的資料。|  
-|[資料] 窗格|在您從 [中繼資料] 窗格和 [導出成員] 窗格中拖曳項目時，顯示結果集的資料行標題。 如果已選取 **[自動執行]** 按鈕，便會自動更新結果集。 執行個體時提供 SQL Server 登入。|  
+|[資料] 窗格|在您從 [中繼資料] 窗格和 [導出成員] 窗格中拖曳項目時，顯示結果集的資料行標題。 如果已選取 **[自動執行]** 按鈕，便會自動更新結果集。 .|  
   
  您可以將 [中繼資料] 窗格中的維度、量值和 KPI 以及 [導出成員] 窗格中的導出成員，拖曳至 [資料] 窗格中。 在 [篩選] 窗格中，則可以選取維度和相關階層，以及設定篩選運算式來限制查詢可使用的資料。 如果已選取工具列上的 [自動執行] (![自動執行查詢](../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")) 切換按鈕，則每次您將中繼資料物件放到 [資料] 窗格中時，查詢設計工具便會執行查詢。 您可以使用工具列上的 [執行] (![執行查詢](../analysis-services/media/rsqdicon-run.gif "執行查詢")) 按鈕，以手動方式執行查詢。  
   

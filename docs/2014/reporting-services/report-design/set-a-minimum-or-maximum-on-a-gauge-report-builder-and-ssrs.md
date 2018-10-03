@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4bb8b841b4835d74eb37ff531f21b4942cc32738
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa4ebcd0b13b2c2e8035eedc77902001a61b7884
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053748"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>設定量測計的最小值或最大值 (報表產生器及 SSRS)
   與定義多個群組的圖表不同的是，量測計只會顯示一個值。 由於報表產生器和報表設計師會判斷您嘗試在量測計上顯示之單一值的內容或相對重要性，所以您必須定義標尺的最小值和最大值。 例如，如果您的資料值為介於 0 和 10 之間的排名，就會想要將最小值設定為 0 而將最大值設定為 10。 系統會根據您針對最小值和最大值指定的值，自動計算間隔數字。 根據預設，最小值和最大值會設定為 0 和 100，但這是您應該變更的任意值。 應用程式不會將您的值計算成百分比。  

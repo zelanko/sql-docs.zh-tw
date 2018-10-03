@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.dmx.f1
 ms.assetid: 7ac877a1-0f29-46b9-9a51-73b02172bef1
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c1efcb4ecef6c311882b471a56535543bcc25b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 063e78a15a4bd365c4eb061cc54454fb6e6637c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153235"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>DMX 查詢編輯器 (Analysis Services - 資料採礦)
   使用 [DMX 查詢編輯器] 即可設計和執行以資料採礦延伸模組 (DMX) 語言撰寫的陳述式。  

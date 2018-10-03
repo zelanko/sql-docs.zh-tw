@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185368"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>進階多重網站組態 (SSRS 原生模式)
   使用此對話方塊可建立及管理用來存取報表伺服器或報表管理員的 URL。 **[進階多重網站組態]** 對話方塊是用來建立其他 URL (亦即包含主機標頭名稱的自訂 URL)，或是指定 IPv4 或 IPv6 格式的 IP 位址。  
@@ -49,7 +46,7 @@ ms.locfileid: "37220728"
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
  **通訊埠**  
- 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他連接埠號碼，您必須一律包含在 URL (例如http://localhost:8181/reports)。  
+ 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他連接埠號碼，您必須一律包含在 URL (例如 http://localhost:8181/reports)。  
   
  **主機標頭**  
  如果您已經在網域名稱伺服器上定義解析為電腦的主機標頭，您可以在設定報表伺服器存取的 URL 中指定該主機標頭。  

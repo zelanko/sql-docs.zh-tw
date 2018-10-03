@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Discover Events event category
 ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3437445c242c2e6ab759119ceb644807eea0cfd1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72e462ead8fc003102bbd5ec1e48ef29904d0fb9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106238"
 ---
 # <a name="discover-events-data-columns"></a>探索事件資料行
   探索事件類別目錄具有下列事件類別：  

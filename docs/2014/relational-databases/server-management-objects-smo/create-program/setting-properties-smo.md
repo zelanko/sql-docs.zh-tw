@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, properties
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f24590f0e8f496c5ac5620153cdbfd3459bc6557
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ceffa7d590ad7861b07700ac13ab795a309bff39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080988"
 ---
 # <a name="setting-properties"></a>設定屬性
   屬性是儲存有關物件之描述性資訊的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]組態選項都由<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>物件的屬性。 您可以使用屬性集合來直接或間接地存取屬性。 直接存取屬性會使用下列語法：  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 360 (Database Engine error)
 ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 73d114cbde0e5b4e132d2a39e222ecff34b66df4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc46a5cf1252df209243623a63ec9bdc68e71873
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131658"
 ---
 # <a name="mssqlserver360"></a>MSSQLSERVER_360
     

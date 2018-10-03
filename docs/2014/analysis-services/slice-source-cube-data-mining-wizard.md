@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089988"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>配量來源 Cube (資料採礦精靈)
    您可以使用 [配量來源 Cube] 對話方塊來限制用於培訓模型的資料。 Cube 通常包含了與許多不同維度及屬性相關的資料，例如所有商店、所有區域和所有產品。 根據無限制的屬性組合來培訓模型並不實用，所以您要使用此對話方塊選擇用於培訓模型的一組特定項目。  
@@ -52,7 +49,7 @@ ms.locfileid: "37326548"
   
  例如，假設您選擇 Geography 階層並且選取 Country 當做層級，便無法建立使用 City 做為屬性的模型。 相對地，若是選擇了 City 做為要配量的階層層級，您就無法建立以 Country 為根據的採礦模型。  
   
- **[運算子]**  
+ **運算子**  
  選取要用於建立配量運算式的運算子。  
   
  例如，若您選擇了 Geography 做為階層，即可選取運算子 = 再接著輸入 "Europe" 當做篩選，從而取得只限 Europe 地區的 Cube 資料。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupAttributeBinding Data Type (out-of-line)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MeasureGroupAttributeBinding data type
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 244656b0ae951ec5f8274f11e58153faef80957d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 247e96f7994fa076b8641394231b772e80685e32
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156578"
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>MeasureGroupAttributeBinding 資料類型 (out-of-line) (ASSL)
   定義衍生資料類型，它代表量值群組中包含之維度內某個屬性的非正規 (out-of-line) 繫結。  
@@ -52,13 +49,13 @@ ms.locfileid: "37218208"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[繫結](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[CubeID](../properties/id-element-assl.md)， [DatabaseID](../../xmla/xml-elements-properties/id-element-xmla.md)， [MeasureGroupID](../properties/measuregroupid-element-assl.md)， [GranularityAttributeID](../properties/attributeid-element-assl.md)，[來源](../properties/source-element-binding-assl.md)|  
 |衍生的元素|[繫結](../../xmla/xml-elements-properties/binding-element-xmla.md)([繫結](../collections/attributes-element-assl.md)集合的 XML for Analysis (XMLA) 所[批次](../../xmla/xml-elements-commands/batch-element-xmla.md)並[程序](../../xmla/xml-elements-commands/process-element-xmla.md)命令)|  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050968"
 ---
 # <a name="processing-analysis-services-objects"></a>處理 Analysis Services 物件
   處理會影響下列 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件類型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、Cube、維度、量值群組、資料分割，以及資料採礦結構和模型。 您可以針對每一個物件，指定物件的處理層級，或者指定 [處理預設] 選項，讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取最佳的處理層級。 如需處理每一個物件之不同層級的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)。  

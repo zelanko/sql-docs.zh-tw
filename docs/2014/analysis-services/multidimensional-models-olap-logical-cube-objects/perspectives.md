@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ready-only cube view
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb27b635b450b8815087d3ac5a93f9e360cddf96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81e6fa2e6331c254d2748fd919878e6f1b98eb0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131678"
 ---
 # <a name="perspectives"></a>「檢視方塊」
   檢視方塊是可讓使用者以更簡單的方式查看 Cube 的定義。 檢視方塊是 Cube 功能的子集。 檢視方塊可讓管理員建立 Cube 的檢視，幫助使用者將焦點放在最相關的資料上。 檢視方塊包含了 Cube 中所有物件的子集。 檢視方塊不能包含父 Cube 中未定義的元素。  
@@ -63,7 +60,7 @@ ms.locfileid: "37155299"
   
  檢視方塊是 Cube 的唯讀檢視；使用檢視方塊並無法重新命名或變更 Cube 中的物件。 同樣地，使用檢視方塊也無法變更 Cube 的行為或功能 (例如，使用視覺化總計)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  檢視方塊並非用來作為安全性機制，而是在商業智慧應用程式中提供較佳使用者體驗的工具。 特定檢視方塊的所有安全性，都是繼承自基礎 Cube。 例如，如果使用者沒有 Cube 中物件的存取權，則檢視方塊也無法提供該物件的存取權。 必須先解決 Cube 的安全性，才能透過檢視方塊提供 Cube 中物件的存取權。  
   
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-caps.latest.revision: 59
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 011b4ee289a55f150d7a800a26db2f9f7f954ad0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177469"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用數位憑證來簽署封裝
   此主題描述如何使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 您可以使用數位簽章搭配其他設定，防止無效的封裝載入並執行。  

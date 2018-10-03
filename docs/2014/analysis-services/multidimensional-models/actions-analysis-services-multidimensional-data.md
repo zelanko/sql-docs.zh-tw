@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d77c8d49f052d11de98747ff9deee0c61e0070c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193658"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
   動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  

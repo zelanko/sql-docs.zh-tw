@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 15517 (Database Engine error)
 ms.assetid: f94287f5-129f-4c52-9d34-62b996088001
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebbc87a299cb55658c7a8506fa4a63a2e2d1d215
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 163503605a8941dfa7486d62c974b0d758ee7931
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133278"
 ---
 # <a name="mssqlserver15517"></a>MSSQLSERVER_15517
     

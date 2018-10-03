@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [AMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12844542252dac6781eae55fa16c463776731cbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176945"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165758"
 ---
 # <a name="programming-amo-data-mining-objects"></a>設計 AMO 資料採礦物件的程式
   使用 AMO 來設計資料採礦物件是簡單且直接的。 第一個步驟是建立資料結構模型以支援採礦專案。 接著建立足以支援您要使用之採礦演算法的資料採礦模型，這是為了預測或是尋找隱藏在資料之下無法察覺的關係。 採礦專案建立完成後 (包括結構與演算法)，您就可以處理採礦模型並取得定型模型，以便稍後在從用戶端應用程式查詢和預測時可以使用。  

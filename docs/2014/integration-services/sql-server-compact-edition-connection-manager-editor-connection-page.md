@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlmobileconnection.connection.f1
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae1f7126fcef4e17969613a448b9f8d6a335c9a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c99c146b1bef27195872f6166141fb4d91fdf1e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178268"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 連接管理員編輯器 (連接頁面)
   使用 [SQL Server Compact Edition 連線管理員] 對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  

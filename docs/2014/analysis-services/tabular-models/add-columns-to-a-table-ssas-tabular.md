@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12534cd4554d71c368f09a6620056e187578b456
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63d2958e8c0dec7213bfed0a054787cda5f0c853
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184718"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>將資料行加入至資料表 (SSAS 表格式)
   本主題描述如何將資料行加入現有資料表。  

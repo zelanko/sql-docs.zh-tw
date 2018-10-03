@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 11/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - system stored functions [SQL Server]
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e9153d73a70a46dbaedc420735fdd694565d276b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764708"
 ---
 # <a name="system-functions-for-transact-sql"></a>TRANSACT-SQL 的系統函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4df9c58eb7832438253fc39bf6c68e8268ff2671
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395241"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067401"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md) 。  
   
 ## <a name="covered-in-this-topic"></a>本主題所涵蓋的內容  
   
-|主題|概觀|  
+|主題|總覽|  
 |-----------|--------------|  
 |[解決由於 OOM 所造成的資料庫還原失敗](resolve-out-of-memory-issues.md#bkmk_resolverecoveryfailures)|若您收到錯誤訊息：「資料庫 '*\<資料庫名稱>*' 的還原作業因為資源集區 '*\<資源集區名稱>*' 中的記憶體不足而失敗」，該怎麼辦。|  
 |[解決低記憶體或 OOM 狀況對於工作負載的影響](resolve-out-of-memory-issues.md#bkmk_recoverfromoom)|如果您發現低記憶體問題對於效能造成負面影響，該怎麼辦。|  
@@ -87,7 +84,7 @@ ms.locfileid: "40395241"
 #### <a name="free-up-existing-memory"></a>釋出現有的記憶體  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>刪除非必要的記憶體最佳化資料表資料列並等候記憶體回收  
- 您可以從記憶體最佳化資料表中移除非必要的資料列。 記憶體回收行程會將這些資料列所使用的記憶體傳回給可用的記憶體。 執行個體時提供 SQL Server 登入。 記憶體中 OLTP 引擎會積極地回收資料列佔用的記憶體。 不過，長時間執行的交易可能會防止記憶體回收。 例如，假設您的交易會執行 5 分鐘，則任何在交易作用期間由於更新/刪除作業而建立的資料列版本，都無法進行記憶體回收。  
+ 您可以從記憶體最佳化資料表中移除非必要的資料列。 記憶體回收行程會將這些資料列所使用的記憶體傳回給可用的記憶體。 . 記憶體中 OLTP 引擎會積極地回收資料列佔用的記憶體。 不過，長時間執行的交易可能會防止記憶體回收。 例如，假設您的交易會執行 5 分鐘，則任何在交易作用期間由於更新/刪除作業而建立的資料列版本，都無法進行記憶體回收。  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>將一個或多個資料列移至磁碟資料表  
  下列 TechNet 文件提供了有關將記憶體最佳化資料表的資料列移至磁碟資料表的指引。  

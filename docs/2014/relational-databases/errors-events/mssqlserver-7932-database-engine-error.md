@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7932 (Database Engine error)
 ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b3732b845b9add5ef6ae38b2d15a62edf71c8a0f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: aa0e9f6eb8e2a02bb92db50eaf11dde60d8e8f12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427042"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140878"
 ---
 # <a name="mssqlserver7932"></a>MSSQLSERVER_7932
     

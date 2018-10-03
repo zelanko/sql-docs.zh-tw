@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7738ca9001ef1c3942dbea1fe7bb9dbae683757
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dc4324a9c0f50ed55131e41b5e767e1ce90232c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059668"
 ---
 # <a name="manage-dqs-databases"></a>管理 DQS 資料庫
   本節針對 DQS 資料庫提供可執行之資料庫管理活動的相關資訊，如備份/還原或卸離/附加等。  

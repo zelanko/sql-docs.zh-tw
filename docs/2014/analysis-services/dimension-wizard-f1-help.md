@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee5540e7421893a5e4639025704b0a636dc791cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2c5f2d0cb6a12ad4d9c879633c97365d15b0287
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142248"
 ---
 # <a name="dimension-wizard-f1-help"></a>維度精靈 F1 說明
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈]，即可在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中建立資料庫維度。 建立資料庫維度之後，您就可以使用 [維度設計師] 來修改其屬性。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  

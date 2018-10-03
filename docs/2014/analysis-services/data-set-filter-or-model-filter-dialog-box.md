@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119298"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>資料集篩選器或模型篩選器對話方塊
   這個對話方塊可協助您建立能套用至資料集的篩選器。  資料集可以是用於字串的外部資料集，或採礦模型的案例資料。 對話方塊的名稱會根據篩選器是用於外部資料集或採礦模型而變更。  
@@ -45,8 +42,8 @@ ms.locfileid: "37187315"
 |-----------|-----------------|  
 |**及/或**|選擇運算子來聯結多個條件。|  
 |**採礦結構資料行**|按一下以選取資料來源，然後再按一下方格中的連續行來從資料來源新增資料行。<br /><br /> 方格中的第一行會指定資料來源檢視。 在選取資料來源檢視之後，[採礦結構資料行] 會顯示資料表圖示，而 [值] 欄位則顯示已為此資料來源所定義之所有準則的組合。<br /><br /> 在選取資料來源之後，[採礦結構資料行] 方塊會提供資料來源中個別資料行的下拉式清單。|  
-|**[運算子]**|從清單選取運算子。|  
-|**ReplTest1**|對於資料表而言，[值] 欄位會顯示套用至資料來源的所有篩選組合。 您也可以按一下文字方塊右側的建立按鈕 **(…)**，以開啟 [篩選] 對話方塊並建立條件。|  
+|**運算子**|從清單選取運算子。|  
+|**值**|對於資料表而言，[值] 欄位會顯示套用至資料來源的所有篩選組合。 您也可以按一下文字方塊右側的建立按鈕 **(…)**，以開啟 [篩選] 對話方塊並建立條件。|  
   
  **運算式**  
  顯示您使用方格所建立的準則集。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c8125b3543e6f3c088ad8b7ae7dd5952d52df26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50f95f4049d03c8d822c3e56ba5ff235705bf4de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121178"
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 結構描述資料列集
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所含的結構描述資料列集會傳回有關伺服器狀態、活動和物件的中繼資料。 如果您要開發連接到有可變結構和特性之 Analysis Services 模型的用戶端應用程式，需要擷取中繼資料。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ef00c8493ab700976e1ede1b6d6631b6d2fe8da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192188"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
     
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此範例示範新[!INCLUDE[hek_2](../includes/hek-2-md.md)]功能，這是組件的[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 它會顯示新的記憶體最佳化資料表和原生編譯預存程序，並可用來示範效能優點[!INCLUDE[hek_2](../includes/hek-2-md.md)]。  
   
 > [!NOTE]  

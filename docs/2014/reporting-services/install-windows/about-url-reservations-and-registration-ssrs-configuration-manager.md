@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b042690b6cf4a9d2335a2c91f8f6a618f9261caf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f51c538b050e746a3d806e5a226eaa77eba1c8b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054078"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
   Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和報表管理員定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
@@ -67,7 +64,7 @@ ms.locfileid: "37183975"
 |HTTP.SYS 中的 URL 保留項目|URL|說明|  
 |---------------------------------|---------|-----------------|  
 |http://+:80/reportserver|http://\<電腦名稱 > / reportserver<br /><br /> http://\<IPAddress > / reportserver<br /><br /> http://localhost/reportserver|此 URL 保留項目會在通訊埠 80 上指定萬用字元 (+)。 如此會將任何指定可在通訊埠 80 上解析為報表伺服器電腦之主機的內送要求放入報表伺服器佇列中。 請注意在處理這個 URL 保留項目時，可使用任意數目的 URL 來存取報表伺服器。<br /><br /> 對於大多數作業系統而言，這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的預設 URL 保留項目。|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|此 URL 保留項目會指定 IP 位址，而且比起萬用字元 URL 保留項目更具限制性。 只有包含此 IP 位址的 URL 可用來連接報表伺服器。 給定此 URL 保留項目，位於 http:// 的報表伺服器的要求\<電腦名稱 > / reportserver 或http://localhost/reportserver會失敗。|  
+|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|此 URL 保留項目會指定 IP 位址，而且比起萬用字元 URL 保留項目更具限制性。 只有包含此 IP 位址的 URL 可用來連接報表伺服器。 給定此 URL 保留項目，位於 http:// 的報表伺服器的要求\<電腦名稱 > / reportserver 或 http://localhost/reportserver會失敗。|  
   
 ##  <a name="DefaultURLs"></a> 預設 URL  
  如果您使用預設組態安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安裝程式將會保留 URL 供報表伺服器 Web 服務和報表管理員使用。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具內定義 URL 保留項目時，您也可以接受這些預設值。 如果您安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或是將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝為具名執行個體，預設 URL 將會包含執行個體名稱。  
@@ -119,7 +116,7 @@ ms.locfileid: "37183975"
   
 -   雖然 SharePoint 產品和技術有為其定義的 URL 保留項目，但是當您發行到伺服器時，可以忽略此保留項目。 如果是 SharePoint Web 應用程式，URL 保留會是內部作業。  
   
--   整合的報表伺服器和 SharePoint 技術執行個體在相同電腦上安裝所在的單一伺服器部署，您無法使用http://localhost/reportserver。 如果http://localhost是用來存取 SharePoint Web 應用程式，您必須使用非預設的網站或唯一的連接埠指派來存取報表伺服器。 此外，如果此報表伺服器與 SharePoint 伺服陣列整合在一起，將不會針對此部署中安裝於遠端電腦上的節點來解析報表伺服器的 localhost 存取。  
+-   整合的報表伺服器和 SharePoint 技術執行個體在相同電腦上安裝所在的單一伺服器部署，您無法使用 http://localhost/reportserver。 如果 http://localhost是用來存取 SharePoint Web 應用程式，您必須使用非預設的網站或唯一的連接埠指派來存取報表伺服器。 此外，如果此報表伺服器與 SharePoint 伺服陣列整合在一起，將不會針對此部署中安裝於遠端電腦上的節點來解析報表伺服器的 localhost 存取。  
   
 -   報表管理員的 URL 保留項目和端點將無法針對 SharePoint 整合模式下執行的報表伺服器來設定。 如果真要設定，該項目在 SharePoint 整合模式下部署報表伺服器之後就無法再運作。 此模式不支援報表管理員。  
   

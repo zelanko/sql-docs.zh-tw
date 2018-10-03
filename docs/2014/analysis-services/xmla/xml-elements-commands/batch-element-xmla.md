@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Batch Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Batch command
 ms.assetid: 818f3212-9605-4e34-8623-1154d9fae1f0
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269eedd9a48d1bf7bde43d0294bac7a81b9f90ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d402c1f6c35370a506ed57c43b8fbc05d0b6bef7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178138"
 ---
 # <a name="batch-element-xmla"></a>Batch 元素 (XMLA)
   執行一或多個 XML for Analysis (XMLA) 命令，以批次作業中，循序或平行執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -57,8 +54,8 @@ ms.locfileid: "37291234"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

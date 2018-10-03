@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f379b41d4620197db75ffdd29b80295ee5dc67d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9ccae1f9ff9d2ab69408e36d8c8ef1cc071eaf9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077218"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>檢視 Integration Services 伺服器的報表
   在目前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，都可使用標準報表[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可協助您監視[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案的已部署至[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]伺服器。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](../../2014/integration-services/reports-for-the-integration-services-server.md)。  

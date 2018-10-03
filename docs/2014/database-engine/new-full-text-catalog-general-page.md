@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalog.general.f1
 ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 72ef177888c7eb646cebed8d7a74195f809cdd28
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9fe261aefff3013f9a97b1a3f8d2b4ce0b1453e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052468"
 ---
 # <a name="new-full-text-catalog-general-page"></a>新增全文檢索目錄 (一般頁面)
   使用這個對話方塊，即可建立新的全文檢索目錄。  

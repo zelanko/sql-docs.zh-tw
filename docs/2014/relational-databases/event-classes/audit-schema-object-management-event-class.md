@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object Management event class
 ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7814c85f2df953f3de5c6760345f41b7be84caf1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7f2d41ac372f774d51336647c3ff89a775771a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147528"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management 事件類別
   建立、改變或卸除伺服器物件時，會發生 **Audit Schema Object Management** 事件類別。  

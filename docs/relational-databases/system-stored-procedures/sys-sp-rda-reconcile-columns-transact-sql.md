@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
@@ -19,12 +17,12 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe05d88b6453bd9918b5777b3f52291ec9fefc2c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1d077da2847a430b2a225ea896b1eafd289218a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603956"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 >0 (失敗)  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要 db_owner 權限。  
    
 ## <a name="remarks"></a>備註  

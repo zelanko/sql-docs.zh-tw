@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72d10ae01b290425d5f00054d84311323c3332a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c307d7c31b3599a358346812279d79c37705b533
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074158"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 使用者介面
   除了 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 索引標籤上的設計介面以外，使用者介面還提供對下列視窗和對話方塊 (用以將功能加入封裝及設定封裝物件屬性) 的存取權：  

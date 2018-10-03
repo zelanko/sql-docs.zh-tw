@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96a513d1ff221b550c53ce31442ae91a9cf5c8dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5f93bf95e34c377047cb86e47dc02a82b64d5777
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165270"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>選項 （設計工具-維護計畫頁面）
   使用 [選項] 對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具] 功能表上按一下 [選項]，展開 [設計工具]，然後選取 [維護計畫]。  

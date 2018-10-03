@@ -5,8 +5,6 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
@@ -14,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132184"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
   在您開始使用 FILESTREAM 之前，必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用 FILESTREAM。 此主題描述如何使用 SQL Server 組態管理員來啟用 FILESTREAM。  
@@ -85,7 +83,7 @@ ms.locfileid: "37413147"
 |-|-|-|-|-|  
 |RAID 層級|寫入效能|讀取效能|容錯|備註|  
 |RAID 5|一般|一般|非常好|效能高於單一磁碟或 JBOD，而低於具有條狀配置的 RAID 0 或 RAID 5。|  
-|RAID 0|非常好|非常好|無||  
+|RAID 0|非常好|非常好|None||  
 |RAID 5 + 條狀配置|非常好|非常好|非常好|成本最高的選項。|  
   
 

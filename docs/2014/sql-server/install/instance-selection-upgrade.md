@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2788588-224e-4857-aa82-c6a0458d5d4f
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38e302479d34dfca27f4978ccb880e476c5a3df8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1fc714b53e843eb2cc1550e230024227b99f68e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153769"
 ---
 # <a name="instance-selection-upgrade"></a>執行個體選取範圍 (升級)
   使用 [執行個體選取範圍 (升級)] 頁面，即可指定要升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  

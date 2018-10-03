@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - database-engine
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
-caps.latest.revision: 13
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c822582902c48c9381112bba3fb3b0734ca6776
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 200a9b6de6ac5d07bd9c58f991fb6c7febc16c72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154958"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>SQL Server 2014 工具和增益集元件的文件集
     

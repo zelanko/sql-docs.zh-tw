@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 10531 (Database Engine error)
 ms.assetid: bb40e994-231c-44ce-933f-8d767fb2f450
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e101562fe823ef7339218dc02b30e60027efbcec
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7324979238eda7f3ee63a709c199878350edb82d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426447"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093948"
 ---
 # <a name="mssqlserver10531"></a>MSSQLSERVER_10531
     

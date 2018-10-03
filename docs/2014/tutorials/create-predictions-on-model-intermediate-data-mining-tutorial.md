@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092828"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>在時序群集模型上建立預測 (中繼資料採礦教學課程)
   了解時序群集檢視器中瀏覽它更好的模型之後，您可以使用預測查詢產生器上建立預測查詢**採礦模型預測**資料採礦設計師中的索引標籤。 若要建立預測，請先選取時序群集模型，然後再選取輸入資料。 對於輸入而言，您可以使用外部資料來源，或是建立單一查詢，並在對話方塊中提供值。  

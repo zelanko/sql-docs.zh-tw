@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Where Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Where element
 ms.assetid: 81fb4190-3379-4ddf-8795-a0772f3b92bb
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44d6242d0c815ee8ec150936a5e41ad12de4a59d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b45926ec9022e8e8092721580c2419b423dd2b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191368"
 ---
 # <a name="where-element-xmla"></a>Where 元素 (XMLA)
   定義 [Drop](../xml-elements-commands/drop-element-xmla.md) 或 [Update](../xml-elements-commands/update-element-xmla.md) 父命令所使用的篩選條件。  
@@ -54,8 +51,8 @@ ms.locfileid: "37218068"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

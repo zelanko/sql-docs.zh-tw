@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checkins [SQL Server Management Studio]
 - checking in files
 - source controls [SQL Server Management Studio], checkins
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 145fbb64b5b7ca0098187a96515cd60d26e770e8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069868"
 ---
 # <a name="manage-checkins"></a>管理簽入
   若要變更其他使用者能夠使用的原始檔控制檔案，您必須簽入檔案。 當您簽入檔案時，您建立的版本會複製到原始檔控制提供者中，且會成為檔案的最新版本，有適當權限的使用者通常都可以使用它。  

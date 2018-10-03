@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5033a56981496455922967f2f1035dbd1245384
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: efa0ae0d1c6bc60ef0201d1e7d289f71102157e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185229"
 ---
 # <a name="options-environment-help-online-page"></a>選項 （環境-說明-線上頁面）
   [選項] 對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具] 功能表上，按一下 [選項]、展開 [環境] 資料夾、選取 [說明]，然後按一下 [線上]。 如果 [線上] 頁面未出現在清單中，請在 [選項] 對話方塊中選取 [顯示所有設定] 核取方塊。  

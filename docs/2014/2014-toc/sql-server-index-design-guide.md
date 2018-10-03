@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178254"
 ---
-# SQL Server 索引設計指南
+# <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
   設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 SQL Server 索引設計指南包含的資訊和最佳作法，可以協助您設計符合應用程式需求的有效索引。  
   
 **適用於**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]透過[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有指示。  
@@ -51,7 +48,7 @@ ms.locfileid: "40393154"
   
  使用索引不一定就會有良好的效能，良好的效能和有效率地使用索引也不能劃上等號。 如果使用索引對產生最佳效能一定有幫助，查詢最佳化工具的作業就很單純。 但事實上，選擇不正確的索引可能得不到最佳效能。 因此，查詢最佳化工具的工作是只有在提升效能時才選擇索引或索引組合，如果會妨礙效能，就要避免索引式擷取。  
   
-### 索引設計工作  
+### <a name="index-design-tasks"></a>索引設計工作  
  下列工作是針對設計索引所建議的策略：  
   
 1.  了解資料庫本身的特性。 例如，這是經常修改資料的線上交易處理 (OLTP) 資料庫嗎？還是包含主要唯讀資料且必須快速處理非常龐大資料集的決策支援系統 (DSS) 或資料倉儲 (OLAP) 資料庫？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 記憶體最佳化的資料行存放區索引* 特別適合一般資料倉儲資料集。 資料行存放區索引可以加快常用資料倉儲查詢 (如篩選、彙總、群組及星型聯結查詢等) 的速度，大幅改善使用者的資料倉儲經驗。 如需詳細資訊，請參閱 < [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
@@ -69,7 +66,7 @@ ms.locfileid: "40393154"
 ##  <a name="General_Design"></a> 一般索引設計指導方針  
  經驗豐富的資料庫管理員可以設計出一組數量適中的索引，但即使是普通複雜的資料庫與工作量，這都是一件非常複雜、費時，且容易出錯的工作。 了解資料庫、查詢和資料行的特性可以協助您設計最佳化的索引。  
   
-### 資料庫考量  
+### <a name="database-considerations"></a>資料庫考量  
  當您設計索引時，請考慮下列資料庫指導方針：  
   
 -   資料表中的索引數量過多會影響到 INSERT、UPDATE、DELETE 和 MERGE 陳述式的效能，因為只要資料表中的資料一變更，所有的索引也都必須隨著調整。 例如，如果資料行會在數個索引中用到，而您執行了修改此資料行資料的 UPDATE 陳述式，則除了基礎基底資料表 (堆積或叢集的索引) 中的資料行之外，還必須更新每個含有該資料行的索引。  
@@ -84,7 +81,7 @@ ms.locfileid: "40393154"
   
 -   使用 Database Engine Tuning Advisor 可分析資料庫，並提供索引建議。 如需詳細資訊，請參閱 [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)。  
   
-### 查詢注意事項  
+### <a name="query-considerations"></a>查詢注意事項  
  當您設計索引時，請考慮下列查詢指導方針：  
   
 -   在查詢之述詞及聯結條件經常使用的資料行上，建立非叢集索引。 但應該避免加入不必要的資料行。 加入太多索引資料行可能會對磁碟空間和索引維護效能產生不利的影響。  
@@ -95,7 +92,7 @@ ms.locfileid: "40393154"
   
 -   評估查詢類型，以及查詢中如何使用資料行。 例如，在完全相符查詢類型中使用的資料行，就很適合當作非叢集或叢集索引。  
   
-### 資料行注意事項  
+### <a name="column-considerations"></a>資料行注意事項  
  當您設計索引時，請考慮下列資料行指導方針：  
   
 -   讓叢集索引保持短小的索引鍵。 此外，對唯一或非 Null 資料行建立叢集索引，會有幫助。  
@@ -116,7 +113,7 @@ ms.locfileid: "40393154"
   
 -   考慮為計算的資料行建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
-### 索引特性  
+### <a name="index-characteristics"></a>索引特性  
  當您決定好適合某一查詢的索引之後，便可選取最符合您需要的索引類型。 索引的特性包括下列項目：  
   
 -   叢集或非叢集  
@@ -146,7 +143,7 @@ ms.locfileid: "40393154"
   
  由於您無法預測何時會發生哪種存取方式，所以比較好的作法是將資料表與索引分散到所有的檔案群組。 這樣就可以保證會存取到所有的磁碟，因為不論資料的存取方式如何，所有的資料與索引都平均分散在所有的磁碟上。 這也是系統管理員較單純的作法。  
   
-#### 多個檔案群組間的資料分割  
+#### <a name="partitions-across-multiple-filegroups"></a>多個檔案群組間的資料分割  
  您也可以考慮將叢集與非叢集索引分割於多個檔案群組之間。 資料分割索引是以水平方式分割，或根據資料分割函數依資料列來分割。 資料分割函數是用以定義每個資料列是否對應到一組資料分割，這些資料分割是根據一些稱為資料分割資料行之值。 資料分割配置指定資料分割與一組檔案群組的對應。  
   
  分割索引將可提供下列優點：  
@@ -205,7 +202,7 @@ ON Purchasing.PurchaseOrderDetail
   
  如果叢集索引不是以 UNIQUE 屬性建立，則 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會自動將 4 位元組的 uniqueifier 資料行加入資料表。 當有需要時， [!INCLUDE[ssDE](../includes/ssde-md.md)] 會自動將 uniqueifier 值加入資料行，使每個索引鍵都是唯一的。 這個資料行及其值是供內部使用的，使用者看不到也無法存取它。  
   
-### 叢集索引架構  
+### <a name="clustered-index-architecture"></a>叢集索引架構  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，索引的結構為 B 型樹狀目錄。 索引 B 型樹狀目錄中的每個分頁稱為索引節點。 B 型樹狀目錄的頂部節點稱為根節點。 索引中的最下層節點稱為分葉節點。 根與分葉節點之間的任何索引層級通稱為中繼層級。 在叢集索引中，分葉節點包含基礎資料表的資料頁。 根和中繼層級節點包含保存索引資料列的索引頁。 每個索引資料列都包含索引鍵值，以及指向 B 型樹狀目錄之中繼層級分頁或索引分葉層級之資料列的指標。 索引每個層級中的分頁都以雙向連結串列方式連結。  
   
  對於索引所使用的每個資料分割，叢集索引在 [sys.partitions](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)中都有一個 **index_id** = 1 的資料列。 根據預設，叢集索引只有一個資料分割。 當叢集索引有多個資料分割時，每個資料分割都有一個 B 型樹狀目錄結構來包含該特定資料分割的資料。 例如，如果叢集索引有四個資料分割，則共有四個 B 型樹狀目錄結構，每個資料分割中各一個。  
@@ -218,7 +215,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![叢集索引的層級](media/bokind2.gif "叢集索引的層級")  
   
-### 查詢注意事項  
+### <a name="query-considerations"></a>查詢注意事項  
  在建立叢集索引之前，必須先了解資料的存取方式。 執行下列情況的查詢請考慮使用叢集索引：  
   
 -   使用如 BETWEEN、>、>=、< 和 <= 等運算子來傳回值的範圍。  
@@ -233,7 +230,7 @@ ON Purchasing.PurchaseOrderDetail
   
      在 ORDER BY 或 GROUP BY 子句中指定的資料行之索引，可讓 [!INCLUDE[ssDE](../includes/ssde-md.md)] 不需排序資料，因為資料列已經排序過了。 這種方式可以提高查詢的執行效能。  
   
-### 資料行注意事項  
+### <a name="column-considerations"></a>資料行注意事項  
  一般而言，您應該盡可能以較少的資料行來定義叢集索引鍵。 考慮具有下列一或多個屬性的資料行：  
   
 -   是唯一或包含許多不同的值  
@@ -267,7 +264,7 @@ ON Purchasing.PurchaseOrderDetail
   
  如同您使用書中索引的方式一樣，查詢最佳化工具會先搜尋非叢集索引以找出資料值在資料表中的位置，然後再直接從該位置擷取資料，即可搜尋資料值。 這讓非叢集索引成為執行完全符合的查詢之最佳選擇，因為此種索引所包含的項目會描述查詢中所要搜尋的資料值在資料表中的確定位置。 例如，若要針對直屬特定經理的所有員工查詢 `HumanResources. Employee` 資料表，查詢最佳化工具可能使用非叢集索引 `IX_Employee_ManagerID`，而這個索引以 `ManagerID` 做為索引鍵資料行。 查詢最佳化工具可以在索引中快速尋找符合指定之 `ManagerID`的所有項目。 每個索引項目會指向資料表中正確的頁面和資料列，或指向可以找到對應資料的叢集索引。 查詢最佳化工具在索引中找到所有項目之後，即可直接跳至正確的頁面和資料列以擷取資料。  
   
-### 非叢集索引架構  
+### <a name="nonclustered-index-architecture"></a>非叢集索引架構  
  非叢集索引擁有與叢集索引相同的 B 型樹狀目錄結構，不過有下列顯著的差異：  
   
 -   基礎資料表的資料列並未根據其非叢集索引鍵的順序，進行排序與儲存。  
@@ -288,7 +285,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![非叢集索引的層級](media/bokind1.gif "非叢集索引的層級")  
   
-### 資料庫考量  
+### <a name="database-considerations"></a>資料庫考量  
  設計非叢集索引時，請考慮資料庫的特性。  
   
 -   更新需求較低但資料容量較大的資料庫或資料表，可以從許多非叢集索引中得到好處以增進查詢效能。 請考慮針對定義完善的資料子集建立篩選的索引來提升查詢效能、降低索引儲存成本，並降低與完整資料表非叢集索引比較的索引維護成本。  
@@ -299,7 +296,7 @@ ON Purchasing.PurchaseOrderDetail
   
      資料表中的索引數量過多會影響到 INSERT、UPDATE、DELETE 和 MERGE 陳述式的效能，因為只要資料表中的資料一變更，所有的索引也都必須隨著調整。  
   
-### 查詢注意事項  
+### <a name="query-considerations"></a>查詢注意事項  
  建立非叢集索引之前，應該先了解資料的存取方式。 請考慮針對具有下列屬性的查詢使用非叢集索引：  
   
 -   使用 JOIN 或 GROUP BY 子句。  
@@ -312,7 +309,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   包含會傳回完全相符項目的查詢 (例如 WHERE 子句) 中，所設定的搜尋條件常會用到的資料行。  
   
-### 資料行注意事項  
+### <a name="column-considerations"></a>資料行注意事項  
  考慮具有一或多個下列屬性的資料行：  
   
 -   涵蓋查詢。  
@@ -339,7 +336,7 @@ ON Purchasing.PurchaseOrderDetail
   
  索引鍵資料行儲存在索引的所有分葉層級上，而非索引鍵之索引資料行僅儲存在分葉層級上。  
   
-##### 使用內含資料行避開大小限制  
+##### <a name="using-included-columns-to-avoid-size-limits"></a>使用內含資料行避開大小限制  
  您可以在非叢集索引中包含非索引鍵之索引資料行，以避免超出目前索引大小限制 (最大 16 個索引鍵資料行，最大 900 個位元組索引鍵大小) 計算索引鍵資料行數或索引鍵大小時， [!INCLUDE[ssDE](../includes/ssde-md.md)] 不會考慮非索引鍵之索引資料行。  
   
  例如，假設您想要在 `Document` 資料表中建立下列資料行的索引：  
@@ -358,7 +355,7 @@ ON Production.Document (Title, Revision)
 INCLUDE (FileName);   
 ```  
   
-##### 內含資料行索引指導方針  
+##### <a name="index-with-included-columns-guidelines"></a>內含資料行索引指導方針  
  設計具有內含資料行的非叢集索引時，請考慮下列指導方針：  
   
 -   非索引鍵之索引資料行是定義於 CREATE INDEX 陳述式的 INCLUDE 子句。  
@@ -375,7 +372,7 @@ INCLUDE (FileName);
   
 -   資料行名稱在 INCLUDE 清單中不得重複。  
   
-##### 資料行大小指導方針  
+##### <a name="column-size-guidelines"></a>資料行大小指導方針  
   
 -   至少必須定義一個索引鍵資料行。 非索引鍵之索引資料行數目的上限為 1023 個資料行。 這是資料表資料行數目的上限減 1。  
   
@@ -383,7 +380,7 @@ INCLUDE (FileName);
   
 -   所有非索引鍵之索引資料行大小總計僅由 INCLUDE 子句中指定的資料行大小限定；例如，`varchar(max)` 資料行是限定為 2 GB。  
   
-##### 資料行修改指導方針  
+##### <a name="column-modification-guidelines"></a>資料行修改指導方針  
  當您修改定義為內含資料行的資料表資料行時，則下列限制適用：  
   
 -   必須先卸除索引，才能從資料表卸除非索引鍵之索引資料行。  
@@ -397,7 +394,7 @@ INCLUDE (FileName);
         > [!NOTE]  
         >  這些資料行修改限制也適用索引鍵資料行。  
   
-##### 設計建議  
+##### <a name="design-recommendations"></a>設計建議  
  重新設計具有大型索引鍵大小的非叢集索引，如此僅有用於搜尋與查閱的資料行才會是索引鍵資料行。 讓涵蓋查詢的所有其他資料行都作為內含非索引鍵之索引資料行。 如此一來，您將擁有涵蓋查詢所需的所有資料行，但是索引鍵本身會變得很小而且很有效率。  
   
  例如，假設您要設計能夠涵蓋下列查詢的索引。  
@@ -418,7 +415,7 @@ ON Person.Address (PostalCode)
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
 ```  
   
-##### 效能考量  
+##### <a name="performance-considerations"></a>效能考量  
  避免加入不必要的資料行。 加入過多的索引資料行、索引鍵或無索引鍵，可能會發生以下的效能問題：  
   
 -   頁面上可以放入的索引資料列變少。 這將使得 I/O 的作業增加而降低快取的效率。  
@@ -446,7 +443,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  建立 PRIMARY KEY 或 UNIQUE 條件約束時，會自動在指定的資料行上建立唯一索引。 建立 UNIQUE 條件約束和不使用條件約束而建立唯一索引，兩者之間並沒有顯著的差異。 資料驗證的方式相同，且查詢最佳化工具不會區分唯一索引是由條件約束所建立還是手動建立的。 不過，當您的目標是資料完整性時，就應該在資料行上建立 UNIQUE 或 PRIMARY KEY 條件約束。 如此一來，索引的目標就很明確。  
   
-### 考量  
+### <a name="considerations"></a>考量  
   
 -   如果資料中已存在重複的索引鍵值，則無法建立唯一索引、UNIQUE 條件約束或 PRIMARY KEY 條件約束。  
   
@@ -491,10 +488,10 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  篩選索引定義於單一資料表，僅支援簡單比較運算子。 如果需要參考多個資料表或具有複雜邏輯的篩選運算式，則應該建立檢視。  
   
-### 設計考量  
+### <a name="design-considerations"></a>設計考量  
  為了設計有效的篩選索引，必須了解應用程式所使用的查詢以及這些查詢與資料子集的關聯。 具有定義良好之子集的資料範例包括大部分的值都是 NULL 的資料行、具有異質值類別的資料行，以及具有相異值範圍的資料行。 下列的設計考量提供多種案例，說明何時篩選索引的優點多於全資料表索引。  
   
-#### 資料子集的篩選索引  
+#### <a name="filtered-indexes-for-subsets-of-data"></a>資料子集的篩選索引  
  當資料行僅具有少數的查詢相關值時，可以在值的子集上建立篩選索引。 例如，當資料行中的值大部分都是 NULL 且查詢只會從非 NULL 值進行選取時，您可以針對非 NULL 的資料列建立篩選索引。 所產生的索引比在相同的索引鍵資料行上定義的全資料表非叢集索引還小，維護成本也比較低。  
   
  例如， `AdventureWorks2012` 資料庫具有 2679 個資料列的 `Production.BillOfMaterials` 資料表。 `EndDate` 資料行只有 199 個包含非 NULL 值的資料列，其他的 2480 個資料列都是包含 NULL。 下列篩選索引所包含的查詢會傳回在索引中定義的資料行，並僅會選取 `EndDate`使用非 NULL 值的資料列。  
@@ -518,7 +515,7 @@ WHERE EndDate IS NOT NULL
   
  如需有關如何建立篩選索引以及如何定義篩選索引述詞運算式的詳細資訊，請參閱 [建立篩選的索引](../relational-databases/indexes/create-filtered-indexes.md)。  
   
-#### 異質資料的篩選索引  
+#### <a name="filtered-indexes-for-heterogeneous-data"></a>異質資料的篩選索引  
  當資料表具有異質資料列時，您可以針對一或多個資料類別建立篩選索引。  
   
  例如，列於 `Production.Product` 資料表中的每個產品都會被指派 `ProductSubcategoryID`，此 ID 又會與產品類別 Bikes、Components、Clothing 或 Accessories 等產生關聯。 這些類別都是異質性的，因為它們在 `Production.Product` 資料表中的資料行值並沒有緊密關聯。 例如，對個別產品類別來說， `Color`、 `ReorderPoint`、 `ListPrice`、 `Weight`、 `Class`和 `Style` 等資料行都有其唯一的特性。 假設經常對具有介於 27 到 36 (含) 之子類別的配件進行查詢。 您只要在配件子類別上建立篩選索引，就可以改善查詢該配件的效能，如下列範例所示。  
@@ -540,7 +537,7 @@ FROM Production.Product
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
 ```  
   
-#### 索引鍵資料行  
+#### <a name="key-columns"></a>索引鍵資料行  
  最佳作法是在篩選索引定義中包含少數的索引鍵或內含資料行，並僅併入查詢最佳化工具在選擇查詢執行計畫的篩選索引時必要的資料行。 查詢最佳化工具可以選擇查詢的篩選索引，不論它是否涵蓋該查詢。 然而，查詢最佳化工具如果涵蓋該查詢，則更可能選擇篩選索引。  
   
  在某些情況下，篩選索引會涵蓋查詢，而不需將資料行以篩選索引定義中的索引鍵或內含資料行方式包含在篩選索引運算式中。 下列指導方針說明篩選索引運算式中的資料行何時應該是篩選索引定義中的索引鍵或內含資料行。 其中的範例會參考先前所建立的篩選索引 `FIBillOfMaterialsWithEndDate` 。  
@@ -568,7 +565,7 @@ WHERE EndDate IS NOT NULL;
   
  資料表的叢集索引鍵並不需要是篩選索引定義中的索引鍵或內含資料行。 叢集索引鍵會自動包含在所有非叢集的索引中 (包含篩選索引在內)。  
   
-#### 篩選述詞中的資料轉換運算子  
+#### <a name="data-conversion-operators-in-the-filter-predicate"></a>篩選述詞中的資料轉換運算子  
  如果在篩選索引的篩選索引運算式中指定的比較運算子產生隱含或明確的資料轉換，則如果該轉換是發生在比較運算子的左側，就會發生錯誤。 解決方案是以資料轉換運算子 (CAST 或 CONVERT) 在比較運算子的右側寫下篩選索引運算式。  
   
  下列範例會建立具有多種資料類型的資料表。  

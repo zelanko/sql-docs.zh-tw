@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ebf90710587c73206408dfda1429a90b58f39621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e37a25432e6e701ffd97bf95799b1a567748e1df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183781"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 函數 (報表產生器及 SSRS)
   指出某個項目目前的執行個體是否在指定的範圍內。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28f8711f832d4dd06b5ea66e4e2a587db1c57cec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b392293114979b5732bb0857fa5873b1375972c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164408"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [工具列] 窗格即可執行常見的動作，例如在 [Cube 設計師] 的 [Cube 結構] 索引標籤上處理或建立新的量值群組。  

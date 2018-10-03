@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - suspended database maintenance plans
 - database maintenance plans [SQL Server Agent]
 - maintenance plans [SQL Server Agent]
 ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 246c273e92a3779f74db225e5532756b475429b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 769bc3ad8b330afd81b14aed1340a67c1d7812ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181438"
 ---
 # <a name="database-maintenance-plans-superseded"></a>已取代資料庫維護計畫
     

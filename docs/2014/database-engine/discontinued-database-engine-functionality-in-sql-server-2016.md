@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - FASTFIRSTROW hint
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
-caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 648ff85c3061bc7d20408eaae7a14748650e5886
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135288"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
@@ -59,7 +56,7 @@ ms.locfileid: "37218038"
   
 |類別目錄|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
-|備份與還原|**備份 {資料庫&#124;LOG} WITH PASSWORD**並**備份 {資料庫&#124;LOG} WITH MEDIAPASSWORD**已停用。 **RESTORE {DATABASE&#124;記錄檔} 與 [MEDIA] PASSWORD**繼續被取代。|無|  
+|備份與還原|**備份 {資料庫&#124;LOG} WITH PASSWORD**並**備份 {資料庫&#124;LOG} WITH MEDIAPASSWORD**已停用。 **RESTORE {DATABASE&#124;記錄檔} 與 [MEDIA] PASSWORD**繼續被取代。|None|  
 |備份與還原|**RESTORE {DATABASE&AMP;#124;記錄檔}...WITH DBO_ONLY**|**RESTORE {DATABASE&AMP;#124;記錄檔}......WITH RESTRICTED_USER**|  
 |相容性層級|80 相容性層級|資料庫至少必須設定為相容性層級 90。|  
 |組態選項|`sp_configure 'user instance timeout'` 和 `'user instances enabled'`|使用本機資料庫功能。 如需詳細資訊，請參閱[SqlLocalDB 公用程式](../tools/sqllocaldb-utility.md)|  
@@ -72,8 +69,8 @@ ms.locfileid: "37218038"
 |可程式性|SQL Server Distributed Management Objects (SQL-DMO)|SQL Server 管理物件 (SMO)|  
 |查詢提示|`FASTFIRSTROW` 提示|`OPTION (FAST` *n* `)`。|  
 |遠端伺服器|使用者已無法使用 `sp_addserver` 建立新的遠端伺服器。 `sp_addserver` 與 'local' 選項仍可使用。 升級期間所保留或複寫所建立的遠端伺服器仍然可以使用。|使用連結的伺服器取代遠端伺服器。|  
-|Security|`sp_dropalias`|以使用者帳戶和資料庫角色的組合來取代別名。 使用`sp_dropalias`在升級的資料庫中移除別名。|  
-|Security|版本參數**PWDCOMPARE**表示由登入值早於[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2000年已停止。|無|  
+|安全性|`sp_dropalias`|以使用者帳戶和資料庫角色的組合來取代別名。 使用`sp_dropalias`在升級的資料庫中移除別名。|  
+|安全性|版本參數**PWDCOMPARE**表示由登入值早於[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2000年已停止。|None|  
 |SMO 中的 Service Broker 可程式性|**Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** 類別不再實作 **Microsoft.SqlServer.Management.Smo.IObjectPermission** 介面。||  
 |SET 選項|`SET DISABLE_DEF_CNST_CHK`|無。|  
 |系統資料表|sys.database_principal_aliases|請使用角色，而非別名。|  

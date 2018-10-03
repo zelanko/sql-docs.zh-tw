@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], attributes
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a2f3e1980c164327e584d8f485c2d08571534245
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 54e8f172518d9e6513c1072d15debb32b2858d95
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351040"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158607"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 常式的自訂屬性
   列出的屬性可以套用 common language runtime (CLR) 常式、 使用者定義型別，以及在中註冊的使用者定義彙總[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]。 如果沒有套用屬性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會假設預設值。 列出的屬性是在 `Microsoft.SqlServer.Server` 命令空間中定義的。  

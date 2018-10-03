@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LocalDBUnshareInstance
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fb600b6dfb2d6432cdb320e036459210aba69cd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f06909209df45a350c5a7f30f81e471da07691db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151238"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函數
   停止共用指定的 SQL Server Express LocalDB 執行個體。  

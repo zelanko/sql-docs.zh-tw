@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7901 (Database Engine error)
 ms.assetid: 2d0d19b9-947b-4474-9ff8-7e03019ab93d
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea29b3ef2bc08e3451f402f17bed298b982f1bc2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: faf43de11a0c1779f043c6dd854e361c0396dc6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066288"
 ---
 # <a name="mssqlserver7901"></a>MSSQLSERVER_7901
     

@@ -1,13 +1,11 @@
 ---
-title: BookmarkEnum |Microsoft 文件
+title: BookmarkEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - BookMarkEnum enumeration [ADO]
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 370d6094e3a05e884c29c37eb5078bed349741c2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8cb55701446d9a532cf57cccbba0aa1f11be416a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752116"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
-指定指出此作業的開始位置的書籤。  
+指定的書籤，表示作業應該開始的位置。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adBookmarkCurrent**|0|開始在目前的記錄。|  
-|**adBookmarkFirst**|@shouldalert|在第一筆記錄的開始。|  
-|**adBookmarkLast**|2|在最後一筆記錄的開始。|  
+|**adBookmarkCurrent**|0|從目前的記錄開始。|  
+|**adBookmarkFirst**|1|在第一筆記錄開始。|  
+|**adBookmarkLast**|2|從最後一筆記錄開始。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  

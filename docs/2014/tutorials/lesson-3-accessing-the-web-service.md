@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-caps.latest.revision: 43
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108298"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 課：存取 Web 服務
   將報表伺服器 Web 服務的參考加入專案後，下一步就是建立 Web 服務之 Proxy 類別的執行個體。 然後您可以藉由呼叫 Proxy 類別中的方法來存取 Web 服務的方法。 當您的應用程式呼叫這些方法時，proxy 類別所產生的程式碼[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]處理您的應用程式與 Web 服務之間的通訊。  

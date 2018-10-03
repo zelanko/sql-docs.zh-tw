@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 10538 (Database Engine error)
 ms.assetid: 284d19b4-4979-4cbe-a9be-ac1104433c69
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 68ad165f0cc3282505d882537f791d253e811ad1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: aa6bce659e20fb80f013539049cc1b99e3e0b4c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055238"
 ---
 # <a name="mssqlserver10538"></a>MSSQLSERVER_10538
     

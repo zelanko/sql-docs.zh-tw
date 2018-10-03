@@ -1,13 +1,11 @@
 ---
-title: BeginTrans、 CommitTrans 和 RollbackTrans 方法 (ADO) |Microsoft 文件
+title: BeginTrans、 CommitTrans 和 RollbackTrans 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,25 +20,24 @@ helpviewer_keywords:
 - CommitTrans method [ADO]
 - RollbackTrans method [ADO]
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42f43c3dfc508ac6885f0e42811af26d89cd6692
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7c796cefc03092e944520a6517bc31c585a2dc42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613886"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、 CommitTrans 和 RollbackTrans 方法 (ADO)
-這些交易方法管理交易中處理[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，如下所示：  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
+這些交易方法管理內處理的交易[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件，如下所示：  
   
 -   **BeginTrans**開始新交易。  
   
--   **CommitTrans**儲存任何變更，並結束目前的交易。 它也可能會啟動新交易。  
+-   **CommitTrans**儲存任何變更，並結束目前的交易。 它也可以啟動新的交易。  
   
--   **RollbackTrans**取消任何目前的交易期間所做的變更並結束交易。 它也可能會啟動新交易。  
+-   **RollbackTrans**取消任何目前的交易期間所做的變更並結束交易。 它也可以啟動新的交易。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,28 +50,28 @@ object.RollbackTrans
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **BeginTrans**可以做為傳回的函式呼叫**長**變數，表示交易的巢狀層級。  
+ **BeginTrans**傳回的函式可以呼叫**長**變數，表示交易的巢狀層級。  
   
 #### <a name="parameters"></a>參數  
  *object*  
- A**連接**物件。  
+ A**連線**物件。  
   
 ## <a name="connection"></a>連接  
- 使用這些方法可搭配**連接**物件時，您想要儲存或取消一系列當做單一單位的來源資料所做的變更。 例如，若要傳輸之間帳戶的金錢，您減去某數從其中一個，並將相同的數量，加入另。 如果是更新失敗時，帳戶不再之間取得平衡。 進行這些變更開啟的交易內時，可確保所有或任何的變更移。  
+ 使用這些方法可搭配**連線**物件時您想要儲存或取消一系列的當做單一單位的來源資料所做的變更。 比方說，帳戶之間傳輸金錢，您減去從某個量，並新增相同數量之間。 如果其中一個更新失敗時，帳戶不再之間取得平衡。 進行這些變更，在開啟的交易內，可確保所有或的任何變更，瀏覽。  
   
 > [!NOTE]
->  並非所有提供者支援交易。 確認提供者定義的屬性"**交易 DDL**"會出現在**連接**物件的[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，表示提供者支援交易。 如果提供者不支援交易，則呼叫其中一種方法會傳回錯誤。  
+>  並非所有提供者支援交易。 確認提供者定義的屬性"**交易 DDL**"會出現在**連線**物件的[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，表示提供者支援交易。 如果提供者不支援交易，呼叫其中一個方法會傳回錯誤。  
   
- 在您呼叫後**BeginTrans**方法，提供者將不會再立即認可的變更，直到您呼叫您進行**CommitTrans**或**RollbackTrans**結束交易。  
+ 在您呼叫後**BeginTrans**方法，提供者將不會再立即認可直到您呼叫您所做的變更**CommitTrans**或是**RollbackTrans**結束交易。  
   
- 提供者支援巢狀的交易，呼叫**BeginTrans**開啟的交易內的方法會啟動新的巢狀交易。 傳回值會指出的巢狀層級:"1"的傳回值會指出您已開啟最上層的交易 （也就是交易不巢狀另一個交易內），"2"表示您已開啟第二個層級的交易 (交易巢狀最上層的交易），依此類推。 呼叫**CommitTrans**或**RollbackTrans**影響最最近開啟的交易，則您必須關閉，或復原目前交易之前可以解決任何較高層級的交易。  
+ 提供者支援巢狀的交易，呼叫**BeginTrans**開啟的交易內的方法會啟動新的巢狀交易。 傳回值，表示巢狀層級:"1"的傳回值會指出您已開啟的最上層的交易 （也就是交易不巢狀在另一個交易內），"2"表示您已開啟第二個層級交易 (交易巢狀結構最上層的交易內），依此類推。 呼叫**CommitTrans**或是**RollbackTrans**影響只有最最近開啟的交易，您必須關閉，或回復目前交易之前，您可以解決任何較高層級的交易。  
   
- 呼叫**CommitTrans**方法會儲存在連接上開啟的交易內進行變更並結束交易。 呼叫**RollbackTrans**方法復原任何開啟的交易內進行的變更並結束交易。 呼叫其中一個方法，沒有開啟的交易時，會產生錯誤。  
+ 呼叫**CommitTrans**方法會儲存在連接上開啟的交易內進行變更並結束交易。 呼叫**RollbackTrans**方法會反轉任何開啟的交易內所做的變更並結束交易。 呼叫任一方法，沒有任何開啟的交易時，會產生錯誤。  
   
- 取決於**連接**物件的[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)屬性，呼叫**CommitTrans**或**RollbackTrans**方法可能自動啟動新交易。 如果**屬性**屬性設定為**adXactCommitRetaining**，提供者會自動啟動新的交易後**CommitTrans**呼叫。 如果**屬性**屬性設定為**adXactAbortRetaining**，提供者會自動啟動新的交易後**RollbackTrans**呼叫。  
+ 取決於**連接**物件的[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)屬性，呼叫**CommitTrans**或是**RollbackTrans**方法可能自動啟動新的交易。 如果**屬性**屬性設定為**adXactCommitRetaining**，提供者會自動啟動新的交易之後**CommitTrans**呼叫。 如果**屬性**屬性設定為**adXactAbortRetaining**，提供者會自動啟動新的交易之後**RollbackTrans**呼叫。  
   
 ## <a name="remote-data-service"></a>遠端資料服務  
- **BeginTrans**， **CommitTrans**，和**RollbackTrans**方法不會提供用戶端**連接**物件。  
+ **BeginTrans**， **CommitTrans**，並**RollbackTrans**方法並不適用於用戶端**連接**物件。  
   
 ## <a name="applies-to"></a>適用於  
  [Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  

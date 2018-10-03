@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Blocks Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b1030bf5efbfb86319d83a19913f58d834f85fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082718"
 ---
 # <a name="blocks-element-assl"></a>Blocks 元素 (ASSL)
   包含的二進位表示的二進位內容的資料區塊集合[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)項目。  
@@ -52,8 +49,8 @@ ms.locfileid: "37161319"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

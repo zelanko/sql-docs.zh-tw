@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ISAPI filters
 - report servers [Reporting Services], upgrade issues
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 448f334fc5a82dea623a12e2ad143725ec11f711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b30b585fc0448f04be2ee98c23f53794675fefe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192208"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>在報表伺服器站台上偵測到 ISAPI 篩選器 (Upgrade Advisor)
   Upgrade Advisor 在主控報表伺服器和報表管理員虛擬目錄的網站上偵測到一個或多個 ISAPI 篩選器。 中不支援 ISAPI 篩選器[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-caps.latest.revision: 13
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cb43470f1f426e52c9258cd7759b291e85546d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8c58ba2eef86ec9c827ea1722abea441ac8ae48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192068"
 ---
 # <a name="development-of-an-integration-services-project"></a>部署 Integration Services 專案
   您可以將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝加入專案。 若要建立及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，您必須安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境。 如需詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。  

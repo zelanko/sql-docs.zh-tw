@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_browsemergesnapshotfolder
 - sp_browsemergesnapshotfolder_TSQL
@@ -22,12 +17,12 @@ ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 153abe2a9466c6f0496dfe86b852571828111a43
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2ed37e8a26a36cb528aaeda0b22f18e5dcb84baa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851956"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

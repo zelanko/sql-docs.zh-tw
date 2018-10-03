@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65ae022fe3445663837b1aaf01204a382ddcdc72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175107"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056326"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
   伺服器可以一次接聽或監視多個網路通訊協定。 然而，必須設定每個通訊協定。 如果未設定特定的通訊協定，則伺服器將無法接聽該通訊協定。 安裝之後，您可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更通訊協定組態。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], saving
 - Table Designer, saving work
 - saving tables
 ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83c7d725b248a72f56e32f2828ea5f410d28d398
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090290"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>儲存資料表設計工具中的工作 (Visual Database Tools)
   您可將變更儲存至 [資料表設計工具] 開啟中的資料表。  

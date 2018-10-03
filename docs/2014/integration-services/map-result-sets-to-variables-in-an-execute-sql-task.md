@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069654"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將結果集對應至變數
   此主題描述如何在執行 SQL 工作中，建立結果集與變數之間的對應。 將結果集對應至變數後，封裝中的其他元素便可使用該結果集。 例如，指令碼工作中的指令碼可以讀取變數，然後使用結果集中的值，或是 XML 來源可以使用儲存在變數中的結果集。 如果結果集由父封裝產生，則可以藉由將結果集對應至父封裝中的變數，然後在子封裝中建立用來儲存父變數值的父封裝變數組態，以便讓「執行封裝」工作所呼叫的子封裝可以使用結果集。  
@@ -39,7 +36,7 @@ ms.locfileid: "37277374"
 3.  按一下 **[控制流程]** 索引標籤。  
   
 4.  如果封裝尚未包含執行 SQL 工作，則會加入一個執行 SQL 工作至封裝的控制流程。 如需詳細資訊，請參閱[加入或刪除工作或容器中的控制流程](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  執行個體時提供 SQL Server 登入。  
+  .  
   
 5.  按兩下執行 SQL 工作。  
   

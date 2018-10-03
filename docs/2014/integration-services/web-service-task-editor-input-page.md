@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.input.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6322a234ea1653f578f60b36a84b7e2c71af169
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056688"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [輸入] 頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
@@ -52,7 +49,7 @@ ms.locfileid: "37264954"
  **變數**  
  選取該核取方塊，即可使用變數來提供輸入。  
   
- **ReplTest1**  
+ **值**  
  如果選取了 [變數] 核取方塊，請從清單中選取要用於提供輸入的變數，否則請直接輸入要用於輸入的值。  
   
 ## <a name="see-also"></a>另請參閱  

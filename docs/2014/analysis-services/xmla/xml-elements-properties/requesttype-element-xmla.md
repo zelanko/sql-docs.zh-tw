@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RequestType Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 322b212853f94a1e1e5b1b48534dee649632d164
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105308"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType 元素 (XMLA)
   決定所傳回的中繼資料的型別[探索](../xml-elements-methods-discover.md)方法。  
@@ -53,7 +50,7 @@ ms.locfileid: "37171189"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37171189"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[探索](../xml-elements-methods-discover.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `RequestType` 元素會決定 `Discover` 方法從中傳回資料的結構描述資料列集。 這個列舉僅限於所支援的結構描述資料列集的名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 如需有關結構描述資料列集的詳細資訊，請參閱 < [Analysis Services 結構描述資料列集](../../schema-rowsets/analysis-services-schema-rowsets.md)。  

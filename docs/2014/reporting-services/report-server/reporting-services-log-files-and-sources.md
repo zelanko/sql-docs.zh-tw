@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 077b79d820a30902b2c705a1e2ec55bda31c8d6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45991def5af8ea0efbb1b9ea9a7bc6246770b3d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116887"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 記錄檔和來源
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器和報表伺服器環境可支援各種記錄目的地，以記錄有關伺服器作業與狀態的資訊。 記錄有兩個基本的類別目錄，也就是執行記錄和追蹤記錄。 執行記錄包含有關報表執行統計資料、稽核、效能診斷與最佳化的資訊。 追蹤記錄是有關錯誤訊息與一般診斷的資訊。  
@@ -38,7 +35,7 @@ ms.locfileid: "37210718"
 |Log|描述|  
 |---------|-----------------|  
 |[報表伺服器執行記錄和 ExecutionLog3 檢視](report-server-executionlog-and-the-executionlog3-view.md)|執行記錄檔是儲存在報表伺服器資料庫中的 SQL Server 檢視。<br /><br /> 報表伺服器執行記錄包含有關特定報表的資料，包括何時執行報表、誰執行、傳遞到何處及使用何種轉譯格式。|  
-|SharePoint 追蹤記錄|如果是在 SharePoint 中執行的報表伺服器，SharePoint 追蹤記錄會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資訊。 您也可以設定[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]針對 SharePoint 統一記錄服務的特定資訊。 如需詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
+|SharePoint 追蹤記錄|如果是在 SharePoint 中執行的報表伺服器，SharePoint 追蹤記錄會包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資訊。 您也可以針對 SharePoint 統一記錄服務，設定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的特定資訊。 如需詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
 |[報表伺服器服務追蹤記錄](report-server-service-trace-log.md)|服務追蹤記錄包含非常詳細的資訊，在您偵錯應用程式或調查問題或事件時很有用。<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`|  
 |[報表伺服器 HTTP 記錄](report-server-http-log.md)|HTTP 記錄檔包含報表伺服器 Web 服務和報表管理員所處理之所有 HTTP 要求與回應的記錄。|  
 |[Windows 應用程式記錄檔](windows-application-log.md)|Microsoft Windows 應用程式記錄包含有關報表伺服器事件的資訊。|  

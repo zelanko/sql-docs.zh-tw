@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Analysis Services, installing
 - SQL Server Analysis Services, installing
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
-caps.latest.revision: 47
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: d90380f1e908c3b0cf1226f94de4a404ae5e65e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149898"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>以多維度及資料採礦模式安裝 Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供商業智慧應用程式的線上分析處理 (OLAP) 和資料採礦功能。 在此版本中，OLAP 資料庫和資料採礦模型都提供當您安裝[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中*多維度模式*。 多維度模式是執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的三種伺服器模式之一， 也是預設模式。 如果您使用預設值安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則會取得執行多維度資料庫和資料採礦模型的執行個體。  

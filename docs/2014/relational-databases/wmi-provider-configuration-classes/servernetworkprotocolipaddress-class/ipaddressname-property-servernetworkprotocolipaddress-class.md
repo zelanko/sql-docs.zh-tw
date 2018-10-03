@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IpAddressName Property (ServerNetworkProtocolIPAddress Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - IpAddressName property
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 34386e3b8b475101893febfc3539cb0da6e8cc7d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2168233715bcb096df10d1cdc322261301fab6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094868"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 屬性 (ServerNetworkProtocolIPAddress 類別)
   取得 IP 位址的名稱。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07554612-8cb6-4bd9-adde-956177261ccd
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7cf1f64662a53c1832df3031f972a0b97001540
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 806c1ecb7cf9363417783c930623a1ce92aee418
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128658"
 ---
 # <a name="uninstallation-rules"></a>解除安裝規則
   [解除安裝規則] 頁面將會執行一組規則來確保安裝程式作業可以順利完成。  

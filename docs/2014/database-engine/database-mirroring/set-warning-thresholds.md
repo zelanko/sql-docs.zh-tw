@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f77cb6ae0912bb5885cfc61aeb729a6eea25f833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195470"
 ---
 # <a name="set-warning-thresholds"></a>設定警告臨界值
   使用這個對話方塊可針對 **[資料庫鏡像監視器]** 對話方塊內導覽樹狀目錄中選取的資料庫，啟用並設定一或多個警告臨界值。  

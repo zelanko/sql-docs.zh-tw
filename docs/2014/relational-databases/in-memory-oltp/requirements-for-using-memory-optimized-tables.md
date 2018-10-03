@@ -4,23 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 314f90a482091823efae4430dbdc2d62ad7b34f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073908"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用記憶體最佳化資料表的需求
   除了[硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)，以下還有使用記憶體內部 OLTP 的需求：  
@@ -41,7 +36,7 @@ ms.locfileid: "40394434"
   
 -   若要安裝記憶體內部 OLTP，請選取**Database Engine Services**當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-     若要安裝報表產生 ([判斷是否將資料表或預存程序應該移植至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (管理記憶體中 OLTP 透過[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]物件總管 中)，請選取**管理工具 — 基本**或是**管理工具 — 進階**當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+     若要安裝報表產生 ([判斷是否將資料表或預存程序應該移植至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](管理記憶體中 OLTP 透過[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]物件總管 中)，請選取**管理工具 — 基本**或是**管理工具 — 進階**當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要注意事項  
   

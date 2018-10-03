@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c88878e5bd680ec6ca6fcbb310b25e5ec216977e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065728"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)
   您可以使用報表管理員來檢視已經發行至報表伺服器的報表。 根據預設，所有報表都會以 HTML 開啟。 開啟報表之後，您可以將它匯出，以便以其他應用程式格式檢視此報表。 如果此報表包含互動式功能，或者它是包含互動式資料的報表產生器報表，您就可以按一下連結，以便檢視其他報表或資料。  

@@ -1,34 +1,31 @@
 ---
-title: GetString 方法範例 （VC + +） |Microsoft 文件
+title: GetString 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a301175045bbe323c00b7b17b6217aaec9f7b74f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6e3692410379c6ef87ec2da4b40f09b0d498a187
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815586"
 ---
-# <a name="getstring-method-example-vc"></a>GetString 方法範例 （VC + +）
-這個範例會示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
+# <a name="getstring-method-example-vc"></a>GetString 方法範例 (VC++)
+此範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
   
- 假設您正在偵錯資料存取問題，而且想快速、 簡單的方式，列印目前內容的一個小型的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 假設您正在偵錯資料存取問題，並想既快速又簡單的方式列印目前內容的小型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -173,7 +170,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>輸入範例  
+## <a name="sample-input"></a>範例輸入  
   
 ```  
 MD  

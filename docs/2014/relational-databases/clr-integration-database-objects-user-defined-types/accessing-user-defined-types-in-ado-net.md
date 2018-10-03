@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ADO.NET [CLR integration]
 - UDTs [CLR integration], ADO.NET
 - user-defined types [CLR integration], ADO.NET
 ms.assetid: 4b0d876c-8066-490e-8e18-327c0e942b19
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b48d45874824f166dc1b3843eda0e1052fddfd6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 893b2c69a20974bb379cc032f442e5fcb3525ec5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129118"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>存取 ADO.NET 中的使用者定義型別
-  使用者定義型別 (Udt) 會使用任何支援的語言所撰寫[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework common language runtime (CLR) 會產生可驗證的程式碼。 這包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic。 UDT 允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件及自訂資料結構。 資料會做為 .NET Framework 類別或結構的公用成員而公開，行為可使用類別或結構的方法來定義。 UDT 可用做資料表的資料行定義中的變數[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，或做為引數的[!INCLUDE[tsql](../../includes/tsql-md.md)]函式或預存程序。  
+  使用者定義型別 (Udt) 會使用任何支援的語言所撰寫[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework common language runtime (CLR) 會產生可驗證的程式碼。 這包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic。 UDT 允許在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件及自訂資料結構。 資料會做為 .NET Framework 類別或結構的公用成員而公開，行為可使用類別或結構的方法來定義。 UDT 可用作資料表的資料行定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式或預存程序的引數。  
   
  在 ADO.NET 中，`System.Data.SqlClient` 提供者以下列方式公開 UDT：  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ID element
 ms.assetid: ea3ce0f4-9084-45d0-8150-73afb7005af2
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c323bd71865d0dd09bf724373ece03d83e7608ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71de55c773ce75ec75b38b774ad0a5e8ec35ed9b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170258"
 ---
 # <a name="id-element-assl"></a>ID 元素 (ASSL)
   包含父元素的唯一識別碼 (ID)。  
@@ -51,7 +48,7 @@ ms.locfileid: "37209938"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (最多 100 個字元)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37209938"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[動作](../objects/action-element-assl.md)，[彙總](../objects/aggregation-element-assl.md)， [AggregationDesign](../objects/aggregationdesign-element-assl.md)，[組件](../objects/assembly-element-assl.md)， [Cube](../objects/cube-element-assl.md)， [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)， [CubeDimension](../data-type/dimension-data-type-assl.md)，[資料庫](../objects/database-element-assl.md)， [DataSource](../objects/datasource-element-assl.md)， [DataSourceView](../objects/datasourceview-element-assl.md)，[維度](../objects/dimension-element-assl.md)， [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)，[階層](../objects/hierarchy-element-assl.md)， [Kpi](../objects/kpi-element-assl.md)，[層級](../objects/level-element-assl.md)， [MdxScript](../objects/mdxscript-element-assl.md)，[量值](../objects/measure-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)， [MeasureGroupBinding](../data-type/binding-data-type-assl.md)， [MiningModel](../objects/miningmodel-element-assl.md)， [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)， [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)，[分割](../objects/partition-element-assl.md)，[權限](../data-type/permission-data-type-assl.md)，[觀點來看](../objects/perspective-element-assl.md)，[角色](../objects/role-element-assl.md)，[伺服器](../objects/server-element-assl.md)，[追蹤](../objects/trace-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  在每個主要物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]具有`ID`元素當做屬性。 `ID` 元素的值具有下列限制：  

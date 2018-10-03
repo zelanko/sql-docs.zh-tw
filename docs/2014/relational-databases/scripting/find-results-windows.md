@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findresults1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0df41e184e2a1efe3b74d3feb541e7e0ce3bf43c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fbb23c1e85d5c612ded5ddfefa53ca3ddc9f1c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106488"
 ---
 # <a name="find-results-windows"></a>尋找結果視窗
   兩個尋找結果視窗使用 **[尋找和取代]** 對話方塊的 **[檔案中尋找]** 或 **[檔案中取代]** 索引標籤，顯示找到的相符結果。 **[檔案中尋找]** 和 **[檔案中取代]** 的 **[結果選項]** 命令允許您選擇 [尋找結果] 視窗，其中會列出所有找到的相符結果。  

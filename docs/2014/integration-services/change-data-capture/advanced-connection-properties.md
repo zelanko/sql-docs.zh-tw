@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccc1337c845e3a9c30d6fcdb08c2c87ca1938b4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a621cc9377f20b5f184f76258f0bc5208dfe7c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195868"
 ---
 # <a name="advanced-connection-properties"></a>進階連接屬性
   使用 **[進階連接屬性]** 對話方塊可在連接字串中加入其他連接參數。  

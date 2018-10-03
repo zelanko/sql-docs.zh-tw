@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connexcelfile.f1
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 022bdfa3e94aa2bd94c8f1806391b877a9c500bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 199da8714542f8de8b7281906f07f3fcd4aaa430
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155479"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067428"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>連接到 Microsoft Excel 檔案 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您連接到儲存在本機電腦上的 Microsoft Excel 檔案。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

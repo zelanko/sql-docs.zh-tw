@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
-caps.latest.revision: 44
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31e3e002996d523aa225e0d0bb607d1772d8b0e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5dd09ba81c6bdf79abdb5d668821442fad7acab0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273064"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114608"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>在優先順序條件約束中使用運算式
   此程序描述如何使用 [優先順序條件約束編輯器] 對話方塊，將運算式加入優先順序條件約束。 封裝必須包括至少兩個可執行檔 (工作或容器)，且這兩個可執行檔必須由優先順序條件約束連接，您才可以將運算式加入優先順序條件約束。  

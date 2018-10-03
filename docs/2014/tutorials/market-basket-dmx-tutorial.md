@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - tutorials [Data Mining]
 - tutorials [DMX]
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210928"
 ---
 # <a name="market-basket-dmx-tutorial"></a>購物籃 DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、定型和探索採礦模型。 您將使用這些採礦模型來建立預測，說明哪些產品有可能同時被購買。  

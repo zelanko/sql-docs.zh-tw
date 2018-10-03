@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083278"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格式模型化 (Adventure Works 教學課程)
   本教學課程提供如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 表格式模型的課程。  
@@ -60,7 +57,7 @@ ms.locfileid: "37247368"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 執行個體 (以表格式模式執行)。  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   AdventureWorksDW 範例資料庫。 這個範例資料庫包括完成本教學課程所需的資料。 若要下載範例資料庫，請參閱[ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807)。  
   

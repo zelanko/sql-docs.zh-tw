@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f64ca72111c89521277818573434e32ef82e028b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd2b59d7a681fda1f18083b73f26aa3e38fbe3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234860"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051520"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
   當使用編輯器時，您可以利用縮排、隱藏文字、URL...等，來建立程式碼的格式。 您也可以利用智慧型縮排 (Smart Indenting) 功能，在輸入程式碼的同時，自動建立程式碼的格式。  
@@ -59,7 +56,7 @@ ms.locfileid: "37234860"
   
     -   [區塊]。 游標會對齊上下行。  
   
-    -   [智慧型] (預設)。 語言服務會決定要使用的適當縮排樣式。  
+    -   [智慧型] \(預設)。 語言服務會決定要使用的適當縮排樣式。  
   
     > [!NOTE]  
     >  有些語言並未完整提供這三個縮排選項。  

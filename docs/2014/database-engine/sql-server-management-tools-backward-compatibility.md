@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7a7cea6026f043f42c0af433d41dd982e3bc747
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089828"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 管理工具回溯相容性
   「回溯相容性」一節中的主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本之間行為上的變更。  

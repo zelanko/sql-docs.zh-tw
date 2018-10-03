@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftpconnectionmanager.f1
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa36c348b23a8f9a64766e46231a6532baf5cb08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79f2d2c03d2403042de7f1ca0aeed3db15c93efc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189138"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
   使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  

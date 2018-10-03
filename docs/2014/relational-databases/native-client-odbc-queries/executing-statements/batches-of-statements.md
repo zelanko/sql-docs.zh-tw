@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC], batches
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be25ac85a21ff528110e56b2db2bc34475a809b6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: aa97baae4ad6331193cab16ae2609212753c5be0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051931"
 ---
 # <a name="batches-of-statements"></a>陳述式的批次
   批次[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式包含兩個或多個陳述式，並以分號 （;），單一字串傳遞至內建**SQLExecDirect**或是[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)。 例如：  

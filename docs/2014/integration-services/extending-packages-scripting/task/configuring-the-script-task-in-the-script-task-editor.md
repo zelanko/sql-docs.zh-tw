@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Script Task Editor
 - SSIS Script task, configuring
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 827721e691e197faf0b786db5999b0061e42c516
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bdb8d4cecc2058b35db2cfaa328bbf1978899f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070011"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在指令碼工作編輯器設定指令碼工作
   在指令碼工作內撰寫自訂程式碼之前，必須先在 [指令碼工作編輯器] 的三個頁面中設定其主要屬性。 您可以使用 [屬性] 視窗，設定其他非指令碼工作專用的工作屬性。  
@@ -64,7 +61,7 @@ ms.locfileid: "37263194"
 ## <a name="expressions-page-of-the-script-task-editor"></a>指令碼工作編輯器的運算式頁面  
  在 [指令碼工作編輯器] 的 [運算式] 頁面上，您可以使用運算式，針對上面列出之指令碼工作的屬性及許多其他工作屬性來提供值。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 最新下載、 文章、 範例和影片[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及選取的解決方案，從社群，請瀏覽[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 最新下載、 文章、 範例和影片[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及選取的解決方案，從社群，請瀏覽[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [編碼和偵錯指令碼工作](coding-and-debugging-the-script-task.md)  

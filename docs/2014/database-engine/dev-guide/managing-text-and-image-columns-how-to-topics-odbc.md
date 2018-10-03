@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
-caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 68ecb484c1ee7a6dc43b28c1079326a6cb80ad6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f858fb26f1866963811efe024fa179024312543b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166560"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>管理 text 和 image 資料行的使用說明主題 (ODBC)
   Microsoft® SQL Server™ ODBC 驅動程式可支援使用文字和影像參數，以及從結果集中的 text、ntext 和 image 資料行中擷取資料。  

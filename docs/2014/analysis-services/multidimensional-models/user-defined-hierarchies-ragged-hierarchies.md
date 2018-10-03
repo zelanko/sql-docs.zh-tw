@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f27105d3a19dc76a8cad643b057a27fff63d10f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69c39bb516c198005246d7d3dde5c588fd68cef1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087888"
 ---
 # <a name="ragged-hierarchies"></a>不完全階層
   不完全階層是所含層級數目不平均的使用者定義階層。 常見範例包括組織圖 (高階主管同時擁有部門主管級和非主管級直屬員工)，或由國家/地區-區域-城市組成的地理階層 (其中部分城市缺少父州或省，例如華盛頓特區、梵蒂岡或新德里)。  

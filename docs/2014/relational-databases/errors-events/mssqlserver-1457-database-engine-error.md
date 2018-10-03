@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 1457 (Database Engine error)
 ms.assetid: 28434ba1-b033-4866-ab41-111fccef45a2
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0cf2eed90e1aea1f636322a0a728720222e0935
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4f45545212b494f955c6b9be97ccf0df7efeb622
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171118"
 ---
 # <a name="mssqlserver1457"></a>MSSQLSERVER_1457
     

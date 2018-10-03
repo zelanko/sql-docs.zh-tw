@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153098"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>在報表伺服器上偵測到自訂延伸模組 (Upgrade Advisor)
   Upgrade Advisor 偵測到組態檔中有自訂延伸模組設定，表示您的安裝包括用於資料處理、傳遞、轉譯、安全性或驗證的一個或多個自訂延伸模組。 升級作業將會一起移動延伸模組的組態設定與升級的報表伺服器。 不過，如果自訂延伸模組安裝在現有的報表伺服器安裝資料夾中，這些自訂延伸模組的組件檔將不會在升級程序期間移至新的安裝資料夾。 升級完成之後，您必須將這些組件檔移至新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝資料夾。  

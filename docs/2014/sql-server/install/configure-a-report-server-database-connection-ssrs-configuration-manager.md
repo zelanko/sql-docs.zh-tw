@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202649"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
   每個報表伺服器執行個體都必須連接至儲存伺服器所管理之報表、報表模型、共用資料來源、資源和中繼資料的報表伺服器資料庫。 如果您要安裝預設組態，您可以在報表伺服器安裝期間建立初始連接。 在大部分的情況下，您將利用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具，在安裝程式完成之後設定連接。 您可以隨時修改連接，以變更帳戶類型或重設認證。 如需如何建立資料庫及設定連線的逐步指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  

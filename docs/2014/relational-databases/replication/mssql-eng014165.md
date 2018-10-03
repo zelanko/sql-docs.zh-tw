@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014165 error
 ms.assetid: 7bb07672-310c-4f51-ae76-c55e7c8d51ea
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3333e47148f8f4c108121b3e81c7eb8bed27eea7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c97a967c4074a4ddbf2b5f5efc77d7c9d3e39744
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145138"
 ---
 # <a name="mssqleng014165"></a>MSSQL_ENG014165
     

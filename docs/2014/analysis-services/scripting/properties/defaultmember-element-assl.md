@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DefaultMember Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c90abe48fc1d3bfa099e39234d22df822a03782
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055291"
 ---
 # <a name="defaultmember-element-assl"></a>DefaultMember 元素 (ASSL)
   包含識別父元素之預設成員的多維度運算式 (MDX) 運算式。  
@@ -51,7 +48,7 @@ ms.locfileid: "37229678"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37229678"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[AttributePermission](../objects/attributepermission-element-assl.md)， [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)， [ManyToManyMeasureGroupDimension](../data-type/dimension-data-type-assl.md)， [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `DefaultMember` 元素會定義父元素的預設成員。 如果`DefaultMember`未指定或設為空字串， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]會選擇要做為預設成員。  

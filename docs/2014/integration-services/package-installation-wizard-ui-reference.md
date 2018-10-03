@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 637ed65f38b53cf39630d4fb3ba04ab9f7a2158d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129628"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>封裝安裝精靈 UI 參考
   使用 [封裝安裝精靈] 來部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
@@ -68,7 +65,7 @@ ms.locfileid: "37316808"
  **型別**  
  檢視屬性的資料類型。  
   
- **ReplTest1**  
+ **值**  
  指定組態的值。  
   
  **下一個**  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1271756e0a8caf036872e03aa1f55fa1da259860
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313130"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067438"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項**RSClientPrint**，提供在瀏覽器中檢視報表的用戶端列印。 此控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能。 這些功能包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向。 雖然依預設會啟用用戶端列印，但如果您不想提供此功能，也可以停用它。  

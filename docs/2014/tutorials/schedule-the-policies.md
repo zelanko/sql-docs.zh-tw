@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 59417a54-55f1-4468-ba41-368aa852c2d4
-caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: c328073f25c27ff05b8b6edbd79a56ad1fda85ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab324e94efdfdebea0387a2212440ed971c11aa5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094438"
 ---
 # <a name="schedule-the-policies"></a>排程原則
   在這項工作中，您將會排程匯入至先前工作中的最佳作法原則。  
@@ -42,7 +39,7 @@ ms.locfileid: "37315128"
     > [!NOTE]  
     >  若要在已排程的原則執行後檢視評估結果，請開啟目標執行個體上的「原則記錄」記錄檔。 若要開啟記錄檔，以滑鼠右鍵按一下**原則管理**，然後按一下**檢視歷程記錄**。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  您設定排程的原則針對單一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體執行。 如果您要將排程的原則部署至多個執行個體，請繼續本教學課程中的下一個工作。  
   
 ## <a name="next-steps"></a>後續步驟  
