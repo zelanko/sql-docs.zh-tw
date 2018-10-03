@@ -1,13 +1,11 @@
 ---
-title: Append 方法 (ADOX Views) |Microsoft 文件
+title: Append 方法 (ADOX Views) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a524be12a721d86e0e5afd1029f486ca7c8ecaa9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707456"
 ---
-# <a name="append-method-adox-views"></a>Append 方法 （ADOX 檢視）
-建立新[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件，並將它附加[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
+# <a name="append-method-adox-views"></a>Append 方法 (ADOX Views)
+建立新[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件，並將其附加至[檢視](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,22 +42,22 @@ Views.Append Name, Command
  ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，表示要建立的檢視。  
   
 ## <a name="remarks"></a>備註  
- 具有名稱和屬性中指定的資料來源中建立新的檢視**命令**物件。  
+ 使用名稱和屬性中指定的資料來源中建立新的檢視**命令**物件。  
   
- 如果使用者指定的命令文字表示程序，而不是檢視，則行為是取決於提供者。 **附加**如果提供者不支援持續性命令將會失敗。  
+ 如果使用者指定的命令文字代表程序，而不是檢視，則行為是取決於提供者。 **附加**如果提供者不支援保存的命令將會失敗。  
   
 > [!NOTE]
->  使用 Microsoft Jet OLE DB 提供者時**檢視**集合**附加**方法將允許您指定**程序**而不是**檢視**中*命令*參數。 **程序**會加入至資料來源，就會加入至**檢視**集合。 之後**附加**，如果**程序**和**檢視**重新整理集合時，**程序**將不再處於**檢視**集合會出現在**程序**集合。  
+>  當使用 OLE DB Provider for Microsoft Jet**檢視**集合**附加**方法可讓您指定**程序**而不是**檢視**中*命令*參數。 **程序**將會加入至資料來源，並將加入**檢視**集合。 之後**Append**，如果**程序**並**檢視**集合會重新整理，**程序**中無法再**檢視**集合會出現在**程序**集合。  
   
 ## <a name="applies-to"></a>適用於  
  [Views 集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視附加方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Append 方法 （ADOX 資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 方法 （ADOX 群組）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append 方法 （ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append 方法 （ADOX 索引鍵）](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append 方法 （ADOX 程序）](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 方法 （ADOX 資料表）](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Views Append 方法範例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Append 方法 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 方法 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append 方法 (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append 方法 (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Append 方法 (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append 方法 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append 方法 (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)

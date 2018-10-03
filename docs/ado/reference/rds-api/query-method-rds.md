@@ -1,34 +1,31 @@
 ---
-title: 查詢方法 (RDS) |Microsoft 文件
+title: 查詢方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 682743135ddb0a7eddff18e0c659f0a7a7b9931f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59dff6a0af01fe55b6b542cfe494cd93ad73b943
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288343"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616867"
 ---
-# <a name="query-method-rds"></a>查詢方法 (RDS)
-使用有效的 SQL 查詢字串傳回[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+# <a name="query-method-rds"></a>Query 方法 (RDS)
+會使用有效的 SQL 查詢字串傳回[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,13 +42,13 @@ Set Recordset = DataFactory.Query(Connection, Query)
  物件變數，表示[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件。  
   
  *[連接]*  
- A**字串**包含伺服器連接資訊的值。 這是類似於[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性。  
+ A**字串**值，包含伺服器連接資訊。 這是類似[Connect](../../../ado/reference/rds-api/connect-property-rds.md)屬性。  
   
  *查詢*  
  A**字串**，其中包含 SQL 查詢。  
   
 ## <a name="remarks"></a>備註  
- 查詢應該使用資料庫伺服器的 SQL 的用語。 如果發生錯誤的查詢來執行，則傳回結果狀態。 **查詢**方法不會執行任何語法上檢查**查詢**字串。  
+ 查詢應該使用資料庫伺服器的 SQL 方言。 如果使用已執行的查詢發生錯誤，則會傳回結果狀態。 **查詢**方法並不會執行任何檢查的語法**查詢**字串。  
   
 ## <a name="applies-to"></a>適用於  
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - cluster security policy
 ms.assetid: 38afa421-2599-404f-8ba6-172668c6325e
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 071114e6a263a1bd956a6a8b2e240920070f8a9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b392222b8b55cc846dca66d20f70355d6778195
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185825"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162788"
 ---
 # <a name="cluster-security-policy"></a>叢集安全性原則
   使用 [叢集安全性原則] 頁面，即可針對容錯移轉叢集執行個體設定安全性原則。  

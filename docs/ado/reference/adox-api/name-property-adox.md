@@ -1,13 +1,11 @@
 ---
-title: Name 屬性 (ADOX) |Microsoft 文件
+title: Name 屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -41,16 +39,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9bb6d6e570de4595e2c6b3130432b8829da137b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f078f8664ce0386bba6069d771ba880b1c02e026
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737186"
 ---
 # <a name="name-property-adox"></a>Name 屬性 (ADOX)
 表示物件的名稱。  
@@ -61,12 +58,12 @@ ms.locfileid: "35286599"
 ## <a name="remarks"></a>備註  
  若要在集合中是唯一沒有名稱。  
   
- **名稱**屬性是讀/寫上[資料行](../../../ado/reference/adox-api/column-object-adox.md)，[群組](../../../ado/reference/adox-api/group-object-adox.md)，[金鑰](../../../ado/reference/adox-api/key-object-adox.md)，[索引](../../../ado/reference/adox-api/index-object-adox.md)， [資料表](../../../ado/reference/adox-api/table-object-adox.md)，和[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件。 **名稱**屬性是唯讀[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)，[程序](../../../ado/reference/adox-api/procedure-object-adox.md)，和[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件。  
+ **名稱**屬性是讀取/寫入上[資料行](../../../ado/reference/adox-api/column-object-adox.md)，[群組](../../../ado/reference/adox-api/group-object-adox.md)，[鍵](../../../ado/reference/adox-api/key-object-adox.md)，[索引](../../../ado/reference/adox-api/index-object-adox.md)， [表格](../../../ado/reference/adox-api/table-object-adox.md)，並[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件。 **名稱**屬性是唯讀[類別目錄](../../../ado/reference/adox-api/catalog-object-adox.md)，[程序](../../../ado/reference/adox-api/procedure-object-adox.md)，以及[檢視](../../../ado/reference/adox-api/view-object-adox.md)物件。  
   
- 讀取/寫入的物件 (**資料行**，**群組**，**金鑰**，**索引**，**資料表**和**使用者**物件)，預設值為空字串 ("")。  
+ 讀取/寫入物件 (**資料行**，**群組**，**金鑰**，**索引**，**資料表**和**使用者**物件)，預設值為空字串 ("")。  
   
 > [!NOTE]
->  代表索引鍵，這個屬性是唯讀**金鑰**物件已經附加至集合。 這個屬性是唯讀的資料表，**資料表**物件已經附加至集合。  
+>  代表索引鍵，這個屬性是唯讀**金鑰**已經附加到集合的物件。 對於資料表，這個屬性是唯讀**資料表**已經附加到集合的物件。  
   
 ## <a name="applies-to"></a>適用於  
   
@@ -77,6 +74,6 @@ ms.locfileid: "35286599"
 |[Table 物件 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User 物件 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View 物件 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料行和資料表附加名稱屬性範例 (VB) 方法](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [索引鍵附加方法、 金鑰類型、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Columns 和 Tables Append 方法、 Name 屬性範例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append 方法、 索引鍵的型別、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog 屬性範例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

@@ -1,13 +1,11 @@
 ---
-title: 純量函數 |Microsoft 文件
+title: 純量函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], scalar functions
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - scalar functions [ODBC], desktop database drivers
 - SQL grammar [ODBC], scalar functions
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e8c7ac156e30861df6db8dd8bc4899ac169a109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 072373adbca54132b3f1f34284d12c31f721e7c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900063"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853788"
 ---
 # <a name="scalar-functions"></a>純量函數
-Microsoft ODBC 桌面資料庫驅動程式支援下列的純量函數：  
+Microsoft ODBC 桌面資料庫驅動程式支援下列的純量函式：  
   
 ||||  
 |-|-|-|  
@@ -35,8 +32,8 @@ Microsoft ODBC 桌面資料庫驅動程式支援下列的純量函數：
 |CONVERT|LEFT|RTRIM|  
 |CURDATE|LENGTH|SUBSTRING|  
 |CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|USER|  
+|DATABASE|LTRIM|使用者|  
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- 引數和傳回值的純量函數的相關資訊，請參閱的 < 附錄 F *ODBC 程式設計人員參考。*
+ 引數和傳回值的純量函式的相關資訊，請參閱附錄 F 的*ODBC 程式設計人員參考。*

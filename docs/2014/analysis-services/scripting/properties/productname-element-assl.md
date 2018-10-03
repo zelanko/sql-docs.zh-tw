@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProductName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ProductName element
 ms.assetid: f8129bb2-55c9-44e1-8857-82dc01c04a7f
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be8078f2e3949513f76d6aed6dfdd3e66c50ed18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 959f6624e0ce22647f724279042f5cd6ab6ba2f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149888"
 ---
 # <a name="productname-element-assl"></a>ProductName 元素 (ASSL)
   包含執行個體的唯讀產品名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]相關聯[Server](../objects/server-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37187035"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37187035"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Server](../objects/server-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `ProductName` 元素會提供與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體相關聯之產品名稱的唯讀存取。  

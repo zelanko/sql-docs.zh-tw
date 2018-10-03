@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102508"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>第 2 課：加入 Web 參考
   Web 服務探索是用戶端用來尋找 Web 服務及取得服務描述的程序。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 的 Web 服務探索程序牽涉到依照預先定義的演算法來詢問網站。 此程序的目的是尋找服務描述，也就是使用 Web 服務描述語言 (WSDL) 的 XML 文件集。  
@@ -38,7 +35,7 @@ ms.locfileid: "37275624"
   
 4.  在  **URL**的方塊**加入 Web 參考**方塊中，輸入可取得服務描述的報表伺服器 Web 服務，例如 URL http://localhost/reportserver/reportservice2010.asmx。 然後按一下**移** 按鈕，擷取 Web 服務的相關資訊。  
   
-     \- 或 -  
+     \-或-  
   
      如果報表伺服器 Web 服務存在本機電腦上，按一下**本機電腦上的 Web 服務**瀏覽器窗格中的連結。 然後按一下所提供清單中的 ReportService2010 Web 服務連結。  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2251360bfc69fd4e1846ace6a072ff537c6248e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ded3fa139483e5a9e3c337bbfd8c63825a749a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130028"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 課：安裝封裝
   在 [第 2 課： 建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)，您建立了部署公用程式，也建立了部署配套所包含的項目，您必須在另一部電腦上安裝封裝。 此外，您也確認了部署配套中的檔案清單，並且檢查了建立部署公用程式時所建立的資訊清單檔內容。  

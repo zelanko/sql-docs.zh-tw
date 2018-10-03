@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e64b28218f4d9912b06b1ab124de9c326133cc6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316078"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068388"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>在 SQL Server 2014 中已停止的管理工具功能
   此主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中無法再使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理工具功能。  
   
 ## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>移除的功能 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- 無  
+ None  
   
 ## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>移除的功能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   

@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_loaded_modules (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_loaded_modules & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_loaded_modules
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1888f39f6024a0b299834217c2f8b69052761b65
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794316"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +32,23 @@ ms.lasthandoff: 05/23/2018
   針對已載入至伺服器位址空間的每一個模組，各傳回一個資料列。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_loaded_modules**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_loaded_modules**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|處理序中的模組位址。|  
 |**file_version**|**varchar(23)**|檔案的版本。 以下列格式呈現：<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|產品的版本。 以下列格式呈現：<br /><br /> x.x:x.x|  
 |**debug**|**bit**|1 = 模組是已載入模組的偵錯版本。|  
-|**修補**|**bit**|1 = 模組已修補。|  
+|**修正的項目**|**bit**|1 = 模組已修補。|  
 |**發行前版本**|**bit**|1 = 模組是已載入模組的發行前版本。|  
 |**private_build**|**bit**|1 = 模組是已載入模組的私用建置。|  
 |**special_build**|**bit**|1 = 模組是已載入模組的特殊建置。|  
 |**語言**|**int**|模組之版本資訊的語言。|  
 |**公司**|**nvarchar(256)**|建立模組的公司名稱。|  
-|**描述**|**nvarchar(256)**|模組的描述。|  
+|**description**|**nvarchar(256)**|模組的描述。|  
 |**name**|**nvarchar(255)**|模組的名稱。 包含模組的完整路徑。|  
-|**pdw_node_id**|**int**|**適用於**：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**pdw_node_id**|**int**|**適用於**：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  

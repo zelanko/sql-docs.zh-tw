@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066878"
 ---
 # <a name="server-configuration---service-accounts"></a>伺服器組態 - 服務帳戶
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [伺服器組態] 頁面，即可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指派登入帳戶。 設定在這個頁面上的實際服務隨著您選取要安裝的功能而不同。  

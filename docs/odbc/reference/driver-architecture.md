@@ -1,39 +1,36 @@
 ---
-title: 驅動程式架構 |Microsoft 文件
+title: 驅動程式架構 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], architecture
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1fee82278af1597eefaf0e17ea3b9aa0dfce8e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8e49b89d233880652f4b19879ff8e658bc4abe1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628396"
 ---
 # <a name="driver-architecture"></a>驅動程式架構
-驅動程式架構分為兩種類別，根據哪個軟體處理序的 SQL 陳述式：  
+驅動程式架構分為兩種類別，根據哪個軟體程序的 SQL 陳述式：  
   
--   **以檔案為基礎的驅動程式**驅動程式可直接存取實體的資料。 在此情況下，驅動程式作為驅動程式和資料來源;也就是說，它會處理呼叫 ODBC 和 SQL 陳述式。 例如，dBASE 驅動程式是以檔案為基礎的驅動程式，因為 dBASE 不提供獨立的資料庫引擎驅動程式就可以使用。 請務必注意的檔案為基礎的驅動程式的開發人員必須撰寫自己的資料庫引擎。  
+-   **檔案為基礎的驅動程式**驅動程式會直接存取實體的資料。 在此情況下，驅動程式可同時作為驅動程式和資料來源;也就是說，它會處理呼叫 ODBC 和 SQL 陳述式。 比方說，dBASE 驅動程式是檔案為基礎的驅動程式，因為 dBASE 不提供獨立的資料庫引擎驅動程式可以使用。 請務必請注意，檔案為基礎的驅動程式的開發人員必須撰寫自己的資料庫引擎。  
   
--   **DBMS 架構驅動程式**驅動程式會透過不同的資料庫引擎來存取實體的資料。 驅動程式在此情況下處理僅 ODBC 呼叫。傳遞 SQL 陳述式至 database engine 的處理。 例如，Oracle 驅動程式是 DBMS 架構驅動程式，因為 Oracle 驅動程式會使用獨立的資料庫引擎。 Database engine 所在的位置並不重要。 它可以位於相同的驅動程式的電腦或不同的電腦上網路。即使可能透過閘道存取。  
+-   **以 DBMS 為基礎的驅動程式**驅動程式會透過個別的資料庫引擎存取的實體資料。 在此情況下，驅動程式處理僅 ODBC 呼叫;它會傳遞 SQL 陳述式給資料庫引擎進行處理。 例如，Oracle 驅動程式是以 DBMS 為基礎的驅動程式，因為 Oracle 驅動程式會使用獨立的資料庫引擎。 Database engine 所在的位置不是那麼重要。 它可以存在於此驅動程式與相同的電腦或不同的機器上網路，甚至可能是透過閘道存取。  
   
- 驅動程式架構的驅動程式寫入器; 通常只有有趣的是也就是說，驅動程式架構通常會造成任何差異，應用程式。 不過，架構會影響是否應用程式可以使用 DBMS 專屬 SQL。 例如，Microsoft Access 提供獨立的資料庫引擎。 如果 Microsoft Access 驅動程式是以 DBMS 為基礎，透過此引擎存取的資料 — 應用程式可以將 Microsoft Access – SQL 陳述式傳遞給引擎進行處理。  
+ 驅動程式架構的驅動程式寫入器; 通常只有有趣的是也就是驅動程式架構通常會讓應用程式並沒有差別。 不過，不論應用程式可以使用的 DBMS 特定 SQL，可能會影響架構。 例如，Microsoft Access 提供獨立的資料庫引擎。 如果 Microsoft Access 驅動程式是以 DBMS 為基礎，透過此引擎存取的資料，應用程式可以將 Microsoft Access – SQL 陳述式傳遞給引擎進行處理。  
   
- 不過，如果驅動程式是以檔案為基礎-也就是它包含可直接存取 Microsoft® Access.mdb 檔案的專屬引擎 — 將 Microsoft 存取特定 SQL 陳述式傳遞給引擎的任何嘗試都可能會造成語法錯誤。 原因是有可能實作僅 ODBC SQL 專屬的引擎。  
+ 不過，如果檔案為基礎的驅動程式 — 也就是它包含一個專屬的引擎，會直接存取 Microsoft® Access.mdb 檔 — Microsoft 存取特定 SQL 陳述式傳遞至引擎的任何嘗試都可能會造成語法錯誤。 原因是有可能實作只 ODBC SQL 專屬的引擎。  
   
  此章節包含下列主題。  
   

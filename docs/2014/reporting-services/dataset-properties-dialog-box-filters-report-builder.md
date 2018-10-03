@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbe6bee60f4cee2ce99f5aadd1dc3cea14e85b1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff8ae37c2caf34432acde8fab2235a3b83b372a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172148"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>資料集屬性對話方塊、篩選 (報表產生器)
   選取 **[資料集屬性]** 對話方塊上的 **[篩選]** ，即可建立資料集的篩選。  
@@ -55,10 +52,10 @@ ms.locfileid: "37258164"
   
  如果您所需要的資料類型選項不在此下拉式清單中，請撰寫運算式，以便將此值轉換為正確的資料類型。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
- **[運算子]**  
+ **運算子**  
  選擇要用來比較運算式和值的運算子。  
   
- **ReplTest1**  
+ **值**  
  評估在 [運算式] 方塊中指定的運算式時，輸入要使用的運算式或值。 請按一下 [運算式]\(**fx**) 按鈕來編輯運算式。  
   
 ## <a name="see-also"></a>另請參閱  

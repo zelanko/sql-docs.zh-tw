@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8416b7500ca68fe1a42ba2a8f2f3e57d81ec8ebc
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ee463adbdcd90d9454cd995e1c1bc52e45988fe2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810014"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071958"
 ---
 # <a name="guest-permissions-on-user-databases"></a>使用者資料庫的 Guest 權限
   此規則會判斷 guest 使用者是否有權存取資料庫。 此規則只適用於使用者資料庫。  

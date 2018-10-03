@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "601"
 helpviewer_keywords:
 - 601 (Database Engine error)
 ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43c15019df09863af85e57d46b21e0b70ad49c08
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176898"
 ---
 # <a name="mssqlserver601"></a>MSSQLSERVER_601
     

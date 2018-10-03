@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 09/22/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ade0baa7e970639769cf5bdba522e54d3843771
-ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
+ms.openlocfilehash: c6e423af0a859932cc78e097b7a73e1644d3cccf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362032"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836376"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>什麼是適用於 SAP ASE (SybaseToSQL) 的 SSMA 的新功能
 本文章列出 SSMA 的每個版本中的 SAP ASE (先前稱為 SSMA for Sybase) 變更。 

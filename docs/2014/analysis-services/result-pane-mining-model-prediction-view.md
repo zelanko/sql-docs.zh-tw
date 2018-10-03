@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.result.f1
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 63fc7eff1a4ae3544fb82f0e7abb88e2fb25d656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071178"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>結果窗格 (採礦模型預測檢視)
   [結果] 窗格會顯示在預測查詢產生器的 [設計] 檢視中，所設計之資料採礦預測查詢的結果。 您可以將方格的選取範圍或整個結果方格複製到剪貼簿。  

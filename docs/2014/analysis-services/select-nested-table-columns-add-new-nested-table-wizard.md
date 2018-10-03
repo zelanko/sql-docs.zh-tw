@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectnestedtablecolumns.f1
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: efcf3c3b0b628cfb7aac93b24a1fc4c874ceb57e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099409"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>選取巢狀資料表資料行 (加入新的巢狀資料表精靈)
   使用 [選取巢狀資料表資料行] 頁面，即可選取要包含在巢狀資料表中的屬性和量值，並定義採礦模型使用屬性和量值的方式。  

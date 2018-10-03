@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.GetVersionDialog
 helpviewer_keywords:
 - Get dialog box
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c61a83ed2352067a3d1ae3a23b22bf11be3d3546
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048788"
 ---
 # <a name="get-dialog-box-source-control"></a>取得對話方塊 (原始檔控制)
   從原始檔控制資料庫擷取選取項目的唯讀副本，傳送到您的工作資料夾，或者其他指定資料夾。  

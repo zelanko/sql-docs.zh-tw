@@ -5,20 +5,18 @@ ms.date: 04/10/2018
 ms.prod: sql-server-2014
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: ''
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88615f87b31b1c95cd9afc9dc8d915df2995267c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098511"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -137,21 +135,21 @@ ms.locfileid: "37197528"
 
 -   當您從 Excel **匯入**時，執行下列其中一項：
 
-    -   若要使用**工作表**或**具名範圍**，請在 [Specify table copy or query] (指定資料表複製或查詢) 畫面，選取 [Copy data from one or more tables or views] (從一或多個資料表或檢視複製資料)。 然後，在 [Select Source Tables and Views] 選取來源資料表和檢視) 頁面上，於 [來源] 資料行中，選取來源工作表及具名範圍。
+    -   若要使用 **工作表** 或 **具名範圍**，請在 [Specify table copy or query] \(指定資料表複製或查詢)  畫面，選取 [Copy data from one or more tables or views] \(從一或多個資料表或檢視複製資料)  。 然後，在 [Select Source Tables and Views] 選取來源資料表和檢視)  頁面上，於 [來源]  資料行中，選取來源工作表及具名範圍。
 
-    -   若要您使用指定位址的**未具名範圍**，請在 [Specify table copy or query] (指定資料表複製或查詢) 頁面上，選取 [Write a query to specify the data to transfer] (撰寫查詢來指定要傳送的資料)。 然後，在 [Provide a Source Query] (提供來源查詢) 頁面上，提供類似於下列範例的查詢：
+    -   若要您使用指定位址的 **未具名範圍** ，請在 [Specify table copy or query] \(指定資料表複製或查詢)  頁面上，選取 [Write a query to specify the data to transfer] \(撰寫查詢來指定要傳送的資料)  。 然後，在 [Provide a Source Query] \(提供來源查詢)  頁面上，提供類似於下列範例的查詢：
 
         ```sql
         SELECT * FROM [Sheet1$A1:B5]
         ```
 
--   當您**匯出** Excel 時，執行下列其中一項：
+-   當您 **匯出** Excel 時，執行下列其中一項：
 
-    -   若要使用**工作表**或**具名範圍**，請在 [Select Source Tables and Views] (選取來源資料表和檢視) 頁面上的 [目的地] 資料行中，選取目的地工作表與具名範圍。
+    -   若要使用 **工作表** 或 **具名範圍**，請在 [Select Source Tables and Views] \(選取來源資料表和檢視)  頁面上的 [目的地]  資料行中，選取目的地工作表與具名範圍。
 
-    -   若要使用指定位址的**未具名範圍**，請在 [Select Source Tables and Views] (選取來源資料表和檢視) 頁面的 [目的地] 資料行中，以不含分隔符號的下列格式輸入範圍：`Sheet1$A1:B5`。 精靈會新增分隔符號。
+    -   若要使用指定位址的 **未具名範圍** ，請在 [Select Source Tables and Views] \(選取來源資料表和檢視)  頁面的 [目的地]  資料行中，以不含分隔符號的下列格式輸入範圍： `Sheet1$A1:B5` 。 精靈會新增分隔符號。
 
-選取或輸入要匯入或匯出的 Excel 物件之後，您也可以在精靈的 [Select Source Tables and Views] (選取來源資料表和檢視) 頁面上執行下列動作：
+選取或輸入要匯入或匯出的 Excel 物件之後，您也可以在精靈的 [Select Source Tables and Views] \(選取來源資料表和檢視)  頁面上執行下列動作：
 
 -   選取 [編譯對應] 來檢閱來源與目的地之間的資料行對應。
 

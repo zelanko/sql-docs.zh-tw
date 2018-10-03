@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.statistics.propertis.f1
@@ -20,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2798479058b3fd12cc34ddedd9352027b6c1821
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066838"
 ---
 # <a name="create-statistics"></a>建立統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表的一個或多個資料行建立查詢最佳化統計資料。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計畫的必要統計資料。不過，在少數情況下，您必須建立其他統計資料。  
@@ -118,7 +116,7 @@ ms.locfileid: "37408397"
      下列屬性會在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [篩選] 頁面中顯示。  
   
      **篩選運算式**  
-     定義要在篩選統計資料中包含什麼資料列。 例如，使用 IPv4 位址的 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     定義要在篩選統計資料中包含什麼資料列。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`   
   
 5.  在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [一般] 頁面上，按一下 [新增]。  
   

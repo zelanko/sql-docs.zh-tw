@@ -1,29 +1,26 @@
 ---
-title: 參數集合的屬性、 方法和事件 |Microsoft 文件
+title: Parameters 集合屬性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Parameters collection [ADO], members
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ee70f2ed8adb47818294b61863dd2c05d5c45c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45cd4c98de56a37c81c40505869851134e281852
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633526"
 ---
-# <a name="parameters-collection-properties-methods-and-events"></a>參數集合的屬性、 方法和事件
+# <a name="parameters-collection-properties-methods-and-events"></a>Parameters 集合屬性、 方法和事件
 ## <a name="properties"></a>屬性  
  [Count 屬性](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -34,7 +31,7 @@ ms.locfileid: "35280658"
   
  [Delete 方法 (ADO Parameters 集合)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
- [重新整理方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>事件  
  無。  

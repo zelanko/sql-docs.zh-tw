@@ -1,13 +1,11 @@
 ---
-title: 建立連線 |Microsoft 文件
+title: 建立連線 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,22 +18,21 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d433869c3ae7cff9921210c25fce6757f36180b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606377"
 ---
 # <a name="establishing-a-connection"></a>建立連線
-配置環境和連接控制代碼，並設定任何連接屬性，應用程式之後可以連接至資料來源或驅動程式。 有三個不同的函數，應用程式可用來執行這項操作： **SQLConnect** （核心介面的一致性層級） **SQLDriverConnect** （核心），和**SQLBrowseConnect**(層級 1)。 每三個被為了在不同的案例中使用。 連接之前，先在應用程式可以判斷與支援的這些函式**ConnectFunctions**所傳回的關鍵字**SQLDrivers**。  
+配置環境和連接控制代碼，並設定任何連接屬性，應用程式之後即可連接到資料來源或驅動程式。 有三個不同的函數應用程式可用來執行這項操作： **SQLConnect** （核心介面一致性層級）， **SQLDriverConnect** （核心），和**SQLBrowseConnect**(層級 1)。 每三個可用於不同的案例。 連線之前，應用程式可以決定其中哪些功能支援**ConnectFunctions**所傳回的關鍵字**SQLDrivers**。  
   
 > [!NOTE]  
->  有些驅動程式限制它們支援的作用中連線數目。 應用程式呼叫**SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS 選項，以決定多少作用中連線的特定驅動程式支援。  
+>  有些驅動程式限制它們支援的作用中連線數目。 應用程式呼叫**SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS 選項，以決定多少個作用中連線的特定驅動程式支援。  
   
  此章節包含下列主題。  
   

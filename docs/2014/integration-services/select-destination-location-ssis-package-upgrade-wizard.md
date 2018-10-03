@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-caps.latest.revision: 19
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4754420ad4058e44e2bc07d3e68a18d076108c1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63e06bc579879f552fa8406fef463738b96e8459
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172988"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>選取目的地位置 (SSIS 封裝升級精靈)
   使用 **[選取目的地位置]** 頁面，指定用來儲存升級封裝的目的地。  

@@ -1,47 +1,44 @@
 ---
-title: OLE DB 提供者 (ADO) |Microsoft 文件
+title: OLE DB 提供者 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae1cb60ac963b71814cfc225e42799c375081e5b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b3f4f1d4efed51a8f9e3b5eaf3bd4a2c7f385e75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613806"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供者 (ADO)
-OLE DB 定義一組 COM 介面，可提供應用程式統一存取各種資訊來源中所儲存的資料。 這個方法可讓共用支援的 DBMS 功能至資料來源的適當數量的介面透過其資料的資料來源。 根據設計，高效能架構的 OLE DB 會依據其彈性，以元件為基礎的服務模型的使用情形。 而不是讓應用程式和資料之間的中繼層級低於指定的數目，OLE DB 需求只做為所需的許多元件完成特定工作。  
+OLE DB 定義一組 COM 介面，可提供應用程式一致的存取會儲存在各種資訊來源的資料。 這種方法可讓資料來源共用其資料，透過支援的 DBMS 功能到資料來源的適當數量的介面。 根據設計，OLE DB 的高效能架構根據其使用彈性、 以元件為基礎的服務模型。 而不是讓應用程式與資料之間的中繼層的規定的數目，OLE DB 會需要只有在做為所需的許多元件完成特定工作。  
   
  例如，假設使用者想要執行查詢。 請考慮下列案例：  
   
--   在關聯式資料庫中目前存在的 ODBC 驅動程式，但沒有原生 OLE DB 提供者所在的資料： 應用程式使用 ADO 與 OLE DB Provider for ODBC，後者接著會載入適當的 ODBC 驅動程式。 驅動程式會將 SQL 陳述式傳遞至 DBMS，擷取資料。  
+-   在關聯式資料庫中目前存在的 ODBC 驅動程式，但沒有原生 OLE DB 提供者的資料位於： 應用程式使用 ADO 與 OLE DB Provider for ODBC，後者接著會載入適當的 ODBC 驅動程式。 驅動程式會將 SQL 陳述式傳遞至 DBMS，擷取資料。  
   
--   原生的 OLE DB 提供者是 Microsoft SQL Server 中的資料所在： 應用程式會使用 ADO 來向直接 OLE DB Provider for Microsoft SQL Server。 需要的任何媒介不。  
+-   資料位於原生的 OLE DB 提供者是 Microsoft SQL Server： 應用程式使用 ADO 與直接 OLE DB Provider for Microsoft SQL Server。 需要任何媒介不。  
   
--   資料位於 Microsoft Exchange Server 的 OLE DB 提供者，但這不會公開程序的 SQL 查詢引擎： 應用程式適用於 Microsoft Exchange 與 OLE DB 提供者會使用 ADO 和 OLE DB 查詢處理器會呼叫處理查詢的元件。  
+-   資料位於 Microsoft Exchange Server 的 OLE DB 提供者，但這不會公開程序的 SQL 查詢引擎： 應用程式與適用於 Microsoft Exchange OLE DB 提供者會使用 ADO 和 OLE DB 的查詢處理器會呼叫若要處理的查詢元件。  
   
--   資料位於 Microsoft NTFS 檔案系統格式的文件： 透過 Microsoft 索引服務，以啟用有效的內容檔案系統中索引的內容和文件的屬性以原生的 OLE DB 提供者存取資料搜尋。  
+-   資料位於 Microsoft NTFS 檔案系統格式的文件： 透過 Microsoft 索引服務，在檔案系統，以啟用有效的內容索引的內容和屬性的文件中使用原生的 OLE DB 提供者存取資料搜尋。  
   
- 在所有先前範例中，應用程式可以查詢資料。 使用元件的最小數目，則符合使用者的需求。 在每個案例中，才需要請使用其他元件和必要的元件會叫用。 使用 OLE DB 時大幅高效能提供可重複使用及共用元件的這個需求載入。  
+ 在所有前述範例中，應用程式可以查詢的資料。 最小元件數會符合使用者的需求。 在每個案例中，只有當有需要請使用其他元件，並叫用必要的元件。 使用 OLE DB 時，此視需要載入可重複使用及共用元件的大幅高效能貢獻。  
   
- 提供者分為兩類： 所提供的資料以及提供服務。 資料提供者擁有它自己的資料，且會公開在表格式表單，以您的應用程式。 服務提供者封裝服務所產生及取用資料，加強 ADO 應用程式中的功能。 服務提供者也可以進一步定義做為服務元件，必須與其他服務提供者或元件搭配運作。  
+ 提供者分為兩類： 提供與資料提供服務。 資料提供者擁有它自己的資料，且會公開在表格式的格式，您的應用程式。 服務提供者封裝服務所產生和取用資料，擴充您的 ADO 應用程式中的功能。 服務提供者也可以進一步定義做為服務元件，必須與其他服務提供者或元件搭配運作。  
   
- ADO 提供一致，較高的層級介面，以各種 OLE DB 提供者。  
+ ADO 提供一致、 較高的層級介面，以各種 OLE DB 提供者。  
   
  此章節包含下列主題。  
   

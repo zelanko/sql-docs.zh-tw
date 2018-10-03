@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "2"
 helpviewer_keywords:
 - -2 (Database Engine error)
 ms.assetid: f37a7b7d-26e1-4b9e-bcb4-57f7805393d2
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38c551b7d45d18a7c60ab3de15b62c27f80f521e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b5a451792e9732bf00e7bf68ce93b42c99b06fa2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122928"
 ---
 # <a name="mssqlserver-2"></a>MSSQLSERVER_-2
     

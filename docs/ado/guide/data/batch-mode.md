@@ -1,34 +1,31 @@
 ---
-title: 批次模式 |Microsoft 文件
+title: 批次模式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], batch mode
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78fd9c4c7a27bad0daddb02f3275ecebfc171cbd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602396"
 ---
 # <a name="batch-mode"></a>批次模式
-批次模式就是作用中時**LockType**屬性設定為**Adlockpessimistic**和提供者所支援批次更新。 無法使用資料指標位置根據特定鎖定類型的設定。 比方說，封閉式鎖定就無法使用類型時**CursorLocation**設**adUseClient**。 相反地，當游標位置是在伺服器上的提供者無法支援批次的開放式鎖定。 您應該使用批次使用索引鍵集或靜態資料指標更新。  
+批次模式的作用中時**LockType**屬性設定為**Adlockpessimistic**和批次更新的提供者支援。 無法使用資料指標位置根據特定鎖定類型設定。 比方說，封閉式鎖定類型不適用於何時**CursorLocation**設為**adUseClient**。 相反地，提供者無法支援批次的開放式鎖定，當資料指標位置是在伺服器上。 您應該使用批次使用 keyset 或 static 資料指標更新。  
   
- **UpdateBatch**方法用來傳送**資料錄集**變更保留複製緩衝區中要更新資料來源的伺服器。 在下列區段中，我們將會開啟**資料錄集**在批次模式中，複製緩衝區中，進行變更，然後將變更傳送到資料來源使用的呼叫**UpdateBatch**。  
+ **UpdateBatch**方法用來傳送**資料錄集**變更保存複製緩衝區中要更新的資料來源的伺服器。 在下一節中，我們便會開啟**Recordset**在批次模式中，變更複製緩衝區中，並再將變更傳送至資料來源使用的呼叫**UpdateBatch**。  
   
  本節包含下列主題：  
   

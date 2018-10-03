@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.addintelligence.f1
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0188728f4e60a3b96cccf6dcbfdd9c318fc11367
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fe045f479d7c482da0a3eb3691479d0159bf978
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172834"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>選擇時間計算 (商業智慧精靈)
   使用 [選擇時間計算] 頁面，即可定義針對現有時間階層所建立之新時間計算的解決方式。  

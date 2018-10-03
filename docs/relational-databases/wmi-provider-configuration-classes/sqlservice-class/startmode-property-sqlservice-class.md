@@ -1,15 +1,12 @@
 ---
-title: StartMode 屬性 （SqlService 類別） |Microsoft 文件
+title: StartMode 屬性 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StartMode Property (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d5f9ba82b7ef75fa9b2a6fff80dab8e0180d59f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e8e6fd01db9c390588bbd1d521411c1467a46ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809216"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示此服務的 [SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
@@ -54,13 +50,13 @@ object.StartMode [= value]
  值 = 0。 由作業系統載入程式啟動的服務。 這個選項只對驅動程式服務有效。  
   
  系統  
- 值 = 1。 透過啟動服務**IoInitSystem**方法。 這個選項只對驅動程式服務有效。  
+ 值 = 1。 服務開始著手**IoInitSystem**方法。 這個選項只對驅動程式服務有效。  
   
  自動  
  值 = 2。 要由服務控制管理員在系統啟動期間自動啟動的服務。  
   
  手動  
- 值 = 3。 服務在啟動處理程序呼叫時由電腦管理員**StartService**方法。  
+ 值 = 3。 要啟動由電腦管理員，當處理程序呼叫的服務**StartService**方法。  
   
  已停用  
  值 = 4。 無法啟動服務。  

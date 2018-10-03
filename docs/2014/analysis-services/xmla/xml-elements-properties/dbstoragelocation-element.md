@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DbStorageLocation element
 ms.assetid: 1f448249-103a-479f-ae86-b0017acd0436
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 055780c9c91817a44dce6dfdaeb6ea3b541c05a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdee1fc2d62f63eb70e5aecd47c32693a9fbd155
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173918"
 ---
 # <a name="dbstoragelocation-element"></a>DbStorageLocation 元素
   指定的資料夾位置[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建立和管理所有資料庫資料和中繼資料檔案。  
@@ -51,7 +48,7 @@ ms.locfileid: "37223998"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[[資料庫]](database-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `DbStorageLocation`資料庫屬性必須設現有的 UNC 資料夾路徑或空字串。 空字串是預設的伺服器資料夾。 如果這個資料夾不存在，當您執行 `Create`、`Attach` 或 `Alter` 命令時，就會引發錯誤。  

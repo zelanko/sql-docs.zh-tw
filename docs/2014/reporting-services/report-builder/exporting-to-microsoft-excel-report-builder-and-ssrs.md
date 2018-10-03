@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096148"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將報表轉譯成 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 的原生格式。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
@@ -181,7 +178,7 @@ ms.locfileid: "37152099"
 |每個工作表的資料行上限|256|16,384|  
 |每個工作表的資料列上限|65,536|1,048,576|  
 |工作表中允許的色彩數目|56 (調色盤)<br /><br /> 如果在報表中使用的色彩超過 56 種，轉譯延伸模組會讓所需的色彩符合自訂調色版中已提供的 56 種色彩之一。|約為 1600 萬 (24 位元色彩)|  
-|ZIP 壓縮的檔案|無|ZIP 壓縮|  
+|ZIP 壓縮的檔案|None|ZIP 壓縮|  
 |預設字型家族|Arial|Calibri|  
 |預設字型大小|10pt|11pt|  
 |預設資料列高度|12.75 pt|15 pt|  

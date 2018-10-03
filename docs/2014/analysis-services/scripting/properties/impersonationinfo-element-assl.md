@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ImpersonationInfo Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ImpersonationInfo element
 ms.assetid: d4b9c372-1023-43f7-97e9-b0a90f544fbb
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ed7caa18c18f73f70a3f39dce608f2b32dbc319
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c48718c9568a54a42e80be18c25dbbcf289079b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104918"
 ---
 # <a name="impersonationinfo-element-assl"></a>ImpersonationInfo 元素 (ASSL)
   包含在存取或執行組件時，用來決定模擬行為的資訊。  
@@ -49,7 +46,7 @@ ms.locfileid: "37275494"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -57,7 +54,7 @@ ms.locfileid: "37275494"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[組件](../data-type/assembly-data-type-assl.md)，[資料來源](../data-type/datasource-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
   

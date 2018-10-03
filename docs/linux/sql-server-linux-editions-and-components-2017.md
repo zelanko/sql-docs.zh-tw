@@ -4,9 +4,7 @@ ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: linux
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: ''
-caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8222c0a58c1dbaeeaa5bd3dffedcca254728aae6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 11cb2d92d0a18e837a1bf7887ddf6f7a2dfbc449
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045106"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628826"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本及支援的功能的 Linux 上的 SQL Server 2017
 
@@ -217,7 +214,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |匯入/匯出業界標準空間資料格式|是|是|是|是|   
 
   
-## <a name="next-steps"></a>後續的步驟 
+## <a name="next-steps"></a>後續步驟 
  [版本及支援的功能，SQL Server 2017-Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [版本及支援的功能，適用於 SQL Server 2016-Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [版本及支援的功能，適用於 SQL Server 2014-Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  

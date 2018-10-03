@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: abbe6fc47b75b8d1e4bf4cdbf8e90f936e6bf834
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4658a709e21e101d35f49424f218ea73a21e27e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166209"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070408"
 ---
 # <a name="version-property--wmi-msreportserverconfigurationsetting"></a>版本屬性 (WMI MSReportServer_ConfigurationSetting)
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  

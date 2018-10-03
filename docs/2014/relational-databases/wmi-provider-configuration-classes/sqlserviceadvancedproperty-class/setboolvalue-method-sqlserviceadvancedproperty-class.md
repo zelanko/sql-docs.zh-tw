@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - Set Breakpoints dialog box
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
-caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 89517b3d1d8ac28db093cb32990f526b98cbf70e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9269cd8d4e01257f4af2642ad767353d09444a6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130332"
 ---
 # <a name="set-breakpoints"></a>[設定中斷點]
   使用 **[設定中斷點]** 對話方塊，即可指定要啟用中斷點的事件並控制中斷點的行為。  

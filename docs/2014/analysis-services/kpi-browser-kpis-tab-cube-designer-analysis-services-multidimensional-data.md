@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174598"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 瀏覽器 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 [KPI] 索引標籤的 [KPI 瀏覽器] 窗格，即可檢視和測試關鍵效能指標 (KPI) 的結果。 瀏覽之前，KPI 必須先部署至 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。  
@@ -39,7 +36,7 @@ ms.locfileid: "37257374"
  **Hierarchy**  
  選取要套用此篩選的階層。  
   
- **[運算子]**  
+ **運算子**  
  選取運算子，定義 [篩選運算式] 中的運算式如何套用至所選取階層。 下表描述可用的運算子。  
   
 |值|描述|  
@@ -66,7 +63,7 @@ ms.locfileid: "37257374"
  **顯示結構**  
  顯示 Cube 包含的 KPI，並根據每一個 KPI 的 [顯示資料夾] 或 [父 KPI] 值來組織階層。  
   
- **ReplTest1**  
+ **值**  
  顯示 KPI 的值。  
   
  **目標**  

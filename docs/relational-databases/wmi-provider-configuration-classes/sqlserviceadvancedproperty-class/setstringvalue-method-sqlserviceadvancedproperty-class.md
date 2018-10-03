@@ -1,15 +1,12 @@
 ---
-title: SetStringValue 方法 （SqlServiceAdvancedProperty 類別） |Microsoft 文件
+title: SetStringValue 方法 （SqlServiceAdvancedProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetStringValue Method (SqlServiceAdvancedProperty Class )
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStringValue method
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9a6a7a3c180b89c7cc97b0e3ae34884e3f5840ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 104edb579af27105ae46dc786b424ab09ff85682
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012226"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603978"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 方法 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +38,17 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表進階屬性的 [SqlServiceAdvancedProperty 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 物件。  
   
 #### <a name="parameters"></a>參數  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
-|*StrValue*|指定進階屬性值的字串值。|  
+|*strValue*|指定進階屬性值的字串值。|  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- A **uint32**值為 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
+ A **uint32**值，也就是 0，如果已成功修改此服務，不支援要求，則為 1，而其他數值則表示錯誤。  
   
 ## <a name="remarks"></a>備註  
  屬性值類型必須是**字串**能夠將屬性設定為字串值。  

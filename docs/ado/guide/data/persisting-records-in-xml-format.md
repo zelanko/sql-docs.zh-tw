@@ -1,13 +1,11 @@
 ---
-title: 以 XML 格式保存記錄 |Microsoft 文件
+title: 以 XML 格式保存記錄 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64041d559dcc680cc72f44f082013c65ef738c27
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c15f4be9d452580cebd6b530f0703f249af17b36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272427"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678456"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保存記錄
-ADTG 格式，例如**資料錄集**持續性 XML 格式使用 Microsoft OLE DB 持續性提供者實作。 此提供者會從已儲存的 XML 檔案或資料流，包含 ADO 所產生的結構描述資訊產生的順向、 唯讀資料列集。 同樣地，可能需要 ADO**資料錄集**、 產生的 XML，並將它儲存到檔案或任何物件實作 COM **IStream**介面。 (事實上，檔案是支援的物件只是另一個範例**IStream**。)版本 2.5 和更新版本中，針對 ADO 會依賴上 Microsoft XML Parser (MSXML) 來將 XML 載入**資料錄集**; 因此 msxml.dll 是必要。  
+ADTG 格式類似**資料錄集**以 XML 格式的持續性透過 Microsoft OLE DB 持續性提供者實作。 此提供者會從已儲存的 XML 檔案或資料流，包含由 ADO 所產生的結構描述資訊產生順向且唯讀的資料列集。 同樣地，可能需要 ADO **Recordset**，產生的 XML，並將它儲存到檔案或任何可實作 COM 物件**IStream**介面。 (事實上，檔案是另一個例子是支援的物件**IStream**。)如需版本 2.5 及更新版本，ADO 需要在 Microsoft XML Parser (MSXML) 載入到 XML**資料錄集**; 因此 msxml.dll 不需要。  
   
 > [!NOTE]
->  儲存階層式時，某些限制適用於**資料錄集**（資料圖形） 為 XML 格式。 如果無法儲存到 XML 階層式**資料錄集**包含擱置的更新，您不能以參數化的方式儲存和階層式**資料錄集**。 如需詳細資訊，請參閱[保存篩選和階層式資料錄集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)。  
+>  儲存階層式時，適用某些限制**資料錄集**（資料圖形） 的 XML 格式。 如果無法儲存到 XML 階層**資料錄集**包含擱置的更新，您不能以參數化的方式儲存和階層式**資料錄集**。 如需詳細資訊，請參閱 <<c0> [ 保存篩選和階層式資料錄集](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)。  
   
- 最簡單的方式將資料保存在 XML，並將其重新載入一次透過 ADO 是與**儲存**和**開啟**方法，分別。 下列的 ADO 程式碼範例示範儲存中的資料**標題**titles.sav 名為檔案資料表。  
+ 最簡單的方式，將資料保存到 XML，並將其載入到上一步一次透過 ADO 是與**儲存**並**開啟**方法，分別。 下列的 ADO 程式碼範例示範儲存中的資料**標題**檔案，稱為 titles.sav 的資料表。  
   
 ```  
 Dim rs as new Recordset  
@@ -63,14 +60,14 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO 永遠保存整個**資料錄集**物件。 如果您想要保存的資料列的子集**資料錄集**物件，請使用**篩選**方法，以縮小資料列，或變更您的選取範圍子句。 不過，您必須開啟**資料錄集**物件與用戶端資料指標 (**CursorLocation** = **adUseClient**) 使用**篩選**方法來儲存資料列的子集。 例如，若要擷取以字母"b"開頭的項目，您可以套用篩選來開啟**資料錄集**物件：  
+ ADO 永遠保存整個**資料錄集**物件。 如果您想要保存的資料列的子集**Recordset**物件，請使用**篩選**方法，以縮小資料列，或變更您的選取範圍子句。 不過，您必須開啟**Recordset**與用戶端資料指標的物件 (**CursorLocation** = **adUseClient**) 使用**篩選**方法來儲存資料列的子集。 例如，若要擷取以字母"b"開頭的項目，您可以套用篩選來開啟**資料錄集**物件：  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO 永遠使用用戶端資料指標引擎的資料列集來產生可捲動 bookmarkable**資料錄集**之上順向的資料持續性提供者所產生的物件。  
+ ADO 一律使用用戶端資料指標引擎的資料列集，來產生可捲動 bookmarkable**資料錄集**根據順向的資料持續性提供者所產生的物件。  
   
  此章節包含下列主題。  
   

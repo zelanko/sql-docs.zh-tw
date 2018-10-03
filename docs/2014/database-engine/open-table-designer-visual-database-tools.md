@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening tables
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: acaeb10ee4f8ea900971d843538442cdde171946
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 788aead525e8a4d21728de60a2162aafb5d286cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163288"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>開啟資料表設計工具 (Visual Database Tools)
   資料表設計工具是一項視覺化工具，可讓您設計要連接的資料庫資料表，並將該資料庫資料表視覺化。 您可以使用 [資料表設計工具] 建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性和條件約束。  

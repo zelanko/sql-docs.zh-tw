@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 10532 (Database Engine error)
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be808412900aed583450824dca873deea4697f40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: cda3117df524ba90f322bbb99d6db98ee989ab71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063858"
 ---
 # <a name="mssqlserver10532"></a>MSSQLSERVER_10532
     

@@ -1,14 +1,11 @@
 ---
-title: sp_detach_db (TRANSACT-SQL) |Microsoft 文件
+title: sp_detach_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0f17581782cea310bcfad9ec6d7ce4823d1d38c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825666"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +47,15 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 ## <a name="arguments"></a>引數  
  [ **@dbname =** ] **'***database_name***'**  
- 這是要卸離的資料庫名稱。 *database_name*是**sysname**值，預設值是 NULL。  
+ 這是要卸離的資料庫名稱。 *database_name*已**sysname**值，預設值是 NULL。  
   
  [ **@skipchecks =** ] **'***skipchecks***'**  
- 指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*是**nvarchar （10)** 值，預設值是 NULL。 若要略過 UPDATE STATISTICS，指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
+ 指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*已**nvarchar(10**值，預設值是 NULL。 若要跳過更新統計資料，請指定 **，則為 true**。 若要明確地執行 UPDATE STATISTICS，指定**false**。  
   
  根據預設，系統會執行 UPDATE STATISTICS 來更新資料表和索引之資料的相關資訊。 對於要移至唯讀媒體的資料庫而言，執行 UPDATE STATISTICS 很有用。  
   
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- 指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**nvarchar （10)** 值預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的全文檢索索引的所有檔案和全文檢索索引的中繼資料會卸除，除非資料庫為唯讀。 如果是 NULL 或**true**，全文檢索相關中繼資料會保留。  
+ 指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*已**nvarchar(10**值，預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料已卸除，除非資料庫為唯讀。 如果是 NULL 或 **，則為 true**，全文檢索相關中繼資料會保留。  
   
 > [!IMPORTANT]  
 >  **@keepfulltextindexfile**的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
@@ -68,13 +64,13 @@ sp_detach_db [ @dbname= ] 'database_name'
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
- 卸離資料庫時，就會卸除其所有中繼資料。 如果資料庫是預設資料庫的任何登入帳戶，**主要**即成為其預設資料庫。  
+ 卸離資料庫時，就會卸除其所有中繼資料。 如果資料庫是任何登入帳戶的預設資料庫**主要**即成為其預設資料庫。  
   
 > [!NOTE]  
->  如需如何檢視所有登入帳戶的預設資料庫資訊，請參閱[sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果您有必要的權限，您可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)指派新的預設資料庫的登入。  
+>  如需有關如何檢視所有登入帳戶的預設資料庫的資訊，請參閱 < [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果您有必要的權限，您可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)指派新的預設資料庫的登入。  
   
 ## <a name="restrictions"></a>限制  
  如果出現下列的任何狀況，您便無法卸離資料庫：  
@@ -118,16 +114,16 @@ GO
 ```  
   
 > [!NOTE]  
->  若要強制現行使用者置於資料庫之外立即或在指定的秒數內同時使用 ROLLBACK 選項： ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+>  若要強制現行使用者移出資料庫立即或在指定的秒數內同時使用 ROLLBACK 選項： ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="reattaching-a-database"></a>重新附加資料庫  
  卸離的檔案會保留下來，您可以利用 CREATE DATABASE 來重新附加它 (使用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 選項)。 您可以將這些檔案移到另一部伺服器，將它附加在那裡。  
   
 ## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定伺服器角色或中的成員資格**db_owner**資料庫的角色。  
+ 需要的成員資格**sysadmin**固定伺服器角色或成員資格**db_owner**資料庫的角色。  
   
 ## <a name="examples"></a>範例  
- 下列範例會卸離[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫*skipchecks*設為 true。  
+ 下列範例會卸離[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]與資料庫*skipchecks*設為 true。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

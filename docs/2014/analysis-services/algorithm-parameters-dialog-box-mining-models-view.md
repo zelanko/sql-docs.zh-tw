@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172998"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>演算法參數對話方塊 (採礦模型檢視)
   使用 [演算法參數] 對話方塊，即可調整所選取模型特定的演算法參數。 當您變更演算法參數時，您通常會變更採礦模型的結果。 每一個參數影響結果的方式取決於您所使用的演算法和資料而定。 如需詳細資訊，請參閱[自訂採礦模型和結構](data-mining/customize-mining-models-and-structure.md)。  
@@ -37,7 +34,7 @@ ms.locfileid: "37178955"
 |「資料行」|描述|  
 |------------|-----------------|  
 |**參數**|列出參數的名稱。|  
-|**ReplTest1**|只有當您要變更參數的預設值時，才輸入值。|  
+|**值**|只有當您要變更參數的預設值時，才輸入值。|  
 |**預設值**|如果您在 [值] 資料行中並未提供值，則會列出演算法使用之參數的預設值。|  
 |**範圍**|列出可以輸入到 [值] 資料行之可能值的範圍。 範圍可以是下列其中一項：<br /><br /> 分隔的清單，例如 1、 2、 3<br /><br /> 一個內含範圍，例如 [0，100]<br /><br /> 排除範圍，例如 (0，...)<br /><br /> 組合，例如 [0，...)|  
   

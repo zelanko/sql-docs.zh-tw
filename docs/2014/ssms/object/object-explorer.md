@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.objectexplorer.commandsoptions
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - filtering objects [SQL Server]
 - Object Explorer, about Object Explorer
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0cb1d04c54106df49689a024fd57e8b63224be
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 848f6947e25188b3d343ef6bcf64da53cf2c1442
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127378"
 ---
 # <a name="object-explorer"></a>物件總管
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供的功能，可用於管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體中的物件。  

@@ -1,40 +1,37 @@
 ---
-title: 命令資料流 |Microsoft 文件
+title: 命令資料流 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f37202ccd4586d3a485f18d070c0af0434a303
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35269967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798567"
 ---
 # <a name="command-streams"></a>命令資料流
-ADO 有一律支援所指定的字串格式的命令輸入**CommandText**屬性。 或者，使用 ADO 2.7 或更新版本，您也可以使用資訊的資料流命令輸入藉由指定的資料流**CommandStream**屬性。 您可以指派 ADO**資料流**物件或任何支援 COM 的物件**IStream**介面。  
+ADO 向來都支援指定的字串格式的命令輸入**CommandText**屬性。 或者，使用 ADO 2.7 或更新版本，您也可以使用資訊的資料流命令輸入藉由指定的資料流**CommandStream**屬性。 您可以指派 ADO **Stream**物件或任何支援 COM 的物件**IStream**介面。  
   
- 命令資料流的內容會只傳遞從 ADO 提供者，因此您的提供者必須支援命令輸入資料流，才能使用這項功能。 例如，SQL Server 支援查詢形式的 XML 範本或 TRANSACT-SQL OpenXML 擴充功能。  
+ 命令資料流的內容只會從 ADO 到您的提供者，因此您的提供者必須支援這項功能運作的資料流所命令輸入。 例如，SQL Server 支援查詢的 XML 範本或 OpenXML TRANSACT-SQL 的延伸模組形式。  
   
- 因為必須提供者所解譯資料流的詳細資料，您必須指定命令用語設定**方言**屬性。 值**方言**是包含您的提供者會定義 GUID 的字串。 如需有關有效值的資訊**方言**支援您的提供者，請參閱您的提供者文件。  
+ 因為必須提供者所解譯的資料流的詳細資料，您必須設定來指定命令用語**方言**屬性。 值**方言**是包含 GUID，它由您的提供者所定義的字串。 如需有效值**方言**支援您的提供者，請參閱您的提供者文件。  
   
 ## <a name="xml-template-query-example"></a>XML 範本查詢範例  
  下列範例是以 VBScript 與 Northwind 資料庫。  
   
- 首先，初始化並開啟**資料流**會用來包含查詢的資料流的物件：  
+ 首先，初始化並開啟**Stream**將用來包含查詢的資料流的物件：  
   
 ```  
 Dim adoStreamQuery  
@@ -42,9 +39,9 @@ Set adoStreamQuery = Server.CreateObject("ADODB.Stream")
 adoStreamQuery.Open  
 ```  
   
- 查詢資料流的內容會 XML 範本查詢。  
+ 查詢資料流的內容會是 XML 範本查詢。  
   
- 範本查詢需要 sql 所識別的 XML 命名空間的參考： 前置詞\<sql:query > 標記。 SQL SELECT 陳述式包含做為 XML 範本的內容，且指派給字串變數，如下所示：  
+ 範本查詢需要 sql 所識別的 XML 命名空間的參考： 前置詞\<sql:query > 標記。 SQL SELECT 陳述式是包含做為 XML 範本的內容，並指派給字串變數，如下所示：  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -59,7 +56,7 @@ adoStreamQuery.WriteText sQuery, adWriteChar
 adoStreamQuery.Position = 0  
 ```  
   
- 指派至 adoStreamQuery **CommandStream**的 ADO 屬性**命令**物件：  
+ 指派至 adoStreamQuery **CommandStream**屬性的 ADO**命令**物件：  
   
 ```  
 Dim adoCmd  
@@ -67,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- 指定的命令語言**方言**，表示 SQL Server OLE DB 提供者應如何解譯命令資料流。 以特定提供者 GUID 指定的方言：  
+ 指定命令語言**方言**，這表示 SQL Server OLE DB 提供者應如何解譯命令資料流。 提供者專屬 GUID 指定 dialect:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

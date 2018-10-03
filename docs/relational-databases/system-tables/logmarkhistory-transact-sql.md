@@ -1,14 +1,11 @@
 ---
-title: logmarkhistory (TRANSACT-SQL) |Microsoft 文件
+title: logmarkhistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - logmarkhistory
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - logmarkhistory system table
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3498368a2c38f5e1c64d38c26920a7a9a9b5e1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 515f9de1c1b3856758b9e0cd2892e059667cfbb7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647526"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +31,11 @@ ms.locfileid: "33258318"
   針對已認可的每個標示交易，各包含一個資料列。 這份資料表儲存在**msdb**資料庫。  
   
 
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|發生標示的交易之本機資料庫。|  
 |**mark_name**|**nvarchar(128)**|使用者提供的標示交易名稱。|  
-|**描述**|**nvarchar(255)**|使用者提供的標示交易描述。 可以是 NULL。|  
+|**description**|**nvarchar(255)**|使用者提供的標示交易描述。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行標示交易的資料庫使用者名稱。 可以是 NULL。|  
 |**lsn**|**numeric(25,0)**|標示所在之交易記錄的記錄序號。|  
 |**mark_time**|**datetime**|標示的交易之認可時間 (本機時間)。|  

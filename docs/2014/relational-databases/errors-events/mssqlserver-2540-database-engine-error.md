@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 2540 (Database Engine error)
 ms.assetid: eb5ee2be-acbb-4fb7-9b45-dc6200bde06e
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e6e47b290d3ac92c6811f1248f168de6cb7f89b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 27b71e75e370cd1a5c5af93a4ba0b34a69db16a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172788"
 ---
 # <a name="mssqlserver2540"></a>MSSQLSERVER_2540
     

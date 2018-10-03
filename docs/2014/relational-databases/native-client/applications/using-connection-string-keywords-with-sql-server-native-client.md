@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], connection string keywords
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - connection strings [SQL Server Native Client]
 - SQL Server Native Client, connection string keywords
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
-caps.latest.revision: 79
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce3c43b14342da1dc8b7d6b1605579b2825a979c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a87237d23b06d0c2f269dde9f34573a74a6d7308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087658"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>搭配 SQL Server Native Client 使用連接字串關鍵字
   某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API 會使用連接字串來指定連接屬性。 連接字串是關鍵字和關聯值的清單，每一個關鍵字都會識別特定的連接屬性。  
@@ -57,7 +54,7 @@ ms.locfileid: "40392555"
 |`Address`|執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。 雖然 `Address` 通常是伺服器的網路名稱，不過也可能是其他名稱，例如管道、IP 位址，或 TCP/IP 通訊埠和通訊端位址。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時，`Address` 的值優先於 ODBC 連接字串中傳遞給 `Server` 的值。 同時請注意，`Address=;` 將會連接到 `Server` 關鍵字中指定的伺服器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都會造成與本機伺服器的連接。<br /><br /> `Address` 關鍵字的完整語法如下：<br /><br /> [*通訊協定*`:`]*位址*[`,`*連接埠&#124;\pipe\pipename*]<br /><br /> *通訊協定*可以是`tcp`(TCP/IP)、 `lpc` （共用記憶體） 或`np`（具名管道）。 如需有關通訊協定的詳細資訊，請參閱[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果沒有*通訊協定*也`Network`指定關鍵字，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。|  
 |`AnsiNPW`|如果為 "yes"，此驅動程式就會使用 ANSI 定義的行為來處理 NULL 比較、字元資料填補、警告和 NULL 串連。 當為 "no" 時，將不會公開 ANSI 定義的行為。 如需有關 ANSI NPW 行為的詳細資訊，請參閱 <<c0> [ 效果的 ISO 選項](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |`APP`|名稱的應用程式呼叫[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) （選擇性）。 如果指定，這個值會儲存在**master.dbo.sysprocesses**資料行**sys.sysprocesses** ，傳回[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)而[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)函式。|  
-|`ApplicationIntent`|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。 例如： ApplicationIntent = ReadOnly<br /><br /> 預設值為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|`ApplicationIntent`|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。 例如： ApplicationIntent = ReadOnly<br /><br /> 預設為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`AttachDBFileName`|可附加資料庫的主要檔案名稱。 包含完整路徑，而且會使用 C 字元字串變數逸出任何 \ 字元：<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 此資料庫會附加，而且變成連接的預設資料庫。 若要使用`AttachDBFileName`您也必須在指定的資料庫名稱[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) DATABASE 參數或 SQL_COPT_CURRENT_CATALOG 連接屬性。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它，它會使用附加的資料庫當做連接的預設值。|  
 |`AutoTranslate`|當為 "yes" 時，如果要轉譯用戶端與伺服器之間傳送的 ANSI 字元字串，則會透過 Unicode 來進行轉換，好讓用戶端與伺服器之字碼頁之間的比對擴充字元問題減至最少。<br /><br /> 用戶端 SQL_C_CHAR 資料傳送至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**， **varchar**，或**文字**變數、 參數或資料行從轉換的字元為使用用戶端的 Unicode此外，ANSI 字碼頁 (ACP)，然後會從 Unicode 轉換成字元使用伺服器的 ACP 轉換。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**， **varchar**，或**文字**傳送到用戶端的 SQL_C_CHAR 變數的資料是從字元轉換成 Unicode 使用伺服器的 ACP，則從 Unicode 轉換成字元使用用戶端轉換ACP。<br /><br /> 這些轉換會由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式在用戶端上執行。 這會要求在伺服器上使用的相同 ANSI 字碼頁 (ACP) 必須也可以在用戶端上使用。<br /><br /> 這些設定對於進行下列傳輸時所發生的轉換沒有作用：<br /><br /> Unicode SQL_C_WCHAR 用戶端資料傳送至**char**， **varchar**，或**文字**伺服器上。<br />-   **char**， **varchar**，或**文字**傳送至用戶端上之 Unicode SQL_C_WCHAR 變數的伺服器資料。<br />ANSI SQL_C_CHAR 用戶端資料傳送到 Unicode **nchar**， **nvarchar**，或**ntext**伺服器上。<br />Unicode **nchar**， **nvarchar**，或**ntext**伺服器資料傳送到用戶端上之 ANSI SQL_C_CHAR 變數。<br /><br /> 當為 "no" 時，不會執行字元轉譯。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不會轉譯傳送到用戶端 ANSI 字元 SQL_C_CHAR 資料**char**， **varchar**，或**文字**變數、 參數，或在伺服器上的資料行。 上執行任何轉譯**char**， **varchar**，或**文字**從伺服器傳送至用戶端的 SQL_C_CHAR 變數的資料。<br /><br /> 如果用戶端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用不同的 ACP，可能會將擴充字元解譯錯誤。|  
 |`Database`|用於連接的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫名稱。 如果未指定 `Database`，就會使用針對登入所定義的預設資料庫。 ODBC 資料來源中的預設資料庫會覆寫針對此登入所定義的預設資料庫。 此資料庫必須是現有的資料庫，除非也指定了 `AttachDBFileName`。 如果也指定了 `AttachDBFileName`，則會附加它所指向的主要檔案，並為它提供 `Database` 所指定的資料庫名稱。|  
@@ -70,7 +67,7 @@ ms.locfileid: "40392555"
 |`FileDSN`|現有 ODBC 檔案資料來源的名稱。|  
 |`Language`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 語言名稱 (選擇性)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以儲存多種語言的訊息**sysmessages**。 如果使用多種語言連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，`Language` 會指定哪些訊息組合將用於連接。|  
 |`MARS_Connection`|啟用或停用連接上的 Multiple Active Result Sets (MARS)。 可辨識的值為 "yes" 和 "no"。 預設值是 "no"。|  
-|`MultiSubnetFailover`|一律指定`multiSubnetFailover=Yes`連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 `multiSubnetFailover=Yes` 會設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 來提供目前使用中伺服器的更快速偵測與連接。 可能的值是 `Yes` 和 `No`。 例如：<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 預設值為 `No`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|`MultiSubnetFailover`|一律指定`multiSubnetFailover=Yes`連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 `multiSubnetFailover=Yes` 會設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 來提供目前使用中伺服器的更快速偵測與連接。 可能的值是 `Yes` 和 `No`。 例如：<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 預設為 `No`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`Net`|"Network" 的同義字。|  
 |`Network`|有效值**dbnmpntw** （具名管道） 和**dbmssocn** (TCP/IP)。<br /><br /> 同時指定 `Network` 關鍵字的值，以及 `Server` 關鍵字的通訊協定前置詞，此為錯誤的做法。|  
 |`PWD`|指定於 UID 參數中之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入帳戶的密碼。 如果登入具有 NULL 密碼或正在使用 Windows 驗證 (`Trusted_Connection = yes`)，就不需要指定 `PWD`。|  
@@ -138,7 +135,7 @@ ms.locfileid: "40392555"
 |`Addr`|SSPROP_INIT_NETWORKADDRESS|"Address" 的同義字。|  
 |`Address`|SSPROP_INIT_NETWORKADDRESS|組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的網路位址。<br /><br /> 如需有關有效位址語法的詳細資訊，請參閱本主題稍後對於 `Address` ODBC 關鍵字的說明。|  
 |`APP`|SSPROP_INIT_APPNAME|識別應用程式的字串。|  
-|`ApplicationIntent`|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。<br /><br /> 預設值為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|`ApplicationIntent`|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。<br /><br /> 預設為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`AttachDBFileName`|SSPROP_INIT_FILENAME|可附加資料庫的主要檔案名稱，包括完整路徑名稱。 若要使用 `AttachDBFileName`，您也必須使用提供者字串 Database 關鍵字來指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它 (它會使用附加的資料庫當做連接的預設值)。|  
 |`Auto Translate`|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" 的同義字。|  
 |`AutoTranslate`|SSPROP_INIT_AUTOTRANSLATE|設定 OEM/ANSI 字元轉譯。 可辨識的值為 "yes" 和 "no"。|  
@@ -191,7 +188,7 @@ ms.locfileid: "40392555"
 |關鍵字|初始化屬性|描述|  
 |-------------|-----------------------------|-----------------|  
 |`Application Name`|SSPROP_INIT_APPNAME|識別應用程式的字串。|  
-|`Application Intent`|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。<br /><br /> 預設值為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|`Application Intent`|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。<br /><br /> 預設為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`Auto Translate`|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" 的同義字。|  
 |`AutoTranslate`|SSPROP_INIT_AUTOTRANSLATE|設定 OEM/ANSI 字元轉譯。 認得的值為 "true" 和 "false"。|  
 |`Connect Timeout`|DBPROP_INIT_TIMEOUT|等候資料來源初始化完成的時間量 (以秒為單位)。|  
@@ -241,7 +238,7 @@ ms.locfileid: "40392555"
   
 |關鍵字|初始化屬性|描述|  
 |-------------|-----------------------------|-----------------|  
-|`Application Intent`|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。<br /><br /> 預設值為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|`Application Intent`|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。<br /><br /> 預設為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`Application Name`|SSPROP_INIT_APPNAME|識別應用程式的字串。|  
 |`Auto Translate`|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" 的同義字。|  
 |`AutoTranslate`|SSPROP_INIT_AUTOTRANSLATE|設定 OEM/ANSI 字元轉譯。 認得的值為 "true" 和 "false"。|  
