@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BadPasswordCount_TSQL
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - default database
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b6c130ea8c926150b0b45f6e23ca06ede7534be0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4135760bb80daa7ffebe01b173fdc8e1c4fd1059
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789229"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616796"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  這是包含為登入傳回之屬性資訊的運算式。 *propertyname* 可以是下列值之一。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|傳回連續使用錯誤密碼嘗試登入的次數。|  
 |**BadPasswordTime**|傳回上一次使用錯誤密碼嘗試登入的時間。|  
@@ -118,7 +115,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="remarks"></a>Remarks  
  這個內建函數會傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入之密碼原則設定的資訊。 屬性的名稱不區分大小寫，所以 **BadPasswordCount** 和 **badpasswordcount** 之類的屬性名稱是相等的。 **PasswordHash、PasswordHashAlgorithm** 和 **PasswordLastSetTime** 屬性值可用於所有受支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定，但其他屬性則只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 上執行而且同時啟用 CHECK_POLICY 和 CHECK_EXPIRATION 時才可使用。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要登入的 VIEW 權限。 在要求密碼雜湊時，也需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

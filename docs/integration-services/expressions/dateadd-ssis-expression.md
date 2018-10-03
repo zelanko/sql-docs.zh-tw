@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29f2a3a911c4fdf2e2bf7edf2840f12563ca1890
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 585b97e644be39048d832f55067be5661430131c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409530"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602486"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
   在日期的指定之日期部分加上代表日期或時間間隔的數字之後，傳回新的 DT_DBTIMESTAMP 值。 number 參數必須評估為整數，date 參數必須評估為有效的日期。  

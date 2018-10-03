@@ -5,28 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
 helpviewer_keywords:
 - custom log providers [Integration Services], creating
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 282746aa33ccdc7477740089cfac1f62ff266efc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2c507ae71459c20abb86f3e3ee3bb69f4d990e37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606623"
 ---
 # <a name="creating-a-custom-log-provider"></a>建立自訂記錄提供者
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段環境具有廣泛的記錄功能。 用於擷取封裝執行期間所發生之事件的記錄檔。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括各種記錄提供者，讓記錄可以多種格式，例如 XML、文字、資料庫或 Windows 事件記錄檔加以建立並儲存記錄檔。 如果這些提供者或輸出格式都不符合您的需求，可以建立自訂記錄提供者。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/21/2015
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troublshooting, failover clustering
@@ -16,12 +14,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b4cecedd4d58531017b8f7557515a61e7e07496
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608396"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

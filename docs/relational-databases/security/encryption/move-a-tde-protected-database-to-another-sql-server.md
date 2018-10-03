@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8512a02e65df08ba99e48af6ece110ab7c893b71
-ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
+ms.openlocfilehash: 27a66ab0882c057bbaa4aa48962a15e68aeb7abb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46013783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612706"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

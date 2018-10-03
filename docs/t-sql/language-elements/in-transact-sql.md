@@ -5,9 +5,7 @@ ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IN_TSQL
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b76e675fddbb361c0c9c8487ab60d8a1dd493b72
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 15af126a7fd76a38fc9cffa218d4a77fc5da3e0b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078961"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602816"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

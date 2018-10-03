@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 370a010271467dc4b95186db00f6019d528e5c2e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 99ed8322745c86bbcf18356c27ed9ec68ab34b2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604526"
 ---
 # <a name="data-tools-operations-window"></a>資料工具作業視窗
 [資料工具作業] 視窗會顯示本主題討論的某些作業的進度，並在發生任何錯誤時通知您。  

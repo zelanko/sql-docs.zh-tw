@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.scripttask.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91549780097dc18bef5b6a4fe2d97cdbff4a44f4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c484ce29354bc21b1aaa0d5d9b708beb10cc5944
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614796"
 ---
 # <a name="script-task"></a>指令碼工作
   指令碼工作提供程式碼，用來執行無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的內建工作和轉換中使用的函數。 指令碼工作亦可在一個指令碼中結合函數，而不使用多項工作和轉換。 您可以使用指令碼工作處理必須在封裝中執行一次 (或是每個列舉物件一次) 的工作，而非每個資料列執行一次的工作。  
@@ -72,7 +69,7 @@ ms.locfileid: "35409550"
 ### <a name="configuring-the-script-task-in-the-designer"></a>在設計師中設定指令碼工作  
  下表描述可以針對指令碼工作所記錄的 **ScriptTaskLogEntry** 事件。 系統會在 [設定 SSIS 記錄] 對話方塊的 [詳細資料] 索引標籤上，選取要記錄的 **ScriptTaskLogEntry** 事件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|描述|  
+|記錄項目|Description|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|報告在指令碼內實作記錄的結果。 每次呼叫 **Dts** 物件的 **Log** 方法時，工作都會寫入記錄項目。 工作會在程式碼執行時撰寫這些項目。 如需詳細資訊，請參閱 [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   

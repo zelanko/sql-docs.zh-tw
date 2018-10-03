@@ -4,17 +4,16 @@ ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5096f18bbb2ce1be88d6ad7bbf9e0684dcb04103
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 93c89ff9c5fe5701340b9783927dfb6bf73503c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617337"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>使用特定查詢字串參數開啟行動報表 | Reporting Services
 如果您的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表具有參數與 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 資料來源，則可以在報表 URL 中包括查詢字串參數，以使用您所指定的值自動開啟報表。 

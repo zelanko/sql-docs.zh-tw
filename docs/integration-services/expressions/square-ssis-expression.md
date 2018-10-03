@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f558775492c58faf17f2957b536e4cbfaef9b1e9
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 835b6cb97bc23b1d7c4fb9c38a7b98050695cf06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599456"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 運算式)
   傳回數值運算式的平方。  

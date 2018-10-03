@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], about conflict resolution
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 0d033c76-e8c9-4e35-ab95-4d335abb18c1
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86c1c4b3c9aa50abaffb242e750986ff75c6933c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ada98028bface5ff05c54b89db4c0aacb6173636
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599040"
 ---
 # <a name="advanced-merge-replication---resolve-merge-replication-conflicts"></a>進階合併式複寫 - 解決合併式複寫衝突
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

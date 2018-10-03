@@ -5,25 +5,22 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - Parse (geometry Data Type)
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 631b079ca9e0e4ca23d807e84e337244e8f416d2
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 92046c52474c538411c42e3509e96d6ef221fde7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607836"
 ---
 # <a name="parse-geometry-data-type"></a>Parse (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

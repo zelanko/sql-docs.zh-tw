@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cdf3056f71609a33910a6c4812127fc78861be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad6102a7d6ddef80770d028c5832d1af6fb06f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598090"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系統資料庫的備份與還原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "32921933"
   
  下表摘要列出所有系統資料庫。  
   
-|系統資料庫|描述|需要備份嗎？|復原模式|註解|  
+|系統資料庫|Description|需要備份嗎？|復原模式|註解|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[master](../../relational-databases/databases/master-database.md)|記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統之所有系統層級資訊的資料庫。|是|Simple|請視需要經常備份 **master** ，充分地保護資料以滿足您業務的需求。 建議安排定期備份，您可在進行大規模更新之後，以額外的備份來補充。|  
 |[model](../../relational-databases/databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。|是|可由使用者設定*|只在有業務上有需要時才備份 **model** ；例如，在自訂資料庫選項之後立即備份。<br /><br /> **最佳作法** ：我們建議您在必要時僅建立 **model**的完整資料庫備份。 因為 **model** 很小，而且少有變更，所以不需要備份記錄。|  

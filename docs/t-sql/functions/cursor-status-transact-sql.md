@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CURSOR_STATUS
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a9fa9ea228f5fdf872e1ec10a4ccdc9ee5b7b53
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 2543cb82826957ecf596b05adb352fa05d1ab2d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599960"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ CURSOR_STATUS
   
 |傳回值|資料指標名稱|資料指標變數|  
 |---|---|---|
-|@shouldalert|資料指標結果集至少有一個資料列。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|配置給這個變數的資料指標是開啟的。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|  
+|1|資料指標結果集至少有一個資料列。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|配置給這個變數的資料指標是開啟的。<br /><br /> 非機密資料指標和索引鍵集資料指標，其結果集至少有一個資料列。<br /><br /> 動態資料指標的結果集可以有零、一或多個資料列。|  
 |0|資料指標結果集是空的。*|配置給這個變數的資料指標是開啟的，但結果集確定空白。*|  
 |-1|資料指標已關閉。|配置給這個變數的資料指標已關閉。|  
 |-2|不適用。|可能有下列其中一種情況：<br /><br /> 先前呼叫的程序未指派任何資料指標給這個 OUTPUT 變數。<br /><br /> 先前指派的程序指派一個資料指標給這個 OUTPUT 變數，但程序完成時，這個資料指標在關閉狀態中。 因此，這個資料指標已取消配置，並未傳回給發出呼叫的程序。<br /><br /> 未指派任何資料指標給已宣告的資料指標變數。|  

@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '!<'
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - '!< (not less than)'
 - not less than operator (!<)
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5cdb115d067e62d3a011ea00d0c4e15c1356d79d
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 7aa112e732d0e8d54b8dedc9cf44c788c52d1ed4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36246460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614346"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;(不小於) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

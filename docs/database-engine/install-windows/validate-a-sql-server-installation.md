@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - validating installations [SQL Server]
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bda8d393f0563879d009191599ed9e124a5c2eb7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3d223ce438087e4fdc017f09b9cdcabfde4a7fc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599136"
 ---
 # <a name="validate-a-sql-server-installation"></a>驗證 SQL Server 安裝
 

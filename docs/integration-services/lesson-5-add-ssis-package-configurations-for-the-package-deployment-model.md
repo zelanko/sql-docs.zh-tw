@@ -5,25 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 079c271a7f9cb2f33c90fb8c4b0914319ea190f8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3e627e6d8854971fbc4428588eb648fb0da3f734
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599496"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 課：加入套件部署模型的 SSIS 套件組態
-封裝組態可讓您從開發環境之外設定執行階段屬性和變數。 組態可讓您開發彈性且易於部署和散發的封裝。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會提供下列組態類型：  
+封裝組態可讓您從開發環境之外設定執行階段屬性和變數。 組態可讓您開發彈性且易於部署和散發的封裝。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會提供下列組態類型：  
   
 -   XML 組態檔  
   
@@ -45,9 +41,9 @@ ms.locfileid: "35331912"
   
 -   [步驟 1：複製第 4 課的套件](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
--   [步驟 2：啟用和設定封裝組態](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
+-   [步驟 2：啟用和設定套件設定](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [步驟 3：修改 Directory 屬性組態值](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [步驟 3：修改 Directory 屬性設定值](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
 -   [步驟 4：測試第 5 課的教學課程封裝](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   

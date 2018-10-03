@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f6460f20104e73a3a941a5fdda0145a5bd2124f1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e825066ecab87f9a338ac7243298d37e9188f852
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608630"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>資料行值散發設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行值散發設定檔要求] 設定選項。 資料行值散發設定檔會報告選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 此設定檔也可以報告代表超過資料表中指定之資料列百分比的值。 這個設定檔可協助您識別資料中的問題，例如某個資料行中相異值的數目不正確。 舉例來說，您分析了「美國州名」資料行並發現超過 50 個相異值。  
@@ -74,7 +71,7 @@ ms.locfileid: "35405620"
 > [!NOTE]  
 >  如果您針對 **ColumnName** 使用 **(\*)** 萬用字元，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值] 設定。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**預設值**|根據來源資料表中的資料行定序來排序和比較資料。|  
 |**BinarySort**|根據針對每個字元所定義的位元模式來排序和比較資料。 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
@@ -82,7 +79,7 @@ ms.locfileid: "35405620"
   
  如果您選取 [DictionarySort]，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
@@ -97,7 +94,7 @@ ms.locfileid: "35405620"
  **ValueDistributionOption**  
  指定是否要計算所有資料行值的散發。 這個選項的預設值為 **FrequentValues**。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**AllValues**|計算所有資料行值的散發。|  
 |**FrequentValues**|僅針對頻率超過 **FrequentValueThreshold**中指定之最小值的值計算散發。 輸出報表會排除不符合 **FrequentValueThreshold** 的值。|  

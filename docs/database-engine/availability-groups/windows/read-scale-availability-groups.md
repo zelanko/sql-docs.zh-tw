@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 649ff605e47f9a47ec68767b8654e0497fc0345c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "35999994"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622402"
 ---
 # <a name="read-scale-availability-groups"></a>讀取級別可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
