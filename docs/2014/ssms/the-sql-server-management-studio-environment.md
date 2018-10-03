@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a3dfc928f2679e4b4c76d461d564957e673cf40
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1848a4f4ba9f52fd0921c76bb3ccc4b34241cfdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078168"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供一個非常豐富的環境，供您管理和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的查詢。  

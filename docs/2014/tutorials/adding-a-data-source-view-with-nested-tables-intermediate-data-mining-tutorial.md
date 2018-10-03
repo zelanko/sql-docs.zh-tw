@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e17467d6d3e207456bd525bde4be6183b92c6450
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068038"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>加入具有巢狀資料表的資料來源檢視 (中繼資料採礦教學課程)
   若要建立購物籃模型，您必須使用支援關聯資料的資料來源檢視。 此資料來源檢視也會用於時序群集狀況。  
@@ -37,7 +34,7 @@ ms.locfileid: "37244028"
 -   指定案例與巢狀資料表之間的多對一關聯性。  
   
     > [!NOTE]  
-    >  執行個體時提供 SQL Server 登入。 務必完全遵循所描述的程序，正確地指定案例資料表與巢狀資料表之間的關聯性，以避免在處理模型時發生錯誤。  
+    >  . 務必完全遵循所描述的程序，正確地指定案例資料表與巢狀資料表之間的關聯性，以避免在處理模型時發生錯誤。  
   
 -   定義資料行如何在模型中使用。  
   

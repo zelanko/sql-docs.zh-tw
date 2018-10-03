@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077738"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>建立處理查詢對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立處理查詢] 對話方塊，即可在 [儲存選項] 對話方塊的 [通知] 索引標籤中建立處理查詢。 處理查詢是會傳回資料列集的查詢，資料列集內會包含與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件相關聯之資料表所做的變更，而且會是上一次輪詢資料表之後所做的變更，如此才能累加地更新該物件的多維度 OLAP (MOLAP) 快取。 Analysis Services 使用另一種查詢 (稱為輪詢查詢) 來輪詢與物件相關聯的資料表，並決定是否已變更該資料表。 完全更新物件的 MOLAP 快取時，不需要處理查詢。  

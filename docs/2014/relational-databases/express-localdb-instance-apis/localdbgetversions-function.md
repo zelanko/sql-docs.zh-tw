@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LocalDBGetVersions
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b84c4db0ce70bdf11459a2d4e5d6214760738e74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 333cd5a6793c335a0003ac6b39ddd6abba710f74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077808"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
   傳回電腦上所有可用的 SQL Server Express LocalDB 版本。  

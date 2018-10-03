@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068988"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
   本教學課程將教導您如何建立類似套印信件的 SSRS 自由格式報表。 您可以排列報表項目，以建立具有文字方塊、影像和其他資料區域的表單。  
@@ -57,7 +54,7 @@ ms.locfileid: "37202808"
 ##  <a name="BlankReport"></a> 1.建立空白報表、資料來源與資料集  
   
 > [!NOTE]  
->  在本教學課程中，查詢會包含資料值，因此報表不需要外部資料來源。 使用這種內部資料類型最適合用於學習目的，但這種方法會使查詢相當冗長。 執行個體時提供 SQL Server 登入。  
+>  在本教學課程中，查詢會包含資料值，因此報表不需要外部資料來源。 使用這種內部資料類型最適合用於學習目的，但這種方法會使查詢相當冗長。 .  
   
 #### <a name="to-create-a-blank-report"></a>建立空白報表  
   
