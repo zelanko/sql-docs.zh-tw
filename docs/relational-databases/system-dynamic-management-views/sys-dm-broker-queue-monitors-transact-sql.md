@@ -1,12 +1,10 @@
 ---
-title: sys.dm_broker_queue_monitors (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_broker_queue_monitors (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_broker_queue_monitors
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cef9da48e964164ca13b80de6f69c00d889bd08
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779856"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,14 +32,14 @@ ms.lasthandoff: 05/23/2018
   針對執行個體中的每個佇列監視器，各傳回一個資料列。 佇列監視器會管理佇列的啟用。  
   
 
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含監視器所監看佇列之資料庫的物件識別碼。 NULLABLE。|  
 |**queue_id**|**int**|監視器監看之佇列的物件識別碼。 NULLABLE。|  
-|**狀態**|**nvarchar(32)**|監視器的狀態。 NULLABLE。 這是下列項目之一：<br /><br /> **非使用中**<br /><br /> **通知**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|監視器的狀態。 NULLABLE。 這是下列項目之一：<br /><br /> **非使用中**<br /><br /> **收到通知**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|上次佇列的 RECEIVE 傳回空結果的時間。 NULLABLE。|  
 |**last_activated_time**|**datetime**|上次這個佇列監視器啟動預存程序的時間。 NULLABLE。|  
-|**tasks_waiting**|**int**|目前 RECEIVE 陳述式中等候這個佇列的工作階段數目。 NULLABLE。<br /><br /> 注意： 這個數目包括執行 receive 陳述式，而不論是否佇列監視器啟動工作階段的任何工作階段。 這個情況是配合 RECEIVE 使用 WAITFOR。 基本上，這些工作會等候訊息到達佇列。|  
+|**tasks_waiting**|**int**|目前 RECEIVE 陳述式中等候這個佇列的工作階段數目。 NULLABLE。<br /><br /> 注意： 此數目包括執行 receive 陳述式，而不論是否佇列監視器啟動工作階段的任何工作階段。 這個情況是配合 RECEIVE 使用 WAITFOR。 基本上，這些工作會等候訊息到達佇列。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  
@@ -79,7 +77,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 相關的動態管理檢視 & #40;TRANSACT-SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 相關的動態管理檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6edd8536c3ebf8b0a312cb8aa71b20ab8a6a92b7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c96134ede585acee4b556200e67c7301feef7713
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730896"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +87,7 @@ ms.locfileid: "37359880"
 ## <a name="replication-maintenance-jobs"></a>複寫維護作業  
  複寫使用下列作業執行依排程和視需要的維護。  
   
-|清除作業|描述|預設排程|  
+|清除作業|Description|預設排程|  
 |------------------|-----------------|----------------------|  
 |代理程式記錄清除：散發|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
 |散發清除：散發|從散發資料庫移除複寫的交易。 |每 10 分鐘執行|  

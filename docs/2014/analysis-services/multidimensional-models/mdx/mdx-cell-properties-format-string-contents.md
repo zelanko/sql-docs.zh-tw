@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052264"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 內容 (MDX)
   `FORMAT_STRING`資料格屬性可格式化`VALUE`資料格屬性，建立值`FORMATTED_VALUE`資料格屬性。 `FORMAT_STRING`資料格屬性能處理字串及原始數值，套用格式運算式，並傳回數值的格式化的值的值對`FORMATTED_VALUE`資料格屬性。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
@@ -74,7 +71,7 @@ ms.locfileid: "37293588"
   
 |字元|描述|  
 |---------------|-----------------|  
-|無|顯示沒有格式的數字。|  
+|None|顯示沒有格式的數字。|  
 |**0**|代表會顯示數字或零 (0) 的數字預留位置。<br /><br /> 如果數值在格式字串中 0 出現的位置有一個數字，格式值便會顯示該數字。 否則，格式值就會在那個位置顯示一個零。<br /><br /> 如果該數值比格式字串中零的位數還少 (在小數點任何一邊)，格式值便會在開頭或尾端顯示零。<br /><br /> 如果該數值小數點右邊的位數比格式運算式小數點右邊零的位數還多，那麼格式值便會將數值四捨五入到與零相同的小數位數。<br /><br /> 如果該數值小數點左邊的位數比格式運算式小數點左邊零的位數還多，那麼格式值就會顯示未經修改的額外位數。|  
 |**#**|代表會顯示數字或零的數字預留位置。<br /><br /> 如果運算式在格式字串中 (**#**) 數字符號出現的位置有一個數字，格式值便會顯示該數字。 否則，格式值就會在那個位置顯示一個零。<br /><br /> 這個 (**#** 數字符號的運作方式就像零(**0**) 數字預留位置，不同的是如果該數值在小數點任何一邊的位數，跟格式運算式在小數點任何一邊上有的 **#** 字元位數相同或較少時，就無法在開頭及尾端顯示零。|  
 |**。**|代表可決定在小數點左、右要顯示幾位數字的小數預留位置。<br /><br /> 如果格式運算式在句號 (**#**.**) 左邊只有 (**) 數字符號那麼小於 1 的數值將是以小數點為開頭。 若要在小數點數字開頭顯示一個零，請使用零 (0) 做為小數點左邊的第一個數字預留位置。<br /><br /> 在格式化輸出中實際做為小數預留位置的字元，將依電腦系統所能辨識的數字格式而有所不同。<br /><br /> 注意：在某些地區設定中，是用逗點做為小數點。|  

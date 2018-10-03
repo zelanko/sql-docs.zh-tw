@@ -1,13 +1,11 @@
 ---
-title: Microsoft OLE DB Provider for Microsoft Active Directory 服務 |Microsoft 文件
+title: Microsoft Active Directory 服務的 Microsoft OLE DB 提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
@@ -15,28 +13,27 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758586"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服務
-Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到透過 ADSI 異質目錄服務。 這可讓 ADO 應用程式對唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目錄服務，除了任何 LDAP 相容目錄服務和 Novell 目錄服務。 ADSI 本身為基礎的提供者模型，使新的提供者提供存取至另一個目錄時，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，啟用 Unicode。  
+# <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服務的 Microsoft OLE DB 提供者
+Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到異質的 directory services 透過 ADSI。 這可讓 ADO 應用程式唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 directory 服務，除了任何 LDAP 相容目錄服務和 Novell Directory Services。 ADSI 本身為基礎提供者模型，因此如果有新的提供者提供存取至另一個目錄，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，並啟用 Unicode。  
   
 ## <a name="connection-string-parameters"></a>連接字串參數  
- 若要連接到此提供者，設定**提供者**引數的[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性如下：  
+ 若要連接到此提供者，將**提供者**引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性如下：  
   
 ```  
 ADSDSOObject  
 ```  
   
- 讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性會傳回這個字串以及。  
+ 讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性會傳回此字串以及。  
   
 ## <a name="typical-connection-string"></a>一般連接字串  
  此提供者的一般連接字串如下所示：  
@@ -45,30 +42,30 @@ ADSDSOObject
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
- 下列關鍵字所組成的字串。  
+ 字串是由下列關鍵字所組成。  
   
 |關鍵字|描述|  
 |-------------|-----------------|  
 |**提供者**|指定 Active Directory 服務的 OLE DB 提供者。|  
 |**使用者識別碼**|指定使用者名稱。 如果省略此關鍵字，則會使用目前登入。|  
-|**密碼**|指定的使用者密碼。 如果省略此關鍵字。 則會使用目前登入。|  
+|**密碼**|指定使用者密碼。 如果省略此關鍵字。 則會使用目前登入。|  
   
 > [!NOTE]
->  如果您要連接至資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是使用者識別碼和密碼連接字串中的資訊。  
+>  如果您要連接到資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或是**Integrated Security = SSPI**而非使用者 ID 和密碼連接字串中的資訊。  
   
 ## <a name="command-text"></a>命令文字  
- 下列語法中的提供者所能辨識的四部分的命令文字字串：  
+ 下列語法將提供者所辨識的四部分的命令文字字串：  
   
 ```  
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*Root*|指出**ADsPath**要開始搜尋 （也就是說，搜尋的根） 的物件。|  
+|*Root*|指出**ADsPath**要從中開始搜尋 （也就是搜尋的根） 物件。|  
 |*篩選*|表示搜尋篩選器以 RFC 1960 格式。|  
 |*屬性*|表示要傳回之屬性的逗號分隔清單。|  
-|*範圍*|選擇性。 A**字串**，指定搜尋範圍。 可以是下列其中一項：<br /><br /> 基底 — 搜尋才基底物件 （搜尋的根）。<br />-OneLevel — 搜尋只有一個層級。<br />-樹狀子目錄，搜尋整個樹狀子目錄。|  
+|*範圍*|選擇性。 A**字串**，指定搜尋範圍。 可以是下列其中一項：<br /><br /> 基底，搜尋只有基底物件 （搜尋根目錄）。<br />-OneLevel — 搜尋只有一個層級。<br />-樹狀子目錄，搜尋整個樹狀子目錄。|  
   
  例如：  
   
@@ -84,12 +81,12 @@ objectClass='user' AND objectCategory='Person'"
 ```  
   
 ## <a name="remarks"></a>備註  
- 提供者不接受預存程序呼叫或簡單的資料表名稱 (例如， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)屬性一定會是**adCmdText**)。 請參閱 Active Directory 服務介面文件如需更完整的命令文字項目說明。  
+ 提供者不接受預存程序呼叫或簡單的資料表名稱 (例如[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)屬性一律會是**adCmdText**)。 請參閱 < Active Directory 服務介面文件，如需更完整的命令文字項目的描述。  
   
 ## <a name="recordset-behavior"></a>資料錄集行為  
- 下表列出可以使用的功能[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)開啟使用此提供者的物件。 靜態資料指標類型 (**adOpenStatic**) 使用。  
+ 下表列出可以使用的功能[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)開啟使用此提供者的物件。 只有靜態資料指標類型 (**adOpenStatic**) 使用。  
   
- 如需有關**資料錄集**您的提供者組態，執行行為[支援](../../../ado/reference/ado-api/supports-method.md)方法，並列舉[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合**資料錄集**來判斷是否存在特定提供者的動態屬性。  
+ 如需詳細資訊**資料錄集**您的提供者組態，執行行為[支援](../../../ado/reference/ado-api/supports-method.md)方法，並列舉[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合**資料錄集**來判斷提供者特有的動態屬性是否存在。  
   
  **標準的 ADO 資料錄集屬性的可用性：**  
   
@@ -141,7 +138,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Update](../../../ado/reference/ado-api/update-method.md)|否|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  
   
- 如需 ADSI 與提供者的細節的詳細資訊，請參閱 Active Directory 服務介面文件或瀏覽 ADSI 網頁。  
+ 如需 ADSI 與提供者的詳細資訊的詳細資訊，請參閱 Active Directory 服務介面文件或瀏覽 ADSI 網頁。  
   
 ## <a name="see-also"></a>另請參閱  
  [CommandType 屬性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   

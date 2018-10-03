@@ -1,33 +1,30 @@
 ---
-title: 結果集中繼資料 |Microsoft 文件
+title: 結果集中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d309136c3682a781d4eef82e69e2a2f98a20efe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7dc88892fab2fd18dbcbec5ce54fa09c9c9b89e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819926"
 ---
 # <a name="result-set-metadata"></a>結果集中繼資料
-*中繼資料*是描述其他資料的資料。 例如，結果集中繼資料描述結果集，例如在結果集中的資料行數目、 資料類型的這些資料行，其名稱、 有效位數、 null 屬性，以及等等。  
+*中繼資料*是描述其他資料的資料。 例如，結果集中繼資料會描述結果集，例如在結果集中的資料行數目、 這些資料行，其名稱、 有效位數、 null 屬性和等等的資料類型。  
   
- 互通的應用程式應該永遠會檢查結果集資料行的中繼資料。 目錄函數所傳回之結果集中的資料行的中繼資料可能會不同資料行的中繼資料。 例如，假設 「 可更新的資料行包含在聯結兩個資料表建立結果集。 雖然**SQLColumnPrivileges**可能表示使用者可以更新資料行，請在結果集中繼資料可能不如果資料行聯結的 「 多 」 端上; 許多資料來源可以更新的聯結，但不是能在 「 一 」 端的資料行 」多 」 端。 甚至是資料類型不能假設為相同，因為資料來源可能會建立結果集時升級的資料類型。  
+ 互通的應用程式應該永遠會檢查結果集資料行的中繼資料。 目錄函式所傳回的資料行的中繼資料可能會與不同結果集中的資料行的中繼資料。 例如，假設在聯結兩個資料表建立的結果集中包含的可更新的資料行。 雖然**SQLColumnPrivileges**可能表示使用者可以更新資料行，結果集中繼資料可能沒有資料行是否在聯結的 「 多 」 端上; 許多資料來源可以更新聯結的但不是能在 「 一 」 端的資料行 」多 」 端。 即使資料類型不能假設為相同，因為資料來源可能會同時建立結果集升級的資料類型。  
   
  此章節包含下列主題。  
   

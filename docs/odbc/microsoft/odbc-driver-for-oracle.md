@@ -1,62 +1,59 @@
 ---
-title: Oracle 的 ODBC 驅動程式 |Microsoft 文件
+title: ODBC Driver for Oracle |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a129bbc39f35c2418fc0dc5d34e534d4c7fb8cbc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806726"
 ---
-# <a name="odbc-driver-for-oracle"></a>Oracle 的 ODBC 驅動程式
+# <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用由 Oracle 提供的 ODBC 驅動程式。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- Oracle 的 Microsoft® ODBC 驅動程式可讓您連接到 Oracle 資料庫 ODBC 相容應用程式。 Oracle 的 ODBC 驅動程式是否符合開放式資料庫連接 (ODBC) 規格中所述*ODBC 程式設計人員參考*。 它可讓 PL/SQL 封裝、 XA/DTC 整合，以及 Oracle 存取從網際網路資訊服務 (IIS) 內的存取。  
+ Microsoft® ODBC Driver for Oracle 可讓您連接到 Oracle 資料庫應用程式符合 ODBC 規範。 ODBC Driver for Oracle 符合開放式資料庫連接 (ODBC) 規格中所述*ODBC 程式設計人員參考*。 它可讓 PL/SQL 封裝、 XA/DTC 整合，以及 Oracle 存取從網際網路資訊服務 (IIS) 內的存取。  
   
- Oracle RDBMS 是多使用者的關聯式資料庫管理系統所執行的各種工作站和迷你電腦作業系統。 執行 Microsoft Windows 的 IBM 相容電腦可以透過網路通訊與 Oracle 資料庫伺服器。 支援的網路包含 Microsoft LAN Manager、 NetWare、 VINES、 DECnet 和任何支援 TCP/IP 的網路。  
+ Oracle RDBMS 是執行各種不同的工作站和迷你電腦作業系統的多使用者的關聯式資料庫管理系統。 執行 Microsoft Windows 的 IBM 相容電腦可以與 Oracle 資料庫伺服器透過網路進行通訊。 支援的網路包含 Microsoft LAN Manager、 NetWare、 VINES、 DECnet 和任何支援 TCP/IP 的網路。  
   
- Oracle 的 ODBC 驅動程式可讓應用程式透過 ODBC 介面存取 Oracle 資料庫中的資料。 此驅動程式可以存取本機 Oracle 資料庫或透過 SQL 網路與通訊 * 網路。 下圖詳細說明此應用程式和驅動程式的架構。  
+ ODBC Driver for Oracle 可讓應用程式透過 ODBC 介面存取 Oracle 資料庫中的資料。 此驅動程式可以存取本機的 Oracle 資料庫，或透過 SQL 網路與通訊 * Net。 下圖詳細說明此應用程式和驅動程式的架構。  
   
  ![Oracle 應用程式的 ODBC 驅動程式&#47;驅動程式架構](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Oracle 的 ODBC 驅動程式符合 API 的一致性層級 1 和 SQL 一致性層級的核心。 它也會支援 API 的一致性層級 2 和大部分的核心和擴充 SQL 一致性層級中的文法中的某些函式。 驅動程式為 ODBC 2.5 相容，並支援 32 位元系統。 Oracle 7.3 x 完全; 支援Oracle8 具有有限的支援。 ODBC Driver for Oracle 不支援新的 Oracle8 資料類型，Unicode 資料類型，Blob、 Clob、，依此類推，也不支援 Oracle 的新的關聯式物件模型。 如需有關支援的資料類型的詳細資訊，請參閱[Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
+ ODBC Driver for Oracle 符合 API 的一致性層級 1 」 及 「 SQL 一致性層級的核心。 它也會支援 API 的一致性層級 2 和大部分的核心和擴充 SQL 一致性層級中的文法中的某些函式。 驅動程式 ODBC 2.5 相容且支援 32 位元系統。 Oracle 7.3 x 完全; 支援Oracle8 具有有限的支援。 ODBC Driver for Oracle 不支援任何新的 Oracle8 資料類型，Unicode 資料類型，Blob、 Clob、 等等，也不支援 Oracle 的新的關聯式物件模型。 如需支援的資料類型的詳細資訊，請參閱 < [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
   
- 若要存取 Oracle 資料，也需要下列元件：  
+ 若要存取 Oracle 資料，下列元件是必要的：  
   
 -   ODBC Driver for Oracle  
   
--   RDBMS Oracle 資料庫  
+-   Oracle RDBMS 資料庫  
   
 -   Oracle 用戶端軟體  
   
  此外，針對遠端連線：  
   
--   連接執行驅動程式和資料庫之電腦的網路。 網路必須支援 SQL * Net 連線。  
+-   網路連線執行驅動程式和資料庫的電腦。 網路必須支援 SQL * Net 連接。  
   
 ## <a name="component-documentation"></a>元件的文件  
- 本指南包含關於設定和設定 Microsoft ODBC Driver for Oracle 和新增程式設計功能的詳細的資訊。 它也包含的技術參考資料。  
+ 本指南包含設定和設定 Microsoft ODBC Driver for Oracle 和新增程式設計功能的詳細的資訊。 它也包含技術參考資料。  
   
- 如需有關特定 Oracle 的產品行為，請參閱 Oracle 產品隨附的文件。  
+ 如需特定的 Oracle 產品行為的資訊，請參閱隨附的 Oracle 產品的文件。  
   
- 設定或設定 Microsoft ODBC Driver for Oracle 使用 ODBC 資料來源管理員的相關資訊，請參閱[ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)文件。  
+ 如需安裝或設定 Microsoft ODBC Driver for Oracle 使用 ODBC 資料來源管理員資訊，請參閱[ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)文件。  
   
  此章節包含下列主題。  
   

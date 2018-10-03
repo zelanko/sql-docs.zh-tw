@@ -1,14 +1,11 @@
 ---
-title: sp_help_notification (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6499d3830859063af74417c84c7fe9e1855b3313
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833576"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,32 +46,32 @@ sp_help_notification
   
 ## <a name="arguments"></a>引數  
  [ **@object_type =**] **'***object_type***'**  
- 要傳回的資訊類型。 *object_type*是**char(9)**，沒有預設值。 *object_type*可能是 ALERTS 會列出指派給所提供之操作員名稱的警示 *，* OPERATORS 會列出負責所提供之警示名稱的操作員或 *。*  
+ 要傳回的資訊類型。 *object_type*已**char(9)**，沒有預設值。 *object_type*可能是 ALERTS 會列出指派給所提供之操作員名稱的警示 *，* or 運算子，它會列出負責所提供之警示名稱的操作員 *。*  
   
  [ **@name =**]  **'***name***'**  
- 運算子名稱 (如果*object_type*是 OPERATORS) 或警示名稱 (如果*object_type*是 ALERTS)。 *名稱*是**sysname**，沒有預設值。  
+ 運算子名稱 (如果*object_type*是 OPERATORS) 或警示名稱 (如果*object_type*是 ALERTS)。 *名稱*已**sysname**，沒有預設值。  
   
  [ **@enum_type =**] **'***enum_type***'**  
- *Object_type*傳回的資訊。 *enum_type*在大部分情況下是 ACTUAL。 *enum_type*是**char （10)**，沒有預設值，它可以是下列值之一。  
+ *Object_type*傳回的資訊。 *enum_type*在大部分情況下是 ACTUAL。 *enum_type*已**char(10)**，沒有預設值，它可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |ACTUAL|只列出*object_types*聯*名稱*。|  
-|ALL|列出所有*object_types*包括未與相關聯的那些*名稱*。|  
-|TARGET|只列出*object_types*符合所提供*target_name*，無論是否關聯*名稱*。|  
+|ALL|列出所有*object_types*包括未與相關聯*名稱*。|  
+|TARGET|只列出*object_types*符合所提供*target_name*，而不論關聯*名稱*。|  
   
  [  **@notification_method =**] *notification_method*  
- 用來決定要傳回之通知方法資料行的數值。 *notification_method*是**tinyint**，而且可以是下列值之一。  
+ 用來決定要傳回之通知方法資料行的數值。 *notification_method*已**tinyint**，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|電子郵件： 只會傳回**use_email**資料行。|  
-|**2**|呼叫器： 只傳回**use_pager**資料行。|  
-|**4**|NetSend： 只傳回**use_netsend**資料行。|  
+|**2**|呼叫器： 只會傳回**use_pager**資料行。|  
+|**4**|NetSend： 只會傳回**use_netsend**資料行。|  
 |**7**|全部：傳回所有資料行。|  
   
  [ **@target_name =**] **'***target_name***'**  
- 要搜尋的警示名稱 (如果*object_type*是 ALERTS) 或要搜尋的操作員名稱 (如果*object_type*是 OPERATORS)。 *target_name*才需要*enum_type*是目標。 *target_name*是**sysname**，預設值是 NULL。  
+ 要搜尋的警示名稱 (如果*object_type*是 ALERTS) 或要搜尋的操作員名稱 (如果*object_type*是 OPERATORS)。 *target_name*才需要*enum_type*是目標。 *target_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-valves"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -83,7 +79,7 @@ sp_help_notification
 ## <a name="result-sets"></a>結果集  
  如果*object_type*是**警示**，結果集會列出給定操作員的所有警示。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警示識別碼。|  
 |**alert_name**|**sysname**|警示名稱。|  
@@ -96,7 +92,7 @@ sp_help_notification
   
  如果**object_type**是**運算子**，結果集會列出給定警示的所有運算子。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|操作員識別碼。|  
 |**operator_name**|**sysname**|操作員名稱。|  
@@ -146,9 +142,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

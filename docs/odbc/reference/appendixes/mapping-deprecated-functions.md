@@ -1,13 +1,11 @@
 ---
-title: 對應已被取代的函式 |Microsoft 文件
+title: 對應已被取代的函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,23 +15,22 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818362"
 ---
-# <a name="mapping-deprecated-functions"></a>對應已被取代的函式
-本章節描述如何已被取代的函式會對應由 ODBC 3 *.x*驅動程式管理員，以保證與舊版相容的 ODBC 3 *.x*搭配 ODBC 2 的驅動程式。*x*應用程式。 驅動程式管理員會執行此應用程式的版本不限的對應。 因為每個 ODBC 2。*x*下列清單中的函式會對應至對應的 ODBC 3 *.x*函式呼叫在 ODBC 3 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式不需要實作 ODBC 2。*x*函式。  
+# <a name="mapping-deprecated-functions"></a>對應已淘汰的函式
+本節說明如何已被取代的函式會對應由 ODBC 3 *.x*驅動程式管理員，以確保 ODBC 3 的回溯相容性 *.x*驅動程式所使用的 ODBC 2。*x*應用程式。 驅動程式管理員會執行這項對應，而不論應用程式版本。 因為每個 ODBC 2。*x*下列清單中的函式會對應到對應的 ODBC 3 *.x*函式呼叫在 ODBC 3 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式不需要實作 ODBC 2。*x*函式。  
   
- 在清單中的對應時的驅動程式是 ODBC 3 觸發 *.x*驅動程式和驅動程式不支援對應函式。  
+ ODBC 3 驅動程式時，會觸發在清單中的對應 *.x*驅動程式和驅動程式不支援要對應的函式。  
   
- 下表列出所有重複的功能而引進在 ODBC 3 *.x*。  
+ 下表列出所有重複的功能，在 ODBC 3 引入 *.x*。  
   
 |ODBC 2。*x*函式|ODBC 3 *.x*函式|  
 |-------------------------|-------------------------|  
@@ -45,7 +42,7 @@ ms.locfileid: "32914103"
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt**與*選項*SQL_DROP 的|**SQLFreeHandle**|  
+|**SQLFreeStmt**具有*選項*SQL_DROP 的|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -55,7 +52,7 @@ ms.locfileid: "32914103"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 即使此函式不存在於 ODBC 2 *.x*，它是 Open Group 和 ISO 標準中。  
+ [1] 即使 ODBC 2 中沒有此函式 *.x*，它會在 Open Group 和 ISO 標準中。  
   
  [2] 這是 ODBC 1.0 函式。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - upgrading mirrored database systems
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053008"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
   此主題描述如何在您安裝 Service Pack 和 Hotfix 時，將鏡像資料庫的停機時間減至最少。 這個程序牽涉到循序升級參與資料庫鏡像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 這種形式的更新，這就所謂*輪流更新*，停機時間減少至只有單一容錯移轉。 請注意，高效能模式工作階段中的鏡像伺服器與主體伺服器地理位置遙遠，輪流更新可能不適合。  

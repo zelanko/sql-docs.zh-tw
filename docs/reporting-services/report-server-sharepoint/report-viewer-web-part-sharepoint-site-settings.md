@@ -4,16 +4,15 @@ ms.date: 10/31/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: ''
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: f39ac00241bd1c4a26b79766a7bc37865ef11181
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4bf85cde9cedd9995fb3092c43f4b2f68e33d2ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824314"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>報表檢視器網頁組件的 SharePoint 網站設定 - Reporting Services
 

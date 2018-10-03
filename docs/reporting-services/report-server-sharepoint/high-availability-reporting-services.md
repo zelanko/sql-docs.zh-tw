@@ -4,16 +4,15 @@ ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2fd43bdb059037366800d73d25cb8fb8cf9cfda
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d310371ce9b5f564b6cd48929bd3da39f68d828a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696185"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>SQL Server Reporting Services 的高可用性
 

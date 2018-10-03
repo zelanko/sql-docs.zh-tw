@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - PreConnect:Starting Event Class
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b980169a5ade2694d1c35fb77c0b9ffd94d22b0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ee98c099d13c0d77a239c22739704e5d51cc5e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048758"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件類別
   PreConnect:Starting 事件類別會指出 LOGON 觸發程序或資源管理員分類函數開始執行。  

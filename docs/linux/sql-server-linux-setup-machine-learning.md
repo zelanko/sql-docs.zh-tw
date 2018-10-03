@@ -7,17 +7,15 @@ manager: cgronlun
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d10e6646d83d90af60aa748a8265a069d961443
-ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
+ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47058927"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770936"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安裝 SQL Server 2019 Machine Learning 在 Linux 上的服務 (R、 Python、 Java)
 

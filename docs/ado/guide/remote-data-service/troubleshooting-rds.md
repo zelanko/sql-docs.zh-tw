@@ -1,33 +1,30 @@
 ---
-title: 疑難排解 RDS |Microsoft 文件
+title: 為 RDS 疑難排解 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 188e1194a3c2f95bf8c97ad608e80a9cebb4a419
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ff122b0a7cf888ec93350da86bf0bc610e47270a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787804"
 ---
-# <a name="troubleshooting-rds"></a>疑難排解 RDS
+# <a name="troubleshooting-rds"></a>對 RDS 進行疑難排解
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 請參閱本節中的特定錯誤或.rds 問題的解決方案 此章節包含下列主題。  
+ 請參閱本節的解決方案特定的錯誤或問題 rds。 此章節包含下列主題。  
   
 -   [在 Windows 2000 上設定 RDS](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
@@ -35,7 +32,7 @@ ms.locfileid: "35274677"
   
 -   [RDS 傳回 "Stream Not Read" 錯誤](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   
--   [讀取可重複的隔離層級的死結](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [讀取可重複隔離等級發生死結](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
   
 -   [確認 TempDB 有足夠空間](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
   

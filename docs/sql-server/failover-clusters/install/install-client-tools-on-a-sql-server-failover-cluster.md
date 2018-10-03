@@ -3,22 +3,19 @@ title: 在 SQL Server 容錯移轉叢集上安裝用戶端工具 | Microsoft Doc
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2f284b51cfb784a65829c161d4df70301c3918c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4e5c1182bb2aeb9a5a3a5c0db640b89237c58a29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792896"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 容錯移轉叢集上安裝用戶端工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

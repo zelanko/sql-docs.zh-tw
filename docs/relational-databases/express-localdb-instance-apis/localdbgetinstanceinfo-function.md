@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetInstanceInfo 函數 |Microsoft 文件
+title: LocalDBGetInstanceInfo 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstanceInfo
@@ -17,22 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5bb8e123f084b20fb16e3fd4e0e52bd482a2760b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 239dfd78fd2f1ce4721953c53efeb47cb29da4cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740328"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   傳回指定之 SQL Server Express LocalDB 執行個體的資訊，例如執行個體是否存在、執行個體使用的 LocalDB 版本、執行個體是否正在執行等等。  
   
- 在傳回的資訊**結構**名為**LocalDBInstanceInfo**，其具有下列定義。  
+ 在傳回的資訊**struct**名為**LocalDBInstanceInfo**，其具有下列定義。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -99,7 +95,7 @@ HRESULT LocalDBGetInstanceInfo(
  [輸出] 儲存 LocalDB 執行個體資訊的緩衝區。  
   
  *dwInstanceInfoSize*  
- [輸入]保留大小*InstanceInfo*緩衝區。  
+ [輸入]保留的大小*InstanceInfo*緩衝區。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -133,11 +129,11 @@ HRESULT LocalDBGetInstanceInfo(
  發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="details"></a>詳細資料  
- 引進的背後的原理**結構**大小引數 (*lpInstanceInfoSize*) 是要讓 API 傳回的不同版本**LocalDBInstanceInfostruct**，有效地啟用往後和回溯相容性。  
+ 引進背後的原理**struct**大小引數 (*lpInstanceInfoSize*) 是要讓 API 傳回的不同版本**LocalDBInstanceInfostruct**，以有效地啟用向前及向後相容性。  
   
- 如果**結構**大小引數 (*lpInstanceInfoSize*) 相符的大小已知版本**LocalDBInstanceInfostruct**，該版本**結構**傳回。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果**struct**大小引數 (*lpInstanceInfoSize*) 符合已知版本的大小**LocalDBInstanceInfostruct**，該版本**結構**會傳回。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
- 典型範例**LocalDBGetInstanceInfo** API 用量看起來像這樣：  
+ 典型範例**LocalDBGetInstanceInfo** API 使用方式，看起來像這樣：  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -145,7 +141,7 @@ LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

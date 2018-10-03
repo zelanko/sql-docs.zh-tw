@@ -5,24 +5,21 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be991897702d63aa505c3c18b4a86fed5f9840c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623676"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
@@ -75,7 +72,7 @@ ms.locfileid: "40409493"
   
 |||  
 |-|-|  
-|初始化 Integration Services|@shouldalert|  
+|初始化 Integration Services|1|  
 |作業清除 (SQL 代理程式作業)|2|  
 |專案版本清理 (SQL 代理程式作業)|3|  
 |部署專案|101|  

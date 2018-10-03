@@ -4,19 +4,16 @@ ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ca21419e841482747410f50809d0d502f495f06
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 381192f80128ca3bd2ebade55dc539137c4bc9bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805606"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連接資訊 (Reporting Services)
 將  分頁報表報表新增至教學課程專案第 1 課之後，您需要定義 *「資料來源」*[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]，這是讓報表從關聯式資料庫、多維度資料庫或其他來源存取資料所用的連線資訊。  

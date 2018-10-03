@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Workload Group Stats object
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a43ca9896a3215d41bac32e01c4d3793d7fee8d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38c6f791c6e7c5f247852737715afb63e2e2c67a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951343"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760496"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951343"
   
  每個作用中工作負載群組都會建立 SQLServer:Workload Group Stats 效能物件的執行個體，而且此執行個體的名稱與資源管理員工作負載群組名稱相同。 下表描述這個執行個體支援的計數器。  
   
-|計數器名稱|描述|  
+|計數器名稱|Description|  
 |------------------|-----------------|  
 |**Active parallel threads**|目前平行執行緒使用量的計數。|  
 |**Active requests**|目前正在這個工作負載群組中執行的要求數目。 這個計數應該等於群組識別碼所篩選之 sys.dm_exec_requests 中的資料列計數。|  

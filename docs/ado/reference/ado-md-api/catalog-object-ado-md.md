@@ -1,13 +1,11 @@
 ---
-title: 目錄物件 (ADO MD) |Microsoft 文件
+title: Catalog 物件 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,34 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827656"
 ---
-# <a name="catalog-object-ado-md"></a>目錄物件 (ADO MD)
-包含多維度結構描述特有的資訊 （也就是 cube 和基礎維度、 階層、 層級和成員） 的多維度資料提供者 (MDP)。  
+# <a name="catalog-object-ado-md"></a>Catalog 物件 (ADO MD)
+包含多維度的結構描述特有的資訊 （也就是 cube 和基礎維度、 階層、 層級和成員） 的多維度資料提供者 (MDP)。  
   
 ## <a name="remarks"></a>備註  
- 集合與屬性**目錄**物件，您可以執行下列：  
+ 使用集合和屬性的**目錄**物件時，您可以執行下列動作：  
   
--   藉由設定開啟目錄[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)標準的 ADO 屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件或為有效的連接字串。  
+-   藉由設定開啟類別目錄[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)屬性，以標準的 ADO[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件或有效的連接字串。  
   
--   識別**目錄**與[名稱](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性。  
+-   找出**Catalog**具有[名稱](../../../ado/reference/ado-md-api/name-property-ado-md.md)屬性。  
   
--   逐一查看目錄，使用中的 cube [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合。  
+-   逐一查看目錄，使用 cube [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合。  
   
  本章節包含下列主題。  
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [Catalog 範例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

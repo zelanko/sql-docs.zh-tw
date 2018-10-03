@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e74fe0d569c627df15b4a75200b6821a236404ef
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833236"
 ---
 # <a name="running-test-cases-sybasetosql"></a>執行測試案例 (SybaseToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果這兩個平台上相同的結果，測試成功。 Sybase 之間的物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -54,8 +48,8 @@ SSMA 軟體測試人員將會在此步驟中，建立輔助物件 （資料表�
 |名稱|類型|描述|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
-|USER_TABLE$ 澳幣|Table|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AudID|Table|儲存新的和變更的資料列的資料表。|  
+|USER_TABLE$ 澳幣|資料表|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$ AudID|資料表|儲存新的和變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
 |新的 USER_TABLE $|檢視|簡化的插入與覆寫的資料列表示。|  
 |USER_TABLE$ new_id|檢視|識別已插入和已變更的資料列。|  

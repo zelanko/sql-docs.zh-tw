@@ -6,9 +6,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -16,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851416"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +122,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 LastRequestedMemory 會在查詢執行之前，顯示授與的記憶體 (KB)。 IsMemoryGrantFeedbackAdjusted 屬性可讓您針對實際查詢執行計畫內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
 
-| IsMemoryGrantFeedbackAdjusted 值 | 描述 |
+| IsMemoryGrantFeedbackAdjusted 值 | Description |
 |--- |--- |
 | 否：第一次執行 | 記憶體授與意見反應不會針對第一次編譯和相關聯的執行，調整記憶體。  |
 | 否：精確授與 | 如果沒有溢出到磁碟，而且陳述式使用至少 50% 的授與的記憶體，則不會觸發記憶體授與意見反應。 |
@@ -191,7 +189,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>追蹤自適性聯結活動
 自適性聯結運算子有下列計劃運算子屬性：
 
-| 計劃屬性 | 描述 |
+| 計劃屬性 | Description |
 |--- |--- |
 | AdaptiveThresholdRows | 顯示從雜湊聯結切換至巢狀迴圈聯結所使用的閾值。 |
 | EstimatedJoinType | 可能的聯結類型。 |
@@ -287,14 +285,14 @@ MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL1
 ### <a name="tracking-interleaved-execution-activity"></a>追蹤交錯執行活動
 您可以在實際的查詢執行計劃中看到使用方式屬性：
 
-| 執行計劃屬性 | 描述 |
+| 執行計劃屬性 | Description |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 適用於 *QueryPlan* 節點。 為 *true* 時，表示計劃包含交錯執行候選項目。 |
 | IsInterleavedExecuted | 位於 TVF 節點 RelOp 之下 *RuntimeInformation* 元素的屬性。 為 *true* 時，這表示作業已具體化為交錯執行作業的一部分。 |
 
 您也可以透過下列 xEvent 追蹤交錯執行項目：
 
-| xEvent | 描述 |
+| xEvent | Description |
 | ---- | --- |
 | interleaved_exec_status | 交錯執行進行時會引發這個事件。 |
 | interleaved_exec_stats_update | 此事件會描述由交錯執行更新的基數估計值。 |

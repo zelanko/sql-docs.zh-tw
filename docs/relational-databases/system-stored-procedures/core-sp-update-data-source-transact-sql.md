@@ -1,14 +1,11 @@
 ---
-title: core.sp_update_data_source (TRANSACT-SQL) |Microsoft 文件
+title: core.sp_update_data_source (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3156ef5a6d4d1af2298222b660e6483eb109cddd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766467"
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +48,22 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>引數  
  [ @collection_set_uid = ] '*collection_set_uid*'  
- 收集組的 GUID。 *collection_set_uid*是**uniqueidentifier**，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collection_sets 檢視表。  
+ 收集組的 GUID。 *collection_set_uid*已**uniqueidentifier**，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collection_sets 檢視表。  
   
  [ @machine_name =] '*machine_name*'  
- 收集組所在的伺服器名稱。 *machine_name*是**sysname** ，沒有預設值。  
+ 收集組所在的伺服器名稱。 *machine_name*已**sysname** ，沒有預設值。  
   
  [ @named_instance =] '*named_instance*'  
- 收集組的執行個體名稱。 *named_instance*是**sysname**，沒有預設值。  
+ 收集組的執行個體名稱。 *named_instance*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
->  *named_instance*必須是完整的執行個體名稱，其中包含電腦名稱與執行個體名稱，表單*computername*\\*instancename*。  
+>  *named_instance*必須是完整的執行個體名稱，其中包含電腦名稱和執行個體名稱，形式*computername*\\*instancename*。  
   
  [ @days_until_expiration = ] *days_until_expiration*  
- 快照集資料保留期限中剩餘的天數。 *days_until_expiration*是**smallint**。  
+ 快照集資料保留期限中剩餘的天數。 *days_until_expiration*已**smallint**。  
   
  [ @source_id = ] *source_id*  
- 更新來源的唯一識別碼。 *source_id*是**int**而且會當做 OUTPUT 傳回。  
+ 更新來源的唯一識別碼。 *source_id*已**int**和會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

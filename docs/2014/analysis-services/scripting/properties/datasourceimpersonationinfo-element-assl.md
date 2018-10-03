@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceImpersonationInfo Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSourceImpersonationInfo element
 ms.assetid: a153044b-2d6c-406b-aeb3-15bf096931f4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da8889abe558a33b18e20ca8ee81855656f149f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed6feef09732e92b018cf73103ea2334888d86c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187075"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055154"
 ---
 # <a name="datasourceimpersonationinfo-element-assl"></a>DataSourceImpersonationInfo 元素 (ASSL)
   包含用來連接到資料來源時，決定模擬行為的資訊[資料庫](../objects/database-element-assl.md)項目。  
@@ -49,7 +46,7 @@ ms.locfileid: "37187075"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|[ImpersonationInfo 資料類型&#40;ASSL&#41;](../data-type/impersonationinfo-data-type-assl.md)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -57,7 +54,7 @@ ms.locfileid: "37187075"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[[資料庫]](../objects/database-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
   

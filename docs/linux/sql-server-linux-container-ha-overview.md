@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c48bf8b5edefbfd86855197128abfd5674067e
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: ccf4b3bab89c29fde1ff592a166baa3747afa890
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843219"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>適用於 SQL Server 容器的高可用性
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_test_connection
@@ -19,12 +17,12 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14f3c4f120e5ae940efd4431d7b996c65f7d9c15
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ef50b770019450f99ede55369c1bdaa654cd52b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056116"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843726"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

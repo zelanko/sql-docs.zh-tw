@@ -1,14 +1,11 @@
 ---
-title: sp_help_fulltext_catalog_components (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_fulltext_catalog_components (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b0fcb1d151d9e201998eb4ee2725239fc239e33
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242104"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720366"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,24 +44,24 @@ sp_help_fulltext_catalog_components
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**全文檢索目錄名稱**|**int**|全文檢索目錄的名稱。|  
 |**全文檢索目錄識別碼**|**sysname**|全文檢索目錄的識別碼。|  
 |**componenttype**|**sysname**|這是元件的類型， 它有下列幾種：<br /><br /> 篩選<br /><br /> 通訊協定處理常式<br /><br /> 斷詞工具|  
 |**componentname**|**sysname**|元件的名稱。|  
 |**clsid**|**uniqueidentifier**|元件的類別識別碼。|  
-|**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> NULL = 呼叫端不是成員的**serveradmin**固定的伺服器角色。|  
+|**fullpath**|**nvarchar(256)**|元件位置的路徑。<br /><br /> NULL = 呼叫端不隸屬於**serveradmin**固定的伺服器角色。|  
 |**version**|**nvarchar(30)**|元件的版本。|  
 |**manufacturer**|**sysname**|元件的製造商名稱。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋和語意搜尋預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_system_components &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
+ [sp_help_fulltext_system_components &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  
   
   

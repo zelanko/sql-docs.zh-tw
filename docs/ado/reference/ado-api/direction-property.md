@@ -1,13 +1,11 @@
 ---
-title: 方向屬性 |Microsoft 文件
+title: Direction 屬性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - Direction property
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab3eecc4e1d4ec0f14634d9c5ce77375f7432231
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: df2f7cc5eadce7d4f8f61674f4915ec3b1561e02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277897"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828606"
 ---
-# <a name="direction-property"></a>方向屬性
-指出是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 輸入和輸出參數，或如果參數是預存程序的傳回值。  
+# <a name="direction-property"></a>Direction 屬性
+指出是否[參數](../../../ado/reference/ado-api/parameter-object.md)代表輸入的參數、 輸出參數、 輸入和一個 output 參數，或如果參數是預存程序的傳回值。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值。  
   
 ## <a name="remarks"></a>備註  
- 使用**方向**屬性來指定從程序或方式傳遞的參數。 **方向**屬性是讀取/寫入; 這可讓您搭配不傳回這項資訊的提供者，或是當您不想讓額外的提供者呼叫以擷取參數資訊的 ADO 設定這項資訊。  
+ 使用**方向**屬性來指定參數如何傳遞至或從程序。 **方向**屬性是讀取/寫入，這可讓您搭配不傳回這項資訊的提供者，或當您不想要進行額外呼叫提供者擷取參數資訊的 ADO 設定這項資訊。  
   
- 並非所有提供者可以判斷其預存程序中的參數方向。 在這些情況下，您必須設定**方向**屬性，然後再執行查詢。  
+ 並非所有提供者可以判斷其預存程序中的參數方向。 在這些情況下，您必須設定**方向**屬性在執行查詢。  
   
 ## <a name="applies-to"></a>適用於  
  [Parameter 物件](../../../ado/reference/ado-api/parameter-object.md)  
