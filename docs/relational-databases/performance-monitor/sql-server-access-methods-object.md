@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d384974e39066d0d1a150e2557872f6f1274be93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aad4951e60f45ae2b25fcaaac018a6671765390a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776126"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server 的 Access Methods 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "32955623"
   
  下表描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** 計數器。  
   
-|SQL Server 的 Access Methods 計數器|描述|  
+|SQL Server 的 Access Methods 計數器|Description|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|可將延遲的已卸除配置單位清除的背景工作，每秒內可順利完成的批次數。|  
 |**AU cleanups/sec**|可將延遲的已卸除配置單位清除的背景工作，每秒內順利卸除的配置單位數。 每次卸除配置單位都需要多個批次。|  

@@ -1,48 +1,45 @@
 ---
-title: 延遲欄位 |Microsoft 文件
+title: 延後欄位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc2020dc36ce031391194695e40308431c0f06d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721036"
 ---
-# <a name="deferred-fields"></a>延後的欄位
-值*延遲欄位*時設定，但是驅動程式會將儲存延後的效果之變數的位址不會使用。 應用程式參數描述元，驅動程式會使用變數的內容時呼叫的**SQLExecDirect**或**SQLExecute**。 應用程式的資料列描述項，為驅動程式會使用變數的內容，在擷取的時間。  
+# <a name="deferred-fields"></a>延遲的欄位
+值*延後欄位*不會設定它們，但驅動程式會將儲存的延後的效果之變數的位址時使用。 應用程式參數描述項中，驅動程式會使用變數的內容呼叫當時**SQLExecDirect**或是**SQLExecute**。 應用程式的資料列描述項中，驅動程式會使用變數的內容在提取的階段。  
   
  延後的欄位如下：  
   
--   描述項記錄的 SQL_DESC_DATA_PTR 和 SQL_DESC_INDICATOR_PTR 欄位。  
+-   描述項記錄的 SQL_DESC_DATA_PTR 並 SQL_DESC_INDICATOR_PTR 欄位。  
   
--   應用程式的描述項記錄 SQL_DESC_OCTET_LENGTH_PTR 欄位。  
+-   將應用程式描述項記錄 SQL_DESC_OCTET_LENGTH_PTR 欄位。  
   
 -   如果是多重資料列提取時，SQL_DESC_ARRAY_STATUS_PTR 和 SQL_DESC_ROWS_PROCESSED_PTR 欄位的描述項標頭。  
   
- 當配置描述元時，延後的每個描述項記錄欄位一開始會有 null 值。 Null 值的意義如下：  
+ 當配置描述元時，延遲的欄位，每個描述項記錄的一開始會有 null 值。 Null 值的意義如下所示：  
   
--   如果 SQL_DESC_ARRAY_STATUS_PTR 有 null 值，多重資料列的 fetch 就無法傳回此元件的每個資料列的診斷資訊。  
+-   如果 SQL_DESC_ARRAY_STATUS_PTR 具有 null 值時，多重資料列的 fetch 無法傳回這個元件的每個資料列的診斷資訊。  
   
--   如果 SQL_DESC_DATA_PTR 有 null 值，記錄就會是未繫結。  
+-   如果 SQL_DESC_DATA_PTR 具有 null 值時，記錄就會是未繫結。  
   
--   如果 ARD 的 SQL_DESC_OCTET_LENGTH_PTR 欄位的 null 值，此驅動程式不會傳回該資料行的長度資訊。  
+-   如果 ARD 的 SQL_DESC_OCTET_LENGTH_PTR 欄位具有 null 值時，驅動程式不會傳回該資料行長度資訊。  
   
--   如果 APD SQL_DESC_OCTET_LENGTH_PTR 欄位具有 null 值，而且參數為字元字串，驅動程式會假設字串是以 null 結束。 輸出的動態參數，此欄位中的 null 值會防止驅動程式傳回長度資訊。 （如果 SQL_DESC_TYPE 欄位並不表示字元字串參數，SQL_DESC_OCTET_LENGTH_PTR 欄位會忽略。）  
+-   APD 中的 SQL_DESC_OCTET_LENGTH_PTR 欄位具有 null 值，而且參數是字元字串，如果驅動程式會假設字串是 null 結束。 輸出動態參數，此欄位中的 null 值會防止驅動程式傳回長度資訊。 （如果 SQL_DESC_TYPE 欄位不是表示的字元字串參數，SQL_DESC_OCTET_LENGTH_PTR 欄位會忽略。）  
   
- 應用程式不能解除配置或捨棄它關聯欄位的時間與驅動程式讀取或寫入它們的時間之間的延遲欄位使用的變數。
+ 應用程式不解除配置或捨棄用於延後的欄位，它將它們與欄位關聯的時間與驅動程式會讀取或寫入的時間之間的變數。

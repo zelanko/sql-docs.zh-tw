@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28e14076113b89c980756d42ddc126f75792d1a4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035098"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704436"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *方法名稱*  
  這是要呼叫之 OLE 物件的方法名稱。  
   
- *returnvalue***輸出**   
+ *returnvalue***輸出**  
  這是 OLE 物件的方法傳回值。 如果指定的話，它必須是適當資料類型的本機變數。  
   
  如果此方法會傳回單一值，指定區域變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，就會傳回方法會傳回給用戶端的值，做為單一資料行、 單一資料列結果集。  

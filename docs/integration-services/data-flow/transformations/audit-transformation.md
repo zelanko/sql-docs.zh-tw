@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.audittrans.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ce5a320baf91ddf028e93ea9560cc9f8c5add5cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770636"
 ---
 # <a name="audit-transformation"></a>稽核轉換
   稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
@@ -33,10 +30,10 @@ ms.locfileid: "35331072"
 ## <a name="system-variables"></a>系統變數  
  下表描述「稽核」轉換可使用的系統變數。  
   
-|系統變數|索引|描述|  
+|系統變數|索引|Description|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|識別封裝執行執行個體的 GUID。|  
-|**PackageID**|@shouldalert|封裝的唯一識別碼。|  
+|**PackageID**|1|封裝的唯一識別碼。|  
 |**PackageName**|2|封裝名稱。|  
 |**VersionID**|3|封裝的版本。|  
 |**ExecutionStartTime**|4|封裝開始執行的時間。|  
@@ -70,7 +67,7 @@ ms.locfileid: "35331072"
  **稽核類型**  
  選取可用的系統變數以提供稽核資訊。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**執行執行個體 GUID**|插入唯一識別封裝之執行執行個體的 GUID。|  
 |**封裝識別碼**|插入唯一識別封裝的 GUID。|  

@@ -5,9 +5,7 @@ ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ROW_NUMBER
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4140679de26c56f59d5531cfc522ea5eaa28cd3b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f577d2176ca4fc8380f68026222d306e3ae4113a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775446"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +107,7 @@ WHERE database_id < 5;
    
 |Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|@shouldalert |master |SIMPLE |
+|1 |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
@@ -129,8 +126,8 @@ FROM sys.databases WHERE database_id < 5;
    
 |Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|@shouldalert |model |FULL |
-|@shouldalert |master |SIMPLE |
+|1 |model |FULL |
+|1 |master |SIMPLE |
 |2 |msdb |SIMPLE |
 |3 |tempdb |SIMPLE |
 

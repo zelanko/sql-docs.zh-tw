@@ -1,13 +1,11 @@
 ---
-title: UPDATE、 DELETE 和 INSERT 陳述式 |Microsoft 文件
+title: UPDATE、 DELETE 和 INSERT 陳述式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -16,42 +14,41 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3c3c8bca44a5cce4a81ecef91c631f3ee1d769c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721906"
 ---
-# <a name="update-delete-and-insert-statements"></a>UPDATE、 DELETE 和 INSERT 陳述式
-以 SQL 為基礎的應用程式對資料表進行變更，藉由執行**更新**，**刪除**，和**插入**陳述式。 下列陳述式是 Minimum SQL 文法一致性層級的一部分，而且必須支援的所有驅動程式和資料來源。  
+# <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE 以及 INSERT 陳述式
+以 SQL 為基礎的應用程式對資料表進行變更，藉由執行**更新**，**刪除**，並**插入**陳述式。 這些陳述式屬於 Minimum SQL 文法的一致性層級，而且必須支援的所有驅動程式和資料來源。  
   
- 這些陳述式的語法如下：  
+ 這些陳述式的語法是：  
   
- **更新***資料表名稱*  
+ **更新***資料表名稱*   
   
  **設定***資料行識別碼* **=** {*運算式* &#124; **NULL**}  
   
  [**，** *資料行識別碼* **=** {*運算式* &#124; **NULL**}]...  
   
- [**其中***搜尋條件*]  
+ [**何處***搜尋條件*]  
   
- **DELETE FROM** *資料表名稱*[**其中***搜尋條件*]  
+ **DELETE FROM** *資料表名稱*[**位置***搜尋條件*]  
   
  **INSERT INTO** *資料表名稱*[**(* * * 資料行識別碼*[* *，** *資料行識別碼*]...**)**]  
   
- {*查詢規格* &#124; **值 (* * * 插入值*[* *，** *插入值*]...**)**}  
+ {*查詢規格* &#124; **的值 (* * * 插入值*[* *，** *插入值*]...**)**}  
   
- 請注意，*查詢規格*項目是只適用於核心和 Extended SQL 文法中，而且*運算式*和*搜尋條件*項目變得更複雜的核心和 Extended SQL 文法中。  
+ 請注意，*查詢規格*項目是只有在核心和 Extended SQL 文法，而且有效*運算式*並*搜尋條件*項目變得更複雜的核心和 Extended SQL 文法。  
   
- 類似其他 SQL 陳述式，**更新**，**刪除**，和**插入**陳述式所需通常較有效率使用時，這些參數。 例如，下列陳述式可以備妥，並重複執行 「 訂單 」 資料表中插入多個資料列：  
+ 像其他 SQL 陳述式中，**更新**，**刪除**，和**插入**陳述式通常會更有效率使用參數時。 例如，下列陳述式可以備妥，並重複執行，以將多個資料列插入 Orders 資料表中：  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- 傳遞參數值的陣列，可以增加這種效率。 如需陳述式參數和參數值的陣列的詳細資訊，請參閱[陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。
+ 這種效率可以增加所傳遞的參數值的陣列。 如需有關陳述式參數和參數值的陣列的詳細資訊，請參閱[陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。

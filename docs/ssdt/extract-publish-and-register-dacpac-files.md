@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DacTableChooser
@@ -16,16 +14,15 @@ f1_keywords:
 - sql.data.tools.publishdacproject
 - sql.data.tools.DacExtractDialog
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e77370c1afe61ff63186e7a203b9be4eeaa97849
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: af7f836549563783686dfb3209fc4e7eedf9727a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770076"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>擷取、發行及註冊 .dacpac 檔案
 本主題描述在 SQL Server 物件總管中以滑鼠右鍵按一下連接的資料庫即可執行的四個程序：  

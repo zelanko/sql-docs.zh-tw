@@ -1,13 +1,11 @@
 ---
-title: 提供者和 DefaultDatabase 屬性範例 (VB) |Microsoft 文件
+title: Provider 和 DefaultDatabase 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - DefaultDatabase property [ADO], Visual Basic example
 - provider property [ADO], Visual Basic example
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe65e3e4e68af0fee63bb3202bcb0e4b6c95b5b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad9e2566af4f320ce3bf12d00421b40e5c41d661
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704926"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vb"></a>提供者和 DefaultDatabase 屬性範例 (VB)
-這個範例會示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)開啟三個屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，使用不同的提供者。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定的預設資料庫的 Microsoft ODBC 提供者。  
+# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 屬性範例 (VB)
+此範例示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)藉由開啟三個屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件，使用不同的提供者。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC 提供者設定的預設資料庫的屬性。  
   
 > [!NOTE]
->  如果您要連接至資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是使用者識別碼和密碼連接字串中的資訊。  
+>  如果您要連接到資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或是**Integrated Security = SSPI**而非使用者 ID 和密碼連接字串中的資訊。  
   
 ```  
 'BeginProviderVB  

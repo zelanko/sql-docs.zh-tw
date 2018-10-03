@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSrepl_transactions_TSQL
 - MSrepl_transactions
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_transactions system table
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94b926dbb7f12aba50a7147cbb3782d569b87975
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: cb185ed1f564b4ea2fc94428096f3cf5daf15835
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721590"
 ---
 # <a name="msrepltransactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

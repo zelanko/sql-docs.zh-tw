@@ -1,13 +1,11 @@
 ---
-title: 儲存並開啟方法的範例 （VC + +） |Microsoft 文件
+title: Save 和 Open 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735986"
 ---
-# <a name="save-and-open-methods-example-vc"></a>儲存並開啟方法的範例 （VC + +）
-這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)和**開啟**方法可以一起使用。  
+# <a name="save-and-open-methods-example-vc"></a>Save 和 Open 方法範例 （VC + +）
+這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)並**開啟**方法可以一起使用。  
   
- 假設您要在出差，而且想要帶資料庫中的資料表。 您繼續之前，您存取資料做為[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)並將它儲存在傳輸的表單。 當您抵達目的地時，存取**資料錄集**做為本機，中斷連接**資料錄集**。 您對進行變更**資料錄集**，再儲存一次。 最後，當返回首頁，再次連接到資料庫並更新您所做的變更旅。  
+ 假設您即將在出差的旅途上，並想要沿著從資料庫資料表。 您繼續之前，您存取資料，當做[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)並將它儲存在容易進行傳輸的表單。 當您抵達您的目的地時，存取**Recordset**為本機，中斷連接**資料錄集**。 若要變更**資料錄集**，然後重新儲存。 最後，當您重返首頁，再連接到資料庫並更新您所做的變更在路上。  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -265,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Open 方法 （ADO 資料錄集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)
