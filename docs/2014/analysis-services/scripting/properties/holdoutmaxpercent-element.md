@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53689f28351a4a5505f1c1bc1d4c8a9586074704
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ef3a056404f350ea8b9bfe5d369b9091bad0de9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140268"
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 元素
   將用於鑑效組資料分割，其中包含的測試集的資料來源中指定之案例的最大百分比[MiningStructure](../objects/miningstructure-element-assl.md)項目。 其餘案例將用於培訓。 值為 0 表示可當做測試集的案例數目沒有任何限制。  
@@ -55,7 +52,7 @@ ms.locfileid: "37278144"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  如果您同時針對 `HoldoutMaxPercent` 和 `HoldoutMaxCases` 指定值，此演算法就會將測試集限制為這兩個值當中較小的值。  

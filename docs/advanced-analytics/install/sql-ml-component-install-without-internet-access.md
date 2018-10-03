@@ -3,17 +3,17 @@ title: 安裝 SQL Server machine learning 沒有網際網路存取的 R 和 Pyth
 description: 離線或已中斷連線 Machine Learning R 和 Python 安裝獨立的 SQL Server 執行個體。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150543"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安裝 SQL Server machine learning 無法存取網際網路的電腦上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ SQL Server 安裝媒體 （.iso 或.cab） 和資料庫內分析封包檔案複�
 
 5. 繼續下螢幕上的提示完成安裝。
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>套用累計更新
+
+我們建議您將最新的累積更新套用至 database engine 和機器學習服務元件。 透過安裝程式安裝累計更新。 
+
+1. 啟動與基準的執行個體。 您只可以將累計更新套用到現有安裝的 SQL Server:
+
+  + SQL Server 2017 的初始版本
+  + SQL Server 2016 的最初發行版本、 SQL Server 2016 SP 1 或 SQL Server 2016 SP 2
+
+2. 在 網際網路連線的裝置，請移至您的 SQL Server 版本的累積更新清單：
+
+  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 選取要下載可執行檔的最新累積更新。
+
+4. 取得 R 和 Python 的相對應的封包檔。 如需下載連結，請參閱[下載 SQL Server 資料庫內分析上的累計更新的執行個體的封包](sql-ml-cab-downloads.md)。
+
+5. 將所有的檔案、 可執行檔及封包檔，以離線的電腦上的相同資料夾。
+
+6. 執行安裝程式。 接受授權條款，並在 特徵選取 頁面中，檢閱 ，套用累計更新的功能。 您應該會看到安裝目前的執行個體，包括機器學習服務功能的每項功能。
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. 繼續執行精靈，並接受 R 和 Python 散發套件的授權條款。 在安裝期間，系統會提示您選擇 包含更新的封包檔的資料夾位置。
+
 ## <a name="post-install-configuration"></a>後續安裝組態
 
 安裝完成之後，重新啟動服務，然後設定 啟用指令碼執行的伺服器：
@@ -108,30 +136,6 @@ SQL Server 2017 Machine Learning 服務或 SQL Server 2016 R Services 的初始�
 
 + [確認安裝是否](sql-machine-learning-services-windows-install.md#verify-installation)(如 SQL Server 2016 中，按一下[這裡](sql-r-services-windows-install.md#verify-installation))。
 + [額外的設定，視](sql-machine-learning-services-windows-install.md#additional-configuration)(如 SQL Server 2016 中，按一下[這裡](sql-r-services-windows-install.md#bkmk_FollowUp))。
-
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>匯集升級
-
-匯集安裝程式是指將補充程式或更新套用至失敗的執行個體安裝，以修正現有問題的功能。 這個方法的優點是在您執行安裝程式的同時更新 SQL Server，以避免稍後分別重新啟動。
-
-當伺服器沒有網際網路存取時，套用服務更新，以下載更新的 SQL Server 安裝程式和對應的語言特有的封包檔的版本。 
-
-1. 啟動與基準的執行個體。 匯集升級支援的這些版本的 SQL Server:
-
-  + SQL Server 2017 的初始版本
-  + SQL Server 2016 的初始版本
-  + SQL Server 2016 SP 1
-  + SQL Server 2016 SP 2
-
-2. 取得指定的累積更新的更新的版本的 SQL Server 安裝程式。 機器學習 （R 和 Python） 功能的任何更新是以串聯的基礎資料庫引擎執行個體的累計更新。
-
-  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. 取得 R 和 Python 的相對應的封包檔。 如需下載連結，請參閱[下載 SQL Server 資料庫內分析上的累計更新的執行個體的封包](sql-ml-cab-downloads.md)。
-
-4. 將所有檔案都放在相同的資料夾中，執行安裝程式。 在安裝期間，系統會提示您選擇的更新版的 CAB 檔案的資料夾位置。
 
 ## <a name="next-steps"></a>後續步驟
 

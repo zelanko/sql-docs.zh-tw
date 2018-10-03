@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Save Tran Completed event class'
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f75c938cb70aec0bbc8017fc1b33fbdf7142c23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb14b93ce3fd7cf4e04dd5ab47b3b6427dc9e57d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138108"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed 事件類別
   TM: Save Tran Completed 事件類別指出已完成 SAVE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  

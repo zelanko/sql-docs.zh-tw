@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
 - snapshot replication [SQL Server], compressed snapshots
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34a397f4c6597751d50aa676f07d42cc694e9c39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be1415b0f31e79baed84545ea623c84151f5c251
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148108"
 ---
 # <a name="compressed-snapshots"></a>壓縮的快照集
   當您透過通訊緩慢的網路傳送快照集時，或將快照集儲存到抽取式媒體中，且未壓縮的快照集過大而未能放入媒體時，適合壓縮快照集檔案。 在這種狀況下，壓縮快照集檔案非常有用，但是壓縮會增加產生及套用快照集的時間。  

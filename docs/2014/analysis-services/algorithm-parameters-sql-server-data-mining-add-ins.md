@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -47,16 +45,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92ff53ae795fa4d0565ca9b1537a7d12bc8f0b5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147608"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>演算法參數 (SQL Server 資料採礦增益集)
   當您使用適用於 Excel 的資料表分析工具來執行資料採礦時，您不需要設定資料採礦演算法或參數；每一個工具都會分析資料，並自動選取最佳參數。 但是，如果您想要修改模型或是從頭開始建立採礦模型，適用於 Excel 的資料採礦用戶端提供了幾個選項供您自訂。  
@@ -109,7 +106,7 @@ ms.locfileid: "37267674"
 |MINIMUM_SUPPORT|Microsoft 時間序列演算法|指定要在每一個時間序列樹中產生分割所需之時間配量的最小數目。<br /><br /> 預設值是 10。|  
 |MISSING_VALUE_SUBSTITUTION|Microsoft 時間序列演算法|指定用來填滿記錄資料中之間距的方法。 依預設，資料中不允許有不規則的間距或不完全的邊緣。 下列方法可用來填滿不規則間距或邊緣：使用上一個值、使用平均值或使用特定數值常數。|  
 |MODELLING_CARDINALITY|Microsoft 群集演算法|指定在叢集處理期間建構的範例模型數目。<br /><br /> 預設值是 10。|  
-|PERIODICITY_HINT|Microsoft 時間序列演算法|提供演算法關於資料週期性的提示。 例如，若每年銷售不同，而且數列中的度量單位是月，則週期性是 12。 此參數採用 {n [, n]} 的格式，其中 n 為任意正數。 方括號 [] 內的 n 是選擇性的，可以視需要而重複。<br /><br /> 預設值為 {1}。|  
+|PERIODICITY_HINT|Microsoft 時間序列演算法|提供演算法關於資料週期性的提示。 例如，若每年銷售不同，而且數列中的度量單位是月，則週期性是 12。 此參數採用 {n [, n]} 的格式，其中 n 為任意正數。 方括號 [] 內的 n 是選擇性的，可以視需要而重複。<br /><br /> 預設為 {1}。|  
 |PREDICTION_SMOOTHING|Microsoft 時間序列演算法|控制 ARTXP 和 ARIMA 時間序列演算法的混合。 只有當 FORECAST_METHOD 參數設定為 MIXED 時，指定的值才有效。 必須介於 0 到 1 之間。 如果值為 0，此模型只會使用 ARTXP。 如果值為 1，模型只會使用 ARIMA。 趨近於 0 的值將偏向於加權 ARTXP。 趨近於 1 的值將偏向於加權 ARIMA。|  
 |SAMPLE_SIZE|Microsoft 群集演算法|指定如果 CLUSTERING_METHOD 參數設定為可擴充的其中一個群集方法時，演算法在每個行程上使用的案例數目。 將 SAMPLE_SIZE 參數設定為 0 會導致整個資料集群集在單一行程中。 這樣會造成記憶體和效能的問題。<br /><br /> 預設值是 50000。|  
 |SAMPLE_SIZE|Microsoft 羅吉斯迴歸演算法<br /><br /> Microsoft Neural Network Algorithm|指定用來定型模型的案例數目。 此演算法提供者會使用此數字或不包括在鑑效組百分比 (由 HOLDOUT_PERCENTAGE 參數指定) 中的總案例數百分比，以較小者為準。<br /><br /> 換句話說，如果 HOLDOUT_PERCENTAGE 設定為 30，則演算法將使用此參數的值，或等於總案例數 70% 的值，以較小者為準。<br /><br /> 預設值是 10000。|  

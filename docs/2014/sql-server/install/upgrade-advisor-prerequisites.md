@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - prerequisites [Upgrade Advisor]
 - Upgrade Advisor [SQL Server], prerequisites
 ms.assetid: d21a39e5-5f81-4096-a7dd-f244e4779992
-caps.latest.revision: 60
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d0ffd9ee070cbd0f5a00d560e5d1c5979d9ec52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 130059c64357d36ddf6c5eea7e27b15b0e42778c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208540"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148508"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>Upgrade Advisor 必要條件
   此主題描述 Upgrade Advisor 的軟體需求。  
