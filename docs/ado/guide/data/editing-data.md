@@ -1,34 +1,31 @@
 ---
-title: 編輯資料 |Microsoft 文件
+title: 編輯資料 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, editing data
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80e6fe9c0e615311bfbc7ee9602aae9ed929a38d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823383"
 ---
 # <a name="editing-data"></a>編輯資料
-我們解釋如何使用 ADO 連接到資料來源、 執行命令，取得結果**資料錄集**物件，並在瀏覽**資料錄集**。 本節著重於下一個基本的 ADO 作業： 編輯資料。  
+我們已說明如何使用 ADO 連接到資料來源執行命令，取得中的結果**Recordset**物件，並瀏覽**資料錄集**。 本節著重於下一個基本的 ADO 作業： 編輯資料。  
   
- 本節會繼續使用範例**資料錄集**中導入[檢查資料](../../../ado/guide/data/examining-data.md)，有一項重要變更。 下列程式碼用來開啟**資料錄集**:  
+ 本章節會繼續使用範例**資料錄集**中導入[檢查資料](../../../ado/guide/data/examining-data.md)，有一項重要變更。 下列程式碼用來開啟**資料錄集**:  
   
 ```  
 'BeginEditIntro  
@@ -47,11 +44,11 @@ ms.locfileid: "35270267"
 'EndEditIntro  
 ```  
   
- 程式碼的重要變更包括設定**CursorLocation**屬性**連接**物件等於**adUseClient**中*GetNewConnection*函式 （在下一個範例中顯示），表示用戶端資料指標使用。 如需用戶端和伺服器端資料指標之間的差異的詳細資訊，請參閱[了解資料指標和鎖定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
+ 程式碼的重要變更牽涉到設定**CursorLocation**屬性**連線**物件等於**adUseClient**在*GetNewConnection*函式 （在下一個範例中顯示），表示用戶端資料指標使用。 如需有關用戶端和伺服器端資料指標之間的差異的詳細資訊，請參閱[了解資料指標和鎖定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
   
- **CursorLocation**屬性的**adUseClient**設定資料來源 (SQL Server，在此情況下) 的游標位置移至用戶端程式碼 （桌面工作站） 的位置。 這項設定會強制在用戶端，才能建立與管理資料指標上叫用戶端資料指標引擎的 OLE DB ADO。  
+ **CursorLocation**屬性的**adUseClient**設定將資料指標的位置從資料來源 (SQL Server，在此情況下) 移至用戶端程式碼 （桌面工作站） 的位置。 此設定會強制在用戶端，來建立和管理資料指標上叫用戶端資料指標引擎，適用於 OLE DB 的 ADO。  
   
- 您可能也注意**LockType**參數**開啟**方法變更為**Adlockpessimistic**。 這會在批次模式中開啟資料指標。 (提供者會快取多個變更，並將它們寫入基礎資料來源，只有當您呼叫**UpdateBatch**方法。)對所做的變更**資料錄集**將不會更新，直到資料庫在**UpdateBatch**方法呼叫。  
+ 您可能也注意**LockType**的參數**開放**方法變更為**Adlockpessimistic**。 這會在批次模式中開啟資料指標。 (提供者會快取多個變更，並將其寫入至基礎資料來源，只有當您呼叫時，才**UpdateBatch**方法。)對所做的變更**Recordset**將不會更新，直到資料庫中**UpdateBatch**呼叫方法。  
   
  最後，本節中的程式碼會使用 GetNewConnection 函式的修改的版本。 此版本的函式現在會傳回用戶端資料指標。 此函式看起來像這樣：  
   

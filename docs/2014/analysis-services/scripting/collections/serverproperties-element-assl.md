@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ServerProperties Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 495577822a86549841bcae022164d5669c1e5b22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95e921a9bc531b66b38423df74f33e2bb53d8078
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157478"
 ---
 # <a name="serverproperties-element-assl"></a>ServerProperties 元素 (ASSL)
   包含的集合[ServerProperty](../objects/serverproperty-element-assl.md)相關聯的項目[Server](../objects/server-element-assl.md)項目。  
@@ -52,8 +49,8 @@ ms.locfileid: "37323088"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

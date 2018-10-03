@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system tables [SQL Server]
 - system tables [SQL Server]
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4f0c1789e4f352fe18fd50b6de739b82328a777
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c656f11c212b703f6a9a71a1392b5d0685b4c179
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158278"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>移除未記載之系統資料表的參考
   在舊版本中未記載的許多系統資料表都已變更或不存在，因此，在升級之後，使用這些資料表可能導致錯誤發生。 因為 Upgrade Advisor 會尋找系統資料表名稱的參考，所以它會報告與系統資料表有相同名稱的任何使用者資料表的參考。  

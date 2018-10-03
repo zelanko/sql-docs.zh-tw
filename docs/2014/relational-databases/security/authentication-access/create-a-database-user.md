@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
@@ -25,12 +23,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2fba39e592835f3c5e6dbffc6c8b6d384c5c837a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030650"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057308"
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
   本主題描述如何建立對應到登入的資料庫使用者[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 連接到資料庫時，資料庫使用者是登入的識別。 資料庫使用者可以使用相同的名稱做為登入，但是並非必要。 本主題假設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已有登入存在。 如需有關如何建立登入的資訊，請參閱 <<c0> [ 建立登入](create-a-login.md)。  
@@ -89,8 +87,7 @@ ms.locfileid: "43030650"
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- 
-  **[資料庫使用者 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[擁有的結構描述]**、 **[成員資格]**、 **[安全性實體]** 和 **[擴充屬性]**。  
+ **[資料庫使用者 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[擁有的結構描述]**、 **[成員資格]**、 **[安全性實體]** 和 **[擴充屬性]**。  
   
 -   **[擁有的結構描述]** 頁面列出新資料庫使用者可擁有的所有可能結構描述。 若要在資料庫使用者中加入或移除結構描述，請在 **[這個使用者擁有的結構描述]** 底下選取或清除結構描述旁邊的核取方塊。  
   

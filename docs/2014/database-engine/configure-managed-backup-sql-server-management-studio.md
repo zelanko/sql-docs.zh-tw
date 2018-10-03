@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managedbackup.configure.f1
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d09c001bc7c267b2235377a1312609ee8b7b3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165598"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>設定受管理的備份 (SQL Server Management Studio)
   **Managed Backup**  對話方塊可讓您設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]執行個體的預設值。 本主題描述如何使用此對話方塊來設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]這麼做時，您必須考量的選項與執行個體的預設設定。 當[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]已設定的執行個體，設定會套用至之後建立任何新資料庫。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070922"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將查詢參數對應到變數
   此主題描述如何在「執行 SQL」工作中使用參數化 SQL 陳述式，以及建立 SQL 陳述式中變數和參數之間的對應。  
@@ -42,7 +39,7 @@ ms.locfileid: "37233388"
 3.  按一下 **[控制流程]** 索引標籤。  
   
 4.  如果封裝尚未包含執行 SQL 工作，則會加入一個執行 SQL 工作至封裝的控制流程。 如需詳細資訊，請參閱[加入或刪除工作或容器中的控制流程](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  執行個體時提供 SQL Server 登入。  
+  .  
   
 5.  按兩下執行 SQL 工作。  
   

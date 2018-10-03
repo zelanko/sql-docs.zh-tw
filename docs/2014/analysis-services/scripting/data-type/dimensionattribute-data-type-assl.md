@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionAttribute data type
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9e07d7b7c313c4d9d21e8e562f2ed6893a08b42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4624e963a9bca0d7850d2936291d3a7515cac25f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106848"
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute 資料類型 (ASSL)
   定義代表維度中某個屬性的基本資料類型。  
@@ -83,14 +80,14 @@ ms.locfileid: "37194288"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[註釋](../collections/annotations-element-assl.md)， [AttributeHierarchyDisplayFolder](../properties/displayfolder-element-assl.md)， [AttributeHierarchyEnabled](../properties/enabled-element-assl.md)， [AttributeHierarchyOptimizedState](../properties/state-element-assl.md)， [AttributeHierarchyOrdered](../properties/attributehierarchyordered-element-assl.md)， [AttributeHierarchyVisible](../properties/visible-element-assl.md)， [AttributeRelationships](../collections/relationships-element-assl.md)， [CustomRollupColumn](../objects/column-element-assl.md)， [CustomRollupPropertiesColumn](../objects/customrolluppropertiescolumn-element-assl.md)， [DefaultMember](../objects/member-element-assl.md)，[描述](../properties/description-element-assl.md)， [DiscretizationBucketCount](../properties/discretizationbucketcount-element-assl.md)， [DiscretizationMethod](../properties/discretizationmethod-element-assl.md)， [EstimatedCount](../properties/estimatedcount-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [InstanceSelection](../properties/instanceselection-element-assl.md)， [IsAggregatable](../properties/isaggregatable-element-assl.md)，[KeyColumns](../collections/columns-element-assl.md)， [KeyUniquenessGuarantee](../properties/keyuniquenessguarantee-element-assl.md)， [MemberNamesUnique](../properties/membernamesunique-element-assl.md)， [MembersWithData](../objects/data-element-assl.md)， [MembersWithDataCaption](../properties/caption-element-assl.md)，[名稱](../properties/name-element-assl.md)， [NameColumn](../objects/namecolumn-element-assl.md)， [NamingTemplate](../properties/namingtemplate-element-assl.md)， [NamingTemplateTranslations](../collections/translations-element-assl.md)， [OrderBy](../properties/orderby-element-assl.md)， [OrderByAttributeID](../properties/attributeid-element-assl.md)， [RootMemberIf](../properties/rootmemberif-element-assl.md)， [SkippedLevelsColumn](../objects/skippedlevelscolumn-element-assl.md)，[來源](../properties/source-element-binding-assl.md)，[翻譯](../collections/translations-element-assl.md)，[型別](../properties/type-element-dimensionattribute-assl.md)， [UnaryOperatorColumn](../objects/unaryoperatorcolumn-element-assl.md)，[使用量](../properties/usage-element-dimensionattribute-assl.md)， [ValueColumn](../objects/valuecolumn-element-assl.md)|  
 |衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)的集合[維度](../objects/dimension-element-assl.md))|  
   

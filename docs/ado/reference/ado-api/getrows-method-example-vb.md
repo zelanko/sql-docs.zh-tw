@@ -1,32 +1,29 @@
 ---
-title: GetRows 方法範例 (VB) |Microsoft 文件
+title: GetRows 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1567342e31352b21b53fb03a769039a8e31d8e1f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 815fb6268fd55566ede8d7f6722f66d9be912a97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837046"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 方法範例 (VB)
-這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取指定的數目的資料列從[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，並使用產生的資料填入陣列。 **GetRows**方法會傳回所需的資料列數少於兩個案例中： 如果任一個[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取記錄其他使用者刪除。 此函數會傳回**False**第二種情況發生時，才。 若要執行此程序需要 GetRowsOK 函式。  
+這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取指定的資料列數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)和要使用產生的資料填入的陣列。 **GetRows**方法會傳回所需的資料列數目少於兩種情況： 如果任一[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取已記錄刪除由其他使用者。 此函數會傳回**False**只有當第二個案例，就會發生。 若要執行此程序需要 GetRowsOK 函式。  
   
 ```  
 'BeginGetRowsVB  

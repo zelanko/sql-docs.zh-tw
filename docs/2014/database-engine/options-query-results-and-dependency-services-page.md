@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-caps.latest.revision: 6
 author: mashamsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecc1b6d238189ca0b9c33dd97d136d3283f1ae6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f587ee792809f9612ca9fca1264794e843172a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118618"
 ---
-# <a name="options-query-results-and-dependency-services-page"></a>選項 （查詢結果和相依性服務頁面）
+# <a name="options-query-results-and-dependency-services-page"></a>選項 (查詢結果和相依性服務頁面)
   使用此頁面可指定要針對相依性服務連接的伺服器。 相依性服務可讓您擷取在不同伺服器上儲存的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件之間的相依性資訊。 使用檢視物件相依性**物件的相依性** 對話方塊中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
  **您想要做什麼事？**  

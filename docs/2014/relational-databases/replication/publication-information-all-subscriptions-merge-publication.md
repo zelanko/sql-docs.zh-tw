@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.merge.f1
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff5e7b659bc74b385cf878e00c2f5e449047e039
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00cc474069b56dd0bb6d8f03aa4db73d6bbebd59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170428"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>發行集資訊，所有訂閱 (合併式發行集)
   **[所有訂閱]** 索引標籤會顯示所選取合併式發行集之所有訂閱的相關資訊。  

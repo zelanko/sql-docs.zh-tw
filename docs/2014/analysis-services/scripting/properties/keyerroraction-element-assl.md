@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyErrorAction Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyErrorAction element
 ms.assetid: 91fa9f88-b79e-4996-9717-d7ca82b64ddd
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 119cf38dc30683c4d1c4fc7edc67c77c8f01e4f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e07c37c43240c2f4fbadf848d80fba8d6a76ef8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140205"
 ---
 # <a name="keyerroraction-element-assl"></a>KeyErrorAction 元素 (ASSL)
   指定的動作[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]才會發生錯誤時在索引鍵。  
@@ -59,7 +56,7 @@ ms.locfileid: "37173525"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpiorganizerpane.f1
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c82287e5fd5265e5cd112a1cb08c52f60c40bc07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136790"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 組合管理 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 之 [KPI] 索引標籤上的 [KPI 組合管理] 窗格，即可存取和記錄指定之 Cube 中所含的關鍵效能指標 (KPI)。  

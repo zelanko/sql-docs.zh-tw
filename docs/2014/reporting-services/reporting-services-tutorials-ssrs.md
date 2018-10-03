@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104588"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教學課程 (SSRS)
   此章節包含的教學課程[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
@@ -43,7 +40,7 @@ ms.locfileid: "37268414"
   
 ## <a name="see-also"></a>另請參閱  
  [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
- [（CodePlex 上 reporting Services 範例http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
+ [（CodePlex 上 reporting Services 範例 http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
  [TechNet WIKI: SQL Server 2012 範例 (http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
  [Picnic 資料集 （範例資料） (http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164868"
 ---
-# SQL Server 交易記錄架構與管理
+# <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 交易記錄架構與管理
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫都有交易記錄檔，這個記錄檔會記錄所有交易，以及個別交易在資料庫中所做的修改。 交易記錄是資料庫的重要元件，而且如果系統故障，就可能需要交易記錄讓資料庫返回一致的狀態。 本指南提供有關交易記錄實體及邏輯架構的資訊。 了解此架構可提升交易記錄管理的效能。  
@@ -82,7 +79,7 @@ ms.locfileid: "37301338"
   
  如果記錄檔包含多個實體記錄檔，邏輯記錄檔會從頭到尾在所有的實體記錄檔移動之後，才繞回第一個實體記錄檔的起點。  
   
-### 記錄截斷  
+### <a name="log-truncation"></a>記錄截斷  
  為了避免記錄被填滿，必須截斷記錄。 記錄截斷會從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的邏輯交易記錄中刪除非使用中的虛擬記錄檔，釋出邏輯記錄中的空間以供實體交易記錄重複使用。 如果永遠都不截斷交易記錄，最終將會填滿配置給其實體記錄檔的所有磁碟空間。 不過，必須先進行檢查點作業，才能截斷記錄。 檢查點會將目前記憶體中已修改的頁面 (稱為中途分頁) 和交易記錄資訊從記憶體寫入磁碟。 執行檢查點時，交易記錄的非使用中部分會標示成可重複使用。 之後，記錄截斷就可以釋出非使用中的部分。 如需檢查點的詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
  下圖將顯示截斷前後的交易記錄。 第一張圖是顯示從未進行截斷的交易記錄。 目前，邏輯記錄正使用四個虛擬記錄檔。 邏輯記錄檔是從第一個虛擬記錄檔的前面開始，並於虛擬記錄檔 4 結束。 MinLSN 記錄位於虛擬記錄檔 3 中。 虛擬記錄檔 1 和虛擬記錄檔 2 僅包含非使用中的記錄檔記錄。 這些記錄都可以截斷。 虛擬記錄 5 仍未使用而且不屬於目前邏輯記錄的一部分。  
@@ -117,15 +114,15 @@ ms.locfileid: "37301338"
   
  若要限制您需要還原的記錄備份數目，定期備份資料是基本作業。 例如，您可能會排程每週的完整資料庫備份和每日的差異資料庫備份。  
   
-### 記錄鏈結  
+### <a name="the-log-chain"></a>記錄鏈結  
  連續的記錄備份順序稱為「記錄檔鏈結」。 記錄鏈結以資料庫的完整備份開始。 通常，只有在首次備份資料庫，或將簡單復原模式切換為完整或大量記錄復原模式之後，才會開始新的記錄鏈結。 除非您在建立完整資料庫備份時選擇覆寫現有的備份組，否則現有的記錄鏈結會維持不變。 透過維持不變的記錄鏈結，您可以從媒體集中的任何完整資料庫備份還原資料庫，後面接著所有後續的記錄備份，直到復原點為止。 復原點可能是上一個記錄備份的結尾，或是任何記錄備份中的特定復原點。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要將資料庫還原到失敗點，必須有完整的記錄鏈結。 也就是說，必須將交易記錄備份的順序不間斷地延伸到失敗點。 這個記錄順序必須從何處開始視您要還原的資料備份類型而定：資料庫、部分或檔案。 如果是資料庫或部分備份，記錄備份的順序必須從資料庫或部分備份的結尾延伸。 如果是檔案備份組，記錄備份的順序則必須從完整檔案備份組的起始來延伸。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-### 還原記錄備份  
+### <a name="restore-log-backups"></a>還原記錄備份  
  還原記錄備份會向前復原交易記錄中所記錄的變更，以重新建立開始進行記錄備份作業時的正確資料庫狀態。 還原資料庫時，您必須還原在所要的完整資料庫備份之後建立的記錄備份，或者必須從您所還原之第一個檔案備份的起始開始還原記錄備份。 一般而言，還原最近的資料或差異備份之後，您必須還原一連串的記錄備份，直到復原點為止。 然後再復原資料庫。 這樣會回復所有在復原啟動時未完成的交易，並使資料庫回到線上。 復原資料庫之後，您不能再還原其他備份。 如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-## 其他閱讀資料  
+## <a name="additional-reading"></a>其他閱讀資料  
  建議您閱覽下列文章和書籍，了解交易記錄的其他相關資訊。  
   
  [＜了解 SQL Server 中的記錄和復原＞，作者 Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-caps.latest.revision: 12
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8b6ed9545815fa17a80dccbd73bf91989b5d1d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bf67585a29ffe1e055efaf9132656c3d1da5dc4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113258"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server 回溯相容性
   回溯相容性一節中的主題說明中的變更[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本之間行為[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f19e49a14939da626c5ec647794aa795ef6e8f8c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1638c2d0696ebaac0b9bfebe7f6349080a8332ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816804"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168628"
 ---
 # <a name="create-a-new-solution"></a>建立新方案
   當您建立專案時，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會建立一個包含它的方案。 您一次只能開啟一個方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允許您在專案內建立資料夾。 若要組織您的工作，請建立多個專案。  

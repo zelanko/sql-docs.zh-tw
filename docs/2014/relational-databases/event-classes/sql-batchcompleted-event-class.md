@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:BatchCompleted event class
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a990cf4223e77e68fd62d7d8e98bca420520d4cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0091d695d1083efec18e39a52fd0f1714af6c417
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075150"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted 事件類別
   SQL:BatchCompleted 事件類別代表已完成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。  

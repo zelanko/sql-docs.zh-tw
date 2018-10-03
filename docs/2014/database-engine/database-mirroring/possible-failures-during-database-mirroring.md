@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time-out period [SQL Server database mirroring]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12be64f3df6173e47bb59a4bcbc52a03e9d82a5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70f9bc727ba86d10a48dbc9265c9c2d3655d9fe0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179068"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>資料庫鏡像期間可能發生的失敗
   實體、作業系統或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 問題都可能會在資料庫鏡像工作階段中導致失敗。 資料庫鏡像不會為了確認 Sqlservr.exe 所依賴的元件是正常運作或已失敗，而定期檢查這些元件。 不過，針對某些類型的錯誤，受影響的元件會對 Sqlservr.exe 報告錯誤。 由其他元件所報告的錯誤稱為「重大錯誤」(Hard Error)。 為了偵測其他沒有通知的失敗，資料庫鏡像會實作其本身的逾時機制。 當鏡像逾時發生時，資料庫鏡像會假設失敗已經發生，並宣告「軟性錯誤」。 但是，某些發生在 SQL Server 執行個體層級的失敗並不會造成鏡像逾時，而且可能無法偵測到。  

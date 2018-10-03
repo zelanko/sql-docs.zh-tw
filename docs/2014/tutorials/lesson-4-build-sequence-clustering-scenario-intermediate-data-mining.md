@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - sequence clustering algorithms [Analysis Services]
 - tutorials [Data Mining]
 ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e594e44dd3c8af8ade94c549d8b489f31623553
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e276d4a2b44c8d0fdc6be6787f58e359e4c15d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251200"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122568"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>第 4 課：建立時序群集案例 (中繼資料採礦教學課程)
   行銷部門[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]想要了解客戶如何透過[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]網站。 公司猜想客戶會依某種次序模式，將產品放入購物籃中。 公司希望分析購物次序，以了解客戶如何將相關的產品加入購物籃中。 之後，他們就能利用這項資訊來簡化網站的流程，以便引導客戶購買其他產品。  

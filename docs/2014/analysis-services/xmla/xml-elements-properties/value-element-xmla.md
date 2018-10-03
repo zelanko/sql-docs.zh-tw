@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 054da002271711d4b86a08e694b18e01e796b3ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205710"
 ---
 # <a name="value-element-xmla"></a>Value 元素 (XMLA)
   包含的所需的值[屬性](attribute-element-xmla.md)要加入的項目[插入](../xml-elements-commands/insert-element-xmla.md)命令，或有[儲存格](cell-element-xmla.md)更新的項目[UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)命令。  
@@ -53,7 +50,7 @@ ms.locfileid: "37263246"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|任意|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37263246"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[屬性](attribute-element-xmla.md)，[資料格](cell-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  若為 `Attribute` 元素，`Value` 元素會包含認可 `Insert` 命令之後此成員應該包含的所需值。 如需有關插入成員的詳細資訊，請參閱 <<c0> [ 插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。</c0>  

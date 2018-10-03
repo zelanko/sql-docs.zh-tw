@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Bindings Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bindings element
 ms.assetid: caa34cab-f61f-4f39-b800-af1601714daa
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ee02beeb04987680cf9cf516bc6f25e66287b7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55aab8ee9c7a2f45dfd04744457f063f5b784168
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173931"
 ---
 # <a name="bindings-element-xmla"></a>Bindings 元素 (XMLA)
   包含的集合[繫結](binding-element-xmla.md)父元素之[批次](../xml-elements-commands/batch-element-xmla.md)或是[程序](../xml-elements-commands/process-element-xmla.md)項目。  
@@ -54,8 +51,8 @@ ms.locfileid: "37302688"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

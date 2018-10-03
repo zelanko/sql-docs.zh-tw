@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - queries [MDX], DRILLTHROUGH statement
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93a9f80d25619aafe6a8a46f7baa7b7106b93351
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076213"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>使用 DRILLTHROUGH 擷取來源資料 (MDX)
   多維度運算式 (MDX) 使用 [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)陳述式從來源資料擷取 Cube 資料格的資料列集。  

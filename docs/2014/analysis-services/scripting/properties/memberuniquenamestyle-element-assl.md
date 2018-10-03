@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MemberUniqueNameStyle Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 204f29e7bfb90894fded974b78cfd136aa39eaeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133458"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 元素 (ASSL)
   決定如何唯一名稱內所包含的階層成員產生[CubeDimension](../data-type/dimension-data-type-assl.md)項目。  
@@ -57,7 +54,7 @@ ms.locfileid: "37226358"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CubeDimension](../data-type/dimension-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5ba2d0d5d3cb355a4d0d6a372b41207ddce1d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97d88ee83d92d22f72db13d20ce37bb6ea9da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097595"
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 元素
   指定包含測試的一組可重複鑑效組資料分割的種子[MiningStructure](../objects/miningstructure-element-assl.md)項目。 這個種子可確保模型內容在重新處理期間會保持不變。 如果未指定或設為 0，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]建立的採礦結構名稱使用雜湊演算法的種子。  
@@ -55,7 +52,7 @@ ms.locfileid: "37185225"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  當您首次建立採礦結構時，識別碼和名稱是相同的。 不過，您可以變更採礦結構的名稱。 因此，如果您想要確保資料分割可重複，就不應該仰賴依據名稱建立的種子，而應該明確設定種子。  

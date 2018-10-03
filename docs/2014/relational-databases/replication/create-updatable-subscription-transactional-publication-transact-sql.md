@@ -4,26 +4,21 @@ ms.custom: ''
 ms.date: 07/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - updatable transactional subscriptions, T-SQL
 ms.assetid: 670e1ea0-ffda-4d84-b4cd-f15a331035b9
-caps.latest.revision: 3
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b619da1f8beb0dd23d18625b6ffebb46f807bfdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca1fe049e243fc94d07707564dde501e646597d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082058"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-using-transact-sql"></a>使用 Transact-SQL 建立交易式發行集的可更新訂閱
 

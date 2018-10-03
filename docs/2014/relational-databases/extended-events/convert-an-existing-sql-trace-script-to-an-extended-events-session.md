@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d4908e180530afa5e82acf5599c1e3f718636c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1affac058c5df7ba5c8329cc6435be6a1f0681a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062518"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
   如果您有現有的 SQL 追蹤指令碼想要轉換成「擴充事件」工作階段，您可以使用本主題的程序建立同等的「擴充事件」工作階段。 您可以藉由使用 trace_xe_action_map 和 trace_xe_event_map 系統資料表中的資訊來收集執行轉換所必須擁有的資訊。  

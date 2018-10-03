@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], upgrading
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 65
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1ba06e961245cf1fe9ae5802abc26b575fe7683c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1caf710a55ee548f7939ec65ead6397ccd4092d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179318"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   報表定義 (.rdl) 檔案會藉由下列方式自動升級：  

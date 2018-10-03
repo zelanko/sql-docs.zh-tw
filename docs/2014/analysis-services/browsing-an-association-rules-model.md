@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining models, viewing
 - association [data mining]
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a108693491fba5c706f48a2eaf12b57ee0f3f69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210438"
 ---
 # <a name="browsing-an-association-rules-model"></a>瀏覽關聯規則模型
   當您開啟關聯模型使用**瀏覽**，會顯示此模型中的互動式檢視器，類似於在關聯規則檢視器[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  此檢視器可讓您快速查看相互關聯的項目，並顯示可用於預測或提出建議的規則。  

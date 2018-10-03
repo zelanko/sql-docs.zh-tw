@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - quorum [SQL Server], database mirroring
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - full quorum [SQL Server]
 - high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2088dee445275316eb439508e80230316508d6bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067548"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：見證如何影響資料庫可用性 (資料庫鏡像)
   每當設定資料庫鏡像工作階段的見證時，就需要「仲裁」。 仲裁是資料庫鏡像工作階段中的多個伺服器執行個體彼此連接時所存在的關係。 一般而言，仲裁涉及三個互連的伺服器執行個體。 設定見證之後，需要有仲裁才能使用資料庫。 仲裁是專為具有自動容錯移轉的高安全性模式而設計，可確保資料庫一次僅能由一個夥伴擁有。  

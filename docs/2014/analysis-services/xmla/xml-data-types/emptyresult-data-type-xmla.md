@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EmptyResult Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc22612f18faa91e6cd668c022f036aadb9ef176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088540"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 資料類型 (XMLA)
   定義衍生的資料類型，表示[根](../xml-elements-properties/root-element-xmla.md)不傳回資料來源的項目[Discover](../xml-elements-methods-discover.md)或是[Execute](../xml-elements-methods-execute.md)方法呼叫。  
@@ -53,14 +50,14 @@ ms.locfileid: "37257154"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[結果集](resultset-data-type-xmla.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
-|子元素|無|  
+|父元素|None|  
+|子元素|None|  
 |衍生的元素|[根目錄](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  

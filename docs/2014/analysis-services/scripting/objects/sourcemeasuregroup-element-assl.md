@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SourceMeasureGroup Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - SourceMeasureGroup element
 ms.assetid: aaa7cc0b-162a-4c31-ab03-a90f81eeca00
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6d6d1dfef880153223d4be13ccb89d4ce3b1cf1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98cf2ab2b8f97c976f0be4f9a008eb162116b124
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099318"
 ---
 # <a name="sourcemeasuregroup-element-assl"></a>SourceMeasureGroup 元素 (ASSL)
   識別當做採礦結構資料行之資料來源的量值群組。  
@@ -51,7 +48,7 @@ ms.locfileid: "37156829"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|[MeasureGroupBinding](../data-type/binding-data-type-assl.md)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37156829"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)型別的[TableMiningStructureColumn](../data-type/tableminingstructurecolumn-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層`Binding`類型，請參閱[繫結資料類型 &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  

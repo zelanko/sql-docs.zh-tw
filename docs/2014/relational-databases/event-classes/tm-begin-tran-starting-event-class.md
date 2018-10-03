@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Begin Tran Starting event class'
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc784ead7ae39b170f1747566c9661788d9edc99
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 516357e45a17c172064fa6a89bb51a60e891f0f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152440"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 事件類別
   TM：Begin Tran Starting 事件類別指出正在開始 BEGIN TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164498"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 是專為以程式設計方式管理的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
@@ -51,7 +48,7 @@ ms.locfileid: "37315658"
   
 -   HTTP 端點，可用於管理 SOAP 要求。 如需詳細資訊，請參閱 <<c0> [ 實作端點](tasks/implementing-endpoints.md)。  
   
--   快照隔離和資料列層級版本控制，可用於提升並行數。 如需詳細資訊，請參閱 <<c0> [ 使用快照隔離](../native-client/features/working-with-snapshot-isolation.md)。  
+-   快照隔離和資料列層級版本控制，可用於提升並行數。 如需詳細資訊，請參閱[使用快照隔離](../native-client/features/working-with-snapshot-isolation.md)。  
   
 -   XML 結構描述集合、XML 索引和 XML 資料類型會提供 XML 資料的驗證和儲存功能。 如需詳細資訊，請參閱 < [XML 結構描述集合&#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md)並[使用的 XML 結構描述](tasks/using-xml-schemas.md)。  
   

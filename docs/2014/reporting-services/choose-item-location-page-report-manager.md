@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260514"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121499"
 ---
 # <a name="choose-item-location-page-report-manager"></a>選擇項目位置頁面 (報表管理員)
   您可以使用 [選擇項目位置] 頁面，針對新的連結報表或新的模型選取資料夾。 如果您要建立特定使用者群組的連結報表或模型，可能會想要將該項目放入含有它們使用之其他報表和模型的資料夾中。 您必須選擇已經存在且有權新增內容的資料夾。  

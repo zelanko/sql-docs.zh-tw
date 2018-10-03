@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimensionBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimensionBinding data type
 ms.assetid: 7288e345-4a3e-4197-82e9-9daa38f6e928
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e511f26166e7f8457b2423df2bd3030e695edde1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8fc7a97ebe67e9461a085e6bafe076216f36d63e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153220"
 ---
 # <a name="cubedimensionbinding-data-type-assl"></a>CubeDimensionBinding 資料類型 (ASSL)
   定義衍生的資料類型表示的繫結[維度](../objects/dimension-element-assl.md)，[量值](../objects/measure-element-assl.md)，或[MiningModel](../objects/miningmodel-element-assl.md)的 cube 維度的項目。  
@@ -53,13 +50,13 @@ ms.locfileid: "37157339"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[繫結](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[CubeDimensionID](../properties/id-element-assl.md)， [CubeID](../properties/cubeid-element-assl.md)， [DataSourceID](../properties/datasourceid-element-assl.md)，[篩選](../properties/filter-element-trace-assl.md)|  
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077878"
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
   您可以使用[Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令會以資料列集傳回追蹤的結果。  

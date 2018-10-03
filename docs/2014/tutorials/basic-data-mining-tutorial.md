@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150298"
 ---
 # <a name="basic-data-mining-tutorial"></a>資料採礦基本教學課程
   歡迎來到[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]基本資料採礦教學課程。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一個整合式的環境來建立資料採礦模型及進行預測。 在本教學課程中，您將完成您的使用機器學習服務來分析和預測客戶購買行為的目標郵寄促銷活動的案例。 本教學課程示範如何使用三種最重要的資料採礦演算法：群集、決策樹和貝氏機率分類。 您也將學習如何使用採礦模型檢視器分析您找到並建立預測和精確度圖表使用資料採礦工具隨附於[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 所有範例都以虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 為例。  

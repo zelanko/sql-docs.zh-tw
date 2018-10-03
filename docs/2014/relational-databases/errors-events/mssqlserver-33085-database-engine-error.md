@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 33085 (Database Engine error)
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa7b45227050af057a5e5005a6664c973855b040
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6f3692ab986f3648bd1ab5b411207fe4948ca216
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169278"
 ---
 # <a name="mssqlserver33085"></a>MSSQLSERVER_33085
     

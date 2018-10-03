@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6ef87f8fdc1dd490bffc6ef694376fae1c47fe
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167185"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
   作業步驟是指作業對資料庫或伺服器所採取的動作， 每一個作業必須至少有一個作業步驟。 作業步驟可以是：  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195618"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>記憶體最佳化的資料表中的交易
   以磁碟為基礎之資料表的資料列版本設定 (使用 SNAPSHOT 隔離或 READ_COMMITTED_SNAPSHOT) 會提供某種形式的開放式並行存取控制。 讀取器和寫入器不會封鎖彼此。 在記憶體最佳化的資料表中，寫入器不會封鎖寫入器。 如果在磁碟資料表上使用資料列版本設定，一筆交易會鎖定資料列，而嘗試更新此資料列的並行交易會遭封鎖。 在記憶體最佳化資料表中，不會有任何鎖定。 而是當有兩筆交易嘗試更新相同資料列時，將會發生寫入/寫入衝突 (錯誤 41302)。  

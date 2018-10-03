@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7916 (Database Engine error)
 ms.assetid: 9bac3536-de14-4e98-84c2-bde9a59ba0d1
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa235c72a0b0333a64b35f481c516de14a5b0eef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0eda0980b3b8ffbc748f15933ea397ae3d0b71e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134704"
 ---
 # <a name="mssqlserver7916"></a>MSSQLSERVER_7916
     
@@ -39,6 +36,6 @@ ms.locfileid: "37410497"
  這是來自 REPAIR 的參考用訊息，指出已經從頁面中刪除指定的記錄。  
   
 ## <a name="user-action"></a>使用者動作  
- 無  
+ None  
   
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 864e8563eec427204f8256372a6a0d947bee9fb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068560"
 ---
 # <a name="choosing-a-network-protocol"></a>選擇網路通訊協定
   若要連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必須啟用網路通訊協定。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以同時處理多個通訊協定的要求。 用戶端會使用單一通訊協定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果用戶端程式不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在接聽哪個通訊協定，請設定用戶端循序嘗試多個通訊協定。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來啟用、停用及設定網路通訊協定。  

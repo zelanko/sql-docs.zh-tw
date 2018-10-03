@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], adding
 - metadata [Master Data Services], adding
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d91d5738ed098617c09acfe4764e314cd4c17ec4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e1e0622a9e561aae6d2ad09cc488553b8caffd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116809"
 ---
 # <a name="add-metadata-master-data-services"></a>加入中繼資料 (Master Data Services)
   在  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，新增至使用者定義的中繼資料**中繼資料**模型，以描述模型物件。  

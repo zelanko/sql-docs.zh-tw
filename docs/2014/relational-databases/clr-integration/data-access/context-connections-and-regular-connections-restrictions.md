@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aaff8841ec9ccd7b61b5ab7646daaf700a05b3df
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349450"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163318"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>一般和內容連接的限制
   本主題討論中執行的程式碼的相關限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  

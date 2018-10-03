@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application roles [SQL Server], about application roles
@@ -22,12 +20,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b82ecbd1fffd99e5830948f0bf2bb799d6f1a851
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 56f075ff4a26af4913d792c20a8d7c1d6a58fcb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224128"
 ---
 # <a name="application-roles"></a>應用程式角色
   應用程式角色是資料庫主體，可以讓應用程式以其自有、類似使用者的權限來執行。 利用應用程式角色，您可以只允許透過特定應用程式來連接的使用者存取特定的資料。 不像資料庫角色，應用程式角色不包含任何成員，且依預設是非使用中狀態。 應用程式角色可與這兩種驗證模式搭配運作。 應用程式角色是使用 **sp_setapprole**(需要有密碼) 予以啟用。 因為應用程式角色是資料庫層級主體，所以它們只可以透過那些資料庫中授與 **guest**的權限來存取其他資料庫。 因此，其他資料庫中的應用程式角色將無法存取任何已停用 **guest** 的資料庫。  

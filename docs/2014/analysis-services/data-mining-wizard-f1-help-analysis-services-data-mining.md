@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087758"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>資料採礦精靈 F1 說明 (Analysis Services - 資料採礦)
   使用 **[資料採礦精靈]** ，即可建立新的採礦結構和選擇性的相關採礦模型。  

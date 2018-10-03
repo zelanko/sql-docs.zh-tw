@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -33,16 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093628"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>動作屬性對話方塊 (報表產生器及 SSRS)
   **[動作]** 對話方塊可用於啟用支援連結之圖表、量測計與地圖元素的超連結選項。 定義動作，讓使用者可以按一下報表與 URL 的連結，便連結至相同報表伺服器或與報表伺服器整合之 SharePoint 網站上的不同報表，或連結至相同報表中的不同位置。  
@@ -84,7 +81,7 @@ ms.locfileid: "37323758"
  **名稱**  
  輸入鑽研報表中定義之參數名稱的文字。  
   
- **ReplTest1**  
+ **值**  
  在鑽研報表中，為具名參數輸入或選取要傳遞的值。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
   
  **略過**  

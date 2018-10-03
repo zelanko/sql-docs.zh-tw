@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing Key Performance Indicators
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d9d138805673defca5c1910b32ebeb9c998f7e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134008"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
   在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  

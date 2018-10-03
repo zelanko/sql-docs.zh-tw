@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3f4c1efc392020f943759d7698c837316f4fdf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214988"
 ---
 # <a name="access-to-files-used-by-packages"></a>對封裝使用之檔案的存取權
   封裝保護等級不會保護儲存於封裝之外的檔案。 這些檔案包括下列各項：  
@@ -42,8 +39,7 @@ ms.locfileid: "37178415"
  您必須分開保護這些檔案，尤其是當檔案中包含機密資訊時。  
   
 ## <a name="configuration-files"></a>組態檔  
- 如果組態中含有機密資訊，例如登入和密碼資訊，則應考慮將組態儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，或使用存取控制清單 (ACL) 來限制對儲存檔案之位置或資料夾的存取權，且只允許特定帳戶擁有其存取權。 通常，您可以將存取權授與您允許執行封裝的帳戶，以及負責管理和疑難排解封裝的帳戶，其工作可能包括檢閱組態、檢查點和記錄檔的內容。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供更安全的儲存體，因為它可以提供伺服器和資料庫層級的保護。 若要將組態儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態類型。 若要儲存至檔案系統，則可以使用 XML 組態類型。  
+ 如果組態中含有機密資訊，例如登入和密碼資訊，則應考慮將組態儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，或使用存取控制清單 (ACL) 來限制對儲存檔案之位置或資料夾的存取權，且只允許特定帳戶擁有其存取權。 通常，您可以將存取權授與您允許執行封裝的帳戶，以及負責管理和疑難排解封裝的帳戶，其工作可能包括檢閱組態、檢查點和記錄檔的內容。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供更安全的儲存體，因為它可以提供伺服器和資料庫層級的保護。 若要將組態儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態類型。 若要儲存至檔案系統，則可以使用 XML 組態類型。  
   
  如需詳細資訊，請參閱 [封裝組態](../../2014/integration-services/package-configurations.md)、 [建立封裝組態](../../2014/integration-services/create-package-configurations.md)和 [SQL Server 安裝的安全性考量](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   

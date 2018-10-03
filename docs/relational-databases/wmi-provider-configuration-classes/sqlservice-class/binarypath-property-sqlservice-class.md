@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - BinaryPath Property (SqlService Class )
@@ -18,16 +15,15 @@ apilocation:
 helpviewer_keywords:
 - BinaryPath property
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2246782e1284a678d665ad73172ecfc243c871b7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5fc252f2210af673611f7edcfed9ae8d30caeca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845696"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining models, charting
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 618388325ecc552bf38f20603ff9d3c4c432bd1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191238"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>收益圖 (SQL Server 資料採礦增益集)
   ![資料採礦功能區中的收益圖按鈕](media/dmc-profitchart.gif "資料採礦功能區中的 [收益圖] 按鈕")  

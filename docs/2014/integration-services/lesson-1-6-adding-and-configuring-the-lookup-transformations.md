@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 405f70f2063ea9930c31b1c8a8cf60085c31889f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206778"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>步驟 6：加入及設定查閱轉換
   在設定一般檔案來源從來源檔擷取資料之後，下一項工作是要定義所需要的查閱轉換來取得 **CurrencyKey** 和 **DateKey**的值。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在此教學課程中，查閱轉換使用 OLE DB 連接管理員來連接到資料庫，該資料庫包含的資料就是參考資料集的來源。  

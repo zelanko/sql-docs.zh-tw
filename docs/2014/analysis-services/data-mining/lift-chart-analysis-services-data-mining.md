@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119398"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
   A**增益圖**以圖形表示與隨機猜測，採礦模型提供相較之下的改進，並測量的變更*提起*分數。 藉由比較資料集各部分與不同模型的增益分數，您可以決定最佳的模型，以及資料集中可從套用模型預測受益的案例百分比。  

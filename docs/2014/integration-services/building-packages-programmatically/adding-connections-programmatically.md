@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 030ba6850c05f6fd81d106833205566576474faa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39a8eaf1f487d70e7e7042129410fcf2b6fb4a67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167059"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105728"
 ---
 # <a name="adding-connections-programmatically"></a>以程式設計方式加入連接
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 類別代表外部資料來源的實體連接。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 類別會將連接的實作詳細資料與執行階段隔離。 這可讓執行階段使用一致且可預測的方式與每個連接管理員互動。 連接管理員包含一組所有連接共有的內建屬性，例如 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 以及 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>。 不過，<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 屬性通常是唯一需要設定連接管理員的屬性。 與其他程式設計範例不同的是，連接類別會公開像是 `Open` 或 `Connect` 等方法，以實體建立連至資料來源的連接，執行階段引擎則會在執行時管理封裝的所有連接。  

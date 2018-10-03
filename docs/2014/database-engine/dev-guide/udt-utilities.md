@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210178"
 ---
 # <a name="udt-utilities"></a>UDT 公用程式
   這個「UDT 公用程式」範例包含數個公用程式函數。 這些函數包括：將組件中繼資料公開至 Transact-SQL 的函數、將組件中的類型以資料表格式傳回的範例資料流資料表值函式，以及傳回使用者定義資料類型中之欄位、方法和屬性的函數。 示範的技術包括資料流資料表值函式、.NET Framework 反映 API，以及 Transact-SQL 之資料表值函式的引動過程。  

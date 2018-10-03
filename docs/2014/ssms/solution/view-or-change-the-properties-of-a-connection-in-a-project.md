@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing connection properties
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - connections [SQL Server Management Studio], viewing
 - modifying connection properties
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4807f42f24e0a07bb0d7df8f0d35972ccd354fce
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 09f9020480327f02362e842e3b7158736f8495f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158458"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>檢視或變更專案中連接的屬性
   您可以檢視專案中所儲存之連接的屬性，也可以修改其中的部份屬性。  

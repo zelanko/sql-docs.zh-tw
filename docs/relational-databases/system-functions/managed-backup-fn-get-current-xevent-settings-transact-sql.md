@@ -1,14 +1,11 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.fn_get_current_xevent_settings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_current_xevent_settings
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - smart_admin.fn_get_current_xevent_settings
 - fn_get_current_xevent_settings
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26fc0678d8597cc8a56211e829bdc598c734f168
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1fa350d9ff9d5e90eb595f1f693b8e62a46fa555
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741056"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ smart_admin.fn_get_current_xevent_settings ()
 |is_configurable|NVARCHAR(128)|此值設為**真**是否可設定事件，否則會設定為**False**。|  
 |is_enabled|NVARCHAR(128)|如果已啟用事件，則設定為 True；如果未啟用，則設定為 False。 使用 smart_admin.sp_set_parameter 可啟用偵錯事件。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>Permissions  
  需要**選取**函式的權限。  

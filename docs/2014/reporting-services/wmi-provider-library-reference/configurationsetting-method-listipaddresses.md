@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 048d654b94d537aa5e6209d0012105ddaef127cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b8dc70cf1502363585abd7f1be5de7c72c6256a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062638"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses 方法 (WMI MSReportServer_ConfigurationSetting)
   列出報表伺服器電腦的 IP 位址。  

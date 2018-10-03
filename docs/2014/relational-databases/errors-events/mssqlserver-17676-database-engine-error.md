@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 17676 (Database Engine error)
 ms.assetid: a4e2c568-f794-486e-ac38-380e30ab0c3d
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0916e7b2e1e20b1375ec7d84a716ac232a983df
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6d9a33bbbb12a56234fcaa07e80663db6e688fcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096288"
 ---
 # <a name="mssqlserver17676"></a>MSSQLSERVER_17676
     

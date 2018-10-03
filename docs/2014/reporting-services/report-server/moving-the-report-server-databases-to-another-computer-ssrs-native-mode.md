@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1d1883651cc37b93383792b94f94695e0775436a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b353e2034a7a21d963bed48e7ee7e670f677f70c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078578"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
   您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  

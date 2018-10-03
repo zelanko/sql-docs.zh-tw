@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -16,28 +15,26 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-caps.latest.revision: 1952
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164329"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085528"
 ---
-# 詞彙
+# <a name="glossary"></a>詞彙
   
   
-## 詞彙  
+## <a name="terms"></a>詞彙  
   
 |詞彙|定義|  
 |----------|----------------|  
@@ -1536,7 +1533,7 @@ ms.locfileid: "37164329"
 |SQL Server 執行個體自動保護|保護類型，可讓 DPM 自動識別和保護加入至設定進行自動保護之 SQL Server 執行個體的資料庫。|  
 |SQL Server 登入|儲存在 SQL Server 中，允許使用者連接至 SQL Server 的帳戶。|  
 |SQL Server 管理物件|一種應用程式開發介面，支援將 SQL Server 管理納入到任何 COM 或 OLE Automation 應用程式中。|  
-|Transact-SQL|Microsoft SQL Server 隨附的一套管理工具，用於設定與管理 Microsoft SQL Server 中的所有元件。|  
+|SQL Server Management Studio|Microsoft SQL Server 隨附的一套管理工具，用於設定與管理 Microsoft SQL Server 中的所有元件。|  
 |SQL Server Master Data Services|主資料管理應用程式，會以一致的方式定義和管理組織的重要資料實體。|  
 |SQL Server PowerPivot for Excel|適用 Excel 的 SQL Server 增益集。|  
 |SQL Server Profiler|圖形化使用者介面，用於監視 SQL Server 資料庫引擎的執行個體或 Analysis Services 的執行個體。|  

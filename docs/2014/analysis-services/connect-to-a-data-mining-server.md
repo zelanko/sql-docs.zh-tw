@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections
 - getting started
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a9da9f806f69cee612c4bb99e4a3b89e190c1730
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196988"
 ---
 # <a name="connect-to-a-data-mining-server"></a>連接到資料採礦伺服器
   ![連接按鈕](media/misc-connection.gif "連接按鈕")  

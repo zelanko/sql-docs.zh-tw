@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Operation event class
 ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5450a5891e7847c117118e12df2e8e823197040f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b7acc4032fdc7ec834f9756258bfc5b349f0db3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087748"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation 事件類別
   當資料庫內發生作業時，如檢查點或訂閱查詢通知，就會發生 **Audit Database Operation** 事件類別。  

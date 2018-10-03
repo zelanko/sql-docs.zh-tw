@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.resultset.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-caps.latest.revision: 33
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57a355411ce49b472708890c51e50eec59996dd6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b342b166a879af2db677f70753b9e53cd0f2bc8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269430"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162228"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>執行 SQL 工作編輯器 (結果集頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [結果集] 頁面，即可將 SQL 陳述式的結果對應至新的或現有的變數。 如果 [一般] 頁面上的 [結果集] 已設定為 [無]，就會停用此對話方塊中的選項。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Update Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Update command [XMLA]
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 75dda4a163ce6551246e11aa9eba6b57fcd9fb25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b9663fa3d44b91f53ac20a5a1b1dba117f7a2574
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200128"
 ---
 # <a name="update-element-xmla"></a>Update 元素 (XMLA)
   更新維度中的屬性成員。  
@@ -55,8 +52,8 @@ ms.locfileid: "37283954"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

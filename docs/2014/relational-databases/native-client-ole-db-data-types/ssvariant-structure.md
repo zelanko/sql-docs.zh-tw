@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0af799acbf0c498797564f2c057532a4964db0ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101318"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
   定義於 sqlncli.h 中的 `SSVARIANT` 結構會對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB 提供者中的 DBTYPE_SQLVARIANT 值。  
   
- `SSVARIANT` 是辨識聯集。 根據 vt 成員的值，取用者可以判斷要讀取的成員。 vt 值會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。 因此，`SSVARIANT` 結構可以保留任何 SQL Server 類型。 如需有關標準 OLE DB 類型的資料結構的詳細資訊，請參閱 <<c0> [ 的類型指標](http://go.microsoft.com/fwlink/?LinkId=122171)。  
+ `SSVARIANT` 是辨識聯集。 根據 vt 成員的值而定，取用者可以判斷要讀取的成員。 vt 值會對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 因此，`SSVARIANT` 結構可以保留任何 SQL Server 類型。 如需有關標準 OLE DB 類型的資料結構的詳細資訊，請參閱 <<c0> [ 的類型指標](http://go.microsoft.com/fwlink/?LinkId=122171)。  
   
 ## <a name="remarks"></a>備註  
  當 DataTypeCompat==80 時，數個 `SSVARIANT` 子類型會變成字串。 例如，下列 vt 值在 `SSVARIANT` 中會顯示為 VT_SS_WVARSTRING：  

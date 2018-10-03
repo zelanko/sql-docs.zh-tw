@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataBlock Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 706b934c51d280ec588bedf3752d61a4cc46697d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211958"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082588"
 ---
 # <a name="datablock-data-type-assl"></a>DataBlock 資料類型 (ASSL)
   定義代表用來儲存的二進位內容的資料區塊集合的基本資料類型[ClrAssemblyFile](clrassemblyfile-data-type-assl.md)項目。  
@@ -48,14 +45,14 @@ ms.locfileid: "37211958"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[區塊](../collections/blocks-element-assl.md)|  
 |衍生的元素|[資料](../objects/data-element-assl.md)項目[ClrAssemblyFile](clrassemblyfile-data-type-assl.md)型別 ([檔案](../collections/files-element-assl.md)的集合[ClrAssembly](assembly-data-type-assl.md)類型)|  
   

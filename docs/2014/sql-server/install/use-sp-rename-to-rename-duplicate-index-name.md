@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sp_rename
 - duplicate index names
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 522fcd712882d031a5febe4766946a31d5696859
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 641dbb6e33f7b39a7542fdd43a940c487a4b21d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093038"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>使用 sp_rename 重新命名重複的索引名稱
   Upgrade Advisor 偵測到重複的資料表或檢視表索引名稱。 升級之前，請先重新命名索引以移除重複項目。  

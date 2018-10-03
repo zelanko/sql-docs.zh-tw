@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableNotification Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - TableNotification element
 ms.assetid: 3afd075a-74f9-428c-b527-ee497cbe71e7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e952acc38173462440ec94c050fb27e7a96cce89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8fea5896667afa1952e088faa97b9a0797f9864
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184268"
 ---
 # <a name="tablenotification-element-assl"></a>TableNotification 元素 (ASSL)
   包含的資訊[ProactiveCaching](proactivecaching-element-assl.md)有關之資料表或檢視已經過修改的資料來源中的項目。  
@@ -49,8 +46,8 @@ ms.locfileid: "37321128"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-n：出現一次以上的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220658"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
   RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器之單一 Web 伺服陣列的環境中，讓您偵測及限制個別租用戶使用特定資源類型的情形。 這種情形的一個範例是裝載服務案例，在此案例中，您可能要為由多個可能分屬不同公司的租用戶所使用的報表伺服器，維護單一 Web 伺服器陣列。 您身為報表伺服器管理員，可以啟用此功能來幫助您達成下列目標：  
@@ -73,7 +70,7 @@ ms.locfileid: "37311348"
 |**Allow**|RDL 運算式中允許的類型或類型集合。|  
 |**Namespace**|**Allow** 的屬性，這是包含一或多個套用至 Value 之類型的命名空間。 這個屬性不區分大小寫。|  
 |`AllowNew`|**Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 注意： 當`RDLSandboxing`啟用時，無法建立新的陣列，在 RDL 運算式中，不論設定為何`AllowNew`。|  
-|**ReplTest1**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 **\*** 值表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
+|**值**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 **\*** 值表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
 |**成員**|如果是 **\<Types>** 項目中所包含的類型清單，則為 RDL 運算式中不允許的成員名稱清單。|  
 |**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意： 當**拒絕**指定成員，不允許具有這個名稱的所有類型的所有成員。|  
   

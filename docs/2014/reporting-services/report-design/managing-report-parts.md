@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123249"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   開頭[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，報表組件可以發行至報表伺服器，並重複使用在其他報表和其他使用者有適當的權限。  
@@ -35,7 +32,7 @@ ms.locfileid: "37286694"
  當報表組件從報表撰寫應用程式 (如報表產生器) 發行至 SharePoint 整合模式的報表伺服器時，報表伺服器目錄也會更新，而且會從組件庫搜尋以準確反映新的或更新的報表組件。  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>直接將報表組件上傳到 SharePoint 資料夾  
- 如果報表組件是直接上傳到 SharePoint 文件資料夾 (而非從報表撰寫應用程式發行)，則報表伺服器目錄不會更新。 從報表組件庫搜尋就找不到上傳的報表組件。 若要讓 SharePoint 資料夾與報表伺服器目錄保持同步，您可以在 SharePoint 伺服器上啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案同步處理功能。 如需詳細資訊，請參閱 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
+ 如果報表組件是直接上傳到 SharePoint 文件資料夾 (而非從報表撰寫應用程式發行)，則報表伺服器目錄不會更新。 從報表組件庫搜尋就找不到上傳的報表組件。 若要讓 SharePoint 資料夾與報表伺服器目錄保持同步，您可以在 SharePoint 伺服器上啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案同步處理功能。 如需詳細資訊，請參閱 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../activate-report-server-file-sync-feature-sharepoint-central-administration.md)。  
   
  檔案也可以透過呼叫一些報表服務管理 API (如 GetProperties 和 SetProperties 等) 進行同步處理。  
   

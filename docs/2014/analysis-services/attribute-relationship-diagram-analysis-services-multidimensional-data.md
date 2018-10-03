@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1255cbcaffe114a47b4c7d251c37e5b3d50d6b2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174658"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性關聯性圖表 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
   在 **[屬性關聯性]** 索引標籤上，使用緊鄰在工具列底下的窗格，即可檢視屬性關聯性圖表，以及建立、修改或刪除屬性關聯性。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], creating datasets
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f322526680b3a91f2fcb7e93e3159f79b79793a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34547b62ecac2a41f9d59d96d8f5c9d99f79b21e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081058"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供圖形化查詢設計工具建置多維度運算式 (MDX) 查詢和資料採礦運算式 (DMX) 查詢[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料來源。 此主題即描述 MDX 查詢設計工具。 如需有關 DMX 查詢設計工具的詳細資訊，請參閱 < [DMX 的 Analysis Services 連接類型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)。  
@@ -50,7 +47,7 @@ ms.locfileid: "37323848"
 |[中繼資料] 窗格|顯示在選取的 Cube 上定義之量值、關鍵效能指標 (KPI) 和維度的階層式清單。|  
 |[導出成員] 窗格|顯示目前已定義，可在查詢中使用的導出成員。|  
 |[篩選] 窗格|用來選擇維度和相關階層，以便篩選來源端的資料和限制傳回給報表的資料。|  
-|[資料] 窗格|在您從 [中繼資料] 窗格和 [導出成員] 窗格中拖曳項目時，顯示結果集的資料行標題。 如果已選取 **[自動執行]** 按鈕，便會自動更新結果集。 執行個體時提供 SQL Server 登入。|  
+|[資料] 窗格|在您從 [中繼資料] 窗格和 [導出成員] 窗格中拖曳項目時，顯示結果集的資料行標題。 如果已選取 **[自動執行]** 按鈕，便會自動更新結果集。 .|  
   
  您可以將 [中繼資料] 窗格中的維度、量值和 KPI 以及 [導出成員] 窗格中的導出成員，拖曳至 [資料] 窗格中。 在 [篩選] 窗格中，則可以選取維度和相關階層，以及設定篩選運算式來限制查詢可使用的資料。 如果已選取工具列上的 [自動執行] (![自動執行查詢](../../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")) 切換按鈕，則每次您將中繼資料物件放到 [資料] 窗格中時，查詢設計工具便會執行查詢。 您可以使用工具列上的 [執行] (![執行查詢](../../analysis-services/media/rsqdicon-run.gif "執行查詢")) 按鈕，以手動方式執行查詢。  
   

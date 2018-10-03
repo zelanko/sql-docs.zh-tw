@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8884b6af873bb2b3fcc4c54ba4f6abce90035e72
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136068"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
   查詢最佳化工具會使用有關資料行的統計資料來建立可改善查詢效能的查詢計劃。 統計資料是從資料庫中的資料表收集，並且儲存在資料庫中繼資料內。  
@@ -61,7 +58,7 @@ ms.locfileid: "40392041"
   
  如果資料經常變更，則應經常更新統計資料。 例如，在批次更新後更新資料表統計資料。 在您更新統計資料後，卸除並重新建立原生編譯預存程序，讓程序能夠利用更新的統計資料。  
   
- 執行個體時提供 SQL Server 登入。  
+ .  
   
  不要在尖峰工作負載期間更新統計資料。  
   

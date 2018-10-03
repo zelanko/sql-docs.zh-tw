@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c362d75076a5d52a9696717cc866a4e7d195c5da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df06bcf5a5f1d43dff50009166279e6b2658790e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145428"
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>建立、修改及刪除發行集和發行項 (複寫)
   文件集的這一章節包含建立發行集和定義發行項之相關工作的程序資訊。  

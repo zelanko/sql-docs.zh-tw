@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - secondary servers [SQL Server]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fdc9d9c52af95f9b76c882befc9dfc3a1a218259
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169314"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087678"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
   此主題描述與記錄傳送設定關聯的所有資料表與預存程序。 所有記錄傳送資料表都儲存在每部伺服器上的 **msdb** 中。 下表描述在記錄傳送設定中，會在哪部伺服器上使用哪些資料表與預存程序。  
   
 ## <a name="primary-server-tables"></a>主要伺服器資料表  
   
-|Table|描述|  
+|資料表|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。 若未設定遠端監視伺服器，則此資料表只會用於主要伺服器。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存與此主要伺服器關聯之記錄傳送作業的錯誤詳細資料。|  
@@ -56,7 +53,7 @@ ms.locfileid: "37169314"
   
 ## <a name="secondary-server-tables"></a>次要伺服器資料表  
   
-|Table|描述|  
+|資料表|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。 若未設定遠端監視伺服器，則此資料表只會用於次要伺服器。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存與此次要伺服器關聯之記錄傳送作業的錯誤詳細資料。|  
@@ -85,7 +82,7 @@ ms.locfileid: "37169314"
   
 ## <a name="monitor-server-tables"></a>監視伺服器資料表  
   
-|Table|描述|  
+|資料表|描述|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|儲存警示作業識別碼。|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|儲存記錄傳送作業的錯誤詳細資料。|  

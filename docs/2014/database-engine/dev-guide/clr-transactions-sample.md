@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149858"
 ---
 # <a name="clr-transactions-sample"></a>CLR 交易範例
   此範例會示範如何使用位於 `System.Transactions` 命名空間內的 Managed API 來控制交易。 特別的是，`System.Transactions.TransactionScope` 類別是用來建立交易界限，以確保除非有足夠庫存可應付要求，否則不調整庫存數字，而且如果有足夠庫存，則庫存是以不可部分完成的方式從某個位置轉移到另一個位置。 示範在分散式交易中自動註冊，其方式是將庫存的變更記錄到儲存在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的稽核資料庫。  

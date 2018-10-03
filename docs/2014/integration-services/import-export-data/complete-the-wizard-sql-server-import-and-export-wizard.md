@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86564caa1ab6228c269e07ed84eb7c935f0d9621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d809d72d0dcea7e6f1dcfd5d65bab416766413c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125878"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
   使用**完成精靈**頁面，即可確認您已在精靈中，複製資料之前的選擇。  

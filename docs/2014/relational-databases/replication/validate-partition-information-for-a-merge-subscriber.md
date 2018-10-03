@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication data validation [SQL Server replication], partitions
 - parameterized filters [SQL Server replication], validating partition information
 - validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5167ea48bf73e7be2946e4739b99a1d92edb9270
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0c16fee2f80978cb4bb8dca96d96bb50e72ce48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195148"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>驗證合併訂閱者的資料分割資訊
   在為合併式發行集定義參數化資料列篩選器時，可以使用參考「訂閱者」資訊的功能，例如「訂閱者」的登入名稱。 依預設，複寫將在每次同步處理和在「訂閱者」端套用快照集之前，根據該功能驗證「訂閱者」資訊。 驗證處理可確保為每個「訂閱者」正確分割資料。 驗證行為由 **validate_subscriber_info** 發行集屬性控制，該發行集屬性可使用 [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 或在 [發行集屬性] 對話方塊的 [訂閱選項] 頁面中變更。 如需有關變更發行集屬性的詳細資訊，請參閱＜ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)＞。  

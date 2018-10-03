@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2922d77122bdf87616e8869e6e03b29eb9a4cbf0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 2ee9f530580d9c3aaff2d10a260be20a1970e8a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395450"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127988"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
   此範例說明使用記憶體中 OLTP 時的效能改進，方法是比較對記憶體最佳化和傳統以磁碟為基礎的資料表執行相同的 Transact-SQL 查詢時，兩者的回應時間有何差異。 此外也會建立原生編譯的預存程序 (根據相同的查詢)，然後執行以示範您通常在使用原生編譯的預存程序來查詢記憶體最佳化資料表時，可獲得最佳的回應時間。 此範例僅顯示在記憶體最佳化資料表中存取資料時的其中一個效能改進層面；即執行插入時的資料存取效率。 此範例為單一執行緒且未利用記憶體中 OLTP 的並行優點。 工作負載若是使用並行作業，將會有更高幅度的效能提升。  

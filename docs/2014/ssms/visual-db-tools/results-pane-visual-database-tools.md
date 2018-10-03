@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bab11af27318818367a0622eda866d8ed5bed19
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4fd1a4c2e8cb5eeb644b2ead8ec1c493251b3f39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152678"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
   [結果] 窗格顯示的是最近執行 SELECT 查詢的結果 (其他查詢類型的結果則顯示在訊息方塊中)。若要開啟結果窗格、開啟或建立查詢或檢視，或傳回資料表的資料。 如果結果窗格未預設顯示，可從 [ **查詢設計工具** ] 功能表，指向 [ **窗格**]，然後按一下 [ **結果**]。  

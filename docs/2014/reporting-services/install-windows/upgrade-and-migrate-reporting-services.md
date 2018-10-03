@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 97
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 626e7c922eb2b6126bdec0b2f9e53b3ab4f1d22d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16808a0bfa3956c19a0e472e778d37308b993462
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204948"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092300"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   本主題概述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的升級和移轉選項。 升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的一般方式有兩種：  

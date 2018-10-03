@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b92bb0b217ba9d6511bb4b5f26ae68a834bd6935
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1af27b0571ef073a5ada2937b93b6cc0487974d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312698"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143740"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 中的 PowerPivot 資料重新整理
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 資料重新整理是一項查詢外部資料來源的排程伺服器端作業，可更新儲存在內容庫中 Excel 2010 活頁簿的內嵌 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 資料。  

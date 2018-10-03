@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.columns.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa36ba30fbf303c9ae93b112eaadc7b16de6dbf9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b22b2c8690e7c680c0087c3a44766cde16f96878
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063688"
 ---
 # <a name="xml-source-editor-columns-page"></a>XML 來源編輯器 (資料行頁面)
   使用 [XML 來源編輯器] 對話方塊的 [資料行] 節點，即可將輸出資料行對應至外部 (來源) 資料行。  

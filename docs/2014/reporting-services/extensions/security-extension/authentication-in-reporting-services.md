@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], authentication
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093318"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的驗證
   驗證是建立使用者對識別的權限之程序。 您可以使用許多技術來驗證使用者。 最常見的方式是使用密碼。 例如，當您實作表單驗證時，想要查詢使用者是否有認證 (通常是透過某個介面來要求登入名稱與密碼)，然後針對資料存放區來驗證使用者，例如資料庫資料表或是組態檔。 如果無法驗證認證，驗證程序會失敗，而且使用者將假設匿名識別。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1563187c936c76c41759d94a6af2949094e83cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 535d02c61df55ffd51c44c02ae59c3d71c913978
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066208"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>使用 AMO 進行管理工作的程式設計
   分析管理物件 (AMO) 是從用戶端應用程式使用的程式設計程式庫，可管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 在本章節中，您將了解如何使用 AMO 物件進行程式設計。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef48666d6e7c73d530895e315cbc3a42b57599eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96171211f08ae5348dfb183dc20abaaa66b3fb6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182485"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>增補感知的字串操作範例
   這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例會示範補充字元感知的字串處理。 此範例顯示五個 Transact-SQL 字串函數的實作，這些字串函數提供的字串操作函數與內建函數相同，但是具有用於處理 Unicode 和補充字串的額外補充字元感知功能。 五個的函數包括 lens （）、`lefts(), rights(), subs()`並`replace_s()`，相當於內建函式`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字串函式。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - user impersonation [CLR integration]
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2695445caee79ee2248a6855bb36349b6ff5f644
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088058"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>模擬和 CLR 整合安全性
   當 Managed 程式碼存取外部資源時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動模擬用來執行常式的目前執行內容。 `EXTERNAL_ACCESS` 和 `UNSAFE` 組件中的程式碼可以明確模擬目前的執行內容。  

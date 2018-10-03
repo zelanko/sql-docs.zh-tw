@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication upgrade issues
 - upgrading replication
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
-caps.latest.revision: 29
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41fb3b0a4176f6b069f5e651616e4a0b1bfe6279
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158938"
 ---
 # <a name="replication-upgrade-issues"></a>複寫升級問題
   下列主題描述的是可能會影響升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的複寫問題。 這些主題會描述一些可讓您採取的動作，以便減少這些變更對環境的影響。  

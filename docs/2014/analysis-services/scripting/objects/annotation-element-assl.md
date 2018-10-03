@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Annotation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c8c8b70e9e15e01a0864cd9f3491aa188be6777
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103398"
 ---
 # <a name="annotation-element-assl"></a>Annotation 元素 (ASSL)
   包含用來擴充「Analysis Services 指令碼語言」(ASSL) 結構描述的元素。  
@@ -52,8 +49,8 @@ ms.locfileid: "37304498"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

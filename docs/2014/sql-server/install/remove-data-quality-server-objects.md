@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 053c0ca015bc3531a96ea1a08c3261918925f0da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a90b7c7aac9ad7f5f0398951e1d4e39ae810a8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194785"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134119"
 ---
 # <a name="remove-data-quality-server-objects"></a>移除 Data Quality Server 物件
   從 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 執行個體解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或完整移除內含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 執行個體時，不會刪除某些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 物件，包括 DQS 資料庫。 這意味著如果您使用 SQL Server 安裝程式解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，就不會失去 DQS 資料。 您必須在完成解除安裝程序之後，手動刪除這些 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 物件。  

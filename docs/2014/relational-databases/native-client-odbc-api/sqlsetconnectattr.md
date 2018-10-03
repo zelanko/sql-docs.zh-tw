@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432527"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070581"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會忽略 SQL_ATTR_CONNECTION_TIMEOUT 的設定。  
@@ -100,7 +97,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 預設值為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]Ag，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 預設為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]Ag，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
 ## <a name="sqlcoptssattachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME 會指定可附加資料庫的主要檔案名稱。 此資料庫會附加，而且變成連接的預設資料庫。 若要使用 SQL_COPT_SS_ATTACHDBFILENAME，您必須指定資料庫的名稱做為連接屬性 SQL_ATTR_CURRENT_CATALOG 的值或在資料庫中 = 參數[SQLDriverConnect](sqldriverconnect.md)。 如果該資料庫先前已附加，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將不會重新附加它。  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  之後進行連線時，應用程式可以查詢這個屬性使用[SQLGetConnectAttr](sqlgetconnectattr.md)判斷容錯移轉夥伴的識別。 如果主要伺服器沒有容錯移轉夥伴，此屬性將會傳回空字串。 這可讓智慧型應用程式快取最近決定的備份伺服器，但是此類應用程式應該會注意到此資訊只會在第一次建立 (如果共用，則重設) 連接時更新，而且在長期連接後會變成過期。  
   
- 如需詳細資訊，請參閱 < [Using Database Mirroring](../native-client/features/using-database-mirroring.md)。  
+ 如需詳細資訊，請參閱[使用資料庫鏡像](../native-client/features/using-database-mirroring.md)。  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY 會針對伺服器登入的存取驗證強制使用 Windows 驗證。 使用 Windows 驗證時，驅動程式會忽略使用者識別碼和密碼值的一部分**SQLConnect**， [SQLDriverConnect](sqldriverconnect.md)，或[SQLBrowseConnect](sqlbrowseconnect.md)處理。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Target Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Target element
 ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec2f4a43b8b03e2f28d4bd8c61a9c6e4a9d20eb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23d55d909179fd568075feba54199514a7396c6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169058"
 ---
 # <a name="target-element-assl"></a>Target 元素 (ASSL)
   識別的目標[動作](../objects/action-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37180765"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37180765"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[動作](../objects/action-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個項目的預期值而定的值[TargetType](targettype-element-assl.md)父元素`Action`。 下表將根據 `Target` 的值來描述 `TargetType` 的預期值。  

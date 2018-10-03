@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 - clickthrough reports, templates
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3df0b140c8d1eb08fc3b1502eb2a627be7f175c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095894"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>將報表連結至模型以做為點選連結報表
   如果不使用預設點選連結報表範本，您可以建立報表產生器報表，然後將它連結至報表模型中的特定實體。 當檢視報表的人按一下主報表中的互動式資料時，此報表就會顯示為點選連結報表。 若要將報表連結至實體，使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表管理員。  

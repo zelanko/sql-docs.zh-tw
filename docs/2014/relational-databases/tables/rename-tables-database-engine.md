@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table renaming [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tables [SQL Server], Visual Database Tools
 - renaming tables
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fdf02dc9b8cefd59b75f6a2d77683930fefb7996
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ea78b3891b3622d98711495814b0029272a5605
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098188"
 ---
 # <a name="rename-tables-database-engine"></a>重新命名資料表 (Database Engine)
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名資料表。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427517"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103388"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode 提供替代[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt IBCPSession2::BCPSetBulkMode 設定所有屬性。  
@@ -60,17 +57,17 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |`S_OK`|此方法已成功。|  
-|`E_FAIL`|如需詳細的資訊，請使用 ISQLServerErrorInfo 介面發生提供者特有的錯誤。|  
+|`E_FAIL`|發生提供者特有的錯誤，如需詳細資訊，請使用 ISQLServerErrorInfo 介面。|  
 |`E_UNEXPECTED`|此方法的呼叫是非預期的。 比方說，`IBCPSession2::BCPInit`方法不會呼叫 IBCPSession2::BCPSetBulkMode 之前呼叫。|  
 |`E_INVALIDARG`|此引數無效。|  
 |`E_OUTOFMEMORY`|記憶體不足的錯誤。|  
   
 ## <a name="remarks"></a>備註  
- IBCPSession2::BCPSetBulkMode 可用來大量複製查詢或資料表。 IBCPSession2::BCPSetBulkMode 來大量複製查詢陳述式，它必須先呼叫才能呼叫`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`來指定查詢陳述式。  
+ IBCPSession2::BCPSetBulkMode 可用來大量複製查詢或資料表。 當 IBCPSession2::BCPSetBulkMode 用來大量複製查詢陳述式時，您必須先呼叫此方法，再呼叫 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` 來指定查詢陳述式。  
   
  您應該避免在單一命令文字中結合 RPC 呼叫語法與批次查詢語法 (例如 `{rpc func};SELECT * from Tbl`)。  這會導致 icommandprepare:: Prepare 傳回錯誤，並讓您無法擷取中繼資料。 如果您需要在單一命令文字中結合預存程序執行與批次查詢，請使用 ODBC CALL 語法 (例如 `{call func}; SELECT * from Tbl`)。  
   
- 下表列出的常數*屬性*參數。  
+ 下表將列出 *property* 參數的常數。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -83,7 +80,7 @@ HRESULT BCPSetBulkMode (
   
  您不能呼叫 ibcpsession:: Bcpcontrol 與`BCP_OPTION_TEXTFILE`和 IBCPSession2::BCPSetBulkMode。  
   
- 如果您嘗試呼叫的函式呼叫的順序，其中包含 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol，以及 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一個函式呼叫會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 ibcpsession:: Bcpinit 來重設設定並重新開始。  
+ 如果您嘗試呼叫的函式呼叫的順序，其中包含 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol，以及 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一個函式呼叫會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 IBCPSession::BCPInit 來重設設定並重新開始。  
   
  下表將呈現產生函數順序錯誤之函數呼叫的部分範例。  
   

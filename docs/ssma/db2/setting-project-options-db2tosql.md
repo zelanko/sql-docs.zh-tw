@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e3974057f6b975a5c8abc7cc99f886360be15aa8
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785586"
 ---
 # <a name="setting-project-options-db2tosql"></a>設定專案選項 (DB2ToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，確認組態選項都適用於專案。  
@@ -49,7 +43,7 @@ SSMA 會有五種專案設定：
   
 -   完整  
   
--   Custom  
+-   自訂  
   
 預設模式被建議用於大部分的使用者。 開放式模式能夠保留更多目前的 DB2 語法，而且容易讀取。 不過，保留目前的語法可能不正確。 如果 DB2 語法必須轉換為對等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]完整模式的語法不會執行最完整的轉換，但產生的程式碼可能會較難閱讀。 在 [自訂] 模式中，您可以設定選項。  
   

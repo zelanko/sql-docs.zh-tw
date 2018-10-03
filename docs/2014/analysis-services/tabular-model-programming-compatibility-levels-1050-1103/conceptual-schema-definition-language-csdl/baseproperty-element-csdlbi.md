@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d0f63e52-7330-4b2c-a929-7a517acc6921
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6de9e321e3cd5122a6252663c533be2d536800d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dcea67deac28838f190947c0b890b86537536c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320838"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198808"
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty 元素 (CSDLBI)
   BaseProperty 元素為複雜類型，可做為其他元素的基底。  
@@ -43,7 +40,7 @@ ms.locfileid: "37320838"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|使用屬性名稱。|  
+|None|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  
 |合併式|根據目前文法的規則，串連內送關聯性名稱和屬性名稱。|  
   
@@ -52,7 +49,7 @@ ms.locfileid: "37320838"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|使用屬性名稱。|  
+|None|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  
 |合併式|串連內送關聯性名稱和屬性名稱。|  
   
