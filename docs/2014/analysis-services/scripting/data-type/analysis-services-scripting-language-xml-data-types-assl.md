@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Analysis Services Scripting Language XML Data Types
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc773c4eda7b9f26b8ddafab5f6c80b068d32ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ff2f0989aa2c88a69351d698c847ca6e835285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276634"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179248"
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services 指令碼語言 XML 資料類型 (ASSL)
   這個參考章節包含在「Analysis Services 指令碼語言」(ASSL) 結構描述中當做類型之每個元素的語法和使用方式資訊。  
@@ -39,7 +36,7 @@ ms.locfileid: "37276634"
   
  雖然類型元素 (例如物件元素) 絕對不是 ASSL 結構描述中的分葉層級元素，但是會具有對應至物件屬性的子元素和元素。  
   
- 不過，類型元素絕不會顯示為定義或描述的指令碼中的項目[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件。 反而，它會顯示成其他物件元素的類型，而這種類型通常是使用 `type` 或 `xsi:type` 以「XML 結構描述執行個體」結構描述的 `xs:type` 屬性指定。 例如， `<Assembly xsi:type="ClrAssembly">...</Assembly>`。  
+ 不過，類型元素絕不會顯示為定義或描述的指令碼中的項目[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件。 反而，它會顯示成其他物件元素的類型，而這種類型通常是使用 `type` 或 `xsi:type` 以「XML 結構描述執行個體」結構描述的 `xs:type` 屬性指定。 例如， `<Assembly xsi:type="ClrAssembly">...</Assembly>` 。  
   
  在部分情況中，某個類型會衍生自另一個類型。 例如，`CubeBinding` 類型便衍生自 `Binding` 父類型。  
   

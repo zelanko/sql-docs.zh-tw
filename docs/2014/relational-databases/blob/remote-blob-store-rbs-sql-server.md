@@ -5,8 +5,6 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
@@ -15,12 +13,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd459f9c8e1fa2a36a6eb8f3fadb3581cee87325
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181465"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遠端 BLOB 存放區 (RBS) 是選用的附加元件，可讓資料庫管理員在商品儲存方案中儲存二進位大型物件，而不是直接儲存在主要資料庫伺服器上。  

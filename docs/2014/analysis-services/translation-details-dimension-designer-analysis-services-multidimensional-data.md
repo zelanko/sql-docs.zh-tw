@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179018"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
   在 [維度設計師] 的 **[翻譯]** 索引標籤中使用 **[翻譯詳細資料]** 窗格，即可定義和管理目前所選取維度的翻譯。  

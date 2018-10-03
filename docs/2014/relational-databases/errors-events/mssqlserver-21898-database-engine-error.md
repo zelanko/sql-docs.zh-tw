@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 21898 (Database Engine error)
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 551b199b6c4c97b58eca822e1372d3b51af31585
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0b2e5fc572ef5562a54d54e06a2ffc7cbd6f4f5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181388"
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
     

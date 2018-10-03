@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8806b23d422969637a536e7a86c12bb5f323e2e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dbd6a425222c0e3f31d55a590294e9d3554f96e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181108"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器服務帳戶與用戶端服務帳戶
   在本主題中，您將了解如何修改 Distributed Replay Controller 和用戶端服務帳戶，然後重新套用存取控制清單 (ACL)。  

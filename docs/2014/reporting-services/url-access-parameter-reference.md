@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d4dc8cb04d2755f534b8ff4f13b113639a14f3b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bdae6fe44e416786e842eb2ecc36d213d771cf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179238"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需有關裝置特定參數的詳細資訊，請參閱 <<c0> [ 在 URL 中指定裝置資訊設定](specify-device-information-settings-in-a-url.md)。  

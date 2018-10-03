@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a2a6ce44a66fbb1e9045116580acc726f648df9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26eb4f82b97d745f6269d57a76c479d677d6cc2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177528"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>第 4 課：標記為日期資料表
   在「第 2 課：加入資料」中，您已匯入了名為 DimDate 的維度資料表。 接著您在「第 3 課：重新命名資料行」中，將 DimDate 資料表重新命名為簡化的 Date。 當模型中的此資料表已命名為 Date 時，也可以稱作「日期資料表」，並會在其中包含日期及時間資料。  

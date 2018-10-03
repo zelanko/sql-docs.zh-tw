@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 147daa2f1e58d636b460921f5a50a987e92a156e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178498"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
   您可以為封裝、工作、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器、事件處理常式、封裝和專案層級的連接管理員和記錄提供者建立屬性運算式。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7cc27c4aeb7245146fb35bcca12c236a56be370
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: dfc80ecaecdc51235928a5ff0e66704449f493d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177318"
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
   您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  

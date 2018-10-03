@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9bce95fa12e7f5437d6d1f3872470a57114b76d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180338"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>使用 CellSet 擷取資料
   當擷取分析資料時，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件可提供最大的互動性和彈性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件是階層式資料和中繼資料的記憶體中快取，其中保留了資料的原始維度性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件也可能以連接或中斷連接的狀態來周遊。 因為這個中斷連接的能力，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件可用來以任何順序檢視資料和中繼資料，並為資料擷取提供最完整的物件模型。 這個中斷連接的功能也會造成 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件有最大的負擔，並成為擴展最慢的 ADOMD.NET 資料擷取物件模型。  
@@ -57,7 +54,7 @@ ms.locfileid: "37178895"
  透過載入從上一個查詢傳回的 XML，您可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件，提供瀏覽分析資料的完整方法，而不需要使用中的連接。  
   
 > [!NOTE]  
->  並非 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件提供的所有物件屬性，都可以在中斷連接的狀態下使用。 如需詳細資訊，請參閱<xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>。  
+>  並非 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件提供的所有物件屬性，都可以在中斷連接的狀態下使用。 如需詳細資訊，請參閱 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>。  
   
 ### <a name="example-of-retrieving-data-in-a-disconnected-state"></a>在中斷連接狀態下擷取資料的範例  
  下列範例類似於本主題稍早所示範的中繼資料與資料範例。 不過，下列範例中的命令在執行時會呼叫 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A>，而且結果會以 `System.Xml.XmlReader` 傳回。 此範例接著會使用這個 `System.Xml.XmlReader` 加上 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 方法來擴展 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> 物件。 雖然這個範例會立即載入 `System.Xml.XmlReader`，不過，您可以將讀取器所含的 XML 快取到硬碟，或是在將資料載入到資料格集之前，先透過任何方式將該資料傳輸到不同的應用程式。  

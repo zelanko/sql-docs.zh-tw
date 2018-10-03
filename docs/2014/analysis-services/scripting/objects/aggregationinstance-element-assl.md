@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationInstance Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationInstance element
 ms.assetid: 2e77e9e1-9f2c-4df4-9aa6-5b7b911016a3
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 089fcff4b01b66f3b2bc1ac98de2f5cb4ba88319
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef7afde2cf93d18ad0a567f5a5e1071b7e42ebf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177898"
 ---
 # <a name="aggregationinstance-element-assl"></a>AggregationInstance 元素 (ASSL)
   定義資料分割的彙總執行個體。  
@@ -53,8 +50,8 @@ ms.locfileid: "37229768"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

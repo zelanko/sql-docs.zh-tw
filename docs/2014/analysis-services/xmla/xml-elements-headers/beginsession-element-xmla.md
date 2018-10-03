@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - BeginSession Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9194333e376dc8ab685057847c3f4156330d5dfa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180058"
 ---
 # <a name="beginsession-element-xmla"></a>BeginSession 元素 (XMLA)
   在 SOAP 要求訊息中使用 SOAP 標頭，以啟動新的工作階段的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -60,16 +57,16 @@ ms.locfileid: "37285824"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
-|子元素|無|  
+|父元素|None|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `BeginSession` 標頭元素屬於傳送給 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體之 SOAP 要求的一部分，而且它會在該執行個體上明確啟動新的工作階段。 SOAP 回應所傳回的 SOAP 標頭包含[工作階段](session-element-xmla.md)項目會識別新的工作階段。 這個新工作階段識別碼將使用 `Session` 標頭元素在後續的 SOAP 要求中儲存並傳送。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc4a0923e5e0d337df82e87a9086e14b61a0e945
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3759aeb64524386ed0ac522e47e1de3ff99c18a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179038"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可協助您透過調查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的執行階段行為，找出程式碼中的錯誤。 在您將 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗設定成偵錯模式之後，就可以在特定的程式碼行上暫停執行作業，然後檢查這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所使用或傳回的資訊和資料。  

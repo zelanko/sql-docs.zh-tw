@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d96efa70219c841abae8d0129716810645d283d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e2fbf2593ae5f85e12555d469ebe77b11539a20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178878"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>將影像指定為量測計的指標 (報表產生器及 SSRS)
   量測計包含三個內建樣式，可用來自訂指標的外觀。 星形量測計的內建樣式如下：指針、標記和列。 線性量測計的內建樣式如下：標記、列和溫度計。 如果需要唯一的指標，使用者可以建立並指定可當做完整功能之指標使用的影像。  

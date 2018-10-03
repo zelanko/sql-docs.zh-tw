@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.Print
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d2ad8a70bf43e8aecc48341f318993bdc5bc815
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4692f5c0ceddea6f8a67ea9aacbcb1efe523db7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180598"
 ---
 # <a name="print-dialog-box"></a>列印對話方塊
   您可以選取 [列印] 對話方塊中的選項，藉以指定您要列印文件的方式。  

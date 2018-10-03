@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182669"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  

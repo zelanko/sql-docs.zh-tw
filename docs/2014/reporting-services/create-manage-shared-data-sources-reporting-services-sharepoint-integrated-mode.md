@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89ac992a05c043dc22dd2ff3ef85d62284b77955
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181408"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>建立及管理共用資料來源 (SharePoint 整合模式的 Reporting Services)
   當您從 SharePoint 文件庫執行報表時，可以在報表內部或連結到報表的外部檔案中定義連接資訊。 如果連接資訊內嵌於報表中，它就稱為自訂資料來源。 如果連接資訊定義於外部檔案中，它就稱為共用資料來源。 外部檔案可以是報表伺服器資料來源 (.rsds) 檔案或 Office 資料連線 (.odc) 檔案。  

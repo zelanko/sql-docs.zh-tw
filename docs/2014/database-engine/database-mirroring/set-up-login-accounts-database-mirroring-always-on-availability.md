@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - logins [SQL Server], database mirroring
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba315e277513bb0f488982dcfb84bded5cc48a73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245258"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178328"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)
   若要讓兩個伺服器執行個體連接到對方的 [資料庫鏡像端點](the-database-mirroring-endpoint-sql-server.md) ，這兩個執行個體的登入帳戶都必須要有對方的存取權。 而且，這兩個登入帳戶都必須要有連接權限來連接到對方的資料庫鏡像端點。  

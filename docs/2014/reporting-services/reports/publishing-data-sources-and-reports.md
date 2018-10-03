@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing data sources [Reporting Services]
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 147892370a3cb93831ae2d99cf77906eca67ca5e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182178"
 ---
 # <a name="publishing-data-sources-and-reports"></a>發行資料來源與報表
   發行報表前，您應該預覽報表以查看報表執行時的外觀。 您可以持續精簡設計，直到您滿意其結果為止。  

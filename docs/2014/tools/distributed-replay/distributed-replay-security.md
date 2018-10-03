@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b46dd3f7a2892faeacb4675904913005e90d7806
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 79e21716c4d484aa9dfba994bf1b970fedfe4235
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181398"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
   安裝和使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay] 功能之前，您應該先檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e309710e72ec344a9e54255483893800b6a4018f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebee6948403822d7e4a9f8d406d1000b27ee2468
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288244"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182028"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 加入至報表 (報表產生器及 SSRS)
   您可以使用預留位置，從資料集的欄位匯入 HTML，以便用於報表中。 根據預設，預留位置代表純文字，所以您必須將預留位置標記類型變更為 HTML。 如需詳細資訊，請參閱[將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)。  
