@@ -1,14 +1,11 @@
 ---
-title: sysmail_add_profile_sp (TRANSACT-SQL) |Microsoft 文件
+title: sysmail_add_profile_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16091d14ba4971ae8e07633dd111dd5f5a2facde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e62a0452a5e7e31591d368cbbcb2050272df5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734726"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,25 +43,25 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
 ## <a name="arguments"></a>引數  
  [ **@profile_name** = ] **'***profile_name***'**  
- 新設定檔的名稱。 *profile_name*是**sysname**，沒有預設值。  
+ 新設定檔的名稱。 *profile_name*已**sysname**，沒有預設值。  
   
  [ **@description** = ] **'***description***'**  
- 新設定檔的選擇性描述。 *描述*是**nvarchar （256)**，沒有預設值。  
+ 新設定檔的選擇性描述。 *描述*已**nvarchar(256)**，沒有預設值。  
   
  [ **@profile_id** = ] *new_profile_id***OUTPUT**  
- 傳回新設定檔的識別碼。 *new_profile_id*是**int**，預設值是 NULL。  
+ 傳回新設定檔的識別碼。 *new_profile_id*已**int**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- Database Mail 設定檔會保存任意數目的 Database Mail 帳戶。 Database Mail 預存程序可以利用這個程序所產生的設定檔名稱或設定檔識別碼來參考設定檔。 如需將帳戶新增至設定檔的詳細資訊，請參閱[sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
+ Database Mail 設定檔會保存任意數目的 Database Mail 帳戶。 Database Mail 預存程序可以利用這個程序所產生的設定檔名稱或設定檔識別碼來參考設定檔。 如需有關將帳戶新增至設定檔的詳細資訊，請參閱 < [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)。  
   
- 預存程序，則可以變更的設定檔名稱和描述**sysmail_update_profile_sp**，而這個設定檔識別碼維持不變的存留期間的設定檔。  
+ 預存程序，則可以變更設定檔名稱和描述**sysmail_update_profile_sp**，而這個設定檔識別碼維持不變的存留期間的設定檔。  
   
  Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的設定檔名稱必須是唯一的，否則，預存程序會傳回一則錯誤。  
   
- 預存程序**sysmail_add_profile_sp**處於**msdb**資料庫，擁有者是**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
+ 預存程序**sysmail_add_profile_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
   
 ## <a name="permissions"></a>Permissions  
  執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
@@ -81,7 +77,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B.建立新的設定檔，將設定檔識別碼儲存在變數**  
+ **B.建立新的設定檔，將設定檔識別碼儲存在變數中**  
   
  下列範例會建立名稱為 `AdventureWorks Administrator` 的新 Database Mail 設定檔。 這個範例會將設定檔識別碼儲存在 `@profileId` 變數中，且會傳回包含新設定檔之設定檔識別碼的結果集。  
   

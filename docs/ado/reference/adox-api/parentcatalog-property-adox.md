@@ -1,13 +1,11 @@
 ---
-title: ParentCatalog 屬性 (ADOX) |Microsoft 文件
+title: ParentCatalog 屬性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -40,27 +38,26 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dd0c1e0ccc1751e79d6ccfdafe89523ae8e8e00
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637056"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 屬性 (ADOX)
-指定的父目錄的資料表、 使用者或資料行的物件，來提供存取提供者特有的屬性。  
+指定的父目錄的資料表、 使用者或資料行的物件，來提供提供者特定屬性的存取權。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
- 設定並傳回[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)物件。 設定**ParentCatalog**開啟**目錄**可讓您之前附加的資料表或資料行的提供者特定屬性的存取**目錄**集合。  
+ 設定，並傳回[目錄](../../../ado/reference/adox-api/catalog-object-adox.md)物件。 設定**ParentCatalog**來開啟**類別目錄**允許之前附加的資料表或資料行的提供者特定屬性的存取權**目錄**集合。  
   
 ## <a name="remarks"></a>備註  
- 某些資料提供者允許提供者特有的屬性值只能在建立寫入： 也就是當資料表或資料行附加至其**目錄**集合。 若要存取這些屬性附加至這些物件之前**目錄**，指定**目錄**中**ParentCatalog**屬性第一次。  
+ 某些資料提供者允許提供者特有的屬性值只能在建立時寫入： 也就是當資料表或資料行附加至其**目錄**集合。 若要存取這些屬性附加至這些物件之前**類別目錄**，指定**類別目錄**中**ParentCatalog**屬性第一次。  
   
- 附加至不同資料表或資料行時，就會發生錯誤**目錄**比**ParentCatalog**。  
+ 當資料表或資料行附加至不同而發生錯誤**Catalog**比**ParentCatalog**。  
   
 ## <a name="applies-to"></a>適用於  
   

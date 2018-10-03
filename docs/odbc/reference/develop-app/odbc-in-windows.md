@@ -1,28 +1,25 @@
 ---
-title: 在 Windows 中的 ODBC |Microsoft 文件
+title: 在 Windows 中的 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f83b8a2926b0dbd9030ced4faf5dc1f076a68ac9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e789a4bccbc1aade9536cd91b331f3cabdd85a6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911273"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642546"
 ---
-# <a name="odbc-in-windows"></a>在 Windows 中的 ODBC
-下列項目僅適用於 Microsoft® NT/Windows 2000年和 Microsoft Windows® 95/98 作業系統中執行的 ODBC。  
+# <a name="odbc-in-windows"></a>Windows 中的 ODBC
+下列項目僅適用於 Microsoft® Windows NT/Windows 2000 和 Microsoft Windows® 95/98 作業系統中執行的 ODBC。  
   
  此章節包含下列主題。  
   
@@ -30,6 +27,6 @@ ms.locfileid: "32911273"
   
 -   [標頭檔](../../../odbc/reference/develop-app/header-files.md)  
   
--   [ODBC 函數傳遞 CString 物件](../../../odbc/reference/develop-app/cstring-class.md)  
+-   [ODBC 函式傳遞 CString 物件](../../../odbc/reference/develop-app/cstring-class.md)  
   
 -   [建立及終止執行緒](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)

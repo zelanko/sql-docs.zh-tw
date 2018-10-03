@@ -1,14 +1,11 @@
 ---
-title: sp_delete_jobserver (TRANSACT-SQL) |Microsoft 文件
+title: sp_delete_jobserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b311f4de82a416fc61a0464077aa5aaa03de99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 886f63ad94921451ca7136064f2148b46eeaba17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246189"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729718"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +42,25 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>引數  
  [ **@job_id=** ] *job_id*  
- 將從中移除指定目標伺服器之作業的識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
+ 將從中移除指定目標伺服器之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
  [ **@job_name=** ] **'***job_name***'**  
- 將從中移除指定目標伺服器之作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
+ 將從中移除指定目標伺服器之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必須指定; 不可同時指定兩者。  
+>  任一*job_id*或是*job_name*必須指定; 不能同時指定這兩者。  
   
  [ **@server_name=** ] **'***server***'**  
- 要從指定作業中移除的目標伺服器名稱。 *伺服器*是**nvarchar （30)**，沒有預設值。 *伺服器*可以 **（本機）** 或遠端目標伺服器的名稱。  
+ 要從指定作業中移除的目標伺服器名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。 *伺服器*可以是 **(LOCAL)** 或遠端目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="permissions"></a>Permissions  
- 若要執行這個預存程序，使用者必須是成員的**sysadmin**固定的伺服器角色。  
+ 若要執行這個預存程序，使用者必須隸屬**sysadmin**固定的伺服器角色。  
   
 ## <a name="examples"></a>範例  
  下列範例會移除伺服器`SEATTLE2`處理`Weekly Sales Backups`作業。  
@@ -84,7 +80,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_help_jobserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+ [sp_help_jobserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,34 +1,31 @@
 ---
-title: 使用範例主控台指令碼檔案 (OracleToSQL) |Microsoft 文件
+title: 使用範例主控台指令碼檔 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Sample Console Script Files, ServersConnectionFileSample.xml
 - Sample Console Script Files, SqlStatementConversionSample.xml
 - Sample Console Script Files,VariableValueFileSample.xml
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f18acd6f1bac8c418c4d3e67845cce52faf0412e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 2eb30c45af544fc57c0d3dfd328ce2d4c2246746
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675306"
 ---
-# <a name="working-with-the-sample-console-script-files-oracletosql"></a>使用範例主控台指令碼檔案 (OracleToSQL)
-幾個範例檔案與產品一起提供給使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
+# <a name="working-with-the-sample-console-script-files-oracletosql"></a>使用範例主控台指令檔 (OracleToSQL)
+幾個範例檔案，以及產品提供的使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
   
-## <a name="sample-console-script-files"></a>範例主控台指令碼檔案  
-下列範例主控台指令碼檔案涵蓋不同的案例提供給使用者參考：  
+## <a name="sample-console-script-files"></a>範例主控台指令碼檔  
+使用者參考已提供下列範例主控台指令碼檔涵蓋不同的案例：  
   
 -   ServersConnectionFileSample.xml  
   
@@ -42,40 +39,40 @@ ms.locfileid: "34778044"
   
 -   **ServersConnectionFileSample.xml:**  
   
-    -   這個範例可讓來源和目標資料庫的連線使用不同的模式，且使用者可以選擇根據需求的任何模式。 此範例包含的伺服器定義。  
+    -   此範例可讓來源和目標資料庫的連線使用不同的模式，使用者可以選取任何根據需求的模式。 此範例包含伺服器定義。  
   
-    -   使用者可以連接到所需的資料庫，只要變更所需的來源和目標伺服器定義的值。 所提供的範例中的所有值已都提供為變數的值中可用的**VariableValueFileSample.xml**。  可以從使用者的工作伺服器的連接檔案中移除所有其他連接參數。  
+    -   使用者可以連接到所需的資料庫，只要變更所需的來源和目標伺服器定義的值。 在範例中提供所有已提供值，變數的值中，您可以使用哪些**VariableValueFileSample.xml**。  可以從使用者的處理伺服器連線檔案中移除所有其他連接參數。  
   
-    -   如需有關如何連接到來源和目標伺服器的詳細資訊，請參閱[伺服器連線檔案建立&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 。  
+    -   如需有關如何連接到來源和目標伺服器的詳細資訊，請參閱 <<c0> [ 建立伺服器連線檔案&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 。</c0>  
   
--   **VariableValueFileSample.xml:** 已經用於範例主控台的所有變數指令都碼檔案和`ServersConnectionFileSample.xml`有這個檔案中已定序。 若要執行使用者具有取代範例變數的範例主控台指令碼值與使用者定義的並將此檔案傳遞做為其他命令列引數，以及指令碼檔案。  
+-   **VariableValueFileSample.xml:** 所有的變數，已使用範例主控台指令碼檔案和`ServersConnectionFileSample.xml`已定序，此檔案中。 使用者已取代範例變數的範例主控台指令碼的執行值與使用者定義的並將這個檔案傳遞做為其他命令列引數，以及指令碼檔案。  
   
-    如需有關變數的值檔案的詳細資訊，請參閱[建立變數值的檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
+    如需有關變數值檔案的詳細資訊，請參閱[建立變數值檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)。  
   
--   **AssessmentReportGenerationSample.xml:** 此範例可讓使用者產生的 xml 評估報表可由使用者進行分析他開始轉換並移轉資料之前。  
+-   **AssessmentReportGenerationSample.xml:** 此範例可讓使用者產生的 xml 評定報告可以用於由使用者分析他開始轉換並移轉資料之前。  
   
-    在`generate-assessment-report`命令 mandatorily 變更變數的值，使用者必須 (請參閱**VariableValueFileSample.xml**) 中`object-name`屬性加入資料庫名稱會出現在使用者使用。 根據指定的物件類型`object-type`值也必須變更。  
+    在`generate-assessment-report`命令的使用者具有 mandatorily 變更變數的值 (請參閱**VariableValueFileSample.xml**) 中`object-name`屬性加入資料庫使用者所使用的名稱所。 根據指定的物件種類`object-type`值也會變更。  
   
-    如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`generate-assessment-report`命令的範例 4 的範例主控台指令碼檔案。  
+    如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`generate-assessment-report`命令的範例 4 的範例主控台指令碼檔案。  
   
-    如需有關如何產生報告的詳細資訊，請參閱[產生報表&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)。  
+    如需有關如何產生報告的詳細資訊，請參閱 <<c0> [ 產生的報表&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)。</c0>  
   
     > [!NOTE]  
-    > -   請確認變數值檔命令列引數會傳遞給主控台應用程式，然後 VariableValueFileSample.xml 會更新為指定的使用者值。  
-    > -   請確認伺服器連線檔命令列引數會傳遞給主控台應用程式，然後 ServersConnectionFileSample.xml 的正確的伺服器參數值來更新。  
+    > -   請確定變數值檔案的命令列引數傳遞至主控台應用程式，且 VariableValueFileSample.xml 會更新指定的使用者值。  
+    > -   請確認伺服器連線檔案命令列引數傳遞至主控台應用程式，然後 ServersConnectionFileSample.xml 已包含正確的伺服器參數值。  
   
 -   **SqlStatementConversionSample.xml:**  
-    這個範例可讓使用者以產生對應`t-sql`來源資料庫的指令碼`sql`提供做為輸入的命令。  
+    此範例可讓使用者產生對應`t-sql`來源資料庫的指令碼`sql`提供作為輸入的命令。  
   
-    中`convert-sql-statement`命令，使用者必須 mandatorily 變更變數的值 (請參閱**VariableValueFileSample.xml**) 中`context`屬性設定為要由使用者所使用的資料庫名稱。 使用者也必須變更`sql`屬性值的來源資料庫`sql`最初轉換所需的命令。  
+    在`convert-sql-statement`命令的使用者具有 mandatorily 變更變數的值 (請參閱**VariableValueFileSample.xml**) 中`context`屬性正被使用者所使用的資料庫名稱。 使用者也必須變更`sql`屬性值的來源資料庫`sql`他/她需要轉換的命令。  
   
     使用者也可以提供要轉換的 sql 檔案。 這已在說明`convert-sql-statement`命令的範例 4 的範例主控台指令碼檔案。  
   
     > [!NOTE]  
-    > 請確認變數值檔命令列引數會傳遞給主控台應用程式，然後 VariableValueFileSample.xml 會更新為指定的使用者值。  
+    > 請確定變數值檔案的命令列引數傳遞至主控台應用程式，且 VariableValueFileSample.xml 會更新指定的使用者值。  
   
 -   **ConversionAndDataMigrationSample.xml:**  
-     這個範例可讓使用者從資料移轉至轉換執行端對端移轉。 強制屬性值，它們將會需要變更清單如下：  
+     此範例可讓使用者從資料移轉至轉換執行端對端移轉。 一個強制屬性值，這些使用者必須先變更清單如下：  
   
     **命令名稱**  
   
@@ -87,7 +84,7 @@ ms.locfileid: "34778044"
   
     -   `source-schema:` 指定轉換所需的來源資料庫。  
   
-    -   `sql-server-schema`： 指定要移轉到目標資料庫  
+    -   `sql-server-schema`： 指定所要移轉到目標資料庫  
   
     **命令名稱**  
   
@@ -95,38 +92,38 @@ ms.locfileid: "34778044"
   
     -   執行從來源到目標結構描述的結構描述轉換。  
   
-    -   如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`convert-schema`命令的範例 4 的範例主控台指令碼檔案。  
+    -   如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`convert-schema`命令的範例 4 的範例主控台指令碼檔案。  
   
     **Attribute**  
   
-    `object-name`： 指定來源資料庫/將物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
+    `object-name`： 指定來源資料庫/物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
   
     **命令名稱**  
   
     `synchronize-target`  
   
-    -   目標物件會同步處理目標資料庫。  
+    -   會使用目標資料庫，同步處理的目標物件。  
   
-    -   如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`synchronize-target`命令的範例主控台指令碼檔案的範例 3。  
+    -   如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`synchronize-target`命令的範例 3 的範例主控台指令碼檔案。  
   
     **Attribute**  
   
-    `object-name:` 指定 sql server 資料庫/物件建立所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
+    `object-name:` 指定 sql server 資料庫/物件建立時所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
   
     **命令名稱**  
   
     `migrate-data`  
   
-    -   將來源資料移轉到目標。  
+    -   將來源資料移轉至目標。  
   
-    -   如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`migrate-data`命令的範例 2 的範例主控台指令碼檔案。  
+    -   如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`migrate-data`命令的範例 2 的範例主控台指令碼檔案。  
   
     **Attribute**  
   
     `object-name:` 指定來源資料庫/資料表移轉所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
   
 ## <a name="see-also"></a>另請參閱  
-[建立變數值的檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
-[建立伺服器連接檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
-[產生報表&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
+[建立變數值檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[建立伺服器連線檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+[產生報告&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
   

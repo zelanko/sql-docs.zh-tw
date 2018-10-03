@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo 傳回值，適用於 Excel |Microsoft 文件
+title: Excel 的 SQLGetInfo 傳回值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8987a1e6c171ccc4154e71cb4e6a80c964cd5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686577"
 ---
-# <a name="sqlgetinfo-returned-values-for-excel"></a>傳回值，適用於 Excel 的 SQLGetInfo
-下表列出 C 語言 #defines *fInfoType*引數和傳回對應值**SQLGetInfo**。 這項資訊可以擷取傳遞列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需有關所傳回的值**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
+# <a name="sqlgetinfo-returned-values-for-excel"></a>Excel 的 SQLGetInfo 傳回值
+下表列出 C 語言 #defines *fInfoType*引數和所傳回的對應值**SQLGetInfo**。 這項資訊可以擷取傳遞所列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需詳細資訊，所傳回之值的相關**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**傳回 32 位元遮罩，垂直列 (&#124;) 代表位元 OR 運算。  
+>  何處**SQLGetInfo**會傳回 32 位元遮罩，垂直列 (&#124;) 代表位元 OR 運算。  
   
 |資訊類型|傳回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|所有集|  
+|SQL_AGGREGATE_FUNCTIONS|所有集合|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -85,7 +82,7 @@ ms.locfileid: "32904883"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc.ini，從資料來源名稱或""如果在 Odbc.ini 使用 DRIVER 關鍵字|  
+|SQL_DATA_SOURCE_NAME|從 Odbc.ini，DSN 或 「 」 如果中的 Odbc.ini 使用 DRIVER 關鍵字|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|目前的資料庫目錄|  
 |SQL_DATETIME_LITERALS|0|  
@@ -100,7 +97,7 @@ ms.locfileid: "32904883"
 |SQL_DRIVER_HSTMT|處理由驅動程式管理員。|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|「 4.00。*nnnn*」 (*nnnn*指定建置日期)|  
+|SQL_DRIVER_VER|「 4.00。*nnnn*」 (*nnnn*指定組建的日期)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -126,7 +123,7 @@ ms.locfileid: "32904883"
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> CREATE TABLE 陳述式時使用 Microsoft Excel 驅動程式，可能會允許 256 個資料行，但 255 資料行限制仍然有效，且資料行 256 的 insert 將會失敗。|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> CREATE TABLE 陳述式時使用 Microsoft Excel 驅動程式，可能會允許 256 個資料行，但 255 資料行限制仍然有效，並且插入資料行 256 將會失敗。|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  

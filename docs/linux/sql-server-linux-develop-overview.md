@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
 ms.custom: sql-linux
-ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: c50b0ad1798f161d945a54e0e9a080a04a6eca05
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 549e392cca7887230a8fb8e22296b8b3e1bb9833
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667896"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何開始開發應用程式在 Linux 上的 SQL server
 

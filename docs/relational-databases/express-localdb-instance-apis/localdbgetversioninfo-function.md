@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetVersionInfo 函數 |Microsoft 文件
+title: LocalDBGetVersionInfo 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersionInfo
@@ -17,22 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8be469a7f4a9f1b316b881ea884f7fbabc955dfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3b4d8e565aa1494e4e68a0243eb470bd7efe90b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935083"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661796"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   傳回指定之 SQL Server Express LocalDB 版本的資訊，例如此版本是否存在，以及完整的 LocalDB 版本號碼 (包括組建和發行版本號碼)。  
   
- 則會傳回資訊的形式**結構**名為**LocalDBVersionInfo**，其具有下列定義。  
+ 則會傳回資訊的形式**struct**名為**LocalDBVersionInfo**，其具有下列定義。  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -72,7 +68,7 @@ HRESULT LocalDBGetVersionInfo(
  [輸出] 儲存 LocalDB 版本資訊的緩衝區。  
   
  *dwVersionInfoSize*  
- [輸入]保留大小*VersionInfo*緩衝區。  
+ [輸入]保留的大小*VersionInfo*緩衝區。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -91,11 +87,11 @@ HRESULT LocalDBGetVersionInfo(
  發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="details"></a>詳細資料  
- 引進的背後的原理**結構**大小引數 (*lpVersionInfoSize*) 是要讓 API 傳回的不同版本**LocalDBVersionInfostruct**，有效地啟用往後和回溯相容性。  
+ 引進背後的原理**struct**大小引數 (*lpVersionInfoSize*) 是要讓 API 傳回的不同版本**LocalDBVersionInfostruct**，以有效地啟用向前及向後相容性。  
   
- 如果**結構**大小引數 (*lpVersionInfoSize*) 相符的大小已知版本**LocalDBVersionInfostruct**，該版本**結構**傳回。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果**struct**大小引數 (*lpVersionInfoSize*) 符合已知版本的大小**LocalDBVersionInfostruct**，該版本**結構**會傳回。 否則會傳回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
- 典型範例**LocalDBGetVersionInfo** API 用量看起來像這樣：  
+ 典型範例**LocalDBGetVersionInfo** API 使用方式，看起來像這樣：  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -104,7 +100,7 @@ LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));
 ```  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlTriggerContext object
 - triggers [CLR integration]
 - context [CLR integration]
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24c7187e74b2729ccaddc651abf421ad64832f77
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7eff223dc255d5a44706e7b97f73963863428ae8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661695"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

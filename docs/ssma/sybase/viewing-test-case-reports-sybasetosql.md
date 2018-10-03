@@ -1,55 +1,49 @@
 ---
-title: 檢視測試案例報表 (SybaseToSQL) |Microsoft 文件
+title: 檢視測試案例報表 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eae96cbd4a222441f98be2aaf9718b3b6438e3b5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 840f73d0732d0789d378c6f1bceb100c58e01bb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624466"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>檢視測試案例報表 (SybaseToSQL)
-測試案例報表會顯示測試驗證結果和一般測試的資訊。 如果測試失敗，也會顯示任何不相符的資料已經過驗證的物件的相關資訊。  
+測試案例報表會顯示測試驗證結果和一般測試的資訊。 如果測試失敗，也會顯示已驗證的物件中的任何不相符資料的相關資訊。  
   
 ## <a name="report-structure"></a>報表結構  
-報表的頂端顯示這些統計資料：  
+報表的頂端會顯示這些統計資料：  
   
--   測試的物件並測試成功的物件數目的總數。  
+-   已測試的物件和測試已順利完成的物件數目的總數。  
   
--   資料表和成功比對的外部索引鍵的數目以及驗證的資料表和外部索引鍵的總數。  
+-   資料表和成功比對的外部索引鍵的數目和已驗證的資料表和外部索引鍵的總數。  
   
 -   開始時間、 結束時間的測試案例和執行所花費的總時間。  
   
-其餘的報表會顯示四個類別中的資訊：  
+報表的其餘部分會顯示四個類別的資訊：  
   
-**先決條件錯誤**  
+**必要條件錯誤**  
 顯示在發生任何錯誤**必要條件**步驟。 通常，它會略過。  
   
 **初始化**  
-顯示做為執行狀態**成功**或**失敗**。  
+顯示執行狀態**成功**或是**失敗**。  
   
 **測試物件的結果**  
-比較結果 （成功或失敗） 和 SSMA Tester 偵測到失敗時不相符。  
+結果 （成功或失敗） 和 SSMA 軟體測試人員偵測到失敗時不相符的比較。  
   
 **最終處理**  
-顯示做為執行狀態**成功**或**失敗**。  
+顯示執行狀態**成功**或是**失敗**。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行測試案例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  

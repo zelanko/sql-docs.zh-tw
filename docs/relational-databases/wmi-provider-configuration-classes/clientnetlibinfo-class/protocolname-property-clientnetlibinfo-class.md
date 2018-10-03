@@ -1,15 +1,12 @@
 ---
-title: ProtocolName 屬性 （ClientNetLibInfo 類別） |Microsoft 文件
+title: ProtocolName 屬性 （ClientNetLibInfo 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ProtocolName Property (ClientNetLibInfo Class)
@@ -19,15 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 88078e5d6c4c8880849499ddc28f128af59d6645
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36c4a92eb0f88bd70f6e98b03f81acebeb638e25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724534"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 屬性 (ClientNetLibInfo 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表用戶端網路程式庫相關資訊的 [ClientNetLibInfo 類別](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

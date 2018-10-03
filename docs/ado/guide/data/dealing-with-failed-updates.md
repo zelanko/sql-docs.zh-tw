@@ -1,35 +1,32 @@
 ---
-title: 處理失敗的更新 |Microsoft 文件
+title: 處理失敗的更新 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45e5a20e0527f8b30035aef7ff86a90378039b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6ba4b4189691bf907b3ad67db91a8534268a8ec0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616426"
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
-更新已結束但發生錯誤，當您解決錯誤的方式取決於本質和錯誤的嚴重性和應用程式的邏輯。 不過，如果資料庫與其他使用者共用，常見的錯誤將會有其他人修改欄位，然後再進行。 這種類型的錯誤稱為衝突。 ADO 會偵測這種情況，並報告錯誤。  
+當更新已結束但發生錯誤時，解決錯誤的方式而定的本質和 錯誤嚴重性以及您的應用程式的邏輯。 不過，如果資料庫與其他使用者共用，常見的錯誤將會有其他人修改的欄位，然後才執行。 此類錯誤稱為 「 衝突 」。 ADO 會偵測這種情況，並回報錯誤。  
   
 ## <a name="remarks"></a>備註  
- 如果沒有更新錯誤，它們將會陷在錯誤處理常式中。 篩選與 adFilterConflictingRecords 常數資料錄集，使衝突資料列會顯示。 在此範例中，錯誤解決方案策略是只列印作者的名字和姓氏的名稱 （au_fname 和 au_lname）。  
+ 如果有更新錯誤，它們會受困在錯誤處理常式。 這樣的衝突資料列就可以看到，篩選與 adFilterConflictingRecords 常數資料錄集。 在此範例中，錯誤解決方案策略是只列印作者的名字和姓氏的名稱 （au_fname 和 au_lname）。  
   
- 警示使用者更新衝突的程式碼看起來像這樣：  
+ 若要通知使用者有更新衝突的程式碼看起來像這樣：  
   
 ```  
 objRs.Filter = adFilterConflictingRecords  

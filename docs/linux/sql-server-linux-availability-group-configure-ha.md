@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621076"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>設定 SQL Server Always On 可用性群組在 Linux 上的高可用性
 
@@ -68,6 +66,8 @@ ms.locfileid: "39082710"
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>建立 AG
+
+在本節中的範例說明如何建立使用 Transact SQL 可用性群組。 您也可以使用 SQL Server Management Studio 的可用性群組精靈。 當您使用精靈建立 AG 時，它會傳回錯誤，當您加入至 AG 的複本。 若要修正此問題，授與`ALTER`， `CONTROL`，和`VIEW DEFINITIONS`上所有複本 AG 上的 pacemaker。 權限會授與主要複本上，將節點加入至 AG，透過精靈 」，但若要正常運作，請授與權限的所有複本上的 HA。
 
 針對高可用性組態，以確保自動容錯移轉，AG 會需要至少三個複本。 下列設定其中一種方法可支援高可用性：
 
@@ -192,6 +192,13 @@ ms.locfileid: "39082710"
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>將次要複本聯結至 AG
 
+Pacemaker 使用者需要`ALTER`， `CONTROL`，和`VIEW DEFINITION`上所有複本的可用性群組的權限。 授與權限，請執行下列 TRANSACT-SQL 指令碼之後加入可用性群組之後，立即建立可用性群組主要複本和每個次要複本上。 執行指令碼之前，請取代`<pacemakerLogin>`pacemaker 使用者帳戶的名稱。
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 下列 TRANSACT-SQL 指令碼會加入名為 AG 中的 SQL Server 執行個體`ag1`。 更新您環境中的指令碼。 在裝載次要複本的每個 SQL Server 執行個體，執行下列 TRANSACT-SQL 將 AG。
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >在設定叢集，並新增為叢集資源的 AG 之後，您無法使用 TRANSACT-SQL 來容錯移轉 AG 資源。 在 Linux 上的 SQL Server 叢集資源未結合緊密與作業系統和它們在 Windows Server 容錯移轉叢集 (WSFC)。 SQL Server 服務並不知道叢集的目前狀態。 所有的協調流程是透過叢集管理工具。 在 RHEL 或 Ubuntu 使用`pcs`。 在 SLES 使用`crm`。 
 
 >[!IMPORTANT]
->如果叢集資源為 AG，有強制容錯移轉至非同步複本遺失的資料不會無法運作的目前版本中是已知的問題。 這將會在即將推出的版本中修正。 同步複本的手動或自動容錯移轉會成功。 
+>如果叢集資源為 AG，有強制容錯移轉至非同步複本遺失的資料不會無法運作的目前版本中是已知的問題。 這將會在即將推出的版本中修正。 同步複本的手動或自動容錯移轉會成功。
 
 
 ## <a name="next-steps"></a>後續步驟

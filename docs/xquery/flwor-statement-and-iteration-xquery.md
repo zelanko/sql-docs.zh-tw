@@ -1,18 +1,13 @@
 ---
-title: FLWOR 陳述式與反覆運算 (XQuery) |Microsoft 文件
+title: FLWOR 陳述式與反覆運算 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -27,16 +22,15 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: 44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9ca8e71d1f71ba6416c08586e5613d129ad35d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe062b9d42dcedfc9c357f5af10ae19c2298acdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078105"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656316"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 陳述式與反覆運算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +143,7 @@ SELECT @x.query('
   
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，不允許異質性時序。 具體而言，不允許同時包含不可部份完成值與節點的時序。  
   
- 反覆項目會經常搭配[XML 建構](../xquery/xml-construction-xquery.md)轉換 XML 的語法格式下, 一個查詢中所示。  
+ 反覆項目經常會搭配[XML 建構](../xquery/xml-construction-xquery.md)轉換 XML 的語法格式，在下一個查詢中所示。  
   
  在 AdventureWorks 範例資料庫中，製造指示儲存在**指示**資料行**Production.ProductModel**資料表具有下列格式：  
   
@@ -197,7 +191,7 @@ where ProductModelID=7
   
 -   FLWOR 陳述式可擷取特定產品的 <`Location`> 元素序列。  
   
--   [Data 函數 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)會用來擷取每個屬性的值，因此它們會以文字節點而不是做為屬性新增至所產生的 XML。  
+-   [Data 函數 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)會用來擷取每個屬性的值，因此它們會以文字節點，而不是做為屬性新增至產生的 XML。  
   
 -   在 RETURN 子句中的運算式可建構您所需的 XML。  
   
@@ -254,7 +248,7 @@ where ProductModelID=7
   
  下列為上一個查詢的注意事項：  
   
--   `where`關鍵字使用**count （)** 函式的次數 <`step`> 子元素，在每個工作中心位置。  
+-   `where`關鍵字會使用**count （)** 函式來計算數目 <`step`> 子元素，在每個工作中心位置。  
   
 -   `return` 運算式可從反覆運算的結果建構 XML。  
   
@@ -301,7 +295,7 @@ SELECT @x.query('
   
  請注意下列項目是從上一個查詢而來：  
   
--   `for`運算式定義`$Loc`和 $`FirstStep`變數。  
+-   `for`運算式會定義`$Loc`和 $`FirstStep`變數。  
   
 -   `two` 運算式 `/ManuInstructions/Location` 及 `$FirstStep in $Loc/Step[1]`，與 `$FirstStep` 值相依的 `$Loc` 值相互關聯。  
   
@@ -316,7 +310,7 @@ Manu step 1 at Loc 1
 Manu step 1 at Loc 2  
 ```  
   
- 下列查詢很類似，不同之處在於它針對具類型的 Instructions 資料行指定**xml**資料行的**ProductModel**資料表。 [XML 建構 (XQuery)](../xquery/xml-construction-xquery.md)用來產生您想要的 XML。  
+ 下列查詢很類似，不同之處在於它針對具類型的 Instructions 資料行所指定**xml**資料行的**ProductModel**資料表。 [XML 建構 (XQuery)](../xquery/xml-construction-xquery.md)用來產生您想要的 XML。  
   
 ```  
 SELECT Instructions.query('  
@@ -336,9 +330,9 @@ WHERE ProductModelID=7
   
 -   `for` 子句定義兩個變數 `$WC` 與 `$S`。 與 `$WC` 關聯的運算式會產生製造腳踏車產品型號的工作中心位置序列。 指派給 `$S` 變數的路徑運算式會為 `$WC` 中的每個工作中心位置產生步驟的序列。  
   
--   傳回的陳述式會建構的 XML <`Step`> 元素包含製造步驟和**LocationID**做為其屬性。  
+-   Return 陳述式會建構具有的 XML <`Step`> 元素包含製造步驟，而**LocationID**做為其屬性。  
   
--   **宣告預設元素命名空間**XQuery 初構中使用，因此產生的 XML 中的所有命名空間宣告會出現在最上層元素。 這將使結果更具可讀性。 如需有關預設命名空間的詳細資訊，請參閱[處理 XQuery 中的命名空間](../xquery/handling-namespaces-in-xquery.md)。  
+-   **宣告預設元素命名空間**用在 XQuery 初構中，以便在產生的 XML 中的所有命名空間宣告會出現在最上層的項目。 這將使結果更具可讀性。 如需有關預設命名空間的詳細資訊，請參閱 <<c0> [ 處理 XQuery 中的命名空間](../xquery/handling-namespaces-in-xquery.md)。  
   
  以下是部份結果：  
   
@@ -360,7 +354,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>使用依子句排序的順序  
- 利用 FLWOR 運算式中的 `order by` 子句執行 XQuery 的排序。 排序運算式傳遞至`order by`子句必須傳回類型的值適用於**gt**運算子。 每個排序運算式必須一個項目產生一個序列。 依預設，會以遞增順序執行順序。 您可以為每個排序運算式選擇性地指定遞增或遞減順序。  
+ 利用 FLWOR 運算式中的 `order by` 子句執行 XQuery 的排序。 排序運算式傳遞至`order by`子句必須傳回的值的類型都適用於**gt**運算子。 每個排序運算式必須一個項目產生一個序列。 依預設，會以遞增順序執行順序。 您可以為每個排序運算式選擇性地指定遞增或遞減順序。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中由 XQuery 實作所執行的字串值排序比較，永遠都會使用二進位的 Unicode 字碼指標定序來執行。  

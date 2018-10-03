@@ -1,32 +1,29 @@
 ---
-title: 輸入屬性的範例 （欄位） （VC + +） |Microsoft 文件
+title: 輸入屬性範例 (Field) （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb420e129d36c9172837a9d68e631c9bc26086e7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666231"
 ---
-# <a name="type-property-example-field-vc"></a>型別屬性範例 （欄位） （VC + +）
-這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性所顯示的值之常數的對應名稱**類型**屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行這個程序。  
+# <a name="type-property-example-field-vc"></a>Type 屬性範例 (Field) (VC++)
+此範例示範[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性的值來顯示對應的常數名稱**型別**屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行此程序。  
   
 ## <a name="example"></a>範例  
   
@@ -157,7 +154,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Employee 資料表中的欄位：**  
+ **在 [員工] 資料表中的欄位：**  
  **名稱： emp_id**  
  **類型： adChar**  
  **名稱： fname**  

@@ -1,13 +1,11 @@
 ---
-title: '參數 （Visual c + + 語法索引與 #import） |Microsoft 文件'
+title: '參數 （Visual c + + 語法索引與 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,16 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - 'Parameter collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab74a56e784eb8ac866f4744e3ae1933a7ae9835
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 184ae6f4d603ff1f4175d54f041d624ae047c6f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280537"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644746"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>參數 （Visual c + + 語法索引與 #import）
 ## <a name="methods"></a>方法  

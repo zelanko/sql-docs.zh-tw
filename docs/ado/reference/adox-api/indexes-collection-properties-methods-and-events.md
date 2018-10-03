@@ -1,29 +1,26 @@
 ---
-title: 索引集合屬性、 方法和事件 |Microsoft 文件
+title: 編製索引的集合屬性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Indexes collection [ADOX], members
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b992c214722826ce72c3cd1dd5bef70ed77cd502
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e5b0efd474debf81d7d61c9228beadb95beea16a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696537"
 ---
-# <a name="indexes-collection-properties-methods-and-events"></a>索引集合的屬性、 方法和事件
+# <a name="indexes-collection-properties-methods-and-events"></a>Indexes 集合屬性、方法和事件
 ## <a name="properties"></a>屬性  
  [Count 屬性](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -34,7 +31,7 @@ ms.locfileid: "35286047"
   
  [Delete 方法 （集合）](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
- [重新整理方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh 方法](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>事件  
  無。  

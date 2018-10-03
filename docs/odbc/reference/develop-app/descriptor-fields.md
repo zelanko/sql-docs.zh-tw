@@ -1,32 +1,29 @@
 ---
-title: 描述項欄位 |Microsoft 文件
+title: 描述項欄位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], fields
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cddf01c0ef40b582410773ba109c2d1c23ee1e7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696577"
 ---
 # <a name="descriptor-fields"></a>描述項欄位
-項目中包含*標頭*和*記錄*完整地描述資料行或參數的欄位。  
+項目中包含*標頭*並*記錄*完整地描述資料行或參數的欄位。  
   
  描述元包含下列標頭欄位的單一複本。 變更標頭欄位，會影響所有的資料行或參數。  
   
@@ -37,7 +34,7 @@ ms.locfileid: "32912573"
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- 描述元包含零或多個描述項記錄。 每一筆記錄描述的資料行或參數，根據描述元的類型。 新的資料行或參數繫結，會將新的記錄加入描述元。 解除繫結資料行或參數時，記錄移除時從描述項。 每一筆記錄會包含下列欄位的單一複本：  
+ 描述元包含零個或多個描述項記錄。 每一筆記錄會描述資料行或參數，取決於型別描述元。 繫結的新資料行或參數，新的記錄會加入到描述元。 解除繫結的資料行或參數時，已移除的記錄，從描述項。 每一筆記錄包含一份下列欄位：  
   
 |||  
 |-|-|  
@@ -58,7 +55,7 @@ ms.locfileid: "32912573"
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- 許多陳述式屬性會對應至標頭欄位的描述元。 設定這些屬性，透過呼叫**SQLSetStmtAttr**呼叫以設定對應的描述項標頭欄位和**SQLSetDescField**有相同的效果。 同樣適用於**SQLGetStmtAttr**和**SQLGetDescField**，這兩種擷取相同的資訊。 呼叫陳述式函式，而不是描述元函式的優點不一定要擷取的描述項控制代碼。  
+ 許多陳述式屬性對應到描述項標頭欄位。 設定這些屬性，透過呼叫**SQLSetStmtAttr**並設定對應的描述項標頭欄位，藉由呼叫**SQLSetDescField**有相同的效果。 這也適用於**SQLGetStmtAttr**並**SQLGetDescField**，這兩者都擷取相同的資訊。 呼叫陳述式函式，而不是描述元函式的優點，不需要擷取描述項控制代碼。  
   
  設定陳述式屬性，即可設定下列標頭欄位：  
   

@@ -1,32 +1,29 @@
 ---
-title: 尋找方法範例 (VB) |Microsoft 文件
+title: Find 方法範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f4b1bea33cc861f1746fdc2af3fe58e0df77773
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e7e2d3c0c306cf9004f42b7d58beb160e8180516
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615616"
 ---
-# <a name="find-method-example-vb"></a>尋找方法範例 (VB)
-這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法找出和商務標題中的次數***Pubs***資料庫。 此範例假設基礎提供者不支援類似的功能。  
+# <a name="find-method-example-vb"></a>Find 方法範例 (VB)
+這個範例會使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法，以找出並計算中的公司職稱數目***Pubs***資料庫。 此範例假設基礎提供者不支援類似的功能。  
   
 ```  
 'BeginFindVB  

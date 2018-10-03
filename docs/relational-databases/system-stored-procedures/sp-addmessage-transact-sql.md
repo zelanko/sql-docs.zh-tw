@@ -1,14 +1,11 @@
 ---
-title: sp_addmessage (TRANSACT-SQL) |Microsoft 文件
+title: sp_addmessage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 964f0909c136eddc86571ce776b559083c8ce3e1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668326"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,31 +44,31 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 ## <a name="arguments"></a>引數  
  [ **@msgnum****=** ] *msg_id*  
- 這是訊息的識別碼。 *msg_id*是**int**預設值是 NULL。 *msg_id*使用者定義錯誤訊息可以是 50,001 和 2,147,483,647 之間的整數。 組合*msg_id*和*語言*必須是唯一的; 如果指定的語言的識別碼已經存在，則會傳回錯誤。  
+ 這是訊息的識別碼。 *msg_id*已**int**預設值是 NULL。 *msg_id*使用者定義錯誤訊息可以是 50,001 和 2,147,483,647 之間的整數。 組合*msg_id*並*語言*必須是唯一的; 如果指定的語言的識別碼已經存在，會傳回錯誤。  
   
  [  **@severity =** ]*嚴重性*  
- 這是錯誤的嚴重性層級。 *嚴重性*是**smallint**預設值是 NULL。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
+ 這是錯誤的嚴重性層級。 *嚴重性*已**smallint**預設值是 NULL。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
  [ **@msgtext =** ] **'***msg***'**  
- 這是錯誤訊息的文字。 *msg*是**nvarchar （255)** 預設值是 NULL。  
+ 這是錯誤訊息的文字。 *msg*已**nvarchar(255)** 預設值是 NULL。  
   
  [  **@lang =** ] **'***語言***'**  
- 這是此訊息的語言。 *語言*是**sysname**預設值是 NULL。 因為可以在相同的伺服器上安裝多種語言*語言*指定用來撰寫每個訊息的語言。 當*語言*已省略，語言是預設語言工作階段。  
+ 這是此訊息的語言。 *語言*已**sysname**預設值是 NULL。 因為可以在相同的伺服器上安裝多種語言*語言*指定撰寫每個訊息的語言。 當*語言*已省略，語言是預設語言工作階段。  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- 這是指當訊息出現時，是否將訊息寫入 Windows 應用程式記錄檔中。 **@with_log** 是**varchar(5)** 預設值是 FALSE。 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有成員**sysadmin**伺服器角色可以使用此選項。  
+ 這是指當訊息出現時，是否將訊息寫入 Windows 應用程式記錄檔中。 **@with_log** 已**varchar(5)** 預設值是 FALSE。 如果是 TRUE，錯誤一律會寫入 Windows 應用程式記錄檔中。 如果是 FALSE，錯誤就不一定會寫入 Windows 應用程式記錄檔中，但隨著錯誤的產生方式而不同，也可能會寫入。 只有成員**sysadmin**伺服器角色可以使用此選項。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
  [ **@replace** *=* ] **'***取代***'**  
- 如果指定為字串*取代*，新訊息文字和嚴重性層級覆寫現有的錯誤訊息。 *取代*是**varchar(7)** 預設值是 NULL。 必須指定這個選項，如果*msg_id*已經存在。 如果您取代 U.S. English 訊息，嚴重性層級會取代所有具有相同的其他語言中的所有訊息*msg_id*。  
+ 如果指定為字串*取代*，新訊息文字和嚴重性層級覆寫現有的錯誤訊息。 *取代*已**varchar(7)** 預設值是 NULL。 必須指定此選項，如果*msg_id*已經存在。 如果您取代 U.S. English 訊息，嚴重性層級會取代所有具有相同的其他語言中的所有訊息*msg_id*。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非英文版本，訊息的 U.S. English 版本必須已存在，之後才能利用其他語言來加入訊息。 兩個版本的訊息，嚴重性必須相符。  
@@ -86,7 +82,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  由於語言語法差異，當地語系化訊息中的參數號碼可能與原始訊息中的順序不符。  
   
 ## <a name="permissions"></a>Permissions  
-需要的成員資格**sysadmin**或**serveradmin**固定伺服器角色。  
+需要的成員資格**sysadmin**或是**serveradmin**固定伺服器角色。  
   
 ## <a name="examples"></a>範例  
   
@@ -169,7 +165,7 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>另請參閱  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
