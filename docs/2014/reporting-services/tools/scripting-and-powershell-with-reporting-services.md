@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
 - scripting [Reporting Services]
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 949ceb6b2aff0dd393cfa0c58e91355f20f4c741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166515"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>指令碼與 PowerShell 搭配 Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 支援各種開發和管理案例，透過指令碼，包括 rs.exe 命令列公用程式、 適用於 SharePoint 模式報表伺服器，PowerShell cmdlet，並善用[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]從原生的 PowerShell 的物件模型和SharePoint 模式。  
@@ -64,7 +61,7 @@ ms.locfileid: "37212538"
   
 ## <a name="rsexe-scripting-samples"></a>RS.exe 指令碼範例  
   
--   第 1 課：建立 Windows Azure 儲存體物件[Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+-   [在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)  
   
 -   如需其他指令碼、應用程式及延伸模組範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
   

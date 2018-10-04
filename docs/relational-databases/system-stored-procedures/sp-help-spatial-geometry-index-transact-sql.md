@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_index
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index procedure
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40eff48fed7d9ba3a687d32858ad2a3f3cdbf154
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 150c82f48e980f0af74dca9616c249ce7605f9f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033451"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629346"
 ---
 # <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

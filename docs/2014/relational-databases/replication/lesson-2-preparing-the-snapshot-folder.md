@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3bc3b7fa0367674ff5db39e3fab424cac0ea7380
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ee7028a14cebadd6d49fac1a081e8db78ea7990
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157028"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 課：準備快照集資料夾
   在這一課，您將學習設定用於建立及儲存發行集快照集的快照集資料夾。  

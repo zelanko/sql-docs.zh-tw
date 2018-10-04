@@ -3,17 +3,17 @@ title: 安裝 SQL Server Machine Learning 在 Windows 上的服務 （資料庫�
 description: 當您在 Windows 上安裝 SQL Server 2017 Machine Learning 服務，可使用 R 在 SQL Server 或 SQL Server 上的 Python。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/14/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 330c21e6eb256bfe398bc707852eb9a66a183fb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142658"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,9 @@ ms.locfileid: "46713030"
 
 7. 安裝程式完成，如果系統指示您重新啟動電腦之後, 請現在登出。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)＞。
 
-## <a name="bkmk_enableFeature"></a>啟用指令碼執行
+<a name="bkmk_enableFeature"></a>
+
+## <a name="enable-script-execution"></a>啟用指令碼執行
 
 1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
@@ -136,6 +138,8 @@ ms.locfileid: "46713030"
 您可以重新啟動服務，使用滑鼠右鍵**重新啟動**命令，在 SSMS 中，或使用之執行個體**Services**面板在控制台中，或使用[SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>確認安裝
+
+檢查安裝狀態中的執行個體[自訂報表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)或安裝程式記錄檔。
 
 使用下列步驟，確認用來啟動外部指令碼的所有元件正在都執行。
 
@@ -191,6 +195,28 @@ ms.locfileid: "46713030"
 > 
 > 例如，您可以新增下列這一行加入產生的任意資料行名稱： `WITH RESULT SETS ((Col1 AS int))`
 
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>套用更新
+
+我們建議您將最新的累積更新套用至 database engine 和機器學習服務元件。
+
+在連線網際網路的裝置，通常透過 Windows Update 套用累計更新，但您也可以使用下列步驟，針對受控制的更新。 在套用 database engine 的更新時，安裝程式會提取您在相同的執行個體安裝任何 R 或 Python 功能的累計更新。 
+
+在中斷連線的伺服器，則需要額外的步驟。 如需詳細資訊，請參閱 <<c0> [ 在沒有網際網路存取的電腦上安裝 > 套用累計更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
+
+1. 開始使用已安裝的基準執行個體： SQL Server 2017 的初始版本
+
+2. 移至累計更新清單： [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+
+3. 選取最新的累積更新。 可執行檔會下載並自動擷取。
+
+4. 執行安裝程式。 接受授權條款，並在 特徵選取 頁面中，檢閱 ，套用累計更新的功能。 您應該會看到安裝目前的執行個體，包括機器學習服務功能的每項功能。 安裝程式下載封包檔需要更新所有功能。
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. 繼續執行精靈，並接受 R 和 Python 散發套件的授權條款。 
+
 ## <a name="additional-configuration"></a>其他組態
 
 如果執行外部指令碼驗證步驟成功，您可以執行 R 或 Python 的命令，從 SQL Server Management Studio、 Visual Studio Code 或其他任何可以傳送至伺服器的 T-SQL 陳述式的用戶端。
@@ -212,7 +238,9 @@ ms.locfileid: "46713030"
 > [!NOTE]
 > 是否需要額外的設定取決於您安全性結構描述中，您可在此安裝 SQL Server，和您預期使用者會連線到資料庫並執行外部指令碼的方式。 
 
-###  <a name="bkmk_configureAccounts"></a> 啟用 SQL 限制使用者群組 (SQLRUserGroup) 帳戶群組的隱含的驗證
+<a name="bkmk_configureAccounts"></a> 
+
+###  <a name="enable-implied-authentication-for-sql-restricted-user-group-sqlrusergroup-account-group"></a>啟用 SQL 限制使用者群組 (SQLRUserGroup) 帳戶群組的隱含的驗證
 
 如果您需要從遠端資料科學用戶端中，執行指令碼和您使用 Windows 驗證，則需要其他組態才能授與背景工作帳戶執行 R 和 Python 處理程序的登入的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表您的執行個體。 這個行為稱為*隱含的驗證*，而且以支援安全執行外部指令碼在 SQL Server 2016 和 SQL Server 2017 資料庫引擎所實作。
 
@@ -235,7 +263,9 @@ ms.locfileid: "46713030"
 在 SQL Server 2019，背景工作帳戶會取代 AppContainers，與在 SQL Server Launchpad 服務下執行的程序。 雖然無法再使用背景工作帳戶，則仍然必須新增的資料庫登入**SQLRUsergroup**如果隱含需要驗證。 如同背景工作帳戶沒有登入權限，Launchpad 服務身分識別會不。 建立的登入**SQLRUserGroup**，後者包含 Launchpad 服務在此版本中，允許隱含的驗證，才能運作。
 ::: moniker-end
 
-### <a name="permissions-external-script"></a> 給予使用者執行外部指令碼的權限
+<a name="permissions-external-script"></a> 
+
+### <a name="give-users-permission-to-run-external-scripts"></a>給予使用者執行外部指令碼的權限
 
 如果您已安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且您會在您自己的執行個體中執行 R 或 Python 指令碼，您通常會以系統管理員身分執行指令碼。 因此，您會有隱含權限不同作業和資料庫中的所有資料。
 
@@ -250,7 +280,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!NOTE]
 > 不支援的指令碼語言特定的權限。 換句話說，沒有與 Python 指令碼的 R 指令碼的個別權限層級。 如果您需要維護這些語言的個別權限，請個別執行個體上安裝 R 和 Python。
 
-### <a name="permissions-db"></a> 提供您的使用者讀取、 寫入或資料定義語言 (DDL) 資料庫的權限
+<a name="permissions-db"></a> 
+
+### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>提供您的使用者讀取、 寫入或資料定義語言 (DDL) 資料庫的權限
 
 當使用者執行指令碼時，使用者可能需要讀取其他資料庫中的資料。 使用者可能也需要建立新的資料表來儲存結果，並將資料寫入至資料表。
 
@@ -305,16 +337,6 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 安裝和管理 R 套件的程序是 SQL Server 2016 和 SQL Server 2017 中的不同。 在 SQL Server 2016 中，資料庫管理員必須安裝使用者所需的 R 套件。 在 SQL Server 2017 中，您可以設定使用者群組，共用每個資料庫層級上的封裝，或設定資料庫角色，以讓使用者安裝自己的封裝。 如需詳細資訊，請參閱 < [SQL Server 中安裝新的 R 套件](../r/install-additional-r-packages-on-sql-server.md)。
 
-
-## <a name="get-help"></a>取得說明
-
-需要安裝或升級的說明嗎？ 如需常見問題和已知的問題的解答，請參閱下列文章：
-
-* [升級及安裝常見問題集-Machine Learning 服務](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-若要檢查的執行個體的安裝狀態，並修正常見的問題，請嘗試這些自訂報表。
-
-* [SQL Server R services 的自訂報表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## <a name="next-steps"></a>後續步驟
 

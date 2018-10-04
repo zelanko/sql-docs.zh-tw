@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - registering report servers
 - report servers [Reporting Services], registering
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099038"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>連接至 Management Studio 中的報表伺服器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供物件總管，可讓您連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何伺服器並以圖形方式瀏覽其內容。 若為 Reporting Services，您可以使用 [物件總管] 來進行下列作業：  
@@ -83,7 +80,7 @@ ms.locfileid: "37172151"
   
     -   若為原生模式報表伺服器，請輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：\<伺服器名稱>[\\<執行個體名稱\>]。  
   
-    -   若為以 SharePoint 整合模式執行的報表伺服器，要連接的伺服器就是與報表伺服器連接的 SharePoint 網站。 連接至 SharePoint 網站是必要的，如此您才能夠檢視控制報表伺服器內容和作業之存取權的權限等級。 您可以在網站集合中指定任何網站。 下列範例說明語法：http://mysharepointsite。  
+    -   若為以 SharePoint 整合模式執行的報表伺服器，要連接的伺服器就是與報表伺服器連接的 SharePoint 網站。 連接至 SharePoint 網站是必要的，如此您才能夠檢視控制報表伺服器內容和作業之存取權的權限等級。 您可以在網站集合中指定任何網站。 下列範例說明語法： http://mysharepointsite。  
   
 5.  對於 [驗證]，請選取要用於存取 Web 伺服器的驗證模式。 您必須選擇報表伺服器正在使用的驗證模式。  
   

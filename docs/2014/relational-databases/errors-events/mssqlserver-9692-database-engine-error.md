@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 9692 (Database Engine error)
 ms.assetid: 02399d6e-ab5e-4f30-8a3e-2bb1e8c135b5
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d885e4da6d2da28a7e14fd82062e548f8b36b829
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 661d7ab65afca258424af300debde328b8f01fee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205173"
 ---
 # <a name="mssqlserver9692"></a>MSSQLSERVER_9692
     

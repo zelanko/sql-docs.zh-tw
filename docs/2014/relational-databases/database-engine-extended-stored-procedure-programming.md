@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], programming
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38ceff6ee0511f8120808d3b7d43ecf0bb58b286
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94be87d9dc0725961200af983e79bc608a2056f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324258"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100608"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>資料庫引擎擴充預存程序程式設計
     

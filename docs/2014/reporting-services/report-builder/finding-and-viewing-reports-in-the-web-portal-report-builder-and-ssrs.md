@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fed7c8d79acf9f02620e6f11ac6eaee08113a819
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ea0eaef40940205b03aaad984d9af7b8782888d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144588"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>在報表管理員中尋找及檢視報表 (報表產生器及 SSRS)
   報表管理員是以網路為基礎的工具，其中包含檢視和管理報表的功能。 這是報表伺服器安裝的一部分。 若要開啟「報表管理員」，請在瀏覽器視窗中輸入「報表管理員」的 URL。 如需瀏覽器需求的詳細資訊，請參閱[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。 如需有關如何在報表伺服器上設定「報表管理員」URL 的詳細資訊，請連絡您的系統管理員。 如需詳細資訊，請參閱[設定報表管理員 &#40;原生模式&#41;](../report-server/configure-web-portal.md)。  

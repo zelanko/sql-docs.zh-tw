@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropsrvrolemember
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a800b6ad29588ec883d8a587eb20d64980d5625e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2f08fa101e2a53696e58f15413ec08c301a9e890
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596939"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

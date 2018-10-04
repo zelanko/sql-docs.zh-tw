@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4889b0385f3f55b4e0ca220d6b1f5f9ecda356b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182708"
 ---
 # <a name="secure-folders"></a>保護資料夾的安全
   資料夾安全性是保護報表伺服器中之所有內容的基礎。 因為安全性會在整個資料夾結構繼承，所以您可以指定很多或很少區段的資料夾階層，來允許特定類型的存取。  

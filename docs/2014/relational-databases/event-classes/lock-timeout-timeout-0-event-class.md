@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6713a2a55ae3326ffccef661093f97aa33a6d3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a65f4256abebd2b5ab9fb80e4f2ca91c1056c079
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191078"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件類別
   **Lock:Timeout (逾時 > 0)** 事件類別表示資源 (例如分頁) 上的鎖定要求已逾時，原因是其他交易在所需資源上已有封鎖的鎖定。 此事件類別與 **Lock:Timeout** 事件類別的操作方式相同，差別在於不包括逾時值為 0 的事件。  

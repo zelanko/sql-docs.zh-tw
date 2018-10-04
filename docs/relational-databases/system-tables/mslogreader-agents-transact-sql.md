@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSlogreader_agents_TSQL
 - MSlogreader_agents
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_agents system table
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c4f075b71494c311b4ba7572a9615bdbc0a7dfe
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 9762ac48d7c757b564d37cd4bedf1d468957de3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102146"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714536"
 ---
 # <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

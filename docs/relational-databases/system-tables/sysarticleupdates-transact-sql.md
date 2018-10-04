@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysarticleupdates_TSQL
 - sysarticleupdates
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sysarticleupdates system table
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72316742aeb0674af092605609b870f0b412aded
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: f6a6617adf3ef8aca68b0876d62eaeda5d953b3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665966"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

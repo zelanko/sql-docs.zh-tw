@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_addlogreader_agent
 - sp_addlogreader_agent_TSQL
@@ -22,12 +17,12 @@ ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de60712c8ad865881e04c01c0a43bb5a46baee0b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fe0495bbe8a6bce3e141a6ff2fe88998e073333b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017436"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650696"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

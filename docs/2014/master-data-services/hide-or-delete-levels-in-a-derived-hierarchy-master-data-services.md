@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, hiding levels
 - derived hierarchies, deleting levels
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: da74b0ff57f6bb5488903730351dcacacf92b2f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 703e18130367c3d508cc6f40f4cdb9af17093f4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088128"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>隱藏或刪除衍生階層中的層級 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您要求群組的層級但是不需要顯示該層級時，請在衍生階層中隱藏該層級。 當您不想要使用層級來群組時，請將它刪除。  

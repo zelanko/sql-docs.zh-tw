@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 326460795e7b1d72c1e894c80265401f5bfd882c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287084"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191468"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
   從 Oracle 資料庫發行和從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫發行的設計幾乎相同。 但應該注意下列限制和問題：  
@@ -141,8 +138,7 @@ ms.locfileid: "37287084"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援兩種類型的驗證：二進位和資料列計數。 「Oracle 發行者」支援資料列數驗證。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-replicated-data.md)。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種快照集格式：原生 bcp 模式以及字元模式。 「Oracle 發行者」支援字元模式快照集。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種快照集格式：原生 bcp 模式以及字元模式。 「Oracle 發行者」支援字元模式快照集。  
   
 -   不支援已發行 Oracle 資料表的結構描述變更。 若要進行結構描述變更，請先卸除發行集，進行變更，然後再重新建立發行集和所有訂閱。  
   

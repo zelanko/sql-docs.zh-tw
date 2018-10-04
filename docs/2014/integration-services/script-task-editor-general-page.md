@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.general.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44373be3f5988cb166e29b61f3d8588559310f33
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc55de3d17111ed8085a90c57e2876b142be5701
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203998"
 ---
 # <a name="script-task-editor-general-page"></a>指令碼工作編輯器 (一般頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述指令碼工作。  

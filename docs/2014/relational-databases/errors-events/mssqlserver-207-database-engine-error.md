@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 207 (Database Engine error)
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58e9168bfac471e2a642c8a9f94a7332361a00bb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050159"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
     
@@ -118,7 +115,7 @@ ms.locfileid: "37426437"
     GROUP BY Year;  
     ```  
   
--   MERGE 陳述式中的 WHEN NOT MATCHED BY SOURCE 子句參考了可存取的值。 請修改 MERGE 陳述式，讓 WHEN NOT MATCHED BY SOURCE 子句中的來源資料表至少會傳回一個資料列。 例如，您可能必須加入或修訂針對該子句所指定的搜尋條件。 或者，您也可以修改子句，以便指定沒有參考來源資料表的值。 例如， `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`。  
+-   MERGE 陳述式中的 WHEN NOT MATCHED BY SOURCE 子句參考了可存取的值。 請修改 MERGE 陳述式，讓 WHEN NOT MATCHED BY SOURCE 子句中的來源資料表至少會傳回一個資料列。 例如，您可能必須加入或修訂針對該子句所指定的搜尋條件。 或者，您也可以修改子句，以便指定沒有參考來源資料表的值。 例如， `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   

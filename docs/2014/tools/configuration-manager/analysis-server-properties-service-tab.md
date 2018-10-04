@@ -1,25 +1,22 @@
 ---
-title: Analysis Server 屬性 （服務索引標籤） |Microsoft Docs
+title: Analysis Server 屬性 (服務索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd921f3f954c027c60ef036a7846388e6927aaef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80f8c532bd416926a604d29946e979669b964228
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173378"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Analysis Server 屬性 (服務索引標籤)
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 必須執行此服務， [!INCLUDE[ssAS](../../includes/ssas-md.md)] 才能正常運作。 淺灰色的屬性值不得以此應用程式加以變更。  

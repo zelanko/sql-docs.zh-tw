@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fb55b8db046e3d4fd76143f37f883b458e8bab64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b981d40631de5185f2e62c11be8f4c8b8eec880b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214628"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自動建立代碼 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以針對 Code 屬性，或針對其他任何數值屬性，自動產生數值。 自動產生代碼時，系統不會防止您針對代碼輸入其他值，但是會自動設定初始值。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1d2141f51c0434fb0c03dee6c1a07875b8150f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31421597871bfef0c02a15ce83bf486ea9cc6646
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048418"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -39,7 +36,7 @@ ms.locfileid: "37305408"
 ## <a name="explanation"></a>說明  
  這是不論是否使用複寫，都有可能引發的一般性錯誤。 如果是複寫拓撲中的伺服器，通常是因為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 服務控制管理員 (而不是正確使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 組態管理員) 變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶，而引發錯誤。 當您在變更服務帳戶之後嘗試執行代理程式作業時，作業可能失敗，並會顯示訊息如下：  
   
- 「 使用者的身分執行： \<UserAccount >。 複寫-複寫快照集子系統： 代理程式\<代理程式名稱 > 失敗。 以使用者身分執行： \<UserAccount >。 用戶端沒有必要的權限。 步驟失敗。 `[SQLSTATE 42000] (Error 14151)`。 步驟失敗。」  
+ 「 使用者的身分執行： \<UserAccount >。 複寫-複寫快照集子系統： 代理程式\<代理程式名稱 > 失敗。 以使用者身分執行： \<UserAccount >。 用戶端沒有必要的權限。 步驟失敗。 `[SQLSTATE 42000] (Error 14151)`. 步驟失敗。」  
   
  發生這個問題是因為 Windows 服務控制管理員無法授與權限給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的新服務帳戶。  
   

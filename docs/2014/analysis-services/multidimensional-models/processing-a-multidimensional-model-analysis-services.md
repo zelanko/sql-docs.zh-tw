@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173318"
 ---
 # <a name="multidimensional-model-object-processing"></a>多維度模型物件處理
   處理是一個步驟或是一連串的步驟，Analysis Services 會在這些步驟中將關聯式資料來源中的資料載入多維度模型中。 如果是使用 MOLAP 儲存的物件，資料會儲存至磁碟的資料庫檔案資料夾中。 對於 ROLAP 儲存，視需要發生處理，以回應物件的 MDX 查詢。 如果是使用 ROLAP 儲存的物件，處理是指在傳回查詢結果之前更新快取。  

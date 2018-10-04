@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a6fcacac48a6f32cbdd7744566400936decc51e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54459f4c31854c11a2285c072b8e5d20ca510807
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174988"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件類別
   **OLEDB QueryInterface** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對分散式查詢和遠端預存程序發出 OLE DB **QueryInterface** 呼叫時發生。 將這個事件類別納入追蹤，追蹤會監視與分散式查詢和遠端預存程序相關聯的問題。  

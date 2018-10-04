@@ -5,25 +5,21 @@ ms.date: 03/06/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70d7e412dced9f2f1cbf81f1edad5545e59eb857
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765516"
 ---
-# <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions，以查看 (Azure SQL Database)
+# <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   傳回有關工作階段事件的資訊。 事件是不連續的執行點。 述詞可以套用至事件，以便在事件不包含必要資訊時阻止事件引發。  

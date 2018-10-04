@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f53586804c7abf1b3fbaf7067efb0324a5005cbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcf061866f6992e37ed5411a0c3b6ac0971f23e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068058"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>變更為了擷取變更所選取的資料表
   在此對話方塊中，您可以從要擷取變更的選定資料表中選取特定資料行。 您也可以編輯 **[安全性角色]** 和 **[擷取執行個體]** 資訊。  

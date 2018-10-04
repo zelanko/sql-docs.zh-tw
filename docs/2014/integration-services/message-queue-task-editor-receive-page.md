@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 384d15668d835db7d75f9e612595d00d83f41da4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060841"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
@@ -35,7 +32,7 @@ ms.locfileid: "37256824"
  指出接收訊息之後，是否從佇列中移除該訊息。 依預設，此值設定為 `False`。  
   
  **ErrorIfMessageTimeOut**  
- 指出當訊息逾時的時侯工作是否失敗，並顯示錯誤訊息。 預設值為 `False`。  
+ 指出當訊息逾時的時侯工作是否失敗，並顯示錯誤訊息。 預設為 `False`。  
   
  **TimeoutAfter**  
  如果您選擇在工作失敗時要顯示錯誤訊息，請指定顯示逾時訊息之前要等候的秒數。  
@@ -57,7 +54,7 @@ ms.locfileid: "37256824"
  輸入要使用的檔案路徑，或按一下省略符號按鈕 **(…)** ，然後尋找檔案。  
   
  **Overwrite**  
- 指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設值為 `False`。  
+ 指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設為 `False`。  
   
  **篩選**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  

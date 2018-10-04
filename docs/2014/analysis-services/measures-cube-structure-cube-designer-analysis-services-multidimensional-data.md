@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90042bb67b29b86941055ed0689a4c7043bfdd6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090309"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>量值 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[量值]** 窗格，即可操作 Cube 設計師中之 **[Cube 結構]** 索引標籤上的量值群組和成員。  
@@ -30,7 +27,7 @@ ms.locfileid: "37319458"
  [量值]  
  顯示 Cube 中所含的量值群組和量值，視選取的檢視而定：  
   
- trEE  
+ 樹狀結構  
  顯示量值群組的樹狀檢視，以量值作為子節點。  
   
  展開量值群組以檢視量值。 按一下選取的量值群組或量值，即可分別重新命名量值群組或量值。  

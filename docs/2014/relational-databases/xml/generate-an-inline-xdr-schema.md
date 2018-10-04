@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XDR schemas [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - XMLDATA option
 - FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 918b9701a2f6cb4aceb69b4ea2fed2e7c16fe35a
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 8d0c7e9c46b4b5ad42192cc4d524e2170a968620
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888674"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088848"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>產生內嵌 XDR 結構描述
   FOR XML 中的 **XMLDATA** 指示詞會將內嵌 XDR 結構描述連同查詢結果一起傳回。 不過，XDR 結構描述並不支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本中引進的所有新資料類型和其他的增強功能。 您可以改用 [XMLSCHEMA 指示詞](generate-an-inline-xsd-schema.md)來要求內嵌 XSD 結構描述。  

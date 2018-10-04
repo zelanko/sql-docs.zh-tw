@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50ee6db4cd7e8d16da89f234a67c437390260364
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb8ac0237fc9175f29471a66b7e3916122b55707
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082284"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>資料集屬性對話方塊、參數 (報表產生器)
   選取 **參數**上**資料集屬性**對話方塊，即可加入、 變更與刪除查詢參數。  

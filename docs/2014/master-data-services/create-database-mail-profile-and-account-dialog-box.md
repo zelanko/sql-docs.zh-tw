@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da77653fa78503a62ec974aa88d41dee020a34d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089178"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>建立 Database Mail 設定檔和帳戶對話方塊 (Master Data Services 組態管理員)
   使用 [建立 Database Mail 設定檔和帳戶] 對話方塊，即可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Mail 設定檔和 Database Mail 帳戶。 當商務規則驗證失敗時，將會使用這個設定檔來透過電子郵件通知使用者和群組。  

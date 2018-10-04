@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c25ed051cfa061cbe402f6da797e360bae97eee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55ac9eaaaa2313536c27df4c96723e96b70fada5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060858"
 ---
 # <a name="request-log"></a>要求記錄檔
   使用 **[要求記錄檔]** 對話方塊可以檢視對 SAP Netweaver BW 系統提出資料取樣要求期間記錄的事件。 如果您需要疑難排解 SAP BW 來源的組態，這項資訊可能很有用。  
@@ -58,7 +55,7 @@ ms.locfileid: "37289408"
 |E|錯誤訊息|  
 |W|警告訊息。|  
 |I|參考資訊。|  
-|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|作業已中止。|  
+|A|作業已中止。|  
   
  **Message**  
  顯示與記錄之事件相關聯的訊息文字。  

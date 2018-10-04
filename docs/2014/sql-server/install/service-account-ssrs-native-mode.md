@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 36b1b0621cd660855638e4fa0a936e9700efb4d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96cee57e82cc9fbb01a43dc1ec13bf0691f737fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079123"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服務帳戶 (SSRS 原生模式)
   使用 [服務帳戶] 頁面，即可指定報表伺服器服務執行所用的帳戶。 此帳戶是在安裝期間進行初始設定。 如果想要變更帳戶或密碼，就可以修改它。 報表伺服器 Web 服務、報表管理員和背景處理應用程式都會使用您在此頁面上指定的服務識別來執行。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8675de132f15b723b6d7d2a651d31ef7b3e85063
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39a1547e2248c62299026440b5b33da88458138e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085878"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>步驟 3：修改 Directory 屬性組態值
   在這項工作中，您會修改儲存在 SSISTutorial.dtsConfig 檔案中有關套件層級變數 `User::varFolderName` 之 Value 屬性的組態設定。 這個變數會更新 Foreach 迴圈容器的 Directory 屬性。 修改過的值會指向`New Sample Data`您在上一個工作中建立的資料夾。 在修改組態設定及執行套件之後，該變數將使用從組態檔擴展的值而不是原本設定在套件中的目錄值來更新 Directory 屬性。  

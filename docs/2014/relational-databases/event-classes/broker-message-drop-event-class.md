@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Broker:Message Drop event class
 - Broker:Message Undeliverable event class
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75838c8eb38e21eb82f6a57278ebe13310a3f53a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03885ddd91a5c0c99516ee692f50626c1f0b5b3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132668"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable 事件類別
   當 Service Broker 無法保留應於此執行個體中傳遞至服務的已接收訊息時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Message Undeliverable** 事件。 對於應該已被轉送的訊息，請參閱 [Broker︰Forwarded Message Dropped 事件類別](broker-forwarded-message-dropped-event-class.md)。  

@@ -1,34 +1,31 @@
 ---
-title: 資料指標程式庫程式碼範例 |Microsoft 文件
+title: 資料指標程式庫程式碼範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cd6d20ff72e69e01defbba3834602fdf2bf47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691697"
 ---
 # <a name="cursor-library-code-example"></a>資料指標程式庫程式碼範例
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 下列範例會使用資料指標程式庫，ORDERS 資料表中擷取每筆訂單識別碼、 開啟的日期和狀態。 然後，它會顯示 20 個資料列。 如果使用者更新這項資料，程式碼會更新資料列集緩衝區，並執行定位的 update 陳述式。 最後，它會提示使用者的方向捲動，並重複此程序。  
+ 下列範例會使用資料指標程式庫來擷取 「 訂單 」 資料表中的每筆訂單識別碼、 開啟的日期和狀態。 然後，它會顯示 20 個資料列的資料。 如果使用者更新這項資料，程式碼會更新資料列集的緩衝區，並執行定位的 update 陳述式。 最後，它會提示使用者輸入方向捲動，並重複此程序。  
   
 ```  
 #define ROWS 20  

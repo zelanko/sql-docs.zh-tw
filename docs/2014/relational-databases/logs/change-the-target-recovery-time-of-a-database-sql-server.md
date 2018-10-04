@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c23360f7a57e110c5cf50bb01406b51f166c5950
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8fbf203ad7928de8b9d6e4919f9b1d44b5f5cd45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141102"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫的目標復原時間。 根據預設，目標復原時間為 0，而且資料庫會使用 *「自動檢查點」* (Automatic Checkpoint) (由 **recovery interval** 伺服器選項控制)。 如果將目標復原時間設定為大於 0，就會導致資料庫使用 *「間接檢查點」* (Indirect-Checkpoint) 並且建立這個資料庫的復原時間上限。  

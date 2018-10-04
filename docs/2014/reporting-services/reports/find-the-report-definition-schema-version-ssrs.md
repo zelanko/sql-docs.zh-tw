@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML schemas [Reporting Services]
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 42fd97141fad21c9995857a6e51c495cf6eac078
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f20619f4f1bbd1632539f3675c8e955e1073130
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151909"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187548"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
   報表定義檔案會針對用來驗證 rdl 檔的報表定義結構描述版本指定 RDL 命名空間。 當您在報表撰寫環境 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師或報表產生器) 中開啟 .rdl 檔案時，如果此報表是針對先前的命名空間所建立，系統就會自動建立備份檔案，而且此報表會升級為目前的命名空間。 如果您儲存了升級的報表定義，就會儲存轉換的 .rdl 檔。 這是升級報表定義的唯一方式。 報表定義本身不會在報表伺服器上升級。 不過，已編譯的報表會在報表伺服器上升級。 如需詳細資訊，請參閱 [Upgrade Reports](../install-windows/upgrade-reports.md)。  

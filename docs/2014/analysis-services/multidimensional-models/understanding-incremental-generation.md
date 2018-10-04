@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a22eb09d21e1ef63a52ae7248fd6fa2a54832c15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177065"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049288"
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
   在初始結構描述產生之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來變更 Cube 和維度定義，然後重新執行 [結構描述產生精靈]。 此精靈會更新主題領域資料庫和相關資料來源檢視中的結構描述，以便能夠反映變更，同時盡量保留目前存在於要重新產生之資料表中的資料。 如果您在初始產生之後變更了資料表，結構描述產生精靈會使用下列規則，盡量保留那些變更：  

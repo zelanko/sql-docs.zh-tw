@@ -1,12 +1,10 @@
 ---
-title: sys.dm_exec_plan_attributes (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_exec_plan_attributes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_plan_attributes_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a815fe805aeb1a1a4f919353225ba04f6e3fb41
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842596"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/23/2018
   針對計畫控制代碼所指定計畫的每個計畫屬性，各傳回一個資料列。 您可以使用這個資料表值函式取得特定計畫的詳細資料，例如快取索引鍵值或目前同時執行計畫數目。  
   
 > [!NOTE]  
->  透過傳回資訊的某些部分此函式對應至[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)回溯相容性檢視。
+>  透過傳回的資訊的一些此函式對應至[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)回溯相容性檢視。
 
 ## <a name="syntax"></a>語法  
 ```  
@@ -43,26 +41,26 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>引數  
  *plan_handle*  
- 用來唯一識別批次的查詢計劃，該批次已經執行且其計畫在計畫快取中。 *plan_handle*是**varbinary(64)**。 您可以從取得的計畫控制代碼[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)動態管理檢視。  
+ 用來唯一識別批次的查詢計劃，該批次已經執行且其計畫在計畫快取中。 *plan_handle*已**varbinary(64)**。 計畫控制代碼可從此[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)動態管理檢視。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|屬性|**varchar(128)**|與這份計畫相關聯的屬性名稱。 這一個正下方的資料表會列出可能的屬性、 其資料類型，以及它們的描述。|  
+|屬性|**varchar(128)**|與這份計畫相關聯的屬性名稱。 正下方此表列出可能的屬性、 其資料類型，以及它們的描述。|  
 |value|**sql_variant**|與這份計畫相關聯的屬性值。|  
 |is_cache_key|**bit**|指出屬性是否作為計畫快取查閱金鑰的一部分使用。|  
 
-從上述資料表中，**屬性**可以是下列值：
+從上述資料表中，**屬性**可以有下列值：
 
-|Attribute|資料類型|Description|  
+|attribute|資料類型|描述|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指出編譯計畫所用的選項值。|  
 |objectid|**int**|用來查閱快取中物件的主要索引鍵之一。 這是的物件識別碼儲存在[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)資料庫物件 （程序、 檢視、 觸發程序等等）。 若計畫屬於「特定」或「準備」類型，這是批次文字的內部雜湊。|  
 |dbid|**int**|這是包含此計畫參考之實體的資料庫識別碼。<br /><br /> 若為特定或準備計畫，這是執行批次的來源資料庫識別碼。|  
 |dbid_execute|**int**|系統物件儲存在**資源**資料庫、 快取的計畫執行時所在的資料庫識別碼。 在所有其他狀況下，就會是 0。|  
 |user_id|**int**|-2 值表示提交的批次不會隨著隱含的名稱解析而不同，不同的使用者可以共用這些批次。 這是慣用的方法。 任何其他值都代表在資料庫中提交查詢之使用者的使用者識別碼。| 
-|language_id|**smallint**|建立快取物件之連接的語言識別碼。 如需詳細資訊，請參閱[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
+|language_id|**smallint**|建立快取物件之連接的語言識別碼。 如需詳細資訊，請參閱 < [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |date_format|**smallint**|建立快取物件之連接的日期格式。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)。|  
 |date_first|**tinyint**|先顯示日期的值。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。|  
 |status|**int**|屬於快取查閱索引鍵一部分的內部狀態位元。|  
@@ -83,18 +81,18 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="permissions"></a>Permissions  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 ## <a name="remarks"></a>備註  
   
 ## <a name="set-options"></a>Set 選項  
- 相同的已編譯計畫副本可能只有不同中的值**set_options**資料行。 這表示不同的連接會使用不同組的 SET 選項來執行相同的查詢。 一般而言，最好不要使用不同組的選項，因為這可能會導致額外編譯、減少重複使用計畫，而且會因快取中產生多個計畫副本而使計畫快取變大。  
+ 相同的已編譯計畫的副本可能只有不同中的值**set_options**資料行。 這表示不同的連接會使用不同組的 SET 選項來執行相同的查詢。 一般而言，最好不要使用不同組的選項，因為這可能會導致額外編譯、減少重複使用計畫，而且會因快取中產生多個計畫副本而使計畫快取變大。  
   
 ### <a name="evaluating-set-options"></a>評估 Set 選項  
- 若要翻譯中傳回的值**set_options**編譯計畫所用的選項，減去的值從**set_options**最大的可能值開始，直到您的值到達 0。 每個減掉的值即為查詢計劃中使用的選項。 例如，如果中的值**set_options**為 251，編譯計畫所使用的選項為 ANSI_NULL_DFLT_ON (128)、 QUOTED_IDENTIFIER (64)、 ANSI_NULLS(32)、 ANSI_WARNINGS (16)、 CONCAT_NULL_YIELDS_NULL (8)、 Parallel plan （2）和 ANSI_PADDING (1)。  
+ 若要翻譯中傳回的值**set_options**編譯計畫所用的選項，減去的值從**set_options**值，範圍從最大的可能值，直到您到達 0。 每個減掉的值即為查詢計劃中使用的選項。 例如，如果中的值**set_options**是 251，編譯計畫所使用的選項為 ANSI_NULL_DFLT_ON (128)、 QUOTED_IDENTIFIER (64)、 ANSI_NULLS(32)、 ANSI_WARNINGS (16)、 CONCAT_NULL_YIELDS_NULL (8)、 平行 plan(2和 ANSI_PADDING (1)。  
   
-|選項|Value|  
+|選項|值|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -120,11 +118,11 @@ sys.dm_exec_plan_attributes ( plan_handle )
  非使用中的資料指標會快取在編譯的計畫中，讓用來儲存資料指標的記憶體可供資料指標的並行使用者重複使用。 例如，假設有個批次宣告並使用資料指標，但沒有取消配置。 如果有兩個使用者執行相同的批次，會有兩個使用中的資料指標。 一旦資料指標取消配置 (可能在不同的批次中)，用來儲存資料指標的記憶體就會快取，而不會釋出。 非使用中資料指標的清單會保留在編譯的計畫中。 等到下次使用者執行批次時，會重複使用快取的資料指標記憶體，並適當地初始化為使用中資料指標。  
   
 ### <a name="evaluating-cursor-options"></a>評估資料指標選項  
- 若要翻譯中傳回的值**required_cursor_options**和**acceptable_cursor_options**減去編譯計畫所用的選項，從資料行值，從開始值最大可能的值，直到您到達 0。 每個減掉的值即為查詢計劃中使用的資料指標選項。  
+ 要翻譯中傳回的值**required_cursor_options**並**acceptable_cursor_options**編譯計畫所用的選項，減去這些值的資料行值，開頭為最大可能的值，直到您到達 0。 每個減掉的值即為查詢計劃中使用的資料指標選項。  
   
-|選項|Value|  
+|選項|值|  
 |------------|-----------|  
-|無|0|  
+|None|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -171,7 +169,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  

@@ -1,13 +1,11 @@
 ---
-title: BeginTrans，CommitTrans，RollbackTrans 事件 (ADO) |Microsoft 文件
+title: BeginTrans、 CommitTrans RollbackTrans 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,19 +20,18 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773446"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件 (ADO)
-這些事件將在上呼叫相關聯的作業之後[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件完成執行。  
+這些事件將在上呼叫相關聯的作業之後[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件完成執行。  
   
 -   **BeginTransComplete**之後呼叫[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)作業。  
   
@@ -53,23 +50,23 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>參數  
  *TransactionLevel*  
- A**長**值，包含新的交易等級的**BeginTrans**導致此事件。  
+ A**長**值，其中包含新的交易等級的**BeginTrans**導致此事件。  
   
  *pError*  
- [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它描述 EventStatusEnum 值時所發生的錯誤**adStatusErrorsOccurred**; 否則為未設定。  
+ [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 它描述 EventStatusEnum 的值時，所發生的錯誤**adStatusErrorsOccurred**; 否則它不會設定。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。 當呼叫這些事件時，這個參數會設定為**adStatusOK**如果造成事件的作業成功，或**adStatusErrorsOccurred**作業失敗。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。 當呼叫其中任何一個事件時，此參數設為**adStatusOK**造成事件的作業已順利完成，還是要**adStatusErrorsOccurred**如果作業失敗。  
   
- 這些事件可以將這個參數設定以防止後續通知**adStatusUnwantedEvent**事件會傳回之前。  
+ 這些事件可透過此參數設定為防止後續通知**adStatusUnwantedEvent**事件會傳回之前。  
   
  *pConnection*  
- **連接**發生此事件的物件。  
+ **連線**物件發生此事件。  
   
 ## <a name="remarks"></a>備註  
- 在 Visual c + + 中，多個**連線**可以共用相同的事件處理方法。 此方法會使用傳回**連接**來判斷哪些物件造成事件的物件。  
+ Visual c + + 中，多個**連線**可以共用相同的事件處理方法。 此方法會使用傳回**連線**來判斷哪些物件造成事件的物件。  
   
- 如果[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)屬性設定為**adXactCommitRetaining**或**adXactAbortRetaining**，新的交易開始之後認可或回復交易。 使用**BeginTransComplete**略過所有事件，但第一個交易的開始事件。  
+ 如果[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)屬性設定為**adXactCommitRetaining**或是**adXactAbortRetaining**，新的交易開始之後認可或回復交易。 使用**BeginTransComplete**要略過所有的事件，但第一個交易的開始事件。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

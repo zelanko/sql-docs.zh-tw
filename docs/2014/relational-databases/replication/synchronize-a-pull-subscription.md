@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], synchronizing
 - synchronization [SQL Server replication], pull subscriptions
 - subscriptions [SQL Server replication], pull
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9143c943f18c793ce7b89be8891025b20be2e092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41374e742c31574f3504c20104f0a7a3775d77cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213018"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步處理提取訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複寫代理程式 [或 Replication Management Objects (RMO) 來同步處理](agents/replication-agents-overview.md)中的提取訂閱。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.objects.f1
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 189da98d8c0fd6f9a114ea6213185db363539117
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c8cfc6a1f16e03025a1560b09918518c9b2575b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053228"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>傳送 SQL Server 物件工作編輯器 (物件頁面)
   使用 [傳送 SQL Server 物件工作編輯器] 對話方塊的 [物件] 頁面，即可指定用於從某個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體將一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件複製到另一個執行個體的屬性。 資料表、檢視、預存程序和使用者自訂函數是您可以複製的一些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件範例。 如需有關這項工作的詳細資訊，請參閱＜ [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)＞。  

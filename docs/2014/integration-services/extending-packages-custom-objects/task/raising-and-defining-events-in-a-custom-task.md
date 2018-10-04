@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8424a0c38144dd26fadf0c0437064d541a3b5b3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6de41e51b171e57b020309df80c84bdda77fe074
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155408"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎提供事件的集合，可以顯示驗證與執行工作時的工作進度狀態。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面會定義這些事件，而且是以 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的參數提供給工作。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [ODBC]
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d41ba76ceaa157070fc2584c5ebd6d080f415420
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fc6a5254afc715a950f2d3c63d02bfca7a1890ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076578"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>提取和更新資料列集 (ODBC)
     

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb490ee36b9b1a3aff3d0477451d9534309b347a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177490"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 課：執行購物籃預測
   在這一課，您將使用 DMX`SELECT`陳述式來建立預測，根據關聯模型中建立[第 2 課： Adding Mining Models to Market Basket Mining Structure&lt](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 預測查詢的建立方式是使用 DMX `SELECT` 陳述式並加入 `PREDICTION JOIN` 子句。 在預測聯結之語法的詳細資訊，請參閱[FROM&#60;模型&#62;預測聯結&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)。  

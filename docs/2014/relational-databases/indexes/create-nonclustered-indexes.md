@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], nonclustered indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3c0d0c0d21bbc2b6bfc77cac481310af1cb30c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e806bc2997826aa8a44be94e79d1a0b428cee3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124588"
 ---
 # <a name="create-nonclustered-indexes"></a>建立非叢集索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立非叢集索引。 非叢集索引是與資料表中所儲存之資料不同的索引結構，可重新排序一個或多個選取的資料行。 非叢集索引經常可協助您以比搜尋基礎資料表更快的速度找到資料；查詢的結果有時會完全來自非叢集索引中的資料，或是非叢集索引可能會將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基礎資料表中的資料列。 一般而言，建立非叢集索引是為了改善叢集索引未涵蓋但經常使用之查詢的效能，或尋找沒有叢集索引之資料表中的資料列 (稱為堆積)。 您可以在資料表或索引檢視表上建立多個非叢集索引。  

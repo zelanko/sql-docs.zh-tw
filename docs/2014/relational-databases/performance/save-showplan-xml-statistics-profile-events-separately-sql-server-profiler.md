@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Showplan XML events
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0752e653649aba2b976c8b2ad7987d5c69910ad0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 511769ec59b62cef75ffde7f0226fe89b3970bc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198288"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
   此主題描述如何使用 **，將在追蹤中所擷取的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 **中開啟** Showplan XML Statistics Profile [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件檔案，以便檢視每個事件的圖形執行計畫。  

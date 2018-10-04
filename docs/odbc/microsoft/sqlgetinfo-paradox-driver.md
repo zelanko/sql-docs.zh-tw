@@ -1,40 +1,37 @@
 ---
-title: SQLGetInfo （Paradox 驅動程式） |Microsoft 文件
+title: SQLGetInfo （Paradox 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Paradox Driver
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ebf4cd02266fc5cc467a4d998eb4516bee782c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752888"
 ---
-# <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo （Paradox 驅動程式）
+# <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (Paradox 驅動程式)
 > [!NOTE]  
->  本主題提供 Paradox 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC 應用程式開發介面參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題提供 Paradox 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- **SQLGetInfo**支援 SQL_FILE_USAGE 資訊類型。 傳回的值是 16 位元的整數，表示驅動程式如何直接處理的資料來源中的檔案：  
+ **SQLGetInfo**支援 SQL_FILE_USAGE 資訊類型。 傳回的值是 16 位元整數，指出如何驅動程式直接處理資料來源中的檔案：  
   
--   SQL_FILE_NOT_SUPPORTED — 驅動程式不是單層驅動程式。  
+-   SQL_FILE_NOT_SUPPORTED — 驅動程式不是單層式架構的驅動程式。  
   
--   SQL_FILE_TABLE — 單層驅動程式將資料來源中的檔案視為資料表。  
+-   SQL_FILE_TABLE — 單層式架構的驅動程式將資料來源中的檔案視為資料表。  
   
--   SQL_FILE_QUALIFIER — 單層驅動程式辨識符號視為資料來源中的檔案。  
+-   SQL_FILE_QUALIFIER — 單層式架構的驅動程式將資料來源中的檔案視為限定詞。  
   
  ODBC 驅動程式會傳回 SQL_FILE_TABLE，因為每個檔案是一個資料表。  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|ODBC
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MS DTC, performing distributed transactions
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ece402751c0f4228364c159521ff8f6f031220e9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4b3839b9300cda1d20860965bc740ca2ce9c068d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765976"
 ---
 # <a name="performing-transactions---distributed-transactions"></a>執行交易 - 分散式交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

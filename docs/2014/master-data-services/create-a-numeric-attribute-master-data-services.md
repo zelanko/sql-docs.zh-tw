@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 88811e8d6a571f8b51a8362310829b92bb2a57d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3aee9b1bbe939c3790d2849c829a706425aa1b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072628"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>建立數值屬性 (Master Data Services)
   當您想要讓使用者輸入數字作為屬性值時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立數值屬性。  

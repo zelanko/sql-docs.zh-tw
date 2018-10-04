@@ -5,10 +5,6 @@ ms.date: 08/01/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.service: sql-data-warehouse
-ms.suite: sql
-ms.component: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a6fbf843d3a9aca9172a5ab6ea828a0c0b0a40a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ac7c933c9ae730810b198266cb9b2b3086169092
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060290"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832116"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

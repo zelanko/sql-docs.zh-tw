@@ -1,13 +1,11 @@
 ---
-title: Microsoft Access 驅動程式的程式設計考量 |Microsoft 文件
+title: Microsoft Access 驅動程式設計考量 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Access driver [ODBC]
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2759fac747e5fabeabb239a37619f933a620d4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75708c6b714806e54afc5802f8084c9635958acb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694589"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access 驅動程式的程式設計考量
 此章節包含下列主題。  

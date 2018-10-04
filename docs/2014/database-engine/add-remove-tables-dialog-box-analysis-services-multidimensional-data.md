@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200418"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>新增或移除資料表對話方塊 (Analysis Services-多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [加入/移除資料表] 對話方塊，即可將資料來源中的資料表加入資料來源檢視，或者從資料來源檢視移除資料來源中的資料表。 您可依下列方式顯示 [加入/移除資料表] 對話方塊：  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226618"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用現有的資料表建立維度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」，從現有的資料表建立維度。 方法是，選取精靈之 [選取建立方法] 頁面的 [使用現有的資料表] 選項。 如果您選取此選項，精靈會以維度資料表、其資料行，以及在現有資料來源檢視中之資料行間的任何關聯性為基礎， 並以來源資料表和相關資料表中的資料為範例。 它會使用此資料，定義以維度資料表中資料行為基礎的屬性資料行，並定義屬性的階層 (稱為「使用者定義的」階層)。 使用「維度精靈」建立維度之後，您可以使用 [維度設計師] 在維度中加入、移除和設定屬性與階層。  

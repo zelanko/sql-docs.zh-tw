@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c21569df7269e7037befbe8fe190c9c84079e51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 806752a22315586ecd730dad89761a079dc7038e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064178"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  

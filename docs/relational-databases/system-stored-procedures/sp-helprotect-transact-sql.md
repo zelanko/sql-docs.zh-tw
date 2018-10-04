@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 716398a738b6ac9de991917ec056ed432c9a59a9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595648"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 1807 (Database Engine error)
 ms.assetid: 13c1b240-098b-4d9e-89aa-21599548e074
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a9df8969a0dbae5dbdb2959c621f287d08c9f75
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 69acb74bd1c50900ae4852c41b3304da7ca7c00c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092223"
 ---
 # <a name="mssqlserver1807"></a>MSSQLSERVER_1807
     

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-caps.latest.revision: 51
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4a571c48c0fa745d77c4d1def9a4e517376fad6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075658"
 ---
 # <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
   此程序會建立新的專案和新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 方案。  

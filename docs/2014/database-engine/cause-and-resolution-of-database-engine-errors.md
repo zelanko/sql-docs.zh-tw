@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 60a77fbcc0395cc3ac5b7fc3007479ae872f7c2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b71d7468e668db88b26e038bc5593d6a83bcc0d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328400"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080268"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>導致 Database Engine 錯誤的原因和解決方案
   本主題包含數個與 [!INCLUDE[ssDE](../includes/ssde-md.md)] 相關之錯誤的原因和解決方案資訊。  

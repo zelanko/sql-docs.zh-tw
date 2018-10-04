@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 922ffe08cfff03a1f3347136d2b809ae5b9926c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb003df07b23f47e3cb5bb78e04f92b35029ea9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127578"
 ---
 # <a name="grouping-pane-report-builder"></a>群組窗格 (報表產生器)
   [群組] 窗格會顯示目前所選 Tablix 資料區的資料列群組和資料行群組。 [群組] 窗格不適用於 [圖表] 或 [量測計] 資料區。 [群組] 窗格包含 [資料列群組] 窗格和 [資料行群組] 窗格。 [群組] 窗格有兩種模式：預設和進階。 預設模式會針對資料列和資料行群組，顯示動態成員的階層式檢視。 進階模式則會針對資料列和資料行群組，同時顯示動態和靜態成員。 群組是來自顯示於資料區域上之報表資料集的命名集資料。 群組會組織成包含靜態和動態成員的階層。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)。  
@@ -66,11 +63,11 @@ ms.locfileid: "37153819"
   
 -   **KeepTogether**： 布林值。 指出要盡可能將整個 Tablix 成員和任何巢狀成員保持在單一頁面上。  
   
--   `KeepWithGroup`。 布林值。 僅用於靜態資料列成員。 在可能的情況下，保留此資料列與之前或之後的同層級動態成員 (如果未隱藏)。 若要將資料列標頭與其相關聯的群組保持在一起，請將 KeepWithGroup 設定為 **After**。  
+-   `KeepWithGroup`. 布林值。 僅用於靜態資料列成員。 在可能的情況下，保留此資料列與之前或之後的同層級動態成員 (如果未隱藏)。 若要將資料列標頭與其相關聯的群組保持在一起，請將 KeepWithGroup 設定為 **After**。  
   
--   `RepeatOnNewPage`。 布林值。 僅用於靜態資料列成員以及其中的 KeepWithGroup 不是 None 時。 如果有可能，在每個頁面上重複由 KeepWithGroup 所指定之至少一個動態成員執行個體的這個靜態資料列。 若要將資料列標頭與其相關聯的群組保持在一起，請將 RepeatOnNewPage 設定為 **True**。  
+-   `RepeatOnNewPage`. 布林值。 僅用於靜態資料列成員以及其中的 KeepWithGroup 不是 None 時。 如果有可能，在每個頁面上重複由 KeepWithGroup 所指定之至少一個動態成員執行個體的這個靜態資料列。 若要將資料列標頭與其相關聯的群組保持在一起，請將 RepeatOnNewPage 設定為 **True**。  
   
--   `Hidden`。 布林值。 指出一開始應該隱藏資料列或資料行。  
+-   `Hidden`. 布林值。 指出一開始應該隱藏資料列或資料行。  
   
 -   **ToggleItem：** 字串。 在其中加入切換影像之文字方塊的名稱。 文字方塊必須位於相同的群組範圍或包含範圍。  
   

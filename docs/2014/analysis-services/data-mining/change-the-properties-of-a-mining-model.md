@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed77c0d87fc6fb62497cc68c52dd3fabeb50d2ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172768"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
   有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 屬性可套用至整個模型的範例包括`Drillthrough`屬性，指定是否應該可供查詢案例資料，而`Description`屬性。 套用至資料行的屬性包含 `Usage` 和 `ModelingFlags`，它們控制資料行中的資料在模型內的使用方式。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - host protection attributes [CLR integration]
 - common language runtime [SQL Server], host protection attributes
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
-caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e29ca3fcd1c14b17169a8f25d5ffb5b63de2b79f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 76f71a4920e2980161032c519eb1fb3dacd12da3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844416"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll 中不允許的型別和成員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

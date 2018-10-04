@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
@@ -19,16 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b38aaceb3f40051138e124286e51922f3e8f218a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182188"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
   在報表中，運算式可用於協助您控制、組織和排序報表資料。 依預設，在您建立資料集與設計報表配置時，報表項目的屬性會依據資料集欄位、參數和 [報表資料] 窗格中出現的其他項目，自動設定為運算式。 您也可以將互動式排序按鈕加入至資料表或矩陣資料格，讓使用者以互動方式變更群組或群組內資料列的資料列排序順序。  

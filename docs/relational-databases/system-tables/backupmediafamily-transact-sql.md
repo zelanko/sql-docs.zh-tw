@@ -1,14 +1,11 @@
 ---
-title: backupmediafamily (TRANSACT-SQL) |Microsoft 文件
+title: backupmediafamily & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupmediafamily
@@ -19,30 +16,29 @@ helpviewer_keywords:
 - backupmediafamily system table
 - backup media [SQL Server], backupmediafamily system table
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da7d59170e9ed3ed9a1808e03e792474c22afddd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7dc119aaaf24457bc9267ee750ce82a9a4a69104
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687256"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對每個媒體家族，各包含一個資料列。 如果媒體家族位於鏡像媒體集中，則在這個媒體集中，這個家族的每個鏡像都會各有一個個別的資料列。 這份資料表儲存在**msdb**資料庫。  
     
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|用來識別這個家族為其成員之媒體集的唯一識別碼。 參考**backupmediaset （media_set_id)**|  
 |**family_sequence_number**|**tinyint**|這個媒體家族在媒體集中的位置。|  
 |**media_family_id**|**uniqueidentifier**|用來識別媒體家族的唯一識別碼。 可以是 NULL。|  
 |**media_count**|**int**|媒體家族中的媒體數目。 可以是 NULL。|  
-|**logical_device_name**|**nvarchar(128)**|在此備份裝置的名稱**sys.backup_devices.name**。 如果這是暫時的備份裝置 (而不是永久的備份裝置中已有**sys.backup_devices**)，值**logical_device_name**是 NULL。|  
-|**physical_device_name**|**nvarchar(260)**|備份裝置的實體名稱。 可以是 NULL。 這個欄位是備份和還原程序之間共用。 它可能包含原始備份的目的地路徑或原始還原來源路徑。 取決於是否備份或還原第一次在伺服器上發生的資料庫。 請注意連續從相同的備份檔案還原會在還原期間更新不論其位置的路徑。 因為這個緣故， **physical_device_name**欄位不能以查看所使用的還原路徑。|  
+|**logical_device_name**|**nvarchar(128)**|在此備份裝置名稱**sys.backup_devices.name**。 如果這是暫時的備份裝置 (而不是永久的備份裝置存在於**sys.backup_devices**)，windows 7 **logical_device_name**是 NULL。|  
+|**physical_device_name**|**nvarchar(260)**|備份裝置的實體名稱。 可以是 NULL。 此欄位會備份和還原程序之間共用。 它可能包含原始備份的目的地路徑或原始還原來源路徑。 取決於是否備份或還原第一次在伺服器上發生的資料庫。 請注意，從相同的備份檔案的連續還原會在還原期間更新的路徑，不論它的位置。 基於這個原因， **physical_device_name**欄位不能用來查看所使用的還原路徑。|  
 |**device_type**|**tinyint**|備份裝置的類型：<br /><br /> 2 = 磁碟<br /><br /> 5 = 磁帶<br /><br /> 7 = 虛擬裝置<br /><br /> 9 = azure 儲存體<br /><br /> 105 = 永久備份裝置。<br /><br /> 可以是 NULL。<br /><br /> 所有永久裝置名稱和裝置號碼位於**sys.backup_devices**。|  
 |**physical_block_size**|**int**|用來寫入媒體家族的實體區塊大小。 可以是 NULL。|  
 |**mirror**|**tinyint**|鏡像數目 (0-3)。|  

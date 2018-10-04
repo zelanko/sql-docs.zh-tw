@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProtocolOrder Property (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProtocolOrder property
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26d3e5d3251d3954ba8c8410b48d471070bcba50
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de7284c4023f7e658c37794d670356fd5b9c4025
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152458"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder 屬性 (ClientNetworkProtocol 類別)
   取得目前參考的用戶端的順序號碼所指定的網路通訊協定[SetOrderValue 方法 （ClientNetworkProtocol 類別）](clientnetworkprotocol-class.md)方法。  

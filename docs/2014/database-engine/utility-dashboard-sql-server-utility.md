@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61519602a7387c11b1374c827628c7063a499ed8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101508"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>公用程式儀表板 (SQL Server 公用程式)
   若要查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式儀表板中的資料，請在公用程式總管樹狀目錄中，選取最上方的節點，也就是標示為 "Utility<UCP_Name>\\(ComputerName\UCP)" 的節點。 此儀表板包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式內所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體及所有資料層應用程式中的摘要和詳細資料。 若要重新整理儀表板中的資料，請以滑鼠右鍵按一下公用程式總管樹狀目錄中的最上方節點，然後選取 [重新整理]。  

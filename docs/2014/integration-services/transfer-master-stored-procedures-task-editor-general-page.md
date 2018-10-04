@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferstoredprocedurestask.general.f1
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f89c6e35e69b8982b379b61e5341e80d6f768cd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 089b12c07b57b24d4c462605af92ed1bf7f0d417
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168768"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>傳送主要預存程序工作編輯器 (一般頁面)
   使用 [傳送主要預存程序工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送主要預存程序工作。 如需這項工作的詳細資訊，請參閱[傳送主要預存程序工作](control-flow/transfer-master-stored-procedures-task.md)。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d1bac7c3bc5e328db1bc54908f1d78ad5829c45
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf88f781199937c5b74d8c4645764f883d812a0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213898"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>建立與表格式模型資料庫的 BI 語意模型連接
   使用本主題的資訊可設定 BI 語意模型連接，重新導向至 SharePoint 伺服器陣列外部的 Analysis Services 執行個體上執行的表格式模型資料庫。  

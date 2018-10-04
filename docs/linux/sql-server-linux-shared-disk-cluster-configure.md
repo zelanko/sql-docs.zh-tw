@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 90235a612617fef28a02f980b349fc15490cba3f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6899f45231a0e77c529ba7b416a4a30f6a7955b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853426"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體-SQL Server 上 Linux (RHEL)
 
@@ -279,7 +277,7 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組不需
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 -->
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
 在本教學課程中，您已完成下列工作的內容。
 

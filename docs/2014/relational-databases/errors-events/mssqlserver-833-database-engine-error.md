@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 833 (Database Engine error)
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3e9519dce24bbe29f9cf30f89706fff9b42f9c7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b827814c5cc6b8659f52c0ff07cde9c3600235a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071618"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     

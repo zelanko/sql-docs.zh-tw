@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -23,12 +21,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f9425c18109817aa3f0112262b6b0928d4e77cf2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029801"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222988"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和個別事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060166"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>篩選對話方塊 (採礦精確度圖表)
   [篩選] 對話方塊會幫助您建立可套用至資料集的條件。 此資料集可以是用於測試的外部資料集，或是用於定型採礦模型的案例資料。 此對話方塊可幫助您建立準則，您可以在 [資料集篩選器] 對話方塊或 [模型篩選器] 對話方塊中，將這些準則儲存為更複雜之篩選準則的一部分。  
@@ -46,8 +43,8 @@ ms.locfileid: "37272604"
 |-----------|-----------------|  
 |**及/或**|按一下此選項，指定是要將 AND 運算子還是 OR 運算子套用到這一行的條件。 只有當您從 [採礦結構資料行] 清單中選取資料行之後，才可以使用這些值。|  
 |**採礦結構資料行**|按一下此選項，從資料表中包含的資料行清單選取資料行，此資料表是您從 [資料集篩選器] 對話方塊中的資料來源選取而來。|  
-|**[運算子]**|從清單選取運算子。 可用的運算子取決於資料行的資料類型而定。<br /><br /> 如果此資料行包含離散值，則只能使用下列運算子：<br /><br /> = (equal to)、<> (不等於)、IS NOT NULL、IS NULL。<br /><br /> 如果此資料行包含連續值，則也支援大於的運算子和小於運算。|  
-|**ReplTest1**|輸入當做條件使用的值。|  
+|**運算子**|從清單選取運算子。 可用的運算子取決於資料行的資料類型而定。<br /><br /> 如果此資料行包含離散值，則只能使用下列運算子：<br /><br /> = (equal to)、<> (不等於)、IS NOT NULL、IS NULL。<br /><br /> 如果此資料行包含連續值，則也支援大於的運算子和小於運算。|  
+|**值**|輸入當做條件使用的值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   

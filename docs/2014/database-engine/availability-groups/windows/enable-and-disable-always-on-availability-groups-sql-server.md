@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cfcbdb8e61941a651539bd545b5067a1df5b63a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cafc562581a5f34bf9b59b1ff7cde1c679abd726
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185351"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228638"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>啟用和停用 AlwaysOn 可用性群組 (SQL Server)
   啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 是伺服器執行個體使用可用性群組的必要條件。 您必須在將要裝載一個或多個可用性群組之可用性複本的每個 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體上啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，才能建立及設定任何可用性群組。  
@@ -67,7 +64,7 @@ ms.locfileid: "37185351"
   
 ##  <a name="IsEnabled"></a> 判斷 AlwaysOn 可用性群組是否已啟用  
   
--   [SQL Server Management Studio](#SSMS1Procedure)  
+-   [Transact-SQL](#SSMS1Procedure)  
   
 -   [Transact-SQL](#Tsql1Procedure)  
   

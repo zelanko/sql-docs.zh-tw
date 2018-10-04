@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 208a63412351e0f3e9ab6b7a5b5d79c6ef51aca3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed72704f230ede202d9363a37d4775b2fdd250d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154619"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178338"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>維度處理目的地編輯器 (對應頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至維度資料行。  

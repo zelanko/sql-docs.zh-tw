@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DISCOVER_ENUMERATORS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DISCOVER_ENUMERATORS rowset
 ms.assetid: ddc7b13c-3135-4419-8166-eddd459167da
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 328d37a9d010388c0cb8d0e7e9d251601e35f949
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b6a41d91bb5d7f5d44c362733ccbb038f707024
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218959"
 ---
 # <a name="discoverenumerators-rowset"></a>DISCOVER_ENUMERATORS 資料列集
   針對特定的資料來源，傳回 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 所支援之列舉值 (Enumerator) 的名稱、資料類型和列舉 (Enumeration) 值的清單。 XMLA 提供者會發行它能辨識的所有列舉常數。  

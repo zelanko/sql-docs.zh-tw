@@ -1,14 +1,11 @@
 ---
-title: dbo.sysschedules (TRANSACT-SQL) |Microsoft 文件
+title: msdb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysjobschedules
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sysjobschedules system table
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2818512730a99bf7352c87f7d651d3084870767f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33252703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644706"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行之作業的排程資訊。 這份資料表儲存在**msdb**資料庫。  
   
-> **注意：** **sysjobschedules**資料表重新整理每隔 20 分鐘，這可能會影響傳回的值**sp_help_jobschedule**預存程序。  
+> **注意︰** **sysjobschedules**資料表會每隔 20 分鐘，可能會影響所傳回的值重新整理**sp_help_jobschedule**預存程序。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

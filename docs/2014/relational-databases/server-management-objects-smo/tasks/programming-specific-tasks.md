@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual Basic [SMO]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 114cc7d651318a0c3892427a54fefb3c5f6bb781
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 893245a2716ad51b4204d6974f81147e2d51a4dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142018"
 ---
 # <a name="programming-specific-tasks"></a>程式設計特有的工作
   使用 SMO 物件的程式設計特有工作包含只有具備特定功能之程式所需要的複雜主題，例如，備份、監視統計資料、複寫、管理執行個體物件，以及設定組態選項。  

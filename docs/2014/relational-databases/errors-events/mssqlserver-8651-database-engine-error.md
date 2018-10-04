@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 8651 (Database Engine error)
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27884929430abbfd63d365ca0a76f2184314b30f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145300"
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
     

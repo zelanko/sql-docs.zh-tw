@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 367ace8512fccfa5a9d5922aac12e6d16ffafda1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cd55d9147d867b89c3d41130a72861a0f3647f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085782"
 ---
 # <a name="data-sources"></a>資料來源
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用的設計階段物件：資料來源。  
@@ -31,7 +28,7 @@ ms.locfileid: "37259074"
 > [!NOTE]  
 >  您只能將資料來源加入到設定為使用封裝部署模型的專案。 若專案設定為使用專案部署模型，您就可以使用在專案層級建立的連接管理員來共用連接，取代使用資料來源的方式。  
 >   
->  如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱[將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
+>  如需有關部署模型的詳細資訊，請參閱＜ [部署專案和封裝](../packages/deploy-integration-services-ssis-projects-and-packages.md)＞。 如需將專案轉換為專案部署模型的詳細資訊，請參閱[將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中使用資料來源的好處包括：  
   

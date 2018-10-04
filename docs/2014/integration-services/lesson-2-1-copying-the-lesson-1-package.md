@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97da2e6f299541173246dae96af1055c7df44810
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0237707fb5342b490806e3d0b8a2f32b3929ab38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118648"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>步驟 1：複製第 1 課的套件
   在這項工作中，您將為第 1 課所建立的 Lesson 1.dtsx 套件建立複本。 如果您並未完成第 1 課，可以將此教學課程中隨附之已完成的第 1 課封裝加入至專案中，然後改為複製該封裝。 在第 2 課其餘的課程中，您將使用這個新的複本。  

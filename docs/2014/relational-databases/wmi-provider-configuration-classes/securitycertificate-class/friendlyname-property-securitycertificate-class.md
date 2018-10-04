@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FriendlyName Property (SecurityCertificate Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - FriendlyName property
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 662103d438a54bfc084068ff93ea3602cf074653
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e936d1db0c7eb03c1d389e96cadd66d3e66fff1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175768"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName 屬性 (SecurityCertificate 類別)
   取得或設定安全性憑證的替代易記名稱。  

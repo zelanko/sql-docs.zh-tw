@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 94291419e279c497b7d54c0d566caaaab45758c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196398"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隱藏項目 (報表產生器及 SSRS)
   當您想要有條件地根據報表參數或是您所指定的某些其他運算式來隱藏項目時，請設定報表項目的可見性。  

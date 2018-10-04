@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b371d1baecb2e9e7dea4aa81ac2d2e716d04a651
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2301f57d97c42ef2887824d2acd092e2a78aee7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133438"
 ---
 # <a name="hierarchies-ssas-tabular"></a>階層 (SSAS 表格式)
   表格式模型中的階層是中繼資料，可定義資料表中兩個 (含) 以上的資料行之間的關聯性。 在報表用戶端欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。  

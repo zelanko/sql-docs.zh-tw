@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6bce8fcc9ea458c3cf2408a3edeb497def4044b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074761"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>選項 (文字編輯器 - 純文字 - 定位點頁面)
   使用這個對話方塊可變更文字編輯器中按 Tab 鍵移動的行為，這個文字編輯器是用來編輯與特定開發語言沒有關聯的文件。 若要顯示這些設定，請按一下 [工具] 功能表上的 [選項]，展開 [文字編輯器]，展開 [純文字]，然後按一下 [定位點]。  

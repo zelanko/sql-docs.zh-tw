@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllowOverwrite Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb0d58570349fbbb17b442ddebc0fd3193531149
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131428"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 元素 (XMLA)
   決定是否父系[備份](../xml-elements-commands/backup-element-xmla.md)或是[還原](../xml-elements-commands/restore-element-xmla.md)命令嘗試覆寫目標檔案或資料庫。  
@@ -60,7 +57,7 @@ ms.locfileid: "37190898"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[備份](../xml-elements-commands/backup-element-xmla.md)，[還原](../xml-elements-commands/restore-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  若為 `Backup` 命令，`AllowOverwrite` 元素會決定此命令是否可覆寫 `File` 元素中指定的備份檔案。  

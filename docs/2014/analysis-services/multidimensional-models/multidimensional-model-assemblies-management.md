@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172108"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供許多可與多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言搭配使用的內建函數，其設計目的是要完成從標準統計計算一直到階層中周遊成員間的各種運算。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
@@ -83,7 +80,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  組件的安全性是以 .NET Framework 安全性模型為基礎，它是一種程式碼存取安全性模型。 .NET Framework 支援程式碼存取安全性機制，而這個機制假設執行階段可以主控完全信任和部份信任的程式碼。 受 .NET Framework 程式碼存取安全性保護的資源，一般都是以 Managed 程式碼包裝，而 Managed 程式碼在存取資源前會要求對應的權限。 唯有在呼叫堆疊中所有的呼叫者 (在組件層級) 都具有對應的資源權限時，權限的要求才會被滿足。  
   
  針對組件，執行的權限會透過 `PermissionSet` 物件的 `Assembly` 屬性傳遞。 Managed 程式碼所接收的權限是由實行中的安全性原則決定。 在非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主控環境中，已實行三個層級的原則：企業、電腦和使用者。 程式碼所接收的有效權限清單是由這三個層級所取得的權限交集決定。  

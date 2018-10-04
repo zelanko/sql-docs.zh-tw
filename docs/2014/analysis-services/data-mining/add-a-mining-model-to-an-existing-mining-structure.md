@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5140aa597e6ed1fea65ba3358fb5c493ffdaa5c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075008"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>將採礦模型加入至現有的採礦結構
   在加入初始模型之後，您就可以將更多採礦模型加入至採礦結構中。 每一個模型必須包含存在於結構中的資料行，但您可以為每一個採礦模型定義不同的資料行使用方式。 如需如何定義採礦模型資料行的詳細資訊，請參閱 [採礦模型資料行](mining-model-columns.md)。  

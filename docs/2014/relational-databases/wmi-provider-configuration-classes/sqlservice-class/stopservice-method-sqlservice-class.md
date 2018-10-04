@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StopService Method (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - StopService method
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85a5ca367ff5974d4fa79b7376acf11f43c8a038
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d2e051ea9dfb0915b888e551ce26ff6d9747aa60
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143968"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService 方法 (SqlService 類別)
   嘗試將此服務置於已停止狀態。  

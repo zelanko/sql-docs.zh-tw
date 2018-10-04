@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efd9cb30582ffcf48c8a7f410dcb164e0a4d3da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bf6502b459cf8f81a3137d73402b73ab6b6e9c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209858"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182258"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>疑難排解 AlwaysOn 可用性群組組態 (SQL Server)
   此主題中的資訊可協助您疑難排解為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]設定伺服器執行個體時常見的問題。 一般組態問題包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 未啟用、不正確地設定帳戶、資料庫鏡像端點不存在、端點無法存取 (SQL Server 錯誤 1418)、網路存取不存在，以及聯結資料庫命令失敗 (SQL Server 錯誤 35250)。  

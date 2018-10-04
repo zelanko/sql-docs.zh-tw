@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e2cc3870ca0b302175c6fdd546b730e73956485f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824781"
 ---
 # <a name="comparison-expressions-xquery"></a>比較運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

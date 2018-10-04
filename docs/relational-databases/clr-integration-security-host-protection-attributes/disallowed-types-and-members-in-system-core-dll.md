@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
-caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b0734153961954ea0b59e59debb12e30fc8909e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 93b898480b3aa04666eeefb4e06c3bd7ba2c44de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709840"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll 中不允許的類型和成員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

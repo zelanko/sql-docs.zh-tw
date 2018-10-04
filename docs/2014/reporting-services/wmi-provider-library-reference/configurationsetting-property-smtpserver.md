@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - SMTPServer
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SMTPServer property
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18a199fd258b5a04b9fed3bf0167b4460d99c368
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71f83aecd44de087c83a97c5d458479033dcd6a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207030"
 ---
 # <a name="smtpserver-property-wmi-msreportserverconfigurationsetting"></a>SMTPServer 屬性 (WMI MSReportServer_ConfigurationSetting)
   從報表伺服器組態檔中取得 SMTP 伺服器屬性。 唯讀。  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.check_constraints
@@ -24,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1d17713f44de6c95c4c0dfc61b6ab5aae67938
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d79720c8e4e966c7f0129371dd6a22be4217f356
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788526"
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

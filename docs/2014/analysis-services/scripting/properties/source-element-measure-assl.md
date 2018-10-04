@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (Measure)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d4e374490fdfe04e5da39a0f4e9424b2cb1ccde
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 933851f354f14e325608c954ce77ba5f3d034a10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117317"
 ---
 # <a name="source-element-measure-assl"></a>Source 元素 (Measure) (ASSL)
   包含的值之來源詳細資料[量值](../objects/measure-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37323208"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37323208"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[量值](../objects/measure-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `Source`的`DataItem`，做為`Source`的`Measure`，接著可以屬於型別[RowBinding](../data-type/binding-data-type-assl.md)， [ColumnBinding](../data-type/columnbinding-data-type-assl.md)， [MeasureBinding](../data-type/measurebinding-data-type-assl.md)，或[CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md)。  

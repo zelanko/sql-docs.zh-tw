@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:namespace-uri function
 - namespace-uri function
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
-caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 41b7cb2839945837540ff90d09a58e051cff635d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609176"
 ---
-# <a name="functions-on-nodes---namespace-uri"></a>節點的命名空間 uri 的相關函式
+# <a name="functions-on-nodes---namespace-uri"></a>節點的相關函式 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 URI 中指定之 qname 的命名空間 *$arg* xs: string。  

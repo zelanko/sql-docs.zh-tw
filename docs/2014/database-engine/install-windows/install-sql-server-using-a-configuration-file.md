@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9536c674f9bf5733fb6d20109ee03206a50570c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55f5fdabcb3c751c0c9d4575e0375d4438fea30b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231858"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149768"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用組態檔安裝 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可供您根據系統預設值與執行階段輸入，產生組態檔。 您可以使用相同的設定，於整個企業中利用組態檔部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您也可以透過建立啟動 Setup.exe 的批次檔，在企業中將手動安裝標準化。  

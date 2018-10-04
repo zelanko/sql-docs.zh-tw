@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4c33a315a81854d606d37433b8e06a4e2dffe3c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02e923299ba7a82f2af27395bc55ae15de4bb1d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164948"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>建立自訂報表項目執行階段元件
   自訂報表項目執行階段元件會使用任何 CLS 相容語言而實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件，並在執行階段由報表處理器呼叫。 您可藉由修改自訂報表項目對應的設計階段元件，在設計環境中定義執行階段元件的屬性。  

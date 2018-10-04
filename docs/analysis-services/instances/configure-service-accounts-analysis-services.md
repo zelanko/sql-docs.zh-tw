@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: bc968281f9aec0cc86f7b5f8f92fb035d9854af9
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348337"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443142"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "43348337"
 ## <a name="logon-account-recommendations"></a>登入帳戶建議  
  在容錯移轉叢集中，Analysis Services 的所有執行個體都應該都設定為使用 Windows 網域使用者帳戶。 將相同的帳戶指派給所有執行個體。 請參閱 [如何將 Analysis Services 叢集化](http://msdn.microsoft.com/library/dn736073.aspx) 如需詳細資訊。  
   
- 獨立執行個體應該使用預設虛擬帳戶**NT Service\MSSQLServerOLAPService**的預設執行個體，或 **NT Service\MSOLAP$ * * * 執行個體名稱*的具名執行個體。 這項建議適用於所有伺服器模式中的 Analysis Services 執行個體，作業系統為 Windows Server 2008 R2 和更新版本，而 Analysis Services 為 SQL Server 2012 和更新版本。  
+ 獨立執行個體應該使用預設的虛擬帳戶 **NT Service\MSSQLServerOLAPService** 作為預設執行個體，或使用 **NT Service\MSOLAP$**_instance-name_ 作為具名執行個體。 這項建議適用於所有伺服器模式中的 Analysis Services 執行個體，作業系統為 Windows Server 2008 R2 和更新版本，而 Analysis Services 為 SQL Server 2012 和更新版本。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>授與權限給 Analysis Services  
  本節說明 Analysis Services 對於本機的內部作業 (例如啟動可執行檔、讀取組態檔，以及從資料目錄載入資料庫) 所需的權限。 如果您是要尋找為外部資料存取設定權限，以及與其他服務和應用程式的互通性的指引，請參閱本主題中的 [授與特定伺服器作業的其他權限](#bkmk_tasks) 。  

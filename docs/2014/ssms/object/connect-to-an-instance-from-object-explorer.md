@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f2d811dc542bf24c2cf75fe792a079046830076
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7947bba9f41ffb77a1260ce79a5f4afb6c773295
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110928"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>從物件總管連接到執行個體
   若要使用物件總管管理物件，您必須先將物件總管連接到包含物件的執行個體。 您可以同時將物件總管連接到多個執行個體。  
