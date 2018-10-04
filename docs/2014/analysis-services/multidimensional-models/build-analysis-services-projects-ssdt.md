@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85e3b552234ff34333b8566bdb741b28f2e56d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c077da81b20444a71b28a2f604cdb7cc485de123
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129468"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>建立多個 Analysis Services 專案 (SSDT)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的方式就像是在 Visual Studio 中建立任何程式設計專案。 當您建立此專案時，會在輸出目錄中建立一組 XML 檔案， 這些 XML 檔案會使用 Analysis Services 指令碼語言 (ASSL)，這種語言是用戶端應用程式 (包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ) 為了建立或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件而與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體溝通所用的 XML 用語； 這些 XML 檔案是用來將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件定義部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  

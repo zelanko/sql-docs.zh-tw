@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - registering assemblies
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], creating
 - assemblies [Analysis Services]
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22351d69fc7b2a7f229980607ae5b8dab6f0499b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68f748ce1df9f1ae28600539759433188d534036
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118418"
 ---
 # <a name="creating-stored-procedures"></a>建立預存程序
   所有預存程序都必須與 Common Language Runtime (CLR) 或元件物件模型 (COM) 類別建立關聯，才能使用。 類別必須安裝在伺服器上 — 通常是在形式[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX® 動態連結程式庫 (DLL) — 並註冊的組件在伺服器上或在為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。  

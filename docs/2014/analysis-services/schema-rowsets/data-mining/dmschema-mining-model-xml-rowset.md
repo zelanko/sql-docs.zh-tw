@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_MODEL_XML
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_XML rowset
 ms.assetid: f58b00e9-3f72-4cff-b448-21a9fb529772
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22d68948949fd1e8c5863ad62f73fd9f5f8fd234
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3be57336379c66577c245a891e047ec95f763fd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130818"
 ---
 # <a name="dmschemaminingmodelxml-rowset"></a>DMSCHEMA_MINING_MODEL_XML 資料列集
   傳回採礦模型的 XML 結構。 XML 字串的格式是遵循預測模型標記語言 (PMML 2.1) 標準。  

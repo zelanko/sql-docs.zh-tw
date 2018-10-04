@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014150 error
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07fcbe83f92a523eea000a9a63b4a72a991228fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 032651d75eb4210005765f82adbb4d504ee2a316
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136818"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     

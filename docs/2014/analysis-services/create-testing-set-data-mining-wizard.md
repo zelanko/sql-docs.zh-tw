@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096348"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>建立測試集 (資料採礦精靈)
   使用 [建立測試集] 頁面來指定用於定型的資料量，以及保留用於測試集的資料量。 在建立採礦結構時將資料分割成定型集和測試集，可以更輕鬆地評估您稍後建立的採礦模型的正確性。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configuredistributionwizard.distributiondatabase.f1
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f49e1f71897906d8ac3d947c43cd284cbee5289e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e074a10011cd0922def946f6bc3f7bda5789cc22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256664"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096968"
 ---
 # <a name="distribution-database"></a>散發資料庫
   散發資料庫會儲存所有複寫類型的中繼資料和記錄資料，以及異動複寫的交易。  

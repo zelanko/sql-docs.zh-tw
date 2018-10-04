@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b1bdcf78e3a7fd35da53e7a39bea5c24e217ae8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105140"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>選取成員 (商業智慧精靈)
   使用 **[選取成員]** 頁面，即可決定商業智慧精靈應該對哪些成員套用 **[設定貨幣轉換選項]** 頁面所指定的貨幣轉換功能。  

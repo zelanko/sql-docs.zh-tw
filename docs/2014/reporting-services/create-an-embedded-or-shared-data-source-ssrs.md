@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-caps.latest.revision: 40
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109438"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>建立內嵌或共用資料來源 (SSRS)
   報表資料來源會指定名稱及連接資訊。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可支援兩種類型的資料來源：內嵌和共用。 內嵌資料來源是定義在報表定義中，而且只能供該報表使用。 共用資料來源會定義成個別的項目，而且可以供多個報表使用。 如需詳細資訊，請參閱 <<c0> [ 內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。</c0>  

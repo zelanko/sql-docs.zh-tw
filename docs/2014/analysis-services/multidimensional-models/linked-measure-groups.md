@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251470"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140348"
 ---
 # <a name="linked-measure-groups"></a>連結量值群組
   連結的量值群組會以相同資料庫或不同的 Analysis Services 資料庫中不同之 Cube 中的另一個量值群組為基礎。 如果您想要重複使用多個 Cube 中的一組量值及對應的資料值，您可使用連結量值群組。  

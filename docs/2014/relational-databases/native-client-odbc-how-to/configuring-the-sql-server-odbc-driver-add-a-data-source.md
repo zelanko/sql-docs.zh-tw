@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e8d3c51595caa5a65f5ac175bdf16a4333511b5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120088"
 ---
 # <a name="add-a-data-source-odbc"></a>加入資料來源 (ODBC)
   您可以使用 ODBC 管理員，以程式設計方式加入資料來源 (利用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))，或藉由建立檔案。  

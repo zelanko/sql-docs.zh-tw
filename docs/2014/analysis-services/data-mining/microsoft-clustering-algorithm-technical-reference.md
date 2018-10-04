@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306598"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089718"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
   本節說明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法的實作，包括可用來控制群集模型行為的參數。 本章節也提供在建立及處理叢集模型時如何改善效能的指南。  

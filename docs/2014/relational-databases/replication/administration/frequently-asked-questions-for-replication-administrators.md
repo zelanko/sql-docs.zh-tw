@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c05191f00030c243ebdcc6210c4a0155278b3435
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105158"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
   透過下列問題和答覆可以了解複寫的資料庫管理員所面臨的各種工作。  

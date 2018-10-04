@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b16fd6b9ce9d89a730f64c5cadd7a67553cb6dd1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54e2594b040c74715d279576a3e09a6fc6016fff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166905"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137538"
 ---
 # <a name="create-the-finance-name-policy"></a>建立 Finance Name 原則
   在這項工作中，您將會建立名為 Finance 的資料庫，然後建立要求所有資料表都以字母 **fintbl** 為開頭的條件。 接著，您將會建立原則和原則類別目錄，以便針對 Finance 資料庫中的資料表強制執行命名標準。  

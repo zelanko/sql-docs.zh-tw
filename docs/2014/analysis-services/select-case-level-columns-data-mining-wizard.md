@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcaselevelcolumn.f1
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b57cf4ff913210c8a0fc7fd48593914c76a315dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74bb2b88a152d812a29dc399c887d78ed264532f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129758"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>選取案例層級資料行 (資料採礦精靈)
   使用 [選取案例層級資料行] 頁面，即可從基礎來源 Cube 維度中，選取將成為採礦結構之案例層級資料行的屬性和量值。  

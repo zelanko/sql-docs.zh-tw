@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79bba6ab7f6823d27dd396413d45aedf788a3d72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091748"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行資料比對。 比對程序會根據比對原則中的比對規則來識別比對記錄叢集、根據存活規則將每一個叢集中的一筆記錄指定為存活者，然後匯出結果。 DQS 會在電腦輔助的程序中執行比對程序 (也稱為刪除重複作業)，但是您可以互動方式建立比對規則，而且您會從數個選擇中選取存活規則，好讓您控制比對程序。  

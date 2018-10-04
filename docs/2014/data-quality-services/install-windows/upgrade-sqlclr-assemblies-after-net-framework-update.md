@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ba3df033171deeb3125b2ed40c5590b70d2dc80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4721b388d35974b8e9749d74dbdf5f9ec988d85e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254790"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105328"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET Framework 更新之後升級 SQLCLR 組件
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是參考 Microsoft .NET Framework 4 組件的 SQL Common Language Runtime (SQLCR) 常式集合。 如果您在電腦上安裝任何會影響這類參考 .NET Framework 組件的 .NET Framework 更新，則會導致全域組件快取 (GAC) 中組件的模組版本 ID (MVID) 發生變更。 這樣會造成 GAC 中所參考組件的 MVID 與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中組件的 MVID 不相符。  

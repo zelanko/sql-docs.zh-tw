@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44b495c59a52648052808eb1bc618b8d0ab89463
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395858"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103278"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>在 VM 環境使用記憶體中的 OLTP
   伺服器虛擬化技術可協助您降低 IT 資本和作業成本，並透過改善的應用程式佈建、維護、可用性和備份/復原程序，達到更高的 IT 效率。 隨著最近的技術進步，可以更輕易地運用虛擬化技術，將複雜的資料庫工作負載合併。 本主題包括在虛擬化環境中使用 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 的最佳作法。  

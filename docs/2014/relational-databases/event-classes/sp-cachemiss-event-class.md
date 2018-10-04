@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheMiss event class
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5857e29d1baa025c36199a9462f50b2903ec17ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f5596801574815bea45762df5e91bbce9047841
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141048"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss 事件類別
   SP:CacheMiss 事件類別指出在快取中找不到程序。 若經常發生 SP:CacheMiss 事件類別，可能表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要更多的可用記憶體，以便增加程序快取的大小。  

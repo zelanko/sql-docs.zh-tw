@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
-caps.latest.revision: 23
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7d904fdf529ee06caa1c11c20978dd8753454a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d18c3524b769e210520dcffde1416cb9ef72ca9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091501"
 ---
 # <a name="select-the-report-type"></a>選取報表類型
   使用報表精靈的這個頁面，即可選取表格式報表或矩陣報表。  

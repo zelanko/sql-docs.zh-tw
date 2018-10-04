@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_colptr
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_colptr function
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c548a1decd7410cd1cbc8df3ee68126e62ca25
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130998"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
   將目前副本的程式變數資料位址設定成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

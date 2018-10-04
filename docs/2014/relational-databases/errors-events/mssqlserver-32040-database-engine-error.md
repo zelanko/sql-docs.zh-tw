@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 32040 (Database Engine error)
 ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c1d6093b9e7eb6c0730c582d8888de3f62c4970
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 198a58816388a1f5c80b45b776548508f01a1c73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135558"
 ---
 # <a name="mssqlserver32040"></a>MSSQLSERVER_32040
     

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6026573b752088a4910acf09265b66a266c15b88
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5969b6065f884d81a864f00eb52a5db8c74ef350
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126478"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed 事件類別
   TM: Commit Tran Completed 事件類別指出已完成 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  

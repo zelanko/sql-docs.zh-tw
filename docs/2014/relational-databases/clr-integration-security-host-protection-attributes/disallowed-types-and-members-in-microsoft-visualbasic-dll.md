@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - host protection attributes [CLR integration]
 - common language runtime [SQL Server], host protection attributes
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
-caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 148f43eb0f401d5f633e181fcc5225e7ec86cac0
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351790"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090090"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll 中不允許的型別和成員
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) 程式設計不允許使用型別或成員具有`HostProtectionAttribute`，指定`System.Security.Permissions.HostProtectionResource`列舉值是`ExternalProcessMgmt`， `ExternalThreading`， `MayLeakOnAbort`， `SecurityInfrastructure`， `SelfAffectingProcessMgmnt`，`SelfAffectingThreading`， **SharedState**， `Synchronization`，或`UI`。 下列資料表所列出 `Microsoft.VisualBasic.dll` 組件的成員和類型之主機保護屬性 (HPA) 值是不允許的。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 867ecaedcdcbafb972ccd289b5257fc73b353a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082950"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092368"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>執行 SQL 工作編輯器 (參數對應頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [參數對應] 頁面，即可將變數對應到 SQL 陳述式中的參數。  
@@ -45,7 +42,7 @@ ms.locfileid: "39082950"
  **參數名稱**  
  提供參數名稱。  
   
- 您必須根據工作所使用的連接管理員類型，來使用數字或參數名稱。 有些連接管理員類型需要參數名稱的第一個字元是\@登入特定的名稱，例如\@Param1 或資料行名稱作為參數名稱。  
+ 您必須根據工作所使用的連接管理員類型，來使用數字或參數名稱。 某些連線管理員類型要求參數名稱的第一個字元是 \@ 符號、特定名稱 (如 \@Param1) 或資料行名稱作為參數名稱。  
   
  **相關主題：**[在執行 SQL 工作中設定參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

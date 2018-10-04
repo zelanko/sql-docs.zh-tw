@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095108"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合參考 (報表產生器及 SSRS)
   `DataSources` 集合代表報表中使用的所有資料來源。 同樣地，`DataSets`集合代表報表中的所有資料來源的所有資料集。 請使用 [報表資料] 窗格以階層的方式檢視報表資料集 (排列在所參考資料來源的下方)。 如果加入這些集合的參考，就不會在預覽報表時看到值。 只有發行報表至報表伺服器後，才可以使用這些集合。  
@@ -32,7 +29,7 @@ ms.locfileid: "37168149"
   
 |**變數**|`Type`|**說明**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`。|  
+|`DataSourceReference`|`String`|報表伺服器上資料來源定義的完整路徑。 例如，您可以包含報表用來做為報表記錄一部分的所有資料來源的清單。 以下範例將示範名為 AdventureWorks2012 的資料來源完整路徑：<br /><br /> `/DataSources/AdventureWorks2012`.|  
 |`Type`|`String`|資料來源的資料提供者類型。 例如， `SQL`。|  
   
 ## <a name="datasets"></a>DataSets  

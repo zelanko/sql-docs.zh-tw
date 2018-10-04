@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], deleting
 - removing foreign keys
 - deleting foreign keys
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b926d46b9f422e928f1b33e769a1126e201b698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2efc18a492d678ef7e9fd9b85c36096dbcb84e16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088878"
 ---
 # <a name="delete-foreign-key-relationships"></a>刪除外部索引鍵關聯性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除外部索引鍵條件約束。 刪除外部索引鍵條件約束後，就不需要強制執行參考完整性。  

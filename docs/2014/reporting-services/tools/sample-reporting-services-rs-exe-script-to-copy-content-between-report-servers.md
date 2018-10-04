@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5fb51019ffa016e76f4801d35578ffca0b2b6a11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116816"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼
   本主題包括並描述範例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]複製內容項目設定不同的 RSS 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]另一部報表伺服器，報表伺服器使用**RS.exe**公用程式。 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
@@ -78,8 +73,7 @@ ms.locfileid: "37290294"
   
 -   在伺服器 A **上** 執行 RS.exe 和指令碼。  
   
--   
-              **從** 伺服器 B 複製內容  
+-   **從** 伺服器 B 複製內容  
   
 -   **到** 到伺服器 C  
   

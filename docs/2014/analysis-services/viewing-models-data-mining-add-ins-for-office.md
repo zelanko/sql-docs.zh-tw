@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visio]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - diagram, creating
 - shapes, creating
 ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56405f4c8f178edbaebdd89ae31833affd8ae245
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c54ca4bfa793ed704691d7a757ffb5de16dc96e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097508"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>檢視模型 (適用於 Office 的資料採礦增益集)
   適用於 Excel 的資料採礦增益集提供以下方式供您探索已建立的分析模型：  

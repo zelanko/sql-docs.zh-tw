@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fbeb44d09f9825a640bc849f4127751ef39aa72c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118530"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 健全狀況規則 - 設定
   PowerPivot for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 PowerPivot for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  

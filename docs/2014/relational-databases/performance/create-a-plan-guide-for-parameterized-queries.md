@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized queries, plan guides for
 - plan guides [SQL Server], parameterized queries
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dfdacfb9764e607737946ccb8dc72d330f6b11a3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 58202b7246acf2a958523cfb874b8ce25bd13bdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132978"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>建立參數化查詢的計畫指南
   TEMPLATE 計畫指南可搭配參數化為指定形式的獨立查詢。  

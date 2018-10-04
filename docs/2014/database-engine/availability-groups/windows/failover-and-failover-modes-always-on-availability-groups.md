@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0603ccd35973b27993207d634ebc89aa90e6fa1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140601"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
   在可用性群組的內容中，可用性複本的主要角色和次要角色在稱為 *「容錯移轉」*(Failover) 的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」。 自動及經過規劃的手動容錯移轉會保留您的所有資料。 可用性群組會在可用性複本層級容錯移轉。 亦即可用性群組會容錯移轉至其中一個次要複本 (目前的「容錯移轉目標」)。  

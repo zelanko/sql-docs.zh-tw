@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReportParameter Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdc677b6aabd9d07275b977dd3d3af3145ea00a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197820"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093458"
 ---
 # <a name="reportparameter-element-assl"></a>ReportParameter 元素 (ASSL)
   包含的名稱和值的參數傳遞給[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表在執行階段。  
@@ -51,8 +48,8 @@ ms.locfileid: "37197820"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

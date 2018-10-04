@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - output parameters [CLR integration]
 - tabular results
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
-caps.latest.revision: 74
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db6d1dd298cba3960189c3983ab9d4781113d569
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0949b6fddf1755da48dd7922a4fbda50d4b2787
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111998"
 ---
 # <a name="clr-stored-procedures"></a>CLR 預存程序
   預存程序是無法在純量運算式中使用的常式。 不像純量函數，它們可以將表格式結果及訊息傳回到用戶端、叫用資料定義語言 (DDL) 及資料操作語言 (DML) 陳述式，並傳回輸出參數。 CLR 整合，以及 managed 程式碼之間進行選擇的優勢的相關資訊並[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱 < [CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  

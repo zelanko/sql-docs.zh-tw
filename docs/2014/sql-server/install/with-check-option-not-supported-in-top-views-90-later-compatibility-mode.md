@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TOP clause
 - WITH CHECK OPTION clause
 ms.assetid: 1b9581d0-bad9-43e0-b8fc-f32d8a8a04ca
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8c64ce7395b5ecbb33530672d93817f7938db6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7eeead0e22e38338baf4c24510fba5fb21aad7fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138736"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>在 90 或之後的相容性模式中，在包含 TOP 的檢視中不支援 WITH CHECK OPTION
   Upgrade Advisor 偵測到有檢視在該檢視的 SELECT 陳述式中或它所參考的檢視中使用 WITH CHECK OPTION 和 TOP 子句。 當資料庫相容性模式設定為 80 及之前的相容性模式時，以此方式定義的檢視會錯誤地允許資料透過檢視修改，而產生不正確的結果。 當檢視或它所參考的檢視使用 TOP 子句，而且資料庫相容性模式設定為 90 或之後的相容性模式時，資料無法透過使用 WITH CHECK OPTION 的檢視進行插入或更新。  

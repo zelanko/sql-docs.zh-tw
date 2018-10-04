@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10545"
@@ -17,16 +15,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 30938348fcb78d1afeeeacaead3bb02362a28574
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6f13d8d76854c3fdf01dceeeb61c4d06f2a0e16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142458"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
   指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 圖示即使很小，但在視覺上也能有效代表指標及其狀態。  

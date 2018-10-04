@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting database objects
@@ -14,12 +12,12 @@ ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 703b55a8991d0f0dc025a206c24680f6b0bb8f30
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 20ef93f1860e5819c45ea23a893d3ff2acd14e1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133909"
 ---
 # <a name="lesson-3-deleting-database-objects"></a>第 3 課：刪除資料庫物件
   在這個簡短的課程中，會移除您在第 1 課和第 2 課中所建立的物件，然後卸除資料庫。  

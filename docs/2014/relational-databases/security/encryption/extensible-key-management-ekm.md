@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 45
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288664"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111238"
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會針對加密和金鑰產生使用「Microsoft 密碼編譯 API」(MSCAPI) 提供者，藉以提供加密功能以及「可延伸金鑰管理」(EKM)。 用於資料和金鑰加密的加密金鑰會建立於暫時性金鑰容器中，而且您必須先從提供者中匯出這些金鑰，然後再將它們儲存於資料庫中。 這個方法會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  

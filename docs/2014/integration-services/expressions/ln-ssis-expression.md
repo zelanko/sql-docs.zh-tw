@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 111c97e177f9829309e5fb727a0227b6f2150791
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf836d26c67276b6780392bef44e1d4e5a470f86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140226"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 運算式)
   傳回數值運算式的自然對數。  

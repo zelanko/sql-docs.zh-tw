@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea05556d69c40a18494d0b5600e05399a0da632b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110728"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
   雖然瀏覽器是最常用來檢視報表的用戶端應用程式，但瀏覽器的列印功能在列印報表時並不理想。 瀏覽器的列印功能是為了列印網頁而設計的。 通常，您從瀏覽器列印的頁面會包括網頁上的所有視覺化元素，以及識別網頁或網站的頁首和頁尾資訊。 從瀏覽器列印時會列印現行視窗的內容。 若為多頁報表．瀏覽器最多只會列印第一頁，如果報表頁面延伸到列印頁面範圍之外，則列印出來的可能更少。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91db405d30b3d7dbcfc351b6a7a0c95e5238902a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099774"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>匯出至 PDF 檔案 (報表產生器及 SSRS)
   PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 與支援 PDF 1.3 之其他協力廠商 PDF 檢視器中開啟的檔案。 雖然 PDF 1.3 與 Adobe Acrobat 4.0 和更新版本相容，但是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只支援 Adobe Acrobat 6 或更新版本。 轉譯延伸模組不需要 Adobe 軟體就能轉譯報表。 但是，若要檢視或列印 PDF 格式的報表，則需要 PDF 檢視器 (例如 Adobe Acrobat)。  

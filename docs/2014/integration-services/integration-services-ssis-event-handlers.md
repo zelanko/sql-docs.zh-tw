@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0df91ac6e5742a5326b98238ec81b31fddc62854
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122838"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab13696e7449f4f7b257aa2af6a76ef40492a921
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130248"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>選取鍵盤快速鍵配置
   除了標準 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 鍵盤配置，您可以設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用與 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]相容的鍵盤配置。  

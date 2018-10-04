@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Integration Services]
 - paths [Integration Services], metadata
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7163b07ea791330299603e9b90d5eca7b1c33b4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b495401e95971848a864b228368c17231bee5e4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122458"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>在資料流程路徑編輯器中檢視路徑中繼資料
   路徑會連接兩個資料流程元件。 資料流程必須包含至少兩個已連接的資料流程元件，您才能檢視路徑中繼資料。 如需詳細資訊，請參閱 [在資料流程中加入或刪除元件](data-flow/add-or-delete-a-component-in-a-data-flow.md) 和 [連接資料流程中的元件](data-flow/connect-components-in-a-data-flow.md)。  

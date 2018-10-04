@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restorepage.general.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dcda45c3aa53bfe6e3e73338e2a37f207b3007d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108728"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在  中還原頁面。 分頁還原的目標是還原一個或多個受損頁面而毋需還原整個資料庫。 一般而言，選定要還原的頁面會標示為「有疑問」，因為存取該頁面時發生問題。 有疑問的頁面是在 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料庫的 **suspect_pages** 資料表中識別。  

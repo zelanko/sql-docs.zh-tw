@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134258"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 時間序列演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法提供最適合用於預測連續值，例如產品銷售狀況經過一段時間的迴歸演算法。 雖然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法 (如決策樹) 需要含有新資訊的其他資料行當做輸入來預測趨勢，但是時間序列模型則不需要。 時間序列模型可以只根據用於建立此模型的原始資料集來預測趨勢。 當您做出預測並將新的資料自動納入趨勢分析時，也可以將新的資料加入此模型中。  
@@ -107,8 +104,8 @@ ms.locfileid: "37325108"
   
 |TimeID|產品|Sales|數量|  
 |------------|-------------|-----------|------------|  
-|1/2001|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|1000|600|  
-|2/2001|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|1100|500|  
+|1/2001|A|1000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   

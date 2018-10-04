@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 525bb7bd5ed1fc3d2c5f48e97f13343d6910182f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a149bb829e542ab98aedc1e3f0d646e347bc979a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114968"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [值包含設定檔要求] 設定選項。 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 因此，它也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您使用了值包含設定檔來分析 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。  

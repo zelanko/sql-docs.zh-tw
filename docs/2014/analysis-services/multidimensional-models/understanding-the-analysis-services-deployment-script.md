@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, scripts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Analysis Services deployments, scripts
 - scripts [Analysis Services], deployment
 ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5473cc30dff70813c252e9529b4490962c329abb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84bc0e699a0fb47b78b1b0d075a0ef87c8a4dcc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099289"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>了解 Analysis Services 部署指令碼
   [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 產生的 XMLA 部署指令碼包含兩個區段：  

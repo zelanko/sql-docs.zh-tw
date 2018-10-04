@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de2c903436475790b1d7b6fa01c5c59ae16f20b5
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1f0963c1f703d471827f60514181e976051abb8d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352580"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125798"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 整合的效能
   本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 通用語言執行平台 (CLR)。  

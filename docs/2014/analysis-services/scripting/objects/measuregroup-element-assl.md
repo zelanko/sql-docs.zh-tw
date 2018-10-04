@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroup Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroup element
 ms.assetid: 7aa099db-5dc7-4cac-b437-f73fc0921b24
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee73b594fde5e3a9e915615d1a343296ce846d52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84186a736f7d3e17587a3a5457b1c7850c02f12b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089708"
 ---
 # <a name="measuregroup-element-assl"></a>MeasureGroup 元素 (ASSL)
   定義位於相同資料粒度層級的一組量值。  
@@ -80,12 +77,12 @@ ms.locfileid: "37163369"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 |上階或父系|資料類型|  
 |------------------------|---------------|  
-|[Cube](cube-element-assl.md)|無|  
+|[Cube](cube-element-assl.md)|None|  
 |[CubeBinding](../data-type/binding-data-type-assl.md)|  
 |[檢視方塊](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
   
@@ -99,8 +96,8 @@ ms.locfileid: "37163369"
 |上階或父系|子元素|  
 |------------------------|--------------------|  
 |[Cube](../collections/aggregationdesigns-element-assl.md)， [AggregationPrefix](../properties/aggregationprefix-element-assl.md)，[註解](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DataAggregation](aggregation-element-assl.md)， [描述](../properties/description-element-assl.md)，[維度](../collections/dimensions-element-assl.md)， [ErrorConfiguration](errorconfiguration-element-assl.md)， [EstimatedRows](../properties/estimatedrows-element-assl.md)， [EstimatedSize](../properties/estimatedsize-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [IgnoreUnrelatedDimensions](../properties/ignoreunrelateddimensions-element-assl.md)， [LastProcessed](../properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [MeasureQualification](../properties/measurequalificaton-element-assl.md)，[量值](../collections/measures-element-assl.md)，[名稱](../properties/name-element-assl.md)，[分割](../collections/partitions-element-assl.md)， [ProactiveCaching](proactivecaching-element-assl.md)， [ProcessingMode](../properties/processingmode-element-assl.md)， [ProcessingPriority](../properties/processingpriority-element-assl.md)，[來源](../properties/source-element-measure-assl.md)，[狀態](../properties/state-element-assl.md)， [StorageLocation](../properties/storagelocation-element-assl.md)， [StorageMode](../properties/storagemode-element-assl.md)，[翻譯](../collections/translations-element-assl.md)，[類型](../properties/type-element-measuregroup-assl.md)|  
-|[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|無|  
-|[檢視方塊](perspective-element-assl.md)|無|  
+|[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|None|  
+|[檢視方塊](perspective-element-assl.md)|None|  
   
 ## <a name="remarks"></a>備註  
  量值群組的所有量值都必須來自單一資料表。 量值群組可以定義可針對每個資料分割覆寫的預設繫結。  

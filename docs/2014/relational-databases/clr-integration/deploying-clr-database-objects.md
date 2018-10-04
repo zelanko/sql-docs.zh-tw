@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 95a69542a6d6f400d3b5a3e88786bda2d7e4a23a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353310"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122778"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
   部署是指您用來散發即將在其他電腦上安裝和執行之已完成應用程式或模組的程序。 您可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 來開發 Common Language Runtime (CLR) 資料庫物件並將它們部署至測試伺服器。 或者，您也可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 轉散發檔案 (而非 Visual Studio) 來編譯 Managed 資料庫物件。 一旦編譯完成之後，您就可以使用 Visual Studio 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，將包含 CLR 資料庫物件的組件部署至測試伺服器。 請注意，Visual Studio .NET 2003 無法用於 CLR 整合程式設計或部署。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含預先安裝的 .NET Framework，而且 Visual Studio .NET 2003 無法使用 .NET Framework 2.0 組件。  

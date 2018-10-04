@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProtocolDLL Property (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab5e3ff06ea7549d75b1a8c30575168663ae1a30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67fdda95d3a447f9390b8366f99a97e269c99ddd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115638"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
   取得所指定之網路通訊協定所需的.dll 檔案的名稱[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  

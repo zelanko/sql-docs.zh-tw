@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0f2ca66b0d2efaf07e394c5912cbaa13518c88
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392271"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124098"
 ---
 # <a name="atomic-blocks"></a>不可部分完成的區塊
   `BEGIN ATOMIC` 是 ANSI SQL 標準的一部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有在最上層原生編譯預存程序才支援不可部分完成的區塊。  

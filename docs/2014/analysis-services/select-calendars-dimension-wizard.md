@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67e4d316b122f44e207037603354f696446aed3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139438"
 ---
 # <a name="select-calendars-dimension-wizard"></a>選取日曆 (維度精靈)
   使用 [選取日曆] 頁面來建立其他階層，其中代表時間維度的會計日曆、報表日曆、製造日曆或國際標準組織 (ISO) 8601 日曆。  

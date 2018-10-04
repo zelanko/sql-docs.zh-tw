@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129038"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式 (AlwaysOn 可用性群組)
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，「可用性模式」為複本屬性，可判斷給定可用性複本是否可以在同步認可模式下執行。 您必須將每個可用性複本的可用性模式設定為同步認可模式或非同步認可模式。  若將主要複本設定為「非同步認可模式」，其便不會等候任何次要複本將內送交易記錄檔記錄寫入磁碟 (「強行寫入記錄」)。 若將給定次要複本設定為非同步認可模式，主要複本便不會等候次要複本強行寫入記錄。 若將主要複本與給定次要複本皆設定為「同步認可模式」，主要複本會等候次要複本確認其已強行寫入記錄 (除非次要複本在主要的「工作階段逾時期限」內無法 Ping 主要複本)。  

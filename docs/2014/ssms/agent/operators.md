@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - operators (users) [Database Engine]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59ca38030ffa52b8a110941f7881fff470cc3f77
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a8bbc084acec25b6a410aae1ffdb98940f53d90c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098764"
 ---
 # <a name="operators"></a>操作員
   操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的通知和監視功能。  

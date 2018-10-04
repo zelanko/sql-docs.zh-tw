@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7987 (Database Engine error)
 ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: daacaa2002700ff4c51d6551ba81ef46d27f2b45
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130493"
 ---
 # <a name="mssqlserver7987"></a>MSSQLSERVER_7987
     

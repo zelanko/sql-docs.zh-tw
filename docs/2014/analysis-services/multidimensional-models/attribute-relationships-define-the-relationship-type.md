@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing member properties
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - adding member properties
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe8c5564487e72e370b2b5004ea3632a3d63242d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cde44399dcee1492ab56fb2f32b2fd1da060c1c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224608"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101398"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>定義屬性關聯性的關聯性類型
   您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取 [維度設計師] 的 [屬性關聯性] 索引標籤，定義屬性關聯性的關聯性類型。  

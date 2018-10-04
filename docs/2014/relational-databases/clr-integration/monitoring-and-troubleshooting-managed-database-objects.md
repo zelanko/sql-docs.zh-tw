@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
 - monitoring [CLR integration]
 - performance [CLR integration]
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b597c47815ca52055f999edda925c8c01bdcfe73
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354100"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090648"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>監視與疑難排解 Managed 資料庫物件
   本主題提供可用於監視和疑難排解 Managed 資料庫物件以及在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中執行之組件的工具相關資訊。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPDone (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137578"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   認可要傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其餘資料列。  
@@ -37,17 +34,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- 可呼叫任何其他作業[IBCPSession](ibcpsession-ole-db.md)之後呼叫的介面**BCPDone**方法。 唯一的辦法就是呼叫[ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md) ; 方法來啟始新的大量複製作業。 這是類似於呼叫[irowsetfastload:: Commit](irowsetfastload-commit-ole-db.md)方法。  
+ 呼叫 **BCPDone** 方法之後，您就無法針對 [IBCPSession](ibcpsession-ole-db.md) 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
  此方法已成功。  
   
  E_UNEXPECTED  
- 此方法的呼叫是非預期的。 例如， **BCPInit**方法不會呼叫這個方法之前呼叫。  
+ 此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。  
   
 ## <a name="example"></a>範例  
- 此範例示範如何使用**IBCPSession**介面。  
+ 此範例會示範如何使用 **IBCPSession** 介面。  
   
  在執行這個範例之前，必須先執行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -65,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  您應該使用 BCP，透過下列命令將這份資料新增回資料表中：  
   
- **bcp 主要...在 outfile.dat-n-T-S fltest** *伺服器*  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
  編譯此範例時，將會需要指定 sqlncli11.lib。  
   

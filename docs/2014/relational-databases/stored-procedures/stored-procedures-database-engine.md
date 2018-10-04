@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - storing programs as stored procedures
@@ -15,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d131ae229bc82243e0192ce7510392c1c8b355a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130614"
 ---
 # <a name="stored-procedures-database-engine"></a>預存程序 (Database Engine)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預存程序是一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的群組，或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：  

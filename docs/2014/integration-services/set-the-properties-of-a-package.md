@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS packages, properties
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 197dbb96b08d484bce2f5235c106dc3f21433528
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9aa4740db5d0dcc0668ec59efd99ec20f5724a53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111759"
 ---
 # <a name="set-the-properties-of-a-package"></a>設定封裝的屬性
   此程序描述如何使用 **[屬性]** 視窗設定封裝屬性。  

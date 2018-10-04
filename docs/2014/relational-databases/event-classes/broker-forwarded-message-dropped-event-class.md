@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97302aee00e4f41f683a4a72b4e4b95185fa2e3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0160cb8dc1092936cfa315865775dfaef2ea7e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141199"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 卸除計畫轉寄的訊息時，會產生 Broker:Forwarded Message Dropped 事件。  

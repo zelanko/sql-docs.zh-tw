@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a539c0dbdadbcf88c7ea06488c4bb54a65a4a146
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c81952706f2e2353406a9d916c8e53d4336d2c07
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125258"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>儲存圖表上所選的資料表 (Visual Database Tools)
   如果不要儲存對資料庫圖表所做的所有變更，可以儲存特定的資料表或一組資料表。  

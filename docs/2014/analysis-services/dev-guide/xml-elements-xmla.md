@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XMLA, elements
 - XML for Analysis, elements
 - elements [XML for Analysis]
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e4de4bbe0b87068ead6ccc9b80f8625bf8014c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76ad5f1c0cc4dd68865174447cb428c1302d3a8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141658"
 ---
 # <a name="xml-elements-xmla"></a>XML 元素 (XMLA)
   下列主題將描述各種 XML for Analysis (XMLA) 元素類別受到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  

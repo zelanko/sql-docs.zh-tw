@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d26329d11885061b01e6147f145ce42a2a8855b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142228"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
   中的中繼資料探索改進[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]可讓[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端應用程式，以確保，從執行查詢所傳回的資料行或參數中繼資料與相同或相容的中繼資料的格式指定之前您在執行查詢。 如果查詢執行之後傳回的中繼資料與您在查詢執行之前指定的中繼資料格式不相容，您就會收到錯誤。  

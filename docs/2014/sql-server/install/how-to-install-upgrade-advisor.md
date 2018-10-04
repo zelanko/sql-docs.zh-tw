@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, installing
 - Upgrade Advisor [SQL Server], installing
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 241bae15e3d4edf548e12cfcb06ca09cab8c8a89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d5be9a4514f002ebd8c9b7ffb05c6f614e2129
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112923"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>如何：安裝 Upgrade Advisor
   Upgrade Advisor 支援所有支援元件 ([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 除外) 的遠端分析。 如果您不要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的執行個體，可以將 Upgrade Advisor 安裝在可連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的任何電腦上。 電腦也必須符合 Upgrade Advisor 必要條件。 如果您要掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的執行個體，則必須將 Upgrade Advisor 安裝在報表伺服器上。  

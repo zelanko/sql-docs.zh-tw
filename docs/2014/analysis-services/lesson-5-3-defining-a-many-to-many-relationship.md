@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 868c814c1031f9ffb499f80da2d7e9314d80e3bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50997645272c5ec900a8a89a8da41a1da421ac5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105428"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定義多對多關聯性
   定義維度時，通常每一個事實只聯結到一個維度成員，而單一維度成員可以與許多不同事實相關聯。 例如，每個客戶可以有許多張訂單，但是每張訂單只會屬於單一客戶。 在關聯式資料庫詞彙中，這稱為「一對多關聯性」。 不過，有時候單一事實可聯結到多個維度成員。 在關聯式資料庫詞彙中，這稱為「多對多關聯性」。 例如，客戶進行採購有許多原因，而採購原因可能與多個採購相關聯。 聯結資料表是用來定義與每項採購相關的銷售原因。 從這樣的關聯性建構的 [銷售原因] 維度會有多個成員與單一銷售交易有關。 當維度與事實資料表無直接相關時，多對多維度會將維度模型可擴展到典型星形結構描述之外，來支援複雜分析。  

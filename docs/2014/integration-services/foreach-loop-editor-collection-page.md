@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-caps.latest.revision: 62
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9226df03f6d1ef018991d4d958430a315ac81cd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140748"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 迴圈編輯器 (集合頁面)
   使用 [Foreach 迴圈編輯器] 對話方塊的 [集合] 頁面，即可指定列舉值類型和設定列舉值。  

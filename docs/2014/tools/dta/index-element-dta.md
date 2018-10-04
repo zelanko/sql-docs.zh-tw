@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9f2efa4761248c94a6db7a2747184808ffce3d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8d334a319807692f099056f0f350c395ecbeeb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120108"
 ---
 # <a name="index-element-dta"></a>Index 元素 (DTA)
   包含您要建立或卸除的使用者指定組態索引的相關資訊。  

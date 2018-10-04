@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7f8cbded499127107802136d2d2e4503cef24ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136008"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>從複寫監視器加入及移除發行者
   從中啟動「複寫監視器」的伺服器會自動新增至監視器 (如果它是「發行者」)。 其他「發行者」可透過 **[加入發行者]** 對話方塊來新增。 在新增「發行者」之後，它會顯示在監視器左窗格的群組中。 依預設會包括 **[我的發行者]** 群組，但您可以建立新的群組來管理一個或多個複寫拓撲。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](start-the-replication-monitor.md)。  

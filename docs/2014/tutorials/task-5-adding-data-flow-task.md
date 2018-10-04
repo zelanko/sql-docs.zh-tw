@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d41ec312bb20e14d1d7adc7d3f834663ebc4950
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ade652a874d8519fb0ff85c7622e2955248286d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137368"
 ---
 # <a name="task-5-adding-data-flow-task"></a>工作 5：加入資料流程工作
   在這項工作中，您會將資料流程工作加入至 SSIS 封裝的控制流程中。  

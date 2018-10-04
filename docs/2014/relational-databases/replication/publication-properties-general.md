@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.general.f1
 ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cb3bae46b114340930d2ffbd66aa4049f7a46ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6337e69df7b7d6fe0984a843bf82124f90cc4d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112668"
 ---
 # <a name="publication-properties-general"></a>發行集屬性，一般
   **[發行集屬性]** 對話方塊的 **[一般]** 頁面，包含發行集的基本資訊，例如名稱、描述和訂閱到期原則。  

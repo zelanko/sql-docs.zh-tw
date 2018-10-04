@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Parameters Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Parameters element
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87836c6ca9f33c100b3ba10ba91379370e787773
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b9c3d0d642ad7248d87e7cc17aaa17953bf6aec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158859"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134048"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 元素 (XMLA)
   包含的集合[參數](parameter-element-xmla.md)所使用的項目[Execute](../xml-elements-methods-execute.md)方法。  
@@ -56,8 +53,8 @@ ms.locfileid: "37158859"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 41325 (Database Engine error)
 ms.assetid: 97c6a8bb-139a-44f3-9ed5-f46d047e8ed3
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 449993925048d902a1c04a78b2bab88c1ab939a7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5c78044f8790f3a1ab97d036467813efa3d30e6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093708"
 ---
 # <a name="mssqlserver41325"></a>MSSQLSERVER_41325
     

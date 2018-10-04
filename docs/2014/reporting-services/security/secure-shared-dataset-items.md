@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f691cc55d7e8a6107e9c602d8edbb5c7d32d904c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098807"
 ---
 # <a name="secure-shared-dataset-items"></a>保護共用資料集項目的安全
   在報表伺服器上，共用資料集項目可由多個報表使用。 您可以保護共用資料集來控制使用者能夠存取的程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以檢視共用資料集、修改屬性、啟用快取、建立快取重新整理計劃，以及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，才能存取共用資料集。  

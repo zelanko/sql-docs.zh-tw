@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], database projects
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], about projects
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65bd646c92893b1766d4ee9b5e748b7f2f1149c5
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 953b2f790cfbe68fcd93458fa6d9cf2b2120ecb9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808324"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117078"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建置資料庫專案
   資料庫指令碼專案是一組有組織的指令碼、連接資訊及範本，而且全都與資料庫或資料庫某一部分有所關聯。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，用以在指令碼專案的內容中管理及設計 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含設計工具、編輯器、指南及精靈，可協助使用者開發、部署及維護資料庫。  

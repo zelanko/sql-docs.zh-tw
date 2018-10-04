@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e443740244e6e70336eb6c711e4e7ade7d2b698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8594114b48f14ac9573ee06efab6b931ca334114
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306160"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098978"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>設定封裝來使用交易
   將封裝設定成使用交易時，您有兩個選項：  

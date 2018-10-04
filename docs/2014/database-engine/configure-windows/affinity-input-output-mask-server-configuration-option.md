@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a2a4e3c41e98be8f39a39e37aee968532e2d9d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101548"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask 伺服器組態選項
   為了完成多工作業， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 與 Windows Server 2003 有時會在不同的處理器之間移動處理序執行緒。 雖然從作業系統的觀點來看很有效率，但是在繁重的系統負載下，這項活動可能會降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的效能，因為每個處理器快取會重複重新載入資料。 將處理器指派給特定的執行緒，可藉由去除處理器的重新載入，而在這些狀況下增進效能；執行緒與處理器之間的這種關聯，稱為處理器相似性。  

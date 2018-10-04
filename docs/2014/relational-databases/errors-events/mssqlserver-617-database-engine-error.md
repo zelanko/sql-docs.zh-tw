@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 617 (Database Engine error)
 ms.assetid: 213545d9-08a7-4427-bfd1-8b7e16644281
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f79f2f585eeffde4cb7e81a322a7b5c089f5212a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f63983243d0859fcb7ebaaf1ac5d184757d1f274
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099770"
 ---
 # <a name="mssqlserver617"></a>MSSQLSERVER_617
     

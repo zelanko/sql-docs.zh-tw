@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorOpen event class
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34e17451a11446f484705b11aaeab984eb5678e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7acffbda62069f25a6bdb37f399679fad4a16bdf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115904"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件類別
   **CursorOpen** 事件類別描述應用程式開發介面 (API) 資料指標中發生的資料指標開啟事件。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定義要與資料指標建立關聯的 SQL 陳述式、定義資料指標選項，並擴展資料指標時，就會發生資料指標開啟事件。  

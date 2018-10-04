@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Management Studio [SQL Server]
 - Enterprise Manager (See SQL Server Management Studio [Analysis Services])
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
-caps.latest.revision: 50
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9f4e2c226324950f21ea27b00e1b8a47d590e50
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1dd92e346a3a1f3dbb04e2a8d726ad4460ca5fc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128128"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用於存取、 設定、 管理、 管理和開發的所有元件的整合式的環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 SSMS 利用許多豐富的指令碼編輯器來組合一群非常廣泛的圖形工具，使所有開發人員和管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153869"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135140"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 從 SharePoint 管理中心進行管理服務應用程式。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。  
@@ -94,7 +91,7 @@ ms.locfileid: "37153869"
   
 |設定|註解|  
 |-------------|--------------|  
-|啟用執行記錄|預設值是 TRUE。<br /><br /> 指定報表伺服器是否產生追蹤記錄以及這些記錄的保存天數。 執行個體時提供 SQL Server 登入。 記錄會儲存在報表伺服器電腦的下列資料夾中：\Microsoft SQL Server\MSSQL.n\ReportServer\Log。 每次服務重新啟動時，就會啟動新的記錄。 如需有關記錄檔的詳細資訊，請參閱[報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)|  
+|啟用執行記錄|預設值是 TRUE。<br /><br /> 指定報表伺服器是否產生追蹤記錄以及這些記錄的保存天數。 . 記錄會儲存在報表伺服器電腦的下列資料夾中：\Microsoft SQL Server\MSSQL.n\ReportServer\Log。 每次服務重新啟動時，就會啟動新的記錄。 如需有關記錄檔的詳細資訊，請參閱[報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)|  
 |執行記錄保留天數|預設值是 60 天。|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -113,7 +110,7 @@ ms.locfileid: "37153869"
 |設定|註解|  
 |-------------|--------------|  
 |啟用報表產生器下載|預設值是 TRUE。<br /><br /> 指定用戶端是否能夠看到下載報表產生器應用程式的按鈕。|  
-|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值：http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
+|報表產生器啟動 URL|當報表伺服器不使用預設的報表產生器 URL 時，指定自訂 URL。 這個設定是選擇性的。 如果您沒有指定值，將會使用預設 URL，這樣會啟動報表產生器。 若要啟動報表產生器 3.0 當作 Click-Once 應用程式，請輸入下列值： http://\<電腦名稱>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
 |啟用用戶端列印|預設值是 TRUE。<br /><br /> 指定使用者是否可以下載提供列印選項的用戶端控制項。|  
 |編輯工作階段逾時|預設值是 7200 秒。|  
 |編輯工作階段快取限制|預設值為 5。|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - database-engine
@@ -12,7 +11,6 @@ ms.technology:
 - master-data-services
 - replication
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - new features [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - sql server 2014 sp1
 - sql server 2014 sp2
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 70
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5845455529c1b7d2cec25e7407ac8425a0a0e4a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4323b2099836d1c381babbf60c376adb178ef7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117954"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>什麼&#39;SQL Server 2014 的新功能
   本主題摘要說明中的新功能的詳細的連結[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，並摘要說明適用於服務組件 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -88,7 +85,7 @@ ms.locfileid: "37150149"
 -   **擷取新的 DMF 輸入 SQL Server 中的緩衝區：** 擷取工作階段/要求 (sys.dm_exec_input_buffer) 現已開放輸入的緩衝區的新 DMF。 其功能相當於 DBCC INPUTBUFFER。 [請參閱部落格以取得更多資訊](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)。
 -   **授與低估和 overestimated 記憶體的風險降低：** 的 Resource Governor MIN_GRANT_PERCENT 和 MAX_GRANT_PERCENT 透過加入新的查詢提示。 這可讓您藉由將達到上限以防止記憶體競爭記憶體授與執行查詢時運用這些提示。 如需詳細資訊，請參閱[KB310740 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107401)
 -   **更好的記憶體授與/使用量診斷：** 新的擴充的事件已新增至清單的 SQL Server (query_memory_grant_usage) 中的追蹤功能，來追蹤要求和授與的記憶體授與。 這可提供更佳的追蹤和分析功能針對記憶體授與相關的查詢執行問題進行疑難排解。 如需詳細資訊，請參閱 < [KB3107173 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107173)。
--   **查詢執行診斷，針對 tempdb 溢出：**-Hash Warning 和 Sort Warnings 現在有額外的資料行，以追蹤實體 I/O 統計資料、 使用的記憶體及受影響的資料列。 我們也引進了新的 hash_spill_details 擴充的事件。 現在您可以在您的雜湊和排序警告追蹤更細微的資訊 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 這項改進現在也會公開透過 XML 查詢計劃 」，SpillToTempDbType 複雜類型的新屬性的形式 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 現在會顯示排序工作資料表的統計資料，請在設定統計資料。 執行個體時提供 SQL Server 登入。
+-   **查詢執行診斷，針對 tempdb 溢出：**-Hash Warning 和 Sort Warnings 現在有額外的資料行，以追蹤實體 I/O 統計資料、 使用的記憶體及受影響的資料列。 我們也引進了新的 hash_spill_details 擴充的事件。 現在您可以在您的雜湊和排序警告追蹤更細微的資訊 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 這項改進現在也會公開透過 XML 查詢計劃 」，SpillToTempDbType 複雜類型的新屬性的形式 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 現在會顯示排序工作資料表的統計資料，請在設定統計資料。 .
 -   **改善的查詢執行計畫涉及殘餘述詞下推的診斷：** 在查詢執行計畫，以協助改善查詢效能的疑難排解，現在報告讀取的實際資料列。 這應該不必個別擷取 SET STATISTICS IO 變換正負號。 這可讓您查看剩餘的述詞下推查詢計劃中的相關資訊。 如需詳細資訊，請參閱 < [KB3107397 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107397)。
 
 

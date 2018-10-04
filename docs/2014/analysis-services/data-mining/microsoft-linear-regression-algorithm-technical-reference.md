@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181065"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106068"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線性迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 Microsoft 決策樹演算法的特殊版本，適用於連續屬性的模型配對。 本主題說明演算法的實作、描述如何自訂演算法的行為，以及提供查詢模型其他資訊的連結。  

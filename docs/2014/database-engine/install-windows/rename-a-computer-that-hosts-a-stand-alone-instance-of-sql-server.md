@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - remote login errors [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66c8ddd5a5ab207f9e9f29367ace2c73b8d2811b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd0003a1741ad9b8f07c034dffd9c80753e00586
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125868"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立執行個體的電腦
   當您變更了執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱之後，便會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間辨識這個新名稱。 您不必重新執行安裝程式，即可重設電腦名稱。 請改用下列步驟來更新儲存在 sys.servers 中而且由系統函式 @@SERVERNAME 所報告的系統中繼資料。 您可以更新系統中繼資料，以便反映使用 @@SERVERNAME 或從 sys.servers 中查詢伺服器名稱之遠端連接和應用程式的電腦名稱變更。  

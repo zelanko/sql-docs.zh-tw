@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27f0ea7b8e215735a0d5ef2f3deb8e354567216a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134542"
 ---
 # <a name="create-an-olap-mining-structure"></a>建立 OLAP 採礦結構
   建立以 OLAP Cube 或其他多維度資料存放區為根據的資料採礦模型有許多優點。 OLAP 方案已經包含妥善組織、清理和適當格式化的大量資料，但是這種資料的複雜性在於使用者不太可能根據隨選探索找到有意義的模式。 資料採礦讓您能夠探索新的相互關聯性，並提供可採取動作的洞察力。  
