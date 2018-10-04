@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Axes Element
@@ -24,16 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdb5aa48dd3a65f99b424274fdb89b3aee8c9591
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094904"
 ---
 # <a name="axes-element-xmla"></a>Axes 元素 (XMLA)
   包含的集合[軸](axis-element-xmla.md)項目代表所包含的軸資料[根](root-element-xmla.md)使用的項目[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)資料型別。  
@@ -56,7 +53,7 @@ ms.locfileid: "37237398"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|任意|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

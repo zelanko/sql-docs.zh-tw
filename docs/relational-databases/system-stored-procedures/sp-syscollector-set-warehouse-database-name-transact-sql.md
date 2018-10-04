@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_warehouse_database_name (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_set_warehouse_database_name (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_database_name
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_set_warehouse_database_name
 - data collector [SQL Server], stored procedures
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 878bf44ab404f5567f0e5933fe6f0173826b1972
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6f2bae4087d929ec7f13caff28bd19afabfa6aae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770206"
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
   
 ## <a name="arguments"></a>引數  
  [ @database_name =] '*database_name*'  
- 這是管理資料倉儲的名稱。 *database_name*是**sysname**預設值是 NULL。  
+ 這是管理資料倉儲的名稱。 *database_name*已**sysname**預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

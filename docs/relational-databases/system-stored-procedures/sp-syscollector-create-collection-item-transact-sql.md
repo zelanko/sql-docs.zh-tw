@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_create_collection_item (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_create_collection_item (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 818294f3fdeebc19a26a8689403205f57d9c8e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719816"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,26 +48,26 @@ sp_syscollector_create_collection_item
   
 ## <a name="arguments"></a>引數  
  [ @collection_set_id = ] *collection_set_id*  
- 這是收集組的唯一本機識別碼。 *collection_set_id*是**int**。  
+ 這是收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**。  
   
  [ @collector_type_uid = ] '*collector_type_uid*'  
- 識別要用於此項目收集器類型的 guid *collector_type_uid*是**uniqueidentifier** ，沒有預設值... 如需收集器型別的清單，請查詢 syscollector_collector_types 系統檢視表。  
+ 是 GUID，識別要用於此項目收集器型別*collector_type_uid&lt*是**uniqueidentifier** ，沒有預設值... 如需收集器型別的清單，請查詢 syscollector_collector_types 系統檢視表。  
   
  [ @name =] '*名稱*'  
- 這是收集項目的名稱。 *名稱*是**sysname** ，不能是空字串或 NULL。  
+ 這是收集項目的名稱。 *名稱*已**sysname**且不能是空字串或 NULL。  
   
  *名稱*必須是唯一的。 如需目前的收集項名稱清單，請查詢 syscollector_collection_items 系統檢視表。  
   
  [ @frequency =]*頻率*  
- 這可用來指定此收集項收集資料的頻率 (以秒為單位)。 *頻率*是**int**，預設值是 5。 可指定的最小值是 5 秒。  
+ 這可用來指定此收集項收集資料的頻率 (以秒為單位)。 *頻率*已**int**，預設值是 5。 可指定的最小值是 5 秒。  
   
  如果收集組設定為非快取模式，系統就會忽略此頻率，因為這個模式會導致在針對收集組指定的排程中同時發生資料收集和上傳作業。 若要檢視收集組的收集模式，請查詢[syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)系統檢視表。  
   
  [ @parameters =] '*參數*'  
- 收集器類型的輸入參數。 *參數*是**xml**預設值是 NULL。 *參數*結構描述必須符合收集器型別的參數結構描述。  
+ 收集器類型的輸入參數。 *參數*已**xml**預設值是 NULL。 *參數*結構描述必須符合收集器型別的參數結構描述。  
   
  [ @collection_item_id =] *collection_item_id*  
- 這是可識別收集組項目的唯一識別碼。 *collection_item_id*是**int**而且具有 OUTPUT。  
+ 這是可識別收集組項目的唯一識別碼。 *collection_item_id*已**int**而且具有 OUTPUT。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -123,10 +119,10 @@ EXEC sp_syscollector_create_collection_item
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_update_collection_item &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
- [sp_syscollector_delete_collection_item &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
- [syscollector_collector_types &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [sp_syscollector_create_collection_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [sp_syscollector_update_collection_item &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
+ [sp_syscollector_delete_collection_item &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
+ [syscollector_collector_types &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
+ [sp_syscollector_create_collection_set &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

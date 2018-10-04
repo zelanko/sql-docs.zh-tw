@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_queue_sp (TRANSACT-SQL) |Microsoft 文件
+title: sysmail_help_queue_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5087f212e72f4fa6970aff614983d8116d1f5b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796509"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,27 +40,27 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@queue_type** =] **'***類型***'**  
- 選擇性引數會刪除指定類型的電子郵件*類型*。 *類型*是**nvarchar(6)** 沒有預設值。 有效的項目是**郵件**和**狀態**。  
+ [ **@queue_type** =] **'***queue_type***'**  
+ 選擇性引數會刪除指定類型的電子郵件*queue_type*。 *queue_type*已**nvarchar(6)** 沒有預設值。 有效的項目都**mail**並**狀態**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|佇列的類型。 可能的值為**郵件**和**狀態**。|  
+|**queue_type**|**nvarchar(6)**|佇列的類型。 可能的值為**mail**並**狀態**。|  
 |**長度**|**int**|指定佇列中的郵件項目數。|  
-|**狀態**|**nvarchar(64)**|監視器的狀態。 可能的值為**INACTIVE** （佇列為非作用中）， **NOTIFIED** (佇列已受通知要進行接收)，和**RECEIVES_OCCURRING** （接收佇列）。|  
+|**state**|**nvarchar(64)**|監視器的狀態。 可能的值為**INACTIVE** （佇列為非作用中），**收到通知**(佇列已受通知要進行接收)，並**RECEIVES_OCCURRING** （接收佇列）。|  
 |**last_empty_rowset_time**|**日期時間**|佇列上次空的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
 |**last_activated_time**|**日期時間**|佇列上次啟動的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
   
 ## <a name="remarks"></a>備註  
- 當 Database Mail 進行疑難排解，使用**sysmail_help_queue_sp**若要查看佇列中有多少項目，啟用狀態的佇列，以及最後一次。  
+ 當 Database Mail 進行疑難排解，使用**sysmail_help_queue_sp**若要查看佇列中有多少項目，啟動的佇列，和最後一次的狀態。  
   
 ## <a name="permissions"></a>Permissions  
- 根據預設，只有**sysadmin**固定的伺服器角色可以存取這個程序。  
+ 根據預設，只有成員**sysadmin**固定的伺服器角色可以存取這個程序。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回郵件和狀態佇列兩者。  

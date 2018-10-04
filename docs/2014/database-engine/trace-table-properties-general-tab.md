@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.general.f1
 helpviewer_keywords:
 - Trace Table Properties dialog box
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04730fcf274b8e8febf9533b84949222e96978b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70f96b0146dbb38827b028e55a241296a5443c1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052353"
 ---
 # <a name="trace-table-properties-general-tab"></a>追蹤資料表屬性 (一般索引標籤)
   使用**一般**索引標籤**追蹤資料表屬性**對話方塊，即可檢視追蹤資料表的屬性。  

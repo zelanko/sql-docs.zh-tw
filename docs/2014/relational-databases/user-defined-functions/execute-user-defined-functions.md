@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - invoking user-defined functions
@@ -15,12 +13,12 @@ ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b478d8ca2912d2afbf5dc399dfd465c0aab1c3f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7e9c170a187fc3ccf28301a2ee1c9ee7b626169f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081594"
 ---
 # <a name="execute-user-defined-functions"></a>執行使用者定義函數
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中執行使用者定義的函數。  

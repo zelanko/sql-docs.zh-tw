@@ -5,10 +5,7 @@ ms.date: 10/18/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_links_TSQL
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e59dcd6550c006b5a1e0f3e3be6440669e05021
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b37ca384c2d3402a3b9ec01a4b9d6ccbfb7d402
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610106"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "37997740"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|目前資料庫中的 sys.databases 檢視的識別碼。|  
 |start_date|**datetimeoffset**|在區域 SQL Database 資料中心起始資料庫複製時的 UTC 時間|  
-|modify_date|**datetimeoffset**|在完成資料庫異地複寫區域的 SQL Database 資料中心的 UTC 時間。 新的資料庫與主要資料庫於此時間同步。 執行個體時提供 SQL Server 登入。|  
+|modify_date|**datetimeoffset**|在完成資料庫異地複寫區域的 SQL Database 資料中心的 UTC 時間。 新的資料庫與主要資料庫於此時間同步。 .|  
 |link_guid|**uniqueidentifier**|異地複寫連結的唯一識別碼。|  
 |partner_server|**sysname**|包含異地複寫資料庫的邏輯伺服器的名稱。|  
 |partner_database|**sysname**|異地複寫連結的邏輯伺服器上資料庫的名稱。|  

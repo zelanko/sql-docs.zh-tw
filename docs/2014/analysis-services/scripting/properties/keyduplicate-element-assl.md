@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyDuplicate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4ca2e06d39607acf92dc820bc08cfe53f938bed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192440"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055290"
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate 元素 (ASSL)
   決定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]處理在處理期間遇到重複的索引鍵錯誤。  
@@ -59,7 +56,7 @@ ms.locfileid: "37192440"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  只有在進行維度處理期間，屬性索引鍵出現一次以上才會產生重複索引鍵錯誤。 由於屬性索引鍵必須是唯一的，所以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會捨棄重複的記錄。 重複索引鍵錯誤通常代表維度的設計 (特別是屬性之間的關聯性) 中含有缺陷。  

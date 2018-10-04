@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StartDate Property (SecurityCertificate Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - StartDate property
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d044ca33722ba9075f6adbb35b5a3e03d714917e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb59a756b6a6990268c3eb20db3530052f0278e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094638"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate 屬性 (SecurityCertificate 類別)
   取得安全性憑證開始生效的日期。  

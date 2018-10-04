@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 80f1e02c-5e71-4610-ae62-fde62c4189d6
-caps.latest.revision: 3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5643d328ac4a7f9a814643557ab96d851212ba03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ba6c9c03459e9e5eaed3b33fa4a6b891f868767
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109528"
 ---
 # <a name="windows-management-instrumentation"></a>Windows Management Instrumentation
   本節包含下列主題：  

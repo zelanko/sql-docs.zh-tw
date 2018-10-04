@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sending feedback to Microsoft
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e878c3d09e2dde7d32e9fa5b37fd02081a6979c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109889"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供關於 SQL Server 2014 的回函
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 感謝您撥冗協助我們改良 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產品和文件集。 您可以提供有關產品功能和使用者介面的建議與錯誤報告、提交文件集回函，以及選擇將錯誤報告和使用方式資料自動傳送給 [!INCLUDE[msCoName](../includes/msconame-md.md)] 進行分析。 這三個回函選項分述如下。  

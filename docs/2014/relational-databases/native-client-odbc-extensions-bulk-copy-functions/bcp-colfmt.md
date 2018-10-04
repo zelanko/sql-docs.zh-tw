@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_colfmt
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad117fe5580267db103f1e6a44ec6798bf87c023
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089278"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   在使用者檔案中指定資料的來源或目標格式。 當做來源格式使用時**bcp_colfmt**指定現有的資料檔案做為大量複製中的資料來源的格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 資料檔案當做目標格式使用時，會建立使用指定的資料行格式**bcp_colfmt**。  
@@ -105,9 +102,9 @@ idxServerCol
   
  針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元和二進位資料類型*cbUserData*可以是 SQL_VARLEN_DATA、 SQL_NULL_DATA、 0 或某些正值。 如果*cbUserData*為 SQL_VARLEN_DATA，系統會使用長度指標，如果存在或結束字元順序來決定資料的長度。 如果同時提供長度指標與結束字元順序，大量複製會使用導致複製最少量資料者。 如果*cbUserData*為 SQL_VARLEN_DATA，資料類型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元或二進位類型，而且沒有長度指標和結束字元順序指定，則系統會傳回錯誤訊息。  
   
- 如果*cbUserData*為 0 或正值，則系統會使用*cbUserData*為最大資料長度。 不過，如果除了正*cbUserData*提供長度指標或結束字元順序，系統會使用產生最少量複製資料的方法來決定資料長度。  
+ 如果 *cbUserData* 為 0 或正值，則系統會使用 *cbUserData* 當作最大的資料長度。 不過，如果除了正的 *cbUserData* 之外，也提供長度指標或結束字元順序，系統會使用導致複製最少量資料的方式決定資料長度。  
   
- *CbUserData*值表示資料的位元組計數。 如果字元資料以 Unicode 寬字元，則正*cbUserData*參數值表示乘以的大小，以位元組為單位，每個字元的字元數。  
+ *cbUserData* 值表示資料的位元組計數。 如果字元資料是以 Unicode 寬字元表示，則 *cbUserData* 正參數值表示字元數乘以每個字元的大小 (以位元組為單位)。  
   
  *pUserDataTerm*  
  這是要用於此資料行的結束字元順序。 此參數主要用於字元資料類型，因為其他所有類型都屬固定長度；如果是二進位資料，則需要一個長度指標，才能正確記錄出現的位元組數目。  

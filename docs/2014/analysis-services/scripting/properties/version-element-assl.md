@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Version Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Version element
 ms.assetid: fb26fe5d-de40-443b-a8bc-031c950552e6
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64c2f90d1d12f9595098ee6a9fc8c20e1ccc36dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e8c8cde757b0de5fb4076c395ac915650a12d4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239598"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091308"
 ---
 # <a name="version-element-assl"></a>Version 元素 (ASSL)
   包含的執行個體的唯讀版本號碼[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]由[Server](../objects/server-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37239598"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37239598"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Server](../objects/server-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `Version` 元素會描述已安裝哪一個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 版本。  

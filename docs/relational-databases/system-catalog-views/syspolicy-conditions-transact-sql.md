@@ -1,14 +1,11 @@
 ---
-title: syspolicy_conditions (TRANSACT-SQL) |Microsoft 文件
+title: syspolicy_conditions & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_conditions
@@ -18,26 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09d52d9a4c4d5005a51057a40c29524301d3fdd4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c0f9efbedc1f380bca66c198accae17b70cb4da2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823106"
 ---
 # <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，針對每一個以原則為基礎的管理條件各顯示一個資料列。 syspolicy_conditions 屬於 msdb 資料庫內的 dbo 結構描述。 下表描述 syspolicy_conditions 檢視表中的資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|此條件的識別碼。 每一個條件都代表一或多個條件運算式的集合。|  
-|name|**sysname**|此條件的名稱。|  
+|NAME|**sysname**|此條件的名稱。|  
 |date_created|**datetime**|建立此條件的日期和時間。|  
 |description|**nvarchar(max)**|此條件的描述 描述資料行為選擇性，而且可為 NULL。|  
 |created_by|**sysname**|建立此條件的登入。|  
