@@ -1,30 +1,24 @@
 ---
-title: 轉換設定 (MySQLToSQL) |Microsoft 文件
+title: 轉換設定 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 70450580a3b473f7b549578924e7f965531ad30f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a311b35597b3c474c2128e73b148ab882f19f42c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776014"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732316"
 ---
 # <a name="conversion-settings-mysqltosql"></a>轉換設定 (MySQLToSQL)
-**'設定'** 索引標籤可讓使用者設定節點層級設定。 [] 索引標籤會位於下列 Metabase 節點：  
+**[設定]** 索引標籤可讓使用者設定節點層級設定。 [] 索引標籤會位於下列 Metabase 節點：  
   
 -   資料庫節點  
   
@@ -37,37 +31,37 @@ ms.locfileid: "34776014"
 -   在資料表節點  
   
 ## <a name="specifications"></a>規格：  
-**設定** 索引標籤有兩個使用者的設定、 viz。:  
+**設定** 索引標籤中有兩個使用者的設定、 上來。:  
   
 1.  函式轉換  
   
 2.  轉換資料表  
   
-這些設定可根據 Metabase 節點類型。 例如，函式轉換相關的設定將不會位於資料表節點  
+這些設定可根據 Metabase 節點類型。 例如，函式轉換相關的設定將無法在資料表節點  
   
 > [!NOTE]  
-> -   使用者所做的變更將在 [專案] 工作區中儲存為個別的喜好設定檔案。  
-> -   這個檔案的副檔名會是**ccprefs**。  
+> -   使用者所做的變更會儲存在專案工作區中，為個別的喜好設定檔案。  
+> -   此檔案的副檔名會是**ccprefs**。  
   
 1.  **函式轉換設定：**  
   
-    1.  此索引標籤包含 **'Force 函式轉換'** 選項。 此選項可以有下列四個值之一：  
+    1.  此索引標籤包含 **'強制函式轉換'** 選項。 選項可能會有下列四個值之一：  
   
         -   根據專案設定 [繼承] 轉換  
   
         -   永遠將轉換成函式  
   
-        -   永遠將轉換的程序  
+        -   永遠將轉換成程序  
   
         -   根據專案設定轉換  
   
-    2.  根據設定，函式將會轉換為函式或預存程序。  
+    2.  根據設定，此函式會轉換函式或預存程序。  
   
-    3.  使用者所做的設定會儲存在重疊的喜好設定檔案上按一下**套用** 按鈕。  
+    3.  使用者所做的設定會儲存在串聯的喜好設定檔案上按一下**套用** 按鈕。  
   
-2.  **資料表轉換設定：**  
+2.  **資料表 [轉換] 設定：**  
   
-    1.  此索引標籤包含**隱藏 ROWID 輔助的資料行產生**選項。 此選項可以有下列四個值之一：  
+    1.  此索引標籤包含 **'隱藏 ROWID 輔助的資料行產生'** 選項。 選項可能會有下列四個值之一：  
   
         -   根據專案設定 [繼承] 轉換  
   
@@ -77,9 +71,9 @@ ms.locfileid: "34776014"
   
         -   根據專案設定轉換  
   
-    2.  如果 **'Yes'**，這項設定會禁止 ROWID 輔助的資料行建立目標資料表上建立。  
+    2.  如果 **'Yes'**，這項設定會禁止 ROWID 輔助的資料行建立在目標資料表上建立。  
   
-    3.  使用者所做的設定會儲存在重疊的喜好設定檔案上按一下**套用** 按鈕。  
+    3.  使用者所做的設定會儲存在串聯的喜好設定檔案，方法是按一下**套用** 按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
 [專案設定 （轉換） (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  

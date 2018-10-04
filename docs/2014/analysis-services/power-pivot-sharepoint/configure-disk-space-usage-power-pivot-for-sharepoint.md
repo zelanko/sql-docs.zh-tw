@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069637"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署會使用主機電腦的磁碟空間來快取 PowerPivot 資料庫，讓重新載入更快速。 在記憶體中載入的每個 PowerPivot 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 根據預設，PowerPivot for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  

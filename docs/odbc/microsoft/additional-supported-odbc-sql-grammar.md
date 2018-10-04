@@ -1,33 +1,30 @@
 ---
-title: 其他支援的 ODBC SQL 文法 |Microsoft 文件
+title: 其他支援的 ODBC SQL 文法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6381f13176e34322db6c5d8649ea348ec1e73673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898923"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675486"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>其他支援的 ODBC SQL 文法
-ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句核心和擴充 ODBC 2.5 文法中。 會顯示其他資訊，請跳至[ALTER TABLE 陳述式](../../odbc/microsoft/alter-table-statement.md)，[相互關聯名稱](../../odbc/microsoft/correlation-names.md)，和[程序引動過程](../../odbc/microsoft/procedure-invocation.md)主題。  
+ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句，核心和擴充 ODBC 2.5 文法中。 會顯示其他資訊，請跳至[ALTER TABLE 陳述式](../../odbc/microsoft/alter-table-statement.md)，[相互關聯名稱](../../odbc/microsoft/correlation-names.md)，並[程序引動過程](../../odbc/microsoft/procedure-invocation.md)主題。  
   
--   近似數值常值 （核心）  
+-   近似的數值常值 （核心）  
   
 -   [ALTER TABLE 陳述式](../../odbc/microsoft/alter-table-statement.md)（核心）  
   
@@ -37,7 +34,7 @@ ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句核心�
   
 -   [程序引動過程](../../odbc/microsoft/procedure-invocation.md)（擴充）  
   
--   [述詞之間](../../odbc/microsoft/between-predicate.md)（核心）  
+-   [BETWEEN 述詞](../../odbc/microsoft/between-predicate.md)（核心）  
   
 -   [CREATE INDEX 陳述式](../../odbc/microsoft/create-index-statement.md)  
   
@@ -61,7 +58,7 @@ ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句核心�
   
 -   [Jet： 外部聯結](../../odbc/microsoft/jet-outer-joins.md)（擴充）  
   
--   SELECT 陳述式 （擴充） （包括 GROUP BY、 HAVING、 和等位子句）  
+-   SELECT 陳述式 （擴充） （包括 GROUP BY、 HAVING 和 UNION 子句）  
   
 -   子查詢 （子選擇） （核心）  
   

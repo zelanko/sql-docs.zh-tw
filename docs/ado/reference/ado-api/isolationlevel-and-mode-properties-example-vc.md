@@ -1,13 +1,11 @@
 ---
-title: IsolationLevel 和模式屬性範例 （VC + +） |Microsoft 文件
+title: IsolationLevel 和 Mode 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688556"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和模式屬性範例 （VC + +）
-這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性可開啟的獨佔連接，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)屬性可開啟所執行的交易中的其他交易隔離。  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 屬性範例 （VC + +）
+這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性，以開啟專屬的連線，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)開啟執行的交易中的其他交易隔離。  
   
 ## <a name="example"></a>範例  
   
@@ -227,25 +224,25 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **連線模式是獨占**  
+ **連線模式是專屬**  
 **交易隔離**  
 **忙碌中執行的資料庫指南-商務**  
-**與電腦烹飪： 展開資產負債表-商務**  
+**與電腦烹飪： 展開的資產負債表-商務**  
 **您可以對抗電腦壓力 ！-商務**  
-**直線談談電腦-商務**  
+**電腦-商務相關的討論**  
 **矽谷 Gastronomic 視為 mod_cook**  
-**美食微波爐-mod_cook**  
-**電腦烹飪-UNDECIDED 的心理**  
+**美食微波爐的電源-mod_cook**  
+**電腦烹飪-未決的心理**  
 **但它是使用者易記嗎？-popular_comp**  
-**矽谷-popular_comp 的機密資料**  
-**網路禮儀-popular_comp**  
-**電腦 Phobic 和非 Phobic 個人： 行為變化-self_help**  
-**Is Anger 敵人嗎？-self_help**  
-**而不必擔心-self_help 生命週期**  
+**矽谷-popular_comp 的祕密**  
+**Net 禮儀-popular_comp**  
+**電腦 Phobic 和非恐懼症個人： 行為變化-self_help**  
+**是憤怒帶來的敵人嗎？-self_help**  
+**而不必擔心-self_help 生命**  
 **長時間的資料 Deprivation： 的四個案例研究-而 self_help**  
 **情感的安全性： 新的演算法-self_help**  
-**Onions、 Leeks 和大蒜： 烹飪 trad_cook 地中海-機密**  
-**Buckingham 明這些 trad_cook 五十個年份**  
+**Onions、 Leeks 和大蒜： 烹飪的地中海-trad_cook 的祕密**  
+**Buckingham Palace 這些 trad_cook 五十個年份**  
 **壽司，任何人？-trad_cook**   
 ## <a name="see-also"></a>另請參閱  
  [IsolationLevel 屬性](../../../ado/reference/ado-api/isolationlevel-property.md)   

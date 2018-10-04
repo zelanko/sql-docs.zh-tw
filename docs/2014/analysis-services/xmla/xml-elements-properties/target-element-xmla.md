@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Target Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08c231b16e6f61f2aa42770ee06832b99a0de5dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97d198e823acb9bf3c8915e18cbf723032f81b58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079788"
 ---
 # <a name="target-element-xmla"></a>Target 元素 (XMLA)
   表示期間合併的目標資料分割[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
@@ -55,8 +52,8 @@ ms.locfileid: "37287864"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|1-n：出現一次以上的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

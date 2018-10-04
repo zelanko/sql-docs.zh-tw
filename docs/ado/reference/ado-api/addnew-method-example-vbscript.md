@@ -1,36 +1,33 @@
 ---
-title: AddNew 方法範例 (VBScript) |Microsoft 文件
+title: AddNew 方法範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a67a9dd7ba9e280da6b361d7473ae8c6f6d2cac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e5d6db633a5c718ea38d2b8959fa54305ec02883
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701616"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 方法範例 (VBScript)
-這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法來建立具有指定名稱的新記錄。  
+這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法用來建立具有指定名稱的新記錄。  
   
- 動態伺服器網頁 (ASP) 中使用下列的範例。 使用**尋找**找出 Adovbs.inc 的檔案，並將它放在您打算使用的目錄中。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**AddNewVBS.asp**。 您可以在任何用戶端瀏覽器中檢視結果。  
+ Active Server Page (ASP) 中使用下列的範例。 使用 **尋找**找出檔案 Adovbs.inc，並將它放在您打算使用的目錄。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**AddNewVBS.asp**。 您可以在任何用戶端瀏覽器中檢視結果。  
   
- 若要執行此範例，HTML 形式，加入新的記錄。 按一下**新增**。 請參閱[刪除方法範例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)可移除不必要的記錄。  
+ 若要執行範例，請在 HTML 表單中加入新的記錄。 按一下 **加入新**。 請參閱[刪除方法範例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)移除不必要的記錄。  
   
 ```  
 <!-- BeginAddNewVBS -->  

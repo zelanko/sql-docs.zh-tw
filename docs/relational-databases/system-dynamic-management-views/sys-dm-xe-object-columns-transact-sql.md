@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_object_columns (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_xe_object_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_object_columns
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b7123f557674afe6016138f05803a8d13753c6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732170"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +35,10 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]  
 >  事件物件會公開唯讀和可讀寫資料的固定結構描述。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|資料行的名稱。 名稱內是唯一的物件。 不可為 Null。|  
-|column_id|**int**|資料行的識別碼。 column_id 物件內是唯一當使用 column_type 時。 不可為 Null。|  
+|NAME|**nvarchar(60)**|資料行的名稱。 在物件內的唯一名稱。 不可為 Null。|  
+|column_id|**int**|資料行的識別碼。 column_id 內是唯一的物件，當使用 column_type 時。 不可為 Null。|  
 |object_name|**nvarchar(60)**|這個資料行所屬之物件的名稱。 這與 sys.dm_xe_objects.id 之間是多對一的關聯性。不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
 |type_name|**nvarchar(60)**|此資料行之類型的名稱。 不可為 Null。|  

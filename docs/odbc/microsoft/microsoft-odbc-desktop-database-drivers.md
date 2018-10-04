@@ -1,13 +1,11 @@
 ---
-title: Microsoft ODBC 桌面資料庫驅動程式 |Microsoft 文件
+title: Microsoft ODBC 桌面資料庫驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4411abb0d9eccf3a209f873d80360de92317ae48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631666"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面資料庫驅動程式
-ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存取語言。 您可以存取各種資料庫管理系統 (Dbms) 具有相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，查詢中，並更新透過 ODBC 介面的桌面資料庫啟用 ODBC 的應用程式的使用者。  
+ODBC 是做為資料庫存取語言會使用結構化查詢語言 (SQL) API。 您可以使用相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼，來存取各種不同的資料庫管理系統 (Dbms)。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，請查詢，啟用 ODBC 的應用程式的使用者，並將其更新透過 ODBC 介面的桌面資料庫中。  
   
- Microsoft ODBC 桌面資料庫驅動程式是 Microsoft Jet 基礎一的 ODBC 驅動程式。 3.0 和更新版本的版本而 Microsoft ODBC 桌面資料庫驅動程式 2.0 包含 16 位元和 32 位元驅動程式，包括 Windows NT 工作站或伺服器版本 4.0、 Windows 2000 Professional 或 Windows 2000 可以在 Windows 95 或更新版本中，只有 32 位元驅動程式伺服器。 這些驅動程式提供下列類型的資料來源存取權：  
+ Microsoft ODBC 桌面資料庫驅動程式是 Microsoft jet ODBC 驅動程式設定。 Microsoft ODBC 桌面資料庫驅動程式 2.0 包含 16 位元和 32 位元驅動程式，而版本 3.0 和更新版本包含唯一的 32 位元驅動程式可在 Windows 95 或更新版本、 Windows NT Workstation 或 4.0 版，Windows 2000 Professional 或 Windows 2000 Server伺服器。 這些驅動程式提供下列類型的資料來源存取權：  
   
 -   Microsoft Access  
   
@@ -41,12 +38,12 @@ ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存�
   
 -   dBASE  
   
--   Text  
+-   文字  
   
- 請參閱[Visual FoxPro ODBC 驅動程式](../../odbc/microsoft/visual-foxpro-odbc-driver.md)如 Microsoft Visual FoxPro® ODBC 驅動程式的相關詳細文件。  
+ 請參閱[Visual FoxPro ODBC Driver](../../odbc/microsoft/visual-foxpro-odbc-driver.md) for Microsoft Visual FoxPro® ODBC 驅動程式的相關詳細文件。  
   
 > [!NOTE]  
->  可安裝 ISAM (IISAM) 驅動程式會啟用 Lotus 1-2-3、 Microsoft Exchange 等 HTML、 其他資料來源的存取權。 如需這些驅動程式的詳細資訊，請參閱 [存取外部資料] 中*Microsoft Jet 資料庫引擎程式設計人員參考*。 ODBC 桌面資料庫驅動程式 4.0 不支援 Btrieve 和 EMS 資料格式。  
+>  存取其他資料來源，例如 Lotus 1-2-3、 Microsoft Exchange 和 HTML，會啟用可安裝 ISAM (IISAM) 驅動程式。 如需有關這些驅動程式的詳細資訊，請參閱 < 存取外部資料 」 中*Microsoft Jet Database Engine 程式設計人員參考*。 ODBC 桌面資料庫驅動程式 4.0 不支援 Btrieve 和 EMS 資料格式。  
   
  此章節包含下列主題。  
   

@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - XQuery, samples
 - sample applications [XQuery]
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9ca9281fd1f7739511f902cbbeabeed96ac58746
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030366"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781886"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>針對 xml 資料類型的其他範例 XQueries
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

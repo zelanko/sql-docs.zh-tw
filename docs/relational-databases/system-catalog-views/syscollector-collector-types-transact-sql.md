@@ -1,14 +1,11 @@
 ---
-title: s (TRANSACT-SQL) |Microsoft 文件
+title: syscollector_collector_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collector_types
@@ -19,23 +16,22 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7951259911347457e4927cb9c3c0133d87cc9cf6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650576"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   提供收集項之收集器類型的相關資訊。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|集合類型的 GUID。 不可為 Null。|  
 |**name**|**sysname**|集合類型的名稱。 不可為 Null。|  
@@ -47,7 +43,7 @@ ms.locfileid: "33221889"
 |**upload_package_id**|**uniqueidentifer**|上傳封裝的 GUID。 不可為 Null。|  
 |**upload_package_path**|**nvarchar(4000)**|提供上傳封裝的路徑。 可為 Null。|  
 |**upload_package_name**|**sysname**|上傳封裝的名稱。 不可為 Null。|  
-|**is_system**|**bit**|開啟 (1) 或關閉 (0)，表示如果收集器型別已隨附於資料收集器，或加入之後由**dc_admin**。 這可能是本廠開發或由協力廠商開發的自訂類型。 不可為 Null。|  
+|**is_system**|**bit**|開啟 (1) 或關閉 (0) 表示如果收集器型別已隨附於資料收集器，或稍後藉由加入**dc_admin**。 這可能是本廠開發或由協力廠商開發的自訂類型。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 SELECT **dc_operator**， **dc_proxy**。  
@@ -56,9 +52,9 @@ ms.locfileid: "33221889"
   
 |更新的內容|  
 |---------------------|  
-|更新**collection_type_uid**的資料行名稱**collector_type_uid**。|  
+|更新**collection_type_uid**資料行名稱**collector_type_uid&lt**。|  
 |已更正的描述**parameter_schema**指出此值可為 null 的資料行。|  
-|加入**parameter_formatter**資料行。|  
+|新增**parameter_formatter**資料行。|  
 |已更正的資料類型**collection_package_path**資料行，並更新描述，指出此值可為 null。|  
 |已更正的資料類型**upload_package_path**資料行，並更新描述，指出此值可為 null。|  
   

@@ -1,30 +1,27 @@
 ---
-title: SQLGetData （桌面資料庫驅動程式） |Microsoft 文件
+title: SQLGetData （桌面資料庫驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Desktop Database Drivers
 ms.assetid: c9d9a32d-5dc2-4189-9bfb-2b008bc3d6a3
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae546182d51663c15a14ac25b5349a06da02e952
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f362d725f8b734ab9ecdbdc79c268af08a495b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622126"
 ---
-# <a name="sqlgetdata-desktop-database-drivers"></a>SQLGetData （桌面資料庫驅動程式）
-此函式可以從任何資料行，擷取資料，不論是否有繫結資料行之後，並在其中擷取資料行的順序為何。  
+# <a name="sqlgetdata-desktop-database-drivers"></a>SQLGetData (桌面資料庫驅動程式)
+此函式可以從任何資料行，擷取資料，不論是否有繫結資料行之後，也不論在其中擷取資料行的順序。  
   
 > [!NOTE]  
->  \*在 pcbValue **SQLGetData**可能會傳回倍字元為實際可用的繫結至 ANSI 資料超過 Jet 4.0 資料庫超出 510 個字元。 字元值或較少的 510 會傳回實際 cbValue。
+>  \*在 pcbValue **SQLGetData**可能會傳回兩倍做為實際可用的字元長度超過在 Jet 4.0 資料庫 510 個字元的 ANSI 資料繫結時。 510 個或更少的字元值會傳回實際 cbValue。

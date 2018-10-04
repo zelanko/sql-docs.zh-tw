@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
-caps.latest.revision: 9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0704648805ce9538e16ec504a8c3508b71f1c6ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166195"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053738"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>將報表匯出為其他檔案類型 (報表產生器及 SSRS)
   當您在報表產生器或報表設計師中預覽報表時，可以將報表轉譯為其他檔案格式，例如 CSV、影像、PDF、[!INCLUDE[ofprword](../includes/ofprword-md.md)] 或 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]，或者，當您在報表伺服器上檢視報表時，也可以轉譯報表。 如果您想要將報表立即儲存為其他檔案類型，而不要將報表發行到報表伺服器，或者您想要查看以特定格式將報表設計傳遞給報表讀者時的外觀，使用特定格式來轉譯報表會相當有用。 當您設定訂閱或透過電子郵件傳遞報表時，或者，如果您想要儲存報表伺服器上提供的報表時，在報表伺服器上轉譯報表很有用。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
@@ -60,7 +57,7 @@ ms.locfileid: "37166195"
   
 6.  若要以選取的匯出格式檢視報表，按一下 **[開啟]**。  
   
-     \- 或 -  
+     \-或-  
   
      若要以選取的匯出格式立即儲存報表，按一下 **[儲存]**。  
   
@@ -78,7 +75,7 @@ ms.locfileid: "37166195"
   
 3.  若要以選取的匯出格式檢視報表，按一下 **[開啟]**。  
   
-     \- 或 -  
+     \-或-  
   
      若要以選取的匯出格式立即儲存報表，按一下 **[儲存]**。  
   

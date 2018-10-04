@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-caps.latest.revision: 45
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f983b412b6ef4a91293e07b66a8a0cab6d15a71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079438"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [一般] 頁面，即可設定「執行 SQL」工作和提供該工作執行的 SQL 陳述式。  

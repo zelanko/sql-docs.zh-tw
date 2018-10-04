@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Command line options, help option
 - Command line options, log file option
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: beddb03c2d5806f9a3e3114346808d54379a9d74
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5f47721b1c7d370ce614cd24e800eef0fef03dbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737586"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 主控台中的命令列選項 (MySQLToSQL)
 Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項。 後續章節將詳細說明相同。  
@@ -99,7 +93,7 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項:-x / xmloutput [xmloutputfile]  
 此命令用來輸出至主控台或至 xml 檔案的 xml 格式的命令輸出訊息。  
   
-有兩個選項可供 xmloutput，報導。。，：  
+有兩個選項可供 xmloutput， 報導..,：  
   
 -   如果 xmloutput 切換之後提供檔案路徑，則會輸出重新導向至檔案。  
   

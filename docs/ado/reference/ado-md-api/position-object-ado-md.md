@@ -1,13 +1,11 @@
 ---
-title: 放置物件 (ADO MD) |Microsoft 文件
+title: 放置物件 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,34 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 844997df808dbb1c61939164d72a9b2c601a9823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4118adb0b6d23a57926f5ca8c4c933dd3ef3b78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284567"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673535"
 ---
-# <a name="position-object-ado-md"></a>位置物件 (ADO MD)
-代表一組不同維度之一個或多個成員會定義沿著軸的點。  
+# <a name="position-object-ado-md"></a>Position 物件 (ADO MD)
+代表一組一個或多個不同的維度成員會定義沿著某個軸點。  
   
 ## <a name="remarks"></a>備註  
- 與屬性和集合**位置**物件可以執行下列：  
+ 使用屬性和集合**位置**物件可以執行下列：  
   
 -   使用**序數**屬性傳回的序數位置**位置**沿著[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)。  
   
--   使用[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合，傳回沿著位置構成**軸**。  
+-   使用[成員](../../../ado/reference/ado-md-api/members-collection-ado-md.md)集合，以傳回成員的位置，沿著構成**軸**。  
   
  本章節包含下列主題。  
   
 -   [屬性、 方法和事件](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [軸範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [軸物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [資料格物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [成員集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+ [Axis 範例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Axis 物件 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Cell 物件 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Members 集合 (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Positions 集合 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)

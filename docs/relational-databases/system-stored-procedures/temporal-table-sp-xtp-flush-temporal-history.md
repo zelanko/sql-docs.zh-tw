@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server (starting with 2016 CTP3)
 f1_keywords:
 - sp_xtp_flush_temporal_history
 - sp_xtp_flush_temporal_history_TSQL
@@ -20,17 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_xtp_flush_temporal_history
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-caps.latest.revision: 7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b69a363dca0e8fd964fb57edd909a47f9c9a5fa9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 25f6c9bd1aa9cbebd9b445399442d47eff1abe72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758686"
 ---
 # <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

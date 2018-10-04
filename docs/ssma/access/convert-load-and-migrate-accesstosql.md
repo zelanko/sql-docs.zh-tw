@@ -4,28 +4,22 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Convert Load and Migrate dialog box
 - migrating databases, one-click
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5f49573fabc1c4012dea3bdb7d1ac25b0b316d06
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c8765c4f3b1f58bc4212b33a3e7e9cedd8205a3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393152"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785666"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>轉換、 載入和移轉 (AccessToSQL)
 **轉換、 載入和移轉** 對話方塊中報告的移轉狀態，當您使用的轉換、 載入和移轉的按鈕或 移轉精靈。  

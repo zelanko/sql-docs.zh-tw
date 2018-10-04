@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba547a44d587851b98249d4a2980645241698b32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c9a60f61a846ddbef3dcdcdcc484f415643e306
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067778"
 ---
 # <a name="propertyref-element-csdlbi"></a>PropertyRef 元素 (CSDLBI)
   PropertyRef 元素是簡單類型，可提供為另一個屬性提供所需值的資料行參考。  

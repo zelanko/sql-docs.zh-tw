@@ -1,32 +1,29 @@
 ---
-title: VARCHAR 資料行大小 （oracle 的 ODBC 驅動程式） |Microsoft 文件
+title: VARCHAR 資料行大小 (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - varchar column size [ODBC]
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02e02b9faf3bd19665536e141884bd663ad64266
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db2871324f92ef6d84a8bf8313db105489100a96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847566"
 ---
-# <a name="varchar-column-size-odbc-driver-for-oracle"></a>VARCHAR 資料行大小 （oracle 的 ODBC 驅動程式）
+# <a name="varchar-column-size-odbc-driver-for-oracle"></a>VARCHAR 資料行大小 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用由 Oracle 提供的 ODBC 驅動程式。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- 在 Oracle8，VARCHAR 資料行的大小上限已經增加從 2000年到 4000 個位元組。 Oracle 7.3.x 用戶端軟體並沒有繫結的參數值超過 2000 個位元組的方式。 因此，如果您建立與超過 2000 個位元組的 VARCHAR 資料行的資料表，您將無法執行參數化的插入、 更新、 刪除和查詢的資料超過 2000年個位元組限制的用戶端軟體。 ODBC Driver for Oracle 和 Oracle OLE DB 提供者都使用參數化的插入、 更新、 刪除和查詢，因為它們會在此情況下報告 ORA-TUT1-LESSON1-STEP2 01026 錯誤。 將工作強制執行的 Oracle 用戶端軟體在限制範圍內的資料。 若要避免此 2000年個位元組限制，您必須升級用戶端軟體，為 Oracle8 (8.0.4.1.1c 或更高版本)。
+ 在 Oracle8，VARCHAR 資料行的大小上限已增加從 2000年到 4000 個位元組。 Oracle 7.3.x 用戶端軟體便無法繫結參數值超過 2000 個位元組。 因此，如果您建立與超過 2000 個位元組的 VARCHAR 資料行的資料表，您將無法執行參數化的插入、 更新、 刪除和查詢它與超過 2000年個位元組限制的用戶端軟體的資料。 ODBC Driver for Oracle 和 OLE DB Provider for Oracle 都使用參數化的插入、 更新、 刪除和查詢，因為它們會在此情況下報告 ORA 01026 錯誤。 強制執行的 Oracle 用戶端軟體在限制範圍內的資料將會運作。 若要避免此 2000年個位元組限制，您必須升級您的用戶端軟體，為 Oracle8 (8.0.4.1.1c 或更高版本)。

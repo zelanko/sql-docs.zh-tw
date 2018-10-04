@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e365dc5e26692b14b4c7621ca173a8e5e4ef1cdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304698"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066944"
 ---
 # <a name="creating-an-analysis-services-project"></a>建立 Analysis Services 專案
   在下列工作中，您可以使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來建立新[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案，命名為`Analysis Services Tutorial`根據[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案範本。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱[建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
@@ -28,7 +25,7 @@ ms.locfileid: "37304698"
   
 1.  按一下 **[開始]**、依序指向 **[所有程式]** 和 **[Microsoft SQL Server 2012]**，然後按一下 **[SQL Server 資料工具]**。  
   
-      [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開發環境隨即開啟。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開發環境隨即開啟。  
   
 2.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的起始頁面上，按一下 **[新增專案]**。  
   

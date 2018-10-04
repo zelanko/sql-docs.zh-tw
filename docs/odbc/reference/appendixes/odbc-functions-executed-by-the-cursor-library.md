@@ -1,13 +1,11 @@
 ---
-title: 資料指標程式庫所執行的 ODBC 函數 |Microsoft 文件
+title: 資料指標程式庫所執行的 ODBC 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursor library [ODBC], functions
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51e123ef04153579227f92e449c3dc4e46f6ac0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 611a79ece0da905c5fc12aeafdbcd7b8c54ee2bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907753"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638738"
 ---
-# <a name="odbc-functions-executed-by-the-cursor-library"></a>資料指標程式庫所執行的 ODBC 函數
+# <a name="odbc-functions-executed-by-the-cursor-library"></a>資料指標程式庫所執行的 ODBC 函式
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。  
   
- 資料指標程式庫執行下列函數。 當應用程式呼叫函式，這份清單中時，驅動程式管理員會叫用資料指標程式庫，而不是驅動程式。 請注意，資料指標程式庫，可能會執行函式呼叫驅動程式。  
+ 資料指標程式庫會執行下列函式。 當應用程式會呼叫函式，這份清單中時，驅動程式管理員會叫用資料指標程式庫，而不是驅動程式。 請注意，資料指標程式庫，可能會執行函式呼叫此驅動程式。  
   
 |||  
 |-|-|  

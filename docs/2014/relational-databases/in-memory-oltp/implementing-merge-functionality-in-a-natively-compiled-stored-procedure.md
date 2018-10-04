@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80dd5a9fc01d6577e67e2bed6ad0b934a6652af1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9614ee30c6e0566dc270f07e20b0c4dc29d1feb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392270"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063938"
 ---
 # <a name="implementing-merge-functionality"></a>實作 MERGE 功能
   根據資料庫中是否已有某個特殊資料列存在而定，資料庫可能需要執行插入或更新。  

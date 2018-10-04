@@ -1,31 +1,28 @@
 ---
-title: 答案是 ODBC？ | Microsoft Docs
+title: 答案是 ODBC 嗎？ | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be3439dd75ac7e67fc83c630f9cf0e2ef670a863
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600556"
 ---
-# <a name="is-odbc-the-answer"></a>答案是 ODBC？
-在深入之前的互通性問題，請考慮下列問題： 應用程式應該使用 ODBC 完全嗎？ 這似乎很奇怪 ODBC，指南中詢問問題，但很，事實上，合法。 ODBC 的設計無法完全取代原生資料庫應用程式開發介面，也就設計來提供在所有情況下的資料庫存取權。 它設計來提供資料庫的通用介面，其目的是要釋放應用程式設計人員必須了解和維護多個資料庫的連結。  
+# <a name="is-odbc-the-answer"></a>答案是 ODBC 嗎？
+在探究之前的互通性問題，請考慮下列問題： 應用程式應該使用 ODBC 完全嗎？ 這看起來似乎很奇怪的問題 ODBC，指南中，但它其實只是，合法。 ODBC 的設計無法完全取代原生資料庫 Api，也就設計來提供在所有情況下的資料庫存取權。 它設計來提供資料庫的通用介面，要用來釋放應用程式設計人員不必了解和維護多個資料庫的連結。  
   
- 自訂應用程式是以原生資料庫 Api 的主要候選。 主要原因是自訂應用程式通常使用單一的 DBMS，而且不需要互通。 原生資料庫 Api 可能會比 ODBC 公開的特定 DBMS 功能的更好，並可能會公開不 ODBC 所公開的功能。 此外，自訂應用程式的開發人員熟悉通常其 DBMS 的原生資料庫應用程式開發介面，因為沒有什麼道理，若要了解 ODBC。 不過，值得請注意，對於某些 Dbms，ODBC API 的原生資料庫。  
+ 自訂的應用程式是原生資料庫 Api 的最佳候選項。 自訂應用程式通常使用單一的 DBMS，而不需要是互通的主要原因。 原生資料庫 Api 可能會表現最好，能比 ODBC 公開特定 DBMS 的功能，並可能會公開不 ODBC 所公開的功能。 此外，自訂應用程式的開發人員熟悉通常他們 DBMS 的原生資料庫 API，因為不太需要了解 ODBC。 不過，值得注意的某些 Dbms，ODBC API 的原生資料庫。  
   
- 因此哪些應用程式是 ODBC 的候選項目？ 最佳的候選方式為使用一個以上的 DBMS 應用程式。 這包括幾乎所有的一般和垂直應用程式。 它也包含一些自訂的應用程式。 例如，使用數個不同的 Dbms 自訂應用程式會更為輕鬆而且清潔撰寫使用多個原生應用程式開發介面比 ODBC。 並使用 ODBC 撰寫的自訂應用程式都能更輕鬆地從一個 DBMS 移到另一個公司，或將相同的應用程式，針對不同的 Dbms 部署移轉。
+ 因此哪些應用程式是適用於 ODBC 的候選項目？ 最佳候選項目是使用一個以上的 DBMS 的應用程式。 這包括幾乎所有的泛型和垂直應用程式。 它也包含一些自訂的應用程式。 例如，使用數個不同的 Dbms 的自訂應用程式會更容易、 更容易撰寫具有比使用多個原生 Api 的 ODBC。 並使用 ODBC 所撰寫的自訂應用程式會更容易移轉為公司將從不同的 DBMS 移至另一個，或將相同的應用程式，針對不同的 Dbms 部署。

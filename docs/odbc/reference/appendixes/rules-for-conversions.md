@@ -1,13 +1,11 @@
 ---
-title: 轉換規則 |Microsoft 文件
+title: 轉換規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], literals
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8020afb215724e05201ac0a2a23ff0f39f1642a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706096"
 ---
 # <a name="rules-for-conversions"></a>轉換規則
-本節中的規則適用於包含數值常值轉換。 這些規則的目的，會定義下列詞彙：  
+在本節中的規則適用於包含數值常值轉換。 基於這些規則的目的，定義下列詞彙：  
   
--   *儲存指派：* 時將資料傳送到資料庫中的資料表資料行。 呼叫期間發生此錯誤**SQLExecute**， **SQLExecDirect**，和**SQLSetPos**。 在存放區指派 「 目標 」 是指資料庫資料行和 「 來源 」 是指應用程式緩衝區中的資料。  
+-   *儲存 指派：* 時將資料傳送到資料庫中的資料表資料行。 這會發生在呼叫**SQLExecute**， **SQLExecDirect**，並**SQLSetPos**。 在存放區指派 「 目標 」 是指資料庫資料行並 「 來源 」 是指應用程式緩衝區中的資料。  
   
--   *擷取指派：* 若干應用程式緩衝區，從資料庫擷取資料時。 呼叫期間發生此錯誤**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區和 「 來源 」 是指資料庫資料行。  
+-   *擷取指派：* 時從資料庫擷取資料到應用程式的緩衝區。 這會發生在呼叫**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，以及**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區而 「 來源 」 是指資料庫資料行。  
   
 -   *CS:* 字元來源中的值。  
   
@@ -41,39 +38,39 @@ ms.locfileid: "32912705"
   
 -   *CT:* 字元目標中的值。  
   
--   確切的數值常值的有效位數： 它所包含的位數。  
+-   確切的數值常值的有效位數： 它所包含的數字數目。  
   
--   確切的數字常值的小數位數： 的明示或默示期間的右邊的位數。  
+-   確切的數值常值的小數位數： 之明示或默示的週期右邊的位數。  
   
 -   近似的數值常值的有效位數： 其尾數的有效位數。  
   
-## <a name="character-source-to-numeric-target"></a>數值目標字元來源  
- 以下是將來源的字元 (CS) 轉換為數值目標 (NT) 的規則：  
+## <a name="character-source-to-numeric-target"></a>數字的目標字元來源  
+ 以下是字元來源 (CS) 的轉換為數值的目標 (NT) 規則：  
   
-1.  CS 取代取得 CS 中移除任何開頭或尾端空格的值。 如果不是有效 CS*數值常值*，就會傳回 SQLSTATE 22018 （無效的字元值轉換規格的）。  
+1.  取得在 CS 中移除任何開頭或尾端空格的值取代 CS。 如果不是有效 CS*數值常值*，則會傳回 SQLSTATE 22018 （無效的字元值轉換規格的）。  
   
-2.  CS 取代取得藉由移除小數點，結尾的小數點，後面的零或同時前面的前置零的值。  
+2.  CS 取代藉由移除前置的零，再小數點，結尾的小數點後的加上零，或兩者所取得的值。  
   
-3.  NT 轉換成 CS。 如果轉換導致遺失有效位數，則會傳回 SQLSTATE 22003 （數值超出範圍）。 如果轉換導致遺失不重要的數字，SQLSTATE 01S07 （小數位數截斷） 會傳回。  
+3.  轉換 NT CS。 如果轉換導致有效位數遺失，則會傳回 SQLSTATE 22003 （數值超出範圍）。 如果轉換導致遺失的重要數字，SQLSTATE 01S07 （小數位數截斷） 會傳回。  
   
-## <a name="numeric-source-to-character-target"></a>數值來源到目標字元  
- 以下是將來自數值來源 (NS) 轉換的字元目標 (CT) 的規則：  
+## <a name="numeric-source-to-character-target"></a>字元目標的數值來源  
+ 以下是從數字的來源 (NS) 轉換成字元目標 (CT) 的規則：  
   
-1.  可讓長期是以字元為單位的 CT.長度 擷取指派的 LT 等於緩衝區長度減去此字元集 null 結束字元位元組數目的字元。  
+1.  讓是以字元為單位的 CT 長度 l 擷取指派的 l 等於緩衝區長度減去此字元集之 null 結束字元位元組數目的字元。  
   
 2.  案例：  
   
-    -   如果 NS 是精確數值類型，然後讓 YP 等於最短的定義符合字元字串*精確數值常值*的小數位數 YP 等同於小數位數 NS、 且 YP 解譯的值是NS 絕對值。  
+    -   如果 NS 是精確數值類型，然後讓相等的定義符合的最短字元字串的 YP*確切的數值常值*使的小數位數 YP 等同的小數位數 NS，並且 YP 解譯值NS 的絕對值。  
   
     -   如果 NS 近似數值類型，然後讓 YP 是字元字串，如下所示：  
   
          案例：  
   
-         如果 NS 等於 0，YP 為 0。  
+         如果 NS 等於 0，YP 就會是 0。  
   
-         可讓最短的字元字串，符合確切-定義 YSN*數值常值*且解譯的值 NS 絕對值。 如果 YSN 長度小於 (*精確度*+ 1) 的 NS 的資料類型，然後讓 YP 等於 YSN。  
+         可讓要符合的確切-定義的最短字元字串的 YSN*數值常值*和其解譯的值是 NS 絕對值。 如果 YSN 長度小於 (*精確度*+ 1) 的 NS 的資料類型，然後讓 YP 等於 YSN。  
   
-         否則 YP 是最短的定義符合字元字串*近似數值常值*解譯其實 NS 和其絕對值*尾數*組成單一*位數*也就是不 '0'，後面接著*期間*和*不帶正負號整數*。  
+         否則 YP 是最短的定義符合的字元字串*近似數值常值*其解譯的值是數值的 NS 和其絕對值*尾數*組成單一*數字*也就是沒有 '0'，後面接著*期間*並*不帶正負號整數*。  
   
 3.  案例：  
   
@@ -81,28 +78,28 @@ ms.locfileid: "32912705"
   
          '-' &AMP;#124; &AMP;#124; YP  
   
-         其中 '&#124;&#124;' 是字串串連運算子。  
+         位置 '&#124;&#124;' 是字串串連運算子。  
   
          否則，可讓等於 YP Y。  
   
-4.  可讓 LY 是以字元為單位 Y 的長度。  
+4.  可讓 LY 是 Y 個字元的長度。  
   
 5.  案例：  
   
-    -   如果 LY 等於 LT，CT 是設定為 Y。  
+    -   如果 LY 等於 l，CT 設為 Y。  
   
-    -   如果 LY LT，然後 CT 是設定為 Y 擴充右邊適當數目的空格。  
+    -   如果 LY L，則 CT 會設定為 Y 擴充右側的適當數目的空格。  
   
-         否則 (LY > LT)，將 Y 的第一個 LT 字元複製到 CT.  
+         否則 (LY > L)，將 Y 的第一個 l 字元複製到 CT  
   
          案例：  
   
-         如果這是存放區指派時，會傳回錯誤 SQLSTATE 22001 （字串資料，向右截斷）。  
+         如果這是存放區指派時，會傳回錯誤 SQLSTATE 22001 （字串資料右側截斷）。  
   
-         如果這是擷取指派時，會傳回警告 SQLSTATE 01004 （字串資料，向右截斷）。 複製產生的小數點後數字 （非尾端的零） 中遺失，時，驅動程式定義是否發生下列其中一項：  
+         如果這是擷取指派時，會傳回 SQLSTATE 01004 （字串資料右側截斷） 的警告。 複製結果的小數位數 （非尾端的零） 中遺失，時，驅動程式定義是否會發生下列其中一項：  
   
-         （1） 驅動程式會截斷 Y 中的字串，以適當的規模 （這也可以是零），並將結果寫入至 CT.  
+         （1） 驅動程式會截斷 （這也可以是零） 的適當調整 Y 中的字串，並將結果寫入至 CT  
   
-         （2） 驅動程式將四捨五入 Y 中的字串，以適當的規模 （這也可以是零），並將結果寫入至 CT.  
+         （2） 驅動程式將四捨五入 Y 中的字串，以適當的規模 （這也可以是零），並將結果寫入至 CT  
   
-         （3） 驅動程式都不會截斷也不會四捨五入，但只會將 Y 的第一個 LT 字元複製到 CT.
+         （3） 驅動程式都不會截斷或四捨五入，但只是將 Y 的第一個 l 字元複製到 CT

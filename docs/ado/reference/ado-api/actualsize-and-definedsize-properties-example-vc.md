@@ -1,13 +1,11 @@
 ---
-title: ActualSize 和 DefinedSize 屬性範例 （VC + +） |Microsoft 文件
+title: ActualSize 和 DefinedSize 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789276"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 屬性範例 （VC + +）
-這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)屬性，以顯示已定義的大小和欄位的實際大小。  
+這個範例會使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)並[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)来顯示的已定義的大小和實際大小 欄位的屬性。  
   
 ## <a name="example"></a>範例  
   
@@ -141,7 +138,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **存放區名稱： 新聞與 Brews**  
 **定義的大小： 40**  
 **實際大小： 12**  
-**存放區名稱： 文件 U Mat： 品質衣服和活頁簿**  
+**存放區名稱： 文件-U-Mat： 品質洗衣和書籍**  
 **定義的大小： 40**  
 **實際大小： 36**  
 **存放區名稱： Fricative Bookshop**  

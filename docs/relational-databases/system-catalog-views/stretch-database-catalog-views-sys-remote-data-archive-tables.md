@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.remote_data_archive_tables
@@ -21,12 +19,12 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d94d4788c071a9c5acc006afad9fe119bc0e9c77
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3633612e6aa674a5cd7513c6a84ce1d77ca46a4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689186"
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>Stretch Database 目錄檢視-sys.remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

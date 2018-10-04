@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - aggregations [Analysis Services], about aggregations
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], aggregations
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b196f950e04a2b636c9b758dda6f5f6947a9912d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a892581ff245559d08ac0a37eca5e4a7db3db1dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051238"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
   <xref:Microsoft.AnalysisServices.AggregationDesign> 物件會定義可在多個資料分割之間共用的一組彙總定義。  

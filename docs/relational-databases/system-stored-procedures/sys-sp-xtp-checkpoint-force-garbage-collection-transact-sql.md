@@ -1,14 +1,11 @@
 ---
-title: sys.sp_xtp_checkpoint_force_garbage_collection (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_xtp_checkpoint_force_garbage_collection (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_checkpoint_force_garbage_collection_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_checkpoint_force_garbage_collection
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4f5968d9a68bef9b9bb6b107d0710d88c7fe5e5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9142800590230126da882031b70e9c59f4670c3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037702"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636576"
 ---
 # <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

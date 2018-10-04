@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_item (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_update_collection_item (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d94ce7762facb878e0e6d8deb60647ee2d05482e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717116"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,21 +48,21 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>引數  
  [ @collection_item_id =] *collection_item_id*  
- 這是識別收集項的唯一識別碼。 *collection_item_id*是**int**預設值是 NULL。 *collection_item_id*必須有值，如果*名稱*是 NULL。  
+ 這是識別收集項的唯一識別碼。 *collection_item_id*已**int**預設值是 NULL。 *collection_item_id*必須有值，如果*名稱*是 NULL。  
   
  [ @name =] '*名稱*'  
- 這是收集項目的名稱。 *名稱*是**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_item_id*是 NULL。  
+ 這是收集項目的名稱。 *名稱*已**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_item_id*是 NULL。  
   
  [ @new_name =] '*new_name*'  
- 這是收集項的新名稱。 *new_name*是**sysname**，而且如果使用，不能是空字串。  
+ 這是收集項的新名稱。 *new_name*已**sysname**，而且如果，不能是空字串。  
   
  *new_name*必須是唯一的。 如需目前的收集項名稱清單，請查詢 syscollector_collection_items 系統檢視表。  
   
  [ @frequency =]*頻率*  
- 這是此收集項收集資料的頻率 (以秒為單位)。 *頻率*是**int**，預設值是 5，您可以指定的最小值。  
+ 這是此收集項收集資料的頻率 (以秒為單位)。 *頻率*已**int**，預設值是 5，您可以指定的最小值。  
   
  [ @parameters =] '*參數*'  
- 收集項的輸入參數。 *參數*是**xml**預設值是 NULL。 *參數*結構描述必須符合收集器型別的參數結構描述。  
+ 收集項的輸入參數。 *參數*已**xml**預設值是 NULL。 *參數*結構描述必須符合收集器型別的參數結構描述。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或 1 （失敗）  
@@ -94,7 +90,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>範例  
- 下列範例以建立在範例中定義的收集項[sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)。  
+ 下列範例會根據定義在範例中所建立的集合項目[sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)。  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. 變更收集頻率  
  下列範例會針對指定的收集項變更收集頻率。  
@@ -145,7 +141,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

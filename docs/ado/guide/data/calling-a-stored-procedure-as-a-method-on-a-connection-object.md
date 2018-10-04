@@ -1,34 +1,31 @@
 ---
-title: 為連線物件上的方法呼叫預存程序 |Microsoft 文件
+title: 為連線物件上方法呼叫預存程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758816"
 ---
-# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>為連線物件上的方法呼叫預存程序
-您可以呼叫預存程序，就好像在開啟相關聯的原生方法**連接**物件。 這是類似於呼叫上的具名的命令**連接**物件。  
+# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>以 Connection 物件方法的形式來呼叫預存程序
+您可以呼叫預存程序，如同它是在相關聯的開啟的原生方法**連線**物件。 這是類似於呼叫上的具名的命令**連線**物件。  
   
- 下列 Visual Basic 程式碼範例會呼叫預存程序，在 Northwind 範例資料庫中，呼叫 CustOrdersOrders，會在這裡再次列出為了方便起見。  
+ 下列 Visual Basic 程式碼範例會呼叫預存程序，在 Northwind 範例資料庫中，稱為 CustOrdersOrders，在這裡再次列出為了方便起見。  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -38,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 下列程式碼範例示範如何呼叫預存程序，就好像在相關聯的開啟的原生方法**連接**物件。  
+ 下列程式碼範例示範如何呼叫預存程序，就像是在相關聯的開啟的原生方法好像**連線**物件。  
   
 ```  
 Const DS = "MySQLServer"  

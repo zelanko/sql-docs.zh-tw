@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_cmdshell
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 26
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4474d6bcd0c24c00ae4c0b6297d11cdbe76ff55b
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 252e3c5f2738b5f3e87632be86ba9f4b6c1cfbc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782796"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +84,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  如需詳細資訊，請參閱 < [sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  因為惡意使用者有時會嘗試利用提高其權限**xp_cmdshell**， **xp_cmdshell**預設會停用。 使用**sp_configure**或是**原則式管理**加以啟用。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
  第一次啟用時， **xp_cmdshell**需要 CONTROL SERVER 權限來執行與所建立的 Windows 處理序**xp_cmdshell**具有相同的安全性內容，做為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶通常會有更多的權限多於所建立的程序執行的工作**xp_cmdshell**。 為了加強安全性，存取權**xp_cmdshell**應該限制為高權限的使用者。  

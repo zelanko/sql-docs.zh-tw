@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CurrentStorageMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d930292898f55736daea9e00893cd6e5f000a34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058768"
 ---
 # <a name="currentstoragemode-element-assl"></a>CurrentStorageMode 元素 (ASSL)
   決定父元素的目前儲存模式。  
@@ -57,7 +54,7 @@ ms.locfileid: "37233818"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[維度](../objects/dimension-element-assl.md)，[資料分割](../objects/partition-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `CurrentStorageMode` 元素會指出目前針對主動式快取目的所用的儲存模式，並套用至父元素的所有屬性。  

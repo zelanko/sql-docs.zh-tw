@@ -5,11 +5,7 @@ ms.date: 07/27/2016
 ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-stored-procedures
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_firewall_rule_TSQL
@@ -25,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f072cc411eaa54757c518b94fec93f9435ccf2c9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a9f446d9c8645d344cf6c14b886323468e387a72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033871"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781106"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

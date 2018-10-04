@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
@@ -21,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac3b42956cacbd10718ca716e7b00b67e0afb949
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033538"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594627"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**SCALE**|**smallint**|小數點右側的位數。 這個值是 NULL。|  
 |**RADIX**|**smallint**|這是數值類型的基底。 這個值是 NULL。|  
 |**可為 NULL**|**smallint**|指定 Null 屬性：<br /><br /> 1 = 參數資料類型可以建立成允許 Null 值。<br /><br /> 0 = 不允許 Null 值。<br /><br /> 這個值是 NULL。|  
-|**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型出現在描述子 TYPE 欄位時的值。 這個資料行是相同**DATA_TYPE**資料行，除了**datetime**和 ISO**間隔**資料型別。 這個資料行一律會傳回值。 這個值是 NULL。|  
+|**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型出現在描述子 TYPE 欄位時的值。 除了 **datetime** 和 **ISO interval** 資料類型，這個資料行與 **DATA_TYPE** 資料行相同。 這個資料行一律會傳回值。 這個值是 NULL。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**或 ISO**間隔**子代碼，如果值**SQL_DATA_TYPE**是 SQL_DATETIME 或 SQL_INTERVAL。 資料類型以外**datetime**和 ISO**間隔**，此資料行是 NULL。 這個值是 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|以位元組為單位的最大長度**字元**或是**二進位**資料型別參數。 所有其他資料類型的這個資料行都會傳回 NULL。 這個值一律是 NULL。|  
 |**ORDINAL_POSITION**|**int**|參數在批次中的序數位置。 如果參數名稱重複許多次，這個資料行會包含第一個出現項目的序數。 第一個參數的序數為 1。 這個資料行一律會傳回值。|  

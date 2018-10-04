@@ -1,36 +1,33 @@
 ---
-title: 標頭檔 |Microsoft 文件
+title: 標頭檔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d31cdda9e97ba72374c60c551f37ecfeccd71c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912393"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656736"
 ---
 # <a name="header-files"></a>標頭檔
-標頭檔 Sql.h 包含原型函式和核心 ODBC 介面一致性層級中的功能。 Sqlext.h 標頭檔包含原型函式和中的層級 1 和層級 2 API 的一致性層級的功能。 Sqltypes.h 標頭檔包含類型定義與 SQL 資料類型的指標。  
+Sql.h 標頭檔包含原型的函式和核心 ODBC 介面一致性層級中的功能。 Sqlext.h 標頭檔包含原型的函式和中的層級 1 和層級 2 API 一致性層級的功能。 Sqltypes.h 標頭檔包含類型定義與 SQL 資料類型的指標。  
   
- 所有包含的標頭檔 **#define**，ODBCVER 應用程式或驅動程式可以設定為針對不同版本的 ODBC 編譯。  
+ 所有包含的標頭檔 **#define**，ODBCVER，應用程式或驅動程式可以設定要編譯的不同版本的 ODBC。  
   
- 若要對齊與 ISO CLI 和開啟群組 CLI，標頭檔包含對呼叫中使用的資訊類型的別名**SQLGetInfo**。 下表中的資料行 [ODBC 名稱] 表示中的資訊類型的 ODBC 名稱[ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)。 資料行 」 標頭檔中的別名"表示 ISO CLI 和開啟群組 CLI 所使用的名稱。 這些資訊清單名稱的實際數值是相同的 ODBC 和標準 Cli。 這些別名啟用符合標準的應用程式或驅動程式使用 ODBC 3 編譯 *.x*標頭檔。  
+ 若要對齊與 ISO CLI 和開啟群組 CLI，請在標頭檔包含對呼叫中使用的資訊類型的別名**SQLGetInfo**。 下表中，「 ODBC 名稱 」 的資料行表示中的資訊類型的 ODBC 名稱[ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)。 資料行 」 標頭檔中的別名"表示使用 ISO CLI 和開啟群組 CLI 中的名稱。 這些資訊清單名稱的實際數值是相同的 ODBC 和標準 Cli。 這些別名啟用符合標準的應用程式或驅動程式使用 ODBC 3 編譯 *.x*標頭檔。  
   
- 這些別名 ODBC 名稱中包含縮寫的展開，使名稱更容易了解。 "MAX"已擴充 「 最大值 」，「 長度 」 成 「 長度 」、 「 MULT 」 與 「 多個 「"OJ"至"OUTER_JOIN"，"TXN 」 到 「 交易 」。  
+ 這些別名在 ODBC 名稱中包含縮寫的展開，使名稱更容易了解。 "MAX"已擴充成"MAXIMUM"、"LEN 」 到 「 長度 」，「 多 」"MULTIPLE"，"OJ"到"OUTER_JOIN 」，和 「 交易 」 到 「 交易 」。  
   
 |ODBC 名稱|標頭檔中的別名|  
 |---------------|--------------------------|  

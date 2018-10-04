@@ -1,32 +1,29 @@
 ---
-title: 支援的方法範例 （VC + +） |Microsoft 文件
+title: Supports 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828366"
 ---
-# <a name="supports-method-example-vc"></a>支援的方法範例 （VC + +）
-這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)開啟具有不同的資料指標類型的方法，以顯示一個資料錄集所支援的選項。 若要執行這個範例需要 DisplaySupport 函式。  
+# <a name="supports-method-example-vc"></a>Supports 方法範例 (VC++)
+這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)開啟具有不同的資料指標類型的方法，以顯示資料錄集所支援的選項。 若要執行此範例需要 DisplaySupport 函式。  
   
 ```  
 // SupportsMethodExample.cpp  

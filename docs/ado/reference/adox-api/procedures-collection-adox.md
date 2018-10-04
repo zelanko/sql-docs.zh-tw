@@ -1,13 +1,11 @@
 ---
-title: 程序集合 (ADOX) |Microsoft 文件
+title: Procedures 集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,26 +14,25 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2690c2911fbd4824937c7153ba681cd5d77b703c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 60d967c6ace03180ae596a3e7f45c830d4bec54b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718096"
 ---
-# <a name="procedures-collection-adox"></a>程序集合 (ADOX)
+# <a name="procedures-collection-adox"></a>Procedures 集合 (ADOX)
 包含所有[程序](../../../ado/reference/adox-api/procedure-object-adox.md)的目錄物件。  
   
 ## <a name="remarks"></a>備註  
- [附加](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法**程序**集合都是唯一的 ADOX。 您可以：  
+ [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法**程序**集合都是唯一的 ADOX。 您可以：  
   
--   將新的程序加入至集合**附加**方法。  
+-   將新的程序新增至集合**Append**方法。  
   
- 是標準，以 ADO 集合其餘的屬性和方法。 您可以：  
+ 其餘的屬性和方法是標準的 ADO 集合。 您可以：  
   
 -   存取集合中的程序[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性。  
   
@@ -43,18 +40,18 @@ ms.locfileid: "35286657"
   
 -   從集合移除的程序[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法。  
   
--   更新以反映目前的資料庫結構描述與集合中的物件[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   更新以反映與目前的資料庫結構描述集合中的物件[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
   
  本章節包含下列主題。  
   
 -   [Indexes 集合屬性、方法和事件](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [命令和 CommandText 屬性範例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [參數集合中，命令屬性範例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [程序附加方法範例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [程序刪除方法的範例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [程序重新整理方法範例 (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [程序集合屬性、 方法和事件](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
- [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command 和 CommandText 屬性範例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Parameters 集合、 Command 屬性範例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Procedures Append 方法範例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Procedures Delete 方法範例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Procedures Refresh 方法範例 (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
+ [Procedures 集合屬性、 方法和事件](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
+ [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Procedure 物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

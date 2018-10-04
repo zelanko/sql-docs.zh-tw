@@ -1,13 +1,11 @@
 ---
-title: 實作 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文件
+title: 實作 SQLGetDiagRec 和 SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6be0d20a2e1171275c3a1ef05d83383a10b763
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771835"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>實作 SQLGetDiagRec 和 SQLGetDiagField
-**SQLGetDiagRec**和**SQLGetDiagField**由驅動程式管理員和每個驅動程式。 驅動程式管理員和每個驅動程式負責維護每個環境、 連接、 陳述式，以及描述項處理的診斷記錄，釋放這些記錄，另一個函式呼叫時使用控制代碼或控制代碼會釋出。  
+**SQLGetDiagRec**並**SQLGetDiagField**由驅動程式管理員和每個驅動程式。 驅動程式管理員和每個驅動程式維護的每個環境、 連接、 陳述式，以及描述項控制代碼，診斷記錄和另一個函式呼叫會釋放控制代碼或控制代碼時，才可用的記錄。  
   
- 雖然驅動程式管理員和每個驅動程式必須判斷第一個狀態記錄中排名根據[狀態記錄順序](../../../odbc/reference/develop-app/sequence-of-status-records.md)，驅動程式管理員會決定最終的記錄順序。  
+ 雖然每個驅動程式和驅動程式管理員必須判斷第一個的狀態記錄，根據在排名[序號的狀態記錄](../../../odbc/reference/develop-app/sequence-of-status-records.md)，驅動程式管理員會決定最終序列的記錄。  
   
- **SQLGetDiagRec**和**SQLGetDiagField**不張貼有關本身的診斷記錄。  
+ **SQLGetDiagRec**並**SQLGetDiagField**請勿張貼有關本身的診斷記錄。  
   
  此章節包含下列主題。  
   

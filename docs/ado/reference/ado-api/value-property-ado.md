@@ -1,13 +1,11 @@
 ---
-title: 值屬性 (ADO) |Microsoft 文件
+title: Value 屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45f028bf6aaa1273f7220519fc5dfa76c1365437
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8c7e4d42bc58321c5b650df5e8e842290094fcf4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715017"
 ---
 # <a name="value-property-ado"></a>Value 屬性 (ADO)
 
@@ -33,18 +30,18 @@ ms.locfileid: "35282827"
   
 ## <a name="settings-and-return-values"></a>設定和傳回值
 
-設定或傳回**Variant**值，指出物件的值。 預設值取決於[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性。
+設定或傳回**Variant**值，指出物件的值。 預設值取決於[型別](../../../ado/reference/ado-api/type-property-ado.md)屬性。
   
 ## <a name="remarks"></a>備註
 
-使用**值**屬性來設定或傳回資料來源**欄位**物件，若要設定或傳回參數值與**參數**物件，或用來設定或傳回與屬性設定**屬性**物件。 是否**值**屬性是可讀寫或唯讀狀態需視許多因素。 請參閱個別物件主題，如需詳細資訊。
+使用**值**屬性來設定或傳回資料來源**欄位**物件，來設定或傳回參數值**參數**物件，或要設定或傳回屬性設定**屬性**物件。 是否**值**屬性是可讀寫或唯讀狀態取決於許多因素。 請參閱個別的物件主題，如需詳細資訊。
 
-設定和傳回的長整數二進位資料，可讓 ADO**值**屬性。
+設定和傳回長的二進位資料，可讓 ADO**值**屬性。
   
 > [!NOTE]
-> 如**參數**物件、 ADO 讀取**值**一次只能從提供者的屬性。 如果命令包含**參數**其**值**屬性是空的而且您建立[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)命令，請先關閉**資料錄集**之前擷取**值**屬性。 否則，對於某些提供者，**值**屬性可能為空白，且不會包含正確的值。
+> 針對**參數**物件、 ADO 讀取**值**一次從提供者的屬性。 如果命令包含**參數**其**值**屬性是空的而且您建立[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)命令，請確定先關閉**資料錄集**擷取前**值**屬性。 否則，對於某些提供者，**值**屬性可能是空的並不會包含正確的值。
 > 
-> 對於新**欄位**已附加至的物件[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件**值**屬性必須設定在任何其他**欄位**可以指定屬性。 首先，為特定值**值**指派屬性必須與[更新](../../../ado/reference/ado-api/update-method.md)上**欄位**稱為集合。 然後，其他屬性，例如[類型](../../../ado/reference/ado-api/type-property-ado.md)或[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)可以存取。
+> 對新**欄位**附加到的物件[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件**值**屬性必須設定在任何其他**欄位**可以指定的屬性。 首先，為特定值如**值**必須獲指派的屬性和[更新](../../../ado/reference/ado-api/update-method.md)上**欄位**呼叫的集合。 然後，這類的其他屬性[型別](../../../ado/reference/ado-api/type-property-ado.md)或是[屬性](../../../ado/reference/ado-api/attributes-property-ado.md)可以存取。
   
 ## <a name="applies-to"></a>適用於
   

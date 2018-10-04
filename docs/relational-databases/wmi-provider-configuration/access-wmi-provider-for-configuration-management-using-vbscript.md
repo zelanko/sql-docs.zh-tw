@@ -1,14 +1,11 @@
 ---
-title: 修改 SQL Server 服務進階屬性使用 VBScript |Microsoft 文件
+title: 修改 SQL Server 服務進階屬性使用 VBScript |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,20 +14,19 @@ helpviewer_keywords:
 - modifying SQL Server Service properties
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a49cc34f92a2dd35d5f85a6013a738184d913810
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60dc69dfa0077c5adc375aa11eba411ab4004345
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802096"
 ---
-# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>存取使用 VBScript 的組態管理的 WMI 提供者
+# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>使用 VBScript 存取組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  本章節描述如何建立 VBScript 程式來列出已安裝的執行個體的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦上執行。  
+  本節說明如何建立 VBScript 程式來列出已安裝的執行個體的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦上執行。  
   
  此程式碼範例會列出在電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的版本。  
   
@@ -46,7 +42,7 @@ ms.locfileid: "33012129"
   
 5.  儲存檔案。  
   
-6.  輸入執行指令碼**cscript test.vbs**在命令提示字元。  
+6.  輸入以執行指令碼**cscript test.vbs**在命令提示字元。  
   
 ## <a name="example"></a>範例  
   

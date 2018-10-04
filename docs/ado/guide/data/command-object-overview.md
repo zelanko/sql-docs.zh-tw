@@ -1,49 +1,46 @@
 ---
-title: 命令物件概觀 |Microsoft 文件
+title: 命令物件概觀 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command object [ADO]
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d2d4eafc42e67f67b4f95c8493521f4204bc746
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 808c63575b93f9e4fa3b6459d2111637021218c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759852"
 ---
-# <a name="command-object-overview"></a>命令物件概觀
-與**命令**物件，您可以執行下列：  
+# <a name="command-object-overview"></a>Command 物件概觀
+具有**命令**物件時，您可以執行下列動作：  
   
--   使用定義的命令 （例如，SQL 陳述式或預存程序） 的可執行檔文字**CommandText**屬性。  
+-   定義所使用的命令 （例如，SQL 陳述式或預存程序） 的可執行檔的文字**CommandText**屬性。  
   
--   使用參數化的查詢或預存程序引數定義**參數**物件和**參數**集合。  
+-   使用來定義參數化的查詢或預存程序引數**參數**物件並**參數**集合。  
   
--   執行命令，並傳回**資料錄集**物件，如果適當，請使用**Execute**方法。  
+-   執行命令，並傳回**Recordset**物件，如果適當的話，利用**Execute**方法。  
   
--   使用指定的命令類型**CommandType**屬性，再執行，以最佳化效能。  
+-   使用指定的命令類型**CommandType**來最佳化效能的執行前的屬性。  
   
 -   使用指定的命令文字的特定資訊**方言**屬性**命令**物件。  
   
--   控制是否提供者會使用儲存之前執行命令的已備妥 （或編譯） 版本**已準備**屬性。  
+-   控制提供者是否會儲存已備妥 （或已編譯的） 版本之前執行命令，使用**已準備**屬性。  
   
--   設定提供者等候命令執行所使用的秒數**CommandTimeout**屬性。  
+-   設定提供者會等候命令執行所使用的秒數**CommandTimeout**屬性。  
   
--   建立與開啟的連接關聯**命令**物件藉由設定其**ActiveConnection**屬性。  
+-   將與開啟的連接產生關聯**命令**物件，藉由設定其**ActiveConnection**屬性。  
   
--   設定**名稱**屬性來識別**命令**物件上相關聯的方法為**連接**物件。  
+-   設定**名稱**屬性來識別**命令**物件上相關聯的方法作為**連接**物件。  
   
 -   傳遞**命令**物件**來源**屬性**資料錄集**為了取得資料。  
   
--   傳遞**資料流**包含命令 （例如，XML 命令） 來支援它的提供者的物件。
+-   傳遞**Stream**包含命令 （例如，XML 命令），來支援它的提供者的物件。

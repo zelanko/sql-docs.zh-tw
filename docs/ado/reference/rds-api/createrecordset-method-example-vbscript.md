@@ -1,35 +1,32 @@
 ---
-title: CreateRecordset 方法範例 (VBScript) |Microsoft 文件
+title: CreateRecordset 方法範例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], VBScript example
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 752651b81e00e2d4f03e2e8b5a72acefc4fc1b30
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 38c94f73468a9ba9e09142da7a73ad3763488428
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601998"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 這個程式碼範例會建立[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)伺服器端上。 它有兩個資料行的四個資料列。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**CreateRecordsetVBS.asp**。  
+ 此程式碼範例會建立[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)伺服器端上。 它有四個資料列的兩個資料行。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**CreateRecordsetVBS.asp**。  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  

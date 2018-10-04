@@ -1,71 +1,65 @@
 ---
-title: 完成測試案例準備 (SybaseToSQL) |Microsoft 文件
+title: 完成測試案例準備 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1df39866e511664027f5a4991360ef2eabf085a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837354"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>完成測試案例準備 (SybaseToSQL)
-精靈的最後一頁會顯示描述測試案例和測試使用到物件的相關資訊。 此外，在此頁面上您可以設定測試執行選項。  
+精靈的最後一頁會顯示測試案例描述和物件參與測試的相關資訊。 此外，在此頁面上您可以設定測試執行選項。  
   
-**測試案例資訊**區段會顯示的測試案例的名稱和描述。  
+**測試案例資訊**區段會顯示測試案例的名稱和描述。  
   
 **測試物件**區段包含依物件類型分組的測試物件的具名的清單。  
   
-**受影響的物件，以便進行分析**區段會顯示具名的資料變更應該比較測試的物件執行後的物件清單。  
+**受影響的物件，以便進行分析**區段會顯示經過測試的物件執行之後，應該比較的資料變更物件的具名的清單。  
   
 ## <a name="test-case-settings"></a>測試案例設定  
-在**測試案例設定**> 一節，您可以設定下列執行測試的選項：  
+在 **測試案例設定**區段，您可以設定下列執行測試選項：  
   
-### <a name="stop-test-execution-after-first-failure"></a>測試之後停止執行第一次失敗  
-指定要中斷測試在測試執行期間發生錯誤。  
+### <a name="stop-test-execution-after-first-failure"></a>停止後第一次失敗的測試執行  
+指定要在測試執行期間發生錯誤時中斷測試。  
   
--   如果您選擇**是**，測試就會發生錯誤中斷執行。  
+-   如果您選擇**是**，測試執行中斷，萬一發生錯誤。  
   
--   如果您選擇**否**，測試執行會在發生錯誤之後繼續。  
+-   如果您選擇**No**，會發生錯誤之後繼續測試執行。  
   
 ### <a name="perform-data-rollback"></a>執行資料復原  
-測試執行之後啟用自動的資料復原。  
+在測試執行後啟用自動的資料復原。  
   
 -   如果您選擇**是**，測試執行之後，資料變更將會遺失。  
   
--   如果您選擇**否**，所有測試的執行資料變更將會儲存。  
+-   如果您選擇**No**，所有測試的執行將會儲存資料變更。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>儲存模式的輔助資料表  
-定義測試執行期間所建立的輔助資料表的儲存模式。 請參閱中的輔助資料表的描述[執行測試案例&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)主題。  
+定義測試執行期間所建立的輔助資料表的儲存模式。 請參閱中的輔助資料表的說明[執行測試案例&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)主題。  
   
--   如果您選取**永遠儲存**，輔助資料表的資料一律會儲存供稍後使用。  
+-   如果您選取**永遠儲存**，輔助資料表的資料一律會儲存供日後使用。  
   
--   如果您選取**儲存資料表的比較失敗**，就會發生錯誤時，才會儲存輔助資料表資料。  
+-   如果您選取**如果資料表的比較無法儲存**，就會發生錯誤時，才會儲存輔助資料表的資料。  
   
 -   如果您選取**永遠刪除**，輔助資料表永遠刪除之後執行測試。  
   
--   如果您選取**詢問使用者，如果資料表比較失敗**，使用者可以選取必要的動作，如果發生錯誤。  
+-   如果您選取**詢問使用者，如果資料表比較失敗**，萬一發生錯誤，使用者可以選取所需的動作。  
   
-按一下**完成**按鈕以儲存到已備妥的測試案例[使用測試儲存機制&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
+按一下 **完成**按鈕以儲存到已備妥的測試案例[使用測試存放庫&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用測試儲存機制&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[使用測試存放庫&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
 [執行測試案例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [測試移轉的資料庫物件&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

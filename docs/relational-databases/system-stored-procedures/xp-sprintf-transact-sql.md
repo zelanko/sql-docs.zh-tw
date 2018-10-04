@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_sprintf_TSQL
@@ -22,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46ea3254e9d912669bb8e13748bdf2b766bb5dd6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 43889665b93da0b4fffe6e5db71ddb4e8bdf9ac9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43086951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772856"
 ---
 # <a name="xpsprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +48,7 @@ xp_sprintf { string OUTPUT , format }
  OUTPUT  
  當指定這個引數時，它會將變數值放在輸出參數中。  
   
- *<格式>*  
+ *格式*  
  是預留位置的格式字元字串*引數*類似 C 語言支援的值**sprintf**函式。 目前只支援 %s 格式引數。  
   
  *引數*  

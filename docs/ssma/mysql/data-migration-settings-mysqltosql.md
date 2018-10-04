@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a5590adadc1436d616d73b275ad90359b6e64d88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc8849c19adb9e372c0c74d2f213e77ff4e7407d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643020"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>資料移轉設定 (MySQLToSQL)
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_sscanf_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 82aedab7b83cadd43ac649837ef848b8a8471613
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103856"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751676"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  OUTPUT  
  指定時，將的值放*引數*輸出參數。  
   
- *<格式>*  
+ *格式*  
  這是格式化的字元字串的類似 C 語言所支援的功能**sscanf**函式。 目前只支援 %s 格式引數。  
   
  *引數*  
@@ -66,7 +63,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076488"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>處理選項屬性頁面 (報表管理員)
   使用 [處理選項] 屬性頁面可以設定目前選取之報表的報表執行屬性。 這些選項會決定何時進行報表的資料處理。 您可以設定這些選項，以便在離峰時段擷取報表資料。 如果您的報表經常被存取，當多位使用者彼此會在短時間內存取相同的報表時，您就可以暫時快取副本，以避免等待時間。  

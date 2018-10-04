@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sp_polybase_join_group
@@ -18,12 +15,12 @@ ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cffdf311abbac196b49a5174364d8f313275ad40
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 878afb5f16c988ee98908030695e0f03c7e2f7d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038961"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722646"
 ---
 # <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

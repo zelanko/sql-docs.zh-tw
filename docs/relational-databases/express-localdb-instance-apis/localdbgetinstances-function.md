@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetInstances 函數 |Microsoft 文件
+title: LocalDBGetInstances 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstances
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3121049938af0707ce30c68a4da6d9ca96ec7763
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2762ae7ccdde7216a28c4042c976ef622595c60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935153"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687323"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ HRESULT LocalDBGetInstances(
  [輸出] 當傳回此函數時，包含使用者工作站上之具名及預設 LocalDB 執行個體的名稱。  
   
  *lpdwNumberOfInstances*  
- [輸入/輸出]輸入時，包含執行個體名稱中的位置數目*pInstanceNames*緩衝區。 輸出時，包含在使用者工作站上找到的 LocalDB 執行個體數目。  
+ [輸入/輸出]輸入時，包含的執行個體名稱中的位置數目*pInstanceNames*緩衝區。 輸出時，包含在使用者工作站上找到的 LocalDB 執行個體數目。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -77,7 +73,7 @@ HRESULT LocalDBGetInstances(
  發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

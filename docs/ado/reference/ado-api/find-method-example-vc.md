@@ -1,32 +1,29 @@
 ---
-title: 尋找方法範例 （VC + +） |Microsoft 文件
+title: Find 方法範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3280728d8e2e7a7f822be568052a5cbac84767a3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682116"
 ---
-# <a name="find-method-example-vc"></a>尋找方法範例 （VC + +）
-這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法找出和商務標題中的次數**Pubs**資料庫。 此範例假設基礎提供者不支援類似的功能。  
+# <a name="find-method-example-vc"></a>Find 方法範例 (VC++)
+這個範例會使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法，以找出並計算中的公司職稱數目**Pubs**資料庫。 此範例假設基礎提供者不支援類似的功能。  
   
 ```  
 // BeginFindCpp.cpp  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +24,17 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779186"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構-CLR 主控環境
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 - CLR 主控環境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 .NET Framework Common Language Runtime (CLR) 整合可讓資料庫程式設計人員使用 Visual C#、Visual Basic .NET 和 Visual C++ 等語言。 程式設計人員可以使用這些語言所撰寫的商務邏輯種類包括函數、預存程序、觸發程序、資料類型和彙總。  
   
@@ -67,7 +65,7 @@ ms.locfileid: "37352810"
   
  用於執行緒、排序和記憶體管理的不同模型對於調整為支援數千個並行使用者工作階段的關聯式資料庫管理系統 (RDBMS) 會呈現整合性問題。 此架構應該確認針對執行緒、記憶體和同步處理原始物件直接呼叫應用程式開發介面 (API) 的使用者程式碼不會危害系統的延展性。  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>安全性  
  存取資料表或資料行之類的資料庫物件時，在資料庫中執行的使用者程式碼必須遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證和授權規則。 此外，資料庫管理員應該能夠從資料庫中執行的使用者程式碼控制作業系統資源的存取權，例如檔案和網路存取權。 由於 Managed 程式語言 (不像 Transact-SQL 之類的非 Managed 語言) 提供 API 來存取這類資源，因此這變得相當重要。 系統必須為使用者程式碼提供一個安全的方式來存取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序外部的電腦資源。 如需相關資訊，請參閱 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
 ###### <a name="performance"></a>效能  

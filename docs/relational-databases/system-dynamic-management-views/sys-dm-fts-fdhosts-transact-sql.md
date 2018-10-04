@@ -5,9 +5,7 @@ ms.date: 03/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_fdhosts
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_fts_fdhosts dynamic management view
 - troubleshooting [SQL Server], full-text search
 ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd3cdd2f14538ca3faceefe1c9a0c08e03856bb1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: faa79f48a4f3b8ac70984c3b02c8863d7d37e8ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43110252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608537"
 ---
 # <a name="sysdmftsfdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

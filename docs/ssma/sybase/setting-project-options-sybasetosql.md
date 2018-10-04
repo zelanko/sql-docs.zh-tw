@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9048eb69fd10cafc97daa91b5cac8571a4240cd0
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 08b1084f2f54a204f82bc0d1a0ee4096d207d835
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773976"
 ---
 # <a name="setting-project-options-sybasetosql"></a>設定專案選項 (SybaseToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 SQL azure、 使用者介面和資料移轉設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，確認組態選項都適用於專案。  
@@ -51,7 +45,7 @@ SSMA 會有五種專案設定：
   
 3.  完整  
   
-4.  Custom  
+4.  自訂  
   
 預設模式被建議用於大部分的使用者。 開放式模式能夠保留更多目前的 Sybase Adaptive Server Enterprise (ASE) 語法中，而且容易讀取。 不過，保留目前的語法可能不正確。 如果 ASE 語法必須轉換為對等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的語法的完整模式不會執行完整的轉換，但產生的程式碼可能更難以閱讀。 在 [自訂] 模式中，您可以設定選項。  
   

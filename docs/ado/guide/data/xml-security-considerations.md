@@ -1,32 +1,29 @@
 ---
-title: XML 安全性考量 |Microsoft 文件
+title: XML 安全性考量 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML security in ADO
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b1453acbce0e3e72999d1397981ff18661c0c1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e80a0bbb70a626ff01043592896ecfbe3c21f189
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802878"
 ---
 # <a name="xml-security-considerations"></a>XML 安全性考量
-ADO 儲存和開啟資料錄集物件上的方法不會視為安全 Internet Explorer 中執行的作業。 因此，如果在應用程式或控制項裝載於瀏覽器中執行指令碼中使用這些方法，瀏覽器的安全性設定會影響其行為。  
+ADO 儲存及開啟資料錄集物件上的方法較不安全的作業，在 Internet Explorer 中執行。 因此，如果在應用程式或控制項裝載於瀏覽器中執行指令碼中使用這些方法，則瀏覽器的安全性組態會有影響其行為。  
   
- Internet Explorer 5 會提供這類作業的安全性限制，預設會在網際網路區域。 根據該設定，資料錄集無法對用戶端上的本機檔案系統中的任何存取，或存取已從中下載網頁伺服器之網域外部的任何資料來源。 具體而言，當瀏覽器主機內執行，資料錄集可以儲存回至檔案才下載頁面的來源在相同伺服器上。 同樣地，您可以藉由從檔案載入該檔案位於相同的伺服器下載頁面的來源時，才開啟資料錄集。  
+ Internet Explorer 5 預設網際網路區域中提供這類作業的安全性的限制。 根據該設定，無法對用戶端上的本機檔案系統中的任何存取資料錄集，或將其存取從中下載網頁伺服器之網域以外的任何資料來源中。 具體來說，當瀏覽器主機內執行，資料錄集可以儲存回到檔案相同的伺服器，從中下載頁面上才。 同樣地，您也可以藉由從檔案載入該檔案位於相同的伺服器，從中下載頁面時，才開啟資料錄集。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 XML 格式保存記錄](../../../ado/guide/data/persisting-records-in-xml-format.md)

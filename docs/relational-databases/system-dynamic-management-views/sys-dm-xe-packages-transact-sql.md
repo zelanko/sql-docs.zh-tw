@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_packages (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_xe_packages & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_packages_TSQL
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9901245681412017736e26c79b000e7f5c845365
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738857"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +33,11 @@ ms.lasthandoff: 05/23/2018
   列出已向擴充的事件引擎註冊的所有封裝。  
   
  
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
+|NAME|**nvarchar(60)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
 |guid|**uniqueidentifier**|識別此封裝的 GUID。 不可為 Null。|  
-|description|**nvarchar(256)**|封裝的描述。 descriptionis 由封裝作者所設定，並不是可為 null。|  
+|description|**nvarchar(256)**|封裝的描述。 descriptionis 由封裝作者所設定，且不為 null。|  
 |capabilities|**int**|描述這個封裝之功能的點陣圖。 可為 Null。|  
 |capabilities_desc|**nvarchar(256)**|此封裝所有可能之功能的清單。 可為 Null。|  
 |module_guid|**uniqueidentifier**|公開此封裝之模組的 GUID。 不可為 Null。|  

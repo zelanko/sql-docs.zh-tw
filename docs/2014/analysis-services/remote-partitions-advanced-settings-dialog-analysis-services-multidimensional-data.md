@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21550167b2850d8e76daa74c0fdb860ca4e98cc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074928"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>遠端資料分割 - 進階設定對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [遠端資料分割 - 進階設定] 對話方塊，即可編輯進階設定，例如代表維護遠端資料分割之遠端 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的資料來源連接字串；另外使用 [還原資料庫] 對話方塊即可從遠端備份檔案還原遠端資料分割到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。 在選取 [還原遠端資料分割] 選項之後，按一下遠端資料分割的省略符號按鈕 (**...**)，即可從 [還原資料庫] 對話方塊的 [資料分割] 頁面顯示 [遠端資料分割 - 進階設定] 對話方塊。  

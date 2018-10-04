@@ -1,13 +1,11 @@
 ---
-title: Visual c + + 擴充功能範例 |Microsoft 文件
+title: Visual c + + Extensions 範例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6543dbf03ab2d81e721c304b1c135509afd081b1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a54c32287a977899838a091543fc776577d54e02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845196"
 ---
-# <a name="visual-c-extensions-example"></a>Visual c + + 擴充功能範例
-此程式會顯示是如何從欄位擷取值，將其轉換為 C/c + + 變數。  
+# <a name="visual-c-extensions-example"></a>Visual C++ Extensions 範例
+此程式示範了解從 欄位擷取並轉換成 C/c + + 變數值。  
   
- 此範例也會利用 「 智慧型指標 」，會自動處理呼叫的 COM 特定詳細資料`QueryInterface`和參考計數**IADORecordBinding**介面。  
+ 此範例也會利用 「 智慧型指標 」，會自動處理呼叫的特定 COM 的詳細資料`QueryInterface`和 參考計數**IADORecordBinding**介面。  
   
  沒有智慧型指標，您會撰寫程式碼：  
   
@@ -42,7 +39,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- 具有智慧型指標，衍生`IADORecordBindingPtr`從`IADORecordBinding`介面使用這個陳述式：  
+ 使用智慧型指標，衍生`IADORecordBindingPtr`從輸入`IADORecordBinding`介面使用此陳述式：  
   
 ```  
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -54,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- 因為 Visual c + + 擴充功能由實作**資料錄集**物件、 智慧型指標，建構函式`picRs`，採用 _`RecordsetPtr`指標， `pRs`。 建構函式呼叫`QueryInterface`使用`pRs`尋找`IADORecordBinding`介面。  
+ 因為 Visual c + + 擴充功能由實作**Recordset**物件、 智慧型指標，建構函式`picRs`，採用 _`RecordsetPtr`指標， `pRs`。 此建構函式會呼叫`QueryInterface`使用`pRs`若要尋找`IADORecordBinding`介面。  
   
 ```  
 // Visual_Cpp_Extensions_Example.cpp  
@@ -114,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Visual c + + 擴充功能](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+ [使用 Visual c + + 延伸模組](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ Extensions 標題](../../../ado/guide/appendixes/visual-c-extensions-header.md)

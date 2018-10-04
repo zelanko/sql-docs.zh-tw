@@ -1,14 +1,11 @@
 ---
-title: 使用組態管理的 WMI 提供者 |Microsoft 文件
+title: 使用組態管理的 WMI 提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - permissions [WMI]
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, late binding
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 031370656da517eda6d56db89bdcead7aff799da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7046ff2dfa9033d1caeb633dec1e4c02799257de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684116"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "33010615"
   
  其中 `instance_name` 預設為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設安裝中的 `MSSQLSERVER`。  
   
- **注意：** 如果您透過 Windows 防火牆，您必須確定已適當地設定您的電腦連接。 請參閱 「 透過 Windows 防火牆連線 」 文件中的 Windows Management Instrumentation 文件上[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[網站](http://go.microsoft.com/fwlink/?linkid=15426)。  
+ **注意：** 如果您要連接通過 Windows 防火牆，您必須先確定您的電腦均正確無誤。 請參閱 「 連線透過 Windows 防火牆 」 文章中的 Windows Management Instrumentation 文件上[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[網站](http://go.microsoft.com/fwlink/?linkid=15426)。  
   
 ## <a name="permissions-and-server-authentication"></a>權限和伺服器驗證  
  若要存取組態管理的 WMI 提供者，用戶端 WMI 管理指令碼必須在目標電腦的管理員內容中執行。 您在要管理的電腦上必須是本機 Windows 管理員群組的成員。  
@@ -58,7 +54,7 @@ ms.locfileid: "33010615"
   
  WMI 管理指令碼可用來更新用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶。  
   
- 安全性憑證受到組態管理的 WMI 提供者支援。 如需有關憑證的詳細資訊，請參閱[加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
+ 安全性憑證受到組態管理的 WMI 提供者支援。 如需有關憑證的詳細資訊，請參閱 <<c0> [ 加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)  

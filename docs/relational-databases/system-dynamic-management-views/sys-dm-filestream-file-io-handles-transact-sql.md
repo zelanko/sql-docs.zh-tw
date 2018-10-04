@@ -1,12 +1,10 @@
 ---
-title: sys.dm_filestream_file_io_handles (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_filestream_file_io_handles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_filestream_file_io_handles
@@ -18,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87dc96a297933b6981e1e2ada432d355287b4ce2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847156"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   顯示命名空間擁有者 (NSO) 所知道的檔案控制代碼。 使用用戶端收到的 Filestream 控制代碼**OpenSqlFilestream**此檢視會顯示。  
   
-|資料行|型別|Description|  
+|「資料行」|類型|描述|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|顯示與用戶端控制代碼相關聯之內部 NSO 結構的位址。 可為 Null。|  
 |**creation_request_id**|**int**|從用來建立此控制代碼的 REQ_PRE_CREATE I/O 要求顯示欄位。 不可為 Null。|  
@@ -50,6 +48,6 @@ ms.lasthandoff: 05/23/2018
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [Filestream 和 FileTable 動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Filestream 及 FileTable 動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

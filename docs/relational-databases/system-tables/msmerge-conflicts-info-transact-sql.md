@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSmerge_conflicts_info_TSQL
 - MSmerge_conflicts_info
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_conflicts_info system table
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41388cd1cc2d7a33f0b976ad62eca5e7f55aeade
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 34dd7496d514db14399134eb7ffe222af7251f95
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737726"
 ---
 # <a name="msmergeconflictsinfo-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

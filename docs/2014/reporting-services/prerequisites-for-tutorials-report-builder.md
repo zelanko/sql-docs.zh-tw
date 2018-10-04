@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 704f250c7cf3056cd2950cfb53224cb8b5c2b21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056208"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教學課程的必要條件 (報表產生器)
   報表產生器教學課程希望您能夠在報表伺服器或與報表伺服器整合的 SharePoint 網站上檢視和儲存報表。 針對資料，所有教學課程都使用必須由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]處理的常值查詢。  
@@ -29,7 +26,7 @@ ms.locfileid: "37296378"
 ## <a name="requirements"></a>需求  
  您必須擁有下列必要元件，才能完成報表產生器教學課程：  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器的存取權。 您可以使用獨立版的報表產生器，或者報表管理員或 SharePoint 網站提供的 ClickOnce 版本來執行報表產生器。 只有第一個步驟「如何開啟報表產生器」與 ClickOnce 版本不同。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器的存取權。 您可以使用獨立版的報表產生器，或者報表管理員或 SharePoint 網站提供的 ClickOnce 版本來執行報表產生器。 只有第一個步驟「如何開啟報表產生器」與 ClickOnce 版本不同。  
   
      若要使用報表管理員中，開啟報表管理員，然後按一下**報表產生器**。 根據預設，報表管理員 URL 是 http://\<*servername*> / 報告。  
   

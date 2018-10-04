@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSsnapshotdeliveryprogress_TSQL
 - MSsnapshotdeliveryprogress
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshotdeliveryprogress system table
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc2e466ac2eeb91aed75703a8d0fd973f4033c5e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 59be6e8f6faaded5ffb78f2e7dd8fecb4371ed52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720946"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

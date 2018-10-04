@@ -1,14 +1,11 @@
 ---
-title: sys.sysaltfiles (TRANSACT-SQL) |Microsoft 文件
+title: sys.sysaltfiles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysaltfiles_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysaltfiles system table
 - sys.sysaltfiles compatibility view
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 306318f32608d7014293ef753292a1f4cd1c68a7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 941b51b6e05fd88a8b59b8e4f3b28ee145affe3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636556"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +36,13 @@ ms.locfileid: "33220579"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|檔案識別碼。 每個資料庫的這個項目都是唯一的。|  
 |**groupid**|**smallint**|檔案群組識別碼。|  
 |**size**|**int**|檔案大小 (以 8 KB 頁面為單位)。|  
-|**maxsize**|**int**|最大檔案大小 (以 8 KB 頁面為單位)。<br /><br /> 0 = 不成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意： 升級以無限的記錄檔案大小的資料庫將會報告記錄檔的大小上限-1。|  
-|**成長**|**int**|資料庫的成長大小。<br /><br /> 0 = 不成長。 隨著狀態值而不同，它可以是頁數或檔案大小百分比。 如果**狀態**是 0x100000，**成長**是百分比檔案大小; 否則它是頁數。|  
+|**大小上限**|**int**|最大檔案大小 (以 8 KB 頁面為單位)。<br /><br /> 0 = 不成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意： 不受限的記錄檔大小會升級的資料庫將會報告記錄檔的大小上限為-1。|  
+|**成長**|**int**|資料庫的成長大小。<br /><br /> 0 = 不成長。 隨著狀態值而不同，它可以是頁數或檔案大小百分比。 如果**狀態**是 0x100000，**成長**是百分比檔案大小，否則為，它是頁數。|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**perf**|**int**|已保留。|  
 |**dbid**|**smallint**|這個檔案所屬的資料庫之資料庫識別碼。|  

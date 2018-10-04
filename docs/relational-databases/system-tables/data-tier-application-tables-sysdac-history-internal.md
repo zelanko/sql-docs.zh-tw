@@ -1,14 +1,11 @@
 ---
-title: sysdac_history_internal (TRANSACT-SQL) |Microsoft 文件
+title: sysdac_history_internal & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
@@ -18,27 +15,26 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 930a8a16a41af91a3e57a0f4c7e3053ef40bb794
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810382"
 ---
-# <a name="data-tier-application-tables---sysdachistoryinternal"></a>資料層應用程式資料表 sysdac_history_internal
+# <a name="data-tier-application-tables---sysdachistoryinternal"></a>資料層應用程式資料表 - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含有關管理資料層應用程式 (DAC) 採取之動作的相關資訊。 這份資料表儲存在**dbo**的結構描述**msdb**資料庫。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|動作的識別碼|  
 |**sequence_id**|**int**|識別動作中的步驟。|  
-|**instance_id**|**uniqueidentifier**|DAC 執行個體的識別碼。 此資料行可以聯結**instance_id**中的資料行[dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)。|  
+|**instance_id**|**uniqueidentifier**|DAC 執行個體的識別碼。 可以聯結此資料行**instance_id**中的資料行[dbo.sysdac_instances &#40;-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)。|  
 |**action_type**|**tinyint**|動作類型的識別碼：<br /><br /> **0** = 部署<br /><br /> **1** = 建立<br /><br /> **2** = 重新命名<br /><br /> **3** = 卸離<br /><br /> **4** = 刪除|  
 |**action_type_name**|**varchar(19)**|動作類型的名稱：<br /><br /> **部署**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|受到動作影響之物件類型的識別碼：<br /><br /> **0** = dacpac<br /><br /> **1** = 登入<br /><br /> **2** = 資料庫|  
@@ -49,7 +45,7 @@ ms.locfileid: "33261967"
 |**dac_object_name_pretran**|**sysname**|認可包含動作之交易前的物件名稱。 僅用於資料庫與登入。|  
 |**dac_object_name_posttran**|**sysname**|認可包含動作之交易後的物件名稱。 僅用於資料庫與登入。|  
 |**sqlscript**|**nvarchar(max)**|在資料庫或登入上實作動作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|  
-|**裝載**|**varbinary(max)**|儲存在二進位編碼字串中的 DAC 封裝定義。|  
+|**承載**|**varbinary(max)**|儲存在二進位編碼字串中的 DAC 封裝定義。|  
 |**註解**|**varchar(max)**|記錄 DAC 升級中接受潛在資料流失之使用者的登入。|  
 |**error_string**|**nvarchar(max)**|動作發生錯誤時所產生的錯誤訊息。|  
 |**created_by**|**sysname**|啟動建立此項目之動作的登入。|  
@@ -57,7 +53,7 @@ ms.locfileid: "33261967"
 |**date_modified**|**datetime**|上次修改此項目的日期和時間。|  
   
 ## <a name="remarks"></a>備註  
- DAC 管理動作 (例如，部署或刪除 DAC) 會產生多個步驟。 針對每個動作都會指派一個動作識別碼。 每個步驟都會指派一個序號和中的資料列**sysdac_history_internal**，步驟的狀態記錄的位置。 當動作步驟啟動時，會建立每個資料列，並在需要時進行更新，以反映作業的狀態。 例如，無法指派部署 DAC 動作**action_id** 12 並得到 4 個資料列中**sysdac_history_internal**:  
+ DAC 管理動作 (例如，部署或刪除 DAC) 會產生多個步驟。 針對每個動作都會指派一個動作識別碼。 每個步驟都會指派一個序號和中的資料列**sysdac_history_internal**，步驟的狀態記錄的位置。 當動作步驟啟動時，會建立每個資料列，並在需要時進行更新，以反映作業的狀態。 例如，部署 DAC 動作中，可以指派**action_id** 12 並得到 4 個資料列中**sysdac_history_internal**:  
   
 |||||  
 |-|-|-|-|  
@@ -67,7 +63,7 @@ ms.locfileid: "33261967"
 |12|2|建立|[資料庫]|  
 |12|3|重新命名|[資料庫]|  
   
- DAC 作業，例如刪除，並移除資料列從**sysdac_history_internal**。 您可以使用下列查詢手動刪除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上不再部署的之 DAC 的資料列：  
+ DAC 作業，例如刪除，不會移除資料列**sysdac_history_internal**。 您可以使用下列查詢手動刪除 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上不再部署的之 DAC 的資料列：  
   
 ```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
@@ -79,14 +75,14 @@ WHERE instance_id NOT IN
  刪除使用中 DAC 的資料列不會影響 DAC 作業；唯一的影響是，您將無法報告 DAC 的完整記錄。  
   
 > [!NOTE]  
->  目前沒有任何機制可刪除**sysdac_history_internal**上的資料列[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+>  目前沒有任何機制可用於刪除**sysdac_history_internal**上的資料列[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 ## <a name="permissions"></a>Permissions  
- 需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。 此檢視的唯讀存取可供所有使用者有權連接到 master 資料庫。  
+ 需要系統管理員 (sysadmin) 固定伺服器角色中的成員資格。 唯讀存取此檢視會提供給有權連接到 master 資料庫的所有使用者。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40;Transact SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [dbo.sysdac_instances &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

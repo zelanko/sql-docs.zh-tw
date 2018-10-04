@@ -1,18 +1,13 @@
 ---
-title: H (TRANSACT-SQL) |Microsoft 文件
+title: IHsyscolumns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - IHsyscolumns
 - IHsyscolumns_TSQL
@@ -21,27 +16,26 @@ dev_langs:
 helpviewer_keywords:
 - IHsyscolumns view
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4775492737d7ea6f87c377f1efde67e0f5cc14ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0e9e69891e759468ab0ae62a59c2fc61a19a9bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668876"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHsyscolumns**檢視會公開發行來自非 SQL Server 發行者之發行項的資料行資訊。 這份檢視儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|資料行或程序參數的名稱。|  
 |**id**|**int**|這個資料行所屬資料表的物件識別碼，或這個參數相關聯預存程序的識別碼。|  
-|**xtype**|**tinyint**|從實體儲存體類型[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
+|**xtype**|**tinyint**|實際儲存類型[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|擴充使用者自訂資料類型的識別碼。|  
 |**長度**|**bigint**|從最大實體儲存體長度[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
@@ -54,14 +48,14 @@ ms.locfileid: "33012357"
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|這個資料行之預設值的識別碼。|  
 |**網域**|**int**|這個資料行的規則或 CHECK 條件約束的識別碼。|  
-|**number**|**int**|子程序數目的程序分組時 (**0**非程序項目)。|  
+|**number**|**int**|當程序分組子程序號碼 (**0**非程序項目)。|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|這個資料行出現在其中的資料列內位移。|  
 |**collationid**|**int**|資料行定序的識別碼。 以非字元為基礎的資料行是 NULL。|  
 |**語言**|**int**|資料行的語言識別碼。|  
-|**status**|**int**|用來描述資料行或參數屬性的點陣圖：<br /><br /> **0x08** = 資料行允許 null 值。<br /><br /> **0x10** = ANSI 填補生效時**varchar**或**varbinary**加入資料行。 保留尾端空白**varchar**保留尾端零**varbinary**資料行。<br /><br /> **0x40** = 參數是輸出參數。<br /><br /> **0x80** = 資料行是識別資料行。|  
-|**type**|**int**|從實體儲存體類型[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
+|**status**|**int**|用來描述資料行或參數屬性的點陣圖：<br /><br /> **0x08** = 資料行允許 null 值。<br /><br /> **0x10** = ANSI 填補生效時**varchar**或是**varbinary**加入資料行。 保留尾端的空白**varchar**並保留尾端的零**varbinary**資料行。<br /><br /> **0x40** = 參數是一個 OUTPUT 參數。<br /><br /> **0x80** = 資料行是識別欄位。|  
+|**type**|**int**|實際儲存類型[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**usertype**|**tinyint**|從使用者定義資料類型的識別碼[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|這個資料行的有效位數層級。|  

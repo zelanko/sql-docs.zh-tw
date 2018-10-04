@@ -1,14 +1,11 @@
 ---
-title: 存取 WMI 提供者使用 WQL 的組態管理 |Microsoft 文件
+title: 存取 WMI 提供者使用 WQL 的組態管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cece73ebb5402fe2f725fedbcdf7cdc833d08265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692826"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 存取組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +31,14 @@ ms.locfileid: "33013175"
   
 ### <a name="querying-services-using-wbemtest"></a>使用 WBEMtest 查詢服務  
   
-1.  從**啟動**功能表上，按一下 **執行**，然後輸入**WBEMtest**。  
+1.  從**開始**功能表上，按一下**執行**，然後輸入**WBEMtest**。  
   
 2.  [WBEMtest.exe] 對話方塊隨即出現。 按一下 **[連接]**。  
   
 3.  在第一個文字欄位中，輸入電腦管理的 WMI 提供者命名空間：root\Microsoft\SqlServer\ComputerManagement11。 按一下 **[連接]**。  
   
-4.  按一下**查詢**。 輸入查詢，以傳回本機電腦上執行的目前服務：**選取\*從 SqlService。** 按一下 **[套用]**。  
+4.  按一下 **查詢**。 輸入查詢，以傳回本機電腦上執行的目前服務：**選取\*從 SqlService。** 按一下 **[套用]**。  
   
-5.  進一步精簡查詢藉由新增**其中 ServiceName ="MSSQLSERVER"**。  
+5.  進一步精簡查詢，藉由新增**其中 ServiceName ="MSSQLSERVER"**。  
   
   

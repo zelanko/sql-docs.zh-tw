@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_log_stats_TSQL
@@ -18,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
 ms.assetid: ''
-caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01718b5a0be80a166332c62c14e60eca1f2041fb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 43e5b145122f5b2586d8eb976162afb0615f89d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846316"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats & Amp;#40;transact-SQL&AMP;#41;   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "43102653"
 
 *database_id* |NULL |**預設**
 
-資料庫的識別碼。 `database_id` 為 `int`。 有效的輸入是資料庫的 ID 編號`NULL`，或`DEFAULT`。 預設值為 `NULL`。 `NULL` 和`DEFAULT`是目前資料庫內容中的對等值。  
+資料庫的識別碼。 `database_id` 為 `int`。 有效的輸入是資料庫的 ID 編號`NULL`，或`DEFAULT`。 預設為 `NULL`。 `NULL` 和`DEFAULT`是目前資料庫內容中的對等值。  
 內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 當使用`DB_ID`如果沒有指定資料庫名稱，目前資料庫的相容性層級必須是 90 （含） 更高。
 
   

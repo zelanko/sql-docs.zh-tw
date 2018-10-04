@@ -1,13 +1,11 @@
 ---
-title: '屬性 （Visual c + + 語法索引與 #import） |Microsoft 文件'
+title: '屬性 （Visual c + + 語法索引與 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,16 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - 'Property collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f228cc91f07c850448b4edfd61bde2aa909778c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 31bdc1249a82660ef7fa7c73a25fb0806c8c0744
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682157"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>屬性 （Visual c + + 語法索引與 #import）
 ## <a name="properties"></a>屬性  

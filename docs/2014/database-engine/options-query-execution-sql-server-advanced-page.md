@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067400"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>選項 (查詢執行： SQL Server︰ 進階頁面)
+# <a name="options-query-executionsql-serveradvanced-page"></a>選項 (查詢執行：SQL Server：進階頁面)
   使用 SET 命令有許多選項可用。 使用此頁面來指定 **設定** 選項，以在 SQL Server 查詢編輯器中執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 它們對於其他程式碼編輯器沒有影響。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 **[查詢]** 功能表上的 **[查詢選項]** ，或按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗的快速鍵功能表。 在 **[執行]** 下，按一下 **[進階]**。 如需上述各項目的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  
   
 ## <a name="options"></a>選項。  
@@ -74,7 +71,7 @@ GO
  **查詢執行後中斷連接**  
  如果選取此核取方塊，查詢完成後會結束 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的連接。 依預設，不會勾選此核取方塊。  
   
- **重設預設值**  
+ **重設為預設值**  
  將此頁面上的所有值重設為原始預設值。  
   
   

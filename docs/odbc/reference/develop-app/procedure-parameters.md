@@ -1,59 +1,56 @@
 ---
-title: 程序參數 |Microsoft 文件
+title: 程序參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc7e82b134ef578907dc0b5e84aa0e1ed7224027
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751858"
 ---
 # <a name="procedure-parameters"></a>程序參數
-程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 這是從所有其他 SQL 陳述式中，永遠是輸入的參數的參數不同。  
+程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 這是從所有其他 SQL 陳述式，其一律為輸入的參數中的參數不同。  
   
- 輸入的參數用來將值傳送給程序。 例如，假設 Parts 資料表有 PartID、 描述和價格的資料行。 InsertPart 程序可能會在資料表中有每個資料行的輸入的參數。 例如：  
+ 輸入的參數用來將值傳送給程序。 例如，假設 Parts 資料表有 PartID、 描述和價格資料行。 InsertPart 程序可能會具有資料表中的每個資料行的輸入的參數。 例如：  
   
 ```  
 {call InsertPart(?, ?, ?)}  
 ```  
   
- 驅動程式不應修改的輸入緩衝區，直到內容**SQLExecDirect**或**SQLExecute**傳回 SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR、 SQL_INVALID_HANDLE 或 sql_no_data 為止。 輸入緩衝區的內容不能修改時**SQLExecDirect**或**SQLExecute**傳回 SQL_NEED_DATA 或 SQL_STILL_EXECUTING。  
+ 驅動程式不應該修改的輸入緩衝區，直到內容**SQLExecDirect**或是**SQLExecute**函數傳回 SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR、 SQL_INVALID_HANDLE 或 sql_no_data 為止。 輸入緩衝區的內容不能修改時**SQLExecDirect**或是**SQLExecute**傳回 SQL_NEED_DATA 或 SQL_STILL_EXECUTING。  
   
- 輸入/輸出參數會用來將值傳送給程序，並從程序中擷取值。 做為輸入和輸出參數使用相同的參數通常會造成混淆，且應予以避免。 例如，假設程序接受訂單 ID，並傳回之客戶的 ID。 這可以使用單一輸入/輸出參數，定義：  
+ 輸入/輸出參數會用來將值傳送給程序和擷取程序中的值。 做為輸入和輸出參數使用相同的參數通常會造成混淆，應予以避免。 例如，假設程序接受訂單 ID，並傳回客戶識別碼。 這可以定義具有單一輸入/輸出參數：  
   
 ```  
 {call GetCustID(?)}  
 ```  
   
- 可能是較好的方式使用兩個參數： 訂單 ID 和輸出或輸入/輸出參數 客戶 id 的輸入的參數：  
+ 最好是使用兩個參數： 訂單 ID 和輸出或客戶識別碼的輸入/輸出參數的輸入的參數：  
   
 ```  
 {call GetCustID(?, ?)}  
 ```  
   
- 輸出參數會用來擷取程序傳回值，以及擷取程序引數; 的值傳回值的程序有時又稱為*函式*。 例如，假設**GetCustID**剛才所提到的程序會傳回值，指出是否能夠找出訂單。 在下列呼叫中，第一個參數是輸出參數用來擷取程序傳回值，第二個參數是用來指定順序識別碼中，輸入的參數，並第三個參數是輸出參數用來擷取客戶 ID:  
+ 輸出參數用來擷取程序傳回值，以及擷取程序引數; 的值傳回值的程序有時稱為*函式*。 例如，假設**GetCustID**剛剛提到的程序傳回值，這個值表示是否能夠找出訂單。 在下列呼叫中，第一個參數是用來擷取程序傳回值為輸出參數、 第二個參數是用來指定順序識別碼中，輸入的參數，和第三個參數是用來擷取客戶識別碼的輸出參數：  
   
 ```  
 {? = call GetCustID(?, ?)}  
 ```  
   
- 驅動程式處理值的輸入和輸入/輸出參數，程序中的不方式不同於其他 SQL 陳述式中的輸入參數。 當執行陳述式時，它們會擷取變數的值繫結至這些參數，並將它們傳送到資料來源。  
+ 驅動程式處理輸入的值和輸入/輸出參數，程序中的不方式不同於其他 SQL 陳述式中的輸入參數。 當執行陳述式時，它們會擷取變數的值繫結到這些參數，並將它們傳送至資料來源。  
   
- 在執行陳述式之後，驅動程式中繫結至這些參數的變數會儲存傳回的值的輸入/輸出和輸出參數。 這些傳回之後已經提取的程序傳回的所有結果，直到設定，則不保證值和**SQLMoreResults**傳回 sql_no_data 為止。 如果執行陳述式會導致錯誤，則緩衝區輸入/輸出參數或輸出參數緩衝區的內容會是未定義。  
+ 在執行陳述式之後，驅動程式中繫結到這些參數的變數會儲存傳回的值的輸入/輸出和輸出參數。 這些傳回值並非保證值之後已經提取的程序所傳回的所有結果，直到設定並**SQLMoreResults**傳回 sql_no_data 為止。 如果執行陳述式會產生錯誤，是未定義的輸入/輸出參數緩衝區或輸出參數緩衝區的內容。  
   
- 應用程式呼叫**SQLProcedure**判斷程序是否有傳回值。 它會呼叫**SQLProcedureColumns**來判斷每個程序參數的型別 （傳回值、 輸入、 輸入/輸出或輸出）。
+ 應用程式呼叫**SQLProcedure**判斷程序是否具有傳回值。 它會呼叫**SQLProcedureColumns**來判斷每個程序參數的型別 （傳回值、 輸入、 輸入/輸出或輸出）。

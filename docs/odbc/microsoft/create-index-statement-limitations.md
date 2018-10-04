@@ -1,38 +1,35 @@
 ---
-title: 建立索引陳述式的限制 |Microsoft 文件
+title: CREATE INDEX 陳述式限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE INDEX statement limitations [ODBC]
 - ODBC SQL grammar, CREATE INDEX statement limitations
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9501e07fcdb70984153a718eed22be4d5448ec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec6ba27197f7a6021aff90d30884129128cb3614
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837036"
 ---
-# <a name="create-index-statement-limitations"></a>建立索引陳述式的限制
+# <a name="create-index-statement-limitations"></a>CREATE INDEX 陳述式限制
 Microsoft Excel 或文字的驅動程式不支援 CREATE INDEX 陳述式。  
   
- 索引可以在最多 10 個資料行定義。 如果超過 10 個資料行包含在 CREATE INDEX 陳述式，將無法辨識索引和資料表會被視為所建立的任何索引。  
+ 可以定義最多 10 個資料行索引。 如果在 CREATE INDEX 陳述式中包含超過 10 個資料行，則將無法辨識索引和資料表會被視為任何索引所建立。  
   
- DBASE 驅動程式無法建立索引的邏輯資料行上。  
+ DBASE 驅動程式無法在邏輯資料行上建立索引。  
   
- 使用 dBASE 驅動程式時，來建立資料行 （欄位） 的 SELECT 陳述式的 WHERE 子句中指定.mdx （或.ndx） 索引可改善大型檔案上的回應時間。 現有的.mdx 索引就會自動套用 for =，>， \<，> =、 = <，及 BETWEEN 運算子，在 WHERE 子句、 LIKE 述詞，以及聯結述詞。  
+ 使用 dBASE 驅動程式時，可改善回應時間，大型檔案上的 SELECT 陳述式的 WHERE 子句中指定的資料行 （欄位） 上建置.mdx （或.ndx） 的索引。 現有的.mdx 索引將會自動套用而 =，>， \<，> =、 = <，及 BETWEEN 運算子在 WHERE 子句、 LIKE 述詞，以及聯結述詞。  
   
- 使用 dBASE 驅動程式時，CREATE UNIQUE INDEX 陳述式所建立的索引實際上是非唯一的且重複的值可以插入到索引的資料行。 只有一筆記錄，從一組具有相同索引鍵的值可以加入至索引。  
+ 使用 dBASE 驅動程式時，CREATE UNIQUE INDEX 陳述式所建立的索引實際上是非唯一的而且重複的值可以插入到索引的資料行。 從一組具有相同索引鍵值的只有一筆記錄可以加入至索引。  
   
- 使用 Paradox 驅動程式時，必須定義唯一索引時連續包括第一個資料行之資料表中的資料行的子集。 如果唯一的索引未定義的資料表，或 Borland 資料庫引擎的實作情況下使用 Paradox 驅動程式時，無法更新資料表 Paradox 驅動程式。
+ 使用 Paradox 驅動程式時，必須定義唯一索引時的資料表，包括第一個資料行的資料行的連續子集。 Paradox 驅動程式無法更新資料表，如果針對資料表或 Paradox 驅動程式配合 Borland 資料庫引擎的實作未定義唯一索引。

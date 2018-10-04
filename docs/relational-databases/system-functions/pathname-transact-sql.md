@@ -1,14 +1,11 @@
 ---
-title: 路徑名稱 (TRANSACT-SQL) |Microsoft 文件
+title: 路徑名稱 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fc13baa2d538e054ed88607cd4b45c6477cb6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852016"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回 FILESTREAM 二進位大型物件 (BLOB) 的路徑。 OpenSqlFilestream API 會傳回的控制代碼的應用程式可以使用 Win32 api 處理 BLOB 資料，使用此路徑。 PathName 是唯讀的。  
+  傳回 FILESTREAM 二進位大型物件 (BLOB) 的路徑。 OpenSqlFilestream API 會使用此路徑來傳回應用程式可用來使用 Win32 Api 處理 BLOB 資料的控制代碼。 PathName 是唯讀的。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,25 +43,25 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *column_name*  
  資料行名稱**varbinary （max)** FILESTREAM 資料行。 *column_name*必須是資料行名稱。 它不能是運算式或是 CAST 或 CONVERT 陳述式的結果。  
   
- 要求的資料行的任何其他資料型別或 PathName **varbinary （max)** columnthat 沒有 FILESTREAM 儲存體屬性會導致查詢編譯時間錯誤。  
+ 要求的資料行的任何其他資料型別或 PathName **varbinary （max)** columnthat 沒有 FILESTREAM 儲存體屬性將會產生查詢編譯時間錯誤。  
   
  *@option*  
- 整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，定義路徑的伺服器元件應如何格式化。 *@option* 可以是下列值之一。 預設值是 0。  
+ 整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，定義如何格式化之路徑的伺服器元件。 *@option* 可以是下列值之一。 預設值是 0。  
   
-|Value|설명|  
+|值|描述|  
 |-----------|-----------------|  
 |0|傳回轉換成 BIOS 格式的伺服器名稱，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|在不轉換的情況下傳回伺服器名稱，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|傳回完整伺服器路徑，例如：`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- 定義的伺服器名稱應如何傳回 Always On 可用性群組中的位元值。  
+ 定義的伺服器名稱應該如何傳回 Always On 可用性群組中的位元值。  
   
- 當資料庫不屬於 Alwayson 可用性群組時，則會忽略這個引數的值。 電腦名稱一定會用於路徑中。  
+ 當資料庫不屬於 Always On 可用性群組時，則會忽略這個引數的值。 電腦名稱一定會用於路徑中。  
   
- 當資料庫屬於 Alwayson 可用性群組時，值*use_replica_computer_name*有下列的輸出效果**PathName**函式：  
+ 當資料庫屬於 Alwayson 可用性群組時，windows 7 *use_replica_computer_name*具有下列的輸出結果**PathName**函式：  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |未指定。|此函數會傳回路徑中的虛擬網路名稱 (VNN)。|  
 |0|此函數會傳回路徑中的虛擬網路名稱 (VNN)。|  

@@ -1,13 +1,11 @@
 ---
-title: GetString 方法 (ADO) |Microsoft 文件
+title: GetString 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708056"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
 傳回[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)做為字串。  
@@ -38,26 +35,26 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回**資料錄集**做為字串值**Variant** (BSTR)。  
+ 傳回**Recordset**做為字串值**Variant** (BSTR)。  
   
 #### <a name="parameters"></a>參數  
  *StringFormat*  
- A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)值，指定如何**資料錄集**應該轉換成字串。 *[Rowdelimiter]*， *[columndelimiter]*，和*NullExpr*參數只會搭配*StringFormat*的**adClipString**。  
+ A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)值，指定如何**資料錄集**應該轉換成字串。 *RowDelimiter*， *ColumnDelimiter*，並*NullExpr*參數只會搭配*StringFormat*的**adClipString**。  
   
  *NumRows*  
- 選擇性。 轉換中的資料列數目**資料錄集**。 如果*NumRows*未指定，或如果大於中的資料列總數**資料錄集**，然後所有資料列**資料錄集**會轉換。  
+ 選擇性。 中要轉換的資料列數目**資料錄集**。 如果*NumRows*未指定，或如果大於中的資料列總數**資料錄集**，然後所有的資料列中**資料錄集**會轉換。  
   
- *[columndelimiter]*  
+ *ColumnDelimiter*  
  選擇性。 使用資料行，如果指定，否則為 TAB 字元之間的分隔符號。  
   
  *RowDelimiter*  
- 選擇性。 使用資料列，如果指定，否則的歸位字元之間的分隔符號。  
+ 選擇性。 使用資料列，如果指定，否則為歸位字元之間的分隔符號。  
   
  *NullExpr*  
- 選擇性。 用來取代 null 值，如果指定，否則為空字串的運算式。  
+ 選擇性。 用來取代 null 的值，如果指定，否則為空字串的運算式。  
   
 ## <a name="remarks"></a>備註  
- 資料列資料，但是沒有結構描述資料，會儲存為字串。 因此，**資料錄集**無法使用此字串重新開啟。  
+ 資料列的資料，但不是含結構描述資料，會儲存為字串。 因此，**資料錄集**無法使用此字串重新開啟。  
   
  這個方法相當於 RDO **GetClipString**方法。  
   

@@ -1,14 +1,11 @@
 ---
-title: sys.fn_servershareddrives (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_servershareddrives (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_servershareddrives
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - names [SQL Server], shared drives
 - sys.fn_serversharedrives function
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72c5f0af9d3e32b76b3ea3bbad91fc680528a469
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a9fe23ad67b8a8cc4e687badf8ef6f75d9363e3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702316"
 ---
 # <a name="sysfnservershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +46,12 @@ fn_servershareddrives()
 ```  
   
 ## <a name="tables-returned"></a>傳回的資料表  
- 如果目前的伺服器是叢集的伺服器， **fn_servershareddrives**傳回共用磁碟機的磁碟機名稱。  
+ 如果目前的伺服器是叢集的伺服器， **fn_servershareddrives**傳回共用的磁碟機的磁碟機名稱。  
   
- 如果目前的伺服器執行個體不是叢集的伺服器， **fn_servershareddrives**傳回空白資料列集。  
+ 如果目前的伺服器執行個體不是叢集的伺服器， **fn_servershareddrives**傳回空的資料列集。  
   
 ## <a name="remarks"></a>備註  
- `fn_servershareddrives` 會傳回這個叢集伺服器所用的共用磁碟機清單。 這些共用磁碟機屬於相同叢集群組[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資源。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源會相依於這些磁碟機。  
+ `fn_servershareddrives` 會傳回這個叢集伺服器所用的共用磁碟機清單。 這些共用的磁碟機屬於相同叢集群組[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資源。 另外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源會相依於這些磁碟機。  
   
  在識別使用者是否能夠使用的磁碟機時，這項功能很有用。  
   
@@ -80,8 +76,8 @@ SELECT * FROM fn_servershareddrives();
  n  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_io_cluster_valid_path_names &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys.fn_virtualservernodes &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
+ [sys.dm_io_cluster_valid_path_names &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys.fn_virtualservernodes &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
   
   

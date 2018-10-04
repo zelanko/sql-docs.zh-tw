@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bd591ecb5c0e37acc4ffea7d7b22bf85636c585
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054748"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 結構描述 (XSD) 所擁有的資料類型非常不同。 例如，XPath 沒有整數或日期資料類型，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 則有許多。 XSD 會將奈秒的有效位數用於時間值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則至多使用 1/300 秒的有效位數。 因此，並非永遠都能將一個資料類型對應到另一個。 如需有關對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型到 XSD 資料類型，請參閱[資料類型強制型轉和 sql: datatype 註解&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
@@ -45,7 +42,7 @@ ms.locfileid: "37167139"
  XPath 具備三種資料類型：`string`、`number` 和 `boolean`。 `number` 資料類型永遠是 IEEE 754 雙精確度浮點數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)`資料類型是最接近 XPath `number`。 不過，`float(53)` 不完全是 IEEE 754。 例如，不會使用 NaN (非數字的值)，也不會使用無限。 嘗試將非數值字串轉換為 `number` 並嘗試除以零會導致錯誤。  
   
 ## <a name="xpath-conversions"></a>XPath 轉換  
- 當您使用 XPath 查詢 (例如，`OrderDetail[@UnitPrice > "10.0"]`) 時，隱含和明確的資料類型轉換可能會以明顯的方式變更查詢的意義。 因此，了解如何實作 XPath 資料類型相當重要。 XPath 語言規格，XML 路徑語言 (XPath) 1.0 版，W3C 提出的建議 8 1999 年，請參閱 W3C 網站上http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 當您使用 XPath 查詢 (例如，`OrderDetail[@UnitPrice > "10.0"]`) 時，隱含和明確的資料類型轉換可能會以明顯的方式變更查詢的意義。 因此，了解如何實作 XPath 資料類型相當重要。 XPath 語言規格，XML 路徑語言 (XPath) 1.0 版，W3C 提出的建議 8 1999 年，請參閱 W3C 網站上 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath 運算子分為四個類別：  
   
@@ -76,7 +73,7 @@ ms.locfileid: "37167139"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會在節點集上執行位置選取：例如，XPath 查詢 `Customer[3]` 表示第三個客戶；在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援此種類型的位置選取。 因此，系統不會實作 XPath 規格所描述的節點集對 `string` 或節點集對 `number` 的轉換。 在 XPath 規格指定 "first" 語意的每個地方，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會使用 "any" 語意。 例如，根據 W3C XPath 規格，XPath 查詢`Order[OrderDetail/@UnitPrice > 10.0]`的第一個選取這些順序**OrderDetail**具有**UnitPrice**大於 10.0。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此 XPath 查詢會選取任何這些訂單**OrderDetail**具有**UnitPrice**大於 10.0。  
   
- 轉換為 `boolean` 時，會產生存在測試，因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 SQL 運算式 "Products.Discontinued is not null"，而非 SQL 運算式 "Products.Discontinued = 1"。 為了讓查詢相當於後者的 SQL 運算式，請先將節點集轉換為非 `boolean` 類型，例如 `number`。 例如， `Products[number(@Discontinued) = true()]`。  
+ 轉換為 `boolean` 時，會產生存在測試，因此，XPath 查詢 `Products[@Discontinued=true()]` 相當於 SQL 運算式 "Products.Discontinued is not null"，而非 SQL 運算式 "Products.Discontinued = 1"。 為了讓查詢相當於後者的 SQL 運算式，請先將節點集轉換為非 `boolean` 類型，例如 `number`。 例如， `Products[number(@Discontinued) = true()]` 。  
   
  對於節點集中的任何一個節點或其中一個節點，如果運算子為 TRUE，則大部分會定義為 TRUE，所以如果節點集是空的，這些運算永遠會評估為 FALSE。 因此，如果 A 是空的，`A = B` 和 `A != B` 都為 FALSE，而 `not(A=B)` 和 `not(A!=B)` 都為 TRUE。  
   

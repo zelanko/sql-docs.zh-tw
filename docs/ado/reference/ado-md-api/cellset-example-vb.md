@@ -1,32 +1,29 @@
 ---
-title: 資料格集範例 (VB) |Microsoft 文件
+title: Cellset 範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb42d133c68942c690f9976af08e1283b49caf85
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9c637d3bcb56a3e2b5e581b3348271f50adb9fd7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714426"
 ---
-# <a name="cellset-example-vb"></a>資料格集範例 (VB)
-這個 Visual Basic 專案，示範如何使用 ADO MD 來存取 cube 資料的基本概念。 它會顯示成員標題的資料行和資料列標頭，然後顯示格式化的資料格集內的特定資料格的值。  
+# <a name="cellset-example-vb"></a>Cellset 範例 (VB)
+此 Visual Basic 專案會示範使用 ADO MD 來存取 cube 資料的基本概念。 它會顯示成員標題資料行和資料列的標頭，然後顯示格式的資料格集內的特定資料格的值。  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

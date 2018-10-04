@@ -1,14 +1,11 @@
 ---
-title: sp_update_notification (TRANSACT-SQL) |Microsoft 文件
+title: sp_update_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260201"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817539"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +45,15 @@ sp_update_notification
   
 ## <a name="arguments"></a>引數  
  [  **@alert_name =**] **'***警示***'**  
- 與此通知相關聯的警示名稱。 *警示*是**sysname**，沒有預設值。  
+ 與此通知相關聯的警示名稱。 *警示*已**sysname**，沒有預設值。  
   
  [ **@operator_name =**]  **'***operator***'**  
- 發生警示時所要通知的操作員。 *運算子*是**sysname**，沒有預設值。  
+ 發生警示時所要通知的操作員。 *運算子*已**sysname**，沒有預設值。  
   
  [  **@notification_method =**]*通知*  
- 用來通知操作員的方法。 *通知*是**tinyint**，沒有預設值，它可以是下列一或多個這些值。  
+ 用來通知操作員的方法。 *通知*已**tinyint**，沒有預設值，它可以是下列其中一個或多個這些值。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|電子郵件|  
 |**2**|呼叫器|  
@@ -76,7 +72,7 @@ sp_update_notification
  若要執行這個預存程序，使用者必須授與**sysadmin**固定的伺服器角色。  
   
 ## <a name="examples"></a>範例  
- 下列範例會修改傳送通知的通知方法`François Ajenstat`警示`Test Alert`。  
+ 下列範例會修改傳送至通知的通知方法`François Ajenstat`警示`Test Alert`。  
   
 ```  
 USE msdb ;  
@@ -90,9 +86,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_add_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

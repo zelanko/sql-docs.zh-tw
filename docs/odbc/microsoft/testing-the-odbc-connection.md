@@ -1,33 +1,30 @@
 ---
-title: 測試 ODBC 連接 |Microsoft 文件
+title: 測試 ODBC 連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - testing connections [ODBC]
 - ODBC driver for Oracle [ODBC], testing connections
 ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba90587f40b3c7ef21f0dd1b6169ad6b0ab1b119
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 543ab436ac7dca5e0d5965220cd90a798afb5ccf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767796"
 ---
-# <a name="testing-the-odbc-connection"></a>測試 ODBC 連接
+# <a name="testing-the-odbc-connection"></a>測試 ODBC 連線
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用由 Oracle 提供的 ODBC 驅動程式。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- 當疑難排解 Oracle ODBC 存取 7.x 及 Oracle8 RDBMS 伺服器，可能需要確認基礎 SQL * Net 與 Oracle 通訊協定介面卡已正確安裝。 若要這樣做，請使用 Oracle 提供公用程式 Nettest.exe Orawin\Bin 目錄中。  
+ 針對至 Oracle 的 ODBC 存取進行疑難排解時 7.x 和 Oracle8 RDBMS 伺服器，可能需要確認基礎 SQL * Net Oracle 通訊協定配接器已正確安裝。 若要這樣做，請使用 Oracle 提供公用 Nettest.exe Orawin\Bin 目錄中。  
   
- Nettest 是簡單的公用程式，嘗試登入到選取的伺服器使用已安裝的 SQL * Net 屬於的 Oracle 用戶端的軟體。 公用程式會要求登入名稱、 密碼和 TNS 連接字串。 如果已正確安裝 Oracle 用戶端，此公用程式只會顯示 「 Ping 成功。 」 如果登入不成功，您必須洽詢資料庫管理員。
+ Nettest 是一個簡單的公用程式，嘗試登入到選取的伺服器使用已安裝的 SQL * Net 屬於 Oracle 用戶端的軟體。 公用程式會要求提供登入名稱、 密碼和 TNS 連接字串。 如果已正確安裝 Oracle 用戶端，此公用程式只會顯示 「 Ping 成功。 」 如果登入不成功，您必須洽詢資料庫管理員。

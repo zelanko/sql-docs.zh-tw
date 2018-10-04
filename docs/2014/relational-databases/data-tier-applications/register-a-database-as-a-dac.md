@@ -5,7 +5,6 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
@@ -21,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a63d4596b89a927d0b6f3fe47387ad9652f48985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067058"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
   使用任何一種**註冊資料層應用程式精靈**或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有的資料庫中的物件，並註冊 DAC 定義中的`msdb`系統資料庫 (**主要**在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
@@ -110,7 +109,7 @@ ms.locfileid: "43811554"
   
  **取消** - 結束精靈，而不註冊 DAC。  
   
-### <a name="summary"></a>摘要  
+### <a name="summary"></a>總結  
  **下列設定將用來註冊 DAC。** - 顯示將包含在 DAC 中的屬性和物件的報表。  
   
  **儲存報表** - 選取此按鈕可以將驗證報告複本儲存到 HTML 檔案。 預設資料夾為 Windows 帳戶之 [文件] 資料夾中的 **SQL Server Management Studio\DAC Packages** 資料夾。  

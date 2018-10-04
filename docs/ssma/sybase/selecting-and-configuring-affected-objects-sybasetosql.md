@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 06f8cf2c05a06163f5d26690de57cdfcabae1755
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 0aed95b084970bf4aa24bd279d8f52af7a33cfc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627539"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>選取並設定受影響的物件 (SybaseToSQL)
 在此頁面中，您可以選取資料表和 SSMA 確認在上一個步驟中選擇之物件的執行結果時，所要比較的外部索引鍵，在其中變更。 此外，您可以自訂的驗證參數。  
@@ -33,7 +27,7 @@ Sybase 物件樹狀結構，位於左邊視窗中檢查的資料表和外部索�
   
 如果 SSMA 軟體測試人員無法驗證任何這些物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視為什麼無法比較這些物件的原因，並清除選取錯誤的物件。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>資料表  
 [資料表] 索引標籤包含方格檢視選取的資料表。 方格包含選取之資料表的下列資訊：  
   
 -   資料行名稱  

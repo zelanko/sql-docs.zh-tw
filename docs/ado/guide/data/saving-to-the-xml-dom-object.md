@@ -1,30 +1,27 @@
 ---
-title: 將儲存到 XML DOM 物件 |Microsoft 文件
+title: 將儲存到 XML DOM 物件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML DOM object [ADO], saving to
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82c9c8a04669d360362f68d8c1b0a524d954efa0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6f47f3c40ed85cf0b38615176309f47bfb6ce542
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272527"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650556"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>儲存到 XML DOM 物件
-下列 Visual Basic 程式碼所示，您可以在 MSXML DOM 物件，執行個體的 XML 格式儲存資料錄集：  
+下列 Visual Basic 程式碼所示，您可以在 MSXML DOM 物件的執行個體的 XML 格式儲存資料錄集：  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  

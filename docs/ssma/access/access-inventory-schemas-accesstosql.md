@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - columns table
 - databases table
@@ -42,12 +37,12 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b0344fcfa5a5b174ef080a5eac431cebf6372842
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653712"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 清查結構描述 (AccessToSQL)
 下列各節描述資料表所建立的 SSMA 中，當您匯出要存取結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

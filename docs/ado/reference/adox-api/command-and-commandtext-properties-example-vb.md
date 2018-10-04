@@ -1,13 +1,11 @@
 ---
-title: 命令和 CommandText 屬性範例 (VB) |Microsoft 文件
+title: Command 和 CommandText 屬性範例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - CommandText property [ADOX], Visual Basic example
 - Command property [ADOX], Visual Basic example
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 710bcfef773fcb5801604eb46121da7bfc689596
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 742f00402a553d8f918e0de0c3aad0f6c6e4af64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634619"
 ---
-# <a name="command-and-commandtext-properties-example-vb"></a>命令和 CommandText 屬性範例 (VB)
+# <a name="command-and-commandtext-properties-example-vb"></a>Command 和 CommandText 屬性範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)来更新的程序文字屬性。  
   
 ```  
@@ -81,7 +78,7 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [ActiveConnection 屬性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [目錄物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog 物件 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command 屬性 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [程序物件 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

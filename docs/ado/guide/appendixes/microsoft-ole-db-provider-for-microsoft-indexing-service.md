@@ -1,43 +1,40 @@
 ---
-title: Microsoft OLE DB Provider for Microsoft 索引服務 |Microsoft 文件
+title: Microsoft OLE DB Provider for Microsoft 索引服務 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613276"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
-Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
+Microsoft OLE DB Provider for Microsoft 索引服務提供程式設計的唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
 
- 提供者是無限制執行緒，啟用 UNICODE。
+ 提供者是無限制執行緒，並啟用 UNICODE。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到此提供者，設定**提供者 =** 引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
+ 若要連接到此提供者，將**提供者 =** 引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
 ```
 MSIDXS
 ```
 
- 讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性會傳回這個字串以及。
+ 讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性會傳回此字串以及。
 
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串是：
@@ -46,27 +43,27 @@ MSIDXS
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 
- 字串，包含這些關鍵字：
+ 字串是由這些關鍵字所組成：
 
 |關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 OLE DB Provider for Microsoft 索引服務。 一般而言，這是唯一的連接字串中指定的關鍵字。|
-|**資料來源**|指定的索引服務類別目錄名稱。 如果未指定此關鍵字，系統會使用預設目錄。|
-|**地區設定識別碼**|指定唯一 32 位元數字 （例如，1033年），指定與使用者的語言喜好設定。 如果未指定此關鍵字，則會使用預設系統地區設定識別碼。|
+|**資料來源**|指定的索引服務類別目錄名稱。 如果未指定此關鍵字，則會使用預設系統類別目錄。|
+|**地區設定識別碼**|指定唯一 32 位元指定的數字 （例如，1033年） 的相關使用者的語言喜好設定。 如果未指定此關鍵字，則會使用預設系統地區設定識別項。|
 
 ## <a name="command-text"></a>命令文字
- 索引服務 SQL 查詢語法組成 SQL 92 延伸**選取**陳述式和其**FROM**和**其中**子句。 查詢的結果會傳回透過 OLE DB 資料列集，可供 ADO 和管理[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。
+ 編製索引服務 SQL 查詢語法包含延伸模組，SQL-92**選取**陳述式並將其**FROM**並**其中**子句。 查詢的結果會傳回透過 OLE DB 資料列，其中可以使用 ADO 與管理[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。
 
- 您可以搜尋精確的單字或片語，或使用萬用字元來搜尋的單字或模式。 搜尋邏輯可以根據布林值決策、 加權的詞彙或接近其他字詞。 您也可以搜尋 「 任意文字 」，找到相符項目意義，而不是完全相同的文字為基礎。
+ 您可以搜尋精確的單字或片語，或使用萬用字元來搜尋的文字或模式。 搜尋邏輯可以根據布林值決策、 加權的詞彙或接近其他字詞。 您也可以搜尋 「 任意文字 」，找到相符項目表示，而不是完全相同的文字為基礎。
 
- 特定命令用語是完整記錄在索引服務文件集的查詢語言。
+ 特定命令用語有 Indexing Service 文件的查詢語言的完整說明。
 
- 提供者不接受預存程序呼叫或簡單的資料表名稱 (例如， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)屬性一定會是**adCmdText**)。
+ 提供者不接受預存程序呼叫或簡單的資料表名稱 (例如[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)屬性一律會是**adCmdText**)。
 
 ## <a name="recordset-behavior"></a>資料錄集行為
- 下表列出可用的功能**資料錄集**開啟與此提供者的物件。 靜態資料指標類型 (**adOpenStatic**) 使用。
+ 下表列出可用的功能**資料錄集**開啟與此提供者的物件。 只有靜態資料指標類型 (**adOpenStatic**) 使用。
 
- 如需詳細資訊，關於**資料錄集**您的提供者組態，執行行為[支援](../../../ado/reference/ado-api/supports-method.md)方法，並列舉[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合**資料錄集**來判斷是否存在特定提供者的動態屬性。
+ 如需詳細資訊的相關**資料錄集**您的提供者組態，執行行為[支援](../../../ado/reference/ado-api/supports-method.md)方法，並列舉[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合**資料錄集**來判斷提供者特有的動態屬性是否存在。
 
  **標準的 ADO 資料錄集屬性的可用性：**
 
@@ -93,7 +90,7 @@ MSIDXS
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|
 
- \*為了讓這項功能提供者，存在於上必須啟用書籤**資料錄集**。
+ \*為了讓這項功能提供者存在於上必須啟用書籤**資料錄集**。
 
  **標準的 ADO 資料錄集方法的可用性：**
 
@@ -117,7 +114,7 @@ MSIDXS
 |[Update](../../../ado/reference/ado-api/update-method.md)|否|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|
 
- 對於特定的實作詳細資料和 Microsoft 索引服務的 Microsoft OLE DB 提供者的功能資訊，請參閱[OLE DB 程式設計人員指南](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)，或請造訪 Windows NT Server Web 的 Web 服務頁面站台。
+ 如需特定的實作詳細資料和 Microsoft 索引服務的 Microsoft OLE DB 提供者的功能資訊，請參閱[OLE DB 程式設計人員指南](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)，或瀏覽 Windows NT Server Web 的 Web 服務頁面站台。
 
 ## <a name="see-also"></a>另請參閱
- [CommandType 屬性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支援方法](../../../ado/reference/ado-api/supports-method.md)
+ [CommandType 屬性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支援方法](../../../ado/reference/ado-api/supports-method.md)

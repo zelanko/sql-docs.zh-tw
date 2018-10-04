@@ -1,14 +1,11 @@
 ---
-title: sys.service_contracts (TRANSACT-SQL) |Microsoft 文件
+title: sys.service_contracts (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - service_contracts_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contracts catalog view
 ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e58e0995d1aae2ce167a0ab0c5b5757c3a05612b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7148068abf027c6f6530c7b6c0ffcd9ec0ffc568
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688866"
 ---
 # <a name="sysservicecontracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   這份目錄檢視會針對資料庫中的每份合約，各包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|合約的名稱，它在資料庫中是唯一的。 不是 NULLABLE。|  
 |**service_contract_id**|**int**|合約的識別碼。 不是 NULLABLE。|  

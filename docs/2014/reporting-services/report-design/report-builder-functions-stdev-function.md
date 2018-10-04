@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c45476e2bc717d7fb0f98830558539843d37879d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1014b04a312b9d4b984e07f429f009e395fd0f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253440"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053308"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>StDev 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的標準差 (在給定範圍中評估)。  

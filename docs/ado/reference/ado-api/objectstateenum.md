@@ -1,13 +1,11 @@
 ---
-title: ObjectStateEnum |Microsoft 文件
+title: ObjectStateEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectStateEnum enumeration [ADO]
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46030a27b9a2567f023c2c0d7946536703c91195
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713736"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
-指定物件是否為開啟或關閉、 連接到執行命令，或擷取資料的資料來源。  
+指定物件是否為開啟或關閉、 連接到資料來源，執行命令，或擷取資料。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指出物件已關閉。|  
-|**adStateOpen**|@shouldalert|指出物件開啟。|  
-|**adStateConnecting**|2|表示正在連接物件。|  
+|**adStateOpen**|1|指出物件已開啟。|  
+|**adStateConnecting**|2|指出物件連接。|  
 |**adStateExecuting**|4|表示物件正在執行命令。|  
-|**adStateFetching**|8|指出，正在抓取物件的資料列。|  
+|**adStateFetching**|8|表示要擷取之物件的資料列的。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  

@@ -1,37 +1,34 @@
 ---
-title: 保留的關鍵字 |Microsoft 文件
+title: 保留的關鍵字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b791ea7d4430e4f594079231926c41e02de1ed4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626336"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
-以下是 ODBC 函數呼叫所用的保留字。 這些字並不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式的相容性，應用程式應該避免使用這些關鍵字。 #**定義**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
+以下是 ODBC 函數呼叫所用的保留字。 這些字並限制基礎的最小的 SQL 文法;不過，若要確保與支援核心 SQL 文法的驅動程式的相容性，應用程式應該避免使用任何這些關鍵字。 #**定義**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
 |ACTION|ISOLATION|  
-|與 ADA|JOIN|  
+|ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
@@ -64,14 +61,14 @@ ms.locfileid: "32912817"
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|OR|  
+|COLLATION|或|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
 |CONNECTION|重疊|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|依照 PASCAL 命名法|  
+|CONTINUE|PASCAL 命名法|  
 |CONVERT|位置|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
@@ -82,7 +79,7 @@ ms.locfileid: "32912817"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -92,7 +89,7 @@ ms.locfileid: "32912817"
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -115,13 +112,13 @@ ms.locfileid: "32912817"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
-|FROM|翻譯|  
+|FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
@@ -131,9 +128,9 @@ ms.locfileid: "32912817"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|USER|  
+|IDENTITY|使用者|  
 |IMMEDIATE|USING|  
-|IN|VALUE|  
+|IN|Value|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -141,7 +138,7 @@ ms.locfileid: "32912817"
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|取代所有提及的|  
+|Insert|取代所有提及的|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

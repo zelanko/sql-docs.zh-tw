@@ -1,39 +1,36 @@
 ---
-title: 最佳化屬性動態 (ADO) |Microsoft 文件
+title: Optimize 動態屬性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bebc49795ff10a29cb3b367c98e9471bc7a2eaa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662276"
 ---
-# <a name="optimize-property-dynamic-ado"></a>最佳化屬性動態 (ADO)
+# <a name="optimize-property-dynamic-ado"></a>Optimize 動態屬性 (ADO)
 指定是否應該在建立索引[欄位](../../../ado/reference/ado-api/field-object.md)。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回**布林**值，指出是否應該建立索引。  
   
 ## <a name="remarks"></a>備註  
- 索引可以提升效能的尋找或排序中的值的作業[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 索引是內部 ADO;您無法明確地存取，或在您的應用程式中使用它。  
+ 索引可改善效能的尋找或排序中的值的作業[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 索引是以內部 ado;您明確地無法存取，或在您的應用程式中使用它。  
   
- 若要建立索引的欄位上，設定**最佳化**屬性**True**。 若要刪除索引，請將此屬性設定為**False**。  
+ 若要在欄位上建立索引，設定**最佳化**屬性設 **，則為 True**。 若要刪除索引，請將此屬性設定為**False**。  
   
  **最佳化**動態屬性附加至[欄位](../../../ado/reference/ado-api/field-object.md)物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合時[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設定為**adUseClient**。  
   
@@ -54,8 +51,8 @@ fld.Properties("Optimize") = False   'Delete an index
  [Field 物件](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [最佳化屬性範例 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
- [最佳化屬性範例 （VC + +）](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
+ [Optimize 屬性範例 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
+ [Optimize 屬性範例 （VC + +）](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort 屬性](../../../ado/reference/ado-api/sort-property.md)

@@ -1,43 +1,40 @@
 ---
-title: 連接到資料來源 （如 Oracle 的 ODBC 驅動程式） |Microsoft 文件
+title: 連接到資料來源 (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connecting to data sources
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c12472544fd843214cab4294311889d0a84010d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: adee8d8dd8d6db0d79b37ff853c41e7604fe21de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825296"
 ---
-# <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>連接到資料來源 （如 Oracle 的 ODBC 驅動程式）
+# <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>連線到資料來源 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  將移除這項功能，在未來的版本的 Windows。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用由 Oracle 提供的 ODBC 驅動程式。  
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- ODBC 應用程式可以數種方式傳遞連接資訊。 例如，應用程式可能永遠會提示使用者輸入連接資訊的驅動程式。 或應用程式可能會預期有指定的資料來源連接的連接字串。 連接到資料來源的方式取決於您的 ODBC 應用程式所使用的連接方法。  
+ ODBC 應用程式可以數種方式傳遞的連接資訊。 比方說，應用程式可能會讓驅動程式一律會提示使用者輸入連接資訊。 或者，應用程式可能需要有指定的資料來源連接的連接字串。 連接到資料來源的方式取決於您的 ODBC 應用程式所使用的連線方式。  
   
- 若要連接到資料來源的一個常見方式是透過資料來源 對話方塊。 如果 ODBC 應用程式設定為使用對話方塊中，該對話方塊會顯示，而且會提示您輸入適當的資料來源連接資訊。  
+ 連接到資料來源的常見方式是透過 [資料來源] 對話方塊。 如果 ODBC 應用程式設定為使用對話方塊中，該對話方塊會隨即出現，並提示您輸入適當的資料來源連接資訊。  
   
- 您也可以連接到資料來源使用[連接字串](../../odbc/microsoft/connection-string-format-and-attributes.md)。  
+ 您也可以連接到資料來源，使用[連接字串](../../odbc/microsoft/connection-string-format-and-attributes.md)。  
   
 ### <a name="to-connect-to-a-data-source-using-a-dialog-box"></a>若要連接到資料來源使用的對話方塊  
   
-1.  資料來源 對話方塊出現時，請選取與 Oracle 資料來源，然後按一下 確定。 [連接] 對話方塊隨即出現。  
+1.  [資料來源] 對話方塊出現時，選取與 Oracle 資料來源，然後按一下 [確定]。 [連接] 對話方塊隨即出現。  
   
-2.  填寫 [連接] 對話方塊中，針對適當的資訊，然後按一下 [確定]。  
+2.  填寫 [連線] 對話方塊中，針對適當的資訊，然後按一下 [確定]。  
   
- 連線後會確認資訊，您的應用程式可以使用 oracle ODBC 驅動程式來存取資料來源包含的資訊。
+ 連接後會驗證資訊，您的應用程式可以使用 ODBC Driver for Oracle 來存取資料來源包含的資訊。

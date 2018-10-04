@@ -1,36 +1,33 @@
 ---
-title: 方式是使用中繼資料？ | Microsoft Docs
+title: 中繼資料的使用方式為何？ | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c4779c5e60b97a389ebf686678c9a989fb933cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3604e9f3bd47a10ae1a6e5ec401b198675c2d3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637046"
 ---
-# <a name="how-is-metadata-used"></a>方式是使用中繼資料？
-應用程式需要大部分結果集作業的中繼資料。 例如，應用程式會使用資料行的資料類型來決定要繫結到該資料行的變數種類。 它會使用字元資料行的位元組長度來判斷多少空間，以便顯示該資料行的資料。 應用程式決定資料行之中繼資料的方式取決於應用程式的類型。  
+# <a name="how-is-metadata-used"></a>中繼資料的使用方式為何？
+應用程式需要大部分結果集作業的中繼資料。 例如，應用程式會使用資料行的資料類型來決定要繫結到該資料行的變數種類。 它會使用字元資料行的位元組長度來決定它必須顯示該資料行中的多少空間。 應用程式決定資料行之中繼資料的方式取決於應用程式的類型。  
   
- 垂直應用程式，使用預先定義的資料表，並執行預先定義的作業，在這些資料表上。 應用程式甚至撰寫，並由應用程式開發人員控制之前，已經定義此類應用程式的結果集中繼資料，因為它可以是硬式編碼至應用程式。 例如，如果次序識別碼資料行在資料來源中定義為 4 位元組整數，應用程式永遠可以將 4 位元組整數繫結至該資料行。 當中繼資料在應用程式中寫入程式碼時，應用程式所使用的資料表變更通常意味著應用程式的程式碼變更。 這是很少會造成問題，因為這類變更通常都會是新發行的應用程式的一部分。  
+ 垂直應用程式使用的預先定義的資料表，並執行預先定義的作業，在這些資料表上。 因為這類應用程式的結果集中繼資料甚至會在撰寫應用程式，並受到應用程式開發人員之前定義，它可以是硬式編碼到應用程式。 例如，如果次序識別碼資料行在資料來源中定義為 4 位元組整數，應用程式永遠可以將 4 位元組整數繫結至該資料行。 當中繼資料在應用程式中寫入程式碼時，應用程式所使用的資料表變更通常意味著應用程式的程式碼變更。 這是很少發生問題，因為這類變更通常都會在應用程式的新版本的一部分。  
   
- 垂直應用程式，例如自訂應用程式，通常使用預先定義的資料表，並執行預先定義的作業，在這些資料表上。 例如，應用程式可能會寫入三個不同的資料來源; 之間傳送資料寫入應用程式時，通常已知要傳輸的資料。 因此，自訂的應用程式也會具有硬式編碼的中繼資料。  
+ 如同垂直應用程式，自訂應用程式，通常使用預先定義的資料表，執行預先定義的作業，在這些資料表上進行相關的設定。 例如，應用程式可能會寫入在三個不同的資料來源; 之間傳送資料要傳送的資料通常稱為時撰寫應用程式。 因此，自訂應用程式也傾向具有硬式編碼的中繼資料。  
   
- 泛型應用程式，特別是那些支援臨機操作查詢，幾乎不會知道他們建立的結果集的中繼資料。 因此，它們必須探索中繼資料，在執行階段函式的使用**SQLNumResultCols**， **SQLDescribeCol**，和**SQLColAttribute**，即中描述下一節[SQLDescribeCol 和 SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)。  
+ 泛型應用程式，尤其是那些支援臨機操作查詢，幾乎不會知道他們所建立的結果集的中繼資料。 因此，它們必須探索中繼資料，在執行階段使用的函式**SQLNumResultCols**， **SQLDescribeCol**，並**SQLColAttribute**，其中所述下一節[SQLDescribeCol 和 SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)。  
   
- 所有的應用程式，不論其類型可以目錄函數所傳回的結果集的硬式編碼中繼資料。 本手冊的參考章節中定義這些結果集。
+ 所有的應用程式，不論其類型可以目錄函式所傳回的結果集的硬式編碼中繼資料。 本手冊的 [參考] 區段中定義這些結果集。

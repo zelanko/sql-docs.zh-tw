@@ -1,13 +1,11 @@
 ---
-title: 集合 (如需 Visual c + + 語法的 ADO) |Microsoft 文件
+title: 集合 (ADO for Visual c + + 語法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc0c28d095c96fa94c13118ce6876a99a888dbc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d94570a337f564588b2709fd292eab5ed5396dc4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276557"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679876"
 ---
-# <a name="collections-ado-for-visual-c-syntax"></a>集合 (如需 Visual c + + 語法的 ADO)
+# <a name="collections-ado-for-visual-c-syntax"></a>Collections (ADO for Visual C++ 語法)
 ## <a name="parameters"></a>參數  
   
 ### <a name="methods"></a>方法  
@@ -145,7 +142,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
 -   [Item 屬性 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [錯誤集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [參數集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

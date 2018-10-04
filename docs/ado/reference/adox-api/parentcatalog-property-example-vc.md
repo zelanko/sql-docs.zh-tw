@@ -1,32 +1,29 @@
 ---
-title: ParentCatalog 屬性範例 （VC + +） |Microsoft 文件
+title: ParentCatalog 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686e8a9dff329f4082c83af83d25855d4b30e2f2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6df31a3de47ca9e8e792258a7123c8b20e7a35ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286587"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823087"
 ---
-# <a name="parentcatalog-property-example-vc"></a>ParentCatalog 屬性範例 （VC + +）
-下列程式碼示範如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特定屬性，再附加至類別目錄的資料表。 屬性是**AutoIncrement**，它會自動累加欄位建立 Microsoft Jet 資料庫中。  
+# <a name="parentcatalog-property-example-vc"></a>ParentCatalog 屬性範例 (VC++)
+下列程式碼示範如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特有的屬性，再附加到類別目錄的資料表。 屬性是**AutoIncrement**，Microsoft Jet 資料庫中建立自動遞增欄位。  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  

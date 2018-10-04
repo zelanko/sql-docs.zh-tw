@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 856ff3ec55236b8216c04fbffeb4f5abed6dbc5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65015ec9175bc1e09b97486794f7bdd44d1c1038
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188015"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056128"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務
   歡迎使用「SQL Server 備份及還原與 Windows Azure Blob 儲存體服務使用者入門」教學課程。 本教學課程可協助您了解如何將備份寫入 Windows Azure Blob 儲存體服務以及從中還原。  

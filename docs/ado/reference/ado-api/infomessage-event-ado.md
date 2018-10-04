@@ -1,13 +1,11 @@
 ---
-title: InfoMessage 事件 (ADO) |Microsoft 文件
+title: InfoMessage 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - InfoMessage event [ADO]
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6cce906c08e524c3a709c573394a72df89eac8e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 516e6a95ba98f1b8d66ddf9f417460ef2a6b7dc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602566"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 事件 (ADO)
 **InfoMessage**期間發生警告時，會呼叫事件**ConnectionEvent**作業。  
@@ -39,15 +36,15 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>參數  
  *pError*  
- [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 這個參數會包含會傳回任何錯誤。 如果傳回多個錯誤，列舉**錯誤**來尋找客戶的集合。  
+ [錯誤](../../../ado/reference/ado-api/error-object.md)物件。 這個參數會包含任何傳回的錯誤。 如果傳回多個錯誤，列舉**錯誤**以找出它們的集合。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。 發生警告*adStatus*設**adStatusOK**和*pError*含有警告。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)狀態值。 發生警告時， *adStatus*設為**adStatusOK**並*pError*包含警告。  
   
  這個事件會傳回之前，請將此參數設定為**adStatusUnwantedEvent**以避免後續的通知。  
   
  *pConnection*  
- A[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 發生警告的連接。 例如，開啟時可能會發生警告**連接**物件或執行[命令](../../../ado/reference/ado-api/command-object-ado.md)上**連接**。  
+ A[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。 警告發生的連線。 例如，開啟時可能會發生警告**連接**物件或執行[命令](../../../ado/reference/ado-api/command-object-ado.md)上**連接**。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

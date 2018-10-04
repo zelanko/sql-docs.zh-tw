@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09103b9294754a7634a1d28109f3129286acae94
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2b8d842e9febc94d35f2a8c53c6106159f44423a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741826"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>選取並設定要測試的物件 (SybaseToSQL)
 在此步驟中，您選取測試，並設定為比較程序的函式的輸出參數，以及函式的傳回值的物件。  
