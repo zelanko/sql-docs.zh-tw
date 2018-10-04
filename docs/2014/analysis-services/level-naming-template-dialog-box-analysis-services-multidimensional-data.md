@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.levelnamingtemplatedialog.f1
 helpviewer_keywords:
 - Level Naming Template dialog box
 ms.assetid: 96cad715-213e-4eac-9003-130a2f5fc985
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89d70fcd6092b2ef06e8b28c97a5935f8fb17f88
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4b0a858c3e87aa657f02d106f6e6db453ee0cb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088328"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>層級命名範本對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [層級命名範本] 對話方塊，即可建構維度中之父屬性的層級命名範本。 如需層級命名範本的詳細資訊，請參閱 [NamingTemplate 元素 &#40;ASSL&#41;](scripting/properties/namingtemplate-element-assl.md)。 您可以顯示**層級命名範本**對話方塊中，依序按一下省略符號按鈕 (**...**) 上`NamingTemplate`值中的屬性翻譯**翻譯詳細資料**窗格**翻譯** 索引標籤的**維度設計師**.  

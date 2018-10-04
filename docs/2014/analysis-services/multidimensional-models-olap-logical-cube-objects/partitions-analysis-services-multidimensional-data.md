@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b9affca8de4e6b0cbd50e25eaaca6447ada4b0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ec379d0dde0775aad3fe81a3443cf5d27601d3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087778"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>資料分割 (Analysis Services - 多維度資料)
   資料分割是量值群組資料之一部分的容器。 無法從 MDX 查詢看到資料分割；所有的查詢都會反映量值群組的完整內容，不論針對此量值群組定義了多少個資料分割。 資料分割的資料內容是由資料分割的查詢繫結及分割運算式所定義。  

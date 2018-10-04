@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b06d9a0b4fd8b365e327d77f776bd75781e8128c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037d9e4c6c8e3d5b720f234f15d57c7f14b081ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084748"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>升級封裝 (SSIS 封裝升級精靈)
   使用 **[正在升級封裝]** 頁面，即可檢視封裝升級的進度，並在必要時中斷升級程序。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝升級精靈會逐一升級選取的封裝。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1ba908e9db3764ccfc0bd35f8dbb901245519e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183845"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087014"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>授與 SharePoint 網站上報表伺服器項目的權限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供內建的安全性功能，可用來授與從 SharePoint 網站和文件庫存取報表伺服器項目的權限。 如果您已經指定權限給使用者，則在設定 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 與報表伺服器之間的整合設定之後，那些使用者就能立即存取報表伺服器項目和作業。 您可以使用現有權限來上傳報表定義和其他文件、檢視報表、建立訂閱和管理項目。  

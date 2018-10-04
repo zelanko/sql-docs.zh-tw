@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087158"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  
@@ -197,12 +194,12 @@ ms.locfileid: "44311688"
 |**2**|列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。|  
 
  **-PrefetchTables** [ **0**| **1**]  
- 指定是否將預先提取及快取的資料表物件的選擇性參數。  預設行為是預先擷取特定資料表屬性，使用內部計算為基礎的 SMO 元件。  這個參數可以是在執行其中 SMO 預先擷取作業所花費相當長再的案例中很有幫助。 如果未使用此參數，此決策是在執行階段根據為發行項加入發行集的資料表的百分比。  
+ 指定是否要預先擷取並快取資料表物件的選擇性參數。  預設行為是根據內部計算，使用 SMO 元件預先擷取特調資料表內容。  此參數在 SMO 預先擷取作業花非常長的時間執行的情況下很實用。 若未使用此參數，會在執行階段根據已新增為要發佈之發行項的資料表百分比來制訂決策。  
   
 |OutputVerboseLevel 值|描述|  
 |------------------------------|-----------------|  
-|**0**|SMO 元件的預先擷取方法的呼叫已停用。|  
-|**1**|快照集代理程式會呼叫預先擷取的方法，以快取使用 SMO 某些資料表屬性|  
+|**0**|SMO 元件的「呼叫以預先擷取」方法已停用。|  
+|**1**|「快照集代理程式」將會呼叫預先擷取方法以使用 SMO 快取某些資料表內容|  
   
  **-PacketSize** *packet_size*  
  這是快照集代理程式連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時所使用的封包大小 (以位元組為單位)。 預設值為 8192 個位元組。  

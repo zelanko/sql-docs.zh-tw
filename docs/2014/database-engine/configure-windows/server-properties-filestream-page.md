@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.filestream.f1
 helpviewer_keywords:
 - FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b7ed447650dfcedddba45bca426a9e7f30a6fc6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b6e3b37b356b715f1365e87f423c5e4346f0fc8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086168"
 ---
 # <a name="sql-server-properties-filestream-page"></a>SQL Server 屬性 (FILESTREAM 頁面)
   您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝啟用 FILESTREAM。  

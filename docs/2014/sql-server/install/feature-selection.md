@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Components to Install page
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
-caps.latest.revision: 86
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cedec01a7e8c7da94f75c00e377a2c965bd58c7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087408"
 ---
 # <a name="feature-selection"></a>特徵選取
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈之 [特徵選取] 頁面上的核取方塊可選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的元件。  

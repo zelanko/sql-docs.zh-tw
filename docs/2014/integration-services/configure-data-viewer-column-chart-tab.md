@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.columnchart.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49d3ad4fbd21db0eaa7588cd54a03ee9c613077c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6ce4cb57a7ee3329bb3eb123a23b740ba5b156c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085828"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>設定資料檢視器 (直條圖索引標籤)
   使用 **[設定資料檢視器]** 對話方塊的 **[直條圖]** 索引標籤，即可指定要在圖表中顯示為直條的資料行。 直條的數目會顯示資料行中不連續資料的數目，而直條的高度會顯示每個值的發生次數。 圖表只會反映一個緩衝區的內容。  

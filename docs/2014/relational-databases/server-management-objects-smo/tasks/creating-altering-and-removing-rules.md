@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rules [SMO]
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d68aa2d625de762ad1bf503c9c79fdbbeaa3875d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6785e14e6e6ef08c7b77daa5e7ab555d05ac1744
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084498"
 ---
 # <a name="creating-altering-and-removing-rules"></a>建立、改變和移除規則
   在 SMO 中，規則會以 <xref:Microsoft.SqlServer.Management.Smo.Rule> 物件表示， 並由 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 屬性定義，該屬性是文字字串，包含使用運算子或述詞 (例如 IN、LIKE 或 BETWEEN) 的條件運算式。 規則不能參考資料行或其他資料庫物件。 未參考資料庫物件的內建函數可以包括在內。  

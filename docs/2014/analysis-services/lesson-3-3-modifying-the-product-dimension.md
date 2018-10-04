@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1163fdaf3e76734217fc8c2cca13a124e30f3b2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171729"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081538"
 ---
 # <a name="modifying-the-product-dimension"></a>修改 [產品] 維度
   在這個主題的工作中，您會使用具名計算來針對產品線提供更具描述性的名稱、定義 [產品] 維度中的階層，以及指定該階層的 (全部) 成員名稱。 此外，您也會將屬性分組放入顯示資料夾中。  

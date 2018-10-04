@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e0e7ae6624bba3866796a3aa457e510abb26826
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 538b1a11962cf861aeaa1e95443f994b27feb87c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088658"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   一個資料表可能有的資料行或資料行可以做為唯一資料列識別碼，建立不含主索引鍵條件約束的資料表傳回空的結果設為 SQLPrimaryKeys。 ODBC 函數[SQLSpecialColumns](sqlspecialcolumns.md)報告資料列識別碼候選資料表沒有主索引鍵。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dbe4128fb05732af795ff689c56c78a5066e862
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086438"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
   此範例會示範如何使用 FILESTREAM 功能，以 SQLPutData 和 SQLGetData 累加地傳送和接收資料。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085728"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。  

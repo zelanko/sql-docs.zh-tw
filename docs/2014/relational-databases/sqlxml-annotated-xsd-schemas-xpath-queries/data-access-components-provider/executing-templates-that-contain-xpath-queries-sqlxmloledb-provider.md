@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing template files
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Mapping Schema property
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e50e819fd2a0cca62ebaabd32a351422f393d6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083978"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>執行包含 XPath 查詢的範本 (SQLXMLOLEDB 提供者)
   此範例顯示如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  

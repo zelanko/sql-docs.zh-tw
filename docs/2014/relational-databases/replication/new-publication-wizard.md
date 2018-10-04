@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbpublishingwizard.choosestoredprocedures.f1
@@ -43,16 +41,15 @@ f1_keywords:
 helpviewer_keywords:
 - New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 788849f9c34eba0d7a5b0f8f010a61bc1e24c0a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f13a2eaf83a4134f601cb1f70cd357bcea69ac55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281014"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080970"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   此章節提供有關新增發行集精靈之下列頁面的資訊。  

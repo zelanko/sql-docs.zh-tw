@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fcad38283e902b305afc5db3e47671b12e91b41f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676af20a08829dcc1bd4fda019c4f42b5d51eb51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083525"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，有兩種管理員類型：模型管理員及 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統管理員。  

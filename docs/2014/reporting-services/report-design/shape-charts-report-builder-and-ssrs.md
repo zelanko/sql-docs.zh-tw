@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081704"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形狀圖 (報表產生器及 SSRS)
   形狀圖會將值資料顯示為整體所佔的百分比。 形狀圖通常用於顯示集合中不同值之間成比例的比較。 類別目錄是以個別的形狀區段表示。 區段的大小取決於值。 形狀圖在用途上類似於圓形圖，差別在於後者排序類別目錄時是從最大到最小。  

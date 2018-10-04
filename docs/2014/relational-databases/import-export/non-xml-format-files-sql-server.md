@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - non-XML format files
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9473932f17c1f3f8a0e375f2f0e9dce2e52e8085
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266774"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080478"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式檔案 (SQL Server)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，有兩種格式檔案支援大量匯出和匯入： *「非 XML 格式檔案」* (Non-XML Format File) 和 *「XML 格式檔案」*(XML Format File)。  

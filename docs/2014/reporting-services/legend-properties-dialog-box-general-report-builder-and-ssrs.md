@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 172fc72cd09356281ddf10f2e048a2a81684c29a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230671"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082242"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>圖例屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[圖例]** 對話方塊來定義圖表中圖例的外觀與配置。 如需詳細資訊，請參閱 <<c0> [ 圖表上格式化圖例&#40;報表產生器及 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)。</c0>  

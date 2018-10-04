@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - synchronization [SQL Server replication], schedules
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b0c837ec8abafa79f6ed27303a69fad62e1c36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b4ee585d23cceaf15acc6c904ce783f21e9f08d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087528"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步處理排程
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步處理排程。 當您建立訂閱時，可以定義一個同步排程，以控制訂閱的複寫代理程式將於何時執行。 如果不指定排程參數，訂閱將使用預設排程。  

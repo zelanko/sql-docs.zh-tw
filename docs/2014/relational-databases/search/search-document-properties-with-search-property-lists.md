@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086838"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
   文件屬性的內容與文件本文的內容之間原本無法區別。 這項限制會將全文檢索查詢限制為整個文件的一般搜尋。 不過，現在您可以針對 `varbinary`、`varbinary(max)` (包括 `FILESTREAM`) 或 `image` 二進位資料行中支援的文件類型設定全文檢索索引，以便支援特定屬性 (例如 Author 和 Title) 的屬性範圍搜尋作業。 這種搜尋形式稱為「屬性搜尋」。  

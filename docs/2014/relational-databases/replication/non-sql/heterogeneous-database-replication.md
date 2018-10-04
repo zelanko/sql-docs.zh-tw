@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - heterogeneous database replication, about heterogeneous database replication
 - replication [SQL Server], heterogeneous database replication
 - heterogeneous database replication
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 061d246e94cd5fc631201e3d8499731e1182b747
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af04e31b66128989ec6ee2bc003f5fbc8ae2ff1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283014"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085288"
 ---
 # <a name="heterogeneous-database-replication"></a>異質資料庫複寫
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援下列交易式與快照式複寫的異質性情況：  
