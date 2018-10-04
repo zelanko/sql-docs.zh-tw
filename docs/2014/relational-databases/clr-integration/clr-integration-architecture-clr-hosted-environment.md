@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354690"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129151"
 ---
 # <a name="clr-hosted-environment"></a>CLR 主控環境
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) 是一個執行許多新式程式語言的環境，包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++。 CLR 具備記憶體回收的記憶體、先佔式執行緒、中繼資料服務 (類型反映)、程式碼可驗證性以及程式碼存取安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
@@ -65,7 +62,7 @@ ms.locfileid: "37354690"
   
  用於執行緒、排序和記憶體管理的不同模型對於調整為支援數千個並行使用者工作階段的關聯式資料庫管理系統 (RDBMS) 會呈現整合性問題。 此架構應該確認針對執行緒、記憶體和同步處理原始物件直接呼叫應用程式開發介面 (API) 的使用者程式碼不會危害系統的延展性。  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>安全性  
  存取資料表或資料行之類的資料庫物件時，在資料庫中執行的使用者程式碼必須遵循 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證和授權規則。 此外，資料庫管理員應該能夠從資料庫中執行的使用者程式碼控制作業系統資源的存取權，例如檔案和網路存取權。 由於 Managed 程式語言 (不像 Transact-SQL 之類的非 Managed 語言) 提供 API 來存取這類資源，因此這變得相當重要。 系統必須為使用者程式碼提供一個安全的方式來存取 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 處理序外部的電腦資源。 如需相關資訊，請參閱 [CLR Integration Security](security/clr-integration-security.md)。  
   
 ###### <a name="performance"></a>效能  

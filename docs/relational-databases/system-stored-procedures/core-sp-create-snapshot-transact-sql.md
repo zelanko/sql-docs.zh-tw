@@ -1,14 +1,11 @@
 ---
-title: core.sp_create_snapshot (TRANSACT-SQL) |Microsoft 文件
+title: core.sp_create_snapshot (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33ba9d69763a9d07cc9907aef60397b6c5b37eee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780966"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,22 +49,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>引數  
  [ @collection_set_uid = ] '*collection_set_uid*'  
- 收集組的 GUID。 *collection_set_uid*是**uniqueidentifier** ，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collection_sets 檢視表。  
+ 收集組的 GUID。 *collection_set_uid*已**uniqueidentifier** ，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collection_sets 檢視表。  
   
  [ @collector_type_uid = ] '*collector_type_uid*'  
- 收集器類型的 GUID。 *collector_type_uid 是否*是**uniqueidentifier** ，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collector_types 檢視表。  
+ 收集器類型的 GUID。 *collector_type_uid 是否*已**uniqueidentifier** ，沒有預設值。 若要取得 GUID，請查詢 msdb 資料庫中的 dbo.syscollector_collector_types 檢視表。  
   
  [ @machine_name=] '*machine_name*'  
- 收集組所在的伺服器名稱。 *machine_name*是**sysname**，沒有預設值。  
+ 收集組所在的伺服器名稱。 *machine_name*已**sysname**，沒有預設值。  
   
  [ @named_instance=] '*named_instance*'  
- 收集組的執行個體名稱。 *named_instance*是**sysname**，沒有預設值。  
+ 收集組的執行個體名稱。 *named_instance*已**sysname**，沒有預設值。  
   
  [ @log_id = ] *log_id*  
- 在收集資料的伺服器上對應至收集組事件記錄檔的唯一識別碼。 *g _ i d*是**bigint** ，沒有預設值。 若要取得的值*log_id*，請查詢 msdb 資料庫中的 dbo.syscollector_execution_log 檢視。  
+ 在收集資料的伺服器上對應至收集組事件記錄檔的唯一識別碼。 *g _ i d*已**bigint** ，沒有預設值。 若要取得的值*g _ i d*，請查詢 msdb 資料庫中的 dbo.syscollector_execution_log 檢視。  
   
  [ @snapshot_id = ] *snapshot_id*  
- 插入 core.snapshots 檢視資料列的唯一識別碼。 *snapshot_id*是**int**而且會當做 OUTPUT 傳回。  
+ 插入 core.snapshots 檢視資料列的唯一識別碼。 *snapshot_id*已**int**和會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

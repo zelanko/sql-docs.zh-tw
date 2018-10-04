@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple precedence constraints
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-caps.latest.revision: 44
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60cd55a656849f3cb5eee9cac879a88d8d85ad4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 368d8faf917094ce1dd306cc4ffd385eb3254363
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084858"
 ---
 # <a name="multiple-precedence-constraints"></a>多個優先順序條件約束
   優先順序條件約束會連接兩個可執行檔：兩個工作、兩個容器，或一個工作和一個容器。 其稱為優先順序可執行檔與受條件約束的可執行檔。 條件約束可執行檔可包含多個優先順序條件約束。 如需詳細資訊，請參閱 [Precedence Constraints](control-flow/precedence-constraints.md)。  

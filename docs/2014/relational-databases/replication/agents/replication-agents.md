@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication]
 - replication [SQL Server], agents and profiles
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8c7c1f0d0e7044e39d24c6acb9f7abfbc1f3e90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b36b2dd74087c91ed753ed040af787ba3a8effc4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175170"
 ---
 # <a name="replication-agents"></a>複寫代理程式
   複寫會使用許多名為「代理程式」的獨立程式執行與追蹤變更和散發資料相關的工作。 文件集的這個章節包含下列複寫代理程式的參數參考。  

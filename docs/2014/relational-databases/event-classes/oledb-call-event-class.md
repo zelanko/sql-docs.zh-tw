@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a068ccc8c24d8dc75fd0ec35b7b99adb4d6d875a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 954ba93ab5c32a9fa957133a6b8b10682ed7d019
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133400"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 事件類別
   **OLEDB Call** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對分散式查詢和遠端預存程序呼叫 OLE DB 提供者時發生。  

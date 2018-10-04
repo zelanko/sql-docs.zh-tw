@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a6c3b3624fc06f650179610778b75de5ef63cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cab26a21658c3573a3bdfab58a50500a7245397e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219698"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184402"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
   變數是在封裝、容器、工作及事件處理常式中動態設定值和控制處理序的方式。 優先順序條件約束也可以使用變數，以控制資料流向不同工作的方向。 變數有各種不同的用途：  

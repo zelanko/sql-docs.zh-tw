@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167939"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (也就是 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中所引進的高可用性和災害復原解決方案) 需要 Windows Server 容錯移轉叢集 (WSFC)。 此外，雖然 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，但是您可以使用容錯移轉叢集執行個體 (FCI) 來裝載可用性群組的可用性複本。 請務必了解每個叢集技術的角色，也要知道設計您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境時所必須考量的事項。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fixed port
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdd79cc6179731f33d8e6a7653a58b7fd9319062
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d408c25216139a173dced0ae19f9ddea7d1ba4d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252770"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088068"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>設定伺服器接聽特定 TCP 通訊埠 (SQL Server 組態管理員)
   此主題描述如何使用 SQL Server 組態管理員，將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體設定為在特定固定通訊埠上接聽。 當啟用時，預設的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體會在 TCP 通訊埠 1433 上接聽。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的具名執行個體是針對動態通訊埠所設定。 這表示，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動時，它們會選取可用的通訊埠。 透過防火牆連接到具名執行個體時，設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽特定通訊埠，如此才能在防火牆中開啟適當的通訊埠。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 198f3c46c97039fb788cb924a5980f0b6cd75145
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70ce28a3beac3b133b9c0423974d9ae73c7c375e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060228"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域的跨定義域規則。 跨定義域規則會在複合定義域所包含的單一定義域中測試值之間的關聯性。 跨定義域規則必須在複合定義域中成立，才能讓定義域值被視為正確且符合商務需求。 跨定義域規則是用來驗證、更正並標準化定義域值。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - remote proc trans option
 - distributed transactions [SQL Server], enforcing
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb1e0a127ca94ce6cac8a668c577e433c1e9086a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 467057e9efe4bd72fbdf50f0833bb687a527de33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064438"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>設定 remote proc trans 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote proc trans** 選項有助於保護透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易的伺服器對伺服器程序的動作。  

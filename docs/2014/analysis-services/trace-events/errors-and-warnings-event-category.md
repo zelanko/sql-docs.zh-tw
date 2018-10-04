@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Errors and Warnings event category [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - errors events [Analysis Services]
 - warnings events [Analysis Services]
 ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a70b8cd5646c8fd9c28e0538e8a0c822b2c226ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa751c332a50038c09c4b359a5dfb6f8f7a1cd9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201468"
 ---
 # <a name="errors-and-warnings-event-category"></a>錯誤和警告事件類別目錄
   [錯誤和警告] 事件類別目錄具有下表所描述的事件類別。  

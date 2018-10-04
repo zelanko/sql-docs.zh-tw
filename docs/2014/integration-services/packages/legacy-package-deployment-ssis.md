@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, deploying
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26c5f0af58ea602a8a0d5e73512b5fa2df2a013b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63d2d0019c725122c091a228dd50a5c97f384211
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209238"
 ---
 # <a name="package-deployment-ssis"></a>封裝部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的工具和精靈可以簡化將封裝從開發電腦部署到實際伺服器或部署到其他電腦的流程。  

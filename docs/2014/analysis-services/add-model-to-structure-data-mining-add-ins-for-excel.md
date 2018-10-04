@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, creating
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71016faaac6126328e1565ef7644fcf0bdf74376
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cbbbbcd154642ef3437b0860d8346d76f84bd97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104788"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>將模型加入結構 (適用於 Excel 的資料採礦增益集)
   ![將模型加入到結構按鈕](media/dmc-addmodel.gif "將模型加入結構 按鈕")  

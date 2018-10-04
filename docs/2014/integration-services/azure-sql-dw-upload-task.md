@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPDWUPTASK.F1
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
-caps.latest.revision: 5
 author: yualan
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfdaa7d851e4d29f476e50ddeaacf0fae943c410
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 651ad07d91d3cf8a351ca6faa9f912c6bd01c07c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063698"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 上傳工作
 **Azure SQL DW 上傳工作** 讓 SSIS 套件能夠將本機資料上傳到 Azure SQL 資料倉儲 (DW) 中的資料表。 目前支援的來源資料檔案格式為使用 UTF8 編碼的分隔文字。 上傳程序遵循高效率的 PolyBase 方法。 具體來說，資料會先上傳到 Azure Blob 儲存體，再到 Azure SQL DW。 因此，使用此工作會需要 Azure Blob 儲存體。

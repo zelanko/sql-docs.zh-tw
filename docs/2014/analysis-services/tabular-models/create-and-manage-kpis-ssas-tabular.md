@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 735d471cdfb847a56cb4b30857a097d8acd7e8b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd373f8080878a69200706a7d53d2dd92f9ad160
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134110"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>建立及管理 KPI (SSAS 表格式)
   本主題描述如何建立、編輯或刪除表格式模型中的 KPI (關鍵效能指標)。 若要建立 KPI，請選取判斷為 KPI 基底值的量值。 然後使用 [關鍵效能指標] 對話方塊選取判斷為目標值的第二個量值或絕對值。 接著您可以定義測量基底和目標量值之間效能的狀態臨界值。  

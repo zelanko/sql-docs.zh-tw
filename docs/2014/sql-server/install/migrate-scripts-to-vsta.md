@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS Script task, converting scripts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], converting scripts
 - SSIS Script component, converting scripts
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
-caps.latest.revision: 44
 author: mashamsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c4c76ef7a09b8c03d0c95f83b647b73ccb3325
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b23d85aa038acae6631dedf64417c65e745baf90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084430"
 ---
 # <a name="migrate-scripts-to-vsta"></a>將指令碼移轉到 VSTA
   當您升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]套件[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]移轉任何指令碼工作或指令碼元件中的指令碼[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 VSTA 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的指令碼環境。 在  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，指令碼環境[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。  

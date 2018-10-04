@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_distributed_ag_replica
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.fn_hadr_distributed_ag_replica
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba68c331ee4fea313bd0186516d5cc9675758c20
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 883df7cb9358d0791d9ea3af520a52d3a480da4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049606"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821546"
 ---
 # <a name="sysfnhadrdistributedagreplica-transact-sql"></a>sys.fn_hadr_distributed_ag_replica & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

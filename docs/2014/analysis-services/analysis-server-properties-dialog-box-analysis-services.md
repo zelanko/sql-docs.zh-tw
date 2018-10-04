@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260011"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078058"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Analysis Server 屬性對話方塊 (Analysis Services)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [Analysis Server 屬性] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的一般、語言/定序和安全性設定。 以滑鼠右鍵按一下**物件總管**中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，然後從操作功能表選取 [屬性]，即可顯示 [Analysis Server 屬性] 對話方塊。 **[Analysis Server 屬性]** 對話方塊包含以下屬性。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8975a3c535d627fe41a51b9b4937e204a07326c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e350687f69ea8e6a8ab70f5fa2eb5a1552058525
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069918"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義合併資料表發行項之間的邏輯記錄關聯性。  

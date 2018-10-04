@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158948"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 執行模式[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]專供程式開發人員。 `LocalDB` 安裝會複製檔案啟動所需的最小集合[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 一次`LocalDB`是安裝，開發人員起始的連線使用特殊連接字串。 在連線時，所需之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基礎結構會自動建立並啟動，讓應用程式使用的資料庫不需複雜或耗時的組態工作。 Developer Tools 為開發人員提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，讓他們撰寫和測試 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，而不需要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的完整伺服器執行個體。 執行個體[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`由`SqlLocalDB.exe`公用程式。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 應該用於取代[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]使用者執行個體功能已被取代。  

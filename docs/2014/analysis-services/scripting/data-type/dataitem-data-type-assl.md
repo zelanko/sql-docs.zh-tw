@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataItem Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f16c23941fc1048429ced974b88bba378bc72c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153478"
 ---
 # <a name="dataitem-data-type-assl"></a>DataItem 資料類型 (ASSL)
   定義代表某個資料項目 (例如資料行或屬性) 之資料相關特性的基本資料類型。  
@@ -57,14 +54,14 @@ ms.locfileid: "37300888"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[註釋](../collections/annotations-element-assl.md)，[定序](../properties/collation-element-assl.md)， [DataSize](../properties/datasize-element-assl.md)，[資料類型](../properties/datatype-element-assl.md)，[格式](../properties/format-element-assl.md)， [InvalidXmlCharacters](../properties/invalidxmlcharacters-element-assl.md)， [MimeType](../properties/mimetype-element-assl.md)， [NullProcessing](../properties/nullprocessing-element-assl.md)，[來源](../properties/source-element-binding-assl.md)，[修剪](../properties/trimming-element-assl.md)|  
 |衍生的元素|請參閱「備註」中的表格。|  
   

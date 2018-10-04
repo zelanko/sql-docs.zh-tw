@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 133c91701744e22e12348fdb9f432062899b1a8a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e6c8547a4234c1edf4273097b53bc41661d3482
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102648"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上加入鑽研動作
   將 ReportViewer 控制項加入至網站應用程式後，下一步是要在父報表上加入鑽研動作。  

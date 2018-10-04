@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147310"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 課：探索目標郵寄模型 (基本資料採礦教學課程)
   處理完專案中的模型之後，您可以瀏覽模型來尋找值得參考的趨勢。 由於模式光看數字可能相當複雜且難以上手，SQL Server 資料採礦提供了一些視覺化工具，可協助您調查資料及了解演算法在資料內探索到的規則和關聯性。 您也可以使用各種精確度測試，在部署模型之前驗證您的資料集或找出執行能力最佳的模型。  

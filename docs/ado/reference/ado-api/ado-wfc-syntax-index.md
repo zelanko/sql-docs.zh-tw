@@ -1,32 +1,29 @@
 ---
-title: ADO-WFC 語法索引 |Microsoft 文件
+title: ADO-WFC 語法索引 |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811426"
 ---
-# <a name="ado---wfc-syntax-index"></a>ADO-WFC 語法索引
-ADO 語言參考會使用 Microsoft Visual Basic 程式語言來說明 ADO 方法和屬性的語法。 此索引是 ADO 語言參考主題，ADO 的 Windows Foundation Classes (ADO/WFC) 為基礎的交互參考。 語法差異，則會發生時使用函式簽章在這個索引中，而不是語法中的清單語言參考主題。  
+# <a name="ado---wfc-syntax-index"></a>ADO - WFC 語法索引
+ADO 語言參考會使用 Microsoft Visual Basic 程式設計語言來說明 ADO 方法和屬性語法。 此索引是 ADO 語言參考主題，ADO 的 Windows Foundation Classes (ADO/WFC) 為基礎的交互參考。 語法差異發生時，請在這個索引，而不是語言參考主題中的語法清單中使用函式簽章。  
   
  下列項目列出方法和屬性的語法：  
   

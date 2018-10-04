@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - cursors [ODBC], types
 - ODBC cursors, types
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a69d50c3f818f2eae6f5b1c97e31e0ec344e006
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6d88b48c1fc4166b32821da9cdaaa5eb7f6c2e60
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072288"
 ---
 # <a name="cursor-types"></a>資料指標類型
   ODBC 定義四種由 Microsoft 所支援的資料指標類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。 這些資料指標不同能力偵測結果集的變更，並在資源中取用，例如記憶體及中的空間**tempdb**。 資料指標只有在嘗試重新提取變更過的資料列時，才能偵測到這些資料列的變更；沒有方法可讓資料來源通知資料指標目前所提取的資料列已變更。 交易隔離等級也會影響資料指標偵測到並非透過該資料指標所進行之變更的能力。  

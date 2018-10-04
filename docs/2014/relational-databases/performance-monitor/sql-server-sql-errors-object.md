@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Errors object
 - SQLServer:SQL Errors
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39124cefec0dafb921c13209adfb46e6658e1546
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: fe5f022f72126209370e1bc1adc919ceb2009772
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116288"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server 的 SQL Errors 物件
   Microsoft **中的** SQLServer:SQL Errors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，提供用來監視 **SQL Errors**的計數器。  

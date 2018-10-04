@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.parameter_type_usages
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.parameter_type_usages catalog view
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 116bec6c18c6b1fe882937913acac09d56550844
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 955dbe8aa7a69f82b6af3698e79b090594b97299
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852196"
 ---
 # <a name="sysparametertypeusages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

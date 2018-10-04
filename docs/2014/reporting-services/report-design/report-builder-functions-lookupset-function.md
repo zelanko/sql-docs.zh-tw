@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166398"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回符合指定之名稱的值組。  
@@ -36,13 +33,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>參數  
  *source_expression*  
- (`Variant`) - 在目前範圍中評估並指定要查閱之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value`。  
+ (`Variant`) - 在目前範圍中評估並指定要查閱之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value` 。  
   
  *destination_expression*  
- (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!CustomerID.Value`。  
+ (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!CustomerID.Value` 。  
   
  *result_expression*  
- (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!PhoneNumber.Value`。  
+ (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!PhoneNumber.Value` 。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"ContactInformation"。  

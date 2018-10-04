@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - messages_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.messages catalog view
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac13b8d68accd744803b7524f9d6d179cca0446b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 13120ff00d2935ed4cb10b91afad9c9076302c05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741726"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>訊息 （錯誤） 目錄檢視-sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

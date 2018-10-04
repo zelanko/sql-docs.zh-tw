@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdefinition.f1
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7213f8bcec9a72c5e319631f7cbf6997b6b7ab7d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148538"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>選取定義方法 (資料採礦精靈)
   使用 **[選取定義方法]** 頁面，即可選取建立新採礦模型的來源。 視選取項目而定，透過精靈進行的路徑會有所不同。因為以 Cube 為基礎的採礦結構與以關聯式資料來源為基礎的採礦結構，需要不同的建構步驟。  

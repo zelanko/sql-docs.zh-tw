@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - conditional delete tracking [SQL Server replication]
 - merge replication [SQL Server replication], conditional delete tracking
 ms.assetid: 0fe330ca-5fb5-422e-ad6f-92fb5d6a3b6c
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65a4ad119dc985c67eeea811f2102f387b7a5419
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58f9c75c13fc2b3315e4cf3fdc3ffb6e41598721
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084258"
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles-replication-transact-sql-programming"></a>指定不應該為合併發行項追蹤刪除 (複寫 Transact-SQL 程式設計)
     

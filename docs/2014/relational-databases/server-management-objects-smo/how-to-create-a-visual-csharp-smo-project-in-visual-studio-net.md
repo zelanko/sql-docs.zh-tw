@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c63f02cc9496a09744f403eaac9ec8dd84cc38b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8abffe99e34df0aa4387651775eb2a3159da8bd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270664"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121520"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中建立 Visual C# SMO 專案
   本節描述如何建立簡單的 SMO 主控台應用程式。  

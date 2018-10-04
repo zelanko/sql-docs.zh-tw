@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee48eae5ae58a6d82ed93a6d678518ce304d7a63
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: b57cf80e34b98bd3015fd17ef327a7f415c90ec8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052938"
 ---
 # <a name="select-source-dialog-box"></a>選取來源對話方塊
   使用此對話方塊可選取要執行之原則的來源。 若要選取一或多個包含原則的 XML 檔案，請選取 [檔案]。 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上找到的原則，請選取 [伺服器]。  

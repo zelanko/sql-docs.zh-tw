@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - database dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], database
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d0d01a815b84f2770a3182d1485f7c958ae1c4a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 5177c51603a9a58f5fc6c85db26827b2fd0b9dc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782486"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

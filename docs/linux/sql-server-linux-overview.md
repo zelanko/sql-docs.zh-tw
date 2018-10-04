@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: ac28fbcadf46e596e43860ebdc497b3d13f59d22
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: 8b8ee30d255382981a65a661ed0a080e39e4577a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617106"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 

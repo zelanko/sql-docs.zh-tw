@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178468"
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
   Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -41,7 +38,7 @@ ms.locfileid: "37316978"
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用戶端傳送給模型的查詢會當做 DAX 陳述式發出，您可以在模型上設定追蹤來加以監視。  在初始結構描述定義中，用戶端也會發出要求給伺服器，該定義是根據概念結構定義語言 (CSDL) 而呈現。 如需詳細資訊，請參閱 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>Transact-SQL  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載表格式模型的執行個體及查詢其中的中繼資料和資料。 您可以處理模型或模型中的物件、建立及管理資料分割，以及設定可用於管理資料存取的安全性。 如需詳細資訊，請參閱下列主題：  
   
 -   [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2895efa338745f8935674ff42620c1f8d6272652
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ecfb2355272ac511e8ccf440f759d01f30f31cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289411"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226258"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>升級 SQL Server 管理工具
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本升級。 本主題說明升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具和管理元件 (如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、Database Mail、維護計畫、XPStar 和 XPWeb) 的支援與行為。  

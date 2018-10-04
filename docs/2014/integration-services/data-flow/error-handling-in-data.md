@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1fc46b6f7827143c3fdd523970fd5748a28aeb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201308"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
   當資料流程元件將轉換套用至資料行資料、從來源擷取資料或將資料載入目的地時，可能會發生錯誤。 錯誤通常是因為非預期的資料值所產生的。 例如，資料轉換失敗的原因是資料行包含字串而非數字；向資料庫資料行插入失敗的原因是資料為日期，而資料行是數值資料類型；運算式評估失敗的原因是資料行值為零，導致數學運算無效。  

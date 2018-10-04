@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a99b40c77183e3c403409d47c211b7733e3235ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ec7d554c8dedd2fb48d1af8a44dbee550e376ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189848"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL、函數、預存程序和檢視表
   列出支援 FILESTREAM 的 Transact-SQL 陳述式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。  

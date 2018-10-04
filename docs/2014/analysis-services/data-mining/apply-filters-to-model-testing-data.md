@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114432"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
   當您指定要用於測試模型的外部資料來源時，可以選擇性地套用篩選，以限制輸入資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  

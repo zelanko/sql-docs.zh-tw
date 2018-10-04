@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 593e926a20d4c2cb001a6da119f6c39e2dc1fd96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 043246a90567bbd0cc2d084e1b2844ef2b79c346
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162058"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>疑難排解圖表 (報表產生器及 SSRS)
   使用圖表時，這些問題很有協助。  

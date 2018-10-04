@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192578"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>透過 FTP 傳遞快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過 FTP 傳遞快照集。  

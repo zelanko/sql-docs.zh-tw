@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], tracking attribute changes
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f66a7e91bcb475fe72d6abbe9f6007c8b9d668b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41aaf404aff55e4b88a73e693e34e6afa84f0a96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151082"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>根據屬性值變更來起始動作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，以根據屬性值變更來起始動作， 例如，當特定的屬性值變更時，您可能想要變更值、傳送通知，或啟動外部工作流程。  

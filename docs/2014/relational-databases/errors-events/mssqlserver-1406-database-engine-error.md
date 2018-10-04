@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 1406 (Database Engine error)
 ms.assetid: 915f97de-9b74-41f8-8bd5-b2d061416718
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84f9ff97dc89092f06a960f86f0a6844a2b30a52
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 612c39b57682e5b7cfcefd1988e7674f25fb913c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141780"
 ---
 # <a name="mssqlserver1406"></a>MSSQLSERVER_1406
     

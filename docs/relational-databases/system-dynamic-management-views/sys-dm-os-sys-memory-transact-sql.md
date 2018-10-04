@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_sys_memory
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7380f47ae405a7fda1bd30cb464cf60bee737a7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d20221d1f551b17483d977b98226066950ce8ce2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709616"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

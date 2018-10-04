@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - New Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01f159352499625bf5065c96fcbd057590570610
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222378"
 ---
 # <a name="new-element-xmla"></a>New 元素 (XMLA)
   包含所使用的新檔案系統儲存位置[資料夾](folder-element-xmla.md)項目。  
@@ -53,7 +50,7 @@ ms.locfileid: "37203978"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37203978"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[資料夾](folder-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `New` 元素包含 UNC 路徑，它會在進行 `Original` 或 `Folder` 命令期間分別取代還原或同步處理之所有物件的 `Restore` 父元素所包含的 `Synchronize` 元素值。 系統會針對每個 Cube、量值群組或資料分割比較 `Original` 元素的值與 `StorageLocation` 元素的值，而且如果找到相符項目，就會在還原或同步處理期間使用這個元素的值來更新物件的 `StorageLocation`。  

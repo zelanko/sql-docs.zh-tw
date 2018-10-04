@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Process Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Process command
 ms.assetid: 886fd480-c0e6-4c9b-b65e-da47f874d938
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: face82815a0034f1e957a0a38fa822a1df447083
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec706973bca433a64d6a27201264509ade5ce773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289454"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149458"
 ---
 # <a name="process-element-xmla"></a>Process 元素 (XMLA)
   在處理物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
@@ -58,8 +55,8 @@ ms.locfileid: "37289454"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

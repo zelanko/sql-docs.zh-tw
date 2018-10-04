@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3bc06bbc38809f3ae3921fb59f11aedad0f3ce1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172945"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135218"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) 參數
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  

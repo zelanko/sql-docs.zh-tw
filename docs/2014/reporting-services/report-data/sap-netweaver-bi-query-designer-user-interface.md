@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10014"
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SAP NetWeaver Business Intelligence [Reporting Services], query designer
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 94cc3da0372bfbeb88aa41aadab7df03cdabcc43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c1a3c4eef40d5cac7d7dabdb0a428d97afdb136
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220428"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立適用於 SAP NetWeaver® Business Intelligence 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：「設計」模式和「查詢」模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從資料來源上定義的 InfoCube、MultiProvider 或 Web 查詢中拖曳成員，從而建立 MDX 查詢，在處理報表時擷取資料。  

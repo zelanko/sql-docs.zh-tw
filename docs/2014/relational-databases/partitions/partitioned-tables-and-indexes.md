@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -17,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85627a122c87c3065fe0bbcd5bfc5cd246a77c9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229818"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  

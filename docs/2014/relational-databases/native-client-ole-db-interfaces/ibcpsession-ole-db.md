@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - IBCPSession interface
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d1b8b0ed771996ccd6045c28199dbe0c02a37a3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 142f6ac339e437877c485588333fabb04e0bd66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212318"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-  **IBCPSession**介面會公開支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]檔案為基礎的大量複製作業。 **IBCPSession**介面會公開在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者在相同的層級下與工作階段。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，資料來源物件是工作階段物件的 factory，而且大量複製作業指定於連接屬性 ssprop_enablebulkcopy。 此外，SSPROP_ENABLEFASTLOAD 屬性應該要設定為 true。  
+  **IBCPSession** 介面會公開以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案為基礎之大量複製作業的支援。 **IBCPSession**介面會公開在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者在相同的層級下與工作階段。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，資料來源物件是工作階段物件的 factory，而且大量複製作業指定於連接屬性 ssprop_enablebulkcopy。 此外，SSPROP_ENABLEFASTLOAD 屬性應該要設定為 true。  
   
- 呼叫**idbcreatesession:: Createsession**方法則會導致建立**BulkCopySession**物件。 透過公開的所有檔案為基礎之大量複製方法**IBCPSession**物件接著會呼叫這幾乎類似的簽章**IBCPSession**物件的**IBCPSession**介面。  
+ 然後，呼叫 **IDBCreateSession::CreateSession** 方法將會導致建立 **BulkCopySession** 物件。 所有透過 **IBCPSession** 物件公開之以檔案為基礎的大量複製方法會變成可在這個 **IBCPSession** 物件的 **IBCPSession** 介面上使用幾乎相同的簽章進行呼叫。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援透過以記憶體為基礎的大量複製作業[IRowsetFastLoad](irowsetfastload-ole-db.md)介面。  

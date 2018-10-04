@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161468"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>在原生模式報表伺服器上授與權限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的授權和驗證子系統來決定能夠在報表伺服器上執行作業及存取項目的人員。 以角色為基礎的授權，將使用者或群組可以執行的動作集分類成角色。 驗證是以內建的 Windows 驗證或您提供的自訂驗證模組為基礎。 您可以使用預先定義或自訂的角色搭配任何一種驗證類型。  

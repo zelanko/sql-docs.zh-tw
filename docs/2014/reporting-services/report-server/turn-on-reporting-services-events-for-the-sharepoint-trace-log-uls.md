@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9170643f3d0a96facb68709ad59bc4c8e90dc9a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117248"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 伺服器可以將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 事件寫入 SharePoint 統一記錄服務 (ULS) 追蹤記錄。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定類別目錄。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Statistics
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed0720dc6af93dc923b8e06ec431c508b71895ed
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 16d8ee81a9613059d0b9d6780d0eee27e81b6d2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175108"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server 的 Broker Statistics 物件
   SQLServer:Broker Statistics 效能物件包含可針對 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體報告一般 [!INCLUDE[ssDE](../../includes/ssde-md.md)]資訊的效能計數器。 下表列出這個物件包含的計數器：  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b932ac5fac719be29bda37f134f9beb06d1483f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104778"
 ---
 # <a name="level-element-csdlbi"></a>Level 元素 (CSDLBI)
   Level 元素是複雜類型，會定義階層中的單一層級。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 10536 (Database Engine error)
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00ca6874fc2b46c1b01495c5c7a0808265b0dd77
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e5ddb4df0089b488d3a15c76a76abef8be154848
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211776"
 ---
 # <a name="mssqlserver10536"></a>MSSQLSERVER_10536
     

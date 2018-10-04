@@ -1,38 +1,35 @@
 ---
-title: 資料行名稱限制 |Microsoft 文件
+title: 資料行名稱的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f3f384b9a2080ab683c8148effe7c6a9a13fcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751496"
 ---
 # <a name="column-name-limitations"></a>資料行名稱限制
-資料行名稱可以包含任何有效的字元 （例如，空格）。 如果資料行名稱可以包含字母、 數字和底線以外的任何字元，名稱必須括在後引號 （'） 分隔。  
+資料行名稱可以包含任何有效的字元 （例如空格）。 如果資料行名稱可包含字母、 數字和底線以外的任何字元，必須括在後引號 （'） 分隔名稱。  
   
- 使用 Microsoft Access 或 Microsoft Excel 驅動程式時，資料行名稱限制為 64 個字元，且更長的名稱產生錯誤。 使用 Paradox 驅動程式時，最大資料行名稱會是 25 個字元。 使用文字驅動程式時，最大資料行名稱為 64 個字元，並會被截斷較長的名稱。  
+ 使用 Microsoft Access 或 Microsoft Excel 驅動程式時，資料行名稱限制為 64 個字元，且更長的名稱會產生錯誤。 使用 Paradox 驅動程式時，最大資料行名稱會是 25 個字元。 使用文字驅動程式時，最大資料行名稱是 64 個字元，而較長的名稱會被截斷。  
   
- 使用 dBASE 驅動程式時，就會將使用 ASCII 值大於 127 的字元轉換成底線。  
+ 使用 dBASE 驅動程式時，使用 ASCII 值大於 127 的字元會轉換成底線。  
   
- 使用 Microsoft Excel 驅動程式時，如果資料行名稱存在，它們必須是第一列。 在 Microsoft Excel 中會使用名稱"！"字元必須括在後引號 （'）。 "！"字元轉換成"$"字元，因為"！"字元以回復括住的名稱，即使是不合法的 ODBC 名稱中。 其他有效的 Microsoft Excel 字元 (除非縱線字元 (&#124;)) 可用於資料行名稱，包括空格。 分隔的識別碼必須用 Microsoft Excel 的資料行名稱，來加上空格。 未指定資料行名稱會取代驅動程式產生的名稱，例如，"Col1"的第一個資料行。  
+ 使用 Microsoft Excel 驅動程式時，資料行名稱是否存在於，它們必須在第一個資料列。 也可以使用這個在 Microsoft Excel 中的名稱"！"字元必須括在後引號 （'）。 "！"字元轉換成"$"字元，因為"！"字元是不合法在 ODBC 名稱，即使以後引號括住名稱。 其他有效的 Microsoft Excel 字元 (除非直立線符號字元 (&#124;)) 可用於資料行名稱，包括空格。 分隔的識別碼必須用於 Microsoft Excel 的資料行名稱，要加上空格。 未指定的資料行名稱將會取代驅動程式產生的名稱，例如，"Col1"的第一個資料行。  
   
- 縱線字元 (&#124;) 不能在資料行名稱是否或不以回復括住名稱。  
+ 直立線符號字元 (&#124;) 不能在資料行名稱，是否以後括住名稱。  
   
- 使用文字驅動程式時，驅動程式會提供預設名稱，如果未指定資料行名稱。 例如，驅動程式會呼叫第一個資料行 F1、 F2，第二個資料行等等。
+ 使用文字驅動程式時，此驅動程式會提供預設名稱，如果未指定資料行名稱。 例如，驅動程式會呼叫第一個資料行 F1、 f2 鍵，第二個資料行等等。

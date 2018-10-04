@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - security [SQL Server Agent]
 - security [SQL Server], SQL Server Agent
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1b945b42542948a52c0bec32de41afbf7ce664c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818804"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210798"
 ---
 # <a name="implement-sql-server-agent-security"></a>實作 SQL Server Agent 安全性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 讓資料庫管理員可以在只具有執行作業步驟所需權限的安全內容中執行每個作業步驟，此權限由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 決定。 若要設定特定作業步驟的權限，請建立具有必要權限的 Proxy，然後將該 Proxy 指派給作業步驟。 您可以將 Proxy 指派給多個作業步驟。 對於要求相同權限的作業步驟，可以使用相同的 Proxy。  

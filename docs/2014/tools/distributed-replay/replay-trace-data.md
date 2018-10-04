@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 347a1923928ef2a7c05b0a9a756d1c85178935b7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1e8897a78bc28aa549eb51f53b56e983e7cdec81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134628"
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
   在您已經備妥輸入追蹤資料之後，就可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 如需詳細資訊，請參閱[準備輸入追蹤資料](prepare-the-input-trace-data.md)。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 3437 (Database Engine error)
 ms.assetid: b38216e2-b650-43bd-97af-061d54f60031
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96a65f6ee852fa08df1b032606220d32abb3acb7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9999b8536faf87a02cdca3432416e7d12f6b2902
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118652"
 ---
 # <a name="mssqlserver3437"></a>MSSQLSERVER_3437
     

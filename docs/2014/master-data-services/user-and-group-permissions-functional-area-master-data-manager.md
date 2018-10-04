@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f333b030158072fa268da73d0ff33f6e67ddf8aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061018"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
   在 [使用者及群組的權限] 功能區域中，管理員可以將權限授與功能區域、屬性 (在 [模型] 索引標籤上) 及成員 (在 [階層成員] 索引標籤上)， 並可以解決重疊的權限，以決定使用者對每個個別屬性值的權限。  

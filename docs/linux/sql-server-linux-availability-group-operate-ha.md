@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8f2978533bb1e4006db9ebf2d2ed97a242a6f603
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a33c18175a03b589f7b431655ff4704356f5eeaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795996"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>一律對 Linux 上的可用性群組
 

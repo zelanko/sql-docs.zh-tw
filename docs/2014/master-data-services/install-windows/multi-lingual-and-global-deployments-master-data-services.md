@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 427d7db5ab1c0c3f3d987883932b97fa3f4ece83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76dfb63f8a18a8193b6764f938491591626659f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107348"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多語言及全域部署 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 可部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援之所有語言的元件和工具。 如需相關資訊，請參閱 [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)。  

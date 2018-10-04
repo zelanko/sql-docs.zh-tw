@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16a1851a46b6602bc9d92d5c7e0111ece8701d43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222508"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>設定和管理加密金鑰 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用加密金鑰來保護儲存於報表伺服器資料庫中之認證和連線資訊的安全。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可透過用於保護敏感性資料的公開、私密和對稱金鑰組合來支援加密。 當您安裝或設定報表伺服器時，對稱金鑰會在報表伺服器起始設定期間建立，供報表伺服器用來對儲存於報表伺服器中之機密資料進行加密。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存報表伺服器資料庫中之機密資料的每一個報表伺服器執行個體，建立一組公開金鑰和私密金鑰。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10183"
@@ -27,16 +25,15 @@ f1_keywords:
 - "10188"
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8e67ff32578131fc5689ac819fd3ac1fc155d0f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f61ad0448df247678be1479b8f28ebb8828796a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211828"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>在圖表上格式化圖例 (報表產生器及 SSRS)
   圖表圖例包含圖表中每一個類別目錄的描述。 圖例一定會包含一或多個圖例項目，其中每一個圖例項目都是由代表數列的彩色方塊及描述此數列的文字字串所組成，如下圖所示。  

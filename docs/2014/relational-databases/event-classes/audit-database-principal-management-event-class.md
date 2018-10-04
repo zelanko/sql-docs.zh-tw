@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Principal Management event class
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a564e6837c9cce33f321e6f7ba855d6b90a8acd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6ea537aa6d792e2c694e343dc5939cc0fd207d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162869"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072658"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 事件類別
   從資料庫建立、改變或卸除主體 (例如使用者) 時，就會發生 **Audit Database Principal Management** 事件類別。  

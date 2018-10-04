@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], text data
@@ -14,25 +12,24 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1670129ba6955418797244c7e35f2daaff291780
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8bffd3776e04fa10cf6454d3200dac623835ac0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421307"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111764"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
   此範例會示範如何使用 IRowsetFastLoad，將記錄大量複製到資料表中。  
   
  取用者會將其大量複製的需求通知 SQLOLEDB，方法是將 SQLOLEDB 提供者特有的屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 在資料來源上設定該屬性後，取用者會建立 SQLOLEDB 工作階段。 新的工作階段可以讓取用者存取 `IRowsetFastLoad`。  
   
- 完整的範例會示範使用 `IRowsetFastLoad` 將記錄大量複製到資料表中。 在此範例中，10 筆記錄會加入至資料表**IRFLTable**。 您需要建立資料表**IRFLTable**資料庫中。  
+ 完整的範例會示範使用 `IRowsetFastLoad` 將記錄大量複製到資料表中。 在這個範例中，10 筆記錄會加入至資料表 **IRFLTable**。 您必須在資料庫中建立資料表 **IRFLTable**。  
   
- 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -58,7 +55,7 @@ ms.locfileid: "37421307"
   
  執行第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  執行第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的資料表。  
   

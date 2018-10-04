@@ -5,24 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 423bae3ce66e21721e328a23d51a8356be40ea2a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fef824d594ea77e1c13df2251872b780e21344b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796836"
 ---
 # <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

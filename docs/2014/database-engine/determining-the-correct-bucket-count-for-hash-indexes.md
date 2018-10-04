@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a81a446b1635359853656305f0a8a5ee8ab3218
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147418"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
   您必須指定的值`BUCKET_COUNT`參數，當您建立記憶體最佳化的資料表。 本主題將針對判斷適合 `BUCKET_COUNT` 參數的值提出建議。 如果您無法判斷正確的值區計數，請改用非叢集索引。  不正確的 `BUCKET_COUNT` 值 (尤其是過低的值) 可能會對工作負載的效能以及資料庫的復原時間造成嚴重影響。 最好是高估值區計數。  

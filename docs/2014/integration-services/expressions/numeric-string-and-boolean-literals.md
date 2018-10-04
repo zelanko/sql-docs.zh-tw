@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 812e0d2db0e0cc202e78e0bd920901509b9ae082
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198834"
 ---
 # <a name="literals-ssis"></a>常值 (SSIS)
   運算式可以包含數值、字串及布林常值。 運算式評估工具支援各種不同的數值常值，例如整數、小數以及浮點常數。 運算式評估工具亦支援長尾碼和浮點尾碼，其指定運算式評估工具處理值的方式，以及數值常值中的科學記號。  
@@ -80,7 +77,7 @@ ms.locfileid: "37312028"
   
     |後置詞|結果類型|  
     |------------|-----------------|  
-    |無|DT_I4|  
+    |None|DT_I4|  
     |u|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 854e53962dcc1b206d20b441b56b7746650aaf94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d396ac9bfd8f04a211e01c8e8384e62f0808d42b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081478"
 ---
 # <a name="calculation-context"></a>計算內容
   計算內容是 Cube 中評估運算式以及所有座標為明確已知或可衍生自運算式的已知子空間。  

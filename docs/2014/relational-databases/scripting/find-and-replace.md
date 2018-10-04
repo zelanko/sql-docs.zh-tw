@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87780d4f33a3e7674778880423f66ac6369ead5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152518"
 ---
 # <a name="find-and-replace"></a>尋找和取代
   使用 **[尋找和取代]** 對話方塊尋找檔案內的文字，並選擇性地取代。 **[尋找和取代]** 對話方塊的版本不同，選項也會有些微差異，視對話方塊以何種方式開啟而定。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速尋找]** 以開啟有尋找選項，但沒有取代選項的對話方塊。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速取代]** 以開啟同時具有尋找和取代選項的對話方塊。  

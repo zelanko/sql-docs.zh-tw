@@ -1,34 +1,31 @@
 ---
-title: StayInSync 屬性範例 （VC + +） |Microsoft 文件
+title: StayInSync 屬性範例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 755fcb827a2ee4789beb85f8a4f58666c6176657
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281937"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729486"
 ---
-# <a name="stayinsync-property-example-vc"></a>StayInSync 屬性範例 （VC + +）
-這個範例會示範如何[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性有助於進行存取的資料列，以階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+# <a name="stayinsync-property-example-vc"></a>StayInSync 屬性範例 (VC++)
+此範例示範如何[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性可協助存取的資料列，以階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
- 外部迴圈會顯示每位作者的名字和姓氏、 狀態和識別。 附加**資料錄集**的每個資料列擷取自[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合並自動指派到**rstTitleAuthor**由**StayInSync**屬性每當父**資料錄集**移到新的資料列。 內部迴圈中附加資料錄集，顯示每個資料列的四個欄位。  
+ 外部迴圈會顯示每位作者的名字和姓氏、 狀態和識別。 附加**資料錄集**每個資料列擷取自[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)集合並且會自動指派給**rstTitleAuthor**由**StayInSync**屬性時的父代**資料錄集**移至新的資料列。 內部迴圈中附加資料錄集顯示每個資料列的四個欄位。  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -148,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [欄位集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync 屬性](../../../ado/reference/ado-api/stayinsync-property.md)

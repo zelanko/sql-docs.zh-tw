@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080468"
 ---
 # <a name="exploring-and-cleaning-data"></a>瀏覽和清除資料
   資料準備不只是進行資料清理而已。 務必記得，準備資料的方式也會影響最後解譯結果的方式。 資料準備包含下列工作：  

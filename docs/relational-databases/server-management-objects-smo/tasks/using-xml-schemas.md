@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML [SMO]
 ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da54d0e771597927a5436a8bff09c2c303f882a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d0e6c33529219e73b4d517dc23fc933b0bf31f1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814176"
 ---
 # <a name="using-xml-schemas"></a>使用 XML 結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - licenses [SQL Server]
 - end user license agreement [SQL Server]
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
-caps.latest.revision: 55
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edfd3cdc1d6565fd6538dfcf5d79e9c1e7d4c9d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 348ee13872db0ae6e9900290404d8db88122b123
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194528"
 ---
 # <a name="about-the-sql-server-license-terms"></a>關於 SQL Server 授權條款
   在安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 軟體授權條款會複製到本機電腦。 如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。 這些檔案會寫入至: %programfiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ 或 %programfiles(x86)%\[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 條款\\。  

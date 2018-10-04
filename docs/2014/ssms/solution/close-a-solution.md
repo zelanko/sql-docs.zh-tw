@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], closing
 - closing solutions
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 344ff9e4a6378805a8a882701d59cc9f7885cd42
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f89ca0bed73282d5ef89ac23a956fdce42532ee5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098064"
 ---
 # <a name="close-a-solution"></a>關閉方案
   您可以關閉方案，再從 [方案總管] 中移除它。 關閉方案之後，[方案總管] 便無法使用它。  

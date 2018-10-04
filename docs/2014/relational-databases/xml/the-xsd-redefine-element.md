@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b4db58d74b640d6b75eca3239ebca2e0fa0f4d1
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: dfed461589882e91f4fa4ec2394bc858def67d96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182268"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
   W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，支援此指示詞可能會使效能，並也要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新驗證的所有執行個體`xml`與重新定義結構描述相關聯的資料類型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  

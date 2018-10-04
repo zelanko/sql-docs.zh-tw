@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b4f1f659bd118827a13c774a8727ea6541d59b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 720411a1f2c2e28288f073ceb53a0da019cef066
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197968"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>使用指令碼工作傳送 HTML 郵件訊息
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SendMail 工作只支援純文字格式的郵件訊息。 不過您可以使用指令碼工作與 .NET Framework 的郵件功能，輕鬆地傳送 HTML 郵件訊息。  

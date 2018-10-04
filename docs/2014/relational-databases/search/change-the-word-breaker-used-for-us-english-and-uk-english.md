@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51be69399e63734bd1d5d9b6b1012eaf38c1d429
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66515d57cada938abe9241d89116cb16beaf431e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192260"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝適用於英文的新版 (14.0.4999.1038 版) 斷詞工具和字幹分析器，並取代這些舊版元件 (12.0.6828.0 版)。 如需新元件行為變更的詳細資訊，請參閱 [全文檢索搜尋的行為變更](full-text-search.md)。 本主題描述的是如何從新版元件切換成舊版，或從舊版切換回新版。 若為叢集安裝，就應該在所有主要和被動節點上進行這些變更。  

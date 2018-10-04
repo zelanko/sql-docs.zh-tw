@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff0ad36402857082e069a322e4519d64b13f7e65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202428"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
   「複寫記錄讀取器代理程式」是一個可執行檔，它會監視針對異動複寫所設定之每個資料庫的交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。  

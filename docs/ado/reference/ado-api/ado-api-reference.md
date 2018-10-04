@@ -1,32 +1,29 @@
 ---
-title: ADO API 參考 |Microsoft 文件
+title: ADO API 參考 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707406"
 ---
-# <a name="ado-api-reference"></a>ADO 應用程式開發介面參考
-ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉的主題。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft Visual c + + 和 Windows Foundation 類別 (WFC)。  
+# <a name="ado-api-reference"></a>ADO API 參考
+ADO 文件的本節包含主題中的每一個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉型別。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft Visual c + + 和 Windows Foundation 類別 (WCF)。  
   
- 如需詳細資訊，搜尋索引中的特定主題，或請參閱下列主題：  
+ 如需詳細資訊，搜尋索引中的特定主題，或參閱下列主題：  
   
 -   [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)  
   
@@ -49,7 +46,7 @@ ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬�
 -   [ADO 程式碼範例](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [附錄 d: ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [附錄 D:ADO 範例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [附錄 c： 使用 ADO 進行程式設計](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)   

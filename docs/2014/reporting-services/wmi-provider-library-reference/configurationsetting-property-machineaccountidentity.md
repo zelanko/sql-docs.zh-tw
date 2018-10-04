@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MachineAccountIdentity property
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 635ec2ab9d147a9d9ec3e951b2739e916a2bfdce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d03d6ebec2a3d2c40b8cd674e51dee56160bc26b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205968"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>MachineAccountIdentity 屬性 (WMI)
   取得安裝報表伺服器的電腦帳戶識別。  

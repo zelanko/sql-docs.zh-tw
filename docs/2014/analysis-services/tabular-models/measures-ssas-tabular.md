@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a92df5ff3826ea7febe4bcf0910125f38c30a2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121568"
 ---
 # <a name="measures-ssas-tabular"></a>量值 (SSAS 表格式)
   在表格式模型中，量值是透過報表用戶端內使用的 DAX 公式所建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  

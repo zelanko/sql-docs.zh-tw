@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Assembly Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb02963baa8a7fca296abe89801d89c1f7ea19fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209638"
 ---
 # <a name="assembly-data-type-assl"></a>Assembly 資料類型 (ASSL)
   定義表示的抽象基本資料類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]組件或 COM 動態連結程式庫 (DLL) 與相關聯[伺服器](../objects/server-element-assl.md)或是[資料庫](../objects/database-element-assl.md)項目。  
@@ -55,16 +52,16 @@ ms.locfileid: "37233828"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
+|基底資料類型|None|  
 |衍生資料類型|[ClrAssembly](assembly-data-type-assl.md)， [ComAssembly](comassembly-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[註釋](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [ImpersonationInfo](../properties/impersonationinfo-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名稱](../properties/name-element-assl.md)|  
-|衍生的元素|無|  
+|衍生的元素|None|  
   
 ## <a name="remarks"></a>備註  
  `Assembly` 資料類型會當做 `ComAssembly` 元素 (代表與執行個體或資料庫相關聯的 COM 程式庫) 和 `ClrAssembly` 元素 (代表與執行個體或資料庫相關聯的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組件) 的基底資料類型。 如需有關組件的詳細資訊，請參閱[多維度模型組件管理](../../multidimensional-models/multidimensional-model-assemblies-management.md)。  

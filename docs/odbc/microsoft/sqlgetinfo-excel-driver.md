@@ -1,42 +1,39 @@
 ---
-title: SQLGetInfo （Excel 驅動程式） |Microsoft 文件
+title: SQLGetInfo （Excel 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14f6ade916baecc37e80e7a5eeea458ad89d0a20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802356"
 ---
-# <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo （Excel 驅動程式）
+# <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel 驅動程式)
 > [!NOTE]  
->  本主題提供 Excel 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC 應用程式開發介面參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主題提供 Excel 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- **SQLGetInfo**支援 SQL_FILE_USAGE 資訊類型。 傳回的值是 16 位元的整數，表示驅動程式如何直接處理的資料來源中的檔案：  
+ **SQLGetInfo**支援 SQL_FILE_USAGE 資訊類型。 傳回的值是 16 位元整數，指出如何驅動程式直接處理資料來源中的檔案：  
   
--   SQL_FILE_NOT_SUPPORTED — 驅動程式不是單層驅動程式。  
+-   SQL_FILE_NOT_SUPPORTED — 驅動程式不是單層式架構的驅動程式。  
   
--   SQL_FILE_TABLE — 單層驅動程式將資料來源中的檔案視為資料表。  
+-   SQL_FILE_TABLE — 單層式架構的驅動程式將資料來源中的檔案視為資料表。  
   
--   SQL_FILE_QUALIFIER — 單層驅動程式辨識符號視為資料來源中的檔案。  
+-   SQL_FILE_QUALIFIER — 單層式架構的驅動程式將資料來源中的檔案視為限定詞。  
   
- ODBC 驅動程式傳回 SQL_FILE_TABLE 行使 Exceldriver 的因為每個檔案是資料表。  
+ ODBC 驅動程式在每個檔案因為是資料表，會傳回 Microsoft Exceldriver 的 SQL_FILE_TABLE。  
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
@@ -68,7 +65,7 @@ ms.locfileid: "32904173"
  31 (Excel 5.0/7.0/97)  
   
 ## <a name="sqlcatalognameseparator"></a>SQL_CATALOG_NAME_SEPARATOR  
- 「\\」 (Excel 3.0/4.0)  
+ 「\\"(Excel 3.0/4.0)  
   
  "."(Excel 5.0/7.0/97)  
   

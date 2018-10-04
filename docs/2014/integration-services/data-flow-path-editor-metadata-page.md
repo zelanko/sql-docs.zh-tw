@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.metadata.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6f14ff76694d380cfa5e118615568b20c2994872
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cc38012789fd2edfe88f2ffcc00f43abea095f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110148"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
   使用 [資料流程路徑編輯器] 對話方塊的 [中繼資料] 頁面，即可檢視路徑資料行的中繼資料。  

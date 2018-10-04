@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.connection.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c5ab0291e4ca99c81c2f5c0c626bab120e9b36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1687baf77bcecedb61a3d1ecee3a9e3c9e155431
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275584"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133728"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 計畫的連接或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之執行個體的連接。  

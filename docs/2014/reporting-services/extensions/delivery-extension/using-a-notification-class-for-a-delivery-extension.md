@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], notifications
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - retry queues
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cf6f9e23cfd4168c2b2b15a6011caf7f7e431b5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e52587b68562ec46ed21ff575ade32014d231b93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097298"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>使用傳遞延伸模組的通知類別
   <xref:Microsoft.ReportingServices.Interfaces.Notification> 類別是位於 <xref:Microsoft.ReportingServices.Interfaces> 命名空間中，並代表傳遞延伸模組用於傳遞報表的訂閱資訊。 <xref:Microsoft.ReportingServices.Interfaces.Notification> 類別提供一些屬性可用以轉譯要傳遞的報表、決定通知狀態以及設定使用者資料。  
