@@ -1,30 +1,27 @@
 ---
-title: setDisableStatementPooling 方法 (SQLServerDataSource) |Microsoft 文件
+title: setDisableStatementPooling 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc89a487c1ee9445e339fd9fb5f1fa31d94c081c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4be547e1d5c37a00cd023bc542f3bb6e9f73e048
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842033"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611046"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverdatasource"></a>setDisableStatementPooling 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定的值**disableStatementPooling**連接屬性。 如果為 false，可讓共用以用於結合，以 statementPoolingCacheSize 值 > 0 的陳述式。  
+  設定的值**disableStatementPooling**連接屬性。 如果為 false，可讓集區，可用於結合 statementPoolingCacheSize 值 > 0 的陳述式。  
 
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +37,7 @@ public void setDisableStatementPooling(boolean disableStatementPooling);
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個方法是從 JDBC 驅動程式版本 6.4 可用且向外。
  
 ## <a name="see-also"></a>另請參閱  

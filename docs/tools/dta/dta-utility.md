@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,15 +19,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644357"
 ---
 # <a name="dta-utility"></a>dta 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -158,7 +155,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|使用*database_name* 選項指定的 **database_name** ||  
 |*owner_name*|**dbo**|*owner_name* 必須是 **dbo**。 如果指定了任何其他值， **dta** 的執行便會失敗並傳回錯誤。|  
-|*table_name*|無||  
+|*table_name*|None||  
   
  如果使用檔案，請指定 .xml 副檔名。 例如，TuningLog.xml。  
   
@@ -171,7 +168,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  指定 **dta** 應該在建議中包含的實體設計結構類型。 下表列出並說明這個引數所能指定的值。 如果未指定任何值， **dta** 將使用預設的 **-fa****IDX**。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引檢視表。|  
 |IDX|只有索引。|  
@@ -182,7 +179,7 @@ dta -d AdventureWorks2012 ...
  指定應為新建議考量篩選的索引。 如需詳細資訊，請參閱 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
 **-fc**  
- 指定新建議需要考量的資料行存放區索引。 DTA 會考慮這兩個叢集與非叢集資料行存放區索引。 如需詳細資訊，請參閱    
+ 指定新建議需要考量的資料行存放區索引。 DTA 會考慮這兩個叢集與非叢集資料行存放區索引。 如需相關資訊，請參閱    
 [Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。
  ||  
 |-|  
@@ -192,7 +189,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  指定 **dta** 在產生建議時，必須保留的現有實體設計結構。 下表列出並說明這個引數所能指定的值：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |無|無現有結構。|  
 |ALL|所有現有結構。|  
@@ -203,7 +200,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  指定是否應該分割 **dta** 所提出的新實體設計結構 (索引和索引檢視表) 及其分割方式。 下表列出並說明這個引數所能指定的值：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |無|沒有資料分割。|  
 |FULL|完整的資料分割 (選擇這個項目，可以增進效能)。|  
@@ -221,7 +218,7 @@ dta -d AdventureWorks2012 ...
  指定計畫快取可用做為工作負載。 針對明確選定的資料庫排名前 1000 個計畫快取事件，進行分析。 您可以利用 **–n** 選項變更此值。  
  
 **-iq**  
- 指定查詢存放區作為工作負載。 從查詢存放區針對明確選定的資料庫排名前 1000 個事件進行分析。 您可以利用 **–n** 選項變更此值。  如需詳細資訊，請參閱[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
+ 指定查詢存放區，做為工作負載使用。 從查詢存放區針對明確選定的資料庫排名前 1000 個事件分析。 您可以利用 **–n** 選項變更此值。  如需詳細資訊，請參閱[查詢存放區](../../relational-databases/performance/how-query-store-collects-data.md)和[使用查詢存放區的工作負載微調資料庫](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。
  ||  
 |-|  
 |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
@@ -253,7 +250,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  指定是否在線上建立實體設計結構。 下表列出和描述這個引數所能指定的值：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |OFF|不能在線上建立任何建議的實體設計結構。|  
 |ON|可以在線上建立所有建議的實體設計結構。|  
@@ -271,11 +268,11 @@ dta -n number_of_events -A 0
  在這個情況下，指定無限微調時間 (`-A 0`) 非常重要。 否則，Database Engine Tuning Advisor 會預設 8 小時的微調時間。
  
  **-I** *time_window_in_hours*   
-   指定的時間間隔 （小時） 時執行的查詢必須有它視為 DTA 微調時使用 **-iq**選項 （查詢存放區中的工作負載）。 
+   指定的時間間隔 （以小時為單位） 的查詢必須有執行時，才能被視為 dta 微調時使用 **-iq**選項 （查詢存放區中的工作負載）。 
 ```  
 dta -iq -I 48  
 ```  
-在此情況下，DTA 將做為工作負載的來源使用查詢存放區，並只考慮過去 48 小時內已執行的查詢。  
+在此情況下，DTA 會做為工作負載的來源使用查詢存放區，並只會考慮過去 48 小時內已執行的查詢。  
   ||  
 |-|  
 |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  

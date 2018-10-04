@@ -1,13 +1,11 @@
 ---
-title: getShort 方法 (SQLServerResultSet) |Microsoft 文件
+title: getShort 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getShort
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5dd39c40-e7cc-4ff9-8491-7e20e25a9d17
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87f4dce7afbd1b08cd6de343833df99900a24a9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1ed57ebf79932f2be4f08f3ce63bb4fdd8cc57fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837723"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759196"
 ---
 # <a name="getshort-method-sqlserverresultset"></a>getShort 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取值，這個目前的資料列中指定的資料行的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件當做**簡短**在 Java 程式語言。  
+  使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **short**。  
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[getShort (int)](../../../connect/jdbc/reference/getshort-method-int-sqlserverresultset.md)|擷取值，這個目前的資料列內指定之資料行索引的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件當做**簡短**在 Java 程式語言。|  
-|[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string-sqlserverresultset.md)|擷取值，這個目前的資料列內指定之資料行名稱的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件當做**簡短**在 Java 程式語言。|  
+|[getShort (int)](../../../connect/jdbc/reference/getshort-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定的資料行索引值來當作 **short**。|  
+|[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string-sqlserverresultset.md)|使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取指定的資料行名稱值來當作 **short**。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
