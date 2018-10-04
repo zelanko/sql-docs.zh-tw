@@ -2,10 +2,10 @@
 sorted: true
 hrefUpdated: true
 references:
-  - uid: Microsoft.SqlServer.Management.Common.ServerConnection
-    commentId: 'T:Microsoft.SqlServer.Management.Common.ServerConnection'
-    href: 'https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection(v=sql.120).aspx'
-    name: ServerConnection
-    name.vb: ServerConnection
-    fullName: Microsoft.SqlServer.Management.Common.ServerConnection
-    fullName.vb: Microsoft.SqlServer.Management.Common.ServerConnection
+- uid: Microsoft.SqlServer.Management.Common.ServerConnection
+  commentId: T:Microsoft.SqlServer.Management.Common.ServerConnection
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection(v=sql.120).aspx
+  name: ServerConnection
+  name.vb: ServerConnection
+  fullName: Microsoft.SqlServer.Management.Common.ServerConnection
+  fullName.vb: Microsoft.SqlServer.Management.Common.ServerConnection

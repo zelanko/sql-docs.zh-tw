@@ -2,10 +2,10 @@
 sorted: true
 hrefUpdated: true
 references:
-  - uid: Microsoft.SqlServer.Replication.MergeArticle.PartitionOption*
-    commentId: 'P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption'
-    href: 'https://msdn.microsoft.com/library/ms153203(v=sql.120).aspx'
-    name: PartitionOption
-    name.vb: PartitionOption
-    fullName: MergeArticle.PartitionOption
-    fullName.vb: MergeArticle.PartitionOption
+- uid: Microsoft.SqlServer.Replication.MergeArticle.PartitionOption*
+  commentId: P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption
+  href: https://msdn.microsoft.com/library/ms153203(v=sql.120).aspx
+  name: PartitionOption
+  name.vb: PartitionOption
+  fullName: MergeArticle.PartitionOption
+  fullName.vb: MergeArticle.PartitionOption
