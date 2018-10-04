@@ -1,13 +1,11 @@
 ---
-title: SQLRemoveTranslator 函式 |Microsoft 文件
+title: SQLRemoveTranslator 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLRemoveTranslator
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveTranslator function [ODBC]
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 495348c07ea707907f664358daea510951e7b208
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d02e60d22f2e3489c7cd7943f7f0ed2fa26fd89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848876"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 函式
-**一致性**  
- 版本引進了： ODBC 3.0  
+**合規性**  
+ 版本導入： ODBC 3.0  
   
  **摘要**  
- **SQLRemoveTranslator**移除轉譯器的相關資訊 Odbcinst.ini 一節的系統資訊和遞減的轉譯程式元件使用計數 1。  
+ **SQLRemoveTranslator**移除轉譯器的相關資訊 Odbcinst.ini 這一節的系統資訊和遞減，轉譯器元件使用計數 1。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,29 +45,29 @@ BOOL SQLRemoveTranslator(
   
 ## <a name="arguments"></a>引數  
  *lpszTranslator*  
- [輸入]轉譯程式的系統資訊 Odbcinst.ini 索引鍵中註冊的名稱。  
+ [輸入]轉譯程式註冊中的系統資訊的 Odbcinst.ini 索引鍵的名稱。  
   
  *lpdwUsageCount*  
- [輸出]轉譯程式呼叫此函式之後使用狀態計數。  
+ [輸出]轉譯程式呼叫此函式之後的使用計數。  
   
 ## <a name="returns"></a>傳回值  
- 如果成功，FALSE 如果失敗，則函數會傳回 TRUE。 如果系統資訊的項目不存在，此函式呼叫時，函數會傳回 FALSE。  
+ 如果成功，FALSE 如果失敗，則函數會傳回 TRUE。 如果系統資訊 中的項目不存在，此函式呼叫時，此函式會傳回 FALSE。  
   
 ## <a name="diagnostics"></a>診斷  
- 當**SQLRemoveTranslator**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
+ 當**SQLRemoveTranslator**會傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的此函式。  
   
-|*\*pfErrorCode*|錯誤|Description|  
+|*\*pfErrorCode*|錯誤|描述|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到元件|安裝程式無法移除的轉譯器的資訊，因為它不存在於登錄或登錄中找不到。|  
-|ODBC_ERROR_INVALID_NAME|驅動程式或轉譯器名稱無效|*LpszTranslator*引數無效。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|無法遞增或遞減元件使用計數|安裝程式失敗的驅動程式的使用方式計數遞減。|  
-|ODBC_ERROR_OUT_OF_MEM|記憶體不足|安裝程式無法執行函式，因為記憶體不足。|  
+|ODBC_ERROR_GENERAL_ERR|一般的安裝程式錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到的元件|安裝程式無法移除 translator 資訊，因為在登錄中不存在或找不到登錄中。|  
+|ODBC_ERROR_INVALID_NAME|無效的驅動程式或轉譯器名稱|*LpszTranslator*引數無效。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|無法遞增或遞減的元件使用計數|安裝程式無法以遞減的驅動程式的使用計數。|  
+|ODBC_ERROR_OUT_OF_MEM|記憶體不足|由於記憶體不足，安裝程式無法執行函式。|  
   
 ## <a name="comments"></a>註解  
- **SQLRemoveTranslator**補充[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)元件使用量函式和更新的系統資訊中的計數。 應該只從安裝應用程式呼叫此函式。  
+ **SQLRemoveTranslator**補充[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)元件使用函式和更新的系統資訊中的計數。 只能從安裝應用程式，就應該呼叫此函式。  
   
- **SQLRemoveTranslator**將元件使用計數減 1。 如果元件使用計數變成 0，將會移除在系統資訊的轉譯程式項目。 轉譯程式項目位於下的轉譯程式的名稱相同的資訊系統中的下列位置：  
+ **SQLRemoveTranslator**會減 1 的元件使用計數。 如果元件使用計數變成 0，將會移除在系統資訊中的轉譯程式項目。 轉譯程式項目是在 [系統資訊] 下的 translator 名稱中的下列位置：  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -80,9 +77,9 @@ BOOL SQLRemoveTranslator(
   
  `Odbcinst.ini`  
   
- **SQLRemoveTranslator**實際上不會移除任何檔案。 呼叫端程式負責刪除檔案，並維護的檔案使用計數。 僅元件使用計數和檔案使用計數已達到零就實際刪除的檔案。 可以刪除某些元件中的檔案，以及其他項目不會刪除，根據是否有遞增檔案使用計數其他應用程式所使用的檔案。  
+ **SQLRemoveTranslator**實際上不會移除任何檔案。 呼叫端程式負責刪除檔案，和維護的檔案使用計數。 僅元件使用計數和檔案使用計數已達到零之後實際刪除的檔案。 可以刪除某些元件中的檔案，與其他人不會刪除，取決於是否有遞增檔案使用計數的其他應用程式所使用的檔案。  
   
- **SQLRemoveTranslator**也稱為升級的程序的一部分。 如果應用程式偵測到它必須執行升級，而且它先前已安裝驅動程式，應該移除，然後重新安裝驅動程式。 **SQLRemoveTranslator**應該先呼叫以遞減的元件使用計數，然後**SQLInstallTranslatorEx**應該呼叫來遞增元件使用計數。 應用程式安裝程式實體必須取代的舊檔案的新檔案。 檔案使用計數將會維持不變，並使用較舊的版本檔案的其他應用程式現在會使用較新版本。  
+ **SQLRemoveTranslator**也稱為升級的程序的一部分。 如果應用程式偵測到它必須執行升級，而且它先前已安裝驅動程式，應該移除，然後重新安裝驅動程式。 **SQLRemoveTranslator**第一次應該呼叫以遞減的元件使用計數，然後**SQLInstallTranslatorEx**應該呼叫要遞增的元件使用計數。 應用程式安裝程式必須實際的舊檔案的新檔案取代。 檔案使用計數會維持不變，並使用較舊的版本檔案的其他應用程式現在會使用較新版本。  
   
 ## <a name="related-functions"></a>相關函數  
   

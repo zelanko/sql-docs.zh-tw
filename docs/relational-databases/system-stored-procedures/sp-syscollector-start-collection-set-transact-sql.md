@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_start_collection_set (TRANSACT-SQL) |Microsoft 文件
+title: sp_syscollector_start_collection_set (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59fba98f9dcca30cc23828439deeb1e42822fdd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de6aff356e5de49802f0bc2813ff481bd45244c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803796"
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +45,10 @@ sp_syscollector_start_collection_set
   
 ## <a name="arguments"></a>引數  
  [ **@collection_set_id =** ] *collection_set_id*  
- 這是收集組的唯一本機識別碼。 *collection_set_id*是**int**預設值是 NULL。 *collection_set_id*必須有值，如果*名稱*是 NULL。  
+ 這是收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**預設值是 NULL。 *collection_set_id&lt*必須有值，如果*名稱*是 NULL。  
   
  [ **@name =** ] '*name*'  
- 這是收集組的名稱。 *名稱*是**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_set_id*是 NULL。  
+ 這是收集組的名稱。 *名稱*已**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_set_id&lt*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -60,9 +56,9 @@ sp_syscollector_start_collection_set
 ## <a name="remarks"></a>備註  
  sp_syscollector_create_collection_set 必須在 msdb 系統資料庫的內容中執行，而且 SQL Server Agent 必須已啟用。  
   
- 如果此程序是針對沒有排程的收集組來執行，此程序就會失敗。 如果收集組沒有排程 （因為它的收集模式設定為非快取，例如），請使用[sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)預存程序啟動收集組。  
+ 如果此程序是針對沒有排程的收集組來執行，此程序就會失敗。 如果收集組沒有排程 （因為其收集模式設定為非快取，例如），請使用[sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)預存程序啟動收集組。  
   
- 這個程序會針對指定的收集組啟用收集和上傳作業，而且如果收集組將其收集模式設定為快取 (0)，此程序將立即啟動收集代理程式作業。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 這個程序會針對指定的收集組啟用收集和上傳作業，而且如果收集組將其收集模式設定為快取 (0)，此程序將立即啟動收集代理程式作業。 如需詳細資訊，請參閱 < [sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  如果收集組未包含任何收集項，這項作業沒有任何作用。 就會傳回錯誤 14685 當做警告。  
   

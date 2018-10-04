@@ -1,38 +1,35 @@
 ---
-title: SQLSTATE 對應 |Microsoft 文件
+title: SQLSTATE 對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
 - SQLSTATE [ODBC]
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226e7fa29cf94b4eff222022d4a94895dcd0e82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855012"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 對應
 本主題會討論 ODBC 2 SQLSTATE 值。*x*和 ODBC 3。*x*。 如需有關 ODBC 3 的詳細資訊。*x* SQLSTATE 值，請參閱[附錄 a: ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
   
- 在 ODBC 3。*x*、 HYxxx Sqlstate 會傳回而不是 S1xxx，和 42Sxx Sqlstate 會傳回而不是 S00XX。 這是為了與 Open Group 和 ISO 標準。 在許多情況下，對應不是一對一因為標準已重新定義的數個 Sqlstate 解譯。  
+ 在 ODBC 3。*x*HYxxx Sqlstate 會傳回而不是 S1xxx，，而不是 S00XX 傳回 42Sxx Sqlstate。 這麼做是為了與 Open Group 和 ISO 標準。 在許多情況下，對應並非一對一因為標準已重新定義的數個 Sqlstate 解譯。  
   
- 當 ODBC 2。*x*應用程式會升級到 ODBC 3。*x*應用程式，應用程式必須變更為預期 ODBC 3。*x* Sqlstate 而不是 ODBC 2。*x* Sqlstate。 下表列出 ODBC 3。*x* Sqlstate 的每個 ODBC 2。*x* SQLSTATE 對應至。  
+ 當 ODBC 2。*x*應用程式會升級到 ODBC 3。*x*應用程式，應用程式必須變更為預期 ODBC 3。*x*而不是 ODBC 2 的 Sqlstate。*x* Sqlstate。 下表列出 ODBC 3。*x* Sqlstate，每個 ODBC 2。*x* SQLSTATE 對應至。  
   
- 當 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2 時，驅動程式就會公佈 ODBC 2。*x*而不是 ODBC 3 的 Sqlstate。*x* Sqlstate 時**SQLGetDiagField**或**SQLGetDiagRec**呼叫。 特定對應由注意 ODBC 2 *.x*對應至 ODBC 3 的下列資料表的資料行 1 中的 SQLSTATE。*x*資料行 2 中的 SQLSTATE。  
+ 當 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2 時，驅動程式會張貼 ODBC 2。*x*而不是 ODBC 3 的 Sqlstate。*x* Sqlstate 時**SQLGetDiagField**或是**SQLGetDiagRec**呼叫。 您會看到 ODBC 2 也可判斷特定的對應 *.x*對應到 ODBC 3 的下列資料表的資料行 1 中的 SQLSTATE。*x*資料行 2 中的 SQLSTATE。  
   
 |ODBC 2。*x* SQLSTATE|ODBC 3。*x* SQLSTATE|註解|  
 |-------------------------|-------------------------|--------------|  
@@ -53,20 +50,20 @@ ms.locfileid: "32914383"
 |S0023|42S23||  
 |就會傳回 S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2。*x* SQLSTATE S1002 會對應至 ODBC 3。*x* SQLSTATE 如果基礎函式進行 07009 **SQLBindCol**， **SQLColAttribute**， **SQLExtendedFetch**， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。|  
+|S1002|07009|ODBC 2。*x* SQLSTATE S1002 會對應至 ODBC 3。*x* SQLSTATE 07009 基礎函式是否**SQLBindCol**， **SQLColAttribute**， **SQLExtendedFetch**， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
-|S1009|HY009|傳回使用無效的 null 指標。|  
-|S1009|HY024|傳回無效的屬性值。|  
-|S1009|HY092|更新或刪除的資料呼叫所傳回的**SQLSetPos**，或加入、 更新或刪除資料，藉由呼叫**SQLBulkOperations**、 並行唯讀時。|  
-|S1010|HY007 HY010|SQLSTATE S1010 會對應至 SQLSTATE HY007 時**SQLDescribeCol**在呼叫之前呼叫**SQLPrepare**， **SQLExecDirect**，或類別目錄函式的*StatementHandle*。 否則，SQLSTATE S1010 會對應至 SQLSTATE HY010。|  
+|S1009|HY009|傳回 null 指標無效地使用。|  
+|S1009|其中包含 SQLSTATE=HY024|傳回無效的屬性值。|  
+|S1009|HY092|若要呼叫所傳回的更新或刪除資料**SQLSetPos**，或新增、 更新或刪除資料，藉由呼叫**SQLBulkOperations**、 並行唯讀時。|  
+|S1010|HY007 HY010|SQLSTATE S1010 會對應至 SQLSTATE HY007 時**SQLDescribeCol**稱為才能呼叫**SQLPrepare**， **SQLExecDirect**，或目錄函式，如*StatementHandle*。 否則，SQLSTATE S1010 會對應至 SQLSTATE HY010。|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3。*x* SQLSTATE 07009 會對應至 ODBC 2。*x*如果基礎函式的 SQLSTATE S1093 **SQLBindParameter**或**SQLDescribeParam**。|  
+|S1093|07009|ODBC 3。*x* SQLSTATE 07009 會對應至 ODBC 2。*x*如果基礎函式的 SQLSTATE S1093 **SQLBindParameter**或是**SQLDescribeParam**。|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -75,7 +72,7 @@ ms.locfileid: "32914383"
 |S1101|HY101||  
 |S1103|HY103||  
 |S1104|HY104||  
-|S1105|HY105||  
+|S1105|包含 SQLSTATE=HY105||  
 |S1106|HY106||  
 |S1107|HY107||  
 |S1108|HY108||  

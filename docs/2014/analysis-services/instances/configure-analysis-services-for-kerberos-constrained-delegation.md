@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3436b2d0e73fc452c12e1aa5a71724e9f8dcd31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d53b52355de6508d47fe7ee0e34fd30d26be454
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060299"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>設定 Analysis Services 進行 Kerberos 限制委派
   將 Analysis Services 設定為 Kerberos 驗證時，若能獲致下列其中一項或兩項結果，對您來說可能最有用處：讓 Analysis Services 在查詢資料時模擬使用者識別，或是由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  
@@ -47,7 +44,7 @@ ms.locfileid: "37191308"
   
 |工作|描述|  
 |----------|-----------------|  
-|步驟 1：確認帳戶適合於委派|確認用以執行服務的帳戶在 Active Directory 中具有正確的屬性。 服務帳戶在 Active Directory 中不得標示為機密帳戶，或是明確地從委派狀況排除。 如需詳細資訊，請參閱 [了解使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> **\*\* 重要\* \* **一般而言，所有帳戶及伺服器必須都屬於相同的 Active Directory 網域或相同樹系中的受信任網域。 不過，由於 Windows Server 2012 支援跨網域界限委派，若網域功能層級是 Windows Server 2012，您就可以設定跨網域界限的 Kerberos 限制委派。 另一種替代方式則是設定 Analysis Services 進行 HTTP 存取並對用戶端連接使用 IIS 驗證方法。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)。|  
+|步驟 1：確認帳戶適合於委派|確認用以執行服務的帳戶在 Active Directory 中具有正確的屬性。 服務帳戶在 Active Directory 中不得標示為機密帳戶，或是明確地從委派狀況排除。 如需詳細資訊，請參閱 [了解使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> **\*\* 重要\* \*** 一般而言，所有帳戶及伺服器必須都屬於相同的 Active Directory 網域或相同樹系中的受信任網域。 不過，由於 Windows Server 2012 支援跨網域界限委派，若網域功能層級是 Windows Server 2012，您就可以設定跨網域界限的 Kerberos 限制委派。 另一種替代方式則是設定 Analysis Services 進行 HTTP 存取並對用戶端連接使用 IIS 驗證方法。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)。|  
 |步驟 2：註冊 SPN|設定限制委派之前，您必須為 Analysis Services 執行個體註冊服務主要名稱 (SPN)。 在您為中介層服務設定 Kerberos 限制委派時，將需要 Analysis Services SPN。 如需相關指示，請參閱＜ [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md) ＞。<br /><br /> 服務主要名稱 (SPN) 係指定某項服務在設定為 Kerberos 驗證之網域中的唯一識別。 使用整合式安全性的用戶端連接通常會在 SSPI 驗證期間要求 SPN。 如果用戶端出示的 SPN 與 Active Directory 中的 SPN 註冊相符，此要求便會轉送至 Active Directory 網域控制站 (DC)，並由 KDC 授與票證。|  
 |步驟 3：設定限制委派|驗證要使用的帳戶以及註冊該等帳戶的 SPN 之後，下一個步驟是設定上層服務如 IIS、Reporting Services 或 SharePoint Web 服務進行限制委派，將 Analysis Services SPN 指定為允許委派的特定服務。<br /><br /> 在 SharePoint 中執行的服務 (例如 Excel Services 或 SharePoint 模式的 Reporting Services) 通常裝載了取用 Analysis Services 多維度或表格式資料的活頁簿和報表。 為這些服務設定限制委派既是常見的組態工作，也是支援從 Excel Services 進行資料重新整理的必備要件。 下列連結提供有關 SharePoint 服務以及可能向 Analysis Services 資料提出下游資料連接要求之其他服務的指示：<br /><br /> [Excel Services 的身分識別委派 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) 或 [How to configure Excel Services in SharePoint Server 2010 for Kerberos authentication](http://support.microsoft.com/kb/2466519)<br /><br /> [PerformancePoint Services 的身分識別委派 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [SQL Server Reporting Services 的身分識別委派 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> 如需 IIS 7.0 方面的資訊，請參閱 [Configure Windows Authentication (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) (設定 Windows 驗證 (IIS 7.0)) 或 [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409)(如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證)。|  
 |步驟 4：測試連接|進行測試時，請以不同的身分識別從遠端電腦連接，並且使用與商務使用者所用相同的應用程式查詢 Analysis Services。 您可以使用 SQL Server Profiler 監視連接。 您應該會看到提出要求的使用者識別。 如需詳細資訊，請參閱本節中的 [測試模擬或委派的身分識別](#bkmk_test) 。|  

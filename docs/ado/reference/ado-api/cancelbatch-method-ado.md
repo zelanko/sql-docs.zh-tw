@@ -1,13 +1,11 @@
 ---
-title: CancelBatch 方法 (ADO) |Microsoft 文件
+title: CancelBatch 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - CancelBatch method [ADO]
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c2db735e51ec0c71f35e211db50b952f942cc3a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c8f0268a91b66f6f26eec1d87502355a1c9795a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828386"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 方法 (ADO)
-取消暫止的批次更新。  
+取消擱置中的批次更新。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,16 +36,16 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>參數  
  *AffectRecords*  
- 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，指出多少記錄**CancelBatch**方法將會影響。  
+ 選擇性。 [AffectEnum](../../../ado/reference/ado-api/affectenum.md)值，指出多少筆記錄**CancelBatch**方法將會影響。  
   
 ## <a name="remarks"></a>備註  
- 使用**CancelBatch**方法來取消任何暫止中的更新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新模式中。 如果**資料錄集**處於立即更新模式中，呼叫**CancelBatch**沒有**adAffectCurrent**會產生錯誤。  
+ 使用**CancelBatch**方法來取消任何暫止更新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)以批次更新模式。 如果**資料錄集**是立即更新模式中，呼叫**CancelBatch**而不需要**adAffectCurrent**會產生錯誤。  
   
- 如果您正在編輯目前的記錄，或要加入新的記錄，當您呼叫**CancelBatch**，ADO 會先呼叫[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法來取消任何快取的變更。 在這之後，所有暫止變更**資料錄集**則會取消。  
+ 如果您正在編輯目前的記錄，或要新增新的記錄，當您呼叫**CancelBatch**，ADO 會先呼叫[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法來取消任何快取的變更。 在那之後，所有暫止的變更**資料錄集**已取消。  
   
- 目前的記錄可能會不確定之後**CancelBatch**呼叫，尤其是如果您正在加入新的記錄。 基於這個理由，審慎的作法是將目前的記錄位置設定中的已知位置**資料錄集**之後**CancelBatch**呼叫。 例如，呼叫[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。  
+ 目前的記錄可能是未知之後**CancelBatch**呼叫，尤其是如果您正在新增新的記錄。 基於這個理由，最好將目前的記錄位置設定中的已知位置**Recordset**之後**CancelBatch**呼叫。 例如，呼叫[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。  
   
- 如果嘗試取消擱置中的更新失敗，因為與基礎資料 （例如，若已由其他使用者刪除記錄） 衝突，提供者所傳回的警告，[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合但不會中止執行程式。 只有當要求的所有記錄中都有衝突，就會發生執行階段錯誤。 使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性 (**adFilterAffectedRecords**) 和[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性找出具有衝突的記錄。  
+ 如果嘗試取消擱置中的更新失敗，因為基礎資料 （例如，如果記錄已刪除另一位使用者） 與發生衝突，提供者會傳回警告[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合，但不會不會中斷程式執行。 只有當所有要求的記錄上會發生衝突，就會發生執行階段錯誤。 使用[篩選條件](../../../ado/reference/ado-api/filter-property.md)屬性 (**adFilterAffectedRecords**) 和[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)屬性找出具有衝突的記錄。  
   
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

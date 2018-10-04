@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68b99702f3b3832db9c3912626deb9442862f74d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b346d265c0aafc2eae9e379d813ef2f46dcd4112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059408"
 ---
 # <a name="application-domains-for-report-server-applications"></a>報表伺服器應用程式的應用程式網域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表伺服器會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 每個應用程式都會在單一報表伺服器處理序內部的應用程式網域中執行。 在大部分情況下，應用程式網域是在內部建立、設定和管理的。 不過，如果您要調查效能或記憶體問題或者疑難排解服務中斷，了解報表伺服器應用程式網域的回收作業如何發生可能會很有用。  

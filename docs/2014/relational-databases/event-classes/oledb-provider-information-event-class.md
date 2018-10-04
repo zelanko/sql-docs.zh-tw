@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Provider Information event class
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e155d532f8c5872ed8895dcfb2042ed11f600f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f76b8cbfa9845ac6cade36b5d7709e6a4510f24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109932"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 事件類別
   在執行分散式查詢時，就會發生 **OLEDB Provider Information** 事件類別，且會收集對應於提供者連接的資訊。  

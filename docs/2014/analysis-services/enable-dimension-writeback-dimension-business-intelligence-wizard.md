@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.setdimensionwritebackcapability.selectdimension.f1
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e97461aa391163f2d45a108909a9935cf1ad6ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a942bb85a2af9b933c8091004fa9bb15529e86d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129028"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>啟用維度回寫 (維度) (商業智慧精靈)
   使用 **[啟用維度回寫]** 頁面即可選取維度，使商業智慧精靈啟用回寫。  

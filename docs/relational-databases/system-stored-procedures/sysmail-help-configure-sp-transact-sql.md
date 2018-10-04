@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_configure_sp (TRANSACT-SQL) |Microsoft 文件
+title: sysmail_help_configure_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d000f176194551f844485bcab04bfd0e085d702
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838426"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,27 +41,27 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>引數  
  [**@parameter_name** = ] **'***parameter_name***'**  
- 要擷取之組態設定的名稱。 當指定，則會傳回組態設定的值**@parameter_value**輸出參數。 若未**@parameter_name**指定，此預存程序傳回的結果集包含所有執行個體中的 Database Mail 組態設定。  
+ 要擷取之組態設定的名稱。 指定時，組態設定的值都會傳入**@parameter_value**輸出參數。 若未**@parameter_name**指定，此預存程序傳回的結果集包含所有執行個體中的 Database Mail 組態設定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 若未**@parameter_name**未指定，傳回含下列資料行的結果集。  
+ 若未**@parameter_name**指定，則會傳回含下列資料行的結果集。  
   
 ||||  
 |-|-|-|  
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |**paramname**|**nvarchar(256)**|組態參數的名稱。|  
 |**paramvalue**|**nvarchar(256)**|組態參數值。|  
-|**描述**|**nvarchar(256)**|組態參數的描述。|  
+|**description**|**nvarchar(256)**|組態參數的描述。|  
   
 ## <a name="remarks"></a>備註  
  預存程序**sysmail_help_configure_sp**列出執行個體目前的 Database Mail 組態設定。  
   
- 當**@parameter_name**指定，但沒有輸出參數會提供如**@parameter_value**，此預存程序會產生任何輸出。  
+ 當**@parameter_name**指定，但沒有輸出參數供**@parameter_value**，此預存程序會產生任何輸出。  
   
- 預存程序**sysmail_help_configure_sp**處於**msdb**資料庫，擁有者是**dbo**結構描述。 如果目前的資料庫不是，程序必須利用三部分名稱叫**msdb**。  
+ 預存程序**sysmail_help_configure_sp**處於**msdb**資料庫中，擁有者**dbo**結構描述。 此程序必須以叫用三部分名稱如果不是目前的資料庫**msdb**。  
   
 ## <a name="permissions"></a>Permissions  
  執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  

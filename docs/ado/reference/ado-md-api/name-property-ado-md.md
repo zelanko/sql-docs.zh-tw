@@ -1,13 +1,11 @@
 ---
-title: Name 屬性 (ADO MD) |Microsoft 文件
+title: Name 屬性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07a54616c2dd16a3a1c7582cbfe36c31ca0bef09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5c6c9ba7f2981fd4162f93f37e6ad0eb2cbae882
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284717"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756766"
 ---
 # <a name="name-property-ado-md"></a>Name 屬性 (ADO MD)
 表示物件的名稱。  
@@ -40,7 +37,7 @@ ms.locfileid: "35284717"
  傳回**字串**和處於唯讀狀態。  
   
 ## <a name="remarks"></a>備註  
- 您可以擷取**名稱**由序數參考之後, 您可以在物件直接依名稱參考物件的屬性。 比方說，如果`cdf.CubeDefs(0).Name`會產生 「 Bobs 視訊 Store，您可以參考此[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)為`cdf.CubeDefs("Bobs Video Store")`。  
+ 您可以擷取**名稱**由序數參考之後, 您可以對物件直接依名稱參考物件的屬性。 例如，如果`cdf.CubeDefs(0).Name`會產生 [Bobs 影片 Store]，您可以參考此[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)做為`cdf.CubeDefs("Bobs Video Store")`。  
   
 ## <a name="applies-to"></a>適用於  
   
@@ -51,7 +48,7 @@ ms.locfileid: "35284717"
 |[Member 物件 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
 ## <a name="see-also"></a>另請參閱  
- [目錄 (VB) 範例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [Catalog 範例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Caption 屬性 (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Description 屬性 (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName 屬性 (ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)

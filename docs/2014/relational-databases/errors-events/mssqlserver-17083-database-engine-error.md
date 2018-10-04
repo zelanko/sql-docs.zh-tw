@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 17083 (Database Engine error)
 ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de02c912edc8af455f6615524be967a000715235
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 08d0918ed0638f73d5dcdfde979cb938abc5496a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060548"
 ---
 # <a name="mssqlserver17083"></a>MSSQLSERVER_17083
     
