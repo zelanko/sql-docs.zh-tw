@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7e514ff56aa305a6ddae9e5a88bc85c253649d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154068"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 用戶端程式設計
   ADOMD.NET 用戶端元件位在 `Microsoft.AnalysisServices.AdomdClient` 命名空間中 (在 microsoft.analysisservices.adomdclient.dll 中)。 這些用戶端元件可提供用戶端的功能和中介層應用程式輕鬆地查詢資料和中繼資料從分析資料存放區，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Dependencies Property (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Dependencies property
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 837b115d1a5d6eee357ae214ced6fd71b140b2d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec643ad360da9d953edf9d88640fc53ed212566c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255930"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170538"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies 屬性 (SqlService 類別)
   取得相依於參考之服務的服務清單。  

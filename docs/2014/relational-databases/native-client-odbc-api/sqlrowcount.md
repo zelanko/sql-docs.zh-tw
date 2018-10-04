@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b1fc405b091f29c4d2660fc554fbbad47a7fdec
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9858619250b5f71e973e4af8eb92868f094e2193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165028"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   繫結參數值的陣列針對陳述式執行時`SQLRowCount`會傳回 SQL_ERROR，如果任何資料列的參數值在陳述式執行產生錯誤狀況。 會傳回任何值，透過*RowCountPtr*函式的引數。  

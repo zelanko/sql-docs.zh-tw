@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55254915b6fad1a7b1c2701ab860f90807a110d0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 715456e4e358346d19a3fe698cbb5d36fd754929
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168739"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>選項 （設計工具-資料表和資料庫設計工具頁面）
   使用此頁面來決定設計師的預設行為。 若要存取設定，請在 [工具] 功能表上按一下 [選項]、展開 [設計工具] 資料夾，然後按一下 [資料表設計工具]。  

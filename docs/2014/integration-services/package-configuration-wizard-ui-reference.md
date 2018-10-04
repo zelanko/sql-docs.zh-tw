@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160378"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>封裝組態精靈 UI 參考
   使用 **[封裝組態精靈]** ，即可建立在執行階段更新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其物件之屬性的組態。 當您在 **[封裝組態組合管理]** 對話方塊中加入新的組態或修改現有的組態時，這個精靈便會執行 若要開啟 **[封裝組態組合管理]** 對話方塊，請在 **中選取** [SSIS] **功能表上的** [封裝組態] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱[建立封裝組態](../../2014/integration-services/create-package-configurations.md)。  
@@ -59,7 +56,7 @@ ms.locfileid: "37322428"
 |**環境變數**|將組態儲存在其中一個環境變數中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
 |**登錄項目**|將組態儲存在登錄中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
 |**父封裝變數**|以變數將組態儲存在包含工作的封裝中。  選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
-|**[SQL Server]**|將組態儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的資料表中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
+|**SQL Server**|將組態儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的資料表中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
   
  **下一個**  
  檢視精靈順序的下一頁。  

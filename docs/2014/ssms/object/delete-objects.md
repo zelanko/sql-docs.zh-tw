@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deleteobjects.f1
 helpviewer_keywords:
 - Delete Objects dialog box
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: daf1f6bedae3f0c30091145417ba5111381095d1
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: de334220ab86f41bd898861d3b26b1e3ae8a7915
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167180"
 ---
 # <a name="delete-objects"></a>刪除物件
   使用此對話方塊來刪除資料庫或資料庫物件。  

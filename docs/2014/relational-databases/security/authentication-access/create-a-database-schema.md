@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.schemas.general.f1
@@ -19,12 +17,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10dd4ad8d0dcbd63e7133e2daf4d35a70695da19
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3a241cc086ae7f1558f9899295496395b4959b74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147076"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立結構描述。  
@@ -76,8 +74,7 @@ ms.locfileid: "43031565"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- 
-  **[結構描述 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[權限]** 和 **[擴充屬性]**。  
+ **[結構描述 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[權限]** 和 **[擴充屬性]**。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

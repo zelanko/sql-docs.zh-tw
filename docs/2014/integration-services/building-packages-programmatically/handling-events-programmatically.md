@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 818e202333a807b457e20b4372d10d2f57b909fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d725cafd19bcc98541bec005780667813f149556
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147278"
 ---
 # <a name="handling-events-programmatically"></a>以程式設計方式處理事件
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 執行階段會提供在驗證和執行封裝之前、期間和之後所發生的事件集合。 這些事件可使用兩種方式來擷取。 第一個方法是在類別中實作 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 介面，並將此類別當做參數提供給封裝的 `Execute` 和 `Validate` 方法。 第二個方法是建立 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 物件，其中可包含當 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 內發生事件時所執行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 物件 (如工作和迴圈)。 本章節描述這兩個方法，並提供示範其使用方式的程式碼範例。  

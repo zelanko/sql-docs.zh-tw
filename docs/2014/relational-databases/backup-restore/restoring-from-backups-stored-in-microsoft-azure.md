@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5eb28e1bf53d889db8767d0c7fcdfcf94a2e5a45
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b00513b2522d83605f1d8ee29c9dcf68a86f625
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154808"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>從儲存在 Windows Azure 的備份還原
   本主題概要說明使用儲存在 Windows Azure Blob 儲存體服務中的備份還原資料庫時，所應注意的事項。 本文適用於使用 SQL Server 備份至 URL 備份或 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立的備份。  
   
  如果您預計要還原儲存在 Windows Azure Blob 儲存體服務中的備份，建議您檢閱本主題，然後再檢閱說明如何還原資料庫的步驟 (此程序與還原內部部署及 Azure 備份相同)。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  從內部部署備份還原資料庫所使用的工具和方法，適用於從雲端備份還原資料庫。  下列各節描述的是這些考量，以及使用儲存在 Windows Azure Blob 儲存體服務中的備份時所應了解的任何差異。  
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL  

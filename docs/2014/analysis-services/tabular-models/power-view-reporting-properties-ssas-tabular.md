@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d9b290b55eceb8734719c61229967d0c93c160a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6c4601553392a2e11bf6ab77063552c2a58e939
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152788"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Power View 報表屬性 (SSAS 表格式)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 為商業使用者 (例如資料分析師、企業決策者和資訊工作者) 提供了直覺式的隨選報表。 他們可以從根據 PowerPivot 圖庫中發行的 PowerPivot 活頁簿的表格式模型或是使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 撰寫的表格式模型，輕鬆地建立資料檢視並與其互動，然後將其部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 執行個體。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是從 SharePoint Server 2010 或更新版本啟動的瀏覽器型 Silverlight 應用程式。  

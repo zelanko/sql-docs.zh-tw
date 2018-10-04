@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0865d7a7fa43db751646d6f9debd19463a7ba23
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153453"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>報表設計的 CSDLBI 屬性
   本節描述表格式模型化的 CSDL 延伸模組中影響 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查詢設計的屬性。  
@@ -41,7 +38,7 @@ ms.locfileid: "37259384"
 |`ReferenceName`|文字|用於在 DAX 查詢中參考此實體的識別碼。 如果省略，則使用名稱。|  
 |`Caption`|文字|實體的顯示名稱。|  
 |`Documentation`|文字|協助商務使用者了解資料意義的描述性文字。|  
-|`Hidden`|布林|表示是否應顯示實體。 預設值為 `false`。|  
+|`Hidden`|布林|表示是否應顯示實體。 預設為 `false`。|  
 |`CollectionCaption`|文字|用於參考實體的一組執行個體的複數名稱。 如果省略，則使用 Caption 屬性。|  
 |`DisplayKey`|MemberRef[]|用於對商務使用者識別實體執行個體的已排序的欄位清單。 參考可以包含執行個體屬性和導覽屬性。 在參考導覽屬性時，會顯示目標實體的 `DisplayKey`。 如果省略 `DisplayKey` 值，則使用 Key 欄位。|  
 |`DefaultImage`|MemberRef|欄位的參考，這個欄位包含用於向商務使用者以視覺方式識別實體執行個體的影像。 如果省略，則使用實體中的第一個影像欄位 (如果有)。|  

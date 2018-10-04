@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d925d1ded18b507148004fb6d47708fb4a28061d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 13baa153f92d3edbbee204f1d526e4b744d201d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168746"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>資料行選取對話方塊 (Visual Database Tools)
   讓您在資料庫圖表中變更資料表的 [自訂] 檢視。 [自訂] 檢視只會顯示使用者可識別的資料行屬性。  

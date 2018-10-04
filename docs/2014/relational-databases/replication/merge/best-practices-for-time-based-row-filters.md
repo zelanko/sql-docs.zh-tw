@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145521"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
   應用程式使用者通常需要來自資料表中以時間為基礎的資料子集。 例如，業務員可能需要上週的訂單資料，或事件計劃者可能需要未來一週的事件資料。 許多狀況下，應用程式會使用包含 `GETDATE()` 函數的查詢來達成這個目的。 請考量下列資料列篩選陳述式：  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - inserting dimension members
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - deleting dimension members
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 394a0448101846db2b6852224e39fedc2dd5fe74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d035cf5891c12857fcdcbc2da7df2304eb10dcdb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171488"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和卸除成員 (XMLA)
   您可以使用[插入](../xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../xmla/xml-elements-commands/update-element-xmla.md)，並[卸除](../xmla/xml-elements-commands/drop-element-xmla.md)命令在 XML for Analysis (XMLA) 分別插入、 更新或刪除成員，從可寫入的維度。 如需有關可寫入維度的詳細資訊，請參閱[Write-Enabled 維度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164288"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用於管理現有採礦結構和採礦模型的用戶端工具。 本節說明可以利用每種環境執行的管理作業。  
@@ -45,8 +42,7 @@ ms.locfileid: "37218298"
 >  有些用戶端 (例如適用於 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的資料採礦增益集) 也可讓您建立工作階段採礦模型和採礦結構，這些用戶端會使用執行個體的連接，但只會將採礦結構和模型儲存在工作階段持續時間的伺服器中。 您仍可以透過用戶端管理這些模型，方法與您管理儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的結構和模型相同，但是在您中斷與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的連接之後，並不會保存這些物件。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>使用 SQL Server 資料工具管理資料採礦物件  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供一些功能，使資料採礦物件的建立、瀏覽和編輯都更為簡易。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供一些功能，使資料採礦物件的建立、瀏覽和編輯都更為簡易。  
   
  以下連結提供有關如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]修改資料採礦物件的資訊：  
   

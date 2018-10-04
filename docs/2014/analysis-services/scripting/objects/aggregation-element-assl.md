@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Aggregation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregation element
 ms.assetid: f37af388-b2b3-4234-a1d6-936ee9b7f2ae
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51e28a8435b2891cf623ea851824809606d83620
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0780a8c81cf80871eed925471fd0ea7e6103e9b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167798"
 ---
 # <a name="aggregation-element-assl"></a>Aggregation 元素 (ASSL)
   定義單一彙總[分割區](partition-element-assl.md)項目。  
@@ -54,8 +51,8 @@ ms.locfileid: "37157189"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

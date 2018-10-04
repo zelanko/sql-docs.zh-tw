@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Name Element (Parameter)
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name element
 ms.assetid: 180e3b4d-058e-4deb-843d-ec60949edab0
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2f5bdd209d6f84d22253c1c47ee430db2facc81
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dfee7f8d2870263fdcf90b1de80ebecc02bee069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226338"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153010"
 ---
 # <a name="name-element-parameter-xmla"></a>Name 元素 (Parameter) (XMLA)
   包含所代表之參數的名稱[參數](parameter-element-xmla.md)項目。  
@@ -53,7 +50,7 @@ ms.locfileid: "37226338"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37226338"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[參數](parameter-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
   

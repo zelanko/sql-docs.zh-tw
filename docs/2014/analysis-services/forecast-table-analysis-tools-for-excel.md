@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining model, time series
 - time series [data mining]
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a469765d20ea8a8330843fbaac401dc85b78f1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170287"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>預測 (適用於 Excel 的資料表分析工具)
   ![預測的按鈕，在 資料表分析工具功能區](media/tat-forecast.gif "預測資料表分析工具功能區中的按鈕")  

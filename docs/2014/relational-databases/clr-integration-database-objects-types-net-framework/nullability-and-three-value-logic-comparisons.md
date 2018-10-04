@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - precision [CLR integration]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43420c9e796605617e3884d8b5bf0aae0c5cfb6c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353930"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160939"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 屬性和三值邏輯比較
   如果您熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，就會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 `System.Data.SqlTypes` 命名空間中找到類似的語意和有效位數。 不過，其中仍有一些差異，而且本主題將涵蓋最重要的差異。  

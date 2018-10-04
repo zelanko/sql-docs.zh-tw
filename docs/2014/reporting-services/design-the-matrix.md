@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
-caps.latest.revision: 22
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f68a47d9b905861b5a2068db3a8a93b1e1d5be2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43d8c841799f740d602d7c2fc48ab229ec30d0fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166708"
 ---
 # <a name="design-the-matrix"></a>設計矩陣
   使用報表精靈的這個頁面，即可選取報表的欄位。  

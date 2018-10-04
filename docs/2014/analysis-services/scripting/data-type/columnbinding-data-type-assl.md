@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ColumnBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ColumnBinding data type
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 227801af8b66d66ebeba50d2713267720adffa9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 271b4ae8b305e554f94bd1b0da3bbed96a7dd476
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149338"
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding 資料類型 (ASSL)
   定義代表資料來源檢視中的資料行的繫結的衍生的資料類型[DataItem](dataitem-data-type-assl.md)項目。  
@@ -51,13 +48,13 @@ ms.locfileid: "37200108"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[繫結](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[ColumnID](../properties/columnid-element-eventcolumn-assl.md)， [TableID](../properties/id-element-assl.md)|  
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   

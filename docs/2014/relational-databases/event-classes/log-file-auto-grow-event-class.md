@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Log File Auto Grow event class
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc7d0ab95d2235ad1f70e33651a95e4ae710bbe9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f32379d9bea6d3993b049a780b994e8d57abfcde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288924"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175248"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow 事件類別
   **Log File Auto Grow** 事件類別指出記錄檔已自動成長。 如果以外顯方式透過 ALTER DATABASE 讓記錄檔增長，則不會觸發這個事件。  

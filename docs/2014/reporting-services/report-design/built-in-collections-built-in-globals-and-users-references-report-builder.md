@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166638"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>內建的全域和使用者參考 (報表產生器及 SSRS)
   內建欄位集合包含 `Globals` 和 `User` 集合，代表在處理報表時 Reporting Services 所提供的全域值。 `Globals` 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 `User` 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  
@@ -78,7 +75,7 @@ ms.locfileid: "37331008"
   
 |**成員**|**型別**|**說明**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|執行報表之使用者的語言。 例如， `en-US`。|  
+|`Language`|`String`|執行報表之使用者的語言。 例如， `en-US` 。|  
 |`UserID`|`String`|執行報表之使用者的識別碼。 如果您是使用 Windows 驗證，此值為目前使用者的網域帳戶。 這個值是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全性延伸模組所決定，此延伸模組可使用 Windows 驗證或自訂驗證。|  
   
  如需在報表中支援多國語言的詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 線上叢書 [》中](http://go.microsoft.com/fwlink/?LinkId=120955)文件集的＜適用於多語言或全域部署的解決方案設計考量＞。  

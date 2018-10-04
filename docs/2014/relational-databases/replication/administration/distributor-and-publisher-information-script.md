@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Publishers [SQL Server replication], information scripts
 - Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 917781041798660d5ca9fc0cde33ffd3c80911f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8999be5356a1d4901ce0c918530451b32ee262c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170208"
 ---
 # <a name="distributor-and-publisher-information-script"></a>散發者與發行者資訊指定碼
   此指令碼使用系統資料表與複寫預存程序來回答關於「散發者」與「發行者」端物件的常見問題。 指令碼能以其現狀使用，也能提供自訂指令碼的基準。 在您的環境下，指令碼可能需要進行兩項修改：  

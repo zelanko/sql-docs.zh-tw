@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Attribute pane formats [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - formats [Analysis Services], Attribute pane
 - modifying Attribute pane format
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f11320a90742a987d1c4daf331219c722cd77ddf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49ee4726c0270f69122b50d61a2066ec0c165e60
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177971"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>在維度設計師中檢視樹狀目錄、清單或方格中的屬性
   此程序會描述如何變更維度設計師中顯示屬性的方式。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e9b39283abf22dca32cfe8c0ea9c17a7310bbbe
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 65d6680d7e03960c0c59e83413be58cb74e5f028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158108"
 ---
 # <a name="migrating-computed-columns"></a>移轉計算資料行
   記憶體最佳化資料表中不支援計算資料行。 但是，您可以模擬計算資料行。  

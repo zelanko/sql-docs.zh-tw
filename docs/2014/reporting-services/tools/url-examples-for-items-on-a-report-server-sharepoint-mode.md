@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157928"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 模式 (SSRS) 在報表伺服器上已發行報表項目的 URL 範例
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  
@@ -37,7 +34,7 @@ ms.locfileid: "37214728"
   
 |Object|描述|  
 |------------|-----------------|  
-|SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如，http://伺服器名稱)，而且可以包含多個網站。|  
+|SharePoint Web 應用程式|SharePoint Web 應用程式可以當做獨立的伺服器安裝，或安裝在包含虛擬伺服器集合的伺服器陣列下。 Web 應用程式具有一個 URL (例如， http://伺服器名稱)，而且可以包含多個網站。|  
 |網站|網站可能是 Web 應用程式的上層網站或子網站。|  
 |SharePoint 文件庫|文件庫包含文件或資料夾。 文件庫或文件庫中的資料夾是可以儲存報表、報表模型、共用資料來源與外部影像的唯一站台物件。|  
 |項目|您可以在 URL 中參考的報表伺服器項目包括報表或子報表的報表定義、報表模型、共用資料來源或外部影像。|  
@@ -48,21 +45,21 @@ ms.locfileid: "37214728"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint 伺服器的 URL  
  當您將「報表伺服器」或「報表模型」專案從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署至報表伺服器時，您必須使用指向 SharePoint 伺服器的 URL。  
   
- 若要尋找欲使用之伺服器的名稱，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 伺服器名稱會出現在通訊協定前置詞的後面，例如，http://伺服器名稱。  
+ 若要尋找欲使用之伺服器的名稱，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 伺服器名稱會出現在通訊協定前置詞的後面，例如， http://伺服器名稱。  
   
- 不支援使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL Proxy 端點。 Proxy 端點包含通訊埠編號，例如，http://伺服器名稱:8080/reportserver。  
+ 不支援使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL Proxy 端點。 Proxy 端點包含通訊埠編號，例如， http://伺服器名稱:8080/reportserver。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 伺服器網站或子網站的 URL  
- 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在伺服器名稱後面，例如，http://伺服器名稱/網站 或 http://伺服器名稱/網站/子網站。  
+ 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在伺服器名稱後面，例如， http://伺服器名稱/網站 或 http://伺服器名稱/網站/子網站。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 應用程式上，網站和子網站通常會對應到主要網站上的索引標籤。 若要尋找網站名稱或子網站名稱，按一下 [主資料夾]，然後按一下 [所有網站內容]。 捲動至底部，然後尋找 [網站與工作區]。 網站清單便會出現在此區段中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 文件庫的 URL  
  當您將報表或相關項目部署至 SharePoint 文件庫時，您必須使用指向 SharePoint 文件庫的 URL。 要用於文件庫的 URL 會視您所使用的 SharePoint 版本而有所不同。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]上，文件庫會出現在伺服器名稱後面，例如，http://*伺服器名稱/* Shared Documents。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]上，文件庫會出現在伺服器名稱後面，例如， http://*伺服器名稱/* Shared Documents。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 上，文件庫會出現在網站和子網站後面。 例如，http://伺服器名稱/網站/Documents。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 上，文件庫會出現在網站和子網站後面。 例如， http://伺服器名稱/網站/Documents。  
   
  若要尋找新 SharePoint 文件庫或不熟悉之網站的路徑資訊，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 如果文件庫是空的，上傳任何檔案。 以滑鼠右鍵按一下檔案，然後選取 [屬性]，以開啟 [屬性] 視窗。 檔案的位址包含發行作業所需的 URL 值。  
   
