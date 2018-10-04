@@ -1,33 +1,30 @@
 ---
-title: 組態元件 |Microsoft 文件
+title: 組態元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c15accf395a33a1af42fe65a3c15612402e381d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcf7d34f8faf70f57373ad1a5dae55261799145b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606466"
 ---
-# <a name="configuration-components"></a>組態元件
+# <a name="configuration-components"></a>設定元件
 > [!NOTE]  
->  從 Windows XP 和 Windows Server 2003，ODBC 隨附於 Windows 作業系統。 您只明確應該在舊版 Windows 上安裝 ODBC。  
+>  從 Windows XP 和 Windows Server 2003 開始，ODBC 會包含在 Windows 作業系統。 您只明確應該安裝在舊版 Windows 上的 ODBC。  
   
- 資料來源會設定安裝程式的 DLL，在開啟呼叫驅動程式安裝 Dll 和轉譯程式安裝 Dll 有需要。 安裝程式的 DLL 是叫用直接從控制台或載入並呼叫另一個程式，稱為*管理程式*。 下圖顯示組態元件間的關聯性。  
+ 資料來源會設定安裝程式 DLL，這進而呼叫驅動程式中安裝 Dll 和轉譯程式安裝程式 Dll 他們所需。 安裝程式 DLL 是以叫用直接從控制台或載入或由另一個程式，稱為呼叫*管理程式*。 下圖顯示組態元件間的關聯性。  
   
  ![組態元件間的關聯性](../../../odbc/reference/install/media/pr30.gif "pr30")  
   

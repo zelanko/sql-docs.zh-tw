@@ -1,34 +1,31 @@
 ---
-title: 述詞限制像 |Microsoft 文件
+title: LIKE 述詞限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 891c6499f54c56635d74289517e8cf33f66ba4ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652969"
 ---
-# <a name="like-predicate-limitations"></a>像述詞限制
-如果資料行中的長度超過 255 個字元，LIKE 比較會根據只有前 255 個字元。  
+# <a name="like-predicate-limitations"></a>LIKE 述詞限制
+如果資料行中的長度超過 255 個字元，LIKE 比較將只會依前 255 個字元。  
   
- 在中使用類似的程序只支援常數的模式。 桌面資料庫驅動程式支援以 sql-92 像模式比對。  
+ 在中使用類似的程序只支援常數模式。 桌面資料庫驅動程式支援 SQL-92 例如模式比對。  
   
- 不支援使用 LIKE 述詞中逸出子句。  
+ 不支援使用 LIKE 述詞中的逸出子句。  
   
- LIKE 比較不應該對該資料行包含數值或 float 資料類型的資料。 可能會無法預期的結果。 如需詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。
+ LIKE 比較不應該對資料行包含數值或浮點資料類型的資料。 您可能無法預期的結果。 如需詳細資訊，請參閱 < *Microsoft Jet Database Engine 程式設計人員指南*。

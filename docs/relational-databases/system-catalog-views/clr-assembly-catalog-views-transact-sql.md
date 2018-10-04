@@ -1,14 +1,11 @@
 ---
-title: CLR 組件目錄檢視 (TRANSACT-SQL) |Microsoft 文件
+title: CLR 組件目錄檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], catalog views
 - CLR assembly catalog views
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4cc6a507be611b843da3554aed3a7d74e963837c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 25dff969ec44ad8e584b0776abefb014f934af89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33175979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601157"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR 組件目錄檢視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
