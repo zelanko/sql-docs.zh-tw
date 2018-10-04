@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47566d2f3557202370a1b6be25a759f9cea3af17
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2639697135e62b66dfd114eb74a7e918190c8fda
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201828"
 ---
 # <a name="what39s-new-in-clr-integration"></a>什麼&#39;CLR 整合的新功能
   以下是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中 CLR 整合的新功能：  

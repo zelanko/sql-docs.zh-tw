@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff97e8210c38bac14bd7bd88075c2dea16f77489
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3406468961dcd5817fb88b5a30098177ec6ac67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073238"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>監視 SQL Server Managed Backup 到 Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]有內建的測量工具，可用於找出備份程序中的問題和錯誤，並在可能時施以更正動作加以矯正。  不過有某些狀況需要使用者介入。 本主題描述可用於判斷備份之整體健康情況的工具，並找出需要處理的所有錯誤。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 230479af0ffa24130bb1ea63f0a72b758a3c81fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196358"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
   下表描述 CDC 控制工作的自訂屬性。 所有屬性都是可讀寫的。  

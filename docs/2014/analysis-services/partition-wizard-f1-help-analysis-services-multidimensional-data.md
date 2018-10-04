@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245691"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198528"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>資料分割精靈 F1 說明 (Analysis Services - 多維度資料)
   您可以使用資料分割精靈來定義 Cube 中之量值群組的資料分割。 依預設，會為 Cube 中的每一個量值群組定義單一資料分割。 但是，大型的資料分割會使存取和處理效能降低。 藉由建立多個分割區，每一個分割區包含量值群組的一部份資料，這樣可以增進該量值群組的存取和處理效能。  

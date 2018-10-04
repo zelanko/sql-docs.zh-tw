@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - SqlClient provider
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351140"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168548"
 ---
 # <a name="data-access-from-clr-database-objects"></a>從 CLR 資料庫物件進行資料存取
   Common language runtime (CLR) 常式可以輕鬆存取的執行個體中儲存的資料[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]中執行，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 存取資料從 CLR 資料庫物件中的使用.NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從受管理的用戶端和中介層應用程式的資料。 因為這個緣故，您可以將 ADO.NET 和 `SqlClient` 的知識運用在用戶端和中間層應用程式。  

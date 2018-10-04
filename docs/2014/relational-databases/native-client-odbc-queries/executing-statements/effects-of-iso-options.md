@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ISO options (ODBC)
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, ISO options
 - statements [ODBC], ISO options
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec72da4557bc851c833018cfff2cc53f8576da0b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180358"
 ---
 # <a name="effects-of-iso-options"></a>ISO 選項的作用
   ODBC 標準與 ISO 標準相當接近，而且 ODBC 應用程式應該是來自 ODBC 驅動程式的標準行為。 若要讓它更為符合的行為中所定義的 ODBC 標準中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式一律會使用所連接的 SQL Server 版本中提供的任何 ISO 選項。  

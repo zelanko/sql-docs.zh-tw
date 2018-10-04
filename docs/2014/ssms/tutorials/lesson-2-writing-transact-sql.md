@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fb7fbd52df66d731f370f2d8ce9f6c99beda40e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226868"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>第 2 課：撰寫 Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用來撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 查詢及 SQLCMD 命令的整合式開發環境。 此教學課程說明如何使用 Database Engine 查詢編輯器撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。  
@@ -40,7 +37,7 @@ ms.locfileid: "37222658"
   
 -   編寫資料表的指令碼  
   
--   摘要  
+-   總結  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [連接查詢編輯器](lesson-2-1-connecting-with-query-editor.md)  

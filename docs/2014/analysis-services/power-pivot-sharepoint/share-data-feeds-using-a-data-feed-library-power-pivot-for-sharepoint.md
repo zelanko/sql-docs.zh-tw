@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ac02a4f06eb66528d68ba42b3036d0837f308d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178548"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用資料摘要庫共用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從以 Atom 電傳格式公開資料之服務或應用程式產生的 XML 資料流， 現在越來越常用在應用程式之間傳輸資料，以及傳輸資料至用戶端檢視器。 在 PowerPivot for SharePoint 部署中，資料摘要用來填入[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]具有以 Atom 感知應用程式或服務的資料來源。  

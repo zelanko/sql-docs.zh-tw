@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.movetabledb.f1
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1ddf2d679860a66cf459cefcbef8e3008264a8a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff10d4c1c2c70049549d848dd31736dbd898fb28
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226748"
 ---
 # <a name="move-table-dialog-box-ssas"></a>移動資料表對話方塊 (SSAS)
   [移動資料表] 對話方塊讓您能夠變更資料表在模型設計工具中出現的順序。 若要存取此對話方塊，請以滑鼠右鍵按一下要移動之資料表底部的索引標籤，然後選取 [移動]。  

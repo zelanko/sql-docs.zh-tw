@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: native-client-ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB [FILESTREAM support]
 - FILESTREAM [SQL Server], OLE DB
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad287aad1d87310a93bb2917d889775bba1e0650
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9a8879a29c69686992bf5955c335e6854ca9bfa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420007"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666746"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 支援 (OLE DB)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

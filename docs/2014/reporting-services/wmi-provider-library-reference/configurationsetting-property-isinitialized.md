@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - IsInitialized
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d05e268fb416cde902c8e30580b8b5cdbfdc659a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7cc5f323e42d79d3954d3eea7009b34eddcc941
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201908"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出報表伺服器執行個體是否已初始化。 唯讀。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.perspectives.perspectivespane.perspectivedetails.f2
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0fd74b1e946ba55c2c647368317b6d872189523a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209818"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>檢視方塊詳細資料 (檢視方塊索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中 **[檢視方塊]** 索引標籤上的 **[檢視方塊詳細資料]** 窗格，即可管理查詢所選檢視方塊之使用者可用的中繼資料。  

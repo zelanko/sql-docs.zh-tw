@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - objects [XML for Analysis]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - deleting objects
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 883f2a0ff0ed67b2543bc663f2a582814f56c850
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a08e0c44d4e5a05e140c0215997c2193fedd8e59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178018"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>建立和改變物件 (XMLA)
   主要物件可以獨立建立、改變和刪除。 主要物件包括下列物件：  

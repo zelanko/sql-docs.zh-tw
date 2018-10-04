@@ -1,13 +1,11 @@
 ---
-title: 執行方式 |Microsoft 文件
+title: 執行方式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06b6b6bff2c99d13811616a9d1ae5040e904656a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719116"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
-指定提供者如何執行命令。  
+指定提供者執行命令的方式。  
   
-|常數|ReplTest1|描述|  
+|常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adAsyncExecute**|0x10|表示命令應該以非同步方式執行。<br /><br /> 此值不能與結合[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。|  
-|**adAsyncFetch**|0x20|指示的其餘資料列中指定的初始的數量之後[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)應該以非同步方式擷取屬性。|  
-|**adAsyncFetchNonBlocking**|0x40|表示在擷取時，永遠不會封鎖主執行緒。 如果尚未擷取要求的資料列，目前的資料列會自動移至檔案結尾。<br /><br /> 如果您開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)從[資料流](../../../ado/reference/ado-api/stream-object-ado.md)包含持續預存**資料錄集**， **adAsyncFetchNonBlocking**不會有效果;作業會同步和封鎖。<br /><br /> **adAsynchFetchNonBlocking**沒有任何作用[adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md)選項用來開啟**資料錄集**。|  
-|**adExecuteNoRecords**|0x80|表示命令文字的命令或預存程序不會傳回資料列 （例如，只將資料插入命令）。 如果擷取任何資料列，它們捨棄而且不會傳回。<br /><br /> **adExecuteNoRecords**只能做為選擇性參數來傳遞**命令**或**連線執行**方法。|  
-|**adExecuteStream**|0x400|指出應傳回做為資料流的命令執行的結果。<br /><br /> **adExecuteStream**只能做為選擇性參數來傳遞**命令執行**方法。|  
-|**adExecuteRecord**||表示**CommandText**命令或預存程序傳回單一資料列都應該以傳回**記錄**物件。|  
+|**adAsyncExecute**|0x10|指出命令應該以非同步方式執行。<br /><br /> 此值不得搭配[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。|  
+|**adAsyncFetch**|0x20|指示的其餘資料列中指定的初始數量之後[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)應該以非同步方式擷取屬性。|  
+|**adAsyncFetchNonBlocking**|0x40|指出在擷取時，永遠不會封鎖主執行緒。 如果尚未擷取要求的資料列，目前的資料列會自動移至檔案結尾。<br /><br /> 如果您開啟[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)從[Stream](../../../ado/reference/ado-api/stream-object-ado.md)包含持續預存**資料錄集**， **adAsyncFetchNonBlocking**不會影響;作業會同步和封鎖。<br /><br /> **adAsynchFetchNonBlocking**沒有時生效[adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md)選項用來開啟**資料錄集**。|  
+|**adExecuteNoRecords**|0x80|表示命令文字的命令或預存程序不會傳回資料列 （例如，只將資料插入命令）。 如果擷取任何資料列，它們會被捨棄，不會傳回。<br /><br /> **adExecuteNoRecords**只能為選擇性的參數，以傳遞**命令**或是**連線執行**方法。|  
+|**adExecuteStream**|0x400|表示代表命令執行的結果不應傳回做為資料流。<br /><br /> **adExecuteStream**只能為選擇性的參數，以傳遞**Command Execute**方法。|  
+|**adExecuteRecord**||指出**CommandText**是命令或預存程序傳回單一資料列應該做為傳回**記錄**物件。|  
 |**adOptionUnspecified**|-1|表示未指定命令。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  

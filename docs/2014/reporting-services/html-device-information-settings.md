@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a415a5f735e731efe3f3ae8b282f8ce2a1ad2eba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155837"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
   下表列出以 HTML 格式轉譯的裝置資訊設定。  
@@ -32,7 +29,7 @@ ms.locfileid: "37177217"
   
 |設定|值|  
 |-------------|-----------|  
-|`AccessibleTablix`|指出是否要使用其他可存取性中繼資料來轉譯，以搭配螢幕助讀員使用。 這個參數只適用於包含簡單資料表或是具有簡單群組之矩陣結構的報表。 預設值是 `false`。 其他可存取性中繼資料會使得轉譯的報表與下列文件內的技術標準相容：＜Electronic and Information Technology Accessibility Standards＞文件 (章節 508) 的＜Web-based Intranet and Internet Information and Applications＞章節 (1194.22)。<br /><br /> (g) 應該針對資料表識別資料列和資料行標頭。<br /><br /> (h) 如果資料表具有兩個或多個邏輯層的資料列或資料行標頭，應該使用標記來讓資料格與標頭資料格產生關聯。<br /><br /> (i) 框架的標頭應該包含文字，該文字有助於識別框架和導覽。<br /><br />  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)]中支援這個參數，但 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]則否。|  
+|`AccessibleTablix`|指出是否要使用其他可存取性中繼資料來轉譯，以搭配螢幕助讀員使用。 這個參數只適用於包含簡單資料表或是具有簡單群組之矩陣結構的報表。 預設值是 `false`。 其他可存取性中繼資料會使得轉譯的報表與下列文件內的技術標準相容：＜Electronic and Information Technology Accessibility Standards＞文件 (章節 508) 的＜Web-based Intranet and Internet Information and Applications＞章節 (1194.22)。<br /><br /> (g) 應該針對資料表識別資料列和資料行標頭。<br /><br /> (h) 如果資料表具有兩個或多個邏輯層的資料列或資料行標頭，應該使用標記來讓資料格與標頭資料格產生關聯。<br /><br /> (i) 框架的標頭應該包含文字，該文字有助於識別框架和導覽。<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)]中支援這個參數，但 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]則否。|  
 |**ActionScript(\*)**|指定發生動作事件 (例如鑽研或書籤點擊) 時所要使用之 JavaScript 函數的名稱。 如果指定這個參數，動作事件便會觸發具名 JavaScript 函數，而非回傳至伺服器。|  
 |**BookmarkID**|跳到報表中的書籤識別碼。|  
 |**DocMap**|指出是否要顯示或隱藏報表文件引導模式。 此參數的預設值為 `true`。|  

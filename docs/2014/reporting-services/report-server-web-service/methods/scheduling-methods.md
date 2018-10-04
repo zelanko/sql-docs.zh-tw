@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - schedules [Reporting Services], methods
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], methods
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f4e9adafb6fa7311ca246e2ce4233ed03e073df1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89736bb02158170425df2c5dae617955fd8f8f80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217894"
 ---
 # <a name="scheduling-methods"></a>排程方法
   您可以使用這些方法來建立並管理執行和傳遞報表的共用排程，並快取報表伺服器所運用的重新整理計劃。  

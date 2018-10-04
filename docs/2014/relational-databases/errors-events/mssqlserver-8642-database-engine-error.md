@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 8642 (Database Engine error)
 ms.assetid: fc498059-202f-4d0b-8599-4e784b47c186
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e4006fce0498eac2d625537c2ba75ff13e79740
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff30f298d961eeb07b16261e400cb9fd8cb2a257
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152444"
 ---
 # <a name="mssqlserver8642"></a>MSSQLSERVER_8642
     

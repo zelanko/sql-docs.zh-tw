@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d31afd4bb907256fc548c8102cdfaa8a927f174
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c808e39a208e81e2869efd389044a70f1af9052a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198590"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>嘗試建立與外部資料來源之間的連接時，發生錯誤。 下列連接無法重新整理：PowerPivot 資料
   如果您在沒有安裝 PowerPivot for SharePoint 的伺服器上查詢 PowerPivot 資料，就會發生這個錯誤。 如果 SQL Server Analysis Services (PowerPivot) 服務停止，或者您嘗試從舊版檢視 PowerPivot 資料，也會發生這個錯誤。  

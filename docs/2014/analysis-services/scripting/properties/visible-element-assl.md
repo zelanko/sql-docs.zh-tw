@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Visible Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Visible element
 ms.assetid: 3e9baf1b-351f-4ebf-b57d-13d561f72d6f
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c025ca22c56d0f7c61f1626b2c861961da432ae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a28fa446eb1753ce85458a19b849729f57c67a7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166658"
 ---
 # <a name="visible-element-assl"></a>Visible 元素 (ASSL)
   決定父元素的可見性。  
@@ -59,7 +56,7 @@ ms.locfileid: "37213848"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CalculationProperty](../objects/calculationproperty-element-assl.md)， [Cube](../objects/cube-element-assl.md)， [CubeDimension](../data-type/dimension-data-type-assl.md)， [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)，[資料庫](../objects/database-element-assl.md)，[量值](../objects/measure-element-assl.md)， [MemberProperty](../objects/attributerelationship-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `Visible` 元素會決定使用者介面元件是否應該顯示父元素。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1
 - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b73e0a549d0bb0b4e97fbace001ea9f428e87425
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3553a338bf1d5a9263d1d4eadc5975784517a559
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192088"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>地圖內嵌點屬性對話方塊、標記
   選取 **[內嵌點屬性]** 對話方塊上的 **[標記]** 來變更下列地圖元素的標記類型和標記大小選項：  
@@ -35,7 +32,7 @@ ms.locfileid: "37168079"
   
 ## <a name="options"></a>選項。  
  **標記類型**  
- 指定標記類型。 預設值為 `Circle`。  
+ 指定標記類型。 預設為 `Circle`。  
   
  **標記大小**  
  指定標記大小。 預設值為 10pt。  

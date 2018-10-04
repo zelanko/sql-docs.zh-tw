@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.reviewresults.f1
 ms.assetid: b206f39e-5fa3-4b5c-babf-c604c0dfd82a
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3838a070f464bf5eff3ec1f80a52ed0a7a6863f7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa9e0f98df874ec7da9525fd361b67bf5331b41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200739"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>檢閱要最佳化的查詢 (基於使用方式的最佳化精靈)
   使用 [檢閱要最佳化的查詢] 頁面，即可顯示和選取從查詢記錄中擷取的查詢，而 [基於使用方式的最佳化精靈] 將使用此查詢記錄來設計選取之資料分割的彙總。  

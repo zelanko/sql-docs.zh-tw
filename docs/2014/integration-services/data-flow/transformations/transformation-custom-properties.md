@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d5e885e1429507b2ae86759a1a34cd68c61d622
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206888"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
   除了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特有的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
@@ -187,7 +184,7 @@ ms.locfileid: "37243188"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|FastParse|布林|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 這個屬性的預設值是`False`。 如需詳細資訊，請參閱 [快速剖析](../../fast-parse.md) 和 [標準剖析](../../standard-parse.md)。 執行個體時提供 SQL Server 登入。<br /><br /> 注意：雖然您無法在資料轉換編輯器中使用這個屬性，但是可以使用進階編輯器來設定這個屬性。|  
+|FastParse|布林|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 這個屬性的預設值是`False`。 如需詳細資訊，請參閱 [快速剖析](../../fast-parse.md) 和 [標準剖析](../../standard-parse.md)。 .<br /><br /> 注意：雖然您無法在資料轉換編輯器中使用這個屬性，但是可以使用進階編輯器來設定這個屬性。|  
 |SourceInputColumnLineageId|Integer|`LineageID`做為來源的輸出資料行之輸入資料行。|  
   
  資料轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  

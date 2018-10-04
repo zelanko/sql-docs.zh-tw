@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a64dd80608d7b1d60718e5753d77fb37687234a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183108"
 ---
 # <a name="security-page-site-settings-report-manager"></a>安全性頁面 (站台設定， 報表管理員)
   您可以使用 [安全性] 頁面來檢視控制報表伺服器站台之存取權的系統角色指派。 系統角色指派存在報表伺服器命名空間或資料夾階層的範圍之外。 系統角色指派是全域的，不會因特定項目而改變。 透過系統角色指派支援的作業包括建立和使用共用排程、使用報表產生器，以及設定某些伺服器功能的預設值。  

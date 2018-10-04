@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7920 (Database Engine error)
 ms.assetid: d16290ea-3875-4148-8d53-057bfee00438
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 509595509ba84d86d5f14ffb2f979f91c496e335
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9396c2cf462ff53020668c09e442fb815d4d66fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429157"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152508"
 ---
 # <a name="mssqlserver7920"></a>MSSQLSERVER_7920
     
@@ -39,6 +36,6 @@ ms.locfileid: "37429157"
  這是 DBCC CHECKALLOC 以外所有 DBCC CHECK 命令傳回的參考用訊息。 傳回的值就是已檢查的資料列集總數。  
   
 ## <a name="user-action"></a>使用者動作  
- 無  
+ None  
   
   

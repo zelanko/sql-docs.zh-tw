@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a56a29edc9b30577dca3db245d3ace5e4c7814d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09d5ad740cb692549d56b9226bc3c7ad5bb234a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175778"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>第 6 課： 執行 RDL 結構描述應用程式 (VB-C#)
-  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供兩種從整合式開發環境 (IDE) 建立與執行主控台應用程式的方法：  
   
 -   啟動並偵錯  

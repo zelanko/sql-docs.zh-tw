@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021075 error
 ms.assetid: c8c29543-d1f6-49d5-b6c8-e8c3aa373090
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adab054bb93bdd00e52b4e2b2c69f4ae539e915f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a25d8e388e09621994b373cf3d6b206cd9c68b0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170348"
 ---
 # <a name="mssqleng021075"></a>MSSQL_ENG021075
     

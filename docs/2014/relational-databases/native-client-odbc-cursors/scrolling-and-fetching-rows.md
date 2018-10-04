@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - scrollable cursors [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - fetching [ODBC]
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5cddcfc7faef48198d8b810f44a08221b066c39
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a0c0f7f2cad7eaecc212e2283fab7fc7d69f2ee7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228738"
 ---
 # <a name="scrolling-and-fetching-rows"></a>捲動與提取資料列
   若要使用可捲動的資料指標，ODBC 應用程式必須：  

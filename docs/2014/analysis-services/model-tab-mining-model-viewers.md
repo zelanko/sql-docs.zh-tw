@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ffed64e129b7c3a94e337ab7a749b6950cdae4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164168"
 ---
 # <a name="model-tab-mining-model-viewers"></a>模型索引標籤 (採礦模型檢視器)
   Microsoft 時間序列檢視器中的 [模型] 索引標籤會將時間序列的表示顯示為圖形中的節點，這與決策樹模型中採用的方式類似。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170408"
 ---
 # <a name="creating-a-user-defined-type"></a>建立使用者定義型別
   若要建立可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安裝的使用者定義型別 (UDT)，您必須先以其中一種受支援的 .NET Framework 程式語言 (例如 Visual C# 或 Visual Basic)，建立符合建立 UDT 之規格的類別。 然後，您就可以將此類別編譯為可載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的動態連結程式庫 (DLL)。 您也可以使用 Visual Studio 來建立和部署 UDT。  

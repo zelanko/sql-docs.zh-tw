@@ -1,20 +1,21 @@
 ---
 title: 建立、 定型和計分 R （SQL Server Machine Learning 服務） 中的資料分割為基礎的模型教學課程 |Microsoft Docs
+description: 了解如何建立模型、 定型和使用資料分割使用資料分割為基礎的模型化功能，SQL Server 機器學習時以動態方式建立的資料。
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232562"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程： 在 SQL Server 上的 R 中建立分割區為基礎的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "46715056"
 在本教學課程，了解資料分割為基礎的模型，使用傳統的 NYC 計程車範例資料和 R 指令碼。 資料分割資料行是付款方法。
 
 > [!div class="checklist"]
-> * 根據 payment_type 資料行的資料分割。 此資料行區段資料，每個付款類型的一個資料分割中的值。
+> * 資料分割根據付款類型 (5)。
 > * 建立並定型的模型，每個磁碟分割，儲存在資料庫中的物件。
 > * 透過每個磁碟分割模型，使用針對該用途保留的範例資料預測小費的結果的機率。
 
@@ -37,21 +38,17 @@ ms.locfileid: "46715056"
  
 若要完成本教學課程中，您必須擁有下列項目：
 
-+ SQL Server 2019 Machine Learning 服務與 R 功能，database engine 執行個體
-+ 範例資料
-+ T-SQL 查詢的執行，例如 SQL Server Management Studio 的的工具
++ 足夠的系統資源。 資料集很大，並訓練作業相當耗費資源。 可能的話，請使用具有至少 8 GB RAM 的系統。 或者，您可以使用較小的資料集以解決資源限制。 減少資料集的指示會以內嵌方式。 
 
-### <a name="system-resources"></a>系統資源
++ T-SQL 的工具執行查詢，例如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-資料集很大，並訓練作業相當耗費資源。 可能的話，請使用具有至少 8 GB RAM 的系統。 或者，您可以使用較小的資料集以解決資源限制。 減少資料集的指示會以內嵌方式。 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，您可以[下載並還原](sqldev-download-the-sample-data.md)至您的本機資料庫引擎執行個體。 檔案大小大約是 90 MB。
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>使用機器學習服務的 SQL Server 資料庫引擎
++ SQL Server 2019 預覽資料庫引擎執行個體，與機器學習服務和 R 的整合。
 
-需要 SQL Server 2019 CTP 2.0 或更新版本，使用機器學習服務安裝和設定。 您可以檢查 Management Studio 中的伺服器版本，藉由執行`SELECT @@Version`為 T-SQL 查詢。 輸出應該是 「 Microsoft SQL Server 2019 (CTP 2.0)-15.0.x"。
+檢查版本，藉由執行**`SELECT @@Version`** 為 T-SQL 查詢中的查詢工具。 輸出應該是 「 Microsoft SQL Server 2019 (CTP 2.0)-15.0.x"。
 
-### <a name="r-packages"></a>R 套件
-
-本教學課程會使用 R 與機器學習服務一起安裝。 您可以藉由傳回格式正確的所有目前已安裝與您的資料庫引擎執行個體的 R 封裝清單，確認 R 安裝：
+檢查可用性的 R 套件，藉由傳回格式正確的所有目前已安裝與您的資料庫引擎執行個體的 R 封裝清單：
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>查詢執行的工具
-
-您可以[下載並安裝 SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)，也可以使用任何工具，以連接到關聯式資料庫，並執行 T-SQL 指令碼。 請確定您可以連接到已 Machine Learning 服務的資料庫引擎執行個體。
-
-### <a name="sample-data"></a>範例資料
-
-資料源自[NYC 計程車和禮車委託](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)公用資料集。 
-
-+ 下載[NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak )資料庫備份檔案，然後將其還原的資料庫引擎執行個體。
-
-資料庫檔案名稱必須是**NYCTaxi_sample**如果您想要執行下列指令碼未修改。
 
 ## <a name="connect-to-the-database"></a>連接到資料庫
 

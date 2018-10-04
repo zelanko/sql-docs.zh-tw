@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Invoke-Sqlcmd cmdlet
 - sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
-caps.latest.revision: 17
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d07e40d7f5b616b4b555ae3bbd17be764a70e394
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180638"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
   **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 **sqlcmd** 公用程式所支援之語言 ([!INCLUDE[tsql](../includes/tsql-md.md)] 及 XQuery) 與命令的陳述式。  
@@ -114,7 +111,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |執行指定的查詢並結束。|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入識別碼。|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證密碼。|-P|-Password|  
-|變數定義。|-V|-Variable|  
+|變數定義。|-v|-Variable|  
 |查詢逾時間隔。|-t|-QueryTimeout|  
 |發生錯誤時停止執行|-b|-AbortOnError|  
 |專用管理員連接。|-A|-DedicatedAdministratorConnection|  
@@ -137,7 +134,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |變更密碼並維持執行中狀態|-Z|無參數|  
 |封包大小|-a|無參數|  
 |資料行分隔符號|-s|無參數|  
-|控制項輸出標頭|-H|無參數|  
+|控制項輸出標頭|-h|無參數|  
 |指定控制字元|-k|無參數|  
 |固定長度的顯示寬度|-Y|無參數|  
 |變動長度的顯示寬度|-Y|無參數|  

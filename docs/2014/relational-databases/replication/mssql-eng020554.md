@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020554 error
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64c590135a3055ac8bc349676d063aae56e15e78
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35bea347563f775570bb8f605ec1b2a76163e51b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217780"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     

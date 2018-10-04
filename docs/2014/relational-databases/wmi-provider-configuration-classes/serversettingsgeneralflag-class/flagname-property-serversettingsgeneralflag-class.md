@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FlagName Property (ServerSettingsGeneralFlag Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5301ee43c8f4fde1d0a8b25541ada2e494aef43c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd076d366d82c50f2cc47ad67c3afea5aeef114d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162418"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 屬性 (ServerSettingsGeneralFlag 類別)
   取得旗標的名稱。  

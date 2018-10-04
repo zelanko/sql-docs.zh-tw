@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105878"
 ---
 # <a name="plan-for-map-report-support"></a>對應報表支援規劃
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支援使用空間資料來源的地圖報表。 空間資料可以來自 SQL Server 資料庫、ESRI 形狀檔，或是隨著 Reporting Services 或報表產生器一起安裝的地圖庫。 地圖也可以顯示 Bing 地圖底圖的背景。 報表作者可以建立報表，做為動態，在執行階段擷取或為 static 並內嵌在報表定義中指定空間資料或 Bing 地圖底圖。  

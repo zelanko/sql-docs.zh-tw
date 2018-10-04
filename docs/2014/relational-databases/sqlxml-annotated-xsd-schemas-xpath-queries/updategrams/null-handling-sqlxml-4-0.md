@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updg:nullvalue attribute
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - nullvalue attribute
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb61234696e419bc203822985f8966a81975e476
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a6da64b6a626da7dcdc3ff8b29c9e291b8684b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172111"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160038"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 處理 (SQLXML 4.0)
   XML 語法表示 NULL 不存在  (例如，如果屬性或元素值為 NULL，該屬性或元素就會從 XML 文件中消失)。在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 中，`updg:nullvalue` 屬性允許針對元素或屬性值指定 NULL。  

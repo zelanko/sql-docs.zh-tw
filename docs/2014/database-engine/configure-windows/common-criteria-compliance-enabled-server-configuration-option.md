@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0452da8e35aadf8ef279413c9780b6a08b5d6e04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f1ad58e4b3e923d23d9770f12b094211adfc5a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178728"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>通用條件符合已啟用伺服器組態選項
   common criteria compliance enabled 選項會啟用通用條件所需的下列元素。  

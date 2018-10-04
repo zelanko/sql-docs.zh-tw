@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Rowset Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c4ce1858e8274e5ae964c497972b4f2b082a712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279444"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170118"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 資料類型 (XMLA)
   定義衍生的資料類型，表示[根](../xml-elements-properties/root-element-xmla.md)傳回的表格式資料的項目[Discover](../xml-elements-methods-discover.md)或是[Execute](../xml-elements-methods-execute.md)方法呼叫。  
@@ -55,13 +52,13 @@ ms.locfileid: "37279444"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[結果集](resultset-data-type-xmla.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[資料列](../xml-elements-properties/row-element-xmla.md)|  
 |衍生的元素|[根目錄](../xml-elements-properties/root-element-xmla.md)|  
   

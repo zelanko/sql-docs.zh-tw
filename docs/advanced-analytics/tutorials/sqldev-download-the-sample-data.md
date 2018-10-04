@@ -3,118 +3,60 @@ title: 下載 NYC 計程車示範資料和指令碼內嵌 R 和 Python （SQL Se
 description: 指示下載紐約市計程車資料的範例，並建立資料庫。 資料會在 SQL Server 教學課程示範如何內嵌 R 和 Python 中 SQL Server 預存程序和 T-SQL 函數。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 700720f7538467dc3edc38414544eb2c402437a6
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232572"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>適用於 SQL Server 的 NYC 計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章會準備您的系統，如需有關如何使用 R 和 Python 的 SQL Server 中的資料庫內分析的教學課程。
+這篇文章說明如何取得 SQL Server 中的資料庫內分析的 R 和 Python 教學課程的範例資料。
 
-在此練習中，您將會下載範例資料，準備環境，所需的 PowerShell 指令碼和[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼在數個教學課程中使用的檔案。 當您完成時， **NYCTaxi_Sample**資料庫位於本機執行個體，提供示範資料以進行實際操作學習。 
+資料源自[NYC 計程車和禮車委託](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)公用資料集。 我們花了我們的示範資料庫資料集的快照集和擷取的 1%的可用資料。 在您系統上，將資料庫備份檔案是稍微超過 90 MB，提供資料表中的主要資料的 1.7 百萬個資料列。
+
+當您完成本文中中的步驟時**NYCTaxi_Sample**資料庫位於本機執行個體，提供示範資料以進行實際操作學習。 資料庫名稱必須是**NYCTaxi_Sample**如果您想要執行未修改的示範指令碼。
 
 ## <a name="prerequisites"></a>先決條件
 
-您需要網際網路連線、 PowerShell 和的電腦上的本機系統管理權限。 您應該[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)或其他工具來驗證物件建立。
+您需要網際網路連線、 電腦以及 database engine 執行個體上的本機系統管理權限。
 
-## <a name="download-nyc-taxi-demo-data-and-scripts-from-github"></a>從 Github 下載 NYC 計程車示範資料和指令碼
+最好先[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)或其他工具來驗證物件建立。
 
-1.  開啟 Windows PowerShell 命令主控台。
-  
-    使用**系統管理員身分執行**選項來建立目的地目錄，或將檔案寫入到指定的目的地。
-  
-2.  執行下列 PowerShell 命令，將參數 *DestDir* 的值變更為任何本機目錄。 我們在此處使用的預設值是 **TempRSQL**。
-  
-    ```ps
-    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
-    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
-    ```
-  
-    如果您在 *DestDir* 中指定的資料夾不存在，PowerShell 指令碼就會加以建立。
-  
-    > [!TIP]
-    > 如果您收到錯誤，您可以暫時設定 PowerShell 指令碼的執行原則**不受限制**僅針對這個逐步解說中使用略過引數，並設定所做的變更目前工作階段的範圍。
-    >   
-    >````
-    > Set\-ExecutionPolicy Bypass \-Scope Process
-    >````
-    > 執行此命令不會導致設定變更。
-  
-    按照網際網路的連線速度，下載可能需要一些時間。
-  
-3.  當所有的檔案已下載時，PowerShell 指令碼會開啟*DestDir*資料夾。 在 PowerShell 命令提示字元中，執行下列命令，並檢閱已下載的檔案。
-  
-    ```
-    ls
-    ```
-  
-    **結果：**
-  
-    ![PowerShell 指令碼下載的檔案清單](media/rsql-devtut-filelist.png "PowerShell 指令碼下載的檔案清單")
+## <a name="download-demo-database"></a>下載示範資料庫
 
-## <a name="create-nyctaxisample-database"></a>建立 NYCTaxi_Sample 資料庫
+範例資料庫是由 Microsoft 裝載的備份檔案。 立即當您按一下連結時，就會開始下載檔案。 
 
-在下載的檔案，您應該會看到 PowerShell 指令碼 (**RunSQL_SQL_Walkthrough.ps1**)，建立資料庫，並大量載入資料。 指令碼所執行的動作包括：
+檔案大小大約是 90 MB。
 
-+ 如果尚未安裝，請安裝 SQL Native Client 和 SQL 命令列公用程式。 使用 **bcp**將資料大量載入資料庫時，需要這些公用程式。
+1. 按一下  [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)下載資料庫備份檔案。
 
-+ 建立資料庫和資料表上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，並大量插入資料來源從.csv 檔案。
+2. 將檔案複製到 C:\Program files\Microsoft SQL Server\MSSQL 執行個體 name\MSSQL\Backup 資料夾中。
 
-+ 建立多個 SQL 函數，以及數個教學課程中使用的預存程序。
+3. 在 Management Studio 中，以滑鼠右鍵按一下**資料庫**，然後選取**還原檔案和檔案群組**。
 
-### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>修改指令碼，以使用受信任的 Windows 身分識別
+4. 請輸入*NYCTaxi_Sample*做為資料庫名稱。
 
-根據預設，指令碼會假設 SQL Server 資料庫使用者登入和密碼。 如果您是 db_owner Windows 使用者帳戶時，您可以使用您的 Windows 身分識別建立的物件。 若要這樣做，請開啟`RunSQL_SQL_Walkthrough.ps1`程式碼編輯器中並附加**`-T`** bcp 大量插入命令 （行 238）：
+5. 按一下 **從裝置**，然後開啟 選取備份檔案的 選取檔案 頁面。 按一下 **新增**選取 NYCTaxi_Sample.bak。
 
-```text
-bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
-```
-
-### <a name="run-the-script-to-create-objects"></a>執行指令碼來建立物件
-
-在 C:\tempRSQL 中使用系統管理員的 PowerShell 命令提示字元，執行下列命令。
-  
-```ps
-.\RunSQL_SQL_Walkthrough.ps1
-```
-系統會提示您輸入下列資訊：
-
-- 伺服器執行個體[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]已安裝。 在預設執行個體，這可以是簡單，只要電腦名稱。
-
-- 資料庫名稱。 本教學課程中，指令碼假設`NYCTaxi_Sample`。
-
-- 使用者名稱和使用者密碼。 輸入這些值的 SQL Server 資料庫登入。 或者，如果您修改要接受信任的 Windows 身分識別的指令碼，按 Enter，以將這些值保留為空白。 您的 Windows 身分識別用於連接。
-
-- 在上一課中所下載的範例資料的完整的檔案名稱。 例如： `C:\tempRSQL\nyctaxi1pct.csv`
-
-您提供這些值之後，立即執行指令碼。 指令碼在執行期間中的所有預留位置名稱[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼已更新為使用您提供的輸入。
+6. 選取 **還原**核取方塊，按一下 **確定**來還原資料庫。
 
 ## <a name="review-database-objects"></a>檢閱資料庫物件
    
-指令碼執行完成時，確認資料庫物件上存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您應該會看到資料庫、 資料表、 函數和預存程序。
+確認資料庫物件上存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您應該會看到資料庫、 資料表、 函數和預存程序。
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-> [!NOTE]
-> 如果資料庫物件已存在，就無法再次建立。
->   
-> 如果資料表已存在，則會附加而不是覆寫資料。 因此，請務必捨棄任何現有的物件，再執行指令碼。
-
 ### <a name="objects-in-nyctaxisample-database"></a>NYCTaxi_Sample 資料庫中的物件
 
-下表摘要說明在 NYC 計程車示範資料庫中建立的物件。 雖然您只執行某個 PowerShell 指令碼 (`RunSQL_SQL_Walkthrough.ps1`)，該指令碼會呼叫其他的 SQL 指令碼，以建立您的資料庫中的物件。 用來建立每個物件的指令碼會在描述中所述。
+下表摘要說明在 NYC 計程車示範資料庫中建立的物件。
 
 |**物件名稱**|**物件類型**|**說明**|
 |----------|------------------------|---------------|
@@ -132,9 +74,9 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 驗證步驟中，執行查詢，以確認資料已上傳。
 
-1. 在 [物件總管] 中，在資料庫中，展開**NYCTaxi_Sample**資料庫，然後開啟 [資料表] 資料夾。
+1. 在 [物件總管] 的資料庫，以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫，然後開始新的查詢。
 
-2. 以滑鼠右鍵按一下**dbo.nyctaxi_sample** ，然後選擇**選取前 1000 個資料列**傳回一些資料。
+2. 執行**`select * from dbo.nyctaxi_sample`** 傳回所有 1.7 百萬個資料列。
 
 ## <a name="next-steps"></a>後續步驟
 

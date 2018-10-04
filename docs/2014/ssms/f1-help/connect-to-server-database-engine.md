@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectoserverunknownservertype.f1
@@ -16,16 +14,15 @@ f1_keywords:
 - sql12.swb.connecttoce.f1
 - sql12.swb.connecttoce.connectionproperties.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50a593c625fe50e5d7a1dfbebc40222ac13433c2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: beb7afac36d1183fc9142874f4c2de1589ff0df2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189958"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
   使用此對話方塊可在連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 時檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  

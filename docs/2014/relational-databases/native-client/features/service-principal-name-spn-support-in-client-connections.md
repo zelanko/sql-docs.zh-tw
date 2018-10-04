@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, SPNs
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f05dae7c8fcd27ca1138ad316fa6a683e4219a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 35d602969e0d34fc9ce1af4e796a0bc4fe612cc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155438"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
   從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 開始，已經擴充服務主體名稱 (SPN) 的支援以便跨所有通訊協定進行相互驗證。 在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的預設 SPN 使用 Active Directory 註冊時，Kerberos 才能透過 TCP 支援 SPN。  

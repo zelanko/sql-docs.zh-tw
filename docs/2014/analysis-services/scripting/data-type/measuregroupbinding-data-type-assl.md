@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 530ed80199c0bc607016a1b34a1a830dfaabee5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3551685e96e248b7cd3e3a5e79eae67bf06efe3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201548"
 ---
 # <a name="measuregroupbinding-data-type-assl"></a>MeasureGroupBinding 資料類型 (ASSL)
   定義代表繫結的衍生的資料類型[MeasureGroup](../objects/group-element-assl.md)項目。  
@@ -56,13 +53,13 @@ ms.locfileid: "37324908"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[繫結](binding-data-type-assl.md)|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[CubeID](../properties/id-element-assl.md)， [DataSourceID](../properties/datasourceid-element-assl.md)，[篩選](../properties/filter-element-binding-assl.md)， [MeasureGroupID](../properties/measuregroupid-element-assl.md)，[持續性](../properties/persistence-element-assl.md)， [RefreshInterval](../properties/refreshinterval-element-assl.md)， [RefreshPolicy](../properties/refreshpolicy-element-assl.md)|  
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   

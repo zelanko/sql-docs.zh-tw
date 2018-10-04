@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Format Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed7cf229d4ef65e324a59d2d9292948ae530147
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228008"
 ---
 # <a name="format-element-assl"></a>Format 元素 (ASSL)
   包含所需的格式[DataItem](../data-type/dataitem-data-type-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37169499"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37169499"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  允許的值`Format`項目就是 Microsoft Office Excel 格式，而字串*TrimRight*， *TrimLeft*， *TrimAll*，以及*TrimNone*。 進行修剪， *TrimRight*是預設值。  

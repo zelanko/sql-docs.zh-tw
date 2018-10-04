@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationInstanceAttribute Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationInstanceAttribute data type
 ms.assetid: fc5a98bf-7c3c-4faf-b9f8-16eb073d7dc7
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8865c55a994cfb698ceea019998fe0e44e65c33b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9bd2bb1b8db7b9913c516dc5b3801e694aebafaf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219370"
 ---
 # <a name="aggregationinstanceattribute-data-type-assl"></a>AggregationInstanceAttribute 資料類型 (ASSL)
   定義代表彙總執行個體所使用之屬性相關資訊的基本資料類型。  
@@ -47,14 +44,14 @@ ms.locfileid: "37297328"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|基底資料類型|無|  
-|衍生資料類型|無|  
+|基底資料類型|None|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
+|父元素|None|  
 |子元素|[AttributeID](../properties/id-element-assl.md)， [KeyColumns](../collections/columns-element-assl.md)|  
 |衍生的元素|[Attribute](../objects/attribute-element-assl.md)|  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217648"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路使用「多層認知」(Multilayer Perceptron) 網路，亦稱為「倒傳播差異規則」(Back-Propagated Delta Rule) 網路，它包含最多 3 層神經 (Neuron) 或「認知器」(Perceptron)。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  

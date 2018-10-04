@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79e75ea52d0e1ed2d80dd4e2ef9dcc2d2092e6c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d60680f4c6f286db1c1d0e47961e75b057b14a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192098"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription 事件類別
   QN:Subscription 事件會報告通知訂閱的資訊。  

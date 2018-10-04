@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3edb4e923424def48ff3cacdd9eb8967f8cb6579
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175368"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>設定 Cube、分割區和維度處理 (SSAS - 多維度) 時發生錯誤
   Cube、資料分割或維度物件的錯誤組態屬性決定了在處理期間發生資料完整性錯誤時，伺服器的回應方式。 索引鍵重複、遺漏索引鍵和索引鍵資料行有 Null 值通常會觸發這類錯誤，而造成錯誤的記錄並不會加入至資料庫，您便可設定屬性以決定接下來將發生什麼情況。 依預設，處理作業會停止。 不過，在開發 Cube 期間，您可能希望錯誤發生時仍繼續進行處理，好讓您能夠使用匯入的資料測試 Cube 行為，就算未完全匯入也無妨。  
@@ -107,7 +104,7 @@ ms.locfileid: "37275914"
   
  您可以對任何能夠當成獨立作業處理的物件設定錯誤組態。  
   
-#### <a name="sql-server-management-studio"></a>Transact-SQL  
+#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
 1.  在物件總管中，以滑鼠右鍵按一下以下任一物件的 [屬性]：維度、Cube 或資料分割。  
   

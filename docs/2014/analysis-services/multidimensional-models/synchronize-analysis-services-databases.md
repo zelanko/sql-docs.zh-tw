@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a627434141bd417d9801354a7879d0879e1c85cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174138"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步處理 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含資料庫同步處理功能，此功能藉由將來源伺服器上資料庫的資料和中繼資料複製到目的地伺服器上的資料庫，讓兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫相等。 使用同步處理資料庫功能可完成下列任何一項工作：  

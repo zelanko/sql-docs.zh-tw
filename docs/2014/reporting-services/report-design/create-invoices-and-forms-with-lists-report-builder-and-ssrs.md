@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 43558261eff0d22d597cdfe63f7d01137aa467a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161518"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>清單 (報表產生器及 SSRS)
   清單資料區域會隨報表資料集中的每一個群組或資料列重複。 清單可以用於建立自由形式的報表或表單 (如發票)，也可以與其他資料區域一起使用。 您可以定義包含任何數目之報表項目的清單。 清單可以巢狀放在另一份清單內，以提供多個資料群組。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 021cb357b85b7e75ec2d4594300c096b8f09fda8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac0637b19437c2570cbb87fb56b84641274d9d3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184675"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174188"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
   使用 **[設定]** 對話方塊來針對封裝和專案設定參數、連接管理員及環境的參考。  
@@ -77,7 +74,7 @@ ms.locfileid: "37184675"
  **屬性名稱**  
  列出連接管理員屬性的名稱。  
   
- **ReplTest1**  
+ **值**  
  列出指派給連接管理員屬性的值。 按一下省略符號按鈕，在 **[設定參數值]** 對話方塊中變更此值。 您可以輸入常值、對應包含您要使用之值的環境變數，或使用封裝中的預設值。  
   
 ##  <a name="references"></a> 在參考頁面上設定選項  

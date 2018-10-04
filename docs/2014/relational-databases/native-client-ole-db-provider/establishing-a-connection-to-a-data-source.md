@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [SQL Server Native Client]
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b07fd8c9710c591806721d019f7dc776298fbab
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137549"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
   若要存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，取用者必須先建立資料來源物件的執行個體藉由呼叫**CoCreateInstance**方法。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，類別識別項為 CLSID_SQLNCLI10。 您也可以使用符號 sqlncli_clsid 符號將會解析為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用您所參考之 sqlncli.h 中的 Native Client OLE DB 提供者。  
   
- 資料來源物件會公開**IDBProperties**介面，取用者可以使用提供基本的驗證資訊，例如伺服器名稱、 資料庫名稱、 使用者識別碼和密碼。 **Idbproperties:: Setproperties**呼叫方法來設定這些屬性。  
+ 資料來源物件會公開 **IDBProperties** 介面，取用者可以使用這個介面來提供基本驗證資訊；例如，伺服器名稱、資料庫名稱、使用者識別碼和密碼。 呼叫 **IDBProperties::SetProperties** 方法可設定這些屬性。  
   
  如果有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在電腦上執行，伺服器名稱會指定為 ServerName\InstanceName。  
   
- 資料來源物件也會公開**IDBInitialize**介面。 設定屬性之後，連接到資料來源建立的方法是呼叫**idbinitialize:: Initialize**方法。 例如：  
+ 資料來源物件也會公開 **IDBInitialize** 介面。 屬性設定之後，就會呼叫 **IDBInitialize::Initialize** 方法來建立資料來源的連線。 例如：  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   
@@ -43,7 +40,7 @@ CoCreateInstance(CLSID_SQLNCLI10,
                  (void **) &pIDBInitialize)  
 ```  
   
- 此呼叫**CoCreateInstance**建立與 CLSID_SQLNCLI10 相關聯類別的單一物件 （CSLID 相關聯的資料和將用來建立物件的程式碼）。 IID_IDBInitialize 是介面的識別項的參考 (**IDBInitialize**) 用來與物件通訊。  
+ 此呼叫**CoCreateInstance**建立與 CLSID_SQLNCLI10 相關聯類別的單一物件 （CSLID 相關聯的資料和將用來建立物件的程式碼）。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
   
  以下是初始化與建立資料來源之連接的範例函數。  
   

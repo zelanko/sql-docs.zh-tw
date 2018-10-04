@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f2f1e53e6dd8aacf6bcf347f2d604ae1e5c1aa6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189128"
 ---
 # <a name="defining-named-sets"></a>定義命名集
   命名集是指傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。  

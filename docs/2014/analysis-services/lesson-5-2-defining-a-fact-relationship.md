@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c242dc17e07f90c0bedae4b67f0b4891ff4a5d50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174738"
 ---
 # <a name="defining-a-fact-relationship"></a>定義事實關聯性
   使用者有時候想要按事實資料表中的資料項目建立量值維度，或查詢事實資料表中的其他特定相關資訊，例如與特定銷售事實相關的發票號碼或訂單號碼。 當您依據這樣的事實資料表項目來定義維度時，這種維度稱為「事實維度」。 事實維度也稱為變質維度。 事實維度對於將相關事實資料表資料列 (例如，與特定發票號碼相關的所有資料列) 分組很有幫助。 雖然您可以將這項資訊放在關聯式資料庫的個別維度資料表中，但為這項資訊建立個別的維度資料表並無好處，因為維度資料表與事實資料表的成長速率一樣，只會建立重複資料和產生不必要的複雜性而已。  

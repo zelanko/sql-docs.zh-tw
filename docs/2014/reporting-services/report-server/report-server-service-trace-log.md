@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161928"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表伺服器追蹤記錄是 ASCII 文字檔，其中包含報表伺服器服務作業的詳細的資訊，包括作業執行的報表伺服器 Web 服務、 報表管理員和背景處理。 追蹤記錄檔包括已記錄於其他記錄檔的重複資訊，加上別處所沒有的其他資訊。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊可能會很有用。  
@@ -56,7 +53,7 @@ ms.locfileid: "37270274"
 ##  <a name="bkmk_trace_configuration_settings"></a> 追蹤組態設定  
  追蹤記錄檔的行為在組態檔 **ReportingServicesrService.exe.config**中管理。下列資料夾路徑中可找到組態檔：  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`。  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`.  
   
  下列範例說明 `RStrace` 設定的 XML 結構。 值`DefaultTraceSwitch`決定加入至記錄的資訊種類。 除了`Components`屬性的值`RStrace`所有組態檔中都相同。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Operation event class
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27a4e9b29c1b7a14618fd97b373ae77896c9749b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef459c632644bcce953c1ba6c7c946f6e488ab93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213908"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation 事件類別
   使用安全性稽核作業 (例如改變設定、資源、外部存取或驗證) 時，就會發生 **稽核伺服器作業** 事件類別。  

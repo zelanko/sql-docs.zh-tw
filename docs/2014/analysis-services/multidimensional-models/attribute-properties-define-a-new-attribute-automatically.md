@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic attribute creation
 - attributes [Analysis Services], creating
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74b4e1950e6a31675994b7cae1562ff92a56de4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10c0a014cb83b8384fd7d742073140eb0e018237
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171288"
 ---
 # <a name="define-a-new-attribute-automatically"></a>自動定義新屬性
   您可以在 [維度設計師] 中使用拖放式編輯，在維度中建立新屬性。  

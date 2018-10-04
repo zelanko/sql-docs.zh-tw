@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7491322b775cca1a6cf65b667ffd979aa723af0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8caec3620a5f7c0df1e3a5d0558272b1a2fb7bfa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164188"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多維度模型中的分割區
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， *「分割區」* (Partition) 提供載入量值群組之事實資料的實體儲存體。 系統會自動為每個量值群組建立一個分割區，但通常會建立其他分割區以進一步分割資料，因此處理效能更佳且查詢效能更快。  

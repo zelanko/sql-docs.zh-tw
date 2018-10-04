@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large data, CLR integration
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SqlBytes data type
 - SqlChars data type
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f23f42a01ba5268c9165a79f5330fb0efcc538ce
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 09797eac229a4b3b92f94a60b6e1c06c9ec12f08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202518"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>處理 CLR 中的大型物件 (LOB) 參數
   使用 `SqlBytes` 和 `SqlChars` 分別傳遞大型物件 (LOB) 二進位類型 (`varbinary(max)`) 和 LOB 字元類型 (`nvarchar(max)`) 參數。 這些類型允許將 LOB 值從資料庫串流到 Common Language Runtime (CLR) 常式，而非將整個值複製到 Managed 空間。 `SqlBinary` 和 `SqlString` 應該僅用於小型二進位和字元字串值。  

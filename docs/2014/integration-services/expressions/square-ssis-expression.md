@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db690f1b8ffd3b011ef5a39f442ca44d32b50f33
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c375621cf6b8f6310fad1beec74b9cf1850478d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214978"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 運算式)
   傳回數值運算式的平方。  
@@ -66,7 +63,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  在運算式中，變數名稱一律包含\@前置詞。  
+>  在運算式中，變數名稱一律包含 \@ 前置詞。  
   
 ## <a name="see-also"></a>另請參閱  
  [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  

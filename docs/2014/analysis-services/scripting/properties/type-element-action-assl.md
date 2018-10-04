@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (Action)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af38eb6a60e8e54ecfc4ac5bb4fb05faeab69feb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168418"
 ---
 # <a name="type-element-action-assl"></a>Type 元素 (Action) (ASSL)
   包含的型別[動作](../objects/action-element-assl.md)項目。  
@@ -51,7 +48,7 @@ ms.locfileid: "37249079"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37249079"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[動作](../objects/action-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeName Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeName element
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 528bd232e9b49bfab5376b6dee16d22c6e6677d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f64264e9432ff4f06b375b3d1ad1b0dfd814514
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178738"
 ---
 # <a name="attributename-element-xmla"></a>AttributeName 元素 (XMLA)
   包含父元素所代表之屬性名稱[屬性](attribute-element-xmla.md)項目。  
@@ -53,7 +50,7 @@ ms.locfileid: "37306143"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|1-1：只能出現一次的必要元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37306143"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Attribute](attribute-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 779597ab830df7cf89ad3d830c41402b43a91768
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea7e6c9b8acb3301174a1e4086aee3844eb1ee81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174508"
 ---
 # <a name="operators-ssis-expression"></a>運算子 (SSIS 運算式)
   本節描述運算式語言提供的運算子，以及運算式評估工具使用的運算子優先順序和關聯性。  
@@ -46,7 +43,7 @@ ms.locfileid: "37320688"
 |[&& &#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](logical-and-ssis-expression.md)|執行邏輯 AND 運算。|  
 |[\! &#40;邏輯 Not&#41;&#40;SSIS 運算式&#41;](logical-not-ssis-expression.md)|執行布林運算元的否定運算。|  
 |[&#124;&#40;位元包含 OR&#41; &#40;SSIS 運算式&#41;](bitwise-inclusive-or-ssis-expression.md)|執行兩個整數值的位元 OR 運算。|  
-|[^ &#40;位元互斥 OR&#41; &#40;SSIS 運算式&#41;](bitwise-exclusive-or-ssis-expression.md)|執行兩個整數值的位元排除 OR 運算。|  
+|[^&#40;位元互斥 OR&#41; &#40;SSIS 運算式&#41;](bitwise-exclusive-or-ssis-expression.md)|執行兩個整數值的位元排除 OR 運算。|  
 |[& &#40;位元 AND&#41; &#40;SSIS 運算式&#41;](bitwise-and-ssis-expression.md)|執行兩個整數值的位元 AND 運算。|  
 |[~ &#40;位元 Not&#41; &#40;SSIS 運算式&#41;](bitwise-not-ssis-expression.md)|執行整數的位元否定運算。|  
 |[== &#40;等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)|執行比較來決定兩個運算式是否相等。|  

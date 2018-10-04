@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - dependencies [SMO]
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 375a8f90c4864c8f1f3db12c56db1bf0eda3b0a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b58c868536b3f34391dc8db15493c2302a9b6c0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179628"
 ---
 # <a name="scripting"></a>指令碼
   在 SMO 中，指令碼是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件控制，或是由個別物件的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件可控制從相依性關聯性物件的執行個體上的對應[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

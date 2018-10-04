@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Type property
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b7be3b5e73134e65cefad48b3d03c4c912a4279a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9303e3d2ddfa53560b900b92bc75763d44c7f87e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323178"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177718"
 ---
 # <a name="configure-measure-properties"></a>設定量值屬性
   量值有一些屬性可讓您定義量值的運作方式以及控制量值讓使用者看到的樣子。  

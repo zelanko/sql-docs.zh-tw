@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DatabaseName Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DatabaseName element
 ms.assetid: 5cfd9a1f-da53-497a-b677-c51be4641bd0
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc7969194f91afa5dcf4d795ce33fae39d00c398
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4727f3554b654687484e6bd273a0d88e557215e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172678"
 ---
 # <a name="databasename-element-xmla"></a>DatabaseName 元素 (XMLA)
   識別[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]父元素所要還原資料庫[還原](../xml-elements-commands/restore-element-xmla.md)命令。  
@@ -53,7 +50,7 @@ ms.locfileid: "37183205"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -61,7 +58,7 @@ ms.locfileid: "37183205"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Restore](../xml-elements-commands/restore-element-xmla.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `DatabaseName` 元素會識別 `Restore` 命令將備份檔案還原至其中的資料庫。 如果您沒有指定這個元素，或者它包含空字串，系統就會使用備份檔案中包含的資料庫名稱。  

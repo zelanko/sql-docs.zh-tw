@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-caps.latest.revision: 43
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180608"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支援的 Access 報表功能 (SSRS)
   當您將報表匯入報表設計師時，匯入程序會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 報表轉換成 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援多種 Access 的功能；但因為 Access 及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之間的差異，會稍微修改或不支援某些項目。 此主題描述 Access 報表功能如何轉換成 RDL。  
@@ -60,7 +57,7 @@ ms.locfileid: "37268474"
   
 |||||  
 |-|-|-|-|  
-|image|標籤|線條|矩形|  
+|Image|標籤|線條|矩形|  
 |SubForm|SubReport<br /><br /> **請注意**當 SubReport 控制項在主報表內轉換、 子報表本身會個別轉換。|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不支援下列控制項：  
@@ -84,7 +81,7 @@ ms.locfileid: "37268474"
 |BorderWidth|BottomMargin|CanGrow (textbox)|CanShrink (textbox)|  
 |Caption|FontBold|FontItalic|FontName|  
 |FontSize|FontUnderline|FontWeight|ForceNewPage|  
-|ForeColor|高度|HideDuplicates|Hyperlink|  
+|ForeColor|高度|HideDuplicates|超連結|  
 |IsHyperlink|IsVisible|KeepTogether (group)|Left|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
@@ -109,7 +106,7 @@ ms.locfileid: "37268474"
 ## <a name="expressions"></a>運算式  
  Access 會使用運算式，來指定顯示在文字方塊中的值。 Access 會使用 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]，加上一些彙總函式，做為運算式語言。 報表設計師會將這些 Access 運算式轉換成報表運算式。  
   
-### <a name="functions"></a>函數  
+### <a name="functions"></a>函式  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表定義使用 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET 做為其原生的運算式語言，而 Access 2002 則使用 Visual Basic。 下列清單描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援的函數。  
   
 #### <a name="array-functions"></a>陣列函數  

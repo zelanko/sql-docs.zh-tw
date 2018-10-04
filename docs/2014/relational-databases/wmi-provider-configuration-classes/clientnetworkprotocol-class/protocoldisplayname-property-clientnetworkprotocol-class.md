@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProtocolDisplayName Property (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProtocolDisplayName property
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 88da0d60f74483dc48cdcb470589a98192a2bd3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb81925334c54f1556ac14a512ada06ea018faff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251810"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161098"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>ProtocolDisplayName 屬性 (ClientNetworkProtocol 類別)
   取得指定的用戶端網路通訊協定的顯示名稱[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  

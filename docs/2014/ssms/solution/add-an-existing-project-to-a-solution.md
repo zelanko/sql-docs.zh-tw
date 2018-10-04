@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.addexistingproject
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], project additions
 - projects [SQL Server Management Studio], adding
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4106c9dbdb81a4dbaec22360b7ca4e9266733c16
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7603d1de37f5a2e858d4c72c14c407200aedfbfc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819104"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134638"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>將現有專案加入方案中
   您可以將一或多個專案加入現有的方案中。 一個專案可以與多個方案產生關聯。  

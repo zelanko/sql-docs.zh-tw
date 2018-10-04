@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Action Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48a07020a2c4b8bb2fbc79c5c3d67697a30760d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166438"
 ---
 # <a name="action-element-assl"></a>Action 元素 (ASSL)
   包含中可用動作的相關資訊[Cube](cube-element-assl.md)項目或有[觀點來看](perspective-element-assl.md)項目。  
@@ -52,7 +49,7 @@ ms.locfileid: "37196008"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 |上階或父系|資料類型|  
@@ -65,7 +62,7 @@ ms.locfileid: "37196008"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[動作](../collections/actions-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Action>。  

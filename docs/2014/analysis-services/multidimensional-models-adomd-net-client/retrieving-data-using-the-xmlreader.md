@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - retrieving data
 - XmlReader object
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa47902131522f807ebe96b0b14a3df28aaf657f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa8ef058839fb3c97a9e3dfdf6022dd91bc2053
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267564"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165688"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>使用 XmlReader 擷取資料
   屬於 Microsoft .NET Framework 類別庫的 `XmlReader` 命名空間的 `System.Xml` 類別，類似於 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 類別，因為 `XmlReader` 類別也可以用快速、非快取且順向的方式存取資料。 如果不需要使用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件，對資料進行記憶體中的分析檢視，`XmlReader` 物件也非常適合用以擷取 XML 資料，特別是大量的資料。 因為 `XmlReader` 會串流資料，所以`XmlReader` 不必擷取和快取所有的資料，即可向呼叫端公開資料，如果 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件是用來將 XML for Analysis 回應轉換為分析物件模型表示，也是如此。  

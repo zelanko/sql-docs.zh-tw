@@ -1,29 +1,26 @@
 ---
-title: ODBC API 參考 |Microsoft 文件
+title: ODBC API 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3920299ded492ef40bee8bd181e5ea60aaa9960
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680826"
 ---
-# <a name="odbc-api-reference"></a>ODBC 應用程式開發介面參考
-本節中的主題會描述每個 ODBC 函數，依字母順序。 每個函式定義為 C 程式設計語言的函式。 描述包含下列各項：  
+# <a name="odbc-api-reference"></a>ODBC API 參考
+在本節中的主題描述依字母順序的每個 ODBC 函式。 每個函式定義為 C 程式設計語言函式。 描述包含下列各項：  
   
 -   目的  
   
@@ -39,20 +36,20 @@ ms.locfileid: "32921943"
   
 -   診斷  
   
--   使用方式和實作的相關註解  
+-   使用方式實作的相關註解  
   
 -   程式碼範例  
   
--   相關函數的參考  
+-   相關的函式的參考  
   
- 標準的 CLI 一致性層級可以是下列其中之一： ISO 92、 Open Group、 ODBC 或已過時。 標記為 ISO 92 標準也會出現在第 1 版的 Open Group Open Group 的 ISO 92 純超集，因為函式。 標記為符合開啟群組的函式也會出現在 ODBC 3。*x*，因為 ODBC 3。*x*是純粹的 Open Group 第 1 版。 標記為 ODBC 相容的函式會出現在任何標準。 標記為已被取代的函式已被取代，在 ODBC 3。*x*。  
+ 標準的 CLI 一致性層級可以是下列其中之一： ISO 92、 Open Group、 ODBC 或已被取代。 標記為 ISO 92 – 符合標準也會出現在 Open Group 第 1 版中，因為 Open Group 是純粹的 ISO 92 函式。 標記為 開啟群組符合規範的函式也會出現在 ODBC 3。*x*，因為 ODBC 3。*x*純 Open Group 第 1 版的超集。 標記為符合 ODBC 規範的函式會出現在沒有標準。 標記為已被取代的函式已被取代，在 ODBC 3。*x*。  
   
- 處理診斷資訊述[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函式描述。 SQLSTATE 值相關聯的文字就會包含提供條件的描述，但不是能指定特定的文字。  
+ 處理診斷資訊所述[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函式描述。 SQLSTATE 值相關聯的文字就會包含提供條件的描述，但不是要指定特定的文字。  
   
 > [!NOTE]  
->  如需 ODBC 函數的驅動程式特定資訊，請參閱驅動程式 」 一節。  
+>  如需 ODBC 函數的驅動程式專屬資訊，請參閱驅動程式區段。  
   
- 本節包含主題的下列功能：  
+ 本章節包含下列函式的主題：  
   
 -   [SQLAllocConnect 函式](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

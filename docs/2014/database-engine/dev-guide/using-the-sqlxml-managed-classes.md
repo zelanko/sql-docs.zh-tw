@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - examples [SQLXML], managed classes
 - Managed Classes [SQLXML], samples
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 045ec75b87e8239043de4b4b90fbb8f82b8a8de7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7872bf8b0e9b6b40ff8668053a3c5d4818a44c1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225828"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>使用 SQLXML Managed 類別
   本節提供範例應用程式，示範如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed 類別。  

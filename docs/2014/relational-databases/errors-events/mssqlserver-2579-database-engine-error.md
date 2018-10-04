@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 2579 (Database Engine error)
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abcbd38497d5e7a5e942c9aba0f9bcdd784d3a8a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0f6b0ebed67ba918cb45c1aaae9c14f15d6871c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152114"
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
     

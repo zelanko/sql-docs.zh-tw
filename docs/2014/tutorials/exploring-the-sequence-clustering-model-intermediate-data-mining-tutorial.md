@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a17523ea68b8f04de5240011ad426dbe19779e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213878"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>探索時序群集模型 (中繼資料採礦教學課程)
   既然您已建立**Sequence Clustering with Region**模型，您可以使用瀏覽它[!INCLUDE[msCoName](../includes/msconame-md.md)]中的時序叢集檢視器**採礦模型檢視器**資料採礦設計師 索引標籤。 [!INCLUDE[msCoName](../includes/msconame-md.md)]時序叢集檢視器包含五個索引標籤：**群集圖表**，**群集設定檔**，**群集特性**， **ClusterDiscrimination**，並**的狀態轉換**。 如需如何使用這個檢視器的詳細資訊，請參閱[瀏覽模型，使用 Microsoft 時序叢集檢視器](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  

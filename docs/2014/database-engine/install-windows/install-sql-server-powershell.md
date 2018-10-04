@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5ad01757b050d6beb491e1f0b2878ab124f5d8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 961f5793732dcfabd19b07f0a22b467591a980c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247020"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203238"
 ---
 # <a name="install-sql-server-powershell"></a>安裝 SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 偵測到您已選取時，安裝程式將停止[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未安裝功能，包括 PowerShell 元件，但 Windows PowerShell 2.0。 您必須使用 Windows Management Framework 安裝 Windows PowerShell 2.0，然後重新執行安裝程式。  

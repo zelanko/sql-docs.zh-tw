@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6594ff2add077ca516cd3f4bf0380cc1af201f6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184298"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
   如果線上資料庫中的資料已經損毀，在某些情況下，將資料庫還原成發生損毀之前的資料庫快照集可能是從備份還原資料庫的正確替代方式。 例如，還原資料庫可用於反轉最近發生的嚴重使用者錯誤，例如誤將資料表卸除。 不過，在快照集之後進行的所有變更都將遺失。  
@@ -50,7 +47,7 @@ ms.locfileid: "37252610"
   
  在還原資料庫之前，請仔細考慮以下限制：  
   
--   還原不適用於媒體復原。 執行個體時提供 SQL Server 登入。 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   還原不適用於媒體復原。 . 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果您必須能夠將來源資料庫還原到您建立資料庫快照集當時的時間點，請使用完整復原模式並實作可讓您執行此作業的備份原則。  

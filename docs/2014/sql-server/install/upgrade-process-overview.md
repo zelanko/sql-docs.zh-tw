@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, process description
 - upgrade process [Upgrade Advisor]
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb54124a1646b65632a74db6d8c4cc9630e30046
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e95a30c813ad2d72313a0e470136d650ea9686a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207158"
 ---
 # <a name="upgrade-process-overview"></a>升級程序概觀
   本主題會提供 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor 的最佳作法資訊，以及升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之建議程序的摘要。  

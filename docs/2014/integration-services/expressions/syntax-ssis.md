@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fc62fbd298f5559dff9dc5d944bd668a17a79bd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082970"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189298"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語法與 C 和 C# 語言使用的語法類似。 運算式的元素包括識別碼 (資料行和變數)、常值、運算子以及函數。 本主題摘要說明運算式評估工具語法套用至不同運算式元素時的獨特需求。  
@@ -39,7 +36,7 @@ ms.locfileid: "39082970"
 ## <a name="identifiers"></a>識別碼  
  運算式可以包括資料行和變數識別碼。 資料行可在資料來源中產生，或在資料流程中藉由轉換建立。 運算式可以使用歷程識別碼來參考資料行。 歷程識別碼是用來識別封裝元素的唯一號碼。 運算式中參考的歷程識別碼必須包括井字號 (#) 前置詞。 例如，歷程識別碼 138 是使用 #138 參考。  
   
- 運算式可包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系統變數和自訂變數。 在運算式中，參考變數時必須包含\@前置詞。 例如，`Counter`使用參考變數\@計數器。 \@字元不是變數名稱的一部分; 它只會顯示運算式評估工具的識別項是一個變數。 如需詳細資訊，請參閱[識別碼 &#40;SSIS&#41;](identifiers-ssis.md)。  
+ 運算式可包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系統變數和自訂變數。 在運算式中參考變數時，必須包括 \@ 前置詞。 例如，`Counter` 變數是使用 \@Counter 來參考。 \@ 字元並非變數名稱的一部分；該字元僅用來向運算式評估工具表示該識別碼為變數。 如需詳細資訊，請參閱[識別碼 &#40;SSIS&#41;](identifiers-ssis.md)。  
   
 ## <a name="literals"></a>常值  
  運算式可以包含數值、字串及布林常值。 運算式中使用的字串常值必須加上引號。 數值和布林常值則不使用引號。 運算式語言包括常逸出之字元的逸出序列。 如需詳細資訊，請參閱[常值 &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)。  
@@ -68,7 +65,7 @@ ms.locfileid: "39082970"
 ###### <a name="equality-operators"></a>相等運算子  
  運算式評估工具文法描述提供 == 相等運算子。 此運算子相當於 Transact-SQL 中的 = 運算子以及 C# 中的 == 運算子。  
   
-## <a name="functions"></a>函數  
+## <a name="functions"></a>函式  
  運算式語言包括與 Transact-SQL 函數和 C# 方法類似的日期和時間函數、數學函數以及字串函數。  
   
  其中有少數函數的名稱與 Transact-SQL 函數相同，但是在運算式評估工具中其功能則稍有不同。  

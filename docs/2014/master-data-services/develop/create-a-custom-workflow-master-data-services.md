@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7cac4dcd3973b3364862c74f38c3e3226301f6d9
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: eaa5a06916b0956a93fb1c473667bbb80b55bd15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351820"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229898"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案，以便根據您所指定的條件，自動更新與驗證資料，並傳送電子郵件通知。 當您需要做的處理比內建工作流程動作所提供的處理還要複雜時，請使用自訂工作流程。 自訂工作流程是您所建立的 .NET 組件。 呼叫您的工作流程組件時，程式碼會採取您的情況所需的任何動作。 例如，如果您的工作流程需要自訂的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 啟動一個自訂工作流程，這個工作流程會分析資料並決定將該資料傳送至何處以待審核。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2bbae058a0e3ecacaa4be9204a822451e1a0602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216004"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步驟 1：建立部署公用程式
   在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
