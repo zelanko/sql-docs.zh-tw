@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.pubdb.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 574ea2e7-4e7b-4733-ab52-429ca93c7b0a
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05c853ff23e0b10434a5e4abc072c950b1cb713
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11e3913b05ac8f595422b74ef4e0d098a593e3cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216078"
 ---
 # <a name="publisher-properties---publisher-publication-databases"></a>發行者屬性 - 發行者，發行集資料庫
   **[發行者屬性]** 對話方塊的 **[發行集資料庫]** 頁面，可讓 **系統管理員 (sysadmin)** 固定伺服器角色中的使用者啟用資料庫供複寫。 啟用資料庫不會發行此資料庫；不過，它允許該資料庫之 **db_owner** 固定資料庫角色中的任何使用者在資料庫上建立一個或多個發行集。  

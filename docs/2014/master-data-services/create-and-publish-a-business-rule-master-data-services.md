@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5cdcdb6edb146393a9daee7221d0a0d979989046
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dade621e2dc095ee08a803351f6692d4c4a5cc34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227018"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  

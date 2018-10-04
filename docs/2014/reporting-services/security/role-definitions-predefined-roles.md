@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149939"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167218"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  

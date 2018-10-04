@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.updatestatisticstask.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - updating statistics
 - Update Statistics task [Integration Services]
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c81bd46453a8f34d5428808361ed2be31c3f5c89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 612f14114e43755f19fd79b9baacd34d5a1ad356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208868"
 ---
 # <a name="update-statistics-task"></a>更新統計資料工作
   「更新統計資料」工作會在指定的資料表或索引檢視表中，更新一個或多個統計群組 (集合) 索引鍵值散發的詳細資訊。 如需詳細資訊，請參閱 [Statistics](../../relational-databases/statistics/statistics.md)。  

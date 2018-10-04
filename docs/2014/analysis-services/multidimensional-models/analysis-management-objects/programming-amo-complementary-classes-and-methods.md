@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restores [AMO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afcf4a2bfcae71564d467e182282f7a8db3d3a65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225279"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>程式設計 AMO 互補的類別和方法
   本主題包含下列幾節：  

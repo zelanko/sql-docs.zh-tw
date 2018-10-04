@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020572 error
 ms.assetid: 636566db-ffcf-4109-8c11-15b8c7cb9cd9
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 653aaa002ee37f7c7cdd3aeea7983486f35d1fcd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f296fab429acc1b5fa9887a88553895a46bc93d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218250"
 ---
 # <a name="mssqleng020572"></a>MSSQL_ENG020572
     

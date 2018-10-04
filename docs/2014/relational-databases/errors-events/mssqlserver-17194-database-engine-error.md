@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "17194"
 helpviewer_keywords:
 - 17194 (Database Engine error)
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eae4dd4577eea1fdbee1f9a23471cb7d94943ebe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d5425431d465c9bddba23c959aab41cefbfcdd89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203638"
 ---
 # <a name="mssqlserver17194"></a>MSSQLSERVER_17194
     

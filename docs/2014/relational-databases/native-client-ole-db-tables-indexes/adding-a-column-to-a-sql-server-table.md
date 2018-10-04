@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - columns [OLE DB]
@@ -14,31 +12,30 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, columns
 - adding columns
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e79886f09783737a392fa67899feb59cd7deb2a1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 32e78feae791788e0aad87079546ea8c7d49e734
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214238"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>將資料行加入至 SQL Server 資料表
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**itabledefinition:: Addcolumn**函式。 這可讓取用者加入資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**itabledefinition:: Addcolumn**函式。 如此可讓取用者將資料行加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
   
  當您將加入的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者取用者受到限制，如下所示：  
   
 -   如果 DBPROP_COL_AUTOINCREMENT 是 VARIANT_TRUE，DBPROP_COL_NULLABLE 就必須是 VARIANT_FALSE。  
   
--   如果藉由定義資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**時間戳記**資料類型，dbprop_col_nullable 就必須是 VARIANT_FALSE。  
+-   如果資料行是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** 資料類型所定義，DBPROP_COL_NULLABLE 就必須是 VARIANT_FALSE。  
   
 -   如果是其他任何資料行定義，DBPROP_COL_NULLABLE 必須為 VARIANT_TRUE。  
   
- 取用者指定為 Unicode 字元字串中的資料表名稱*pwszName*隸屬*uName*聯集*pTableID*參數。 *EKind*隸屬*pTableID*必須是 DBKIND_NAME。  
+ 取用者會在 *pTableID* 參數中，將資料表名稱指定為 *uName* 聯集之 *pwszName* 成員中的 Unicode 字元字串。 *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
- 新的資料行名稱指定為 Unicode 字元字串*pwszName*隸屬*uName*聯集*dbcid*之 DBCOLUMNDESC 參數成員*Pwszname*。 *EKind*成員必須是 DBKIND_NAME。  
+ 在 *pColumnDesc* 之 DBCOLUMNDESC 參數的 *dbcid* 成員中，新的資料行名稱會指定為 *uName* 聯集之 *pwszName* 成員內的 Unicode 字元字串。 *eKind* 成員必須是 DBKIND_NAME。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料表和索引](tables-and-indexes.md)   

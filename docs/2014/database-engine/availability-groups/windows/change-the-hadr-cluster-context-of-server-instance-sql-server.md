@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f8ab0198debcbb5ec9d09146737ca507357e654
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3309d3754d8d4842ed238a54f0120b54bba1d596
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219178"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>變更伺服器執行個體的 HADR 叢集內容 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 切換 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體的 HADR 叢集內容。 「HADR 叢集內容」會決定哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集管理伺服器執行個體所裝載可用性複本的中繼資料。  

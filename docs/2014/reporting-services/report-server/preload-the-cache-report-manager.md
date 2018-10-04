@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef7898589335192022fa83095f19a72ee4549798
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253910"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209498"
 ---
 # <a name="preload-the-cache-report-manager"></a>預先載入快取 (報表管理員)
   您可以為共用資料集建立快取重新整理計劃，為共用資料集預先載入快取。  

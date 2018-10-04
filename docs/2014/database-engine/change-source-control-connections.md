@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], source controls
 - source controls [SQL Server Management Studio], connections
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cacfeef1468a0aec47ecd8e0b27a432bb689d1ef
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222818"
 ---
 # <a name="change-source-control-connections"></a>變更原始檔控制連接
   您第一次從原始檔控制中加入或開啟方案時，您的原始檔控制提供者會建立本機方案目錄的根資料夾及其對應的伺服器資料夾之間的關聯。  

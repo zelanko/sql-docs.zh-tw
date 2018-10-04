@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196578"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>使用資料列篩選器實作動態安全性
   在這個補充課程中，您將建立實作動態安全性的其他角色。 動態安全性提供以使用者目前登入的使用者名稱或登入識別碼為主的資料列層級安全性。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)。  

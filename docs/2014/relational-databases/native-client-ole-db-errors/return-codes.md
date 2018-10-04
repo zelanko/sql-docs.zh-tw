@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB error handling, return codes
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - FAILED macro
 - errors [OLE DB], return codes
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00082a5c6053d8b9f0319c26ae8d72302c14d218
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7a84ad46068260524a2e6232ca668da445447529
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207418"
 ---
 # <a name="return-codes"></a>傳回碼
   在大部分的基本層級，成員函數不是成功就是失敗。 在更精確一點的層級，函數可能會成功，但是其成功可能不是應用程式開發人員所樂見的。  
   
- 如需有關 OLE DB 傳回碼的詳細資訊，請參閱 <<c0> [ 傳回碼 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)。  
+ 如需 OLE DB 傳回碼的詳細資訊，請參閱 [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631) (傳回碼 (OLE DB))。  
   
  當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者成員函數傳回 s_ok 時，該函數會成功。  
   

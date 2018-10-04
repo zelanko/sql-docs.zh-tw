@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: 38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6a14942e60e38405fa24f9b49e7a4ca34d72991
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225045"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>設定 SQL Server 使用軟體 NUMA (SQL Server)
 現代處理器在每個插槽有許多核心。 每個插槽通常代表單一 NUMA 節點。 SQL Server 資料庫引擎資料分割將每個 NUMA 節點分為內部結構和資料分割服務執行緒。 處理器包含 10 個或多個核心，每個通訊端，使用軟體 NUMA (軟體 NUMA) 將硬體 NUMA 節點通常會增加延展性和效能。   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan Statistics Profile event class
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8634750f29c68af569a7c5d7da3803ce47a167
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60ae90181ff66f2e90418909a019ec9ab8f66335
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207848"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile 事件類別
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan Statistics Profile 事件類別。 包含的資訊是 Showplan XML Statistics Profile 事件類別中可用資訊的子集。  

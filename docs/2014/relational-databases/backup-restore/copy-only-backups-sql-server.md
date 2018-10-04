@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - copy-only backups [SQL Server]
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d5ef086b610402e2c696196b2baae7705c5f920
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf2a1c84bab547e7b3dbc4bd1a930b4605f4052f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149638"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
   「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  

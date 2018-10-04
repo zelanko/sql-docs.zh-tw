@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DBSCHEMA_TABLES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83537dc9159331342ae344e5003d9c04fd8980eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66780a650e3187f3ec62831fd2badf331a1fca4d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153158"
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES 資料列集
   識別的量值群組和維度內公開為資料表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  

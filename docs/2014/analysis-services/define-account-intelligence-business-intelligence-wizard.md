@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.mapaccounttype.f1
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 780f13e8ef18a4c17e3bec0322bd3c498efff4d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0afc9be649d3d9eb23a9c0e4b1b601b772cd16fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209398"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>定義帳戶智慧 (商業智慧精靈)
   使用 **[定義帳戶智慧]** 頁面，即可將 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上所定義的帳戶類型，對應至資料來源中來源資料表所定義的帳戶類型，該來源資料表會提供帳戶維度的資料。  

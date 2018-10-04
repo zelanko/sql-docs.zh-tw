@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190268"
 ---
 # <a name="define-semiadditive-behavior"></a>定義局部加總行為
   在許多商務狀況中，經常見到局部加總量值並未跨所有維度一致地彙總。 每個以不同時間之結餘快照集為基礎的 Cube 都會出現這個問題。 您可以在處理安全性、帳戶結餘、預算、人力資源、保險政策和理賠、以及其他許多商務領域的應用程式中發現這些快照集。  
@@ -52,7 +49,7 @@ ms.locfileid: "37265414"
   
 -   第一個非空白子系  
   
--   無  
+-   None  
   
  此選項不會變更具有下列一般彙總函式的量值： `Sum`， `Min`， `Max`， `Count`，或`Distinct``Count`。  
   
@@ -82,7 +79,7 @@ ms.locfileid: "37265414"
 |LastNonEmpty|成員值判斷為包含資料之時間維度最後一個子系的值。|  
 |Max|套用標準最大彙總函式。|  
 |Min|套用標準最小彙總函式。|  
-|無|不套用任何彙總。|  
+|None|不套用任何彙總。|  
 |SUM|套用標準總和函數。|  
   
  當精靈完成時，會覆寫全部現有的局部加總行為。  

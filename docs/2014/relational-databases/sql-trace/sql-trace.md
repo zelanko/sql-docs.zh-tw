@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193188"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
   在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
@@ -39,7 +36,7 @@ ms.locfileid: "37188335"
  下列詞彙說明 SQL 追蹤的主要概念。  
   
  **事件**  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]執行個體內所發生的動作。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]執行個體內所發生的動作。  
   
  **資料行**  
  事件的屬性。  

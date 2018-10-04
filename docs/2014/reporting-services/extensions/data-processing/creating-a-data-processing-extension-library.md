@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], namespace assignments
 - library [Reporting Services]
 - assigning namespaces to extensions
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 15e43e0f62111283aebcb6b0e0c4527464a5d9a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9070c23997211eec25d23976a48de321611f4efd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329019"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217748"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>建立資料處理延伸模組程式庫
   每個您建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組都應該指派到唯一的命名空間，並內建於程式庫或是組件檔中。 命名空間的正確名稱並不重要，但是它必須是唯一且未與其他延伸模組共用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的資料處理延伸模組使用命名空間 <xref:Microsoft.ReportingServices.DataProcessing>。 您應該為公司的資料處理延伸模組建立自己的唯一命名空間。  

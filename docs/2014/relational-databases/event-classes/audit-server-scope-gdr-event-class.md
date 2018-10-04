@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Scope GDR event class
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76215fde6b6ee141364777ab8a057c46de1a1182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ffb2858bb00890370cd77a44bc9b82ec43b6b416
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205038"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR 事件類別
   發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍中的權限時 (例如建立登入) 時，會發生 **Audit Server Scope GDR** 事件類別。  

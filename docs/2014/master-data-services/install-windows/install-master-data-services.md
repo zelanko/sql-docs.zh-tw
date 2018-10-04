@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 27
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dad90bd2040e5101f373441650f8f69ebf3b426b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0d0487ca83b3168506aec529d7cc6d24f2cea4d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213278"
 ---
 # <a name="install-master-data-services"></a>安裝 Master Data Services
   下列工作流程提供如何安裝及設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的概觀。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝程序包含三個部分：  

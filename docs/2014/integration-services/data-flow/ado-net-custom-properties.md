@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 177e0cda681e81082e5b52fc324880f04a5d608c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c04ffa97900e7fd392b5c8b53a2ba7cdb0c5d8dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221528"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET 自訂屬性
   **來源自訂屬性**  

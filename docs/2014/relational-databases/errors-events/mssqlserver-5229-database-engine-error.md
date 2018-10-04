@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 5229 (Database Engine error)
 ms.assetid: 0d9e50da-4f42-4b3a-bc84-daf05cf0e0e5
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9be09f7eeba7bfd27ec030ceb540e9eab541642e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e3d2a420529778584b9e187550772a112d459c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219168"
 ---
 # <a name="mssqlserver5229"></a>MSSQLSERVER_5229
     

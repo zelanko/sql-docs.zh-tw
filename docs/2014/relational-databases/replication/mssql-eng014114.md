@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014114 error
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1730e47e153191a77813b0ad6bab1cde187c739b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce1aae6b4dac983d05c31ac96c6d2a0c7689c266
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196378"
 ---
 # <a name="mssqleng014114"></a>MSSQL_ENG014114
     

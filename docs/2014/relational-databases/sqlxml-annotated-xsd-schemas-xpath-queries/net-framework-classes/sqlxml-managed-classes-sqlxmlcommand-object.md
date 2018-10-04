@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - void ExecuteNonQuery() method
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4cec787d682ae0ee16945518887fce980acc101
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0aba35418c1a7759f5c083bd5e5f7485118cbfc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250068"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207218"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 物件 (SQLXML Managed 類別)
   這是 SqlXmlCommand 物件的建構函式：  

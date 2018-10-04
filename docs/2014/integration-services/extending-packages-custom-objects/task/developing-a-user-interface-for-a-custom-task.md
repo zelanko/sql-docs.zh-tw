@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d86350195a980f87e5e67ea4634ebadd0116355
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3665e22ca7e9fb4a04f3cfd46cb5f5af5025ab41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197568"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>開發自訂工作的使用者介面
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型會提供自訂工作開發人員能夠輕鬆地針對工作建立自訂使用者介面的能力 (該介面之後可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中整合及顯示)。 使用者介面可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中提供有用的資訊給使用者，然後指引使用者正確地設定自訂工作的屬性和設定。  
@@ -59,7 +56,7 @@ ms.locfileid: "37217628"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|在控制流程工具箱內顯示工作名稱。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|工作描述 (繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>)。 這個屬性會顯示在工具提示中。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中的圖示。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果有使用的話，請將它設定為 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列舉內的其中一個值。 例如， `RequiredProductLevel = DTSProductLevel.None`。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|如果有使用的話，請將它設定為 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列舉內的其中一個值。 例如， `RequiredProductLevel = DTSProductLevel.None` 。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|保留連絡人資訊給此工作需要技術支援的情況使用。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|指派類型給此工作。|  
 |Attribute.TypeId|在衍生類別中實作時，取得這個屬性的唯一識別碼。 如需詳細資訊，請參閱 .NET Framework 類別庫中的 `Attribute.TypeID` 屬性。|  

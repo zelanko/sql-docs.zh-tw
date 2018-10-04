@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 611985a99822321092942c1e9de806e24c57f09b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2728200068787d69c6eaa225e0195170625cac4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194168"
 ---
 # <a name="using-user-defined-tables"></a>使用使用者定義的資料表
   使用者定義的資料表表示表格式資訊。 當您將表格式資料傳遞到預存程序或使用者定義函數時，這些資料表會當做參數。 使用者定義的資料表不能用於表示資料庫資料表中的資料行。  

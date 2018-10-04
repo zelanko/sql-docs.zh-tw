@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - write-enabled cubes [Analysis Services]
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225128"
 ---
 # <a name="write-enabled-dimensions"></a>可寫入維度
     
@@ -59,7 +56,7 @@ ms.locfileid: "37293524"
 > [!NOTE]  
 >  連結維度不支援維度回寫。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  唯一可以更新可寫入維度的商務使用者，是那些在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色中被授權對該維度有讀取/寫入權限的使用者。 針對每個角色，您可以控制哪些成員可以或不可以被更新。 針對要更新可寫入維度的商務使用者，其用戶端應用程式必須支援此能力。 如果是這類使用者，可寫入維度必須包含在該維度上次變更之後處理過的 Cube 中。 如需詳細資訊，請參閱[物件和作業的存取權授權 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
   
  管理員角色中所含的使用者和群組可以更新可寫入維度的屬性成員，即使該維度未包括在 Cube 中也一樣。  

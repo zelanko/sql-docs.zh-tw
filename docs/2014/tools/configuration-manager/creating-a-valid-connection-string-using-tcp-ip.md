@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - connection strings [Database Engine], TCP/IP
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c778918b89e374881a97555b817ef0de036f0cec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e46748234c0cf9a8cb810bb8ff2613b8b45794d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263804"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211818"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 建立有效的連接字串
   若要使用 TCP/IP 建立有效的連接字串，您必須：  

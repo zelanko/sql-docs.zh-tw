@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0915cda96047732894ec848c861e83319888d6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209468"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>報表模型查詢中的公式 (報表產生器及 SSRS)
   公式是針對使用報表模型做為資料來源之報表中的值來執行的計算。 公式可以包含函數、運算子、常數和對欄位或實體的參考。 公式可讓您結合、彙總、篩選以及評估數值和文字資料。 您可以建立公式，並將它們另存為新的欄位，或者，您可以修改現有欄位的公式。  

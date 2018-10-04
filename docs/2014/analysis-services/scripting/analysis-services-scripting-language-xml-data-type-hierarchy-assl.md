@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Analysis Services Scripting Language XML Data Type Hierarchy
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - inheritance [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 259b843979c16d47c59bc0b3ab74843cc0015592
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d0d739a21f422b36910cb29cc0a1b1d9f8d3de4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199738"
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Analysis Services 指令碼語言 XML 資料類型階層 (ASSL)
   下表顯示「Analysis Services 指令碼語言」(ASSL) 中資料類型的繼承階層。  

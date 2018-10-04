@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 35ddaed3e6735e11fe3fd0e3f39435516e8bb851
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194114"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>彙總函式參考 (報表產生器及 SSRS)
   若要在報表中加入彙總值，您可以在運算式中使用內建彙總函式。 數值欄位的預設彙總函式是 SUM。 您可以編輯運算式，並使用不同的內建彙總函式或指定不同的範圍。 範圍會識別用於計算的資料集。  

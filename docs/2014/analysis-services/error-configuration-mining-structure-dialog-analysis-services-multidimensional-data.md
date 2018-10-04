@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.general.f1
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73c3627f3861b978a9e539943bcb65777b2f36b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1cf11c572860815f46e6d20a0cf1a4b82399a93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210908"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>錯誤組態 (採礦結構對話方塊) (Analysis Services - 多維度資料)
   在 **SQL Server Management Studio** 中，使用 **[採礦結構屬性]** 對話方塊的 **[錯誤組態]** 頁面，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中採礦結構的錯誤組態屬性。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dba3c283bb5215bb573fa90caf6f8e9cff74ca63
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97ed62336cad7f3e1bc0bbe70edd895384336205
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197748"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
   本主題描述如何管理變更追蹤。 此外，本主題也會描述如何設定安全性，以及判斷使用變更追蹤對儲存和效能產生的影響。  
@@ -41,7 +38,7 @@ ms.locfileid: "37232978"
   
  此外，當針對使用者資料表啟用變更追蹤時， [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) 目錄檢視也會列出所建立的內部資料表。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  若要使用 [變更追蹤函數](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)來存取變更追蹤資訊，主體必須具有以下權限：  
   
 -   在所查詢的資料表上，變更追蹤資料表上至少具有主索引鍵資料行的 SELECT 權限。  

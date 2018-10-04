@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying target servers
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], modifying
 ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ab5397152adea4e5bd947adf4669f2214441dbb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a7a3abf08d7b6aceb6a4c832cfaac1a288cbec1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221940"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的目標伺服器。  

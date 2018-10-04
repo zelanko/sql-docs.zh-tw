@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96a296a7d041223c214afe59b7d10b047b32c869
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 31bdf5f2b1e435496f2b00f141a7387f9e7560eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118858"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
   此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例會使用四個新的日期和時間類型 (`date`，**時間**， `datetime2`，和`datetimeoffset`) 來執行具有參數的命令，並擷取資料列集結果。  
   
- 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -31,7 +28,7 @@ ms.locfileid: "37428647"
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的預存程序。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的預存程序。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [data mining]
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e13002a2cd4fd8cd0690968733eacffa74020cab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77a0c6f2f0100e7e0c0e73ee70bc8705135d259f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191178"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225248"
 ---
 # <a name="data-types-data-mining"></a>資料類型 (資料採礦)
   當您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立採礦模型或採礦結構時，您必須針對採礦結構內的每一個資料行定義資料類型。 此資料類型會告訴資料採礦引擎，資料來源中的資料是數值還是文字，以及應該如何處理資料。 例如，如果您的來源資料包含數值資料，您可以指定數字應該視為整數還是使用小數位數。  

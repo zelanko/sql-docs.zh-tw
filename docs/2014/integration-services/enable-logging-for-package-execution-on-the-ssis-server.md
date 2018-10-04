@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
-caps.latest.revision: 12
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d6dc6dedc92fd70d4b3a9e1adf6eb6deb4bc3bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6d1d614ee66731a24355a918678226dcc54ae35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201648"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>在 SSIS 伺服器上啟用封裝執行的記錄功能
   此程序描述如何在執行已經部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的封裝時，設定或變更封裝的記錄層次。 執行封裝時所設定的記錄層次會覆寫您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設定的封裝記錄。 如需詳細資訊，請參閱[在 SQL Server Data Tools 中啟用封裝記錄功能](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)。  
@@ -48,10 +45,10 @@ ms.locfileid: "37245238"
   
 |[記錄層次]|描述|  
 |-------------------|-----------------|  
-|無|關閉記錄功能。 只記錄封裝執行狀態。|  
+|None|關閉記錄功能。 只記錄封裝執行狀態。|  
 |[基本]|記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
 |效能|只記錄效能統計資料，以及 OnError 和 OnWarning 事件。<br /><br /> **[執行效能]** 報表會顯示封裝資料流程元件的 [啟用時間] 和 [總時間]。 最後一個封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]** 時，就可使用這項資訊。 如需詳細資訊，請參閱 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md)。<br /><br /> [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) 檢視會顯示每一個執行階段之資料流程元件的開始和結束時間。 此檢視只會在封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]** 時，顯示這些元件的這項資訊。|  
-|「詳細資訊」|記錄所有事件，包括自訂和診斷事件。<br /><br /> DiagnosticEx 事件即為診斷事件的範例。 只要執行封裝工作執行子封裝，它就會記錄這個事件。 事件訊息是由傳遞至子封裝的參數值所組成。<br /><br /> DiagnosticEx 之訊息資料行的值是 XML 文字。 執行個體時提供 SQL Server 登入。 若要檢視封裝執行的訊息文字，請查詢 [catalog.operation_messages &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) 檢視。<br /><br /> 注意： 自訂事件包括會記錄這些事件[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]工作。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](../../2014/integration-services/custom-messages-for-logging.md)。<br /><br /> 每當資料流程元件傳送資料至封裝執行的下游元件， [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) 檢視就會顯示一個資料列。 您必須將記錄層次設定為 **[詳細資訊]** ，以擷取檢視中的這項資訊。|  
+|「詳細資訊」|記錄所有事件，包括自訂和診斷事件。<br /><br /> DiagnosticEx 事件即為診斷事件的範例。 只要執行封裝工作執行子封裝，它就會記錄這個事件。 事件訊息是由傳遞至子封裝的參數值所組成。<br /><br /> DiagnosticEx 之訊息資料行的值是 XML 文字。 . 若要檢視封裝執行的訊息文字，請查詢 [catalog.operation_messages &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) 檢視。<br /><br /> 注意： 自訂事件包括會記錄這些事件[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]工作。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](../../2014/integration-services/custom-messages-for-logging.md)。<br /><br /> 每當資料流程元件傳送資料至封裝執行的下游元件， [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) 檢視就會顯示一個資料列。 您必須將記錄層次設定為 **[詳細資訊]** ，以擷取檢視中的這項資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41;記錄](performance/integration-services-ssis-logging.md)   

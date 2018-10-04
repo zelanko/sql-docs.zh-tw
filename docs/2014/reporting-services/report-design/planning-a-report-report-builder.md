@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202028"
 ---
 # <a name="planning-a-report-report-builder"></a>規劃報表 (報表產生器)
   報表產生器可讓您建立許多種類的報表。 例如，您可以建立顯示摘要或詳細銷售資料、行銷和銷售趨勢、營運報表或儀表板的報表。 您也可以建立利用豐富文字格式 (例如銷售訂單、產品目錄或正式書信) 的報表。 所有這些報表都是使用報表產生器中相同基本建置組塊的不同組合而建立。 若要建立有用且易於了解的報表，先進行規劃是有效的方法。 以下是開始作業前可能要考量的部分事項：  

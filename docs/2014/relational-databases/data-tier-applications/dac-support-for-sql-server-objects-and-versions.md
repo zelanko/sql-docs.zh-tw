@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e61147031a3b17fcf98f32064cc3f53e2c6d8ac
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 24c2184d01c52222dae0bad6bb05ddd7979dbac5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209384"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
   資料層應用程式 (DAC) 支援最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 物件。  

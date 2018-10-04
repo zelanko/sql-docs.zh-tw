@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CONTAINS predicate (Transact-SQL)
 - queries [full-text search], creating
 - full-text queries [SQL Server], creating
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48fd46baa8f64e5e14063c73633e2332146c3ba1
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 13aba689cd3aca26601778aa0641d3bd48b06809
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194189"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>建立全文檢索搜尋查詢 (Visual Database Tools)
   全文檢索搜尋會使用 CONTAINS 述詞 (Predicate)，找出在指定資料行中具有指定文字的資料列。 全文檢索搜尋只適用於具有現用全文檢索索引的資料行。 如果您嘗試在未具有目前現用全文檢索索引的資料行上使用 CONTAINS 子句，您會收到錯誤訊息。 如需有關全文檢索索引和 CONTAINS 子句的詳細資訊，請參閱 <<c0> [ 全文檢索搜尋](../../relational-databases/search/full-text-search.md)並[CONTAINS &#40;-&#41;](/sql/t-sql/queries/contains-transact-sql)。</c0>  

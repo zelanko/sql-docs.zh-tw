@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d238cd2bce87f65c1d29936457e2b966eee40a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ebf115466a916922444818d11ccd3855c49f825
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214118"
 ---
 # <a name="publication-properties-snapshot"></a>發行集屬性，快照集
   **[發行集屬性]** 對話方塊的 **[快照集]** 頁面，可以讓您設定快照集格式、快照集資料夾位置以及在快照集的應用程式之前和之後執行的指令碼。 快照集資料夾必須指定為共用，而且會讀取和寫入檔案到資料夾的代理程式需要有足夠的權限。 如需適當地保護資料夾的詳細資訊，請參閱[保護快照集資料夾](security/secure-the-snapshot-folder.md)。  

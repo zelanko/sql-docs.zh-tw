@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61792f88c028ce1c011b91fb9a5ecbec97b50396
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189045"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212508"
 ---
 # <a name="dimension-types"></a>維度類型
   `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，`Type` 設定只會提供用戶端應用程式的指導，而且是選擇性的。 在其他情況下 (例如 `Accounts` 或 `Time` 維度)，維度的 `Type` 屬性 (Property) 設定及其屬性 (Attribute) 會決定特定的伺服器型行為，且在 Cube 中實作某些行為時可能會需要用到。 例如，維度的 `Type` 屬性可設定為 `Accounts`，對用戶端應用程式指出標準維度包含帳戶屬性。 如需時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立的父子式類型維度的財務帳戶](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  

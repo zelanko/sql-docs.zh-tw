@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255460"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141838"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  

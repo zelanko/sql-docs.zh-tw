@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.output.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f730d9c7544263bc925c8464d4c150318997376
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e87ebbf69eaaee40c42344a8334a0309300ddd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203748"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>資料採礦查詢工作編輯器 (輸出索引標籤)
   使用 **[資料採礦查詢工作編輯器]** 對話方塊的 **[輸出]** 索引標籤，即可指定預測查詢的目的地。  

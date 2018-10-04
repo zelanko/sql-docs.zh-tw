@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - column names [SQL Server]
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cc9478d0c4deed830c23eae4d4a425a1fc112f9
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 3dc982de67c3fc1ddd874b38c1e14eec49d3b0af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220578"
 ---
 # <a name="use-path-mode-with-for-xml"></a>搭配 FOR XML 使用 PATH 模式
   如 [使用 FOR XML 建構 XML](for-xml-sql-server.md)所述，PATH 模式提供比較簡單的方式來混合元素與屬性。 PATH 模式也是導入其他巢狀以代表複雜屬性的較簡單方式。 您可以使用 FOR XML EXPLICIT 模式查詢來建構從資料列集而來的這類 XML，但是 PATH 模式對於可能會比較繁雜的 EXPLICIT 模式查詢提供較簡單的替代方案。 PATH 模式還可撰寫巢狀 FOR XML 查詢及 TYPE 指示詞，以傳回 **xml** 類型執行個體，這將可讓您撰寫較不複雜的查詢。  

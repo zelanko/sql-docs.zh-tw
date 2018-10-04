@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ff1d223cee1ce86851b3021bad15582db156639
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c798ff08653e770ea633597dfc64dfadf4639fbf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227168"
 ---
 # <a name="data-mining-ssas"></a>資料採礦 (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供併入資料採礦的方案一個整合式平台。 您可以使用關聯式資料或 Cube 資料建立具有預測分析的商業智慧方案。  

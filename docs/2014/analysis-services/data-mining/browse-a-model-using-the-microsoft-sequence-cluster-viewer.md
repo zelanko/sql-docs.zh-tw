@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Sequence Cluster Viewer
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - sequence [Analysis Services]
 - transitions [Analysis Services]
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14b1cb2c1aff17b9953865846ba2d4d100132397
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5571c8bc684a8d57f8696b3a5630170679c1cf63
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229468"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 時序叢集檢視器瀏覽模型
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時序叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時序叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)。  

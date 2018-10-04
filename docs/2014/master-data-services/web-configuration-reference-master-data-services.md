@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9c345312ddadab6c5efd689d36f36f09cc2d0a41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f52ca10bd9d857d4e87a54f19cfaa87f1e92575
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130958"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 在 Web.config 檔案中包含讓 Internet Information Services (IIS) 主控 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務的組態設定。 這個 Web.config 檔案位於 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 安裝路徑的 WebApplication 資料夾。 如需路徑和權限的詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](folder-and-file-permissions-master-data-services.md)。  

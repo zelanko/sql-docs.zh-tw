@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Alter Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Alter command
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e13819d301af842eb2094d7b6ad3367cde424c72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9bdf13c64834100db14357a5a0ac7f47a6f9bf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205788"
 ---
 # <a name="alter-element-xmla"></a>Alter 元素 (XMLA)
   包含由所使用的 Analysis Services 指令碼語言 (ASSL) 元素[Execute](../xml-elements-methods-execute.md)方法來改變執行個體上的物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -53,8 +50,8 @@ ms.locfileid: "37192406"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

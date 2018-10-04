@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5203f517335ab3d346b5b303d4225a87e5be64ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213468"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>指定資料行內容和資料類型 (資料採礦精靈)
   使用 **[指定資料行的內容和資料類型]** 頁面，針對每個在精靈的前一頁上所選取的資料行指定使用方式和資料類型。 如果想要忽略資料行，請按一下 **[上一步]** 返回 **[指定培訓資料]**，然後清除所有核取方塊。  

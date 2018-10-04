@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.transition.f1
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 307f14f06354195147f32cbcf338d4b04e852b9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bada5acfd14b824be79fca692debf1a3479f056d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216638"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>時序叢集的叢集轉換索引標籤 (採礦模型檢視器)
   可以使用 [Microsoft 時序叢集檢視器] 中的 [狀態轉換] 索引標籤，更仔細地查看選定叢集中屬性/值組 (或狀態) 之間的轉換。  

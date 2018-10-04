@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2018456f-b4a6-496c-89fb-043c62d8b82e
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d509719bc9a4f5a69635a875b30bea1513ba1198
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bda3ffe4bc91ce2cea25a83bd0b37b2f91451c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220588"
 ---
 # <a name="supplemental-lessons"></a>補充課程
   本節提供如何使用進階表格式模型功能的其他資訊和課程。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76a9fa3b31b90890ae261ccce89acbc9829cc14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204938"
 ---
 # <a name="data-compression"></a>資料壓縮
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援資料列和頁面壓縮的資料列存放區資料表和索引，並支援資料行存放區和資料行存放區封存壓縮的資料行存放區資料表和索引。  

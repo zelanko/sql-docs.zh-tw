@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multivalued parameters [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - parameters [Reporting Services], multivalued
 - valid values [Reporting Services]
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e0c10880dd8557ed7d1a0902b33397e37bd6483c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48e9673e31371f76f84a9e5d8d5841282b364425
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221691"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用的篩選 (報表產生器及 SSRS)
   若要建立篩選，您必須指定一個或多個篩選方程式。 篩選方程式包含運算式、資料類型、運算子和值。 本主題提供常用的篩選範例。  

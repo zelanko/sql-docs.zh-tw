@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5b78b9bd82f9dcade48d653bf5bc2bdb3d6456
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197608"
 ---
 # <a name="view-the-cube-schema"></a>檢視 Cube 結構描述
   **[Cube 設計師]** 之 **[Cube 結構]** 索引標籤的 **[資料來源檢視]** 窗格顯示 Cube 結構描述。 結構描述是一組衍生 Cube 量值和維度的來源資料表。 每一個 Cube 結構描述是由一個或多個事實資料表及一個或多個維度資料表所組成，Cube 中的量值和維度會以這些資料表為基礎。  

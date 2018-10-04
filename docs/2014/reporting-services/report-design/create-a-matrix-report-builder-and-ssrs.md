@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0ea7d7f6512cf006ef246ad34698da3b71478b15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e520e394ba98cc4dddb0057abde1598da352045
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223348"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>矩陣 (報表產生器及 SSRS)
   使用矩陣顯示群組資料與摘要資訊。 您可以依資料列和資料行群組中的多個欄位或運算式群組資料。 矩陣提供與交叉資料表和樞紐資料表類似的功能。 在執行階段，當報表資料和資料區域結合時，矩陣在頁面上會以水平和垂直方式成長。 矩陣資料格中的值會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。 您可以格式化資料列和資料行以反白顯示您要強調的資料。 您也可以加入一開始隱藏詳細資料的向下鑽研切換，使用者就可以在需要時，按一下切換來顯示更多或更少的詳細資料。  

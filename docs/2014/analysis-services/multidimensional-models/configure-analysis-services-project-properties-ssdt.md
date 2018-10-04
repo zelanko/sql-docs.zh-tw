@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
 helpviewer_keywords:
 - projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d75eff8c794c18a296a9d26850af87618af028a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118298"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>設定 Analysis Services 專案屬性 (SSDT)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，將會包含一些影響 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案建立及部署的預設屬性。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5aac2ad5d164757a330bb5a5784bb6c99fb48fb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbd837c0dc28e1c083a14c21614d174580eb7b0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210858"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219918"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
   在 SMO 中，[!INCLUDE[ssSB](../../../includes/sssb-md.md)] 物件位於 `Microsoft.SqlServer.Management.Smo.Broker` 命名空間內，該命名空間需要參考 Microsoft.SqlServer.Smo.dll。 支援類別資訊也需要參考 Microsoft.SqlServer.ServiceBrokerEnum.dll。  

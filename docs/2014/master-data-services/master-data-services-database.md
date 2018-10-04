@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d426c9c7ffb874cd304932889d41660cf0d3edac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6d7b54e6df133c4362ba5d9cb998a61fea3202f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115083"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 資料庫
   此資料庫包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系統的所有資訊。 它是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 部署的核心。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫：  

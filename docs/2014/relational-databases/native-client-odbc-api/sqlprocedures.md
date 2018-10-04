@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLProcedures function
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a7855016bf7c0dec86775cc6a1a289d0b317031
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: feb5cd9df428ec09441ae1ebe0ff1cb051660754
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203988"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序都會傳回值。 **SQLProcedures**會針對結果集資料行 PROCEDURE_TYPE 報告 sql_pt_function。  

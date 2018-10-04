@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - earlier versions [SQL Server], import and export data formats
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15fad4d86582f2e5b98f24be1ac7e8b807202013
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169582"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您可以透過 **-V** 參數使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]bcp [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 匯入原生與字元格式資料。 **-V** 參數會讓 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定之舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料類型，而資料檔案格式將會與舊版中的資料檔案格式相同。  

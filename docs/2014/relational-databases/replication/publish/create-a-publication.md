@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - adding articles
 - articles [SQL Server replication], adding
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dee016784a438de226877d94d7271048749a859c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ce1f698224a7e1938ac30e94565033e3c32f5c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195568"
 ---
 # <a name="create-a-publication"></a>建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  

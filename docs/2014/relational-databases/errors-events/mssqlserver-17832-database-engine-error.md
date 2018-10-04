@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 17828 (Database Engine error)
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - 17832 (Database Engine error)
 - login packet (bad)
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 300ad8adc9c710ecc8b8632711a81d624b900852
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 37ca0222975528efcd722ec3c39f84ca570fc08b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186958"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     

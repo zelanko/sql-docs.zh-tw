@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207318"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 錯誤
     

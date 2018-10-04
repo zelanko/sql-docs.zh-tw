@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d258dd150b879b9e993e0c550916b4ab42e272d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a43cfd2b692bb897950be25e29aa7932d32f780
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180395"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212458"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>設定 Database Engine 接聽多個 TCP 通訊埠
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中設定 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 於多個 TCP 通訊埠上接聽。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟用 TCP/IP 時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將會在由 IP 位址及 TCP 通訊埠編號構成的連接點上接聽內送連接。下列程序會建立表格式資料流 (TDS) 端點，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將可以在其他 TCP 通訊埠上接聽。  

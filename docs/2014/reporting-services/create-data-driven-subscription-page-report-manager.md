@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223218"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116851"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>建立資料驅動訂閱頁面 (報表管理員)
   您可以使用 [建立資料驅動訂閱] 頁面來建立或修改每次訂閱執行時在訂閱者資料庫中查詢訂閱資訊的訂閱。 資料驅動訂閱會使用查詢結果來判斷訂閱者收件者、傳遞設定和報表參數值。 在執行時期，報表伺服器執行查詢來取得訂閱設定所用的值。 您可以使用 [建立資料驅動訂閱] 頁面來定義查詢並將查詢值指派至訂閱設定。 您為資料驅動訂閱指定的值和選項可分為數個頁面，類似於精靈。 全部總共有七個頁面。  
@@ -100,7 +97,7 @@ ms.locfileid: "37223218"
 ## <a name="set-delivery-options-page-4"></a>設定傳遞選項 (第 4 頁)  
  在第四個頁面中指定傳遞延伸模組選項。 在此頁面顯示的選項是由傳遞延伸模組傳遞來的。 指定這些選項的方式可能根據傳遞延伸模組呈現選項的方式而有所改變。 如果延伸模組沒有設定值，則此頁面不會顯示任何選項。  
   
-|選項|以進行此動作|  
+|選項|動作|  
 |-----------------|----------------|  
 |**指定靜態值**|在傳遞設定中使用常數值。 有些傳遞延伸模組提供可以選擇的靜態值。 例如，報表伺服器電子郵件傳遞會提供 **[IncludeReport]**、 **[RenderFormat]**、 **[優先權]** 和 **[包含連結]** 的值。|  
 |**從資料庫取值**|使用來自結果集的值。 結果集的資料行可用來提供訂閱者資料和報表參數值。|  
@@ -133,7 +130,7 @@ ms.locfileid: "37223218"
 ## <a name="set-parameters-page-5"></a>設定參數 (第 5 頁)  
  如果報表包含參數，您必須指定報表使用的參數值。 可以從訂閱者資料來源取得參數值 (例如，如果您有根據區域碼來參數化的區域業務報表，且區域資訊儲存在員工資料庫中，則您可以取得每一位員工的區域資訊)。  
   
-|選項|以進行此動作|  
+|選項|動作|  
 |-----------------|----------------|  
 |**指定靜態值**|若要對所有的訂閱者使用相同參數，請使用常數作為參數值。 如果此參數是多重值，您就可以從清單中選擇一個值。|  
 |**使用預設值**|某些報表包含所有或部分參數的預設值。 如果報表參數具有預設值，請按一下此核取方塊以使用預設值。|  
@@ -142,7 +139,7 @@ ms.locfileid: "37223218"
 ## <a name="specify-a-trigger-page-6"></a>指定觸發程序 (第 6 頁)  
  選取啟始訂閱處理的事件。  
   
-|選項|以進行此動作|  
+|選項|動作|  
 |-----------------|----------------|  
 |**在報表伺服器上更新報表資料時**|如果報表設定為當做執行快照集執行，您就可以指定在重新整理快照集時執行訂閱。|  
 |**為此訂用帳戶建立的排程上**|在指定的日期和時間執行訂閱。|  

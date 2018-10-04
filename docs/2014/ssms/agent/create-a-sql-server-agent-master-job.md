@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], master jobs
 - jobs [SQL Server Agent], creating
 - master SQL Server Agent job [SQL Server]
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0387bda982e45c4ef1c269052aca4c08a2567e80
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4dde650f7b4bb6a8c860b4ee0e53535e4d068d5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200498"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>建立 SQL Server Agent 主要作業
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的主要作業。  

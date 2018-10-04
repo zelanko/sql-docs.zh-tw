@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2ed63bd9188dc25b6edfea09f8378d4243776b9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 156fa271582673d93cf2f76e92e447ea63b846c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200828"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 **驗證擴充保護** 是作業系統實作的網路元件功能。 Windows 7 和 Windows Server 2008 R2 上可支援 **[擴充保護]** 。 Service Pack 中內含**擴充保護** ，可供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 作業系統使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。  
@@ -70,8 +67,7 @@ ms.locfileid: "37323228"
   
 -   **擴充保護**  
   
-     可能的值是 **[關閉]**、 **[允許]** 和 **[必要]**。 
-              **[擴充保護]** 變數可讓使用者設定每個 **執行個體的** 擴充保護層級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **[擴充保護]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值是 **[關閉]**、 **[允許]** 和 **[必要]**。 **[擴充保護]** 變數可讓使用者設定每個 **執行個體的** 擴充保護層級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **[擴充保護]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
     -   當設定為 **[關閉]** 時，便會停用 **[擴充保護]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體將會接受來自任何用戶端的連接，不論用戶端是否受到保護。 **[關閉]** 與舊版及未修補的作業系統相容，但是比較不安全。 當您知道用戶端作業系統不支援擴充保護時，請使用這個設定。  
   

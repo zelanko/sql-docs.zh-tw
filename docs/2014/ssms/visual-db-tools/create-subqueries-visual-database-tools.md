@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], subqueries
 - nested queries
 - subqueries [SQL Server], SQL pane
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43ac300a6d833238147bef5b8e844e39b0cd07e4
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bed294d5568f4d7218c24d029781284c6bde0bfb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820704"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221678"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>建立子查詢 (Visual Database Tools)
   可以使用某個查詢的結果做為另一個查詢的輸入。 子查詢的結果可以用來做為使用 IN( ) 函數、EXISTS 運算子或 FROM 子句的陳述式。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - large reports
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 15925e061103c12f869dae722b1b5881f4146919
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217948"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  

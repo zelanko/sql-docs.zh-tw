@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-caps.latest.revision: 43
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cee9f40b308c545a9ebc74f2e4f1a88618d5008
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208278"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>將運算式加入優先順序條件約束
   優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 `Success`、`Failure` 或 `Completion`。 `Success` 表示優先順序可執行檔必須執行成功；`Failure` 表示優先順序可執行檔必須執行失敗；`Completion` 則指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [Precedence Constraints](control-flow/precedence-constraints.md)。  

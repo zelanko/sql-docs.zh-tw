@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrator connections [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - remote admin connections option
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0a79abea84914ca0c4ffef487e8f7e1bc0a7e96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7a63994b64920f9fa85d31ae551d2078faa8bb9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168308"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>遠端管理員連接伺服器組態選項
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供專用管理員連接 (DAC)。 DAC 可讓系統管理員存取執行中的伺服器，如此一來，即使伺服器遭到鎖定或在異常狀態下執行，而且未回應 [!INCLUDE[tsql](../../includes/tsql-md.md)] 連接時，也能執行診斷功能或 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 陳述式，或針對伺服器上的問題進行疑難排解。 依預設，只能從伺服器上的用戶端使用 DAC。 若要讓遠端電腦上的用戶端應用程式使用 DAC，請使用 sp_configure 的 remote admin connections 選項。  

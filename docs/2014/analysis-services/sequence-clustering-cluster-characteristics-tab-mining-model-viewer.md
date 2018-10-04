@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4272975a16da0cf0d9db534df34d00e329dc5430
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196856"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>時序叢集的叢集特性索引標籤 (採礦模型檢視器)
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集特性]** 索引標籤提供定義時序叢集之特性的詳細清單。 這些特性可包括簡單屬性/值組以及狀態之間的轉換。  

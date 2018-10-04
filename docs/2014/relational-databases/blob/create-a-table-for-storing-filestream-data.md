@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], table storage
 ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8e243a95caaeaf639deda594c13e024b6ef30ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a72480cf2bc6dbc394d10a1c0c068332e67417f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208378"
 ---
 # <a name="create-a-table-for-storing-filestream-data"></a>建立儲存 FILESTREAM 資料的資料表
   此主題說明如何建立儲存 FILESTREAM 資料的資料表。  

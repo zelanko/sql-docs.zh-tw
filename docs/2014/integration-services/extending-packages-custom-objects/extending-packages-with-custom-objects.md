@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8faaa92db8752329a489ee69fa4f9e82c62bc3c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b3c563360368f2bdc542e511812460aab623d39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229798"
 ---
 # <a name="extending-packages-with-custom-objects"></a>使用自訂物件擴充封裝
   如果發現 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中提供的元件不符合需求，可以編寫自己的延伸模組，擴充 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 您有兩個完全不同的選項可擴充封裝：其一是在指令碼工作與指令碼元件所提供的強大包裝函數中撰寫程式碼；其二則是可以從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型提供的基底類別衍生，從頭建立自訂 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 延伸模組。  

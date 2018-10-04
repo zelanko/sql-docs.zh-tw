@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3019133dd0fa326a1595f2815698e10eb9586427
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159300"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195228"
 ---
 # <a name="new-search-property-list"></a>新增搜尋屬性清單
   使用這個對話方塊來建立搜尋屬性清單。  

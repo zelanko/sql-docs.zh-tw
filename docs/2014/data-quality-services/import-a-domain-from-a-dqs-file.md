@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a608f6fe0ab40eae3e525b3ff8d6aa49a8534e99
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8506e286015d0c695c4c0d01ac675509a312da6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153438"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將 .dqs 檔案中的定義域匯入現有的知識庫中。 .dqs 資料檔的建立方式是從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出定義域或知識庫。 .dqs 資料檔已加密，所以無法檢視。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219858"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少
   升級伺服器執行個體時[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您也可以執行的循序升級，只有單一手動容錯移轉來減少每個鏡像資料庫的停機時間稱為*輪流升級*。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當做鏡像伺服器的伺服器執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體伺服器，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之伺服器執行個體上執行的鏡像工作階段數目和配置而定。  

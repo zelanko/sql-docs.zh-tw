@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.arp4joined.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5233c25448a10ba7673078d36fc37c464e839d67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50a2dcbb776b9f8bc3a736e8e6f06f572f76b449
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194958"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性複本未聯結
     

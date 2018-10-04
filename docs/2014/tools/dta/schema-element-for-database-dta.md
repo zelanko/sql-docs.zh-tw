@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Schema element
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d334d41335d0065fe1883da8b1f5fceae063751e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e368411b4a35f54f5cd653728bd1ffd9bdd1087f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306698"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227530"
 ---
 # <a name="schema-element-for-database-dta"></a>資料庫的 Schema 元素 (DTA)
   指定您要微調之資料庫的結構描述。  

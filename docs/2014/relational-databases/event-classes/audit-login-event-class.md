@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login event class
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 903325359173b8d3da0a17754d871c75d58997a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11ddf57e8ed1c1a57b1eb610d5a722677112da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205388"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228398"
 ---
 # <a name="audit-login-event-class"></a>Audit Login 事件類別
-   **Audit Login** 事件類別表示使用者已順利登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
+  **Audit Login** 事件類別表示使用者已順利登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
   
 ## <a name="audit-login-event-class-data-columns"></a>Audit Login 事件類別資料行  
   

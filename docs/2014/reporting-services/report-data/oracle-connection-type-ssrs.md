@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 057c882deec47b3f4d210da3a430328954f7dd68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef55fa4a5715ba58ed1ecd426533ef161034dc7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163889"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141776"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 連接類型 (SSRS)
   若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 .NET Framework Managed Provider for Oracle 為基礎，並且需要 Oracle 用戶端軟體元件。  

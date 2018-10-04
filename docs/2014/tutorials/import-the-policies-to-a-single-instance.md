@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4c45508880948c3ce1cb4814eca918278a66aacb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04c0170d33b07ea39b8c08ee194eb0cd63b4e64e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177145"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128308"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>將原則匯入至單一執行個體
   在這項工作中，您將會針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的單一執行個體，匯入您要排程到以原則為基礎之管理的最佳作法原則。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.historycleanuptask.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9866ea65bdd4f7fdb9e867898c4ae85a0c0f189
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4327be90b142556f0d41efd3228eead7b671d838
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271654"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161808"
 ---
 # <a name="history-cleanup-task"></a>記錄清除工作
   「記錄清除」工作會刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中下列記錄資料表的項目。  

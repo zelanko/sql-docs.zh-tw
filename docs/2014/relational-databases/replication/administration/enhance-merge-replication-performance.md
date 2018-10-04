@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - performance [SQL Server replication], merge replication
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 78221050ed5832f76843a57d20ed3a518b1ebea9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175654"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
   除了考慮＜ [增強一般複寫效能](enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  

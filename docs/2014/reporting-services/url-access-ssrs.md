@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5550a321e812b84c2d3e2dc8c64efd298e8eb95f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206338"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
   在 SQL Server Reporting Services (SSRS) 中，報表伺服器的 URL 存取權可讓您透過 URL 要求，傳送命令至報表伺服器。 例如，您可在原生模式報表伺服器或 SharePoint 文件庫中自訂報表的轉譯。 您可能已使用特定一組報表參數值來檢視過報表，或報表中您感興趣的特定頁面。 您可以使用預先定義的 URL 存取參數，封裝 URL 中的資訊。 您還可以內嵌轉譯格式或調整報表檢視器外觀的參數，以進一步自訂報表伺服器處理報表的方式。 然後，您可以直接將此 URL 貼入電子郵件或網頁，讓其他人在瀏覽器中用相同方式存取您的報表。  

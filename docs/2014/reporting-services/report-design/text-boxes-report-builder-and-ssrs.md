@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10134"
@@ -15,16 +13,15 @@ f1_keywords:
 - "10120"
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ec2d4d435145a86e5f14e8110e40ef03d4c4a1cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19c2f599a00548ed85853720c0aad86d38950c74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222518"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文字方塊 (報表產生器及 SSRS)
   當您考慮文字方塊時，可能會考慮包含介面 (如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint) 文字的獨立方塊。 在報表產生器中，有些文字方塊就像那樣，而且這些文字方塊可以根據運算式，顯示標題、描述與標籤或動態文字的常值文字。 但是，資料表或矩陣 (Tablix 資料區) 中的每個資料格也都包含一個文字方塊，這個文字方塊可以使用報表中之獨立文字方塊的相同方式進行格式化。  

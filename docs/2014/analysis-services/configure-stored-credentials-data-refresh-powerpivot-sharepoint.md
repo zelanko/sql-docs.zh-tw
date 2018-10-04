@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e2e6287e4631a2179fdfcac6dfc28506b21ef9cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149418"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>設定 PowerPivot 資料重新整理的預存認證 (PowerPivot for SharePoint)
   只要您在 Secure Store Service 中建立目標應用程式來儲存想要使用的認證，PowerPivot 資料重新整理作業就可以在任何 Windows 使用者帳戶之下執行。 同樣地，若想要提供的資料庫登入不同於最初用於匯入 PowerPivot for Excel 資料的登入，可以將這些認證對應至 Secure Store Service 目標應用程式，然後在資料重新整理排程中指定該目標應用程式。  

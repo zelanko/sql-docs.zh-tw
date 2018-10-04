@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NotifyTableChange Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - NotifyTableChange command
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 612738591115a2e7af964ba4ee5d9950587e45bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d060b73f7fb5999d4eb04faaa209eb7713f9d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224430"
 ---
 # <a name="notifytablechange-element-xmla"></a>NotifyTableChange 元素 (XMLA)
   通知的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，已發生變更，以指定的資料來源中的資料表。  
@@ -53,8 +50,8 @@ ms.locfileid: "37203898"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|無|  
-|預設值|無|  
+|資料類型和長度|None|  
+|預設值|None|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  

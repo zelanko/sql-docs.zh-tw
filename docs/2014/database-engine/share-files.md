@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da45eccfa103da171bfccc2e118e29b21566086
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224708"
 ---
 # <a name="share-files"></a>共用檔案
   您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來跨越不同的原始檔控制專案共用項目。 當您共用某個項目時，這個項目的任何變更都會反映在共用這個項目的每個專案中。  

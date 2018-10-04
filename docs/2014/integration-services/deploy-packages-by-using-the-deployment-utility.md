@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], installing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - dependencies [Integration Services]
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78fe699eade5daa76a8d6f2a77e63a2c5019b815
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18b20bf82031167e8a0a5f8175e957053e97afb6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116948"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Deploy Packages by Using the Deployment Utility
   當已建立部署公用程式，以從建立部署公用程式之電腦以外電腦上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案安裝封裝時，必須首先將部署資料夾複製到目的地電腦。  

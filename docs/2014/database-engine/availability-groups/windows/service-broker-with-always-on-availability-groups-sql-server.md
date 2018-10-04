@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7dc427aaf045a2cd62925ac23a017875302f276
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2758227de47509e62c9f7874c70bbcf30e01d364
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191088"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
   本主題包含將 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Service Broker 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相關資訊。  

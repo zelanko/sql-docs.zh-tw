@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17df4d4f8d311be311907d18ad61cbbce05ea397
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252280"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217590"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>建立訂閱檢視 (Master Data Services)
   當您想要建立的檢視中的資料，請建立訂閱檢視[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫以供訂閱系統。  

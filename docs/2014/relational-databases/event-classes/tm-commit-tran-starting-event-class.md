@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Commit Tran Starting event class'
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78bea47b4faafcc4910521c65bf8a94c149670df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d313efff71316dba71bda9bc50c1ce1e5c47b3e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145358"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting 事件類別
   TM: Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  

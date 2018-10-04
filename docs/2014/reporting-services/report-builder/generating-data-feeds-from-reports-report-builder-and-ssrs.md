@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202658"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224208"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中列出可從報表資料摘要，並從資料摘要的資料在報表中的區域。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端的資料摘要。  
@@ -178,7 +175,7 @@ ms.locfileid: "37202658"
   
 |項目|轉譯行為|  
 |----------|------------------------|  
-|Table|藉由展開資料表，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。 不支援鑽研報表。|  
+|資料表|藉由展開資料表，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。 不支援鑽研報表。|  
 |矩陣|藉由展開矩陣，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。|  
 |清單|轉譯每個詳細資料列或清單中執行個體的記錄。|  
 |子報表|內容的每個執行個體都會重複父項目。|  

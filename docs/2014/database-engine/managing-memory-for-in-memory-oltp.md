@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ba49bf6834800a4da450952e94a8474d40f2b5f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214248"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>為記憶體中的 OLTP 管理記憶體
   記憶體最佳化資料表需要有足夠的記憶體，以將所有資料列和索引保留在記憶體中。 因為記憶體是有限的資源，所以請務必了解並管理系統上的記憶體使用量。 本節的主題涵蓋了常見的記憶體使用與管理案例。  

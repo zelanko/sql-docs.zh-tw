@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67212f7457e029b18f39b15c6f105ed315f28251
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228348"
 ---
 # <a name="start-the-sqlcmd-utility"></a>啟動 sqlcmd 公用程式
   若要開始使用 `sqlcmd`，您必須先啟動該公用程式並連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 您可以連接到預設或具名執行個體。 啟動 `sqlcmd` 公用程式是第一個步驟。  

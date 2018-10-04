@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Cancel event class
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f9c82becfb066b6eb7da70d9e0524e0837be680
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9a2ef095189ca4505248865a6b9a8a99c86243d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200863"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel 事件類別
   **Lock:Cancel** 事件類別指出已取消在資源上取得鎖定，例如，由於取消查詢所導致。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1
 helpviewer_keywords:
 - Calculation Properties dialog box
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f715b54f45c3bf8c676dd8f6c10c25d9d92d00e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209630"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>計算屬性對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [計算屬性] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，可檢視或編輯在 [Cube 設計師] 的 **[計算]** 索引標籤上，針對選取的 Cube 所定義的顯示資料夾和相關聯的量值群組計算屬性。 在 Cube 設計師的 **[計算]** 索引標籤上，按一下 **[工具列]** 窗格的 **[計算屬性]** ，即可顯示 **[計算屬性]** 對話方塊。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 204166a6e87f2b8ebdca6b5d2e565b413400da00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f59a5925cb784c205e60b77e07ec82605fe0e838
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183461"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196128"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 教學課程 (SSAS)
   本節包含 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 的教學課程。  

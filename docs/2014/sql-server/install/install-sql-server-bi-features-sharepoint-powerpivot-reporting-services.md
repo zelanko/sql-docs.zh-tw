@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85ded5847bbb2bc1c32336e999b3579925a4e930
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5088c22fed14e099f77f1ddcc1b7158f9e6f04f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202778"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>安裝具有 SharePoint 的 SQL Server BI 功能 (PowerPivot 和 Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可與 Microsoft SharePoint 伺服器陣列，若要啟用 SharePoint 中的商業智慧 (BI) 功能整合。 這些功能包括[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]， [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 用於[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]SharePoint 伺服陣列中的資料存取。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是一種資料引擎，適用於以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 建立並從 SharePoint 文件庫存取的活頁簿。 一旦儲存之後[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]到 SharePoint 的活頁簿，您可以使用它做為資料來源[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]報表。  

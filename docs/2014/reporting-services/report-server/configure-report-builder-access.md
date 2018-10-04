@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, Report Builder
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e715595ae4ed8394fc4e30c2819af140eb8e3681
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0426c117011ed812d9c2d4e1fc9f4e76b06a989a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328888"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182448"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
   報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
@@ -164,7 +161,7 @@ ms.locfileid: "37328888"
 |交涉 (預設值)<br /><br /> NTLM (預設值)|在 Windows 整合式安全性之下，如果用戶端和伺服器部署在相同的網域中、使用者使用有權存取報表產生器的網域帳戶來登入用戶端電腦，而且報表伺服器有設定 Windows 驗證時，來自 ClickOnce 和報表產生器的已驗證要求通常會成功。<br /><br /> 要求成功是因為 ClickOnce 以及與報表伺服器的瀏覽器連接具有相同的使用者識別。<br /><br /> 如果使用者使用 [執行身分] 開啟 Internet Explorer 而且指定了非預設的認證，要求將會失敗。 如果報表伺服器上的使用者工作階段是在特定的帳戶之下建立，而且 ClickOnce 會在不同的帳戶下執行，則報表伺服器將會拒絕檔案的存取。|  
 |Kerberos|使用報表產生器所需的 Internet Explorer 並不會直接支援 Kerberos。|  
 |基本驗證|ClickOnce 不支援基本驗證。 ClickOnce 將不會在驗證標頭中編寫用於指定基本驗證的要求， 也不會傳遞認證或是提示使用者提供認證。 您可以啟用報表產生器應用程式檔案的匿名存取來解決這些問題。<br /><br /> 如果您啟用報表產生器應用程式檔案的匿名存取，要求將會成功，因為報表伺服器會忽略驗證標頭。 如需如何啟用報表產生器的匿名存取的詳細資訊，請參閱[設定報表伺服器上的基本驗證](../security/configure-basic-authentication-on-the-report-server.md)。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。<br /><br /> 如果報表伺服器有設定基本驗證，而且您並未啟用報表產生器程式檔案的匿名存取，要求將會失敗。 要求失敗是因為 ClickOnce 會在它的要求中指定 Windows 整合式安全性。 如果報表伺服器有設定基本驗證，伺服器將會拒絕要求，因為它會指定無效的安全性封裝，而且它會缺少報表伺服器所預期的認證。<br /><br /> 此外，如果報表伺服器設定為使用 SharePoint 整合模式，而且 SharePoint 網站使用基本驗證，則當使用者嘗試使用 ClickOnce 在用戶端電腦上安裝報表產生器時，會出現 401 錯誤。 發生這個狀況的原因是 SharePoint 會使用 Cookie 讓使用者在工作階段期間維持驗證狀態，但是 ClickOnce 不支援 Cookie。 當使用者啟動 ClickOnce 應用程式 (例如報表產生器) 時，應用程式不會讓 Cookie 通過 SharePoint，因此 SharePoint 會拒絕存取並傳回 401 錯誤。<br /><br /> 您可以嘗試下列其中一個選項來解決這個問題：<br /><br /> 選取 **記住我的密碼**選項時提供您的使用者認證。<br /><br /> 針對 SharePoint 網站集合啟用匿名存取。<br /><br /> 設定環境，讓使用者不提供認證。 例如，在內部網路環境中，您可能會將 SharePoint 伺服器設定為屬於某個工作群組，然後在本機電腦上建立使用者帳戶。|  
-|Custom|當您設定報表伺服器使用自訂驗證時，報表伺服器上會啟用匿名存取，而且會接受要求而不執行驗證檢查。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。|  
+|自訂|當您設定報表伺服器使用自訂驗證時，報表伺服器上會啟用匿名存取，而且會接受要求而不執行驗證檢查。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](../security/authentication-with-the-report-server.md)   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], push subscriptions
 - subscriptions [SQL Server replication], push
 - push subscriptions [SQL Server replication], synchronizing
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3bc18973ae091e04d70fefa3a54a44434983fb6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac4db6c772d7b40daadbded626bcd778356de2b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225458"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複寫代理程式 [或 Replication Management Objects (RMO) 來同步處理](agents/replication-agents-overview.md)中的發送訂閱。  

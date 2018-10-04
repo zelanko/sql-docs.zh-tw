@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b91b8628fe9c12af7bb1c5ab74a079aa52401398
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac80f4187bc57c86736f09a19200d408e83eb57d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213790"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services 中使用的工具和應用程式
   尋找在 Analysis Services 執行個體上建立 Analysis Services 模型和管理關聯資料庫所需的工具與應用程式。  
@@ -43,7 +40,7 @@ ms.locfileid: "37282044"
   
 ## <a name="administrative-tools"></a>系統管理工具  
   
-### <a name="sql-server-management-studio"></a>Transact-SQL  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Management Studio 是所有 SQL Server 功能 (包括 Analysis Services) 的主要系統管理工具。 SQL Server Management Studio 是選擇性元件。 如果您在 Windows Server 2012 的 [應用程式] 頁面上未看到該元件和其他 SQL Server 應用程式，請執行 SQL Server 安裝程式以將其新增到您的安裝。  
   
 ### <a name="sql-server-profiler"></a>SQL Server Profiler  

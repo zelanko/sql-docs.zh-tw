@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea360997ea9d0f2dd388aa3ff803ab153836073d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50b98c3038d8ec1af9272eb9da0ad6d8ec0e3139
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311880"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215692"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
   使用**建立資料表 SQL 陳述式**對話方塊檢視自動產生的陳述式，或修改您的目的。 如果您修改此陳述式，就可能也必須對資料行對應進行相關的變更，而且此後必須手動維護已編輯的 SQL 陳述式。  

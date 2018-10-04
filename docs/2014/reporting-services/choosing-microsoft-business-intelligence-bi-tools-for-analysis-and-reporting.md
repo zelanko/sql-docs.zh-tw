@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f0122769e599963658cc2f481c7273de7803505d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1d70c3276c479de8d8f8d67256729ad9f2bce005
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393160"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223818"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>選擇 Microsoft 報告和分析工具
   下表會將資料分析與報告的工作負載對應到最適合這些工作負載的 Microsoft BI 工具。  
@@ -30,7 +27,7 @@ ms.locfileid: "40393160"
   
 |工作負載|使用者|||BI 工具|||  
 |---------------|----------|-|-|--------------|-|-|  
-|||[匯出]|**SharePoint**|**SharePoint Online**|**Power BI for Office 365**|**[SQL Server]**|  
+|||[匯出]|**SharePoint**|**SharePoint Online**|**Power BI for Office 365**|**SQL Server**|  
 |**自助 BI**|分析師/使用者||||||  
 |輕鬆地探索及存取公用和公司資料||[Power Query](http://go.microsoft.com/fwlink/p/?LinkId=391845)|||[資料目錄](http://go.microsoft.com/fwlink/p/?LinkId=391855)<br /><br /> [系統管理中心](http://go.microsoft.com/fwlink/p/?LinkId=391856)||  
 |建立功能強大的資料模型||[Power Pivot](http://go.microsoft.com/fwlink/p/?LinkId=391846)|||||  

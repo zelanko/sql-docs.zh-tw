@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Collation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Collation element
 ms.assetid: 9b6dbe19-543e-43e6-abe9-1e8b4dfaa275
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92e4e7eaa9eb4d994fc225c9d3d1c9a0c941b1b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 410baddd86da9d6100cd3ef7342501fed955b847
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178068"
 ---
 # <a name="collation-element-assl"></a>Collation 元素 (ASSL)
   決定父元素所使用的定序。  
@@ -51,7 +48,7 @@ ms.locfileid: "37213928"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -59,7 +56,7 @@ ms.locfileid: "37213928"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Cube](../objects/cube-element-assl.md)，[資料庫](../objects/database-element-assl.md)， [DataItem](../data-type/dataitem-data-type-assl.md)，[維度](../objects/dimension-element-assl.md)， [MiningModel](../objects/miningmodel-element-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
  `Collation` 字串包含地區設定識別碼 (LCID) 和比較旗標 (以底線字元隔開)。 例如，Latin1_General_CI_AS 是可接受的字串。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DISCOVER_XML_METADATA
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f902be22a044112b3801f3e0090e7faea5603ebf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227998"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 資料列集
   傳回描述所要求物件的 XML 文件。 傳回的資料列集永遠都是由一個資料列與一個資料行所組成。  

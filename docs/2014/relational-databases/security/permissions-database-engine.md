@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sql12.swb.databaseuser.permissions.database.f1--May use common.permissions
 - sql12.swb.databaseuser.permissions.object.f1--May use common.permissions
@@ -22,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 53399e161e9c585c42c0442efe5138794819a273
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141968"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 此主題提供下列資訊：  

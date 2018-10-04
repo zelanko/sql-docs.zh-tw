@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - transformations [Integration Services], synchronous and asynchronous
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a4fb438fce2ff1e774938a34dfd25be1b483a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5229fe609ed2f607478fc49fb12f01ac7359d73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225448"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
   如需了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 之同步與非同步轉換間的差異，可以從了解同步轉換開始著手。 如果同步轉換不符合您的需求，您的設計可能需要非同步轉換。  
@@ -46,7 +43,7 @@ ms.locfileid: "37302358"
   
 -   輸入資料列和輸出資料列之間有一對一的關係。 彙總轉換就是一個範例，其中的元件必須在輸出中加入資料列，才能保留計算的彙總值。  
   
- 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定非同步轉換，其方式是將 0 的值指派給元件輸出的 `SynchronousInputID` 屬性。 執行個體時提供 SQL Server 登入。 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 指令碼和程式設計中，您會指定非同步轉換，其方式是將 0 的值指派給元件輸出的 `SynchronousInputID` 屬性。 . 這樣會告訴資料流程引擎不要將每一個資料列自動傳送給輸出。 然後您必須撰寫程式碼，明確地將每一個資料列傳送給適當的輸出，其方式是將其加入到針對非同步轉換輸出所建立的新輸出緩衝區內。  
   
 > [!NOTE]  
 >  由於來源元件也必須明確地將它從資料來源讀取的每一個資料列加入到它的輸出緩衝區內，所以來源類似於具有非同步輸出的轉換。  

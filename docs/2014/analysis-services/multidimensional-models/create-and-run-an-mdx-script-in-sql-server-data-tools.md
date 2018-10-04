@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], scripts
 - scripts [Analysis Services], creating
 - scripts [MDX], creating
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e71c6a057606b2a28e08efe1cf8e164c54c29de8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2691573c6a3ca0ae860339177780f707c5277b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218608"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立及執行 MDX 指令碼
   若要在  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立和執行 MDX 指令碼，您必須是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中且已建立 Cube，並準備就緒可供編輯。  

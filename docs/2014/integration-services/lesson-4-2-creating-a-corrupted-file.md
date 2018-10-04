@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226598"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  

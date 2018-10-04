@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MimeType Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MimeType element
 ms.assetid: 710e2519-6892-4ce8-a10f-a4edf7077e18
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c5514f057e954ff81e79fb1727f1856ce161030
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae3b1b8b006c6e7825275f399aca9e0e1a720fb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132328"
 ---
 # <a name="mimetype-element-assl"></a>MimeType 元素 (ASSL)
   包含的多用途網際網路郵件延伸標準 (MIME) 類型，如果適用的話所代表之資料[DataItem](../data-type/dataitem-data-type-assl.md)項目。  
@@ -49,7 +46,7 @@ ms.locfileid: "37254800"
 |特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|String|  
-|預設值|無|  
+|預設值|None|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -57,7 +54,7 @@ ms.locfileid: "37254800"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|子元素|無|  
+|子元素|None|  
   
 ## <a name="remarks"></a>備註  
   

@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fc243f4f5be0982e8e06496860b67faa419d9f1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8c019b7735b70247d0646cccc9f8de277725eec8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122788"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>從結果集提取資料列 (OLE DB)
   此範例會示範如何從結果集提取資料列。 IA64 不支援此範例。  
   
- 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -33,7 +30,7 @@ ms.locfileid: "37407638"
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
 ### <a name="code"></a>程式碼  
   
@@ -379,6 +376,6 @@ int ProcessResultSet() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果使用說明主題&#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [處理結果操作說明主題 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

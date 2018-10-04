@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reosurce Pool Stats object
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a3b589fee01dc06b4a2cbf96e984ddb0294fd56d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a1360399717819cfe82f02979de06b9f933fca4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229228"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
   SQLServer:Resource Pool Stats 物件包含效能計數器，可報告資源管理員資源集區統計資料的相關資訊。  

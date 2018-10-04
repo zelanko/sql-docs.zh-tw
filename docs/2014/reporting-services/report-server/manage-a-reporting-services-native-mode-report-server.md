@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c6190ec6494e5a723aa449c5d4053c12979076c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206108"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
   本節包含使用 Reporting Services 組態管理員來設定原生模式報表伺服器執行個體的程序。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
-caps.latest.revision: 15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9df35b685d9814636acaa194d5cb30741e9b994
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122754"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具來建立封裝。 根據您指定的命令，此封裝可以包含：  

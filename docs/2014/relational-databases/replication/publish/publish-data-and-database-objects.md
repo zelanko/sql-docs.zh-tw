@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227108"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
   在建立發行集時，您可以選擇想要發行的資料表和其他資料庫物件。 您可以使用複寫發行下列資料庫物件。  

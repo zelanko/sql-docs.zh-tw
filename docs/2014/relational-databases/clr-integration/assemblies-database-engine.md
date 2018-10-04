@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 157f43f4646c6c935da7884a0fdae93c9676e6fe
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354960"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208428"
 ---
 # <a name="assemblies-database-engine"></a>組件 (Database Engine)
   本節中的主題提供可協助您了解、設計和實作組件的資訊。  
@@ -39,7 +36,7 @@ ms.locfileid: "37354960"
   
 -   使用者自訂彙總函式。 如需詳細資訊，請參閱 <<c0> [ 建立使用者定義彙總](../user-defined-functions/create-user-defined-aggregates.md)。  
   
--   使用者定義型別。 如需詳細資訊，請參閱 < [Using User-Defined 類型](../native-client/features/using-user-defined-types.md)。  
+-   使用者定義型別。 如需詳細資訊，請參閱[使用使用者定義型別](../native-client/features/using-user-defined-types.md)。  
   
  組件在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中會執行下列功能：  
   

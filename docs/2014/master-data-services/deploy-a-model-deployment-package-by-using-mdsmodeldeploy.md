@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
-caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e15f7e75f8967fb49b33b6b8a8eb6720b92131d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 048929ec4ff58def3d392df3f326f31f98fe9d83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205868"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具來部署封裝，其中包含下列其中一項：  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Web synchronization, topologies
 - IIS server configuration [SQL Server replication]
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23b40b4547bb76ed153b62cf859ec9c9e622825e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3607a2d85005827421353be5f9871c58de9f5a41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301804"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191801"
 ---
 # <a name="topologies-for-web-synchronization"></a>Web 同步處理的拓撲
   您可以選擇各種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同步處理複寫拓撲。 設定 Web 同步處理的一般方式包括：  

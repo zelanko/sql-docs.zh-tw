@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b8af11178bf4f2d56d3b1d8df515c12298b81d5b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210818"
 ---
 # <a name="capture-logon-trigger-event-data"></a>擷取登入觸發程序事件資料
   若要擷取有關 LOGON 事件的 XML 資料，以用於登入觸發程序內部，請使用 [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) 函式。 LOGON 事件會傳回下列事件資料結構描述：  

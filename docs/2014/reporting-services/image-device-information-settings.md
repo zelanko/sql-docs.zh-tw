@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17c7a8f084db4c252da7f235762a60078ef39214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6737a32eb7597f8115a7ee6797bcf1aedbd006b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315468"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220778"
 ---
 # <a name="image-device-information-settings"></a>影像裝置資訊設定
   下表列出以 IMAGE 格式轉譯的裝置資訊設定。  
@@ -38,7 +35,7 @@ ms.locfileid: "37315468"
 |**MarginLeft**|為報表所設定的左邊界值 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `1in`)。 這個值會覆寫報表的原始設定。|  
 |**MarginRight**|為報表所設定的右邊界值 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `1in`)。 這個值會覆寫報表的原始設定。|  
 |**MarginTop**|為報表所設定的上邊界值 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `1in`)。 這個值會覆寫報表的原始設定。|  
-|**OutputFormat**|其中一個[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支援的輸出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
+|**OutputFormat**|其中一個[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支援的輸出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
 |**PageHeight**|為報表所設定的頁面高度 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `11in`)。 這個值會覆寫報表的原始設定。|  
 |**PageWidth**|為報表所設定的頁面寬度 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `8.5in`)。 這個值會覆寫報表的原始設定。|  
 |**PrintDpiX**|輸出影像的水平解析度。 預設值是 `300`。 適用於增強型中繼檔 (`EMF`) 輸出格式。|  

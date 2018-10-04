@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44d7dfcb5928d0984c0ce34b314fd4d25adcc812
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69135b95383c8a00bbde4475717e68d2bbdaf770
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150758"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
   使用**指定資料表複製或查詢**頁面，即可指定如何將資料複製。 您可以使用圖形介面來選取要複製的現有資料庫物件，或使用 Transact-SQL 來建立更複雜的查詢。  

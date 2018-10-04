@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70214fb48ffa66fdfeca56eccebdb335c11a214f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc0c149ab222976d643eb65ebde540af514bd86c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218909"
 ---
 # <a name="partition-storage-modes-and-processing"></a>資料分割儲存模式及處理
   資料分割的儲存模式會影響查詢及處理效能、儲存需求，以及此資料分割的儲存位置及其父量值群組和 Cube。 儲存模式的選擇也會影響處理選擇。  

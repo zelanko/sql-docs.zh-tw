@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3139aa4fab106e048e21847acadafc6bc90b8bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204728"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組完整的工具，可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件，以及用來微調實體資料庫設計。 要選擇的工具依據要做的監視或微調類型，以及要監視的特殊事件而定。  

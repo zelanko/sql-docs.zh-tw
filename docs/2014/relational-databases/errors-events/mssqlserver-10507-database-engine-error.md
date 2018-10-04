@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 10507 (Database Engine error)
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7614a550b0a7e60ac1d8d355fa68299aa8812e90
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214048"
 ---
 # <a name="mssqlserver10507"></a>MSSQLSERVER_10507
     

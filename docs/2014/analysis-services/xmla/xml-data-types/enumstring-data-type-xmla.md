@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EnumString Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea4f9057c05d7be5a5f8d8591d27460540a377fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb075a8c659fe264dbed7dd68654d1fb84fdf7a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210233"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 資料類型 (XMLA)
   定義代表給定列舉值之具名常數集合的衍生資料類型。  
@@ -49,15 +46,15 @@ ms.locfileid: "37224022"
 |特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|`string`|  
-|衍生資料類型|無|  
+|衍生資料類型|None|  
   
 ## <a name="data-type-relationships"></a>資料類型關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|無|  
-|子元素|無|  
-|衍生的元素|無|  
+|父元素|None|  
+|子元素|None|  
+|衍生的元素|None|  
   
 ## <a name="remarks"></a>備註  
  XML for Analysis (XMLA) 會使用列舉，將字串值限制為可驗證設定集合。 `EnumString` 會使用標準的 XML `string` 資料類型。 每個具名常數的特定值都以列舉值定義指定。 列舉值定義加入至[DISCOVER_ENUMERATORS](../../schema-rowsets/xml/discover-enumerators-rowset.md)結構描述資料列，而且可以使用擷取[Discover](../xml-elements-methods-discover.md)方法搭配 DISCOVER_ENUMERATORS 要求類型。  

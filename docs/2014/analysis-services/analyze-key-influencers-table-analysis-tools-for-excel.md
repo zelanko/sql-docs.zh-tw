@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - key influencers
 - factor analysis
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e280644cbd3d5fd78ba6f1b29f8a989948094a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49dc66cfeb9b6d30abd98563b995bcbead0de5d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187635"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128771"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析關鍵影響因數 (適用於 Excel 的資料表分析工具)
   ![功能區中的 [分析關鍵影響因數] 按鈕](media/tat-aki.gif "功能區中的 [分析關鍵影響因數] 按鈕")  

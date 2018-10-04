@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportdata.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Report Data pane
 ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 464bdb206986b01de68b018b8b6128956aee7036
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 910f7f6d67b7e31922ed45006008d292e6f2a1c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270564"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162778"
 ---
 # <a name="report-data-pane"></a>報表資料窗格
   [報表資料] 窗格可用於檢視報表中目前定義的參數、資料來源、資料集、欄位集合和影像。 [圖表資料] 會以階層檢視來顯示表示報表中資料的項目。 最上層節點代表內建欄位、參數、影像和資料來源參考。 請展開每個節點以檢視資料項目。 例如，當您展開資料來源節點時，為該資料來源所定義的資料集就會顯示。 在展開資料集時，其欄位集合就會顯示。 將項目拖曳到報表設計介面，以將資料連結到報表頁面的報表項目。  

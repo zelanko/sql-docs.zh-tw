@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Integration Services, scripting
 - SSIS, scripting
 - scripts [Integration Services], about scripting
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06a199eebc0cde91c928f2099118996cf9d6bf50
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b060579cfb55a1698007630240f86bdf4c170c5f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158599"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229268"
 ---
 # <a name="extending-packages-with-scripting"></a>使用指令碼擴充封裝
   如果您發現 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的內建元件不符合需求，可以透過撰寫自己的延伸模組，擴充 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 您有兩個完全不同的選項可擴充封裝：其一是在指令碼工作與指令碼元件所提供的強大包裝函數中撰寫程式碼；其二則是可以從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型提供的基底類別衍生，從頭建立自訂 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 延伸模組。  

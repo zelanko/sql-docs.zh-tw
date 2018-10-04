@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cc28e7645732d46bd9cf62eba049fbc7dd48ad7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215268"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
   在 [指令碼工作編輯器] 中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifyprocessingandstorage.f1
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eae2e7c380b7b0de69047079edac87d273f07d52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a1462a2cc1338e973df3d0fd84641aa24d0bc41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198618"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>處理與儲存位置 (資料分割精靈)
   使用 [處理與儲存位置] 頁面，即可指定擁有資料分割之 Cube 的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，以及儲存該資料分割之資料的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 藉由指定遠端 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體或指定預設儲存位置以外的儲存位置，即可將資料分割定義為遠端資料分割。 如需遠端資料分割的詳細資訊，請參閱 [遠端資料分割](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。  

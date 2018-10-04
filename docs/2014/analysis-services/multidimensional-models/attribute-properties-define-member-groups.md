@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - member groups [Analysis Services]
 - grouping members
 - DiscretizationMethod property
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bc08324764811c101f0ba8d7bf5c6067a8ba388
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 389439143ddd5f56d565cdebff42a91e241e16fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219338"
 ---
 # <a name="define-member-groups"></a>定義成員群組
   如果屬性有大量成員，您可以選擇將這些成員分組成值區，減少使用者在階層中瀏覽資料時所看到的成員數目。 您也可以決定成員分組的值區數目和設定值區的命名配置。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  

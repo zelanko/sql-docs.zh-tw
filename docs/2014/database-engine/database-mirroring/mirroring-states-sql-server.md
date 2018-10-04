@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SUSPENDED state
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 10cc3385d0bbcd7832533e1e375401b1b060c959
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225898"
 ---
 # <a name="mirroring-states-sql-server"></a>鏡像狀態 (SQL Server)
   在資料庫鏡像工作階段期間，鏡像資料庫一定會處於特定狀態 (「鏡像狀態」)。 資料庫的狀態會反映通訊狀態、資料流程，以及夥伴之間的資料差異。 資料庫鏡像工作階段會與主體資料庫採用相同的狀態。  

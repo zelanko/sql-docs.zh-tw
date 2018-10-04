@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef8be1c1777e51b14a0db38a15a5ff806a83443d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f641d9bb33c918e8194ac7ed02af8c4c9469db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193258"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫供內部儲存之用。 根據預設，資料庫是命名為 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 是由主要報表伺服器資料庫所建立，用於儲存暫存資料、工作階段資訊和快取報表。  
@@ -80,7 +77,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>關於資料庫版本  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 產品版本資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]表示透過檔案版本資訊出現在記錄檔中，所有的 SOAP 呼叫的標頭中，而且當您連接到報表伺服器 URL (例如，當您開啟瀏覽器並前往http://localhost/reportserver)。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 產品版本資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]表示透過檔案版本資訊出現在記錄檔中，所有的 SOAP 呼叫的標頭中，而且當您連接到報表伺服器 URL (例如，當您開啟瀏覽器並前往 http://localhost/reportserver)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員&#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9401dd59c23b08548c3cb5a02770a8dbf7e51450
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1335fdd99afb81be5f67cda57fefc3241a032f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213610"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件類別
   SP:Completed 事件類別指出預存程序已完成執行。  

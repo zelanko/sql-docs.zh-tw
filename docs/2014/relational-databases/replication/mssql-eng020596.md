@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020596 error
 ms.assetid: fa33627c-2e99-4be3-9424-52ab83446e07
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a05b9dc595bf27d2912c13792702f680b67a6be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58d47808f52fd2d2624f26f7bd17bcb49df100f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179665"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215178"
 ---
 # <a name="mssqleng020596"></a>MSSQL_ENG020596
     

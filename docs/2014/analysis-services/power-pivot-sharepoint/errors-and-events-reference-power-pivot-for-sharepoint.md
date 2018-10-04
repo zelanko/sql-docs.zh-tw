@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 95970bab-aa4d-4e8e-be86-0c96e95a5d0c
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0eeb235e4edc3cbf4b99657e9997aef65525ae76
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e422bbc6d14c70da299c55ec5af2aa6d824f099
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197559"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>錯誤和事件參考 (PowerPivot for SharePoint)
   本節提供有關 PowerPivot for SharePoint 錯誤和事件的資訊。 本節中的錯誤是由出現在記錄檔或錯誤視窗中的錯誤訊息文字所識別。  

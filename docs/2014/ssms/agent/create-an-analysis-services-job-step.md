@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [Analysis Services]
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3614c25faa1ba79c25c1459de5e82b6ab02efcd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6a87cde46f7382392764abc4836fc9dd50381c84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227338"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立和定義執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services 命令與查詢的 [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 作業步驟。  

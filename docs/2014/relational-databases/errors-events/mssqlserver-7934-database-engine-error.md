@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 7934 (Database Engine error)
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c124a3e9427d4ca89a4a44d94efcc1b40d649e8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427607"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227868"
 ---
 # <a name="mssqlserver7934"></a>MSSQLSERVER_7934
     

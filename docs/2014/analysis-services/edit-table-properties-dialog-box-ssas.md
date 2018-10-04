@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229278"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>編輯資料表屬性對話方塊 (SSAS)
   **[編輯資料表屬性]** 對話方塊可讓您檢視與修改使用 [資料表匯入精靈] 匯入至模型設計師之資料表的屬性。 若要存取此對話方塊，請在模型設計師中選取資料表，然後按一下 **[資料表]** 功能表，再按一下 **[資料表屬性]**。  

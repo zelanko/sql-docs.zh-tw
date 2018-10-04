@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 115
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229968"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
   `sqlcmd`公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序與指令碼檔案在命令提示字元中，在**查詢編輯器**SQLCMD 模式、 Windows 指令碼檔案或的作業系統 (Cmd.exe) 作業步驟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理程式作業。 這個公用程式利用 ODBC 執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批次。  

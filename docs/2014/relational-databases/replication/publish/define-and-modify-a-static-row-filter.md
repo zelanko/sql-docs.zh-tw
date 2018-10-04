@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying filters, static row
 - static row filters
 - filters [SQL Server replication], static row
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 736701091763d9b3d50fbe66494dab9c7fa09e14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73c0e6d0ab47960aae61955cc4c432f2a883ae42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184928"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定義及修改靜態資料列篩選
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義及修改靜態資料列篩選。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table modifications [SQL Server], multiple users
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 986e737dd3cccdfe67ef745f2cbcb3789ca3aa12
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 10d432ca5ba341bda0d3aacdb9ef9a9a90f4820c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172308"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>協調多位使用者所做的變更 (Visual Database Tools)
   在多位使用者環境中，可以同時讓多位使用者修改相同的物件。 這樣的情況會發生在當您使用資料表或資料庫圖表設計工具設計物件的結構時，或是發生在 [查詢和檢視設計師] 的 [結果] 窗格中的值。 這樣會產生您需要解決的衝突。  

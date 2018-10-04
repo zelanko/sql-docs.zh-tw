@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f64787a50373e2bb958d0c3851ff3f762a6eb83c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9fe97795be77255412ecac2dbcda11214369c9b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218708"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
   要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中設計商業智慧應用程式，先從在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]專案開始。 在這個專案內，您要定義方案的所有元素，請從資料來源檢視開始。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe12091ae639be7a2fd1c3a430d866b14d522693
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181318"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 或是否有值存在都會傳回 SQL_SUCCESS *CatalogName*， *TableName*，或*ColumnName*參數。 **SQLFetch**無效的值用於這些參數時，會傳回 sql_no_data 為止。  

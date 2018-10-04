@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204878"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>總計、彙總與內建集合的運算式範圍 (報表產生器及 SSRS)
   撰寫運算式時，您會發現 *「範圍」* (Scope) 一詞用於多個內容。 範圍可以指定要用於評估運算式的資料、轉譯頁面上的文字方塊集合、可以根據切換顯示或隱藏之報表項目的集合。 您將會在與運算式評估、彙總函式語法、條件式可用性相關的主題中，以及與這些領域相關的錯誤訊息中看 *「範圍」* (Scope) 一詞。 使用下列描述來協助區分 *「範圍」* (Scope) 適用的意義：  

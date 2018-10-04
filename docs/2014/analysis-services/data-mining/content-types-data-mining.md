@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190088"
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以同時定義採礦結構中資料行的實體資料類型，以及用於模型內之資料行的邏輯內容類型。  
@@ -93,7 +90,7 @@ ms.locfileid: "37163509"
   
  這個內容類型受到下列資料類型所支援：`Double`、`Long` 和 `Date`。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>資料表  
  *table* 內容類型表示資料行包含另一個資料表，資料表內有一個或多個資料行及一個或多個資料列。 對於案例資料表中的任何特定資料列，這個資料行也可以包含多個全與父案例記錄相關的值。 例如，如果主要案例資料表包含客戶清單，則您可以擁有數個包含巢狀資料表的資料行，例如 **ProductsPurchased** 資料行 (其中巢狀資料表會列出此客戶過去購買的產品) 及 **Hobbies** 資料行 (列出客戶興趣)。  
   
  此資料行的資料類型一定是 `Table`。  

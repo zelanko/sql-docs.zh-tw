@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d58af6ce4b1050b4a971a0b9d4ed5620bd8bd6fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205540"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>將知識加入至知識庫
   此主題描述您可以在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將知識加入至知識庫的方式。 在您可以執行資料品質作業之前，您必須擁有資料的相關知識。 您取得該項知識的方式是建立及維護資料品質知識庫，並將與特定類型之資料來源相關的知識加入至知識庫。 知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。  

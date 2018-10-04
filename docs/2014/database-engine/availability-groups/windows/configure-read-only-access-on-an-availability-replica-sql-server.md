@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c6da139e873434bec21e7dd053094ff0a5eeff7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ab31817941f6f57634990f39cf4b55aa3672daf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218254"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>設定可用性複本上的唯讀存取 (SQL Server)
   預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連接 AlwaysOn 可用性群組的次要複本。 本主題說明如何藉由使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，針對 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性群組的可用性複本設定連接存取。  

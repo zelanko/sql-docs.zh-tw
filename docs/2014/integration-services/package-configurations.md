@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - direct configurations [Integration Services]
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-caps.latest.revision: 47
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200918"
 ---
 # <a name="package-configurations"></a>封裝組態
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供封裝組態可供您在執行階段更新屬性的值。  

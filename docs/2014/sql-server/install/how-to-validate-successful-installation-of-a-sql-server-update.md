@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 96b0fb42-ebf0-408f-ba31-524cdbc0860e
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c709a4a8bd1b6af3c523b80b6b18d3f828b31983
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 140939776eac60f3e62ace9309e87df89db6fd01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227188"
 ---
 # <a name="how-to-validate-successful-installation-of-a-sql-server-update"></a>如何：驗證 SQL Server 更新的安裝是否成功
   若要驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新的安裝是否成功：  

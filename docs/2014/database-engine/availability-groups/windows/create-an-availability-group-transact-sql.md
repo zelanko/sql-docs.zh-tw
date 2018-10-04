@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5ed555d0b81e74babd60b16c1ba8df4685d6b37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40f47820be28dccb90b158a7b71c886306d7961d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169858"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>建立可用性群組 (Transact-SQL)
   此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  

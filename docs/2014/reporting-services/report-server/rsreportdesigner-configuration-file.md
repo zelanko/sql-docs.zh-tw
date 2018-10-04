@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9a19c05387c61e96573ec9525d8e0cab2eb7c8ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255550"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211704"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 組態檔
   RSReportDesigner.config 檔會儲存有關 [報表設計師] 可用之轉譯和資料處理延伸模組的設定。 資料處理延伸模組資訊儲存在`Data`項目。 轉譯延伸模組資訊儲存在 `Render` 元素中。 `Designer` 元素列舉報表設計師中所使用的查詢產生器。  
@@ -62,7 +59,7 @@ ms.locfileid: "37255550"
 |-------------|-----------------|  
 |`SecureConnectionLevel`|指定 Web 服務連接的安全性程度。 有效值範圍是從 0 到 3，其中 0 表示最不安全。 如需詳細資訊，請參閱 [使用安全的 Web 服務方法](../report-server-web-service/net-framework/using-secure-web-service-methods.md)。|  
 |`InstanceName`|預覽伺服器的識別碼。 請勿修改此值。|  
-|`SessionCookies`|指定報表伺服器是否使用瀏覽器 Cookie 來維護工作階段資訊。 有效值包括`true`和`false`。 預設值為 `true`。 如果將此值設定為 [False]，工作階段資料就會儲存在 **reportservertempdb** 資料庫中。|  
+|`SessionCookies`|指定報表伺服器是否使用瀏覽器 Cookie 來維護工作階段資訊。 有效值包括`true`和`false`。 預設為 `true`。 如果將此值設定為 [False]，工作階段資料就會儲存在 **reportservertempdb** 資料庫中。|  
 |`SessionTimeoutMinutes`|指定工作階段 Cookie 有效的期間。 預設值是 3 分鐘。|  
 |`PolicyLevel`|指定安全性原則組態檔。 有效的值為 Rspreviewpolicy.config。如需詳細資訊，請參閱＜ [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)＞。|  
 |`CacheDataForPreview`|當設定為`True`，報表設計師會將資料儲存在本機電腦上的快取檔案。 有效值`True`（預設值） 和`False`。 如需詳細資訊，請參閱 [預覽報表](../reports/previewing-reports.md)。|  

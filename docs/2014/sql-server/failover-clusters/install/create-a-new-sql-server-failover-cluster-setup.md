@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 672699fe7c941098b0b689a49a30e12c6cc71ee8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd742a01e52f63aa7c357d954c2de025d2f4d509
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116791"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
   若要安裝或升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在容錯移轉叢集的每個節點上執行安裝程式。 若要將節點加入至現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在要加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 請勿在使用中節點上執行安裝程式來管理其他節點。  

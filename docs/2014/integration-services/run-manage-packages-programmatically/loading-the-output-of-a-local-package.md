@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7b0056def4b62d7305fe5ac78db93ba15fb22a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8214e3da53bf87ea96edcf5fb77d9bc774f65aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155058"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 **System.IO** 命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於`Microsoft.SqlServer.Dts.DtsClient`命名空間，其中包含特殊的實作`IDbConnection`， `IDbCommand`，以及**Idbcommand**介面從**System.Data**命名空間。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b65b1ae16a7df30d161c7f45c594678264de0a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284744"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201498"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>將資料加入至報表 (報表產生器及 SSRS)
   若要將資料加入至報表中，您要建立資料集。 每個資料集都表示從資料來源執行查詢命令而得到的結果集。 結果集中的資料行為欄位集合。 結果集中的資料列則為資料。 資料集不包含實際資料。 資料集包含從資料來源擷取一組特定資料所需的資訊。  

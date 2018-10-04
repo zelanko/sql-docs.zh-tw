@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], copying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - regenerating package GUID
 - updating package properties
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e315d008ec7e17672c831172add10e5c32a6152b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 023ffdb16c16c54093190a370c3d8a52c068104b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229318"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中複製封裝
   此主題描述如何透過複製現有的封裝來建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝，以及如何更新這個新封裝的 `Name` 和 `GUID` 屬性。  
