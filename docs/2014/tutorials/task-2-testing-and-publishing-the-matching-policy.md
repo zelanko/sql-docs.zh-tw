@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abb23e91e5cb96d6c58958a26bfc28528ea5a262
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e6f8fbd3ffbfcee4db212a22d4aef223450e41c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174458"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>工作 2：測試和發行比對原則
   在這個工作中，您需要測試和發佈**移除重複的供應商**比對原則。  

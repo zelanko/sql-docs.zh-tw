@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b9293aeb938a5898ab80f94f4b3879e381b4848
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9d6407d98bccb62f54443a8a8d1f5b61a093c7c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182658"
 ---
 # <a name="feature-review"></a>功能檢閱
   [功能檢閱] 頁面是一份唯讀的功能清單，其中列出已經備妥而且將在完成映像步驟結束時設定並完成的功能。 此功能清單是在準備映像步驟期間選取，而且無法在完成映像步驟期間修改。 除了所顯示的功能以外，備妥的執行個體也會包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  

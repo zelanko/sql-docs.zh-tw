@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.selectdimension.f1
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05caa09e6100aad7943ade8d64231d8293f1f9ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58b35c6bf321dec4f6e190eed14b4aa00acbec8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179298"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>指定屬性排序方式 (維度) (商業智慧精靈)
   使用 **[指定屬性排列方式]** 頁面即可選取維度，讓商業智慧精靈定義此維度的排序屬性和排序準則，並利用這些屬性和準則來排序該維度所包含之每一個屬性中的成員。  

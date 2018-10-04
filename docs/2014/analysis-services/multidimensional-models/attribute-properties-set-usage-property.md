@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], usage setting
 - usage options [Analysis Services]
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d71fd632ed57a27744687674c4a7d514981ab33
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2ab9f98018e421bd14012af7d8bd1cb5da3a71c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189135"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187198"
 ---
 # <a name="set-usage-property"></a>設定 Usage 屬性
   您可以在維度設計師中使用 [維度結構] 檢視來設定屬性的使用方式，您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取此設計師工具。  

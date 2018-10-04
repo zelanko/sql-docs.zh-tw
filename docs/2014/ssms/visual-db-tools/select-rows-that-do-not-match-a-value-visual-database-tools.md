@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], rows not matching value
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - NOT operator [Visual Database Tools]
 - search criteria [SQL Server], rows not matching value
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa3084d9b624f1836a3970da77c01677b7700ba4
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 92e0ac92531caeab2aa64187141c4978bc08bcba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814284"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181858"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>選取不符合某值的資料列 (Visual Database Tools)
   若要尋找不符合某值的資料列，請使用 NOT 運算子。  

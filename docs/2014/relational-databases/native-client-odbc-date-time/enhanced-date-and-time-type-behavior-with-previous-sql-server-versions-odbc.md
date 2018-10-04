@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91052172849df1cd0234fe73cd39130d4568f131
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184189"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
   本主題描述使用增強型日期和時間增強功能的用戶端應用程式與早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本進行通訊時，以及使用 Microsoft Data Access Components、Windows Data Access Components，或早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的應用程式將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
@@ -36,14 +33,14 @@ ms.locfileid: "37422957"
   
 |SQL Server 2005 類型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更新版本）型別|ODBC 用戶端類型|結果轉換 (SQL 到 C)|參數轉換 (C 到 SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|[確定]|[確定] (1)|  
+|DATETIME|date|SQL_C_TYPE_DATE|[確定]|[確定] \(1)|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定] (1)|  
+||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定] \(1)|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(7)|SQL_C_TIME|失敗 – 無效的時間間隔。|[確定] (1)|  
-|||SQL_C_TYPE_TIMESTAMP|失敗 – 無效的時間間隔。|[確定] (1)|  
-||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|[確定]|[確定] (1)|  
-||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|[確定]|用戶端轉換會將值捨入為 1/300 秒。|  
+||Time(7)|SQL_C_TIME|失敗 – 無效的時間間隔。|[確定] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|失敗 – 無效的時間間隔。|[確定] \(1)|  
+||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|[確定]|[確定] \(1)|  
+||datetime2(7)|SQL_C_TYPE_TIMESTAMP|[確定]|用戶端轉換會將值捨入為 1/300 秒。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|[確定]|[確定]|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定]|  

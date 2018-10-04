@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - events [SMO], replaying
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb1d3f67ef90dcadfeb0dc976672af615b4efbba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a24c1da04128c2da01b4496e511f22f15f1f8efd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188720"
 ---
 # <a name="tracing-and-replaying-events"></a>追蹤及重新執行事件
   在 SMO 中，<xref:Microsoft.SqlServer.Management.Trace> 命名空間中的 `Trace` 和 `Replay` 物件會提供 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 功能的程式設計存取方式，該功能是用來監視 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體。 您可以擷取每一個事件的相關資料，並將資料儲存至檔案或資料表，以供稍後分析。 例如，您可以監視實際環境，查看哪些程序由於執行速度過慢而妨礙效能。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184948"
 ---
 # <a name="configure-report-manager-native-mode"></a>設定報表管理員 (原生模式)
   報表管理員是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration (以預設原生模式組態安裝)] 選項，報表管理員就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將報表管理員設定為後續安裝工作。 本主題會提供有關下列報表管理員組態狀況的資訊：  

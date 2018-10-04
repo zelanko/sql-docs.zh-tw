@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf19c170dc90f71eb959b1cd28f03a1df3e79846
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185328"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
   使用 [詞彙擷取轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
@@ -53,7 +50,7 @@ ms.locfileid: "37193418"
  指定在文字中，片語的最大長度。 此選項只會影響名詞片語。 預設值為 12。  
   
  **使用區分大小寫的詞彙擷取**  
- 指定擷取是否區分大小寫。 預設值為 `False`。  
+ 指定擷取是否區分大小寫。 預設為 `False`。  
   
  **設定錯誤輸出**  
  使用 [[設定錯誤輸出]](../../2014/integration-services/configure-error-output.md) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  

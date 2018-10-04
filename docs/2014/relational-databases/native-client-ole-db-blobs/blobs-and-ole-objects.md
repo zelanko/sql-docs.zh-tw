@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BLOBs, OLE objects
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 743873bce06d995b21c6d72e028a221f93d86868
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180318"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，以及 xml 資料類型當做二進位大型物件 (Blob). **讀取**方法**ISequentialStream**可讓取用者擷取更容易管理的區塊中的資料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，以及 xml 資料類型當做二進位大型物件 (Blob). **ISequentialStream** 上的 **Read** 方法可讓取用者在可管理的區塊中擷取更多資料。  
   
  如需示範這項功能的範例，請參閱 <<c0> [ 大型資料集&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)。</c0>  
   
@@ -49,7 +46,7 @@ ms.locfileid: "37428667"
   
 ## <a name="storage-object-limitations"></a>儲存物件的限制  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者可支援只有單一開啟的儲存體物件。 嘗試開啟一個以上的儲存體物件 (若要取得參考多個**ISequentialStream**介面指標) 傳回 DBSTATUS_E_CANTCREATE。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者可支援只有單一開啟的儲存體物件。 開啟多個儲存物件的嘗試 (取得多個 **ISequentialStream** 介面指標的參考) 會傳回 DBSTATUS_E_CANTCREATE。  
   
 -   在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，DBPROP_BLOCKINGSTORAGEOBJECTS 唯讀屬性的預設值為 VARIANT_TRUE。 這表示如果儲存物件作用中，某些方法 (非儲存物件的方法) 將會吃敗，並出現 E_UNEXPECTED。  
   

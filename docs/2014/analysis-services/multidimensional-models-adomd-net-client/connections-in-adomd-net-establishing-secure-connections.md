@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b77fefaad8ac573e526412f1c81be3969743a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180855"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178208"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>在 ADOMD.NET 中建立安全連接
   在 ADOMD.NET 中使用連接時，用於連接的安全性方法，端視您呼叫 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> 的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 方法時所使用的連接字串之 `ProtectionLevel` 屬性值而定。  

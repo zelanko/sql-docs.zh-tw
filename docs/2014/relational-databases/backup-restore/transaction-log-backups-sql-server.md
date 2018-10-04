@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], transaction logs
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - log backups [SQL Server[
 - transaction log backups [SQL Server], sequencing
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
-caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e0a796d00c24f099f6ca96b826eb41e7f0e103e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186595"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168638"
 ---
 # <a name="transaction-log-backups-sql-server"></a>交易記錄備份 (SQL Server)
   本主題只與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。 本主題討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的交易記錄備份。  

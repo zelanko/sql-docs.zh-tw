@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157019"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182494"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非叢集資料行存放區索引
   描述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表上使用非叢集資料行存放區索引的主要工作。  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 865a135e144dd93a60a8f74da6559637b2c566d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb78a5a7179caf7a42173c2fd752708c0434d2b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186444"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 對於全文檢索搜尋支援的所有語言 (韓文除外)，都會安裝並啟用特定版本的斷詞工具和字幹分析器。 本主題描述的是如何從此版本的元件切換成舊版，或從舊版切換回新版。  
@@ -215,8 +212,8 @@ ms.locfileid: "37154239"
 |---------------|------------------|-------------|  
 |舊版 CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|目前 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|無|  
-|目前檔案名稱|MSWB7.dll|無|  
+|目前 CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|目前檔案名稱|MSWB7.dll|None|  
   
  **德文 (deu)，LCID 1031**  
   
@@ -233,8 +230,8 @@ ms.locfileid: "37154239"
 |---------------|------------------|-------------|  
 |舊版 CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|目前 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|無|  
-|目前檔案名稱|MsWb70011.dll|無|  
+|目前 CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|目前檔案名稱|MsWb70011.dll|None|  
   
  **荷蘭文 (nld)，LCID 1043**  
   
@@ -349,8 +346,8 @@ ms.locfileid: "37154239"
 |---------------|------------------|-------------|  
 |舊版 CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |舊版檔案名稱|Thawbrkr.dll|Thawbrkr.dll|  
-|目前 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|無|  
-|目前檔案名稱|MsWb7001e.dll|無|  
+|目前 CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|目前檔案名稱|MsWb7001e.dll|None|  
   
  **繁體中文 (zh-hk)，LCID 3076**  
   

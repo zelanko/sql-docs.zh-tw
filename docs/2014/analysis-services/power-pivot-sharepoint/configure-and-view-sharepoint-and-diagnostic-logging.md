@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255840"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188348"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業、 事件和訊息記錄在 SharePoint 記錄檔中。 使用本主題的資訊來設定記錄層級及檢視記錄檔資訊。 您可以控制要記錄到檔案中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器事件。 您也可以控制所記錄之訊息的嚴重性。 如需詳細資訊，請參閱 <<c0> [ 設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。</c0>  

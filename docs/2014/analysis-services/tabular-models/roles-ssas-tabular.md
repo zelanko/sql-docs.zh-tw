@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181368"
 ---
 # <a name="roles-ssas-tabular"></a>角色 (SSAS 表格式)
   表格式模型中的角色定義模型的成員權限。 每個角色都包含成員 (依 Windows 使用者名稱或 Windows 群組列出) 和權限 (讀取、處理、系統管理員)。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。  
@@ -68,7 +65,7 @@ ms.locfileid: "37235688"
   
 |Permissions|描述|使用 DAX 的資料列篩選|  
 |-----------------|-----------------|----------------------------|  
-|無|成員無法對模型資料庫結構描述進行任何修改，也無法查詢資料。|不會套用資料列篩選。 此角色的使用者看不到任何資料|  
+|None|成員無法對模型資料庫結構描述進行任何修改，也無法查詢資料。|不會套用資料列篩選。 此角色的使用者看不到任何資料|  
 |讀取|允許成員查詢資料 (根據資料列篩選)，但是無法在 SSMS 中看到模型資料庫，也無法對模型資料庫結構描述做任何變更，使用者也無法處理模型。|可套用資料列篩選。 使用者只能看到資料列篩選 DAX 公式中指定的資料。|  
 |讀取和處理|成員可以查詢資料 (根據資料列層級篩選)，並透過執行指令碼或包含處理命令的封裝來執行處理作業，但無法對資料庫進行任何變更。 無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視模型資料庫。|可套用資料列篩選。 只能查詢資料列篩選 DAX 公式中指定的資料。|  
 |處理|成員可以透過執行指令碼或包含處理命令的封裝來執行處理作業。 無法修改模型資料庫結構描述。 無法查詢資料。 無法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查詢模型資料庫。|不會套用資料列篩選。 無法查詢此角色中的任何資料|  
@@ -83,7 +80,7 @@ ms.locfileid: "37235688"
   
  資料列篩選會套用至指定的資料列及相關的資料列。 當資料表具有多個關聯性時，篩選會對作用中關聯性套用安全性。 資料列篩選會與針對相關資料表定義的其他資料列篩選進行交叉篩選，例如：  
   
-|Table|DAX 運算式|  
+|資料表|DAX 運算式|  
 |-----------|--------------------|  
 |Region|=Region[Country]=”USA”|  
 |ProductCategory|=ProductCategory[Name]=”Bicycles”|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], result lists
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3513f3919772a6f8c89921dfaf8e8120c61e2cfd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0229e95b6d4bdc4fec8950a5e8e5e155300bfd19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190149"
 ---
 # <a name="search-documents-using-results-lists"></a>使用結果清單搜尋文件
   您可以利用 **[尋找和取代]** 對話方塊來搜尋和取代專案或方案或檔案系統資料夾中之所有檔案內的文字，即使尚未在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中開啟它們，也是如此。 **[尋找和取代]** 對話方塊所執行之搜尋的相符項目會出現在 [尋找結果 1] 和 [尋找結果 2] 視窗中，可讓您檢視相符項目所在字行中的確實文字。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a91ef7af12ec523c9c97ffb09690134069a4d6d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ab1c8c07ed176632f98ed19251d616633480436
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179028"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用我的報表 (報表產生器及 SSRS)
   在設定為原生模式的報表伺服器上，[我的報表] 資料夾是個人的工作空間，可以用來儲存和使用您所擁有的報表。 其他報表伺服器資料夾都是公開的，通常使用者必須具備進階權限才可以加入或修改資料夾內容。 相對地，[我的報表] 資料夾是使用者自行管理的工作空間。 您可以加入或移除報表和資料夾，以及使用個人化的設定來儲存連結報表。  
