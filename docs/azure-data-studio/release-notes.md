@@ -47,8 +47,8 @@ ms.locfileid: "48037995"
 
 ### <a name="bug-fixes"></a>錯誤修正
 
-- 修正[發出 # 2647年](https://github.com/Microsoft/azuredatastudio/issues/143)： 圖表回溯花了一大步。
-- 修正[發出 # 2648年](https://github.com/Microsoft/azuredatastudio/issues/143)： 傳回 JSON 的超連結的整個資料行的選取。
+- 修正[問題 2647](https://github.com/Microsoft/azuredatastudio/issues/143)： 圖表回溯花了一大步。
+- 修正[問題 2648](https://github.com/Microsoft/azuredatastudio/issues/143)： 傳回 JSON 的超連結的整個資料行的選取。
 - ...
 
 如需詳細資訊，請參閱 <<c0> [ 變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，並[版本](https://github.com/Microsoft/azuredatastudio/releases)。
@@ -73,37 +73,37 @@ ms.locfileid: "48037995"
 ### <a name="bug-fixes"></a>錯誤修正
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143)： 按兩下不選取變數名稱中的 。
-- 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387): SQL DB 索引標籤圖示為紅色。
-- 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825)： 要求： 自動連接到目前的伺服器，做為指令碼之後... 
-- 修正[發出 # 1278年](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
-- 修正[發出 # 1285年](https://github.com/Microsoft/azuredatastudio/issues/1285)： 更新會導致應用程式是在 Windows 中的 [移除/取代] 圖示。
-- 修正[發出 # 1317年](https://github.com/Microsoft/azuredatastudio/issues/1317)： 修正在小數點分隔符號。
-- 修正[發出 # 1474年](https://github.com/Microsoft/azuredatastudio/issues/1474)： 取消變更連線會中斷目前的連接。
-- 修正[發出 # 1497年](https://github.com/Microsoft/azuredatastudio/issues/1497)： 以圖表方式檢視選項會被截掉底部。
-- 修正[發出 # 1524年](https://github.com/Microsoft/azuredatastudio/issues/1524)： 殼層/儀表板： Main viewlet 圖示可拖曳，而且可能會損毀應用程式。
-- 修正[發出 # 1578年](https://github.com/Microsoft/azuredatastudio/issues/1578)： 無法展開/摺疊遠端檔案瀏覽器資料夾名稱，即可。
-- 修正[發出 # 1620年](https://github.com/Microsoft/azuredatastudio/issues/1620)： 功能建議： 取得現有連接的連接字串。
-- 修正[發出 # 1624年](https://github.com/Microsoft/azuredatastudio/issues/1624): SelectBox 不會變更色彩時停用。
-- 修正[發出 amp;#40;sql 1728](https://github.com/Microsoft/azuredatastudio/issues/1728)： 將儲存為 JSON/EXCEL/CSV 無法工作。
-- 修正[發出 # 1744年](https://github.com/Microsoft/azuredatastudio/issues/1744)： 索引標籤之間切換時，結果窗格會失去其捲動的位置。
-- 修正[發出 # 1748年](https://github.com/Microsoft/azuredatastudio/issues/1748)： 儲存 Excel 檔案，第二個 （及後續） 時間時，出現錯誤訊息。
-- 修正[發出 # 1782年](https://github.com/Microsoft/azuredatastudio/issues/1782)： 編輯資料： 資料格不會還原為原始值按下 Esc 鍵。
-- 修正[發出 # 1836年](https://github.com/Microsoft/azuredatastudio/issues/1836)： 與 SQL Operations Studio 無關的.sql 檔案。
-- 修正[發出 # 1850年](https://github.com/Microsoft/azuredatastudio/issues/1850)： 輸入 N '會以 N' '。
-- 修正[發出 # 1985年](https://github.com/Microsoft/azuredatastudio/issues/1985)： 從查詢結果方格複製為關閉 1 個資料行。
-- 修正[發出 # 1998年](htpts://github.com/Microsoft/azuredatastudio/pull/1998)： 關於對話来加入 VS Code 版本。
-- 修正[發出 # 2042年](https://github.com/Microsoft/azuredatastudio/pull/2042)： 代理程式： 已啟用 按鈕，從 sql 檔案匯入查詢。
-- 修正[發出 # 2091年](https://github.com/Microsoft/azuredatastudio/issues/2091)： 無法使用快速鍵 Ctrl + C 複製結果 窗格。
-- 修正[發出 # 2099年](https://github.com/Microsoft/azuredatastudio/pull/2099)： 新增更多的 saveAsCsv 選項。
-- 修正[發出 # 2107年](https://github.com/Microsoft/azuredatastudio/issues/2107)： 儀表板和 Profiler 的文件的更新文件圖示。
-- 修正[發出 # 2129年](https://github.com/Microsoft/azuredatastudio/pull/2129)： 儲存編輯資料會切換索引標籤時，捲軸位置。
-- 修正[發出 # 2152年](https://github.com/Microsoft/azuredatastudio/issues/2152)： 結果方格資料列指標以零起始。
+- 修正[問題 143](https://github.com/Microsoft/azuredatastudio/issues/143)： 按兩下不選取變數名稱中的 。
+- 修正[問題 387](https://github.com/Microsoft/azuredatastudio/issues/387): SQL DB 索引標籤圖示為紅色。
+- 修正[問題 825](https://github.com/Microsoft/azuredatastudio/issues/825)： 要求： 自動連接到目前的伺服器，做為指令碼之後... 
+- 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
+- 修正[問題 1285](https://github.com/Microsoft/azuredatastudio/issues/1285)： 更新會導致應用程式是在 Windows 中的 [移除/取代] 圖示。
+- 修正[問題 1317](https://github.com/Microsoft/azuredatastudio/issues/1317)： 修正在小數點分隔符號。
+- 修正[問題 1474](https://github.com/Microsoft/azuredatastudio/issues/1474)： 取消變更連線會中斷目前的連接。
+- 修正[問題 1497](https://github.com/Microsoft/azuredatastudio/issues/1497)： 以圖表方式檢視選項會被截掉底部。
+- 修正[問題 1524](https://github.com/Microsoft/azuredatastudio/issues/1524)： 殼層/儀表板： Main viewlet 圖示可拖曳，而且可能會損毀應用程式。
+- 修正[問題 1578](https://github.com/Microsoft/azuredatastudio/issues/1578)： 無法展開/摺疊遠端檔案瀏覽器資料夾名稱，即可。
+- 修正[問題 1620](https://github.com/Microsoft/azuredatastudio/issues/1620)： 功能建議： 取得現有連接的連接字串。
+- 修正[問題 1624](https://github.com/Microsoft/azuredatastudio/issues/1624): SelectBox 不會變更色彩時停用。
+- 修正[問題 1728](https://github.com/Microsoft/azuredatastudio/issues/1728)： 將儲存為 JSON/EXCEL/CSV 無法工作。
+- 修正[問題 1744](https://github.com/Microsoft/azuredatastudio/issues/1744)： 索引標籤之間切換時，結果窗格會失去其捲動的位置。
+- 修正[問題 1748](https://github.com/Microsoft/azuredatastudio/issues/1748)： 儲存 Excel 檔案，第二個 （及後續） 時間時，出現錯誤訊息。
+- 修正[問題 1782](https://github.com/Microsoft/azuredatastudio/issues/1782)： 編輯資料： 資料格不會還原為原始值按下 Esc 鍵。
+- 修正[問題 1836](https://github.com/Microsoft/azuredatastudio/issues/1836)： 與 SQL Operations Studio 無關的.sql 檔案。
+- 修正[問題 1850](https://github.com/Microsoft/azuredatastudio/issues/1850)： 輸入 N '會以 N' '。
+- 修正[問題 1985](https://github.com/Microsoft/azuredatastudio/issues/1985)： 從查詢結果方格複製為關閉 1 個資料行。
+- 修正[問題 1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998)： 關於對話来加入 VS Code 版本。
+- 修正[問題 2042](https://github.com/Microsoft/azuredatastudio/pull/2042)： 代理程式： 已啟用 按鈕，從 sql 檔案匯入查詢。
+- 修正[問題 2091](https://github.com/Microsoft/azuredatastudio/issues/2091)： 無法使用快速鍵 Ctrl + C 複製結果 窗格。
+- 修正[問題 2099](https://github.com/Microsoft/azuredatastudio/pull/2099)： 新增更多的 saveAsCsv 選項。
+- 修正[問題 2107](https://github.com/Microsoft/azuredatastudio/issues/2107)： 儀表板和 Profiler 的文件的更新文件圖示。
+- 修正[問題 2129](https://github.com/Microsoft/azuredatastudio/pull/2129)： 儲存編輯資料會切換索引標籤時，捲軸位置。
+- 修正[問題 2152](https://github.com/Microsoft/azuredatastudio/issues/2152)： 結果方格資料列指標以零起始。
 
 ## <a name="known-issues"></a>已知問題
 
-- [問題 # 2371年](https://github.com/Microsoft/azuredatastudio/issues/2371)儲存為 Excel 僅將第一個資料列的資料
-- [問題 # 2150年](https://github.com/Microsoft/azuredatastudio/issues/2150)： 無法連接到容器中的 SQL 的 Ubuntu 16.04
+- [問題 2371](https://github.com/Microsoft/azuredatastudio/issues/2371)儲存為 Excel 僅將第一個資料列的資料
+- [問題 2150](https://github.com/Microsoft/azuredatastudio/issues/2150)： 無法連接到容器中的 SQL 的 Ubuntu 16.04
 
 
 ## <a name="july-2018-july-public-preview"></a>2018 年 7 月起 （7 月公開預覽）
@@ -128,21 +128,21 @@ ms.locfileid: "48037995"
 - 版本的合併指令碼擴充功能
 - 新增延伸模組作者的精靈和對話方塊擴充性點
 - 修正 GitHub 問題：
- - 修正[發出 728](https://github.com/Microsoft/azuredatastudio/issues/728)： 在 macOS 上的加入連接沒有回應
- - 修正[發出 1612年](https://github.com/Microsoft/azuredatastudio/issues/1612)： 結果方格中文字顯示亂七八糟國際字元
- - 修正[發出 1693年](https://github.com/Microsoft/azuredatastudio/issues/1693)： 備份對話方塊： 檔案瀏覽器 UI 已中斷
- - 修正[發出 1713年](https://github.com/Microsoft/azuredatastudio/issues/1713)： 受影響的資料列數目
- - 修正[發出 1718年](https://github.com/Microsoft/azuredatastudio/issues/1718)： 無法連接到任何資料來源
- - 修正[發出 1719年](https://github.com/Microsoft/azuredatastudio/issues/1719): TypeError 連接到伺服器時
- - 修正[發出 1724年](https://github.com/Microsoft/azuredatastudio/issues/1724)： 延伸模組對話方塊已停止運作
- - 修正[發出 1749年](https://github.com/Microsoft/azuredatastudio/issues/1749)： 錯誤： 資料行中的 HTML 資料取得解譯
- - 修正[發出 1789年](https://github.com/Microsoft/azuredatastudio/issues/1789)： 擴充性： 如果您新增的連線提供者解除安裝將會永遠不會從清單移除
- - 修正[發出 1791年](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops 延伸模組： queryeditor.connect() 連接到目標資料庫，但 UI 不會顯示連接編輯器
- - 修正[發出 1799年](https://github.com/Microsoft/azuredatastudio/issues/1799): Top 10 DB 大小圖表在區分大小寫的執行個體上無法運作
- - 修正[發出 1814年](https://github.com/Microsoft/azuredatastudio/issues/1814): sqlops.d.ts 打字錯誤導致隱含 'any' 類型的定義
- - 修正[發出 1817年](https://github.com/Microsoft/azuredatastudio/issues/1817)： 錯誤 de Ortografia
- - 修正[發出 1830年](https://github.com/Microsoft/azuredatastudio/issues/1830)： 設定 ButtonComponent iconPath component() 呼叫之後，不會變更圖示
- - 修正[發出 1843年](https://github.com/Microsoft/azuredatastudio/issues/1843)： 較佳的資料表組織
+ - 修正[問題 728](https://github.com/Microsoft/azuredatastudio/issues/728)： 在 macOS 上的加入連接沒有回應
+ - 修正[問題 1612](https://github.com/Microsoft/azuredatastudio/issues/1612)： 結果方格中文字顯示亂七八糟國際字元
+ - 修正[問題 1693](https://github.com/Microsoft/azuredatastudio/issues/1693)： 備份對話方塊： 檔案瀏覽器 UI 已中斷
+ - 修正[問題 1713](https://github.com/Microsoft/azuredatastudio/issues/1713)： 受影響的資料列數目
+ - 修正[問題 1718](https://github.com/Microsoft/azuredatastudio/issues/1718)： 無法連接到任何資料來源
+ - 修正[問題 1719](https://github.com/Microsoft/azuredatastudio/issues/1719): TypeError 連接到伺服器時
+ - 修正[問題 1724](https://github.com/Microsoft/azuredatastudio/issues/1724)： 延伸模組對話方塊已停止運作
+ - 修正[問題 1749](https://github.com/Microsoft/azuredatastudio/issues/1749)： 錯誤： 資料行中的 HTML 資料取得解譯
+ - 修正[問題 1789](https://github.com/Microsoft/azuredatastudio/issues/1789)： 擴充性： 如果您新增的連線提供者解除安裝將會永遠不會從清單移除
+ - 修正[問題 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops 延伸模組： queryeditor.connect() 連接到目標資料庫，但 UI 不會顯示連接編輯器
+ - 修正[問題 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Top 10 DB 大小圖表在區分大小寫的執行個體上無法運作
+ - 修正[問題 1814](https://github.com/Microsoft/azuredatastudio/issues/1814): sqlops.d.ts 打字錯誤導致隱含 'any' 類型的定義
+ - 修正[問題 1817](https://github.com/Microsoft/azuredatastudio/issues/1817)： 錯誤 de Ortografia
+ - 修正[問題 1830](https://github.com/Microsoft/azuredatastudio/issues/1830)： 設定 ButtonComponent iconPath component() 呼叫之後，不會變更圖示
+ - 修正[問題 1843](https://github.com/Microsoft/azuredatastudio/issues/1843)： 較佳的資料表組織
 
 
 ## <a name="june-2018-june-public-preview"></a>2018 年 6 月起 （年 6 月公開預覽）
@@ -159,14 +159,14 @@ ms.locfileid: "48037995"
 - 改善**精靈和對話方塊 UI 產生器架構**擴充性 Api。
 - 更新 VS 程式碼平台來源的程式碼整合[年 3 月 2018 (1.22)](https://code.visualstudio.com/updates/v1_22)並[年 4 月 2018 (1.23)](https://code.visualstudio.com/updates/v1_23)釋放。
 - 修正 GitHub 問題：
-  - 功能要求 ([發出 1204年](https://github.com/Microsoft/azuredatastudio/issues/1204)): 請資料，讓結果格線自動調整資料行寬度及 （或) 重新執行相同的查詢時，請記得手動變更。
-  - 修正[發出 1398年](https://github.com/Microsoft/azuredatastudio/issues/1398)： 應該顯示新增訊息，並新增帳戶 [帳戶] 按鈕，當連結的帳戶為空白時。
-  - 修正[發出 1399年](https://github.com/Microsoft/azuredatastudio/issues/1399)： 摺疊檢視時，會中斷連結的帳戶 索引標籤。
-  - 修正[發出 1374年](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL 工具服務損毀時從磁碟開啟的.sql 檔。
-  - 修正[發出 1372年](https://github.com/Microsoft/azuredatastudio/issues/1372)： 遺漏的 SQL 關鍵字"BETWEEN"。
-  - 修正[發出 1395年](https://github.com/Microsoft/azuredatastudio/issues/1395): 比對' 關鍵字損毀的 SQL 工具服務。
-  - 修正[發出 1496年](https://github.com/Microsoft/azuredatastudio/issues/1496): 「 新的 Profiler 」 快顯功能表選項，在 [物件總管] 中不執行任何動作。
-  - 修正[發出 1495年](https://github.com/Microsoft/azuredatastudio/issues/1495)： 查詢編輯器 」 Explain"查詢計劃已中斷。
+  - 功能要求 ([問題 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): 請資料，讓結果格線自動調整資料行寬度及 （或) 重新執行相同的查詢時，請記得手動變更。
+  - 修正[問題 1398](https://github.com/Microsoft/azuredatastudio/issues/1398)： 應該顯示新增訊息，並新增帳戶 [帳戶] 按鈕，當連結的帳戶為空白時。
+  - 修正[問題 1399](https://github.com/Microsoft/azuredatastudio/issues/1399)： 摺疊檢視時，會中斷連結的帳戶 索引標籤。
+  - 修正[問題 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL 工具服務損毀時從磁碟開啟的.sql 檔。
+  - 修正[問題 1372](https://github.com/Microsoft/azuredatastudio/issues/1372)： 遺漏的 SQL 關鍵字"BETWEEN"。
+  - 修正[問題 1395](https://github.com/Microsoft/azuredatastudio/issues/1395): 比對' 關鍵字損毀的 SQL 工具服務。
+  - 修正[問題 1496](https://github.com/Microsoft/azuredatastudio/issues/1496): 「 新的 Profiler 」 快顯功能表選項，在 [物件總管] 中不執行任何動作。
+  - 修正[問題 1495](https://github.com/Microsoft/azuredatastudio/issues/1495)： 查詢編輯器 」 Explain"查詢計劃已中斷。
 
 
 ## <a name="may-2018-may-public-preview"></a>2018 年 5 月版（ 5 月公開預覽）
@@ -185,7 +185,7 @@ ms.locfileid: "48037995"
 - 改善管理儀表板內容捲動。
 - 修正 GitHub 問題：
    - 修正[問題 703](https://github.com/Microsoft/azuredatastudio/issues/703)： 在編輯資料中輸入類似 HTML 的文字之後，除非重新整理，否則會導致無法正確顯示值
-   - 修正[發出 821](https://github.com/Microsoft/azuredatastudio/issues/821): azuredatastudio.deb 封裝相依性
+   - 修正[問題 821](https://github.com/Microsoft/azuredatastudio/issues/821): azuredatastudio.deb 封裝相依性
    - 修正[問題 1260](https://github.com/Microsoft/azuredatastudio/issues/1260)： 關鍵字 'distinct' 非反白顯示
    - 修正[問題 1332](https://github.com/Microsoft/azuredatastudio/issues/1332)： 編輯資料還原不適用於資料列
    - 修正[問題 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): SQL Agent擴充功能和狀態列
