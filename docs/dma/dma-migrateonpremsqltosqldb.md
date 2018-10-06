@@ -1,8 +1,8 @@
 ---
-title: 將內部部署 SQL Server 移轉到 Azure SQL Database 使用 Data Migration Assistant |Microsoft Docs
+title: 移轉內部部署 SQL Server 或 Azure Vm 上的 SQL Server 到 Azure SQL Database 使用 Data Migration Assistant |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 將內部部署 SQL Server 移轉至 Azure SQL Database
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/05/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,14 +15,14 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e8359fa14e474cceaa7316a67831ff8bf2351992
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd2fbf4340978424816ba3b4577e7559d80ea68c
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688026"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782387"
 ---
-# <a name="migrate-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>將內部部署 SQL Server 移轉至 SQL Server 或 SQL Server Azure Vm 上使用 Data Migration Assistant
+# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>將內部部署 SQL Server 或 Azure Vm 上的 SQL Server 移轉至 Azure SQL Database 使用 Data Migration Assistant
 
 Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署和更新版本的 SQL Server 的升級或移轉至 SQL Server 的 Azure Vm 或 Azure SQL Database。
 

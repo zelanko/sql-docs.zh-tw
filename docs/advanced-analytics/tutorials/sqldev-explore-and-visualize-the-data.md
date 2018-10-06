@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724342"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798586"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 課： 瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "44724342"
     GO
     ```
 
-預存程序**PlotHistogram2**等同於預先存在的預存程序**PlotHistogram**由`RunSQL_SQL_Walkthrough.ps1`指令碼。 
+預存程序**PlotHistogram2**等同於預先存在的預存程序**PlotHistogram** NYCTaxi_sample 資料庫中找到。 
   
 + `@query` 變數會定義查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，以當成指令碼輸入變數 `@input_data_1`的引數傳遞給 R 指令碼。
   
@@ -164,7 +164,7 @@ ms.locfileid: "44724342"
 
 一般而言，資料科學家會產生多個資料視覺效果，以取得深入了解資料從不同的角度。 在此範例中，預存程序會使用 Hist 函式建立的長條圖，例如將二進位資料匯出至熱門的格式。JPG、。PDF、 和。PNG。 
 
-1. 使用現有的預存程序， **PlotInOutputFiles**、 長條圖、 散佈和其他 R 圖形來撰寫。JPG 和。PDF 格式。 `RunSQL_SQL_Walkthrough.ps1`會建立**PlotInOutputFiles**並將它加入資料庫。 使用滑鼠右鍵按一下**修改**檢視的來源。
+1. 使用現有的預存程序， **PlotInOutputFiles**、 長條圖、 散佈和其他 R 圖形來撰寫。JPG 和。PDF 格式。 使用滑鼠右鍵按一下**修改**檢視的來源。
 
 2. 選擇性地學習練習中，建立您自己的程序的複本**PlotInOutputFiles2**，以避免命名衝突的唯一名稱。
 

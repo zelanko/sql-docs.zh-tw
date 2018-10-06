@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf4b3bab89c29fde1ff592a166baa3747afa890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f5c3cc4756c305ba82af4c110488722ec24a9af
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843219"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251985"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>適用於 SQL Server 容器的高可用性
 
@@ -27,7 +27,7 @@ ms.locfileid: "47843219"
 
 SQL Server 2017 提供在 Kubernetes 上的 Docker 映像，可供部署。 您可以設定 Kubernetes 永續性磁碟區宣告 (PVC) 映像。 Kubernetes 會監視 SQL Server 處理序，容器中。 如果處理程序、 pod、 容器或節點失敗，Kubernetes 自動啟動另一個執行個體，並重新連接到儲存體。
 
-SQL Server 2019 導入了更強固的 archicture 與 Kubernetes StatefulSet。 這可讓 Kubernetes 來協調 SQL Server Always On 可用性群組可以參與的容器映像中的 SQL Server 的執行個體。 這可提供改善的健全狀況監視，更快獲得復原、 卸載備份和讀取相應。  
+SQL Server 2019 （預覽） 導入了更強固的架構，與 Kubernetes StatefulSet。 Kubernetes 會協調參與 SQL Server Always On 可用性群組的容器映像中的 SQL Server 執行個體。 此模式提供改良的健康情況監視、 更快獲得復原、 卸載備份，以及讀取的向外延展。  
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 執行個體的容器
 
@@ -39,7 +39,7 @@ Kubernetes 1.6 和更新版本可支援[*儲存類別*](http://kubernetes.io/doc
 
 在上圖中，`mssql-server`是 SQL Server 執行個體 （容器） 中[ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod/)。 A[複本集](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可確保 pod，節點失敗後自動復原。 應用程式連接至服務。 在此情況下，服務會代表裝載失敗後會保持相同的 IP 位址的負載平衡器`mssql-server`。
 
-Kubernetes 會協調在叢集中的資源。 Pod 或裝載在容器中的 SQL Server 執行個體的節點失敗時，啟動 SQL Server 執行個體相同的 pod 中容器協調器，並將它連結至相同的永續性儲存體。
+Kubernetes 會協調在叢集中的資源。 當裝載 SQL Server 執行個體容器的節點失敗時，它會啟動新的容器，SQL Server 執行個體，並將它連結至相同的永續性儲存體。
 
 SQL Server 2017 和更新版本支援容器的 Kubernetes 上。
 
@@ -53,7 +53,7 @@ SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可
 
 在上圖中，四個節點的 kubernetes 叢集中會裝載具有三個複本的可用性群組。 解決方案包含下列元件：
 
-* Kubernetes [*部署*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 此部署包含使用運算子，以及設定對應。 這些提供容器映像、 軟體和部署可用性群組的 SQL Server 執行個體所需的指示。
+* Kubernetes [*部署*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 此部署包含使用運算子，以及設定對應。 部署描述的容器映像、 軟體和部署可用性群組的 SQL Server 執行個體所需的指示。
 
 * 三個節點，每個裝載[ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)。 StatefulSet 包含 pod。 包含每個 pod:
   * SQL Server 執行的容器一個 SQL Server 執行個體。
@@ -67,9 +67,9 @@ SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可
 
 此外，叢集會儲存[*祕密*](http://kubernetes.io/docs/concepts/configuration/secret/)密碼、 憑證、 金鑰和其他機密資訊。
 
-## <a name="compare-sql-server-high-availabiltiy-on-containers-with-and-without-the-availability-group"></a>比較容器而不需可用性群組上的 SQL Server 高可用性
+## <a name="compare-sql-server-high-availability-on-containers-with-and-without-the-availability-group"></a>比較容器而不需可用性群組上的 SQL Server 高可用性
 
-下列表格 compairs 在 Kubernetes 上的容器，而沒有可用性群組中的 SQL Server 高可用性功能：
+下表比較在 Kubernetes 上的容器，而可用性群組中的 SQL Server 高可用性功能：
 
 | |使用可用性群組 | 獨立的容器執行個體<br/> 沒有可用性群組
 |:------|:------|:------
@@ -82,7 +82,7 @@ SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可
 |次要複本的備份 | 是 | 
 |StatefulSet 形式執行 | 是 | 
 
-只有一個主要差異是更快速地在容器中的 SQL Server 的單一執行個體與可用性群組的復原 （或容錯移轉） 的時間。 這是因為 SQL Server 可用性群組會保留在叢集中其他節點上的可用性群組資料庫的次要複本。 在容錯移轉，次要複本已選取，並提升為主要。 連線至服務的應用程式會重新導向至新的主要複本。 
+只有一個主要差異是更快速地在容器中的 SQL Server 的單一執行個體與可用性群組的復原 （或容錯移轉） 的時間。 這項改進是因為 SQL Server 可用性群組會保留在叢集中其他節點上的次要複本。 在容錯移轉，次要複本已選取，並提升為主要。 連線至服務的應用程式會重新導向至新的主要複本。
 
 可用性群組中，當 Kubernetes 偵測容錯移轉之後，它必須將建立容器，並將它連接至儲存體，而不重新連線至服務的應用程式。 確切的容錯移轉時間取決於其中的容錯移轉，並偵測方式。 
 
@@ -90,9 +90,9 @@ SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可
 
 ## <a name="next-steps"></a>後續步驟
 
-若要部署 Azure Kubernetes Service (AKS) 中的 SQL Server 容器，請遵循這些教學課程：
+若要將 SQL Server 容器 Azure Kubernetes Service (AKS) 中的部署，請參閱這些範例：
 
 * [部署 Docker 容器中的 SQL Server](sql-server-linux-configure-docker.md)
 * [部署 Kubernetes 中的 SQL Server 容器](tutorial-sql-server-containers-kubernetes.md)
-* [部署 SQL Server Always On 可用性群組 Kubernetes](tutorial-sql-server-ag-kubernetes.md)
+* [Always On 可用性群組的 SQL Server 容器](sql-server-ag-kubernetes.md)
 

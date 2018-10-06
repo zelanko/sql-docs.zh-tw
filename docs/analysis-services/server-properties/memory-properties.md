@@ -1,6 +1,6 @@
 ---
 title: 記憶體屬性 |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054870"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264878"
 ---
 # <a name="memory-properties"></a>記憶體屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會預先配置適度在啟動時的記憶體數量，以便立即處理要求。 隨著查詢和處理工作負載的增加，會配置額外的記憶體。 
+  Analysis Services 會預先配置適度在啟動時的記憶體數量，因此可以立即處理要求。 隨著查詢和處理工作負載的增加，會配置額外的記憶體。 
   
   指定組態設定，即可控制釋放記憶體的臨界值。 例如， **HardMemoryLimit** 設定可指定自行強加的記憶體不足狀況 (依預設，未啟用此臨界值)；其中，變得需要更多資源時，就會立即拒絕新的要求。
 
-若要深入了解使用每個 Analysis Services 執行個體版本的最大記憶體，請參閱[版本及支援的功能的 SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
+若要深入了解使用每個 SQL Server Analysis Services 執行個體版本的最大記憶體，請參閱[版本及支援的功能的 SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
   
- 除非另有指示，下列設定會套用至這兩個表格式和多維度伺服器模式。  
+ 除非另有指示，下列設定將套用至表格式和多維度伺服器。  
  
 ## <a name="default-memory-configuration"></a>預設記憶體組態
 
@@ -33,7 +33,7 @@ ms.locfileid: "38054870"
 
 請記住，預設組態是根據執行個體而定。 如果您是在相同硬體上執行多個 Analysis Services 執行個體 (例如表格式和多維度執行個體)，則每個執行個體都會配置它自己的記憶體，而這與其他執行個體無關。
 
-下表簡述更常用的記憶體設定 (參考一節中會有更詳細的資訊)。 您應該設定這些設定只有當 Analysis Services 會競用記憶體與其他應用程式相同的伺服器上：
+下表簡述更常用的記憶體設定 (參考一節中會有更詳細的資訊)。 只有當 Analysis Services 會競用記憶體與相同的伺服器上的其他應用程式，請設定這些設定：
 
 設定 | 描述
 --------|------------
@@ -66,12 +66,10 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  **VertiPaqPagingPolicy**  
   僅針對表格式執行個體，指定伺服器記憶體不足時的分頁行為。 下列是有效值：  
   
-  
-
 設定  |描述  
 ---------|---------
-**0**     |  停用分頁。 如果記憶體不足，處理會失敗，且會出現記憶體不足的錯誤。 如果您停用分頁，就必須授與 Windows 權限給服務帳戶。 如需指示，請參閱[設定服務帳戶 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
-**1**     |  (預設值) 此屬性允許使用作業系統分頁檔 (pagefile.sys)，在磁碟中分頁。   
+**0**     |  （如 Azure Analysis Services 的預設值）停用分頁。 如果記憶體不足，處理會失敗，且會出現記憶體不足的錯誤。 如果您停用分頁，就必須授與 Windows 權限給服務帳戶。 如需指示，請參閱[設定服務帳戶 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
+**1**     |  （SQL Server Analysis services 的預設值）這個屬性允許使用作業系統分頁檔 (pagefile.sys) 磁碟中分頁。   
   
 設為 1 時，處理比較不可能因為記憶體限制而失敗，因為伺服器將會嘗試使用您指定的方法，在磁碟中分頁。 設定 **VertiPaqPagingPolicy** 屬性並不能保證記憶體錯誤永遠不會發生。 在下列狀況下，記憶體不足錯誤仍然可能發生：  
   

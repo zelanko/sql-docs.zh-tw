@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759356"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251996"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On 可用性群組 Kubernetes 運算子的參數
 
-Always On 可用性群組在 Kubernetes 上的需要操作員。 運算子說明.yaml 檔案。  中的規格的範例，請參閱[本教學課程](tutorial-sql-server-ag-kubernetes.md)。
+Always On 可用性群組在 Kubernetes 上的需要操作員。 資訊清單描述運算子。 資訊清單是`.yaml`檔案。 中的規格的範例，請參閱[Always On 可用性群組的 SQL Server 容器](sql-server-ag-kubernetes.md)。
 
 這篇文章將說明運算子全域環境變數。
 
@@ -31,15 +31,15 @@ Always On 可用性群組在 Kubernetes 上的需要操作員。 運算子說明
 
 * `MSSQL_K8S_POD_NAMESPACE` 
   * 必要項
-  * **描述**： 運算子的 Kubernetes 命名空間。
+  * **描述**: Kubernetes 命名空間的運算子。
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * 選擇性
-  * **描述**: sql server 外部的持續時間寫入租用來保留 sql server 的可寫入，並防止裂腦案例。 次要複本會等候此到期日之後選擇新的領導者。
+  * **描述**: sql server 的寫入-租用的持續時間。 用來保留 sql server 的可寫入，並防止裂腦案例。 次要複本會等候此選取新的領導者之後的秒數。
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * 選擇性
-  * **描述**： 監視期間的可用性群組的狀態。 判斷複本新增和卸除的速度。 必須是小於`MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`。
+  * **描述**： 若要監視可用性群組的狀態的期間。 判斷複本新增和卸除的速度。 必須是小於`MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`。
   * **預設**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

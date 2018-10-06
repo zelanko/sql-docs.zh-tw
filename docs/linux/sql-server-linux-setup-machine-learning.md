@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770936"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782357"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安裝 SQL Server 2019 Machine Learning 在 Linux 上的服務 (R、 Python、 Java)
 
@@ -273,13 +273,19 @@ GO
 
 您可以安裝並在程序中設定 database engine 和 Machine Learning 服務，藉由附加 R、 Python 或 Java 的封裝和參數在命令中安裝資料庫引擎。 
 
-下列範例是 「 範本 」 圖例中的套件組合的安裝看起來像使用 Yum 套件管理員：
+下列範例是 「 範本 」 圖例中的套件組合的安裝看起來像使用 Yum 套件管理員。 它會安裝 database engine，並新增為相依性 extensibility framework 套件會提取的 Java 語言擴充功能。
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-此範例會安裝 database engine，並新增為相依性 extensibility framework 套件會提取的 Java 語言擴充功能。 在此範例中使用的套件的所有位於相同的路徑。 如果您已新增 R 封裝，就必須使用 microsoft r 開啟套件存放庫的註冊。
+所有的延伸模組 （Java、 R、 Python） 以展開的範例看起來像這樣：
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+除了 R 必要條件，所有在此範例中使用的套件會位於相同的路徑。 新增 R 要求您[註冊 microsoft r 開啟套件存放庫](#mro)做為額外的步驟，以取得 MRO。 MRO 是 R 擴充性的必要條件。 在 連線到網際網路的電腦，會 MRO 擷取，且會自動一併安裝的 R 延伸模組中，假設您設定兩個存放庫。
 
 安裝後，請務必使用 mssql-conf 工具來設定整個安裝，並接受授權合約。 自動偵測到開放原始碼 R 和 Python 元件不被接受的 Eula，系統會提示您接受這些條款，以及適用於 SQL Server 使用者授權合約。
 
