@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_CHECKCATALOG_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b71c8011ebf2830409f886dc61a3b9e93a00df92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7427364996b5ce2fdc684823dc4b149733dc4660
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596559"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,10 +60,10 @@ DBCC CHECKCATALOG
 ## <a name="remarks"></a>Remarks  
 DBCC CATALOG 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息中會指出命令已經終止，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |0|已引發錯誤號碼 8930。 這表示中繼資料損毀使 DBCC 命令終止。|  
-|@shouldalert|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
+|1|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|  
 |2|修復緊急模式資料庫期間發生失敗。|  
 |3|這表示中繼資料損毀使 DBCC 命令終止。|  
 |4|偵測到判斷提示或存取違規。|  
@@ -96,7 +93,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要系統管理員 **sysadmin** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

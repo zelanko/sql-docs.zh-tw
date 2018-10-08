@@ -4,9 +4,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
@@ -14,12 +12,12 @@ ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ea026f2111bf29d490bc0b154a5b08ea5bf5ffb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e78c2bc024395d90a33d38c1edeba79c3635448
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783328"
 ---
 # <a name="create-views-over-xml-columns"></a>建立 XML 資料行檢視
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

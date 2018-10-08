@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 5da8c0ad77fc93e9eba34a028b242cc0d1936247
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c92626c8ef9e24436c323819ca50c211aead9ffb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175152"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699736"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
 

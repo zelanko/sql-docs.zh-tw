@@ -5,25 +5,22 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42f181035f2fffff06540d060ed4a179ab88f806
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329102"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598162"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
 
@@ -50,7 +47,7 @@ ms.locfileid: "35329102"
 ##  <a name="Staging"></a> 暫存資料  
  在下表中，每個安全物件都會有 "name" 做為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|動作|[安全性實體]|Permissions|  
+|動作|[安全性實體]|[權限]|  
 |------------|----------------|-----------------|  
 |建立、更新和刪除分葉成員及其屬性。|stg.name_Leaf|必要：INSERT<br /><br /> 選擇性：SELECT 和 UPDATE|  
 |將資料從 [分葉] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Leaf|執行 CREATE 陳述式之前，請先執行|  
@@ -64,7 +61,7 @@ ms.locfileid: "35329102"
   
 ##  <a name="rules"></a> 依商務規則驗證資料  
   
-|動作|安全性實體|Permissions|  
+|動作|安全性實體|[權限]|  
 |------------|---------------|-----------------|  
 |依商務規則驗證資料版本|mdm.udpValidateModel|執行 CREATE 陳述式之前，請先執行|  
   
@@ -72,7 +69,7 @@ ms.locfileid: "35329102"
   
 ##  <a name="Versions"></a> 刪除版本  
   
-|動作|[安全性實體]|Permissions|  
+|動作|[安全性實體]|[權限]|  
 |------------|----------------|-----------------|  
 |決定要刪除之版本的識別碼|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |刪除模型的版本|mdm.udpVersionDelete|執行 CREATE 陳述式之前，請先執行|  
@@ -81,7 +78,7 @@ ms.locfileid: "35329102"
   
 ##  <a name="Hierarchy"></a> 立即套用階層成員權限  
   
-|動作|[安全性實體]|Permissions|  
+|動作|[安全性實體]|[權限]|  
 |------------|----------------|-----------------|  
 |立即套用成員權限|mdm.udpSecurityMemberProcessRebuildModel|執行 CREATE 陳述式之前，請先執行|  
   

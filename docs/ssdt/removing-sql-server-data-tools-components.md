@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f8ddb919-661f-4868-8c71-87c96f1f4487
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a3fcb24fc18812b139dfe49376699e83607f16d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6b114b99b816e10bc004cea8d60c56d296053c7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685466"
 ---
 # <a name="removing-sql-server-data-tools-components"></a>移除 SQL Server Data Tools 元件
 解除安裝 SSDT 或 Visual Studio 時，有些 SQL Server Data Tools (SSDT) 元件未移除。  

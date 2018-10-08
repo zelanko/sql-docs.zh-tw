@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker Transmission Object object
 - 'SQL Server: Broker Transmission Object'
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfca3f86f601e6a242ad47fdb3b8e51b511ae9c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1307e2e47c2215aa7845114f58062b1770fe0ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603119"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server 的 Broker TO Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "32950743"
   
  下表列出這個物件包含的計數器。  
   
-|SQL Server Broker TO Statistics 計數器|描述|  
+|SQL Server Broker TO Statistics 計數器|Description|  
 |----------------------------------------------|-----------------|  
 |**平均Length of Batched Writes**|儲存於批次中的傳輸物件平均數目。|  
 |**平均Time To Write Batch (ms)**|儲存傳輸物件批次所需的平均毫秒數。|  

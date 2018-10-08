@@ -5,9 +5,7 @@ ms.date: 11/29/2016
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DISTRIBUTED
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d75638152141d1035bfad5affe3d24b50db14d60
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 866b1e7f94645fb9336ce75e48afa8f8fb437895
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36253230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746762"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +77,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  如需有關分散式交易環境和處理序的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器文件集。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

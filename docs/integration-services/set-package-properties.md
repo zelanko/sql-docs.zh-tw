@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f3b42dd7df892f2e6c281ae5fec651823e99d4c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 73752c57120544374edfc9790b07fe6a648779a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826296"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
@@ -71,7 +68,7 @@ ms.locfileid: "35406000"
 ###  <a name="Checkpoints"></a> 檢查點  
  您可以使用此類別中的屬性，從封裝控制流程中的失敗點重新啟動封裝，而不用從控制流程的開頭重新執行封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**CheckpointFileName**|擷取可讓封裝重新啟動的檢查點資訊之檔案名稱。 當封裝成功完成時，便會刪除此檔案。|  
 |**CheckpointUsage**|指定何時可以重新啟動封裝。 這些值為 **Never**、 **IfExists**和 **Always**。 此屬性的預設值為 **Never**，指出無法重新啟動封裝。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage>。|  
@@ -83,7 +80,7 @@ ms.locfileid: "35406000"
 ###  <a name="Execution"></a> 執行  
  此類別中的屬性會設定封裝物件的執行階段行為。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|指出封裝驗證是否延遲到封裝執行時。 這個屬性的預設值為 **False**。|  
 |**Disable**|指出是否停用封裝。 此屬性的預設值為 **False**。|  
@@ -97,7 +94,7 @@ ms.locfileid: "35406000"
 ###  <a name="ForcedExecutionValue"></a> 強制執行的值  
  此類別中的屬性會針對封裝設定選擇性的執行值。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**ForcedExecutionValue**|如果 ForceExecutionValue 設定為 **True**，則是指定封裝傳回之選擇性執行值的值。 這個屬性的預設值為 **0**。|  
 |**ForcedExecutionValueType**|ForcedExecutionValue 的資料類型。 此屬性的預設值為 **Int32**。|  
@@ -106,7 +103,7 @@ ms.locfileid: "35406000"
 ###  <a name="Identification"></a> 識別  
  此類別中的屬性會提供唯一識別碼與封裝名稱等資訊。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**CreationDate**|建立封裝的日期。|  
 |**CreatorComputerName**|用來建立封裝的電腦名稱。|  
@@ -119,7 +116,7 @@ ms.locfileid: "35406000"
 ###  <a name="Misc"></a> 其他  
  此類別中的屬性是用來存取封裝所用的組態和運算式，以及提供有關封裝的地區設定與記錄模式等資訊。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../integration-services/expressions/use-property-expressions-in-packages.md)。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**組態**|封裝使用的組態集合。 請按一下瀏覽按鈕 **(…)** 以檢視和設定封裝組態。|  
 |**運算式**|請按一下瀏覽按鈕 **(…)** 以建立封裝屬性的運算式。<br /><br /> 請注意，您可以為物件模型中包含的所有封裝屬性建立屬性運算式，而不是只有 [屬性] 視窗中所列的屬性而已。<br /><br /> 如需詳細資訊，請參閱[在封裝中使用屬性運算式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要檢視現有的屬性運算式，請展開 **Expressions**。 按一下運算式文字方塊中的瀏覽按鈕 **(…)** ，以修改及評估運算式。|  
@@ -133,7 +130,7 @@ ms.locfileid: "35406000"
 ###  <a name="Security"></a> 安全性  
  此類別中的屬性是用來設定封裝的保護等級。 如需詳細資訊，請參閱 [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md)。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**PackagePassword**|需要密碼之封裝保護層級 (**EncryptSensitiveWithPassword** 和 **EncryptAllWithPassword**) 的密碼。|  
 |**ProtectionLevel**|封裝保護等級。 可能的值為 **DontSaveSensitive**、 **EncryptSensitiveWithUserKey**、 **EncryptSensitiveWithPassword**、 **EncryptAllWithPassword**和 **ServerStorage**。 此屬性的預設值為 **EncryptSensitiveWithUserKey**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>。|  
@@ -141,7 +138,7 @@ ms.locfileid: "35406000"
 ###  <a name="Transactions"></a> 交易  
  此類別中的屬性會設定封裝的隔離等級和交易選項。 如需詳細資訊，請參閱 [Integration Services 交易](../integration-services/integration-services-transactions.md)。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**IsolationLevel**|封裝交易的隔離等級。 可能的值為 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此屬性的預設值為 **Serializable**。<br /><br /> 注意： **IsolationLevel** 屬性的 **Snapshot** 值與封裝交易不相容。 因此，您不能使用 **IsolationLevel** 屬性將封裝交易的隔離等級設定為 **Shapshot**。 而是要改用 SQL 查詢將封裝交易設定為 **Snapshot**。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 只有當 **IsolationLevel** 屬性的值設定為 **TransactionOption** 時，系統才會將 **Required**屬性套用到封裝交易。<br /><br /> 當下列條件成立時，子容器所要求的 **IsolationLevel** 屬性值會被忽略：<br />子容器的 **TransactionOption** 屬性值為 **Supported**。<br />子容器會聯結父容器的交易。<br /><br /> 只有當容器起始新的交易時，才會接受容器所要求的 **IsolationLevel** 屬性值。 當下列條件都成立時，容器會起始新的交易：<br />容器的 **TransactionOption** 屬性值為 **Required**。<br />父容器尚未啟動交易。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |**TransactionOption**|封裝的交易式參與。 可能的值為 **NotSupported**、 **Supported**、 **Required**。 此屬性的預設值為 **Supported**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
@@ -149,7 +146,7 @@ ms.locfileid: "35406000"
 ###  <a name="Version"></a> 版本  
  此類別中的屬性會提供有關封裝物件版本的資訊。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**VersionBuild**|封裝建置的版本號碼。|  
 |**VersionComments**|封裝的版本註解。|  

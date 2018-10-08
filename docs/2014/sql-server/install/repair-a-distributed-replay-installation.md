@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5baee6d121becc970dd6c7e6d0a82f47e4a2ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d14b1bf3200802e9fab359ba3ede9fa295911fe1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227209"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>修復 Distributed Replay 安裝
   修復 Distributed Replay 元件 (控制器或用戶端) 會執行下列動作：  

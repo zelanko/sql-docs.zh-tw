@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.failoverwizard.results.f1
@@ -14,16 +12,15 @@ f1_keywords:
 - sql13.swb.addreplicawizard.results.f1
 - sql13.swb.adddatabasewizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2e9eafbd63a68d6b996494f51f0c757e1eae1ee
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f404d3cbba96aae8157b4c7f3261062b4bf33a39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768674"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652287"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>結果頁面 (Always On 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "34768674"
  **結果**  
  針對每個完成的步驟，顯示下列其中一個超連結文字。  
   
-|結果|描述|  
+|結果|Description|  
 |------------|-----------------|  
 |**錯誤**|表示驗證步驟失敗。 按一下連結可檢視錯誤訊息。|  
 |**成功**|表示驗證步驟已順利完成。|  

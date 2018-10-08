@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe4abe4e227b65f940875dcff7f70afe66b3086b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ce29d9e39b2abd46845a035183e6dee80f6c7236
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767706"
 ---
 # <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>課程 6-2 - 將專案轉換成專案部署模型
 在這個工作中，您將使用 Integration Services 專案轉換精靈，將專案轉換為專案部署模型。  

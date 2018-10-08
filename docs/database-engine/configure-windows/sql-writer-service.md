@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - VDI [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80eb04dfefca7903592ea391d915e140d93f479f
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 5c75f96d2c4d00214ccbeda5fae69f9d3bde4e76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623877"
 ---
 # <a name="sql-writer-service"></a>SQL 寫入器服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43888344"
 ## <a name="virtual-backup-device-interface-vdi"></a>虛擬備份裝置介面 (VDI)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一種稱為「虛擬備份裝置介面 (VDI)」的 API，可讓獨立軟體廠商將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 整合到他們的產品中，以對備份和還原作業提供支援。 這些 API 可提供最高的可靠性與效能，並能支援所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原功能，包括所有熱備份與快照集備份能力。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  SQL 寫入器服務必須以 **本機系統** 帳戶執行。 SQL 寫入器服務使用 **NT Service\SQLWriter** 登入連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 **NT Service\SQLWriter** 登入可讓 SQL 寫入器處理序在指定為 **沒有登入**的帳戶中，以較低權限層級執行，藉此限制漏洞。 如果停用 SQL 寫入器服務，則依賴 VSS 快照集的任何公用程式 (例如 System Center Data Protection Manager) 以及其他一些協力廠商產品都將損毀，更糟的情況會導致資料庫備份不一致的風險。 如果執行所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統或主機系統 (在虛擬機器的情況下) 只需要使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 備份，則可以放心停用 SQL 寫入器服務並移除登入。  請注意，系統或磁碟區層級備份都可能叫用 SQL 寫入器服務，而不論備份是否直接以快照集為基礎。 某些系統備份產品使用 VSS 避免遭到開啟或鎖定檔案的封鎖。 由於 SQL 寫入器服務在活動過程中會暫時凍結 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有 I/O，因此 SQL 寫入器服務需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更高權限。  
   
 ## <a name="features"></a>功能  
@@ -80,6 +77,6 @@ ms.locfileid: "43888344"
   
 -   分頁還原  
   
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 「SQL 寫入器」服務與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎不同，而且跨不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本共用，而且跨相同伺服器上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體共用。  「SQL 寫入器」服務檔案隨著 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝套件提供，而且其版本號碼會與其所隨著提供之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎的版本號碼相同。  當新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體安裝在伺服器上或現有的執行個體升級時，若要安裝或升級之執行個體的版本號碼高於伺服器上目前「SQL 寫入器」服務的版本號碼，伺服器上的檔案將會被安裝套件中的檔案取代。  請注意，若「SQL 寫入器」服務已由 Service Pack 或 Cumulative Update 更新，且正在安裝 RTM 版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以使用較舊的「SQL 寫入器」服務取代較新的版本，前提是該安裝必須有較高的版本號碼。  例如，「SQL 寫入器」服務已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 中更新。  若將該執行個體升級到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM，更新的「SQL 寫入器」服務將會被較舊的版本取代。  在此案例中，您將必須套用最新的 CU 到該新執行個體，以取得較新的「SQL 寫入器」服務版本。
 

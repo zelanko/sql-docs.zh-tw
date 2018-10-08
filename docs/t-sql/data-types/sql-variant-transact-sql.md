@@ -5,9 +5,7 @@ ms.date: 9/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql_variant
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - sql_variant data type
 - storage [SQL Server], sql_variant
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 812e9e2e27434605f4339dd62edc93caad923ee7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785888"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

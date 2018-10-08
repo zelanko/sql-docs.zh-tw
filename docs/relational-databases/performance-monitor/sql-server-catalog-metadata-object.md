@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Catalog Metadata
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
-caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 484dc0c7be3b7ca67c3645e6b8f088839d4bf631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f92f446ebd8d3f8efdd2c3ff8e62ec46c55b60a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826034"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, Catalog Metadata Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32950503"
 下表描述 SQL Server **Catalog Metadata** 效能物件。
 
 
-|**SQL Server Catalog Metadata 計數器**|描述|  
+|**SQL Server Catalog Metadata 計數器**|Description|  
 |-------------|-----------------|  
 |**Cache Entries Count**|目錄中繼資料快取中的項目數。|
 |**Cache Entries Pinned Count**|已釘選的目錄中繼資料快取項目數。|

@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,16 +14,15 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ba39da9c13a1a2051f249942de86b18963eade8
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737666"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>如何：使用重命名和重構，變更資料庫物件
 Transact\-SQL 編輯器的 [重構] 關聯式功能表可讓您重新命名物件或將物件移至其他結構描述，並且在認可變更之前預覽所有受影響的區域。 您也可以使用 [重構] 功能表，在資料庫專案中完整限定資料庫物件的所有參考，或是擴充 `SELECT` 陳述式內的任何萬用字元。  

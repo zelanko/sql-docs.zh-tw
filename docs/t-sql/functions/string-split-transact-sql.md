@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STRING_SPLIT
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45e0dbf6fac0361a95aeedc3b47ba13ae82058d5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a079cda1246beae3458e415a01afae8b76417702
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627736"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ Product 資料表有一個資料行含有標籤的逗號分隔清單，如下列
   
 |ProductId|[屬性]|Tags|  
 |---------------|----------|----------|  
-|@shouldalert|Full-Finger Gloves|clothing,road,touring,bike|  
+|1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike,mountain|  
   
@@ -106,10 +103,10 @@ FROM Product
   
 |ProductId|[屬性]|value|  
 |---------------|----------|-----------|  
-|@shouldalert|Full-Finger Gloves|clothing|  
-|@shouldalert|Full-Finger Gloves|road|  
-|@shouldalert|Full-Finger Gloves|touring|  
-|@shouldalert|Full-Finger Gloves|bike|  
+|1|Full-Finger Gloves|clothing|  
+|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|touring|  
+|1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  

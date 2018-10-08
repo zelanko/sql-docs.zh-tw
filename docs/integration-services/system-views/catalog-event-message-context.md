@@ -5,28 +5,25 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ec738406c400f8db058360835a3dece093f9449
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 690d2cb04b9764e0aa0a65934d4f5ae52a5640ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407550"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613156"
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   針對 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上的執行顯示與執行事件訊息相關聯之條件的詳細資訊。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|錯誤內容的唯一識別碼。|  
 |Event_message_id|BIGINT|與內容相關之訊息的唯一識別碼。|  
@@ -43,7 +40,7 @@ ms.locfileid: "35407550"
   
 ||||  
 |-|-|-|  
-|內容類型值|類型名稱|描述|  
+|內容類型值|類型名稱|Description|  
 |10|工作|發生錯誤時的工作狀態。|  
 |20|管線|錯誤來自管線元件：來源、目的地或轉換元件。|  
 |30|序列|數列的狀態。|  
@@ -53,7 +50,7 @@ ms.locfileid: "35407550"
 |70|變數|變數值|  
 |80|[ODBC 來源編輯器]|連接管理員的屬性。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個檢視需要下列其中一個權限：  
   
 -   作業的 READ 權限  

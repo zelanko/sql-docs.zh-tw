@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26507d69e601d09b60ef8b794f755d24efceebcb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 5b302626d3a1f13a2be13d0da77f2f3aca684b83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772006"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -182,7 +179,7 @@ ms.locfileid: "35312107"
 >  若要讓見證中斷連接維持一段較長的時間，我們建議您從工作階段中移除見證，直到它可用為止。  
   
 ##  <a name="TsqlSettingsAndOpModes"></a> Transact-SQL 設定和資料庫鏡像作業模式  
- 本節描述與 ALTER DATABASE 設定和鏡像資料庫與見證狀態相關的資料庫鏡像工作階段 (如果有的話)。 本節適用於主要或專以 [!INCLUDE[tsql](../../includes/tsql-md.md)] (而非 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 管理資料庫鏡像的使用者。  
+ 本節描述與 ALTER DATABASE 設定和鏡像資料庫與見證狀態相關的資料庫鏡像工作階段 (如果有的話)。 本節適用於主要或專以 [!INCLUDE[tsql](../../includes/tsql-md.md)](而非 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 管理資料庫鏡像的使用者。  
   
 > [!TIP]  
 >  做為使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的替代方法，您可以使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面，在物件總管中控制工作階段的作業模式。 如需詳細資訊，請參閱本主題稍後的 [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
@@ -251,7 +248,7 @@ ms.locfileid: "35312107"
 ###  <a name="ViewWitness"></a> 檢視安全性設定和見證狀態  
  若要檢視資料庫的安全性設定和見證狀態，請使用 **sys.database_mirroring** 目錄檢視。 相關的資料行如下：  
   
-|因數|[資料行]|描述|  
+|因數|[資料行]|Description|  
 |------------|-------------|-----------------|  
 |交易安全性|**mirroring_safety_level** 或 **mirroring_safety_level_desc**|在鏡像資料庫上更新的交易安全性設定，其中一個為：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= 資料庫不在線上。|  
 |見證存在嗎？|**mirroring_witness_name**|資料庫鏡像見證的伺服器名稱或 NULL，表示沒有見證。|  
