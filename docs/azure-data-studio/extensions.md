@@ -1,5 +1,5 @@
 ---
-title: Azure Data Studio 的擴充功能  |Microsoft Docs
+title: 延伸 Azure Data Studio 的功能 | Microsoft Docs
 description: 將擴充功能新增至 Azure Data Studio
 ms.custom: tools|sos
 ms.date: 09/24/2018
@@ -19,9 +19,9 @@ ms.locfileid: "48038039"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]的擴充模組
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 內的擴充功能提供了一種輕鬆且以 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝程序為基礎的方式，讓您加入更多功能。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的擴充功能提供一種對基本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝更多功能的簡單方法。
 
-延伸模組會由 Azure Data Studio 小組 (Microsoft) 以及第 3 方社群 （您 ！）提供。 如需有關建立擴充功能的詳細資訊，請參閱 [延伸模組製作](extension-authoring.md)。
+延伸模組是由 Azure Data Studio 小組 (Microsoft) 與第 3 方社群 (您!) 提供。如需有關建立延伸模組的詳細資訊，請參閱[延伸模組製作](extension-authoring.md)。
 
 
 ## <a name="add-azure-data-studio-extensions"></a>新增 Azure Data Studio 擴充功能
