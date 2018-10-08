@@ -28,9 +28,9 @@ ms.locfileid: "48037995"
 
 一般可用性版本的 Azure Data Studio (先前稱為 SQL Operations Studio)。
 
-- 宣布 SQL Server 2019 預覽延伸模組。
-  - 支援 SQL Server 2019 預覽功能，包括[巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)支援。
-    - 連線到隨附於 SQL Server 2019 預覽 HDFS/Spark 閘道。
+- 宣布 SQL Server 2019 預覽版延伸模組。
+  - 支援 SQL Server 2019 預覽版功能，包括[巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)支援。
+    - 在連SQL Server 2019 預覽版上連線到HDFS/Spark 閘道。
     - 瀏覽 HDFS、 將檔案上傳、 儲存檔案，並啟動例如在 Notebook 中進行分析有用的 CSV 檔案的動作。
     - 提交 Spark 作業，從儀表板，或以滑鼠右鍵按一下物件總管 中的 HDFS/Spark 連接。
   - Azure Data Studio Notebook
