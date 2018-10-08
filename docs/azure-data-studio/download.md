@@ -36,7 +36,7 @@ ms.locfileid: "48037975"
 
 ## <a name="get-azure-data-studio-for-windows"></a>取得適用於 Windows 的 Azure Data Studio
 
-這一版的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括標準的 Windows 安裝程式，以及 .zip檔案兩種方式： 
+這一版的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包括標準 Windows 安裝程式，以及 .zip 檔案兩種安裝方式： 
 
 **安裝程式**
 
