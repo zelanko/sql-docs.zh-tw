@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09dad738b4d94c79a3462c2886ba758c7c3f669d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1658039af7e81a8019a7b72f0338802bd30162b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603296"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +52,16 @@ ms.locfileid: "37353140"
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>重新設定現有的交易複寫  
   
-1.  移至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的訂閱屬性，並將 [Memory Optimized Subscription]\(記憶體最佳化訂閱)  設定為 [true] 。 重新初始化訂閱之前，不會套用所做的變更。  
+1.  移至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的訂閱屬性，並將 [Memory Optimized Subscription] (記憶體最佳化訂閱)  設定為 [true] 。 重新初始化訂閱之前，不會套用所做的變更。  
   
      如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 進行設定的話，設定 **@memory_optimized** 預存程序的 **@memory_optimized** 參數為 true。  
   
-2.  移至 [發行項屬性] 視窗 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內的發行集，將 [Enable Memory]\(啟用記憶體)  設定為 [true]。  
+2.  移至 [發行項屬性] 視窗 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 內的發行集，將 [Enable Memory] (啟用記憶體)  設定為 [true]。  
   
      如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為   
     **0x40000000000**開始，將提供這項功能。  
   
-3.  記憶體最佳化資料表不支援叢集索引。 若要藉由在目的地上將複寫轉換為非叢集索引來處理此項目的話，請將 [Convert clustered index to nonclustered for memory optimized article]\(為記憶體最佳化發行項將叢集索引轉換為非叢集索引)  設定為 [true]。  
+3.  記憶體最佳化資料表不支援叢集索引。 若要藉由在目的地上將複寫轉換為非叢集索引來處理此項目的話，請將 [Convert clustered index to nonclustered for memory optimized article] (為記憶體最佳化發行項將叢集索引轉換為非叢集索引)  設定為 [true]。  
   
      如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** 預存程序的 **@schema_option** 參數為  **0x0000080000000000**開始，將提供這項功能。  
   
