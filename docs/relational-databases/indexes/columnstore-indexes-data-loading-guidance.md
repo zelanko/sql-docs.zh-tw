@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c720c40703a24e529d62e8e39f3adfde7f7f8d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0bf70712f71e4c56b96fe648de36d66c842ea64
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703998"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851833"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47703998"
   
 ```sql  
 SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id, 
-  state state_desc, total_rows, deleted_rows, size_in_bytes   
+  state, state_desc, total_rows, deleted_rows, size_in_bytes   
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   

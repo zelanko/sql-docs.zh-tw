@@ -1,27 +1,19 @@
 ---
 title: Reporting Services 的備份與還原作業 | Microsoft Docs
-ms.date: 05/24/2018
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- databases [Reporting Services], backing up
-- databases [Reporting Services], restoring
-- databases [Reporting Services], moving
-- backing up databases [Reporting Services]
-- moving databases
-- restoring databases [Reporting Services]
-- files [Reporting Services], restoring
-- files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ae5c597ddf5958209057b225bfc11b25335df74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.date: 05/24/2018
+ms.openlocfilehash: bc5ee18e2ddcde4038541f374bae68aeaa3fd3bc
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677736"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782307"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
 

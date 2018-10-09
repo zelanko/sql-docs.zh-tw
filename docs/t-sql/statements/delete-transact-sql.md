@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91da8325f2917605cf508f1e279ae829d525e658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838616"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798597"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -232,7 +232,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 #### <a name="a-using-delete-with-no-where-clause"></a>A. 使用不含 WHERE 子句的 DELETE  
  以下範例會刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `SalesPersonQuotaHistory` 資料表的所有資料列，因為並未利用 WHERE 子句來限制刪除的資料列數。  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
 GO  
 ```  
@@ -243,7 +243,7 @@ GO
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句刪除一組資料列  
  以下範例會刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductCostHistory` 資料表中，所有 `StandardCost` 資料行值超過 `1000.00` 的資料列。  
   
-```    
+```sql
 DELETE FROM Production.ProductCostHistory  
 WHERE StandardCost > 1000.00;  
 GO  
@@ -251,7 +251,7 @@ GO
   
  下列範例會顯示更加複雜的 WHERE 子句。 WHERE 子句會定義為了判斷要刪除之資料列而必須符合的兩個條件。 `StandardCost` 資料行中的值必須介於 `12.00` 與 `14.00` 之間，而且 `SellEndDate` 資料行中的值必須為 Null。 這個範例也會印出來自 **@@ROWCOUNT** 函式的值，以傳回已刪除資料列的數目。  
   
-```  
+```sql
 DELETE Production.ProductCostHistory  
 WHERE StandardCost BETWEEN 12.00 AND 14.00  
       AND EndDate IS NULL;  
@@ -261,7 +261,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 使用資料指標來判斷要刪除的資料列  
  以下範例會使用名為 `my_cursor` 的資料指標，從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `EmployeePayHistory` 資料表中刪除單一資料列。 刪除作業只會影響目前從資料指標中提取的單一資料列。  
   
-```  
+```sql
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
     FROM HumanResources.EmployeePayHistory AS a  
@@ -281,7 +281,7 @@ GO
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 針對某個資料表中的資料使用聯結和子查詢，以刪除其他資料表中的資料列  
  下列範例會顯示兩種方法，可根據其他資料表中的資料來刪除某個資料表中的資料列。 這兩個範例都會根據 `SalesPerson` 資料表所儲存之年初至今銷售情況來刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `SalesPersonQuotaHistory` 資料表中的資料列。 第一個 `DELETE` 陳述式會顯示 ISO 相容的子查詢方案，而第二個 `DELETE` 陳述式會顯示要聯結兩個資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 延伸模組。  
   
-```  
+```sql
 -- SQL-2003 Standard subquery  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -292,7 +292,7 @@ WHERE BusinessEntityID IN
 GO  
 ```  
   
-```  
+```sql
 -- Transact-SQL extension  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -303,7 +303,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-```  
+```sql
 -- No need to mention target table more than once.  
   
 DELETE spqh  
@@ -317,7 +317,7 @@ DELETE spqh
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制刪除的資料列數目  
  當 TOP (*n*) 子句與 DELETE 一起使用時，會隨機選取 *n* 個資料列來執行刪除作業。 以下範例會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `PurchaseOrderDetail` 資料表中刪除到期日早於 2006 年 7 月 1 日的 `20` 個隨機資料列。  
   
-```  
+```sql
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
@@ -326,7 +326,7 @@ GO
   
  如果您必須使用 TOP 依有意義的時序來刪除資料列，就必須在 subselect 陳述式中同時使用 TOP 和 ORDER BY。 下列查詢會刪除 `PurchaseOrderDetail` 資料表中具有最早到期日的 10 個資料列。 為確保只刪除 10 個資料列，subselect 陳述式 (`PurchaseOrderID`) 中指定的資料行是資料表的主索引鍵。 如果指定的資料行包含重複值，則在 subselect 陳述式中使用非索引鍵資料行會造成刪除 10 個以上的資料列。  
   
-```  
+```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
    (SELECT TOP 10 PurchaseOrderDetailID   
@@ -343,7 +343,7 @@ GO
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 使用連結的伺服器刪除遠端資料表的資料  
  下列範例會刪除遠端資料表的資料列。 此範例一開始會使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 建立遠端資料來源的連結。 接下來，會將連結的伺服器名稱 `MyLinkServer` 指定為 *server.catalog.schema.object* 格式之四部分物件名稱的一部分。  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -357,7 +357,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -369,7 +369,7 @@ GO
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. 使用 OPENQUERY 函數刪除遠端資料表的資料  
  下列範例會藉由指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 資料列集函式來刪除遠端資料表的資料列。 上一個範例所建立之連結的伺服器名稱會用於這個範例。  
   
-```  
+```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
 FROM AdventureWorks2012.HumanResources.Department  
 WHERE DepartmentID = 18');  
@@ -379,7 +379,7 @@ GO
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. 使用 OPENDATASOURCE 函數刪除遠端資料表的資料  
  下列範例會藉由指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 資料列集函式來刪除遠端資料表的資料列。 使用 *server_name* 或 *server_name\instance_name* 格式，為資料來源指定有效的伺服器名稱。  
   
-```  
+```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
@@ -391,7 +391,7 @@ WHERE DepartmentID = 17;'
 #### <a name="i-using-delete-with-the-output-clause"></a>I. 搭配 OUTPUT 子句使用 DELETE  
  以下範例示範如何將 `DELETE` 陳述式的結果儲存到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的資料表變數。  
   
-```  
+```sql
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
@@ -406,7 +406,7 @@ GO
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. 在 DELETE 陳述式中，搭配 <from_table_name> 來使用 OUTPUT  
  以下範例根據 `DELETE` 陳述式的 `FROM` 子句所定義的搜尋準則來刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductProductPhoto` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表的 `DELETED.ProductID`、 `DELETED.ProductPhotoID`資料行及 `Product` 資料表中的資料行。 `FROM` 子句藉此來指定要刪除的資料列。  
   
-```  
+```sql
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -436,14 +436,14 @@ GO
 ### <a name="k-delete-all-rows-from-a-table"></a>K. 刪除資料表中的所有資料列  
  下列範例會刪除 `Table1` 資料表中的所有資料列，因為並未利用 WHERE 子句來限制刪除的資料列數。  
   
-```  
+```sql
 DELETE FROM Table1;  
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. 刪除資料表中的一組資料列  
  下列範例會刪除 `Table1` 資料表中，所有 `StandardCost` 資料行值超過 1000.00 的資料列。  
   
-```  
+```sql
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
@@ -451,7 +451,7 @@ WHERE StandardCost > 1000.00;
 ### <a name="m-using-label-with-a-delete-statement"></a>M. 搭配 DELETE 陳述式使用 LABEL  
  下列範例會搭配 DELETE 陳述式使用標籤。  
   
-```  
+```sql
 DELETE FROM Table1  
 OPTION ( LABEL = N'label1' );  
   
@@ -460,7 +460,7 @@ OPTION ( LABEL = N'label1' );
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. 搭配 DELETE 陳述式使用標籤及查詢提示  
  此查詢示會示範查詢聯結提示與 DELETE 陳述式搭配使用的基本語法。 如需聯結提示及如何使用 OPTION 子句的詳細資訊，請參閱 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DELETE FROM dbo.FactInternetSales  

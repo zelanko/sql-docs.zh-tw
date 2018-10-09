@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8a949009b200b80ad9d911c606e480d2e407da70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1146af0e323345a514dad5a587b3f239b439c4c5
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803536"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798536"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 資料庫引擎功能的重大變更
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "47803536"
 
 -   [SQL Server 2016 中對於 Database Engine 的重大變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   [SQL Server 2014 中對於資料庫引擎的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
+-   [SQL Server 2014 中對於 Database Engine 的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   [SQL Server 2012 中對於資料庫引擎的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
+-   [SQL Server 2012 中對於 Database Engine 的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   [SQL Server 2008 中對於資料庫引擎的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
+-   [SQL Server 2008 中對於 Database Engine 的重大變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 中已被取代的 Database Engine 功能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

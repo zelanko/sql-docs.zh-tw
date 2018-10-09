@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 782b254eca5a0fb60ab354e35b40eae5d5fd2640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810806"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851973"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -59,7 +59,16 @@ ms.locfileid: "47810806"
 
 > [!NOTE]  
 > JDBC 分散式交易元件會包含在 JDBC 驅動程式安裝的 xa 目錄中。 這些元件包括 xa_install.sql 及 sqljdbc_xa.dll 檔案。  
-  
+
+> [!NOTE]  
+> 從 SQL Server 2019 公用預覽 CTP 2.0 開始，JDBC XA 分散式的交易元件包含在 SQL Server 引擎可以啟用或停用的系統預存程序。 若要啟用必要的元件，以執行使用 JDBC 驅動程式的 XA 分散式交易，請執行下列預存程序。
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> 若要停用先前安裝的元件，請執行下列預存程序。 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### <a name="running-the-ms-dtc-service"></a>執行 MS DTC 服務
 
 應該在服務管理員中將 MS DTC 服務標示為 [自動]，以確定啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務時，便執行該服務。 若要啟用 MS DTC 以用於 XA 交易，您必須遵循下列步驟：  

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17bce03ce87ee2d38563d0f9fe1ea19bafabae56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aa7e073c9184cd515072ca56a201555a0c94712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074488"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +38,12 @@ ms.locfileid: "47607866"
 ## <a name="syntax"></a>語法  
   
 ```  
-MAX ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
+-- Aggregation Function Syntax  
+MAX( [ ALL | DISTINCT ] expression )  
+  
+-- Analytic Function Syntax  
+MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
+``` 
   
 ## <a name="arguments"></a>引數  
  **ALL**  

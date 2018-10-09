@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ba74df9a4218424e7ed25a40bb6fc8e17b3d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb27c4ca77382887acdbfec788df40e5cbfd76c7
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816957"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798616"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -362,7 +362,7 @@ OUTPUT 子句
   
 -   只要使用者定義型別支援從這個類型進行隱含或明確的轉換，便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型中提供一個值。 下列範例會顯示如何從字串進行明確的轉換，以便在使用者定義的 `Point` 類型資料行中插入一個值。  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -371,7 +371,7 @@ OUTPUT 子句
   
 -   呼叫傳回使用者定義型別之值的使用者定義函數。 下列範例會利用使用者定義函數 `CreateNewPoint()` 來建立使用者定義型別 `Point` 的新值，且將這個值插入 `Cities` 資料表中。  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
@@ -431,7 +431,7 @@ OUTPUT 子句
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入單一資料列  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表中插入一個資料列。 此資料表中的資料行為 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由於所有資料行的值均已提供，並按資料表中資料行的相同順序列出；因此，您不需要在資料行清單中指定資料行名稱。  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -439,7 +439,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. 插入多個資料列  
  下列範例會在單一 INSERT 陳述式中使用[資料表值建構函式](../../t-sql/queries/table-value-constructor-transact-sql.md)，將三個資料列插入至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `Production.UnitMeasure` 資料表。 由於提供了所有資料行的值，而且依照資料表中資料行的相同順序來列出它們，因此，不需要在資料行清單中指定資料行名稱。  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -448,7 +448,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. 插入與資料表資料行順序不同的資料  
  下列範例會利用資料行清單來明確指定插入每個資料行的值。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Production.UnitMeasure` 資料表的資料行順序是 `UnitMeasureCode`、`Name`、`ModifiedDate`，但在 *column_list* 中不會依照該順序列出這些資料行。  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 將資料插入包含有預設值之資料行的資料表  
  下列範例會顯示如何將資料列插入含有自動產生值或有預設值的資料行之資料表中。 `Column_1` 是一個計算資料行，它會將字串與插入 `column_2` 的值串連起來，自動產生某個值。 `Column_2` 會使用預設條件約束來定義。 如果此資料行並未指定值，就會使用預設值。 `Column_3` 定義了 **rowversion** 資料類型，該資料類型會自動產生唯一的遞增二進位數字。 `Column_4` 不會自動產生值。 如果未指定這個資料行的值，就會插入 NULL。 INSERT 陳述式會插入包含部分 (而非全部) 資料行值的資料列。 在最後一個 INSERT 陳述式中，並未指定任何資料行，只會使用 DEFAULT VALUES 子句插入預設值。  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -486,7 +486,7 @@ GO
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>E. 將資料插入含識別資料行的資料表  
  下列範例會顯示將資料插入識別欄位的不同方法。 前兩個 INSERT 陳述式允許可用於產生新資料列的識別值。 第三個 INSERT 陳述式利用 SET IDENTITY_INSERT 陳述式來覆寫資料行的 IDENTITY 屬性，且會將明確的值插入識別欄位中。  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -505,7 +505,7 @@ GO
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. 利用 NEWID() 將資料插入 uniqueidentifier 資料行  
  下列範例會使用 [NEWID](../../t-sql/functions/newid-transact-sql.md)() 函式來取得 `column_2` 的 GUID。 不同於識別欄位，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 並不會自動產生 [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) 資料類型的資料行值，如第二個 `INSERT` 陳述式所示。  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -524,7 +524,7 @@ FROM dbo.T1;
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. 將資料插入使用者定義型別的資料行  
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會將三個資料列插入 `PointValue` 資料表的 `Points` 資料行。 這個資料行會使用 [CLR 使用者定義類型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT)。 `Point` 資料類型包括公開為 UDT 屬性的 X 及 Y 整數值。 您必須使用 CAST 或 CONVERT 函數，將以逗號分隔的 X 及 Y 值轉換為 `Point` 類型。 前兩個陳述式使用 CONVERT 函式，將字串值轉換為 `Point` 類型，而第三個陳述式則使用 CAST 函式。 如需詳細資訊，請參閱[操作 UDT 資料](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)。  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -538,7 +538,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
   
  第一個 INSERT 陳述式會使用 SELECT 陳述式，以從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的來源資料表 (`Employee`、`SalesPerson` 和 `Person`) 衍生資料，並將結果集儲存在 `EmployeeSales` 資料表中。 第二個 INSERT 陳述式會使用 EXECUTE 子句來呼叫包含 SELECT 陳述式的預存程序，而第三個 INSERT 陳述式會使用 EXECUTE 子句將 SELECT 陳述式當做常值字串來參考。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -591,7 +591,7 @@ FROM dbo.EmployeeSales;
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. 使用 WITH 通用資料表運算式定義插入的資料  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立 `NewEmployee` 資料表。 通用資料表運算式 (`EmployeeTemp`) 會定義一個或多個資料表中要插入 `NewEmployee` 資料表的資料列。 INSERT 陳述式會在通用資料表運算式中參考此資料行。  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -634,7 +634,7 @@ GO
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. 使用 TOP 限制從來源資料表中插入的資料  
  下列範例會建立 `EmployeeSales` 資料表，而且會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `HumanResources.Employee` 資料表的前 5 名隨機員工的姓名和今年到目前的銷售資料插入其中。 INSERT 陳述式會選擇 `SELECT` 陳述式所傳回的任 5 個資料列。 OUTPUT 子句會顯示插入到 `EmployeeSales` 資料表的資料列。 請注意，SELECT 陳述式中的 ORDER BY 子句不會用來判斷前 5 名員工。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -655,7 +655,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  如果您必須使用 TOP 依有意義的時序來插入資料列，就必須搭配子選擇陳述式中指定的 ORDER BY 子句來使用 TOP，如下列範例所示。 OUTPUT 子句會顯示插入到 `EmployeeSales` 資料表的資料列。 請注意，現在插入的前 5 名員工是依據 ORDER BY 子句的結果，而不是隨機資料列。  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -673,7 +673,7 @@ INSERT INTO dbo.EmployeeSales
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. 指定檢視表以插入資料  
  下列範例會將檢視表名稱指定為目標物件；不過，新資料列會插入基礎基底資料表中。 `INSERT` 陳述式中的值順序必須符合檢視表的資料行順序。 如需詳細資訊，請參閱[透過檢視修改資料](../../relational-databases/views/modify-data-through-a-view.md)。  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -694,7 +694,7 @@ GO
 #### <a name="l-inserting-data-into-a-table-variable"></a>L. 將資料插入資料表變數  
  下列範例會將 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的資料表變數指定為目標物件。  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -721,7 +721,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -736,7 +736,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -750,7 +750,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -763,7 +763,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -780,7 +780,7 @@ GO
   
 **適用於**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -811,7 +811,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 在記錄最少的情況下將資料插入堆積中  
  下列範例會建立新的資料表 (堆積)，然後使用最低限度記錄，將另一個資料表中的資料插入其中。 此範例會假設 `AdventureWorks2012` 資料庫的復原模式設定為 FULL。 為了確保使用最低限度記錄，`AdventureWorks2012` 資料庫的復原模式會在插入資料列之前設定為 BULK_LOGGED，然後在 INSERT INTO…SELECT 陳述式之後重設為 FULL。 此外，針對目標資料表 `Sales.SalesHistory` 指定了 TABLOCK 提示。 這樣做可確保此陳述式會在交易記錄中使用最小的空間並有效率地執行作業。  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -856,7 +856,7 @@ GO
   
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -876,7 +876,7 @@ FROM OPENROWSET (
   
 **適用於**：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -888,7 +888,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### <a name="t-using-output-with-an-insert-statement"></a>T. 搭配 INSERT 陳述式使用 OUTPUT  
  下列範例會將資料列插入 `ScrapReason` 資料表中，並且利用 `OUTPUT` 子句，將陳述式的結果傳回 `@MyTableVar` 資料表變數。 由於 `ScrapReasonID` 資料行定義了 `IDENTITY` 屬性，因此，`INSERT` 陳述式並未指定這個資料行的值。 不過請注意，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 針對這個資料行所產生的值，會在 `OUTPUT` 資料行的 `INSERTED.ScrapReasonID` 子句中傳回。  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -907,7 +907,7 @@ FROM Production.ScrapReason;
 #### <a name="u-using-output-with-identity-and-computed-columns"></a>U. 搭配識別和計算資料行使用 OUTPUT  
  下列範例會建立 `EmployeeSales` 資料表，之後再利用含有 SELECT 陳述式的 INSERT 陳述式來擷取來源資料表中的資料，以插入幾個資料列。 `EmployeeSales` 資料表包含一個識別欄位 (`EmployeeID`) 和一個計算資料行 (`ProjectedSales`)。 由於這些值都是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在插入作業期間所產生的，因此，這些資料行都不能定義在 `@MyTableVar` 中。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -944,7 +944,7 @@ FROM dbo.EmployeeSales;
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. 插入從 OUTPUT 子句傳回的資料  
  下列範例將擷取從 MERGE 陳述式的 OUTPUT 子句中傳回的資料，並將該資料插入另一個資料表中。 MERGE 陳述式會根據在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Quantity` 資料表內處理的順序，每天更新 `ProductInventory` 資料表的 `SalesOrderDetail` 資料行。 它也會刪除產品存貨降到 0 的資料列。 此範例會擷取已刪除的資料列，並將其插入另一個資料表 `ZeroInventory`，該資料表會追蹤沒有存貨的產品。  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -974,7 +974,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### <a name="w-inserting-data-using-the-select-option"></a>W. 使用 SELECT 選項來插入資料  
  下列範例會示範如何搭配使用 INSERT 陳述式與 SELECT 選項，插入多個資料列的資料。 第一個 `INSERT` 陳述式會使用 `SELECT` 陳述式，直接擷取來源資料表的資料，並將結果集儲存在 `EmployeeTitles` 資料表中。  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -989,7 +989,7 @@ INSERT INTO EmployeeTitles
 #### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. 搭配 INSERT 陳述式指定標籤  
  下列範例示範如何搭配使用 INSERT 陳述式與標籤。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -1000,7 +1000,7 @@ OPTION ( LABEL = N'label1' );
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. 搭配 INSERT 陳述式使用標籤及查詢提示  
  此查詢示範搭配使用 INSERT 陳述式、標籤及查詢聯結提示的基本語法。 向控制節點提交查詢之後，在計算節點上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會於產生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢計劃時套用雜湊聯結策略。 如需聯結提示及如何使用 OPTION 子句的詳細資訊，請參閱 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 

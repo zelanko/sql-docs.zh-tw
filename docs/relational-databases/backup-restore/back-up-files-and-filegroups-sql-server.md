@@ -17,12 +17,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a549581378924fc499dfc3725095fa308b881f52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e99ded8423879fe62393d3e8c3731780b305eaad
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697996"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851904"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>備份檔案和檔案群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "47697996"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* } [ **,**...* f* ]  
+     { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
   
      TO *backup_device* [ **,**...*n* ]  
   
@@ -140,10 +140,10 @@ ms.locfileid: "47697996"
     |選項|[描述]|  
     |------------|-----------------|  
     |*database*|這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。|  
-    |FILE **=***logical_file_name*|指定要包含在檔案備份中檔案的邏輯名稱。|  
-    |FILEGROUP **=***logical_filegroup_name*|指定要包含在檔案備份中的檔案群組的邏輯名稱。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。|  
+    |FILE _=_*logical_file_name*|指定要包含在檔案備份中檔案的邏輯名稱。|  
+    |FILEGROUP _=_*logical_filegroup_name*|指定要包含在檔案備份中的檔案群組的邏輯名稱。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。|  
     |[ **,**...*f* ]|這是一個預留位置，表示可以指定多個檔案和檔案群組。 檔案或檔案群組的數目沒有限制。|  
-    |*backup_device* [ **,**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
+    |*backup_device* [ **,**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } _=_*physical_backup_device_name*<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
     |WITH *with_options* [ **,**...*o* ]|另外，也可以指定一個或多個其他選項，如 DIFFERENTIAL。<br /><br /> 注意：差異檔案備份需要以完整檔案備份作為基底。 如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)。|  
   
 2.  在完整復原模式下，您還必須備份交易記錄。 若要使用一組完整的完整檔案備份來還原資料庫，您還必須有足夠的記錄備份，才能從第一個檔案備份開始涵蓋所有的檔案備份。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)中準備鏡像資料庫。  
@@ -197,9 +197,9 @@ GO
   
 1.  使用 **Backup-SqlDatabase** Cmdlet，並指定 **-BackupAction** 參數值的 **Files** 。 另外再指定下列其中一個參數：  
   
-    -   若要備份特定檔案，請指定 **-DatabaseFile***String* 參數，其中 *String* 是要備份的一或多個資料庫檔案。  
+    -   若要備份特定檔案，請指定 _-DatabaseFile_*String* 參數，其中 *String* 是要備份的一個或多個資料庫檔案。  
   
-    -   若要備份指定檔案群組中的所有檔案，請指定 **-DatabaseFileGroup***String* 參數，其中 *String* 是要備份的一或多個資料庫檔案群組。  
+    -   若要備份指定檔案群組中的所有檔案，請指定 _-DatabaseFileGroup_*String* 參數，其中 *String* 是要備份的一個或多個資料庫檔案群組。  
   
      以下範例會為 `MyDB` 資料庫內的次要檔案群組 'FileGroup1' 和 'FileGroup2' 建立其中每個檔案的完整檔案備份。 備份是建立在伺服器執行個體 `Computer\Instance`的預設備份位置。  
   

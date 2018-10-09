@@ -23,12 +23,12 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6dd48ccff0855d59736e3c0b20670b3f8a5c2890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ccb4805575d0d7285797525ebef9f14e3a242e0
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777176"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798546"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47777176"
   
 ```  
   
-SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }  
+SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -51,7 +51,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table { ON | OFF }
  *schema_name*  
  這是資料表所屬的結構描述名稱。  
   
- *table*  
+ *table_name*  
  這是含識別欄位之資料表的名稱。  
   
 ## <a name="remarks"></a>Remarks  

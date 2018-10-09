@@ -1,17 +1,18 @@
 ---
 title: 設定報表伺服器資料庫連線 (SSRS 設定管理員) | Microsoft Docs
-ms.date: 09/20/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 175178a067a674dfde3635bca65a05894c401570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.date: 09/20/2017
+ms.openlocfilehash: eed0c630bca54b28e78f2c59c5a14fca6e77da54
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644446"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782317"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
 
