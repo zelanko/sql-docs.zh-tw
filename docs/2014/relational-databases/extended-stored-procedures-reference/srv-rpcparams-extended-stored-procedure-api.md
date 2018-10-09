@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcparams
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcparams
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e3910a9b26487b536761ade4835e30862d723261
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99010c8d4ece2811c8b98b588489b874501544e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069878"
 ---
 # <a name="srvrpcparams-extended-stored-procedure-api"></a>srv_rpcparams (擴充預存程序 API)
     

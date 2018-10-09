@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramtype
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramtype
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7ec38d14a34ed7718c9bb58f6fb3802cc98d531c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf12f8515d8d26d7e1a9eb7e1d4f07ee692f8571
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294780"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073828"
 ---
 # <a name="srvparamtype-extended-stored-procedure-api"></a>srv_paramtype (擴充預存程序 API)
     

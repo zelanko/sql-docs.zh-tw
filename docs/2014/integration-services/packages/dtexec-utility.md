@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a94da30fb0e52fdf75b58c1139b8d32a2fe80aa8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 116d82b57db147abc8b4b5ebecd5874f36a37001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106298"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
   `dtexec`命令提示字元公用程式用來設定及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 `dtexec` 公用程式可存取所有封裝組態及執行功能，例如參數、連接、屬性、變數、記錄與進度指標。 `dtexec`公用程式可讓您從這些來源載入封裝：[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器、.ispac 專案檔案， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區和檔案系統。  

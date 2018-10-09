@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ topic_type:
 helpviewer_keywords:
 - extended stored procedures [SQL Server], listed
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52fc30cedc3e45f970b9f1d9a28da4bede344a77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b86bc1d1aefc0a1e69beb45451448d7b8a31666a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090218"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>擴充預存程序程式設計人員&#39;參考
     

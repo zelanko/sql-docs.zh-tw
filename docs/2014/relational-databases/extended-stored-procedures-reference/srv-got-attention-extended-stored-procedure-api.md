@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_got_attention
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_got_attention
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7d6f026b9c851c7fb8636442cfda27a870be861
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc6c05c84513766a5597dc31bc7e2495c90ecc7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097138"
 ---
 # <a name="srvgotattention-extended-stored-procedure-api"></a>srv_got_attention (擴充預存程序 API)
     

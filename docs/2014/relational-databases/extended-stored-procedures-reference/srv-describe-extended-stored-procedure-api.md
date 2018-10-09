@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_describe
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_describe
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 647a884ca1f6f60e3a370fe2e975110180a25292
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 376aa2a01f6b7f25f29c1086c5ce0ea81fe87b14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264764"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096778"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
     

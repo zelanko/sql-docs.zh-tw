@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_willconvert
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_willconvert
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f8adefdd3f867dfdce3014ea84779b9f5868f91b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56a3036741a5e4833ab8033dc036993e465725a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193208"
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert (擴充預存程序 API)
     
