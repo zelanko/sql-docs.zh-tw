@@ -1,25 +1,22 @@
 ---
-title: setNClob 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: setNClob 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f96cfac153820263eedf2739eda2274ea898e99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 03bd1bab1fc2cc380c35dbc8e138b9a40ae7bdad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679766"
 ---
 # <a name="setnclob-method-sqlservercallablestatement"></a>setNClob 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,11 +25,11 @@ ms.locfileid: "32845463"
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[setNClob 方法&#40;java.lang.String，java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|將指定的參數設定為指定 NClob 物件。|  
-|[setNClob 方法&#40;java.lang.String，java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|將指定之的參數設定為指定的讀取器物件。|  
-|[setNClob 方法&#40;java.lang.String，java.io.Reader，long&#41;](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|將指定之的參數設定為指定的讀取器物件指定的字元數。|  
+|[setNClob 方法 (java.lang.String, java.sql.NClob)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-sql-nclob.md)|設定指定的參數為指定的  物件。|  
+|[setNClob 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
+|[setNClob 方法 (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setnclob-method-java-lang-string-java-io-reader-long.md)|將指定的參數設定為指定的  物件，該物件長度為指定的字元數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

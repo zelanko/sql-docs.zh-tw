@@ -1,13 +1,11 @@
 ---
-title: nativeSQL 方法 (SQLServerConnection) |Microsoft 文件
+title: nativeSQL 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.nativeSQL
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4d739006005194e96021046c942c565d6034298
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 994a15cd8ac69c49306612582cb69413e035a1fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778486"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>nativeSQL 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,15 +41,15 @@ public java.lang.String nativeSQL(java.lang.String sql)
 #### <a name="parameters"></a>參數  
  *sql*  
   
- A**字串**包含 SQL 陳述式。  
+ $**：一個包含 SQL 陳述式的字串。  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**包含已轉換的 SQL 陳述式。  
+ ，包含轉換過的 SQL 陳述式。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 nativeSQL 方法是由 java.sql.Connection 介面中的 nativeSQL 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_client_info | Microsoft Docs
+title: sqlsrv_client_info |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_client_info
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 145249dc452cd7aeabb9b9667c337a4e17e39637
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309237"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710442"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,21 +44,21 @@ sqlsrv_client_info( resource $conn)
   
 **若是 SQL Server 3.2 和 3.1 版的 PHP**：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
-|DriverVer|ODBC Driver 11 for SQL Server DLL 版本：<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.2 或 3.1 版)|  
-|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />3.2.xxxx.x (如[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]3.2 版)<br /><br />3.1.xxxx.x (如[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]3.1 版)|  
+|DriverVer|ODBC Driver 11 for SQL Server DLL 版本：<br /><br />xx.yy.zzzz [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.2 或 3.1 版|  
+|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />3.2.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]適用於  3.2 版<br /><br />3.1.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]適用於  3.1 版|  
   
 **若是 SQL Server 3.0 和 2.0 版的 PHP**：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10。DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
+|DriverDllName|SQLNCLI10.DLL [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
-|DriverVer|SQL Server Native Client DLL 版本：<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
-|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
+|DriverVer|SQL Server Native Client DLL 版本：<br /><br />10.50.xxx [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版|  
+|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />2.0.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版|  
   
 ## <a name="example"></a>範例  
 從命令列執行下列範例時，該範例會將用戶端資訊寫入至主控台。 此範例假設 SQL Server 安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  

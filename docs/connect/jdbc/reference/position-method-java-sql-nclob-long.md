@@ -1,30 +1,27 @@
 ---
-title: position 方法 (java.sql.NClob，long) |Microsoft 文件
+title: position 方法 (java.sql.NClob，long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21299de3fa9eb6a8c9d02691c2cdfc326de68765
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bf58493fcf9e4f8a5f55baecc2b38114dc6a5a31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611616"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 方法 (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取的字元位置指定**NClob**物件*searchstr*會出現在這個**NClob**物件。  
+  擷取的字元位置指定**NClob**物件*searchstr*會出現在此**NClob**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +34,7 @@ long position(java.sql.NClob searchstr,
 #### <a name="parameters"></a>參數  
  *searchstr*  
   
- 要搜尋 NClob 物件。  
+ 要搜尋的  物件。  
   
  *start*  
   
@@ -49,8 +46,8 @@ long position(java.sql.NClob searchstr,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 此位置方法是由所指定位置中的方法 java.sql.NClob 介面。  
+## <a name="remarks"></a>Remarks  
+ 這個位置的方法是方法所指定位置 java.sql.NClob 介面中。  
   
 ## <a name="see-also"></a>另請參閱  
  [position 方法&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   

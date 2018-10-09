@@ -1,13 +1,11 @@
 ---
-title: updateCharacterStream 方法 （java.io.Reader，int） |Microsoft Docs
+title: updateCharacterStream 文件 (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateCharacterStream (java.lang.String, java.io.Reader, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 08cfc4e0-83f0-4f2f-ac55-b381f34fe67f
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5394ea8b5f7c270a5cda01ef3e781b3263119a52
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 84eb71761702fe48fd8001f7789fea5a5e47f586
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810796"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-int"></a>updateCharacterStream 方法 (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

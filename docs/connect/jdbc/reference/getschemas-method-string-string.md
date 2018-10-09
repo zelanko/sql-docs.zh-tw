@@ -1,25 +1,22 @@
 ---
-title: getSchemas 方法 （String，String） |Microsoft 文件
+title: getSchemas 方法 （String，String） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0684e2ec5e840d6fbe2f45cdcb66f39feb404320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 76c5831547178b33854465d38cfe97dc87684d15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684606"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas 方法 (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,27 +34,27 @@ public ResultSet getSchemas(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- 在資料庫中之目錄的名稱。 如果它是空字串 ""，結果就會包含結構描述而不包含目錄。 如果是**null**，目錄名稱不會用於搜尋。  
+ 在資料庫中之目錄的名稱。 如果它是空字串 ""，結果就會包含結構描述而不包含目錄。 如果它是 **null**，目錄名稱就不會用於搜尋。  
   
  *schemaPattern*  
   
- 結構描述的名稱。 如果是**null**，結構描述名稱不會用於搜尋。  
+ 結構描述的名稱。 如果它是 **null**，結構描述名稱就不會用於搜尋。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetSchemas 方法 java.sql.DatabaseMetaData 介面中所指定此 getSchemas 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 getURL 方法是由 java.sql.DatabaseMetaData 介面中的 getURL 方法所指定。  
   
- GetSchemas 方法所傳回的結果集包含下列資訊：  
+ 透過 getSchemas 方法所傳回的結果集將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**字串**|結構描述的名稱。|  
-|TABLE_CATALOG|**字串**|結構描述的目錄名稱。|  
+|TABLE_SCHEM|**String**|結構描述的名稱。|  
+|TABLE_CATALOG|**String**|結構描述的目錄名稱。|  
   
  這些結果會依據 TABLE_CATALOG 排列，接著再依據 TABLE_SCHEM 排列。 每個資料列都是以 TABLE_SCHEM 做為第一個資料列，以 TABLE_CATALOG 做為第二個資料列。  
   

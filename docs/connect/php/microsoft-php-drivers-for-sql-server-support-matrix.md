@@ -5,20 +5,17 @@ ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 3ee34b40af4f72b32286067e5853c673f62ad240
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728696"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支援對照表
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "39268766"
   此頁面包含 Microsoft PHP Drivers for SQL Server 的支援對照表與支援週期原則。
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Microsoft PHP 驅動程式支援生命週期對照表及原則
- Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 3.x、 4.x 和 5.x 具有五年的主流支援，驅動程式的發行日期起的 PHP 驅動程式版本。 主要支援會在 [Microsoft 支援週期網站](https://support.microsoft.com/lifecycle)上定義。
+ Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 JDBC 驅動程式 3.0、4.x、6.x 和 7.x 版自發行日期起提供五年的主要支援。 主要支援會在 [Microsoft 支援週期網站](https://support.microsoft.com/lifecycle)上定義。
 
  Microsoft PHP Driver 不提供延長支援與自訂支援選項。
 
@@ -35,7 +32,7 @@ ms.locfileid: "39268766"
 |驅動程式名稱|驅動程式套件版本|結束主要支援|
 |-|-|-|
 |Microsoft PHP Driver for SQL Server 5.3|5.3|2023 年 7 月 20 日|
-|Microsoft PHP Driver for SQL Server 5.2|5.2|2023 年 2 月 9 日|
+|Microsoft PHP Driver for SQL Server 5.2|5.2|2017 年 2 月 9 日|
 |Microsoft PHP Driver for SQL Server 4.3|4.3|2022 年 7 月 6 日|
 |Microsoft PHP Driver 4.0 for SQL Server|4.0|2021 年 7 月 11 日|
 |Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 年 3 月 9日日|

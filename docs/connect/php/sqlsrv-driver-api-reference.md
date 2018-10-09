@@ -1,35 +1,32 @@
 ---
-title: SQLSRV 驅動程式 API 參考 |Microsoft 文件
+title: SQLSRV 驅動程式 API 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756586"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驅動程式 API 參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驅動程式的 API 名稱是 **sqlsrv**。 所有**sqlsrv**函式開頭**sqlsrv_** ，後面接著動詞或名詞。 後面接著動詞的會執行某些動作，後面接著名詞的則會傳回某種形式的中繼資料。  
+在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驅動程式的 API 名稱是 **sqlsrv**。 所有 **sqlsrv** 函數皆以 **sqlsrv** 開頭，後面再加上動詞或名詞。 後面接著動詞的會執行某些動作，後面接著名詞的則會傳回某種形式的中繼資料。  
   
 ## <a name="in-this-section"></a>本節內容  
 SQLSRV 驅動程式包含下列函數：  
   
-|函數|描述|  
+|函數|Description|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|開始交易。|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|取消陳述式；會捨棄陳述式任何擱置的結果。|  
@@ -62,11 +59,11 @@ SQLSRV 驅動程式包含下列函數：
 [PHP 手冊](http://php.net/manual)  
   
 ## <a name="see-also"></a>另請參閱  
-[Microsoft Drivers for PHP for SQL Server 的概觀](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 概觀](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

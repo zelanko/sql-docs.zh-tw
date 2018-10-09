@@ -1,37 +1,34 @@
 ---
-title: 步驟 3： 連接到使用 Node.js SQL 的概念證明 |Microsoft 文件
+title: 步驟 3︰使用 Java 連線到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288917"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834137"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3： 連接到使用 Node.js SQL 的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步驟 3︰使用 Node.js 連線到 SQL 的概念證明
 
-![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![下載-向下箭號-圈選起來](../../ssdt/media/download.png)[若要下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-此範例中，應該考量只概念證明。  範例程式碼為了清楚起見，已簡化，並不一定代表由 Microsoft 所建議的最佳作法。 其他範例，可以使用相同的重要功能，可在 Github 上：
+此範例應該考慮只概念證明。  範例程式碼為了清楚起見，已簡化，並不一定代表 Microsoft 建議的最佳作法。 可在 Github 上使用相同的重要功能的其他範例︰
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>步驟 1： 連接  
+## <a name="step-1-connect"></a>步驟 1： 連線  
   
-**新連線**函數用來連接到 SQL Database。  
+**新的連接**函數用來連接到 SQL Database。  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -49,10 +46,10 @@ ms.locfileid: "35288917"
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>步驟 2： 執行查詢  
+## <a name="step-2--execute-a-query"></a>步驟 2：執行查詢  
   
   
-所有 SQL 陳述式會都執行使用**新 request （)** 函式。 如果陳述式會傳回資料列，例如 select 陳述式，則您可以取回使用**request.on()** 函式。 如果有任何資料列，request.on() 函式會傳回空的清單。  
+所有 SQL 陳述式會使用都執行**new request （)** 函式。 如果陳述式會傳回資料列，例如 select 陳述式中，您可以擷取這些使用**request.on （)** 函式。 如果不有任何資料列，request.on （） 函式會傳回空白清單。  
   
   
 ```javascript  
@@ -101,7 +98,7 @@ ms.locfileid: "35288917"
   
 ## <a name="step-3-insert-a-row"></a>步驟 3： 插入資料列  
   
-在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式安全地傳遞可保護您的應用程式的參數[SQL 插入式攻擊](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
   
 ```javascript  

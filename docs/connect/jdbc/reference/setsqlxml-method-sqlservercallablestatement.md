@@ -1,30 +1,27 @@
 ---
-title: setSQLXML 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: setSQLXML 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: de095cb3-1111-4154-8996-3c2e529e3000
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcc2c813c0c2f52872938ae09134f20664c7097c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3852a1251bb1f7567276529c1f15f5863ea69731
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800926"
 ---
 # <a name="setsqlxml-method-sqlservercallablestatement"></a>setSQLXML 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定之的參數設定為指定的 SQLXML 物件。  
+  設定指定的參數為指定的  物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,19 +32,19 @@ public final void setSQLXML(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>參數  
- *參數名稱*  
+ *parameterName*  
   
- **字串**，指出參數名稱。  
+ 指出參數名稱的**字串**。  
   
  *xmlObject*  
   
- SQLXML 物件，其中包含參數值。  
+ 物件，包含參數值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- SetSQLXML 方法 java.sql.CallableStatement 介面中所指定此 setSQLXML 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setURL 方法由 java.sql.CallableStatement 介面中的 setURL 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  

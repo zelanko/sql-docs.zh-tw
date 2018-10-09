@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce11cfca3416796f24299c722c65e755d64f4d4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643846"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "38032972"
   
 3.  建構在準備或執行查詢時要使用的 *$params* 陣列。 請注意， *$params* 陣列的每個元素，在您指定 SQL Server 資料類型時也必須是陣列。  
   
-4.  使用適當的 **SQLSRV_SQLTYPE_\*** 常數作為 *$params* 陣列中每個子陣列的第四個參數，以指定所需的 SQL Server 資料類型。 如需 **SQLSRV_SQLTYPE_\*** 常數的完整清單，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的＜SQLTYPE＞一節。 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
+4.  使用適當的 **SQLSRV_SQLTYPE_***常數作為*$params 陣列中每個子陣列的第四個參數，以指定所需的 SQL Server 資料類型。 如需 **SQLSRV_SQLTYPE_**[ 常數的完整清單，請參閱](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)常數 &#40;Microsoft Drivers for PHP for SQL Server&#41; 的＜SQLTYPE＞一節。 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
   
     ```  
     $employeeId = 5;  

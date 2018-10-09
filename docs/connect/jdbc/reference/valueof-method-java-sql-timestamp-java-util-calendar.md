@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2b742e3ccdf297aaa6ede4feb5bb93b04224823
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd94495081d99521758747f174268d2163cf67e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742736"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 方法 (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  會建立**DateTimeOffset**物件，表示在給定 java.sql.Timestamp 值以及指出位移的 java.util.Calendar 值 GMT 特定位移的時間點。  
+  根據指定的 java.sql.Timestamp 值以及指出位移 (以分鐘為單位) 的值，建立 **DateTimeOffset** 物件，這個物件表示從 GMT 特定位移的時間點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,8 +33,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
 #### <a name="parameters"></a>參數  
  *timestamp*  
   
- 
-          java.sql.Timestamp 值。  
+ java.sql.Timestamp 值。  
   
  *calendar*  
   

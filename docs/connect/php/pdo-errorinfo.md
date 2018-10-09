@@ -1,25 +1,22 @@
 ---
-title: Errorinfo |Microsoft 文件
+title: Errorinfo |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4a5dc723d735436bde18b813a8716b054779971
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8216e6c9adbb2154a1e416510b989db252572cb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690576"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,15 +39,15 @@ array PDO::errorInfo();
   
 -   驅動程式特有的錯誤訊息。  
   
-如果沒有發生錯誤，或未設定 SQLSTATE，驅動程式專用欄位都是 NULL。  
+如果沒有發生錯誤，或如果未設定 SQLSTATE，則驅動程式特有的欄位會是 NULL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 PDO::errorInfo 只會針對直接在資料庫上執行的作業擷取錯誤資訊。 使用 PDO::prepare 或 PDO::query 建立 PDOStatement 執行個體時，請使用 PDOStatement::errorInfo。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  
-在此範例中，資料行名稱的拼字錯誤 (`Cityx`而不是`City`)，導致發生錯誤，而後會予以報告。  
+在此範例中，資料行名稱的拼字錯誤 (`Cityx` 而不是 `City`)，因而導致錯誤並隨之進行報告。  
   
 ```  
 <?php  

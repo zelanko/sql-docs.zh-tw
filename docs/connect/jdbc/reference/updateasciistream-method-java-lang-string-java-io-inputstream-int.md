@@ -1,13 +1,11 @@
 ---
-title: updateAsciiStream 方法 （java.io.InputStream，int） |Microsoft 文件
+title: updateAsciiStream 方法 （java.io.InputStream，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateAsciiStream (java.lang.String, java.io.InputStream, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4e2997a0-c18e-4114-bce9-0ab4b2b9f92c
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74938db74f72b081e4e1256a1c4e94af43b8fc8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7f5ce02456075e1341a73c80d70d7c6d417ec79f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684210"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-int"></a>updateAsciiStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,24 +46,24 @@ public void updateAsciiStream(java.lang.String columnName,
   
  InputStream 物件。  
   
- *長度*  
+ *length*  
   
- **Int** ，指出資料流的長度。  
+ **int**，指出資料流的長度。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateAsciiStream 方法 java.sql.ResultSet 介面中所指定此 updateAsciiStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 updateAsciiStream 方法是由 java.sql.ResultSet 介面中的 updateAsciiStream 方法指定。  
   
- 這個方法將 ASCII 字元 （位元組） 從 InputStream 物件傳遞至轉換字元資料行，也就是 ASCII 範圍 [0x00 – 0x7F] 的 Unicode，以及 874、 932、 936、 949、 950 和 1250 到 1258年的字碼頁。 這個方法會執行轉換，直到目的地定序頁面。 嘗試更新無法轉換的目的地資料行，將擲回例外狀況。 若是處理二進位資料行，則會傳遞未經處理位元組。  
+ 這個方法會從 InputStream 物件，將 ASCII 字元 (位元組) 傳遞到可轉換的字元資料行，這些是 Unicode 的 ASCII 範圍 [0x00 – 0x7F]，以及 874、932、936、949、950 和 1250 到 1258 的字碼頁。 這個方法會執行轉換，直到目的地定序頁面。 嘗試更新無法轉換的目的地資料行，將擲回例外狀況。 若是處理二進位資料行，則會傳遞未經處理位元組。  
   
- 如果資料流的長度不同中指定*長度*參數，JDBC 驅動程式會擲回例外狀況時更新或插入資料列。  
+ 如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   
- 如果資料流長度未知，*長度*參數可能會設定為-1，指出驅動程式應該接受資料流，無論其長度為何。 針對 sqljdbc4.jar，我們建議您使用 JDBC 4.0 方法[updateAsciiStream 方法&#40;java.lang.String，java.io.InputStream&#41; ](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream.md)應用程式要更新的資料流長度的資料行未知的。  
+ 如果資料流長度為未知，*length* 參數可能會設為 -1，指出驅動程式應接受該資料流 (無論其長度為何)。 針對 sqljdbc4.jar，建議您在應用程式要從長度未知的資料流更新資料行時，使用 JDBC 4.0 方法 [setBinaryStream 方法 &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateAsciiStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
+ [updateAsciiStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

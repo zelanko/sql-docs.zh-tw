@@ -1,30 +1,27 @@
 ---
-title: setNString 方法 （int，java.lang.String） |Microsoft 文件
+title: setNString 方法 （int，java.lang.String） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1fbe3580d39e1ea97f59940450f9b6b11becea6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cef8c88654cf29f9a860a30fc3b79ef6d5124ce4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650016"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>setNString 方法 (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定的參數設定為指定**字串**物件。  
+  設定指定的參數為指定的  物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,15 +38,15 @@ public final void setNString(int parameterIndex,
   
  *value*  
   
- A**字串**物件，其中包含參數值。  
+ 物件，包含參數值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個方法應用於**NCHAR**， **NVARCHAR**， **NTEXT**，和**XML**資料型別。  
+## <a name="remarks"></a>Remarks  
+ 這個方法應該用於**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**資料型別。  
   
- SetNString 方法 java.sql.PreparedStatement 介面中所指定此 setNString 方法。  
+ 此 setTime 方法由 java.sql.PreparedStatement 介面中的 setTime方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  

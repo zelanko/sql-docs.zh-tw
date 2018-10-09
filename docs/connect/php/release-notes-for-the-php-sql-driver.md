@@ -5,23 +5,20 @@ ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new in version 1.1
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d06042b61e96da8e003cf893f86dac905832743b
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42784694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624056"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的版本資訊
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

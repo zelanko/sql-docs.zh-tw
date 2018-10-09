@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36a147c4231d9c2c90f0f2151d4e69bebd5eefb1
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 58357c0316f5b439d3dbac00a79547bd799e27bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601956"
 ---
 # <a name="connecting-to-the-server"></a>連接到伺服器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

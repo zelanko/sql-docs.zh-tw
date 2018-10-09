@@ -1,27 +1,24 @@
 ---
-title: Microsoft drivers 設定 IIS for PHP for SQL Server |Microsoft Docs
+title: 為 Microsoft Drivers for PHP for SQL Server 設定 IIS
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - configuring, Internet Information Services
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 379e7c7f63b4e071627d9ad1b2f056d8c79c1b0a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7b550fb7300ffdb2d37ae4407aaeeb43a49c89f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654776"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>為 Microsoft Drivers for PHP for SQL Server 設定 IIS
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

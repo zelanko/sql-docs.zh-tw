@@ -1,13 +1,11 @@
 ---
-title: getDatabaseMajorVersion 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getDatabaseMajorVersion 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getDatabaseMajorVersion
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 30860c07-e84b-428a-922a-ba63c070cd9c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fee6e9dd980d72cabb1262422147ebc10470991
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7a833c31d359e456a5f7f9a44164ae2f26924041
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834323"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778356"
 ---
 # <a name="getdatabasemajorversion-method-sqlserverdatabasemetadata"></a>getDatabaseMajorVersion 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public int getDatabaseMajorVersion()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **Int** ，指出資料庫的主要版本。  
+ ，指出資料庫的主要版本。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getDatabaseMajorVersion 方法是由 java.sql.DatabaseMetaData 介面中 getDatabaseMajorVersion 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

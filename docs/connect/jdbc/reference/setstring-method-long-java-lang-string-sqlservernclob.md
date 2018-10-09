@@ -1,30 +1,27 @@
 ---
-title: setString 方法 (long，java.lang.String)-NClob |Microsoft 文件
+title: setString 方法 (long，java.lang.String)-NClob |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc953a2026bf4fca9401b1eb9484ff9f34435e2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 151ff8f36ad3397321dc168b46a949de38e10bd6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689896"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString 方法 (long, java.lang.String) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  寫入指定**字串**至**NCLOB**指定位置開始。  
+  寫入指定**字串**要**NCLOB**指定位置開始。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,11 +34,11 @@ public int setString(long pos,
 #### <a name="parameters"></a>參數  
  *pos*  
   
- 要開始寫入位置**NCLOB**; 第一個位置是 1。  
+ 開始寫入至  的位置，第一個位置是 1。  
   
- *str*  
+ *STR*  
   
- 要寫入的字串**NCLOB**。  
+ 要寫入 CLOB 的字串。  
   
 ## <a name="return-value"></a>傳回值  
  寫入的字元數。  
@@ -49,8 +46,8 @@ public int setString(long pos,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- SetString 方法 java.sql.NClob 介面中所指定此 setString 方法。  
+## <a name="remarks"></a>Remarks  
+ SetString 方法 java.sql.NClob 介面中所指定這個 setString 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

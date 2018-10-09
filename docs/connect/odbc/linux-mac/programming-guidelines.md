@@ -5,19 +5,17 @@ ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613078"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -114,7 +112,7 @@ SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 
 若要避免這種資料遺失，繫結輸入的參數時，指定 Unicode SQL 字元類型，例如 SQL_NVARCHAR。 在此情況下，驅動程式會從用戶端的編碼為 utf-16，可以代表所有的 Unicode 字元轉換。 此外，目標資料行或參數在伺服器上的也必須是 Unicode 類型 (**nchar**， **nvarchar**， **ntext**) 或其中一個使用定序/編碼方式，可以代表原始來源資料的所有的字元。 避免資料遺失與輸出參數，指定 Unicode SQL 型別和 Unicode C 類型 (SQL_C_WCHAR)，造成驅動程式傳回為 utf-16; 的資料或窄的 C 類型，並確保用戶端的編碼方式可表示來源資料 （這是永遠使用 utf-8。） 的所有字元
 
-如需有關定序和編碼方式的詳細資訊，請參閱 < [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)。
+如需定序的詳細資訊，請參閱[定序和 Unicode 支援](../../../relational-databases/collations/collation-and-unicode-support.md)。
 
 有一些 Windows 與 Linux 和 macOS 上的 iconv 程式庫的數個版本之間的編碼轉換差異。 文字資料的字碼頁 1255年 （希伯來文） 有一個字碼 (元素 0xCA) 在轉換成 Unicode 時的行為不相同。 在 Windows 中，此字元會將 0x05BA 的 utf-16 字碼指標。 MacOS 與 Linux 上使用早於 1.15 libiconv 版本，它會將 0x00CA。 在 Linux 上使用不支援 Big5/CP950 2003 修訂的 iconv 程式庫 (名為`BIG5-2003`)，加上該修訂的字元不會正確地轉換。 在字碼頁 932 （日文，Shift JIS），不是原本定義編碼標準中的字元解碼的結果也不同。 比方說，0x80 的位元組將轉換成 u+0080，在 Windows 上，但可能會變得 U + 30FB Linux 和 macOS，視 iconv 版本而定。
 

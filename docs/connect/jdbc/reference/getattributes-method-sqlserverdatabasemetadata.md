@@ -1,13 +1,11 @@
 ---
-title: getAttributes 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getAttributes 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getAttributes
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21a129e92958022b692db1745ed4be0fd5e66093
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8e129702dea18ee9866aba2595ea357a739388b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833413"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754746"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>getAttributes 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,27 +44,27 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- A**字串**，其中包含目錄名稱。  
+ 包含目錄名稱的 **String**。  
   
  *schemaPattern*  
   
- A**字串**，包含結構描述名稱模式。  
+ 包含結構描述名稱模式的 **String**。  
   
  *typeNamePattern*  
   
- A**字串**，包含型別名稱模式。  
+ 包含資料表名稱模式的 **String**。  
   
  *attributePattern*  
   
- A**字串**，其中包含屬性名稱模式。  
+ ，包含屬性名稱模式。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getAttributes 方法是由 java.sql.DatabaseMetaData 介面中 getAttributes 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

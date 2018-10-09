@@ -1,13 +1,11 @@
 ---
-title: supportsTransactionIsolationLevel 方法 |Microsoft 文件
+title: supportsTransactionIsolationLevel 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsTransactionIsolationLevel
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b716ed6c-6ec3-47a7-8e6d-16cbf2469d6d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11f676b7f390bee7f67795d7d19bcce26616142e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c37551bd71289cad366c7624604d2c532934e15b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712156"
 ---
 # <a name="supportstransactionisolationlevel-method-sqlserverdatabasemetadata"></a>supportsTransactionIsolationLevel 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +36,17 @@ public boolean supportsTransactionIsolationLevel(int level)
 ```  
   
 #### <a name="parameters"></a>參數  
- *層級*  
+ *Level*  
   
- **Int** ，指出交易隔離等級。  
+ ，指出交易隔離等級。  
   
 ## <a name="return-value"></a>傳回值  
- **true**受支援。 否則為 **false**。  
+ **true**如果支援。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 supportsTransactionIsolationLevel 方法是由 java.sql.DatabaseMetaData 介面中 supportsTransactionIsolationLevel 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

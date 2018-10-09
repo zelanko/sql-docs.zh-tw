@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d496016fc323bd0fc6616a019c9c3a4668b384d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 4e9e25a45940304b977623b0f009ed134b56caed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672326"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -77,7 +74,7 @@ ms.locfileid: "42787354"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 設定 **int** 值來指出資料庫在報告鎖定逾時前將等待的毫秒數。|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|(繼承自[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 設定此 DataSource 物件在嘗試建立連線時將等待的秒數。|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 設定要用於所有記錄和追蹤訊息的字元輸出資料流。|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(繼承自[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 設定的值**multiSubnetFailover**連接屬性。|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 傳回 **multiSubnetFailover** 連線屬性的值。|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 設定將用來連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密碼。|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 設定要用來與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通訊的連接埠號碼。|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|(繼承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 設定用於以此 DataSource 物件所建立之所有結果集的預設資料指標類型。|  

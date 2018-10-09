@@ -1,31 +1,28 @@
 ---
-title: 如何： 使用 SQLSRV 驅動程式擷取輸出參數 |Microsoft 文件
+title: 如何：使用 SQLSRV 驅動程式擷取輸出參數
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700456"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題示範如何呼叫將其中一個參數定義為輸出參數的預存程序。 當擷取輸出或輸入/輸出參數，預存程序所傳回的所有結果必須都取用傳回的參數值才可供存取。  
+本主題示範如何呼叫將其中一個參數定義為輸出參數的預存程序。 在擷取輸出或輸入/輸出參數時，必須先取用預存程序所傳回的所有結果，傳回的參數值才可供存取。  
   
 > [!NOTE]  
 > 初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法作為輸出參數。  
@@ -41,9 +38,9 @@ ms.locfileid: "34563886"
 由於預存程序僅傳回一個結果，因此在執行預存程序之後， *$salesYTD* 中隨即包含輸出參數的傳回值。  
   
 > [!NOTE]  
-> 使用標準語法呼叫預存程序，是建議的做法。 如需關於標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
+> 使用標準語法呼叫預存程序，是建議的做法。 如需標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -124,10 +121,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Bigint 型別，繫結 output 參數，如果值可能會超出範圍時[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定為 SQLSRV_SQLTYPE_BIGINT 它 SQL 的欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
+> 時的輸出參數繫結至一個 bigint 型別，如果值可能超出範圍的最後[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定 SQLSRV_SQLTYPE_BIGINT SQL 欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
 
 ## <a name="example-2"></a>範例 2
-此程式碼範例示範如何將大型的 bigint 值做為輸出參數繫結。  
+此程式碼範例示範如何將大型的 bigint 值，做為輸出參數繫結。  
 
 ```
 <?php

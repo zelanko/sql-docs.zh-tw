@@ -1,13 +1,11 @@
 ---
-title: isReadOnly 方法 (SQLServerResultSetMetaData) |Microsoft 文件
+title: isReadOnly 方法 (SQLServerResultSetMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.isReadOnly
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c63a6b595808ff18981b99983713ae6967089d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ab66f9568985c5814b203edecb634a9cbc430b83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845296"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>isReadOnly 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,12 +41,12 @@ public boolean isReadOnly(int column)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果資料行是唯讀的。 否則為 **false**。  
+ 如果資料行是唯讀的則為 ， 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 isReadOnly 方法是由 java.sql.ResultSetMetaData 介面中的 isReadOnly 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

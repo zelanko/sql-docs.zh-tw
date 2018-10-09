@@ -1,13 +1,11 @@
 ---
-title: 最後一個方法 (SQLServerResultSet) |Microsoft 文件
+title: last 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.last
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bff20e80dff3293f354272eaebab8f17047418c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 808b09c349ce571c490e7a1aeff7acd9661ecd25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842563"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825946"
 ---
-# <a name="last-method-sqlserverresultset"></a>最後一個方法 (SQLServerResultSet)
+# <a name="last-method-sqlserverresultset"></a>last 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將游標移至最後一個資料列，在這個[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+  將資料指標移動到這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中的最後一個資料列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,8 +41,8 @@ public boolean last()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個最後一個方法是由 java.sql.ResultSet 介面中的最後一個方法來指定。  
+## <a name="remarks"></a>Remarks  
+ 這個  方法是由 java.sql.ResultSet 介面中的  方法所指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

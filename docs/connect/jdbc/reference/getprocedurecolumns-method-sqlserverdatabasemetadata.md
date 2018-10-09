@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getProcedureColumns
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cae6530dc0b37b57d986ab160ce9be0bf4d5a33e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: c239a16728538acece726c1d0b4722d9c2977765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786088"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734696"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +41,11 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 #### <a name="parameters"></a>參數  
  *sCatalog*  
   
- 包含目錄名稱的**字串**。 提供 null 給這個參數，將指出不需要使用目錄名稱。  
+ 包含目錄名稱的 **String**。 提供 null 給這個參數，將指出不需要使用目錄名稱。  
   
  *s*  
   
- 包含結構描述名稱模式的**字串**。 提供 null 給這個參數，將指出不需要使用結構描述名稱。  
+ 包含結構描述名稱模式的 **String**。 提供 null 給這個參數，將指出不需要使用結構描述名稱。  
   
  *proc*  
   
@@ -56,7 +53,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  *col*  
   
- 包含資料表名稱模式的**字串**。 提供 null 給這個參數，將針對每個資料行傳回資料列。  
+ 包含資料表名稱模式的 **String**。 提供 null 給這個參數，將針對每個資料行傳回資料列。  
   
 ## <a name="return-value"></a>傳回值  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
@@ -67,7 +64,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="remarks"></a>Remarks  
  這個 getProcedureColumns 方法是由 java.sql.DatabaseMetaData 介面中 getProcedureColumns 方法指定。  
   
- GetProcedureColumns 方法所傳回的結果集將包含下列資訊：  
+ 透過 getProcedures 方法所傳回的結果將包含下列資訊：  
   
 |[屬性]|類型|Description|  
 |----------|----------|-----------------|  

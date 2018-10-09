@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 8ba3e713fdb80682960fba8ab8c3b195aa6a3fe6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812256"
 ---
 # <a name="sqlserverblob-class"></a>SQLServerBlob 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "42786445"
   
  **擴充：** java.lang.Object  
   
- 實作：** java.sql.Blob、java.io.Serializable  
+ 實作： java.sql.Blob、java.io.Serializable  
   
 ## <a name="syntax"></a>語法  
   

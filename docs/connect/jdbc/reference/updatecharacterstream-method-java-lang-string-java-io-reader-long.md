@@ -1,25 +1,22 @@
 ---
-title: updateCharacterStream 方法 (java.io.Reader，long) |Microsoft Docs
+title: updateCharacterStream 文件 (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d43eca56db8b35759bf10d65cda3592a5cb3103
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b1933ed19c28940057a183d31cbc3f6584f76bfe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743556"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-long"></a>updateCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +35,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>參數  
  *columnLabel*  
   
- 包含資料行標籤的**字串**。  
+ **String**，包含資料行標籤。  
   
  *reader*  
   
@@ -54,7 +51,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  UpdateCharacterStream 方法 java.sql.ResultSet 介面中所指定這個 updateCharacterStream 方法。  
   
- 這個方法會透過讀取器物件將 Unicode 字元傳遞到選取的文字和二進位資料行。 這包括了所有的文字資料行，以及 binary、varbinary、varbinary(max)、image 和 XML 等資料行，但是不包含 UDT 資料行。  
+ 這個方法會透過 Reader 物件將 Unicode 字元傳遞到選取的文字和二進位資料行。 這包括了所有的文字資料行，以及 binary、varbinary、varbinary(max)、image 和 XML 等資料行，但是不包含 UDT 資料行。  
   
  如果此資料流的長度與 *length* 參數中所指定的長度不同，JDBC 驅動程式就會在更新或插入資料列時擲回例外狀況。  
   

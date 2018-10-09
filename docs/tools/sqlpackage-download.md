@@ -5,20 +5,17 @@ ms.custom: tools|sos
 ms.date: 06/18/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
-ms.suite: sql
 ms.prod_service: sql-tools
-ms.component: sqlpackage
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: fa682766fe4330a34cff39600b6296403031a3e4
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: ecefe3f1abe47a1a4f1af967cb1a15ee9f4dd52b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800256"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -28,7 +25,7 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
 
 |平台|下載|發行日期|Version|建置|
 |:---|:---|:---|:---|:---|
-|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=875508)|2018 年 6 月 22日日|17.8|14.0.4079.2|
+|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=875508)|2018 年 6 月 20 日|17.8|14.0.4079.2|
 |macOS (預覽)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
 |Linux (預覽)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
 

@@ -1,13 +1,11 @@
 ---
-title: setLong 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: setLong 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setLong
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9539da05e55056aaa10d9fd6378977336d7d79c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9fb6172a5ce5601a7af547771850424a74d1bfc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846906"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為給定**長**值。  
+  將指定的參數設定為指定的 Java 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,15 +41,15 @@ public void setLong(java.lang.String sCol,
   
  包含參數名稱的**字串**。  
   
- *L*  
+ -l  
   
  A**長**值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- SetLong 方法 java.sql.CallableStatement 介面中所指定此 setLong 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getLong 方法由 java.sql.CallableStatement 介面中的 getLong 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

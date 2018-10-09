@@ -1,30 +1,27 @@
 ---
-title: setClob 方法 （java.lang.String，java.io.Reader，long） |Microsoft 文件
+title: updateNClob 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2fb51dba5eee7258aaacabcc87f28042897a1f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 18452e922be67e0656ef52b0117552dad0c661c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654938"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>setClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定之的參數設定為指定的讀取器物件指定的字元數。  
+  將指定的參數設定為指定的  物件，該物件長度為指定的字元數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +33,7 @@ public final void setClob(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>參數  
- *參數名稱*  
+ *parameterName*  
   
  包含參數名稱的**字串**。  
   
@@ -44,18 +41,18 @@ public final void setClob(java.lang.String parameterName,
   
  讀取器物件。  
   
- *長度*  
+ *length*  
   
- A**長**，指出資料流中的字元數。  
+ ，指出資料流中的字元數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- SetClob 方法 java.sql.CallableStatement 介面中所指定此 setClob 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [setClob 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)   
+ [setTime 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

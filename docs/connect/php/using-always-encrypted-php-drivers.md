@@ -3,19 +3,18 @@ title: 搭配 PHP Drivers for SQL Server 使用 Always Encrypted | Microsoft Doc
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 12f0427b4ff23452f244c830c9116913dfb03968
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695676"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>搭配 PHP Drivers for SQL Server 使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "39174965"
 
 本文章提供有關如何開發 PHP 應用程式使用的資訊[Always Encrypted （資料庫引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)並[PHP Driver for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md)。
 
-[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 啟用 永遠加密驅動程式，例如 ODBC Driver for SQL Server，以透明方式加密和解密用戶端應用程式中的機密資料。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 PHP Driver for SQL Server 使用 ODBC Driver for SQL Server 加密機密資料。
+[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 ODBC Driver for SQL Server 等啟用了 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料來達成此目的。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 PHP Driver for SQL Server 使用 ODBC Driver for SQL Server 加密機密資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -89,7 +88,7 @@ CREATE TABLE [dbo].[Patients](
 
 下列範例示範如何使用 SQLSRV 和 PDO_SQLSRV 驅動程式將資料列插入病患資料表。 請注意下列幾點：
  -   範例程式碼中沒有任何需要加密的特定項目。 驅動程式會自動偵測並加密的 SSN 和 BirthDate 參數，其目標為加密的資料行的值。 此機制讓加密對應用程式變得透明化。
- -   插入至資料庫資料行的值，包括加密的資料行，會傳遞為繫結參數。 雖然將值傳送到未加密的資料行時，使用參數是選擇性的 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要的。 如果插入 SSN 或 BirthDate 資料行中的值傳遞做為內嵌在查詢陳述式中的常值，則查詢會失敗，因為驅動程式不會嘗試加密，或處理查詢中的常值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
+ -   插入至資料庫資料行的值，包括加密的資料行，會傳遞為繫結參數。 雖然將值傳送到未加密的資料行時，使用參數是選擇性項目 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要項目。 如果插入 SSN 或 BirthDate 資料行中的值傳遞做為內嵌在查詢陳述式中的常值，則查詢會失敗，因為驅動程式不會嘗試加密，或處理查詢中的常值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
  -   插入時使用繫結參數的值，與目標資料行的資料型別完全相同，或其轉換成目標資料行的資料類型支援的 SQL 類型必須傳遞至資料庫。 此需求是因為 Always Encrypted 支援一些型別轉換 (如需詳細資訊，請參閱 < [Always Encrypted （資料庫引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md))。 兩個 PHP drivers SQLSRV 和 PDO_SQLSRV，每個都有一個機制來協助使用者決定值的 SQL 類型。 因此，使用者不必明確提供的 SQL 型別。
   -   SQLSRV 驅動程式時，使用者會有兩個選項：
    -   如果需要依賴的 PHP 驅動程式，以判斷及設定正確的 SQL 類型。 在此情況下，使用者必須使用`sqlsrv_prepare`和`sqlsrv_execute`執行參數化的查詢。
@@ -154,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>純文字資料擷取範例
 
 下列範例會示範根據加密的值，以及擷取純文字資料，從使用 SQLSRV 和 PDO_SQLSRV 驅動程式的加密資料行篩選資料。 請注意下列幾點：
- -   要傳遞使用繫結參數，讓驅動程式可以以透明方式加密它傳送到伺服器之前，先用在 WHERE 子句來篩選 SSN 資料行所需要的值。
+ -   在 WHERE 子句中用來篩選 SSN 資料行的值，需要以參數形式傳遞，如此 Microsoft JDBC Driver for SQL Server 可以清晰簡明的方式加密它，再將它傳送至資料庫。
  -   執行具有繫結參數的查詢，PHP 驅動程式除非使用者明確指定的 SQL 型別，使用 SQLSRV 驅動程式時，會自動判斷使用者的 SQL 類型。
  -   程式列印的所有值都是純文字，因為驅動程式以透明的方式解密從 SSN 和 BirthDate 資料行擷取的資料。
  
@@ -229,7 +228,7 @@ $row = $stmt->fetch();
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>因為傳送純文字，而不是傳送加密值所造成的錯誤。
 
-目標加密資料行的任何值，就需要加密再傳送至伺服器。 插入、 修改或篩選出導致錯誤之加密資料行的純文字值的嘗試。 若要避免這類錯誤，請確定：
+目標加密資料行的任何值，就需要加密再傳送至伺服器。 嘗試對加密資料行插入、修改或以純文字值進行篩選時，會導致發生錯誤。 若要避免這類錯誤，請確定：
  -   已啟用 永遠加密 (在連接字串中，設定`ColumnEncryption`關鍵字來`Enabled`)。
  -   您可以使用繫結參數傳送以加密資料行為目標的資料。 下列範例會示範加密資料行 (SSN) 以常值/常數錯誤篩選的查詢：
 ```
@@ -266,7 +265,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 Microsoft driver 5.3.0 for PHP for SQL Server，只有 「 Windows 憑證存放區提供者 」 和 「 Azure 金鑰保存庫支援。 不支援 ODBC 驅動程式 （自訂金鑰存放區提供者） 所支援其他金鑰儲存區提供者。
 
-### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
+### <a name="using-the-windows-certificate-store-provider"></a>Windows 憑證存放區的提供者。
 
 Windows 上的 SQL Server ODBC 驅動程式包含內建的資料行主要金鑰存放區提供者的 Windows 憑證存放區、 名為`MSSQL_CERTIFICATE_STORE`。 （此提供者無法使用。 在 macOS 或 Linux）與此提供者，CMK 會儲存在本機用戶端電腦上，並由應用程式不需要額外組態，才能使用它來搭配此驅動程式。 不過，應用程式必須存取憑證和私密金鑰存放區中。 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 

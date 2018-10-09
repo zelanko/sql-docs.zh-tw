@@ -1,13 +1,11 @@
 ---
-title: nullPlusNonNullIsNull 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: nullPlusNonNullIsNull 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.nullPlusNonNullIsNull
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d04b8def0f2b6697d1cf55b5a232623c59da64e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9564b8430f39e0546f3b38f325d11a32b640ce98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813266"
 ---
 # <a name="nullplusnonnullisnull-method-sqlserverdatabasemetadata"></a>nullPlusNonNullIsNull 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public boolean nullPlusNonNullIsNull()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果支援串連則為。 否則為 **false**。  
+ 如果支援串連則為 ， 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 nullPlusNonNullIsNull 方法是由 java.sql.DatabaseMetaData 介面中 nullPlusNonNullIsNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

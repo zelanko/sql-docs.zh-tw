@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_send_stream_data |Microsoft 文件
+title: sqlsrv_send_stream_data |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790606"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-將參數資料流中的資料傳送至伺服器。 最多 8 kb (8k) 的資料會傳送每次呼叫**sqlsrv_send_stream_data**。  
+將參數資料流中的資料傳送至伺服器。 每次呼叫 sqlsrv_send_stream_data** 時最多可傳送 8K 的資料。  
   
 > [!NOTE]  
 > 根據預設，在查詢執行時，所有的資料流資料都會傳送至伺服器。 如果未變更此預設行為，您即無需使用 **sqlsrv_send_stream_data** 將資料流資料傳送至伺服器。 如需變更預設行為的相關資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)的「參數」一節。  
@@ -50,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 布林值：如果還有資料要傳送，則為 **true** 。 否則為 **false**。  
   
 ## <a name="example"></a>範例  
-下列範例會以資料流的形式開啟產品評論，並將其傳送至伺服器。 在執行時傳送所有資料流資料的預設行為會停用。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會以資料流的形式開啟產品評論，並將其傳送至伺服器。 在執行時傳送所有資料流資料的預設行為會停用。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

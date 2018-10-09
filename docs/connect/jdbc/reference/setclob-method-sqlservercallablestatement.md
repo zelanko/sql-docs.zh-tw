@@ -1,25 +1,22 @@
 ---
-title: setClob 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: setClob 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 222ea248-1185-4c33-ae10-5158bf3f6430
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d09f336779226633704ce975ec32828282c244d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: fd934afd6e40b417bb7cfe8542daa15b94a7669d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732566"
 ---
 # <a name="setclob-method-sqlservercallablestatement"></a>setClob 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,11 +25,11 @@ ms.locfileid: "32841853"
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[setClob 方法&#40;java.lang.String，java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|將指定的參數設定為指定之 Clob 物件。|  
-|[setClob 方法&#40;java.lang.String，java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|將指定之的參數設定為指定的讀取器物件。|  
-|[setClob 方法&#40;java.lang.String，java.io.Reader，long&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader-long.md)|將指定之的參數設定為指定的讀取器物件指定的字元數。|  
+|[setClob 方法 (java.lang.String, java.sql.Clob)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|設定指定的參數為指定的  物件。|  
+|[setClob 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
+|[setClob 方法 (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader-long.md)|將指定的參數設定為指定的  物件，該物件長度為指定的字元數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

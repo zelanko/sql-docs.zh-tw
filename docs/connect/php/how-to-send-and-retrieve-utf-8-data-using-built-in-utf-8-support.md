@@ -5,25 +5,22 @@ ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633936"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

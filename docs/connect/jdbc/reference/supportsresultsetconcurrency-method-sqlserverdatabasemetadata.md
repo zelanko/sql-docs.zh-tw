@@ -1,13 +1,11 @@
 ---
-title: supportsResultSetConcurrency 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: supportsResultSetConcurrency 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsResultSetConcurrency
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87b9db3f492cdb0399396b35a15a665be1d6cc49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c20b22e7eac31b66055e01c9442725d889f3309a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825976"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +39,7 @@ public boolean supportsResultSetConcurrency(int type,
 #### <a name="parameters"></a>參數  
  *type*  
   
- **Int** ，指出結果集類型，可以是下列值的其中一個定義於 java.sql.ResultSet 或 SQLServerResultSet 中：  
+ 指出結果集類型的 **int**，可以是定義於 java.sql.ResultSet 或 SQLServerResultSet 中的下列其中一個值：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 型別  
  TYPE_FORWARD_ONLY  
@@ -62,9 +59,9 @@ public boolean supportsResultSetConcurrency(int type,
   
  TYPE_SS_SCROLL_DYNAMIC  
   
- *並行存取*  
+ 並行 (concurrency)  
   
- **Int** ，指出結果集並行層級，可以是下列值的其中一個定義於 java.sql.ResultSet 或 SQLServerResultSet 中：  
+ 指出結果集並行等級的 ，可以是定義於 java.sql.ResultSet 或 SQLServerResultSet 中的下列其中一個值：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 型別  
  CONCUR_READ_ONLY  
@@ -79,12 +76,12 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>傳回值  
- **true**受支援。 否則為 **false**。  
+ **true**如果支援。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 supportsResultSetConcurrency 方法是由 java.sql.DatabaseMetaData 介面中 supportsResultSetConcurrency 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

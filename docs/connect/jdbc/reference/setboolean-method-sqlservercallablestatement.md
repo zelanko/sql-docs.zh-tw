@@ -1,13 +1,11 @@
 ---
-title: setBoolean 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: setBoolean 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setBoolean
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f49ede3bf8407fa8f4ba00c294301926b2dd108
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2fd641dd34571e19780331761604cfdf346056dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843423"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652716"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>setBoolean 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為給定**布林**值。  
+  將指定的參數設定為給定的  值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,15 +41,15 @@ public void setBoolean(java.lang.String sCol,
   
  包含參數名稱的**字串**。  
   
- *B*  
+ *b*  
   
- A**布林**值，可能是**true**或**false**。  
+ A**布林**值，請 **，則為 true**或是**false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- SetBoolean 方法 java.sql.CallableStatement 介面中所指定此 setBoolean 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setURL 方法由 java.sql.CallableStatement 介面中的 setURL 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

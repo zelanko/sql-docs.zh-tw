@@ -5,19 +5,17 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 8924fa356b10264bb3116bd1eb40e8fdc94d7334
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: 034efe241bb948c1e5739247e481a4057b0d7219
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020692"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838176"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
 
@@ -123,7 +121,7 @@ ms.locfileid: "40020692"
 
 以下是一些連接字串關鍵字和連接屬性中所未記載[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)， [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)並[SQLSetConnectAttr 函數](../../odbc/reference/syntax/sqlsetconnectattr-function.md)。
 
-### <a name="description"></a>說明
+### <a name="description"></a>Description
 
 用來描述資料來源。
 
@@ -131,7 +129,7 @@ ms.locfileid: "40020692"
 
 控制 ANSI 至 OEM 轉換的資料。 
 
-| 屬性值 | 說明 |
+| 屬性值 | Description |
 |-|-|
 | SQL_AO_OFF | （預設值）不會執行轉譯。 |
 | SQL_AO_ON | 會執行轉譯。 |
@@ -140,7 +138,7 @@ ms.locfileid: "40020692"
 
 控制 SQL Server 後援連線使用。 不再支援這一個。
 
-| 屬性值 | 說明 |
+| 屬性值 | Description |
 |-|-|
 | SQL_FB_OFF | （預設值）後援的連線已停用。 |
 | SQL_FB_ON | 會啟用後援的連接。 |
@@ -153,7 +151,7 @@ ms.locfileid: "40020692"
 
 設定要連接到 SQL Server 時使用的驗證模式。 請參閱[使用 Azure Active Directory](using-azure-active-directory.md)如需詳細資訊。
 
-| 關鍵字的值 | 屬性值 | 說明 |
+| 關鍵字的值 | 屬性值 | Description |
 |-|-|-|
 | |SQL_AU_NONE|（預設值）未設定。 其他屬性的組合，決定驗證模式。|
 |SqlPassword|SQL_AU_PASSWORD|SQL Server 驗證 (使用使用者名稱和密碼)。|
@@ -166,7 +164,7 @@ ms.locfileid: "40020692"
 
 控制透明的資料行加密 （永遠加密）。 請參閱[使用一律加密 (ODBC)](using-always-encrypted-with-the-odbc-driver.md)如需詳細資訊。
 
-| 關鍵字的值 | 屬性值 | 說明 |
+| 關鍵字的值 | 屬性值 | Description |
 |-|-|-|
 |已啟用|SQL_CE_ENABLED|啟用 Always Encrypted。|
 |已停用|SQL_CE_DISABLED|（預設值）停用 Always Encrypted。|
@@ -176,16 +174,16 @@ ms.locfileid: "40020692"
 
 控制項的透明網路 IP 解析功能互動 MultiSubnetFailover 以允許更快重新連線嘗試。 請參閱[使用透明網路 IP 解析](using-transparent-network-ip-resolution.md)如需詳細資訊。
 
-| 關鍵字的值 | 屬性值| 說明 |
+| 關鍵字的值 | 屬性值| Description |
 |-|-|-|
-|是|SQL_IS_ON|（預設值）可讓透明網路 IP 解析。|
+|是|SQL_IS_ON|停用透明網路 IP 解析。|
 |否|SQL_IS_OFF|停用透明網路 IP 解析。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
 控制使用 SET FMTONLY 中繼資料時連線到 SQL Server 2012 及更新版本。
 
-| 關鍵字的值 | 說明 |
+| 關鍵字的值 | Description |
 |-|-|
 |否|（預設值）如果有的話，請使用 sp_describe_first_result_set 中繼資料。 |
 |是| 使用 SET FMTONLY 中繼資料。 |
@@ -194,7 +192,7 @@ ms.locfileid: "40020692"
 
 允許使用 Azure Active Directory 存取權杖進行驗證。 請參閱[使用 Azure Active Directory](using-azure-active-directory.md)如需詳細資訊。
 
-| 屬性值 | 說明 |
+| 屬性值 | Description |
 |-|-|
 | NULL | （預設值）會不提供任何存取權杖。 |
 | ACCESSTOKEN* | 存取語彙基元指標。 |
@@ -203,7 +201,7 @@ ms.locfileid: "40020692"
 
 載入的金鑰儲存區提供者程式庫與通訊。 請參閱控制項透明的資料行加密 （永遠加密）。 此屬性有沒有預設值。 請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)如需詳細資訊。
 
-| 屬性值 | 說明 |
+| 屬性值 | Description |
 |-|-|
 | CEKEYSTOREDATA * | 通訊金鑰儲存區提供者程式庫的資料結構 |
 
@@ -211,7 +209,7 @@ ms.locfileid: "40020692"
 
 Always encrypted 載入金鑰儲存區提供者程式庫，或擷取已載入的金鑰儲存區提供者程式庫名稱。 請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)如需詳細資訊。 此屬性有沒有預設值。
 
-| 屬性值 | 說明 |
+| 屬性值 | Description |
 |-|-|
 | char * | 金鑰儲存區提供者程式庫路徑 |
 

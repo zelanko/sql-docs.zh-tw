@@ -1,13 +1,11 @@
 ---
-title: setNull 方法 （java.lang.String，int，java.lang.String） |Microsoft 文件
+title: setNull 方法 (java.lang.String, int, java.lang.String)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setNull (java.lang.String, int, java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e819135ec2f8aa6c93e2d34291b1855a9fdb3904
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 75d36097c8fad4f15b06497561ff52dbfcea19ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827846"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>setNull 方法 (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +40,7 @@ public void setNull(java.lang.String sCol,
 #### <a name="parameters"></a>參數  
  *sCol*  
   
- A**字串**contthat 包含參數名稱。  
+ ，包含參數名稱。  
   
  *n*  
   
@@ -51,12 +48,12 @@ public void setNull(java.lang.String sCol,
   
  *sTypeName*  
   
- A**字串**，指出參數所設定的完整的名稱。  
+ ，指出正在設定之參數的完整名稱。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  此 setNull 方法由 java.sql.CallableStatement 介面中的 setNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

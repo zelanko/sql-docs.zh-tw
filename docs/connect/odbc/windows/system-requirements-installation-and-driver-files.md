@@ -5,21 +5,18 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfbf0ef8a02695a2bc3a1870a2660cf2bff23b7d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716566"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系統需求、安裝和驅動程式檔案
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +54,7 @@ ODBC Driver 17 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]�
 - [下載 Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434)。 
 
 [!NOTE]
-對於使用者而言有 17.1.0.1 安裝的驅動程式，建議，它會解除安裝手動安裝驅動程式 17.2.0.1 前或更新版本
+對於使用者而言有驅動程式 17.1.0.1 或以下的安裝，建議，它手動解除安裝，再安裝較新版本的驅動程式
 
 它可以與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 並存安裝。  
 

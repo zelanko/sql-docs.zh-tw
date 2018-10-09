@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727486"
 ---
 # <a name="connection-options"></a>連線選項
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,8 +33,8 @@ ms.locfileid: "42784012"
 |CharacterSet<br /><br />(PDO_SQLSRV 驅動程式不支援)|String|指定用來將資料傳送至伺服器的字元集。<br /><br />可能的值為 SQLSRV_ENC_CHAR 和 UTF-8。 如需詳細資訊，請參閱 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|[啟用] 或 [停用]|指定是否啟用了 Always Encrypted 功能。 |已停用|  
 |ConnectionPooling|1 或 **true** 表示開啟連接共用。<br /><br />0 或 **false** 表示關閉連接共用。|指定要從連接集區指派連接 (1 或 **true**)，還是不要指派 (0 或 **false**)。<sup>1</sup>|**true** (1)|  
-|ConnectRetryCount|介於 0 和 255 之間 （含） 之間的整數|若要重新建立放棄之前中斷的連線的嘗試次數上限。 根據預設，單一嘗試重新建立連線時中斷。 值 0 表示沒有重新連線將會嘗試。|@shouldalert|  
-|ConnectRetryInterval|介於 1 到 60 （含） 之間的整數|時間 （秒），嘗試重新建立連線。 應用程式會嘗試立即重新連線，一旦偵測連線中斷，而且會然後等到 ConnectRetryInterval 秒後再試一次。 如果 ConnectRetryCount 等於 0，則會忽略這個關鍵字。|@shouldalert|  
+|ConnectRetryCount|介於 0 和 255 之間 （含） 之間的整數|若要重新建立放棄之前中斷的連線的嘗試次數上限。 根據預設，單一嘗試重新建立連線時中斷。 值 0 表示沒有重新連線將會嘗試。|1|  
+|ConnectRetryInterval|介於 1 到 60 （含） 之間的整數|時間 （秒），嘗試重新建立連線。 應用程式會嘗試立即重新連線，一旦偵測連線中斷，而且會然後等到 ConnectRetryInterval 秒後再試一次。 如果 ConnectRetryCount 等於 0，則會忽略這個關鍵字。|1|  
 |[資料庫]|String|指定要建立的連接使用中的資料庫名稱<sup>2</sup>。|使用登入的預設資料庫。|  
 |驅動程式|String|指定用來與 SQL Server 通訊的 Microsoft ODBC 驅動程式。<br /><br />可能的值為：<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (僅 Windows)。|當未指定 Driver 關鍵字時，Microsoft Drivers for PHP for SQL Server 嘗試尋找支援的 Microsoft ODBC 驅動程式在系統中，最新的 ODBC 版本開始，依此類推。|  
 |Encrypt|1 或 **true** 表示開啟加密。<br /><br />0 或 **false** 表示關閉加密。|指定要加密與 SQL Server 的通訊 (1 或 **true**)，還是不要加密 (0 或 **false**)<sup>3</sup>。|**false** (0)|  

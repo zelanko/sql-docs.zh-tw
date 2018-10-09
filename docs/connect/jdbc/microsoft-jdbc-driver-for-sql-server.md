@@ -1,25 +1,22 @@
 ---
-title: Microsoft JDBC Driver for SQL Server |Microsoft 文件
+title: 下載 Microsoft JDBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e5a25cf3d51ff54e650de30b654887b3f949119
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 19e8cf2e5c4aeaa2eab8c49d61a05a0eaa434e3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831913"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611036"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>用於 SQL Server 的 Microsoft JDBC 驅動程式
 
@@ -29,31 +26,31 @@ ms.locfileid: "32831913"
 
 Microsoft JDBC Driver for SQL Server 已在主要的應用程式伺服器上經過測試，例如 IBM WebSphere 及 SAP NetWeaver。
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 * [步驟 1︰設定 Java 開發的開發環境](step-1-configure-development-environment-for-java-development.md)  
 * [步驟 2︰建立 Java 開發的 SQL 資料庫](step-2-create-a-sql-database-for-java-development.md)  
 * [步驟 3︰使用 Java 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>文件集  
-* [使用者入門](getting-started-with-the-jdbc-driver.md)
+* [快速入門](getting-started-with-the-jdbc-driver.md)
 * [概觀](overview-of-the-jdbc-driver.md)  
 * [程式設計指南](programming-guide-for-jdbc-sql-driver.md)
-* [安全性](securing-jdbc-driver-applications.md)  
+* [Security](securing-jdbc-driver-applications.md)  
 * [效能與可靠性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [疑難排解](diagnosing-problems-with-the-jdbc-driver.md)
 * [程式碼範例](sample-jdbc-driver-applications.md) 
-* [相容性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [合規性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>社群
 [尋找其他 JDBC Driver 資訊](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>下載
-[下載 Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -Maven 專案和多個相關的其他資訊。
+[下載 Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -Maven 專案及更多的相關資訊。
   
 ## <a name="samples"></a>範例  
 * [範例 JDBC 驅動程式應用程式](sample-jdbc-driver-applications.md)  
-* [開始使用 Windows 上的 Java](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [開始使用 Java macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [在 Ubuntu 上 Java 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL) 上的 Java 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise Server (SLES) 上的 Java 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [在 Windows 上使用 Java 開始使用](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [在 macOS 上開始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [在 Ubuntu 上使用 Java 開始使用](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [在 Red Hat Enterprise Linux (RHEL) 上使用 Java 開始使用](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [在 SUSE Linux Enterprise Server (SLES) 上使用 Java 開始使用](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

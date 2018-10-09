@@ -1,13 +1,11 @@
 ---
-title: setResponseBuffering 方法 (SQLServerDataSource) |Microsoft 文件
+title: setResponseBuffering 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setResponseBuffering(String responseBufferingValue)
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerDataSource.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 785fc2e8e8b384d2573cfed715459cbed07a04fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b56a2382759825fd296ea70ad2e52cfc858c7166
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781896"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>setResponseBuffering 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定的回應緩衝模式為使用這項功能所建立的連線[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)物件。  
+  設定連線的回應緩衝模式，此連線是使用這個 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 物件所建立的。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,14 +38,14 @@ public void setResponseBuffering(java.lang.String value)
 #### <a name="parameters"></a>參數  
  *value*  
   
- A**字串**包含緩衝和資料流處理模式。 有效的模式可以是下列的不區分大小寫字串的其中之一：**完整**或**適應性**。  
+ ，包含緩衝和資料流模式。 有效模式可能是下列其中一個區分大小寫的字串： 或 。  
   
-## <a name="remarks"></a>備註  
- **完整**值會指定在執行階段從伺服器讀取整個結果。  
+## <a name="remarks"></a>Remarks  
+ 值會指定在執行階段從伺服器讀取整個結果。  
   
- **適應性**值會指定緩衝處理最小可能的資料時所需。 **適應性**值是預設的緩衝模式。  
+ 值會指定在必要時緩衝處理可能的資料下限。 值是預設緩衝模式。  
   
- 如需使用回應緩衝模式的詳細資訊，請參閱[使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ 如需使用回應緩衝模式的詳細資訊，請參閱 <<c0> [ 使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
