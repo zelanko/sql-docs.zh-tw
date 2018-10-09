@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merging datasets [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b113a2ca169ebc1f49a522d51800b09b9a30343
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a2225e9d504cd019016c1ff8cffb742112aeecc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134724"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
   若要加入及設定「聯集全部」轉換，封裝必須已包括至少一個「資料流程」工作與兩個資料來源。  
@@ -62,6 +59,6 @@ ms.locfileid: "37221808"
  [聯集全部轉換](union-all-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作]((../../control-flow/data-flow-task.md)  
+ [資料流程工作] ((../../control-flow/data-flow-task.md)  
   
   

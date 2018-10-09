@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Join transformation
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bd70921524de8124b9fd65d5d02f60de3f26ab9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b88d3ec75e73329f8de1e97f7b9936203e745946
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062174"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合併聯結轉換來擴充資料集
   若要加入和設定「合併聯結」轉換，封裝必須已包含至少一個「資料流程」工作，及兩個為「合併聯結」轉換提供輸入的資料流程元件。  
@@ -68,6 +65,6 @@ ms.locfileid: "37322638"
  [合併聯結轉換](merge-join-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作]((../../control-flow/data-flow-task.md)  
+ [資料流程工作] ((../../control-flow/data-flow-task.md)  
   
   

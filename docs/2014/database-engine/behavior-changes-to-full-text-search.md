@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-caps.latest.revision: 39
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f136a7016e1b17248a3b547da0561cc3d4b30c68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198688"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文檢索搜尋的行為變更
   本主題描述全文檢索搜尋的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
@@ -106,7 +103,7 @@ ms.locfileid: "37233798"
      全文檢索引擎會針對 FILESTREAM BLOB 的內容建立索引。 為檔案 (如影像) 建立索引可能不會很實用。 當更新 FILESTREAM BLOB 時，會為它重新建立索引。  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋]((../ relational-databases/search/full-text-search.md)   
+ [全文檢索搜尋] ((../ relational-databases/search/full-text-search.md)   
  [全文檢索搜尋的回溯相容性](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [升級全文檢索搜尋](../relational-databases/search/upgrade-full-text-search.md)   
  [全文檢索搜尋使用者入門](../relational-databases/search/get-started-with-full-text-search.md)  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2f2ab9752c9b9761e83c9f9207af36454cd52f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054311"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
   若要加入及設定「衍生的資料行」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -67,7 +64,7 @@ ms.locfileid: "37215368"
  [Integration Services 資料類型](../integration-services-data-types.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作]((../../control-flow/data-flow-task.md)   
+ [資料流程工作] ((../../control-flow/data-flow-task.md)   
  [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)  
   
   

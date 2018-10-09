@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 821d47f8a112efb3c2f70a094c139fdc7936ab32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c25b5b564f0fbe69d2559ae0c7c57d262c6646e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177518"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中，指令碼元件有中繼資料設計與程式碼設計兩種模式。 當您開啟 [指令碼轉換編輯器] 時，元件就會進入中繼資料設計模式，您可在其中設定中繼資料及元件屬性。 在您於中繼資料設計模式設定好指令碼元件的屬性和輸入及輸出後，就可以切換到程式碼設計模式編寫自訂的指令碼。 如需中繼資料設計模式和程式碼設計模式的詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)。  
@@ -68,7 +65,7 @@ ms.locfileid: "37203988"
   
 -   `BufferWrapper`專案項目包含的類別，繼承自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>每個輸入和輸出上設定**輸入和輸出**頁面**指令碼轉換編輯器**。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。  
   
- 如需如何使用這些物件、 方法和屬性的詳細資訊，請參閱 [了解指令碼元件物件 Model]((understanding-the-script-component-object-model.md)。 如需如何在特定的指令碼元件類型中使用這些類別的方法和屬性的資訊，請參閱[其他指令碼元件範例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。 範例主題也包含完整的程式碼範例。  
+ 如需如何使用這些物件、 方法和屬性的詳細資訊，請參閱 [了解指令碼元件物件 Model] ((understanding-the-script-component-object-model.md)。 如需如何在特定的指令碼元件類型中使用這些類別的方法和屬性的資訊，請參閱[其他指令碼元件範例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。 範例主題也包含完整的程式碼範例。  
   
  當您將指令碼元件設定為轉換時，`ScriptMain` 專案項目會包含下列自動產生的程式碼。 程式碼範本也會提供指令碼元件的概觀，以及有關如何擷取與操作 SSIS 物件 (例如變數、事件與連接) 的其他資訊。  
   
@@ -193,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出] 視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出] 視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師的 [進度] 索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../data-flow/transformations/script-component.md)。  
   
--   將事件或使用者定義的訊息記錄到啟用的記錄提供者。 如需詳細資訊，請參閱 [登入指令碼 Component]((logging-in-the-script-component.md)。  
+-   將事件或使用者定義的訊息記錄到啟用的記錄提供者。 如需詳細資訊，請參閱 [登入指令碼 Component] ((logging-in-the-script-component.md)。  
   
  如果只需要檢查設定為來源或轉換的指令碼元件的輸出，而不將資料儲存到目的地，可以使用[資料列計數轉換](../../data-flow/transformations/row-count-transformation.md)停止資料流程，並將資料檢視器附加到指令碼元件的輸出。 如需資料檢視器的資訊，請參閱[偵錯資料流程](../../troubleshooting/debugging-data-flow.md)。  
   
@@ -213,7 +210,7 @@ public class ScriptMain : UserComponent
   
 -   blogs.msdn.com 上的部落格文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (SSIS 2008 和 R2 安裝的 VSTA 安裝與設定問題)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)  
