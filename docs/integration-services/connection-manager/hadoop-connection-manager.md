@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab6388e36e05fca9bf7fdf4c7ea46381840fd39c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 051fb627684e8a094ac0f39d5fffad9d9e399d0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841626"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
   Hadoop 連線管理員可以使用您為屬性指定的值，讓 SQL Server Integration Services (SSIS) 套件連線至 Hadoop 叢集。  

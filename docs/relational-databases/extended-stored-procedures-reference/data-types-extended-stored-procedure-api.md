@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], data types
 - data types [SQL Server], extended stored procedures
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 770dfdb06d7f29019ee9583e2f37b2517ceb2c92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938343"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671766"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>資料類型 (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "32938343"
   
  若要使用擴充預存程序 API 資料類型，請在程式中包含 Srv.h 標頭檔案。  
   
-|資料類型|SQL Server 資料類型|描述|  
+|資料類型|SQL Server 資料類型|Description|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|**binary** 資料類型，長度為 0 到 8000 個位元組。|  
 |SRVBIGCHAR|**char**|**character** 資料類型，長度為 0 到 8000 個位元組。|  

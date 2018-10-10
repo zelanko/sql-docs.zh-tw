@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_describe
@@ -21,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_describe
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 432a53228022c2f332758252520f980c3faa5436
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e96de741943abc35c9a0a6f27a6b90cbb413e208
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700176"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

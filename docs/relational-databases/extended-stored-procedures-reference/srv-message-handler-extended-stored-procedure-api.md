@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_message_handler
@@ -21,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_message_handler
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8efe412c9d9fdeef7f6c0a90dd2274ea1ad2dd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb0038c8f3a30ce12b0dfae9dc69cec7fa35d305
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775428"
 ---
 # <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

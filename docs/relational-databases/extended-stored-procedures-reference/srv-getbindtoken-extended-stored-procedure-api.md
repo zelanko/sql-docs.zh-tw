@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_getbindtoken
@@ -21,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_getbindtoken
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3934bc259fc1d69b2a4bf00e52fdb57b176978fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75b520afbca6115cbd3fccc928838e99d3831fef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936223"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659398"
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

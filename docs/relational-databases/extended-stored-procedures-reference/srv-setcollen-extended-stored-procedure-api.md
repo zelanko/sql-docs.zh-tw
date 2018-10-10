@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_setcollen
@@ -21,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_setcollen
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e647374b9c313be9b19aa81325fa4fb85bd8ffc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8dd7a79f5bf7ad80b5a3084d7f317906477099ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935123"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668906"
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

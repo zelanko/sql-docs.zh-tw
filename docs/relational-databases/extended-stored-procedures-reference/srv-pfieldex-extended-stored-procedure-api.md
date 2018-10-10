@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_pfieldex
@@ -21,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_pfieldex
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 128586621b16aaf83b7533327c99c9f7bc952b10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02c18969955283b4731870d63894671500d7a922
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691686"
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ len
  *field*  
  指定要傳回的 *srvproc* 欄位。  
   
-|欄位|描述|傳回類型|  
+|欄位|Description|傳回類型|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|目前的工作階段訊息 LCID。|ULONG*|  
 |SRV_INSTANCENAME|執行個體名稱 (如果是具名的)；否則，傳回 NULL。|WCHAR*|  
