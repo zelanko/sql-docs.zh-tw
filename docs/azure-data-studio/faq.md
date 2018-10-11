@@ -21,9 +21,9 @@ ms.locfileid: "48038047"
 
 ## <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
-Azure Data Studio 是一個新的開放原始碼的跨平台桌面環境，可讓資料專業人員在 Windows、MacOS 與 Linux 上使用內部與雲端資料平台的 Azure 資料系列服務。先前以預覽名稱 SQL Operations Studio 發行，Azure Data Studio 提供現代化編輯器體驗，具有閃電般快速的 IntelliSense、程式碼片段、原始檔控制整合和整合式終端機。它在設計時將資料庫平台使用者納入考量，內建查詢結果集合圖表功能和可自訂自的儀表板。
+Azure Data Studio 是一個新的開放原始碼的跨平台桌面環境，可讓資料專業人員在 Windows、MacOS 與 Linux 上使用內部與雲端資料平台的 Azure 資料系列服務。 先前以預覽名稱 SQL Operations Studio 發行，Azure Data Studio 提供現代化編輯器體驗，具有閃電般快速的 IntelliSense、程式碼片段、原始檔控制整合和整合式終端機。 它在設計時將資料庫平台使用者納入考量，內建查詢結果集合圖表功能和可自訂自的儀表板。
 
-研究顯示，在使用 SQL Server Management Studio 時與任何其他工作相比，使用者花費更多時間在查詢編輯上。基於這個理由，Azure Data Studio 深度專注在使用頻率最高的功能，並以可選用擴充套件加入產品以提供額外體驗。這允許每個使用者根據他們最常使用的工作流程來自訂其環境。
+研究顯示，在使用 SQL Server Management Studio 時與任何其他工作相比，使用者花費更多時間在查詢編輯上。 基於這個理由，Azure Data Studio 深度專注在使用頻率最高的功能，並以可選用擴充套件加入產品以提供額外體驗。 這允許每個使用者根據他們最常使用的工作流程來自訂其環境。
 
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio 費用是多少？
