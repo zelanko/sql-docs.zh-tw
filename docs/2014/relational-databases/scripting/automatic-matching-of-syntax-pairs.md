@@ -14,12 +14,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 174918e72602acaef4ec4f505fb387e78ab04d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085354"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085114"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
   語法組的自動比對會提供有關必須成對編碼的語法元素是否正確配對的立即回應給您。 這就是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中的分隔符號比對、Analysis Services XMLA 查詢編輯器中的大括號比對，以及 MDX 和 DMX 編輯器中的括號比對。  
@@ -70,6 +70,6 @@ ms.locfileid: "48085354"
 -   屬性上的開頭及結束引號。  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>MDX 和 DMX 編輯器的括號比對  
- 多維度運算式 (MDX) 和資料採礦運算式 (DMX) 編輯器會自動比對函數中的括號組。  
+ 多維度運算式 (MDX) 和資料採礦運算式 (DMX) 編輯器會自動比對函式中的括號組。  
   
   

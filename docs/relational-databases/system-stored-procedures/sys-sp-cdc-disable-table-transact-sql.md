@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 556d6f5a7513f08867c73ba26369861d9e960688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810306"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169168"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@source_schema=** ] **'***source_schema&lt***'**  
+ [  **@source_schema=** ] **'**_來源\_結構描述_**'**  
  這是容納來源資料表的結構描述名稱。 *source_schema&lt*已**sysname**，沒有預設值，不能是 NULL。  
   
  *source_schema&lt*必須存在於目前的資料庫。  
   
- [  **@source_name=** ] **'***source_name***'**  
+ [  **@source_name=** ] **'**_來源\_名稱_**'**  
  這是要停用異動資料擷取的來源資料表名稱。 *source_name*已**sysname**，沒有預設值，不能是 NULL。  
   
  *source_name*必須存在於目前的資料庫。  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** 所有 **'**  
+ [  **@capture_instance=** ] **'**_擷取\_執行個體_**'** | **'** 所有 **'**  
  這是要針對指定之來源資料表停用的擷取執行個體名稱。 *capture_instance*已**sysname**不能是 NULL。  
   
  指定 'all' 時，所有擷取執行個體定義*source_name*會停用。  

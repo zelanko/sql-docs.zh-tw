@@ -7,14 +7,14 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: cf13ea198a5a40a5d67d41fea2f8f9b9b3b5434d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a18eeca5bd6af2fb0bb9562f126351ac4d3f1c9
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796093"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085054"
 ---
-# <a name="what-is-sql-server-2019-big-data-clusters"></a>什麼是 SQL Server 2019 巨量資料叢集？
+# <a name="what-are-sql-server-2019-big-data-clusters"></a>什麼是 SQL Server 2019 巨量資料叢集？
 
 從開始[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]，SQL Server 的巨量資料叢集可讓您部署的 SQL Server、 Spark 和 HDFS 的 Docker 容器在 Kubernetes 上執行的可調整叢集。 這些元件會並存執行，可讓您讀取、 寫入和處理從 TRANSACT-SQL 或 Spark 的巨量資料。 SQL Server 巨量資料叢集可讓您輕鬆地結合和分析龐大的巨量資料與您寶貴的關聯式資料。
 

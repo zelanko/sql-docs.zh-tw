@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171178"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905758"
 ---
 # <a name="general-properties"></a>一般屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
@@ -61,7 +61,7 @@ ms.locfileid: "48171178"
  字串屬性，以分隔清單指定在 Analysis Services 對話方塊中可儲存、開啟和尋找檔案時可瀏覽的資料夾。 Analysis Services 服務帳戶對您加入至清單中的所有資料夾，必須有讀取和寫入權限。  
   
  `BackupDir`  
- 字串屬性，會識別儲存備份檔案的預設目錄名稱，如果 Backup 命令未指定路徑，就會使用此目錄。  
+ 字串屬性所識別的名稱。 根據預設，儲存備份檔案的目錄，萬一不指定路徑，Backup 命令的一部分。  
   
  `CollationName`  
  此為識別伺服器定序的字串屬性。 如需詳細資訊，請參閱[語言和定序 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)。  
@@ -77,12 +77,12 @@ ms.locfileid: "48171178"
  `CoordinatorCancelCount`  
  此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。  
   
- `CoordinatorCancelCount` 在表格式伺服器模式會忽略。  
+ `CoordinatorCancelCount` 在表格式伺服器模式下將會遭到忽略。  
   
  `CoordinatorExecutionMode`  
  此為帶正負號的 32 位元整數屬性，定義伺服器會嘗試的最大平行作業數目，包含處理和查詢作業。 零 (0) 表示伺服器會依據內部演算法決定。 正數表示總計的最大作業數目。 具有反轉符號的負數，表示每個處理器的最大作業數目。  
   
- `CoordinatorExecutionMode` 在表格式伺服器模式會忽略。  
+ `CoordinatorExecutionMode` 在表格式伺服器模式下將會遭到忽略。  
   
  此屬性的預設值為 -4，表示伺服器限制為每個處理器 4 個平行作業。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48171178"
  如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` 適用於 cube 處理命令和回寫作業。  
+>  `ForceCommitTimeout` 適用於 Cube 處理命令和回寫作業。  
   
  `IdleConnectionTimeout`  
  整數屬性，指定處於非使用狀態之連接的逾時 (以秒為單位)。  

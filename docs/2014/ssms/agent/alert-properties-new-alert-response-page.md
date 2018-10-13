@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217878"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906218"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警示屬性-新增警示 （回應頁面）
   使用此頁面可指定您想要執行的作業，以及取得要通知的操作員清單來回應 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  
@@ -51,7 +51,7 @@ ms.locfileid: "48217878"
  顯示 [新增操作員] 對話方塊，可讓您建立新的操作員。  
   
  **檢視操作員**  
- 顯示目前選取之操作員的 [屬性] 對話方塊。 您可以在 [操作員屬性] 對話方塊上檢視及修改操作員屬性。  
+ 顯示目前選取之操作員的 [屬性] 對話方塊。 您可以檢視及修改操作員屬性上**操作員屬性** 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [警示](alerts.md)   

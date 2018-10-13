@@ -12,12 +12,12 @@ ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfed461589882e91f4fa4ec2394bc858def67d96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d7fe9246e0b689335d43a124c4a2391778f127a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182268"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905018"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 項目
   W3C XSD **redefine** 元素支援重新定義結構描述的元件。 不過，支援此指示詞可能會使效能，並也要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新驗證的所有執行個體`xml`與重新定義結構描述相關聯的資料類型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援此元素。 伺服器將會拒絕包含 **\<xsd:redefine>** 項目的 XML 結構描述。  

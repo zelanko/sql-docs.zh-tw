@@ -11,12 +11,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159488"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120295"
 ---
 # <a name="view-event-session-data"></a>檢視事件工作階段資料
   本主題描述如何使用顯示使用者介面來查看並分析擴充事件資料：  
@@ -26,7 +26,7 @@ ms.locfileid: "48159488"
 -   使用資料  
   
 ## <a name="view-target-data"></a>檢視目標資料  
- 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中顯示收集到指定目標內的資料。  
+ 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中顯示收集到指定目標內的資料。  
   
 ### <a name="view-target-data"></a>檢視目標資料  
  若要檢視目標資料：  
@@ -45,13 +45,13 @@ ms.locfileid: "48159488"
   
 -   若為 event_file 目標，請使用下列其中一種方法來檢視檔案目標資料 (.XEL 檔案)：  
   
-    -   使用中的檔案]-> [開啟位置[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用 [檔案] -> [開啟]。  
   
-    -   將檔案拖放至 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中。  
+    -   將檔案拖放至 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中。  
   
     -   按兩下 .XEL 檔案。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下執行中的「擴充事件」工作階段，然後選取 [檢視目標資料]。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，以滑鼠右鍵按一下執行中的「擴充事件」工作階段，然後選取 [檢視目標資料]。  
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159488"
  **[詳細資料]** 窗格會顯示選取事件的所有資料行，包括欄位和動作。 您可以用滑鼠右鍵按一下 **[詳細資料]** 窗格中的資料列，然後選取 **[顯示資料表中的資料行]**，藉以將資料行加入至目標資料表。  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>建立、修改或刪除合併的資料行  
- 合併的資料行可讓您結合一組要顯示在單一資料行中的欄位。 合併的資料行將根據欄位加入至欄位清單的順序，顯示第一個非 NULL 欄位中的資料。 這是類似於您在看到的內容[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler，其中特定資料行可能會顯示不同的資料，根據事件 (最常見的範例是中的 TextData 欄位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler)。 例如，您可能會分別將 sql_statement_completed 和 sql_batch_completed 事件中的 statement 和 batch_text 欄位合併成名為 myStatement 的欄位。 當您在資料表中顯示 myStatement 資料行時，它將針對相關聯的事件顯示適當的資料。  
+ 合併的資料行可讓您結合一組要顯示在單一資料行中的欄位。 合併的資料行將根據欄位加入至欄位清單的順序，顯示第一個非 NULL 欄位中的資料。 這與您在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler 中看見的內容很相似，其中特定資料行可能會根據事件顯示不同的資料 (最常見的範例就是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler 中的 TextData 欄位)。 例如，您可能會分別將 sql_statement_completed 和 sql_batch_completed 事件中的 statement 和 batch_text 欄位合併成名為 myStatement 的欄位。 當您在資料表中顯示 myStatement 資料行時，它將針對相關聯的事件顯示適當的資料。  
   
  您可以建立、修改或刪除合併的資料行：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159488"
  如果已對資料行進行分組，則資料行排序只會對群組中的資料進行排序。  
   
 ### <a name="group-results"></a>將結果分組  
- 分組的結果就相當於的功能`GROUP BY`子句中的[!INCLUDE[tsql](../includes/tsql-md.md)]。 目標資料表將顯示分成一組的資料，讓您展開或摺疊資料。  
+ 分組的結果就相當於 [!INCLUDE[tsql](../includes/tsql-md.md)] 中 `GROUP BY` 子句的功能。 目標資料表將顯示分成一組的資料，讓您展開或摺疊資料。  
   
  您必須先將資料分組，然後才能進行彙總。 例如，您可以針對 query_hash 值分組、依照持續時間遞減排序、取得每個群組的平均持續時間，然後針對彙總遞減排序。  這樣就會產生一份清單，其中列出平均持續時間最長到最短的唯一陳述式。 當您展開最上方的群組時，就會看見該特定查詢的個別執行時間 (從最長到最短排序)。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159488"
   
     -   資料表資料行： 使用此選項可在追蹤視窗中搜尋所有可見資料行。  
   
-    -   詳細資料： 使用此選項可在追蹤視窗中搜尋在開啟 **[在擴充事件中尋找]** 對話方塊之前已選取的所有資料行 (已升級和非升級)。  
+    -   詳細資料： 使用此選項來搜尋所有的資料行 （已升級和非升級），在追蹤視窗中，開啟之前已選取**在擴充事件中尋找** 對話方塊。  
   
     -   *Event_column_name*。 使用此選項可在下拉式清單的特定事件資料行中進行搜尋。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159488"
   
  若要複製追蹤結果，請選取資料格或資料列、按一下滑鼠右鍵、選取 **[複製]** ，然後選取 **[資料格]**、 **[資料列]** 或 **[詳細資料]**。 擴充事件最多支援複製 1000 個資料列。  
   
- 您可以將追蹤結果儲存至匯出。XEL 檔案、 資料表、 或。選取 CSV 檔案**匯出至**從**擴充事件**中的功能表選項[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
+ 您可以在 **的** [擴充事件] **功能表選項中選取** [匯出至] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，藉以將追蹤結果匯出至 .XEL 檔案、資料表或 .CSV 檔案。  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>檢視死結圖形和查詢計畫  
  您可以在 [詳細資料] 窗格中檢視 **xml_deadlock_report** 的死結圖形，幫助您針對死結進行疑難排解。 您也可以檢視下列事件的查詢計畫圖形：  

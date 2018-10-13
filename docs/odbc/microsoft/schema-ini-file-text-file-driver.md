@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713206"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169218"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 檔案 (文字檔驅動程式)
 使用文字驅動程式時，文字檔案的格式取決於使用結構描述資訊檔案。 結構描述資訊檔案是一律名為 Schema.ini，並且永遠保持在相同的目錄，做為文字資料來源中。 此結構描述資訊檔案會提供相關資訊的一般格式的檔案、 資料行名稱和資料型別資訊，以及數個其他資料特性 iisam 開啟。 Schema.ini 檔案總是需要存取固定長度的資料。 當您文字的資料表包含日期時間、 貨幣或十進位資料或任何您想要更充分掌控的資料表中的資料處理的時間，您應該使用 Schema.ini 檔案。  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- 下一個項目會指定資料表中的欄位使用的資料行編號 (**資料行 * * * n*) 選項，這是字元分隔檔案的選擇性及必要的固定長度的檔案。 此範例示範兩個欄位、 10 個字元 CustomerNumber 文字欄位和 30 個字元 CustomerName 文字欄位的 Schema.ini 項目：  
+ 下一個項目會指定資料表中的欄位使用的資料行編號 (**Col**_n_) 選項，這是字元分隔檔案的選擇性及必要的固定長度的檔案。 此範例示範兩個欄位、 10 個字元 CustomerNumber 文字欄位和 30 個字元 CustomerName 文字欄位的 Schema.ini 項目：  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- 語法 **資料行 * * * n*是：  
+ 語法**Col**_n_是：  
   
 ```  
   

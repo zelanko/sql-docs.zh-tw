@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144418"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071842"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
   您可在 [資料警示設計工具] 中建立資料警示定義。 儲存警示定義之後，可以在 [資料警示設計工具] 中再次開啟、編輯，然後再次儲存警示定義。 如需編輯警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md) 和 [在警示設計工具中編輯資料警示](edit-a-data-alert-in-alert-designer.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "48144418"
   
      警示定義的預設名稱就是報表名稱。 警示定義名稱不一定要是唯一的，不過這樣可能造成您之後在 [資料警示管理員] 中檢視警示清單時，難以區分各個警示的情況。 建議您使用有意義且唯一的警示定義名稱。  
   
-6.  (選擇性) 將預設資料選項從 [資料摘要中的任何資料都有] 變更為 [資料摘要中的任何資料都沒有]。  
+6.  （選擇性） 變更預設資料選項，從**資料摘要中的任何資料已經**要**沒有任何資料摘要中的資料**。  
   
 7.  按一下 [新增規則]。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144418"
      根據預設，警示訊息沒有停止日期。  
   
     > [!NOTE]  
-    >  停止警示訊息並不會刪除警示定義。 停止警示訊息之後，可以藉由更新開始和停止日期將它重新啟動。 如需有關刪除警示定義資訊，請參閱[管理我的資料警示的資料警示管理員 中](manage-my-data-alerts-in-data-alert-manager.md)。  
+    >  停止警示訊息並不會刪除警示定義。 停止警示訊息之後，可以藉由更新開始和停止日期將它重新啟動。 如需刪除警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md)。  
   
 18. (選擇性) 清除 [僅在結果變更時傳送訊息] 核取方塊。  
   

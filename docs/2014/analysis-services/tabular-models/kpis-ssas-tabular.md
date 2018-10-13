@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104618"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906058"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS 表格式)
   表格式模型中的「關鍵效能指標」(KPI) 可用來針對由量值或絕對值定義的「目標」值，量測由「基底」量值定義之值的績效。 本主題為表格式模型作者提供對於表格式模型中 KPI 的基本了解。  
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立及管理 Kpi &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)|描述如何使用基底量值、目標量值及狀態臨界值建立 KPI。|  
+|[建立及管理 KPI &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)|描述如何使用基底量值、目標量值及狀態臨界值建立 KPI。|  
   
 ## <a name="see-also"></a>另請參閱  
- [量值&#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
- [檢視方塊&#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)  
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
+ [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)  
   
   

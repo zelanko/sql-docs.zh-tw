@@ -15,12 +15,12 @@ ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ecc2960e583b46b44839259bc9b84d3d941a553
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f0e0244df7adae2d0fd89e0c83f9b660a0ef0dd
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786602"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100349"
 ---
 # <a name="source-property-example-vc"></a>Source 屬性範例 (VC++)
 此範例示範[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)藉由開啟三個屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)不同的資料來源為基礎的物件。  
@@ -78,7 +78,7 @@ void SourceX() {
       pCmdSQL->CommandText = strCmdSQL;  
       pRstTitles = pCmdSQL->Execute(NULL, NULL, adCmdText);  
   
-      // Open a recordset based on a a table  
+      // Open a recordset based on a table  
       TESTHR(pRstPublishers.CreateInstance(__uuidof(Recordset)));  
       pRstPublishers->Open ("publishers", _variant_t((IDispatch *) pConnection, true),  
          adOpenForwardOnly, adLockReadOnly, adCmdTable);  

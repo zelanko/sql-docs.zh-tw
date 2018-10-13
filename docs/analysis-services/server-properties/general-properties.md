@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033336"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906208"
 ---
 # <a name="general-properties"></a>一般屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38033336"
  字串屬性，以分隔清單指定在 Analysis Services 對話方塊中可儲存、開啟和尋找檔案時可瀏覽的資料夾。 Analysis Services 服務帳戶對您加入至清單中的所有資料夾，必須有讀取和寫入權限。  
   
  **BackupDir**  
- 字串屬性，會識別儲存備份檔案的預設目錄名稱，如果 Backup 命令未指定路徑，就會使用此目錄。  
+ 字串屬性所識別的名稱。 根據預設，儲存備份檔案的目錄，萬一不指定路徑，Backup 命令的一部分。  
   
  **CollationName**  
  此為識別伺服器定序的字串屬性。 如需詳細資訊，請參閱[語言和定序 &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)。  

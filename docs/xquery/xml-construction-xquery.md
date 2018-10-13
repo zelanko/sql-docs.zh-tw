@@ -23,12 +23,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8043e2187ccb1eca7dea58507451113da45429a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861d48490df31e731113b673972a7768867a5ab
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814376"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119896"
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47814376"
   
     -   \<功能 > 項目具有三個元素節點子系\<色彩 >，\<權數 >，並\<瑕疵責任擔保 >。 這些節點的每一個都有一個文字子節點，而且分別有 Red、25、2 years parts and labor 的值。  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -68,7 +68,7 @@ This is product model catalog description.
   
  以下是產生的 XML：  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -82,7 +82,7 @@ This is product model catalog description.
   
  雖然從常數運算式建構元素 (如本範例所示) 非常有用，不過此 XQuery 語言真正強大的功能在於能夠從資料庫動態擷取資料來建構 XML。 您可以使用大括號指定查詢運算式。 在產生的 XML 中，其值將會取代運算式。 例如，下列查詢使用一個子元素 (<`e`>) 來建構 <`NewRoot`> 元素。 元素的值 <`e`> 計算所指定路徑運算式在大括號 （"{... }").  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
@@ -92,7 +92,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  以下是結果：  
   
-```  
+```xml
 <NewRoot>  
   <e>  
     <root>5</root>  
@@ -102,7 +102,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  下列查詢與上一個查詢相似。 不過，在大括號運算式的指定**data （)** 函式可擷取的不可部份完成值 <`root`> 項目並將它指派給建構元素 <`e`>。  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -115,7 +115,7 @@ SELECT @y;
   
  以下是結果：  
   
-```  
+```xml
 <NewRoot>  
   <e>5</e>  
 </NewRoot>  
@@ -123,7 +123,7 @@ SELECT @y;
   
  如果您想要使用大括號做為文字而不是內容切換 Token 的一部份，只要使用 "}}" 或 "{{" 就可以跳過它們，如本範例所示：  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -134,13 +134,13 @@ SELECT @y;
   
  以下是結果：  
   
-```  
+```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
  下列查詢是使用直接元素建構函式來建構元素的另一個範例。 另外，<`FirstLocation`> 元素的值是由執行大括號中的運算式而取得。 查詢運算式會在第一個工作中心位置從 Production.ProductModel 資料表的 Instructions 資料行傳回製造步驟。  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
@@ -153,7 +153,7 @@ WHERE ProductModelID=7;
   
  以下是結果：  
   
-```  
+```xml
 <FirstLocation>  
   <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7;
 #### <a name="element-content-in-xml-construction"></a>在 XML 建構中的元素內容  
  下列範例使用直接元素建構函式，說明運算式建構元素內容的行為。 在下列範例中，直接元素建構函式指定了一個運算式。 為了此運算式，在產生的 XML 中建立了一個文字節點。  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -187,13 +187,13 @@ select @x.query('
   
  從運算式評估所產生的不可部份完成值順序將會加入文字節點，並在相鄰的不可部份完成值之間加入空格，如下列結果所示。 建構元素具有一個子元素。 這是包含值的文字節點，如下列結果所示。  
   
-```  
+```xml
 <result>This is step 1 This is step 2 This is step 3</result>  
 ```  
   
  如果您不指定一個運算式而是指定三個獨立的運算式以產生三個文字節點，相鄰的節點會在產生的 XML 中依串連合併成單一文字節點。  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -211,14 +211,14 @@ select @x.query('
   
  建構元素節點具有一個子元素。 這是包含值的文字節點，如下列結果所示。  
   
-```  
+```xml
 <result>This is step 1This is step 2This is step 3</result>  
 ```  
   
 ### <a name="constructing-attributes"></a>建構屬性  
  當您使用直接元素建構函式建構元素時，您也可以使用與 XML 相似的語法來指定元素的屬性，如下列範例所示：  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -229,7 +229,7 @@ This is product model catalog description.
   
  以下是產生的 XML：  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -246,7 +246,7 @@ This is product model catalog description.
   
  在下列範例中， **data （)** 函式不是絕對必要。 因為您將運算式值指派給屬性 (attribute)，所以**data （)** 會隱含套用至擷取指定之運算式的具類型的值。  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -256,13 +256,13 @@ SELECT @y;
   
  以下是結果：  
   
-```  
+```xml
 <NewRoot attr="5" />  
 ```  
   
  以下是另一個範例，它為 LocationID 與 SetupHrs 屬性建構指定運算式。 這些運算式會針對 Instruction 資料行中的 XML 來評估運算式。 運算式中具類型的值會指派給屬性。  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
@@ -277,7 +277,7 @@ where ProductModelID=7;
   
  以下是部份結果：  
   
-```  
+```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
   <AWMI:step …   
   </AWMI:step>  
@@ -290,13 +290,13 @@ where ProductModelID=7;
   
 -   不支援多個或混合的 (字串與 XQuery 運算式) 屬性運算式。 例如，如下列查詢所示，您可以建構 XML，其中 `Item` 是常數，而值 `5` 是由評估查詢運算式所取得：  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
      下列查詢會傳回錯誤，因為您將常數字串與運算式 ({/x}) 混用，這是不支援的：  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
@@ -306,19 +306,19 @@ where ProductModelID=7;
   
     -   依兩個不可部份完成值的串連組成屬性值。 這些不可部份完成值將序列化成屬性值，並在兩個不可部份完成值之間加上空格：  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
          以下是結果：  
   
-        ```  
+        ```xml
         <a attr="Item 5" />  
         ```  
   
     -   使用[concat 函式](../xquery/functions-on-string-values-concat.md)串連成產生的屬性值的兩個字串引數：  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
         ```  
   
@@ -326,13 +326,13 @@ where ProductModelID=7;
   
          以下是結果：  
   
-        ```  
+        ```xml
         <a attr="Item5" />  
         ```  
   
 -   不支援做為屬性值的多個運算式。 例如，下列查詢會傳回錯誤：  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
@@ -340,7 +340,7 @@ where ProductModelID=7;
   
 -   不支援異質性時序。 嘗試指派異質性時序做為屬性值將會傳回錯誤，如下列範例所示。 此範例為異質性順序，將字串 "Item" 與元素 <`x`> 指定為屬性值：   
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     select @x.query( '<a attr="{''Item'', /x }" />')  
@@ -348,19 +348,19 @@ where ProductModelID=7;
   
      如果您套用**data （)** 函式，查詢運作，因為它會擷取運算式，不可部份完成值`/x`，這與字串串連。 下列是不可部份完成值的時序：  
   
-    ```  
+    ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
      以下是結果：  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
 -   屬性節點順序會在序列化期間強制執行，而非靜態類型檢查期間。 例如，由於下列查詢嘗試將節點加入非屬性節點後面，因此查詢將會失敗。  
   
-    ```  
+    ```sql
     select convert(xml, '').query('  
     element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
     ')  
@@ -385,7 +385,7 @@ where ProductModelID=7;
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>使用命名空間宣告屬性加入命名空間  
  下列範例在建構 <`a`> 元素時，使用命名空間宣告屬性來宣告預設的命名空間。 子元素 <`b`> 的建構會恢復在父項元素中宣告的預設命名空間宣告。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -396,7 +396,7 @@ select @x.query( '
   
  以下是結果：  
   
-```  
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -404,7 +404,7 @@ select @x.query( '
   
  您可以指派前置詞給命名空間。 在建構 <`a`> 元素時會指定前置詞。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -415,7 +415,7 @@ select @x.query( '
   
  以下是結果：  
   
-```  
+```xml
 <x:a xmlns:x="a">  
   <b />  
 </x:a>  
@@ -423,7 +423,7 @@ select @x.query( '
   
  您可以取消宣告 XML 建構中的預設命名空間，但是您無法取消宣告命名空間的前置詞。 下列查詢會傳回錯誤，因為您無法取消宣告在建構 <`b`> 元素時所指定的前置詞。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -434,7 +434,7 @@ select @x.query( '
   
  新建構的命名空間可在查詢中使用。 例如，下列查詢會在建構 <`FirstLocation`> 元素時宣告命名空間，並在 LocationID 與 SetupHrs 屬性值的運算式中指定前置詞。  
   
-```  
+```sql
 SELECT Instructions.query('  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -448,7 +448,7 @@ where ProductModelID=7
   
  請注意以此方式建立的新命名空間前置詞，將會覆寫此前置詞的任何已存在的命名空間宣告。 例如，<`FirstLocation`> 元素中的命名空間宣告將會覆寫在查詢初構中的命名空間宣告 `AWMI="http://someURI"`。  
   
-```  
+```sql
 SELECT Instructions.query('  
 declare namespace AWMI="http://someURI";  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
@@ -464,7 +464,7 @@ where ProductModelID=7
 #### <a name="using-a-prolog-to-add-namespaces"></a>使用初構加入命名空間  
  此範例說明命名空間如何加入已建構的 XML。 在查詢初構中會宣告預設的命名空間。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -474,8 +474,10 @@ select @x.query( '
   
  請注意，在建構 <`b`> 元素時，將使用空白字串來指定命名空間宣告屬性以做為其值。 這將會取消宣告在父元素中所宣告的預設命名空間。  
   
-```  
-This is the result:  
+
+以下是結果：  
+
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -496,7 +498,7 @@ This is the result:
   
  下列範例說明在 XML 建構中空白的處理：  
   
-```  
+```sql
 -- line feed is repaced by space.  
 declare @x xml  
 set @x=''  
@@ -525,7 +527,7 @@ test
   
  以下是結果：  
   
-```  
+```xml
 -- result  
 <test attr="<test attr="    my test   attr  value    "><a>  
   
@@ -550,7 +552,7 @@ test
   
  在下列查詢中，已建構的 XML 包含一個元素、兩個屬性、註解以及處理指示。 請注意在 <`FirstLocation`> 前面使用了一個逗號，因為正在建構時序。  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
@@ -569,7 +571,7 @@ where ProductModelID=7;
   
  以下是部份結果：  
   
-```  
+```xml
 <?myProcessingInstr abc="value" ?>  
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
@@ -578,7 +580,7 @@ where ProductModelID=7;
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
-/FirstLocation>  
+</FirstLocation>  
   
 ```  
   
@@ -593,7 +595,7 @@ where ProductModelID=7;
   
  對於元素和屬性節點而言，這些關鍵字後面接著括在括號中的節點名稱及運算式，它們將會產生該節點的內容。 在以下範例中，您正在建構此 XML：  
   
-```  
+```xml
 <root>  
   <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
 </root>  
@@ -601,7 +603,7 @@ where ProductModelID=7;
   
  以下查詢是使用計算建構函式產生 XML：  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 select @x.query('element root   
@@ -618,7 +620,7 @@ text{"Some text "},
   
  產生節點內容的運算式可以指定查詢運算式。  
   
-```  
+```sql
 declare @x xml  
 set @x='<a attr="5"><b>some summary</b></a>'  
 select @x.query('element root   
@@ -636,7 +638,7 @@ text{"Some text "},
   
  在下列範例中，建構節點的內容從 XML 製造指示儲存在 Instructions 資料行中取得**xml** ProductModel 資料表的資料類型。  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
@@ -651,7 +653,7 @@ where ProductModelID=7
   
  以下是部份結果：  
   
-```  
+```xml
 <FirstLocation LocationID="10">  
   <AllTheSteps>  
     <AWMI:step> ... </AWMI:step>  

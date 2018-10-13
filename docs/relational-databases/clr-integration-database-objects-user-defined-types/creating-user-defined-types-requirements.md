@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697117"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119746"
 ---
 # <a name="creating-user-defined-types---requirements"></a>建立使用者定義型別 - 需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697117"
   
  **bool**，**位元組**， **sbyte**，**簡短**， **ushort**， **int**， **uint**，**長**， **ulong**， **float**， **double**， **SqlByte**，**SqlInt16**， **SqlInt32**， **SqlInt64**， **SqlDateTime**， **SqlSingle**， **SqlDouble**， **SqlMoney**， **SqlBoolean**  
   
- 實值型別所組成上述類型之欄位的良好候選項目**原生**格式，例如**結構**Visual C# (或**結構**如中Visual Basic)。 例如，使用指定的 UDT**原生**序列化格式可能包含也已經使用指定的另一個 UDT 的欄位**原生**格式。 如果 UDT 定義較為複雜，且包含不在上述清單上的資料類型，您必須指定**UserDefined**改為設定序列化的格式。  
+ 組成上述類型之欄位的實值類型十分適合**原生**格式，例如**結構**Visual C# (或**結構**如中Visual Basic)。 例如，使用指定的 UDT**原生**序列化格式可能包含也已經使用指定的另一個 UDT 的欄位**原生**格式。 如果 UDT 定義較為複雜，且包含不在上述清單上的資料類型，您必須指定**UserDefined**改為設定序列化的格式。  
   
  **原生**格式具有下列需求：  
   

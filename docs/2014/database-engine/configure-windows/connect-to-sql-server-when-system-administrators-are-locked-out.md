@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171988"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119785"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連接到 SQL Server
   本主題描述如何以系統管理員的身分，重新取得 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的存取權。 系統管理員可能因為下列其中一個原因而失去 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取權：  
@@ -62,11 +62,11 @@ ms.locfileid: "48171988"
 5.  在 **啟動參數**索引標籤中，於**指定啟動參數**方塊中，輸入`-m`，然後按一下  `Add`。 (這是虛線，然後接著小寫字母 m)。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新參數`;-m`，然後按一下  `OK`。 (這是分號，然後接著虛線和小寫字母 m)。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階]** 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新的參數 `;-m`，然後按一下 [`OK`]  (這是分號，然後接著虛線和小寫字母 m)。  
   
 6.  按一下  `OK`，並在之後重新啟動的訊息，以滑鼠右鍵按一下您的伺服器名稱，然後按**重新啟動**。  
   
-7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您的伺服器即會處於單一使用者模式。 確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 並未執行。 如果已啟動，它將會佔用您的唯一連接。  
+7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您的伺服器即會處於單一使用者模式。 請確定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式未執行。 如果已啟動，它將會佔用您的唯一連接。  
   
 8.  在 Windows 8 的 [開始] 畫面上，以滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的圖示。 在畫面底部，選取 [以系統管理員身分執行] (這樣會將您的系統管理員認證傳遞給 SSMS)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171988"
 11. 在 **啟動參數**索引標籤**現有參數**方塊中，選取`-m`，然後按一下  `Remove`。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 移除`;-m`這是您稍早，新增，然後按一下`OK`。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階]** 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 移除`;-m`這是您稍早，新增，然後按一下`OK`。  
   
 12. 以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [重新啟動]。  
   

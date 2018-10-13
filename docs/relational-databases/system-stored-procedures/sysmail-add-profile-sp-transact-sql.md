@@ -18,12 +18,12 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e62a0452a5e7e31591d368cbbcb2050272df5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce8549b95348085699694c17027c2dd393f5b1f5
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734726"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169178"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **'**_設定檔\_名稱_**'**  
  新設定檔的名稱。 *profile_name*已**sysname**，沒有預設值。  
   
- [ **@description** = ] **'***description***'**  
+ [ **@description** =] **'**_描述_**'**  
  新設定檔的選擇性描述。 *描述*已**nvarchar(256)**，沒有預設值。  
   
- [ **@profile_id** = ] *new_profile_id***OUTPUT**  
+ [ **@profile_id** =]_新\_的設定檔\_識別碼_**輸出**  
  傳回新設定檔的識別碼。 *new_profile_id*已**int**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

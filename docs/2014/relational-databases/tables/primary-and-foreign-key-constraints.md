@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063440"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120355"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
   主索引鍵和外部索引鍵是兩種類型的條件約束，可用以強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  
@@ -39,7 +39,7 @@ ms.locfileid: "48063440"
   
  當您為資料表指定主索引鍵條件約束時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為主索引鍵資料行建立唯一的索引，以強制資料的唯一性。 當主索引鍵用於查詢時，此索引也可讓您快速地存取資料。 若主索引鍵條件約束定義於多個資料行，則某個資料行內的值可能會重複，但主索引鍵條件約束定義中所有資料行的每個值組合都必須是唯一的。  
   
- 如下圖所示， **Purchasing.ProductVendor** 資料表中的 **ProductID** 和 **VendorID** 資料行形成此資料表的複合主索引鍵條件約束。 這樣可確保 **ProductVendor** 資料表中的每個資料列都有唯一的 **ProductID** 和 **VendorID**組合。 如此可防止插入重複的資料列。  
+ 如下圖所示， **Purchasing.ProductVendor** 資料表中的 **ProductID** 和 **VendorID** 資料行形成此資料表的複合主索引鍵條件約束。 這樣可確保 **ProductVendor** 資料表中的每個資料列都有唯一的 **ProductID** 與 **VendorID** 組合。 如此可防止插入重複的資料列。  
   
  ![複合 PRIMARY KEY 條件約束](../../database-engine/media/fund04.gif "複合 PRIMARY KEY 條件約束")  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48063440"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤，而且會回復對父資料表中資料列的刪除或更新動作。  
   
  CASCADE  
- 更新或刪除父資料表中的對應資料列時，也會更新或刪除參考資料表中的該資料列。 無法指定 CASCADE，如果`timestamp`資料行是外部索引鍵或參考的索引鍵的一部分。 如果資料表有 INSTEAD OF DELETE 觸發程序，則不能指定 ON DELETE CASCADE。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能指定 ON UPDATE CASCADE。  
+ 更新或刪除父資料表中的對應資料列時，也會更新或刪除參考資料表中的該資料列。 如果 `timestamp` 資料行是外部索引鍵或被參考索引鍵的一部分，就無法指定 CASCADE。 如果資料表有 INSTEAD OF DELETE 觸發程序，則不能指定 ON DELETE CASCADE。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能指定 ON UPDATE CASCADE。  
   
  SET NULL  
  更新或刪除父資料表中的對應資料列時，所有組成外部索引鍵的值都會設定為 NULL。 若要執行這個條件約束，外部索引鍵資料行必須可為 Null。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能予以指定。  

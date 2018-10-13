@@ -10,24 +10,24 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192188"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120379"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
     
 ## <a name="overview"></a>總覽  
- 此範例示範新[!INCLUDE[hek_2](../includes/hek-2-md.md)]功能，這是組件的[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 它會顯示新的記憶體最佳化資料表和原生編譯預存程序，並可用來示範效能優點[!INCLUDE[hek_2](../includes/hek-2-md.md)]。  
+ 此範例示範新的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 功能 (屬於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的一部分)。 此範例顯示新的記憶體最佳化資料表和原生編譯的預存程序，並可用來示範 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的效能優勢。  
   
 > [!NOTE]  
 >  若要檢視 SQL Server 2016 的這項主題，請參閱 [示範記憶體內 OLTP 的 AdventureWorks 擴充功能](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
  此範例會將 AdventureWorks 資料庫中的 5 個資料表移轉至記憶體最佳化資料表，並包含銷售訂單處理的工作負載示範。 您可以利用此工作負載示範，查看在伺服器上使用 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的效能優勢。  
   
- 在此範例的描述中，我們會討論將資料表移轉至 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的利弊，以說明 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的記憶體最佳化資料表尚未支援的功能。  
+ 在此範例的描述中，我們會討論將資料表移轉至 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的利弊，以說明 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的記憶體最佳化資料表尚未支援的功能。  
   
  此範例的文件集結構如下：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192188"
   
 ##  <a name="Prerequisites"></a> 必要條件  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM-Evaluation、 Developer 或 Enterprise edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM - Evaluation、Developer 或 Enterprise Edition  
   
 -   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 如需一般的指導方針的硬體上[!INCLUDE[hek_2](../includes/hek-2-md.md)]，請參閱下列部落格文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -81,13 +81,13 @@ ms.locfileid: "48192188"
      GO  
     ```  
   
-4.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的查詢視窗中執行下列命令，將資料庫擁有者變更為伺服器上的登入：  
+4.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的查詢視窗中執行下列命令，將資料庫擁有者變更為伺服器上的登入：  
   
     ```  
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  下載範例指令碼 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 從[SQL Server 2014 RTM 記憶體中 OLTP 範例](http://go.microsoft.com/fwlink/?LinkID=396372)至本機資料夾。  
+5.  將＜[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SQL Server 2014 RTM 記憶體中的 OLTP 範例 [!INCLUDE[hek_2](../includes/hek-2-md.md)] ＞中的範例指令碼 ‘ [RTM](http://go.microsoft.com/fwlink/?LinkID=396372) Sample.sql’ 下載至本機資料夾。  
   
 6.  更新指令碼 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 中的 ‘checkpoint_files_location’ 變數值，以指向 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 檢查點檔案的目標位置。 檢查點檔案應該置於具有適當循序 IO 效能的磁碟機上。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192188"
   
 -   「計算資料行」 - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
   
--   *Foreign key 條件約束*中的記憶體最佳化資料表不支援[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是範例工作負載中的作用資料表，而外部索引鍵條件約束需要對所有 DML 作業進行額外的處理，因為它需要查閱這些條件約束中參考的其他所有資料表。 因此，此處的假設是應用程式會確保參考完整性，但插入資料列時不會驗證參考完整性。 您可以使用預存程序 dbo.usp_ValidateIntegrity 驗證此資料表中資料的參考完整性，其指令碼如下：  
+-   在*中，記憶體最佳化資料表不支援「外部索引鍵條件約束」*  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是範例工作負載中的作用資料表，而外部索引鍵條件約束需要對所有 DML 作業進行額外的處理，因為它需要查閱這些條件約束中參考的其他所有資料表。 因此，此處的假設是應用程式會確保參考完整性，但插入資料列時不會驗證參考完整性。 您可以使用預存程序 dbo.usp_ValidateIntegrity 驗證此資料表中資料的參考完整性，其指令碼如下：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192188"
   
 -   「別名 UDT」 - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
   
--   *BIN2 定序*– 的資料行 Name 和 ProductNumber 包含在索引鍵，以及因此必須具有 BIN2 定序[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此處的假設是應用程式不依賴定序規格，例如區分大小寫。  
+-   「BIN2 定序」 – The columns Name and ProductNumber are included in index keys, and must thus have s in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中必須具有 BIN2 定序。 此處的假設是應用程式不依賴定序規格，例如區分大小寫。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- 我們會看到總計約 6.5GB 的資料。 請注意，資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小，與插入銷售訂單之前的索引大小相同。 由於這兩個資料表使用雜湊索引，而雜湊索引是靜態的，因此索引大小不會改變。  
+ 我們會看到總計約 6.5GB 的資料。 請注意，資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上索引的大小和索引的大小相同之前插入銷售訂單。 由於這兩個資料表使用雜湊索引，而雜湊索引是靜態的，因此索引大小不會改變。  
   
 #### <a name="after-demo-reset"></a>重設示範之後  
  您可以使用預存程序 Demo.usp_DemoReset 重設示範。 此預存程序會刪除資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的資料，然後重新植入原始資料表 SalesOrderHeader 和 SalesOrderDetail 中的資料。  

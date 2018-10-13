@@ -19,12 +19,12 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee801da96f6281e5bf1775df1233ee85712ff74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856966"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072132"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47856966"
 |filename|**nvarchar(256)**|服務可執行檔的路徑和檔案名稱。 不可為 null。|  
 |is_clustered|**nvarchar(1)**|指出服務是否安裝為叢集伺服器的資源。 不可為 null。|  
 |cluster_nodename|**nvarchar(256)**|安裝服務所在之叢集節點的名稱。 可為 Null。|
-|instant_file_initialization_enabled|**nvarchar(1)**|指定是否已啟用檔案立即初始化[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服務。<br /><br />Y = 服務已啟用檔案立即初始化。<br /><br />N = 停用服務的檔案立即初始化。<br /><br /> 可為 Null。<br /><br /> **注意：** 不適用於其他服務，例如 SQL Server Agent。<br /><br /> **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4，以及[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過 SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
+|instant_file_initialization_enabled|**nvarchar(1)**|指定是否已啟用檔案立即初始化[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服務。<br /><br />Y = 服務已啟用檔案立即初始化。<br /><br />N = 停用服務的檔案立即初始化。<br /><br /> 可為 Null。<br /><br /> **注意：** 不適用於其他服務，例如 SQL Server Agent。<br /><br /> **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4，以及[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
 
 ## <a name="security"></a>安全性  
   

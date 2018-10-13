@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 809b0229e1f5d37ed285b8c5783f8c73a4af6056
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108578"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906438"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>啟用資料表或索引的壓縮
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中啟用資料表或索引的壓縮。  
@@ -42,7 +42,7 @@ ms.locfileid: "48108578"
   
 -   **若要使用下列項目來啟用資料表或索引的壓縮：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48108578"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會先查詢 `sys.indexes` 目錄檢視以傳回 `index_id` 資料表上每個索引的名稱和 `Production.TransactionHistory` 。 然後，它會執行 `sp_estimate_data_compression_savings` 預存程序以傳回指定索引識別碼的估計大小 (如果要使用 PAGE 壓縮設定的話)。 最後，此範例會重建索引識別碼 2 (`IX_TransactionHistory_ProductID`)，並指定 PAGE 壓縮。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會先查詢 `sys.indexes` 目錄檢視以傳回 `index_id` 資料表上每個索引的名稱和 `Production.TransactionHistory` 。 接著它會執行預存程序`sp_estimate_data_compression_savings`時要使用 PAGE 壓縮設定所傳回的指定的索引識別碼的估計的大小。 最後，此範例會重建索引識別碼 2 (`IX_TransactionHistory_ProductID`)，並指定 PAGE 壓縮。  
   
     ```  
     USE AdventureWorks2012;   

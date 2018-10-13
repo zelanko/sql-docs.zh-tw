@@ -10,12 +10,12 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630700b4541bf804ca9dd5b1b6c6ca705412643c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792556"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072082"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>專案設定 (同步處理) (MySQLToSQL)
 同步處理**專案設定**可讓您設定 MySQL 資料庫物件如何同步處理使用 SQL Server 資料庫物件。  
@@ -63,7 +63,7 @@ SSMA 中的物件變更時，請在同步處理 對話方塊中指定的預設�
 ##### <a name="action-when-local-object-metadata-is-missing"></a>遺漏本機物件的中繼資料時的動作  
 遺漏本機中繼資料時，請在同步處理 對話方塊中指定的預設設定。  
   
--   如果您選取**從資料庫重新整理**，SSMA SSMA 會將載入資料庫定義的中繼資料時即符合此條件。  
+-   如果您選取**從資料庫重新整理**，SSMA 會將載入資料庫定義的中繼資料時即符合此條件。  
   
 -   如果您選取**略過**，SSMA 將不會執行任何重新整理動作  
   

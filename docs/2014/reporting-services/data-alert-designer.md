@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162238"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120115"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
   您可在 [資料警示設計工具] 中建立和編輯資料警示定義。 警示定義是中繼資料的集合，包括您感興趣的報表資料、報表資料必須符合才能建立資料警示執行個體和傳送資料警示訊息的規則、警示訊息的收件者等。  
@@ -45,7 +45,7 @@ ms.locfileid: "48162238"
 > [!NOTE]  
 >  由於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能只有在您安裝 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時才可使用，因此要建立其警示的報表必須儲存、部署或上傳到 SharePoint 文件庫。  
 >   
->  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+>  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
  若要開啟 [資料警示設計工具]，請在報表工具列上按一下 [動作] 功能表上的 [新資料警示] 選項。 如果您看不見 [新資料警示] 選項，表示報表未設定為使用預存認證。 您可以藉由從 SharePoint 文件庫更新報表資料來源的方式更新認證類型。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48162238"
 ### <a name="alert-name"></a>警示名稱  
  根據預設，警示定義與報表的名稱相同。 您可以將警示名稱變更為更有意義的名稱。 這樣更方便您管理警示，判斷哪些警示需要更新、刪除等。  
   
- 您可以在報表上建立多個警示。 雖然您可以擁有多個相同名稱的警示定義，不過建議您使用唯一的警示名稱。 這樣更方便您區分及管理警示定義。 您可以在 [資料警示管理員] 中檢視您建立之所有警示的清單。 如需詳細資訊，請參閱 <<c0> [ 資料警示管理員的警示管理員](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)並[在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md)。  
+ 您可以在報表上建立多個警示。 雖然您可以擁有多個相同名稱的警示定義，不過建議您使用唯一的警示名稱。 這樣更方便您區分及管理警示定義。 您可以在 [資料警示管理員] 中檢視您建立之所有警示的清單。 如需詳細資訊，請參閱 [警示系統管理員的資料警示管理員](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md)。  
   
 ### <a name="rules-and-clauses"></a>規則和子句  
  資料變更的範圍和警示規則會定義觸發警示的資料變更。 資料變更的範圍如下：  
@@ -172,7 +172,7 @@ ms.locfileid: "48162238"
  如需如何產生電子郵件的詳細資訊，請參閱 [Reporting Services 資料警示](../ssms/agent/alerts.md)。  
   
 ##  <a name="CreateAlert"></a> 建立資料警示定義  
- 如果您擁有「SharePoint 檢視項目」和「建立提醒」權限，只要報表使用預存認證或不使用認證，您就可以為任何可以檢視的報表建立資料警示定義。 您會從 SharePoint 文件庫執行報表。 您可在 [資料警示設計工具] 中使用的資料是來自該報表。 如果報表已參數化，您可能需要使用不同的參數值執行報表，以確保您想要的資料出現在報表中。 報表開啟之後，在報表工具列上按一下 [動作] 功能表上的 [新資料警示] 選項，開啟 [資料警示設計工具]。 下圖說明如何開啟 [資料警示設計工具]。  
+ 如果您擁有「SharePoint 檢視項目」和「建立提醒」權限，只要報表使用預存認證或不使用認證，您就可以為任何可以檢視的報表建立資料警示定義。 您會從 SharePoint 文件庫執行報表。 您可在 [資料警示設計工具] 中使用的資料是來自該報表。 如果報表已參數化，您可能需要使用不同的參數值，以確定資料執行報表，您有興趣，就會出現。 報表開啟之後，在報表工具列上按一下 [動作] 功能表上的 [新資料警示] 選項，開啟 [資料警示設計工具]。 下圖說明如何開啟 [資料警示設計工具]。  
   
  ![從 SharePoint 文件庫開啟警示設計工具](media/rs-openalertdesigneriw.gif "從 SharePoint 文件庫開啟警示設計工具")  
   

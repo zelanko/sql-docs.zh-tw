@@ -14,12 +14,12 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db840abbf4caed344a1be055afd6432b4d2b18e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209478"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169198"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是以工作為基礎的命令列介面和指令碼語言，專為系統管理所設計。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供一組 PowerShell 指令程式，可讓您部署、管理和監視可用性群組、可用性複本以及可用性資料庫。  
@@ -50,7 +50,7 @@ ms.locfileid: "48209478"
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
-|`Disable-SqlAlwaysOn`|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|`Path`、`InputObject` 或 `Name` 參數所指定的伺服器執行個體  (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本)。|  
+|`Disable-SqlAlwaysOn`|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|`Path`、`InputObject` 或 `Name` 參數所指定的伺服器執行個體  (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 版本)。|  
 |`Enable-SqlAlwaysOn`|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需支援資訊[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 <<c2> [ 必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。</c2>|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
 |`New-SqlHadrEndPoint`|在伺服器執行個體上建立新的資料庫鏡像端點。 在主要與次要資料庫之間進行資料移動時需要這個端點。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|變更現有資料庫鏡像端點的屬性，例如名稱、狀態或驗證屬性。|支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 且缺少資料庫鏡像端點的伺服器執行個體|  
@@ -60,7 +60,7 @@ ms.locfileid: "48209478"
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|建立資料或記錄備份。|任何線上資料庫 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載主要複本之伺服器執行個體的資料庫)|  
-|`Restore-SqlDatabase`|還原備份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載次要複本的伺服器執行個體)<br /><br /> **\*\* 重要\* \*** 準備次要資料庫時，您必須使用`-NoRecovery`參數中的每個`Restore-SqlDatabase`命令。|  
+|`Restore-SqlDatabase`|還原備份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載次要複本的伺服器執行個體)<br /><br /> **&#42;&#42;重要&#42; &#42;** 準備次要資料庫時，您必須使用`-NoRecovery`參數中的每個`Restore-SqlDatabase`命令。|  
   
  如需使用這些 Cmdlet 來準備次要資料庫的相關資訊，請參閱[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48209478"
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|建立新的可用性複本。 您可以使用`-AsTemplate`參數來建立每個新的可用性複本的記憶體中的可用性複本物件。|裝載主要複本的伺服器執行個體|  
+|**New-SqlAvailabilityReplica**|建立新的可用性複本。 您可以使用 `-AsTemplate` 參數，針對每個新的可用性複本建立記憶體中的可用性複本物件。|裝載主要複本的伺服器執行個體|  
 |`Join-SqlAvailabilityGroup`|將次要複本聯結至可用性群組。|裝載次要複本的伺服器執行個體|  
 |**Remove-SqlAvailabilityReplica**|刪除可用性複本。|裝載主要複本的伺服器執行個體|  
 |`Set-SqlAvailabilityReplica`|設定可用性複本的屬性。|裝載主要複本的伺服器執行個體|  

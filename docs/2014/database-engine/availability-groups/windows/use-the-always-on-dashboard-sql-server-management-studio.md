@@ -15,15 +15,15 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f53007ac70cce216e0dc30c9d72ce830050504
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123748"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120365"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Use the AlwaysOn Dashboard (SQL Server Management Studio)
-  資料庫管理員可以使用 AlwaysOn 儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中取得 AlwaysOn 可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 AlwaysOn 儀表板的部分一般用法包括：  
+  資料庫管理員可以使用 AlwaysOn 儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中取得 AlwaysOn 可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 AlwaysOn 儀表板的部分一般用法包括：  
   
 -   選擇手動容錯移轉的複本。  
   

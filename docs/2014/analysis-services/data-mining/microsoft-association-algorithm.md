@@ -31,12 +31,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185028"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120025"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association Algorithm
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供的關聯分析演算法，對於建議引擎很有用。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議產品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。 如需購物籃分析的範例，請參閱 <<c0> [ 第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)在資料採礦教學課程。</c0>  
@@ -79,7 +79,7 @@ ms.locfileid: "48185028"
  如需如何針對資料採礦模型建立查詢的一般資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。  
   
 ## <a name="performance"></a>效能  
- 建立項目集和計算關聯性的過程可能很耗費時間。 雖然[!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯規則演算法會使用最佳化技巧來節省空間及加速處理，您應該要知道在下列情況下，可能會發生效能問題：  
+ 建立項目集和計算關聯性的過程可能很耗費時間。 雖然[!INCLUDE[msCoName](../../includes/msconame-md.md)]關聯規則演算法會使用最佳化技巧來節省空間及加速處理，您應該要知道在下列情況下可能會發生效能問題：  
   
 -   資料集很大且具有許多個別的項目。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48185028"
 -   支援建立資料採礦維度。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [瀏覽模型，使用 Microsoft 關聯規則檢視器](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [關聯模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [使用 Microsoft 關聯規則檢視器瀏覽模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 關聯分析演算法技術參考](microsoft-association-algorithm-technical-reference.md)   
  [關聯模型查詢範例](association-model-query-examples.md)  
   

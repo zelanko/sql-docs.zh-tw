@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28a1b42780b57fb5807e0ff8f900bfe7b1fc7559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670456"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168658"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@class =**] **'***類別***'**  
+ [  **@class =**] **'**_類別_**'**  
  類別目錄的類別。 *類別*已**varchar(8)**，沒有預設值，而且必須具有下列值之一。  
   
 |值|描述|  
@@ -50,7 +50,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**警示**|刪除警示類別目錄。|  
 |**運算子**|刪除操作員類別目錄。|  
   
- [ **@name =**] **'***name***'**  
+ [  **@name =**] **'**_名稱_**'**  
  要移除的類別目錄名稱。 *名稱*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  

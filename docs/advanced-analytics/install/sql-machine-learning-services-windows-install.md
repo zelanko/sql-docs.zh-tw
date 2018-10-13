@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 330c21e6eb256bfe398bc707852eb9a66a183fb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142658"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878091"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -225,87 +225,20 @@ ms.locfileid: "48142658"
 
 執行個體層級，可能包括額外的設定：
 
-* [設定傳入連接的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [SQL Server Machine Learning 服務的防火牆設定](../../advanced-analytics/security/firewall-configuration.md)
 * [啟用額外的網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [啟用遠端連接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 
-在資料庫上，您可能需要將下列的組態更新：
-
-* [擴充內建的權限給遠端使用者](#bkmk_configureAccounts)
-* [授與權限來執行外部指令碼](#permissions-external-script)
-* [授與存取權，對個別的資料庫](#permissions-db)
-
-> [!NOTE]
-> 是否需要額外的設定取決於您安全性結構描述中，您可在此安裝 SQL Server，和您預期使用者會連線到資料庫並執行外部指令碼的方式。 
-
 <a name="bkmk_configureAccounts"></a> 
-
-###  <a name="enable-implied-authentication-for-sql-restricted-user-group-sqlrusergroup-account-group"></a>啟用 SQL 限制使用者群組 (SQLRUserGroup) 帳戶群組的隱含的驗證
-
-如果您需要從遠端資料科學用戶端中，執行指令碼和您使用 Windows 驗證，則需要其他組態才能授與背景工作帳戶執行 R 和 Python 處理程序的登入的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表您的執行個體。 這個行為稱為*隱含的驗證*，而且以支援安全執行外部指令碼在 SQL Server 2016 和 SQL Server 2017 資料庫引擎所實作。
-
-> [!NOTE]
-> 如果您使用**SQL 登入**的 SQL Server 計算內容中執行指令碼，這個額外步驟則不需要。
-
-1. 在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管] 中展開**安全性**。 然後以滑鼠右鍵按一下**登入**，然後選取**新的登入**。
-2. 在 **登入-新增**對話方塊中，選取**搜尋**。
-3. 選取 **物件的型別**，然後選取**群組**。 清除所有其他項目。
-4. 在**輸入要選取的物件名稱**，型別*SQLRUserGroup*，然後選取**檢查名稱**。
-5. 與執行個體的 Launchpad 服務相關聯的本機群組名稱，應該解析為類似 *instancename\SQLRUserGroup*。 選取 [確定]。
-6. 根據預設，群組指派給**公用**角色，而且具有連接到 database engine 的權限。
-7. 選取 [確定]。
-
-在 SQL Server 2017 和更早版本，來執行工作的安全性權杖下建立本機 Windows 使用者帳戶的許多[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服務。 您可以在 Windows 使用者群組 **SQLRUserGroup**中，檢視這些帳戶。 根據預設，會建立 20 個背景工作帳戶，而這通常是遠超過執行外部指令碼的更多作業。 
-
-這些帳戶用，如下所示。 當使用者從外部用戶端傳送的 Python 或 R 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動可用的工作者帳戶、 將它對應至呼叫的使用者的身分識別和執行指令碼，代表使用者。 如果指令碼，對 SQL Server 外部執行時，必須從 SQL Server 擷取資料或資源，SQL Server 的連線需要登入。 建立的資料庫登入**SQLRUserGroup**也連接才會成功。
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-在 SQL Server 2019，背景工作帳戶會取代 AppContainers，與在 SQL Server Launchpad 服務下執行的程序。 雖然無法再使用背景工作帳戶，則仍然必須新增的資料庫登入**SQLRUsergroup**如果隱含需要驗證。 如同背景工作帳戶沒有登入權限，Launchpad 服務身分識別會不。 建立的登入**SQLRUserGroup**，後者包含 Launchpad 服務在此版本中，允許隱含的驗證，才能運作。
-::: moniker-end
-
 <a name="permissions-external-script"></a> 
 
-### <a name="give-users-permission-to-run-external-scripts"></a>給予使用者執行外部指令碼的權限
+在資料庫上，您可能需要將下列的組態更新：
 
-如果您已安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且您會在您自己的執行個體中執行 R 或 Python 指令碼，您通常會以系統管理員身分執行指令碼。 因此，您會有隱含權限不同作業和資料庫中的所有資料。
-
-不過，大部分的使用者，不需要這類更高的權限。 例如，在組織中使用 SQL 登入通常存取資料庫的使用者沒有提高權限。 因此，對於每個使用者使用 R 或 Python，您必須授與使用者的機器學習服務會使用語言每個資料庫中執行外部指令碼的權限。 方法：
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
+* [SQL Server Machine Learning 服務的權限授與使用者](../../advanced-analytics/security/user-permission.md)
+* [新增 SQLRUserGroup 作為資料庫使用者](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> 不支援的指令碼語言特定的權限。 換句話說，沒有與 Python 指令碼的 R 指令碼的個別權限層級。 如果您需要維護這些語言的個別權限，請個別執行個體上安裝 R 和 Python。
-
-<a name="permissions-db"></a> 
-
-### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>提供您的使用者讀取、 寫入或資料定義語言 (DDL) 資料庫的權限
-
-當使用者執行指令碼時，使用者可能需要讀取其他資料庫中的資料。 使用者可能也需要建立新的資料表來儲存結果，並將資料寫入至資料表。
-
-對於每個 Windows 使用者帳戶或 SQL 登入執行 R 或 Python 指令碼，請確定它在特定資料庫上擁有適當的權限： `db_datareader`， `db_datawriter`，或`db_ddladmin`。
-
-例如，下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式可提供 SQL 登入*MySQLLogin*執行的 T-SQL 查詢的權限*ML_Samples*資料庫。 SQL 登入必須存在於伺服器的安全性內容中，才能執行此陳述式。
-
-```SQL
-USE ML_Samples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-如需包含在每個角色的權限的詳細資訊，請參閱[資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>為您的資料科學用戶端執行個體建立 ODBC 資料來源
-
-您可以建立機器學習資料科學用戶端電腦上的解決方案。 如果您需要使用 SQL Server 電腦當作計算內容中執行程式碼，您會有兩個選項： 使用 SQL 登入存取的執行個體，或使用 Windows 帳戶。
-
-+ 針對 SQL 登入： 請確定此登入擁有您會在其中讀取資料之資料庫的適當權限。 您可以藉由新增*連接到*並*選取*權限，或藉由新增登入`db_datareader`角色。 若要建立物件，指派`DDL_admin`權限。 如果您必須將資料儲存至資料表中，加入`db_datawriter`角色。
-
-+ Windows 驗證： 您可能需要指定執行個體名稱和其他連接資訊的資料科學用戶端上建立 ODBC 資料來源。 如需詳細資訊，請參閱 < [ODBC 資料來源管理員](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)。
+> 是否需要額外的設定取決於您安全性結構描述中，您可在此安裝 SQL Server，和您預期使用者會連線到資料庫並執行外部指令碼的方式。
 
 ## <a name="suggested-optimizations"></a>建議的最佳化
 
@@ -313,7 +246,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>新增更多的背景工作帳戶
 
-如果您預期許多使用者同時執行指令碼時，您可以增加指派給 Launchpad 服務的工作者帳戶數目。 如需詳細資訊，請參閱 <<c0> [ 修改 SQL Server Machine Learning 服務的使用者帳戶集區](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
+如果您預期許多使用者同時執行指令碼時，您可以增加指派給 Launchpad 服務的工作者帳戶數目。 如需詳細資訊，請參閱 <<c0> [ 修改 SQL Server Machine Learning 服務的使用者帳戶集區](../administration/modify-user-account-pool.md)。
 
 ### <a name="optimize-the-server-for-script-execution"></a>最佳化指令碼執行的伺服器
 
@@ -325,7 +258,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
   
 - 若要變更的資料庫保留的記憶體數量，請參閱[伺服器記憶體組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
   
-- 若要變更可以啟動的 R 帳戶數目[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，請參閱 <<c2> [ 修改機器學習服務的使用者帳戶集區](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
+- 若要變更可以啟動的 R 帳戶數目[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，請參閱 <<c2> [ 修改機器學習服務的使用者帳戶集區](../administration/modify-user-account-pool.md)。
 
 如果您使用標準版並沒有資源管理員時，您可以使用動態管理檢視 (Dmv) 和擴充的事件，以及 Windows 事件監視，以協助您管理伺服器資源。 如需詳細資訊，請參閱 <<c0> [ 監視和管理 R Services](../r/managing-and-monitoring-r-solutions.md)並[監視和管理 Python Services](../python/managing-and-monitoring-python-solutions.md)。
 

@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802462"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169318"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函式
 **合規性**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>註解  
  *LpszDriver*引數是一份關鍵字-值配對的形式的屬性。 每組都終止 null 位元組，並將整個清單結尾 null 位元組。 （也就是兩個 null 位元組標記清單的結尾）。此清單的格式如下所示：  
   
- *驅動程式 desc* **\\**0Driver**=***驅動程式 DLL 的檔名***\\**0 [安裝程式**=***安裝程式-DLL 檔名***\\**0]  
+ _驅動程式 desc_ **\\**0Driver**=**_驅動程式 DLL 的檔名_**\\**0 [安裝程式**=**_安裝程式-DLL 檔名_<b>\\</b>0]  
   
- [*驅動程式-attr-keyword1***=*** value1 ***\\**0] [* 驅動程式-attr-keyword2***=*** value2 ***\\**0]...**\\**0  
+ [_驅動程式-attr-keyword1_**=**_value1_<b>\\</b>0] [_驅動程式-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b> \\ </b>0  
   
  \0 所在 null 位元組並*驅動程式-attr-keywordn*任何驅動程式屬性的關鍵字。 關鍵字必須出現在指定的順序。 例如，假設格式化文字檔驅動程式會有不同的驅動程式和安裝程式 Dll，而且可以使用.txt 和.csv 副檔名的檔案。 *LpszDriver*引數，此驅動程式的可能，如下所示：  
   

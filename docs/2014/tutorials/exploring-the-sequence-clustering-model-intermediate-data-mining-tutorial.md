@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213878"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085474"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>探索時序群集模型 (中繼資料採礦教學課程)
   既然您已建立**Sequence Clustering with Region**模型，您可以使用瀏覽它[!INCLUDE[msCoName](../includes/msconame-md.md)]中的時序叢集檢視器**採礦模型檢視器**資料採礦設計師 索引標籤。 [!INCLUDE[msCoName](../includes/msconame-md.md)]時序叢集檢視器包含五個索引標籤：**群集圖表**，**群集設定檔**，**群集特性**， **ClusterDiscrimination**，並**的狀態轉換**。 如需如何使用這個檢視器的詳細資訊，請參閱[瀏覽模型，使用 Microsoft 時序叢集檢視器](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "48213878"
   
 2.  選取  **Cycling Cap**中**狀態**清單。  
   
-     此圖表會更新，以顯示每一個群集中選定產品的聚集程度。 具有最暗陰影的群集所包含的 Cycling Cap 密度最高。 您可以變更陰影變數來使用任何輸入資料行的任何狀態。  
+     此圖表會更新，以顯示每一個群集中選定產品的聚集程度。 具有最暗陰影的群集所包含的 Cycling Cap 密度最高。 您可以變更陰影變數來使用任何輸入資料任何的行狀態。  
   
 3.  在 **陰影變數**清單中，選取**母體擴展**。  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48213878"
  [建立相關的時序群集模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 時序群集演算法](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [時序群集模型查詢範例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [時序叢集模型查詢範例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f51c538b050e746a3d806e5a226eaa77eba1c8b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054078"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905978"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
   Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和報表管理員定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
@@ -51,7 +51,7 @@ ms.locfileid: "48054078"
 >  本主題並未說明可存取報表產生器或報表伺服器上儲存之特定報表的 URL。 如需這些項目之 URL 存取的詳細資訊，請參閱《 [線上叢書》中的](../access-report-server-items-using-url-access.md) 使用 URL 存取權存取報表伺服器項目 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLreservation"></a> URL 保留項目和註冊  
- URL 保留項目會定義可用於存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會保留一或多個報表伺服器 Web 服務和報表管理員 http Url。SYS，然後在服務啟動時註冊它們。 報表產生器和報表的 URL 是根據報表伺服器 Web 服務的 URL 保留項目。 您可以將參數附加到 URL，透過此 Web 服務開啟報表產生器或報表。 保留項目和註冊是由 HTTP.SYS 所提供。 如需詳細資訊，請參閱 MSDN 上的＜ [命名空間保留、註冊和路由](http://go.microsoft.com/fwlink/?LinkId=92653) ＞。  
+ URL 保留項目會定義可用於存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會保留一個或多個 URL 以供 HTTP.SYS 中的報表伺服器 Web 服務和報表管理員使用，然後在此服務啟動時加以註冊。 報表產生器和報表的 URL 是根據報表伺服器 Web 服務的 URL 保留項目。 您可以將參數附加到 URL，透過此 Web 服務開啟報表產生器或報表。 保留項目和註冊是由 HTTP.SYS 所提供。 如需詳細資訊，請參閱 MSDN 上的＜ [命名空間保留、註冊和路由](http://go.microsoft.com/fwlink/?LinkId=92653) ＞。  
   
  *「URL 保留」* 是建立 Web 應用程式的 URL 端點，並將其儲存在 HTTP.SYS 中的一項程序。 HTTP.SYS 是所有定義於電腦上之 URL 保留項目的通用儲存機制，而且會定義一組通用規則來保證唯一的 URL 保留項目。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48054078"
   
  如果您停止此服務或是回收此 Web 服務或報表管理員應用程式定義域，URL 會取消註冊。 如果您在此服務執行時修改 URL 保留項目，報表伺服器將會立即回收應用程式定義域，好讓舊的 URL 可以取消註冊，並使用新的 URL。  
   
- 幾個簡單範例將可說明 URL 保留項目的概念，以及它如何與用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL 位址相關。 請注意一個要點，URL 保留項目的語法與用於存取此應用程式之 URL 的語法不同：  
+ 幾個簡單範例將可說明 URL 保留項目的概念，以及它如何與用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL 位址相關。 要注意的重點是 URL 保留項目有不同的語法比您用來存取應用程式的 URL:  
   
 |HTTP.SYS 中的 URL 保留項目|URL|說明|  
 |---------------------------------|---------|-----------------|  
@@ -98,14 +98,14 @@ ms.locfileid: "48054078"
   
  此服務帳戶沒有預設值。 但是，安裝期間需要指定服務帳戶，而且即使您在僅限檔案模式下安裝伺服器，仍然會在 RSReportServer.config 的 `URLReservation` 中指定服務帳戶。 此服務帳戶的有效值包括網域使用者帳戶、`LocalSystem` 或 `NetworkService`。  
   
- 由於預設安全性，已停用匿名存取`RSWindowsNegotiate`。 如果是內部網路存取，報表伺服器 URL 會使用網路電腦名稱。 如果您想要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 進行網際網路連接，就必須使用不同的設定。 如需驗證的詳細資訊，請參閱《 [線上叢書》中的](../security/authentication-with-the-report-server.md) 使用報表伺服器驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 由於預設安全性為 `RSWindowsNegotiate`，所以會停用匿名存取。 如果是內部網路存取，報表伺服器 URL 會使用網路電腦名稱。 如果您想要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 進行網際網路連接，就必須使用不同的設定。 如需驗證的詳細資訊，請參閱《 [線上叢書》中的](../security/authentication-with-the-report-server.md) 使用報表伺服器驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLlocalAdmin"></a> 用於本機管理的 URL  
  如果您指定了強式或弱式萬用字元作為 URL 保留項目，則可以使用 http://localhost/reportserver 或 http://localhost/reports。  
   
  http://localhost URL 會解譯成 http://127.0.0.1。 如果您將 URL 保留項目限制為電腦名稱或單一 IP 位址，則除非您針對本機電腦上的 127.0.0.1 建立其他保留項目，否則將無法使用 localhost。 同樣地，如果電腦上已停用 localhost 或 127.0.0.1，您將無法使用該 URL。  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 和[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]包含新的安全性功能，意外使用更高權限執行程式的風險降至最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 包含新的安全性功能，可讓意外使用更高權限執行程式的風險降到最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ##  <a name="URLSharePoint"></a> 以 SharePoint 整合模式的報表伺服器的 Url  
  如果獨立報表伺服器設定為在 SharePoint 產品或技術的大型部署內執行，URL 和虛擬目錄建構將受到以下方面的影響：  
@@ -124,6 +124,6 @@ ms.locfileid: "48054078"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [URL 保留項目語法&#40;SSRS 組態管理員&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL 保留項目語法 &#40;SSRS 組態管理員&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82646e7dd6b51df00083e7eb175ab0dd99349173
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101458"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119205"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
   此主題描述如何備份及還原 DQS 資料庫。  
@@ -25,9 +25,9 @@ ms.locfileid: "48101458"
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
--   您必須知道或記得您在 DQS 伺服器安裝期間所提供之資料庫主要金鑰的密碼。  
+-   您必須知道或記得您在 DQS 伺服器安裝期間提供的資料庫主要金鑰的密碼。  
   
--   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需在此畫面工作的詳細資訊，請參閱[Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
+-   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需有關在此畫面工作的詳細資訊，請參閱＜ [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)＞。  
   
 -   確定沒有任何使用者登入 DQS 伺服器。  
   

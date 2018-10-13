@@ -11,12 +11,12 @@ ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195918"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120377"
 ---
 # <a name="modify-the-trace-results-view"></a>修改追蹤結果檢視
   本主題描述如何透過執行下列工作，在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中修改擴充事件工作階段的追蹤結果檢視。  
@@ -228,7 +228,7 @@ ms.locfileid: "48195918"
   
     -   **資料表資料行**： 使用此選項可在追蹤視窗中搜尋所有可見資料行。  
   
-    -   **詳細資料**： 使用此選項可在追蹤視窗中搜尋在開啟 **[在擴充事件中尋找]** 對話方塊之前已選取的所有資料行 (已升級和非升級)。  
+    -   **詳細資料**： 使用此選項來搜尋所有的資料行 （已升級和非升級），在追蹤視窗中，開啟之前已選取**在擴充事件中尋找** 對話方塊。  
   
     -   **\<事件資料行名稱 >**。 使用此選項可在下拉式清單的特定事件資料行中進行搜尋。  
   

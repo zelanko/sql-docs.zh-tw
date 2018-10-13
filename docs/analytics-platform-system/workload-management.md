@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396258"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100375"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理
 
@@ -107,7 +107,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 SQL Server PDW 執行陳述式之前，它會嘗試取得要求所需的並行存取插槽。 如果它無法取得足夠的並行位置，則 SQL Server PDW 會將要求進入執行等候的狀態。 已配置給要求的所有資源系統會都傳回到系統中。  
   
-大部分的 SQL 陳述式永遠需要預設的資源配置，並因此不受資源類別。 例如，建立登入只需要少量的資源，和已配置的預設資源，即使呼叫建立的登入的登入的成員資源類別。  比方說，如果 Anna 為 largerc 資源類別的成員，她將提交的 CREATE LOGIN 陳述式 CREATE LOGIN 陳述式會使用預設的資源數目。  
+大部分的 SQL 陳述式永遠需要預設的資源配置，並因此不受資源類別。 比方說，建立登入只需要少量的資源，，和已配置的預設資源，即使呼叫建立的登入的登入的資源類別的成員。  比方說，如果 Anna 為 largerc 資源類別的成員，她將提交的 CREATE LOGIN 陳述式 CREATE LOGIN 陳述式會使用預設的資源數目。  
   
 SQL 陳述式和作業都受到資源類別控管：  
   

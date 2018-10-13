@@ -14,15 +14,15 @@ ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de2261820fd7e35c44c6d70562ca9751c370bc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9331aede0a02f0f84bd2ae76998efeb8edc075b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094688"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905068"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>報表屬性對話方塊、版面設定
-  選取 **[報表屬性]** 對話方塊上的 **[版面配置]** 來設定整個報表的頁面選項。  
+  選取 **版面**上**報表屬性**，來設定整個報表的分頁選項的對話方塊。  
   
 ## <a name="options"></a>選項。  
  **英吋為單位**  

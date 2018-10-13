@@ -18,12 +18,12 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc910b5ca726e50596dc17612b19f4851a51b48c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2252fe0339a13a6d75c43a09351b95b17b7abd7b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636654"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168758"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@oldest_date=** ] **'***oldest_date***'**  
+ [  **@oldest_date=** ] **'**_最舊\_日期_**'**  
  這是備份和還原記錄資料表中所保留的最舊日期。 *oldest_date*已**datetime**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  

@@ -13,12 +13,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f6695b6f5d77b506147fa6d9f6aa0b77e1978ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152748"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072282"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
@@ -163,7 +163,7 @@ ms.locfileid: "48152748"
  本章節討論 SQL Server Native Client ODBC 函數為了支援大型 CLR UDT 所做的變更。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「繫結和轉換」一節所述。  
+ UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT 所需的值如下所示：  
@@ -196,13 +196,13 @@ ms.locfileid: "48152748"
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「繫結和轉換」一節所述。  
+ UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「繫結和轉換」一節所述。  
+ UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT 結果資料行值會從 SQL 轉換成 C 資料類型，如本主題稍早的「繫結和轉換」一節所述。  
+ UDT 結果資料行值會轉換是從 SQL 到 C 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  有提供新類型的描述項欄位在本主題稍早的「參數的描述項欄位」和「結果的描述項欄位」章節中有加以描述。  
@@ -222,7 +222,7 @@ ms.locfileid: "48152748"
  針對 UDT 傳回的值如同本主題稍早的「SQLColumns 和 SQLProcedureColumns 傳回的資料行中繼資料 (目錄中繼資料)」一節所述。  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- UDT 參數值會從 C 轉換成 SQL 資料類型，如本主題稍早的「繫結和轉換」一節所述。  
+ UDT 參數值會轉換是從 C 到 SQL 資料類型在 「 繫結和轉換 」 區段中，稍早在本主題中所述。  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  有提供新類型的描述項欄位在本主題稍早的「參數的描述項欄位」和「結果的描述項欄位」章節中有加以描述。  

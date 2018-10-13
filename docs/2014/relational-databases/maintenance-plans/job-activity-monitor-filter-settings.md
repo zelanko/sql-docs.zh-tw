@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207551"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168819"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作業活動監視器 (篩選設定)
   使用此頁面來減少可以在作業活動監視器看到的資料列數目。 在一或數個可用的方塊中輸入準則，只顯示符合指定值的資料列。 有些方塊 (例如 [狀態] 或 [封鎖類型]) 提供有限數目的可能值，經由下拉式清單提供。 其他的方塊 (例如 [應用程式]) 則允許您以逗號分隔的清單，輸入任何值以及隨您想要之數量的值。 工具列圖示允許您依類別或字母順序排序可用的方塊。 按一下準則以顯示每個準則的簡短描述。  
@@ -60,7 +60,7 @@ ms.locfileid: "48207551"
  這個未命名的方塊，在準則被選取時提供準則的簡短描述。  
   
  **套用篩選**  
- 若要套用篩選，請按一下 [套用****篩選]，然後按一下 [確定]。 若要在 [篩選****設定] 對話方塊中保留篩選設定而不套用它們，請取消選取 [套用****篩選]，然後按一下 [確定]，以顯示所有資料列。  
+ 若要套用的篩選器，按一下**套用篩選**，然後按一下**確定**。 若要保留中的篩選器設定**篩選設定**對話方塊方塊中，但不是套用它們，請取消核取**套用篩選**，然後按一下 **[確定]**，用來顯示所有資料列。  
   
  **Clear**  
  將篩選設定恢復成預設值。  

@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200874"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084967"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重新命名 DML 觸發程序
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改或重新命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的 DML 觸發程序。  
@@ -36,7 +36,7 @@ ms.locfileid: "48200874"
   
 -   **使用下列方法修改或重新命名 DML 觸發程序：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48200874"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   我們建議您不要使用 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 預存程序重新命名觸發程序。 變更物件名稱的任何部分，可能破壞指令碼和預存程序。 重新命名觸發程序並不會變更 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 目錄檢視 definition 資料行中對應的物件名稱。 我們建議您先卸除，再重新建立觸發程序。  
+-   我們建議您不要使用 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 預存程序重新命名觸發程序。 變更物件名稱的任何部分，可能破壞指令碼和預存程序。 重新命名觸發程序並不會變更 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 目錄檢視 definition 資料行中對應的物件名稱。 我們建議您卸除並重新改為建立觸發程序。  
   
 -   如果您變更 DML 觸發程序所參考的物件名稱，就必須修改觸發程序以反映新的名稱。 因此，在您重新命名物件之前，請先顯示此物件的相依性，以判斷是否有任何觸發程序受到相關變更的影響。  
   

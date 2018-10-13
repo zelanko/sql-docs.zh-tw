@@ -18,12 +18,12 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc732205a726af76da07f92e6a2d29558ebfb816
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4daab0b36ff21fea956c1c5b0db27588cc5acee
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743366"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168698"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'**_計劃\_識別碼_**'**  
  指定維護計畫的識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'**_作業\_識別碼_**'**  
  指定與維護計畫相關聯的作業識別碼。 *job_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  

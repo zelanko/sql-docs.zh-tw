@@ -13,15 +13,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8b839a64feb81a538f943d403733fee3772cce7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116376"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119836"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
-  在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第一個工作是計算變更間隔的端點。 這些端點是`datetime`值，而且會儲存在稍後在封裝中使用的封裝變數中。  
+  在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第一個工作是計算變更間隔的端點。 這些端點是 `datetime` 值，而且將會以封裝變數儲存，以便稍後在封裝中使用。  
   
 > [!NOTE]  
 >  如需設計控制流程之完整程序的描述，請參閱[異動資料擷取 &#40;SSIS&#41;](change-data-capture-ssis.md)。  
@@ -35,44 +35,44 @@ ms.locfileid: "48116376"
   
 2.  在 **[變數]** 視窗中，建立下列變數：  
   
-    1.  建立的變數`datetime`以保存間隔的起始點的資料類型。  
+    1.  建立具有 `datetime` 資料類型的變數，以保存間隔的起始點。  
   
          這個範例會使用變數名稱 ExtractStartTime。  
   
-    2.  建立與另一個變數`datetime`以保存間隔的結束點的資料類型。  
+    2.  建立具有 `datetime` 資料類型的另一個變數，以保存間隔的結束點。  
   
          這個範例會使用變數名稱 ExtractEndTime。  
   
  如果您要在主要封裝中，計算執行多個子封裝的端點，您可以使用「父封裝變數」組態，將這些變數的值傳遞到每個子封裝。 如需詳細資訊，請參閱 [執行封裝工作](../control-flow/execute-package-task.md) 和 [在子封裝中使用變數和參數的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>計算變更資料的起始點和結束點  
- 設定間隔端點的封裝變數後，您可以計算這些端點的實際值，然後將這些值對應到對應的封裝變數。 這些端點都是 `datetime` 值，因此您必須使用可以計算或處理 `datetime` 值的函數。 這兩個[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]運算式語言和 TRANSACT-SQL 都有函式可搭配`datetime`值：  
+ 設定間隔端點的封裝變數後，您可以計算這些端點的實際值，然後將這些值對應到對應的封裝變數。 這些端點都是 `datetime` 值，因此您必須使用可以計算或處理 `datetime` 值的函數。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言和 Transact-SQL 都有可以使用 `datetime` 值的函數：  
   
- 中的函式[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的運算式語言`datetime`值  
+ 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言中，使用 `datetime` 值的函數  
  -   [DATEADD &#40;SSIS 運算式&#41;](../expressions/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF &#40;SSIS 運算式&#41;](../expressions/datediff-ssis-expression.md)  
   
 -   [DATEPART &#40;SSIS 運算式&#41;](../expressions/datepart-ssis-expression.md)  
   
--   [天&#40;SSIS 運算式&#41;](../expressions/day-ssis-expression.md)  
+-   [DAY &#40;SSIS 運算式&#41;](../expressions/day-ssis-expression.md)  
   
 -   [GETDATE &#40;SSIS 運算式&#41;](../expressions/getdate-ssis-expression.md)  
   
 -   [GETUTCDATE &#40;SSIS 運算式&#41;](../expressions/getutcdate-ssis-expression.md)  
   
--   [每月&#40;SSIS 運算式&#41;](../expressions/month-ssis-expression.md)  
+-   [MONTH &#40;SSIS 運算式&#41;](../expressions/month-ssis-expression.md)  
   
 -   [YEAR &#40;SSIS 運算式&#41;](../expressions/year-ssis-expression.md)  
   
- 函式中使用的 TRANSACT-SQL`datetime`值  
+ 在 Transact-SQL 中，使用 `datetime` 值的函數  
  [日期和時間資料類型與函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
  使用其中任何一個 `datetime` 函數計算端點前，您必須判斷間隔是否已經固定，而且是否定期發生。 一般而言，您會想要將來源資料表中發生的變更定期套用到目的地資料表。 例如，您可能會想要每小時、每天，或每週套用一次這些變更。  
   
  了解您的變更間隔是固定還是比較隨機後，您就可以計算端點：  
   
--   **計算開始日期和時間**。 您可以使用上次載入的結束日期和時間當做目前的開始日期和時間。 如果您將固定的間隔用於累加式載入時，您可以使用來計算這個值`datetime`函式的 TRANSACT-SQL 或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]運算式語言。 否則，您可能需要保存執行之間的端點，並使用「執行 SQL」工作或「指令碼」工作來載入前一個端點。  
+-   **計算開始日期和時間**。 您可以使用上次載入的結束日期和時間當做目前的開始日期和時間。 如果您將固定間隔用於累加式載入，您可以使用 Transact-SQL 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言的 `datetime` 函數來計算這個值。 否則，您可能需要保存執行之間的端點，並使用「執行 SQL」工作或「指令碼」工作來載入前一個端點。  
   
 -   **計算結束日期和時間**。 如果您將固定間隔用於累加式載入，計算目前的結束日期和時間當做開始日期和時間的位移。 同樣地，您可以計算此值，使用`datetime`函式的 TRANSACT-SQL 或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]運算式語言。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48116376"
 3.  在 **[執行 SQL 工作編輯器]** 的 **[結果集]** 頁面上，將 ExtractStartTime 結果對應到 ExtractStartTime 封裝變數，並將 ExtractEndTime 結果對應到 ExtractEndTime 封裝變數。  
   
     > [!NOTE]  
-    >  當您使用運算式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數的值時，每次存取變數的值時，就會評估該運算式。  
+    >  當您使用運算式來設定的值[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]變數時，運算式會評估每次存取變數的值。  
   
 ## <a name="next-step"></a>下一個步驟  
  計算變更範圍的起點和結束點後，下一個步驟是判斷變更資料是否就緒。  

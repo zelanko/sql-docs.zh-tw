@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177788"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120335"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的強制手動容錯移轉 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。 強制容錯移轉是一種手動容錯移轉形式，嚴格限於 [已規劃的手動容錯移轉](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 不可行時用來進行災難復原。 如果您強制容錯移轉至非同步的次要複本，有些資料可能會遺失。 因此，強烈建議您只有在主要複本不再執行、而且您願意承擔遺失資料的風險以還原可用性群組中對資料庫的存取時，才進行強制容錯移轉。  
@@ -132,7 +132,7 @@ ms.locfileid: "48177788"
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
-1.  連接到裝載需要容錯移轉之可用性群組中，其角色為 SECONDARY 或 RESOLVING 狀態之複本的伺服器執行個體。  
+1.  連接到裝載角色處於 SECONDARY 或 RESOLVING 狀態，在需要容錯移轉之可用性群組複本的伺服器執行個體。  
   
 2.  使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 陳述式，如下所示：  
   
@@ -151,15 +151,15 @@ ms.locfileid: "48177788"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
-1.  將目錄 (`cd`) 變更為裝載需要容錯移轉之可用性群組中，其角色為 SECONDARY 或 RESOLVING 狀態之複本的伺服器執行個體。  
+1.  將目錄變更 (`cd`) 裝載角色處於 SECONDARY 或 RESOLVING 狀態，在需要容錯移轉之可用性群組複本的伺服器執行個體。  
   
 2.  以下列其中一種形式，搭配 `Switch-SqlAvailabilityGroup` 參數使用 `AllowDataLoss` 指令程式：  
   
     -   `-AllowDataLoss`  
   
-         根據預設，`-AllowDataLoss` 參數會使 `Switch-SqlAvailabilityGroup` 提示您提醒自己強制容錯移轉可能會導致遺失未認可交易以及要求確認。 若要繼續，請輸入`Y`; 若要取消作業，請輸入`N`。  
+         根據預設，`-AllowDataLoss` 參數會使 `Switch-SqlAvailabilityGroup` 提示您提醒自己強制容錯移轉可能會導致遺失未認可交易以及要求確認。 若要繼續，請輸入 `Y`；若要取消操作，請輸入 `N`。  
   
-         以下範例會針對名稱為 `MyAg` 之伺服器執行個體上的次要複本，執行可用性群組 `SecondaryServer\InstanceName`的強制容錯移轉 (可能會遺失資料)。 您將會收到確認此作業的提示。  
+         以下範例會針對名稱為 `SecondaryServer\InstanceName` 之伺服器執行個體上的次要複本，執行可用性群組 `MyAg` 的強制容錯移轉 (可能會遺失資料)。 您將會收到確認此作業的提示。  
   
         ```  
         Switch-SqlAvailabilityGroup `  
@@ -169,9 +169,9 @@ ms.locfileid: "48177788"
   
     -   **-AllowDataLoss-Force**  
   
-         若要在不確認的情況下起始強制容錯移轉，請同時指定 `-AllowDataLoss` 和 `-Force` 參數。 如果您要在指令碼中加入命令，並在沒有使用者介入的情況之下執行它，這相當實用。  不過，使用`-Force`選項小心，因為強制容錯移轉可能會導致遺失的資料從參與可用性群組的資料庫。  
+         若要在不確認的情況下起始強制容錯移轉，請同時指定 `-AllowDataLoss` 和 `-Force` 參數。 如果您要在指令碼中加入命令，並在沒有使用者介入的情況之下執行它，這相當實用。  不過，使用 `-Force` 選項時請小心，因為強制容錯移轉可能會導致資料從參與可用性群組的資料庫中遺失。  
   
-         以下範例會針對名稱為 `MyAg` 的伺服器執行個體，執行可用性群組 `SecondaryServer\InstanceName`的強制容錯移轉 (可能會遺失資料)。 `-Force` 選項會隱藏此作業的確認。  
+         以下範例會針對名稱為 `MyAg` 的伺服器執行個體，執行可用性群組 `SecondaryServer\InstanceName` 的強制容錯移轉 (可能會遺失資料)。 `-Force` 選項會隱藏此作業的確認。  
   
         ```  
         Switch-SqlAvailabilityGroup `  
@@ -180,7 +180,7 @@ ms.locfileid: "48177788"
         ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 3.  強制可用性群組容錯移轉之後，完成必要的後續追蹤步驟。 如需詳細資訊，請參閱本主題前面的＜ [後續：強制容錯移轉後的重要任務](#FollowUp)＞。  
   
@@ -303,7 +303,7 @@ ms.locfileid: "48177788"
   
 -   [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [使用容錯移轉可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [使用容錯移轉可用性群組精靈 (SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
  **若要疑難排解：**  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 776b4390c78a6bd228989b94dd76d4a269f94126
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818056"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878101"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>部署 SQL Server Always On 可用性群組上的 Kubernetes 叢集
 
@@ -39,7 +39,7 @@ ms.locfileid: "48818056"
   >您可以使用任何類型的 Kubernetes 叢集。 若要在 Azure Kubernetes Service (AKS) 建立 Kubernetes 叢集，請參閱[建立 AKS 叢集](http://docs.microsoft.com/azure/aks/create-cluster)。
   > 下列指令碼會在 Azure 中建立四個節點的 Kubernetes 叢集。
   >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3
+  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
   >```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>部署運算子、 SQL Server 容器和負載平衡服務

@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121745"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120065"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>針對 SQL Server Managed Backup 到 Windows Azure 進行疑難排解
   本主題說明[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]作業期間，針對其中可能發生的錯誤所使用的工作和工具進行疑難排解。  
@@ -56,7 +56,7 @@ ms.locfileid: "48121745"
   
 1.  **啟用或設定時的錯誤[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     錯誤：「無法存取儲存體 URL…。 請提供有效的 SQL 認證...」 ： 您可能會看到此錯誤和其他類似的錯誤，指的 SQL 認證。  在這種情況下，請檢閱您提供的 SQL 認證名稱，以及儲存在 SQL 認證中的資訊 - 儲存體帳戶名稱及儲存體存取金鑰，並確定它們為最新且有效。  
+     錯誤：「無法存取儲存體 URL…。 請提供有效的 SQL 認證...」 ： 您可能會看到此錯誤和其他類似的錯誤，指的 SQL 認證。  在此情況下，檢閱您提供的 SQL 認證，以及資訊儲存在 SQL 認證-儲存體帳戶名稱和儲存體存取金鑰的名稱，並確定它們是最新且有效。  
   
      錯誤: 「... 無法設定資料庫...，因為它是系統資料庫 」: 您會看到這個錯誤，如果您嘗試啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]系統資料庫。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支援系統資料庫的備份。  若要設定系統資料庫的備份，請使用其他 SQL Server 備份技術 (例如維護計劃)。  
   

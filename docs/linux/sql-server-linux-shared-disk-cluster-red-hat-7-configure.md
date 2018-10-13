@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 79525e1127bdef20c85e1098b040de5d5eb7a60e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739463"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085484"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -287,7 +287,7 @@ NFS 伺服器上執行下列作業：
 
    
 
-2. 設定安裝 Pacemaker 和 Corosync 套件時建立的預設使用者密碼。 在這兩個節點上使用相同的密碼。 
+2. 設定安裝 Pacemaker 和 Corosync 封裝時建立的預設使用者密碼。 在這兩個節點上使用相同的密碼。 
 
    ```bash
    sudo passwd hacluster

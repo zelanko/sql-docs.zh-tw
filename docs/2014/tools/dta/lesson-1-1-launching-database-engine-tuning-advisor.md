@@ -14,12 +14,12 @@ ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad6b28f2e133abcc872186adc57fdd422687ddc5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130610"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906248"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>啟動 Database Engine Tuning Advisor
   首先，請開啟 Database Engine Tuning Advisor 圖形化使用者介面 (GUI)。 在第一次使用時， **系統管理員** 固定伺服器角色的成員必須啟動 Database Engine Tuning Advisor 來初始化應用程式。 初始化之後， **db_owner** 固定資料庫角色的成員便可以利用 Database Engine Tuning Advisor 來微調他們擁有的資料庫。 如需初始化 Database Engine Tuning Advisor 的詳細資訊，請參閱 [啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48130610"
  ![Database Engine Tuning Advisor 預設視窗](media/defaultdtagui.gif "Database Engine Tuning Advisor 預設視窗")  
   
 > [!NOTE]  
->  索引標籤和 [工作階段名稱] 方塊會顯示您的電腦名稱和已連接的執行個體名稱。 索引標籤和方塊也會顯示目前的日期和時間。  
+>  [] 索引標籤並**工作階段名稱**方塊會顯示您的電腦以及您所連接的執行個體的名稱。 索引標籤和方塊也會顯示目前的日期和時間。  
   
  在第一次開啟 Database Engine Tuning Advisor 時，它的 GUI 會出現兩個主要窗格。  
   

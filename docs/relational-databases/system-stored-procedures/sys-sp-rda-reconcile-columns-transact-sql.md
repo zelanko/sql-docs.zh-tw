@@ -17,17 +17,17 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d077da2847a430b2a225ea896b1eafd289218a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603956"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906318"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  協調遠端 Azure 資料表中的資料行中的資料行已啟用 Stretch 的 SQL Server 資料表。  
+  已啟用 Stretch 的 SQL Server 資料表中的資料行來調解遠端 Azure 資料表中的資料行。  
     
   **sp_rda_reconcile_columns**將存在於已啟用 Stretch 的 SQL Server 資料表中，但遠端資料表中找不到遠端資料表的資料行。 這些資料行可能會不小心刪除遠端資料表中的資料行。 不過， **sp_rda_reconcile_columns**不會刪除遠端資料表存在於遠端資料表中，但不是在 SQL Server 資料表資料行。
   
@@ -58,7 +58,7 @@ sp_rda_reconcile_columns @objname = '@objname'
  如果遠端 Azure 資料表中有些資料行已不再存在於已啟用延展功能的 SQL Server 資料表中，這些額外的資料行並不會影響 Stretch Database 的正常運作。 您也可以手動移除額外的資料行。  
   
 ## <a name="example"></a>範例  
- 若要先協調的資料行，在遠端 Azure 資料表中，執行下列陳述式。  
+ 若要協調遠端 Azure 資料表中的資料行，執行下列陳述式。  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

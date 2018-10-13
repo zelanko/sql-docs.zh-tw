@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217948"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119324"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  
@@ -35,7 +35,7 @@ ms.locfileid: "48217948"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會限制公佈之檔案的大小上限，以便減少針對伺服器的阻絕服務攻擊威脅。 增加上限值會逐漸破壞此限制所提供的一些保護。 只有當您確定增加上限值後的優點，大於任何額外的安全性風險時，才需要這麼做。  
   
- 請記住，您為 `maxRequestLength` 元素所設定的值必須大於想要強制執行的實際大小限制。 將所有參數封裝在 SOAP Envelope 中，並將 Base64 編碼套用至特定參數 (例如 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 和 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 方法中的 Definition 參數) 之後，HTTP 要求大小必然會增加，因此您需要設定更大的值以容納增加的大小。 Base64 編碼會使原始資料大小增加約 33%。 因此，此值指定`maxRequestLength`項目，就必須大於實際可用的項目大小約 33%。 例如，如果您為 `maxRequestLength` 所指定的值為 64 MB，公佈到報表伺服器的報表檔案大小上限實際上應該約會是 48 MB。  
+ 請記住，您為 `maxRequestLength` 元素所設定的值必須大於想要強制執行的實際大小限制。 將所有參數封裝在 SOAP Envelope 中，並將 Base64 編碼套用至特定參數 (例如 <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> 和 <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> 方法中的 Definition 參數) 之後，HTTP 要求大小必然會增加，因此您需要設定更大的值以容納增加的大小。 Base64 編碼會使原始資料大小增加約 33%。 因此，您為 `maxRequestLength` 元素所指定的值需要大於實際可用的項目大小約 33%。 例如，如果您為 `maxRequestLength` 所指定的值為 64 MB，公佈到報表伺服器的報表檔案大小上限實際上應該約會是 48 MB。  
   
 ## <a name="report-size-in-memory"></a>記憶體中的報表大小  
  當您執行報表時，報表大小等於傳回的報表資料量再加上輸出資料流的大小。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會限制已轉譯之報表的大小上限。 系統記憶體會決定大小上限 (根據預設，轉譯報表時，報表伺服器會使用所有設定的可用記憶體)，但是您可以指定組態設定，以便設定記憶體臨界值和記憶體管理原則。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "48217948"
   
  **reportserver** 與 **reportservertempdb** 兩種資料庫預設都設定為自動成長。 儘管資料庫大小會自動增加，但卻不會自動減少。 如果因為刪除快照集造成 **reportserver** 資料庫超出其容量，您就必須手動縮減資料庫的大小來復原磁碟空間。 相同的，如果擴充 **reportservertempdb** 以容納不尋常、極大量的互動式報告功能，磁碟空間配置將會維持這個設定直到您縮小資料庫大小為止。  
   
- 若要測量報表伺服器資料庫的大小，您可以執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。 定期計算資料庫大小的總和可以幫助您建立在一段期間內合理預估報表伺服器資料庫的方式。 下列陳述式會測量目前使用的空間數量 (這些陳述式假定您使用的是預設的資料庫名稱)：  
+ 若要測量報表伺服器資料庫的大小，您可以執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。 定期計算資料庫大小的總和可以幫助您建立在一段期間內合理預估報表伺服器資料庫的方式。 下列陳述式會測量目前使用的空間數量 （這些陳述式會假設您使用預設的資料庫名稱）：  
   
 ```  
 USE ReportServer  
@@ -82,7 +82,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](set-report-processing-properties.md)   
- [報表伺服器資料庫&#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)   
+ [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)   
  [處理大型報表](process-large-reports.md)  
   
   

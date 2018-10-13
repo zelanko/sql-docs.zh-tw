@@ -17,12 +17,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132108"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906488"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)
   您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元，將 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
@@ -44,9 +44,9 @@ ms.locfileid: "48132108"
   
 -   安裝程式會在叢集作業系統上安裝 .NET Framework 4.0。 若要盡量縮短任何可能的停機時間，您可以考慮在執行安裝程式前先安裝 .NET Framework 4.0。  
   
--   若要確定 Visual Studio 元件可以正確地安裝[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會要求您安裝更新。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會檢查此更新的狀態，然後需要您下載並安裝更新才能繼續安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 若要避免期間中斷[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝程式，您可以下載並安裝更新，再執行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]如下所述，安裝程式 （或.NET 3.5 sp1 提供 Windows Update 上安裝所有更新）：  
+-   若要確定 Visual Studio 元件可以正確安裝， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要安裝更新。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會檢查此更新的狀態，然後需要您下載並安裝更新才能繼續安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 若要避免 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式期間的中斷，您可以先下載並安裝更新，然後執行如下所述的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式 (或安裝 Windows Update 上可用 .NET 3.5 SP1 的所有更新)：  
   
-     如果您安裝[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Widows Server 2008 SP2 作業系統的電腦上，您可以取得必要的更新[這裡](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     如果您安裝[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]上與 Windows Server 2008 SP2 作業系統的電腦，您可以取得必要的更新[這裡](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
      如果您將 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 安裝在 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1 作業系統的電腦上，則已包含此更新。  
   

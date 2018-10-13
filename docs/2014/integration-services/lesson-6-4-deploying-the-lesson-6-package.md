@@ -11,12 +11,12 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81119bcb31e46667e572c4d5cd2ea37858306876
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177038"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905038"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>步驟 4：部署第 6 課的套件
   部署封裝時，需要將封裝新增至 SSISDB 目錄中的 SQL Server 執行個體上的整合服務。 在本課程中您會將第 6 課封裝加入至 SSISDB 目錄、 設定參數，以及執行封裝。 本課程中引導您使用 SQL Server Management Studio 來將第 6 課封裝加入至 SSISDB 目錄，以及部署封裝。 在部署封裝之後，您將修改參數指向新位置，然後執行封裝。  
@@ -31,7 +31,7 @@ ms.locfileid: "48177038"
   
 -   在 SSMS 中執行封裝。  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>若要尋找或加入 SSISDB 目錄  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>尋找或新增 SSISDB 目錄  
   
 1.  按一下 [開始]，指向 [所有程式]、 指向 Microsoft SQL Server 2012，，然後按一下 [SQL Management Studio]。  
   

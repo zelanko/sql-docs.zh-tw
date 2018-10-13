@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745746"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851843"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (Faq)
 
@@ -103,7 +103,7 @@ ms.locfileid: "47745746"
 
 1. **在 Linux 上的 SQL Server 支援多個執行個體上相同的主機嗎？**
 
-   建議要有多個不同的執行個體的主機上執行多個容器。 每個容器都必須在不同的連接埠上接聽。 如需詳細資訊，請參閱 <<c0> [ 執行 SQL Server 的多個容器](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)。
+   建議要有多個不同的執行個體的主機上執行多個容器。 這其實很容易使用 docker，但每個容器都必須在不同的連接埠上接聽。 如需詳細資訊，請參閱 <<c0> [ 執行 SQL Server 的多個容器](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)。
 
 1. **在 Linux 上支援的 Active Directory 驗證？**
 

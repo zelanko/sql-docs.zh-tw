@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827329"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878011"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 預覽中使用 notebook
 
@@ -76,6 +76,9 @@ ms.locfileid: "48827329"
 附加至選取項目提供的核心，以附加的內容。 當您連接到 SQL Server 的巨量資料叢集端點時，預設值附加至曾說: 「 選取項目會是叢集中的該端點。
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> 根據預設，Spark 應用程式已設定 1 的驅動程式，並將需要大約 8.5 GB 的記憶體的 3 個執行程式。 執行多個 spark 工作階段的建議的設定為至少 32 GB 的記憶體，將叢集中的每一部伺服器 (例如，在 AKS 環境中使用**Standard_D8_v3**有 32 GB 的記憶體的 VM 大小)。
 
 ## <a name="hello-world-in-the-different-contexts"></a>不同的內容中的 hello world
 

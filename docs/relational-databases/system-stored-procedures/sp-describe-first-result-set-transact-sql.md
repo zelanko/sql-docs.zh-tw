@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705876"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072062"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  名稱、Null 屬性和資料類型可以不同。 如果**sp_describe_first_result_set**傳回空的結果集，就可以保證批次執行會傳回任何結果集。  
   
- 這項保證會假設伺服器上沒有任何相關的結構描述變更。 在伺服器上的相關結構描述變更不包括建立暫存資料表或資料表之間的時間於批次 A 中的變數， **sp_describe_first_result_set**稱為和期間傳回的結果集的時間執行，包括由批次 b 進行的結構描述變更  
+ 這項保證會假設伺服器上沒有相關的結構描述變更。 在伺服器上的相關結構描述變更不包括建立暫存資料表或資料表之間的時間於批次 A 中的變數， **sp_describe_first_result_set**稱為和期間傳回的結果集的時間執行，包括由批次 b 進行的結構描述變更  
   
  **sp_describe_first_result_set**任何下列的情況下會傳回錯誤。  
   

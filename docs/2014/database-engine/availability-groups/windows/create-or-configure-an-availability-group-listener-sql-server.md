@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d2a18c1f9f425ec7531c46299a5cf4c78278437
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052368"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120405"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
   本主題描述如何使用 *、* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一 [!INCLUDE[tsql](../../../includes/tsql-md.md)]「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener)。  
@@ -160,7 +160,7 @@ ms.locfileid: "48052368"
      `New-SqlAvailabilityGroupListener`  
      建立新的可用性群組接聽程式，並將其附加至現有的可用性群組。  
   
-     例如，下列`New-SqlAvailabilityGroupListener`命令會建立名為可用性群組接聽程式`MyListener`可用性群組`MyAg`。 此接聽程式會使用傳遞至的 IPv4 位址`-StaticIp`參數做為其虛擬 IP 位址。  
+     例如，下列 `New-SqlAvailabilityGroupListener` 命令會針對可用性群組 `MyListener` 建立名為 `MyAg` 的可用性群組接聽程式。 這個接聽程式將使用傳遞給 `-StaticIp` 參數的 IPv4 位址做為其虛擬 IP 位址。  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -183,7 +183,7 @@ ms.locfileid: "48052368"
      `Add-SqlAGListenerstaticIp`  
      將靜態 IP 位址加入至現有的可用性群組接聽程式組態。 IP 位址可以是包含子網路的 IPv4 位址或 IPv6 位址。  
   
-     例如，下列 `Add-SqlAGListenerstaticIp` 命令會將靜態 IPv4 位址加入至可用性群組 `MyListener` 的可用性群組接聽程式 `MyAg`。 這個 IPv6 位址會做為子網路 `255.255.252.0`之接聽程式的虛擬 IP 位址。 如果可用性群組跨越多個子網路，您就應該將每個子網路的靜態 IP 位址加入至接聽程式。  
+     例如，下列 `Add-SqlAGListenerstaticIp` 命令會將靜態 IPv4 位址加入至可用性群組 `MyListener` 的可用性群組接聽程式 `MyAg`。 這個 IPv6 位址會做為子網路 `255.255.252.0` 之接聽程式的虛擬 IP 位址。 如果可用性群組跨越多個子網路，您就應該將每個子網路的靜態 IP 位址加入至接聽程式。  
   
     ```  
     $path = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\ MyListener" `   
@@ -210,7 +210,7 @@ ms.locfileid: "48052368"
 ##  <a name="FollowUp"></a> 後續操作：建立可用性群組接聽程式之後  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover 關鍵字和相關聯的功能  
- `MultiSubnetFailover` 用來加快容錯移轉 AlwaysOn 可用性群組和 AlwaysOn 容錯移轉叢集執行個體，SQL Server 2012 中新的連接字串關鍵字。 當您在連接字串中設定 `MultiSubnetFailover=True` 時，就會啟用下列三項子功能：  
+ `MultiSubnetFailover` 是新的連接字串關鍵字，可用來加快 SQL Server 2012 中 AlwaysOn 可用性群組和 AlwaysOn 容錯移轉叢集執行個體的容錯移轉速度。 當您在連接字串中設定 `MultiSubnetFailover=True` 時，就會啟用下列三項子功能：  
   
 -   將多重子網路快速容錯移轉至 AlwaysOn 可用性群組或容錯移轉叢集執行個體的多重子網路接聽程式。  
   
@@ -241,11 +241,11 @@ ms.locfileid: "48052368"
      **缺點：** 如果發生跨子網路容錯移轉，用戶端復原時間可能是 15 分鐘或更久，取決於您`HostRecordTTL`設定和跨網站 DNS/AD 複寫排程的設定。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 設定  
- 當您使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或在 WSFC 中建立 PowerShell 建立可用性群組接聽程式，用戶端存取點`RegisterAllProvidersIP`屬性設定為 1 (true)。 這個屬性值的影響取決於用戶端連接字串，如下所示：  
+ 當您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 建立可用性群組接聽程式時，會在 WSFC 中建立用戶端存取點，且 `RegisterAllProvidersIP` 屬性會設定為 1 (true)。 這個屬性值的影響取決於用戶端連接字串，如下所示：  
   
 -   將 `MultiSubnetFailover` 設為 true 的連接字串  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 設定`RegisterAllProvidersIP`屬性為 1，以便用戶端連接字串指定的用戶端，縮短重新連接的時間，在容錯移轉之後`MultiSubnetFailover = True`、 建議的方式。 請注意，若要利用接聽程式多重子網路功能，用戶端可能需要支援 `MultiSubnetFailover` 關鍵字的資料提供者。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會將 `RegisterAllProvidersIP` 屬性設定為 1，以便在用戶端連接字串依建議指定 `MultiSubnetFailover = True` 的用戶端容錯移轉之後，縮短重新連接的時間。 請注意，若要利用接聽程式多重子網路功能，用戶端可能需要支援 `MultiSubnetFailover` 關鍵字的資料提供者。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)。  
   
      如需多重子網路叢集的相關資訊，請參閱 [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)。  
   
@@ -258,16 +258,16 @@ ms.locfileid: "48052368"
   
 -   未將 `MultiSubnetFailover` 設為 true 的連接字串  
   
-     `RegisterAllProvidersIP = 1`時，連接字串未使用 `MultiSubnetFailover = True`的任何用戶端將經歷嚴重的連線延遲。 這是因為這些用戶端嘗試循序連接到所有 IP。 相反地，如果 `RegisterAllProvidersIP` 變更為 0，則使用中 IP 位址會在 WSFC 叢集的用戶端存取點中註冊，因而減少舊版用戶端的延遲。 因此，如果您擁有需要連接到可用性群組接聽程式，而且無法使用 `MultiSubnetFailover` 屬性的舊版用戶端，建議您將 `RegisterAllProvidersIP` 變更為 0。  
+     `RegisterAllProvidersIP = 1` 時，連接字串未使用 `MultiSubnetFailover = True` 的任何用戶端將經歷嚴重的連線延遲。 這是因為這些用戶端嘗試循序連接到所有 IP。 相反地，如果 `RegisterAllProvidersIP` 變更為 0，則使用中 IP 位址會在 WSFC 叢集的用戶端存取點中註冊，因而減少舊版用戶端的延遲。 因此，如果您有需要連接到可用性群組接聽程式，而且不能使用的舊版用戶端`MultiSubnetFailover`屬性，建議您變更`RegisterAllProvidersIP`設為 0。  
   
     > [!IMPORTANT]  
-    >  當您建立可用性群組接聽程式透過 WSFC 叢集 (容錯移轉叢集管理員 GUI)`RegisterAllProvidersIP`會預設為 0 (false)。  
+    >  當您透過 WSFC 叢集 (容錯移轉叢集管理員 GUI) 建立可用性群組接聽程式時，`RegisterAllProvidersIP` 會預設為 0 (false)。  
   
 ###  <a name="HostRecordTTL"></a> HostRecordTTL 設定  
- 根據預設，用戶端會快取叢集 DNS 記錄 20 分鐘。  藉由減少`HostRecordTTL`，時間 (TTL)，快取的資料錄，舊版用戶端可能會更快速地重新連接。  不過，減少`HostRecordTTL`設定也可能導致傳輸至 DN 伺服器的流量增加。  
+ 根據預設，用戶端會快取叢集 DNS 記錄 20 分鐘。  透過縮短快取記錄的 `HostRecordTTL` 存留時間 (TTL)，舊版用戶端就可以更快速地重新連接。  不過，縮短 `HostRecordTTL` 設定也可能導致傳輸至 DN 伺服器的流量增加。  
   
 ###  <a name="SampleScript"></a> 停用 RegisterAllProvidersIP 和減少 TTL 的範例 PowerShell 指令碼  
- 下列 PowerShell 範例示範如何設定兩者`RegisterAllProvidersIP`和`HostRecordTTL`叢集接聽程式資源參數。  DNS 記錄將會快取 5 分鐘，而不是預設的 20 分鐘。  對於無法使用 `MultiSubnetFailover` 參數的舊版用戶端而言，修改這兩個叢集參數可能會減少容錯移轉之後連接至正確 IP 位址的時間。  將 `yourListenerName` 取代為您要變更的接聽程式名稱。  
+ 下列 PowerShell 範例將示範如何設定接聽程式資源的 `RegisterAllProvidersIP` 和 `HostRecordTTL` 這兩個叢集參數。  DNS 記錄將會快取 5 分鐘，而不是預設的 20 分鐘。  修改這兩個叢集參數可能會縮短無法使用 `MultiSubnetFailover` 參數的舊版用戶端在容錯移轉後連接到正確 IP 位址的時間。  將 `yourListenerName` 取代為您要變更的接聽程式名稱。  
   
 ```  
 Import-Module FailoverClusters  

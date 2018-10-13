@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141568"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072032"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
   DDL 觸發程序則是為了回應各種資料定義語言 (DDL) 事件而引發的。 這些事件主要對應至以 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 關鍵字開頭的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 執行類似 DDL 作業的某些系統預存程序也可能引發 DDL 觸發程序。  
@@ -35,14 +35,14 @@ ms.locfileid: "48141568"
   
 ## <a name="types-of-ddl-triggers"></a>DDL 觸發程序的類型  
  Transact-SQL DDL 觸發程序  
- 特殊類型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，可執行一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以回應伺服器範圍或資料庫範圍事件。 例如，如果執行陳述式 (例如 ALTER SERVER CONFIGURATION) 或使用 DROP TABLE 刪除資料表，則可能會引發 DDL 觸發程序。  
+ 一種特殊型別的[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序執行一或多個[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式以回應伺服器範圍或資料庫範圍的事件。 例如，如果執行陳述式 (例如 ALTER SERVER CONFIGURATION) 或使用 DROP TABLE 刪除資料表，則可能會引發 DDL 觸發程序。  
   
  CLR DDL 觸發程序  
  CLR 觸發程序不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而是執行以 Managed 程式碼撰寫的一個或多個方法，這些方法是在 .NET Framework 中建立並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中上傳的組件成員。  
   
  在執行會觸發 DDL 觸發程序的 DDL 陳述式之後，才會引發 DDL 觸發程序。 DDL 觸發程序不能使用為 INSTEAD OF 觸發程序。 對於影響區域或全域暫存資料表與預存程序的事件，DDL 觸發程序不會為了回應它而引發。  
   
- DDL 觸發程序不會建立特殊`inserted`和`deleted`資料表。  
+ DDL 觸發程序不會建立特殊 `inserted` 和 `deleted` 資料表。  
   
  使用 EVENTDATA 函數將可擷取引發 DLL 觸發程序的事件資訊，以及觸發程序所造成的後續變更之資訊。  
   

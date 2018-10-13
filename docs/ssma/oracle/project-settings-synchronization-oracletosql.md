@@ -10,12 +10,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f1dde13356f684d7fa6d7273156485bd6b5d07fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe71e5b301c016e25bb179e0104831285dab3ce1
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780726"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071778"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>專案設定 (同步處理) (OracleToSQL)
 同步處理頁面**專案設定** 對話方塊中包含自訂 SSMA 載入及重新整理的資料庫物件，例如資料表和預存程序，設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -57,7 +57,7 @@ SSMA 中的物件變更時，請在同步處理 對話方塊中指定的預設�
 **遺漏本機物件的中繼資料時的動作**  
 遺漏本機中繼資料時，請在同步處理 對話方塊中指定的預設設定。 設定預設值是**從資料庫重新整理**。  
   
--   如果您選取**從資料庫重新整理**，SSMA SSMA 會將載入資料庫定義的中繼資料時即符合此條件。  
+-   如果您選取**從資料庫重新整理**，SSMA 會將載入資料庫定義的中繼資料時即符合此條件。  
   
 -   如果您選取**略過**，SSMA 將不會執行重新整理的任何動作。  
   

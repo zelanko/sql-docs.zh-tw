@@ -10,12 +10,12 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076808"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119167"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>設定記憶體最佳化資料表的儲存體
   您必須設定儲存容量和每秒的輸入/輸出作業 (IOPS)。  
@@ -28,7 +28,7 @@ ms.locfileid: "48076808"
   
 -   將磁碟資料表移轉到記憶體最佳化資料表時，請確定交易記錄所在的儲存媒體可以支援增加的交易記錄活動。 例如，如果您的儲存媒體支援每秒 100 MB 的交易記錄作業，而且記憶體最佳化資料表會產生五倍的效能，則交易記錄的儲存媒體也必須能夠支援五倍的效能改善，以免交易記錄活動變成效能瓶頸。  
   
--   記憶體最佳化資料表會分散在一個或多個容器的檔案中來保存。 通常每個容器都應該對應至其本身的主軸，並用於增加儲存容量及改良效能。 您必須確定儲存媒體的連續 IOPS 可以支援交易記錄輸送量的 3 倍增加量。  
+-   記憶體最佳化資料表會分散在一個或多個容器的檔案中來保存。 通常每個容器都應該對應至其本身的主軸，並用於增加儲存容量及改良效能。 您必須確定儲存媒體的連續 IOPS 可以支援 3 倍增加交易記錄輸送量。  
   
      例如，如果記憶體最佳化資料表的交易記錄中產生 500 MB/秒的活動，記憶體最佳化資料表的儲存體必須支援 1.5 GB/秒。需要支援的 3 倍增加交易記錄輸送量來自以下的觀察： 資料和差異檔案組的初始資料時，會先寫入則需要 讀取/重新寫入為合併作業的一部分。  
   

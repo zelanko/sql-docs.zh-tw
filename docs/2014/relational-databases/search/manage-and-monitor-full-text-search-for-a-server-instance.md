@@ -13,12 +13,12 @@ ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fd0f2ae6efce8eba2229df199025bc09eaec64b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23dd1efa80cab8301c0a361c4e8486f036baf6f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147369"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906368"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
   伺服器執行個體的全文檢索管理包括：  

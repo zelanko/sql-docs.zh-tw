@@ -11,12 +11,12 @@ ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce87b35d04b360168eb1d4070bb94d52c702f3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180048"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085394"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
   「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
@@ -24,7 +24,7 @@ ms.locfileid: "48180048"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>鑽研模型案例和鑽研結構的比較  
- 鑽研**模型案例**對於尋找模型中規則、模式或叢集的詳細資料很有幫助。 例如，您不會在叢集模型中使用客戶連絡資訊進行分析，即使已經有資料可用，但使用鑽研可以從模型中取得此資訊的存取。  
+ 鑽研 **模型案例** 對於尋找模型中規則、模式或叢集的詳細資料很有幫助。 例如，您不會使用客戶連絡資訊用於群集模型中的分析，即使資料是使用鑽研，您可以存取該資訊從模型。  
   
  反之， **鑽研結構** 資料用意在於提供對模型中無法使用之資訊的存取。 例如，一些結構資料行可能因為資料類型不相容或者資料未用於分析而從模型中排除。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48180048"
 |Microsoft 貝氏機率分類演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
 |Microsoft 類神經網路演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
 |Microsoft 羅吉斯迴歸演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
-|Microsoft 線性迴歸演算法|支援。<br /><br /> 不過，因為此模型會建立單一節點， `All`，鑽研會傳回模型的所有定型案例。 如果定型集很龐大，載入結果的時間可能會很長。|  
+|Microsoft 線性迴歸演算法|支援。<br /><br /> 不過，由於此模型會建立單一節點 `All`，因此鑽研會傳回模型的所有定型案例。 如果定型集很龐大，載入結果的時間可能會很長。|  
 |Microsoft 時間序列演算法|支援。<br /><br /> 不過，您無法使用資料採礦設計師中的 **[採礦模型檢視器]** ，鑽研結構或案例資料。 您必須改為建立 DMX 查詢。<br /><br /> 此外，您無法鑽研至特定節點，或撰寫 DMX 查詢來擷取時間序列模型之特定節點中的案例。 您可以使用其他準則 (例如日期或屬性值)，從模型或結構內部擷取案例資料。<br /><br /> 如果您想要檢視 Microsoft 時間序列演算法所建立之 ARTXP 和 ARIMA 節點的詳細資訊，使用 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) 可能更容易。|  
   
 ## <a name="related-tasks"></a>相關工作  

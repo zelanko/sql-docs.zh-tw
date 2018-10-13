@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af0bb90170445cbfb073adeb8bfc8f8e4e478efe
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984490"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906498"
 ---
 # <a name="dax-in-tabular-models"></a>表格式模型中的 DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -146,7 +146,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|指定 Date 資料表中的 Date 資料行。 資料行用括弧括住。|  
 |`,`||  
 |`STARTOFQUARTER`|STARTOFQUARTER 函數會傳回季度開始的日期。|  
-|`LASTDATE`|LASTDATE 函數會傳回季度的最後一個日期。|  
+|`LASTDATE`|LASTDATE 函數會傳回當季的最後一個日期。|  
 |`'Date'`|指定 Date 資料表。|  
 |`[Date]`|指定 Date 資料表中的 Date 資料行。|  
 |`,`||  

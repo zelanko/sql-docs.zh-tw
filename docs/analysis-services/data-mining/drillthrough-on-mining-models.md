@@ -1,5 +1,5 @@
 ---
-title: 採礦模型的鑽研 |Microsoft 文件
+title: 採礦模型的鑽研 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2abd3430c1882148cd564c973ecf5824f3a55d4a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ccb3e36739043684f2a86a082dd04ab749a0b031
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014805"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085434"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供兩個不同的鑽研案例資料的選項。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>鑽研模型案例和鑽研結構的比較  
- 鑽研**模型案例**對於尋找模型中規則、模式或叢集的詳細資料很有幫助。 例如，您不會在叢集模型中使用客戶連絡資訊進行分析，即使已經有資料可用，但使用鑽研可以從模型中取得此資訊的存取。  
+ 鑽研 **模型案例** 對於尋找模型中規則、模式或叢集的詳細資料很有幫助。 例如，您不會使用客戶連絡資訊用於群集模型中的分析，即使資料是使用鑽研，您可以存取該資訊從模型。  
   
  反之， **鑽研結構** 資料用意在於提供對模型中無法使用之資訊的存取。 例如，一些結構資料行可能因為資料類型不相容或者資料未用於分析而從模型中排除。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34014805"
 |工作|連結|  
 |-----------|-----------|  
 |在採礦模型檢視器中使用鑽研|[從模型檢視器使用鑽研](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
-|使用鑽研擷取模型的案例資料|[從採礦模型鑽研到案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|使用鑽研擷取模型的案例資料|[鑽研採礦模型的案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |針對現有的採礦模型啟用鑽研|[針對採礦模型啟用鑽研](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |參閱特定模型類型的鑽研查詢範例。|[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)|  
 |在採礦模型精靈中啟用鑽研|[正在完成精靈 &#40;資料採礦精靈&#41;](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1)。|  

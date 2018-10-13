@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fae8beb4f865c537f00fa8b58a01cafe09541d71
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892865"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878181"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務的擴充性架構 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,6 +47,8 @@ SQL Server 已在伺服器上執行外部指令碼，例如 R 或 Python 擴充�
   ![元件架構](../media/generic-architecture.png "元件架構")
 
 元件包括**Launchpad**用來叫用特定語言的啟動器 （R 或 Python） 的語言和程式庫特有的邏輯，來載入解譯器和程式庫的服務。 啟動器會載入語言執行平台，再加上任何專屬的模組。 例如，如果您的程式碼包含 RevoScaleR 函式，會載入 RevoScaleR 解譯器。 **BxlServer**並**SQL Satellite**管理與 SQL Server 的通訊和資料傳輸。
+
+<a name="launchpad"></a>
 
 ## <a name="launchpad"></a>Launchpad
 

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796260"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877931"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>設定 SQL Server 2019 ctp 2.0 的 Azure Kubernetes 服務
 
@@ -24,7 +24,10 @@ Azure Kubernetes Service (AKS) 可讓您更輕鬆地建立、 設定及管理預
 
 ## <a name="prerequisites"></a>先決條件
 
-- AKS 環境中，最小的 VM 需求是至少兩個代理程式 （除了主版頁面） 的 Vm 大小下限 Standard_DS3_V2。 每個 VM 所需的最小資源是 4 個 Cpu 和 14 GB 記憶體。
+- AKS 環境中，最小的 VM 需求是至少兩個代理程式 Vm （在新增到主機） 的大小下限[Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)。 每個 VM 所需的最小資源是 4 個 Cpu 和 14 GB 記憶體。
+  
+   > [!NOTE]
+   > 如果您打算執行巨量資料作業或多個 Spark 應用程式，最小的大小是[Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup)，而每個 VM 所需的最小資源 8 個 Cpu 及 32 GB 的記憶體。
 
 - 本節中，您必須執行 Azure CLI 2.0.4 版或更新版本。 如果您需要安裝或升級，請參閱[安裝 Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)。 執行`az --version`以尋找版本，如有需要。
 
@@ -80,7 +83,7 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
     --kubernetes-version 1.10.7
     ```
 
-    您可以增加或減少預設代理程式計數，加上`--node-count <n>`至 az aks create 命令其中`<n>`是您想要有代理程式節點數目。
+    您可以增加或減少預設代理程式計數，藉由變更`--node-count <n>`其中`<n>`是您想要有代理程式節點數目。
 
     幾分鐘之後，此命令會完成，並傳回 JSON 格式化叢集的相關資訊。
 

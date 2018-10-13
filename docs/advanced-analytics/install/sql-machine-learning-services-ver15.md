@@ -8,12 +8,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f007549021fc246d943929f73a763e6343c5641a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2bd03c4c1dfb019238785b5284b4cceffc95c3a2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715027"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878151"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>在 SQL Server Machine Learning 服務安裝在 SQL Server 2019 的差異  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "46715027"
 
 ## <a name="implied-authentication"></a>隱含驗證
 
-因為之前，其他設定仍然需要*隱含的驗證*的指令碼或程式碼有具有連回 SQL Server 擷取資料或資源使用受信任的驗證。 額外的設定牽涉到建立的資料庫登入**SQLRUserGroup**，其唯一的成員現在是單一的 SQL Server Launchpad 服務帳戶，而不是多個背景工作帳戶。 如需有關這項工作的詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../r/add-sqlrusergroup-to-database.md)。
+因為之前，其他設定仍然需要*隱含的驗證*的指令碼或程式碼有具有連回 SQL Server 擷取資料或資源使用受信任的驗證。 額外的設定牽涉到建立的資料庫登入**SQLRUserGroup**，其唯一的成員現在是單一的 SQL Server Launchpad 服務帳戶，而不是多個背景工作帳戶。 如需有關這項工作的詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../security/add-sqlrusergroup-to-database.md)。
 
 
 ## <a name="symbolic-link-created-by-setup"></a>安裝程式所建立的符號連結

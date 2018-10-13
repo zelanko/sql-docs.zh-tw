@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085528"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120475"
 ---
 # <a name="glossary"></a>詞彙
   
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085528"
 |智慧卡設定檔|Certificate Lifecycle Manager (CLM) 設定檔，使用僅包含智慧卡式憑證範本的設定檔範本執行要求時就會建立。|  
 |智慧卡讀卡機|安裝在電腦中以便使用智慧卡提供增強型安全性功能的裝置。|  
 |Smart Card Self Service Control|安裝在用戶端上的軟體，可讓使用者和系統管理員藉由提供用戶端電腦到智慧卡的連接來管理智慧卡。|  
-|智慧卡解除封鎖|繫結智慧卡與管理認證，以重設個人識別碼 (PIN) 嘗試計數器的動作。|  
+|智慧卡解除封鎖|動作的繫結智慧卡與系統管理認證才能重設個人識別碼 (PIN) 嘗試計數器。|  
 |SMO|一種應用程式開發介面，支援將 SQL Server 管理納入到任何 COM 或 OLE Automation 應用程式中。|  
 |SMTP|通訊協定的 TCP/IP 套件成員，負責控管訊息傳送代理程式之間的電子郵件交換。|  
 |嵌入式管理單元|工具，可加入至 Microsoft Management Console (MMC) 支援的主控台。 獨立的嵌入式管理單元可自行加入，延伸嵌入式管理單元則只能以延伸其他嵌入式管理單元的功能為目的加入。|  

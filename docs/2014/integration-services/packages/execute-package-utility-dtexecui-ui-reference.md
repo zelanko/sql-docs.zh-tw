@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217428"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169315"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>執行封裝公用程式 (DtExecUI) UI 參考
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面，可以從開啟[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，或輸入`dtexecui`的命令提示字元中，會使用執行封裝的替代方案**DTExec**命令提示字元工具。  
@@ -52,7 +52,7 @@ ms.locfileid: "48217428"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>在命令提示字元下開啟執行封裝公用程式  
   
--   在命令提示字元 視窗中，執行`dtexecui`。  
+-   在命令提示字元視窗中，執行 `dtexecui`。  
   
  下列各節將說明 **[執行封裝公用程式]** 對話方塊的各個頁面。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217428"
  按一下即可關閉 [執行封裝公用程式] 對話方塊。  
   
 ## <a name="logging-page"></a>記錄頁面  
- 使用 **[執行封裝公用程式]** 對話方塊的 **[記錄]** 頁面，即可讓封裝在執行階段使用記錄提供者。 提供連接到記錄的封裝記錄提供者類型和連接字串。 每個記錄提供者項目各會新增一個 **/LOGGER***classid* 選項到命令提示字元。  
+ 使用 **[執行封裝公用程式]** 對話方塊的 **[記錄]** 頁面，即可讓封裝在執行階段使用記錄提供者。 提供連接到記錄的封裝記錄提供者類型和連接字串。 每個記錄提供者項目都會將 **/LOGGER**_classid_ 選項加入命令提示字元。  
   
 ### <a name="options"></a>選項。  
  **記錄提供者**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217428"
  按一下即可關閉 [執行封裝公用程式] 對話方塊。  
   
 ## <a name="set-values-page"></a>設定值頁面  
- 使用 **[執行封裝公用程式]** 對話方塊的 **[設定值]** 頁面，即可藉由輸入屬性的路徑和屬性值，來設定封裝、可執行檔、連接、變數和記錄提供者的屬性值。 每個路徑項目各會新增一個 **/SET***propertypath;value* 選項到命令提示字元。  
+ 使用 **[執行封裝公用程式]** 對話方塊的 **[設定值]** 頁面，即可藉由輸入屬性的路徑和屬性值，來設定封裝、可執行檔、連接、變數和記錄提供者的屬性值。 每個路徑項目都會將 **/SET**_propertypath;value_ 選項加入命令提示字元。  
   
 ### <a name="options"></a>選項。  
  **屬性路徑**  

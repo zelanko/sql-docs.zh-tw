@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 2fdccaf93ad53e6fda7671b734dc1ce12caa652c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641676"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085100"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>操作 SQL server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -153,7 +153,7 @@ sudo crm_mon
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. 設定安裝 Pacemaker 和 Corosync 套件時建立的預設使用者密碼。 與現有節點使用相同的密碼。 
+2. 設定安裝 Pacemaker 和 Corosync 封裝時建立的預設使用者密碼。 與現有節點使用相同的密碼。 
 
    ```bash
    sudo passwd hacluster

@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130678"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905242"
 ---
 # <a name="excel-destination"></a>Excel 目的地
   Excel 目的地會將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍。  
@@ -49,7 +49,7 @@ ms.locfileid: "48130678"
   
      如需如何避免包含單引號的資訊，請參閱 msdn.com 上的此篇部落格文章 [使用 SSIS 封裝中 Excel 資料流程目的地元件將資料轉換至 Excel 時，附加至所有字串的單引號](http://go.microsoft.com/fwlink/?LinkId=400876)(英文)。  
   
--   **正在儲存備忘 (ntext) 資料**。 在 Excel 資料行中成功儲存長於 255 個字元的字串之前，驅動程式必須能將目的地資料行的資料類型辨識為 **備忘** ，而不是 **字串**。 如果目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。 如果目的地資料表是在封裝設計期間或在執行階段建立，則 CREATE TABLE 陳述式必須使用 LONGTEXT (或其同義字之一) 做為備忘資料行的資料類型。  
+-   **正在儲存備忘 (ntext) 資料**。 在 Excel 資料行中成功儲存長於 255 個字元的字串之前，驅動程式必須能將目的地資料行的資料類型辨識為 **備忘** ，而不是 **字串**。 如果目的地資料表已包含資料列，則驅動程式所取樣的前幾個資料列必須在備忘資料行中至少包含一個值長於 255 個字元的執行個體。 如果在套件設計期間或在執行階段建立目的地資料表，則 CREATE TABLE 陳述式必須使用 LONGTEXT （或其同義字之一） 作為備忘資料行的資料類型。  
   
 -   **資料類型**。 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 對應 Excel 資料類型的情況如下：  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48130678"
   
  如需有關 **[Excel 目的地編輯器]** 對話方塊中可設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Excel 目的地編輯器&#40;連線管理員頁面&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Excel 目的地編輯器 &#40;連線管理員頁面&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Excel 目的地編輯器&#40;對應頁面&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Excel 目的地編輯器 &#40;對應頁面&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Excel 目的地編輯器&#40;錯誤輸出頁面&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Excel 目的地編輯器 &#40;錯誤輸出頁面&#41;](../excel-destination-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48130678"
   
 -   [Excel 自訂屬性](excel-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130678"
   
 ## <a name="see-also"></a>另請參閱  
  [Excel 來源](excel-source.md)   
- [Integration Services &#40;SSIS&#41;變數](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)   
  [資料流程](data-flow.md)   
  [以指令碼工作處理 Excel 檔案](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

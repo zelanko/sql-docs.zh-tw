@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bfd449a51948f3a5b88c28f5034550fe81a7f406
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395440"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906138"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System 平行資料倉儲系統檢視表
 系統檢視表的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。

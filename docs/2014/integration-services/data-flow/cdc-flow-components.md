@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195628"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120136"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
   Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 可協助 SSIS 開發人員使用 CDC 並且降低 CDC 封裝的複雜性。  
@@ -43,7 +43,7 @@ ms.locfileid: "48195628"
 ### <a name="version-support"></a>版本支援  
  SSIS CDC 元件支援下列 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 產品：  
   
--   Microsoft [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Microsoft   
   
 -   Microsoft [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 或 2010  
   
@@ -58,20 +58,20 @@ ms.locfileid: "48195628"
 -   Windows Server 2008 R2 64 位元 (x64)  
   
 ### <a name="running-the-installation-program"></a>執行安裝程式  
- 執行安裝精靈之前，務必[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]已關閉。 然後，遵循安裝精靈中的指示進行。  
+ 執行安裝精靈之前，請確定 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 已關閉。 然後，遵循安裝精靈中的指示進行。  
   
 ### <a name="restart-ssis"></a>重新啟動 SSIS  
- 安裝 CDC 元件之後，您必須重新啟動 SSIS 服務，才能確保在 SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中開發封裝時，這些元件可正確運作。  
+ 安裝 CDC 元件之後，您必須重新啟動 SSIS 服務，才能確保在 SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中開發封裝時，這些元件可正確運作。  
   
  安裝元件之後，系統會顯示一則訊息。 出現提示時，請按一下 [是]。  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>解除安裝 Microsoft CDC 元件  
  您可以使用解除安裝精靈來解除安裝 CDC 來源、CDC 分隔器或 CDC 控制工作。 解除安裝元件之前，您必須先確定下列事項：  
   
- 如果您使用[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]進行封裝開發，請確定[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]關閉然後再執行解除安裝精靈。  
+ 如果您正在使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 進行封裝開發，請確定 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 已關閉，然後再執行解除安裝精靈。  
   
 ## <a name="benefits"></a>優點  
- CDC 元件[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]元件 」 可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 元件的 CDC 元件可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
   
  SSIS CDC 元件是用來以方便進一步處理的方式提供變更資料，以便複寫、載入資料倉儲、更新 OLAP 的緩時變維度、稽核變更或進行其他可能的用途。 所使用的進一步處理類型是由 SSIS 開發人員決定。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48195628"
   
  ![Trickle 摘要處理封裝控制流程](../media/tricklefeedprocessing.gif "Trickle 摘要處理封裝控制流程")  
   
- 這[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」的第一項工作會針對在名為「處理變更」之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
+ 這個 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 控制流程包含兩項 CDC 控制工作和資料流程工作。 名為「取得 CDC 處理範圍」的第一項工作會針對在名為「處理變更」之資料流程工作中處理的變更建立 LSN 範圍。 這個範圍是根據最後一個封裝執行期間所處理的內容以及儲存在永續性存放區中的內容所建立。  
   
  如需使用 CDC 控制工作的詳細資訊，請參閱 [CDC 控制工作](../control-flow/cdc-control-task.md)和 [CDC 控制工作編輯器](../cdc-control-task-editor.md)。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "48195628"
   
  [CDC 來源](cdc-source.md)  
   
- [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [CDC 來源編輯器&#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
+ [CDC 來源編輯器 &#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
   
- [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
+ [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
   
  如需有關 CDC 分隔器的詳細資訊，請參閱：  
   

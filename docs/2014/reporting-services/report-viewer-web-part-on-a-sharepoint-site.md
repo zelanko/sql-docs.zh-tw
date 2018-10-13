@@ -16,15 +16,15 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 84afc267fe7b61ee850395750128a5cad15f716f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80baae6ca56757c8723934102341352f34cb0709
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063468"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905229"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 網站上的報表檢視器 Web 組件
-  報表檢視器網頁組件是由適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集所安裝的自訂網頁組件。 您可以在設定為以 SharePoint 整合模式執行的報表伺服器上，使用 Web 組件來檢視、導覽、列印與匯出報表。 報表檢視器 Web 組件是由所處理的報表定義 (.rdl) 檔相關聯[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器。 您無法使用該組件搭配以其他軟體產品建立的其他報表文件。  
+  報表檢視器網頁組件是由適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集所安裝的自訂網頁組件。 您可以在設定為以 SharePoint 整合模式執行的報表伺服器上，使用 Web 組件來檢視、導覽、列印與匯出報表。 報表檢視器網頁組件與 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器所處理的報表定義 (.rdl) 檔相關聯。 您無法使用該組件搭配以其他軟體產品建立的其他報表文件。  
   
  若要安裝此 Web 組件，您必須執行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集的安裝程式。 您不應該獨立安裝或解除安裝此 Web 組件。 這是增益集的一部分，而且僅能透過增益集安裝套件安裝。 報表檢視器 Web 組件的檔案名稱為 ReportViewer.dwp。 它位於 Program Files\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver 資料夾中，而且不得移到其他資料夾中。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48063468"
  **匯出**上**動作**功能表會顯示與報表伺服器上部署的轉譯延伸模組相關聯的應用程式格式。 若要決定特定格式的可用性，您可以在報表伺服器上加入或移除轉譯延伸模組，也可以修改組態設定，以便從清單中移除特定匯出格式。 此外，您也可以在報表伺服器上指定組態設定，以便控制可用的格式。 您可以透過加入並修改該轉譯延伸模組的組態設定，修改特定格式的預設行為。  
   
 ### <a name="print-action-on-the-report-toolbar"></a>報表工具列上的列印動作  
- **列印**上**動作** 功能表是透過提供自訂列印功能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 當您按一下 **列印**，ActiveX 用戶端列印控制項就會下載到用戶端電腦。 在大部分情況下，使用者按下的使用者**列印**必須在本機電腦上具有系統管理員權限。 常見的作法是將 ActiveX 控制項下載限制為僅擁有「管理員」權限的使用者。 您可以使用 SharePoint 管理中心啟用或停用用戶端列印控制的下載。  
+ **列印**上**動作** 功能表是透過提供自訂列印功能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 當您按一下 **列印**，ActiveX 用戶端列印控制項就會下載到用戶端電腦。 在大部分情況下，使用者按下的使用者**列印**必須在本機電腦上具有系統管理員權限。 常見的作法是將 ActiveX 控制項下載限制為僅擁有「管理員」權限的使用者。 您可以使用 SharePoint 管理中心來啟用或停用用戶端列印控制項下載。  
   
 ### <a name="find-action-on-the-report-toolbar"></a>報表工具列上的尋找動作  
  **尋找**上**動作**功能表可用來將移至報表中的目標位置。 您可以輸入您要尋找的單字或片語來搜尋報表的內容。 搜尋詞彙的最大值為 256 個字元。 當您的搜尋在報表中找到相符的值時，焦點就會移到報表中，包含該值的部分。  
@@ -65,12 +65,12 @@ ms.locfileid: "48063468"
  **認證**並**參數**會出現在檢視區域旁的窗格。 **認證**報表的資料來源連接設定為提示使用者輸入的帳戶和密碼具有權限可存取資料來源時，會出現。 **參數**報表接受報表中定義參數的使用者輸入時，會出現。  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>設定報表檢視器 Web 組件上的屬性  
- Web 組件上的屬性包括報表檢視器特定的自訂屬性，以及您可以為任何 Web 組件設定的一般屬性。 如需詳細資訊，請參閱 <<c0> [ 自訂報表檢視器 Web 組件](../../2014/reporting-services/customize-the-report-viewer-web-part.md)。  
+ Web 組件上的屬性包括報表檢視器特定的自訂屬性，以及您可以為任何 Web 組件設定的一般屬性。 如需詳細資訊，請參閱 [自訂報表檢視器網頁組件](../../2014/reporting-services/customize-the-report-viewer-web-part.md)。  
   
  根據預設，報表會以整頁模式開啟。 整頁模式會顯示提供頁面導覽、搜尋及其他功能的工具列。 您可以自訂網頁組件，以便變更外觀或預設行為。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝或解除安裝 Reporting Services 增益集，適用於 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [將報表檢視器 Web 組件新增至網頁&#40;Reporting Services SharePoint 整合模式&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [將報表檢視器網頁組件加入至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

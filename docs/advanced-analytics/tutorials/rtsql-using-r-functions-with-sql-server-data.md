@@ -3,17 +3,17 @@ title: 說明 R 的快速入門函式與 SQL Server 資料 （SQL Server 機器�
 description: 在本快速入門，了解如何撰寫使用 SQL Server 資料的 R 函數。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5785b8b8162fdde25dea13eb3aead55c10dbfc3b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 877c7ffd5cb67479eed0e2239cbe90d366934515
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086670"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878161"
 ---
 # <a name="quickstart-using-r-functions-with-sql-server-data"></a>快速入門： 使用 R 函式搭配 SQL Server 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

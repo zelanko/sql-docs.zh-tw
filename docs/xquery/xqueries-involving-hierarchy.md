@@ -17,12 +17,12 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3296807e7470c84a4df2f3960ea01185c5915048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 469b4dece1dca9aca2aa584e60bd502034fc8645
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597057"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119085"
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47597057"
   
  每一個 <`Location`> 元素有它自己的屬性集和一個 <`step`> 子元素。 這個 <`step`> 子元素是工作中心位置的第一個製造步驟。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
  以下是部份結果：  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. 在 AdditionalContactInfo 資料行中尋找所有電話號碼  
  下列查詢利用搜尋 <`telephoneNumber`> 元素的整個階層，來擷取特定客戶連絡人的其他電話號碼。 因為 <`telephoneNumber`> 元素可能出現在階層的任何地方，所以此查詢在搜尋中使用下階和自身運算子 (//)。  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
  declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
  declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
@@ -102,7 +102,7 @@ WHERE ContactID = 1
   
  以下是結果：  
   
-```  
+```xml
 \<act:number   
   xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  
@@ -115,7 +115,7 @@ WHERE ContactID = 1
   
  若只要擷取最上層電話號碼，尤其是 <`AdditionalContactInfo`> 的 <`telephoneNumber`> 子元素，則將查詢中的 FOR 運算式變更成  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   

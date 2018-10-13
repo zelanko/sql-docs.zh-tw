@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136018"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906378"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格式模型中的 DAX (SSAS 表格式)
   資料分析運算式 (DAX) 是公式語言，可用來在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 活頁簿和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型專案中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
@@ -52,7 +52,7 @@ ms.locfileid: "48136018"
 ##  <a name="bkmk_DAXintm"></a> 表格式模型中的 DAX  
  在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和表格式模型中，DAX 公式計算值的方式及其個別資料集之間在功能上沒有任何差異。 不過，DAX 公式在活頁簿中建立的位置和模型撰寫工具不同，而且評估某些量值內容的位置也不同。  
   
- 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中，計算公式通常是由活頁簿使用者所建立，用於自助商業智慧分析。 資料表的導出資料行是在 PowerPivot 視窗中建立，量值則是在樞紐分析表或計算區域中建立。 PowerPivot 活頁簿與表格式模型專案不同，前者不會提供以角色為基礎的安全性，可使用 DAX 公式保護資料安全。  
+ 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中，計算公式通常是由活頁簿使用者所建立，用於自助商業智慧分析。 資料表的導出資料行是在 PowerPivot 視窗中建立，量值則是在樞紐分析表或計算區域中建立。 PowerPivot 活頁簿與表格式模型專案不同，前者不會提供以角色為基礎的安全性，可使用 DAX 公式保護資料安全。  
   
  在表格式模型專案中，計算公式是由模型作者在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 模型設計師中所建立。 導出資料行的值是透過使用 DAX 公式計算的，會立即出現在模型設計師的資料表中 (但量值方格中的量值預覽功能除外)，而量值必須等到使用者在報表用戶端 (例如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 或 Microsoft Excel 的樞紐分析表) 中指定篩選之後才會計算。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48136018"
   
  資料列篩選會套用至指定的資料列及相關的資料列。 當資料表具有多個關聯性時，篩選會對作用中關聯性套用安全性。 資料列篩選會與針對相關資料表定義的其他資料列篩選進行交叉篩選。  
   
- 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)。  
+ 如需詳細資訊，請參閱 [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)中撰寫的表格式模型專案。  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX 資料類型  
  您可以從可能支援不同資料類型的許多不同資料來源，將資料匯入模型中。 當您將資料匯入模型時，資料會轉換為其中一個表格式模型資料類型。 當模型資料用於計算時，在計算的持續時間內資料會轉換為 DAX 資料類型做為輸出。 當您建立 DAX 公式時，用於公式中的詞彙會自動判斷傳回的值資料類型。  
@@ -182,7 +182,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|指定 Date 資料表中的 Date 資料行。 資料行用括弧括住。|  
 |`,`||  
 |`STARTOFQUARTER`|STARTOFQUARTER 函數會傳回季度開始的日期。|  
-|`LASTDATE`|LASTDATE 函數會傳回季度的最後一個日期。|  
+|`LASTDATE`|LASTDATE 函數會傳回當季的最後一個日期。|  
 |`'Date'`|指定 Date 資料表。|  
 |`[Date]`|指定 Date 資料表中的 Date 資料行。|  
 |`,`||  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   DAX 函數包含各種不同的 *「時間智慧」* (Time Intelligence) 函數。 這些函數可讓您定義或選取日期範圍，並根據這些日期或範圍執行動態計算。 例如，您可以比較平行期間的總和。  
   
 ### <a name="date-and-time-functions"></a>日期和時間函數  
- DAX 中的日期和時間函數與 Microsoft Excel 中的日期和時間函數類似。 不過，DAX 函數會根據`datetime`Microsoft SQL Server 所使用的資料類型。 如需詳細資訊，請參閱 <<c0> [ 日期和時間函數&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)。</c0>  
+ DAX 中的日期和時間函數與 Microsoft Excel 中的日期和時間函數類似。 不過，DAX 函數會以 Microsoft SQL Server 所使用的 `datetime` 資料類型為基礎。 如需詳細資訊，請參閱 <<c0> [ 日期和時間函數&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)。</c0>  
   
 ### <a name="filter-functions"></a>篩選函數  
  DAX 中的篩選函數會傳回特定的資料類型、查閱相關資料表中的值，以及依相關值篩選。 查閱函數會透過使用資料表和關聯性 (例如資料庫) 運作。 篩選函數可讓您操作資料內容來建立動態計算。 如需詳細資訊，請參閱 <<c0> [ 篩選函式&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)。</c0>  
@@ -393,7 +393,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  除非重新計算的結果傳回不同的值，而讓角色成員可以或不可以查詢資料列，否則處理和重新計算都不會影響資料列篩選公式。  
   
- 如需詳細資訊，請參閱[處理資料 &#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)。  
+ 如需詳細資訊，請參閱 [處理資料 &#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_troubleshoot"></a> 疑難排解公式中的錯誤  
  如果您在定義公式時出現錯誤，該公式可能包含 *「語法錯誤」*(Syntactic Error)、 *「語意錯誤」*(Semantic Error) 或 *「計算錯誤」*(Calculation Error)。  
@@ -423,10 +423,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ## <a name="see-also"></a>另請參閱  
  [Data Analysis Expressions &#40;DAX&#41;參考](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [量值&#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
- [導出資料行&#40;SSAS 表格式&#41;](ssas-calculated-columns.md)   
- [角色&#40;SSAS 表格式&#41;](roles-ssas-tabular.md)   
- [Kpi &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)   
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
+ [導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns.md)   
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)   
+ [KPI &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)   
  [支援的資料來源 &#40;SSAS 表格式&#41;](data-sources-supported-ssas-tabular.md)  
   
   

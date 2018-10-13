@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 6899f45231a0e77c529ba7b416a4a30f6a7955b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853426"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085464"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體-SQL Server 上 Linux (RHEL)
 
@@ -141,7 +141,7 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
-1. 設定安裝 Pacemaker 和 Corosync 套件時建立的預設使用者密碼。 在這兩個節點上使用相同的密碼。 
+1. 設定安裝 Pacemaker 和 Corosync 封裝時建立的預設使用者密碼。 在這兩個節點上使用相同的密碼。 
 
    ```bash
    sudo passwd hacluster

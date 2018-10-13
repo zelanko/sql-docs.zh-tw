@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786966"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906228"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
 
@@ -67,7 +67,7 @@ GO
 
 ## <a name="granting-access-with-least-privileges"></a>以最低權限的存取權授與
 
-系統管理員和資料庫擁有者帳戶，將會連接至使用者資料庫的第一個人。 不過這些使用者會擁有所有可用的資料庫上的權限。 這是更多的權限的大部分使用者應該擁有比。 
+系統管理員和資料庫擁有者帳戶，將會連接至使用者資料庫的第一個人。 不過這些使用者會在資料庫上擁有可用的所有權限。 這是更多的權限的大部分使用者應該擁有比。 
 
 當您剛開始使用時，您就可以使用內建指派權限的某些一般分類*固定資料庫角色*。 比方說，`db_datareader`固定的資料庫角色可以讀取所有的資料表，在資料庫中，但不做任何變更。 使用授與固定的資料庫角色的成員資格[ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)陳述式。 下列範例會將使用者新增`Jerry`至`db_datareader`固定的資料庫角色。   
    
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-如需詳細資訊，請參閱 <<c0> [ 備份加密](../relational-databases/backup-restore/backup-encryption.md)。
+如需詳細資訊，請參閱＜ [備份加密](../relational-databases/backup-restore/backup-encryption.md)＞。
 
 
 ## <a name="next-steps"></a>後續步驟

@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4db726ac3ceab7649b0a3c04b2c4647b83c7e660
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818066"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877891"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>如何部署在 Kubernetes 上的 SQL Server 的巨量資料叢集
 
@@ -24,11 +24,12 @@ SQL Server 的巨量資料叢集可以部署為 docker 容器的 Kubernetes 叢�
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="kubernetes-prerequisistes"></a>Kubernetes prerequisistes
+## <a id="prereqs"></a> Kubernetes 叢集的先決條件
 
 SQL Server 的巨量資料叢集需要最小 v1.10 版本，如 Kubernetes、 伺服器和用戶端。 若要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。  最新版的 minikube 和 AKS 是至少 1.10。 您需要使用 aks`--kubernetes-version`參數來指定預設值不同的版本。
 
-此外，請注意，用戶端/伺服器 Kubernetes 版本扭曲也就是支援是 + /-1 的次要版本。 Kubernetes 文件中指出，「 用戶端應該扭曲有一個以上的次要版本，在主機上，但可能會導致主要由最多一個次要版本。 比方說，v1.3 主要應該使用 v1.1、 v1.2 和 v1.3 節點，並應該使用 v1.2、 v1.3 和 v1.4 用戶端。 」 如需詳細資訊，請參閱 < [Kubernetes 支援的版本和元件扭曲](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
+> [!NOTE]
+> 請注意，用戶端和伺服器的 Kubernetes 版本應該是 + 1，則為-1 的次要版本。 如需詳細資訊，請參閱 < [Kubernetes 支援的版本和元件扭曲](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
 
 ## <a id="kubernetes"></a> Kubernetes 叢集設定
 
@@ -49,11 +50,11 @@ SQL Server 的巨量資料叢集需要最小 v1.10 版本，如 Kubernetes、 �
 
 ## <a id="deploy"></a> 部署 SQL Server 的巨量資料叢集
 
-您已設定您的 Kubernetes 叢集之後，您可以繼續使用 SQL Server 的巨量資料叢集的部署。 若要部署 Aris 叢集用於開發/測試環境的所有預設設定，請遵循這篇文章中的指示：
+您已設定您的 Kubernetes 叢集之後，您可以繼續使用 SQL Server 的巨量資料叢集的部署。 若要部署的開發/測試環境的所有預設設定的巨量資料叢集，請遵循這篇文章中的指示：
 
-[快速入門： 部署 Kubernetes 上的 SQL Server Aris](quickstart-big-data-cluster-deploy.md)
+[快速入門： 部署巨量資料叢集的 Kubernetes 的 SQL Server](quickstart-big-data-cluster-deploy.md)
 
-如果您想要自訂您 Aris 的組態，根據您的工作負載需求，請遵循下的一組指示。
+如果您想要自訂您的巨量資料叢集組態，根據您的工作負載需求，請遵循下的一組指示。
 
 ## <a name="verify-kubernetes-configuration"></a>確認 kubernetes 組態
 

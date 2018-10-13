@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073008"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085334"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>設定可用性複本的備份 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組設定次要複本的備份。  
@@ -111,13 +111,13 @@ ms.locfileid: "48073008"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要設定次要複本的備份**  
   
-1.  設為預設值 (`cd`) 裝載主要複本的伺服器執行個體。  
+1.  將預設值 (`cd`) 設定為裝載主要複本的伺服器執行個體。  
   
 2.  (選擇性) 設定您要加入或修改之每個可用性複本的備份優先權。 裝載主要複本的伺服器執行個體會使用這個優先權來決定哪個複本應該服務可用性群組中資料庫的自動備份要求 (系統會選擇優先權最高的複本)。 這個優先權可以是 0 和 100 (含) 之間的任何數字。 如果優先權為 0，就表示系統不應該將複本視為服務備份要求的候選。  預設值為 50。  
   
      將可用性複本加入至可用性群組時，請使用 `New-SqlAvailabilityReplica` 指令程式。 修改現有的可用性複本時，請使用 `Set-SqlAvailabilityReplica` 指令程式。 在任一情況下，指定`BackupPriority` *n*參數，其中*n*是從 0 到 100 的值。  
   
-     例如，下列命令會將可用性複本的備份優先權`MyReplica`至`60`。  
+     例如，下列命令會將可用性複本 `MyReplica` 的備份優先權設定為 `60`。  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -126,7 +126,7 @@ ms.locfileid: "48073008"
   
 3.  (選擇性) 設定您要建立或修改之可用性群組的自動備份喜好設定。 這個喜好設定會指出備份作業在選擇要在何處執行備份時應該如何評估主要複本。 預設設定是慣用次要複本。  
   
-     建立可用性群組時，請使用 `New-SqlAvailabilityGroup` 指令程式。 當修改現有的可用性群組，請使用`Set-SqlAvailabilityGroup`cmdlet。 在任一情況下，指定`AutomatedBackupPreference`參數。  
+     建立可用性群組時，請使用 `New-SqlAvailabilityGroup` 指令程式。 修改現有的可用性群組時，請使用 `Set-SqlAvailabilityGroup` 指令程式。 在任何一種情況中，請指定 `AutomatedBackupPreference` 參數。  
   
      其中  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073008"
     ```  
   
 > [!NOTE]  
->  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   

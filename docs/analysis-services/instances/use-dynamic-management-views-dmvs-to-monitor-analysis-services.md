@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
-ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
+ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47178324"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906398"
 ---
 # <a name="dynamic-management-views-dmvs"></a>動態管理檢視 (DMV) 
 
@@ -210,4 +210,4 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|說明目前在資料庫中，包括工作階段範圍集所述的任何集合。|  
 
 > [!NOTE]
-> 儲存體 Dmv 沒有結構描述資料列中所述的通訊協定。
+> 儲存體 Dmv 沒有通訊協定中所述的結構描述資料列集。

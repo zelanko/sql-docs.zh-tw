@@ -1,5 +1,5 @@
 ---
-title: Kpi |Microsoft 文件
+title: Kpi |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eaaf0fc4589fb07484dd10479ded4956650b245
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043722"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906428"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  表格式模型中的「關鍵效能指標」(KPI) 可用來針對由量值或絕對值定義的「目標」值，量測由「基底」量值定義之值的績效。 本文章提供表格式模型作者在表格式模型中 Kpi 的基本知識。  
+  表格式模型中的「關鍵效能指標」(KPI) 可用來針對由量值或絕對值定義的「目標」值，量測由「基底」量值定義之值的績效。 這篇文章會提供表格式模型作者在表格式模型中 Kpi 的基本知識。  
   
 ##  <a name="bkmk_benefits"></a> 優點  
  在商務用語中，關鍵效能指標 (KPI) 是量測商務目標的可量化度量。 KPI 通常會在一段時間內進行評估。 例如，組織的銷售部門可以使用 KPI，針對預計的毛利來測量每月的毛利。 會計部門可以針對營收測量每月支出，以評估成本，而人力資源部門可以測量每季員工營業額。 每一個都是 KPI 的範例。 商務專業人員經常會使用在商務計分卡中分組的 KPI，以取得商務成就之快速與精確的記錄摘要，或識別趨勢。  
@@ -37,7 +37,7 @@ ms.locfileid: "34043722"
 ##  <a name="bkmk_example"></a> 範例  
  任職於 Adventure Works 的銷售經理想要建立樞紐分析表，用來快速顯示銷售員工是否達成給定期間 (年份) 的銷售配額。 對於每個銷售員工，她要樞紐分析表顯示實際銷售金額 (美元)、銷售配額量 (美元)，以及顯示每個銷售員工狀態是低於、等於或高於其銷售配額的簡單圖形。 她希望能依年份配量這些資料。  
   
- 為了達成目的，銷售經理請組織的 BI 方案開發人員協助將銷售 KPI 加入至 AdventureWorks 表格式模型。 銷售經理將使用 Excel 來連接至 Adventure Works 表格式模型，做為資料來源，並具有欄位 （量值和 KPI） 和交叉分析篩選器來分析銷售主力達成其配額建立樞紐分析表。  
+ 為了達成目的，銷售經理請組織的 BI 方案開發人員協助將銷售 KPI 加入至 AdventureWorks 表格式模型。 銷售經理接著將會使用 Excel 連接到 Adventure Works 表格式模型，做為資料來源，並建立樞紐分析表的欄位 （量值和 KPI） 和交叉分析篩選器來分析銷售人員達成其配額使用。  
   
  在模型中，FactResellerSales 資料表的 SalesAmount 資料行上建立了量值，提供每個銷售員工的實際銷售金額 (美元)。 此量值會定義 KPI 的基底值。  
   
@@ -71,7 +71,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="bkmk_related_tasks"></a> 相關工作  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[建立及管理 KPI](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|描述如何使用基底量值、目標量值及狀態臨界值建立 KPI。|  
   

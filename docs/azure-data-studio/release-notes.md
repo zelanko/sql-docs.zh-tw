@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6b1328b1d0a0832e9d412d1fcd908f3cdb0d349
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037995"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072302"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 版本資訊
 
@@ -61,7 +61,7 @@ ms.locfileid: "48037995"
 
 *0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github.com/Microsoft/azuredatastudio/issues/1971)， [# 2372年](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-*年 8 月公開預覽*著重於錯誤修正、 產品穩定及填入現有的案例中的間距。  
+*年 8 月公開預覽*著重於 bug 修正、 產品穩定和填滿現有案例中的間距。  
 
 - 宣布 SQL Server 匯入擴充功能
 - SQL Server Profiler 工作階段管理
@@ -73,8 +73,8 @@ ms.locfileid: "48037995"
 ### <a name="bug-fixes"></a>錯誤修正
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143)： 按兩下不選取變數名稱中的 。
-- 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387): SQL DB 索引標籤圖示為紅色。
+- 修正[問題 143](https://github.com/Microsoft/azuredatastudio/issues/143)： 按兩下不選取變數名稱中的 。
+- 修正[問題 387](https://github.com/Microsoft/azuredatastudio/issues/387): SQL DB 索引標籤圖示為紅色。
 - 修正[問題 825](https://github.com/Microsoft/azuredatastudio/issues/825)： 要求： 自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
 - 修正[問題 1285](https://github.com/Microsoft/azuredatastudio/issues/1285)： 更新會導致應用程式是在 Windows 中的 [移除/取代] 圖示。
@@ -93,8 +93,8 @@ ms.locfileid: "48037995"
 - 修正[問題 1850](https://github.com/Microsoft/azuredatastudio/issues/1850)： 輸入 N '會以 N' '。
 - 修正[問題 1985](https://github.com/Microsoft/azuredatastudio/issues/1985)： 從查詢結果方格複製為關閉 1 個資料行。
 - 修正[問題 1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998)： 關於對話来加入 VS Code 版本。
-- 修正[發出 # 2042年](https://github.com/Microsoft/azuredatastudio/pull/2042)： 代理程式： 已啟用 按鈕，從 sql 檔案匯入查詢。
-- 修正[發出 # 2091年](https://github.com/Microsoft/azuredatastudio/issues/2091)： 無法使用快速鍵 Ctrl + C 複製結果 窗格。
+- 修正[問題 2042](https://github.com/Microsoft/azuredatastudio/pull/2042)： 代理程式： 已啟用 按鈕，從 sql 檔案匯入查詢。
+- 修正[問題 2091](https://github.com/Microsoft/azuredatastudio/issues/2091)： 無法使用快速鍵 Ctrl + C 複製結果 窗格。
 - 修正[問題 2099](https://github.com/Microsoft/azuredatastudio/pull/2099)： 新增更多的 saveAsCsv 選項。
 - 修正[問題 2107](https://github.com/Microsoft/azuredatastudio/issues/2107)： 儀表板和 Profiler 的文件的更新文件圖示。
 - 修正[問題 2129](https://github.com/Microsoft/azuredatastudio/pull/2129)： 儲存編輯資料會切換索引標籤時，捲軸位置。
@@ -161,10 +161,10 @@ ms.locfileid: "48037995"
 - 修正 GitHub 問題：
   - 功能要求 ([問題 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): 請資料，讓結果格線自動調整資料行寬度及 （或) 重新執行相同的查詢時，請記得手動變更。
   - 修正[問題 1398](https://github.com/Microsoft/azuredatastudio/issues/1398)： 應該顯示新增訊息，並新增帳戶 [帳戶] 按鈕，當連結的帳戶為空白時。
-  - 修正[發出 1399年](https://github.com/Microsoft/azuredatastudio/issues/1399)： 摺疊檢視時，會中斷連結的帳戶 索引標籤。
+  - 修正[問題 1399](https://github.com/Microsoft/azuredatastudio/issues/1399)： 摺疊檢視時，會中斷連結的帳戶 索引標籤。
   - 修正[問題 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL 工具服務損毀時從磁碟開啟的.sql 檔。
   - 修正[問題 1372](https://github.com/Microsoft/azuredatastudio/issues/1372)： 遺漏的 SQL 關鍵字"BETWEEN"。
-  - 修正[發出 1395年](https://github.com/Microsoft/azuredatastudio/issues/1395): 比對' 關鍵字損毀的 SQL 工具服務。
+  - 修正[問題 1395](https://github.com/Microsoft/azuredatastudio/issues/1395): 比對' 關鍵字損毀的 SQL 工具服務。
   - 修正[問題 1496](https://github.com/Microsoft/azuredatastudio/issues/1496): 「 新的 Profiler 」 快顯功能表選項，在 [物件總管] 中不執行任何動作。
   - 修正[問題 1495](https://github.com/Microsoft/azuredatastudio/issues/1495)： 查詢編輯器 」 Explain"查詢計劃已中斷。
 

@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833356"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119655"
 ---
 # <a name="aggregate-functions---avg"></a>彙總函式 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="remarks"></a>備註  
  所有類型的不可部份完成值傳遞給**avg （)** 一定要子類型之一的三個內建數值基底類型或 xdt: untypedatomic。 它們不能是混合的類型。 xdt:untypedAtomic 類型的值會被視為 xs:double。 結果**avg （)** 接收傳入的類型，例如 xs: untypedatomic 的 double 類型的基底類型。  
   
- 若輸入在靜態上是空的，則隱含著空值且會引發靜態錯誤。  
+ 如果輸入是靜態空白，則會隱含空白並引發靜態錯誤。  
   
  **Avg （)** 函式會傳回計算數字的平均值。 例如：  
   

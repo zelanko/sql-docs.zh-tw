@@ -10,12 +10,12 @@ ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aa572611a522e1a83f334e13c36a7fc178c6090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791766"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071762"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>專案 Settings(Synchronization) (DB2ToSQL)
 同步處理頁面**專案設定** 對話方塊中包含自訂 SSMA 載入及重新整理的資料庫物件，例如資料表和預存程序，設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -57,7 +57,7 @@ SSMA 中的物件變更時，請在同步處理 對話方塊中指定的預設�
 **遺漏本機物件的中繼資料時的動作**  
 遺漏本機中繼資料時，請在同步處理 對話方塊中指定的預設設定。 設定預設值是**從資料庫重新整理**。  
   
--   如果您選取**從資料庫重新整理**，SSMA SSMA 會將載入資料庫定義的中繼資料時即符合此條件。  
+-   如果您選取**從資料庫重新整理**，SSMA 會將載入資料庫定義的中繼資料時即符合此條件。  
   
 -   如果您選取**略過**，SSMA 將不會執行重新整理的任何動作。  
   

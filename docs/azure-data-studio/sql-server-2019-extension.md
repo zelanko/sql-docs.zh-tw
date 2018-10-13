@@ -2,7 +2,7 @@
 title: Azure 資料 Studio SQL Server 2019 擴充功能 （預覽） |Microsoft Docs
 description: Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f9d10fbdec028549f9b23b23506882d5c5afe5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131228"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168785"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
@@ -24,23 +24,31 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安裝 SQL Server 2019 擴充功能 （預覽）
 
-下載並安裝 SQL Server 2019 擴充功能 （預覽）：
+若要安裝 SQL Server 2019 擴充功能 （預覽版），下載並安裝相關聯的.vsix 檔案。
 
-  |平台|下載|發行日期|
-  |:---|:---|:---|
-  |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 年 9 月 24日日|
-  |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 年 9 月 24日日 |
-  |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 年 9 月 24日日 |
+1. 將 SQL Server 2019 擴充功能 （預覽版）.vsix 檔案下載到本機目錄：
 
+   |平台|下載|發行日期|
+   |:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 年 9 月 24日日|
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 年 9 月 24日日 |
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 年 9 月 24日日 |
 
-在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。 選擇**是**時提示您確認安裝，並等候安裝成功的通知。
+1. 在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。
 
-選取**重新載入**以啟用該擴充功能 (只有第一次安裝擴充功能時需要)。
+1. 選擇**是**時提示您確認安裝，並等候安裝成功的通知。
 
+1. 選取**重新載入**以啟用該擴充功能 (只有第一次安裝擴充功能時需要)。
+
+1. 重新載入後，擴充功能會安裝相依性。 您可以看到在 [輸出] 視窗中，進度，並可能需要幾分鐘的時間。
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 巨量資料叢集支援
 
 * 按一下 **加入連接**中*物件總管*，然後選擇 **巨量資料的 SQL Server 叢集**作為連線類型。
+
+   > [!TIP]
+   > 如果您看不見**巨量資料的 SQL Server 叢集**連接類型，重新啟動 Azure Data Studio。
+
 * 輸入主機名稱或 IP 位址的叢集端點加上使用者名稱和密碼用來連接。
 * （選擇性） 包含中的易記顯示名稱**名稱**欄位。
 * 按一下 [ **Connect** ，然後您可以啟動一般工作的儀表板中，瀏覽**HDFS**在物件總管] 中，並從該處執行的內容中工作。

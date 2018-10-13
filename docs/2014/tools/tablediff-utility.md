@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147930"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169398"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
   **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
@@ -77,8 +77,8 @@ ms.locfileid: "48147930"
  [ **-?** ]  
  傳回支援的參數清單。  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *source_server_name***\\***instance_name*。  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ 這是來源伺服器的名稱。 指定_來源\_伺服器\_名稱_預設執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_來源\_伺服器\_名稱_**\\**_執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  這是來源資料庫的名稱。  
@@ -101,8 +101,8 @@ ms.locfileid: "48147930"
  **-sourcelocked**  
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *destination_server_name***\\***instance_name*。  
+ **-destinationserver** *destination_server_name*[**\\**_執行個體\_名稱_]  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定_目的地\_伺服器\_名稱_**\\**_執行個體\_名稱_的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  這是目的地資料庫的名稱。  
@@ -126,7 +126,7 @@ ms.locfileid: "48147930"
  在比較期間，目的地資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
  **-b** *large_object_bytes*  
- 是包含要比較的大型物件資料類型資料行的位元組數： `text`， `ntext`， `image`， `varchar(max)`，`nvarchar(max)`和`varbinary(max)`。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
+ 這是用來進行下列大型物件資料類型之資料行比較的位元組數目，其中包括：`text`、`ntext`、`image`、`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)`。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
   
  **-bf**  *number_of_statements*  
  這是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 選項時要寫入目前 **指令碼檔案中的** 陳述式數目。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數目超出 *number_of_statements*時，會建立新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案。  
@@ -172,7 +172,7 @@ ms.locfileid: "48147930"
 ## <a name="remarks"></a>備註  
  **tablediff** 公用程式不能與非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器一起使用。  
   
- 資料表與`sql_variant`不支援資料類型資料行。  
+ 具有 `sql_variant` 資料類型資料行的資料表不受支援。  
   
  根據預設， **tablediff** 公用程式支援來源和目的地資料行之間的下列資料類型對應。  
   

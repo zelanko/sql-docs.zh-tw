@@ -18,12 +18,12 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf13e60a25e4368b9e7877b7515aad17e3755071
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748328"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085136"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
 清除目前[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件，並傳回下一步**資料錄集**前移透過一系列的命令。  

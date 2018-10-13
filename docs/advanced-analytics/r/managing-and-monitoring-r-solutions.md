@@ -1,58 +1,97 @@
 ---
-title: 管理及監視 SQL Server 中的機器學習解決方案 |Microsoft 文件
+title: 管理並整合 SQL Server 中的機器學習工作負載 |Microsoft Docs
+description: SQL Server DBA，檢閱部署機器學習服務 R 和 Python 的子系統，database engine 執行個體上的系統管理工作。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585700"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169078"
 ---
-# <a name="managing-and-monitoring-machine-learning-solutions"></a>管理和監視的機器學習解決方案
+# <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理並整合 SQL Server 上的機器學習工作負載
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明在 SQL Server 機器學習服務與資料庫管理員想要開始使用 R 和 Python 解決方案相關的功能。
+這篇文章是適用於 SQL Server 資料庫管理員負責部署有效率的資料科學基礎結構上支援多個工作負載的伺服器資產。 框架的系統管理的問題空間相關的管理 R 和 Python 程式碼在 SQL Server 上的執行。 
 
-**適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務
+## <a name="what-is-feature-integration"></a>功能整合是什麼
 
-## <a name="security"></a>Security
+R 和 Python 機器學習服務由提供[SQL Server 機器學習服務](../what-is-sql-server-machine-learning.md)做為資料庫引擎執行個體的延伸。 整合是主要是透過安全性層級和資料定義語言中，彙總，如下所示：
 
-資料庫管理員必須提供資料存取，不只是資料科學家但各種報表開發人員、 商務分析師和商務資料取用者。 R （以及現在 Python） 至 SQL Server 的整合支援資料科學角色的資料庫系統管理員提供許多優點。
++ 預存程序便有能力能夠接受 R 和 Python 程式碼作為輸入的參數。 開發人員和資料科學家可以使用[系統預存程序](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017)或建立包裝其程式碼的自訂程序。
++ T-SQL 函式 (亦即[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql))，可以使用之前已培訓的資料模型。 這項功能可透過 T-SQL。 因此，特別是沒有的機器學習服務延伸模組安裝在系統上可以呼叫它。
++ 現有的資料庫登入和以角色為基礎的權限涵蓋使用者叫用指令碼使用相同的資料。 一般而言，如果使用者無法存取資料，透過查詢時，就無法存取它透過指令碼是。
 
-+ [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的架構會保護您資料庫的安全，並隔離 R 工作階段的執行與資料庫執行個體的操作。
+## <a name="feature-availability"></a>功能可用性
 
-+ 您可以指定有權執行 R 指令碼的對象，並確保 R 工作中使用的資料是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所定義之相同安全性角色來管理。
+R 和 Python 整合會變成可透過一連串的步驟。 第一個是安裝程式，當您[包含或加入**Machine Learning 服務**](../install/sql-machine-learning-services-windows-install.md)資料庫引擎執行個體的功能。 後續步驟中，您必須啟用外部指令碼 （它預設為關閉） 資料庫引擎執行個體上。
 
-+ 資料庫管理員可以使用角色來管理安裝 R 封裝和 R 和 Python 指令碼的執行。
+到目前為止，只有資料庫管理員擁有完整權限建立和執行外部指令碼、 加入或刪除封裝，並建立預存程序及其他物件。
 
-如需詳細資訊，請參閱下列資源：
+所有其他使用者必須具有 EXECUTE ANY EXTERNAL SCRIPT 權限。 額外[標準的資料庫權限](../security/user-permission.md)判斷使用者是否可以建立物件、 執行指令碼、 使用序列化和定型模型，以及等。 
 
-+ [SQL Server 中 R 執行階段的安全性考量](../../advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server.md)
+## <a name="resource-allocation"></a>資源配置
 
-+ [R 安全性概觀](../r/security-overview-sql-server-r.md)
+預存程序和叫用外部處理的 T-SQL 查詢使用預設資源集區可用的資源。 預設組態的一部分，例如 R 和 Python 的工作階段的外部處理序允許最多 20%的總記憶體主機系統上。 
 
-+ [Python 安全性概觀](../python/security-overview-sql-server-python-services.md)
+如果您想要重新調整資源，您可以修改預設集區，與該系統上執行的機器學習工作負載中對應的效果。
 
-+ [在 SQL Server 中的預設 R，並將 Python 封裝](installing-and-managing-r-packages.md)
+另一個選項是建立自訂的外部資源集區，來擷取源自於特定的程式、 主機或特定時間間隔期間所發生的活動的工作階段。 如需詳細資訊，請參閱 <<c0> [ 若要修改 R 和 Python 執行資源層級的資源控管](../administration/resource-governance.md)並[如何建立資源集區](../administration/how-to-create-a-resource-pool.md)如需逐步指示。
 
-## <a name="configuration-and-management"></a>設定和管理
+## <a name="isolation-and-containment"></a>隔離和內含項目
 
-資料庫管理員必須將競爭專案和優先順序整合至單一窗口︰資料庫伺服器。 它們必須支援分析，同時維護操作和報告資料存放區的健全狀況。 機器學習服務與 SQL Server 的整合會提供許多優點，資料庫管理員，負責越來越重要的角色部署用於資料科學之有效基礎結構。
+處理架構已經過設計，以找出核心引擎處理從外部指令碼。 R 和 Python 指令碼執行以個別的處理序在本機的背景工作帳戶。 在 [工作管理員] 中，您可以監視 R 和 Python 處理程序，在低權限本機使用者帳戶，不同於 SQL Server 服務帳戶下執行。 
 
-+ R 和 Python 的工作階段會執行不同的處理序，以確保您的伺服器會繼續如往常般執行，即使外部指令碼執行階段有問題。
+執行個別的低權限帳戶中的 R 和 Python 的處理程序有下列優點：
 
-+ 低權限之實體的使用者帳戶用來包含及隔離外部指令碼活動。
++ 隔離從 R 和 Python 工作階段，您可以終止 R 或 Python 處理程序，而不會影響核心資料庫作業的核心引擎處理序。 
 
-+ DBA 可以使用標準 SQL Server 資源的管理工具，來控制配置給 R 執行階段，以防止從大量計算危及整體伺服器效能的資源數量。
++ 減少主機電腦上的外部指令碼執行階段處理程序的權限。
 
-如需詳細資訊，請參閱下列資源：
+最低權限帳戶會在安裝期間建立，並放在 Windows*使用者帳戶集區*稱為**SQLRUserGroup**。 根據預設，此群組具有可執行檔、 程式庫和內建的資料集，使用 R 和 SQL Server 下的 Python 程式資料夾中的權限。 
 
-+ [資源管理針對 R 服務](../r/resource-governance-for-r-services.md)
+擔任 DBA 一，您可以使用 SQL Server 資料安全性，來指定誰有權限來執行指令碼，並在相同的安全性角色來控制下管理作業中使用的資料存取透過 T-SQL 查詢。 身為系統管理員，您可以明確拒絕**SQLRUserGroup**藉由建立 Acl 的本機伺服器上的機密資料的存取權。
 
-+ [設定及管理進階分析擴充功能](../r/configure-and-manage-advanced-analytics-extensions.md)
+>[!NOTE]
+> 根據預設， **SQLRUserGroup**不會在 SQL Server 本身不需要登入或權限。 背景工作帳戶應該進行資料存取需要登入，您必須建立它自己。 明確呼叫登入建立的案例是當使用者識別 Windows 使用者，而且連接字串會指定信任的使用者時，在執行中，資料或資料庫引擎執行個體上的作業支援從指令碼的要求。 如需詳細資訊，請參閱 <<c0> [ 為資料庫使用者的新增 SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)。
+
+## <a name="disable-script-execution"></a>停用指令碼執行
+
+萬一失控的指令碼，您可以停用所有執行的指令碼，反轉之前如何將先啟用外部指令碼執行的步驟。
+
+1. 在 SQL Server Management Studio 或其他查詢工具中，執行下列命令可設定`external scripts enabled`為 0 或 FALSE。
+
+    ```sql
+    EXEC sp_configure  'external scripts enabled', 0
+    RECONFIGURE WITH OVERRIDE
+    ```
+2. 重新啟動 database engine 服務。
+
+一旦您解決此問題，請記得重新啟用執行個體上執行的指令碼，如果您想要繼續 R 和 Python 指令碼支援的 database engine 執行個體。 如需詳細資訊，請參閱[啟用指令碼執行](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)
+
+## <a name="extend-functionality"></a>擴充功能
+
+資料科學通常導入了封裝部署和管理新的需求。 資料科學家，對於常見的作法是利用自訂的解決方案中的開放原始碼和第三方封裝。 這些套件的一些會對其他套件相依性，在此情況下您可能需要評估，並安裝到您的目標的多個封裝。
+
+負責伺服器資產的 DBA，作為部署到實際伺服器的任意 R 和 Python 套件表示不熟悉的挑戰。 然後再加入封裝，您應該評估是否外部的封裝所提供的功能是真正的必要項目，內建中沒有對等[R 語言](r-libraries-and-data-types.md)並[Python 程式庫](../python/python-libraries-and-data-types.md)安裝SQL Server 安裝程式。 
+
+為伺服器封裝安裝的替代方案，資料科學家可能可以[建置，並在外部的工作站上執行解決方案](../r/set-up-a-data-science-client.md)，從 SQL Server 擷取資料，但使用所有分析本機上執行的工作站而不是在伺服器本身。 
+
+如果您後來決定外部程式庫函式是的也不會造成伺服器作業或整個資料的風險，您可以選擇從多個方法來新增封裝。 在大部分情況下，系統管理員權限才能將套件新增至 SQL Server。 若要進一步了解，請參閱[SQL Server 中的安裝 Python 套件](../python/install-additional-python-packages-on-sql-server.md)並[SQL Server 中的安裝 R 封裝](install-additional-r-packages-on-sql-server.md)。
+
+> [!NOTE]
+> R 套件的伺服器管理員權限並不特別需要套件安裝如果您使用的替代方法。 請參閱[SQL Server 中的安裝 R 封裝](install-additional-r-packages-on-sql-server.md)如需詳細資訊。
+
+## <a name="next-steps"></a>後續步驟
+
++ 檢閱的概念和元件[擴充性架構](../concepts/extensibility-framework.md)並[安全性](../concepts/security.md)更多的背景。
+
++ 您可能會在功能安裝，已經很熟悉使用者資料的存取控制，但如果沒有，請參閱[授與使用者權限，SQL Server machine learning](../security/user-permission.md)如需詳細資訊。 
+
++ 了解如何調整需要大量計算的機器學習服務工作負載的系統資源。 如需詳細資訊，請參閱 <<c0> [ 如何建立資源集區](../administration/how-to-create-a-resource-pool.md)。

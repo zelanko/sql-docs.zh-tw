@@ -1,26 +1,31 @@
 ---
 title: "\"Hello World\"基本 R 程式碼執行 T-SQL (SQL Server Machine Learning) 中的快速入門 |Microsoft Docs"
-description: 在此快速入門中的 SQL Server 中的 R 指令碼，了解與 hello world 練習 sp_execute_external_script 系統預存程序的基本概念。
+description: SQL Server 中的 R 指令碼的快速入門。 了解呼叫 R 指令碼在 hello world 練習使用 sp_execute_external_script 的系統預存程序的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1a51fcb9e67bef48346ff74ebfb1e911a6ee3365
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086881"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878081"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門： 在 SQL Server 中的"Hello world"的 R 指令碼 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 包含內建的 SQL Server 資料的資料庫內分析的 R 語言功能支援。 您可以使用開放原始碼 R 函數、 第三方套件，以及內建的 Microsoft R 套件，進行大規模的預測性分析。
+SQL Server 包含內建的 SQL Server 資料的資料科學分析的 R 語言支援。 您的 R 指令碼可以包含開放原始碼 R 函數，第三方的 R 程式庫或內建的 Microsoft R 程式庫這類[RevoScaleR](../r/revoscaler-overview.md)進行大規模的預測性分析。 
 
-在本快速入門中，您將了解重要的概念，透過執行"Hello World"R 指令碼 inT SQL，簡介**sp_execute_external_script**系統預存程序。 執行 R 指令碼是透過預存程序。 您可以使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)預存程序並傳入 R 指令碼中，做為示範在本快速入門中，為輸入參數或換行中的 R 指令碼[之自訂預存程序](sqldev-in-database-r-for-sql-developers.md)。 
+執行指令碼是透過預存程序，使用下列其中一個方法：
+
++ 內建[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)預存程序，將 R 指令碼中的傳遞做為輸入參數。
++ 換行中的 R 指令碼[之自訂預存程序](sqldev-in-database-r-for-sql-developers.md)您所建立。
+
+在本快速入門中，您將了解重要的概念，透過執行"Hello World"R 指令碼 inT SQL，簡介**sp_execute_external_script**系統預存程序。 
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -33,7 +38,7 @@ SQL Server 包含內建的 SQL Server 資料的資料庫內分析的 R 語言功
 
 + 執行 SQL 查詢工具。 您可以使用任何應用程式可以連接到 SQL Server 資料庫並執行 T-SQL 程式碼。 SQL 專業人員可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio。
 
-本教學課程中，以顯示 執行 R 在 SQL Server 內是多麼我們使用新**適用於 Visual Studio Code 的 mssql 擴充功能**。 VS Code 是免費的開發環境可在 Linux、 macOS 或 Windows 上執行。 **Mssql**延伸模組是執行 T-SQL 查詢的輕量級擴充功能。 若要取得 Visual Studio Code，請參閱[下載並安裝 Visual Studio Code (英文)](https://code.visualstudio.com/Download)。 若要新增**mssql**延伸模組，請參閱這篇文章：[使用 Visual Studio Code 的 mssql 擴充功能](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
+本快速入門中，以顯示 執行 R 在 SQL Server 內是多麼我們使用新**適用於 Visual Studio Code 的 mssql 擴充功能**。 VS Code 是免費的開發環境可在 Linux、 macOS 或 Windows 上執行。 **Mssql**延伸模組是執行 T-SQL 查詢的輕量級擴充功能。 若要取得 Visual Studio Code，請參閱[下載並安裝 Visual Studio Code (英文)](https://code.visualstudio.com/Download)。 若要新增**mssql**延伸模組，請參閱這篇文章：[使用 Visual Studio Code 的 mssql 擴充功能](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>連線到資料庫並執行 Hello World 測試指令碼
 

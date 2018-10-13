@@ -20,12 +20,12 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842676"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169333"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47842676"
 |**step_id**|**int**|作業中步驟的識別碼。|  
 |**step_name**|**sysname**|作業步驟的名稱。|  
 |**subsystem**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來執行作業步驟的子系統名稱。|  
-|命令|**nvarchar(max)**|要執行的命令**子系統**。|  
+|**command**|**nvarchar(max)**|要執行的命令**子系統**。|  
 |**flags**|**int**|已保留。|  
 |**additional_parameters**|**ntext**|已保留。|  
 |**cmdexec_success_code**|**int**|所傳回的錯誤層級值**CmdExec**子系統步驟，以表示成功。|  
@@ -52,7 +52,7 @@ ms.locfileid: "47842676"
 |**retry_attempts**|**int**|作業失敗時的重試次數。|  
 |**retry_interval**|**int**|重試的間隔等待時間。|  
 |**os_run_priority**|**int**|已保留。|  
-|**output_file_name**|**nvarchar(200)**|在其中步驟輸出的檔案名稱會儲存時**子系統**是 TSQL、 PowerShell 或 **CmdExec * * *。*|  
+|**output_file_name**|**nvarchar(200)**|在其中步驟輸出的檔案名稱會儲存時**子系統**是 TSQL、 PowerShell 或**CmdExec**_。_|  
 |**last_run_outcome**|**int**|作業步驟上次執行的結果。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 重試<br /><br /> **3** = 取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|上次執行步驟的持續期間 (hhmmss)。|  
 |**last_run_retries**|**int**|作業步驟上次執行的重試次數。|  

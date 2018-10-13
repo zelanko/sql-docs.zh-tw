@@ -18,12 +18,12 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b0b66722189a42b4bd5f157900815a96a716f49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840680"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119526"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 語言參考 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47840680"
   
  若要查詢變數或資料行中儲存 XML 執行個體**xml**類型，您使用[xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，您可以在其中宣告的變數**xml**輸入，並使用查詢**query （)** 方法**xml**資料型別。  
   
-```  
+```sql
 DECLARE @x xml  
 SET @x = '<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('/ROOT/a')  
@@ -46,7 +46,7 @@ SELECT @x.query('/ROOT/a')
   
  在下列範例中，查詢針對 Instructions 資料行指定**xml** AdventureWorks 資料庫中 ProductModel 資料表中的型別。  
   
-```  
+```sql
 SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   

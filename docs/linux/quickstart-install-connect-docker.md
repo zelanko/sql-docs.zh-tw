@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782367"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085284"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>使用 Docker 的快速入門： 執行 SQL Server 容器映像
 
@@ -41,7 +41,7 @@ ms.locfileid: "48782367"
 
 此映像包含以 Ubuntu 16.04 為基礎，在 Linux 上執行的 SQL Server。 您可於適用於 Mac/Windows 的 Docker 上將其與 Docker 引擎 1.8 以上版本搭配使用。 本快速入門中特別著重在使用上的 SQL Server **linux**映像。 Windows 映像則不涵蓋在內，但您可於 [mssql-server-windows-developer Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)進一步加以了解。
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 必要條件
 
 - 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 - 至少 2 GB 的磁碟空間
@@ -213,7 +213,7 @@ SELECT @@SERVERNAME,
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a name="change-the-sa-password"></a>變更 SA 密碼
+## <a id="sapassword"></a> 變更 SA 密碼
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
