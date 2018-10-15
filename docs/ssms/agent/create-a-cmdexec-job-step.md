@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9b874ea411770b1f0a43d276550deef0729bc2d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 415ec242187a7b097e603c79a74d5eeb3d800dc6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703119"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120265"
 ---
 # <a name="create-a-cmdexec-job-step"></a>建立 CmdExec 作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47703119"
 > [!IMPORTANT]  
 > [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立和定義 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟，來使用可執行程式或作業系統命令。  
+此主題描述如何使用 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立和定義 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 作業步驟，來使用可執行程式或作業系統命令。  
   
 **本主題內容**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47703119"
   
 -   **若要使用下列項目建立 CmdExec 作業步驟：**  
   
-    [Transact-SQL](#SSMS)  
+    [SQL Server Management Studio](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47703119"
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
-    -- creates a job step that that uses CmdExec  
+    -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

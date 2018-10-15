@@ -16,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0f77947a1651d65021b219480c8432e53498a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f945fca69c73d0cf334085064fe76d77b2b55759
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773846"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169248"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,11 @@ ms.locfileid: "47773846"
 
   本文描述如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。 遵循本文中的步驟時，您也可以讓系統做好重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的準備。  
   
->**重要！** 若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體，您必須是本機管理員，且具有以服務登入的權限。  
+  >[!IMPORTANT]
+  > 若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體，您必須是本機管理員，且具有以服務登入的權限。  
   
-> **注意：** 若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所提供的「移除節點」功能來分別移除每個節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集 &#40;Setup&#41; 中加入或移除節點](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+ > [!NOTE]
+ > 若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所提供的「移除節點」功能來分別移除每個節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集 &#40;Setup&#41; 中加入或移除節點](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
  請注意，解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先考慮下列重要狀況：  
   

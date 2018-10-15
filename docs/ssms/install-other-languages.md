@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb1feb9a26f4f9e969d568975b331bc522c14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 706615794b7f3e88cc5228f56de1e388501494b5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722866"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904916"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>安裝非英文語言版本的 SQL Server Management Studio (SSMS) 
 
-[SSMS 提供數種語言版本](download-sql-server-management-studio-ssms.md#available-languages)，但是當系統地區設定與 SSMS 語言不相符時，SSMS 安裝程式會封鎖電腦上的安裝。 
+[SSMS 提供數種語言版本](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview)，但是當系統地區設定與 SSMS 語言不相符時，SSMS 安裝程式會封鎖電腦上的安裝。 
 
 下列指示會依您的 Windows 版本而有所不同。 下列指示適用於 Windows 10。
 
@@ -28,7 +28,7 @@ ms.locfileid: "47722866"
 1. 針對您希望 SSMS 所使用的語言，安裝此語言的 Windows 語言套件： 
    - [設定] > [時間與語言] > [區域與語言] > [新增語言] 
 2. 現在按一下剛剛安裝的語言，然後選取 [設為預設值]，以便將系統地區設定設為使用先前步驟中所安裝的語言套件。 (安裝 SSMS 之後，您可以將系統地區設定重新設定為英文)。
-3. 當作業系統以您所要的語言執行之後，請[安裝相同語言的 SSMS 版本](download-sql-server-management-studio-ssms.md#available-languages)。 第一次安裝新的 SSMS 語言時，請使用完整的套件。 針對後續安裝，您可以使用升級套件。
+3. 當作業系統以您所要的語言執行之後，請[安裝相同語言的 SSMS 版本](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview)。 第一次安裝新的 SSMS 語言時，請使用完整的套件。 針對後續安裝，您可以使用升級套件。
 4. 執行 SSMS，它應該會以您在先前步驟中所安裝的語言來顯示。
 5. 將電腦的系統地區設定重新設定為英文。
 
@@ -37,7 +37,7 @@ ms.locfileid: "47722866"
 1. 針對您希望 SSMS 所使用的語言，安裝此語言的 Windows 語言套件： 
    - [設定] > [時間與語言] > [區域與語言] > [新增語言] 
 2. 現在按一下剛剛安裝的語言，然後選取 [設為預設值]，以便將系統地區設定設為使用先前步驟中所安裝的語言套件。 
-3. 當作業系統以您所要的語言執行之後，請[安裝相同語言的 SSMS 版本](download-sql-server-management-studio-ssms.md#available-languages)。 第一次安裝新的 SSMS 語言時，請使用完整的套件。 針對後續安裝，您可以使用升級套件。
+3. 當作業系統以您所要的語言執行之後，請[安裝相同語言的 SSMS 版本](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview)。 第一次安裝新的 SSMS 語言時，請使用完整的套件。 針對後續安裝，您可以使用升級套件。
 4. 針對您想要安裝但不符合已安裝初版 SSMS 語言的每種語言，請安裝對應的 Visual Studio 2015 Shell (獨立模式) 語言套件：
    - 瀏覽至 [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (您可能需要登入並完成「連線註冊」程序)。
    - 下載所需的 Visual Studio 2015 Shell (獨立模式) 語言套件並加以安裝。
