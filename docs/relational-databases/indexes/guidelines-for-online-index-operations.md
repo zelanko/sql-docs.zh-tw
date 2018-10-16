@@ -1,11 +1,10 @@
 ---
 title: 線上索引作業的指導方針 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -15,19 +14,17 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b37a9c192d17275deb4d37ac244f45ad402f8b4b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8b2947f9e9d3a6ba075bfe1a87d5f76cdbcb84c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731002"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43059670"
 -   當資料表包含 LOB 資料類型，但這些資料行並未在索引定義中當做索引鍵或非索引鍵 (內含) 資料行使用時，您可以在線上建立非唯一的非叢集索引。  
   
 -   您無法在線上建立、重建或卸除本機暫存資料表的索引。 此限制不適用於全域暫存資料表上的索引。
-- 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 
+- 可以從非預期的失敗、資料庫容錯移轉或 **PAUSE** 命令之後的停止處繼續索引。 請參閱 [Create Index](../../t-sql/statements/create-index-transact-sql.md) 及 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本所支援的功能清單，請參閱[版本支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -94,7 +91,7 @@ ms.locfileid: "43059670"
 ## <a name="resumable-index-considerations"></a>可繼續索引考量因素
 
 > [!NOTE]
-> 可繼續的索引選項適用於 SQL Server (從 SQL Server 2017 開始) (僅限索引重建) 和 SQL Database (建立非叢集索引和索引重建)。 請參閱[建立索引](../../t-sql/statements/create-index-transact-sql.md) (目前處於僅限 SQL Database 公開預覽狀態) 和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 
+> 可繼續索引選項會套用至 SQL Server (自 SQL Server 2017 開始) (僅限索引重建) 及 SQL Database (建立索引及索引重建)。 請參閱 [Create Index](../../t-sql/statements/create-index-transact-sql.md) (目前在公開預覽階段，適用於 SQL Database 及 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) 及 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 當您執行可繼續的線上索引建立或重建時，將適用下列指導方針：
 -   管理、規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引建立或重建作業多次，以符合您的維護期間。
@@ -118,7 +115,7 @@ ms.locfileid: "43059670"
 ## <a name="online-default-options"></a>線上預設選項 
 
 > [!IMPORTANT]
-> 這些選項處於公開預覽狀態。
+> 這些選項在公開預覽階段，適用於 SQL Database 及 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]。
 
 您可以透過設定 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 資料庫範圍設定選項，在資料庫層級設定線上或可繼續的預設選項。 使用這些預設選項，您可以避免不小心執行讓資料庫資料表離線的作業。 這兩個選項都會使引擎自動將某些作業提升為線上或可繼續執行。  
 您可以使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 命令，將選項設為 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 OFF。 您可以為線上和可繼續設定不同的值。 
@@ -129,12 +126,9 @@ ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 僅適用於分別支援線上和可繼續�
 > ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 不適用於 XML 索引作業。 
  
 ## <a name="related-content"></a>相關內容  
- [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)  
-  
- [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)  
-  
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
-  
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+- [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

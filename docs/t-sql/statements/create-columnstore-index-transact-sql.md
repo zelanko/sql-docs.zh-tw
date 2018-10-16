@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4eef7eee4073a2c1b10633c043aec1b452c2d5a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 009433960a4662985d78c09c10b125cfb5f7100f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690658"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -115,7 +112,19 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 ```  
   
 ## <a name="arguments"></a>引數  
-CREATE CLUSTERED COLUMNSTORE INDEX  
+
+部分選項無法在所有資料庫引擎版本上使用。 下表說明當在 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE 索引中引入該選項時，所顯示的版本：
+
+|選項| CLUSTERED | NONCLUSTERED |
+|---|---|---|
+| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
+| WHERE 子句 | 不適用 | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+
+所有選項皆可在 Azure SQL Database 中使用。
+
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
 建立叢集資料行存放區索引，由資料行將所有資料壓縮並儲存。 索引會包括資料表中的所有資料行，而且將儲存整個資料表。 如果現有的資料表是堆積或叢集索引，則該資料表會轉換成叢集資料行存放區索引。 如果資料表已儲存為叢集資料行存放區索引，將卸除並重建現有的索引。  
   
 *index_name*  
@@ -126,13 +135,16 @@ CREATE CLUSTERED COLUMNSTORE INDEX
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    指定要儲存為叢集資料行存放區索引之資料表的單部分、兩部分或三部分名稱。 如果資料表是堆積或叢集索引，則該資料表會從資料列存放區轉換成資料行存放區。 如果資料表已經是資料行存放區，此陳述式會重建叢集資料行存放區索引。  
   
-取代所有提及的  
-DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON 指定要卸除現有的叢集資料行存放區索引，並建立新的資料行存放區索引。  
-
+#### <a name="with-options"></a>WITH 選項  
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+   `DROP_EXISTING = ON` 指定要卸除現有的索引，並建立新的資料行存放區索引。  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (DROP_EXISTING = ON);
+```
    預設值為 DROP_EXISTING = OFF，表示 索引名稱要與現有名稱相同。 如果指定的索引名稱已存在，就會發生錯誤。  
   
-MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    在索引作業期間，覆寫現有的「平行處理原則的最大程度」伺服器組態。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
    *max_degree_of_parallelism* 值可以是：  
@@ -140,27 +152,44 @@ MAXDOP = *max_degree_of_parallelism*
    - \>1 - 根據目前的系統工作負載，將平行索引作業所使用的處理器數目上限，限制為所指定的數目或更少的數目。 例如，當 MAXDOP = 4，使用的處理器數目將會等於或小於 4。  
    - 0 (預設值) - 根據目前的系統工作負載來使用實際數目的處理器或比實際數目更少的處理器。  
   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (MAXDOP = 2);
+```
    如需詳細資訊，請參閱[設定平行處理原則的最大程度伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
-COMPRESSION_DELAY = **0** | *延遲* [ 分鐘 ]  
-   適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-
+###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *延遲* [ 分鐘 ]  
    至於磁碟資料表，「延遲」會指定關閉狀態下的差異資料列群組，必須在差異資料列群組中至少保留多少分鐘的時間，然後 SQL Server 才能將它壓縮到壓縮的資料列群組。 因為磁碟資料表不會追蹤個別資料列的插入和更新時間，因此 SQL Server 會將這段延遲時間套用於關閉狀態下的差異資料列群組。  
    預設值是 0 分鐘。  
+   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( COMPRESSION_DELAY = 10 Minutes );
+```
+
    如需 COMPRESSION_DELAY 的使用時機建議，請參閱[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
-DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-針對指定的資料表、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：   
-COLUMNSTORE  
-   COLUMNSTORE 是預設值，並指定要利用最高效能的資料行存放區壓縮方式來進行壓縮。 這是典型的選擇。  
+##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+   針對指定的資料表、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：   
+- `COLUMNSTORE` 是預設，並指定要利用最高效能的資料行存放區壓縮方式來壓縮。 這是典型的選擇。  
+- `COLUMNSTORE_ARCHIVE` 會進一步將資料表或分割區壓縮成較小的大小。 某些封存需要的儲存空間較小而且允許較長儲存和擷取時間，此時可以使用這個選項。  
   
-COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE 會進一步將資料表或分割區壓縮成較小的大小。 某些封存需要的儲存空間較小而且允許較長儲存和擷取時間，此時可以使用這個選項。  
-  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
+```
    如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
 
-ON  
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]
+- `ON` 指定當建置索引的新複本時，資料行存放區索引會保持連線並可供使用。
+- `OFF` 指定當建置新複本時，索引不可供使用。
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( ONLINE = ON );
+```
+
+#### <a name="on-options"></a>ON 選項 
    使用 ON 選項可讓您指定資料存放區選項，例如資料分割配置、特定的檔案群組或預設檔案群組。 如果未指定 ON 選項，索引會使用現有資料表的設定分割區或檔案群組設定。  
   
    *partition_scheme_name* **(** *column_name* **)**  
@@ -176,7 +205,7 @@ ON
   
    如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 QUOTED_IDENTIFIER 的預設值是 ON。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+### <a name="create-nonclustered-columnstore-index"></a>CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 在資料列存放區資料表上建立記憶體內非叢集資料行存放區索引，並儲存為堆積或叢集索引。 索引可以有一個篩選的條件而且不需要包含基礎資料表的所有資料行。 資料行存放區索引需要足夠的空間來儲存資料複本。 它是可更新的，而且當基礎資料表變更時，就會隨之更新。 叢集索引的非叢集資料行存放區索引可以進行即時分析。  
   
 *index_name*  
@@ -189,12 +218,13 @@ CREATE [NONCLUSTERED] COLUMNSTORE INDEX
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    指定包含索引之資料表的一部分、兩部分或三部分名稱。  
 
-WITH DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH 選項
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON 卸除及重建現有的索引。 所指定的索引名稱必須與目前現有的索引相同；不過，索引定義可以修改。 例如，您可以指定不同的資料行或索引選項。
   
    DROP_EXISTING = OFF 如果指定的索引名稱已存在，就會顯示錯誤訊息。 您無法利用 DROP_EXISTING 來變更索引類型。 在與舊版本相容的語法中，WITH DROP_EXISTING 相當於 WITH DROP_EXISTING = ON。  
 
-MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    針對索引作業期間，覆寫[設定平行處理原則的最大程度伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)組態選項。 請利用 MAXDOP 來限制執行平行計畫所用的處理器數目。 最大值是 64 個處理器。  
   
    *max_degree_of_parallelism* 值可以是：  
@@ -207,29 +237,26 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]  
 >  [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-ONLINE = [ON | OFF]   
-   只適用於：叢集資料行存放區索引中的 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
-ON 指定當建立索引的新複本時，非叢集資料行存放區索引會保持連線並可供使用。
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
+- `ON` 指定當建置索引的新複本時，資料行存放區索引會保持連線並可供使用。
+- `OFF` 指定當建置新複本時，索引不可供使用。 在非叢集索引中，基底資料表仍可供使用，在新的索引建置完畢前，只有非叢集資料行存放區索引不會用來供查詢使用。 
 
-   OFF 定當建立索引的新複本時，索引不可供使用。 因為這只是一個非叢集索引，所以基底資料表仍可供使用，而且在新的索引建立完畢之前，只有非叢集資料行存放區索引不會被用來滿足查詢。 
+```sql
+CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
+```
 
-COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
-  
+##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<延遲>[分鐘]  
    指定資料列應該保留在差異資料列群組中的時間下限，當過了這段時間後，資料列才能遷移到壓縮的資料列群組。 例如，客戶可以指定資料列維持不變 120 分鐘後，就可以把它壓縮成單欄式儲存體格式。 至於磁碟資料表上的資料行存放區索引，我們不會追蹤資料列插入或更新的時間，我們使用差異資料列群組關閉時間來代理資料列。 預設持續時間是 0 分鐘。 當差異資料列群組累積了 1 百萬個資料列並標示為已關閉，就會將資料列移轉至單欄式儲存體。  
   
-DATA_COMPRESSION  
-   針對指定的資料表、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：  
-COLUMNSTORE  
-   適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 只適用於資料行存放區索引，包括非叢集資料行存放區索引和叢集資料行存放區索引。 COLUMNSTORE 是預設值，並指定要利用最高效能的資料行存放區壓縮方式來進行壓縮。 這是典型的選擇。  
-  
-COLUMNSTORE_ARCHIVE  
-   適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-只適用於資料行存放區索引，包括非叢集資料行存放區索引和叢集資料行存放區索引。 COLUMNSTORE_ARCHIVE 會進一步將資料表或分割區壓縮成較小的大小。 這可用於封存，或是其他需要較小儲存體，而且可負擔更多時間來儲存和擷取的狀況。  
+###### <a name="datacompression"></a>DATA_COMPRESSION  
+   針對指定的資料表、分割區編號或分割區範圍指定資料壓縮選項。 只適用於資料行存放區索引，包括非叢集資料行存放區索引和叢集資料行存放區索引。 選項如下：
+   
+- `COLUMNSTORE` - 這是預設，並指定要利用最高效能的資料行存放區壓縮方式來壓縮。 這是典型的選擇。  
+- `COLUMNSTORE_ARCHIVE` - COLUMNSTORE_ARCHIVE 會進一步將資料表或分割區壓縮成較小的大小。 這可用於封存，或是其他需要較小儲存體，而且可負擔更多時間來儲存和擷取的狀況。  
   
  如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
-WHERE \<filter_expression > [AND \<filter_expression >] 適用於：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    這稱為篩選述詞，可指定要在索引中包含的資料列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在篩選之索引的資料列上，建立已篩選的統計資料。  
   
@@ -242,7 +269,7 @@ WHERE \<filter_expression > [AND \<filter_expression >] 適用於：[!INCLUDE[ss
    
    如需篩選的索引指引，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
-ON  
+#### <a name="on-options"></a>ON 選項  
    這些選項會指定將在哪些檔案群組建立索引。  
   
 *partition_scheme_name* **(** *column_name* **)**  

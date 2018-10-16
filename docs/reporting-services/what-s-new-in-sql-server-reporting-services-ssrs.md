@@ -1,19 +1,18 @@
 ---
 title: Reporting Services (SSRS) 中的新功能 | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 09/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e427312fcc73596c709d54252b27286d09372ce
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639776"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -21,17 +20,22 @@ ms.locfileid: "43268086"
 
 了解 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新功能。 這會涵蓋主要功能領域，並在發行新的項目時更新。
 
-  如需 SQL Server 其他區域之新功能的資訊，請參閱 [SQL Server 2017 中的新功能](../sql-server/what-s-new-in-sql-server-2017.md)或 [SQL Server 2016 中的新功能](../sql-server/what-s-new-in-sql-server-2016.md)。
-
- **下載** ![download](../analysis-services/media/download.png "download")
-
-- 請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)** 下載 SQL Server 2017 Reporting Services。
-
 如需取得目前的版本資訊，請參閱 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)。 
 
 如需 Power BI 報表伺服器的資訊，請參閱[什麼是 Power BI 報表伺服器？](https://docs.microsoft.com/power-bi/report-server/get-started)。
 
-## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
+**下載** ![download](../analysis-services/media/download.png "download")
+
+請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)** 下載 SQL Server 2017 Reporting Services。
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+
+SQL Server vNext CTP 2.0 Reporting Services 不提供預覽。 安裝目前的版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。 
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="ssrs-2017"></a>SSRS 2017
 
 ### <a name="comments-on-reports"></a>報表的註解
 
@@ -49,9 +53,9 @@ ms.locfileid: "43268086"
 
 為了進行現代化應用程式的開發和自訂，SQL Server Reporting Services 現在支援完全符合 OpenAPI 的 RESTful API。 您現在可以在 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) 上找到完整的 API 規格和文件。
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>現在報表產生器及 SQL Server Data Tools 中支援 DAX 的查詢設計工具
+### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>現在報表產生器及 SQL Server Data Tools 中支援 DAX 的查詢設計工具
 
-在最新版的報表產生器和 SQL Server Data Tools - 候選版中，您現在可以對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 您可以在這兩個工具中使用查詢設計工具來拖放您想要的欄位，並為您產生 DAX 查詢，而不需要自行撰寫。  
+您現在可以在報表產生器及 SQL Server Data Tools 中，對支援的 SQL Server Analysis Services 表格式資料模型建立原生 DAX 查詢。 您可以在這兩個工具中使用查詢設計工具來拖放您想要的欄位，並為您產生 DAX 查詢，而不需要自行撰寫。  
  
 請參閱 [Reporting Services 部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)。
 
@@ -59,8 +63,9 @@ ms.locfileid: "43268086"
 * 下載 [SQL Server Data Tools - 候選版](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
 
 > **注意**：您只能搭配使用 DAX 的查詢設計工具與 SQL Server 2016+ 內建的 SSAS 表格式資料來源。
+::: moniker-end
  
-## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
+## <a name="ssrs-2016"></a>SSRS 2016
   
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  有新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 可用。 這是更新過的新式入口網站，納入了 KPI、行動報表、分頁報表、Excel 和 Power BI Desktop 檔案。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 取代舊版中的報表管理員。 您也可以從 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 下載行動報表發行工具和報表產生器，而不需要 ClickOnce 技術。
@@ -186,7 +191,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## <a name="next-steps"></a>後續步驟
 
 [Analysis Services 的新功能](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)   
 [回溯相容性](reporting-services-backward-compatibility.md)   
 [SQL Server 2016 版本所支援的 Reporting Services 功能](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [升級和移轉 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

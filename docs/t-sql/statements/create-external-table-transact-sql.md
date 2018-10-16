@@ -5,9 +5,7 @@ ms.date: 6/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30febe9ab31ac58bbdd993a3e5034e5abcb427c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649370"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -147,37 +144,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 允許一或多個資料行定義。 CREATE EXTERNAL TABLE 和 CREATE TABLE 在定義資料行上都使用相同的語法。 唯一的例外是無法在外部資料表上使用 DEFAULT CONSTRAINT。 如需資料行定義及其資料類型的完整詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL Database 上的 CREATE TABLE](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
   
- 資料行定義 (包括資料類型和資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。  
+ 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。 如需如何對應不同外部資料來源之資料類型的詳細資訊，請參閱[使用 PolyBase 的類型對應](../../relational-databases/polybase/polybase-type-mapping.md)。  
   
- 針對會參考位於外部資料來源中之檔案的外部資料表，資料行和類型定義必須對應至外部檔案中的確切結構描述。 定義會參考儲存於 Hadoop/Hive 中資料的資料類型時，請在 SQL 和 Hive 資料類型之間使用下列對應，並在從類型進行選取時將該類型轉換成 SQL 資料類型。 除非另行指定，否則這些類型都包含 Hive 的所有版本。
-
-> [!NOTE]  
->  SQL Server 在任何轉換中皆不支援 Hive 的 _infinity_ 資料值。 PolyBase 將會搭配資料類型轉換錯誤而失敗。
-
-
-|SQL 資料類型|.NET 資料類型|Hive 資料類型|Hadoop/Java 資料類型|註解|  
-|-------------------|--------------------|--------------------|----------------------------|--------------|  
-|TINYINT|Byte|TINYINT|ByteWritable|僅適用於不帶正負號的數字。|  
-|SMALLINT|Int16|SMALLINT|ShortWritable||  
-|ssNoversion|Int32|ssNoversion|IntWritable||  
-|BIGINT|Int64|BIGINT|LongWritable||  
-|bit|布林|boolean|BooleanWritable||  
-|FLOAT|Double|double|DoubleWritable||  
-|REAL|Single|FLOAT|FloatWritable||  
-|money|Decimal|double|DoubleWritable||  
-|SMALLMONEY|Decimal|double|DoubleWritable||  
-|NCHAR|String<br /><br /> Char[]|string|text||  
-|NVARCHAR|String<br /><br /> Char[]|string|文字||  
-|char|String<br /><br /> Char[]|string|文字||  
-|varchar|String<br /><br /> Char[]|string|文字||  
-|BINARY|Byte[]|BINARY|BytesWritable|適用於 Hive 0.8 及更新版本。|  
-|varbinary|Byte[]|BINARY|BytesWritable|適用於 Hive 0.8 及更新版本。|  
-|日期|DateTime|TIMESTAMP|TimestampWritable||  
-|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
-|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
-|DATETIME|DateTime|TIMESTAMP|TimestampWritable||  
-|time|TimeSpan|TIMESTAMP|TimestampWritable||  
-|Decimal|Decimal|Decimal|BigDecimalWritable|適用於 Hive 0.11 及更新版本。|  
   
  LOCATION =  '*folder_or_filepath*'  
  指定位於 Hadoop 或 Azure Blob 儲存體中之實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始；根資料夾是在外部資料來源中指定的資料位置。  

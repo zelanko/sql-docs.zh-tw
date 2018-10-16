@@ -4,21 +4,19 @@ ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 79e09b64fc044aaa6da89f34a4fa81d892fc6c5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28dfb353d20f67d8adae6f38857b7ffb707ad107
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041006"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653426"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +28,9 @@ ms.locfileid: "38041006"
 **試用 SQL Server！**
 - [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下載 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![建立虛擬機器](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [使用 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+> [!NOTE]
+> SQL Server 2019 現已提供預覽。 如需詳細資訊，請參閱 [SQL Server 2019 中的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 正式運作版本 (2017 年 10 月)
 ### <a name="database-engine"></a>Database Engine
@@ -122,7 +123,7 @@ ms.locfileid: "38041006"
 - **因應措施：** 若要暫時解決此問題，並修正相依於 v13 版本組件的應用程式，請遵循下列步驟：
 
    1. 移至**新增/移除程式**
-   2. 尋找 *Microsoft SQL Server vNext T-SQL 語言服務 CTP2.1*，以滑鼠右鍵按一下，然後選取**解除安裝**。
+   2. 尋找 *Microsoft SQL Server 2019 T-SQL 語言服務 CTP2.1*，按一下右鍵，然後選取 [解除安裝]。
    3. 移除元件之後，請修復無法運作的應用程式，或重新安裝適當版本的 *TSqlLanguageService.MSI*。
 
    這個因應措施會移除這些 v14 版本組件，使得任何相依於 v14 版本的應用程式再也無法運作。 如果需要這些組件，則需要不使用並行 2016 安裝的個別安裝。
