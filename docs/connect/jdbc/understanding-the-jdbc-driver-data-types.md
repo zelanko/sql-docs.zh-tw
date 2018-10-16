@@ -11,18 +11,18 @@ ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e74573c676cb7793beff55dc478e79c7f4c5bdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730506"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905008"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC Driver 資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當作其資料庫的 Java 應用程式中，使用 JDBC 基本和進階資料類型。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當做其資料庫的 Java 應用程式中，使用 JDBC 基本和進階資料類型。  
   
 JDBC 類型系統會調解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型和 Java 語言類型與物件之間的轉換。 JDBC 類型的模型是以 SQL-92 和 SQL-99 類型建立的。 JDBC 驅動程式遵守 JDBC 規格，其設計在於提供可預測性與彈性之間的正確平衡。  
   

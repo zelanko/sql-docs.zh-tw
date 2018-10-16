@@ -1,4 +1,4 @@
-﻿---
+---
 title: Azure Data Studio 中的原始檔控制 | Microsoft Docs
 description: 了解如何在 Azure Data Studio 中設定原始檔控制。
 ms.custom: tools|sos
@@ -28,10 +28,10 @@ ms.locfileid: "48038075"
 
 
 
-## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 儲存庫
+## <a name="open-an-existing-git-repository"></a>開啟現有的 Git 存放庫
 
-1. 在 [檔案]**** 功能表下方，選取 [開啟資料夾]****
-2. 瀏覽包含由 Git 追蹤之檔案的資料夾，然後按一下 [選取資料夾]****。 您可以選擇本機存放庫中的子資料夾。
+1. 在 [檔案] 功能表下方，選取 [開啟資料夾]
+2. 瀏覽包含由 Git 追蹤之檔案的資料夾，然後按一下 [選取資料夾]。 您可以選擇本機存放庫中的子資料夾。
 
 
 ## <a name="initialize-a-new-git-repository"></a>初始化新的 git 儲存機制
@@ -44,9 +44,10 @@ ms.locfileid: "48038075"
 
    ![初始化 Git 儲存機制](media/source-control/initialize-git-repository.png)
 
-## <a name="working-with-git-repositories"></a>使用 Git 儲存庫
+## <a name="working-with-git-repositories"></a>使用 Git 存放庫
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] VS Code 中，會繼承其 Git 實作，但目前不支援額外的 SCM 提供者。 如需使用 Git，在您開啟或初始化存放庫後的詳細資訊，請參閱 <<c0> [ 在 VS Code 中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
+
 
 ## <a name="additional-resources"></a>其他資源
 - [Git 文件](https://git-scm.com/documentation)

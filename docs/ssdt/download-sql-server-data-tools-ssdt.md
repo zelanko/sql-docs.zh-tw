@@ -1,29 +1,25 @@
 ---
 title: 下載 SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - 安裝 SSDT, 下載 SSDT, 最新的 SSDT
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 907b8a7d11bbd7889f3796d3f56633caec22a529
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 703990d0484240d602c34ca24262df38e7aadc5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736604"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,18 +44,20 @@ ms.locfileid: "43743481"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (獨立安裝程式)
 
-[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.8) ](https://go.microsoft.com/fwlink/?linkid=2014060) 
+[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.8.1) ](https://go.microsoft.com/fwlink/?linkid=2024393) 
 
 > [!IMPORTANT]
-> - 請先解除安裝「Analysis Services 專案」和「Reporting Services 專案」延伸模組 (如果已安裝)，並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.8)。
+> - 如有安裝 *Analysis Services 專案*及 *Reporting Services 專案*延伸模組 ，請先予以解除安裝，並關閉所有 VS 執行個體，然後再安裝 SSDT for Visual Studio 2017 (15.8.1)。
+> - 在 Windows 10 1803 上安裝 SSDT 並選擇安裝 SSIS 時，可能會出現未預期的重新開機。 您可以重新啟動安裝程式，在重新開機之後繼續安裝。
+> - SSDT 15.8.1 目前不支援 Windows 7 SP1，因此，您若是使用 Windows 7 SP1，請繼續使用 15.8.0。
 
 
 
 **版本資訊**  
   
-版本編號：15.8  
-組建編號：14.0.16174.0  
-發行日期：2018 年 9 月 5 日  
+版本號碼：15.8.1  
+組建編號：14.0.16179.0  
+發行日期：2018 年 9 月 27 日  
 
 如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
 
@@ -69,21 +67,41 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：  
 
-[簡體中文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x804) | 
-[繁體中文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x404) | 
-[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x409) | 
-[法文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40c)  
-[德文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x407) | 
-[義大利文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x410) | 
-[日文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x411) | 
-[韓文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x412) | 
-[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x416) | 
-[俄文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x419) | 
-[西班牙文]( https://go.microsoft.com/fwlink/?linkid=2014060&clcid=0x40a)  
+[簡體中文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x804) | 
+[繁體中文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x404) | 
+[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x409) | 
+[法文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40c)  
+[德文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x407) | 
+[義大利文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x410) | 
+[日文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x411) | 
+[韓文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x412) | 
+[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x416) | 
+[俄文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x419) | 
+[西班牙文]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40a)  
 
 
+## <a name="offline-install"></a>離線安裝
 
+若要在未連線到網際網路時安裝 SSDT，請遵循本節所述的步驟。 如需詳細資訊，請參閱[建立 Visual Studio 2017 的網路安裝](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio)。
 
+首先，請在連線時完成下列步驟：
+
+1. [下載 SSDT 的獨立安裝程式](#ssdt-for-vs-2017-standalone-installer)。
+2. [下載 vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe)。
+3. 在連線時，執行下列命令下載離線安裝所需的全部檔案。 使用 `--layout` 選項是關鍵。 使用用以儲存檔案的實際路徑取代 <filepath>。
+
+   A.   若是使用特定語言，請傳遞地區設定：`vs_sql.exe --layout c:\<filepath> --lang en-us` (一種語言 ~1GB)  
+   B. 若是使用所有語言，請省略 `--lang` 引數：`vs_sql.exe --layout c:\<filepath>` (所有語言 ~3.9GB)。
+
+完成前述步驟之後，就可以離線執行下列步驟：
+
+1. 將 VS2017 酬載複製到 SSDT 的酬載資料夾。 請務必將兩者的所有檔案合併到同一個配置資料夾。
+2. 執行 `vs_setup.exe --NoWeb`，以安裝 VS2017 Shell 及 SQL Server 資料專案。
+3. 執行 `SSDT-Setup-ENU.exe /install` 並選取 SSIS/SSRS/SSAS。
+
+   - 若要自動安裝，請執行或 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+
+若要查看可用的選項，請執行 `SSDT-Setup-ENU.exe /help`
 
 ## <a name="supported-sql-versions"></a>支援的 SQL 版本
   

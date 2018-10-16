@@ -1,18 +1,18 @@
 ---
 title: 對 Windows Token 服務 (c2WTS) 和 Reporting Services 的宣告 | Microsoft Docs
-ms.date: 09/15/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4092aa6f801d1f3f521cffc088e8b345495267b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.topic: conceptual
+ms.date: 09/15/2017
+ms.openlocfilehash: d201fb9d134f4066e0504056c208d2c1c0507fa3
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275605"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782287"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
 
@@ -25,11 +25,16 @@ ms.locfileid: "43275605"
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
-## <a name="report-viewer-web-part-configuration"></a>報表檢視器 Web 組件設定
+## <a name="report-viewer-native-mode-web-part-configuration"></a>報表檢視器 (原生模式) Web 組件設定
 
-報表檢視器 Web 組件可用於在 SharePoint 網站中，內嵌 SQL Server Reporting Services 原生模式報表。 SharePoint 2013 和 SharePoint 2016 提供此 Web 組件。 SharePoint 2013 和 SharePoint 2016 都使用宣告驗證。 SQL Server Reporting Services (原生模式) 預設使用 Windows 驗證。 結果是，您需要正確設定 C2WTS，才能正確轉譯報表。
+報表檢視器 Web 組件可用於在 SharePoint 網站中，內嵌 SQL Server Reporting Services 原生模式報表。 SharePoint 2013 和 SharePoint 2016 提供此 Web 組件。 SharePoint 2013 和 SharePoint 2016 都使用宣告驗證。 因此，除了必須正確地設定 C2WTS，還必須為 Kerberos 驗證設定 Reporting Services，才能正確地轉譯報表。
 
-## <a name="sharepoint-mode-integaration"></a>SharePoint 模式整合
+1. 您可以指定 SSRS 服務帳戶、設定 SPN，以及更新 rsreportserver.config 檔案，以使用 RSWindowsNegotiate 驗證類型，為 Kerberos 驗證設定您的 Reporting Services (原生模式) 執行個體。 [為報表伺服器註冊服務主體名稱 (SPN)](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+
+2. 遵循[設定 c2WTS 的必要步驟](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)中的步驟
+ 
+
+## <a name="sharepoint-mode-integration"></a>SharePoint 模式整合
 
 **本節只適用於 SQL Server 2016 Reporting Services 及更早版本。**
 
@@ -37,14 +42,25 @@ ms.locfileid: "43275605"
 
 ## <a name="steps-needed-to-configure-c2wts"></a>設定 c2WTS 的必要步驟
 
-C2WTS 所建立的 Token 只可與限制委派 (僅限特定服務使用) 及組態選項 [使用任何驗證通訊協定] 並用。 如前文所述，資料來源與共用服務若是位在同一部電腦上，即無須使用限制委派。
+C2WTS 建立的權杖只能與限制委派 (僅限於特定服務) 及設定選項 [使用任何驗證通訊協定] (通訊協定轉換) 搭配使用。
 
 如果您的環境會使用 Kerberos 限制委派，則 SharePoint Server 服務及外部資料來源必須位於相同的 Windows 網域。 相依於 Windows Token 服務之宣告 (c2WTS) 的任何服務，都必須使用 Kerberos **限制** 委派，才能讓 c2WTS 使用 Kerberos 通訊協定轉換將宣告轉譯成 Windows 認證。 這些需求對於所有 SharePoint Shared 服務都是如此。 如需詳細資訊，請參閱 [規劃 SharePoint 2013 的 Kerberos 驗證](http://technet.microsoft.com/library/ee806870.aspx)。  
 
-1. 設定 C2WTS 服務帳戶。 在每部使用 C2WTS 之伺服器的本機 Administrators 群組中新增服務帳戶。
+1. 設定 C2WTS 服務網域帳戶。 
 
-    在**報表檢視器 Web 組件**，這會是 Web 前端 (WFE) 伺服器。 在 **SharePoint 整合模式**，這會是 Reporting Services 服務執行所在的應用程式伺服器。
+    **最佳做法：C2WTS 應以自己的網域識別身分執行。**
 
+    * 建立 Active Directory 帳戶，並在 SharePoint 伺服器中，將此帳戶註冊為受控帳戶。 若要深入了解受控帳戶，請參閱 [Managed Accounts in Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/) (Sharepoint 中的受控帳戶)
+   
+    * 將 C2WTS 服務設定為必須透過 SharePoint 管理中心 > 安全性 > 設定服務帳戶 > Windows 服務 - 對 Windows Token 服務宣告，才能使用受控帳戶
+
+    將 C2WTS 服務帳戶新增到要使用 C2WTS 之每部伺服器上的本機系統管理員群組。 在**報表檢視器 Web 組件**，這會是 Web 前端 (WFE) 伺服器。 在 **SharePoint 整合模式**，這會是 Reporting Services 服務執行所在的應用程式伺服器。
+    * 在本機原則 > 使用者權限指派下的本機安全性原則中，授與 C2WTS 帳戶下列權限：
+        * 作為作業系統的一部分
+        * 在驗證後模擬用戶端
+        * 登入為服務
+
+    
 2. 設定 C2WTS 服務帳戶的委派。
 
     帳戶需要具有通訊協定轉換的限制委派，以及要委派給所需通訊服務 (如 SQL Server 資料庫引擎、SQL Server Analysis Services) 的權限。 若要設定委派，您可以使用 [Active Directory 使用者和電腦] 嵌入式管理單元，且需要成為網域的系統管理員。
@@ -56,7 +72,7 @@ C2WTS 所建立的 Token 只可與限制委派 (僅限特定服務使用) 及組
 
     * 以滑鼠右鍵按一下各服務帳戶，以開啟屬性對話方塊。 按一下對話方塊中的 [委派] 索引標籤。
 
-        物件必須獲指派服務主體名稱 (SPN)，才會顯示 [委派] 索引標籤。 C2WTS 不需要 C2WTS 帳戶的 SPN，但若無 SPN，即不會顯示 [委派] 索引標籤。 另一種設定限制委派的方法是使用 **ADSIEdit**這類的公用程式。
+        僅當物件指派有服務主體名稱 (SPN) 時，才會顯示 [委派] 索引標籤。 C2WTS 不需要 C2WTS 帳戶的 SPN，但若無 SPN，即不會顯示 [委派] 索引標籤。 另一種設定限制委派的方法是使用 **ADSIEdit**這類的公用程式。
 
     * 以下是 [委派] 索引標籤上的主要組態選項：
 
@@ -65,9 +81,10 @@ C2WTS 所建立的 Token 只可與限制委派 (僅限特定服務使用) 及組
 
     * 選取 [加入]，加入要委派的目標服務。
 
-    * 選取 [使用者或電腦...]*，然後輸入裝載服務的帳戶。 例如，如果使用名為 *sqlservice* 的帳戶來執行 SQL Server，請輸入 `sqlservice`。 
+    * 選取 [使用者或電腦...&#42;]，然後輸入裝載服務的帳戶。 例如，如果使用名為 *sqlservice* 的帳戶來執行 SQL Server，請輸入 `sqlservice`。 
+      對於**報表檢視器 Web 組件**，這會是 Reporting Services (原生模式) 執行個體的服務帳戶。
 
-    * 選取服務清單。 這會顯示適用於該帳戶的 SPN。 如果您看不到針對該帳戶所列出的服務，則它可能遺失或放置在不同的帳戶上。 您可以使用 SetSPN 公用程式來調整 SPN。
+    * 選取服務清單。 這會顯示適用於該帳戶的 SPN。 如果您看不到針對該帳戶所列出的服務，則它可能遺失或放置在不同的帳戶上。 您可以使用 SetSPN 公用程式來調整 SPN。 在**報表檢視器 Web 組件**的[報表檢視器 Web 組件設定](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration)中，會顯示 HTTP SPN 設定。
 
     * 選取 [確定] 以離開對話方塊。
 
@@ -96,6 +113,6 @@ C2WTS 所建立的 Token 只可與限制委派 (僅限特定服務使用) 及組
     </configuration>
     ```
 
-4. 從 [管理伺服器上的服務] 上的 SharePoint 管理中心啟動對 Windows Token 服務的宣告。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 SQL Server Reporting Services 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 C2WTS。 如果在執行的是報表檢視器 Web 組件，WFE 伺服器上只需要 C2WTS。
+4. 從 SharePoint 管理中心的 Manage Services on Server (伺服器上的受控服務 頁面，啟動對 Windows Token 服務的宣告 (若已啟動，請先停止再啟動)。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 SQL Server Reporting Services 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 C2WTS。 如果在執行的是報表檢視器 Web 組件，WFE 伺服器上只需要 C2WTS。
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
