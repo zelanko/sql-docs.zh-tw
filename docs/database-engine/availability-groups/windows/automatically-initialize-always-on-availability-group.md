@@ -8,14 +8,14 @@ ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
-ms.author: v-saume
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eccdccaaa6e448439097ba25d2c6706152544088
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72b1695a77fbf5d8d080a11abe65247f59fffe59
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684886"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336257"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自動初始化 AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

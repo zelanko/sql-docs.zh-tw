@@ -27,12 +27,12 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4591593408a6cbafb2f6a64b790403fd72cb97b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efa562211bbd32633d149796162b67141e0c174e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807056"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085315"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myValue;  
+    AND RV = myRv;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -100,7 +100,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue` 代表您上次讀取資料列時，該資料列的 **rowversion** 資料行值。 此值必須由實際的 **rowversion** 值取代。 實際 **rowversion** 值的範例是 0x00000000000007D3。
+`myRv` 代表您上次讀取資料列時，該資料列的 **rowversion** 資料行值。 此值必須由實際的 **rowversion** 值取代。 實際 **rowversion** 值的範例是 0x00000000000007D3。
   
 您也可以將範例 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式放入交易中。 您可藉由在交易的範圍中查詢 `@t` 變數來擷取資料表已更新的 `myKey` 資料行，而不必重新查詢 `MyTes` 資料表。
   
@@ -119,7 +119,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myValue;  
+    AND TS = myTS;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

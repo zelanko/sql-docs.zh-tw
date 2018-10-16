@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28967819353769601e5ba8e760435f6d43aac3a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818496"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905769"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ FOR
 ## <a name="basic-pivot-example"></a>基本 PIVOT 範例  
  下列程式碼範例會產生包含兩個資料行的資料表，其中有四個資料列。  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -93,7 +93,7 @@ GROUP BY DaysToManufacture;
   
  下列程式碼會顯示同樣的結果，但是經過樞紐處理後，讓 `DaysToManufacture` 值變成了資料行的標題。 即使結果為 `[3]`，還是為這三 `NULL` 天產生了一個資料行。  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -119,7 +119,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ## <a name="complex-pivot-example"></a>複雜 PIVOT 範例  
  當您想要產生跨表格式報表來建立資料摘要時，這個常見的狀況可以顯出 `PIVOT` 的用處。 例如，假設您想要查詢 `PurchaseOrderHeader` 範例資料庫中的 `AdventureWorks2014` 資料表，以判斷某些員工所下的訂單數目。 下列查詢會提供這個報表，並依供應商排序：  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -149,7 +149,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  這個子選擇陳述式所傳回的結果，是根據 `EmployeeID` 資料行進行樞紐處理而來。  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -161,7 +161,7 @@ FROM PurchaseOrderHeader;
   
  `UNPIVOT` 執行的作業則幾乎與 `PIVOT` 相反，它會將資料行旋轉成資料列。 假設上述範例中所產生的資料表在資料庫中是儲存為 `pvt`，而現在您想要將資料行識別碼 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋轉成對應到特定供應商的資料列值。 這表示您必須識別兩個額外的資料行。 包含所要旋轉的資料行值 (`Emp1`、`Emp2`、...) 的資料行將命名為 `Employee`，而保留目前位在所要旋轉資料行之下的值的資料行則命名為 `Orders`。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義中，這些資料行會分別與 *pivot_column* 和 *value_column* 對應。 查詢內容如下。  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  

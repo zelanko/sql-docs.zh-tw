@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cec143edb47f54e63d18a07991cb3b1d3c9ab7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817076"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906268"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ JSON
   
 -   您必須使用 **NO_BROWSETABLE**選項來執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，才能開啟瀏覽模式：  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -123,7 +123,7 @@ JSON
   
 2.  在 SampleDB 資料庫中，建立同時包含名為 c1 之單一資料行的 tleft 資料表和 tright 資料表。 針對 tleft 資料表中的 c1 資料行定義唯一索引鍵，並且將此資料行設定為接受 Null 值。 若要這樣做，請在適當的查詢視窗中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -132,7 +132,7 @@ JSON
   
 3.  在 tleft 資料表和 tright 資料表中插入多個值。 請確定您在 tleft 資料表中插入一個 Null 值。 若要這樣做，請在查詢視窗中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -143,14 +143,14 @@ JSON
   
 4.  開啟 **NO_BROWSETABLE** 選項。 若要這樣做，請在查詢視窗中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  透過在 SELECT 查詢中使用外部聯結陳述式，存取 tleft 資料表和 tright 資料表中的資料。 請確定 tleft 資料表位於外部聯結陳述式的內部。 若要這樣做，請在查詢視窗中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -223,7 +223,7 @@ JSON
   
  下列範例指定設定了 `FOR XML AUTO` 和 `TYPE` 選項的 `XMLSCHEMA`。 由於 `TYPE` 選項的緣故，因此會將結果集以 **xml** 類型的形式傳回給用戶端。 `XMLSCHEMA` 選項指定將內嵌 XSD 結構描述包括在傳回的 XML 資料中，`ELEMENTS` 選項指定 XML 結果以元素為中心。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

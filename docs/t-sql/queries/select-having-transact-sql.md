@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7bcfd646b39805cb90fd4673f508c51cf84b92b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72072a62ba6e7650791bfd1410682c112b95ee91
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824116"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906118"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47824116"
 ## <a name="examples"></a>範例  
  使用簡單 `HAVING` 子句的下列範例會從 `SalesOrderID` 資料表中，擷取超出 `SalesOrderDetail` 的每個 `$100000.00` 的總計。  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
@@ -63,7 +63,7 @@ ORDER BY SalesOrderID ;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會使用 `HAVING` 子句從 `FactInternetSales` 資料表中，擷取 `OrderDateKey` 在 2004 年或之後的每個 `SalesAmount` 的總計。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

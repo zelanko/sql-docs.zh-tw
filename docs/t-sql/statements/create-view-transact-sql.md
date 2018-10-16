@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794f6310185292224d68624a16493aa3e8d91fe3
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808456"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085494"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -205,7 +205,7 @@ OR ALTER
  分割區檢視是成員資料表的 UNION ALL 所定義的檢視，這些成員資料表的結構相同，但在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，或在一群獨立存在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 伺服器 (稱為同盟資料庫伺服器) 執行個體中，它們分別儲存成多份資料表。  
   
 > [!NOTE]  
->  在伺服器本機分割資料的慣用方法是透過分割區資料表。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+>  在伺服器本機分割資料的慣用方法是透過分割區資料表。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  在設計分割區結構描述時，您必須清楚哪些資料屬於哪個分割區。 例如，`Customers` 資料表的資料散發在三個伺服器位置的三份成員資料表中：`Customers_33` 的 `Server1`、`Customers_66` 的 `Server2`，以及 `Customers_99` 的 `Server3`。  
   
@@ -442,11 +442,6 @@ supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 451 and 600),
 supplier CHAR(50)  
 );  
 GO  
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
-, ('231', 'FarEast'), ('280', 'NZ')  
-, ('321', 'EuroGroup'), ('442', 'UKArchip')  
-, ('475', 'India'), ('521', 'Afrique');  
-GO  
 --Create the view that combines all supplier tables.  
 CREATE VIEW dbo.all_supplier_view  
 WITH SCHEMABINDING  
@@ -462,6 +457,12 @@ SELECT supplyID, supplier
 UNION ALL  
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
+GO
+INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+, ('231', 'FarEast'), ('280', 'NZ')  
+, ('321', 'EuroGroup'), ('442', 'UKArchip')  
+, ('475', 'India'), ('521', 'Afrique');  
+GO  
 ```  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
