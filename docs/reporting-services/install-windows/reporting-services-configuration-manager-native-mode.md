@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d4433bee0e96b8baaa67c211040729b5d00f0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dbb43ba4b8595a02e2132bf1670bbe06884aee5
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743802"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085404"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
@@ -68,7 +68,7 @@ ms.locfileid: "47743802"
 
 1.  請使用下列適合您的 Microsoft Windows 版本的步驟：
 
-    - 在 Windows 的 [開始] 畫面上，鍵入 **Reporting** ，然後從搜尋結果中選取 [Reporting Services 組態管理員] 。
+    - 在 Windows 的 [開始] 畫面上，輸入 **Reporting** ，然後從搜尋結果中選取 **[Reporting Services 組態管理員]** 。
 
     - 選取 [開始]，然後依序指向 [所有程式] 和 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，再指向 [組態工具]。
 

@@ -1,7 +1,7 @@
 ---
 title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,15 +16,15 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f773267d6ff65d4340ebf467e7293cb5952a390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5bca48c2aa30bf1a3616076c61d06f69dc5dab2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722466"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168952"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 此函式會使用 GZIP 演算法壓縮輸入運算式。 此函式會傳回類型 **varbinary(max)** 的位元組陣列。
   

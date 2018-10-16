@@ -1,7 +1,7 @@
 ---
 title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/12/2017
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0db3d5ea4971a571115ed93a1a24b9506647ea84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd4d5baf2148b4fe587117140854ea29db0c2ae1
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845026"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169188"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,17 +40,16 @@ ms.locfileid: "47845026"
   
 ## <a name="syntax"></a>語法  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
+```sql  
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```sql
+-- Syntax for Parallel Data Warehouse  
   
-DROP VIEW [ schema_name . ] view_name   
-[;]  
+DROP VIEW [ schema_name . ] view_name [ ; ]  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -86,8 +85,8 @@ DROP VIEW [ schema_name . ] view_name
 ### <a name="a-drop-a-view"></a>A. 卸除檢視  
  下列範例會移除 `Reorder` 檢視。  
   
-```  
-DROP VIEW dbo.Reorder ;  
+```sql
+DROP VIEW IF EXISTS dbo.Reorder ;  
 GO  
 ```  
   

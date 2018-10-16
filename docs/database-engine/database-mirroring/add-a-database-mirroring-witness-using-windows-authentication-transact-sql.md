@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0569a8f94232ec31e96024e798da6027e0c695a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742316"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168888"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "47742316"
   
 3.  連接到主體伺服器並執行以下陳述式：  
   
-     ALTER DATABASE <資料庫名稱> SET WITNESS **=***<伺服器網路位址>*  
+     ALTER DATABASE *<資料庫名稱>* SET WITNESS **=**_<伺服器網路位址>_  
   
      其中 *<資料庫名稱>* 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 *<伺服器網路位址>* 是見證伺服器執行個體的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>://</b>_\<系統位址>_<b>:</b>_\<通訊埠>_  
   
      其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   

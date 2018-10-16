@@ -23,12 +23,12 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a61cfca736629d3f8ffb7b1240f85a0aa9edb45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749489"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169208"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  **sysname** 類型的選擇性純量運算式，表示用來測試權限之安全性實體的子實體名稱。 預設值是 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全性實體不能使用格式為 **'[***sub name***]'** 的括弧。 請改為使用 **'***sub name***'**。  
+>  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全性實體不能使用格式為 **'[**_sub name_**]'** 的括弧。 請改為使用 **'**_sub name_**'**。  
   
  *sub-securable_class*  
  **nvarchar(60)** 類型的選擇性純量運算式，表示測試權限的安全性實體之子實體的類別。 預設值是 NULL。  

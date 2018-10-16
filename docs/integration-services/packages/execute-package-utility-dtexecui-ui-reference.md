@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ae6db2bfa011defe472054b98243062b5bc93d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669426"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169108"
 ---
 # <a name="execute-package-utility-dtexecui"></a>執行套件公用程式 (dtexecui)
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟或藉由在命令提示字元輸入 **dtexecui** 加以開啟，作為使用 **DTExec** 命令提示字元工具執行封裝的替代方案。  
@@ -283,7 +283,7 @@ ms.locfileid: "47669426"
  按一下即可關閉 [執行封裝公用程式] 對話方塊。  
   
 ## <a name="logging-page"></a>記錄頁面  
- 使用 **[執行封裝公用程式]** 對話方塊的 **[記錄]** 頁面，即可讓封裝在執行階段使用記錄提供者。 提供連接到記錄的封裝記錄提供者類型和連接字串。 每個記錄提供者項目各會新增一個 **/LOGGER***classid* 選項到命令提示字元。  
+ 使用 **[執行封裝公用程式]** 對話方塊的 **[記錄]** 頁面，即可讓封裝在執行階段使用記錄提供者。 提供連接到記錄的封裝記錄提供者類型和連接字串。 每個記錄提供者項目都會將 **/LOGGER**_classid_ 選項加入命令提示字元。  
   
 ### <a name="options"></a>選項。  
  **記錄提供者**  
@@ -302,7 +302,7 @@ ms.locfileid: "47669426"
  按一下即可關閉 [執行封裝公用程式] 對話方塊。  
   
 ## <a name="set-values-page"></a>設定值頁面  
- 使用 **[執行封裝公用程式]** 對話方塊的 **[設定值]** 頁面，即可藉由輸入屬性的路徑和屬性值，來設定封裝、可執行檔、連接、變數和記錄提供者的屬性值。 每個路徑項目各會新增一個 **/SET***propertypath;value* 選項到命令提示字元。  
+ 使用 **[執行封裝公用程式]** 對話方塊的 **[設定值]** 頁面，即可藉由輸入屬性的路徑和屬性值，來設定封裝、可執行檔、連接、變數和記錄提供者的屬性值。 每個路徑項目都會將 **/SET**_propertypath;value_ 選項加入命令提示字元。  
   
 ### <a name="options"></a>選項。  
  **屬性路徑**  

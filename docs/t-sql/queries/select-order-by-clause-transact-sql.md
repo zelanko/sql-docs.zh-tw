@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839996"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906510"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. 指定選取清單中所定義的單一資料行  
  下列範例會依據數值 `ProductID` 資料行來排序結果集。 因為未指定特定的排序次序，所以會使用預設值 (遞增順序)。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. 指定選取清單中未定義的資料行  
  在下列範例中，結果集排序依據的資料行並不包含在選取清單中，而是定義在 FROM 子句中所指定的資料表中。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. 指定別名做為排序資料行  
  下列範例會指定資料行別名 `SchemaName` 做為排序次序資料行。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. 指定運算式做為排序資料行  
  下列範例會使用運算式做為排序資料行。 運算式是透過使用 DATEPART 函數來定義，以依據員工雇用年度來排序結果集。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. 指定遞減順序  
  下列範例會依據數值資料行 `ProductID` 以遞減順序來排序結果集。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>B. 指定遞增順序  
  下列範例會依據資料行 `Name` 以遞增順序來排序結果集。 字元會以字母順序排序，而不是以數值順序排序。 也就是說，10 會排序在 2 之前。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. 指定遞增和遞減順序  
  下列範例會依據兩個資料行來排序結果集。 查詢的結果集會先依據 `FirstName` 資料行以遞增順序排序，然後再依據 `LastName` 資料行以遞減順序排序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> 指定定序  
  下列範例示範 ORDER BY 子句中指定定序會如何變更傳回查詢結果的順序。 建立的資料表中包含一個資料行，這個資料行是透過使用不區分大小寫、不區分腔調字的定序來定義。 插入的值有各種不同的大小寫和腔調字。 因為 ORDER BY 子句中未指定定序，所以第一個查詢會在排序值時使用資料行的定序。 在第二個查詢中，ORDER BY 子句中指定區分大小寫、區分腔調字的定序，這變更傳回資料列的順序。  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> 指定條件順序  
  下列範例在 ORDER BY 子句中使用 CASE 運算式，以根據給定的資料行值，有條件地決定資料列的排序次序。 在第一則範例中，系統會評估 `SalariedFlag` 資料表之 `HumanResources.Employee` 資料行的值。 將 `SalariedFlag` 設定為 1 的員工會以 `BusinessEntityID` 的遞減順序傳回。 將 `SalariedFlag` 設定為 0 的員工會以 `BusinessEntityID` 的遞增順序傳回。 在第二則範例中，結果集會依照資料行 `TerritoryName` 排序 (當資料行 `CountryRegionName` 等於 'United States' 時) 以及依照 `CountryRegionName` 排序 (針對所有其他資料列)。  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> 在次序函數中使用 ORDER BY  
  下列範例在 ROW_NUMBER、RANK、DENSE_RANK 和 NTILE 次序函數中使用 ORDER BY 子句。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. 為 OFFSET 和 FETCH 值指定整數常數  
  下列範例會指定整數常數做為 OFFSET 和 FETCH 子句的值。 第一個查詢傳回依資料行 `DepartmentID` 排序的所有資料列。 比較這個查詢所傳回的結果與後面兩個查詢的結果。 下一個查詢使用子句 `OFFSET 5 ROWS` 略過前 5 個資料列，並傳回所有其餘的資料列。 最後查詢使用子句 `OFFSET 0 ROWS` 從第一個資料列開始，然後再使用 `FETCH NEXT 10 ROWS ONLY`，將傳回的資料列限制在已排序結果集內的 10 個資料列。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. 為 OFFSET 和 FETCH 值指定變數  
  下列範例會宣告變數 `@StartingRowNumber` 和 `@FetchRows`，並在 OFFSET 和 FETCH 子句中指定這些變數。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. 為 OFFSET 和 FETCH 值指定運算式  
  下列範例使用 `@StartingRowNumber - 1` 運算式來指定 OFFSET 值，並使用 `@EndingRowNumber - @StartingRowNumber + 1` 運算式來指定 FETCH 值。 此外，也指定 OPTIMIZE FOR 查詢提示。 在查詢進行編譯和最佳化時，此提示可用來提供區域變數的特定值。 只有在查詢最佳化期間，才使用這個值，在查詢執行期間，不使用這個值。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. 為 OFFSET 和 FETCH 值指定常數純量子查詢  
  下列範例使用常數純量子查詢來定義 FETCH 子句的值。 子查詢會從 `PageSize` 資料表中的 `dbo.AppSettings` 資料行傳回單一值。  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. 在單一交易中執行多個查詢  
  下列範例示範實作分頁方案的其中一種方法，可確保所有查詢要求中傳回穩定的結果。 在使用快照集隔離等級的單一交易中執行查詢，而且 ORDER BY 子句中指定的資料行可確保資料行唯一性。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> 搭配 UNION、EXCEPT 和 INTERSECT 使用 ORDER BY  
  當查詢使用 UNION、EXCEPT 或 INTERSECT 運算子時，ORDER BY 子句必須在陳述式結尾處指定，合併的查詢結果才會排序。 下列範例會傳回紅色或黃色的所有產品，並依據資料行 `ListPrice` 排序此組合清單。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例示範依據數值的 `EmployeeKey` 資料行以遞增順序排序結果集。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  下列範例依據數值的 `EmployeeKey` 資料行以遞減順序排序結果集。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  下列範例依據 `LastName` 資料行排序結果集。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  下列範例依據兩個資料行排序。 此查詢會先依據 `FirstName` 資料行以遞增順序排序，然後再依據 `LastName` 資料行以遞減順序排序共同的 `FirstName` 值。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

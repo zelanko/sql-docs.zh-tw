@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711736"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085044"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)
   您可以使用報表管理員來檢視已經發行至報表伺服器的報表。 根據預設，所有報表都會以 HTML 開啟。 開啟報表之後，您可以將它匯出，以便以其他應用程式格式檢視此報表。 如果此報表包含互動式功能，或者它是包含互動式資料的報表產生器報表，您就可以按一下連結，以便檢視其他報表或資料。  
@@ -39,7 +39,6 @@ ms.locfileid: "47711736"
      關閉報表並不會將其從瀏覽器快取中移除。 您必須關閉瀏覽器以中斷報表的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [搜尋報表和其他項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [內容頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  

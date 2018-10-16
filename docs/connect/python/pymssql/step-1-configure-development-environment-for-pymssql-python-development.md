@@ -11,12 +11,12 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b60c7aa0f53be6d9c9a249c69ace6780a318e6f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d883a74e8e783ed289917b9970cc1c5956f4b0be
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787446"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905801"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步驟 1︰設定 pymssql Python 開發的開發環境
 您必須設定您的開發環境的先決條件，才能開發使用 Python Driver for SQL Server 的應用程式。    
@@ -32,7 +32,7 @@ c. 下載一次執行安裝 Python 執行階段的 msi
   
 2. **下載模組 pymssql**從[這裡](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    請確定您選擇正確的 whl 檔案。  例如： 如果您在 64 位元電腦上使用 Python 2.7 的選擇： pymssql‑2.1.1‑cp27‑none‑win_amd64.whl。 一旦您下載.whl 檔案將它放在 c:/python27 資料夾。  
+    請確定您選擇正確的 whl 檔案。  例如： 如果您在 64 位元電腦上使用 Python 2.7 的選擇： pymssql‑2.1.1‑cp27‑none‑win_amd64.whl。 一旦您下載.whl 檔案會將它放在 c:/python27 資料夾中。  
       
 3. **開啟 cmd.exe**  
   
