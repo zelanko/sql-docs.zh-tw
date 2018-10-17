@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], merge replication
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71e3d7a65fe7a4839046ffd82ef8c97779b1f378
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 16f7701ab70e3edab1194732dca70e5c10f98a65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707906"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +72,7 @@ ms.locfileid: "37356720"
   
  若要重新初始化訂閱，請參閱＜ [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)＞。  
   
- 若要建立並套用快照集，請參閱＜ [Create ＞和＜ Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) ＞和＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
+ 若要建立並套用快照集，請參閱＜ [Create ＞和＜ Apply the Initial Snapshot](../../../relational-databases/replication/create-＞和＜-apply-the-initial-snapshot.md) ＞和＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>備份與還原散發資料庫  
  對於合併式複寫，散發資料庫應定期備份，並且只要使用的備份不晚於使用「散發者」之所有發行集的最短保留期限，無需任何特殊考量即可還原。 例如，如果有三個保留期間分別為 10、20 及 30 天的發行集，則用來還原資料庫的備份不應晚於 10 天。 散發資料庫在合併式複寫中擁有有限的角色：它不儲存變更追蹤中使用的任何資料，也不提供要轉送到訂閱資料庫之合併式複寫變更的暫時儲存 (與它在異動複寫中一樣)。  

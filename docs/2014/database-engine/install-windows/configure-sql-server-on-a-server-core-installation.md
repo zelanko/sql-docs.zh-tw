@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7016c90e98e7719c4566e53b7aa071edf469b080
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269784"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101728"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
   本主題涵蓋有關在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 的 Server Core 安裝上設定 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的詳細資料。 請參考下列章節：  
@@ -144,7 +141,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  按兩下 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
   
-6.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員] 中，按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，以滑鼠右鍵按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<執行個體名稱 >)，其中\<執行個體名稱 > 是您要啟用 AlwaysOn 的本機伺服器執行個體的名稱可用性群組，然後按一下內容。  
+6.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員] 中，按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，以滑鼠右鍵按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<執行個體名稱 >)，其中\<執行個體名稱 > 是您要啟用 AlwaysOn 的本機伺服器執行個體的名稱可用性群組，然後按一下 內容。  
   
 7.  選取 [AlwaysOn 高可用性] 索引標籤。  
   

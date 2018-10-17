@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104798"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>設定 PowerPivot 及部署方案 (SharePoint 2013)
   本主題描述如何部署和設定 PowerPivot 功能的中介層增強功能[!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]包括 PowerPivot 圖庫、 排程資料重新整理、 管理儀表板和資料提供者。 請執行 **PowerPivot for SharePoint 2013 組態** 工具以完成下列作業：  
@@ -54,7 +51,7 @@ ms.locfileid: "37312668"
   
  請以安裝 SharePoint 的帳戶登入或將安裝帳戶設定為 SharePoint 管理中心網站的主要管理員。  
   
-1.  上**開始** 功能表中，按一下**所有程式**，然後按一下[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，按一下 **組態工具**，然後按一下 **PowerPivot For SharePoint2013 組態**。 只有在本機伺服器上安裝了 PowerPivot for SharePoint 時，才會列出此工具。  
+1.  上**開始**] 功能表中，按一下**所有程式**，然後按一下[!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]，按一下 **組態工具**，然後按一下  **PowerPivot For SharePoint2013 組態**。 只有在本機伺服器上安裝了 PowerPivot for SharePoint 時，才會列出此工具。  
   
 2.  按一下 **[設定或修復 PowerPivot for SharePoint]** ，然後按一下 **[確定]**。  
   

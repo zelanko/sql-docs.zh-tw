@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - error list pane
 - getting started
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 853386a30ade7c9833e9a6057cd2aa1084427094
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668666"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>開始使用 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取可讓您快速轉換至 Access 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 物件上傳到產生的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，並將資料從存取移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 如果有必要，您也可以連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 資料表，好讓您可以繼續使用現有存取前端應用程式與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
@@ -80,7 +74,7 @@ SSMA 包含兩個中繼資料瀏覽器，您可以使用瀏覽並執行動作的
   
 -   瀏覽每個存取資料庫中的資料表。  
   
--   選取轉換的物件，並將轉換至物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法。 如需詳細資訊，請參閱 <<c0> [ 轉換的 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。  
+-   選取轉換的物件，並將轉換至物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法。 如需詳細資訊，請參閱 [ 轉換的 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。  
   
 -   選取的資料移轉的物件，然後將資料從這些物件移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 將 Access 資料移轉到 SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)。  
   
@@ -100,7 +94,7 @@ SSMA 包含兩個中繼資料瀏覽器，您可以使用瀏覽並執行動作的
   
 -   在存取中繼資料總管 中，您可能會改變型別對應。 請務必在您建立報表，或將結構描述轉換之前進行這些變更。  
   
--   在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管] 中，您可以在變更資料表和索引的屬性**表格** 索引標籤。進行這些變更，再將結構描述載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 轉換的 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。  
+-   在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，您可以在變更資料表和索引的屬性**表格** 索引標籤。進行這些變更，再將結構描述載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [ 轉換的 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。  
   
 ### <a name="toolbars"></a>工具列  
 SSMA 會有兩個工具列： 專案工具列和移轉工具列。  

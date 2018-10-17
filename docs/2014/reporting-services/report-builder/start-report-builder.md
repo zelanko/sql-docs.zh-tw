@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-caps.latest.revision: 50
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c2802b0ed89de430e892baacdd8ec3dfce8485c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30fef45662f5cfa81e88ce740e556cdc0e66cf39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192498"
 ---
 # <a name="start-report-builder-report-builder"></a>啟動報表產生器 (報表產生器)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括單機和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
@@ -72,7 +69,7 @@ ms.locfileid: "37227008"
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>若要從開始功能表獨立啟動報表產生器  
   
-1.  在 [開始] 功能表中，按一下 **所有程式**，然後按一下[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**報表產生器**。  
+1.  在 [開始] 功能表中，按一下 [**所有程式**，然後按一下[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**報表產生器**。  
   
 2.  按一下 [報表產生器]  。  
   

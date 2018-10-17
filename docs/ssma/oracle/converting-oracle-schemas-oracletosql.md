@@ -4,23 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788506"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
 您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
@@ -39,7 +36,7 @@ ms.locfileid: "40394437"
 |||  
 |-|-|  
 |Oracle 物件|產生的 SQL Server 物件|  
-|函數|如果函式可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 建立函式。<br /><br />在某些情況下，函式必須轉換成預存程序。 在此情況下，SSMA 所建立的預存程序和函式來呼叫預存程序。|  
+|函式|如果函式可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 建立函式。<br /><br />在某些情況下，函式必須轉換成預存程序。 在此情況下，SSMA 所建立的預存程序和函式來呼叫預存程序。|  
 |程序|如果此程序可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 建立預存程序。<br /><br />在某些情況下，必須在自發交易中呼叫預存程序。 在此情況下，SSMA 會建立兩個預存程序： 實作程序，和另一個則用來呼叫實作的其中一個預存程序。|  
 |Packages|SSMA 會建立一組預存程序和已整合在一起以類似的物件名稱的函式。|  
 |序列|SSMA 建立順序物件 （SQL Server 2012 或 SQL Server 2014），或模擬 Oracle 序列。|  
@@ -47,7 +44,7 @@ ms.locfileid: "40394437"
 |檢視與相依的物件，例如觸發程序|SSMA 會建立具有相依物件的檢視。|  
 |具體化的檢視|**SSMA 會建立 SQL server 上的索引檢視表，但有些例外狀況。如果具體化的檢視包含一或多個下列建構函式，轉換將會失敗：**<br /><br />使用者定義函數<br /><br />不具決定性的欄位 / 函式 / 運算式在 SELECT、 位置或 GROUP BY 子句<br /><br />選取 * 中的浮點數資料行的使用方式，或 GROUP BY 子句 （上一期的特殊情況）<br /><br />自訂資料類型 （包括巢狀資料表）<br /><br />COUNT (distinct&lt;欄位&gt;)<br /><br />FETCH<br /><br />OUTER 聯結 (LEFT、RIGHT 或 FULL)<br /><br />子查詢，其他的檢視<br /><br />過去，排名、 潛在客戶、 記錄<br /><br />MIN、MAX<br /><br />UNION、 減號，INTERSECT<br /><br />HAVING|  
 |觸發程序|**SSMA 會建立觸發程序根據下列規則：**<br /><br />之前觸發程序會轉換成，而不是觸發程序。<br /><br />AFTER 觸發程序會轉換為 AFTER 觸發程序。<br /><br />INSTEAD OF 觸發程序會轉換成，而不是觸發程序。 多個 INSTEAD OF 觸發程序定義在同一個作業會結合成一個觸發程序。<br /><br />資料列層級觸發程序會模擬使用資料指標。<br /><br />階層式的觸發程序會轉換成多個個別的觸發程序。|  
-|同義字|**同義字會針對下列物件類型：**<br /><br />資料表和物件的資料表<br /><br />檢視和物件的檢視<br /><br />預存程序<br /><br />函數<br /><br />**下列物件的同義字會判斷已解決，並直接物件參考所取代：**<br /><br />序列<br /><br />Packages<br /><br />Java 類別結構描述物件<br /><br />使用者定義的物件類型<br /><br />為另一個同義字的同義字無法移轉，並將標示為錯誤。<br /><br />同義字不會建立 Materialized 檢視。|  
+|同義字|**同義字會針對下列物件類型：**<br /><br />資料表和物件的資料表<br /><br />檢視和物件的檢視<br /><br />預存程序<br /><br />函式<br /><br />**下列物件的同義字會判斷已解決，並直接物件參考所取代：**<br /><br />序列<br /><br />Packages<br /><br />Java 類別結構描述物件<br /><br />使用者定義的物件類型<br /><br />為另一個同義字的同義字無法移轉，並將標示為錯誤。<br /><br />同義字不會建立 Materialized 檢視。|  
 |使用者定義型別|**SSMA 不提供支援的使用者定義型別轉換。使用者定義型別，其使用方式納入 PL/SQL 程式會標有特殊的轉換錯誤的下列規則：**<br /><br />資料表資料行的使用者定義型別會轉換為 varchar （8000）。<br /><br />引數的使用者定義型別，預存程序或函式會轉換為 varchar （8000）。<br /><br />PL/SQL 區塊中的使用者定義類型的變數會轉換為 varchar （8000）。<br /><br />物件表會轉換成標準的資料表。<br /><br />物件檢視會轉換成標準的檢視。|  
   
 ## <a name="converting-oracle-database-objects"></a>轉換 Oracle 資料庫物件  
@@ -114,7 +111,7 @@ ms.locfileid: "40394437"
   
 -   您可以修改以移除或修改有問題的程式碼的 Oracle 資料庫中的物件。 若要更新的程式碼載入 SSMA 中，您必須更新的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 連接到 Oracle 資料庫&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。</c0>  
   
--   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管]，Oracle 中繼資料總管 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉。  
+-   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管，Oracle 中繼資料總管 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md)。  

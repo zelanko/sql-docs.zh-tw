@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76e76290206dd1618b37865f95ca17709faf2a6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180908"
 ---
 # <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>工作 9：加入聯集全部轉換來結合正確和更正的記錄
   在這項工作，您會將聯集全部轉換加入至資料流程。 「聯集全部」轉換會將多項輸入結合至單一輸出。 在您的案例中，它會將正確和已更正的記錄結合到一個資料流中。  
@@ -40,7 +37,7 @@ ms.locfileid: "37220538"
   
 5.  將標題為連接器移**更正**向左拖放至左的連接器結尾的點。  
   
-     ![正確 連接至 結合正確與更正](../../2014/tutorials/media/et-addinguattocombinecacrecords-03.jpg "正確連接至 [結合正確與更正]")  
+     ![正確] 連接至 [結合正確與更正](../../2014/tutorials/media/et-addinguattocombinecacrecords-03.jpg "正確] 連接至 [結合正確與更正]")  
   
 6.  如果您選取**挑選正確和已更正的記錄**轉換，您應該會看到另一個藍色的連接器。 將以該藍色連接器拖曳**結合正確和已更正的記錄**。  
   

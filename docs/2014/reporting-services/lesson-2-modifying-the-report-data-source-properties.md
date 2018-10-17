@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175241"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159618"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   在這一課，您將使用報表管理員來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。 在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
@@ -42,7 +39,7 @@ ms.locfileid: "37175241"
   
 2.  瀏覽到包含 **Sales Orders** 報表的資料夾，然後在報表的內容功能表中，按一下 **[管理]**。  
   
-     ![開啟 [報表] 內容功能表，然後選取 [管理]](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "開啟報表內容功能表，然後選取 [管理]")  
+     ![開啟 [報表] 內容功能表，然後選取 [管理]](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "開啟報表] 內容功能表，然後選取 [管理]")  
   
 3.  按一下 [資料來源] 索引標籤。  
   

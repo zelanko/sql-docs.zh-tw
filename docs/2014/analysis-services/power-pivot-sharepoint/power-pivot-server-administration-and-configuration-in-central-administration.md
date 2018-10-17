@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0522e8e4df8d6e2cbb1a386b89f933c2f7075a53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168558"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>管理中心的 PowerPivot 伺服器管理和組態
   PowerPivot 伺服器管理與組態是由 SharePoint 服務應用程式管理員使用 SharePoint 管理中心所執行。  
@@ -55,7 +52,7 @@ ms.locfileid: "37200288"
 |----------|----------|----------------------|  
 |[將 PowerPivot 方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|必要項|這個步驟會安裝方案檔，這些檔案會將程式檔和應用程式頁面加入至伺服器陣列和網站集合。|  
 |[建立並在管理中心設定 PowerPivot 服務應用程式](create-and-configure-power-pivot-service-application-in-ca.md)|必要項|這個步驟會佈建 PowerPivot 系統服務。|  
-|[為在 [管理中心] 的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)|必要項|這個步驟會在網站集合層級開啟 PowerPivot 功能。|  
+|[為在 [管理中心] 的 [網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)|必要項|這個步驟會在網站集合層級開啟 PowerPivot 功能。|  
 |[將 MSOLAP.5 新增為 Excel Services 中信任的資料提供者](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必要項|此步驟會加入 Analysis Services OLE DB 提供者做為 Excel Services 中受信任的提供者。|  
 |[SharePoint 2010 中的 PowerPivot 資料重新整理](../powerpivot-data-refresh-with-sharepoint-2010.md)|建議|資料重新整理為選擇性，但是建議使用它。 它可讓您將自動更新排程到已發行之 Excel 活頁簿中的 PowerPivot 資料。|  
 |[設定 PowerPivot 無人看管的資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|建議|這個步驟會佈建特殊目的的帳戶，此帳戶可在伺服器上用來執行資料重新整理作業。|  

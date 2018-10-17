@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108688"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
   「複製資料庫精靈」可讓您輕鬆地在伺服器之間移動或複製資料庫及其物件，而不需要讓伺服器停機。 您也可以從舊版升級的資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此精靈可以執行下列作業：  
@@ -111,7 +108,7 @@ ms.locfileid: "37199548"
   
 ##  <a name="Copy_Move"></a> 複製、 移動或升級資料庫  
   
-1.  在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管] 中展開**資料庫**，以滑鼠右鍵按一下資料庫，指向**工作**，然後按一下 **複製資料庫**。  
+1.  在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管] 中展開**資料庫**，以滑鼠右鍵按一下資料庫，指向**工作**，然後按一下 **複製資料庫**。  
   
 2.  從 **[選取來源伺服器]** 頁面，指定要移動或複製之資料庫所在的伺服器，以及輸入登入資訊。 在您選取驗證方法並輸入登入資訊之後，按 **[下一步]** 以建立與來源伺服器的連接。 在整個工作階段中，此連接會保持開啟。  
   

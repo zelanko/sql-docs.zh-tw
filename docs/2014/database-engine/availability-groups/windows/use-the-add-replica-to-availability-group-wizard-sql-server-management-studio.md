@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218148"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將複本加入至可用性群組] 精靈 (SQL Server Management Studio)
   使用 [將複本加入至可用性群組精靈]，可協助您將新次要複本加入至現有的 AlwaysOn 可用性群組。  
@@ -78,7 +75,7 @@ ms.locfileid: "37291394"
   
 3.  以滑鼠右鍵按一下您要加入次要複本的可用性群組，並選取 **[加入複本]** 命令。 這會啟動 [將複本加入至可用性群組] 精靈。  
   
-4.  在 **[連接到現有次要複本]** 頁面上，連接到可用性群組中的每一個次要複本。 如需詳細資訊，請參閱 [ 連接到現有次要複本頁面&#40;新增複本精靈 及 [新增資料庫精靈]&#41;](connect-to-existing-secondary-replicas-page.md)。  
+4.  在 **[連接到現有次要複本]** 頁面上，連接到可用性群組中的每一個次要複本。 如需詳細資訊，請參閱 <<c0> [ 連接到現有次要複本頁面&#40;新增複本精靈] 及 [新增資料庫精靈]&#41;](connect-to-existing-secondary-replicas-page.md)。</c0>  
   
 5.  在 **[指定複本]** 頁面上，針對可用性群組指定並設定一個或多個新次要複本。 此頁面包含三個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：加入複本精靈&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
   

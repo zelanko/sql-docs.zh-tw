@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: service-broker
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 797aef8ddeab8daaf094556e5ba2ec96754a6ffe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894ba222854e21a5d02811ca457ffa47184c4431
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702575"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.locfileid: "32972313"
 |-------------------|-------------------|  
 |選擇或建立資料庫來保存事件通知和主要金鑰。|選擇或建立資料庫來保存主要金鑰。|  
 |如果來源資料庫沒有主要金鑰，請 [建立主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。 來源和目標資料庫上必須有主要金鑰才能協助保護其個別憑證。|如果目標資料庫沒有主要金鑰，請建立主要金鑰。|  
-|為來源資料庫[建立登入](../../t-sql/statements/create-login-transact-sql.md) 和對應的 [使用者](../../t-sql/statements/create-user-transact-sql.md)。|為目標資料庫建立登入和對應的使用者。|  
+|為來源資料庫[建立登入](../../t-sql/statements/create-login-transact-sql.md) 和對應的 [使用者](../../t-sql/statements/create-使用者-transact-sql.md) 。|為目標資料庫建立登入和對應的使用者。|  
 |[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) ，這是來源資料庫的使用者所擁有的憑證。|建立憑證，這是目標資料庫的使用者所擁有的憑證。|  
 |[備份憑證](../../t-sql/statements/backup-certificate-transact-sql.md) 到可供目標伺服器存取的檔案。|備份憑證到可供來源伺服器存取的檔案。|  
 |[建立使用者](../../t-sql/statements/create-user-transact-sql.md)時，指定目標資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的目標資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的目標資料庫憑證。|建立使用者時，指定來源資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的來源資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的來源資料庫憑證。|  

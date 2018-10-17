@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263724"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090678"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
   依據事實維度測量事實資料的維度，但卻未正確篩選查詢傳回的資料，可能會降低查詢效能。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
@@ -34,7 +31,7 @@ ms.locfileid: "37263724"
   
      下圖顯示 [Cube 設計師] 的 [動作] 索引標籤。  
   
-     ![動作索引標籤，Cube 設計師](../../2014/tutorials/media/l8-action1.gif "Cube 設計師的 [動作] 索引標籤")  
+     ![動作索引標籤，Cube 設計師](../../2014/tutorials/media/l8-action1.gif "Cube 設計師] 的 [動作] 索引標籤")  
   
 2.  在 [動作] 索引標籤的工具列上，按一下 [新增鑽研動作] 按鈕。  
   

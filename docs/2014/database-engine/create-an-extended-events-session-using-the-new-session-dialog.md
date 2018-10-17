@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSMS.XEDISPLAY.GROUPING.F1
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Extended Events Dialog Box
 ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92fc98d32c8fe021af008dcd1058f6e43fc2fdd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0bfce6c45fcfefd214511c994b3d87fd34bf8282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150608"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>使用新增工作階段對話方塊建立擴充事件工作階段
   [新增工作階段] 對話方塊讓您定義擷取、顯示及分析資料的擴充事件工作階段。 [新增工作階段] 對話方塊會公開所有擴充事件功能。  
@@ -214,7 +211,7 @@ ms.locfileid: "37306248"
   
 ## <a name="see-also"></a>另請參閱  
  [建立擴充的事件工作階段中使用查詢編輯器](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)   
- [建立擴充的事件工作階段使用 [精靈]&#40;物件總管&#41;](../ssms/object/object-explorer.md)   
+ [建立擴充的事件工作階段使用 [精靈]&#40;物件總管]&#41;](../ssms/object/object-explorer.md)   
  [編寫擴充事件工作階段的指令碼](../../2014/database-engine/script-an-extended-event-session.md)  
   
   

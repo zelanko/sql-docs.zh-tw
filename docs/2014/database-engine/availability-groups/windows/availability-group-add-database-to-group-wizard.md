@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3900ee843069adb8775497168069716e68eea352
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055631"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將資料庫加入至可用性群組] 精靈 (SQL Server Management Studio)
   使用 [將資料庫加入至可用性群組精靈] 可將一個或多個資料庫加入現有的 AlwaysOn 可用性群組。  
@@ -86,7 +83,7 @@ ms.locfileid: "37243498"
   
 3.  以滑鼠右鍵按一下您要加入資料庫的可用性群組，並選取 [加入資料庫] 命令。 這個命令會啟動 [將資料庫加入至可用性群組] 精靈。  
   
-4.  在 **[選取資料庫]** 頁面上，選取一個或多個資料庫。 如需詳細資訊，請參閱 [ 選取 [資料庫] 頁面&#40;新可用性群組精靈 / 加入資料庫精靈&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)。  
+4.  在 **[選取資料庫]** 頁面上，選取一個或多個資料庫。 如需詳細資訊，請參閱 <<c0> [ 選取 [資料庫] 頁面&#40;新可用性群組精靈 / 加入資料庫精靈]&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)。</c0>  
   
 5.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
   
@@ -113,11 +110,11 @@ ms.locfileid: "37243498"
   
 6.  在 **[連接到現有次要複本]** 頁面上，如果裝載此可用性群組之可用性複本的所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體都是在相同使用者帳戶下以服務方式執行，請按一下 **[全部連接]**。 如果有任何伺服器執行個體是在不同的帳戶下以服務方式執行，請按一下每個伺服器執行個體名稱右邊的個別 **[連接]** 按鈕。  
   
-     如需詳細資訊，請參閱 [ 連接到現有次要複本頁面&#40;新增複本精靈及 [新增資料庫精靈]&#41;](connect-to-existing-secondary-replicas-page.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 連接到現有次要複本頁面&#40;新增複本精靈] 及 [新增資料庫精靈]&#41;](connect-to-existing-secondary-replicas-page.md)。</c0>  
   
 7.  **[驗證]** 頁面會驗證您在此精靈中指定的值是否符合 [新增可用性群組精靈] 的需求。 若要進行變更，您可以按 **[上一步]** 返回先前的精靈頁面，以變更一個或多個值。 然後按 **[下一步]** 返回 **[驗證]** 頁面，再按一下 **[重新執行驗證]**。  
   
-     如需詳細資訊，請參閱 [ 驗證頁面的&#40;AlwaysOn 可用性群組精靈&#41;](validation-page-always-on-availability-group-wizards.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 驗證 頁面的&#40;AlwaysOn 可用性群組精靈&#41;](validation-page-always-on-availability-group-wizards.md)。</c0>  
   
 8.  在 **[摘要]** 頁面上，檢閱您為新的可用性群組的選擇。 若要進行變更，請按 **[上一步]** 返回相關頁面。 進行變更之後，請按 **[下一步]** 返回 **[摘要]** 頁面。  
   

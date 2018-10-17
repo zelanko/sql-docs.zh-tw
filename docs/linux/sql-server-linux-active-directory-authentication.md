@@ -7,18 +7,16 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 85684fdb257dea2d4b3c06537c59e4c1a997aaaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631588"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程： 使用 Active Directory Linux 上的 SQL Server 驗證
 
@@ -53,7 +51,7 @@ ms.locfileid: "43381256"
 
 使用下列步驟，加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機加入 Active Directory 網域：
 
-1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 到 AD 網域加入您的主機電腦。 如果您尚未開始，將 [realmd] 與 Kerberos 用戶端封裝上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發封裝管理員：
+1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 到 AD 網域加入您的主機電腦。 如果您尚未開始，將 [realmd] 與 [Kerberos 用戶端封裝上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發封裝管理員：
 
    ```bash
    # RHEL

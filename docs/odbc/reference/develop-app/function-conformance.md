@@ -1,13 +1,11 @@
 ---
-title: 函式一致性 |Microsoft 文件
+title: 函式一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], function
@@ -15,45 +13,44 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 182b53071f5d7d4c3486a84f789954e12772e0bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740076"
 ---
 # <a name="function-conformance"></a>函式一致性
-下表指出這是妥善定義的每個 ODBC 函式中，一致性層級。  
+下表指出這是妥善定義的每個 ODBC 函式，一致性層級。  
   
 |函數|一致性層級|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|核心|  
 |**SQLBindCol**|核心|  
-|**SQLBindParameter**|核心 [1]|  
+|**SQLBindParameter**|Core [1]|  
 |**SQLBrowseConnect**|層級 1|  
 |**SQLBulkOperations**|層級 1|  
-|**SQLCancel**|核心 [1]|  
+|**SQLCancel**|Core [1]|  
 |**SQLCloseCursor**|核心|  
-|**SQLColAttribute**|核心 [1]|  
+|**SQLColAttribute**|Core [1]|  
 |**SQLColumnPrivileges**|層級 2|  
 |**SQLColumns**|核心|  
 |**SQLConnect**|核心|  
 |**SQLCopyDesc**|核心|  
 |**SQLDataSources**|核心|  
-|**SQLDescribeCol**|核心 [1]|  
+|**SQLDescribeCol**|Core [1]|  
 |**SQLDescribeParam**|層級 2|  
 |**SQLDisconnect**|核心|  
 |**SQLDriverConnect**|核心|  
 |**SQLDrivers**|核心|  
-|**SQLEndTran**|核心 [1]|  
+|**SQLEndTran**|Core [1]|  
 |**SQLExecDirect**|核心|  
 |**SQLExecute**|核心|  
 |**SQLFetch**|核心|  
-|**SQLFetchScroll**|核心 [1]|  
+|**SQLFetchScroll**|Core [1]|  
 |**SQLForeignKeys**|層級 2|  
 |**SQLFreeHandle**|核心|  
 |**SQLFreeStmt**|核心|  
@@ -80,18 +77,18 @@ ms.locfileid: "32914253"
 |**SQLProcedures**|層級 1|  
 |**SQLPutData**|核心|  
 |**SQLRowCount**|核心|  
-|**SQLSetConnectAttr**|核心 [2]|  
+|**SQLSetConnectAttr**|Core [2]|  
 |**SQLSetCursorName**|核心|  
-|**SQLSetDescField**|核心 [1]|  
+|**SQLSetDescField**|Core [1]|  
 |**SQLSetDescRec**|核心|  
-|**SQLSetEnvAttr**|核心 [2]|  
-|**SQLSetPos**|層級 1 [1]|  
-|**SQLSetStmtAttr**|核心 [2]|  
-|**SQLSpecialColumns**|核心 [1]|  
+|**SQLSetEnvAttr**|Core [2]|  
+|**SQLSetPos**|層級 1] [1]|  
+|**SQLSetStmtAttr**|Core [2]|  
+|**SQLSpecialColumns**|Core [1]|  
 |**SQLStatistics**|核心|  
 |**SQLTablePrivileges**|層級 2|  
 |**SQLTables**|核心|  
   
- [1] 一些重要的功能，此函式可用只能在較高的一致性層級。  
+ [1] 重要的功能，此函式可只能在較高的一致性層級。  
   
- [2] 將某些屬性設定為非預設值取決於一致性層級。 如需詳細資訊，請參閱下節中，[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。
+ [2] 將某些屬性設定為非預設值是根據一致性層級而定。 如需詳細資訊，請參閱下一步 區段中，[屬性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。

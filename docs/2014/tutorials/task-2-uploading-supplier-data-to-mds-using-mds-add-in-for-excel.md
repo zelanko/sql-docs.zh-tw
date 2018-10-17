@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a296db8f933ceef5d3e17e2f3f3b8034cf8a0e2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101208"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>工作 2：使用適用於 Excel 的 MDS 增益集將供應商資料上傳到 MDS
   在這個工作中，您已清理和供應商將資料發佈至**MDS**使用**MDS 增益集適用於 Excel**。 建立名為實體**供應商**中**供應商**您在上一課中建立的模型。 此實體將會針對 Excel 檔案中的每個資料行具有一個屬性。 Supplier 實體的 Code 和 Name 屬性等於**SupplierID**並**Supplier Name**在 Excel 中的資料行。  
@@ -34,7 +31,7 @@ ms.locfileid: "37272174"
   
 4.  按一下 **建立實體**功能區上的按鈕。  
   
-     ![Excel-主要資料 索引標籤-[建立實體] 按鈕](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel-主要資料索引標籤-[建立實體] 按鈕")  
+     ![Excel-主要資料] 索引標籤-[建立實體] 按鈕](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel-主要資料] 索引標籤-[建立實體] 按鈕")  
   
 5.  在**管理連線** 對話方塊中，如果您看不到連接**本機 MDS 伺服器**之下**現有連接**，執行下列動作：  
   

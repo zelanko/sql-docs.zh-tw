@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a5cecee40fb3eaee2bd481b38a54cbcfa686eb0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81ad874c4d7e3c417058b2403c1307893300feaa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118778"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除排程。  
@@ -45,7 +42,7 @@ ms.locfileid: "37317875"
 -   [建立和管理共用的排程 （原生模式）](#bkmk_native)  
   
 ##  <a name="bkmk_overview"></a> 共用排程的管理的概觀  
- 若要管理原生模式的共用的排程，請使用在報表管理員中的 [排程] 頁面或 [共用排程] 資料夾中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
+ 若要管理原生模式的共用的排程，請使用 [在報表管理員中的 [排程] 頁面或 [共用排程] 資料夾中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
   
  您可以檢視所有為報表伺服器定義的共用排程、暫停與繼續排程 (只能在報表管理員上進行)，以及選取要修改或刪除的排程。 [共用排程] 頁面中會有每一個排程狀態的下列摘要資訊：頻率、擁有者、到期日與狀態。  
   

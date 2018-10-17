@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e974c81b3f65ef7830362bc80fc7f15df0f1009
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178128"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 PowerPivot for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 PowerPivot 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
@@ -86,14 +83,14 @@ ms.locfileid: "37249408"
   
     1.  [基底 URL] 是選擇性的。 如果資料服務文件提供多個摘要，則您應該指定它。 基底 URL 應該指定所有摘要通用的 URL 部分 (例如，伺服器名稱和網站)。 如果您要建立 Reporting Services 報表的資料服務文件，基底 URL 將是報表伺服器 URL 與報表。  
   
-    2.  [Web 服務 URL] 是必要的。 如果沒有基底 URL，這個值在位址中必須包含 http:// 或 https://。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL，則http://adventure-works/inventory/today.aspx，基底 URL 將是http://adventure-works/inventory，和 Web 服務 URL 將是 /today.aspx。  
+    2.  [Web 服務 URL] 是必要的。 如果沒有基底 URL，這個值在位址中必須包含 http:// 或 https://。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL，則 http://adventure-works/inventory/today.aspx，基底 URL 將是 http://adventure-works/inventory，和 Web 服務 URL 將是 /today.aspx。  
   
          Web 服務 URL 可以包含篩選或選取資料子集的參數。 提供摘要的應用程式或服務必須支援您在 URL 中指定的參數。  
   
 6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 這是必要的值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 PowerPivot for Excel 中，資料表名稱用來命名 PowerPivot 視窗中，將包含已匯入之資料的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [為在 [管理中心] 的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)   
+ [為在 [管理中心] 的 [網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [使用資料摘要的庫共用資料摘要&#40;PowerPivot for SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
