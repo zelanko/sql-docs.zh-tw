@@ -1,5 +1,7 @@
 items:
-- name: SQL Server 機器學習服務
+- name: SQL Server ML 與程式設計延伸模組文件
+  href: index.md
+- name: 機器學習延伸模組 (R、Python)
   items:
   - name: 機器學習服務 (R、Python)
     href: what-is-sql-server-machine-learning.md
@@ -9,8 +11,20 @@ items:
     href: r/r-server-standalone.md
   - name: 新功能
     href: what-s-new-in-sql-server-machine-learning-services.md
-- name: Install
+- name: Java 延伸模組
   items:
+  - name: 在 SQL 上執行 Java 程式碼
+    href: java/extension-java.md
+  - name: 如何從 SQL 呼叫 Java
+    href: java/howto-call-java-from-sql.md
+  - name: Java 範例
+    href: java/java-first-sample.md
+  - name: Java 與 SQL 資料類型
+    href: java/java-sql-datatypes.md
+- name: 安裝
+  items:
+  - name: SQL Server 2019 中的差異
+    href: install/sql-machine-learning-services-ver15.md
   - name: 機器學習服務 (R、Python)
     href: install/sql-machine-learning-services-windows-install.md
   - name: R Services
@@ -24,7 +38,7 @@ items:
     items:
     - name: CAB 下載 (離線安裝程式)
       href: install/sql-ml-cab-downloads.md
-  - name: 命令提示字元安裝程式
+  - name: 命令提示字元設定
     href: install/sql-ml-component-commandline-install.md
   - name: 升級 R 與 Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
@@ -44,16 +58,24 @@ items:
       href: tutorials/rtsql-working-with-inputs-and-outputs.md
     - name: 處理資料類型和物件
       href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+    - name: 使用 R 函式
+      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
     - name: 建立預測模型
       href: tutorials/rtsql-create-a-predictive-model-r.md
     - name: 從模型預測及繪製
       href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: Python
+    items:
+    - name: 使用 T-SQL 執行 Python
+      href: tutorials/run-python-using-t-sql.md
 - name: 教學課程
   href: tutorials/machine-learning-services-tutorials.md
   items:
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
+    - name: 建立資料分割型模型
+      href: tutorials/r-tutorial-create-models-per-partition.md
     - name: 了解資料庫內分析
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
@@ -120,20 +142,17 @@ items:
   - name: Python
     href: tutorials/sql-server-python-tutorials.md
     items:
-    - name: 使用 T-SQL 執行 Python
-      href: tutorials/run-python-using-t-sql.md
+    - name: SQL 上之 Python 中的 Iris 資料
       items:
       - name: 將 Python 包裝到預存程序中
         href: tutorials/wrap-python-in-tsql-stored-procedure.md
       - name: 從 SQL Server 中的 Python 模型定型及計分
         href: tutorials/train-score-using-python-in-tsql.md
-      - name: 在 SQL Server 計算內容中使用 revoscalepy 建立模型
-        href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: 使用 revoscalepy 建立模型
+      href: tutorials/use-python-revoscalepy-to-create-model.md
     - name: 了解資料庫內分析
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 取得資料和指令碼
-        href: tutorials/sqldev-py1-download-the-sample-data.md
       - name: 匯入資料
         href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
       - name: 探索及視覺化資料
@@ -156,7 +175,9 @@ items:
     href: concepts/extension-r.md
   - name: Python 延伸模組
     href: concepts/extension-python.md
-- name: 如何
+  - name: Security
+    href: concepts/security.md
+- name: 使用說明指南
   href: r/sql-server-machine-learning-tasks.md
   items:
   - name: 套件管理
@@ -213,69 +234,66 @@ items:
       href: sql-native-scoring.md
   - name: 效能
     items:
-    - name: R 效能微調 - 概觀
+    - name: R 中的效能微調概觀
       href: r/sql-server-r-services-performance-tuning.md
-    - name: R 效能微調 - SQL Server 組態
+    - name: 效能微調伺服器設定
       href: r/sql-server-configuration-r-services.md
-    - name: R 效能微調 - R 和資料最佳化
+    - name: 效能微調 - R 中的資料最佳化
       href: r/r-and-data-optimization-r-services.md
-    - name: R 效能微調 - 結果
+    - name: R 中的結果效能微調
       href: r/performance-case-study-r-services.md
     - name: 使用 R 程式碼剖析函式
       href: r/using-r-code-profiling-functions.md
   - name: Security
     items:
-    - name: SQL Server 中 R 執行階段的安全性考量
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: R 的安全性
-      href: r/security-overview-sql-server-r.md
-    - name: Python 安全性
-      href: python/security-overview-sql-server-python-services.md
-    - name: SQL Server Launchpad 服務帳戶
-      href: general/sql-server-launchpad-service-account.md
-    - name: 修改 SQLRUserGroup
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: 授與使用者權限
+      href: security/user-permission.md
+    - name: 設定啟動控制板
+      href: security/sql-server-launchpad-service-account.md
+    - name: 設定防火牆
+      href: security/firewall-configuration.md
     - name: 新增 SQLRUserGroup 作為資料庫使用者
-      href: r/add-sqlrusergroup-to-database.md
+      href: security/add-sqlrusergroup-to-database.md
   - name: 系統管理
     items:
-    - name: 設定及管理 R
-      href: r/configuration-sql-server-r-services.md
-    - name: 機器學習服務的進階組態選項
-      href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: 使用 Web 服務部署及取用模型
-      href: operationalization-with-mrsdeploy.md
-    - name: 管理與監視解決方案
+    - name: 管理整合
       href: r/managing-and-monitoring-r-solutions.md
-    - name: 機器學習服務的資源管理
-      href: r/resource-governance-for-r-services.md
-    - name: 建立機器學習服務的資源集區
-      href: r/how-to-create-a-resource-pool-for-r.md
-    - name: 機器學習服務的擴充事件
-      href: r/extended-events-for-sql-server-r-services.md
-    - name: 監視 PREDICT 陳述式的擴充事件
-      href: xe-event-predict-tsql.md
-    - name: 機器學習服務的 DMV
-      href: r/dmvs-for-sql-server-r-services.md
-    - name: 使用 R 程式碼剖析函式
-      href: r/using-r-code-profiling-functions.md
-    - name: 使用 Management Studio 中的自訂報表監視機器學習服務
+    - name: 使用 SSMS 報告來監視
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
-- name: 套件參考
+    - name: 調整指令碼執行規模
+      href: administration/modify-user-account-pool.md
+    - name: 使用資源治理
+      href: administration/resource-governance.md
+    - name: 建立資源集區
+      href: administration/how-to-create-a-resource-pool.md
+    - name: 擴充事件
+      href: r/extended-events-for-sql-server-r-services.md
+    - name: 延伸的事件 PREDICT T-SQL
+      href: xe-event-predict-tsql.md
+    - name: 資料管理檢視 (DMV)
+      href: r/dmvs-for-sql-server-r-services.md
+    - name: R 程式碼分析函式
+      href: r/using-r-code-profiling-functions.md
+- name: 參考
   href: r/machine-learning-services-r-reference.md
   items:
-  - name: SQL 中的 MicrosoftML
-    href: using-the-microsoftml-package.md
-  - name: SQL 中的 RevoScaleR
-    href: r/revoscaler-overview.md
-  - name: 適用於 SQL Server 資料的 RevoScaleR 函式清單
-    href: r/scaler-functions-for-working-with-sql-server-data.md
-  - name: SQL 中的 sqlrutils
-    href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-  - name: SQL 中的 olapR
-    href: r/how-to-create-mdx-queries-using-olapr.md
-  - name: SQL 中的 revoscalepy
-    href: python/what-is-revoscalepy.md
+  - name: R 套件
+    href: r/machine-learning-services-r-reference.md
+    items:
+    - name: SQL 中的 olapR
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: SQL 中的 MicrosoftML
+      href: using-the-microsoftml-package.md
+    - name: SQL 中的 RevoScaleR
+      href: r/revoscaler-overview.md
+    - name: 適用於 SQL Server 資料的 RevoScaleR 函式清單
+      href: r/scaler-functions-for-working-with-sql-server-data.md
+    - name: SQL 中的 sqlrutils
+      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+  - name: Python 套件
+    items:
+    - name: SQL 中的 revoscalepy
+      href: python/what-is-revoscalepy.md
 - name: 資源
   items:
   - name: 已知問題
@@ -307,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: ed84c8ae7a1a1ef653decd2bf445aed053432323
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888864"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383374"
