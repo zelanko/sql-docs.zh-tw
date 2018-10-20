@@ -4,7 +4,7 @@ description: 本文說明在 Linux 上的 SQL Server 複寫。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734126"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390840"
 ---
 # <a name="sql-server-replication-on-linux"></a>在 Linux 上的 SQL Server 複寫
 
@@ -34,7 +34,7 @@ SQL Server 的執行個體可以參與任何複寫角色：
 * 散發者
 * 訂閱者
 
-複寫結構描述可以混搭作業系統平台。 例如，複寫結構描述可以使用 Linux 上的 SQL Server 執行個體的發行者和散發者，而訂閱者可以包含在 Windows 上的 SQL Server 執行個體。
+複寫結構描述可以混搭作業系統平台。 例如，複寫結構描述可能包括發行者和散發者上，在 Linux 上的 SQL Server 的執行個體，以及訂閱者包含在 Windows 與 Linux 上的 SQL Server 執行個體。
 
 Linux 上的 SQL Server 執行個體可以參與任何類型的複寫。
 
@@ -62,6 +62,7 @@ Linux 上的 SQL Server 執行個體可以參與任何類型的複寫。
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 不支援下列功能：
 
 * 立即更新訂閱者
+* Oracle 發行
 
 ## <a name="next-steps"></a>後續步驟
 

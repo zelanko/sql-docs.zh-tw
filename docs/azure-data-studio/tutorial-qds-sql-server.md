@@ -4,18 +4,18 @@ description: 本教學課程會示範如何啟用資料庫儀表板上的五個�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 839f72a83d45f49004f0bbfb876baadbeaafdeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038043"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356239"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程： 新增*五個最慢的查詢*資料庫儀表板的範例小工具
 

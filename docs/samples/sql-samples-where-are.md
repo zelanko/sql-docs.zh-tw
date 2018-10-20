@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802588"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390860"
 ---
 # <a name="sql-samples"></a>SQL 範例
 
@@ -51,3 +51,13 @@ AdventureWorks 資料庫有[SQL Server 範例](https://github.com/Microsoft/sql-
 - [SQL Server 2014 和更新版本，會下載 AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 包含 2012年版本的.bak 檔案。
 - [下載 SQL Server 2012 的 AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)。
 - [下載 SQL Server 2008R2 AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)。
+
+## <a name="azure-samples-and-templates"></a>Azure 範例及範本
+在.NET、 Java、 Python、 Node.js、 PHP 和 Ruby 的 Github 上有許多 Microsoft Azure 程式碼範例和範例可用。 此外，Azure Resource Manager 可讓您佈建您的應用程式使用宣告式範本。 在單一範本中，您可以部署多個服務及其相依性。 您可以使用相同的範本來重複部署應用程式每個階段的應用程式生命週期。
+
+- [Azure 範例](https://github.com/Azure-Samples)
+- [Azure 快速入門範本](https://azure.microsoft.com/resources/templates/)
+
+
+
+

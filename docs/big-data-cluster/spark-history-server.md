@@ -9,12 +9,12 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 1e154ccfca46430f4ab96e620ac450e3c213313d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796085"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460863"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
 
@@ -201,5 +201,5 @@ Spark 記錄伺服器 」 web UI 看起來像：
 
 ## <a name="next-steps"></a>後續步驟
 
-* [管理 HDInsight 上的 Spark 叢集的資源](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-resource-manager)
-* [設定 Spark 設定](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-settings)
+* [管理 HDInsight 上的 Spark 叢集的資源](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [設定 Spark 設定](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

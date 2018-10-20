@@ -11,12 +11,12 @@ ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222608"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462044"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 課：將採礦模型加入 Bike Buyer 採礦結構中
   在這一課，您會將兩個採礦模型新增至您所建立的 Bike Buyer 採礦結構[第 1 課： 建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 這些採礦模型可讓您使用一個模型探索資料，使用另一個模型建立預測。  
@@ -26,7 +26,7 @@ ms.locfileid: "48222608"
  為了預測潛在客戶是否可能購買自行車，您將建立採礦模型，根據[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。 此演算法會查看與每一位潛在客戶相關聯的資訊，並尋找在預測其是否會購買自行車時有用的特性。 然後它會比較之前的自行車買主與新的潛在客戶的特性值，以判斷新的潛在客戶是否有可能購買自行車。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 陳述式  
- 若要將採礦模型加入採礦結構，您使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 陳述式。 陳述式中的程式碼可分成下列各部份：  
+ 若要將採礦模型加入採礦結構，您使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)陳述式。 陳述式中的程式碼可分成下列各部份：  
   
 -   識別採礦結構  
   

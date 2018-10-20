@@ -17,12 +17,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b85c611b01727c21059d43d04cb65134c7f2fc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190178"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460967"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>監視可用性群組 (Transact-SQL)
   為了透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)]監視可用性群組和複本，以及相關聯的資料庫， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供一組目錄和動態管理檢視與伺服器屬性。 您可以透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 陳述式使用這些檢視來監視可用性群組及其複本和資料庫。 針對給定可用性群組所傳回的資訊取決於連接到的是裝載主要複本或次要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
@@ -80,7 +80,7 @@ ms.locfileid: "48190178"
 > [!NOTE]  
 >  另請參閱本主題稍後[監視可用性複本](#AvReplicas)一節中的 **sys.dm_hadr_availability_replica_cluster_nodes** 和 **sys.dm_hadr_availability_replica_cluster_states**，以及[監視可用性資料庫](#AvDbs)一節中的 **sys.availability_databases_cluster** 和 **sys.dm_hadr_database_replica_cluster_states**。  
   
- 適用於資訊 WSFC 叢集和[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 [Windows Server 容錯移轉叢集&#40;WSFC&#41;與 SQL Server] ((.../../../ sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md） 和[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)。  
+ 適用於資訊 WSFC 叢集和[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[Windows Server 容錯移轉叢集&#40;WSFC&#41; SQL server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)並[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL伺服器&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="AvGroups"></a> 監視可用性群組  
  若要監視伺服器執行個體裝載其可用性複本的可用性群組，請使用下列檢視：  

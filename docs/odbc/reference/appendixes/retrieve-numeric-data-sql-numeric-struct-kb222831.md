@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 7a8a4d4272ad15b0ba045f5a683dc009711ee0e8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5b98e6e640030640af177057f4a3e06636681613
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809824"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460849"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>擷取數值資料的 SQL\_數值\_結構
 
@@ -380,6 +380,6 @@ http://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/2228
 
 http://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
 
-https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/c-data-types
+https://docs.microsoft.com/sql/odbc/reference/appendixes/c-data-types
 -->
 

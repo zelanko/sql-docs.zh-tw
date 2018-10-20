@@ -1,21 +1,21 @@
 ---
-title: 擴充功能的 Azure Data Studio |Microsoft Docs
+title: 延伸 Azure Data Studio 的功能 | Microsoft Docs
 description: 了解有關擴充 Azure Data Studio
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b458234f0a166f3dc820cbfa58269bb90d7c33b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038015"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460243"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>開始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充性
 
@@ -112,7 +112,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 `dashboard.insights`
 
-您可以註冊使用 dashboard.insights 的深入解析。 這是類似於[教學課程： 建置自訂的深入解析小工具](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+您可以註冊使用 dashboard.insights 的深入解析。 這是類似於[教學課程： 建置自訂的深入解析小工具](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -273,8 +273,8 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 |內容變數| description|
 |:---|:---|
-|`connectionProvider` | 目前連接的提供者的識別項的字串。 例如 `connectionProvider == 'MSSQL'`.|
-|`serverName`|目前連接的伺服器名稱的字串。 例如 `serverName == 'localhost'`.|
-|`databaseName` | 目前連接的資料庫名稱的字串。 例如 `databaseName == 'master'`.|
+|`connectionProvider` | 目前連接的提供者的識別項的字串。 例如 `connectionProvider == 'MSSQL'` 。|
+|`serverName`|目前連接的伺服器名稱的字串。 例如 `serverName == 'localhost'` 。|
+|`databaseName` | 目前連接的資料庫名稱的字串。 例如 `databaseName == 'master'` 。|
 |`connection` | 完整的連線設定檔物件，目前的連接 (IConnectionProfile)|
 |`dashboardContext` | 儀表板頁面內容的字串，目前已開啟。 'Database' 或者 'server'。 例如 `dashboardContext == 'database'`|

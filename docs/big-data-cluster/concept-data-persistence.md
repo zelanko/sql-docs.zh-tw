@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796204"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460573"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 
@@ -23,6 +23,7 @@ ms.locfileid: "48796204"
 SQL Server 巨量資料叢集會使用這些永續性磁碟區的方式是使用[儲存類別](https://kubernetes.io/docs/concepts/storage/storage-classes/)。 您可以建立不同的儲存體類別，用於不同種類的儲存體，並在巨量資料叢集部署期間指定它們。 您可以設定的儲存體来使用類別用途 （集區）。 SQL Server 的巨量資料叢集會建立[永續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)與每個 pod，需要永續性磁碟區的指定儲存體類別名稱。 然後，它會裝載 pod 中對應的永續性磁碟區。
 
 > [!NOTE]
+
 > CTP 2.0，只有`ReadWriteOnce`支援整個叢集的存取模式。
 
 ## <a name="deployment-settings"></a>部署設定
@@ -36,11 +37,20 @@ SQL Server 巨量資料叢集會使用這些永續性磁碟區的方式是使用
 
 ## <a name="aks-storage-classes"></a>AKS 儲存類別
 
-AKS 隨附[兩個內建的儲存體類別](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv)**預設**並**進階儲存體**以及它們的動態佈建程式。 您可以指定這些，或建立您自己的儲存類別啟用永續性儲存體，以部署巨量資料叢集。
+AKS 隨附[兩個內建的儲存體類別](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**預設**並**管理 premium**以及它們的動態佈建程式。 您可以指定這些，或建立您自己的儲存類別啟用永續性儲存體，以部署巨量資料叢集。
 
 ## <a name="minikube-storage-class"></a>Minikube 儲存類別
 
-Minikube 隨附內建的儲存體類別，稱為**標準**以及它的動態佈建程式。
+Minikube 隨附內建的儲存體類別，稱為**標準**以及它的動態佈建程式。 請注意，在 Minikube，如果 USE_PERSISTENT_VOLUME = true （預設值），您也必須覆寫 STORAGE_CLASS_NAME 環境變數的預設值，因為預設值不同。 將值設為`standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+或者，您可以隱藏 Minikube 上使用永續性磁碟區：
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,7 +71,7 @@ export STORAGE_SIZE=10Gi
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

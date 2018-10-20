@@ -5,23 +5,23 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 17bb33ddc366196d21f45a0dd6ec895c5ceaef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e113e2755a5d50fa7b8c5a06486227b3671347e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038059"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460615"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 匯入擴充功能 （預覽）
 
 SQL Server 匯入擴充功能 （預覽） 會將.txt 或.csv 檔案轉換成 SQL 資料表。 此精靈會利用 Microsoft Research 架構，稱為[Program Synthesis using 範例 (PROSE)](https://microsoft.github.io/prose/)以智慧方式剖析具有最少的使用者輸入的檔案。 它是功能強大的架構，用於資料處理，而且相同的技術，提供在 Microsoft Excel 中 Flash 填滿
 
-若要深入了解這項功能的 SSMS 版本，您可以閱讀[這篇文章](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard)。
+若要深入了解這項功能的 SSMS 版本，您可以閱讀[這篇文章](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)。
 
 
 ## <a name="install-the-sql-server-import-extension"></a>安裝 SQL Server 匯入擴充功能

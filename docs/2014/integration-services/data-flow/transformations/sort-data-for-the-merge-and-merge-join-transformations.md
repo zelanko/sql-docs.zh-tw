@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8ced7cfaef647fb8aaa93a477c69f1d690d0328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213448"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460593"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>排序合併和合併聯結轉換的資料
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，「合併」和「合併聯結」轉換需要針對其輸入排序的資料。 輸入資料必須實際排序，且必須在來源中或上游轉換中設定輸出和輸出資料行的排序選項。 如果排序選項表示資料已排序，但實際上資料並未排序，則合併或合併聯結作業的結果可能無法預測。  
@@ -49,14 +49,14 @@ ms.locfileid: "48213448"
 ## <a name="setting-sort-options-on-the-data"></a>設定資料的排序選項  
  有兩個重要的排序屬性必須針對將資料提供給「合併」和「合併聯結」轉換的來源或上游轉換設定：  
   
--   輸出的 `IsSorted` 屬性，表示資料是否經過排序。 此屬性必須設為`True`。  
+-   輸出的 `IsSorted` 屬性，表示資料是否經過排序。 此屬性必須設定為 `True`。  
   
     > [!IMPORTANT]  
-    >  值設定`IsSorted`屬性設`True`不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。  
+    >  將 `IsSorted` 屬性的值設定為 `True` 時，不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。  
   
--   `SortKeyPosition`輸出資料行屬性，指出是否排序資料行、 資料行的排序次序，以及排序多個資料行的順序。 此屬性必須針對已排序資料的每個資料行設定。  
+-   輸出資料行的 `SortKeyPosition` 屬性，指出資料行是否經過排序、資料行的排序次序，以及排序多個資料行的順序。 此屬性必須針對已排序資料的每個資料行設定。  
   
- 如果您使用「排序」轉換排序資料，「排序」轉換會同時設定「合併」或「合併聯結」轉換所需的屬性。 也就是 「 排序 」 轉換設定`IsSorted`屬性的輸出，以`True`，並設定`SortKeyPosition`其輸出資料行的屬性。  
+ 如果您使用「排序」轉換排序資料，「排序」轉換會同時設定「合併」或「合併聯結」轉換所需的屬性。 也就是說，「排序」轉換會將其輸出的 `IsSorted` 屬性設定為 `True`，並設定其輸出資料行的 `SortKeyPosition` 屬性。  
   
  不過，如果您沒有使用「排序」轉換排序資料，則必須在來源或上游轉換手動設定這些排序屬性。 若要在來源或上游轉換手動設定排序屬性，請使用下列程序。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "48213448"
 6.  按一下  **\<元件名稱 > 輸出**，並將`IsSorted`屬性設`True`。  
   
     > [!NOTE]  
-    >  如果您手動設定`IsSorted`屬性的輸出，`True`而且資料未排序，可能會那里遺失資料或不正確的資料比較，下游 「 合併 」 或 「 合併聯結 」 轉換在執行封裝時。  
+    >  如果您手動將輸出的 `IsSorted` 屬性設定為 `True` 而且資料未排序，則當您執行封裝時，下游「合併」或「合併聯結」轉換中可能會有資料遺失或是不正確的資料比較。  
   
 7.  展開 **[輸出資料行]**。  
   
-8.  按一下您想要指出的資料行是已排序，並設定其`SortKeyPosition`屬性設為非零的整數值，依照這些指導方針：  
+8.  按一下要表示為已排序的資料行，並按照下列指導方針，將其 `SortKeyPosition` 屬性設定為非零整數值：  
   
     -   整數值必須表示數值順序，且從 1 開始並以 1 為遞增值。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "48213448"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     此陳述式中，您會設定`SortKeyPosition`屬性每個資料行，如下所示：  
+     針對此陳述式，設定每個資料行的 `SortKeyPosition` 屬性，如下所示：  
   
     -   將 ColumnA 的 `SortKeyPosition` 屬性設定為 1。 這表示 ColumnA 是要排序的第一個資料行，而且是以遞增順序排序。  
   
     -   將 ColumnB 的 `SortKeyPosition` 屬性設定為 -2。 這表示 ColumnB 是要排序的第二個資料行，而且是以遞減順序排序  
   
-    -   設定`SortKeyPosition`ColumnC 屬性設定為 3。 這表示 ColumnC 是要排序的第三個資料行，而且是以遞增順序排序。  
+    -   將 ColumnC 的 `SortKeyPosition` 屬性設定為 3。 這表示 ColumnC 是要排序的第三個資料行，而且是以遞增順序排序。  
   
 9. 針對每個已排序的資料行重複步驟 8。  
   
@@ -112,6 +112,6 @@ ms.locfileid: "48213448"
  [合併聯結轉換](merge-join-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作] ((../../control-flow/data-flow-task.md)  
+ [資料流程工作](../../control-flow/data-flow-task.md)  
   
   

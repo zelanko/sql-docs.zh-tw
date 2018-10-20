@@ -15,12 +15,12 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aedb460d51eb79325d6a45650eb4964a10618ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d16fc8f7911e358a5b46610d1c03d7304b514fb7
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184728"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460333"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用條件式分割轉換來分割資料集
   若要加入及設定「條件式分割」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -61,11 +61,11 @@ ms.locfileid: "48184728"
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [條件式分割轉換](conditional-split-transformation.md)   
+ [Conditional Split Transformation](conditional-split-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
  [Integration Services 資料類型](../integration-services-data-types.md)   
- [資料流程工作] ((../../control-flow/data-flow-task.md)   
+ [資料流程工作](../../control-flow/data-flow-task.md)   
  [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)  
   
   

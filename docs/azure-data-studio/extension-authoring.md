@@ -5,23 +5,23 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8935d641c8c3fa6da58b5f7c2d8b5560664a6486
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d778eb4df52d28a44ec8127ebc9f657a9f0dde
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038055"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355880"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]的擴充模組
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供了一種對基本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝更多功能的簡單方法。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中的擴充功能提供一種對基本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝更多功能的簡單方法。
 
-延伸模組會提供 Azure Data Studio 小組 (Microsoft)，以及第 3 個合作對象社群 （您 ！）。
+延伸模組是由 Azure Data Studio 小組 (Microsoft) 與第 3 方社群 (您!) 提供。
 
 
 ## <a name="author-an-extension"></a>撰寫擴充功能

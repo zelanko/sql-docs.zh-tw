@@ -5,17 +5,17 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: f92391c3d18648555a0c65d55915bf6752c195b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f5d1731cfb126b2dbaa259b89b327951d384e1a
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037979"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356009"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 擴充功能 （預覽）
 

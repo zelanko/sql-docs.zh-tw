@@ -3,17 +3,17 @@ title: 在 SQL Server Machine Learning 服務的擴充性架構 |Microsoft Docs
 description: 外部程式碼支援的 SQL Server database engine，使用的雙重架構關聯式資料上執行 R 和 Python 指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878181"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419216"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務的擴充性架構 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SQL Server 已在伺服器上執行外部指令碼，例如 R 或 Python 擴充�
 
 ## <a name="launchpad"></a>Launchpad
 
-SQL Server 受信任的 Launchpad 是一項服務，負責管理和執行外部指令碼，類似於全文檢索索引及查詢服務啟動個別的主機，來處理全文檢索查詢的方式。 Launchpad 服務可以開始只信任的啟動器，由 Microsoft 發行或，都經過 Microsoft 為符合需求的效能與資源管理。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]是一項服務，負責管理和執行外部指令碼，類似於全文檢索索引及查詢服務啟動個別的主機，來處理全文檢索查詢的方式。 Launchpad 服務可以開始只信任的啟動器，由 Microsoft 發行或，都經過 Microsoft 為符合需求的效能與資源管理。
 
 | 受信任的啟動器 | 延伸模組 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
@@ -60,6 +60,8 @@ SQL Server 受信任的 Launchpad 是一項服務，負責管理和執行外部�
 | 適用於 Python 3.5 Pythonlauncher.dll | [Python 擴充功能](extension-python.md) | SQL Server 2017 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務在其自有的使用者帳戶下執行。 如果您變更執行 Launchpad 的帳戶，請務必這樣做時使用 SQL Server 組態管理員，以確保變更會寫入相關檔案。
+
+個別[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]每個資料庫引擎執行個體已加入 SQL Server Machine Learning 服務建立服務。 沒有一個 Launchpad 服務，讓每個資料庫引擎執行個體，因此如果您有多個執行個體外部的指令碼支援，您必須針對每個 Launchpad 服務。 Database engine 執行個體繫結至建立它的 Launchpad 服務。 預存程序中的外部指令碼或呼叫建立相同的執行個體的 Launchpad 服務的 SQL Server 服務中的 T-SQL 結果的所有引動過程。
 
 若要在特定的支援語言中執行工作，[啟動列] 從集區，取得受保護的背景工作帳戶，並啟動附屬處理序來管理外部執行階段。 每個附屬處理序會繼承 Launchpad 的使用者帳戶，並執行指令碼的持續期間使用該背景工作帳戶。 如果指令碼會使用平行處理序，它們會建立相同且單一背景工作帳戶。
 

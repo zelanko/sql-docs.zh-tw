@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d87ba02342948d140afb68c2d9d13a2aef9464eb
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450341"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460874"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 以存取 Hadoop 中的外部資料
 
@@ -200,7 +200,5 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>後續步驟
 
-探索更多設定 PolyBase 下列文章中的方法：
-
-[PolyBase 組態和適用於 Hadoop 的安全性](../relational-databases/polybase/polybase-configuration.md)。  
+如需 PoliyBase 的詳細資訊，請參閱[什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

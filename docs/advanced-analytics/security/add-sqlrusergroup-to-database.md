@@ -1,35 +1,31 @@
 ---
 title: 新增 SQLRUserGroup 作為資料庫使用者 （SQL Server 機器學習服務） |Microsoft Docs
-description: 如何新增 SQLRUserGroup 作為資料庫使用者，SQL Server Machine Learning 服務。
+description: 對於使用隱含的驗證的回送連線，新增 SQLRUserGroup 作為資料庫使用者，使背景工作帳戶可以登入伺服器上，以傳回給呼叫使用者的身分識別轉換。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/10/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc5294453def64d13cc43a74a8a5fb299c3e23e3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100319"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419083"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>新增 SQLRUserGroup 作為資料庫使用者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-建立的資料庫登入[SQLRUserGroup](../concepts/security.md#sqlrusergroup)以允許來自 R 和 Python 指令碼，目標是資料或 SQL Server 執行個體上的作業時的信任的連接。 
+建立的資料庫登入[SQLRUserGroup](../concepts/security.md#sqlrusergroup)當[循迴路連線](../../advanced-analytics/concepts/security.md#implied-authentication)指令碼中指定*信任連接*，以及用來執行物件的識別包含您的程式碼是 Windows 使用者帳戶。
 
-包含與 SQL Server 登入的連接字串或完整指定的使用者名稱和密碼的指令碼，建立登入不需要。
+受信任的連接是指`Trusted_Connection=True`連接字串中。 當 SQL Server 收到要求，指定受信任的連線時，它會檢查目前的 Windows 使用者的身分識別是否有登入。 執行為背景工作帳戶的外部處理序 (例如 MSSQLSERVER01 從**SQLRUserGroup**)，則要求會失敗，因為這些帳戶依預設沒有登入。
 
-## <a name="when-a-login-is-required"></a>何時需要登入
-
-如果 R 或 Python 指令碼包含連接字串，指定受信任的連線 (例如，"Trusted_Connection = True")，額外的設定是必要的使用者身分識別正確的呈現方式的 SQL Server。 外部處理序正在**SQLRUserGroup**背景工作帳戶，例如 MSSQLSERVER01，信任的使用者會以背景工作角色的身分識別。 因為此身分識別沒有 SQL Server 的登入權限，信任連接將會失敗，除非您將新增**SQLRUserGroup**當做資料庫使用者。 如需詳細資訊，請參閱 < [*隱含的驗證*](../../advanced-analytics/concepts/security.md#implied-authentication)。
-
-恢復 Launchpad 會保留原始叫用指令碼，並執行此程序的背景工作帳戶的使用者的對應。 受信任的連線成功後的背景工作帳戶，原始的呼叫使用者的身分識別會接管，並可用來擷取資料。 您不需要將 db_datareader 權限授予**SQLRUserGroup**。
+您可以藉由提供解決連線錯誤**SQLServerRUserGroup**的 SQL Server 登入。 如需身分識別和外部處理序的詳細資訊，請參閱[擴充性架構的安全性概觀](../concepts/security.md)。
 
 > [!Note]
->  請確定**SQLRUserGroup**有 「 允許本機登入 」 權限。 根據預設，此權限提供給所有新的本機使用者，，但在某些組織可能會強制執行更嚴格的群組原則。
+>  請確定**SQLRUserGroup**有 「 允許本機登入 」 權限。 根據預設，此權限提供給所有新的本機使用者，但在某些組織中更嚴格的群組原則可能會停用此權限。
 
 ## <a name="create-a-login"></a>建立登入
 
@@ -54,9 +50,9 @@ ms.locfileid: "49100319"
 5. 捲動清單，直到您找到一開始在伺服器上的群組帳戶的`SQLRUserGroup`。
     
     + Launchpad 服務相關聯的群組名稱_預設執行個體_總是**SQLRUserGroup**，而不論您是否安裝了 R 或 Python 或兩者。 選取此帳戶只是預設執行個體。
-    + 如果您使用_具名執行個體_，執行個體名稱會附加至的預設背景工作群組名稱， `SQLRUserGroup`。 因此，如果您的執行個體名稱為"MLTEST 」，這個執行個體的預設使用者群組名稱會是**SQLRUserGroupMLTest**。
+    + 如果您使用_具名執行個體_，執行個體名稱會附加至的預設背景工作群組名稱， `SQLRUserGroup`。 例如，如果您的執行個體名稱為"MLTEST 」，這個執行個體的預設使用者群組名稱會是**SQLRUserGroupMLTest**。
  
-     ![範例伺服器上的群組](media/implied-auth-login5.png "範例伺服器上的群組")
+ ![範例伺服器上的群組](media/implied-auth-login5.png "範例伺服器上的群組")
    
 5. 按一下 **確定**以關閉 進階的搜尋 對話方塊。
 
@@ -66,3 +62,8 @@ ms.locfileid: "49100319"
 6. 按一下 [ **[確定]** 以關閉**選取使用者或群組**] 對話方塊。
 
 7. 在 [**登入-新增**] 對話方塊中，按一下**確定**。 依預設，登入指派給 **公用** 角色，並有連接到資料庫引擎的權限。
+
+## <a name="next-steps"></a>後續步驟
+
++ [安全性概觀](../concepts/security.md)
++ [擴充性架構](../concepts/extensibility-framework.md)

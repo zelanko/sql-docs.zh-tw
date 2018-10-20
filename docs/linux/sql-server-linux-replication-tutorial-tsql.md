@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669306"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390830"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 設定複寫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-在本教學課程中，您將設定 SQL Server 快照式複寫在 Linux 上使用 2 個使用 Transact SQL 的 SQL Server 執行個體。 「 發行者 」 與 「 散發者 」 會是相同的執行個體，和 「 訂閱者 」 會在個別的執行個體。
+在本教學課程中，您將設定 SQL Server 快照式複寫在 Linux 上使用兩個使用 Transact SQL 的 SQL Server 執行個體。 「 發行者 」 與 「 散發者 」 會是相同的執行個體，和 「 訂閱者 」 會在個別的執行個體。
 
 > [!div class="checklist"]
 > * 啟用在 Linux 上的 SQL Server 複寫代理程式
@@ -38,7 +38,7 @@ ms.locfileid: "47669306"
 ## <a name="prerequisites"></a>先決條件  
 若要完成本教學課程中，您必須：
 
-- 2 個執行個體的 SQL Server 與 Linux 上的 SQL Server 的最新版本
+- Linux 上的 SQL Server 的最新版本的 SQL Server 兩個執行個體
 - 若要設定複寫，例如 SQLCMD 或 SSMS 的發出 T-SQL 查詢的工具
 
   請參閱[使用 SSMS 管理 SQL Server on Linux](./sql-server-linux-manage-ssms.md)。
@@ -50,15 +50,6 @@ ms.locfileid: "47669306"
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. 設定您的 SQL Server 執行個體的複寫執行下列預存程序參與 SQL Server 複寫每個 CTP1.5 執行個體的 msdb 資料庫中。
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. 建立範例資料庫和資料表在您的發行者建立範例資料庫和資料表做為發行集發行項。
@@ -282,7 +273,7 @@ ms.locfileid: "47669306"
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-在本教學課程中，您可以設定 SQL Server 快照式複寫在 Linux 上使用 2 個使用 Transact SQL 的 SQL Server 執行個體。
+在本教學課程中，您可以設定 SQL Server 快照式複寫在 Linux 上使用兩個使用 Transact SQL 的 SQL Server 執行個體。
 
 > [!div class="checklist"]
 > * 啟用在 Linux 上的 SQL Server 複寫代理程式

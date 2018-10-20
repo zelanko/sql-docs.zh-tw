@@ -16,12 +16,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129788"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461073"
 ---
 # <a name="contained-databases"></a>自主資料庫
   *「自主資料庫」* (Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體隔離的資料庫。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以四種方式協助使用者將其資料庫與執行個體隔離。  
@@ -34,7 +34,7 @@ ms.locfileid: "48129788"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境 (DMV、XEvent 等) 會報告內含項目資訊並對其作用。  
   
- 部分自主資料庫的某些功能，例如將中繼資料儲存在資料庫中，適用於所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。 部分自主資料庫的某些優點，例如資料庫層級驗證和目錄定序，必須先啟用才可供使用。 部分內含項目會使用啟用`CREATE DATABASE`並`ALTER DATABASE`陳述式或使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如需有關如何啟用部分資料庫內含項目的詳細資訊，請參閱＜ [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)＞。  
+ 部分自主資料庫的某些功能，例如將中繼資料儲存在資料庫中，適用於所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。 部分自主資料庫的某些優點，例如資料庫層級驗證和目錄定序，必須先啟用才可供使用。 部分內含項目是透過使用 `CREATE DATABASE` 和 `ALTER DATABASE` 陳述式或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來啟用。 如需有關如何啟用部分資料庫內含項目的詳細資訊，請參閱＜ [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)＞。  
   
  本主題包含下列各節。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48129788"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>搭配使用自主資料庫使用者與 AlwaysOn 的優點  
  透過減少與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的關聯，在使用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]時，部分自主資料庫在容錯移轉期間就很有用。  
   
- 建立包含的使用者可讓使用者直接連接到自主資料庫。 在高可用性和災害復原案例 (例如 AlwaysOn 方案) 中，這是非常重要的功能。 如果使用者是包含的使用者，萬一發生容錯移轉時，使用者無需在裝載次要副本的執行個體上建立登入，就能夠連接到次要副本。 這為使用者提供直接的好處。 如需詳細資訊，請參閱 < [AlwaysOn 可用性群組概觀&#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)和 [必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;] ((.../../ database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md）。  
+ 建立包含的使用者可讓使用者直接連接到自主資料庫。 在高可用性和災害復原案例 (例如 AlwaysOn 方案) 中，這是非常重要的功能。 如果使用者是包含的使用者，萬一發生容錯移轉時，使用者無需在裝載次要副本的執行個體上建立登入，就能夠連接到次要副本。 這為使用者提供直接的好處。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 和 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ### <a name="initial-database-development"></a>初始資料庫開發  
  因為開發人員可能不知道新資料庫的部署位置，所以限制資料庫的部署環境影響會減少開發人員的工作和顧慮。 在非自主模型中，開發人員必須據此考慮新資料庫和程式的可能環境影響。 但是，透過使用部分自主資料庫，開發人員可以偵測資料庫的執行個體層級影響以及開發人員的執行個體層級顧慮。  

@@ -16,12 +16,12 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b88d3ec75e73329f8de1e97f7b9936203e745946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062174"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460193"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合併聯結轉換來擴充資料集
   若要加入和設定「合併聯結」轉換，封裝必須已包含至少一個「資料流程」工作，及兩個為「合併聯結」轉換提供輸入的資料流程元件。  
@@ -62,9 +62,9 @@ ms.locfileid: "48062174"
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [合併聯結轉換](merge-join-transformation.md)   
+ [Merge Join Transformation](merge-join-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作] ((../../control-flow/data-flow-task.md)  
+ [資料流程工作](../../control-flow/data-flow-task.md)  
   
   

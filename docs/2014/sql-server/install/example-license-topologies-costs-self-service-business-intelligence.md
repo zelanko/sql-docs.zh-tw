@@ -11,15 +11,15 @@ ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e08f483f1f56dcab49391190fd1c6edc11f6db
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091398"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462054"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>SQL Server 2014 自助商業智慧的授權拓撲和成本範例
-  本主題說明如何針對選取的高層級考量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Business Intelligence 版或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition。 本主題包含數個內部部署 Microsoft 自助商業智慧 (BI) 拓撲的範例。 您可以利用這些範例所包含的版本和授權，在成本與效能之間取得最佳平衡。 本文提供的拓撲、伺服器數目和授權成本 **僅為範例**。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 Microsoft SharePoint 2013 導入了幾項授權變更，提供更多的選項讓您選擇伺服器、使用者和裝置的授權方式。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 授權支援相同的商業智慧相關案例。  
+  本主題說明在選擇 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence 版或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版時的進階考量。 本主題包含數個內部部署 Microsoft 自助商業智慧 (BI) 拓撲的範例。 您可以利用這些範例所包含的版本和授權，在成本與效能之間取得最佳平衡。 本文提供的拓撲、伺服器數目和授權成本 **僅為範例**。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 Microsoft SharePoint 2013 導入了幾項授權變更，提供更多的選項讓您選擇伺服器、使用者和裝置的授權方式。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 授權支援相同的商業智慧相關案例。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 隨附於 Business Intelligence 版，它針對某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本提供每個核心的授權方式。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48091398"
   
 -   瀏覽器中的互動式 PowerPivot 活頁簿。  
   
--   互動式[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]SharePoint 中的報表。  
+-   SharePoint 中的互動式 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理、管理儀表板。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48091398"
   
 -   SQL Server BI 版本同時使用伺服器授權和用戶端存取授權 (CAL)。  
   
--   CAL 授權是以連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每一個使用者或裝置來計算，而不論所連接的伺服器數目。  
+-   CAL 授權是以連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每一個使用者或裝置來計算，而不論所連接的伺服器數目。  
   
 -   核心授權則要求伺服器中的所有核心都由一個授權涵蓋。 伺服器中的每個實體處理器至少需要 **四** 個核心授權。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48091398"
 |Business Intelligence|**(是)** $8592 + $199 (每個 CAL)|不適用|  
 |Standard|**(Yes)**|**(Yes)**|  
   
- 如需有關範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]授權價格資訊，請參閱：  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授權價格範例的詳細資訊，請參閱：  
   
 -   [授權適用於虛擬環境](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx)(http://www.microsoft.com/licensing/about-licensing/virtualization.aspx)。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48091398"
   
  因為部署範例全部都是內部網路環境，因此需要 SharePoint CAL 授權。  
   
--   [SharePoint 完整授權清單](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise)(http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise)。  
+-   [SharePoint 完整授權清單](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise)(http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise)。  
   
--   [如何購買 SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx)。  
+-   [如何購買 SharePoint](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx)。  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> 3 層拓撲使用不同[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服器  
  此範例將說明在 800 個或更少的使用者環境下，針對 SharePoint 應用程式伺服器和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 伺服器來使用 SQL Server BI 版是成本最低的方案。 不過，如果有 800 個以上的使用者，SQL Server Enterprise 版的成本會比較低。 核心授權與使用者數目無關，因此當您比較核心和 CAL 授權成本以及使用者數目的增長時，就會有一個成本臨界點。 從臨界點向上推，Enterprise 版會是成本最低的方案。 若要判斷成本臨界值，請將需要購買授權的核心數目以及需要購買授權的使用者或裝置 CAL 數目所計算而得的成本做個比較。  
@@ -158,7 +158,7 @@ ms.locfileid: "48091398"
   
 -   PowerPivot 模式 (2) 執行伺服器陣列外部的 analysis Services，但 PowerPivot 執行**相同的實體上**在另一個應用程式角色的伺服器。  
   
--   資料庫角色 (3) 會使用 SQL Server Enterprise 以便[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能，AlwaysOn 可用性群組。  
+-   資料庫角色 (3) 會使用 SQL Server Enterprise，這樣就可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能：AlwaysOn 可用性群組。  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   

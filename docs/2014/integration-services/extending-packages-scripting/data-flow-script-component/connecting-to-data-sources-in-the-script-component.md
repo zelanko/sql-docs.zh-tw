@@ -14,17 +14,17 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44f21359f5d35661115582ffc76a00365d2fe8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2943855784fccd869124a3dad1bc2dc72f6a8cf6
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215858"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460643"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>連接到指令碼元件中的資料來源
   連接管理員只是一種便利的單位，用以封裝和儲存連接至特定類型的資料來源所需的資訊。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../connection-manager/integration-services-ssis-connections.md)。  
   
- 您可以在 [指令碼轉換編輯器] 的 [連線管理員] 頁面上，按一下 [加入] 與 [移除] 按鈕，讓來源或目的地元件中的自訂指令碼可以存取現有的連線管理員。 不過，您必須撰寫自己的自訂程式碼，以載入或是儲存資料，以及 (可能的話) 開啟和關閉連至資料來源的連接。 如需詳細資訊**連接管理員**頁**指令碼轉換編輯器**，請參閱 [設定指令碼元件在指令碼元件編輯器] （(configuring-the-script-component-in-the-script-component-editor.md) 和[指令碼轉換編輯器&#40;連線管理員頁面&#41;](../../script-transformation-editor-connection-managers-page.md)。  
+ 您可以在 [指令碼轉換編輯器] 的 [連線管理員] 頁面上，按一下 [加入] 與 [移除] 按鈕，讓來源或目的地元件中的自訂指令碼可以存取現有的連線管理員。 不過，您必須撰寫自己的自訂程式碼，以載入或是儲存資料，以及 (可能的話) 開啟和關閉連至資料來源的連接。 如需 [指令碼轉換編輯器] 之 [連線管理員] 頁面的詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)和[指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../script-transformation-editor-connection-managers-page.md)。  
   
  指令碼元件會建立 `Connections` 專案項目中的 `ComponentWrapper` 集合類別，它含有每個連接管理員之強式類型存取子，具有與連接管理員本身相同的名稱。 此集合是透過 `Connections` 類別的 `ScriptMain` 屬性來公開。 存取子屬性會傳回連接管理員的參考，以做為 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> 的執行個體。 例如，如果您已在對話方塊的 [連接管理員] 頁面中加入名為 `MyADONETConnection` 的連接管理員，就可以加入下列程式碼，取得指令碼中該連接管理員的參考：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48215858"
   
  如需如何透過指令碼元件使用連線管理員的詳細資訊，請參閱[以指令碼元件建立來源](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)和[以指令碼元件建立目的地](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 連線](../../connection-manager/integration-services-ssis-connections.md)   

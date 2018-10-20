@@ -4,18 +4,18 @@ description: 安裝、 更新及解除安裝 Linux 上的 SQL Server。 本文�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/06/2018
+ms.date: 04/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 12583e17ecd37fa61b1f8d7a327e44fb8987d1eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f277ca5984523ea25a0a7a8f02cde025d6e14789
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646196"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419383"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安裝指引
 

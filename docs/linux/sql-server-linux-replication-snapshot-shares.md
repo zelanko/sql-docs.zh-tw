@@ -6,19 +6,18 @@ ms.author: mikeray
 manager: craigg
 ms.date: 9/24/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3dbef02b9630e73a5cdb19fcdeeb782b223ad204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32333836b8802198d59e4d978a5de625f2b8e3d
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658622"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355959"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>設定透過共用的複寫快照集資料夾
 

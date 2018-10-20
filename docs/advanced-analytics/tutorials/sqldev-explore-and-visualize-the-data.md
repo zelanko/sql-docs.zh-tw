@@ -1,21 +1,21 @@
 ---
-title: 課程 3 的瀏覽和使用 R 和 T-SQL (SQL Server Machine Learning) 將資料視覺化 |Microsoft Docs
+title: 課程 1 的瀏覽和使用 R 和 T-SQL (SQL Server Machine Learning) 將資料視覺化 |Microsoft Docs
 description: 教學課程示範如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798586"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461984"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 課： 瀏覽及視覺化資料
+# <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課： 瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
@@ -279,8 +279,8 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>下一課
 
-[第 3 課： 建立使用 T-SQL 的資料特徵](sqldev-create-data-features-using-t-sql.md)
+[第 2 課： 建立使用 T-SQL 的資料特徵](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[NYC 計程車示範資料的第 1 課： 設定](sqldev-download-the-sample-data.md)
+[NYC 計程車示範資料集](demo-data-nyctaxi-in-sql.md)

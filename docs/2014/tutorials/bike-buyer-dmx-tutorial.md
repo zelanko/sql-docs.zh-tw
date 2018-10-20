@@ -1,7 +1,7 @@
 ---
 title: Bike Buyer DMX 教學課程 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074958"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462014"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、培訓和探索採礦模型。 您將使用這些採礦模型來建立預測，以判斷客戶是否要購買自行車。  
@@ -69,7 +69,7 @@ ms.locfileid: "48074958"
  ALTER MINING STRUCTURE  
  使用此陳述式將採礦模型加入已存在於伺服器上的採礦結構中。 如果您想要建立包含數個不同採礦模型的採礦結構，則此陳述式很有幫助。 您要在單一採礦結構中加入不止一個採礦模型，有幾個原因。 例如，您可以建立數個使用不同演算法的採礦模型，看看哪一個最好用。 您可以建立數個使用相同演算法的採礦模型，但每一個採礦模型要設定不同的參數，以找出參數的最佳設定。  
   
- 如需詳細資訊，請參閱 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)。  
+ 如需詳細資訊，請參閱 < [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)。  
   
  因為您要建立包含數個採礦模型的採礦結構，所以您將使用此教學課程的第二個方法。  
   

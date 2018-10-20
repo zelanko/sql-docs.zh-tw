@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621026"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336247"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47621026"
 3.  透過指定新的資料類型，更改來源資料表。 然後，資料類型變更就會成功地傳播至變更資料表。  
   
 ## <a name="data-manipulation-language-modifications"></a>資料操作語言修改  
- 在啟用異動資料擷取的來源資料表上執行插入、更新和刪除作業時，這些 DML 作業的記錄就會顯示在資料庫交易記錄中。 異動資料擷取的擷取處理序會從交易記錄中擷取這些變更的相關資訊，然後將一或兩個資料列加入至變更資料表，以便記錄變更。 雖然變更資料表項目的認可通常必須針對一組變更而非單一項目執行，不過將項目加入至變更資料表的順序會與來源資料表認可這些項目的順序相同。  
+ 在啟用異動資料擷取的來源資料表上執行插入、更新和刪除作業時，這些 DML 作業的記錄就會顯示在資料庫交易記錄中。 異動資料擷取程序從交易記錄檔中，擷取這些變更的相關資訊，並將一或兩個資料列加入至變更資料表，以便記錄變更。 雖然變更資料表項目的認可通常必須針對一組變更而非單一項目執行，不過將項目加入至變更資料表的順序會與來源資料表認可這些項目的順序相同。  
   
  變更資料表項目內 **__ $start_lsn**資料行用來記錄與來源資料表變更相關聯的 LSN 的認可和 **__ $seqval 資料行**用來排序內變更它的異動。 這些中繼資料資料行可一起用來確保來源變更的認可順序會保留下來。 由於擷取處理序會從交易記錄中取得其變更資訊，因此請務必注意，變更資料表項目不會以同步方式隨著其對應的來源資料表變更顯示。 不過，當擷取處理序已經處理來自交易記錄的相關變更項目之後，對應的變更會以非同步方式顯示。  
   

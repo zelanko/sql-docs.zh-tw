@@ -22,16 +22,15 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1966c4de240c97cabad59e6e48f678c8ee00f5f8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5f17f628a739d0db63278097fe864d56fcfb808e
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071682"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383440"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 如需舊版 SQL Server 相關的內容，請參閱[安裝 SQL Server Native Client](installing-sql-server-native-client.md)。
 
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

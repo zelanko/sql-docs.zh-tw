@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232562"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462004"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程： 在 SQL Server 上的 R 中建立分割區為基礎的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "48232562"
 
 + T-SQL 的工具執行查詢，例如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，您可以[下載並還原](sqldev-download-the-sample-data.md)至您的本機資料庫引擎執行個體。 檔案大小大約是 90 MB。
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，您可以[下載並還原](demo-data-nyctaxi-in-sql.md)至您的本機資料庫引擎執行個體。 檔案大小大約是 90 MB。
 
 + SQL Server 2019 預覽資料庫引擎執行個體，與機器學習服務和 R 的整合。
 
@@ -64,7 +64,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>連接到資料庫
 
-啟動 Management Studio 並連接到 database engine 執行個體。 在 [物件總管] 中，確認[NYCTaxi_Sample 資料庫](sqldev-download-the-sample-data.md)存在。 
+啟動 Management Studio 並連接到 database engine 執行個體。 在 [物件總管] 中，確認[NYCTaxi_Sample 資料庫](demo-data-nyctaxi-in-sql.md)存在。 
 
 ## <a name="create-calculatedistance"></a>建立 CalculateDistance
 

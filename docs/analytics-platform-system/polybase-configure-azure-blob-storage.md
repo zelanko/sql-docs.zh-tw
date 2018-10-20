@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 09bac30e30a6549dd572b8594e5efeec6473ef2a
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450338"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460629"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 以存取 Azure Blob 儲存體中的外部資料
 
@@ -179,7 +179,5 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>後續步驟
 
-探索更多使用與下列文章中監視 PolyBase 方式：
-
-[使用 PolyBase 的型別對應](../relational-databases/polybase/polybase-type-mapping.md)。  
+如需有關 PolyBase 的詳細資訊，請參閱 <<c0> [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
 

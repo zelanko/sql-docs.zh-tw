@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083878"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460923"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>在量值群組內定義維度資料粒度
   使用者希望維度事實資料基於不同的用途有不同的資料粒度或具體性。 例如可能記錄每一天轉售商的銷售資料或網際網路銷售，但銷售配額資訊可能只有當月或當季才有。 在這些案例中，使用者希望時間維度對每一個不同的事實資料表有不同的資料粒度或詳細層級。 雖然您能夠以這種不同的資料粒度將新資料庫維度定義為時間維度，但有更容易的方法，就是使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
@@ -221,11 +221,11 @@ ms.locfileid: "48083878"
      ![銷售配額量值群組已正確建立維度](../../2014/tutorials/media/l5-granularity-7.gif "已正確建立維度的銷售配額量值群組")  
   
 ## <a name="next-lesson"></a>下一課  
- [第 6 課： 定義計算] ((課-6-定義-calculations.md)  
+ [第 6 課：定義計算](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定義一般關聯性及一般關聯性屬性](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [在 資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

@@ -4,17 +4,17 @@ description: 本文章提供有關 SQL Server 常見問題的解答，在 Linux 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/24/2018
+ms.date: 07/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851843"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419353"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (Faq)
 
@@ -69,6 +69,22 @@ ms.locfileid: "48851843"
 1. **我可以在 Linux 上執行自動的安裝的 SQL Server？**
 
    是的。 如需自動安裝的討論，請參閱 <<c0> [ 在 Linux 上的 SQL Server 的安裝指引](sql-server-linux-setup.md#unattended)。 請參閱範例指令碼，如[Red Hat](sample-unattended-install-redhat.md)， [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)，並[Ubuntu](sample-unattended-install-ubuntu.md)。 您也可以檢閱[這個範例指令碼](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)SQL Server 客戶諮詢小組所建立。
+
+1. **我已購買時，我有選擇哪些版本的 SQL Server 應該？**
+
+   當您執行 mssql conf 安裝程式會提供這些選項：  
+   `Choose an edition of SQL Server:` <br>
+`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
+`     2. Developer (free, no production use rights)` <br>
+`     3. Express (free)` <br>
+`     4. Web (PAID)` <br>
+`     5. Standard (PAID)` <br>
+`     6. Enterprise (PAID)` <br>
+`     7. Enterprise Core (PAID)` <br>
+`     8. I bought a license through a retail sales channel and have a product key to enter.`
+     
+   如果您已取得您透過大量授權 Enterprise 合約的一部分，或透過您的 MSDN 訂閱的授權，您需要選取 4 到 7。 如果您已購買透過零售通路的 Standard edition，您需要選取 8。 
+
 
 ## <a name="tools"></a>工具
 

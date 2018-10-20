@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 651e529bf0aa4cd4b4fab7e292e570dbb78e89d5
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724302"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461884"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>教學課程： 了解在 SQL Server 中使用 R 的資料庫內分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,21 +26,21 @@ ms.locfileid: "44724302"
 > 
 > 在 Python 中使用相同的方案。 需要 SQL Server 2017。 請參閱[資料庫內分析適用於 Python 開發人員](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 
 通常建置端對端解決方案的程序包含取得和清除資料、 資料探索和特徵工程、 模型定型和微調，和最後在生產環境中將模型部署。 實際的程式碼的開發和測試是最適合執行使用專用的開發環境。 針對 R，這可能表示 RStudio 或[!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)]。
 
 不過，建立解決方案之後，您可以在熟悉的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 輕鬆地將它部署至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
-- [NYC 計程車示範資料的第 1 課： 設定](../tutorials/sqldev-download-the-sample-data.md)
+- [將 NYC 計程車資料庫設定](demo-data-nyctaxi-in-sql.md)
 
-- [第 2 課： 探索和視覺化 預存程序呼叫 R 函式的 資料圖形和散發](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [第 1 課： 探索和視覺化 預存程序呼叫 R 函式的 資料圖形和散發](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [第 3 課： 建立在 T-SQL 函式中使用 R 的資料特徵](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [第 2 課： 建立在 T-SQL 函式中使用 R 的資料特徵](sqldev-create-data-features-using-t-sql.md)
   
-- [第 4 課： 訓練及儲存使用函式和預存程序的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [第 3 課： 訓練及儲存使用函式和預存程序的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [第 5 課： 運算化的預存程序中的換行 R 程式碼](../tutorials/sqldev-operationalize-the-model.md)。 
+- [第 4 課： 運算化的預存程序中的換行 R 程式碼](../tutorials/sqldev-operationalize-the-model.md)。 
   將模型儲存至資料庫之後，使用預存程序從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 呼叫要預測的模型。
 
 ## <a name="prerequisites"></a>先決條件
@@ -60,4 +60,4 @@ ms.locfileid: "44724302"
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [第 1 課︰ 下載範例資料](../tutorials/sqldev-download-the-sample-data.md)
+> [將 NYC 計程車資料庫設定](demo-data-nyctaxi-in-sql.md)

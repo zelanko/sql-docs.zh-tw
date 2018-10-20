@@ -1,46 +1,46 @@
 ---
-title: 課程 4 請建立資料功能使用 T-SQL 函式 （SQL Server 機器學習） |Microsoft 文件
-description: 教學課程顯示如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
+title: 課程 2 建立的資料功能，使用 T-SQL 函式 （SQL Server 機器學習服務） |Microsoft Docs
+description: 教學課程示範如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249541"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462094"
 ---
-# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>第 4 課： 建立使用 R 和 T-SQL 資料功能
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 課： 建立使用 R 和 T-SQL 的資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
 
 在此步驟中，您將了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數，從原始資料建立特徵。 接著您將從預存程序呼叫該函數，以建立包含特徵值的資料表。
 
-## <a name="about-feature-engineering"></a>關於特徵設計
+## <a name="about-feature-engineering"></a>關於特徵工程設計
 
-瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」。 這個程序的建立有意義的功能，從原始資料是在建立分析模型的重要步驟。
+瀏覽資料幾回合之後，您已從資料收集一些深入資訊，並準備好繼續進行「特徵工程」。 此程序，從未經處理的資料建立有意義的功能是建立分析模型的重要步驟。
 
-這個資料集，距離值為基礎的報告計量表距離，並不必然表示地理距離或旅行的實際距離。 因此，您必須使用來源紐約市計程車資料集中可用的座標，來計算上車和下車點之間的直線距離。 您可以使用自訂 [函數中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 公式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來執行這項運算。
+在此資料集中，距離值會根據報告的計量表距離，並不一定代表地理距離或行車實際距離。 因此，您必須使用來源紐約市計程車資料集中可用的座標，來計算上車和下車點之間的直線距離。 您可以使用自訂 [函數中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 公式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來執行這項運算。
 
 您將會使用一個自訂 T-SQL 函數 _fnCalculateDistance_，透過 Haversine 公式來計算距離，並使用第二個自訂 T-SQL 函數 _fnEngineerFeatures_，建立包含所有特徵的資料表。
 
 整個程序如下所示：
 
-- 建立執行計算的 T-SQL 函式
+- 建立會執行計算的 T-SQL 函式
 
-- 呼叫產生功能資料函式
+- 呼叫函數來產生功能資料
 
-- 儲存功能資料的資料表
+- 功能資料儲存至資料表
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>計算使用 fnCalculateDistance 的旅行距離
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>計算使用 fnCalculateDistance 車程距離
 
-此函式_fnCalculateDistance_應該下載並註冊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的準備工作，在此教學課程的一部分。 花點時間檢閱程式碼。
+此函式_fnCalculateDistance_應該下載並向[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]準備本教學課程的過程。 花點時間檢閱程式碼。
   
 1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。   
 
@@ -76,7 +76,7 @@ ms.locfileid: "35249541"
 
 ## <a name="generate-the-features-using-fnengineerfeatures"></a>產生使用的功能_fnEngineerFeatures_
 
-若要將計算的值加入至資料表可以用來定型模型，您將使用另一個函式， _fnEngineerFeatures_。 新的函式會呼叫先前建立的 T-SQL 函式， _fnCalculateDistance_，以取得收取和下車位置之間的直接距離。 
+若要新增的計算的值可用來定型模型的資料表，您將使用另一個函式， _fnEngineerFeatures_。 新的函式會呼叫先前建立的 T-SQL 函數_fnCalculateDistance_，以取得上車和下車位置之間的直線距離。 
 
 1. 請花幾分鐘檢閱自訂 T-SQL 函數 _fnEngineerFeatures_的程式碼，在進行本逐步解說的準備工作時，應該已為您建立此函數。
   
@@ -104,11 +104,11 @@ ms.locfileid: "35249541"
     GO
     ```
 
-    + 這個資料表值函式會使用多個資料行做為輸入，並輸出包含多個特徵資料行的資料表。
+    + 此資料表值函式會採用多個資料行做為輸入，並將輸出具有多個特徵資料行的資料表。
 
-    + 此函式的目的是建立新功能，用於建立模型。
+    + 此函式的目的是要建立新的功能，用於建立模型。
 
-2.  若要確認此函式運作方式，使用它來計算這些往返的計量付費的距離為 0，但收取和下車位置是不同之地理距離。
+2.  若要確認此函式運作方式，使用它來計算這些車程，其中的計量付費的距離為 0，但上車和下車位置不同的地理距離。
   
     ```SQL
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -119,12 +119,12 @@ ms.locfileid: "35249541"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    如您所見，計量表回報的距離不一定會對應到地理距離。 這就是特徵工程之所以很重要的原因。 您可以使用這些提升的資料的功能來定型使用 r 的機器學習模型
+    如您所見，計量表回報的距離不一定會對應到地理距離。 這就是特徵工程之所以很重要的原因。 您可以使用這些改進的資料功能來定型機器學習模型，使用。
 
 ## <a name="next-lesson"></a>下一課
 
-[第 5 課： 定型和儲存模型，使用 T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[第 3 課： 訓練及儲存模型，使用 T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[第 3 課： 探索和視覺化的資料，使用 R 和預存程序](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[第 1 課： 探索和使用 R 和預存程序將資料視覺化](sqldev-explore-and-visualize-the-data.md)

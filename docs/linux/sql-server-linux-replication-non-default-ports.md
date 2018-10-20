@@ -6,19 +6,17 @@ ms.author: mikeray
 manager: craigg
 ms.date: 9/24/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod: sql
+ms.technology: linux
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dae79e05ff7f92e9e93543fd3540b5a2b019e255
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21a1ec20733c0f6a5ad05444a65c7df59257b683
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850096"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356129"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>使用非預設連接埠設定複寫
 

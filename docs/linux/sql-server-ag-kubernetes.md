@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cc5a96fd5efc4a2eb0e45a3034d17e98ae3c7172
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251962"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356449"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On 可用性群組的 SQL Server 容器
 
@@ -70,7 +70,7 @@ StatfulSet 包含：
 
 * mssql ha-監督員容器
 
-運算子、 HA 監督員和 SQL Server 的程式碼封裝在 Docker 映像呼叫`mcr.microsoft.com/mssql/ha`。 此映像包含下列二進位檔：
+運算子、 HA 監督員和 SQL Server 的程式碼封裝在 Docker 映像呼叫`mcr.microsoft.com/mssql/ha`。 此映像會包含下列二進位檔：
 
 * `mssql-operator`
 

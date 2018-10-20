@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 3d4a2786a795b20e9c2f943824027859230b2c85
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878101"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460463"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>部署 SQL Server Always On 可用性群組上的 Kubernetes 叢集
 
@@ -109,7 +109,7 @@ ms.locfileid: "48878101"
 
 ### <a name="monitor-the-deployment"></a>監視部署
 
-您可以使用[Kubernetes 儀表板與 Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard)來監視部署。
+您可以使用[Kubernetes 儀表板與 Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)來監視部署。
 
 使用`az aks browse`啟動儀表板。 
 

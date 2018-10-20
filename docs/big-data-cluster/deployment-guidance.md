@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: f998c9f9df91f08d3a4e1877942b901ae5d96aeb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877891"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460653"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>如何部署在 Kubernetes 上的 SQL Server 的巨量資料叢集
 
@@ -47,6 +47,9 @@ SQL Server 的巨量資料叢集需要最小 v1.10 版本，如 Kubernetes、 �
 
    - [設定 Minikube](deploy-on-minikube.md)
    - [設定 Azure Kubernetes Service 上的 Kubernetes](deploy-on-aks.md)
+   
+> [!TIP]
+> 部署 AKS 和 SQL Server 的巨量資料叢集的範例 python 指令碼，請參閱[部署巨量資料叢集的 Azure Kubernetes Service (AKS) 上的 SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
 
 ## <a id="deploy"></a> 部署 SQL Server 的巨量資料叢集
 
@@ -108,8 +111,8 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 | **CONTROLLER_PASSWORD** | 是 | 不適用 | 針對叢集系統管理員密碼。 |
 | **KNOX_PASSWORD** | 是 | 不適用 | Knox 使用者的密碼。 |
 | **MSSQL_SA_PASSWORD** | 是 | 不適用 | 密碼的程式的 SQL 主要執行個體的 SA 使用者。 |
-| **USE_PERSISTENT_VOLUME** | 否 | true | `true` 若要使用 Kubernetes 永續性磁碟區宣告 pod 儲存體。  `false` 要用於 pod 儲存體中的暫時主機儲存體。 請參閱[資料持續性](concept-data-persistence.md)如需詳細資訊。 |
-| **STORAGE_CLASS_NAME** | 否 | 預設 | 如果`USE_PERSISTENT_VOLUME`是`true`這表示 Kubernetes 儲存體類別使用的名稱。 請參閱[資料持續性](concept-data-persistence.md)如需詳細資訊。 |
+| **USE_PERSISTENT_VOLUME** | 否 | true | `true` 若要使用 Kubernetes 永續性磁碟區宣告 pod 儲存體。  `false` 要用於 pod 儲存體中的暫時主機儲存體。 請參閱[資料持續性](concept-data-persistence.md)如需詳細資訊。 如果您部署在 minikube 叢集化巨量資料的 SQL Server 和 USE_PERSISTENT_VOLUME = true，您必須設定的值`STORAGE_CLASS_NAME=standard`。 |
+| **STORAGE_CLASS_NAME** | 否 | 預設 | 如果`USE_PERSISTENT_VOLUME`是`true`這表示 Kubernetes 儲存體類別使用的名稱。 請參閱[資料持續性](concept-data-persistence.md)如需詳細資訊。 請注意，如果您部署在 minikube 叢集化巨量資料的 SQL Server 時，預設儲存體類別名稱不同，且您必須藉由設定覆寫它`STORAGE_CLASS_NAME=standard`。 |
 | **MASTER_SQL_PORT** | 否 | 31433 | 主要的 SQL 執行個體接聽公用網路的 TCP/IP 通訊埠。 |
 | **KNOX_PORT** | 否 | 30443 | 公用網路的 Apache Knox 接聽的 TCP/IP 通訊埠。 |
 | **GRAFANA_PORT** | 否 | 30888 | 公用網路的 Grafana 監視應用程式會接聽 TCP/IP 通訊埠。 |
@@ -122,7 +125,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 >1. 適用於內部部署叢集 kubeadm，環境變數的值以建置`CLUSTER_PLATFORM`是`kubernetes`。 也，當 USE_PERSISTENT_STORAGE = true 時，您必須預先佈建 Kubernetes 儲存體類別，並將它傳遞到使用 STORAGE_CLASS_NAME。
 >1. 請確定您將包裝密碼雙引號括住，如果它包含任何特殊字元。 您可以設定 MSSQL_SA_PASSWORD 為任何您喜歡，但請確定它們已夠複雜，而且不使用`!`，`&`或`‘`字元。 請注意，雙引號括住分隔符號僅適用於 bash 命令。
 >1. 您名稱必須是叢集的只有大小寫英數字元，不含空格。 所有 Kubernetes 成品容器、 pod，具狀態設定 （服務） 叢集將會都建立與叢集名稱相同的命名空間中指定的名稱。
->1. **SA**帳戶是在安裝期間建立的 SQL Server Master 執行個體上的系統管理員。 建立您的 SQL Server 容器，您所指定的 MSSQL_SA_PASSWORD 環境變數設定為可探索執行後回應在容器中的 $MSSQL_SA_PASSWORD。 基於安全考量，變更您的 SA 密碼，根據所述的最佳作法[此處](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
+>1. **SA**帳戶是在安裝期間建立的 SQL Server Master 執行個體上的系統管理員。 建立您的 SQL Server 容器，您所指定的 MSSQL_SA_PASSWORD 環境變數設定為可探索執行後回應在容器中的 $MSSQL_SA_PASSWORD。 基於安全考量，變更您的 SA 密碼，根據所述的最佳作法[此處](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
 
 設定環境變數所需的部署 Aris 不同取決於您使用 Windows 或 Linux 用戶端的叢集。  選擇執行下列步驟根據哪一個作業系統使用。
 
@@ -149,6 +152,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+在 minikube，如果 USE_PERSISTENT_VOLUME = true （預設值），您也必須覆寫 STORAGE_CLASS_NAME 環境變數的預設值：
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+或者，您可以使用永續性磁碟區上 minikube 不要顯示：
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### <a name="linux"></a>Linux
 
 初始化下列環境變數：
@@ -170,6 +182,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+在 minikube，如果 USE_PERSISTENT_VOLUME = true （預設值），您也必須覆寫 STORAGE_CLASS_NAME 環境變數的預設值：
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+或者，您可以使用永續性磁碟區上 minikube 不要顯示：
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## <a name="deploy-sql-server-big-data-cluster"></a>部署 SQL Server 的巨量資料叢集
 
 建立叢集 API 用來初始化 Kubernetes 命名空間，並部署到命名空間的所有應用程式 pod。 若要部署 Kubernetes 叢集上的 SQL Server 的巨量資料叢集，請執行下列命令：

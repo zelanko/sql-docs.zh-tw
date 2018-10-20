@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054311"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460293"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
   若要加入及設定「衍生的資料行」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -60,11 +60,11 @@ ms.locfileid: "48054311"
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [在衍生的資料行轉換](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services 資料類型](../integration-services-data-types.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作] ((../../control-flow/data-flow-task.md)   
+ [資料流程工作](../../control-flow/data-flow-task.md)   
  [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)  
   
   

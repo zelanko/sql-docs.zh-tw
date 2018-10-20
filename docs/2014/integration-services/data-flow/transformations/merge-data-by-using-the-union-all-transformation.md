@@ -17,12 +17,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a2225e9d504cd019016c1ff8cffb742112aeecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134724"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460363"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
   若要加入及設定「聯集全部」轉換，封裝必須已包括至少一個「資料流程」工作與兩個資料來源。  
@@ -56,9 +56,9 @@ ms.locfileid: "48134724"
 9. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [聯集全部轉換](union-all-transformation.md)   
+ [Union All Transformation](union-all-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作] ((../../control-flow/data-flow-task.md)  
+ [資料流程工作](../../control-flow/data-flow-task.md)  
   
   

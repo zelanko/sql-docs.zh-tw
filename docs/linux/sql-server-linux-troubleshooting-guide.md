@@ -4,18 +4,18 @@ description: 在 Linux 上使用 SQL Server 提供疑難排解提示。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/30/2018
+ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 5adbd3cb58791fc38d534a64d1a76ab2e329c1bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610495"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419263"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 

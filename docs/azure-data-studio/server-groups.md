@@ -4,18 +4,18 @@ description: 深入了解 Azure Data Studio 中的伺服器群組。
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 592064e0392f586111ca2a3f0bcabff557cc2926
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233f4579860bef97a641460752544b8e1042e700
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038031"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356559"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>中的伺服器群組 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

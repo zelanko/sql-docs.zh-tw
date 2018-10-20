@@ -15,12 +15,12 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa23f7b520fd224323122f7f3674bbafd25eb53c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f120b4c582be95662a889ab1ee003faae37cdafb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069158"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460622"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>使用資料轉換將資料轉換至不同的資料類型
   若要加入及設定「資料轉換」，封裝必須已包含至少一個「資料流程」工作及一個來源。  
@@ -55,10 +55,10 @@ ms.locfileid: "48069158"
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料轉換](data-conversion-transformation.md)   
+ [Data Conversion Transformation](data-conversion-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
  [Integration Services 資料類型](../integration-services-data-types.md)   
- [資料流程工作] ((../../control-flow/data-flow-task.md)  
+ [資料流程工作](../../control-flow/data-flow-task.md)  
   
   

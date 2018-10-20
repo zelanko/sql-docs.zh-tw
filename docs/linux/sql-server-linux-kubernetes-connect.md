@@ -10,33 +10,32 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6092f15fe64c96ed004d352408ae6cdac034def9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852156"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356099"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>連接到 SQL Server Always On 可用性群組在 Kubernetes 上
 
-若要連線到 Kubernetes 叢集上的容器中的 SQL Server 執行個體，建立[負載平衡器服務](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 負載平衡器會將轉送到執行 SQL Server 執行個體的 pod 的 IP 位址的要求。
+若要連線到 Kubernetes 叢集上的容器中的 SQL Server 執行個體，建立[負載平衡器服務](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 負載平衡器端點。 它會保留的 IP 位址，並轉送到執行 SQL Server 執行個體的 pod 的 IP 位址的要求。
 
-若要連接到可用性群組複本，建立不同的複本類型的服務。 您可以看到服務中的複本不同類型的範例[sql server 範例](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml)。
+若要連接到可用性群組複本，建立不同的複本類型的服務。 您可以看到服務中的複本不同類型的範例[sql-server-範例/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)。
 
 * `ag1-primary` 指向主要複本。
-* `ag1-secondary-sync` 要同步的次要複本的點。
-* `ag1-secondary-async` 以非同步的次要複本的點。
+* `ag1-secondary` 指向任何次要複本。
 
-有相同類型的多個次要複本時，Kubernetes 會將您的連線路由到不同的複本，以循環配置資源的方式。
+如果多個有一個次要複本，Kubernetes 會將您的連線路由到不同的複本，以循環配置資源的方式。
 
 ## <a name="create-a-load-balancer-service"></a>建立負載平衡器服務
 
-若要建立主要複本的負載平衡器服務，請將複製`ag1-primary.yaml`從[sql server 範例]()並更新您的可用性群組。
+若要建立的主要和複本的負載平衡器服務，請將複製[ `ag1-services.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml)從[sql server 範例](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file)並更新您的可用性群組。
 
-下列命令適用於您的叢集.yaml 檔案：
+下列命令會將組態從`.yaml`到叢集的檔案：
 
 ```kubectl
-kubectl apply -f ag1-primary.yaml
+kubectl apply -f ag1-services.yaml --namespace ag1
 ```
 
 ## <a name="get-the-ip-address-for-your-load-balancer-service"></a>取得您的負載平衡器服務的 IP 位址

@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210928"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461904"
 ---
 # <a name="market-basket-dmx-tutorial"></a>購物籃 DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、定型和探索採礦模型。 您將使用這些採礦模型來建立預測，說明哪些產品有可能同時被購買。  
@@ -76,7 +76,7 @@ ms.locfileid: "48210928"
   
  您要在單一採礦結構中加入不止一個採礦模型，有幾個原因。 例如，您可以使用不同演算法來建立數個採礦模型，看看哪一個最好用。 或者，您也可以建立數個使用相同演算法的採礦模型，但每一個採礦模型要設定不同的參數，以找出該參數的最佳設定。  
   
- 如需詳細資訊，請參閱 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)。  
+ 如需詳細資訊，請參閱 < [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)。  
   
  因為您要建立包含數個採礦模型的採礦結構，所以您將使用此教學課程的第二個方法。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48210928"
   
 ## <a name="see-also"></a>另請參閱  
  [Bike Buyer DMX 教學課程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -15,20 +15,20 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122398"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460693"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>對全文檢索搜尋的重大變更
   本主題描述全文檢索搜尋的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>全文檢索搜尋的突破性變更 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 全文檢索搜尋的重大變更  
  將於日後提供資訊。  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>全文檢索搜尋的突破性變更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 全文檢索搜尋的重大變更  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>sys.fulltext_languages 中之名稱資料行的定序已變更  
  目錄檢視 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) 中的語言**名稱**資料行定序，已從資源資料庫的固定定序，變更為針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體選取的預設定序。 當您聯結 [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 檢視與 **sys.fulltext_languages** 時，此項變更讓您可以比較**名稱**資料行中的值。 例如，您可以查詢預設全文檢索語言與預設資料庫語言不同的所有資料庫。  
@@ -59,6 +59,6 @@ ms.locfileid: "48122398"
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋的行為變更](../relational-databases/search/full-text-search.md)   
- [全文檢索搜尋] ((../ relational-databases/search/full-text-search.md)  
+ [全文檢索搜尋](../relational-databases/search/full-text-search.md)  
   
   

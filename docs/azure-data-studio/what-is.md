@@ -4,24 +4,24 @@ description: Azure Data Studio 是免費、 輕量級工具，可用於管理 SQ
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93e1eae9c920a06f24d19a3f2757a7afaa7ca968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038051"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356529"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什麼是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 
 Azure Data Studio 是跨平台資料庫工具，供資料專業人員使用 Microsoft 家族的內部部署和雲端資料平台，在 Windows、 MacOS 和 Linux 上的。
 
-先前的預覽名稱 SQL Operations Studio 發行，Azure Data Studio 提供 Intellisense、 程式碼片段、 原始檔控制整合和整合式終端機使用現代的編輯器體驗。 它是設計成可與資料平台使用者記住，與內建的查詢結果集和可自訂的儀表板的圖表。
+先前的預覽名稱 SQL Operations Studio 發行，Azure Data Studio 提供 Intellisense、 程式碼片段、 原始檔控制整合和整合式終端機使用現代的編輯器體驗。 它在設計時將資料庫平台使用者納入考量，內建查詢結果集合圖表功能和可自訂自的儀表板。
 
 **[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

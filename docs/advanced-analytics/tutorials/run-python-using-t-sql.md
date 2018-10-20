@@ -1,46 +1,40 @@
 ---
-title: 執行 Python 使用 T-SQL |Microsoft Docs
+title: 執行 T-SQL 的 SQL Server 上使用 Python |Microsoft Docs
+description: 了解執行 Python 整合已啟用的 SQL Server database engine 執行個體上使用 T-SQL 和預存程序的 Python 程式碼的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/15/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b4a6035996ce457cb2e58aef5d1c7498ad9f826
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878021"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461914"
 ---
 # <a name="run-python-using-t-sql"></a>使用 T-SQL 執行 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本教學課程說明如何執行 Python 程式碼，以及在 SQL Server 2017 中。 它會引導您完成 SQL Server 與 Python 之間移動資料的程序，並說明如何將格式正確的 Python 程式碼包裝在預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)建置、 定型和使用在 SQL 中的機器學習服務模型伺服器。
+這篇文章說明如何執行 Python 程式碼，以及在 SQL Server 2017 中。 它會引導您透過 SQL Server 與 Python 之間移動資料的基本概念： 需求、 資料結構、 輸入和輸出。 它也會說明如何將格式正確的 Python 程式碼包裝在預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)來建置、 定型和使用 SQL Server 中的機器學習服務模型。
 
 ## <a name="prerequisites"></a>先決條件
 
-若要完成本教學課程中，您必須先安裝 SQL Server 2017 並啟用執行個體上的 Machine Learning 服務中所述[安裝 SQL Server 2017 Machine Learning 服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。 
+若要執行這些練習的範例程式碼，必須先安裝 SQL Server 2017 並啟用執行個體上的 Machine Learning 服務中所述[安裝 SQL Server 2017 Machine Learning 服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。 
 
 您也應該安裝[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。 或者，您可以使用其他的資料庫管理或查詢工具，只要它可以連接到伺服器和資料庫，並執行 T-SQL 查詢或預存程序。
 
-您已完成設定之後，請回到本教學課程中，以了解如何在預存程序的內容中執行 Python 程式碼。 
+您的環境準備就緒時，返回此頁面，即可了解如何在預存程序的內容中執行 Python 程式碼。 
 
-## <a name="overview"></a>總覽
+## <a name="verify-python-exists"></a>請確認有 Python
 
-本教學課程包含四個課程：
+下列步驟確認 Python 已啟用，而且 SQL Server Launchpad 服務正在執行。
 
-+ SQL Server 與 Python 之間移動資料的基本概念： 了解基本需求、 資料結構、 輸入和輸出。
-+ 練習使用簡單的 Python 工作，例如載入範例資料的預存程序。
-+ 使用預存程序來建立 Python 機器學習模型，並從模型產生分數。
-+ 選擇性課程中的使用者想要從遠端用戶端，使用 SQL Server 作為執行 Python_計算內容_。 包含用於建置模型的程式碼不過，需要您已熟悉 Python 環境與 Python 工具。
+1. 請檢查資料庫引擎執行個體上是否已安裝 Python 整合。 您應該會發現**python.exe**中名為的資料夾**PYTHON_SERVICES**在 C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\. 這是 SQL Server 用來執行 Python 程式碼的 Python 可執行檔。
 
-這裡提供 SQL Server 2017 的特定其他的 Python 範例： [SQL Server Python 教學課程](../tutorials/sql-server-python-tutorials.md)
-
-## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>確認已啟用 Python，並執行 [啟動列]
-
-1. 在 Management Studio 中，執行此陳述式，確定已啟用服務。
+2. 請檢查是否已啟用外部指令碼。 在 Management Studio 中，執行下列陳述式：
 
     ```sql
     sp_configure 'external scripts enabled'
@@ -48,9 +42,9 @@ ms.locfileid: "48878021"
 
     如果**run_value**為 1，機器學習功能已安裝且可供使用。
 
-    錯誤的常見原因是 [啟動列]，管理 SQL Server 與 Python 之間的通訊，已停止。 您也可以使用 Windows 來檢視 「 啟動控制板狀態**Services** ] 面板中，或藉由開啟 [SQL Server 組態管理員。 如果服務已停止，請將它重新啟動。
+    常見錯誤的原因，在於[SQL Server Launchpad 服務](../concepts/extensibility-framework.md#launchpad)，其可管理 SQL Server 與 Python 之間的通訊已停止。 您也可以使用 Windows 來檢視 「 啟動控制板狀態**Services** ] 面板中，或藉由開啟 [SQL Server 組態管理員。 如果服務已停止，請將它重新啟動。
 
-2. 接下來，確認 Python 執行階段使用且與 SQL Server 通訊。 若要這樣做，請開啟 [新**查詢**在 SQL Server Management Studio] 視窗，並連接到已安裝 Python 的執行個體。
+3. 確認 Python 執行階段使用且與 SQL Server 通訊。 若要這樣做，請開啟 [新**查詢**在 SQL Server Management Studio] 視窗，並連接到已安裝 Python 的執行個體。
 
     ```sql
     EXEC sp_execute_external_script @language = N'Python', 
@@ -74,10 +68,11 @@ ms.locfileid: "48878021"
 
 有兩種方式可在 SQL Server 中執行 Python 程式碼：
 
-+ 將 Python 指令碼新增的系統預存程序中，引數為**sp_execute_external_script**
-+ 從遠端的 Python 用戶端，連接到 SQL Server，並執行程式碼使用 SQL Server 作為計算內容。 這需要[revoscalepy](../python/what-is-revoscalepy.md)。
++ 做為引數的系統預存程序中，新增 Python 指令碼[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-本教學課程的主要目標是確保您可以在預存程序中使用 Python。
++ 從[遠端 Python 用戶端](../python/setup-python-client-tools-sql.md)、 連接到 SQL Server 和執行程式碼使用 SQL Server 作為計算內容。 這需要[revoscalepy](../python/what-is-revoscalepy.md)。
+
+下列練習著重於第一次的互動模型： 如何將 Python 程式碼傳遞至預存程序。
 
 1. 執行一些簡單的程式碼，以查看資料的 SQL Server 與 Python 之間的來回傳遞方式。
 
@@ -108,40 +103,42 @@ ms.locfileid: "48878021"
 
 + 所有東西放在`@script`引數必須是有效的 Python 程式碼。 
 + 程式碼必須遵循有關縮排、 變數名稱，以及其他等等的所有 Pythonic 規則。 當您收到錯誤時，請檢查您的泛空白字元和大小寫。
-+ 如果您使用預設不會載入任何程式庫，您必須在您的指令碼開頭使用匯入陳述式，載入它們。 
-+ 如果尚未安裝的程式庫，停止和安裝 SQL Server 外部 Python 套件，如下所示： [SQL Server 上安裝新的 Python 套件](../python/install-additional-python-packages-on-sql-server.md)
++ 如果您使用預設不會載入任何程式庫，您必須在您的指令碼開頭使用匯入陳述式，載入它們。 SQL Server 將新增多個產品專屬程式庫。 如需詳細資訊，請參閱 < [Python 程式庫](../python/python-libraries-and-data-types.md)。
++ 如果尚未安裝的程式庫，停止，並安裝 SQL Server 外部 Python 套件，如下所示： [SQL Server 上安裝新的 Python 套件](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="inputs-and-outputs"></a>[指令碼轉換編輯器]
 
-根據預設， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)接受單一輸入資料集，這通常是您提供有效的 SQL 查詢的形式。 其他類型的輸入可以當做 SQL 變數： 比方說，您可以傳遞定型的模型為變數，例如使用序列化函式[pickle](https://docs.python.org/3.0/library/pickle.html)或是[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)中撰寫模型二進位格式。
+根據預設， [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)接受單一輸入資料集，這通常是您提供有效的 SQL 查詢的形式。 
 
-預存程序傳回單一的 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)做為輸出資料框架。 不過您可以輸出純量和模型做為變數。 例如，您可以輸出定型的模型，做為二進位的變數，並將它傳遞至 T-SQL INSERT 陳述式，以寫入該模型的資料表。 您也可以產生繪圖 （以二進位格式） 或純量 （個別的值，例如日期和時間，所經過的時間來定型模型，等等）。
+其他類型的輸入可以當做 SQL 變數： 比方說，您可以傳遞定型的模型為變數，例如使用序列化函式[pickle](https://docs.python.org/3.0/library/pickle.html)或是[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)中撰寫模型二進位格式。
 
-現在，讓我們看看只是預設的輸入和輸出變數`InputDataSet`和`OutputDataSet`。 
+預存程序傳回單一的 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)資料框架做為輸出，但您也可以輸出純量和做為變數的模型。 例如，您可以輸出定型的模型，做為二進位的變數，並將它傳遞至 T-SQL INSERT 陳述式，以寫入該模型的資料表。 您也可以產生繪圖 （以二進位格式） 或純量 （個別的值，例如日期和時間，所經過的時間來定型模型，等等）。
+
+現在，讓我們看看只是預設的 sp_execute_external_script 的輸入和輸出變數：`InputDataSet`和`OutputDataSet`。 
 
 1. 執行下列程式碼，執行一些計算，並將結果輸出。
 
-        ```sql
-        execute sp_execute_external_script 
-        @language = N'Python', 
-        @script = N'
-        a = 1
-        b = 2
-        c = a/b
-        print(c)
-        OutputDataSet = c
-        '
-        WITH RESULT SETS ((ResultValue float))
-        ```
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    print(c)
+    OutputDataSet = c
+    '
+    WITH RESULT SETS ((ResultValue float))
+    ```
 
 2. 您應該先取得發生錯誤，因為 Python 程式碼會產生純量，而不是資料框架。
 
-        **Results**
+    **結果**
 
-        ```text
-        line 43, in transform
-            raise TypeError('OutputDataSet should be of type pandas.DataFrame')
-        ```
+    ```text
+    line 43, in transform
+        raise TypeError('OutputDataSet should be of type pandas.DataFrame')
+    ```
 
 3. 現在可以看到當您傳遞的表格式資料集的 python，使用預設輸入的變數時，會發生什麼事`InputDataSet`。 
 
@@ -382,4 +379,4 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
 
 ## <a name="next-steps"></a>後續步驟
 
-[SQL 預存程序中包裝 Python 程式碼](wrap-python-in-tsql-stored-procedure.md)
+[設定鳶尾花示範資料集](demo-data-iris-in-sql.md)

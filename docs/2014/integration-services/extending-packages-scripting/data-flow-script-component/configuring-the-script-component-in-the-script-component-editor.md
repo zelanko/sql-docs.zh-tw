@@ -19,12 +19,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116688"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461025"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在指令碼元件編輯器中設定指令碼元件
   您在指令碼元件中撰寫自訂程式碼之前，必須選取您要建立的資料流程元件的類型 (來源、轉換或是目的地)，然後在 [指令碼轉換編輯器] 中設定元件的中繼資料與屬性。  
@@ -105,7 +105,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `ValidateExternalMetadata` 屬性的布林值可指定元件要在設計階段針對外部資料來源執行驗證，還是將驗證延後到執行階段執行。 依預設，此屬性的值是 `True`，也就是，外部中繼資料是在設計階段與執行階段進行驗證。 當外部資料來源在設計階段無法使用時，您可能會想要將此屬性的值設定為 `False`：例如，當封裝只在執行階段下載來源或建立目的地時。  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 與 ReadWriteVariables 屬性  
- 您可以輸入現有變數的逗號分隔清單做為這些屬性的值，使得變數可在指令碼元件程式碼中以唯讀或讀取/寫入的方式來存取。 在程式碼中，變數是透過自動產生的基底類別之 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 屬性來存取。 如需詳細資訊，請參閱 [使用中指令碼 Component] ((using-variables-in-the-script-component.md) 的變數。  
+ 您可以輸入現有變數的逗號分隔清單做為這些屬性的值，使得變數可在指令碼元件程式碼中以唯讀或讀取/寫入的方式來存取。 在程式碼中，變數是透過自動產生的基底類別之 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 屬性來存取。 如需詳細資訊，請參閱[在指令碼元件中使用變數](using-variables-in-the-script-component.md)。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  
@@ -114,7 +114,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  您可以選擇使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 做為指令碼元件的程式設計語言。  
   
 #### <a name="edit-script-button"></a>編輯指令碼按鈕  
- [編輯指令碼] 按鈕會開啟 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，您可以在此撰寫自訂指令碼。 如需詳細資訊，請參閱 [程式碼撰寫和偵錯指令碼 Component] ((coding-and-debugging-the-script-component.md)。  
+ [編輯指令碼] 按鈕會開啟 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，您可以在此撰寫自訂指令碼。 如需詳細資訊，請參閱[編碼和偵錯指令碼元件](coding-and-debugging-the-script-component.md)。  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>指令碼轉換編輯器的連接管理員頁面  
  在 [指令碼轉換編輯器] 的 [連線管理員] 頁面上，您可以新增和移除要在自訂指令碼中使用的連線管理員。 一般而言，您需要在建立來源或是目的地元件時，參考連接管理員。  
@@ -126,11 +126,11 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- 如需詳細資訊，請參閱 [指令碼 Component] ((connecting-to-data-sources-in-the-script-component.md) 中的資料來源的連接。  
+ 如需詳細資訊，請參閱[在指令碼元件中連線至資料來源](connecting-to-data-sources-in-the-script-component.md)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [程式碼撰寫和偵錯指令碼元件] ((coding-and-debugging-the-script-component.md)  
+ [編碼和偵錯指令碼元件](coding-and-debugging-the-script-component.md)  
   
   

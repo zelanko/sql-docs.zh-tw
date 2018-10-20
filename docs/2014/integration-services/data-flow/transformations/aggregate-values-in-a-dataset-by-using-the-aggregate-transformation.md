@@ -15,12 +15,12 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 490c8bc5c2a045f911a3bbe0a5a372a81d49a08e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d0d415a9dd8dbb891892fce083b65745dd27ff3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115074"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460303"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>使用彙總轉換來彙總資料集中的值
   若要加入及設定「彙總」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  
@@ -70,9 +70,9 @@ ms.locfileid: "48115074"
 15. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [彙總 」 轉換](aggregate-transformation.md)   
+ [彙總轉換](aggregate-transformation.md)   
  [Integration Services 轉換](integration-services-transformations.md)   
  [Integration Services 路徑](../integration-services-paths.md)   
- [資料流程工作] ((../../control-flow/data-flow-task.md)  
+ [資料流程工作](../../control-flow/data-flow-task.md)  
   
   
