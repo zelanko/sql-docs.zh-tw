@@ -41,9 +41,9 @@ items:
   - name: 複寫至記憶體最佳化資料表訂閱者
     href: replication-to-memory-optimized-table-subscribers.md
   - name: 複寫至 SQL 資料庫
-    href: https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database
+    href: https://docs.microsoft.com/azure/sql-database/replication-to-sql-database
   - name: 使用 SQL Database 複寫
-    href: https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance.md
+    href: https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md
   - name: 重新發行資料
     href: republish-data.md
   - name: 透過網際網路的複寫
@@ -619,9 +619,9 @@ items:
   items:
   - name: 尋找具有異動複寫的錯誤
     href: troubleshoot-tran-repl-errors.md
-ms.openlocfilehash: 337f649be0c9fa4187bd9930d3237beb40355a13
-ms.sourcegitcommit: 35f34b5aedb97b14c448b8f68084ea70ddd532fe
+ms.openlocfilehash: e857dc57b68598d6adbc521f0b86e194e5278acb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234450"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461003"
