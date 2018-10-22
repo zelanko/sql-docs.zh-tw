@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289309"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461103"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新的 Microsoft® Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
@@ -25,7 +25,7 @@ ms.locfileid: "46289309"
 發行日期為 2018 年 7 月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不會取用的並行存取插槽 （行為變更）
-APS 支援 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)這類[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 這些命令之前，會耗用[並行存取插槽](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)減少使用者載入/查詢無法執行的數目。 `DBCC`現在會執行命令並不會耗用改善整體的查詢執行效能的使用者並行存取插槽的本機佇列中。
+APS 支援 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)這類[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 這些命令之前，會耗用[並行存取插槽](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)減少使用者載入/查詢無法執行的數目。 `DBCC`現在會執行命令並不會耗用改善整體的查詢執行效能的使用者並行存取插槽的本機佇列中。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>有些中繼資料的呼叫取代目錄物件
 使用目錄物件，而不是使用 SMO 的中繼資料呼叫已顯示效能改善的 APS。 CU7.1 從開始，這些中繼資料呼叫的一些現在目錄物件，依預設使用。 可以關閉此行為由[功能切換](appliance-feature-switch.md)如果客戶使用中繼資料查詢時遇到任何問題。
@@ -85,7 +85,7 @@ APS AU6 支援這些 T-SQL 的相容性改進。  這些額外的語言項目，
 
 **資料類型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[varbinary （max)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp Utility][]。 Polybase 和 dwloader 目前不支援這些資料類型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[varbinary （max)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp 公用程式][]。 Polybase 和 dwloader 目前不支援這些資料類型。 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][]和十進位資料類型。
@@ -155,7 +155,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [寬型資料表]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[bcp Utility]:/sql/tools/bcp-utility
+[bcp 公用程式]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [ROWS 或 RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql

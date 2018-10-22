@@ -4,18 +4,18 @@ description: 如何修改 Azure Data Studio 使用者和工作區設定。
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: e446d117bd56cb0c3607eeaf40522800d82e8a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038003"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355949"
 ---
 # <a name="user-and-workspace-settings"></a>使用者和工作區設定
 
