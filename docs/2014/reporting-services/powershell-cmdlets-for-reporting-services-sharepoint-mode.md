@@ -177,7 +177,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  將 Proxy 加入至預設 Proxy 群組。  
   
-3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 指令碼會假設網站"http://sitename"已經存在。  
+3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 指令碼會假設網站 "http://sitename" 已經存在。  
   
 ```  
 # Create service application and service application proxy  

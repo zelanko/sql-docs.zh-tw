@@ -46,7 +46,7 @@ ms.locfileid: "48073731"
  **資料來源類型**  
  指定用來處理資料來源之資料的資料處理延伸模組。 報表伺服器包括資料處理延伸模組[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，Oracle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、 SAP、 XML、 ODBC 和 OLE DB。 其他的資料處理延伸模組可向協力廠商索取。  
   
- 如需有關遠端及非 SQL 資料來源支援的詳細資訊，請參閱[支援的 SQL Server 2012 版本的功能](http://go.microsoft.com/fwlink/?linkid=232473)(超連結"http://go.microsoft.com/fwlink/?linkid=232473"http://go.microsoft.com/fwlink/?linkid=232473)和[支援的報表資料來源服務&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 如需有關遠端及非 SQL 資料來源支援的詳細資訊，請參閱[支援的 SQL Server 2012 版本的功能](http://go.microsoft.com/fwlink/?linkid=232473) ( 超連結"http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) 和 [支援的報表資料來源服務&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
  **連接字串**  
  指定報表伺服器用來連接至資料來源的連接字串。 連接類型決定您應該使用的語法。 例如，XML 資料處理延伸模組的連接字串是 XML 文件的 URL。 在大部分狀況下，一般連接字串會指定資料庫伺服器和資料檔案。  

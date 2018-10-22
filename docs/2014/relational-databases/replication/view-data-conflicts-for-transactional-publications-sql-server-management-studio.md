@@ -33,7 +33,7 @@ ms.locfileid: "48052948"
   
     -   為 @conflict_retention sp_addpublication [的](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)參數指定保留值。  
   
-    -   指定的值為`'conflict_retention'`for@property參數，並保留值@value參數[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。  
+    -   指定的值為`'conflict_retention'`for @property 參數，並保留值 @value 參數[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。  
   
 ### <a name="to-view-conflicts"></a>若要檢視衝突  
   
