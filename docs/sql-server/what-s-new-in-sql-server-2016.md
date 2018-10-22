@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 的新功能
 ms.custom: ''
-ms.date: 07/21/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce0078caf1a1d9afe2d17db87be55d530009f5d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d44aeec8323578c8867f5978fbc6c5f8b6fa0d0d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819796"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419463"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  

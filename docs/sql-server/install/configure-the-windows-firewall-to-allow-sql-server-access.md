@@ -23,18 +23,15 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79b26af281fd55d9fdcda2c0e4cbf9b1de29460a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 516732cacc3f5f34b7faa1eecd31e82cd286fa61
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819706"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383723"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-
- > 如需舊版 SQL Server 的相關內容，請參閱[設定 Windows 防火牆以允許 SQL Server 存取](configure-the-windows-firewall-to-allow-sql-server-access.md)。
 
 防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  
   

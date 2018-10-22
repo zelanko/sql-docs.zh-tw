@@ -4,17 +4,17 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 07/12/2017
+ms.date: 07/13/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 466ad58e03ec5a49a26a82712c1f7c7c2fa31a5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735976"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419123"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

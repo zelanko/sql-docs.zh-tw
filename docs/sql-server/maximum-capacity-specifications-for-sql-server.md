@@ -21,16 +21,15 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8823f7fd346fdadfecb67c8db217894415b4e0a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764374"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383608"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱 [SQL Server 的最大容量規格](maximum-capacity-specifications-for-sql-server.md)。
 
   下表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件中已定義之各種物件的大小和數目上限。 若要導覽至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術的資料表，請按一下其連結：  
   

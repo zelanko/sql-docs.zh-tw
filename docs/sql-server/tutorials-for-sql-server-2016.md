@@ -1,7 +1,7 @@
 ---
 title: 適用於 SQL Server 的教學課程 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/31/2017
+ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,12 +10,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 442f9cbaed725da0c757ea1aa78b89fa2c170285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ad1d1c83e2b736be9ea0dde4067316f08dd0646
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836136"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419143"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

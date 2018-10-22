@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 版本資訊 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2017
+ms.date: 10/31/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 28dfb353d20f67d8adae6f38857b7ffb707ad107
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653426"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419403"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

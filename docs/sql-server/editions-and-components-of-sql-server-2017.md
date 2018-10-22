@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 的版本及支援功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/10/2017
+ms.date: 11/11/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a21c80b335bd936eea957a7f9194dfa7040ad63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cea5f9c80eb8fa6cba29c451b4b6b20e16d559c
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784946"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419533"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
