@@ -1,7 +1,7 @@
 ---
 title: 疑難排解：尋找 SQL Server 異動複寫的錯誤 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/26/2018
+ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 665ffbd6b0a36bc38a0e7f88b7fbff035a5f2b0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800976"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419453"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解：尋找 SQL Server 異動複寫的錯誤 
 若對異動複寫的運作方式沒有基本的了解，針對複寫錯誤進行疑難排解可能會令人感到沮喪。 建立發行集的第一個步驟是讓快照集代理程式建立快照集，並將它儲存到快照集資料夾。 接下來，散發代理程式會將快照集套用到訂閱者。 

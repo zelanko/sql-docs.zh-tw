@@ -9,14 +9,14 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
-ms.technology: database-engine
+ms.technology: high-availability
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.openlocfilehash: 3a258245bbdac41b2c6a0588150f9b29a637e45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c15b1e38ad406c6d752b691cbd180fd6fce213ea
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656826"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356380"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>商務持續性與資料庫復原 - SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 防火牆上的 TCP 連接埠必須開啟以作為接聽程式連接埠。
 
-如需詳細資訊，請參閱[資料庫鏡像端點 (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017)。
+如需詳細資訊，請參閱[資料庫鏡像端點 (SQL Server)](https://docs.microsoft.com/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017)。

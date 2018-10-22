@@ -8,16 +8,14 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dccb06e0de416af80cb485ce8a116835d0022e29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628108"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383653"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
-
- > 如需舊版 SQL Server 的相關內容，請參閱[第 1 課：建立報表伺服器專案 (Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md)。
 
 在這一課中，您將會在 Visual Studio 中以 *建立「報表伺服器專案」**和「報表定義 (.rdl)」*[!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] 檔案。 
 

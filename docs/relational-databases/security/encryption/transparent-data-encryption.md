@@ -19,17 +19,15 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f868f562ead9ff0d4b9dfa895624a02d018da9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac89fa10f34d8c6f4d06c26a3be063cf00fcad2a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827686"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383783"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > 如需舊版 SQL Server 的相關內容，請參閱[透明資料加密 (TDE)](transparent-data-encryption-tde.md)。
 
   *透明資料加密* (TDE) 會加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] 資料檔案，一般稱之為靜止的加密資料。 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 但是，當發生實體媒體 (如磁碟機或備份磁帶) 遭竊的狀況時，惡意人士可以還原或附加資料庫，並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
   

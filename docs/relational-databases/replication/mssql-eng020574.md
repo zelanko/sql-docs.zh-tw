@@ -3,7 +3,6 @@ title: MSSQL_ENG020574 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
 ms.topic: conceptual
@@ -13,12 +12,12 @@ ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cfcf5670f786a9b7bc6bb3b919a167495aafdd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e448c4f63e0b64984623fff07238ee977cfa0dd
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784386"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356385"
 ---
 # <a name="mssqleng020574"></a>MSSQL_ENG020574
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

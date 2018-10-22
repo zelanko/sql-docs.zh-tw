@@ -14,17 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ba45e79fe2fa739e19ec1b54107d12cf33da202
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae608ebf733857cf086f4953a6d75dd75eadc5ae
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610692"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384113"
 ---
 # <a name="create-primary-keys"></a>建立主索引鍵
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
- > 如需舊版 SQL Server 的相關內容，請參閱[建立主索引鍵](create-primary-keys.md)。
 
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定義主索引鍵。 建立主索引鍵會自動建立對應的唯一叢集索引，或若依此指定則建立非叢集索引。  
   
@@ -38,7 +36,7 @@ ms.locfileid: "47610692"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  建立具有主索引鍵的新資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。  
   
  在現有資料表中建立主索引鍵需要此資料表的 ALTER 權限。  

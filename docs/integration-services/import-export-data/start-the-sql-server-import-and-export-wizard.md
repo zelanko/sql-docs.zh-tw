@@ -16,16 +16,14 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02a585a5ca12fc17e20bdd7a122e8399472ea03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2820f37466cfd14a9d29791a7999a70b48dade
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724166"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383573"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>啟動 SQL Server 匯入和匯出精靈
-
- > 如需舊版 SQL Server 的相關內容，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。
 
 使用本主題中所述的其中一種方式來啟動 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]，以從中匯入資料，並將資料匯出至任何支援的資料來源。
 
@@ -84,7 +82,7 @@ ms.locfileid: "47724166"
 
     ![啟動精靈 (SSMS)](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
 
-如果您未安裝 SQL Server，或您有 SQL Server 但未安裝 SQL Server Management Studio，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
+如果您未安裝 SQL Server，或您有 SQL Server 但未安裝 SQL Server Management Studio，請參閱 [下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
   
 ## <a name="startVS"></a> Visual Studio
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>使用 SQL Server Data Tools (SSDT) 從 Visual Studio 啟動 SQL Server 匯入和匯出精靈 

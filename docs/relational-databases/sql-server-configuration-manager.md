@@ -23,16 +23,15 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60cdb2abfa9b02f4aa88ecf6f0a3b0cf97fb1d79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe790a131fe48a4cdfd506aedcde49308ab67d0
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635766"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383403"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱 [SQL Server 組態管理員](sql-server-configuration-manager.md)。
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個工具，用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關服務、設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所用的網路通訊協定，以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端電腦的網路連接組態。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 嵌入式管理單元，您可以從 [開始] 功能表存取它，也可以將它加入任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 顯示畫面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) 使用 **SQLServerManager\<版本>.msc** 檔案 (例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 **SQLServerManager13.msc**) 開啟組態管理員。 以下是將 Windows 安裝在 C 磁碟機時的最近四個版本路徑。  
   

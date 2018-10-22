@@ -32,18 +32,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd23323817a8d858e8fbacdc7a6d54639d25a8bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2facef8dc12717fcb8fc1cfb20518ed08948334
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725056"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383683"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-> [!NOTE]
-> 如需舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相關內容，請參閱[重新組織與重建索引](reorganize-and-rebuild-indexes.md)。
 
 本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新組織或重建片段索引。 只要對基礎資料進行插入、更新或刪除作業，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會自動修改索引。 過一段時間後，這些修改就可能使索引中的資訊變成散佈於資料庫中 (片段)。 當根據索引鍵值的邏輯順序頁面，與資料檔中的實體順序不相符時，就會有片段產生。 嚴重分散的索引可能會造成查詢效能降低，並會使得應用程式回應緩慢，特別是掃描作業。  
   
@@ -96,7 +93,7 @@ ms.locfileid: "47725056"
   
 ### <a name="Security"></a> 安全性  
   
-#### <a name="Permissions"></a> 權限  
+#### <a name="Permissions"></a> Permissions  
 需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="SSMSProcedureFrag"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 檢查索引片段  

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803b1a72edb5a6c0a951eb9d199a4d7ff27526fe
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649370"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460936"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -144,8 +144,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 允許一或多個資料行定義。 CREATE EXTERNAL TABLE 和 CREATE TABLE 在定義資料行上都使用相同的語法。 唯一的例外是無法在外部資料表上使用 DEFAULT CONSTRAINT。 如需資料行定義及其資料類型的完整詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL Database 上的 CREATE TABLE](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
   
- 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。 如需如何對應不同外部資料來源之資料類型的詳細資訊，請參閱[使用 PolyBase 的類型對應](../../relational-databases/polybase/polybase-type-mapping.md)。  
-  
+ 資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。  
   
  LOCATION =  '*folder_or_filepath*'  
  指定位於 Hadoop 或 Azure Blob 儲存體中之實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始；根資料夾是在外部資料來源中指定的資料位置。  

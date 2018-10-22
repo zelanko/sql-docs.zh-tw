@@ -15,16 +15,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dbe5ab51d1a2480ecabcf8f56564a1d2590e45b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfd594650225431708137dab5ffcc92119d970c8
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782236"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383743"
 ---
 # <a name="create-a-stored-procedure"></a>建立預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱[建立預存程序](create-a-stored-procedure.md)。
 
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。  
   
@@ -33,13 +32,13 @@ ms.locfileid: "47782236"
   
 -   **若要建立程序，請使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  需要在資料庫中的 CREATE PROCEDURE 權限，以及在建立程序時所在的結構描述上的 ALTER 權限。  
   
 ##  <a name="Procedures"></a> 如何建立預存程序  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   

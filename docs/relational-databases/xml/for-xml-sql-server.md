@@ -20,17 +20,16 @@ ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5dd4d957386cc352bf218e72204f91e937d9605d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1aa8edf745211beb04a52d3d7c3b7f8363d7988
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668686"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383533"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱 [FOR XML (SQL Server)](for-xml-sql-server.md)。
-
+ 
   SELECT 查詢會將結果以資料列集的形式傳回。 在查詢中指定 FOR XML 子句，您就可選擇以 XML 格式擷取 SQL 查詢的正式結果。 FOR XML 子句可以使用在最上層的查詢與子查詢中。 最上層的 FOR XML 子句只能用在 SELECT 陳述式中。 在子查詢中，FOR XML 可以在 INSERT、UPDATE 與 DELETE 陳述式中使用。 它也可用在指派陳述式中。  
   
  在 FOR XML 子句中，您可以指定下列其中一個模式：  

@@ -15,17 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 110d60fa0f94f5c66ba59e2d8068d6eb0084df28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4687887715ffb9df13168bc1ee1dc78418c196c3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820036"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383913"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
- > 如需舊版 SQL Server 的相關內容，請參閱[叢集與非叢集索引說明](clustered-and-nonclustered-indexes-described.md)。
 
   索引是一種與資料表或檢視有關的磁碟內存結構，它會加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 這些索引鍵儲存在結構中 (B 型樹狀目錄)，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以快速有效地找到與索引鍵值相關的一或多個資料列。  
   

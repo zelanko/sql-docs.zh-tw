@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d201fb9d134f4066e0504056c208d2c1c0507fa3
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782287"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460983"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
 
@@ -29,9 +29,9 @@ ms.locfileid: "48782287"
 
 報表檢視器 Web 組件可用於在 SharePoint 網站中，內嵌 SQL Server Reporting Services 原生模式報表。 SharePoint 2013 和 SharePoint 2016 提供此 Web 組件。 SharePoint 2013 和 SharePoint 2016 都使用宣告驗證。 因此，除了必須正確地設定 C2WTS，還必須為 Kerberos 驗證設定 Reporting Services，才能正確地轉譯報表。
 
-1. 您可以指定 SSRS 服務帳戶、設定 SPN，以及更新 rsreportserver.config 檔案，以使用 RSWindowsNegotiate 驗證類型，為 Kerberos 驗證設定您的 Reporting Services (原生模式) 執行個體。 [為報表伺服器註冊服務主體名稱 (SPN)](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. 您可以指定 SSRS 服務帳戶、設定 SPN，以及更新 rsreportserver.config 檔案，以使用 RSWindowsNegotiate 驗證類型，為 Kerberos 驗證設定您的 Reporting Services (原生模式) 執行個體。 [為報表伺服器註冊服務主體名稱 (SPN)](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
 
-2. 遵循[設定 c2WTS 的必要步驟](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)中的步驟
+2. 遵循[設定 c2WTS 的必要步驟](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)中的步驟
  
 
 ## <a name="sharepoint-mode-integration"></a>SharePoint 模式整合
@@ -84,7 +84,7 @@ C2WTS 建立的權杖只能與限制委派 (僅限於特定服務) 及設定選�
     * 選取 [使用者或電腦...&#42;]，然後輸入裝載服務的帳戶。 例如，如果使用名為 *sqlservice* 的帳戶來執行 SQL Server，請輸入 `sqlservice`。 
       對於**報表檢視器 Web 組件**，這會是 Reporting Services (原生模式) 執行個體的服務帳戶。
 
-    * 選取服務清單。 這會顯示適用於該帳戶的 SPN。 如果您看不到針對該帳戶所列出的服務，則它可能遺失或放置在不同的帳戶上。 您可以使用 SetSPN 公用程式來調整 SPN。 在**報表檢視器 Web 組件**的[報表檢視器 Web 組件設定](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration)中，會顯示 HTTP SPN 設定。
+    * 選取服務清單。 這會顯示適用於該帳戶的 SPN。 如果您看不到針對該帳戶所列出的服務，則它可能遺失或放置在不同的帳戶上。 您可以使用 SetSPN 公用程式來調整 SPN。 在**報表檢視器 Web 組件**的[報表檢視器 Web 組件設定](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration)中，會顯示 HTTP SPN 設定。
 
     * 選取 [確定] 以離開對話方塊。
 
