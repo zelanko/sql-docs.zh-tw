@@ -189,7 +189,7 @@ ms.locfileid: "48110428"
   
      請注意，每一個量值群組只會出現一個量值，如下圖所示。  
   
-     ![網際網路銷售] 和 [轉售商銷售的量值](../../2014/tutorials/media/l9-perspectives-4.gif "網際網路銷售] 和 [轉售商銷售的量值")  
+     ![網際網路銷售 和 轉售商銷售的量值](../../2014/tutorials/media/l9-perspectives-4.gif "網際網路銷售 和 轉售商銷售的量值")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [定義和瀏覽翻譯](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  

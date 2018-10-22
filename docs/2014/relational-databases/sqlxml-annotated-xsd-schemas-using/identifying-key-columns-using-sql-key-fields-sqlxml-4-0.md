@@ -107,7 +107,7 @@ ms.locfileid: "48175358"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 < [Ba6e326154d2"&gt;using ADO to Execute SQLXML Queries&lt](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這是部分結果集：  
   
@@ -172,7 +172,7 @@ ms.locfileid: "48175358"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 < [Ba6e326154d2"&gt;using ADO to Execute SQLXML Queries&lt](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是結果：  
   
