@@ -21,7 +21,7 @@ items:
     href: java/java-first-sample.md
   - name: Java 與 SQL 資料類型
     href: java/java-sql-datatypes.md
-- name: 安裝
+- name: Install
   items:
   - name: SQL Server 2019 中的差異
     href: install/sql-machine-learning-services-ver15.md
@@ -71,6 +71,32 @@ items:
 - name: 教學課程
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: data
+    items:
+    - name: Iris 資料集
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: NYC 計程車資料集
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: 訓練並使用您的第一個模型
+      href: tutorials/train-score-using-python-in-tsql.md
+    - name: 了解資料庫內分析
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 匯入資料
+        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+      - name: 探索及視覺化資料
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 建立資料特徵
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 定型及儲存
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 操作模型
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: 使用 revoscalepy 建立模型
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -79,15 +105,13 @@ items:
     - name: 了解資料庫內分析
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - 設定示範資料
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - 將資料視覺化
+      - name: 1 - 將資料視覺化
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3 - 建立資料特徵
+      - name: 2 - 建立資料特徵
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4 - 定型及儲存至 SQL
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5 - 預測結果
+      - name: 3 - 訓練並儲存至 SQL
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 4 - 預測結果
         href: tutorials/sqldev-operationalize-the-model.md
     - name: 資料科學端對端逐步解說
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -139,30 +163,6 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: 建立簡單的模擬
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: SQL 上之 Python 中的 Iris 資料
-      items:
-      - name: 將 Python 包裝到預存程序中
-        href: tutorials/wrap-python-in-tsql-stored-procedure.md
-      - name: 從 SQL Server 中的 Python 模型定型及計分
-        href: tutorials/train-score-using-python-in-tsql.md
-    - name: 使用 revoscalepy 建立模型
-      href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: 了解資料庫內分析
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 匯入資料
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: 探索及視覺化資料
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 建立資料特徵
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 定型及儲存
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 操作模型
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: 範例
   href: https://github.com/Microsoft/sql-server-samples
 - name: 方案
@@ -325,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: ed84c8ae7a1a1ef653decd2bf445aed053432323
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 15b60b36d87f9eab56616d66984237ef2f57f68d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383374"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461934"
