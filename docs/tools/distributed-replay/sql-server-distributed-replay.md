@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
@@ -15,12 +14,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f5320f6230b7dcc3d9042b4524de4c1fc51a409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f9da3fed151af765409004681d5054420ed454
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781446"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356149"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47781446"
 ## <a name="benefits-of-distributed-replay"></a>Distributed Replay 的優點  
  與 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]相似之處在於，您可以使用 Distributed Replay，針對已升級的測試環境重新執行擷取的追蹤。 而與 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]不同的是，Distributed Replay 不限於從單一電腦重新執行工作負載。  
   
- Distributed Replay 提供比 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]更容易擴充的方案。 您可以使用 Distributed Replay，從多部電腦重新執行工作負載，並有效地模擬關鍵任務的工作負載。  
+ Distributed Replay 提供比 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 更容易擴充的方案。 您可以使用 Distributed Replay，從多部電腦重新執行工作負載，並有效地模擬關鍵任務的工作負載。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能可以使用多部電腦重新執行追蹤資料，並模擬任務關鍵性工作負載。 您可以使用 Distributed Replay 進行應用程式相容性測試、效能測試或容量計畫。  
   
