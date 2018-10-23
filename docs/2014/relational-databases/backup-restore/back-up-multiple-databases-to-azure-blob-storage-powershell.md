@@ -30,7 +30,7 @@ ms.locfileid: "48064288"
  可用於還原資料庫。  
   
  New-SqlCredential  
- 此指令程式可用於建立 SQL Server 備份至 Windows Azure 儲存體時所使用的 SQL 認證。 如需有關認證及其在 SQL Server 備份與還原中之用法的詳細資訊，請參閱＜ [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)＞。  
+ 此指令程式可用於建立 SQL Server 備份至 Windows Azure 儲存體時所使用的 SQL 認證。 如需有關認證及其在 SQL Server 備份與還原中之用法的詳細資訊，請參閱＜ [SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)＞。  
   
  Get-SqlCredential  
  此指令程式可用於擷取認證物件及其屬性。  

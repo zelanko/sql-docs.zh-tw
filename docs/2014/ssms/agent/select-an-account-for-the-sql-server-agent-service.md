@@ -94,7 +94,7 @@ ms.locfileid: "48075558"
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：對於多伺服器管理使用非管理帳戶  
  在主要伺服器上編列目標伺服器可能失敗，並出現下列錯誤訊息：「編列作業失敗」。  
   
- 若要解決此錯誤，請重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 若要解決此錯誤，請重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：對於多伺服器管理使用本機系統帳戶  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務在本機系統帳戶下執行時支援多伺服器管理，但前提是主要伺服器和目標伺服器都必須位於相同電腦上。 如果您使用此組態，則當您在主要伺服器上編列目標伺服器時會傳回下列訊息：  
