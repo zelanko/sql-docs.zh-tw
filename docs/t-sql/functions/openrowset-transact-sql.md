@@ -39,7 +39,7 @@ ms.locfileid: "44171820"
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  包含所有從 OLE DB 資料來源存取遠端資料所需的連接資訊。 這個方法是存取連結伺服器資料表的另一個方法，而且是使用 OLE DB 來連接和存取遠端資料的單次特定方法。 對於更常用到的 OLE DB 資料來源參考，請改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。 您可以依照參考資料表名稱的相同方式，在查詢的 FROM 子句中參考 `OPENROWSET` 函數。 根據 OLE DB 提供者的能力而定，`OPENROWSET` 函數也可以被當做 `INSERT`、`UPDATE` 或 `DELETE` 陳述式的目標資料表加以參考。 雖然查詢可能傳回多個結果集，但是 `OPENROWSET` 只能傳回第一個。  
+  包含所有從 OLE DB 資料來源存取遠端資料所需的連接資訊。這個方法是存取連結伺服器資料表的另一個方法，而且是使用 OLE DB 來連接和存取遠端資料的單次特定方法。對於更常用到的 OLE DB 資料來源參考，請改用連結的伺服器。如需詳細資訊，請參閱[連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。您可以依照參考資料表名稱的相同方式，在查詢的 FROM 子句中參考 `OPENROWSET` 函數。根據 OLE DB 提供者的能力而定，`OPENROWSET` 函數也可以被當做 `INSERT`、`UPDATE` 或 `DELETE` 陳述式的目標資料表加以參考。雖然查詢可能傳回多個結果集，但是 `OPENROWSET` 只能傳回第一個。
   
  `OPENROWSET` 也支援透過內建 BULK 提供者執行大量作業，可讓檔案資料被讀取，並且當做資料列集傳回。  
 
@@ -235,7 +235,7 @@ FIELDQUOTE **=** 'field_quote'
   
  存取遠端 OLE DB 資料來源時，用戶端連接到將進行查詢之伺服器所在的伺服器上，不會自動委派信任連接的登入識別。 此時必須設定驗證委派。  
   
- 如果 OLE DB 提供者支援指定之資料來源中的多個目錄和結構描述，則需要用到目錄和結構描述名稱。 如果 OLE DB 提供者不支援 *catalog* 和 *schema* 的值，就可以將它們省略。 如果提供者只支援結構描述名稱，就必須指定 *schema* **.** *object* 格式的兩部分名稱。 如果提供者只支援目錄名稱，則必須指定 *catalog* **.** *schema* **.** *object* 格式的三部分名稱。 您必須為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的通過查詢指定三部分的名稱。 如需詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ 如果 OLE DB 提供者支援指定之資料來源中的多個目錄和結構描述，則需要目錄和結構描述名稱。如果 OLE DB 提供者不支援 *catalog* 和 *schema* 的值，就可以將它們省略。如果提供者只支援結構描述名稱，就必須指定 *schema* **.** *object* 格式的兩部分名稱。如果提供者只支援目錄名稱，則必須指定 *catalog* **.** *schema* **.** *object* 格式的三部分名稱。您必須為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的通過查詢指定三部分的名稱。如需詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
   
  `OPENROWSET` 不接受變數作為其引數。  
   
@@ -268,7 +268,7 @@ FIELDQUOTE **=** 'field_quote'
 >  使用 `OPENROWSET` 時，一定要了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何處理模擬。 如需安全性考量的資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>大量匯入 SQLCHAR、SQLNCHAR 或 SQLBINARY 資料  
- OPENROWSET(BULK...) 會假設，如果未指定，則 SQLCHAR、SQLNCHAR 或 SQLBINARY 資料的最大長度不會超過 8000 個位元組。 如果要匯入的資料位於 LOB 資料欄位中，該欄位包含了超過 8000 個位元組的任何 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 物件，您必須使用 XML 格式檔案來定義資料欄位的最大長度。 若要指定最大長度，請編輯格式檔案，並宣告 MAX_LENGTH 屬性。  
+ OPENROWSET(BULK...) 會假設，如果未指定，則 SQLCHAR、SQLNCHAR 或 SQLBINARY 資料的最大長度不會超過 8000 個位元組。如果要匯入的資料位於 LOB 資料欄位中，該欄位包含了超過 8000 個位元組的任何 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 物件，您必須使用 XML 格式檔案來定義資料欄位的最大長度。若要指定最大長度，請編輯格式檔案，並宣告 MAX_LENGTH 屬性。
   
 > [!NOTE]  
 >  自動產生的格式檔案不會指定 LOB 欄位的長度或最大長度。 但是，您可以編輯格式檔案，並手動指定長度或最大長度。  
