@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd379df3c82a16924a984464d1bdbe68e8ebfce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a164a4c4c3cff6b2569e49f5dc84348376a727d4
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632126"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359295"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47632126"
 ### <a name="a-using-error-to-detect-a-specific-error"></a>A. 利用 @@ERROR 來偵測特定錯誤  
  下列範例利用 `@@ERROR` 來檢查 `UPDATE` 陳述式的 CHECK 條件約束違規 (錯誤號碼 547)。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.EmployeePayHistory  
@@ -72,7 +72,7 @@ GO
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 利用 @@ERROR 有條件地結束程序  
  下列範例會在預存程序中的 `DELETE` 陳述式之後，使用 `IF...ELSE` 陳述式來測試 `@@ERROR`。 `@@ERROR` 變數的值決定了傳給呼叫端程式來指出程序成功或失敗的傳回碼。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Drop the procedure if it already exists.  
@@ -107,7 +107,7 @@ GO
 ### <a name="c-using-error-with-rowcount"></a>C. 搭配 @@ROWCOUNT使用 @@ERROR  
  下列範例搭配 `@@ERROR` 使用 `@@ROWCOUNT` 來驗證 `UPDATE` 陳述式的作業。 `@@ERROR` 的值用來針對任何錯誤指示來進行檢查，而 `@@ROWCOUNT` 則用來確保更新已成功套用至資料表中的資料列。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Purchasing.usp_ChangePurchaseOrderHeader',N'P')IS NOT NULL  
@@ -176,7 +176,7 @@ GO
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
-  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)     
+ [錯誤和事件參考 &#40;資料庫引擎&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
 

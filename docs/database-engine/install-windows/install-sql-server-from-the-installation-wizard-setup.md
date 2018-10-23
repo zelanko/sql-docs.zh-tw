@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 75ca694832c0509a4db5d422bbed79b2bef0f83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731486"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460683"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-本文說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。 如需舊版 SQL Server 的相關內容，請參閱[從安裝精靈安裝 SQL Server 2014 (安裝程式)](install-sql-server-from-the-installation-wizard-setup.md)。
+本文說明如何使用安裝精靈安裝 SQL Server。 它會套用至 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
 
 本文提供的逐步程序，可讓您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的安裝精靈來進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新執行個體安裝。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需如何個別安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的詳細資訊，請參閱[安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
 
@@ -69,7 +69,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 4.  在 [授權條款] 頁面上，檢閱授權合約，並在同意時，選取 [我接受授權條款]  核取方塊，然後按 [下一步] 。  
 
   >[!NOTE]
-  > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/en-us/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
+  > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/en-us/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
   
 5.  在 [全域規則] 視窗中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新] 視窗。  
   

@@ -1,7 +1,7 @@
 ---
 title: char 和 varchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,42 +19,49 @@ helpviewer_keywords:
 - varchar(max) data type
 - variable-length data types [SQL Server]
 - varchar data type
+- utf8
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6699c1b1c02f071dd95cd642f15a9b449de8e815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824788"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49644006"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-這些資料類型可為固定長度或可變長度。  
+固定長度 **char** 或變動長度 **varchar** 的字元資料型別。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，當使用支援 UTF-8 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 字元編碼。 若指定非 UTF-8 定序，則這些資料類型只會存放該定序對應之字碼頁所支援的字元子集。
   
 ## <a name="arguments"></a>引數  
-**char** [ ( *n* ) ] 固定長度的非 Unicode 字串資料。 *n* 可定義字串長度，而且必須是 1 到 8,000 之間的值。 儲存體大小是 *n* 位元組。 **char** 的 ISO 同義字為 **character**。
-  
-**varchar** [ ( *n* | **max** ) ] 可變長度的非 Unicode 字串資料。 *n* 定義字串長度，可以是 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。
-  
+**char** [ ( *n* ) ] 固定長度字串資料。 *n* 會定義字串長度 (單位為位元組)，而且必須是 1 到 8,000 之間的值。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組，但可儲存的字元數目可能小於 *n*。 **char** 的 ISO 同義字為 **character**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+
+**varchar** [ ( *n* | **max** ) ] 可變長度的字串資料。 *n* 會定義字串長度 (單位為位元組)，而且必須是 1 到 8,000 之間的值。 **max** 表示儲存大小上限是 2^31-1 個位元組 (2 GB)。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+
 ## <a name="remarks"></a>Remarks  
 當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 如果使用 CAST 和 CONVERT 函式時未指定 *n*，則預設長度為 30。
   
 除非使用 COLLATE 子句指派特定定序；否則，使用 **char** 或 **varchar** 的物件會被指派資料庫的預設定序。 定序會控制用來儲存字元資料的字碼頁。
-  
-如果您有支援多國語言的網站，請考慮使用 Unicode **nchar** 或 **nvarchar** 資料類型，將字元轉換問題減到最少。 如果您使用 **char** 或 **varchar**，我們建議您執行下列動作：
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的多位元組編碼包括：
+-   一些東亞語言的雙位元組字元集 (DBCS) 使用字碼頁 936 與 950 (中文)、932 (日文) 或 949 (韓文)。
+-   UTF-8 (具有字碼頁 65001)。 **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始))
+
+若您的網站支援多種語言：
+- 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，請考慮使用支援 UTF-8 的定序來支援 Unicode 並將字元轉換問題降到最低。 
+- 若使用舊版 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，請考慮使用 Unicode **nchar** 或 **nvarchar** 資料類型，以將字元轉換問題降到最低。   
+
+若使用 **char** 或 **varchar**，建議您：
 - 當資料行資料項目的大小一致時，請使用 **char**。  
 - 當資料行資料項目的大小變化相當大時，請使用 **varchar**。  
-- 當資料行資料項目的大小變化相當大，且大小可能超出 8,000 位元組時，請使用 **varchar(max)**。  
+- 當資料行資料項目的大小變化相當大，且字串長度可能超出 8,000 位元組時，請使用 **varchar(max)**。  
   
 如果執行 CREATE TABLE 或 ALTER TABLE 時，SET ANSI_PADDING 是 OFF，就會將定義為 NULL 的 **char** 資料行當作 **varchar** 來處理。
   
-當定序字碼頁使用雙位元組字元時，儲存體大小仍是 *n* 個位元組。 *n* 位元組的儲存體大小可能會少於 *n* 個字元，這會隨著字元字串而不同。
-
 > [!WARNING]
 > 每個非 null 的 varchar(max) 或 nvarchar(max) 資料行都需要額外 24 位元組的固定配置，而不利於排序作業期間 8,060 位元組的資料列限制。 因此可能會對資料表中可建立的非 null varchar(max) 或 nvarchar(max) 資料行數目建立隱含限制。  
 建立資料表時 (高於最大資料列大小超過允許上限 8060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業 (如叢集索引鍵更新) 期間造成錯誤 (如錯誤 512)，或讓使用者直到執行作業前都無法預期多種完整資料行集。
@@ -65,7 +72,7 @@ ms.locfileid: "47824788"
 當字元運算式被轉換成不同資料類型或大小的字元運算式時，例如從 **char(5)** 轉換成 **varchar(5)**，或從 **char(20)** 轉換成 **char(15)**，輸入數值的定序會被指派至轉換的數值。 如果將非字元運算式轉換成字元資料類型，會將目前資料庫的預設定序指派給轉換的數值。 不論哪一種狀況，都可以使用 [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 子句指派特定的定序。
   
 > [!NOTE]  
->  支援 **char** 和 **varchar** 資料類型的字碼頁轉換，但不支援 **text** 資料類型的字碼頁轉換。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不會報告字碼頁翻譯期間的資料遺失。  
+> 支援 **char** 和 **varchar** 資料類型的字碼頁轉換，但不支援 **text** 資料類型的字碼頁轉換。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不會報告字碼頁翻譯期間的資料遺失。  
   
 轉換成近似 **numeric** 資料類型的字元運算式可以包含選擇性的指數標記法 (小寫 e 或大寫 E 後面跟著選擇性的加號 (+) 或減號 (-)，再接著數字)。
   
@@ -115,7 +122,7 @@ WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID SalesYTD              DisplayFormat CurrentDate             DisplayDateFormat  
 ---------------- --------------------- ------------- ----------------------- -----------------  
 278              1453719.4653          1,453,719.47  2011-05-07 14:29:01.193 07/05/11  
@@ -144,7 +151,7 @@ SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  
@@ -158,6 +165,7 @@ String                                       TruncatedValue
 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[估計資料庫的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)
-  
+[估計資料庫的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)     
+[定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)    
+[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
   

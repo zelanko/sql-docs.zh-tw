@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775606"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356139"
 ---
 # <a name="databases"></a>資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47775606"
   
  使用者在取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取權時會視為已登入。 使用者在取得資料庫的存取權時會視為資料庫使用者。 資料庫使用者可以根據登入來建立。 若啟用自主資料庫，則可建立不是根據登入的資料庫使用者。 如需使用者的詳細資訊，請參閱 [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)。  
   
- 具有資料庫存取權的使用者可以獲得存取資料庫中物件的權限。 雖然權限可以授與個別使用者，但是建議建立資料庫角色，並將資料庫使用者加入至角色，然後授與角色的存取權。 授與角色的權限，而非使用者的權限，如此即可在使用者數目成長並持續變更時，更輕鬆地保持權限的一致性，且使權限更容易了解。 如需角色權限的詳細資訊，請參閱 [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) 和[主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
+ 具有資料庫存取權的使用者可以獲得存取資料庫中物件的權限。 雖然權限可以授與個別使用者，但是建議建立資料庫角色，並將資料庫使用者加入至角色，然後授與角色的存取權。 授與角色的權限，而非使用者的權限，如此即可在使用者數目成長並持續變更時，更輕鬆地保持權限的一致性，且使權限更容易了解。 如需角色權限的詳細資訊，請參閱 [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) 和[主體 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
 ## <a name="working-with-databases"></a>使用資料庫  
- 使用資料庫的大多數使用者都會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 工具具有用於建立資料庫和資料庫中物件的圖形化使用者介面。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也具有查詢編輯器，可透過寫入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與資料庫互動。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝磁碟進行安裝，或從 MSDN 進行下載。  
+ 使用資料庫的大多數使用者都會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 工具具有用於建立資料庫和資料庫中物件的圖形化使用者介面。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 也具有查詢編輯器，可透過寫入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與資料庫互動。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝磁碟進行安裝，或從 MSDN 進行下載。 如需有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具的詳細資訊，請參閱 [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)。
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47775606"
 |[檔案狀態](../../relational-databases/databases/file-states.md)|[壓縮資料庫](../../relational-databases/databases/shrink-a-database.md)|  
 |[估計資料庫的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[壓縮檔案](../../relational-databases/databases/shrink-a-file.md)|  
 |[複製資料庫至其他伺服器](../../relational-databases/databases/copy-databases-to-other-servers.md)|[檢視或變更資料庫的屬性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
-|[資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[檢視 SQL Server 執行個體上的資料庫清單](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
+|[資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[檢視 SQL Server 執行個體上的資料庫清單](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
 |[變更資料庫的組態設定](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[使用維護計畫精靈](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[建立資料庫](../../relational-databases/databases/create-a-database.md)|[建立使用者定義資料類型別名](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
@@ -63,6 +63,6 @@ ms.locfileid: "47775606"
   
  [檢視](../../relational-databases/views/views.md)  
   
- [預存程序 &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+ [預存程序 &#40;資料庫引擎&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
   
   

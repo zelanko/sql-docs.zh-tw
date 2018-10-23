@@ -1,7 +1,7 @@
 ---
 title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 10/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 737ea3c8553d6d994096fc30a2a944483b2027b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637896"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643776"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,13 +44,16 @@ ms.locfileid: "47637896"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```
 CHAR ( integer_expression )  
 ```  
   
 ## <a name="arguments"></a>引數  
 *integer_expression*  
-0 到 255 之間的整數。 `CHAR` 傳回超出此範圍之整數運算式的 `NULL` 值。
+0 到 255 之間的整數。 `CHAR` 會針對此範圍以外的整數運算式傳回 `NULL` 值，或當整數運算式只包含雙位元組字元的第一個位元組時也會傳回此值。
+
+> [!NOTE]
+> 一些非歐洲字元集 (例如 [Shift Japanese Industrial Standards](http://www.wikipedia.org/wiki/Shift_JIS)) 包括能以單位元組編碼配置表示的字元，但需要多位元組編碼。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。 
   
 ## <a name="return-types"></a>傳回類型
 **char(1)**
@@ -88,7 +91,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------- -
 78          N  
 ----------- -  
@@ -112,9 +115,9 @@ GO
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
-FROM Person.Person p JOIN Person.EmailAddress pe  
-ON p.BusinessEntityID = pe.BusinessEntityID  
-AND p.BusinessEntityID = 1;  
+FROM Person.Person p 
+INNER JOIN Person.EmailAddress pe ON p.BusinessEntityID = pe.BusinessEntityID  
+  AND p.BusinessEntityID = 1;  
 GO  
 ```
   
@@ -127,8 +130,6 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. 利用 ASCII 和 CHAR 來列印字串中的 ASCII 值  
 此範例採用 ASCII 字元集。 它會傳回六個不同 ASCII 字元數字值的字元值。
   
@@ -140,7 +141,7 @@ CHAR(49) AS [49], CHAR(50) AS [50];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 65   66   97   98   49   50  
 ---- ---- ---- ---- ---- ----  
 A    B    a    b    1    2  
@@ -157,15 +158,46 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
+```
+name                                      create_date               name                                  state_desc  
+--------------------------------------------------------------------------------------------------------------------  
+master                    was created on  2003-04-08 09:13:36.390   master                  is currently  ONLINE 
+tempdb                    was created on  2014-01-10 17:24:24.023   tempdb                  is currently  ONLINE   
+AdventureWorksPDW2012     was created on  2014-05-07 09:05:07.083   AdventureWorksPDW2012   is currently  ONLINE 
+```
+
+### <a name="e-using-char-to-return-single-byte-characters"></a>E. 使用 CHAR 來傳回單位元組字元  
+此範例使用 ASCII 有效範圍的整數與十六進位值。 CHAR 函式可輸出單位元組日文字元。
+  
 ```sql
-name     create_date    name    state_desc  
-------------------------------------------------------------  
-master                   was created on  2003-04-08 09:13:36.390   
-master                   is currently  ONLINE  
-tempdb                   was created on  2014-01-10 17:24:24.023   
-tempdb                   is currently  ONLINE  
-AdventureWorksPDW2012    was created on  2014-05-07 09:05:07.083 
-AdventureWorksPDW2012    is currently  ONLINE  
+SELECT CHAR(188) AS single_byte_representing_complete_character, 
+  CHAR(0xBC) AS single_byte_representing_complete_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+single_byte_representing_complete_character single_byte_representing_complete_character
+------------------------------------------- -------------------------------------------
+ｼ                                           ｼ                                         
+```
+
+### <a name="f-using-char-to-return-multibyte-characters"></a>F. 使用 CHAR 來傳回多位元組字元  
+此範例使用 ASCII 有效範圍的整數與十六進位值。 不過，CHAR 函式會傳回 NUL，因為參數只代表多位元組字元的第一個位元組。
+  
+```sql
+SELECT CHAR(129) AS first_byte_of_double_byte_character, 
+  CHAR(0x81) AS first_byte_of_double_byte_character;  
+GO  
+```
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```
+first_byte_of_double_byte_character first_byte_of_double_byte_character
+----------------------------------- -----------------------------------
+NULL                                NULL                                         
 ```
   
 ## <a name="see-also"></a>另請參閱

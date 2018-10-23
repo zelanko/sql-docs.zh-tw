@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9b61ca423f79f95ab24ae59b398b5d4a834126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782846"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643926"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "47782846"
  [透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  有關如何以透明方式加密資料的一般資訊。  
   
- [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+ [SQL Server 和資料庫加密金鑰 &#40;資料庫引擎&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 本節將說明如何實作及管理加密金鑰。  
   
- [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+ [Always Encrypted &#40;資料庫引擎&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
  確保以下人員無法存取加密資料：內部部署資料庫系統管理員、雲端資料庫操作員，或其他具備高權限但未經授權的使用者。  
   
  [動態資料遮罩](../../../relational-databases/security/dynamic-data-masking.md)  
@@ -60,6 +60,9 @@ ms.locfileid: "47782846"
 ## <a name="related-content"></a>相關內容  
  [保護 SQL Server 的安全](../../../relational-databases/security/securing-sql-server.md)  
  如何有助於維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台安全及如何處理使用者與安全性物件的概觀。  
+
+[Azure SQL Database 安全性功能概觀](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>Azure SQL Database 資料保護、存取控制與主動監視的安全性概觀。
   
  [密碼編譯函數 &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  有關如何實作密碼編譯函數的資訊。  
@@ -82,7 +85,7 @@ ms.locfileid: "47782846"
   
 ## <a name="see-also"></a>另請參閱  
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
- [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server 和資料庫加密金鑰 &#40;資料庫引擎&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [備份與還原 Reporting Services 加密金鑰](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

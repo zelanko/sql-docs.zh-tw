@@ -20,16 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db923d432be92abfea17ee12a2bcdf61601c9fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802916"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419273"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱[執行預存程序](execute-a-stored-procedure.md)。
 
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "47802916"
   
 -   **若要執行預存程序，使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "47802916"
   
 -   執行系統預存程序  
   
-     系統程序會以 **sp_** 前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者和系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
+     系統程序會以 **sp_** 前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者與系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -126,7 +125,7 @@ ms.locfileid: "47802916"
 ###  <a name="Security"></a> 安全性  
  如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 和 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)中的預存程序。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -213,6 +212,6 @@ EXEC sp_procoption @ProcName = '<procedure name>'
  [設定 scan for startup procs 伺服器組態選項](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [預存程序 &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+ [預存程序 &#40;資料庫引擎&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
   
   

@@ -58,7 +58,7 @@ boolean_expression?expression1:expression2
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
--   **字串***expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
+-   **字串** *expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
   
 -   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   

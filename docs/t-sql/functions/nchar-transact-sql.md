@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716548"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636437"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>引數  
  *integer_expression*  
- 如果資料庫的定序不包含增補字元 (SC) 旗標，這會是從 0 到 65535 (0 到 0xFFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。 如需增補字元的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 如果資料庫的定序不包含[增補字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 旗標，這會是從 0 到 65535 (0 到 0xFFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。 如需增補字元的詳細資訊，請參閱[定序和 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
- 如果資料庫的定序支援增補字元 (SC) 旗標，這會是從 0 到 1114111 (0 到 0x10FFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。  
+ 如果資料庫的定序支援 SC 旗標，這會是從 0 到 1114111 (0 到 0x10FFFF) 的正整數。 如果指定了這個範圍以外的值，便會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回類型  
  當預設資料庫定序不支援增補字元時，便為 **nchar(1)**。  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  如果參數 *integer_expression* 在 0 - 0xFFFF 範圍內，則只會傳回一個字元。 對於較高值，NCHAR 會傳回對應的 Surrogate 字組。 請勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 建構 Surrogate 字組。 而應使用支援增補字元的資料庫定序，然後為 Surrogate 字組指定 Unicode 字碼指標。 下列範例示範建構 Surrogate 字組的舊有樣式方法，以及指定 Unicode 字碼指標的慣用方法。  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. 使用 NCHAR 和 UNICODE  
  下列範例會利用 `UNICODE` 和 `NCHAR` 函數來列印 `UNICODE` 字元字串第二個字元的 `NCHAR` 值和 `København` (Unicode 字元)，以及列印實際的第二個字元 `ø`。  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. 使用 SUBSTRING、UNICODE、CONVERT 和 NCHAR  
  下列範例會利用 `SUBSTRING`、`UNICODE`、`CONVERT` 和 `NCHAR` 函數來列印 `København` 字串中的字元數目、Unicode 字元，以及各字元的 UNICODE 值。  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

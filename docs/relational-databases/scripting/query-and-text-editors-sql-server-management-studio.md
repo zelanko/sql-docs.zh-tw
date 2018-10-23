@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- VS.TextEditor
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
 - Code Editor [SQL Server Management Studio], about Query Editor
@@ -28,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acf755d1055e9d46abe22bf33bf421b685d3c14f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e69482bec727d3c55cecce5015a9d5e5c36e2b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821768"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462064"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23b3938eb6ef388f5ddb50e1c9e768e222dfd488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e0b6dacfa0facce9da804dac8406885e7228e4c
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711126"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359278"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,8 +62,7 @@ ERROR_SEVERITY ( )
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_SEVERITY  
 此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_SEVERITY` 會傳回該錯誤的嚴重性值。  
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -72,7 +71,9 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -88,8 +89,7 @@ ErrorSeverity
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_SEVERITY  
 此範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 預存程序會傳回錯誤的相關資訊。  
 
-```  
-  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -104,7 +104,9 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```
 -----------
 
 (0 row(s) affected)
@@ -127,6 +129,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
  [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [錯誤和事件參考 &#40;資料庫引擎&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

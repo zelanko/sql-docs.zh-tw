@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdf4b9ba29155d3779f1c28b74b7ad8617be0d48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717056"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359345"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,6 +66,9 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查詢的執行計劃通常會在一段時間後，因為統計資料的變更、結構描述變更、建立/刪除索引等數種不同原因而有所演變。儲存快取的查詢計劃之程序快取，只會儲存最新的執行計劃。 計劃也會因為記憶體不足的壓力，而從計劃快取中收回。 因此，因為執行計劃變更所造成的查詢效能低下，可能相形重要，而且可能需要許多時間才可解決。  
   
  因為查詢存放區會為每項查詢保留多個執行計劃，其可強制套用原則以指示查詢處理器要為查詢使用特定的執行計劃。 這也稱為強制執行計劃。 查詢存放區中的強制執行計劃，透過類似於 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) 查詢提示的機制加以提供，但它不需要在使用者應用程式中進行任何變更。 強制執行計劃可以解決在非常短的期間內，因計劃變更所導致的查詢效能低下。  
+
+> [!NOTE]
+> 查詢存放區會收集 DML 陳述式 (例如 SELECT、INSERT、UPDATE、DELETE、MERGE 與 BULK INSERT) 的計畫。
 
  **等候統計資料**是另一種可協助您針對 SQL Server 效能進行疑難排解的來源資訊。 等候統計資料長久以來只能在執行個體層級取得，難以回溯至實際的查詢。 在 SQL Server 2017 和 Azure SQL Database 中，我們在查詢存放區中新增了另一個維度，追蹤等候統計資料。 
 
