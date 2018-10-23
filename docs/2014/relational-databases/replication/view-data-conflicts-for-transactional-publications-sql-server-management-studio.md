@@ -31,9 +31,9 @@ ms.locfileid: "48052948"
   
 -   如果是佇列更新訂閱，則會針對每一個衝突提供資料。 複寫衝突檢視器可以在衝突保留期限指定的時間內使用衝突資料 (預設為 14 天)。 若要設定衝突保留期限，您可以執行以下其中一項作業：  
   
-    -   為 @conflict_retention sp_addpublication [的](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)參數指定保留值。  
+    -   為 @conflict_retention [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 的 參數指定保留值。  
   
-    -   指定的值為`'conflict_retention'`for @property 參數，並保留值 @value 參數[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。  
+    -   指定的值為 `'conflict_retention'` for @property 參數，並保留值 @value 參數[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。  
   
 ### <a name="to-view-conflicts"></a>若要檢視衝突  
   
