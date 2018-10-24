@@ -120,7 +120,7 @@ ms.locfileid: "48141838"
 rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- 如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
+ 如需詳細的範例，請參閱＜ [在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
   
  如需其他範例，請參閱[執行 Reporting Services 指令碼檔案](run-a-reporting-services-script-file.md)  
   
@@ -130,7 +130,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  指令碼必須以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 程式碼撰寫，然後使用 .rss 副檔名將指令碼儲存在 Unicode 或 UTF-8 文字檔中。 您不可以使用 **rs** 公用程式來偵錯指令碼。 若要偵錯指令碼，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中執行該程式碼。  
   
 > [!TIP]  
->  如需詳細的範例，請參閱＜ [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
+>  如需詳細的範例，請參閱＜ [在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行 Reporting Services 指令碼檔案](run-a-reporting-services-script-file.md)   

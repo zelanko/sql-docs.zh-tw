@@ -71,8 +71,10 @@ items:
 - name: 教學課程
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: data
+  - name: 資料
     items:
+    - name: 航空公司資料集
+      href: tutorials/demo-data-airlinedemo-in-sql.md
     - name: Iris 資料集
       href: tutorials/demo-data-iris-in-sql.md
     - name: NYC 計程車資料集
@@ -85,8 +87,6 @@ items:
     - name: 了解資料庫內分析
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 匯入資料
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
       - name: 探索及視覺化資料
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
       - name: 建立資料特徵
@@ -313,7 +313,7 @@ items:
       href: r-script-execution-errors.md
   - name: 部落格
     items:
-    - name: '[SQL Server]'
+    - name: SQL Server
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
     - name: R 伺服器
       href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
@@ -321,13 +321,13 @@ items:
       href: https://blogs.technet.microsoft.com/machinelearning/
   - name: 論壇
     items:
-    - name: '[SQL Server]'
+    - name: SQL Server
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 15b60b36d87f9eab56616d66984237ef2f57f68d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461934"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806778"
