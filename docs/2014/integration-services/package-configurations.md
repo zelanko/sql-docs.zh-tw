@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>相關內容  
   
--   msdn.microsoft.com 上的技術文件： [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643)(了解 Integration Services 封裝組態)  
+-   msdn.microsoft.com 上的技術文件： [了解 Integration Services 封裝組態](http://go.microsoft.com/fwlink/?LinkId=165643)  
   
--   www.sqlis.com 上的部落格文章： [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663)(透過程式碼建立封裝 – 封裝組態)。  
+-   www.sqlis.com 上的部落格文章： [透過程式碼建立封裝 – 封裝組態](http://go.microsoft.com/fwlink/?LinkId=217663)。  
   
--   blogs.msdn.com 上的部落格文章： [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664)(API 範例 - 以程式設計方式將組態檔加入封裝中)。  
+-   blogs.msdn.com 上的部落格文章： [API 範例 - 以程式設計方式將組態檔加入至封裝](http://go.microsoft.com/fwlink/?LinkId=217664)。  
   
   

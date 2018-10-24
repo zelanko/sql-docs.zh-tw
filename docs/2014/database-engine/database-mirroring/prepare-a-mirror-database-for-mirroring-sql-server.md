@@ -31,7 +31,7 @@ ms.locfileid: "48130078"
   
 ###  <a name="Requirements"></a> 需求  
   
--   主體和鏡像伺服器執行個體必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。 雖然鏡像伺服器有可能擁有較高版本的 SQL Server，但是只有在仔細規劃的升級程序中才建議使用這個組態。 在這種組態中，您會遇到自動容錯移轉的風險，此時資料移動會自動暫停，因為資料無法移到較低版本的 SQL Server。 如需詳細資訊，請參閱 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)。  
+-   主體和鏡像伺服器執行個體必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本上執行。 雖然鏡像伺服器有可能擁有較高版本的 SQL Server，但是只有在仔細規劃的升級程序中才建議使用這個組態。 在這種組態中，您會遇到自動容錯移轉的風險，此時資料移動會自動暫停，因為資料無法移到較低版本的 SQL Server。 如需詳細資訊，請參閱 [在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少](upgrading-mirrored-instances.md)。  
   
 -   主體和鏡像伺服器執行個體必須在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上執行。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料庫鏡像支援的相關資訊，請參閱 [SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   

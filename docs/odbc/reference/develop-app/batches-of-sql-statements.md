@@ -25,7 +25,7 @@ ms.locfileid: "47775099"
 # <a name="batches-of-sql-statements"></a>SQL 陳述式的批次
 批次的 SQL 陳述式是一組兩個或多個 SQL 陳述式或單一的 SQL 陳述式具有一組兩個或多個 SQL 陳述式相同的效果。 在某些實作中，會將整個批次陳述式執行之前未提供任何結果。 這通常會較有效率，比個別提交陳述式，因為通常可降低網路流量，而且資料來源有時可以最佳化執行 SQL 陳述式的批次。 在其他實作中，呼叫**SQLMoreResults**觸發的批次中的下一個陳述式。 ODBC 支援下列類型的批次：  
   
--   **明確的批次***明確的批次*是以分號 （;） 分隔的兩個或多個 SQL 陳述式。 例如，下列批次的 SQL 陳述式會開啟新的銷售訂單。 這需要將 Orders 與 程式行的資料表中插入資料列。 請注意最後一個陳述式之後沒有任何分號。  
+-   **明確的批次** *明確的批次*是以分號 （;） 分隔的兩個或多個 SQL 陳述式。 例如，下列批次的 SQL 陳述式會開啟新的銷售訂單。 這需要將 Orders 與 程式行的資料表中插入資料列。 請注意最後一個陳述式之後沒有任何分號。  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -49,7 +49,7 @@ ms.locfileid: "47775099"
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     **CREATE PROCEDURE**陳述式本身不是批次的 SQL 陳述式。 不過，它會建立程序是批次的 SQL 陳述式。 沒有分號分隔的兩個**選取 **陳述式因為**CREATE PROCEDURE**陳述式是 SQL Server 特定的而且 SQL Server 不需要分號來分隔多個陳述式**CREATE PROCEDURE**陳述式。  
+     **CREATE PROCEDURE**陳述式本身不是批次的 SQL 陳述式。 不過，它會建立程序是批次的 SQL 陳述式。 沒有分號分隔的兩個**選取**陳述式因為 **CREATE PROCEDURE** 陳述式是 SQL Server 特定的而且 SQL Server 不需要分號來分隔多個陳述式 **CREATE PROCEDURE** 陳述式。  
   
 -   **參數陣列**參數陣列可以搭配參數化的 SQL 陳述式，以執行大量作業的有效方法。 例如，使用參數陣列，使用下列**插入**陳述式，以插入幾行的資料表中的多個資料列，執行只有單一 SQL 陳述式時：  
   
