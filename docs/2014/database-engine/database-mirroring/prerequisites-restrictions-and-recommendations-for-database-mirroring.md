@@ -51,7 +51,7 @@ ms.locfileid: "48164788"
 -   兩個夥伴 (亦即，主體伺服器和鏡像伺服器) 必須都在執行相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 見證 (如果有的話) 可在任一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行，只要該版本支援資料庫鏡像。  
   
     > [!NOTE]  
-    >  您可以將做為鏡像工作階段夥伴的伺服器執行個體升級為最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)。  
+    >  您可以將做為鏡像工作階段夥伴的伺服器執行個體升級為最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少](upgrading-mirrored-instances.md)。  
   
 -   資料庫必須使用完整復原模式。 簡單與大量記錄復原模式不支援資料庫鏡像。 因此，鏡像資料庫的大量作業永遠都是完整記錄作業。 如需復原模式的相關資訊，請參閱[復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
