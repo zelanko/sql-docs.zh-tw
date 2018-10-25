@@ -50,7 +50,7 @@ ms.locfileid: "48048528"
   
  同樣地，您可以在此偵測使用不相符的類型，透過相同的 XEvent `hekaton_slow_parameter_passing`，使用`reason=parameter_conversion`。  
   
- 因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱[Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](memory-optimized-tables.md)。  
+ 因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱[記憶體最佳化資料表交易的重試邏輯方針](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [原生編譯的預存程序](natively-compiled-stored-procedures.md)  

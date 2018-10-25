@@ -114,7 +114,7 @@ ms.locfileid: "48116340"
   
 8.  重新啟動報表伺服器，清除目前開啟的任何工作階段。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> 連接到報表伺服器時解決 Kerberos 驗證錯誤  
  在設定交涉式驗證或 Kerberos 驗證的報表伺服器上，如果發生 Kerberos 驗證錯誤，與報表伺服器的用戶端連接將會失敗。 目前已知以下情況下會發生 Kerberos 驗證錯誤：  
   
 -   報表伺服器服務以 Windows 網域使用者帳戶的身分執行，而且您並未針對此帳戶註冊服務主要名稱 (SPN)。  

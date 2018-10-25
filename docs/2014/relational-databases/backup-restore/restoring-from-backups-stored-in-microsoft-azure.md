@@ -27,7 +27,7 @@ ms.locfileid: "48154808"
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL  
   
--   因為 SQL Server 必須連接至外部來源以擷取備份檔案，所以會使用 SQL 認證來驗證儲存體帳戶。 因此，RESTORE 陳述式需要 WITH CREDENTIAL 選項。 如需詳細資訊，請參閱 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+-   因為 SQL Server 必須連接至外部來源以擷取備份檔案，所以會使用 SQL 認證來驗證儲存體帳戶。 因此，RESTORE 陳述式需要 WITH CREDENTIAL 選項。 如需詳細資訊，請參閱 [SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 -   如果您是使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理雲端的備份，您可以使用 **smart_admin.fn_available_backups** 系統函數來檢閱儲存體中的所有可用備份。 此系統函數會以資料表傳回資料庫的所有可用備份。 由於結果是以資料表傳回，因此您可以篩選或排序結果。 如需詳細資訊，請參閱 < [smart_admin.fn_available_backups &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)。  
   

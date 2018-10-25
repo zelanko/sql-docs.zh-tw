@@ -54,7 +54,7 @@ ms.locfileid: "48072648"
 |public|每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入都屬於 public 伺服器角色。 當伺服器主體未被授與或拒絕安全性實體物件的特定權限時，該使用者會繼承授與給該物件之 public 的權限。 只有當您想要將任何物件提供給所有使用者使用時，才指派該物件的 public 權限。 您無法變更 public 的成員資格。<br /><br /> 注意：public 的實作方式與其他角色不同。 不過，您可以在 public 中授與、拒絕或撤銷權限。|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定伺服器角色的權限  
- 每個固定伺服器角色都擁有指派給它的特定權限。 如需指派給伺服器角色之權限的圖表，請參閱 [Database Engine Fixed Server and Fixed Database Roles](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)(資料庫引擎固定伺服器與固定資料庫角色)。  
+ 每個固定伺服器角色都擁有指派給它的特定權限。 如需指派給伺服器角色之權限的圖表，請參閱 [資料庫引擎固定伺服器與固定資料庫角色](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
   
 > [!IMPORTANT]  
 >  `CONTROL SERVER`類似，但不是完全相同的權限`sysadmin`固定的伺服器角色。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， `CONTROL SERVER` 不代表 `sysadmin` 固定伺服器角色中的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 `DBCC` 命令與許多系統程序都需要 `sysadmin` 固定伺服器角色中的成員資格。 取得一份 171 個系統預存程序，需要`sysadmin`成員資格，請參閱以下由 Andreas Wolter 張貼的部落格[CONTROL SERVER vs.sysadmin/sa： 權限、 系統程序、 DBCC、 自動結構描述建立和權限escalation-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
