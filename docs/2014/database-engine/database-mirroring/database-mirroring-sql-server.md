@@ -152,7 +152,7 @@ ms.locfileid: "48154938"
  如需詳細資訊，請參閱本主題稍後的 [角色切換](#RoleSwitching)。  
   
 > [!NOTE]  
->  建立新的鏡像工作階段或將見證加入至現有鏡像組態時，會要求所有涉及的伺服器執行個體都執行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不過，當您升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本時，這些相關執行個體的版本可能會不同。 如需詳細資訊，請參閱 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)。  
+>  建立新的鏡像工作階段或將見證加入至現有鏡像組態時，會要求所有涉及的伺服器執行個體都執行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不過，當您升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本時，這些相關執行個體的版本可能會不同。 如需詳細資訊，請參閱 [在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少](upgrading-mirrored-instances.md)。  
   
 ####  <a name="TxnSafety"></a> 交易安全性與作業模式  
  作業模式為同步或非同步作業需視其交易安全性設定而定。 如果您以獨佔模式使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來設定資料庫鏡像，系統便會在您選取作業模式時自動設定交易安全性設定。  
