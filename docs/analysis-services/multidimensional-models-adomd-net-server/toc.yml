@@ -1,8 +1,15 @@
+items:
 - name: ADOMD.NET 伺服器功能
-  href: adomd-net-server-functionality.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
 - name: ADOMD.NET 伺服器物件架構
-  href: adomd-net-server-object-architecture.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
 - name: ADOMD.NET 伺服器程式設計
-  href: adomd-net-server-programming.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
 - name: 使用者定義函數和預存程序
-  href: user-defined-functions-and-stored-procedures.md
+  href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
+ms.openlocfilehash: 92a4c043d6062ebe61f004ba47e6fdb02c8afb7d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144423"

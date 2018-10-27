@@ -1,75 +1,82 @@
+items:
 - name: 表格式模型程式設計
   href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: 商業智慧的 CSDL 註解 (CSDLBI)
-  href: csdl-annotations-for-business-intelligence-csdlbi.md
+  href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
   items:
-    - name: CSDLBI 概念
-      href: csdlbi-concepts.md
-    - name: 報表設計的 CSDLBI 屬性
-      href: csdlbi-attributes-for-report-design.md
+  - name: CSDLBI 概念
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts
+  - name: 報表設計的 CSDLBI 屬性
+    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design
 - name: 了解表格式物件模型
   href: representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
   items:
-    - name: 資料庫表示法
-      href: representation/database-representation-tabular.md
-    - name: 連接表示法
-      href: representation/connection-representation-tabular.md
-    - name: 資料表表示法
-      href: representation/tables-representation-tabular.md
-    - name: 導出資料行表示法
-      href: representation/tables-calculated-column-representation.md
-    - name: 導出量值表示法
-      href: representation/tables-calculated-measure-representation.md
-    - name: 階層表示法
-      href: representation/tables-hierarchy-representation.md
-    - name: 關鍵效能指標表示法
-      href: representation/tables-key-performance-indicator-representation.md
-    - name: 資料分割表示法
-      href: representation/tables-partition-representation.md
-    - name: 關聯性表示法
-      href: representation/relationship-representation-tabular.md
-    - name: 檢視方塊表示法
-      href: representation/perspective-representation-tabular.md
-    - name: 查詢表格式模型
-      href: representation/querying-a-tabular-model.md
+  - name: 資料庫表示法
+    href: representation/database-representation-tabular.md
+  - name: 連接表示法
+    href: representation/connection-representation-tabular.md
+  - name: 資料表表示法
+    href: representation/tables-representation-tabular.md
+  - name: 導出資料行表示法
+    href: representation/tables-calculated-column-representation.md
+  - name: 導出量值表示法
+    href: representation/tables-calculated-measure-representation.md
+  - name: 階層表示法
+    href: representation/tables-hierarchy-representation.md
+  - name: 關鍵效能指標表示法
+    href: representation/tables-key-performance-indicator-representation.md
+  - name: 資料分割表示法
+    href: representation/tables-partition-representation.md
+  - name: 關聯性表示法
+    href: representation/relationship-representation-tabular.md
+  - name: 檢視方塊表示法
+    href: representation/perspective-representation-tabular.md
+  - name: 查詢表格式模型
+    href: representation/querying-a-tabular-model.md
 - name: CSDLBI 技術參考
-  href: conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md
+  href: https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl
   items:
-    - name: AssociationSet 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
-    - name: BaseProperty 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/baseproperty-element-csdlbi.md
-    - name: DefaultDetails 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md
-    - name: DisplayKey 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md
-    - name: EntityContainer 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/entitycontainer-element-csdlbi.md
-    - name: EntitySet 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md
-    - name: EntityType 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md
-    - name: Hierarchy 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md
-    - name: KPI 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md
-    - name: KpiGoal 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/kpigoal-element-csdlbi.md
-    - name: KpiStatus 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/kpistatus-element-csdlbi.md
-    - name: Level 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/level-element-csdlbi.md
-    - name: Measure 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/measure-element-csdlbi.md
-    - name: Member 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/member-element-csdlbi.md
-    - name: MemberRef 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md
-    - name: NavigationProperty 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/navigationproperty-element-csdlbi.md
-    - name: Property 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/property-element-csdlbi.md
-    - name: PropertyRef 元素 (CSDLBI)
-      href: conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md
+  - name: AssociationSet 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi
+  - name: BaseProperty 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/baseproperty-element-csdlbi
+  - name: DefaultDetails 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/defaultdetails-element-csdlbi
+  - name: DisplayKey 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/displaykey-element-csdlbi
+  - name: EntityContainer 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entitycontainer-element-csdlbi
+  - name: EntitySet 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entityset-element-csdlbi
+  - name: EntityType 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/entitytype-element-csdlbi
+  - name: Hierarchy 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/hierarchy-element-csdlbi
+  - name: KPI 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpi-element-csdlbi
+  - name: KpiGoal 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpigoal-element-csdlbi
+  - name: KpiStatus 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/kpistatus-element-csdlbi
+  - name: Level 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/level-element-csdlbi
+  - name: Measure 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/measure-element-csdlbi
+  - name: Member 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/member-element-csdlbi
+  - name: MemberRef 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/memberref-element-csdlbi
+  - name: NavigationProperty 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/navigationproperty-element-csdlbi
+  - name: Property 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/property-element-csdlbi
+  - name: PropertyRef 元素 (CSDLBI)
+    href: https://docs.microsoft.com/bi-reference/csdl/propertyref-element-csdlbi
 - name: IMDEmbedded 介面
   href: imdembeddeddata-interface.md
+ms.openlocfilehash: febd610d6863a751ab484adec7f89cf33fd11d44
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148053"

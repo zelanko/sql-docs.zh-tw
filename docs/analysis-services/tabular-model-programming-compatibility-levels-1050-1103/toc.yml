@@ -1,14 +1,21 @@
+items:
 - name: 相容性層級 1050 到 1103 的表格式模型程式設計
   href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: 表示法 +
   href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
 - name: 概念結構描述定義語言 (CSDL) +
-  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
+  href: https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi
 - name: 商業智慧的 CSDL 註解 (CSDLBI)
-  href: csdl-annotations-for-business-intelligence-csdlbi.md
+  href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
 - name: 報表設計的 CSDLBI 屬性
-  href: csdlbi-attributes-for-report-design.md
+  href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design
 - name: CSDLBI 概念
-  href: csdlbi-concepts.md
+  href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts
 - name: IMDEmbeddedData 介面
   href: imdembeddeddata-interface.md
+ms.openlocfilehash: 61f3924bad5741a44536f7c019933588475fa7b2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145343"
