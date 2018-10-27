@@ -1,5 +1,5 @@
 ---
-title: 動作 (Analysis Services-多維度資料) |Microsoft 文件
+title: 動作 (Analysis Services-多維度資料) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020485"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146363"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020485"
   
 -   標準動作，該動作會傳回與動作發生所在之 Cube 中選定區段有關的動作元素 (URL、HTML、DataSet、RowSet 和其他元素)。  
   
- 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取動作，並對使用者公開動作。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
+ 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取動作，並對使用者公開動作。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Action> 物件是由基本資訊、動作要發生的目標、限制動作範圍的條件以及類型所組成。 基本資訊包括動作的名稱、動作的描述、動作的建議標題和其他內容。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34020485"
 ## <a name="types-of-actions"></a>動作的類型  
  下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中所含的動作類型：  
   
-|動作類型|說明|  
+|動作類型|描述|  
 |-----------------|-----------------|  
 |CommandLine|在命令提示字元執行命令。|  
 |資料集|將資料集傳回用戶端應用程式。|  
@@ -59,7 +59,7 @@ ms.locfileid: "34020485"
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
 |報表|將一個以 URL 為基礎的參數化要求，提交給報表伺服器，然後將報表傳回用戶端應用程式。|  
 |資料列集|將資料列集傳回用戶端應用程式。|  
-|Statement|執行 OLE DB 命令。|  
+|引數|執行 OLE DB 命令。|  
 |URL|在網際網路瀏覽器中顯示動態網頁。|  
   
 ## <a name="resolving-and-executing-actions"></a>解析及執行動作  

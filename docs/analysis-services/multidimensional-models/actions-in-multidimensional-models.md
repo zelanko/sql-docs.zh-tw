@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的動作 |Microsoft 文件
+title: 多維度模型中的動作 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024275"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145703"
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34024275"
   
 -   階層成員  
   
--   Level  
+-   層級  
   
 -   層級成員  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34024275"
  **動作內容**  
  選取動作的類型。 下表摘要可以使用的類型。  
   
-|型別|Description|  
+|類型|描述|  
 |----------|-----------------|  
 |資料集|擷取資料集。|  
 |專屬|使用不同於此資料表列出的介面來執行作業。|  
@@ -65,7 +65,7 @@ ms.locfileid: "34024275"
  **其他屬性**  
  選取屬性。 下表摘要可以使用的屬性。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**引動過程**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> 批次<br /><br /> 互動式<br /><br /> 開啟時|  
 |**應用程式**|描述動作的應用程式。|  
@@ -74,7 +74,7 @@ ms.locfileid: "34024275"
 |**標題是 MDX**|如果標題是 MDX，請指定 **True** ；如果不是 MDX，則指定 **False** 。|  
   
 > [!NOTE]  
->  您必須使用 Analysis Services 指令碼語言 (ASSL) 或分析管理物件 (AMO) 來定義 HTML 和命令列動作類型。 如需詳細資訊，請參閱 [Action 元素 &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md)、[Type 元素 &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) 和[設計 AMO OLAP 進階物件的程式](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)。  
+>  您必須使用 Analysis Services 指令碼語言 (ASSL) 或分析管理物件 (AMO) 來定義 HTML 和命令列動作類型。 如需詳細資訊，請參閱 [Action 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)、[Type 元素 &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 和[設計 AMO OLAP 進階物件的程式](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)。  
   
 ## <a name="creating-a-reporting-action"></a>建立報表動作  
  報表伺服器會回應以 URL 為基礎的報表要求。 若要建立報表動作，請在 [Cube] 功能表上，按一下 [新增報表動作]。 下列選項是報表動作特有的選項。  
@@ -82,7 +82,7 @@ ms.locfileid: "34024275"
  **報表伺服器**  
  下表中描述的屬性是為報表伺服器指定的。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**伺服器名稱**|正在執行報表伺服器的電腦名稱。|  
 |**伺服器路徑**|報表伺服器所公開的路徑。|  
@@ -122,6 +122,6 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  選取一或多個維度，並針對每一個維度，選取由動作傳回到用戶端應用程式的鑽研資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

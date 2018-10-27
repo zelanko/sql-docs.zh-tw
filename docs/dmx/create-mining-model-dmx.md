@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980588"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148043"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  目前提供者所定義之資料採礦演算法的名稱。  
   
 > [!NOTE]  
->  使用也可以擷取一份目前的提供者所支援的演算法[DMSCHEMA_MINING_SERVICES 資料列集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要檢視目前執行個體中支援的演算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 資料採礦屬性](../analysis-services/server-properties/data-mining-properties.md)。  
+>  使用也可以擷取一份目前的提供者所支援的演算法[DMSCHEMA_MINING_SERVICES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)。 若要檢視目前執行個體中支援的演算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 資料採礦屬性](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  如需可用於定義資料行之資料類型、內容類型、資料行散發及模型旗標的清單，請參閱下列主題：  
   
--   [資料型別&#40;資料採礦&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [資料類型 &#40;資料採礦&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [內容類型&#40;資料採礦&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [內容類型 &#40;資料採礦&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [資料行散發&#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [資料行分佈 &#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [模型旗標&#40;資料採礦&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [模型旗標 &#40;資料採礦&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列使用\<資料行關聯性 > 子句。  
   

@@ -1,6 +1,6 @@
 ---
 title: 下載 NYC 計程車示範資料和指令碼內嵌 R 和 Python （SQL Server 機器學習服務） |Microsoft Docs
-description: 指示下載紐約市計程車資料的範例，並建立資料庫。 資料會在 SQL Server 教學課程示範如何內嵌 R 和 Python 中 SQL Server 預存程序和 T-SQL 函數。
+description: 指示下載紐約市計程車資料的範例，並建立資料庫。 在 SQL Server Python 和 R 語言教學課程，示範如何在 SQL Server 預存程序和 T-SQL 函式中內嵌指令碼會使用資料。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463035"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806708"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>適用於 SQL Server 的 NYC 計程車示範資料
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>如需 SQL Server Python 和 R 教學課程的 NYC 計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章說明如何設定從公用資料所組成的範例資料庫[紐約市計程車和禮車委託](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。 這項資料可在數個 R 和 Python 教學課程中的 SQL Server 中的資料庫內分析。 範例資料是公用的資料集的 1%。 在您系統上，將資料庫備份檔案是稍微超過 90 MB，提供資料表中的主要資料的 1.7 百萬個資料列。
@@ -26,7 +26,7 @@ ms.locfileid: "49463035"
 
 +  [使用 SQL Server 中的 Python 模型訓練和評分](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>下載示範資料庫
+## <a name="download-files"></a>下載檔案
 
 範例資料庫是由 Microsoft 裝載的備份檔案。 立即當您按一下連結時，就會開始下載檔案。 
 
@@ -66,7 +66,7 @@ ms.locfileid: "49463035"
 |**PredictTipSingleMode**  |預存程序| PredictTipSingleMode.sql 指令碼建立。 呼叫所定型的模型，來使用模型建立預測。 此預存程序接受新的觀察值作為輸入，其個別特徵值會當作內嵌參數傳遞，並傳回值以預測新觀察值的結果。 這個預存程序會在[使 R 模型作業化](sqldev-operationalize-the-model.md)。|
 |**TrainTipPredictionModel**  |預存程序|TrainTipPredictionModel.sql 指令碼建立。 藉由呼叫 R 封裝，可訓練羅吉斯迴歸模型。 此模型會預測已支付小費資料行的值，並使用隨機選取的 70%資料進行定型。 此預存程序會輸出已定型的模型，並儲存在資料表 nyc_taxi_models 中。 這個預存程序會在[定型及儲存模型](sqldev-train-and-save-a-model-using-t-sql.md)。|
 
-## <a name="query-data-for-verification"></a>驗證查詢資料
+## <a name="query-the-data"></a>查詢資料
 
 驗證步驟中，執行查詢，以確認資料已上傳。
 

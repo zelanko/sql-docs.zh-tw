@@ -1,5 +1,5 @@
 ---
-title: 多維度模型 (Analysis Services) 中的翻譯 |Microsoft 文件
+title: 多維度模型 (Analysis Services) 中的翻譯 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026675"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147073"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多維度模型中的翻譯 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34026675"
   
 4.  以滑鼠右鍵按一下任何欄位，然後選取 [瀏覽資料] 。 您會看到每個成員的英文、西班牙文和法文翻譯。  
   
- 日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 **FormatString** 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](../../analysis-services/scripting/properties/formatstring-element-assl.md)。  
+ 日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 **FormatString** 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
  Analysis Services 教學課程中的[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) 將逐步引導您完成建立及測試翻譯的步驟。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026675"
   
 4.  建立及部署專案。  
   
-5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱[全球化秘訣和最佳作法 &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)。  
+5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>將翻譯加入維度和屬性  
  您可以將翻譯加入資料庫維度、屬性、階層和階層內的層級。  
@@ -119,6 +119,6 @@ ms.locfileid: "34026675"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 的全球化案例](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [語言和定序&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [語言和定序 &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

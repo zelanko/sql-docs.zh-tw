@@ -10,12 +10,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356529"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099780"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什麼是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 
@@ -47,7 +47,7 @@ T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料
 
 ## <a name="integrated-terminal"></a>整合式終端機
 
-在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用者介面的整合式終端機視窗中，使用您喜歡的命令列工具 (例如：Bash, PowerShell, sqlcmd, bcp和 ssh)。 若要深入了解整合式終端機，請參閱[整合式驗證終端機] (整合 terminal.md)。
+在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用者介面的整合式終端機視窗中，使用您喜歡的命令列工具 (例如：Bash, PowerShell, sqlcmd, bcp和 ssh)。 若要深入了解整合式終端機，請參閱[整合式終端機](integrated-terminal.md)。
 
 ## <a name="extensibility-and-extension-authoring"></a>擴充性和擴充功能撰寫
 

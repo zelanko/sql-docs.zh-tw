@@ -1,6 +1,6 @@
 ---
-title: 鳶尾花示範資料集，SQL server |Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: 鳶尾花示範資料集，SQL Server Python 和 R 教學課程 |Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463024"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806668"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>適用於 SQL Server 的鳶尾花示範資料
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>如需 SQL Server Python 和 R 教學課程的鳶尾花示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在此練習中，準備包含資料表的 SQL Server 資料庫[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)和模型儲存體。 鳶尾花資料包含在 SQL Server 所安裝的 R 和 Python 散發套件。 它用於機器學習服務教學課程適用於 SQL Server。 
+在此練習中，建立將資料從 SQL Server 資料庫[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)和相同的資料為基礎的模型。 鳶尾花資料包含在 SQL Server 所安裝的 R 和 Python 散發套件，並會在機器學習服務教學課程適用於 SQL Server。 
 
 若要完成此練習中，您應該具備[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或其他工具，可執行 T-SQL 查詢。
 
@@ -26,7 +26,7 @@ ms.locfileid: "49463024"
 
 +  [使用 SQL Server 中的 Python 模型訓練和評分](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>準備資料庫和資料表
+## <a name="create-the-database"></a>建立資料庫
 
 1. 啟動 SQL Server Management Studio，並開啟新**查詢**視窗。  
 
@@ -139,7 +139,7 @@ ms.locfileid: "49463024"
     > 若要修改預存程序之後，您不需要卸除並重新建立它。 使用[ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)陳述式。 
 
 
-## <a name="query-data-for-verification"></a>驗證查詢資料
+## <a name="query-the-data"></a>查詢資料
 
 驗證步驟中，執行查詢，以確認資料已上傳。
 

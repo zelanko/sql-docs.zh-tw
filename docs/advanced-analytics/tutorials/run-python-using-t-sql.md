@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461914"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050891"
 ---
 # <a name="run-python-using-t-sql"></a>使用 T-SQL 執行 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,6 +64,33 @@ ms.locfileid: "49461914"
     
     此外，您可能需要啟用網路通訊協定已停用，或開啟防火牆，以便 SQL Server 可與外部用戶端通訊。 如需詳細資訊，請參閱 <<c0> [ 疑難排解安裝](../common-issues-external-script-execution.md)。
 
+### <a name="call-revoscalepy-functions"></a>呼叫 revoscalepy 函式
+
+若要確認**revoscalepy**可供使用，執行包含的指令碼[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)產生統計摘要資料。 此指令碼會示範如何從內建的範例包含在 revoscalepy 擷取範例.xdf 資料檔案。 RxOptions 函式會提供**sampleDataDir**傳回的範例檔案位置的參數。
+
+因為 rx_summary 傳回型別的物件`class revoscalepy.functions.RxSummary.RxSummaryResults`，其中包含多個項目，您可以使用 pandas 資料框架以表格格式中擷取。
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
+
 ## <a name="basic-python-interaction"></a>Python 的基本互動
 
 有兩種方式可在 SQL Server 中執行 Python 程式碼：
@@ -102,7 +129,7 @@ ms.locfileid: "49461914"
 現在，請記住這些規則：
 
 + 所有東西放在`@script`引數必須是有效的 Python 程式碼。 
-+ 程式碼必須遵循有關縮排、 變數名稱，以及其他等等的所有 Pythonic 規則。 當您收到錯誤時，請檢查您的泛空白字元和大小寫。
++ 程式碼必須遵循有關縮排、 變數名稱，以及其他等等的所有 Python 規則。 當您收到錯誤時，請檢查您的泛空白字元和大小寫。
 + 如果您使用預設不會載入任何程式庫，您必須在您的指令碼開頭使用匯入陳述式，載入它們。 SQL Server 將新增多個產品專屬程式庫。 如需詳細資訊，請參閱 < [Python 程式庫](../python/python-libraries-and-data-types.md)。
 + 如果尚未安裝的程式庫，停止，並安裝 SQL Server 外部 Python 套件，如下所示： [SQL Server 上安裝新的 Python 套件](../python/install-additional-python-packages-on-sql-server.md)
 

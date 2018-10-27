@@ -1,5 +1,5 @@
 ---
-title: 資料採礦結構描述資料列集 (SSAs) |Microsoft 文件
+title: 資料採礦結構描述資料列集 (SSAs) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f29f8578fad9fe1f9ed50bf23a5aba80e14c560a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017725"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144284"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>資料採礦結構描述資料列集 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，許多現有的 OLE DB 資料採礦結構描述資料列集已經公開成一組系統資料表，而且您可以使用資料採礦延伸模組 (DMX) 陳述式來查詢它們。 透過針對資料採礦結構描述資料列集建立查詢，您可以識別可用的服務、取得模型和結構之狀態的更新，以及找出模型內容或參數的相關詳細資料。 如需資料採礦結構描述資料列集的描述，請參閱＜ [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)＞。  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，許多現有的 OLE DB 資料採礦結構描述資料列集已經公開成一組系統資料表，而且您可以使用資料採礦延伸模組 (DMX) 陳述式來查詢它們。 透過針對資料採礦結構描述資料列集建立查詢，您可以識別可用的服務、取得模型和結構之狀態的更新，以及找出模型內容或參數的相關詳細資料。 如需資料採礦結構描述資料列集的描述，請參閱＜ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)＞。  
   
 > [!NOTE]  
 >  您也可以使用 XMLA 來查詢資料採礦結構描述資料列集。 如需如何在 SQL Server Management Studio 中執行此動作的詳細資訊，請參閱 [使用 XMLA 建立資料採礦查詢](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "34017725"
 ## <a name="list-of-data-mining-schema-rowsets"></a>資料採礦結構描述資料列集的清單  
  下表列出可能適用於查詢和監視的資料採礦結構描述資料列集。  
   
-|資料列集名稱|說明|  
+|資料列集名稱|描述|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|列出目前環境中的所有採礦模型。<br /><br /> 其中包含的資訊如建立的日期、建立模型所使用的參數，以及定型集的大小。|  
 |DMSCHEMA_MINING_COLUMNS|列出目前環境之採礦模型中使用的所有資料行。<br /><br /> 其中的資訊包括採礦結構來源資料行的對應、資料類型、精確度，以及可搭配資料行使用的預測函數。|  

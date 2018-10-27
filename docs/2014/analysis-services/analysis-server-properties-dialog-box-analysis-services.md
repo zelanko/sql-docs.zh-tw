@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078058"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145093"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Analysis Server 屬性對話方塊 (Analysis Services)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [Analysis Server 屬性] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的一般、語言/定序和安全性設定。 以滑鼠右鍵按一下**物件總管**中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，然後從操作功能表選取 [屬性]，即可顯示 [Analysis Server 屬性] 對話方塊。 **[Analysis Server 屬性]** 對話方塊包含以下屬性。  
@@ -35,7 +35,7 @@ ms.locfileid: "48078058"
   
 -   **1103** 是部署模式 1 或 2 (適用於支援表格式模式或 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]的安裝) 的預設相容性層級。  
   
- 當支援命名空間的用戶端要求 DISCOVER_XML_METADATA 時，伺服器會傳回這個值。 如需詳細資訊，請參閱 [DISCOVER_XML_METADATA 資料列集](schema-rowsets/xml/discover-xml-metadata-rowset.md)。  
+ 當支援命名空間的用戶端要求 DISCOVER_XML_METADATA 時，伺服器會傳回這個值。 如需詳細資訊，請參閱 [DISCOVER_XML_METADATA 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset)。  
   
 ## <a name="general-properties"></a>一般屬性  
  使用此頁面即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的基本和進階一般屬性，例如資料夾位置和網路設定。  
@@ -98,8 +98,8 @@ ms.locfileid: "48078058"
 ## <a name="see-also"></a>另請參閱  
  [判斷 Analysis Services 執行個體的伺服器模式](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Analysis Services 中設定伺服器屬性](server-properties/server-properties-in-analysis-services.md)   
- [支援的 Analysis Services 的驗證方法](instances/authentication-methodologies-supported-by-analysis-services.md)   
- [角色和權限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [語言和定序&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
+ [Analysis Services 支援的驗證方法](instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [角色與權限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
+ [語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   
   

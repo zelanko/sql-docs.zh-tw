@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: 883eab47796f5cb09d5993fa2b2570cdda3cd2ae
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975667"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099649"
 ---
 # <a name="create-and-manage-roles"></a>建立及管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -66,8 +66,8 @@ ms.locfileid: "45975667"
 ## <a name="see-also"></a>另請參閱  
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [在 Excel 中進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [使用者名稱的函式 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [[在 Excel 中進行分析]](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

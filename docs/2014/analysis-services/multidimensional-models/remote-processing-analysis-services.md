@@ -11,12 +11,12 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173098"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146063"
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
   您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
@@ -92,10 +92,10 @@ ms.locfileid: "48173098"
 2.  最後一個步驟是將作業修改成依照您所義的排程執行，並新增管理作業所需的警示或通知。 您也可能想要精簡處理指令碼，或在作業中建立多個步驟來單獨處理物件。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 元件](../../ssms/agent/sql-server-agent.md#Components)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
  [使用 SQL Server Agent 排程 SSAS 管理工作](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批次方式處理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [批次處理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)   
- [處理物件&#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [處理物件 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

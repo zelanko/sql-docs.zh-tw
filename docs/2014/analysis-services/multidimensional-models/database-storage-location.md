@@ -13,22 +13,22 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216538"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148193"
 ---
 # <a name="database-storage-location"></a>資料庫儲存位置
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓特定資料庫放置於伺服器資料夾外部。 這些情況通常是由商務需求所驅使，例如改善效能或展開儲存體。 這些情況下，`DbStorageLocation`資料庫屬性可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 在本機的磁碟或網路裝置中指定資料庫位置。  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 資料庫屬性  
- `DbStorageLocation`資料庫屬性會指定其中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立和管理所有資料庫資料和中繼資料檔案。 所有的中繼資料檔案都會儲存在`DbStorageLocation`資料夾，但資料庫中繼資料檔案，它會儲存在伺服器資料夾除外。 設定的值時有兩個重要的考量`DbStorageLocation`資料庫屬性：  
+ `DbStorageLocation` 資料庫屬性會指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用以建立和管理所有資料庫資料和中繼資料檔案的資料夾。 所有中繼資料檔案都會儲存在 `DbStorageLocation` 資料夾，但資料庫中繼資料檔案除外，因為這種檔案會儲存在伺服器資料夾中。 在設定 `DbStorageLocation` 資料庫屬性的值時有兩個重要的考量：  
   
--   `DbStorageLocation`資料庫屬性必須設現有的 UNC 資料夾路徑或空字串。 空字串是伺服器資料夾的預設值。 如果這個資料夾不存在，當您執行 `Create`、`Attach` 或 `Alter` 命令時，就會引發錯誤。  
+-   `DbStorageLocation` 資料庫屬性必須設定為現有的 UNC 資料夾路徑或空字串。 空字串是伺服器資料夾的預設值。 如果這個資料夾不存在，當您執行 `Create`、`Attach` 或 `Alter` 命令時，就會引發錯誤。  
   
--   `DbStorageLocation`資料庫屬性無法設定為指向伺服器資料夾或其子資料夾中的任何一個。 如果此位置指向伺服器資料夾或其中任何一個子資料夾，當您執行 `Create`、`Attach` 或 `Alter` 命令時，就會引發錯誤。  
+-   `DbStorageLocation` 資料庫屬性無法設定為指向伺服器資料夾或其中任何一個子資料夾。 如果此位置指向伺服器資料夾或其中任何一個子資料夾，當您執行 `Create`、`Attach` 或 `Alter` 命令時，就會引發錯誤。  
   
 > [!IMPORTANT]  
 >  建議您將 UNC 路徑設定為使用存放區域網路 (SAN)、iSCSI 架構網路或附加於本機的磁碟。 任何網路共用的 UNC 路徑或任何高度延遲的遠端存放區方案，都會導致發生不支援的安裝。  
@@ -46,9 +46,9 @@ ms.locfileid: "48216538"
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [附加和卸離 Analysis Services 資料庫](attach-and-detach-analysis-services-databases.md)   
  [移動 Analysis Services 資料庫](move-an-analysis-services-database.md)   
- [DbStorageLocation 元素](../xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [建立項目&#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)   
- [Attach 元素](../xmla/xml-elements-commands/attach-element.md)   
- [同步處理項目&#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [Attach 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

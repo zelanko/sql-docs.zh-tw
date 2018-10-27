@@ -1,5 +1,5 @@
 ---
-title: 步驟 6 中運作 Python 模型，使用 SQL Server |Microsoft Docs
+title: 使用 SQL Server 的 Python 模型運算化 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,14 +7,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1af856e020228850a9311c5c4fa823d58908b57e
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d95edb081edc0f18a3734025a5902d13f8e9a295
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888954"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806808"
 ---
-# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>步驟 6: 使用 SQL Server 的 Python 模型運算化
+# <a name="operationalize-the-python-model-using-sql-server"></a>使用 SQL Server 的 Python 模型運算化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是教學課程中，部分[適用於 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
@@ -361,7 +361,7 @@ GO
 
 ## <a name="previous-step"></a>上一個步驟
 
-[步驟 5： 定型及儲存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[訓練及儲存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>另請參閱
 

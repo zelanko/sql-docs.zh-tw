@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f2e2d0b49f58eff2eac52103bddc6fda818aeb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849276"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150199"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,58 +59,58 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|database_id |ssNoversion |資料庫識別碼 |
-|file_id |ssNoversion |檔案識別碼 |
-|page_id |ssNoversion |頁面識別碼 |
-|page_type |ssNoversion |頁面類型 |
-|page_type_desc |Nvarchar(64) |頁面類型的描述 |
-|page_flag_bits |Nvarchar(64) |頁面標頭中的旗標位元 |
-|page_flag_bits_desc |nvarchar(256) |頁面標頭中的旗標位元描述 |
-|page_type_flag_bits |Nvarchar(64) |頁面標頭中的型別旗標位元 |
-|page_type_flag_bits_desc |Nvarchar(64) |頁面標頭中的型別旗標位元描述 |
-|object_id |ssNoversion |擁有分頁的物件識別碼 |
-|index_id |ssNoversion |索引 (堆積資料頁的 0) 的識別碼 |
-|partition_id |BIGINT |資料分割識別碼 |
-|alloc_unit_id |BIGINT |配置單位識別碼 |
-|page_level |ssNoversion |在索引中頁面的層級 (分葉 = 0) |
-|slot_count |SMALLINT |總數的位置 （使用和未使用） <br> 資料頁，這個號碼是相等的資料列數目。 |
-|ghost_rec_count |SMALLINT |標示為在頁面上的準刪除記錄數目 <br> 準刪除的記錄是指已標示為刪除但尚未移除。 |
-|torn_bits |ssNoversion |1 位元，每個偵測損毀的磁區寫入。 也可以用來儲存總和檢查碼 <br> 這個值用來偵測資料損毀 |
-|is_iam_pg |bit |表示頁面為 IAM 頁面的位元  |
-|is_mixed_ext |bit |位元來指示是否配置混合範圍 |
-|pfs_file_id |SMALLINT |對應的 PFS 頁面檔案識別碼 |
-|pfs_page_id |ssNoversion |對應的 PFS 頁面的頁面識別碼 |
-|pfs_alloc_percent |ssNoversion |PFS 位元組所指定的配置百分比 |
-|pfs_status |Nvarchar(64) |PFS 位元組 |
-|pfs_status_desc |Nvarchar(64) |PFS 位元組的描述 |
-|gam_file_id |SMALLINT |對應的 GAM 頁面檔案識別碼 |
-|gam_page_id |ssNoversion |對應的 GAM 頁面的頁面識別碼 |
-|gam_status |bit |位元來指示是否配置在 GAM |
-|gam_status_desc |Nvarchar(64) |GAM 葒鷑糔磢的描述 |
-|sgam_file_id |SMALLINT |對應的 SGAM 頁面的檔案識別碼 |
-|sgam_page_id |ssNoversion |對應的 SGAM 頁面的頁面識別碼 |
-|sgam_status |bit |位元來指示是否配置 SGAM 中 |
-|sgam_status_desc |Nvarchar(64) |SGAM 葒鷑糔磢的描述 |
-|diff_map_file_id |SMALLINT |對應的差異點陣圖頁面檔案識別碼 |
-|diff_map_page_id |ssNoversion |對應的差異點陣圖頁面的頁面識別碼 |
-|diff_status |bit |表示如果差異狀態已變更位元 |
-|diff_status_desc |Nvarchar(64) |Diff 葒鷑糔磢的描述 |
-|ml_file_id |SMALLINT |對應的最低限度記錄的點陣圖頁面檔案識別碼 |
-|ml_page_id |ssNoversion |對應的最低限度記錄的點陣圖頁面的頁面識別碼 |
-|ml_status |bit |指出頁面是否會進行最低限度記錄的位元 |
-|ml_status_desc |Nvarchar(64) |位元的最低限度記錄狀態的描述 |
-|free_bytes |SMALLINT |在頁面上的可用位元組數 |
-|free_data_offset |ssNoversion |在資料區域的結尾的可用空間位移 |
-|reserved_bytes |SMALLINT |所有交易所保留的可用位元組數目 (如果堆積) <br> 準刪除列 （如果索引分葉） 數 |
-|reserved_xdes_id |SMALLINT |M_reservedCnt 的 m_xdesID 所提供的空間 <br> 偵錯之用 |
-|xdes_id |Nvarchar(64) |M_reserved 所提供的最新交易 <br> 偵錯之用 |
-|prev_page_file_id |SMALLINT |先前的頁面檔案識別碼 |
-|prev_page_page_id |ssNoversion |前一個頁面的頁面識別碼 |
-|next_page_file_id |SMALLINT |下一個頁面檔案識別碼 |
-|next_page_page_id |ssNoversion |下一步 頁面的頁面識別碼 |
-|min_len |SMALLINT |固定的大小的資料列的長度 |
-|lsn |Nvarchar(64) |記錄序號 / 時間戳記 |
-|header_version |ssNoversion |頁面標頭版本 |
+|database_id |ssNoversion |資料庫識別碼 |
+|file_id |ssNoversion |檔案識別碼 |
+|page_id |ssNoversion |頁面識別碼 |
+|page_type |ssNoversion |頁面類型 |
+|page_type_desc |Nvarchar(64) |頁面類型的描述 |
+|page_flag_bits |Nvarchar(64) |頁面標頭中的旗標位元 |
+|page_flag_bits_desc |nvarchar(256) |頁面標頭中的旗標位元描述 |
+|page_type_flag_bits |Nvarchar(64) |頁面標頭中的型別旗標位元 |
+|page_type_flag_bits_desc |Nvarchar(64) |頁面標頭中的型別旗標位元描述 |
+|object_id |ssNoversion |擁有分頁的物件識別碼 |
+|index_id |ssNoversion |索引 (堆積資料頁的 0) 的識別碼 |
+|partition_id |BIGINT |資料分割識別碼 |
+|alloc_unit_id |BIGINT |配置單位識別碼 |
+|page_level |ssNoversion |在索引中頁面的層級 (分葉 = 0) |
+|slot_count |SMALLINT |總數的位置 （使用和未使用） <br> 資料頁，這個號碼是相等的資料列數目。 |
+|ghost_rec_count |SMALLINT |標示為在頁面上的準刪除記錄數目 <br> 準刪除的記錄是指已標示為刪除但尚未移除。 |
+|torn_bits |ssNoversion |1 位元，每個偵測損毀的磁區寫入。 也可以用來儲存總和檢查碼 <br> 這個值用來偵測資料損毀 |
+|is_iam_pg |bit |表示頁面為 IAM 頁面的位元  |
+|is_mixed_ext |bit |位元來指示是否配置混合範圍 |
+|pfs_file_id |SMALLINT |對應的 PFS 頁面檔案識別碼 |
+|pfs_page_id |ssNoversion |對應的 PFS 頁面的頁面識別碼 |
+|pfs_alloc_percent |ssNoversion |PFS 位元組所指定的配置百分比 |
+|pfs_status |Nvarchar(64) |PFS 位元組 |
+|pfs_status_desc |Nvarchar(64) |PFS 位元組的描述 |
+|gam_file_id |SMALLINT |對應的 GAM 頁面檔案識別碼 |
+|gam_page_id |ssNoversion |對應的 GAM 頁面的頁面識別碼 |
+|gam_status |bit |位元來指示是否配置在 GAM |
+|gam_status_desc |Nvarchar(64) |GAM 葒鷑糔磢的描述 |
+|sgam_file_id |SMALLINT |對應的 SGAM 頁面的檔案識別碼 |
+|sgam_page_id |ssNoversion |對應的 SGAM 頁面的頁面識別碼 |
+|sgam_status |bit |位元來指示是否配置 SGAM 中 |
+|sgam_status_desc |Nvarchar(64) |SGAM 葒鷑糔磢的描述 |
+|diff_map_file_id |SMALLINT |對應的差異點陣圖頁面檔案識別碼 |
+|diff_map_page_id |ssNoversion |對應的差異點陣圖頁面的頁面識別碼 |
+|diff_status |bit |表示如果差異狀態已變更位元 |
+|diff_status_desc |Nvarchar(64) |Diff 葒鷑糔磢的描述 |
+|ml_file_id |SMALLINT |對應的最低限度記錄的點陣圖頁面檔案識別碼 |
+|ml_page_id |ssNoversion |對應的最低限度記錄的點陣圖頁面的頁面識別碼 |
+|ml_status |bit |指出頁面是否會進行最低限度記錄的位元 |
+|ml_status_desc |Nvarchar(64) |位元的最低限度記錄狀態的描述 |
+|free_bytes |SMALLINT |在頁面上的可用位元組數 |
+|free_data_offset |ssNoversion |在資料區域的結尾的可用空間位移 |
+|reserved_bytes |SMALLINT |所有交易所保留的可用位元組數目 (如果堆積) <br> 準刪除列 （如果索引分葉） 數 |
+|reserved_xdes_id |SMALLINT |M_reservedCnt 的 m_xdesID 所提供的空間 <br> 偵錯之用 |
+|xdes_id |Nvarchar(64) |M_reserved 所提供的最新交易 <br> 偵錯之用 |
+|prev_page_file_id |SMALLINT |先前的頁面檔案識別碼 |
+|prev_page_page_id |ssNoversion |前一個頁面的頁面識別碼 |
+|next_page_file_id |SMALLINT |下一個頁面檔案識別碼 |
+|next_page_page_id |ssNoversion |下一步 頁面的頁面識別碼 |
+|min_len |SMALLINT |固定的大小的資料列的長度 |
+|lsn |Nvarchar(64) |記錄序號 / 時間戳記 |
+|header_version |ssNoversion |頁面標頭版本 |
 
 ## <a name="remarks"></a>備註
 `sys.dm_db_page_info`動態管理函數會傳回類似的頁面資訊`page_id`， `file_id`， `index_id`，`object_id`等，會出現在頁面標頭。 這項資訊是用於疑難排解和偵錯各種效能 （鎖定和閂鎖爭用） 和損毀問題。
@@ -143,7 +143,7 @@ FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 SELECT page_info.* 
 FROM sys.dm_exec_requests AS d  
 CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r  
-CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
+CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 關鍵效能指標 (Kpi) 多維度模型中的 |Microsoft 文件
+title: 關鍵效能指標 (Kpi) 多維度模型中的 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027558"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147783"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027558"
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，關鍵效能指標是用來評估商務成就的計算集合，這些計算與 Cube 中的量值群組相關。 一般來說，這些計算是多維度運算式 (MDX) 運算式或導出成員的結合。 KPI 也有其他中繼資料，這些中繼資料會提供有關用戶端應用程式應該如何顯示 KPI 計算結果的資訊。  
   
- KPI 會處理有關目標集合、Cube 中記錄之效能的實際公式，以及顯示趨勢與效能狀態度量的相關資訊。 AMO 會用來定義公式及有關 KPI 值的其他定義。 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取 KPI 值，並對使用者公開 KPI 值。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
+ KPI 會處理有關目標集合、Cube 中記錄之效能的實際公式，以及顯示趨勢與效能狀態度量的相關資訊。 AMO 會用來定義公式及有關 KPI 值的其他定義。 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取 KPI 值，並對使用者公開 KPI 值。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Kpi> 物件是由基本資訊、目標、達到的實際值、狀態值、趨勢值，以及檢視 KPI 的資料夾所組成。 基本資訊包括 KPI 的名稱和描述。 目標是評估為某個數字的 MDX 運算式。 實際值是評估為某個數字的 MDX 運算式。 狀態和趨勢值是評估為某個數字的 MDX 運算式。 資料夾是要呈現給用戶端之 KPI 的建議位置。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "34027558"
 |詞彙|定義|  
 |----------|----------------|  
 |目標|會傳回 KPI 目標值的 MDX 數值運算式或計算。|  
-|Value|會傳回實際 KPI 值的 MDX 數值運算式。|  
-|狀態|代表特定時間點之 KPI 狀態的 MDX 運算式。<br /><br /> 狀態 MDX 運算式應傳回介於 -1 和 1 之間的正規化值。 等於或小於 -1 的值將解譯為「不良」或「低」。 零值 (0) 會解釋為「可接受」或「中」。 等於或大於 1 的值將解譯為「很好」或「高」。<br /><br /> 可以選擇性地傳回無限數量的中繼值，而且如果用戶端應用程式支援的話，也可用來顯示任意數量的其他狀態。|  
+|值|會傳回實際 KPI 值的 MDX 數值運算式。|  
+|[狀態]|代表特定時間點之 KPI 狀態的 MDX 運算式。<br /><br /> 狀態 MDX 運算式應傳回介於 -1 和 1 之間的正規化值。 等於或小於 -1 的值將解譯為「不良」或「低」。 零值 (0) 會解釋為「可接受」或「中」。 等於或大於 1 的值將解譯為「很好」或「高」。<br /><br /> 可以選擇性地傳回無限數量的中繼值，而且如果用戶端應用程式支援的話，也可用來顯示任意數量的其他狀態。|  
 |趨勢|評估一段時間後之 KPI 值的 MDX 運算式。 趨勢可以是在特定商務內容中任何有意義且以時間為基礎的準則。<br /><br /> 趨勢 MDX 運算式可讓商務使用者判斷經過一段時間之後，KPI 是提升還是降低。|  
 |狀態指標|快速表示 KPI 狀態的視覺元素。 元素的顯示取決於用來評估狀態的 MDX 運算式值。|  
 |趨勢指標|快速表示 KPI 趨勢的視覺元素。 元素的顯示取決於用來評估趨勢的 MDX 運算式值。|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027558"
 ## <a name="parent-kpis"></a>父 KPI  
  組織可追蹤不同層級的不同商業標準。 例如，只有兩或三個 KPI 可用來量測全公司的商業成就，但這些公司的整體性 KPI 可以用公司內的事業單位所追蹤的其他三或四個 KPI 為基礎。 同時，公司內的事業單位可使用不同的統計資料來計算相同的 KPI，然後再將結果積存到公司的整體性 KPI。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可讓您定義 Kpi 之間的父子式關聯性。 此父子式關聯性可讓子 KPI 的結果用於計算父 KPI 的結果。 用戶端應用程式也可以使用此關聯性來適當地顯示父 KPI 和子 KPI。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您定義 KPI 之間的父子式關聯性。 此父子式關聯性可讓子 KPI 的結果用於計算父 KPI 的結果。 用戶端應用程式也可以使用此關聯性來適當地顯示父 KPI 和子 KPI。  
   
 ## <a name="weights"></a>加權  
  子 KPI 也可指派加權。 加權可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在計算父 KPI 值時，按比例調整子 KPI 的結果。  

@@ -11,12 +11,12 @@ ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8d1e4f8b036a21becde793f2d4fdde89913e7b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9eb585f756c03388bfe5b280a75b85f57d35394d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146028"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146683"
 ---
 # <a name="drillthrough-on-mining-structures"></a>採礦結構的鑽研
   「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
@@ -33,13 +33,13 @@ ms.locfileid: "48146028"
 ## <a name="enabling-drillthrough-to-structure-data"></a>啟用結構資料鑽研  
  若要對採礦結構使用鑽研，必須符合下列條件：  
   
--   還必須在模型上啟用鑽研。 根據預設，這兩種類型的鑽研都已停用。 若要在資料採礦精靈中啟用鑽研，請選取位於精靈最後一頁啟用鑽研模型案例的選項。 您也可以將功能加入模型鑽研稍後藉由變更`AllowDrillthrough`屬性。  
+-   還必須在模型上啟用鑽研。 根據預設，這兩種類型的鑽研都已停用。 若要在資料採礦精靈中啟用鑽研，請選取位於精靈最後一頁啟用鑽研模型案例的選項。 您也可以稍後變更 `AllowDrillthrough` 屬性，在模型上新增鑽研的能力。  
   
 -   如果您使用 DMX 來建立採礦結構，請使用 WITH DRILLTHROUGH 子句。 如需詳細資訊，請參閱 [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)。  
   
--   鑽研藉由擷取處理採礦結構時快取之定型案例的相關資訊來運作。 因此，如果您在處理結構變更之後清除快取的資料<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>屬性設`ClearAfterProcessing`，鑽研將不會運作。 若要啟用結構資料行的鑽研，您必須變更<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>屬性設`KeepTrainingCases`，然後重新處理結構。  
+-   鑽研藉由擷取處理採礦結構時快取之定型案例的相關資訊來運作。 因此，如果您將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 `ClearAfterProcessing`，在處理結構之後清除快取的資料，鑽研將不會運作。 若要啟用結構資料行的鑽研功能，您必須將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 `KeepTrainingCases`，然後重新處理結構。  
   
--   確認採礦結構和採礦模型都已[AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md)屬性設定為`True`。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。  
+-   確認採礦結構和採礦模型都已[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)屬性設定為`True`。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。  
   
 ## <a name="security-issues-for-drillthrough"></a>鑽研的安全性問題  
  鑽研權限是在結構和模型上分別設定的。 即使您沒有結構的權限，模型權限還是可以讓您從模型進行鑽研。 結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。  
@@ -56,7 +56,7 @@ ms.locfileid: "48146028"
 |-|-|  
 |從採礦模型檢視器對結構使用鑽研|[從模型檢視器使用鑽研](use-drillthrough-from-the-model-viewers.md)|  
 |參閱特定模型類型的鑽研查詢範例。|[資料採礦查詢](data-mining-queries.md)|  
-|取得有關適用於特定採礦結構和採礦模型之權限的詳細資訊。|[資料採礦結構和模型的權限授與&#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|取得有關適用於特定採礦結構和採礦模型之權限的詳細資訊。|[授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型的鑽研](drillthrough-on-mining-models.md)  

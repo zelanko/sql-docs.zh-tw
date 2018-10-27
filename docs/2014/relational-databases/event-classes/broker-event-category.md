@@ -17,12 +17,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db73daadcb32a64d308b4f223be133cd5de4bb9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 602113da86b3d8ffdc79484b35dab59749844a01
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101558"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145643"
 ---
 # <a name="broker-event-category"></a>Broker 事件類別目錄
   **Broker** 事件類別目錄包含一般的 Service Broker 事件。  
@@ -45,6 +45,6 @@ ms.locfileid: "48101558"
  還為 Service Broker 提供了兩個安全性稽核事件。 如需這些事件的詳細資訊，請參閱 [Audit Broker 登入事件類別](audit-broker-login-event-class.md) 和 [Audit Broker 交談事件類別](audit-broker-conversation-event-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性稽核事件類別目錄](../../analysis-services/trace-events/security-audit-event-category.md)  
+ [安全性稽核事件類別目錄](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

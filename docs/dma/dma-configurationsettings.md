@@ -2,7 +2,7 @@
 title: 設定 Data Migration assistant (SQL Server) |Microsoft Docs
 description: 了解如何設定的更新組態檔中的值設定 Data Migration Assistant
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755576"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643816"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration assistant
 
 您可以微調特定行為的資料移轉小幫手 dma.exe.config 檔案中設定組態值。 這篇文章描述的索引鍵的組態值。
 
-您可以找到 dma.exe.config 檔案 Data Migration Assistant 的桌面應用程式和命令列公用程式，您的電腦上的下列資料夾中。
+您可以在您的電腦上的下列資料夾中，Data Migration Assistant 的桌面應用程式和命令列公用程式中，找到 dma.exe.config 檔案。
 
 - 桌面應用程式
 
@@ -42,7 +42,7 @@ ms.locfileid: "47755576"
 
 Data Migration Assistant 評估多個資料庫，以平行方式。 在評估期間 Data Migration Assistant 中擷取資料層應用程式 (dacpac) 以了解資料庫結構描述。 這項作業可以逾時，如果相同的伺服器上的多個資料庫以平行方式來評估。 
 
-開始使用 Data Migration Assistant v2.0，您可以控制此設定 parallelDatabases 組態值。 預設值為 8。
+開始使用 Data Migration Assistant v2.0，您可以控制這藉由設定 parallelDatabases 組態值。 預設值為 8。
 
 ```
 <advisorGroup>
@@ -87,15 +87,15 @@ Data Migration Assistant 移轉多個資料庫，以平行方式，之前移轉�
 
 - commandTimeout
 
-   這會設定 IDbCommand.CommandTimeout 屬性*秒*。 (預設值 = 60)
+   此參數中設定 IDbCommand.CommandTimeout 屬性*秒*。 (預設值 = 60)
 
 - databaseLockTimeout
 
-   這相當於[設定的鎖定\_逾時等候逾時\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (預設 = 5000)
+   此參數相當於[設定的鎖定\_逾時等候逾時\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (預設 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   若要使用的 SQL 連接集區連線的數目。 (預設值 = 8)
+  此參數會設定要使用的 SQL 連接集區連線的數目。 (預設值 = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database： 建議的臨界值
 

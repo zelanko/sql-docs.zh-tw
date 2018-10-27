@@ -1,7 +1,7 @@
 ---
 title: 什麼是新 Data Migration Assistant (SQL Server) |Microsoft 文件
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655652"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643946"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
+
+## <a name="dma-v41"></a>DMA 4.1 版
+DMA 的 v4.1 版本引進了支援的內部部署 SQL Server 資料庫移轉至 Azure SQL Database 受控執行個體的全方位評估。
+
+評估工作流程可協助您偵測可能會影響您移轉至 Azure SQL Database 受控執行個體的下列問題：
+
+- **不支援，或僅部分支援功能**。 DMA 會評估來源 SQL Server 資料庫使用中或在目標 Azure SQL Database 受控執行個體上不支援部分支援的功能。 然後此工具會提供一組完整的建議，Azure，以及緩和步驟，以便規劃移轉專案時，客戶可以用這項資訊到帳戶中可用的替代方法。
+
+- **相容性問題**。 DMA 也會識別下列領域的相關的相容性問題：
+
+    - 重大變更： 可能會中斷移轉到目標資料庫的功能特定的結構描述物件。  我們建議修正資料庫移轉後的這些結構描述物件。
+    - 行為變更： 報告的結構描述物件可能會繼續運作，但它們可能會出現不同的行為，例如效能降低。
+    - 資訊的問題： 這些物件不會影響移轉，但可能已被取代的 SQL Server 版本的功能。
+
+完成評估之後，使用我們[Azure 資料庫移轉服務](https://azure.microsoft.com/services/database-migration/)(DMS) 來執行的 SQL Server 資料庫到 Azure SQL Database 受控執行個體移轉。  同時支援 DMS[離線](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)（單次） 和[線上](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)（最少停機時間） 的資料庫移轉至 Azure SQL Database 受控執行個體。
 
 ## <a name="dma-v40"></a>DMA v4.0
 DMA 的 v4.0 版本引進了 「 Azure SQL 資料庫 SKU 建議 」 功能，可讓使用者能夠識別建議從裝載資料庫的電腦收集效能計數器為基礎的 Azure SQL 資料庫 SKU 的最小。 這項功能提供定價層、 計算層級，和最大的資料大小，以及每月預估的成本的相關建議。 它也提供佈建所有資料庫到 Azure 中大量的能力。
@@ -35,7 +50,7 @@ DMA 的 v4.0 版本引進了 「 Azure SQL 資料庫 SKU 建議 」 功能，可
 ## <a name="dma-v36"></a>DMA 3.6 版
 DMA 的 3.6 版版本導入了 「 自動修復 」 會受到最常見的移轉封鎖器的結構描述物件。
 
-此版本中提供下列移轉封鎖程式自動修正和行為變更的問題：
+此版本中提供下列移轉封鎖程式 autofix 和行為變更的問題：
 - 使用未限定 Join 語法的結構描述物件。
 - 使用舊版的 RAISEERROR 陳述式的結構描述物件。
 - 使用順序的整數常值的 SQL 陳述式。

@@ -15,15 +15,15 @@ ms.assetid: 96cad715-213e-4eac-9003-130a2f5fc985
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b0a858c3e87aa657f02d106f6e6db453ee0cb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37afa05887059607edc257c3957495a8db335d3c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088328"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144765"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>層級命名範本對話方塊 (Analysis Services - 多維度資料)
-  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [層級命名範本] 對話方塊，即可建構維度中之父屬性的層級命名範本。 如需層級命名範本的詳細資訊，請參閱 [NamingTemplate 元素 &#40;ASSL&#41;](scripting/properties/namingtemplate-element-assl.md)。 您可以顯示**層級命名範本**對話方塊中，依序按一下省略符號按鈕 (**...**) 上`NamingTemplate`值中的屬性翻譯**翻譯詳細資料**窗格**翻譯** 索引標籤的**維度設計師**.  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [層級命名範本] 對話方塊，即可建構維度中之父屬性的層級命名範本。 如需層級命名範本的詳細資訊，請參閱 [NamingTemplate 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl)。 您可以顯示**層級命名範本**對話方塊中，依序按一下省略符號按鈕 (**...**) 上`NamingTemplate`值中的屬性翻譯**翻譯詳細資料**窗格**翻譯** 索引標籤的**維度設計師**.  
   
 ## <a name="options"></a>選項。  
   

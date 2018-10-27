@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 198f2f184a703f270c4fb52a775c47330c68888b
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: b224b70c8985b23568d24f6230b138d6c43f5928
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563844"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148163"
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "45563844"
 |**整合式安全性**|使用呼叫端的 Windows 識別連接到 Analysis Services。 有效值為空白、SSPI 和 BASIC。<br /><br /> **Integrated Security**=**SSPI** 是 TCP 連接的預設值，允許 NTLM、Kerberos 或匿名驗證。 空白是 HTTP 連接的預設值。<br /><br /> 使用 **SSPI**時， **ProtectionLevel** 必須設定為下列其中一項： **Connect**、 **PktIntegrity**、 **PktPrivacy**。|  
 |**保存加密**|當用戶端應用程式需要由資料來源物件以加密形式保存機密的驗證資訊如密碼時，請設定此屬性。 預設情況下並不會保存驗證資訊。|  
 |**保存安全性資訊**|有效值為 True 和 False。 設定為 True 時，一旦建立連接之後，即可從連接取得先前在連接字串中指定的使用者識別或密碼等安全性資訊。 預設值是 False。|  
-|**保護層級**|決定連接所使用的安全性層級。 有效值為：<br /><br /> -   **無**。 未驗證或匿名連接。 對傳送到伺服器的資料不執行驗證。<br />-   **連接**。 驗證的連接。 只有在用戶端與伺服器建立關聯性時才會驗證。<br />-   **Pkt Integrity**。 加密的連接。 確認所有資料都是接收自用戶端，而且資料在傳輸過程中未遭到變更。<br />-   **Pkt Privacy**。 經簽署的加密，僅限 XMLA 支援此選項。 確認所有資料都是接收自用戶端，而且資料在傳輸過程中未遭到變更，並透過資料加密保護資料的隱私。<br /><br /> 如需詳細資訊，請參閱＜ [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)＞|  
+|**保護層級**|決定連接所使用的安全性層級。 有效值為：<br /><br /> -   **無**。 未驗證或匿名連接。 對傳送到伺服器的資料不執行驗證。<br />-   **連接**。 驗證的連接。 只有在用戶端與伺服器建立關聯性時才會驗證。<br />-   **Pkt Integrity**。 加密的連接。 確認所有資料都是接收自用戶端，而且資料在傳輸過程中未遭到變更。<br />-   **Pkt Privacy**。 經簽署的加密，僅限 XMLA 支援此選項。 確認所有資料都是接收自用戶端，而且資料在傳輸過程中未遭到變更，並透過資料加密保護資料的隱私。<br /><br /> 如需詳細資訊，請參閱＜ [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)＞|  
 |**角色**|指定預先定義的角色以逗號分隔的清單，以便使用該角色所傳達的權限連接到伺服器或資料庫。 如果省略此屬性，則會使用所有角色，而且有效權限將是所有角色權限的組合。 將此屬性設定為空值 (例如 Roles=' ') 時，用戶端連接即不具備任何角色成員資格。<br /><br /> 系統管理員使用此屬性連接時將使用其角色所傳達的權限。 如果角色未提供足夠的權限，某些命令可能會失敗。|  
 |**SSPI**|當 **Integrated Security** 設定為 **SSPI**時，明確指定哪一種安全性封裝用於用戶端驗證。 SSPI 支援多種封裝，但是您可以使用這個屬性來指定特定封裝。 有效的值為：交涉、Kerberos、NTLM 和匿名使用者。 如果未設定此屬性，所有封裝都將可供連接使用。|  
 |**使用加密資料**|將資料傳輸加密。 有效值為 True 和 False。|  

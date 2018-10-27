@@ -23,17 +23,17 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fdfd3ce4393fef5ae2574e5ec151cd345f59bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117818"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145663"
 ---
 # <a name="processing-objects-xmla"></a>處理物件 (XMLA)
   在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 處理是在步驟或一系列的步驟轉換資料成供商務分析的資訊。 處理會因物件類型而異，但是處理永遠都是將資料轉換為資訊的一部分。  
   
- 程序[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件，您可以使用[程序](../xmla/xml-elements-commands/process-element-xmla.md)命令。 `Process` 命令可以處理在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的下列物件：  
+ 程序[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件，您可以使用[程序](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)命令。 `Process` 命令可以處理在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的下列物件：  
   
 -   Cube  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48117818"
  若要控制物件的處理，`Process` 命令具有各種可以設定的屬性。 `Process` 命令具有可控制以下動作的屬性：將完成多少處理、將處理哪些物件、是否使用非正規的繫結、如何處理錯誤以及如何管理回寫資料表。  
   
 ## <a name="specifying-processing-options"></a>指定處理選項  
- [型別](../xmla/xml-elements-properties/type-element-xmla.md)屬性`Process`命令會指定處理物件時要使用的處理選項。 如需處理選項的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)。  
+ [型別](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)屬性`Process`命令會指定處理物件時要使用的處理選項。 如需處理選項的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
  下表列出 `Type` 屬性的常數，以及各種可使用每個常數處理的物件。  
   
@@ -72,14 +72,14 @@ ms.locfileid: "48117818"
  如需有關處理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件，請參閱[多維度模型物件處理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ## <a name="specifying-objects-to-be-processed"></a>指定要處理的物件  
- [物件](../xmla/xml-elements-properties/object-element-xmla.md)屬性`Process`命令中包含要處理之物件的物件識別碼。 在 `Process` 命令中只能指定一個物件，但是處理物件也會處理任何子系物件。 例如，在 Cube 處理序中處理量值群組會處理該量值群組的所有資料分割，然而處理資料庫處理序則會處理資料庫包含的所有物件，包括 Cube、維度和採礦結構。  
+ [物件](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)屬性`Process`命令中包含要處理之物件的物件識別碼。 在 `Process` 命令中只能指定一個物件，但是處理物件也會處理任何子系物件。 例如，在 Cube 處理序中處理量值群組會處理該量值群組的所有資料分割，然而處理資料庫處理序則會處理資料庫包含的所有物件，包括 Cube、維度和採礦結構。  
   
  如果您將 `ProcessAffectedObjects` 命令的 `Process` 屬性設定為 True，則也會處理指定物件所影響的任何相關物件。 例如，如果使用以累加方式更新的維度*ProcessUpdate*處理中的選項`Process`命令時，也是其彙總都會變成無效，因為加入或刪除成員的任何磁碟分割由處理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果`ProcessAffectedObjects`設為 true。 在這種情況下，單一 `Process` 命令可以處理在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的多個物件，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會決定除了在 `Process` 命令中指定的單一物件之外，還必須處理哪些物件。  
   
  不過，您可以使用 `Process` 命令中的 `Batch` 命令來同時處理多個物件 (例如維度)。 相較於使用 `ProcessAffectedObjects` 屬性，批次作業在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上依序或平行處理物件時，提供更細的控制層級，而且可讓您為較大的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫調整您的處理方法。 如需有關執行批次作業的詳細資訊，請參閱 <<c0> [ 執行批次運算&#40;XMLA&#41;](performing-batch-operations-xmla.md)。</c0>  
   
 ## <a name="specifying-out-of-line-bindings"></a>指定非正規繫結  
- 如果`Process`命令未包含之`Batch`命令，您可以選擇性地指定中的程式碼外部繫結[繫結](../xmla/xml-elements-properties/bindings-element-xmla.md)， [DataSource](../xmla/xml-elements-properties/source-element-xmla.md)，和[DataSourceView](../xmla/xml-elements-properties/datasourceview-element-xmla.md)屬性的`Process`命令要處理的物件。 非正規 (out-of-line) 繫結是資料來源、資料來源檢視以及其他物件的參考，其中繫結只會在 `Process` 命令執行期間存在，而且會覆寫任何與要處理的物件關聯的現有繫結。 如果未指定非正規 (out-of-line) 繫結，會使用與要處理的物件目前關聯的繫結。  
+ 如果`Process`命令未包含之`Batch`命令，您可以選擇性地指定中的程式碼外部繫結[繫結](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla)， [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)，和[DataSourceView](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla)屬性的`Process`命令要處理的物件。 非正規 (out-of-line) 繫結是資料來源、資料來源檢視以及其他物件的參考，其中繫結只會在 `Process` 命令執行期間存在，而且會覆寫任何與要處理的物件關聯的現有繫結。 如果未指定非正規 (out-of-line) 繫結，會使用與要處理的物件目前關聯的繫結。  
   
  非正規 (out-of-line) 繫結用於在下列情況：  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48117818"
  如需有關合併資料分割使用 XML for Analysis (XMLA) 的詳細資訊，請參閱[合併的分割區&#40;XMLA&#41;](merging-partitions-xmla.md)。  
   
 ## <a name="handling-processing-errors"></a>處理在處理時發生的錯誤  
- [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md)屬性`Process`命令可讓您指定如何處理在處理物件時發生錯誤。 例如，處理維度時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在索引鍵屬性的索引鍵資料行中遇到重複的值。 由於屬性索引鍵必須是唯一的，所以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會捨棄重複的記錄。 根據[KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md)屬性`ErrorConfiguration`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]無法：  
+ [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla)屬性`Process`命令可讓您指定如何處理在處理物件時發生錯誤。 例如，處理維度時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在索引鍵屬性的索引鍵資料行中遇到重複的值。 由於屬性索引鍵必須是唯一的，所以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會捨棄重複的記錄。 根據[KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl)屬性`ErrorConfiguration`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]無法：  
   
 -   忽略錯誤並繼續處理維度。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48117818"
  當 `ErrorConfiguration` 在 `Process` 命令期間提供選項時，有許多類似的狀況。  
   
 ## <a name="managing-writeback-tables"></a>管理回寫資料表  
- 如果 `Process` 命令遇到可寫入的資料分割，或是這類資料分割尚未完全處理的 Cube 或是量值群組，該資料分割可能不會有已經存在的回寫資料表。 [WritebackTableCreation](../xmla/xml-elements-properties/writebacktablecreation-element-xmla.md)屬性`Process`命令會判斷是否[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]應該建立回寫資料表。  
+ 如果 `Process` 命令遇到可寫入的資料分割，或是這類資料分割尚未完全處理的 Cube 或是量值群組，該資料分割可能不會有已經存在的回寫資料表。 [WritebackTableCreation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/writebacktablecreation-element-xmla)屬性`Process`命令會判斷是否[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]應該建立回寫資料表。  
   
 ## <a name="examples"></a>範例  
   

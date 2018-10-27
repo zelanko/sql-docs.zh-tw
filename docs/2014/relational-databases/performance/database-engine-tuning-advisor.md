@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127416"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991171"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) 會分析資料庫，並提出可用來最佳化查詢效能的建議。 Database Engine Tuning Advisor 在您尚未深入了解資料庫結構或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本質內容之前，就能夠選取及建立一組最佳的索引、索引檢視或資料表資料分割。 您可以使用 DTA 來執行下列工作。  
@@ -94,7 +94,7 @@ ms.locfileid: "48127416"
   
     2.  建議的索引在目前的實體資料庫設計下，無法對查詢效能提供足夠的改善。  
   
-    3.  執行 Database Engine Tuning Advisor 的使用者不屬於`db_owner`資料庫角色或`sysadmin`固定的伺服器角色。 工作負載中的查詢，會在執行 Database Engine Tuning Advisor 之使用者的安全性內容中進行分析， 使用者必須是 `db_owner` 資料庫角色的成員。  
+    3.  執行 Database Engine Tuning Advisor 的使用者，不是 `db_owner` 資料庫角色或`sysadmin` 固定伺服器角色的成員。 工作負載中的查詢，會在執行 Database Engine Tuning Advisor 之使用者的安全性內容中進行分析， 使用者必須是 `db_owner` 資料庫角色的成員。  
   
 -   Database Engine Tuning Advisor 會在 `msdb` 資料庫中儲存微調工作階段資料及其他資訊。 若變更 `msdb` 資料庫，則可能會有遺失微調工作階段資料的風險。 為降低此風險，請實作 `msdb` 資料庫的適當備份策略。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127416"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 擴充預存程序的相依性  
  Database Engine Tuning Advisor 依賴 **xp_msver** 擴充預存程序來提供完整的功能。 預設會開啟擴充預存程序。 Database Engine Tuning Advisor 會使用這個擴充預存程序，來提取您要微調的資料庫所在電腦上的處理器數目和可用的記憶體。 如果無法使用 **xp_msver** ，Database Engine Tuning Advisor 會假設執行 Database Engine Tuning Advisor 的電腦之硬體特性。 如果無法取得執行 Database Engine Tuning Advisor 之電腦的硬體特性，將會假設 1 個處理器和 1024 MB 的記憶體。  
   
- 此相依性會影響分割的建議，因為所建議的分割數目是根據這兩個值 (處理器的數目和可用的記憶體) 而定。 此外，當您使用測試伺服器來微調實際伺服器時，此相依性也會影響微調結果。 在此案例中，Database Engine Tuning Advisor 會使用 **xp_msver** ，從實際伺服器提取硬體屬性。 在測試伺服器上微調工作負載之後，Database Engine Tuning Advisor 會使用這些硬體屬性來產生建議。 如需詳細資訊，請參閱 [xp_msver &#40;TRANSACT-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md。  
+ 此相依性會影響分割的建議，因為所建議的分割數目是根據這兩個值 (處理器的數目和可用的記憶體) 而定。 此外，當您使用測試伺服器來微調實際伺服器時，此相依性也會影響微調結果。 在此案例中，Database Engine Tuning Advisor 會使用 **xp_msver** ，從實際伺服器提取硬體屬性。 在測試伺服器上微調工作負載之後，Database Engine Tuning Advisor 會使用這些硬體屬性來產生建議。 如需詳細資訊，請參閱 [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)。  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>Database Engine Tuning Advisor 工作  
  下表列出 Database Engine Tuning Advisor 的常見工作，以及描述如何執行這些工作的主題。  

@@ -1,5 +1,5 @@
 ---
-title: 處理錯誤和警告 (XMLA) |Microsoft 文件
+title: 處理錯誤和警告 (XMLA) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f2ba225f749364101f800efc4316b941bf18aac5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021445"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144923"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>處理錯誤和警告 (XMLA)
-  當 XML for Analysis (XMLA) 時，就需要錯誤處理[探索](../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫不會執行、 成功執行但產生錯誤或警告，或是成功執行但傳回的結果包含錯誤。  
+  當 XML for Analysis (XMLA) 時，就需要錯誤處理[Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)或是[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法呼叫未執行、 成功執行但產生錯誤或是警告，或成功執行但傳回的結果包含錯誤。  
   
 |錯誤|報告|  
 |-----------|---------------|  
-|XMLA 方法呼叫未執行|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 傳回 SOAP 錯誤訊息包含失敗的詳細資料。<br /><br /> 如需詳細資訊，請參閱 > 一節，[處理 SOAP 錯誤](#handling_soap_faults)。|  
-|方法呼叫成功時的錯誤或警告|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含[錯誤](../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)或[警告](../../analysis-services/xmla/xml-elements-properties/warning-element-xmla.md)項目，每個錯誤或警告，分別在[訊息](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)屬性[根](../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)項目包含方法呼叫的結果。<br /><br /> 如需詳細資訊，請參閱 > 一節，[處理錯誤和警告](#handling_errors_and_warnings)。|  
-|方法呼叫成功時結果中的錯誤|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含內嵌**錯誤**或**警告**項目錯誤或警告，分別內適當[儲存格](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md)或[列](../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)方法呼叫的結果項目。<br /><br /> 如需詳細資訊，請參閱 > 一節，[處理內嵌錯誤和警告](#handling_inline_errors_and_warnings)。|  
+|XMLA 方法呼叫未執行|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 傳回 SOAP 錯誤訊息包含失敗的詳細資料。<br /><br /> 如需詳細資訊，請參閱 區段中，[處理 SOAP 錯誤](#handling_soap_faults)。|  
+|方法呼叫成功時的錯誤或警告|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含[錯誤](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla)或是[警告](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla)項目，針對每個錯誤或警告，分別在[訊息](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)屬性[根](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla)項目包含方法呼叫的結果。<br /><br /> 如需詳細資訊，請參閱 區段中，[處理錯誤和警告](#handling_errors_and_warnings)。|  
+|方法呼叫成功時結果中的錯誤|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含內嵌**錯誤**或**警告**錯誤或警告，項目分別內適當[儲存格](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)或[列](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla)項目方法呼叫的結果。<br /><br /> 如需詳細資訊，請參閱 區段中，[處理內嵌錯誤和警告](#handling_inline_errors_and_warnings)。|  
   
 ##  <a name="handling_soap_faults"></a> 處理 SOAP 錯誤  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在發生下列情況時會傳回 SOAP 錯誤：  
@@ -39,15 +39,15 @@ ms.locfileid: "34021445"
 ### <a name="fault-code-information"></a>錯誤碼資訊  
  下表將顯示包含在 SOAP 回應之詳細資料區段中的 XMLA 錯誤碼資訊。 資料行是在 SOAP 錯誤的詳細資料區段中某個錯誤的屬性。  
   
-|資料行名稱|類型|Description|允許 null<sup>1</sup>|  
+|資料行名稱|類型|描述|允許的 null<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |**ErrorCode**|**UnsignedInt**|傳回指出方法成功或失敗的代碼。 十六進位值必須可轉換成**UnsignedInt**值。|否|  
 |**WarningCode**|**UnsignedInt**|傳回指出警告狀況的代碼。 十六進位值必須可轉換成**UnsignedInt**值。|是|  
-|**說明**|**字串**|產生錯誤的元件所傳回的警告文字與描述。|是|  
-|**Source**|**字串**|產生錯誤或警告之元件的名稱。|是|  
-|**HelpFile**|**字串**|描述錯誤或警告之說明檔或主題的路徑或 URL。|是|  
+|**說明**|**String**|產生錯誤的元件所傳回的警告文字與描述。|是|  
+|**Source**|**String**|產生錯誤或警告之元件的名稱。|是|  
+|**HelpFile**|**String**|描述錯誤或警告之說明檔或主題的路徑或 URL。|是|  
   
- <sup>1</sup>資料需要和是否必須傳回，或是否是選擇性的資料，以及如果不適用資料行允許 null 的字串表示。  
+ <sup>1</sup>指出是否需要資料，且必須傳回，或是否資料是選擇性的如果不適用資料行允許 null 的字串。  
   
  下列是方法呼叫失敗時所發生的 SOAP 錯誤之範例：  
   
@@ -72,25 +72,25 @@ HelpFile="" />
 ```  
   
 ##  <a name="handling_errors_and_warnings"></a> 處理錯誤和警告  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 傳回**訊息**屬性**根**命令執行該命令之後，就會發生下列情況下，如果項目：  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回**訊息**中的屬性**根**項目，如果該命令執行之後，就會發生下列情況：  
   
 -   方法本身並未失敗，但是方法呼叫成功之後，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上發生失敗。  
   
 -   當命令成功時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會傳回警告。  
   
- **訊息**屬性會遵循所包含的其他所有屬性**根**項目，而且可以包含一或多個**訊息**項目。 接著，每個**訊息**項目可以包含單一**錯誤**或**警告**分別描述任何錯誤或警告，項目中發生的指定的命令。  
+ **訊息**屬性會遵循所包含的其他所有屬性**根**項目，而且可以包含一或多個**訊息**項目。 在開啟，每個**訊息**項目可以包含單一**錯誤**或是**警告**分別描述任何錯誤或警告，項目中發生的指定的命令。  
   
- 如需詳細資訊，關於錯誤和警告中所包含的**訊息**屬性，請參閱[Messages 元素&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)。  
+ 如需有關錯誤和警告中所包含**訊息**屬性，請參閱[訊息項目&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)。  
   
 ### <a name="handling-errors-during-serialization"></a>處理序列化期間的錯誤。  
- 如果發生錯誤之後[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體已經開始序列化成功執行的命令，輸出[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]傳回[例外狀況](../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md)錯誤不同命名空間中的項目。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體接著會關閉所有開啟的元素，這樣傳送到用戶端的 XML 文件就會是有效的文件。 執行個體也會傳回**訊息**包含錯誤的描述項目。  
+ 如果發生錯誤之後[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體已經開始序列化成功執行的命令的輸出[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會傳回[例外狀況](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla)錯誤不同命名空間中的項目。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體接著會關閉所有開啟的元素，這樣傳送到用戶端的 XML 文件就會是有效的文件。 執行個體也會傳回**訊息**包含錯誤的描述項目。  
   
 ##  <a name="handling_inline_errors_and_warnings"></a> 處理內嵌錯誤和警告  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 傳回內嵌**錯誤**或**警告**如果 XMLA 方法本身並未失敗，但發生錯誤之方法所傳回的結果中的資料元素的特定命令[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]XMLA 方法呼叫成功之後，執行個體。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 傳回內嵌**錯誤**或是**警告**如果 XMLA 方法本身並未失敗，但發生錯誤的方法所傳回的結果中的資料元素的特定命令[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]XMLA 方法呼叫成功之後，執行個體。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供內嵌**錯誤**和**警告**項目有問題的特定資料格，或其他資料，內含**根**項目使用[MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)發生資料類型，例如安全性錯誤或資料格的格式錯誤。 在這些情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]傳回**錯誤**或**警告**中的項目**儲存格**或**列**元素包含錯誤或警告，分別。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供內嵌**錯誤**並**警告**如果是問題的特定資料格，或其他資料的項目內含**根**項目使用[MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla)進行資料類型，例如安全性錯誤或資料格的格式錯誤。 在這些情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會傳回**錯誤**或是**警告**中的項目**儲存格**或**資料列**包含錯誤的項目或警告，分別。  
   
- 下列範例說明一個結果集，其中包含從傳回的資料列中的錯誤**Execute**方法使用[陳述式](../../analysis-services/xmla/xml-elements-commands/statement-element-xmla.md)命令。  
+ 下列範例說明結果集，其中包含從傳回的資料列集時發生**Execute**方法使用[陳述式](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)命令。  
   
 ```  
 <return>  
@@ -115,6 +115,6 @@ HelpFile="" />
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

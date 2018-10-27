@@ -17,18 +17,18 @@ ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e99be9f6a2af7dbbaab624ba592b2486cf807f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d4d95e556059709f1d4e5a0fc069b6da5ed289c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048158"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146545"
 ---
 # <a name="managing-caches-xmla"></a>管理快取 (XMLA)
-  您可以使用[ClearCache](../xmla/xml-elements-commands/clearcache-element-xmla.md) XML for Analysis (XMLA) 以清除指定的維度或是資料分割的快取中的命令。 清除快取會強制[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]重建該物件的快取。  
+  您可以使用[ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) XML for Analysis (XMLA) 以清除指定的維度或是資料分割的快取中的命令。 清除快取會強制[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]重建該物件的快取。  
   
 ## <a name="specifying-objects"></a>指定物件  
- [物件](../xmla/xml-elements-properties/object-element-xmla.md)屬性`ClearCache`命令可以包含只針對下列物件的其中一個物件參考。 如果物件參考不是用於下列其中一個物件，就會發生錯誤：  
+ [物件](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)屬性`ClearCache`命令可以包含只針對下列物件的其中一個物件參考。 如果物件參考不是用於下列其中一個物件，就會發生錯誤：  
   
  [資料庫]  
  針對資料庫中包含的所有維度與資料分割清除快取。  

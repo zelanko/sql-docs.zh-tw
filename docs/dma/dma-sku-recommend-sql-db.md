@@ -2,7 +2,7 @@
 title: 識別您的內部部署資料庫 (Data Migration Assistant) 正確的 Azure SQL 資料庫 SKU |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant，以識別您的內部部署資料庫權限的 Azure SQL 資料庫 SKU
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684446"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643996"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>識別您的內部部署資料庫正確的 Azure SQL 資料庫 SKU
 
@@ -141,7 +141,7 @@ TSV 輸出檔案包含資料行，如下圖所示：
 - **MetricValue** -建議使用 Azure SQL Database 的 SKU。
 - **SQLMiEquivalentCores** -如果您選擇 Azure SQL Database 受控執行個體，您可以使用此值的核心計數。
 - **IsTierRecommended** -我們提供最小 SKU 建議為每個層。 此外，我們就會套用啟發學習法來判斷適合您的資料庫層。 
-- **ExclusionReasons** -這個值是空白，如果建議的層。 建議您不要每個層，我們會提供為什麼它未選取的原因。
+- **ExclusionReasons** -這個值是空白，如果建議的層。 每個層級，不建議，我們會提供為什麼它不挑選的原因。
 - **AppliedRules** -簡短的標記法的已套用的規則。
 
 建議的值是您在 Azure 中執行與成功率類似於您的內部部署資料庫的查詢所需的最低 SKU。 比方說，如果建議的最低 SKU S4 適用於標準層中，然後選擇 S3 或下方將會導致查詢逾時或無法執行。

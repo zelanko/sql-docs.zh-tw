@@ -1,5 +1,5 @@
 ---
-title: 移動 Analysis Services 資料庫 |Microsoft 文件
+title: 移動 Analysis Services 資料庫 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 984430962e9df6c3efdb04d66ef255baed814a0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026415"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148427"
 ---
 # <a name="move-an-analysis-services-database"></a>移動 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  通常在很多情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將多維度或表格式模型資料庫移至不同的位置。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。  
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將多維度或表格式模型資料庫移至不同的位置。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。  
   
  您可以使用許多方式來移動資料庫。 本文件將說明下列常見狀況：  
   
@@ -140,10 +140,10 @@ ms.locfileid: "34026415"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和卸離 Analysis Services 資料庫](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [資料庫儲存位置](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [資料庫 Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Attach 元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Detach 元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode 元素](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation 元素](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [資料庫 ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [Attach 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

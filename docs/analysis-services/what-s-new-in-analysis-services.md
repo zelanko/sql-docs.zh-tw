@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016085"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145993"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -94,7 +94,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
  ### <a name="powershell-for-tabular-models"></a>表格式模型的 PowerShell    
  此版本包含相容性層級 1200 之表格式模型的 PowerShell 增強功能。 您可以使用所有適用的 Cmdlet，再加上表格式模式特定的 Cmdlet︰ [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) 和 [Invoke-ProcessTable Cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)。    
  ### <a name="ssms-scripting-database-operations"></a>SSMS 指令碼資料庫作業    
- 在 [最新版的 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)中，現已針對資料庫命令啟用指令碼，包括 Create、Alter、Delete、Backup、Restore、Attach、Detach。 輸出是 JSON 格式的表格式模型指令碼語言 (TMSL)。 如需詳細資訊，請參閱[表格式模型指令碼語言 &#40;TMSL&#41; 參考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)。    
+ 在 [最新版的 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)中，現已針對資料庫命令啟用指令碼，包括 Create、Alter、Delete、Backup、Restore、Attach、Detach。 輸出是 JSON 格式的表格式模型指令碼語言 (TMSL)。 如需詳細資訊，請參閱[表格式模型指令碼語言 &#40;TMSL&#41; 參考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作    
  [Analysis Services 執行 DDL 工作](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 現在也接受表格式模型指令碼語言 (TMSL) 命令。     
  ### <a name="ssas-powershell-cmdlet"></a>SSAS PowerShell Cmdlet    
@@ -103,7 +103,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS 中支援的表格式模型指令碼語言 (TMSL)    
   您現在可以使用 [最新版的 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)來建立指令碼，將表格式 1200 模型的大部分管理工作自動化。 目前可以編寫下列工作的指令碼︰任何層級的 Process，以及資料庫層級的 CREATE、ALTER、DELETE。    
     
- 在功能上，TMSL 相當於可提供多維度物件定義的 XMLA ASSL 延伸模組，不同之處在於 TMSL 會使用 **model**、 **table**和 **relationship** 等原生描述元來描述表格式中繼資料。 如需結構描述的詳細資訊，請參閱[表格式模型指令碼語言 &#40;TMSL&#41; 參考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)。    
+ 在功能上，TMSL 相當於可提供多維度物件定義的 XMLA ASSL 延伸模組，不同之處在於 TMSL 會使用 **model**、 **table**和 **relationship** 等原生描述元來描述表格式中繼資料。 如需結構描述的詳細資訊，請參閱[表格式模型指令碼語言 &#40;TMSL&#41; 參考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
     
  針對表格式模型產生的 JSON 型指令碼可能如下所示︰    
     
@@ -121,7 +121,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
 }    
 ```    
 
-裝載是一份 JSON 文件，該文件可以如上述範例一樣精簡，或使用一組完整物件定義高度裝飾。 [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)描述語法。
+裝載是一份 JSON 文件，該文件可以如上述範例一樣精簡，或使用一組完整物件定義高度裝飾。 [表格式模型指令碼語言 &#40;TMSL&#41; 參考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)描述語法。
 
 在資料庫層級，CREATE、ALTER 和 DELETE 命令會在熟悉的 XMLA 視窗中輸出 TMSL 指令碼。  其他命令 (例如 Process) 也可以在此版本中建立指令碼。 未來版本中可能新增許多其他動作的指令碼支援。    
 

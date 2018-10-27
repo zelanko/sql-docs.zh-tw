@@ -1,5 +1,5 @@
 ---
-title: 建立 Analysis Services 專案 (SSDT) |Microsoft 文件
+title: 建立 Analysis Services 專案 (SSDT) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18c906c7dea3b57b2760a7bb5f44e69834906e6a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022989"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147267"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>建立多個 Analysis Services 專案 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34022989"
   
  如果驗證成功，則 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會產生 XML 檔案。 當組建之後，輸出資料夾中所包含的檔案如下表所示。  
   
-|檔案 (在 bin 資料夾中)|Description|  
+|檔案 (在 bin 資料夾中)|描述|  
 |-----------------------------|-----------------|  
 |*Projectname*.asdatabase|包含 ASSL 元素，這些元素會在部署指令碼檔案中定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案內物件的中繼資料， 部署引擎會使用這個檔案將這些物件部署至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
 |*Projectname*.configsettings|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的組態設定 (例如，資料來源的連接字串)。|  
@@ -46,7 +46,7 @@ ms.locfileid: "34022989"
 |*Projectname*.deploymentoptions|包含部署期間可用來直接修改或在 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 中使用的各種選項設定 (例如，儲存位置)|  
 |*Assemblyname*/*dllname.* dll|每一個參考之組件的個別資料夾；每一個資料夾都包含該組件的 DLL、任何參考的組件，以及輸出偵錯資訊的所有關聯 .pdb 檔案。|  
   
-|檔案 (在 obj 資料夾中)|Description|  
+|檔案 (在 obj 資料夾中)|描述|  
 |-----------------------------|-----------------|  
 |\<組態名稱 > \LastBuilt.xml|包含時間戳記和雜湊碼，可用來識別上次建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的時間。|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34022989"
  參考的組件 (不包括標準系統和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組件) 也會複製到輸出目錄中； 當參考方案中的其他專案時，會先使用適當的專案組態及這些專案參考所建立的組建相依性來建立這些專案，然後再複製到專案輸出資料夾中。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 指令碼語言 &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
+ [Analysis Services 指令碼語言 &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [部署 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

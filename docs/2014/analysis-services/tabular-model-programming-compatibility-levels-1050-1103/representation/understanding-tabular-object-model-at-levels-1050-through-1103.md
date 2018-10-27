@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164708"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148426"
 ---
 # <a name="understanding-the-tabular-object-model"></a>了解表格式物件模型
-  表格式模型是資料表、關聯性、階層、檢視方塊、量值和關鍵效能的邏輯表示法。 本節介紹使用 AMO 進行的內部實作。 請參閱[使用分析管理物件開發&#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)如果您未曾使用過 AMO。  
+  表格式模型是資料表、關聯性、階層、檢視方塊、量值和關鍵效能的邏輯表示法。 本節介紹使用 AMO 進行的內部實作。 請參閱[使用分析管理物件開發&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)如果您未曾使用過 AMO。  
   
  此處說明的方法採由上而下，表格式模型中的所有相關物件都是以邏輯方式對應至 AMO 物件，並且將說明必要的互動或工作流程。 一個可供您使用 AMO、「AMO 對表格式」建立表格式模型的原始程式碼範例，可從 Codeplex 使用。 有關範例程式碼的重要注意事項：提供此範例的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。 此範例之提供不附帶任何支援或擔保。  
   

@@ -20,40 +20,40 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71abb7339a45e86e39329f6f5e9478d03889c71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1128fccb209c38f4b33009b3045f0f3ad2aebb1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094758"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148153"
 ---
 # <a name="designing-aggregations-xmla"></a>設計彙總 (XMLA)
-  彙總設計會與特定量值群組的資料分割關聯，以確保資料分割在儲存彙總時會使用相同的結構。 資料分割使用相同的儲存體結構可讓您輕鬆地定義 合併資料分割可以稍後使用[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 如需有關彙總設計的詳細資訊，請參閱[彙總及彙總設計](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+  彙總設計會與特定量值群組的資料分割關聯，以確保資料分割在儲存彙總時會使用相同的結構。 資料分割使用相同的儲存體結構可讓您輕鬆地定義 合併資料分割可以稍後使用[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令。 如需有關彙總設計的詳細資訊，請參閱[彙總及彙總設計](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
- 若要定義的彙總設計的彙總，您可以使用[DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) XML for Analysis (XMLA) 命令。 `DesignAggregations` 命令具有一些屬性，可識別要使用哪個彙總設計做為參考，以及如何根據該參考控制設計程序。 使用 `DesignAggregations` 命令及其屬性，您可以反覆或用批次方式設計彙總，然後檢視產生的設計統計資料以評估設計程序。  
+ 若要定義的彙總設計的彙總，您可以使用[DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) XML for Analysis (XMLA) 命令。 `DesignAggregations` 命令具有一些屬性，可識別要使用哪個彙總設計做為參考，以及如何根據該參考控制設計程序。 使用 `DesignAggregations` 命令及其屬性，您可以反覆或用批次方式設計彙總，然後檢視產生的設計統計資料以評估設計程序。  
   
 ## <a name="specifying-an-aggregation-design"></a>指定彙總設計  
- [物件](../xmla/xml-elements-properties/object-element-xmla.md)屬性`DesignAggregations`命令必須包含現有的彙總設計的物件參考。 物件參考包含資料庫識別碼、Cube 識別碼、量值群組識別碼以及彙總設計識別碼。 如果彙總設計尚未存在，就會發生錯誤。  
+ [物件](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)屬性`DesignAggregations`命令必須包含現有的彙總設計的物件參考。 物件參考包含資料庫識別碼、Cube 識別碼、量值群組識別碼以及彙總設計識別碼。 如果彙總設計尚未存在，就會發生錯誤。  
   
 ## <a name="controlling-the-design-process"></a>控制設計程序  
  您可以使用 `DesignAggregations` 命令的下列屬性來控制為彙總設計定義彙總的演算法。  
   
--   [步驟](../xmla/xml-elements-properties/steps-element-xmla.md)屬性會決定多少反覆項目`DesignAggregations`命令應該花費，它將控制權還給用戶端應用程式。  
+-   [步驟](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/steps-element-xmla)屬性會決定多少反覆項目`DesignAggregations`命令應該花費，它將控制權還給用戶端應用程式。  
   
--   [時間](../xmla/xml-elements-properties/time-element-xmla.md)屬性會決定多少毫秒`DesignAggregations`命令應該花費，它將控制權還給用戶端應用程式。  
+-   [時間](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/time-element-xmla)屬性會決定多少毫秒`DesignAggregations`命令應該花費，它將控制權還給用戶端應用程式。  
   
--   [最佳化](../xmla/xml-elements-properties/optimization-element-xmla.md)屬性會決定的效能改善估計的百分比`DesignAggregations`命令應該嘗試達成。 如果您反覆設計彙總，只需要在第一個命令上傳送此屬性。  
+-   [最佳化](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla)屬性會決定的效能改善估計的百分比`DesignAggregations`命令應該嘗試達成。 如果您反覆設計彙總，只需要在第一個命令上傳送此屬性。  
   
--   [儲存體](../xmla/xml-elements-properties/storage-element-xmla.md)屬性會決定磁碟儲存體，以位元組為單位，所使用的預估的量`DesignAggregations`命令。 如果您反覆設計彙總，只需要在第一個命令上傳送此屬性。  
+-   [儲存體](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla)屬性會決定磁碟儲存體，以位元組為單位，所使用的預估的量`DesignAggregations`命令。 如果您反覆設計彙總，只需要在第一個命令上傳送此屬性。  
   
--   [具體化](../xmla/xml-elements-properties/materialize-element-xmla.md)屬性會決定是否`DesignAggregations`命令應該建立在設計程序期間所定義的彙總。 如果您反覆地設計彙總，此屬性應該設定為 False，直到您準備儲存設計的彙總為止。 當設定為 True 時，目前的設計程序會結束，而定義的彙總會加入指定的彙總設計。  
+-   [具體化](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla)屬性會決定是否`DesignAggregations`命令應該建立在設計程序期間所定義的彙總。 如果您反覆地設計彙總，此屬性應該設定為 False，直到您準備儲存設計的彙總為止。 當設定為 True 時，目前的設計程序會結束，而定義的彙總會加入指定的彙總設計。  
   
 ## <a name="specifying-queries"></a>指定查詢  
- DesignAggregations 命令包含一或多個支援基於使用方式的最佳化命令`Query`中的項目[查詢](../xmla/xml-elements-properties/queries-element-xmla.md)屬性。 `Queries`屬性可包含一或多個[查詢](../xmla/xml-elements-properties/query-element-xmla.md)項目。 如果 `Queries` 屬性不包含任何 `Query` 元素，在 `Object` 元素中指定的彙總設計，會使用包含一組一般彙總的預設結構。 這組一般彙總的設計，是為了符合在 `Optimization` 命令的 `Storage` 與 `DesignAggregations` 屬性中所指定的準則。  
+ DesignAggregations 命令包含一或多個支援基於使用方式的最佳化命令`Query`中的項目[查詢](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla)屬性。 `Queries`屬性可包含一或多個[查詢](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)項目。 如果 `Queries` 屬性不包含任何 `Query` 元素，在 `Object` 元素中指定的彙總設計，會使用包含一組一般彙總的預設結構。 這組一般彙總的設計，是為了符合在 `Optimization` 命令的 `Storage` 與 `DesignAggregations` 屬性中所指定的準則。  
   
- 每個`Query`項目代表一個目標查詢，使用定義目標最常用的查詢的彙總設計程序。 您可以指定您自己的目標查詢，或者您可以使用的執行個體所儲存的資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來擷取有關最常用的查詢記錄中使用的查詢。 「基於使用方式的最佳化精靈」會在傳送 `DesignAggregations` 命令時，依據時間、使用方式或是指定的使用者，使用查詢記錄擷取目標查詢。 如需詳細資訊，請參閱 <<c0> [ 基於使用方式的最佳化精靈 F1 說明](../usage-based-optimization-wizard-f1-help.md)。  
+ 每個 `Query` 元素都代表一個目標查詢，而且設計處理序會使用此查詢來定義以最常用查詢為目標的彙總。 您可以指定自己的目標查詢，也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體在查詢記錄中儲存的資訊來擷取有關最常用查詢的資訊。 「基於使用方式的最佳化精靈」會在傳送 `DesignAggregations` 命令時，依據時間、使用方式或是指定的使用者，使用查詢記錄擷取目標查詢。 如需詳細資訊，請參閱 <<c0> [ 基於使用方式的最佳化精靈 F1 說明](../usage-based-optimization-wizard-f1-help.md)。  
   
- 如果您反覆設計彙總，您只需要將目標查詢傳入第一個`DesignAggregations`命令即可，因為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體儲存這些目標查詢，並在後續的期間使用這些查詢`DesignAggregations`命令。 當您將目標查詢傳入反覆處理序的第一個 `DesignAggregations` 命令之後，任何在 `DesignAggregations` 屬性中包含目標查詢的後續 `Queries` 命令就會產生錯誤。  
+ 如果您要反覆地設計彙總，只需要將目標查詢傳入第一個 `DesignAggregations` 命令即可，因為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會儲存這些目標查詢，然後在後續的 `DesignAggregations` 命令執行期間使用這些查詢。 當您將目標查詢傳入反覆處理序的第一個 `DesignAggregations` 命令之後，任何在 `DesignAggregations` 屬性中包含目標查詢的後續 `Queries` 命令就會產生錯誤。  
   
  `Query` 元素包含具有下列引數的逗號分隔值：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48094758"
  例如，字串 "011" 是指涉及含有三個屬性之維度的查詢，其中第二和第三個屬性包含在查詢中。  
   
 > [!NOTE]  
->  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱 <<c0> [ 查詢項目&#40;XMLA&#41;](../xmla/xml-elements-properties/query-element-xmla.md)。</c0>  
+>  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱 <<c0> [ 查詢項目&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)。</c0>  
   
  在包含彙總設計的量值群組中的每個維度由*資料集*中的值`Query`項目。 *Dataset* 值的順序必須與量值群組中包含維度的順序相符。  
   

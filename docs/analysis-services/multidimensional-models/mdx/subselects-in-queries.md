@@ -1,5 +1,5 @@
 ---
-title: 子選擇中查詢 |Microsoft 文件
+title: 在查詢中的子選擇 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025265"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147883"
 ---
 # <a name="subselects-in-queries"></a>查詢中的子選擇
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   axis 子句中不允許 HAVING 子句；請改用 [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) 函數運算式。  
   
--   根據預設導出的成員中不允許子選擇。不過，這項限制可以變更，以每個工作階段為基礎，在所指派值給**子查詢**中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES** 屬性[支援 XMLA 屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。 如需根據 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值導出成員之行為的詳細說明，請參閱 **子選擇和 Subcube 中的導出成員**。  
+-   預設的導出的成員不允許在子選擇;不過，這項限制可以變更，以每個工作階段為基礎，在指派值給**子查詢**中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或是**DBPROP_MSMD_SUBQUERIES** 中的屬性[支援 XMLA 屬性&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。 如需根據 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值導出成員之行為的詳細說明，請參閱 **子選擇和 Subcube 中的導出成員**。  
   
   

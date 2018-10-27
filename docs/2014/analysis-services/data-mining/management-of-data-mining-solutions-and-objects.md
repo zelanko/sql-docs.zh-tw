@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164288"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147573"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用於管理現有採礦結構和採礦模型的用戶端工具。 本節說明可以利用每種環境執行的管理作業。  
@@ -29,9 +29,9 @@ ms.locfileid: "48164288"
 ## <a name="in-this-section"></a>本章節內容  
  [移動資料採礦物件](moving-data-mining-objects.md)  
   
- [處理需求和考量&#40;資料採礦&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 &#40;資料採礦&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [使用 SQL Server Profiler 監視資料採礦&#40;Analysis Services-資料採礦&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [使用 SQL Server Profiler 監視資料採礦 &#40;Analysis Services - 資料採礦&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>資料採礦物件的位置  
  已經處理的採礦結構和模型會儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體中。  
@@ -52,7 +52,7 @@ ms.locfileid: "48164288"
   
 -   [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)  
   
--   [檢視或變更模型旗標&#40;資料採礦&#41;](modeling-flags-data-mining.md)  
+-   [檢視或變更模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)  
   
 -   [檢視或變更演算法參數](view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164288"
 > [!WARNING]  
 >  採礦結構或採礦模型的所有變更 (包括類似名稱或描述等中繼資料的變更) 都需要重新處理結構或模型。  
   
- 如果您沒有用來建立物件的資料採礦專案的方案檔，您可以使用 Analysis Services 匯入精靈 從伺服器匯入現有的專案，進行修改物件，並再重新部署使用`Incremental`選項。 如需詳細資訊，請參閱 [使用 Analysis Services 匯入精靈匯入資料採礦專案](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
+ 如果您沒有用於建立資料採礦專案或物件的方案檔，您可使用 Analysis Services 匯入精靈從伺服器匯入現有的專案、修改物件，然後使用 `Incremental` 選項重新部署。 如需詳細資訊，請參閱 [使用 Analysis Services 匯入精靈匯入資料採礦專案](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理資料採礦物件  
  您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中撰寫指令碼、處理或刪除採礦結構及採礦模型。 您只能使用物件總管檢視有限的屬性集；不過，您可以藉由開啟 **[DMX 查詢]** 視窗並選取採礦結構，以檢視有關採礦模型的其他中繼資料。  
@@ -76,7 +76,7 @@ ms.locfileid: "48164288"
 ### <a name="analysis-management-objects-amo"></a>分析管理物件 (AMO)  
  分析管理物件 (AMO) 是根據 XMLA 所建立的物件模型，可讓您完全控制資料採礦物件。 您可以藉由使用 AMO 來建立、部署和監視採礦結構和採礦模型  
   
--   [AMO 概念和物件模型](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO 概念和物件模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164288"
 ### <a name="data-mining-extensions-dmx"></a>資料採礦延伸模組 (DMX)  
  資料採礦延伸模組 (DMX) 可搭配其他的命令介面 (例如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADOMD.Net) 來建立、刪除和查詢採礦結構和採礦模型。  
   
--   [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](/sql/dmx/dmx-statements-data-definition)  
+-   [資料採礦延伸模組 &#40;DMX&#41; 資料定義陳述式](/sql/dmx/dmx-statements-data-definition)  
   
  **限制** ：有些屬性無法使用 DMX 變更。  
   

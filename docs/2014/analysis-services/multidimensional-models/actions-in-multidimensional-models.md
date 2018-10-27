@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084678"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146423"
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
   動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](actions-analysis-services-multidimensional-data.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "48084678"
  選取目標物件類型之後，在 [目標物件] 下，選取指定類型的 Cube 物件。  
   
  **條件 (選擇性)**  
- 指定解析成布林值的選擇性多維度運算式 (MDX) 運算式。 如果值為`True`，在指定的目標上執行此動作。 如果值為`False`，不會執行動作。  
+ 指定解析成布林值的選擇性多維度運算式 (MDX) 運算式。 如果值為 `True`，就會在指定的目標上執行動作。 如果值為 `False`，則不會執行動作。  
   
  **動作內容**  
  選取動作的類型。 下表摘要可以使用的類型。  
@@ -77,10 +77,10 @@ ms.locfileid: "48084678"
 |**應用程式**|描述動作的應用程式。|  
 |**說明**|描述動作。|  
 |**Caption**|提供為動作顯示的標題。 如果標題是 MDX，指定`True`for**標題是 MDX**。|  
-|**標題是 MDX**|指定`True`如果標題是 MDX 或`False`如果不是。|  
+|**標題是 MDX**|如果標題是 MDX，請指定 `True`；如果不是 MDX，則指定 `False`。|  
   
 > [!NOTE]  
->  您必須使用 Analysis Services 指令碼語言 (ASSL) 或分析管理物件 (AMO) 來定義 HTML 和命令列動作類型。 如需詳細資訊，請參閱 [Action 元素 &#40;ASSL&#41;](../scripting/objects/action-element-assl.md)、[Type 元素 &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) 和[設計 AMO OLAP 進階物件的程式](analysis-management-objects/programming-amo-olap-advanced-objects.md)。  
+>  您必須使用 Analysis Services 指令碼語言 (ASSL) 或分析管理物件 (AMO) 來定義 HTML 和命令列動作類型。 如需詳細資訊，請參閱 [Action 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)、[Type 元素 &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 和[設計 AMO OLAP 進階物件的程式](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)。  
   
 ## <a name="creating-a-reporting-action"></a>建立報表動作  
  報表伺服器會回應以 URL 為基礎的報表要求。 若要建立報表動作，請在 [Cube] 功能表上，按一下 [新增報表動作]。 下列選項是報表動作特有的選項。  
@@ -125,6 +125,6 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  選取一或多個維度，並針對每一個維度，選取由動作傳回到用戶端應用程式的鑽研資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
   
   

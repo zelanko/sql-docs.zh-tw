@@ -11,12 +11,12 @@ ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5716541be57191cd6bb3e6e6399a354889b2cf58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3fc1b8aa5c6a2f76ebdfe98fd8aa98e5a593919
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179668"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144903"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>使用 SQL Server 擴充事件 (XEvents) 監視 Analysis Services
   Analysis Services 會提供追蹤功能，透過使用[擴充事件](../../relational-databases/extended-events/extended-events.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48179668"
  提供給此追蹤的名稱；通常是人們可讀取的追蹤定義。 使用 *trace_id* 值作為名稱是常見的做法。  
   
  *AS_event*  
- 要公開的 Analysis Services 事件。 如需事件的名稱，請參閱 [Analysis Services 追蹤事件](../trace-events/analysis-services-trace-events.md) 。  
+ 要公開的 Analysis Services 事件。 如需事件的名稱，請參閱 [Analysis Services 追蹤事件](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 。  
   
  *data_filename*  
  包含事件資料之檔案的名稱。 此名稱的後置字元為時間戳記，以防重複傳送追蹤時，資料遭到覆寫。  

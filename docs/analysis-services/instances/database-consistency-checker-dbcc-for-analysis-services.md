@@ -1,5 +1,5 @@
 ---
-title: 資料庫一致性檢查 (DBCC) for Analysis Services |Microsoft 文件
+title: 資料庫 Analysis Services 的一致性檢查 (DBCC) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb131f76c839f446cbdc31dae51e98431bb87902
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019685"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147863"
 ---
-# <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 的 database Consistency Checker (DBCC)
+# <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis services 的 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC 提供適用於 Analysis Services 執行個體上之多維度和表格式資料庫的隨選驗證。 您可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查詢視窗中執行 DBCC，並在 SSMS 的 SQL Server Profiler 或 xEvent 工作階段中追蹤 DBCC 輸出。  
 此命令會接受物件定義，並傳回空的結果集或詳細錯誤資訊 (如果物件已損毀)。   在本文中，您將了解如何執行命令、解譯結果，以及解決任何發生的問題。  
@@ -30,7 +30,7 @@ ms.locfileid: "34019685"
   
 -   諸如 **cubeID**、 **measuregroupID**和 **partitionID**等多維度模型建構描述多維度 + SQL Server 2016 之前的表格式 1100 或 1103 相容性層級資料庫。  
   
--   中繼資料的描述元包含新的表格式模型資料庫，相容性層級 1200年 （含） 以上喜歡**TableName**和**PartitionName**。  
+-   中繼資料的描述元包含新的表格式模型資料庫，相容性層級 1200年及以上喜歡**TableName**並**PartitionName**。  
   
  只要資料庫是在 SQL Server 2016 執行個體上執行，DBCC for Analysis Services 便能在任何相容性層級的任何 Analysis Services 資料庫上執行。 只要確認您針對每個資料庫類型使用正確的命令語法即可。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "34019685"
  您必須是 Analysis Services 資料庫或伺服器管理員 (伺服器角色的成員) 才能執行命令。 如需相關指示，請參閱[授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) 或[將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
 ## <a name="command-syntax"></a>命令語法 
- 位於 1200年的表格式資料庫及更高的相容性層級使用表格式中繼資料的物件定義。 下列範例說明在 SQL Server 2016 功能層級建立之表格式資料庫的完整 DBCC 語法。  
+ 在 1200年的表格式資料庫及更高的相容性層級使用表格式中繼資料物件定義。 下列範例說明在 SQL Server 2016 功能層級建立之表格式資料庫的完整 DBCC 語法。  
   
- 兩種語法之間的主要差異包括較新的 XMLA 命名空間，不\<物件 > 項目，且沒有\<模型 > （沒有每個資料庫仍然只有一個模型） 的項目。  
+ 兩種語法之間的主要差異包括較新的 XMLA 命名空間，否\<物件 > 項目，但不含任何\<模型 > 元素 （每個資料庫仍然只有一個模型）。  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2014/engine">  
@@ -58,7 +58,7 @@ ms.locfileid: "34019685"
  在 Management Studio 中，您可以透過每個物件的屬性頁取得物件名稱和 DatabaseID。  
   
 ## <a name="command-syntax-for-multidimensional-and-tabular-110x-databases"></a>多維度和表格式 110x 資料庫的命令語法  
- DBCC 在多維度及表格式 1100 和 1103 資料庫中使用相同的語法。 您可以針對特定資料庫物件 (包括整個資料庫) 執行 DBCC。 如需物件定義的詳細資訊，請參閱 [Object 元素 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)。  
+ DBCC 在多維度及表格式 1100 和 1103 資料庫中使用相同的語法。 您可以針對特定資料庫物件 (包括整個資料庫) 執行 DBCC。 如需物件定義的詳細資訊，請參閱 [Object 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)。  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -179,7 +179,7 @@ Execution complete
      狀態訊息的開頭 」 的一致性檢查\<物件 >"，"已開始檢查\<物件 >"，或 「 已完成檢查\<物件 > 」。  
   
     > [!NOTE]  
-    >  在 CTP 3.0 中，物件是由內部名稱來加以識別。 類別階層架構，例如字集 H$ 分類-\<objectID >。 在後續的 CTP 中，內部名稱應取代為使用者易記名稱。  
+    >  在 CTP 3.0 中，物件是由內部名稱來加以識別。 例如，類別目錄階層 categories-<objectid> H$ 類別-\<objectID >。 在後續的 CTP 中，內部名稱應取代為使用者易記名稱。  
   
      錯誤訊息如下所示。  
   
@@ -218,11 +218,11 @@ Execution complete
 ||||  
 |-|-|-|  
 |**物件**|**DBCC 檢查描述**|**失敗錯誤**|  
-|資料庫|檢查資料庫中的資料表數目。  小於零的值表示損毀。|儲存層發生損毀。 '%{parent/}' 資料庫中的資料表集合已損毀。|  
-|資料庫|檢查用來追蹤參考完整性的內部結構，並在大小不正確時擲回錯誤。|資料庫檔案無法通過一致性檢查。|  
-|Table|檢查用來判斷資料表是維度資料表或事實資料表的內部值。  超出已知範圍的值表示損毀。|檢查資料表統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|Table|檢查資料表之區段對應中的分割區數目是否與資料表的已定義分割區數目相符。|儲存層發生損毀。 '%{parent/}' 資料表中的分割區集合已損毀。|  
-|Table|如果表格式資料庫是從 PowerPivot for Excel 2010 建立或匯入，且其分割區計數大於一，該狀況將引發錯誤，因為分割區支援是在更新版本中加入，而這就表示損毀。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
+|[資料庫]|檢查資料庫中的資料表數目。  小於零的值表示損毀。|儲存層發生損毀。 '%{parent/}' 資料庫中的資料表集合已損毀。|  
+|[資料庫]|檢查用來追蹤參考完整性的內部結構，並在大小不正確時擲回錯誤。|資料庫檔案無法通過一致性檢查。|  
+|資料表|檢查用來判斷資料表是維度資料表或事實資料表的內部值。  超出已知範圍的值表示損毀。|檢查資料表統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|資料表|檢查資料表之區段對應中的分割區數目是否與資料表的已定義分割區數目相符。|儲存層發生損毀。 '%{parent/}' 資料表中的分割區集合已損毀。|  
+|資料表|如果表格式資料庫是從 PowerPivot for Excel 2010 建立或匯入，且其分割區計數大於一，該狀況將引發錯誤，因為分割區支援是在更新版本中加入，而這就表示損毀。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
 |資料分割|檢查每個分割區，確認資料區段的數目和區段中每個資料區段的記錄計數，是否與儲存在區段索引中的值相符。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
 |資料分割|如果記錄、區段或每個區段的記錄總數不正確 (小於零)，或區段數目不符合根據記錄總數計算出來的必要區段數目，便引發錯誤。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
 |關聯性|如果用來儲存關聯性相關資料的結構不含任何記錄，抑或是如果用於關聯性的資料表名稱為空白，便引發錯誤。|檢查關聯性時資料庫一致性檢查 (DBCC) 失敗。|  
@@ -230,17 +230,17 @@ Execution complete
 |階層|如果階層的排序次序是不可辨識的值，便引發錯誤。|檢查 '%{hier/}' 階層時資料庫一致性檢查 (DBCC) 失敗。|  
 |階層|針對階層執行的檢查取決於使用的階層對應配置內部類型。<br /><br /> 檢查所有階層的已處理狀態是否正確，即階層存放區存在，且適用於資料識別碼至階層位置轉換的資料結構存在。<br /><br /> 假設以上所有檢查均通過，便移動階層結構來確認階層中的每個位置都指向正確的成員。<br />如果有任何未通過的測試，便引發錯誤。|檢查 '%{hier/}' 階層時資料庫一致性檢查 (DBCC) 失敗。|  
 |使用者定義階層|檢查階層層級名稱是否已設定。<br /><br /> 如果階層已處理，便檢查內部階層資料存放區內是否有正確的格式。  確認內部階層存放區是否不含任何無效的資料值。<br /><br /> 如果階層標示為未處理，確認此狀態適用於舊資料結構且階層的所有層級均標示為空白。|檢查 '%{hier/}' 階層時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|如果未將資料行使用的編碼設定成已知的值，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|檢查記憶體中引擎是否已壓縮資料行。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|檢查資料行的壓縮類型是否為已知的值。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|當「Token 化」資料行未設定成已知的值時，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|如果儲存的資料行資料字典識別碼範圍與資料字典中的值數目不符或超出允許的範圍，便引發錯誤。|檢查資料字典時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|檢查資料行的資料區段數目是否與所屬之資料表的資料區段數目相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
-|資料行|檢查資料行的分割區數目是否與資料行之資料區段對應的分割區數目相符。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|確認資料行區段中的記錄數目是否與儲存在該資料行區段之索引中的記錄計數相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
-|資料行|如果資料行沒有區段統計資料，便引發錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
-|資料行|如果資料行沒有壓縮資訊或區段儲存體，便引發錯誤。|資料庫檔案無法通過一致性檢查。|  
-|資料行|如果資料行的區段統計資料與最小資料識別碼、最大資料識別碼、相異值數目、資料列數目或 NULL 值目前狀態的實際資料行值不符，便回報錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|如果未將資料行使用的編碼設定成已知的值，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|檢查記憶體中引擎是否已壓縮資料行。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|檢查資料行的壓縮類型是否為已知的值。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|當「Token 化」資料行未設定成已知的值時，便引發錯誤。|檢查資料行統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|如果儲存的資料行資料字典識別碼範圍與資料字典中的值數目不符或超出允許的範圍，便引發錯誤。|檢查資料字典時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|檢查資料行的資料區段數目是否與所屬之資料表的資料區段數目相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
+|「資料行」|檢查資料行的分割區數目是否與資料行之資料區段對應的分割區數目相符。|檢查區段對應時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|確認資料行區段中的記錄數目是否與儲存在該資料行區段之索引中的記錄計數相符。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
+|「資料行」|如果資料行沒有區段統計資料，便引發錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
+|「資料行」|如果資料行沒有壓縮資訊或區段儲存體，便引發錯誤。|資料庫檔案無法通過一致性檢查。|  
+|「資料行」|如果資料行的區段統計資料與最小資料識別碼、最大資料識別碼、相異值數目、資料列數目或 NULL 值目前狀態的實際資料行值不符，便回報錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |ColumnSegment|如果最小資料識別碼或最大資料識別碼小於系統保留的 NULL 值，便將資料行區段資訊標示為損毀。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |ColumnSegment|如果這個區段沒有資料列，資料行的最小和最大資料值應設定為系統保留的 NULL 值。  如果值不是 null，便會引發錯誤。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
 |ColumnSegment|如果資料行具有資料列和至少一個非 null 值，便檢查資料行的最小和最大資料識別碼是否大於系統保留的 NULL 值。|檢查區段統計資料時資料庫一致性檢查 (DBCC) 失敗。|  
@@ -252,8 +252,8 @@ Execution complete
 |DBCC 資料表|針對驗證中的資料表，檢查資料行數目是否小於零，如果為 true，便引發錯誤。  如果資料表中資料行的資料行存放區是 NULL，也會引發錯誤。|儲存層發生損毀。 '%{parent/}' 資料表中的資料行集合已損毀。|  
 |DBCC 分割區|檢查驗證中之分割區所屬的資料表，如果資料表的資料行數目小於零，表示資料表的資料行集合已損毀。 如果資料表中資料行的資料行存放區是 NULL，也會引發錯誤。|儲存層發生損毀。 '%{parent/}' 資料表中的資料行集合已損毀。|  
 |DBCC 分割區|針對選取之分割區的每個資料行執行迴圈，並檢查分割區的每個區段具有資料行區段結構的有效連結。  如果有任何包含 NULL 連結的區段，便將分割區視為損毀。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
-|資料行|如果資料行類型不正確，便傳回錯誤。|發現錯誤的區段類型。|  
-|資料行|如果任何有資料行之資料行中的區段數目為負數計數，抑或是指向區段之資料行區段結構的指標含有 NULL 連結，便傳回錯誤。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
+|「資料行」|如果資料行類型不正確，便傳回錯誤。|發現錯誤的區段類型。|  
+|「資料行」|如果任何有資料行之資料行中的區段數目為負數計數，抑或是指向區段之資料行區段結構的指標含有 NULL 連結，便傳回錯誤。|儲存層發生損毀。 '%{parent/}' 資料行中的區段集合已損毀。|  
 |DBCC 命令|DBCC 命令在透過 DBCC 作業進行時，將會回報多個狀態訊息。  它會在啟動之前回報狀態訊息，包括資料庫、資料表或物件的資料行名稱，然後在每個物件的檢查完成後再回報一次。|正在檢查的一致性\<objectname > \<objecttype >。 階段︰前置檢查。<br /><br /> 正在檢查的一致性\<objectname > \<objecttype >。 階段︰後置檢查。|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>解決錯誤狀況的常見方法  
@@ -262,8 +262,8 @@ Execution complete
 |錯誤|問題|解決方案|  
 |-----------|-----------|----------------|  
 |**中繼資料管理員出現錯誤**<br /><br /> 物件參考 '\<objectID >' 無效。 它不符合中繼資料類別階層的結構。|格式不正確的命令|檢查命令語法。 最有可能的情況是您納入了較低層級的物件，卻未指定該物件的一或多個父物件。|  
-|**中繼資料管理員出現錯誤**<br /><br /> 任一\<物件 > 識別碼為 '\<objectID >' 不存在於\<parentobject > 識別碼為'\<j >'，或使用者沒有存取物件的權限。|索引損毀 (多維度)|重新處理物件和任何相依的物件。|  
-|**在分割區的一致性檢查期間發生錯誤**<br /><br /> 時的一致性檢查，發生錯誤\<分割區名稱 > 的資料分割\<量值群組名稱 > 量值群組\<-n a m > 從 cube \<-n a m > 資料庫。 請重新處理分割區或索引，以修正損毀。|索引損毀 (多維度)|重新處理物件和任何相依的物件。|  
+|**中繼資料管理員出現錯誤**<br /><br /> 任一\<物件 > 識別碼為 '\<objectID >' 不存在於\<parentobject > 識別碼為'\<j >'，或使用者沒有存取該物件的權限。|索引損毀 (多維度)|重新處理物件和任何相依的物件。|  
+|**在分割區的一致性檢查期間發生錯誤**<br /><br /> 正在檢查的一致性時發生錯誤\<分割區名稱 > 的資料分割\<量值群組名稱 > 量值群組\<cube 名稱 > 從 cube\<資料庫名稱 > 資料庫。 請重新處理分割區或索引，以修正損毀。|索引損毀 (多維度)|重新處理物件和任何相依的物件。|  
 |**分割區區段統計資料已損毀**|索引損毀 (多維度)|重新處理物件和任何相依的物件。|  
 |**分割區區段已損毀**|中繼資料損毀 (多維度或表格式)|刪除和重新部署專案，或從備份還原後再重新處理。<br /><br /> 如需相關指示，請參閱 [如何處理 Analysis Services 資料庫中的損毀 (部落格)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
 |**資料表中繼資料損毀**<br /><br /> 資料表\<資料表名稱 > 中繼資料檔案已損毀。 在 DataFileList 節點下找不到主要資料表。|中繼資料損毀 (僅限表格式)|刪除和重新部署專案，或從備份還原後再重新處理。<br /><br /> 如需相關指示，請參閱 [如何處理 Analysis Services 資料庫中的損毀 (部落格)](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
@@ -299,7 +299,7 @@ Execution complete
 ## <a name="see-also"></a>另請參閱  
  [處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

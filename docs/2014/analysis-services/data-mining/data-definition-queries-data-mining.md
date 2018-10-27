@@ -11,12 +11,12 @@ ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 602aae01c3ce19c83e44f039fdf3f996dfdb72b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164128"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147515"
 ---
 # <a name="data-definition-queries-data-mining"></a>資料定義查詢 (資料採礦)
   如果是資料採礦， *「資料定義查詢」* (Data Definition Query) 類別目錄表示執行以下作業的 DMX 陳述式或 XMLA 命令：  
@@ -60,7 +60,7 @@ ms.locfileid: "48164128"
   
 -   搭配資料來源查詢 (例如 OPENROWSET) 一起使用 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)，以定義用於定型模型的資料集。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供可幫助您建立資料定義查詢的查詢範本。 如需詳細資訊，請參閱[在 SQL Server Management Studio 中使用 Analysis Services 範本](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供可幫助您建立資料定義查詢的查詢範本。 如需詳細資訊，請參閱 [在 SQL Server Management Studio 中使用 Analysis Services 範本](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)。  
   
  一般來說， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中針對 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所提供的範本只包含一般語法定義，您必須在 **[查詢]** 視窗中輸入或是使用為了輸入參數所提供的對話方塊來自訂這些語法定義。  
   
@@ -84,12 +84,12 @@ ms.locfileid: "48164128"
 |-|-|  
 |處理 DMX 查詢的範本。|[在 SQL Server Management Studio 中使用 Analysis Services 範本](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |使用預測查詢產生器來設計所有種類的查詢。|[使用預測查詢產生器來建立預測查詢](create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|使用 SQL Server Profiler 來擷取查詢定義，並使用追蹤來監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|[使用 SQL Server Profiler 監視 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|深入了解針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的指令碼語言和程式語言。|[XML for Analysis &#40;XMLA&#41;參考](../xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [使用分析管理物件開發&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|了解如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中管理模型。|[匯出及匯入資料採礦物件](export-and-import-data-mining-objects.md)<br /><br /> [匯出&AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [匯入&AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)|  
+|使用 SQL Server Profiler 來擷取查詢定義，並使用追蹤來監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|深入了解針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的指令碼語言和程式語言。|[XML for Analysis &#40;XMLA&#41; 參考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|了解如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中管理模型。|[匯出及匯入資料採礦物件](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |深入了解 OPENROWSET 及查詢外部資料的其他方式。|[&#60;來源資料查詢&#62;](/sql/dmx/source-data-query)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ [資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
   

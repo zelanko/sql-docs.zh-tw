@@ -2,7 +2,7 @@
 title: 分析彙總的資料移轉小幫手評定報表，使用 Power BI (SQL Server) |Microsoft Docs
 description: 了解如何使用 Power BI 來分析您已匯入，並合併 SQL Server 中的資料移轉評估報告
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832229"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643966"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析 Data Migration Assistant 有了 Power BI 所建立的彙總的評估報告
 
@@ -52,7 +52,7 @@ ms.locfileid: "47832229"
 
 - [Azure SQL DB 不支援的功能](#azure-sql-db-unsupported-features--details)
 
-  顯示您現有的資料庫不支援 Azure SQL DB (V12) 中的功能。
+  在您現有的資料庫不支援的 Azure SQL DB (V12) 中顯示功能。
 
 您可以修改這些報表來使用您的環境，藉由變更 Power BI 中的資料來源。 
 
@@ -120,7 +120,7 @@ ms.locfileid: "47832229"
 
 使用此報告來反白顯示*執行個體層級的功能*，不支援的 Azure SQL Database V12。
 
-當您在漏斗圖中選取一項功能時，在底端的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，選取這項功能： **Always on 可用性群組組態不支援 Azure SQL Database 中**。  
+當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，選取這項功能： **Always on 可用性群組組態不支援 Azure SQL Database 中**。  
 
 ![Alwayson 可用性群組功能](../dma/media/Feature_AlwaysOnAvailability.png)
 

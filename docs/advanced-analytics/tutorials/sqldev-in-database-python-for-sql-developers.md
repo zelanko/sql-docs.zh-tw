@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461854"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806758"
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>適用於 SQL 開發人員的資料庫內 Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,30 +37,23 @@ ms.locfileid: "49461854"
 
 所有的工作可使用[!INCLUDE[tsql](../../includes/tsql-md.md)]熟悉環境中的預存程序 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [步驟 1︰下載範例資料](demo-data-nyctaxi-in-sql.md)
 
-    下載範例資料集和所有的指令碼檔案到本機電腦上。
-
-- [步驟 2︰使用 PowerShell 將資料匯入 SQL Server](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    執行 PowerShell 指令碼，建立資料庫和資料表在指定的執行個體，並載入範例資料的資料表。
-
-- [步驟 3： 瀏覽及視覺化資料使用 Python](sqldev-py3-explore-and-visualize-the-data.md)
+- [瀏覽及視覺化資料使用 Python](sqldev-py3-explore-and-visualize-the-data.md)
 
     執行基本的資料探索和視覺效果，從呼叫 python[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序。
 
-- [步驟 4： 建立使用 Python 在 T-SQL 中的資料特徵](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [在 T-SQL 中使用 Python 建立資料特徵](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     使用自訂 SQL 函數，建立新的資料特徵。
   
-- [步驟 5： 定型及儲存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [訓練及儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     建置並儲存機器學習模型，在預存程序中使用 Python。
   
     本逐步解說示範如何執行二進位分類工作;您也可以使用資料建立用於迴歸或多級分類模型。
 
   
--  [步驟 6︰ 操作 Python 模型](sqldev-py6-operationalize-the-model.md)
+-  [ 實作 Python 模型](sqldev-py6-operationalize-the-model.md)
 
     模型儲存到資料庫之後，呼叫模型的預測使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。
 

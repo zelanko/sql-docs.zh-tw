@@ -14,12 +14,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216648"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145873"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本機 Cube (Analysis Services - 多維度資料)
   若要建立、更新或刪除本機 Cube，您必須撰寫及執行 ASSL 指令碼或 AMO 程式。  
@@ -40,8 +40,8 @@ ms.locfileid: "48216648"
   
 |本機 Cube 的資料來源|建立方法|  
 |------------------------------------|---------------------|  
-|以伺服器為基礎的 Cube|您可以使用 CREATE GLOBAL CUBE 陳述式或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指令碼語言 (ASSL) 指令碼建立和擴展 cube 以伺服器為基礎的 cube。 如需詳細資訊，請參閱 <<c0> [ 建立 GLOBAL CUBE 陳述式&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)或是[Analysis Services Scripting Language &#40;ASSL&#41;參考](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)。</c0>|  
-|關聯式資料來源|您可以使用 ASSL 指令碼，根據 OLE DB 關聯式資料庫建立和擴展 Cube。 若要使用 ASSL 來建立本機 Cube，您只要連接至本機 Cube 檔案 (*.cub) 並以針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體執行 ASSL 指令碼來建立伺服器 Cube 的相同方式執行 ASSL 指令碼即可。 如需詳細資訊，請參閱 < [Analysis Services Scripting Language &#40;ASSL&#41;參考](../../scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
+|以伺服器為基礎的 Cube|您可以使用 CREATE GLOBAL CUBE 陳述式或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指令碼語言 (ASSL) 指令碼建立和擴展 cube 以伺服器為基礎的 cube。 如需詳細資訊，請參閱 <<c0> [ 建立 GLOBAL CUBE 陳述式&#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube)或是[Analysis Services Scripting Language &#40;ASSL&#41;參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。</c0>|  
+|關聯式資料來源|您可以使用 ASSL 指令碼，根據 OLE DB 關聯式資料庫建立和擴展 Cube。 若要使用 ASSL 來建立本機 Cube，您只要連接至本機 Cube 檔案 (*.cub) 並以針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體執行 ASSL 指令碼來建立伺服器 Cube 的相同方式執行 ASSL 指令碼即可。 如需詳細資訊，請參閱 < [Analysis Services Scripting Language &#40;ASSL&#41;參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
   
  您可以使用 REFRESH CUBE 陳述式來重建本機 Cube 並更新其資料。 如需詳細資訊，請參閱 <<c0> [ 重新整理 CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)。</c0>  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48216648"
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE GLOBAL CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
- [使用 Analysis Services 開發的指令碼語言&#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [重新整理 CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
   
   

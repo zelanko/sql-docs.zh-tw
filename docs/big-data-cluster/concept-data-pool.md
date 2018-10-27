@@ -1,18 +1,18 @@
 ---
 title: 什麼是 SQL 巨量資料叢集資料集區？ | Microsoft Docs
-description: ''
+description: 本文說明在 SQL Server 2019 巨量資料叢集中的資料集區。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a75f47148ff59d58d0d0d1397ba445b064c028f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050760"
 ---
 # <a name="what-is-a-sql-big-data-clusters-data-pool"></a>什麼是 SQL 巨量資料叢集資料集區？
 

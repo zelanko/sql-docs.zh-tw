@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98585ac8a3e504a2b73741559f4db839e6737154
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168688"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991157"
 ---
 # <a name="remote-servers"></a>遠端伺服器
   基於回溯相容性，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支援遠端伺服器。 新應用程式應該改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="viewing-local-or-remote-server-properties"></a>檢視本機或遠端伺服器屬性  
- 您可以使用 **xp_msver** 擴充預存程序，來檢閱本機或遠端伺服器的伺服器屬性。 這些屬性包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本號碼、電腦的處理器類型和數目以及作業系統版本。 您可以從本機伺服器來檢視遠端伺服器的資料庫、檔案、登入與工具。 如需詳細資訊，請參閱 [xp_msver &#40;TRANSACT-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md。  
+ 您可以使用 **xp_msver** 擴充預存程序，來檢閱本機或遠端伺服器的伺服器屬性。 這些屬性包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本號碼、電腦的處理器類型和數目以及作業系統版本。 您可以從本機伺服器來檢視遠端伺服器的資料庫、檔案、登入與工具。 如需詳細資訊，請參閱 [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)。  
   
 ## <a name="related-tasks"></a>相關工作  
  [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042356"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145983"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>什麼是 SQL Server 2017 Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -173,9 +173,9 @@ db.Update(UpdateOptions.ExpandFull);
 [Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)是 SQL Server Profiler 中傳回本機伺服器作業和伺服器健全狀況的相關資訊的查詢。
 此版本包括改善[動態管理檢視](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services)(DMV) 1200年和 1400年相容性層級的表格式模型。
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)現在適用於表格式 1200年和 1400年模型。 表格式 1400年模型顯示 M 資料分割、 M 運算式和結構化的資料來源之間的相依性。 若要進一步了解，請參閱[Analysis Services 部落格](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)。
+[DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)現在適用於表格式 1200年和 1400年模型。 表格式 1400年模型顯示 M 資料分割、 M 運算式和結構化的資料來源之間的相依性。 若要進一步了解，請參閱[Analysis Services 部落格](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)。
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)增強功能會包含此 dmv，各種用戶端工具用來顯示量值維度性。 比方說，在 Excel 樞紐分析表中的 [瀏覽] 功能可讓使用者跨-向下切入至選取的量值與相關維度。 此版本中修正的基數的資料行，先前已顯示不正確的值。
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)增強功能會包含此 dmv，各種用戶端工具用來顯示量值維度性。 比方說，在 Excel 樞紐分析表中的 [瀏覽] 功能可讓使用者跨-向下切入至選取的量值與相關維度。 此版本中修正的基數的資料行，先前已顯示不正確的值。
 
 ## <a name="dax-enhancements"></a>DAX 增強功能
 此版本包含新的 DAX 函數和功能的支援。 若要利用，您需要使用最新版的 SSDT。 若要進一步了解，請參閱[新的 DAX 函數](https://msdn.microsoft.com/library/mt704075.aspx)。

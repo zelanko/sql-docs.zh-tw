@@ -1,5 +1,5 @@
 ---
-title: 針對採礦模型啟用鑽研 |Microsoft 文件
+title: 針對採礦模型啟用鑽研 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a928e8d49c815ad087b5baf19f9f85c7888c75dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0de38435c74f68e2558f0b6893324bc431dc32ed
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015325"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145393"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>針對採礦模型啟用鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   如果您已經啟用採礦模型的鑽研，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 若要檢視這項資訊，您必須擁有必要的權限，而且結構必須已經經過處理。  
   
- **權限** ：若要讓使用者鑽研模型資料或結構資料，該使用者必須是針對採礦模型或採礦結構擁有 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 權限之角色的成員。 鑽研權限是在結構和模型上分別設定的。  
+ **權限** ：若要讓使用者鑽研模型資料或結構資料，該使用者必須是針對採礦模型或採礦結構擁有 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 權限之角色的成員。 鑽研權限是在結構和模型上分別設定的。  
   
 -   即使您沒有結構的權限，模型的鑽研權限還是可以讓您從模型進行鑽研。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34015325"
 > [!NOTE]  
 >  如果尚未快取定型案例，您必須將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 **KeepTrainingCases** ，然後在可以檢視案例資料之前，重新處理模型。  
   
- 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如需詳細資訊，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>針對採礦模型啟用鑽研  
   
@@ -52,6 +52,6 @@ ms.locfileid: "34015325"
 4.  在 [資料庫] 功能表中，選取 [處理]。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

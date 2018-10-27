@@ -17,21 +17,21 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077878"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146463"
 ---
 # <a name="monitoring-traces-xmla"></a>監視追蹤 (XMLA)
-  您可以使用[Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令會以資料列集傳回追蹤的結果。  
+  您可以使用[Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)命令，在 XML for Analysis (XMLA) 來監視現有的執行個體上定義的追蹤[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令會以資料列集傳回追蹤的結果。  
   
 ## <a name="specifying-a-trace"></a>指定追蹤  
- [物件](../xmla/xml-elements-properties/object-element-xmla.md)屬性`Subscribe`命令必須包含物件參考[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體或在追蹤[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 如果未指定 `Object` 屬性，或者如果在 `Object` 屬性中沒有指定追蹤識別碼，則 `Subscribe` 命令會監視命令的 SOAP 標頭中指定的明確工作階段之預設工作階段追蹤。  
+ [物件](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)屬性`Subscribe`命令必須包含物件參考[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體或在追蹤[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 如果未指定 `Object` 屬性，或者如果在 `Object` 屬性中沒有指定追蹤識別碼，則 `Subscribe` 命令會監視命令的 SOAP 標頭中指定的明確工作階段之預設工作階段追蹤。  
   
 ## <a name="returning-results"></a>傳回結果  
- `Subscribe` 命令會傳回包含指定追蹤擷取的追蹤事件之資料列集。 `Subscribe`命令會傳回追蹤結果，直到取消命令為止[取消](../xmla/xml-elements-commands/cancel-element-xmla.md)命令。  
+ `Subscribe` 命令會傳回包含指定追蹤擷取的追蹤事件之資料列集。 `Subscribe`命令會傳回追蹤結果，直到取消命令為止[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令。  
   
  資料列集包含下表中列出的資料行。  
   

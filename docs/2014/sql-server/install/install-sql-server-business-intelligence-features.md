@@ -1,32 +1,31 @@
 ---
-title: 安裝 SQL Server 2014 BI 功能 |Microsoft Docs
+title: 安裝 SQL Server 2014 BI 功能
 ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
 ms.topic: conceptual
-ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3fec33fe160d5ee901eefda541133e6c7b9610b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.date: 10/24/2018
+ms.openlocfilehash: a1d8d4c96ec6008b66e8b1be65767e413b0a4db7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116958"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051140"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>安裝 SQL Server 2014 BI 功能
+
   屬於 Microsoft Business Intelligence 平台的 SQL Server 功能包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，以及用來建立或處理分析資料的數種用戶端應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件集中的本節將說明如何安裝這些功能。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以安裝成獨立伺服器、向外延展的組態，或是 SharePoint 伺服器陣列中的共用服務應用程式等形式。 將這些服務安裝在伺服器陣列中，可以啟用僅限在 SharePoint 中使用的 BI 功能，包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 及 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，後者是在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 表格式模型資料庫上執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 隨選互動式報表設計工具。  
   
  您若已熟悉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 PowerPivot for SharePoint 的安裝步驟，可以直接前往指引您如何啟用特定案例的檢查清單。 如需詳細資訊，請參閱 < [for sharepoint 安裝 BI 功能的檢查清單](checklists-for-installing-bi-features-with-sharepoint.md)。  
   
-## <a name="contents"></a>目錄  
- 本節內容：  
+## <a name="contents"></a>目錄
+
+本節內容：
   
 |連結|工作|  
 |----------|----------|  
@@ -42,10 +41,12 @@ ms.locfileid: "48116958"
 |[升級到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|您可以使用本節的指示，將舊版的伺服器與內容升級成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |[解除安裝 SQL Server 2014](uninstall-sql-server.md)<br /><br /> [解除安裝 PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [解除安裝 Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)|您可以使用本節的指示來解除安裝 BI 功能。|  
   
-## <a name="see-also"></a>另請參閱  
- [新功能&#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)   
- [新 Analysis Services 和 Business Intelligence 功能](../../analysis-services/what-s-new-in-analysis-services.md)   
- [安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
- [升級到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+* [新功能&#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
+
+* [新 Analysis Services 和 Business Intelligence 功能](../../analysis-services/what-s-new-in-analysis-services.md)
+
+* [安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)
+
+* [升級到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)

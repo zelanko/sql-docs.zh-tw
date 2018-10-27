@@ -11,17 +11,17 @@ ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171418"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147343"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 課：瀏覽 Bike Buyer 採礦模型
   在這一課，您將使用[SELECT (DMX)](/sql/dmx/select-dmx)陳述式來探索決策樹和群集採礦的內容模型中建立您[第 2 課： 將採礦模型加入預測採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- 包含在採礦模型中的資料行不是採礦結構所定義的資料行，而是描述該演算法所發現的趨勢和模式的一組特定資料行。 這些採礦模型資料行所述[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)結構描述資料列。 例如，內容結構描述資料列集的 MODEL_NAME 資料行包含採礦模型的名稱。 若為群集採礦模型，NODE_CAPTION 資料行包含每一個群集的名稱，NODE_DESCRIPTION 資料行包含每一個群集之特性的描述。 您可以利用 SELECT FROM 瀏覽這些資料行\<模型 >。在 DMX 中的陳述式內容。 您也可以使用此陳述式來探索用來建立採礦模型的資料。 您必須在採礦結構中啟用鑽研，才能使用此陳述式。 如需有關此陳述式的詳細資訊，請參閱[FROM&#60;模型&#62;。案例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
+ 包含在採礦模型中的資料行不是採礦結構所定義的資料行，而是描述該演算法所發現的趨勢和模式的一組特定資料行。 這些採礦模型資料行所述[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)結構描述資料列。 例如，內容結構描述資料列集的 MODEL_NAME 資料行包含採礦模型的名稱。 若為群集採礦模型，NODE_CAPTION 資料行包含每一個群集的名稱，NODE_DESCRIPTION 資料行包含每一個群集之特性的描述。 您可以利用 SELECT FROM 瀏覽這些資料行\<模型 >。在 DMX 中的陳述式內容。 您也可以使用此陳述式來探索用來建立採礦模型的資料。 您必須在採礦結構中啟用鑽研，才能使用此陳述式。 如需有關此陳述式的詳細資訊，請參閱[FROM&#60;模型&#62;。案例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
   
  您也可以使用 SELECT DISTINCT 陳述式來傳回分隔資料行的所有狀態。 例如，如果您在性別資料行執行此作業，該查詢將傳回 `male` 和 `female`。  
   
@@ -50,7 +50,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- 採礦模型名稱旁邊的 .CONTENT 子句指定您要從採礦模型傳回內容。 如需有關採礦模型中包含的資料行的詳細資訊，請參閱[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
+ 採礦模型名稱旁邊的 .CONTENT 子句指定您要從採礦模型傳回內容。 如需有關採礦模型中包含的資料行的詳細資訊，請參閱[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
  您可以選擇性地使用程式碼的最後一行來篩選陳述式傳回的結果：  
   
@@ -86,7 +86,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     您也可以取代 * 任何資料行中包含一份[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
+     您也可以取代 * 任何資料行中包含一份[DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
 4.  取代下列項目：  
   

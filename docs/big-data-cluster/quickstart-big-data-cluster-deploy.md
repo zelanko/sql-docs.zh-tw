@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384103"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050990"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門： 部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -26,9 +26,9 @@ ms.locfileid: "49384103"
 
 在您用來執行命令來安裝 SQL Server 的巨量資料叢集電腦上安裝[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 SQL Server 的巨量資料叢集需要 1.10 版本，如 Kubernetes、 伺服器和用戶端 (kubectl)。 若要安裝 kubectl，請參閱[安裝 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 
 
-若要安裝`mssqlctl`CLI 工具來管理 SQL Server 的巨量資料叢集化您的用戶端電腦上，您必須先安裝[Python](https://www.python.org/downloads/)最低版本 v3.0 並[pip3](https://pip.pypa.io/en/stable/installing/)。 `pip` 如果您使用最少 3.4 從下載的 Python 版本已安裝[python.org](https://www.python.org/)。
+若要安裝**mssqlctl** CLI 工具來管理 SQL Server 的巨量資料叢集化您的用戶端電腦上，您必須先安裝[Python](https://www.python.org/downloads/)最低版本 v3.0 並[pip3](https://pip.pypa.io/en/stable/installing/)。 `pip` 如果您使用最少 3.4 從下載的 Python 版本已安裝[python.org](https://www.python.org/)。
 
-如果您的 Python 安裝遺漏`requests`套件，您必須安裝`requests`使用`python -m pip install requests`。 如果您已經有`requests`封裝，將它升級到最新版本使用`python -m pip install requests --upgrade`。
+如果您的 Python 安裝遺漏`requests`套件，您必須安裝`requests`使用`python -m pip install requests`(使用`python3`Linux 上的這些命令)。 如果您已經有`requests`封裝，將它升級到最新版本使用`python -m pip install requests --upgrade`。
 
 ## <a name="verify-aks-configuration"></a>確認 AKS 組態
 
@@ -40,11 +40,14 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>安裝 mssqlctl CLI 管理工具
 
-執行下列命令來安裝`mssqlctl`用戶端電腦上的工具。 命令的運作方式與 Windows 和 Linux 用戶端，但請確定您從 Windows 以系統管理權限執行的 cmd 視窗中執行它，或在它前面加`sudo`Linux 上：
+執行下列命令來安裝**mssqlctl**用戶端電腦上的工具。 命令的運作方式與 Windows 和 Linux 用戶端，但請確定您從 Windows 以系統管理權限執行的 cmd 視窗中執行它，或在它前面加`sudo`Linux 上：
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
 ```
+
+> [!TIP]
+> 如果**mssqlctl**未正確安裝，請檢閱文件中的先決條件步驟[安裝 mssqlctl](deployment-guidance.md#mssqlctl)。
 
 ## <a name="define-environment-variables"></a>定義環境變數
 

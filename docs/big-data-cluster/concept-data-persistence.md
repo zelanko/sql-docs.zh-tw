@@ -1,18 +1,18 @@
 ---
 title: 使用巨量資料叢集的 Kubernetes 的 SQL Server 的資料持續性 |Microsoft Docs
-description: ''
+description: 深入了解資料持續性中的 SQL Server 2019 巨量資料叢集的運作方式。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460573"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050825"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 
@@ -31,7 +31,7 @@ SQL Server 巨量資料叢集會使用這些永續性磁碟區的方式是使用
 若要在部署期間使用永續性儲存體，請設定**USE_PERSISTENT_VOLUME**並**STORAGE_CLASS_NAME**環境變數，再執行`mssqlctl create cluster`命令。 **USE_PERSISTENT_VOLUME**設為`true`預設。 您可以覆寫預設值，並將它設定為`false`和巨量資料的 SQL Server 叢集在此情況下，使用 emptyDir 掛接。 
 
 > [!WARNING]
-> 執行而永續性儲存體不會導致非功能性的叢集。 在 pod 重新啟動時，叢集中繼資料及/或使用者資料會永久遺失。
+> 執行而永續性儲存體不能在測試環境中，但它可能會導致非功能性的叢集。 在 pod 重新啟動時，叢集中繼資料及/或使用者資料會永久遺失。
 
 如果您設定旗標設為 true 時，您也必須提供**STORAGE_CLASS_NAME**做為參數，在部署階段。
 
@@ -41,20 +41,25 @@ AKS 隨附[兩個內建的儲存體類別](https://docs.microsoft.com/azure/aks/
 
 ## <a name="minikube-storage-class"></a>Minikube 儲存類別
 
-Minikube 隨附內建的儲存體類別，稱為**標準**以及它的動態佈建程式。 請注意，在 Minikube，如果 USE_PERSISTENT_VOLUME = true （預設值），您也必須覆寫 STORAGE_CLASS_NAME 環境變數的預設值，因為預設值不同。 將值設為`standard`: 
-```
+Minikube 隨附內建的儲存體類別，稱為**標準**以及它的動態佈建程式。 請注意，在 minikube，如果`USE_PERSISTENT_VOLUME=true`（預設值），您也必須覆寫的預設值**STORAGE_CLASS_NAME**環境變數，因為預設值不同。 將值設為`standard`: 
+
+在 Windows 中，使用下列命令：
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-或者，您可以隱藏 Minikube 上使用永續性磁碟區：
-```
-SET USE_PERSISTENT_VOLUME=false
+在 Linux 上，使用下列命令：
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+或者，您可以隱藏設定永續性磁碟區使用 minikube `USE_PERSISTENT_VOLUME=false`。
 
 ## <a name="kubeadm"></a>Kubeadm
 
-Kubeadm 並未隨附於內建的儲存體類別;因此，我們建立了指令碼，以設定永續性磁碟區和儲存體類別使用本機儲存體或[城堡](https://github.com/rook/rook)儲存體。
+Kubeadm 並未隨附於內建的儲存體類別。 您可以選擇建立您自己的永續性磁碟區和儲存體類別使用本機儲存體或您慣用的佈建程式，例如[城堡](https://github.com/rook/rook)。 在此情況下，您會設定**STORAGE_CLASS_NAME**為您設定的儲存類別。 或者，您可以設定`USE_PERSISTENT_VOLUME=false`在測試環境中，但請注意在先前的警告**部署設定**一節。  
 
 ## <a name="on-premises-cluster"></a>在內部部署叢集
 

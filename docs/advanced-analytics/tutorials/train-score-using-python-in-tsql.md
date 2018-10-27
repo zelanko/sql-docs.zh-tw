@@ -1,28 +1,43 @@
 ---
-title: SQL Server 中使用 Python 模型訓練和預測 |Microsoft Docs
-description: 建立並定型模型，使用 Python 和傳統的鳶尾花資料集。 將模型儲存至 SQL Server，然後使用它來產生預測的結果。
+title: SQL Server 中的 Python 模型訓練和預測使用預存程序 |Microsoft Docs
+description: 若要建立、 定型和使用 Python 模型與傳統的鳶尾花資料集的 SQL Server 預存程序中內嵌 Python 程式碼。 將定型的模型儲存至 SQL Server，然後使用它來產生預測的結果。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/18/2018
+ms.date: 10/23/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 839bcecdeaf7b5e2a7ea1297fe941353bffed20e
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461834"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099868"
 ---
-# <a name="use-a-python-model-in-sql-server-for-training-and-scoring"></a>使用 SQL Server 中的 Python 模型訓練和評分
+# <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在 Python 練習中，了解常見的模式，來建立、 定型和使用 SQL Server 中的模型。 這個練習中建立兩個預存程序。 第一個會產生預測根據花卉特性鳶尾花品種的貝氏機率分類模型。 第二個程序是用於評分。 它會呼叫第一個程序輸出一組預測中所產生的模型。 透過逐步執行本練習，您將學習為基礎的 SQL Server 資料庫引擎執行個體上執行 Python 程式碼的基本技巧。
+這個練習中示範的 Python 與 SQL Server 的整合，當您將新增[Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)資料庫引擎執行個體的功能。 這類執行個體上，您可以將內部的 Python 程式碼包裝[預存程序](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)以利作業化您的指令碼，對於生產工作負載。 能夠將程式碼內嵌在預存程序中有如何設計、 測試及管理資料科學與機器學習服務工作中的獲益良多。 它能讓您的指令碼和模型到任何可以連線到 SQL Server 的應用程式。
 
-此練習中所使用的範例資料[鳶尾花資料集](demo-data-iris-in-sql.md)中**irissql**資料庫。
+在 Python 練習中，您將建立和執行兩個預存程序。 第一個使用傳統的鳶尾花資料集，並產生預測根據花卉特性鳶尾花品種的貝氏機率分類模型。 第二個程序是用於評分。 它會呼叫第一個程序輸出一組預測中所產生的模型。 藉由將程式碼放在預存程序中，作業會為自主、 可重複使用，和可呼叫其他預存程序和用戶端應用程式。 
 
-## <a name="create-a-model-using-a-sproc"></a>使用預存程序建立模型
+藉由完成本教學課程中，您將了解：
+
+> [!div class="checklist"]
+> * 如何在預存程序中內嵌 Python 程式碼
+> * 如何將您的程式碼，透過輸入的輸入傳遞預存程序
+> * 如何讓模型來使用預存程序
+
+## <a name="prerequisites"></a>先決條件
+
+此練習中所使用的範例資料[ **irissql** ](demo-data-iris-in-sql.md)資料庫。
+
+您也需要 T-SQL 編輯器中，例如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)。
+
+## <a name="create-a-stored-procedure-that-generates-models"></a>建立會產生模型的預存程序
+
+SQL Server 開發的常見模式是組織成不同的預存程序的可程式化作業。 在此步驟中，您將建立產生的模型來預測結果的預存程序。 
 
 1. 開啟新的 [查詢] 視窗，在 Management Studio 連接到**irissql**資料庫。 
 
@@ -31,9 +46,15 @@ ms.locfileid: "49461834"
     GO
     ```
 
-2. 在新的 [查詢] 視窗，建立預存程序，建立並定型的模型執行下列程式碼。 會儲存在 SQL Server 中重複使用的模型會序列化為位元組資料流，並儲存在資料庫資料表中的 varbinary （max） 資料行。 一旦建立模型時，定型、 序列化，並儲存至資料庫，它可以呼叫其他程序或計分工作負載預測 T-SQL 函式。
+2. 複製下列程式碼來建立新的預存程序。 
 
-   這個程式碼會使用序列化，序列化的模型和 scikit-learn 提供貝氏機率分類演算法。 此模型會使用從 0 到 4 中的資料行的資料定型**iris_data**資料表。 您在程序的第二部分中看到的參數說明資料輸入和模型輸出。 
+   此程序執行時，呼叫[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)啟動 Python 工作階段。 
+   
+   輸入所需的 Python 程式碼會傳遞做為輸入參數，此預存程序。 輸出會是定型的模型，並根據 Python **scikit-learn-了解**適用於機器學習演算法程式庫。 
+
+   此程式碼會使用[ **pickle** ](https://docs.python.org/2/library/pickle.html)序列化模型。 此模型會使用從 0 到 4 中的資料行的資料定型**iris_data**資料表。 
+   
+   您在程序的第二部分中看到的參數說明資料輸入和模型輸出。 盡量，您想要清楚定義輸入預存程序中執行的 Python 程式碼，並將輸出對應至預存程序輸入和輸出，在執行階段中傳遞。 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -54,13 +75,17 @@ ms.locfileid: "49461834"
     GO
     ```
 
-3. 驗證預存程序存在。 如果沒有發生錯誤，執行 T-SQL 指令碼，從上一個步驟，新的預存程序稱為**generate_iris_model**會建立並加入至**irissql**資料庫。 您可以在 Management Studio 中找到預存程序**物件總管**下方**可程式性**。
+3. 驗證預存程序存在。 
 
-## <a name="execute-the-sproc-to-create-and-train-models"></a>執行預存程序建立並定型模型
+   如果沒有發生錯誤，執行 T-SQL 指令碼，從上一個步驟，新的預存程序稱為**generate_iris_model**會建立並加入至**irissql**資料庫。 您可以在 Management Studio 中找到預存程序**物件總管**下方**可程式性**。
 
-1. 建立預存程序之後，執行下列程式碼來執行它。 執行預存程序的特定陳述式是`EXEC`第五個列。
+## <a name="execute-the-procedure-to-create-and-train-models"></a>執行程序建立並定型模型
 
-   這個指令碼會刪除現有的模型，相同的名稱 （"貝氏機率分類 」） 以挪出空間給新的重新執行相同的程序所建立。 不用模型刪除，就會發生錯誤，指出此物件已經存在。 
+在此步驟中，執行程序執行的內嵌程式碼，建立定型和序列化的模型，做為輸出。 會儲存在 SQL Server 中重複使用的模型會序列化為位元組資料流，並儲存在資料庫資料表中的 varbinary （max） 資料行。 一旦模型建立、 定型、 序列化，並儲存至資料庫，它可以呼叫其他程序，或由[預測 T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)計分工作負載的函式。
+
+1. 下列程式碼複製到執行程序。 執行預存程序的特定陳述式是`EXEC`第五個列。
+
+   這個指令碼會刪除現有的模型，相同的名稱 （"貝氏機率分類 」） 以挪出空間給新的重新執行相同的程序所建立。 不用模型刪除，就會發生錯誤，指出此物件已經存在。 模型會儲存在名為資料表**iris_models**，您所建立時佈建**irissql**資料庫。
 
     ```sql
     DECLARE @model varbinary(max);
@@ -82,7 +107,7 @@ ms.locfileid: "49461834"
     | 1 | 貝氏機率分類     | 
 
 
-## <a name="create-and-execute-a-sproc-for-generating-predictions"></a>建立和執行的預存程序來產生預測
+## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>建立及執行預存程序來產生預測
 
 既然您已建立、 定型，並儲存模型中，移至下一個步驟： 建立預存程序，會產生預測。 所呼叫的 sp_execute_external_script 來啟動 Python，然後將傳遞載入序列化的模型，您在上一個練習中，建立，然後提供它要評分的資料輸入的 Python 指令碼中，您會執行這項操作。
 
@@ -128,13 +153,14 @@ ms.locfileid: "49461834"
 
 ## <a name="conclusion"></a>結論
 
-在這個練習中，您已了解如何建立預存程序，針對不同的工作，每個預存程序使用的系統預存程序的地方[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)啟動 Python 處理序。 Python 程序的輸入會當做參數傳遞至 sp_execute_external 指令碼。 在 Python 指令碼本身和 SQL Server 資料庫中的資料變數會傳遞做為輸入。
+在此練習中，您已了解如何建立不同的工作，其中每個預存程序會使用系統預存程序專用的預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)啟動 Python 處理序。 Python 程序的輸入會當做參數傳遞至 sp_execute_external 指令碼。 在 Python 指令碼本身和 SQL Server 資料庫中的資料變數會傳遞做為輸入。
 
-如果您是用來使用 Python 中，您可能習慣手動載入資料、 建立一些摘要和圖形，然後定型模型及產生一些分數，全都放在相同的 250 行程式碼。 這篇文章會有所不同組織成個別的程序作業的慣用方法。 這種做法會很有幫助以多種等級。
+針對某些 Python 開發人員用來撰寫全部包含的指令碼處理作業的範圍，將工作組織成個別的程序看起來不必要。 但定型和計分有不同的使用案例。 藉由分隔它們，您可以將每個工作放上不同的排程和作業的 「 範圍 」 權限。
 
-其中一個優點是您可以分隔成可以使用參數進行修改的可重複執行步驟的程序。 盡量，您想清楚定義輸入和對應至預存程序輸入的輸出和輸出可以在執行階段傳入預存程序中執行的 Python 程式碼。 在此練習中，建立模型 （名為在此範例中的"貝氏機率分類 」） 的 Python 程式碼會傳遞做為第二個預存程序，在 計分程序中呼叫模型的輸入。
+同樣地，您也可以利用資源配置的 SQL Server 功能，例如平行處理，資源控管，或撰寫您的指令碼，以使用中的演算法[revoscalepy](../python/what-is-revoscalepy.md)或是[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) ，支援資料流處理和平行執行。 藉由分隔定型和計分，您可以針對特定工作負載的最佳化。
 
-第二個優點是訓練並可最佳化評分程序，利用 SQL Server 的功能，例如平行處理，資源控管，或使用中的演算法[revoscalepy](../python/what-is-revoscalepy.md)或[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) ，支援資料流，並平行執行。 藉由分隔定型和計分，您可以針對特定工作負載的最佳化。
+最後一個好處是可以使用參數來修改處理程序。 在此練習中，建立模型 （在此範例中，名為"貝氏機率分類 」） 的 Python 程式碼傳遞做為第二個預存程序呼叫模型評分程序中的輸入。 這個練習中只會使用一個模型，但您可以想像如何參數化的評分的工作中的模型會使該指令碼更加實用。
+
 
 ## <a name="next-steps"></a>後續步驟
 

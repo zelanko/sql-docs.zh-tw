@@ -1,22 +1,22 @@
 ---
-title: 設定 SQL Server 2019 CTP 2.0 部署 Minikube |Microsoft Docs
-description: ''
+title: 設定適用於 SQL Server 2019 巨量資料叢集部署的 Minikube |Microsoft Docs
+description: 了解如何設定 Minikube 適用於在單一機器上的 SQL Server 2019 巨量資料叢集 （預覽） 部署。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050780"
 ---
-# <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>設定 SQL Server 2019 CTP 2.0 Minikube
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集部署的 Minikube
 
-Minikube 是一種工具，輕鬆地執行類似的桌上型或膝上型電腦在單一機器上的 Kubernetes。 Minikube 會執行使用者想要試用 Kubernetes，或使用它進行開發的膝上型電腦上每日的 VM 內的單一節點 Kubernetes 叢集。 
+這篇文章說明如何設定**minikube**適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署在單一電腦上。 Minikube 是一種工具，輕鬆地執行類似的桌上型或膝上型電腦在單一機器上的 Kubernetes。 Minikube 會執行使用者想要試用 Kubernetes，或使用它進行開發的膝上型電腦上每日的 VM 內的單一節點 Kubernetes 叢集。 
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -72,6 +72,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>後續步驟
 
-這篇文章中的步驟設定 Minikube 叢集。 下一個步驟是將 SQL Server 2019 CTP 2.0 部署至叢集。
+這篇文章中的步驟設定 Minikube 叢集。 下一個步驟是將 SQL Server 2019 巨量資料叢集部署。 如需指示，請參閱下列文章：
 
 [將 SQL Server 2019 CTP 2.0 在 Kubernetes 上部署](deployment-guidance.md#deploy)

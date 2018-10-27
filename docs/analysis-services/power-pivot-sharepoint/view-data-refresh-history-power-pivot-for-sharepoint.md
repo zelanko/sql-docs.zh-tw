@@ -1,5 +1,5 @@
 ---
-title: 檢視資料重新整理記錄 (Power Pivot for SharePoint) |Microsoft 文件
+title: 檢視資料重新整理記錄 (Power Pivot for SharePoint) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099679"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>檢視資料重新整理記錄 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,20 +55,20 @@ ms.locfileid: "34028646"
 ##  <a name="pageelements"></a> 使用記錄資訊  
  [資料重新整理記錄] 頁面提供有關每項重新整理作業的詳細資訊。 您可以使用此頁面上的資訊，以確認是否已進行重新整理，或判斷作業失敗的原因。  
   
-|項目|說明|  
+|項目|描述|  
 |----------|-----------------|  
 |名稱|指定含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之 Excel 活頁簿的檔案名稱。|  
 |目前狀態|值包括：[已排程]、[正在重新整理]、[成功] 或 [失敗]。<br /><br /> **已排程**：當您初次建立排程時會顯示此值。 資料重新整理執行過第一次後，就不會再出現此狀態訊息。<br /><br /> **正在重新整理** ：表示該資料重新整理在進行中。 要求是在程序佇列中，或正在伺服器上執行。<br /><br /> **成功** ：表示上次資料重新整理作業已完成，而且已將更新的活頁簿存回 SharePoint 文件庫中。<br /><br /> **失敗** ：表示上次資料重新整理作業並未成功。 已重新整理資料並未儲存。 活頁簿中所包含的資料與資料重新整理開始之前相同。|  
 |上次成功重新整理|指定上次順利完成資料重新整理的日期。|  
 |下次排程更新|指定下次排程要進行資料重新整理的日期。<br /><br /> [正在設定排程] 連結會跳至 [排程定義] 頁面。 如果您在活頁簿上擁有「參與」權限，您可以按一下連結以檢視及修改排程資訊，控制活頁簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的自動資料重新整理。|  
-|시작됨|在 [記錄詳細資料] 區段之中，[已啟動] 會指出實際的處理時間。 實際的處理時間可能與您的排程不同。 在伺服器上有足夠記憶體可用時，就會開始進行處理。 如果伺服器非常忙碌，可能會在您指定的開始時間之後數小時，才開始進行處理。|  
+|Started|在 [記錄詳細資料] 區段之中，[已啟動] 會指出實際的處理時間。 實際的處理時間可能與您的排程不同。 在伺服器上有足夠記憶體可用時，就會開始進行處理。 如果伺服器非常忙碌，可能會在您指定的開始時間之後數小時，才開始進行處理。|  
 |已完成|在 [記錄詳細資料] 區段之中，[已完成] 會指出資料重新整理作業完成的時間。 日期和時間表示活頁簿存回文件庫時的時間。<br /><br /> 如果資料重新整理失敗，會有一則或多則錯誤訊息說明失敗的原因。 您可以展開每項記錄，以檢視詳細的狀態。 每個資料來源都會個別列出，旁邊會有成功或失敗訊息，說明資料重新整理未完成的原因。|  
 |Time|提供從資料重新整理開始到完成的累計時間。|  
-|狀態|提供重新整理作業成功或失敗的歷程記錄。|  
+|[狀態]|提供重新整理作業成功或失敗的歷程記錄。|  
   
 ## <a name="see-also"></a>另請參閱  
  [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [排程資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [排定資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Power Pivot 資料重新整理](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

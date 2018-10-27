@@ -13,12 +13,12 @@ ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e08cccf573d86d7904e695afdab289084f65604
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 338eb4766573cf99d3070fe91cdd276721df79b8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113428"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147973"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>設定多維度資料庫屬性 (Analysis Services)
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫設計工具中設定許多 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫屬性。  
@@ -38,7 +38,7 @@ ms.locfileid: "48113428"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|彙總前置詞|可用於資料庫中所有資料分割之彙總名稱的一般前置詞。 如需詳細資訊，請參閱 [AggregationPrefix 元素 &#40;ASSL&#41;](../scripting/properties/aggregationprefix-element-assl.md)。|  
+|彙總前置詞|可用於資料庫中所有資料分割之彙總名稱的一般前置詞。 如需詳細資訊，請參閱 [AggregationPrefix 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)。|  
 |定序|當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體時，資料庫將會繼承自定序伺服器屬性，除非這裡有提供不同的值。|  
 |DataSourceImpersonationInfo|針對資料庫中的所有資料來源物件指定預設模擬模式， 這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務在處理物件、同步處理伺服器，以及執行 OpenQuery 和 SystemOpenSchema 資料採礦陳述式時所用的模式。|  
 |估計的大小|提供磁碟上資料庫檔案的預估大小。 如果資料儲存在多個位置，此預估值僅限於儲存在資料庫資料夾底下的資料檔案。<br /><br /> `EstimatedSize` 也可以當做預估記憶體的基礎使用。 一般來說，記憶體需求會大於磁碟資料大小，因為將資料庫載入記憶體時會產生額外的資料結構。<br /><br /> 若要進一步預估記憶體需求，您也可以使用工作管理員，在處理資料庫前後查看 Analysis Services 處理序記憶體，並觀察耗用的記憶體，當做了解資料庫之記憶體需求的方法。|  
@@ -46,7 +46,7 @@ ms.locfileid: "48113428"
 |MasterDataSource ID|與遠端資料分割一起使用。 如需詳細資訊，請參閱 [遠端資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫屬性 對話方塊中&#40;SSAS-多維度&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [設定 Analysis Services 專案屬性&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
+ [資料庫屬性對話方塊 &#40;SSAS - 多維度&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193658"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146585"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
   動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  
@@ -33,13 +33,13 @@ ms.locfileid: "48193658"
   
 -   標準動作，該動作會傳回與動作發生所在之 Cube 中選定區段有關的動作元素 (URL、HTML、DataSet、RowSet 和其他元素)。  
   
- 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取動作，並對使用者公開動作。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](adomd-net/developing-with-adomd-net.md)。  
+ 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取動作，並對使用者公開動作。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Action> 物件是由基本資訊、動作要發生的目標、限制動作範圍的條件以及類型所組成。 基本資訊包括動作的名稱、動作的描述、動作的建議標題和其他內容。  
   
  目標是指動作要發生在 Cube 中的實際位置。 目標是由目標類型和目標物件所組成。 目標類型表示 Cube 中 (啟用動作的地方) 的物件種類。 目標類型可以是層級成員、資料格、階層、階層成員或其他內容。 目標物件是此目標類型的特定物件；如果目標類型為階層，則目標物件會是 Cube 中任何一個定義的階層。  
   
- 條件是`Boolean`在動作事件上評估 MDX 運算式。 如果條件評估為`true`，就會執行動作。 否則，不會執行此動作。  
+ 條件是指在動作事件上評估的 `Boolean` MDX 運算式。 如果條件評估為 `true`，就會執行此動作。 否則，不會執行此動作。  
   
  類型是指要執行之動作的種類。 <xref:Microsoft.AnalysisServices.Action> 是抽象類別，因此使用它時，必須使用任何一個衍生類別。 預先定義的動作有兩種：鑽研和報表。 它們具有相對應的衍生類別： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他動作已涵蓋在 <xref:Microsoft.AnalysisServices.StandardAction> 類別中。  
   

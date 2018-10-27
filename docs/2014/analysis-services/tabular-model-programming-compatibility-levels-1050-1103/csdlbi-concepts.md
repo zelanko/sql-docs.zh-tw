@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098138"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146514"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   具有 BI 註解的概念結構定義語言 (CSDLBI) 是以實體資料架構為基礎，這是一種用於表示資料摘要，以便用程式設計方式存取、查詢或匯出不同的資料集。 CSDLBI 可用來表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料模型，因為它支援豐富的資料驅動報表和應用程式。  
@@ -131,7 +131,7 @@ ms.locfileid: "48098138"
   
  **維度：** 維度會以 CSDLBI 表示為實體 （資料表） 資料行和屬性。 請注意，即使未包含在檢視方塊內，包含在模型中的維度仍將以 CSDL 輸出表示，並標示為 `Hidden`。  
   
- **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱 < [DISCOVER_CSDL_METADATA 資料列集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
+ **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱 < [DISCOVER_CSDL_METADATA 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)。  
   
  **階層：** 支援且以 CSDLBI 表示為一組層級的階層。  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098138"
  **限制：** 不支援資料格安全性。  
   
 ## <a name="see-also"></a>另請參閱  
- [商業智慧的 CSDL 註解&#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

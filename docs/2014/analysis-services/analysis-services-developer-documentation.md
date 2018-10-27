@@ -15,12 +15,12 @@ ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a23859191c8a1dfaf5f81a38d5a07c92e3a6394a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9296e5270fc3cb6114595dd1709b1a90e69a12ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225301"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147133"
 ---
 # <a name="developer39s-guide-analysis-services"></a>開發人員&#39;指南 (Analysis Services)
     
@@ -34,13 +34,13 @@ ms.locfileid: "48225301"
  [多維度模型程式設計](multidimensional-models/multidimensional-model-programming.md)  
  描述在自訂方案中整合多維度模型物件的開發工作與方法。  
   
- [Analysis Services 結構描述資料列集](schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  描述可提供有關伺服器狀態、伺服器作業和資料庫物件之資訊的結構描述資料列集。  
   
- [Analysis Services 指令碼語言&#40;ASSL&#41;參考](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services 指令碼語言&#40;ASSL&#41;參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  描述 ASSL 對 XMLA 的延伸模組。 ASSL 針對補充 XMLA 規格的 Analysis Services 多維度模型提供資料定義和操作語言。  
   
- [XML for Analysis &#40;XMLA&#41;參考](xmla/xml-for-analysis-xmla-reference.md)  
+ [XML for Analysis &#40;XMLA&#41; 參考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  描述可幫助您了解 XMLA 如何對自訂方案做出貢獻的 XMLA 概念。 也會描述符合 XMLA 1.1 規格的層級。  
   
   

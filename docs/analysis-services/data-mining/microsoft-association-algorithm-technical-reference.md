@@ -1,5 +1,5 @@
 ---
-title: Microsoft 關聯分析演算法技術參考 |Microsoft 文件
+title: Microsoft 關聯分析演算法技術參考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9cba8f282e1f355b7b4265298890eccb0a4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017385"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145903"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34017385"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法支援數個會影響所產生之採礦模型的行為、效能和精確度的參數。  
   
 ### <a name="setting-algorithm-parameters"></a>設定演算法參數  
- 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師，隨時變更採礦模型的參數。 您也可以變更參數以程式設計方式使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合在 AMO 中，或使用[MiningModels 元素&#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) XMLA 中。 下表描述每一個參數。  
+ 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦設計師，隨時變更採礦模型的參數。 您也可以變更參數以程式設計方式使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合中 AMO，或使用[MiningModels 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA 中。 下表描述每一個參數。  
   
 > [!NOTE]  
 >  您不能使用 DMX 陳述式變更現有模型中的參數；而必須在建立模型時，在 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中指定參數。  
@@ -143,7 +143,7 @@ ms.locfileid: "34017385"
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法支援下表所列的特定輸入資料行和可預測資料行。 如需採礦模型中內容類型意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|資料行|內容類型|  
+|「資料行」|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Cyclical、Discrete、Discretized、Key、Table 和 Ordered|  
 |可預測屬性|Cyclical、Discrete、Discretized、Table 和 Ordered|  
@@ -154,6 +154,6 @@ ms.locfileid: "34017385"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 關聯分析演算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)   
- [關聯模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

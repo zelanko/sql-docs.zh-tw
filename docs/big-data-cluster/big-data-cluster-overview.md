@@ -1,18 +1,18 @@
 ---
 title: 什麼是 SQL Server 2019 巨量資料叢集？ | Microsoft Docs
-description: ''
+description: 深入了解 SQL Server 2019 巨量資料叢集 （預覽），以在 Kubernetes 上執行，並提供關聯式的向外延展選項和 HDFS 的資料。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/25/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: 3a18eeca5bd6af2fb0bb9562f126351ac4d3f1c9
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 7648988fb861531a403efe17b883f53eca8e5dbe
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085054"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051000"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什麼是 SQL Server 2019 巨量資料叢集？
 

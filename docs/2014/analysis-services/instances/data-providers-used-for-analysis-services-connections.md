@@ -11,17 +11,17 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136998"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145217"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用於 Analysis Services 連接的資料提供者
   Analysis Services 會為伺服器和資料存取提供三個資料提供者。 所有連接到 Analysis Services 的應用程式都會使用其中一個提供者來進行存取。 其中兩個提供者 ADOMD.NET 和 Analysis Services 管理物件 (AMO) 為 Managed 資料提供者。 Analysis Services OLE DB 提供者 (MSOLAP DLL) 是原生資料提供者。  
   
- 如果組織執行多個 Analysis Services 版本，您可能需要在連接至 Analysis Services 資料的使用者工作站上安裝較新版本的資料提供者。 若要連接至較新版本的 Analysis Services，您必須使用同一個主要版本的資料提供者。 例如，若要連接到[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]，每一個工作站都必須有 2014年版本的資料提供者。 儘管 Excel 會安裝其進行連接所需的資料提供者，但是該提供者可能比您所使用的 Analysis Services 執行個體還要舊。  
+ 如果組織執行多個 Analysis Services 版本，您可能需要在連接至 Analysis Services 資料的使用者工作站上安裝較新版本的資料提供者。 若要連接至較新版本的 Analysis Services，您必須使用同一個主要版本的資料提供者。 例如，若要連接至 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]，每一個工作站都必須有 2014 版的資料提供者。 儘管 Excel 會安裝其進行連接所需的資料提供者，但是該提供者可能比您所使用的 Analysis Services 執行個體還要舊。  
   
  本主題包含下列各節：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48136998"
   
 -   在 SQL Server Management Studio 中，連接到 Analysis Services 執行個體。 以滑鼠右鍵按一下您想要檢查，指向 執行的個體**報表**，然後按一下**一般**。 版次和版本組建資訊隨即出現在報表中。  
   
- 主要組建編號的最初發行版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]為 12.0.2000.9。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最初發行版本的主要組建編號為 12.0.2000.9。  
   
  如需有關版本與組建資訊取得方式的詳細資訊，請參閱＜ [如何判斷 SQL Server 的版本及其元件](http://support.microsoft.com/kb/321185)＞。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48136998"
   
  連接到資料庫時，上述三套程式庫的連接字串屬性大致全都相同。 針對 ADOMD.NET 所定義的任何連接字串 (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>)，幾乎也都適用於 AMO 以及 Analysis Services OLE DB 提供者。 如需詳細資訊，請參閱[連接字串屬性 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)。  
   
- 如需有關以程式設計方式連接的詳細資訊，請參閱＜ [Establishing Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net.md)＞。  
+ 如需有關以程式設計方式連接的詳細資訊，請參閱＜ [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net)＞。  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  AMO 是用於伺服器管理及資料定義的 Managed 資料提供者。 例如，SQL Server Management Studio 會使用 AMO 連接到 Analysis Services。  
@@ -109,7 +109,7 @@ ms.locfileid: "48136998"
   
  使用 AMO 的連接是通常最簡短，其中包含 「 資料來源 =\<伺服器名稱 >"。 建立連接之後，您將使用 API 處理資料庫集合與主要物件。 SSDT 和 SSMS 都是使用 AMO 連接到 Analysis Services 執行個體。  
   
- 如需有關以程式設計方式連接的詳細資訊，請參閱＜ [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)＞。  
+ 如需有關以程式設計方式連接的詳細資訊，請參閱＜ [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 Analysis Services](connect-to-analysis-services.md)  

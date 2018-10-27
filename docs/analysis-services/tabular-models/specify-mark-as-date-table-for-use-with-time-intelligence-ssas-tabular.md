@@ -1,5 +1,5 @@
 ---
-title: 指定標記為日期資料表 |Microsoft 文件
+title: 指定標記為日期資料表 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6a4ad929c866658ce241f33ddd2a5326dc78e19
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099331"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定標記為日期資料表以搭配時間智慧
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  若要在 DAX 公式中使用時間智慧函數，您必須指定日期資料表和唯一識別碼 (datetime) 資料行的日期資料類型。 您將日期資料表中的某個資料行指定為唯一識別碼之後，就可以在日期資料表與任何事實資料表的資料行之間建立關聯性。  
+  若要在 DAX 公式中使用時間智慧函數，您必須指定日期資料表以及 Date 資料類型的唯一識別碼 (datetime) 資料行。 您將日期資料表中的某個資料行指定為唯一識別碼之後，就可以在日期資料表與任何事實資料表的資料行之間建立關聯性。  
   
  使用時間智慧函數時，適用下列規則：  
   
--   使用 DAX 時間智慧函數時，請勿指定事實資料表的日期時間資料行。 請務必在您的模型中建立個別的日期資料表，其中至少包含一個 Date 資料類型的日期時間資料行且包含唯一值。  
+-   使用 DAX 時間智慧函數時，永遠不會指定事實資料表的日期時間資料行。 請務必在您的模型中建立個別的日期資料表，其中至少包含一個 Date 資料類型的日期時間資料行且包含唯一值。  
   
 -   請確定您的日期資料表具有連續的日期範圍。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34039782"
   
 3.  在 **[標記為日期資料表]** 對話方塊的 **[日期]** 清單方塊中，選取要當做唯一識別碼使用的資料行。 這個資料行必須包含唯一值而且應該屬於 Date 資料類型。 例如：  
   
-    |日期|  
+    |date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -52,6 +52,6 @@ ms.locfileid: "34039782"
   
 ## <a name="see-also"></a>另請參閱  
  [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [時間智慧函數 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [時間智慧函數 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

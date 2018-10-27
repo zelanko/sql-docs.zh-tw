@@ -1,5 +1,5 @@
 ---
-title: SELECT 陳述式 (MDX) |Microsoft 文件
+title: SELECT 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55a4e841a181e788892c293ec9c39a1a53a0459e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741887"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148413"
 ---
-# <a name="mdx-data-manipulation---select"></a>MDX 資料操作選取
+# <a name="mdx-data-manipulation---select"></a>MDX 資料操作 - SELECT
 
 
   擷取指定 Cube 的資料。  
@@ -117,7 +117,7 @@ FROM
   
  子選擇陳述式中的 NON VISUAL 選項，可以讓您在篩選出成員的同時，保留實際總計而非篩選後的總計。 如此一來，您可以查詢前十筆銷售 (人員/產品/地區) 並取得所有查詢成員的實際銷售總計，而不只是傳回的前十筆銷售額總計。 如需詳細資訊，請參閱以下範例。  
   
- 導出的成員可以包含在\<query axis clause> > 只要使用連接字串參數開啟連線*子查詢 = 1*; 請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。 以下提供子選擇中的導出成員範例。  
+ 導出的成員可以包含在\<query axis clause>&lt > 只要使用連接字串參數開啟連線*子查詢 = 1*; 請參閱[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)並<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。 以下提供子選擇中的導出成員範例。  
   
 ## <a name="autoexists"></a>自動存在  
  在 SELECT 陳述式中使用兩個或多個維度屬性時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。 例如，假設您正在使用來自 Geography 維度的屬性。 如果您所擁有的其中一個運算式會從 City 屬性傳回所有成員，而另一個運算式會將 Country 屬性的成員限制為歐洲所有國家 (地區)，這將會使得 City 成員限制為只有屬於歐洲國家 (地區) 的城市。 Analysis Services 的這個特性稱為「自動存在」，僅適用於相同維度中的屬性。 「自動存在」僅適用於相同維度的屬性的原因是，它會嘗試防止某個屬性運算式加入其他屬性運算式中排除的維度記錄。 您也可以將「自動存在」視為不同之屬性運算式在維度記錄上所產生的交集。 請參閱下列範例：  
@@ -340,10 +340,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 「 自動存在 」 行為可以修改使用 AUTOEXISTS = [1 | 2 | 3] 參數中的連接字串。請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
+ 「 自動存在 」 行為可以修改使用 「 自動存在 」 = [1 | 2 | 3] 參數中的連接字串;請參閱[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)並<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回的 sum`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中所包含的彙總`Date`維度中，從**Adventure Works** cube。  
+ 下列範例會傳回的總和`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中包含在彙總`Date`維度中，從**Adventure Works** cube。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -362,7 +362,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 若要了解**NON VISUAL，** 下列範例會取得 [Reseller Sales Amount] 數字，其中產品類別目錄的資料行和轉售商商務類型是資料列的資料表中 [Adventure Works] 的查詢。 請注意，產品和轉售商的總計都有提供。  
+ 若要了解**NON VISUAL，** 下列範例是如何取得 [Reseller Sales Amount] 數字，其中產品類別目錄的資料行和轉售商商務類型的資料列的資料表中的 [Adventure Works] 的查詢。 請注意，產品和轉售商的總計都有提供。  
   
  下列 SELECT 陳述式：  
   
@@ -436,7 +436,7 @@ WHERE
   
  與前一個結果相比，您可以發現 [All Resellers] 資料列現在只總計 [Value Added Reseller] 和 [Warehouse] 的顯示值，但 [All Products] 資料行顯示所有產品 (包括未顯示產品) 的總計值。  
   
- 以下範例示範如何在子選擇中使用導出成員，以篩選出這些成員。 若要能重新產生此範例，必須先建立連接使用連接字串參數*子查詢 = 1*。  
+ 以下範例示範如何在子選擇中使用導出成員，以篩選出這些成員。 若要能夠重現此範例中，建立的連接必須使用連接字串參數*的子查詢 = 1*。  
   
  `select Measures.allmembers on 0`  
   
@@ -464,7 +464,7 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>另請參閱  
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 資料操作陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [利用查詢與 Slicer 軸限制查詢&#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料採礦服務與資料來源 |Microsoft 文件
+title: 資料採礦服務與資料來源 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016585"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145883"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34016585"
 ### <a name="xmla-listener"></a>XMLA 接聽程式  
  XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 msmdsrv.ini 檔中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [通訊埠] 組態設定可用來指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體所接聽的通訊埠。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
   
-|通訊埠|Description|  
+|通訊埠|描述|  
 |----------|-----------------|  
 |2383|預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的重新導向程式。|  
@@ -88,7 +88,7 @@ ms.locfileid: "34016585"
  您也可以設定屬性，以便微調伺服器以及控制用戶端使用量的安全性。 如需詳細資訊，請參閱 [功能屬性](../../analysis-services/server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>以程式設計方式存取資料採礦物件  
  您可以使用下列物件模型來建立 Analysis Services 資料庫的連接以及使用資料採礦物件：  
@@ -117,14 +117,14 @@ ms.locfileid: "34016585"
   
  如果此程序傳回資料集，用戶端將會收到資料集或資料表，其中具有包含資料列的巢狀資料表。 例如，如果您針對模型內容建立查詢，此查詢會傳回整個模型。 若要避免傳回太多資料列，您可以使用 ADOMD+ 物件模型來撰寫預存程序。  
   
- 若要撰寫伺服器預存程序，您必須參考 Microsoft.AnalysisServices.AdomdServer 命名空間。 如需如何建立和使用預存程序的詳細資訊，請參閱 [使用者定義函數和預存程序](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)。  
+ 若要撰寫伺服器預存程序，您必須參考 Microsoft.AnalysisServices.AdomdServer 命名空間。 如需如何建立和使用預存程序的詳細資訊，請參閱 [使用者定義函數和預存程序](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)。  
   
 > [!NOTE]  
 >  預存程序無法用來變更資料伺服器物件的安全性。 當您執行某個預存程序時，使用者的目前內容就會用來決定所有伺服器物件的存取權。 因此，使用者必須針對他們所存取的任何資料庫物件擁有適當的權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [實體架構 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [實體架構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [實體架構 &#40;Analysis Services – 資料採礦&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [資料採礦方案與物件的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

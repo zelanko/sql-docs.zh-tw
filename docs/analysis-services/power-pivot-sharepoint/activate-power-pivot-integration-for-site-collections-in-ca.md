@@ -1,5 +1,5 @@
 ---
-title: 啟用網站集合，在 CA 中的 Power Pivot 整合 |Microsoft 文件
+title: 啟用 Power Pivot 整合，在 CA 為網站集合 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77c8cb0d9e9617bfa0560ae1e9bc6389a297a5c2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 564ff616ec13b5f7f669db4cf6402114175f5670
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026115"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100059"
 ---
-# <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>啟用網站集合，在 CA 中的 Power Pivot 整合
+# <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>啟用 CA 中的網站集合的 Power Pivot 整合
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   如果您使用 [現有的伺服陣列] 安裝選項來安裝 SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，就需要為特定的網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合。 如果您已使用 [新的伺服器] 選項來安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，您可以略過這項工作，因為 SQL Server 安裝程式已經在設定部署時，針對根網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合。  
   
@@ -24,14 +24,14 @@ ms.locfileid: "34026115"
   
  您必須為每個支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查詢處理的網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 整合。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>先決條件  
  您必須是網站集合管理員。  
   
 ## <a name="activate-power-pivot-features"></a>啟動 Power Pivot 功能  
   
 1.  按一下 SharePoint 網站上的 [網站動作]。  
   
-     根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以存取 SharePoint 網站輸入 http://\<電腦名稱 > 若要開啟根網站集合。  
+     根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示您通常可以存取 SharePoint 網站中輸入 http://\<電腦名稱 > 以開啟根網站集合。  
   
 2.  按一下 **[站台設定]**。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34026115"
   
 ## <a name="see-also"></a>另請參閱  
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [初始組態 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
- [PowerPivot for SharePoint 2010 安裝](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [初始組態 (Power Pivot for SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)   
+ [PowerPivot for SharePoint 2010 安裝](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 表格式模型資料分割 |Microsoft 文件
+title: 表格式模型資料分割 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045254"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146283"
 ---
 # <a name="tabular-model-partitions"></a>表格式模型資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 模型撰寫期間，在已部署的模型中有重複定義的模型資料分割。 在部署之後，即可使用 **的** [資料分割] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊或指令碼，管理這些資料分割及建立新的資料分割。 本主題提供的資訊說明部署的表格式模型資料庫中的資料分割。 如需建立及管理資料分割在模型製作期間的詳細資訊，請參閱[分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+  分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 模型撰寫期間，在已部署的模型中有重複定義的模型資料分割。 在部署之後，即可使用 **的** [資料分割] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊或指令碼，管理這些資料分割及建立新的資料分割。 本主題提供的資訊說明部署的表格式模型資料庫中的資料分割。 如需有關建立及管理資料分割在模型製作期間的詳細資訊，請參閱[分割區](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
  本主題的章節：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34045254"
   
  您為組織表格式模型所實作的資料分割策略，主要取決於您的特定模型資料處理需求及可用的資源。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> 權限  
  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立、管理及處理資料分割，您必須具備在安全性角色中定義的適當 Analysis Services 權限。 每個安全性角色都具有下列其中一個權限：  
   
 |權限|動作|  
@@ -60,13 +60,13 @@ ms.locfileid: "34045254"
 |處理|讀取、處理|  
 |唯讀|讀取|  
   
- 若要深入了解使用的模型撰寫期間建立角色[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，請參閱[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)。 若要進一步瞭解管理角色成員的使用來部署表格式模型角色[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請參閱[表格式模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
+ 若要深入了解所使用的模型撰寫期間建立角色[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，請參閱 <<c2> [ 角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)。 若要深入了解您可以使用部署表格式模型角色管理角色成員[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請參閱 <<c2> [ 表格式模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
 ##  <a name="bkmk_parallelProc"></a> 平行處理  
-Analysis Services 包括具有兩個或多個資料分割資料表平行處理提高處理效能。 平行處理沒有任何組態設定 (請參閱注意事項)。 當您處理資料表，或為相同的資料表和程序選取多個分割區時，依預設會發生平行處理。 您仍然可以選擇各自處理資料表的資料分割。  
+Analysis Services 包括具有兩個或多個分割區之資料表的平行處理提高處理效能。 平行處理沒有任何組態設定 (請參閱注意事項)。 當您處理資料表，或為相同的資料表和程序選取多個分割區時，依預設會發生平行處理。 您仍然可以選擇各自處理資料表的資料分割。  
   
 > [!NOTE]  
->  若要指定以循序或平行方式執行重新整理作業，您可以使用 **maxParallism** 屬性選項搭配 [Sequence command (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)(Sequence 命令 (TMSL))。
+>  若要指定以循序或平行方式執行重新整理作業，您可以使用 **maxParallism** 屬性選項搭配 [Sequence command (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl)(Sequence 命令 (TMSL))。
 
 > [!NOTE]  
 >  如果偵測到重新編碼，平行處理就會增加系統資源的用量。 這是因為必須中斷多個分割區作業，使用平行的新編碼重新開始。  
@@ -74,7 +74,7 @@ Analysis Services 包括具有兩個或多個資料分割資料表平行處理�
 ##  <a name="bkmk_process_partitions"></a> 處理資料分割  
  您可使用 **的** [資料分割] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 對話方塊或指令碼，讓資料分割可以不受其他資料分割的影響，單獨處理 (重新整理)。 處理的選項如下：  
   
-|模式|說明|  
+|[模式]|描述|  
 |----------|-----------------|  
 |處理預設|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
 |完整處理|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  
@@ -84,7 +84,7 @@ Analysis Services 包括具有兩個或多個資料分割資料表平行處理�
   
 ##  <a name="bkmk_related_tasks"></a> 相關工作  
   
-|工作|Description|  
+|工作|描述|  
 |----------|-----------------|  
 |[建立及管理表格式模型資料分割](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中建立及管理資料分割。|  
 |[處理表格式模型資料分割](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在部署的表格式模型中處理資料分割。|  

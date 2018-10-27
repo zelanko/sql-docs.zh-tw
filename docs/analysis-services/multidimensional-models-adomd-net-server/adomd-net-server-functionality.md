@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 伺服器功能 |Microsoft 文件
+title: ADOMD.NET 伺服器功能 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 003e50efa8ed21720410830a3d02134df15c3c97
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6c1f37be45b702828d3c663eac0fb575a0af3bbd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023775"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146934"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET 伺服器功能
   所有的 ADOMD.NET 伺服器物件，都可用唯讀方式存取伺服器上的資料與中繼資料。 若要擷取資料與中繼資料，使用 ADOMD.NET 伺服器物件模型做為伺服器物件模型，並不支援結構描述資料列集。  
@@ -44,11 +44,11 @@ FROM SalesModel
 ## <a name="what-is-a-stored-procedure"></a>何謂預存程序？  
  A*預存程序*是一種方法具有下列特性：  
   
--   您呼叫預存程序上使用 MDX 自己[呼叫](../../mdx/mdx-data-manipulation-call.md)陳述式。  
+-   您呼叫預存程序的使用 MDX[呼叫](../../mdx/mdx-data-manipulation-call.md)陳述式。  
   
 -   預存程序可以使用任何數目的參數。  
   
--   預存程序可以傳回資料集、 **IDataReader**，或是空的結果。  
+-   預存程序可以傳回的資料集**IDataReader**，或空的結果。  
   
  下列範例使用虛構的預存程序 `FinalSalesNumbers`：  
   
@@ -57,6 +57,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ADOMD.NET 伺服器程式設計](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET 伺服器程式設計](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

@@ -1,24 +1,24 @@
 ---
-title: 設定 Azure Kubernetes Service 來進行 SQL Server 2019 CTP 2.0 部署 |Microsoft Docs
-description: ''
+title: 設定適用於 SQL Server 2019 巨量資料叢集部署的 Azure Kubernetes 服務 |Microsoft Docs
+description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes Service (AKS)。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460893"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050909"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>設定 SQL Server 2019 ctp 2.0 的 Azure Kubernetes 服務
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>設定 Azure Kubernetes Service 來進行 SQL Server 2019 （預覽） 部署
 
-Azure Kubernetes Service (AKS) 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的叢集使用來執行容器化應用程式的 Kubernetes 叢集。 
+本文說明如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes Service (AKS)。 
 
-這可讓您使用現有技能，或運用大量且不斷成長的社群專業知識，來部署和管理 Microsoft Azure 上的容器型應用程式。
+AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的叢集使用來執行容器化應用程式的 Kubernetes 叢集。 這可讓您使用現有技能，或運用大量且不斷成長的社群專業知識，來部署和管理 Microsoft Azure 上的容器型應用程式。
 
 這篇文章說明部署 Kubernetes AKS 使用 Azure CLI 上的步驟。 如果您沒有 Azure 訂用帳戶，請在您開始前建立免費帳戶。
 
@@ -34,7 +34,7 @@ Azure Kubernetes Service (AKS) 可讓您更輕鬆地建立、 設定及管理預
 
 - 本節中，您必須執行 Azure CLI 2.0.4 版或更新版本。 如果您需要安裝或升級，請參閱[安裝 Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli)。 執行`az --version`以尋找版本，如有需要。
 
-- 安裝[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 SQL Server 的巨量資料叢集需要 1.10 版本範圍內的任何次要版本，如 Kubernetes、 伺服器和用戶端。 若要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 您需要使用 aks`--kubernetes-version`參數來指定預設值不同的版本。 請注意，在 CTP2.0 發行時間範圍內，AKS 只支援 1.10.7 和 1.10.8 版本。 
+- 安裝[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 巨量資料的 SQL Server 叢集的 Kubernetes、 伺服器和用戶端，需要 1.10 版本範圍內的任何次要版本。 若要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 您需要使用 aks`--kubernetes-version`參數來指定預設值不同的版本。 請注意，在 CTP2.0 發行時間範圍內，AKS 只支援 1.10.7 和 1.10.8 版本。 
 
 
 > [!NOTE]
@@ -110,4 +110,4 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
 這篇文章中的步驟會設定在 AKS 中 Kubernetes 叢集。 下一個步驟是將 SQL Server 2019 巨量資料部署到叢集。
 
-[部署在 Kubernetes 上的 SQL Server 2019 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+[快速入門： 部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)

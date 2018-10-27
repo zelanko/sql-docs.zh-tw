@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120379"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100409"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120379"
  此範例示範新的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 功能 (屬於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的一部分)。 此範例顯示新的記憶體最佳化資料表和原生編譯的預存程序，並可用來示範 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的效能優勢。  
   
 > [!NOTE]  
->  若要檢視 SQL Server 2016 的這項主題，請參閱 [示範記憶體內 OLTP 的 AdventureWorks 擴充功能](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  若要檢視 SQL Server 2016 的這項主題，請參閱 [示範記憶體內 OLTP 的 AdventureWorks 擴充功能](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  此範例會將 AdventureWorks 資料庫中的 5 個資料表移轉至記憶體最佳化資料表，並包含銷售訂單處理的工作負載示範。 您可以利用此工作負載示範，查看在伺服器上使用 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的效能優勢。  
   

@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142448"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145838"
 ---
 # <a name="merging-partitions-xmla"></a>合併資料分割 (XMLA)
-  如果資料分割有相同的彙總設計與結構，您可以使用來合併資料分割[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) XML for Analysis (XMLA) 命令。 合併資料分割是管理資料分割時要執行的一項重要的動作，特別是那些包含依日期分割的歷程記錄資料之資料分割。  
+  如果資料分割有相同的彙總設計與結構，您可以使用來合併資料分割[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) XML for Analysis (XMLA) 命令。 合併資料分割是管理資料分割時要執行的一項重要的動作，特別是那些包含依日期分割的歷程記錄資料之資料分割。  
   
  例如，財務 Cube 可能使用兩個資料分割：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142448"
  兩個資料分割使用不同的儲存設定，但是使用相同的彙總設計。 您不需要在年底時處理跨多年歷程記錄資料的 Cube，只要改用 `MergePartitions` 命令將今年的資料分割合併到往年的資料分割中。 如此便可保存資料，而不需要將時間耗費在 Cube 的完整處理上。  
   
 ## <a name="specifying-partitions-to-merge"></a>指定要合併的資料分割  
- 當`MergePartitions`命令執行時，儲存在指定之來源資料分割的彙總資料[來源](../xmla/xml-elements-properties/source-element-xmla.md)屬性中指定的目標資料分割加入[目標](../xmla/xml-elements-properties/target-element-xmla.md)屬性。  
+ 當`MergePartitions`命令執行時，儲存在指定之來源資料分割的彙總資料[來源](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)屬性中指定的目標資料分割加入[目標](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)屬性。  
   
 > [!NOTE]  
 >  `Source` 屬性可包含一個以上的資料分割物件參考。 不過，`Target` 屬性則不可以。  

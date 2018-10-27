@@ -1,5 +1,5 @@
 ---
-title: 步驟 4 建立資料的功能使用 T-SQL |Microsoft 文件
+title: 使用 T-SQL 建立資料特徵 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202070"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806678"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>步驟 4︰使用 T-SQL 建立資料特徵
+# <a name="create-data-features-using-t-sql"></a>使用 T-SQL 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-資料探索之後, 您已經從資料收集一些深入資訊後，即可移至*功能工程*。 這個程序的功能建立從原始資料可以是進階的分析模型的重要步驟。
+資料探索之後, 方法，您可以從資料中，收集一些深入解析，並已準備好繼續進行*特徵工程設計*。 從未經處理的資料建立特徵的這個程序可以是進階分析模型的重要步驟。
 
-這篇文章的教學課程中，屬於[SQL 開發人員的資料庫中的 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
+這篇文章是教學課程中，部分[適用於 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
 在此步驟中，您將了解如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數，從原始資料建立特徵。 接著您將從預存程序呼叫該函數，以建立包含特徵值的資料表。
 
@@ -29,7 +29,7 @@ ms.locfileid: "31202070"
 
 您將會使用一個自訂 T-SQL 函數 _fnCalculateDistance_，透過 Haversine 公式來計算距離，並使用第二個自訂 T-SQL 函數 _fnEngineerFeatures_，建立包含所有特徵的資料表。
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>計算使用 fnCalculateDistance 的旅行距離
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>計算使用 fnCalculateDistance 車程距離
 
 1.  在進行本逐步解說的準備工作時，已下載並向 _註冊函數_ fnCalculateDistance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 花點時間檢閱程式碼。
   
@@ -106,16 +106,16 @@ ms.locfileid: "31202070"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    如您所見，計量表回報的距離不一定會對應到地理距離。 這就是為什麼特徵設計很重要。
+    如您所見，計量表回報的距離不一定會對應到地理距離。 這就是為什麼特徵工程之所以很重要。
 
-在下一個步驟中，您將學習如何使用這些資料功能來建立及定型使用 Python 的機器學習模型。
+在下一個步驟中，您將了解如何使用這些資料功能來建立及定型機器學習模型，使用 Python。
 
 ## <a name="next-step"></a>下一步
 
-[步驟 5： 訓練並儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[訓練及儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>上一個步驟
 
-[步驟 3：瀏覽及視覺化資料](sqldev-py3-explore-and-visualize-the-data.md)
+[瀏覽及視覺化資料](sqldev-py3-explore-and-visualize-the-data.md)
 
 

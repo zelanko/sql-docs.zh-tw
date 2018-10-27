@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090968"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145893"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
   資料採礦會要求建立與 SQL Server Analysis Services 執行個體的連接。 資料採礦不需要 Cube 中的資料，而且建議您使用關聯式來源；但是資料採礦會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎所提供的元件。  
@@ -78,7 +78,7 @@ ms.locfileid: "48090968"
 -   `AllowAdHocOpenRowsetQueries` 控制項的特定存取至 OLE DB 提供者，它們會直接載入伺服器記憶體空間。  
   
     > [!IMPORTANT]  
-    >  若要改善安全性，我們建議您將這個屬性設定為 `false`。 預設值是 `false`。 不過，即使這個屬性設為`false`，使用者仍然可以繼續建立單一查詢，並可以針對允許的資料來源使用 OPENQUERY。  
+    >  若要改善安全性，我們建議您將這個屬性設定為 `false`。 預設值是 `false`。 不過，即使這個屬性設定為 `false`，使用者仍然可以繼續建立單一查詢，而且可以針對允許的資料來源使用 OPENQUERY。  
   
 -   **AllowedProvidersInOpenRowset** ：指定提供者 (如果已啟用特定存取的話)。 您可以透過輸入逗號分隔的 ProgID 清單，指定多個提供者。  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090968"
   
  如果此程序傳回資料集，用戶端將會收到資料集或資料表，其中具有包含資料列的巢狀資料表。 例如，如果您針對模型內容建立查詢，此查詢會傳回整個模型。 若要避免傳回太多資料列，您可以使用 ADOMD+ 物件模型來撰寫預存程序。  
   
- 若要撰寫伺服器預存程序，您必須參考 Microsoft.AnalysisServices.AdomdServer 命名空間。 如需如何建立和使用預存程序的詳細資訊，請參閱 [使用者定義函數和預存程序](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)。  
+ 若要撰寫伺服器預存程序，您必須參考 Microsoft.AnalysisServices.AdomdServer 命名空間。 如需如何建立和使用預存程序的詳細資訊，請參閱 [使用者定義函數和預存程序](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)。  
   
 > [!NOTE]  
 >  預存程序無法用來變更資料伺服器物件的安全性。 當您執行某個預存程序時，使用者的目前內容就會用來決定所有伺服器物件的存取權。 因此，使用者必須針對他們所存取的任何資料庫物件擁有適當的權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [實體架構&#40;Analysis Services-多維度資料&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [實體架構&#40;Analysis Services-資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [實體架構 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [實體架構 &#40;Analysis Services – 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)   
  [資料採礦方案與物件的管理](management-of-data-mining-solutions-and-objects.md)  
   
   

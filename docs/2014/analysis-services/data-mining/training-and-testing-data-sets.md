@@ -16,12 +16,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120260"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144993"
 ---
 # <a name="training-and-testing-data-sets"></a>定型和測試資料集
   將資料分成定型集和測試集是評估資料採礦模型中的一個重要部分。 一般來說，當您將資料集分成定型集和測試集時，大多數的資料會用於定型，小部分的資料會用於測試。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會隨機取樣資料，以確保測試集和定型集類似。 您可以透過針對定型和測試使用相同的資料，盡可能減少資料不一致的影響並有效了解模型的特性。  
@@ -44,7 +44,7 @@ ms.locfileid: "48120260"
   
  此外，您可以設定精靈以便設定定型案例的最大數目，也可以結合限制以便允許案例的最大百分比 (最高達指定的最大案例數目)。 當您同時指定案例的最大百分比和案例的最大數目時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用這兩個限制中的較小者當做測試集的大小。 例如，如果您針對測試案例指定 30% 鑑效組，而且測試案例的最大數目為 1000，則測試集的大小絕對不會超過 1000 個案例。 如果您想要確保測試集的大小維持一致 (即使有更多定型資料加入至模型)，這可能會很有用。  
   
- 如果您針對不同的採礦結構使用相同的資料來源檢視，並想確保所有採礦結構及其模型使用大致相同的方式分割資料，您應該指定用來初始化隨機取樣的種子。 當您指定的值`HoldoutSeed`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]將會使用該值來開始取樣。 否則，取樣會針對採礦結構的名稱使用雜湊演算法來建立初始值。  
+ 如果您針對不同的採礦結構使用相同的資料來源檢視，並想確保所有採礦結構及其模型使用大致相同的方式分割資料，您應該指定用來初始化隨機取樣的種子。 當您指定 `HoldoutSeed` 的值時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將使用該值來開始取樣。 否則，取樣會針對採礦結構的名稱使用雜湊演算法來建立初始值。  
   
 > [!NOTE]  
 >  如果使用 `EXPORT` 和 `IMPORT` 陳述式建立採礦結構的複本，由於匯出程序建立新識別碼但使用相同名稱，因此新採礦結構會有相同的定型和測試資料集。 不過，如果兩個採礦結構使用相同的基礎資料來源，但具有不同的名稱，則針對每個採礦結構所建立的集合將會不同。  
@@ -88,7 +88,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>使用鑑效組資料的限制  
   
--   若要使用鑑效組，採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性必須設定為預設值 `KeepTrainingCases`。 如果您變更`CacheMode`屬性設`ClearAfterProcessing`，然後重新處理採礦結構，資料分割將會遺失。  
+-   若要使用鑑效組，採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性必須設定為預設值 `KeepTrainingCases`。 如果您將 `CacheMode` 屬性變更為 `ClearAfterProcessing`，然後重新處理採礦結構，資料分割將會遺失。  
   
 -   您無法從時間序列模型中移除資料；因此，您無法將來源資料分成定型集和測試集。 如果您開始建立採礦結構和模型，並選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法，即會停用建立鑑效組資料集的選項。 如果採礦結構在案例或巢狀資料表層級包含 KEY TIME 資料行，也會停用鑑效組資料。  
   
@@ -96,22 +96,22 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   在大部分情況下，預設的鑑效組值 30 會在定型與測試資料之間提供良好的平衡。 目前沒有任何簡易方式可判斷資料集應該設定為多大才能提供足夠的定型，或定型集可設定為多疏鬆，而仍能避免過度學習。 但是，在您建立模型之後，可以使用交叉驗證來評估與特定模型相關的資料集。  
   
--   除了上表所列的屬性以外，AMO 和 XML DDL 中也提供了一個唯讀屬性 `HoldoutActualSize`。 不過，因為在處理結構之後，則無法直到準確地判斷資料分割的實際大小，您應該檢查之前擷取的值是否已經處理模型`HoldoutActualSize`屬性。  
+-   除了上表所列的屬性以外，AMO 和 XML DDL 中也提供了一個唯讀屬性 `HoldoutActualSize`。 不過，由於資料分割的實際大小要等到結構已經處理之後才能正確判斷出，因此您應該先檢查模型是否已經處理，然後再擷取 `HoldoutActualSize` 屬性的值。  
   
 ## <a name="related-content"></a>相關內容  
   
 |主題|連結|  
 |------------|-----------|  
-|描述模型上的篩選與定型和測試資料集的互動方式。|[採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)|  
-|描述定型和測試資料的使用如何影響交叉驗證。|[交叉驗證&#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
-|提供有關使用採礦結構中的定型集和測試集之程式設計介面的詳細資訊。|[AMO 概念和物件模型](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure 元素&#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
-|提供用於建立鑑效組資料集的 DMX 語法。|[建立採礦結構&AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
+|描述模型上的篩選與定型和測試資料集的互動方式。|[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)|  
+|描述定型和測試資料的使用如何影響交叉驗證。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
+|提供有關使用採礦結構中的定型集和測試集之程式設計介面的詳細資訊。|[AMO 概念和物件模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|提供用於建立鑑效組資料集的 DMX 語法。|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
 |擷取有關定型集和測試集中案例的資訊。|[資料採礦結構描述資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [查詢資料採礦結構描述資料列集&#40;Analysis Services-資料採礦&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦工具](data-mining-tools.md)   
+ [資料採礦工具。](data-mining-tools.md)   
  [資料採礦概念](data-mining-concepts.md)   
  [資料採礦方案](data-mining-solutions.md)   
- [測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

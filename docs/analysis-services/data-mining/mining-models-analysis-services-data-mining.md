@@ -1,5 +1,5 @@
 ---
-title: 採礦模型 (Analysis Services-資料採礦) |Microsoft 文件
+title: 採礦模型 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8febdd6f68cae6f28182a5734e46717a3b597624
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 78c4085a674bce6cca75394ee2c7f376c14d6a93
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018135"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146023"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -118,10 +118,10 @@ ms.locfileid: "34018135"
   
 |主題|連結|  
 |------------|-----------|  
-|了解如何建立可支援多個採礦模型的採礦結構。 了解資料行在模型中的使用方式。|[採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [內容類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
-|了解不同的演算法，以及選擇的演算法如何影響模型內容。|[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [資料採礦演算法 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
-|了解您現在可以在模型上設定影響其組成和行為的屬性。|[採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
-|了解資料採礦的程式設計介面。|[使用分析管理物件 & #40; 開發AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)|  
+|了解如何建立可支援多個採礦模型的採礦結構。 了解資料行在模型中的使用方式。|[採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
+|了解不同的演算法，以及選擇的演算法如何影響模型內容。|[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|了解您現在可以在模型上設定影響其組成和行為的屬性。|[採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|了解資料採礦的程式設計介面。|[使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)|  
 |了解如何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用自訂資料採礦檢視器。|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |檢視您可以對資料採礦模型使用的不同查詢類型範例。|[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)|  
   
@@ -130,10 +130,10 @@ ms.locfileid: "34018135"
   
 |工作|連結|  
 |----------|----------|  
-|加入及刪除採礦模型|[將採礦模型加入現有的採礦結構](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|使用採礦模型資料行|[從採礦模型排除資料行](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行的離散化](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|改變模型屬性|[變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [將篩選套用至採礦模型](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [從採礦模型刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [針對採礦模型啟用鑽研](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [檢視或變更演算法參數](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
-|複製、 移動或管理模型|[建立採礦模型的副本](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [匯出 & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|加入及刪除採礦模型|[將採礦模型新增至現有的採礦結構](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
+|使用採礦模型資料行|[從採礦模型排除資料行](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行分隔](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|改變模型屬性|[變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [將篩選套用至採礦模型](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [從採礦模型中刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [針對採礦模型啟用鑽研](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [檢視或變更演算法參數](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
+|複製、 移動或管理模型|[建立採礦模型的複本](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |以資料擴展模型，或更新模型中的資料|[處理採礦模型](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |使用 OLAP 模型|[建立資料採礦維度](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   

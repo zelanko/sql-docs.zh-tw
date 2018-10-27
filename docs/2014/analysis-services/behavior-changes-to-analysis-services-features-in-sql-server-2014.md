@@ -11,18 +11,18 @@ ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5731d04494b9b9b73910ca1e06b021a46e78f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f8855fceb717ba210b8fc5c36960d660143be79
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099718"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145837"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行為變更
-  本主題說明中的行為變更[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多維度、 表格式、 資料採礦和[!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]部署。 行為變更會影響功能在目前版本中，與舊版 SQL Server 相較之下的運作或互動方式。  
+  本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中多維度、表格式、資料採礦及 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 部署的行為變更。 行為變更會影響功能在目前版本中，與舊版 SQL Server 相較之下的運作或互動方式。  
   
 > [!NOTE]  
->  相反地，中斷變更則防止資料模型或應用程式與整合[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]無法執行。 若要進一步了解，請參閱[SQL Server 2014 中 Analysis Services 功能的突破性變更](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)。  
+>  相反地，中斷變更則防止已與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 整合的資料模型或應用程式執行。 如需詳細資訊，請參閱＜ [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)＞。  
   
  本主題內容：  
   
@@ -33,23 +33,23 @@ ms.locfileid: "48099718"
 -   [SQL Server 2012 中的行為變更](#bkmk_sql2012)  
   
 ##  <a name="bkmk_sql2014"></a> 中的行為變更 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
- 沒有表格式、 多維度資料採礦，宣布新的行為變更或[!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]在此版本的功能。  不過，因為[!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]很類似[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]並[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]這兩個舊版的行為變更會提供版本中，此為萬一您要從升級[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]。  
+ 此版本中的多維度、表格式、資料採礦或 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 功能皆未宣告任何新的行為變更。  不過，因為  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 很類似 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 版本，所以在此為您提供這兩個舊版的行為變更，以便您從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]升級。  
   
 ##  <a name="bkmk_sql2012sp1"></a> 中的行為變更 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]  
- 本章節記載針對報告的行為變更[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的功能[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]。 這些變更也套用至[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
+ 本章節記載針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]功能所報告的行為變更。 這些變更也適用於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
 |問題|描述|  
 |-----------|-----------------|  
-|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用 SQL Server 2008 R2 PowerPivot 活頁簿時，這些活頁簿不會以無訊息方式升級並重新整理模型。 因此，排程的資料重新整理不會針對 SQL Server 2008 R2 PowerPivot 活頁簿運作。|2008 R2 活頁簿會在中開啟[!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]，但是排程的重新整理無法運作。 如果您檢閱重新整理記錄，將會看到類似下面的錯誤訊息：<br /> 「活頁簿包含不受支援的 PowerPivot 模型。 活頁簿中的 PowerPivot 模型是採用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支援的 PowerPivot 模型如下: <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 」<br /><br /> **如何升級活頁簿** ：在您將活頁簿升級為 2012 活頁簿之前，排程的重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：<br /><br /> 在已安裝 SQL Server 2012 PowerPivot for Excel 增益集的 Microsoft Excel 2010 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> 在 Microsoft Excel 2013 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> <br /><br /> 如需有關活頁簿升級的詳細資訊，請參閱 <<c0> [ 升級活頁簿和排程資料重新整理&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。</c0>|  
-|DAX 中的行為變更[ALL 函數](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)。|之前[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]、 如果您指定 [Date] 資料行中標記為日期資料表，以便用於時間智慧使用，和 [日期] 資料行做為引數傳遞給所有的函式，接著會傳遞為 CALCULATE 函數的篩選條件，在資料表中的所有資料行的所有篩選器會被忽略，不論日期資料行上的任何交叉分析篩選器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 之前[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]、 所有篩選器會忽略 All 的所有資料行，不論 [日期] 資料行傳遞做為引數給所有。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]和在 Excel 2013 中 PowerPivot 中，行為將會忽略所有傳遞做為引數指定的資料行的篩選。<br /><br /> 若要避開新的行為，事實上是忽略當做整個資料表之篩選條件的所有資料行，您可以從引數中排除 [日期] 資料行，例如，<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 這樣會產生與之前 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 相同的行為結果。|  
+|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用 SQL Server 2008 R2 PowerPivot 活頁簿時，這些活頁簿不會以無訊息方式升級並重新整理模型。 因此，排程的資料重新整理不會針對 SQL Server 2008 R2 PowerPivot 活頁簿運作。|2008 R2 活頁簿將在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中開啟，但是排程的重新整理不會運作。 如果您檢閱重新整理記錄，將會看到類似下面的錯誤訊息：<br /> 「活頁簿包含不受支援的 PowerPivot 模型。 活頁簿中的 PowerPivot 模型是採用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支援的 PowerPivot 模型如下: <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 」<br /><br /> **如何升級活頁簿** ：在您將活頁簿升級為 2012 活頁簿之前，排程的重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：<br /><br /> 在已安裝 SQL Server 2012 PowerPivot for Excel 增益集的 Microsoft Excel 2010 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> 在 Microsoft Excel 2013 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> <br /><br /> 如需有關活頁簿升級的詳細資訊，請參閱 <<c0> [ 升級活頁簿和排程資料重新整理&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。</c0>|  
+|DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)中的行為變更。|在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，如果您將標示的 [日期] 資料行指定為日期資料表以供時間智慧使用，則該 [日期] 資料行會傳遞為 ALL 函數的引數，接著會傳遞為 CALCULATE 函數的篩選條件，並且資料表中所有資料行的所有篩選條件都會被忽略，不論日期資料行上是否使用任何交叉分析篩選器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，日期資料表的所有資料行都會忽略所有篩選條件，不論 [日期] 資料行是否當做 ALL 的引數傳遞。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 和 Excel 2013 的 PowerPivot 中，此行為只會忽略當做 ALL 的引數傳遞之指定資料行的篩選條件。<br /><br /> 若要避開新的行為，事實上是忽略當做整個資料表之篩選條件的所有資料行，您可以從引數中排除 [日期] 資料行，例如，<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 這樣會產生與之前 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]相同的行為結果。|  
   
 ##  <a name="bkmk_sql2012"></a> 中的行為變更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- 本章節記載針對報告的重大變更[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的功能[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。 這些變更也套用至[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
+ 本章節記載針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]功能所報告的重大變更。 這些變更也適用於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。  
   
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services 多維度模式  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>相異計數量值不再支援將 NullProcessing 選項設為 Preserve  
- 之前[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，即可設定[NullProcessing 元素&#40;ASSL&#41; ](scripting/properties/nullprocessing-element-assl.md)來`Preserve`相異計數量值。  不幸的是，這種做法產生的結果時常無效，有時甚至會損毀正在處理的作業。 如此一來，此設定就不再有效[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。 嘗試使用此設定將導致發生以下驗證錯誤：「中繼資料管理員發生錯誤。 Preserve 不是有效 NullProcessing 值\<measurename > 相異計數量值。 」  
+ 之前[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，即可設定[NullProcessing 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)來`Preserve`相異計數量值。  不幸的是，這種做法產生的結果時常無效，有時甚至會損毀正在處理的作業。 因此 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]將不再提供這項設定。 嘗試使用此設定將導致發生以下驗證錯誤：「中繼資料管理員發生錯誤。 Preserve 不是有效 NullProcessing 值\<measurename > 相異計數量值。 」  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>已經移除 Management Studio 和 Cube 設計師中的 Cube 瀏覽器  
  已經從產品中移除 Cube 瀏覽器控制項，此控制項可讓您將欄位拖放到 Management Studio 或 Cube 設計師中的樞紐分析表結構上。 此控制項為 Office Web 控制項 (OWC) 元件。 OWC 已被 Office 取代，無法再使用。  
@@ -103,7 +103,7 @@ ms.locfileid: "48099718"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>負載平衡要求的新預設設定從「循環配置資源」變更為「依據健全狀態」  
  PowerPivot 服務應用程式的預設設定會決定如何將 PowerPivot 資料的要求分散至伺服陣列中的多部 PowerPivot for SharePoint 伺服器。 在舊版中，預設設定為 **[循環配置資源]**，這項設定會在可用的伺服器之間循序分散要求。 而在此版本中，預設現在為 **[依據健全狀態]**。 PowerPivot 服務應用程式會使用伺服器健全狀況統計資料 (例如可用的記憶體或 CPU)，決定哪個伺服器執行個體取得 xt 要求。  
   
- 如果您已從舊版升級伺服器，PowerPivot 服務應用程式仍會保留舊的預設設定 (**[循環配置資源]**)。 若要使用 **[依據健全狀態]** 配置方法設定，則必須修改組態設定。 如需詳細資訊，請參閱 <<c0> [ 建立及設定 PowerPivot 服務應用程式，在 [管理中心]](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 如果您已從舊版升級伺服器，PowerPivot 服務應用程式仍會保留舊的預設設定 (**[循環配置資源]**)。 若要使用 **[依據健全狀態]** 配置方法設定，則必須修改組態設定。 如需詳細資訊，請參閱 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [回溯相容性](../../2014/getting-started/backward-compatibility.md)   

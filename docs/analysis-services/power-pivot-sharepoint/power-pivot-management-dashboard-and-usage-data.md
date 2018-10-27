@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Management Dashboard and Usage Data |Microsoft 文件
+title: Power Pivot Management Dashboard and Usage Data |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099929"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理儀表板和使用量資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34030339"
 ##  <a name="items"></a> 儀表板中各區段的概觀  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板包含 Web 組件和向下鑽研至特定資訊類別的內嵌報表。 下列清單描述的是儀表板的每個部分：  
   
-|儀表板|Description|  
+|儀表板|描述|  
 |---------------|-----------------|  
 |基礎結構 - 伺服器健全狀況|顯示隨時間經過的 CPU 使用量、記憶體消耗量和查詢回應時間趨勢，以便評估系統資源是已接近最大容量，或利用率極低。|  
 |動作|包含管理中心內其他頁面的連結，包括目前的服務應用程式、服務應用程式的清單以及使用量記錄。|  
@@ -95,7 +95,7 @@ ms.locfileid: "34030339"
   
 5.  在文字編輯器中開啟 .odc 檔。  
   
-6.  在 **\<odc:ConnectionString >** 元素中，捲動至行尾並移除結尾**內嵌資料 = False**，然後再移除**編輯模式 = 0**。 如果字串中的最後一個字元是分號，請將它移除。  
+6.  在   **\<d c: connectionstring> >** 元素中，捲動至行尾並移除結尾**內嵌資料 = False**，然後再移除**編輯模式 = 0**。 如果字串中的最後一個字元是分號，請將它移除。  
   
 7.  儲存檔案。 其餘步驟取決於您所使用的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 與 Excel 版本。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34030339"
     9. 在 [指定 MDX 查詢] 中，按一下 **[設計]** 開啟 MDX 查詢設計工具以組合您要使用的資料，然後建立樞紐分析表或樞紐分析圖報表，將 Excel 中的資料視覺化。  
   
 ## <a name="see-also"></a>另請參閱  
- [SharePoint 2010 中的 PowerPivot 資料重新整理](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [SharePoint 2010 中的 PowerPivot 資料重新整理](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

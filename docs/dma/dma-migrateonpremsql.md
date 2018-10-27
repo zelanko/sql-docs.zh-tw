@@ -2,7 +2,7 @@
 title: 升級內部部署 SQL Server 到 SQL Server 或 SQL Server Azure Vm 上使用資料移轉小幫手 |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 將升級至較新版的 SQL Server 或 Azure Vm 上的 SQL Server 的內部部署 SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833126"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643836"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在內部部署 SQL Server 升級至 SQL Server 或 SQL Server Azure Vm 上使用 Data Migration Assistant
 
@@ -81,7 +81,7 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
 
 5. 選取 **[下一步]**。
 
-Data Migration Assistant 會執行驗證之備份的資料夾中，資料和記錄檔位置。 如果任何驗證失敗，請修正 選項，然後選取**下一步**。
+Data Migration Assistant 上備份的資料夾、 資料和記錄檔位置執行驗證。 如果任何驗證失敗，修正選項，然後按**下一步**。
 
 ## <a name="select-logins"></a>選取 登入
 

@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178468"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148403"
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
   Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "48178468"
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用戶端會藉由傳送要求給指定的資料來源來判斷指定之模型的結構，該資料來源會傳回可由用戶端使用的結構描述，以便針對資料來源形式的模型建立查詢，並執行以資料為根據的作業。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 使用者介面中用來篩選資料、執行計算或彙總及顯示相關資料的後續作業是由用戶端所控制，而且無法以程式設計方式操作。  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用戶端傳送給模型的查詢會當做 DAX 陳述式發出，您可以在模型上設定追蹤來加以監視。  在初始結構描述定義中，用戶端也會發出要求給伺服器，該定義是根據概念結構定義語言 (CSDL) 而呈現。 如需詳細資訊，請參閱 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用戶端傳送給模型的查詢會當做 DAX 陳述式發出，您可以在模型上設定追蹤來加以監視。  在初始結構描述定義中，用戶端也會發出要求給伺服器，該定義是根據概念結構定義語言 (CSDL) 而呈現。 如需詳細資訊，請參閱 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  您可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來管理裝載表格式模型的執行個體及查詢其中的中繼資料和資料。 您可以處理模型或模型中的物件、建立及管理資料分割，以及設定可用於管理資料存取的安全性。 如需詳細資訊，請參閱下列主題：  
@@ -53,7 +53,7 @@ ms.locfileid: "48178468"
   
 -   在您開啟 [查詢] 視窗之後，便無法變更 [XMLA 查詢] 視窗的資料庫內容。 因此，如果您需要傳送查詢到不同的資料庫或不同的執行個體，您必須使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 開啟該資料庫或執行個體，並在該內容中開啟新的 [XMLA 查詢] 視窗。  
   
- 您可以針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型建立追蹤，就像多維度方案一樣。 在這個版本中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會提供可用來追蹤記憶體使用量、查詢和處理作業與檔案使用狀況的許多新的事件。 如需詳細資訊，請參閱 [Analysis Services 追蹤事件](../trace-events/analysis-services-trace-events.md)。  
+ 您可以針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型建立追蹤，就像多維度方案一樣。 在這個版本中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會提供可用來追蹤記憶體使用量、查詢和處理作業與檔案使用狀況的許多新的事件。 如需詳細資訊，請參閱 [Analysis Services 追蹤事件](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)。  
   
 > [!WARNING]  
 >  如果您將追蹤放在表格式模型資料庫上，您可能會看到分類為 DMX 查詢的某些事件。 但是，表格式模型資料上並不支援資料採礦，而且資料庫上所執行的 DMX 查詢受限於模型中繼資料上的 SELECT 陳述式。 這些事件只會分類為 DMX，因為 MDX 會使用相同的剖析器架構。  
@@ -74,7 +74,7 @@ ms.locfileid: "48178468"
 ### <a name="csdl"></a>CSDL  
  概念結構定義語言本身並不是查詢語言，但是可用來擷取有關模型和模型中繼資料的資訊，該資訊之後可用來建立報表或是針對模型建立查詢。  
   
- 如需如何在表格式模型中使用 CSDL 的詳細資訊，請參閱[商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
+ 如需如何在表格式模型中使用 CSDL 的詳細資訊，請參閱[商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)。  
   
 ## <a name="programmatic-interfaces"></a>程式設計介面  
  用來與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型互動的主要介面為結構描述資料列集、XMLA 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]所提供的查詢用戶端和查詢工具。  
@@ -84,13 +84,13 @@ ms.locfileid: "48178468"
   
 -   Codeplex 上的表格式模型 AMO 範例  
   
--   [使用動態管理檢視&#40;Dmv&#41;若要監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  您可以在 Unmanaged 用戶端應用程式中使用 Analysis Services 9.0 OLE DB 提供者支援 OLE DB 存取表格式模型。 需要更新版本的 Analysis Services OLE DB 提供者來啟用表格式模型存取。 如需與表格式模型搭配使用之提供者的詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 。  
   
  您也可以直接從 Analysis Services 執行個體擷取 XML 架構格式的資料。 您可以使用 DISCOVER_CSDL_METADATA 資料列集來擷取表格式模型的結構描述，或者搭配現有的 ASSL 元素、物件或屬性使用 EXECUTE 或 DISCOVER 命令。 如需詳細資訊，請參閱下列資源：  
   
--   [商業智慧的 CSDL 註解&#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>操作 Analysis Services 物件  
  您可以利用 XMLA 命令或 AMO 來建立、修改、刪除和處理表格式模型以及模型中的物件，其中包括資料表、資料行、檢視方塊、量值和資料分割。 AMO 和 XMLA 都已更新，可支援表格式模型中所使用的其他屬性，以增強報告和模型化功能。  
@@ -106,11 +106,11 @@ ms.locfileid: "48178468"
 ### <a name="schema-rowsets"></a>結構描述資料列集  
  用戶端應用程式可以使用結構描述資料列集來檢查表格式模型的中繼資料，並從 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器擷取支援和監視資訊。 在這個版本的 SQL Server 中，已加入新的結構描述資料列集，並擴充現有的結構描述資料列集來支援與表格式模型有關的功能及增強 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的監視和效能分析。  
   
--   [DISCOVER_CALC_DEPENDENCY 資料列集](../schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      表格式模型中為了追蹤資料行與參考之間之相依性的新結構描述資料列集  
   
--   [DISCOVER_CSDL_METADATA 資料列集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)  
+-   [DISCOVER_CSDL_METADATA 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      為了取得表格式模型之 CSDL 表示法的新結構描述資料列集  
   
@@ -118,13 +118,13 @@ ms.locfileid: "48178468"
   
      為了監視 SQL Server 擴充事件的新結構描述資料列集 如需詳細資訊，請參閱 <<c0> [ 使用 SQL Server 擴充事件&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。</c0>  
   
--   [DISCOVER_TRACES 資料列集](../schema-rowsets/xml/discover-traces-rowset.md)  
+-   [DISCOVER_TRACES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   
      新的 `Type` 資料行可讓您依據類別目錄篩選追蹤。 如需詳細資訊，請參閱[建立 Profiler 追蹤以重新執行 &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md)。  
   
--   [MDSCHEMA_HIERARCHIES 資料列集](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
+-   [MDSCHEMA_HIERARCHIES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
   
-     新`STRUCTURE_TYPE`列舉可支援表格式模型中建立的使用者定義階層的識別。 如需詳細資訊，請參閱[階層 &#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)。  
+     新的 `STRUCTURE_TYPE` 列舉可支援在表格式模型中建立之使用者定義階層的識別。 如需詳細資訊，請參閱[階層 &#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)。  
   
  這個版本中的 OLE DB for Data Mining 結構描述資料列集沒有更新。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48178468"
 >  您不能在已經於 DirectQuery 模式下部署的資料庫中使用 MDX 或 DMX 查詢；因此，如果您需要使用結構描述資料列集來針對 DirectQuery 模式執行查詢，您應該使用 XMLA 而不是關聯的 DMV。 如果是整體會傳回伺服器結果的 DMV，例如來自 $system.DBSCHEMA_CATALOGS 或 DISCOVER_TRACES 的 SELECT *，您可以在快取模式中部署的資料庫內容中執行查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [連接到表格式模型資料庫&#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
+ [連接到表格式模型資料庫 &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot 資料存取](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [連接到 Analysis Services](../instances/connect-to-analysis-services.md)  
   

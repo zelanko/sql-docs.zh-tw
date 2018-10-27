@@ -2,7 +2,7 @@
 title: Data Migration assistant (SQL Server) 的最佳做法 |Microsoft Docs
 description: 了解使用 Data Migration Assistant 移轉 SQL Server 資料庫的最佳做法
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9a8d346e3cc4a2ddc718d9e2758ec02caa458a8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632698"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643826"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>執行 Data Migration Assistant 的最佳做法
 本文提供安裝、 評估和移轉一些最佳作法資訊。
 
 ## <a name="installation"></a>安裝
-請勿安裝並直接在 SQL Server 主機電腦上執行 Data Migration Assistant。
+未安裝，並直接在 SQL Server 主機電腦上執行 Data Migration Assistant。
 
 ## <a name="assessment"></a>評估
 - 在生產環境資料庫上執行評量，在非尖峰時段。

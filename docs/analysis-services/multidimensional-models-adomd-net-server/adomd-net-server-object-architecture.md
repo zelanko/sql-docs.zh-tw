@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 伺服器物件架構 |Microsoft 文件
+title: ADOMD.NET 伺服器物件架構 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f3806faf430f5909397a3b805433ddaca402b78f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021215"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144963"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 伺服器物件架構
-  ADOMD.NET 伺服器物件是可以用於建立使用者定義函數 (Udf) 或預存程序中的協助程式物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  ADOMD.NET 伺服器物件是協助程式物件，可用來建立使用者定義函數 (Udf) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
 > [!NOTE]  
->  若要使用**Microsoft.AnalysisServices.AdomdServer**命名空間 （以及這些物件），必須將 msmgdsrv.dll 的參考加入 UDF 專案或是預存程序。  
+>  若要使用**Microsoft.AnalysisServices.AdomdServer**命名空間 （以及這些物件），將 msmgdsrv.dll 的參考必須加入 UDF 專案或是預存程序。  
   
- ![顯示 ADOMD.NET 伺服器物件關聯性](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "顯示 ADOMD.NET 伺服器物件關聯性")  
+ ![顯示 ADOMD.NET 伺服器物件的關聯性](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "顯示 ADOMD.NET 伺服器物件的關聯性")  
 ADOMD.NET 物件模型  
   
  與 ADOMD.NET 物件階層互動通常是從最頂層中的一或多個物件開始，如下表所述。  
@@ -36,6 +36,6 @@ ADOMD.NET 物件模型
 |支援隱含轉換以及 MDX 語言的六個基本類型之間轉換。|<xref:Microsoft.AnalysisServices.AdomdServer.MDXValue><br /> <xref:Microsoft.AnalysisServices.AdomdServer.MDXValue> 物件提供隱含轉換以及在下列類型之間轉換：<br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Hierarchy><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Level><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Member><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Tuple><br /><br /> <xref:Microsoft.AnalysisServices.AdomdServer.Set><br /><br /> 純量或值類型|  
   
 ## <a name="see-also"></a>另請參閱  
- [ADOMD.NET 伺服器程式設計](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
+ [ADOMD.NET 伺服器程式設計](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

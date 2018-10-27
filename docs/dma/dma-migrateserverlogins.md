@@ -2,7 +2,7 @@
 title: 移轉 SQL Server 登入，使用 Data Migration Assistant |Microsoft Docs
 description: 了解如何移轉 SQL Server 登入，使用 Data Migration Assistant
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836936"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643806"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>移轉 SQL Server 登入，使用 Data Migration Assistant
 
@@ -30,7 +30,7 @@ ms.locfileid: "47836936"
 
 - 您可以移轉 （例如網域使用者或 Windows 網域群組） 的 Windows 主體為基礎的登入。 您也可以移轉建立根據 SQL 驗證，也稱為 SQL Server 登入的登入。
 
-- Data Migration Assistant 目前不支援與獨立安全性憑證 （登入對應到憑證）、 獨立的非對稱金鑰 （對應至非對稱金鑰的登入） 和對應至認證的登入相關聯的登入。
+- Data Migration Assistant 目前不支援與獨立安全性憑證 （登入對應到憑證）、 獨立的非對稱金鑰 （對應至非對稱金鑰登入） 和對應至認證的登入相關聯的登入。
 
 - 不會移動 data Migration Assistant **sa**登入和伺服器名稱加上雙引號的雜湊與原則 (\#\#)，這是僅供內部使用。
 
@@ -44,7 +44,7 @@ ms.locfileid: "47836936"
 
 - 登入移轉的一部分，Data Migration Assistant 將指派權限給目標 SQL Server 上的安全性實體存在於來源 SQL Server 上。 
 
-  如果登入已在目標 SQL Server 中，Data Migration Assistant 移轉只指派給安全性實體的權限，不會重新產生整個登入。
+  如果目標 SQL Server 上已有登入，Data Migration Assistant 移轉只指派給安全性實體的權限並不會重新建立整個登入。
 
 - 資料移轉小幫手會盡力將登入對應至資料庫使用者，如果目標伺服器上已經有登入。
 

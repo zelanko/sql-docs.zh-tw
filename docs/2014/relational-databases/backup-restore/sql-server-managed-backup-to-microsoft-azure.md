@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100249"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>SQL Server Managed Backup 到 Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]管理並將 SQL Server 備份至 Windows Azure Blob 儲存體服務的程序自動化。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 所使用的備份策略會以資料庫的保留週期與交易工作負載為依據。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支援指定保留時間週期的時間點還原。   
@@ -42,7 +42,7 @@ ms.locfileid: "48159798"
  SQL Server 功能之一，可以自動備份資料庫備份並依據保留週期維護備份。  
   
  保留週期  
- 會使用保留期限[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]來判斷應該在儲存體中保留哪些備份檔案，才能將資料庫復原到某個點所指定的時間範圍內的時間。  支援的值是在 1-30 天的範圍內。  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會使用保留期限決定應該在儲存體中保留哪些備份檔案，才能將資料庫還原至指定時間範圍內的時間點。  支援的值是在 1-30 天的範圍內。  
   
  記錄鏈結  
  連續的記錄備份順序稱為記錄檔鏈結。 記錄鏈結以資料庫的完整備份開始。  
@@ -72,7 +72,7 @@ ms.locfileid: "48159798"
 |-|-|  
 |系統物件|描述|  
 |**MSDB**|儲存 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立之所有備份的中繼資料與備份記錄。|  
-|[smart_admin.set_db_backup &#40;-SQL&AMP;#41;&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|針對資料庫啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系統預存程序。|  
+|[smart_admin.set_db_backup &#40;-SQL&AMP;#41;&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|針對資料庫啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系統預存程序。|  
 |[smart_admin.set_instance_backup &#40;-SQL&AMP;#41;&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|系統預存程序，進而啟用及設定預設設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server 執行個體。|  
 |[smart_admin.sp_ backup_master_switch &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|暫停及繼續[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系統預存程序。|  
 |[smart_admin.sp_set_parameter &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]監視的系統預存程序。 例如：啟用擴充事件、通知的郵件設定。|  
@@ -140,7 +140,7 @@ ms.locfileid: "48159798"
   
 -   Windows Azure Blob 儲存體服務是唯一支援的備份儲存體選項。 不支援備份至磁碟或磁帶。  
   
--   目前 Windows Azure 儲存體允許的分頁 Blob 檔案大小上限是 1 TB。 大於 1 TB 的備份檔案將會失敗。 為避免此情況，建議大型資料庫先行壓縮，然後在設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前測試備份檔案大小。 測試方法有兩種：一是藉由備份到本機磁碟，一是利用 `BACKUP TO URL` Transact-SQL 陳述式手動備份到 Windows Azure 儲存體。 如需詳細資訊，請參閱＜ [SQL Server Backup to URL](sql-server-backup-to-url.md)＞。  
+-   目前 Windows Azure 儲存體允許的分頁 Blob 檔案大小上限是 1 TB。 大於 1 TB 的備份檔案將會失敗。 為避免此情況，建議大型資料庫先行壓縮，然後在設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前測試備份檔案大小。 測試方法有兩種：一是藉由備份到本機磁碟，一是利用 `BACKUP TO URL` Transact-SQL 陳述式手動備份到 Windows Azure 儲存體。 如需詳細資訊，請參閱 [SQL Server Backup to URL](sql-server-backup-to-url.md)。  
   
 -   復原模式：僅支援設定為完整或大量記錄模式的資料庫。  不支援設定為簡單復原模式的資料庫。  
   

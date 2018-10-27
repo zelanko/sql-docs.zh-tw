@@ -1,18 +1,18 @@
 ---
 title: 什麼是 SQL Server 的巨量資料叢集存放集區？ | Microsoft Docs
-description: ''
+description: 本文說明 SQL Server 2019 巨量資料叢集存放集區。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 100ce09f7066a6df33d7b1daaf50db50bda4ed03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cbf9ff14ece1b33e1c271786bc96f0ac590b807e
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796039"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050750"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-storage-pool"></a>什麼是 SQL Server 的巨量資料叢集存放集區？
 
@@ -29,7 +29,7 @@ ms.locfileid: "48796039"
 儲存體節點會負責：
 
 - 透過 Spark 的資料擷取。
-- HDFS （Parquet 格式） 中的資料存放區。 HDFS 也會提供資料持續性，因為 HDFS 資料則會分散到 SQL 的巨量資料叢集中的所有儲存體節點。
+- HDFS （Parquet 格式） 中的資料存放區。 HDFS 也會提供資料持續性，因為 HDFS 資料會分散儲存體叢集中所有節點 SQL 巨量資料。
 - 透過 HDFS 與 SQL Server 端點的資料存取。
 
 ## <a name="next-steps"></a>後續步驟

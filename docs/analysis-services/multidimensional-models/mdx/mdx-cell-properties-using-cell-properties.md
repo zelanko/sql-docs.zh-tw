@@ -1,5 +1,5 @@
 ---
-title: 使用資料格屬性 (MDX) |Microsoft 文件
+title: 使用資料格屬性 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023425"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145303"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>MDX 資料格屬性的使用資料格屬性
+# <a name="mdx-cell-properties---using-cell-properties"></a>MDX 資料格屬性-使用資料格屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   多維度運算式 (MDX) 的資料格屬性包含有關多維度資料來源 (如 Cube) 中資料格的內容及格式的資訊。  
   
@@ -42,7 +42,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>支援的內建資料格屬性  
  下表會將 `<property>` 值中使用的支援內建資料格屬性列出。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|代表存在於資料格上動作類型的位元遮罩。 此屬性可以有下列其中一個值：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：包含 where 子句中之集合的查詢，不包括鑽研動作。|  
 |**BACK_COLOR**|用以顯示 **VALUE** 或 **FORMATTED_VALUE** 屬性的背景色彩。 如需詳細資訊，請參閱 [FORE_COLOR 及 BACK_COLOR 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   因為採礦模型、間接或資料採礦維度中不支援更新，所以無法更新資料格。|  
 |**VALUE**|未格式化的資料格值。|  
   
- 只需要 **CELL_ORDINAL**、 **FORMATTED_VALUE**和 **VALUE** 資料格屬性。 **PROPERTIES** 結構描述資料列集中定義的所有內建或提供者特有的資料格屬性，包括它們的資料類型及提供者支援。 如需 **PROPERTIES** 結構描述資料列集的詳細資訊，請參閱 [MDSCHEMA_PROPERTIES 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)。  
+ 只需要 **CELL_ORDINAL**、 **FORMATTED_VALUE**和 **VALUE** 資料格屬性。 **PROPERTIES** 結構描述資料列集中定義的所有內建或提供者特有的資料格屬性，包括它們的資料類型及提供者支援。 如需 **PROPERTIES** 結構描述資料列集的詳細資訊，請參閱 [MDSCHEMA_PROPERTIES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)。  
   
  依預設，如未使用 **CELL PROPERTIES** 關鍵字，傳回的資料格屬性會是 **VALUE**、 **FORMATTED_VALUE**和 **CELL_ORDINAL** (依此順序)。 如果使用 **CELL PROPERTIES** 關鍵字，只會傳回明確陳述關鍵字的那些資料格屬性。  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

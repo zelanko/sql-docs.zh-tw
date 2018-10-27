@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098511"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991251"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -254,9 +254,9 @@ Excel 驅動程式會在指定來源中讀取特定資料列數目 (依預設為
 [以指令碼工作處理 Excel 檔案](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>關於 SQL Server 匯入和匯出精靈
-[連接至 Excel 資料來源](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[透過匯入和匯出精靈的簡單範例開始使用](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[連接至 Excel 資料來源](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[透過匯入和匯出精靈的簡單範例開始使用](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>其他文章
-[將 Excel 中的資料匯入 SQL Server 或 Azure SQL Database](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[將 Excel 中的資料匯入 SQL Server 或 Azure SQL Database](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

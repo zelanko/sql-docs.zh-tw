@@ -1,5 +1,5 @@
 ---
-title: 工具和方法來處理 (Analysis Services) |Microsoft 文件
+title: 工具和方法來處理 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027315"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147733"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "34027315"
   
 -   使用 SQL Server Profiler 來監視處理  
   
--   使用 AMO 進行自訂方案程式設計。 如需相關資訊，請參閱 [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)。  
+-   使用 AMO 進行自訂方案程式設計。 如需相關資訊，請參閱 [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)。  
   
  處理是可高度設定的作業，由決定在物件層級上發生完整處理或累加式處理的一組處理選項所控制。 如需處理選項和物件的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) 和[處理 Analysis Services 物件](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱[處理資料庫、 資料表或資料分割&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)和[處理資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+>  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱 <<c0> [ 處理資料庫、 資料表或分割區&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)並[處理序資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。</c0>  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中處理物件  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34027315"
   
 5.  或者，按一下 **[變更設定]** 來修改處理順序、相對於特定類型錯誤的處理行為，以及其他設定。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
      [處理進度] 對話方塊會提供每個命令的進行中狀態。 如果狀態訊息遭到截斷，您可以按一下 **[檢視詳細資料]** 來讀取完整訊息。  
   

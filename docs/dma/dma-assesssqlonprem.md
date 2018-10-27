@@ -2,7 +2,7 @@
 title: 執行 SQL Server 移轉評估 (Data Migration Assistant) |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 評估內部部署 SQL Server 移轉至另一個 SQL Server 或 Azure SQL Database 之前
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706186"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643976"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>執行 SQL Server 移轉評估，使用 Data Migration Assistant
 
@@ -32,7 +32,7 @@ ms.locfileid: "47706186"
 
 2.  設定來源和目標伺服器類型。
 
-    現代化內部部署 SQL Server 執行個體或裝載於 Azure VM 上的 SQL Server，您要升級您的內部部署 SQL Server 執行個體，如果來源和目標伺服器類型設為**SQL Server**。 如果您要移轉至 Azure SQL Database，而是會將目標伺服器類型設為**Azure SQL Database**。
+    現代化內部部署 SQL Server 執行個體或裝載於 Azure VM 上的 SQL Server，您要升級您的內部部署 SQL Server 執行個體，如果來源和目標伺服器類型設為**SQL Server**。 如果您要移轉到 Azure SQL Database，而是會將目標伺服器類型設為**Azure SQL Database**。
 
 3.  按一下 **[建立]**。
 
@@ -77,7 +77,7 @@ ms.locfileid: "47706186"
 
 ## <a name="view-results"></a>檢視結果
 
-評估的持續時間取決於新增的資料庫數目和每個資料庫的結構描述的大小。 一旦可供使用，結果會顯示每個資料庫。
+評估的持續時間取決於新增的資料庫數目和每個資料庫的結構描述的大小。 結果會顯示每個資料庫，因為它們可以使用。
 
 1.  選取的資料庫，已完成評估，並切換**相容性問題**並**功能建議**使用切換器。
 

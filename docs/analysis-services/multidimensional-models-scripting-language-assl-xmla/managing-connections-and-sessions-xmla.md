@@ -1,5 +1,5 @@
 ---
-title: 管理連接與工作階段 (XMLA) |Microsoft 文件
+title: 管理連接和工作階段 (XMLA) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52351646759b6354411de094152c2faceb8fe598
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023135"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144883"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理連接與工作階段 (XMLA)
-  *Statefulness*是在伺服器保留之身分識別與內容的用戶端方法呼叫之間的條件。 *Statelessness*是在伺服器不會記住之身分識別與內容的用戶端方法呼叫完成之後的條件。  
+  *Statefulness*是期間伺服器保留之識別與用戶端方法呼叫之間的內容。 *Statelessness*是期間伺服器不會記住之識別與內容的用戶端方法呼叫完成後的條件。  
   
- 若要提供 statefulness，XML for Analysis (XMLA) 支援*工作階段*，允許一系列陳述式一起執行。 這樣一系列的陳述式範例，將會建立用於後續查詢的導出成員。  
+ 若要提供 statefulness，XML for Analysis (XMLA) 支援*工作階段*，允許一系列的陳述式一起執行。 這樣一系列的陳述式範例，將會建立用於後續查詢的導出成員。  
   
  一般而言，在 XMLA 中的工作階段會遵循 OLE DB 2.6 規格所述的下列行為：  
   
@@ -27,13 +27,13 @@ ms.locfileid: "34023135"
   
 -   在單一工作階段的內容中可以執行多個命令。  
   
--   支援 XMLA 內容中的交易是透過提供者特有的命令，以傳送[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+-   XMLA 內容中交易的支援是透過提供者特有的命令，以傳送[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法。  
   
  XMLA 定義了一個方法，可支援在 Web 環境中的工作階段，其所使用的模式類似於分散式撰寫及版本處理 (DAV) 通訊協定所使用的方法，可在鬆散偶合的環境中實作鎖定。 這個實作與 DAV 相似，因為其允許提供者基於各種理由 (例如，逾時或是連接錯誤) 使工作階段過期。 當再度支援工作階段時，Web 服務必須知道並準備處理必須重新啟動之中斷的命令集。  
   
  World Wide Web Consortium (W3C) 簡易物件存取通訊協定 (SOAP) 規格建議使用 SOAP 標頭，在 SOAP 訊息上面建立新的通訊協定。 下表列出 XMLA 為起始、維護和關閉工作階段，所定義的 SOAP 標頭元素與屬性。  
   
-|SOAP 標頭|Description|  
+|SOAP 標頭|描述|  
 |-----------------|-----------------|  
 |BeginSession|此標頭要求提供者建立新的工作階段。 提供者應該建構新的工作階段，並在 SOAP 回應中，將工作階段識別碼與 Session 標頭一起傳回。|  
 |SessionId|值區域包含的工作階段識別碼，必須用於工作階段其餘部分的每個方法呼叫。 在 SOAP 回應中的提供者會傳送這個標記，而用戶端也必須將這個屬性與每個 Session 標頭元素一起傳送。|  
@@ -64,7 +64,7 @@ ms.locfileid: "34023135"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  從提供者的 SOAP 回應訊息包含的工作階段識別碼傳回標頭區域中，使用 XMLA 標頭標記\<SessionId >。  
+2.  從提供者的 SOAP 回應訊息包含的工作階段識別碼傳回的標頭區域中，使用 XMLA 標頭標記\<SessionId >。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -85,7 +85,7 @@ ms.locfileid: "34023135"
     </SOAP-ENV:Header>  
     ```  
   
-4.  工作階段完成時， \<EndSession > 標記會使用包含相關的工作階段識別碼值。  
+4.  當工作階段已完成， \<EndSession > 標記會使用包含相關的工作階段識別碼值。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -98,6 +98,6 @@ ms.locfileid: "34023135"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Analysis Services 中的 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

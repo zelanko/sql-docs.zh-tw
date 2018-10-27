@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8789efdd287964cc0c2db29fc128f11685df9898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715526"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991191"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的 SQL Server 資料庫還原
 
@@ -36,7 +36,7 @@ ms.locfileid: "47715526"
 
 > [!div class="checklist"]
 > * 提取，並執行最新的 SQL Server Linux 容器映像。
-> * World Wide Importers 資料庫檔案複製到容器。
+> * Wide World Importers 資料庫檔案複製到容器。
 > * 在容器中的將資料庫還原。
 > * 執行 TRANSACT-SQL 陳述式，來檢視和修改資料庫。
 > * 備份已修改的資料庫。

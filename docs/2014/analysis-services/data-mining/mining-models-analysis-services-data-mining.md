@@ -18,12 +18,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 903c12bd13660af2cde0333e783d5dc22cc4a76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a328e2b7af2fb1e743c81e23a0f80e7530f3810
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207698"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146003"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
   「採礦模型」透過將演算法套用至資料來建立，但是採礦模型不只是演算法或中繼資料容器，還是可以套用至新資料以產生預測並推斷關聯性的一組資料、統計資料及模式。  
@@ -91,9 +91,9 @@ ms.locfileid: "48207698"
   
  此外，每個採礦模型都包含兩個特殊的屬性： <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
   
--   **演算法屬性** ：指定建立模型所使用的演算法。 可用的演算法取決於您所使用的提供者。 如需隨附之演算法的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[Data Mining Algorithms &#40;Analysis Services-Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
+-   **演算法屬性** ：指定建立模型所使用的演算法。 可用的演算法取決於您所使用的提供者。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的演算法清單，請參閱 [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
   
--   **Usage 屬性** ：定義此模型要如何使用每一個資料行。 您可以定義為資料行使用方式`Input`， `Predict`， `Predict Only`，或`Key`。 `Usage` 屬性會套用到個別採礦模型，而且必須針對模型中所包含的每一個資料行來個別設定。 如果此結構包含模型中未使用的資料行，使用方式會設定為 `Ignore`。 您想包含在採礦結構中但不想用於分析的資料範例可能包括客戶名稱或電子郵件地址。 如此一來，您可以稍後再查詢，而不需要包含在分析階段期間。  
+-   **Usage 屬性** ：定義此模型要如何使用每一個資料行。 您可以將資料行使用方式定義為 `Input`、`Predict`、`Predict Only` 或 `Key`。 `Usage` 屬性會套用到個別採礦模型，而且必須針對模型中所包含的每一個資料行來個別設定。 如果此結構包含模型中未使用的資料行，使用方式會設定為 `Ignore`。 您想包含在採礦結構中但不想用於分析的資料範例可能包括客戶名稱或電子郵件地址。 如此一來，您可以稍後再查詢，而不需要包含在分析階段期間。  
   
  您可以在建立採礦模型後，變更採礦模型屬性的值。 不過，即使是採礦模型名稱的任何變更都需要您重新處理模型。 重新處理模型後，您可能會看到不同的結果。  
   
@@ -126,10 +126,10 @@ ms.locfileid: "48207698"
   
 |主題|連結|  
 |------------|-----------|  
-|了解如何建立可支援多個採礦模型的採礦結構。 了解資料行在模型中的使用方式。|[採礦結構資料行](mining-structure-columns.md)<br /><br /> [採礦模型資料行](mining-model-columns.md)<br /><br /> [內容類型&#40;資料採礦&#41;](content-types-data-mining.md)|  
-|了解不同的演算法，以及選擇的演算法如何影響模型內容。|[採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
-|了解您現在可以在模型上設定影響其組成和行為的屬性。|[採礦模型屬性](mining-model-properties.md)<br /><br /> [模型旗標&#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
-|了解資料採礦的程式設計介面。|[使用分析管理物件開發&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)|  
+|了解如何建立可支援多個採礦模型的採礦結構。 了解資料行在模型中的使用方式。|[採礦結構資料行](mining-structure-columns.md)<br /><br /> [採礦模型資料行](mining-model-columns.md)<br /><br /> [內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)|  
+|了解不同的演算法，以及選擇的演算法如何影響模型內容。|[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|了解您現在可以在模型上設定影響其組成和行為的屬性。|[採礦模型屬性](mining-model-properties.md)<br /><br /> [模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
+|了解資料採礦的程式設計介面。|[使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |了解如何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用自訂資料採礦檢視器。|[資料採礦模型檢視器](data-mining-model-viewers.md)|  
 |檢視您可以對資料採礦模型使用的不同查詢類型範例。|[資料採礦查詢](data-mining-queries.md)|  
   
@@ -138,14 +138,14 @@ ms.locfileid: "48207698"
   
 |工作|連結|  
 |----------|----------|  
-|加入及刪除採礦模型|[將採礦模型新增至現有的採礦結構](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構中刪除採礦模型](delete-a-mining-model-from-a-mining-structure.md)|  
-|使用採礦模型資料行|[從採礦模型中排除資料行](exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行分隔](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|加入及刪除採礦模型|[將採礦模型新增至現有的採礦結構](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [從採礦結構刪除採礦模型](delete-a-mining-model-from-a-mining-structure.md)|  
+|使用採礦模型資料行|[從採礦模型排除資料行](exclude-a-column-from-a-mining-model.md)<br /><br /> [建立模型資料行的別名](create-an-alias-for-a-model-column.md)<br /><br /> [變更採礦模型中的資料行分隔](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |改變模型屬性|[變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)<br /><br /> [將篩選套用至採礦模型](apply-a-filter-to-a-mining-model.md)<br /><br /> [從採礦模型中刪除篩選](delete-a-filter-from-a-mining-model.md)<br /><br /> [針對採礦模型啟用鑽研](enable-drillthrough-for-a-mining-model.md)<br /><br /> [檢視或變更演算法參數](view-or-change-algorithm-parameters.md)|  
-|複製、 移動或管理模型|[建立採礦模型的複本](make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](copy-a-view-of-a-mining-model.md)<br /><br /> [匯出&AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [匯入&AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)|  
+|複製、 移動或管理模型|[建立採礦模型的複本](make-a-copy-of-a-mining-model.md)<br /><br /> [複製採礦模型的檢視](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |以資料擴展模型，或更新模型中的資料|[處理採礦模型](process-a-mining-model.md)|  
 |使用 OLAP 模型|[建立資料採礦維度](create-a-data-mining-dimension.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件&#40;Analysis Services-多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

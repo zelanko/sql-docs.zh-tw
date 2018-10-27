@@ -1,5 +1,5 @@
 ---
-title: 內建成員屬性 (MDX) |Microsoft 文件
+title: 內建成員屬性 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025735"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146161"
 ---
-# <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成員屬性內建成員屬性
+# <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成員屬性-內建成員屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會公開維度成員的內建屬性，您可以將它們納入查詢中，以便傳回用於自訂應用程式的其他資料或中繼資料，或協助模型調查或建構。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "34025735"
 ## <a name="context-sensitive-member-properties"></a>區分內容的成員屬性  
  所有維度成員及層級成員支援區分內容的內建成員屬性清單。 下表列出這些區分內容的屬性。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
-|**識別碼**|內部維護用的成員識別碼。|  
+|**ID**|內部維護用的成員識別碼。|  
 |**Key**|原始資料類型的成員索引鍵值。 MEMBER_KEY 是為回溯相容性而提供。  對於非複合索引鍵，MEMBER_KEY 的值與 KEY0 相同，對於複合索引鍵，MEMBER_KEY 屬性為 Null。|  
 |**KEYx**|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵，但主要是用於複合索引鍵。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨使用每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 **Key**。<br /><br /> 請注意， **KEYx** 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱 [簡單的 MDX 小知識：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
 |**名稱**|成員的名稱。|  
@@ -85,9 +85,9 @@ ms.locfileid: "34025735"
  下表列出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援的不區分內容內建屬性。  
   
 > [!NOTE]  
->  MEMBERS 結構描述資料列集中的資料行支援下表列出的內建成員屬性。 如需 **MEMBERS** 結構描述資料列集的詳細資訊，請參閱 [MDSCHEMA_MEMBERS 資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)。  
+>  MEMBERS 結構描述資料列集中的資料行支援下表列出的內建成員屬性。 如需 **MEMBERS** 結構描述資料列集的詳細資訊，請參閱 [MDSCHEMA_MEMBERS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|此一成員所屬 Cube 的名稱。|  
 |**CHILDREN_CARDINALITY**|成員擁有的子系數目。 這可為一個估計值，因此您不應該依賴此值做為確實計數。 提供者應會傳回最佳的可能估計值。|  
@@ -205,15 +205,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [子系&#40;MDX&#41;](../../../mdx/children-mdx.md)   
- [Hierarchize & #40;MDX & #41;](../../../mdx/hierarchize-mdx.md)   
- [計數 & #40;設定 & #41;& #40;MDX & #41;](../../../mdx/count-set-mdx.md)   
- [篩選 & #40;MDX & #41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40;MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40;MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
- [屬性 & #40;MDX & #41;](../../../mdx/properties-mdx.md)   
+ [Children &#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   
+ [Count &#40;集合&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
- [使用成員屬性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 函數參考 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [使用成員屬性 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

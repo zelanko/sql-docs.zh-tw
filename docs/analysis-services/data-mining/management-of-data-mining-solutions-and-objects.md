@@ -1,5 +1,5 @@
 ---
-title: 資料採礦方案與物件的管理 |Microsoft 文件
+title: 資料採礦方案與物件的管理 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015815"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145683"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34015815"
   
 -   [變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [檢視或變更模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [檢視或變更模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [檢視或變更演算法參數](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015815"
 ### <a name="analysis-management-objects-amo"></a>分析管理物件 (AMO)  
  分析管理物件 (AMO) 是根據 XMLA 所建立的物件模型，可讓您完全控制資料採礦物件。 您可以藉由使用 AMO 來建立、部署和監視採礦結構和採礦模型  
   
--   [AMO 概念和物件模型](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO 概念和物件模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

@@ -17,12 +17,12 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166248"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144863"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>邏輯架構 (Analysis Services – 資料採礦)
   資料採礦是涉及多個元件互動的程序。  
@@ -51,7 +51,7 @@ ms.locfileid: "48166248"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  資料採礦結構是定義資料網域 (從中建立採礦模型) 的邏輯資料容器。 單一採礦結構可以支援多個採礦模型。  
   
- 當您需要使用資料採礦方案中的資料時，Analysis Services 會從來源讀取資料，並產生彙總與其他資訊的快取。 預設會保存此快取，以便重複使用定型資料來支援其他模型。 如果您需要刪除快取，變更`CacheMode`屬性的值，對採礦結構物件`ClearAfterProcessing`。 如需詳細資訊，請參閱 [AMO 資料採礦類別](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
+ 當您需要使用資料採礦方案中的資料時，Analysis Services 會從來源讀取資料，並產生彙總與其他資訊的快取。 預設會保存此快取，以便重複使用定型資料來支援其他模型。 如果您需要刪除快取，請將採礦結構物件上的 `CacheMode` 屬性變更為 `ClearAfterProcessing` 值。 如需詳細資訊，請參閱 [AMO 資料採礦類別](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)。  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 也提供將資料分為定型資料集與測試資料集的功能，讓您可以在隨機選取但具代表性的資料集上測試採礦模型。 資料實際上並不會分開儲存，而是以某個屬性來標示結構快取中的案例資料，該屬性指出特定案例是否用於定型或測試。 如果快取遭到刪除，就無法擷取該資訊。  
   
@@ -89,12 +89,12 @@ ms.locfileid: "48166248"
   
  執行交叉驗證時支援使用下列預存程序。  
   
- [資料採礦預存程序&#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [資料採礦預存程序 &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也包含許多系統預存程序，可在內部用來進行資料採礦。 雖然系統預存程序供內部使用，但是您可能會發現這些是非常實用的捷徑。 Microsoft 保留視需要變更這些預存程序的權利；因此在實際使用上，我們建議您最好使用 DMX、AMO 或 XMLA 建立查詢。  
   
  **建立外掛程式演算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一個機制來建立您自己的演算法，然後將演算法當做新的資料採礦服務的伺服器執行個體。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一個機制讓您建立自己的演算法，然後將演算法當做新的資料採礦服務加入伺服器執行個體。  
   
  Analysis Services 會使用 COM 介面與外掛程式演算法通訊。 若要深入了解如何實作新的演算法，請參閱 [外掛程式演算法](plugin-algorithms.md)。  
   
@@ -104,6 +104,6 @@ ms.locfileid: "48166248"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型物件處理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

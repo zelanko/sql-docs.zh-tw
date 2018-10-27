@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113691"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100319"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)
 Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格式模型中的量值和其他自訂公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 活頁簿中的資料模型和 Power BI Desktop 資料模型。 在大部分的方面，您在這些環境中建立的模型相同，且您可以使用相同的量值、 關聯性和 Kpi 等等。不過，如果您撰寫的 Analysis Services 表格式模型，並將它部署在 DirectQuery 模式中，有一些限制，您可以使用的公式。 本主題概述這些差異，列出在相容性層級 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式中，不支援的函式並列出支援的函式但可能傳回不同的結果。  
   
-在本主題中，我們會使用這個詞彙*記憶體中模型*以指向表格式模型，這完全是裝載在以表格式模式執行 Analysis Services 伺服器上的記憶體中快取的資料。 我們會使用*DirectQuery 模型*參考具有已撰寫和/或以 DirectQuery 模式部署的表格式模型。 DirectQuery 模式的相關資訊，請參閱[DirectQuery 模式 （SSAS 表格式）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
+在本主題中，我們會使用這個詞彙*記憶體中模型*以指向表格式模型，這完全是裝載在以表格式模式執行 Analysis Services 伺服器上的記憶體中快取的資料。 我們會使用*DirectQuery 模型*參考具有已撰寫和/或以 DirectQuery 模式部署的表格式模型。 DirectQuery 模式的相關資訊，請參閱[DirectQuery 模式 （SSAS 表格式）](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>記憶體中和 DirectQuery 模式之間的差異  
@@ -92,7 +92,7 @@ Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格�
 使用記憶體中資料存放區之模型所支援的日期文字格式範圍比 SQL Server 所支援的日期字串格式更有限。 不過，DAX 支援自訂日期和時間格式。  
   
 **從字串轉換成其他非布林值**  
-從字串轉換成非布林值時，DirectQuery 模式的行為與 SQL Server 相同。 如需詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
+從字串轉換成非布林值時，DirectQuery 模式的行為與 SQL Server 相同。 如需詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允許從數字轉換成字串**  
 範例： `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
   
 根據預設，系統會使用 Latin1_General 定序，這種定序不區分大小寫，但是區分腔調字。 因此，如果某個文字字串具有多個採用小寫、大寫或混合大小寫的執行個體，所有執行個體都會被視為相同的字串，而且只有字串的第一個執行個體會儲存在索引中。 針對預存字串運作的所有文字函數都會擷取索引格式的指定部分。 因此，範例公式會使用第一個執行個體做為輸入，針對整個資料行傳回相同的值。  
   
-[表格式模型中的字串儲存和定序](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[表格式模型中的字串儲存和定序](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 這種行為也適用於其他文字函數，包括 RIGHT、MID 等等。  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>另請參閱  
-[DirectQuery 模式 (SSAS 表格式)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 模式 (SSAS 表格式)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

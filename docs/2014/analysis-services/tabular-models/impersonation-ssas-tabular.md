@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111978"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145593"
 ---
 # <a name="impersonation-ssas-tabular"></a>模擬 (SSAS 表格式)
   本主題讓表格式模型作者了解連接到資料來源匯入與處理 (重新整理) 資料時，Analysis Services 如何使用登入認證。  
@@ -71,7 +71,7 @@ ms.locfileid: "48111978"
 |**特定的 Windows 使用者名稱和密碼** <sup>2</sup>|ImpersonateWindowsUserAccount|此選項會指定模型使用 Windows 使用者帳戶匯入或處理資料來源中的資料。 網域和使用者帳戶的名稱使用下列格式：**\<網域名稱 >\\< 使用者帳戶名稱\>**。 使用 [資料表匯入精靈] 建立新模型這是預設選項。|  
 |**服務帳戶**|ImpersonateServiceAccount|此選項會指定模型使用與管理該模型之 Analysis Services 服務執行個體相關聯的安全性認證。|  
   
- <sup>1</sup>impersonationmode 會針對指定的值[DataSourceImpersonationInfo 元素&#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md)資料來源上的屬性。  
+ <sup>1</sup>impersonationmode 會針對指定的值[DataSourceImpersonationInfo 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)資料來源上的屬性。  
   
  <sup>2</sup>時使用此選項時，如果工作空間資料庫已移除從記憶體中，由於重新開機或有**工作區保留**屬性設定為**從記憶體中的卸載**或**從工作區刪除**，而該模型專案是關閉，後續的工作階段中，如果您嘗試處理資料表的資料，將會提示您輸入每個資料來源的認證。 同樣地，如果部署的模型資料庫已從記憶體中移除，系統將提示您輸入每個資料來源的認證。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48111978"
   
 ## <a name="see-also"></a>另請參閱  
  [DirectQuery 模式 &#40;SSAS 表格式&#41;](directquery-mode-ssas-tabular.md)   
- [資料來源&#40;SSAS 表格式&#41;](../data-sources-ssas-tabular.md)   
- [表格式模型方案部署&#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [資料來源 &#40;SSAS 表格式&#41;](../data-sources-ssas-tabular.md)   
+ [表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

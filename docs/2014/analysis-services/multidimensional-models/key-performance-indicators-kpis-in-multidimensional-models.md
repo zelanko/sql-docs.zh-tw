@@ -20,19 +20,19 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134008"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145216"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
   在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，關鍵效能指標是用來評估商務成就的計算集合，這些計算與 Cube 中的量值群組相關。 一般來說，這些計算是多維度運算式 (MDX) 運算式或導出成員的結合。 KPI 也有其他中繼資料，這些中繼資料會提供有關用戶端應用程式應該如何顯示 KPI 計算結果的資訊。  
   
- KPI 會處理有關目標集合、Cube 中記錄之效能的實際公式，以及顯示趨勢與效能狀態度量的相關資訊。 AMO 會用來定義公式及有關 KPI 值的其他定義。 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取 KPI 值，並對使用者公開 KPI 值。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](adomd-net/developing-with-adomd-net.md)。  
+ KPI 會處理有關目標集合、Cube 中記錄之效能的實際公式，以及顯示趨勢與效能狀態度量的相關資訊。 AMO 會用來定義公式及有關 KPI 值的其他定義。 查詢介面 (如 ADOMD.NET) 是由用戶端應用程式用來擷取 KPI 值，並對使用者公開 KPI 值。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Kpi> 物件是由基本資訊、目標、達到的實際值、狀態值、趨勢值，以及檢視 KPI 的資料夾所組成。 基本資訊包括 KPI 的名稱和描述。 目標是評估為某個數字的 MDX 運算式。 實際值是評估為某個數字的 MDX 運算式。 狀態和趨勢值是評估為某個數字的 MDX 運算式。 資料夾是要呈現給用戶端之 KPI 的建議位置。  
   

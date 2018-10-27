@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server) 概觀 |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 將 SQL Server 資料庫移轉至其他 SQL Server 或 Azure 資料庫
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: ce503f2b6cb39296d85c7e917e5600d8de44545a
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100362"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643856"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 的概觀
 
@@ -77,9 +77,7 @@ DMA 會取代所有舊版的 SQL Server Upgrade Advisor，並應用於大部分�
 - SQL Server 2016
 - 在 Windows 和 Linux 上的 SQL Server 2017
 - Azure SQL Database
-
-> [!NOTE] 
-> DMA 目前不支援 Azure SQL Database 受控執行個體做為目標。
+- Azure SQL Database 受控執行個體
 
 ## <a name="installation"></a>安裝
 

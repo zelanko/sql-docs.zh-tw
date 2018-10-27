@@ -1,5 +1,5 @@
 ---
-title: 鑽研查詢 （資料採礦） |Microsoft 文件
+title: 鑽研查詢 （資料採礦） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8b3afda19fbbf084223d0f597fe2893dce17049
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018295"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148013"
 ---
 # <a name="drillthrough-queries-data-mining"></a>鑽研查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "34018295"
 -   如果採礦結構不允許鑽研，但是採礦模型允許，您就只能檢視模型案例的資訊，而無法檢視採礦結構的資訊。  
   
 ###  <a name="bkmk_Security"></a> 鑽研的安全性問題  
- 如果您想要鑽研模型的結構案例，則必須確認採礦結構和採礦模型都已將 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 屬性設定為 **True**。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。 如需如何建立角色的資訊，請參閱[角色設計工具 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)。 請參閱。  
+ 如果您想要鑽研模型的結構案例，則必須確認採礦結構和採礦模型都已將 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 屬性設定為 **True**。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。 如需如何建立角色的資訊，請參閱[角色設計工具 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)。 請參閱。  
   
  鑽研權限是在結構和模型上分別設定的。 即使您沒有結構的權限，模型權限還是可以讓您從模型進行鑽研。 結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。  
   
@@ -89,10 +89,10 @@ ms.locfileid: "34018295"
   
 |工作|連結|  
 |----------|----------|  
-|描述在資料採礦設計師中使用鑽研的程序|[從採礦模型鑽研到案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|描述在資料採礦設計師中使用鑽研的程序|[鑽研採礦模型的案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |改變現有的採礦模型以允許鑽研|[針對採礦模型啟用鑽研](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|使用 DMX WITH DRILLTHROUGH 子句，在採礦結構上啟用鑽研|[建立採礦結構 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|如需有關指派套用至採礦結構和採礦模型之權限的詳細資訊|[授與權限的資料採礦結構和模型 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|使用 DMX WITH DRILLTHROUGH 子句，在採礦結構上啟用鑽研|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|如需有關指派套用至採礦結構和採礦模型之權限的詳細資訊|[授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   

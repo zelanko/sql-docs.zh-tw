@@ -2,7 +2,7 @@
 title: 評估企業並合併評定報告 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA，以評估企業，並合併評定報告，然後再升級 SQL Server，或移轉至 Azure SQL Database。
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721086"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960782"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -37,14 +37,14 @@ ms.locfileid: "47721086"
     - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
 - 下載並解壓縮：
     - [DMA 報表 Power BI 範本](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)。
-    - [LoadWarehouse 指令碼](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip)。
+    - [LoadWarehouse 指令碼](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>正在載入 PowerShell 模組
 儲存到 PowerShell 模組目錄的 PowerShell 模組，可讓您呼叫的模組，而不需要明確載入它們，才能使用。
 
 若要載入的模組，請執行下列步驟：
 1. 瀏覽至 C:\Program Files\WindowsPowerShell\Modules，然後建立名為資料夾**DataMigrationAssistant**。
-2. 開啟[PowerShell 模組](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)，然後將它們儲存到您所建立的資料夾。
+2. 開啟[PowerShell 模組](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip)，然後將它們儲存到您所建立的資料夾。
 
       ![PowerShell 模組](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "47721086"
 
     PowerShell 應該現在這些模組自動載入新的 PowerShell 工作階段啟動時。
 
-## <a name="create-an-inventory-of-sql-servers"></a>建立 SQL 伺服器的清查
+## <a name="create-inventory"></a> 建立 SQL 伺服器的清查
 之前執行的 PowerShell 指令碼，來評估您的 SQL Server，您必須建置您想要評估 SQL 伺服器的清查。
 
 此清查可以處於兩種形式之一：
@@ -98,7 +98,7 @@ ms.locfileid: "47721086"
 
 |參數  |描述
 |---------|---------|
-|**getServerListFrom** | 您的清查。 可能的值為**SqlServer**並**CSV**。 |
+|**getServerListFrom** | 您的清查。 可能的值為**SqlServer**並**CSV**。<br/>如需詳細資訊，請參閱 <<c0> [ 建立的 SQL 伺服器清查](#create-inventory)。 |
 |**serverName** | 清查時使用的 SQL Server 執行個體名稱**SqlServer**中**getServerListFrom**參數。 |
 |**databaseName** | 裝載清查資料表的資料庫。 |
 |**AssessmentName** | DMA 評估的名稱。 |
@@ -112,7 +112,7 @@ ms.locfileid: "47721086"
 
 ## <a name="consuming-the-assessment-json-file"></a>使用評估 JSON 檔案
 
-完成您的評估之後，不過您現在已準備好資料匯入至 SQL Server 進行分析。 若要使用評估的 JSON 檔案，請開啟 PowerShell 並執行 dmaProcessor 函式。
+完成您的評估之後，您現在準備好資料匯入至 SQL Server 進行分析。 若要使用評估的 JSON 檔案，請開啟 PowerShell 並執行 dmaProcessor 函式。
  
   ![dmaProcessor 函式清單](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
@@ -121,12 +121,12 @@ ms.locfileid: "47721086"
 |參數  |描述
 |---------|---------|
 |**processTo**  | 處理 JSON 檔案的位置。 可能的值為**SQLServer**並**AzureSQLDatabase**。 |
-|**serverName** | 處理資料的 SQL Server 執行個體。  如果您指定**AzureSQLDatabase** for **processTo**參數，則會包含只有 SQL Server 名稱 (不包括。 database.windows.net)。 系統會提示兩個登入的目標為 Azure SQL Database; 時第一個是您的 Azure 租用戶認證，而第二個是您的系統管理員登入 Azure SQL server。 |
-|**CreateDMAReporting** | 要建立來處理 JSON 檔案的暫存資料庫。  如果您已經指定此資料庫確實存在，而且您將此參數設定為其中一個，然後無法取得建立物件。  此參數可用於重新建立已卸除單一物件。 |
+|**serverName** | 處理資料的 SQL Server 執行個體。  如果您指定**AzureSQLDatabase** for **processTo**參數，則會包含只有 SQL Server 名稱 (不包括。 database.windows.net)。 您在目標為 Azure SQL Database; 時的兩個登入提示第一個是您的 Azure 租用戶認證，而第二個是您的系統管理員登入 Azure SQL server。 |
+|**CreateDMAReporting** | 要建立來處理 JSON 檔案的暫存資料庫。  如果您已經指定此資料庫確實存在，而且您將此參數設定為其中一個，不會建立物件。  此參數可用於重新建立已卸除單一物件。 |
 |**CreateDataWarehouse** | 建立將用於 Power BI 報表資料倉儲。 |
 |**databaseName** | DMAReporting 資料庫的名稱。 |
 |**warehouseName** | 資料倉儲資料庫的名稱。 |
-|**jsonDirectory** | 包含 JSON 評估檔案的目錄。  如果在目錄中有多個 JSON 檔案，它們會逐一處理。 |
+|**jsonDirectory** | 包含 JSON 評估檔案的目錄。  如果在目錄中，有多個 JSON 檔案，則它們會處理一一。 |
 
 DmaProcessor 函式應該只需要幾秒鐘的時間處理單一檔案。
 
@@ -135,7 +135,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 
 1. 您可以使用 LoadWarehouse 指令碼來填入維度中的任何遺漏值。
 
-    指令碼會在 DMAReporting 資料庫採取 ReportData 資料表中的資料，並將其載入至倉儲的資料。  如果此載入程序期間有任何錯誤，則可能遺漏的項目維度資料表中的結果。
+    指令碼會在 DMAReporting 資料庫採取 ReportData 資料表中的資料，並將其載入至倉儲的資料。  如果此載入程序期間發生任何錯誤，它們可能遺漏的項目維度資料表中的結果。
 
 2. 載入資料倉儲。
  
@@ -158,7 +158,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 
       ![載入的 DMA 報表 Power BI 範本](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
-   已重新整理報表中的資料之後**DMAWarehouse**資料庫中，您會看到類似下列的報表。
+   已重新整理報表中的資料之後**DMAWarehouse**資料庫中，將會看到類似下列的報表。
 
    ![DMAWarehouse 報表檢視](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
 

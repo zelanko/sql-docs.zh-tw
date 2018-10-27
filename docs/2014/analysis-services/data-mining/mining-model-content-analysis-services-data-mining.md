@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db6b49c10441e08bb66256860550fc2447f6dcf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120898"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148003"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   當您已經使用基礎採礦結構中的資料來設計及處理採礦模型之後，該採礦模型會是完整的，並包含 *「採礦模型內容」*(Mining Model Content)。 您可以使用此內容來進行預測或分析資料。  
@@ -55,7 +55,7 @@ ms.locfileid: "48120898"
  根據您用來建立模型的演算法而定，根節點具有各種不同的子節點數目。 子節點則具有不同的意義且包含了不同的內容 (根據演算法及資料的深度和複雜度而定)。  
   
 ##  <a name="bkmk_Nodes"></a> 採礦模型內容中的節點  
- 在採礦模型中，節點是一般用途的容器，可儲存有關此模型的所有部分或一部分的資訊片段。 每一個節點的結構一定是相同的，而且包含了資料採礦結構描述資料列集所定義的資料行。 如需詳細資訊，請參閱 [DMSCHEMA_MINING_MODEL_CONTENT 資料列集](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
+ 在採礦模型中，節點是一般用途的容器，可儲存有關此模型的所有部分或一部分的資訊片段。 每一個節點的結構一定是相同的，而且包含了資料採礦結構描述資料列集所定義的資料行。 如需詳細資訊，請參閱 [DMSCHEMA_MINING_MODEL_CONTENT 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
  每一個節點都包含有關此節點的中繼資料，其中包含每一個模型內唯一的識別碼、父節點的識別碼，以及此節點擁有的子節點數目。 中繼資料會識別此節點所屬的模型以及特定模型儲存所在的資料庫目錄。 節點中所提供的其他內容將會因為用來建立模型的演算法類型而異，而且可能包含以下項目：  
   
@@ -160,9 +160,9 @@ ms.locfileid: "48120898"
   
  如果此屬性名稱是資料行，則在最直接的案例中，ATTRIBUTE_VALUE 會包含該資料行的其中一個離散值。  
   
- 根據如何演算法處理值，ATTRIBUTE_VALUE 也可以包含一個旗標，告訴您是否有值存在的屬性 (`Existing`)，或者該值是否為 null (`Missing`)。  
+ 根據演算法處理值的方式而定，ATTRIBUTE_VALUE 也可以包含一個旗標，告訴您屬性 (`Existing`) 是否有值存在，或者該值是否為 null (`Missing`)。  
   
- 例如，如果設定您的模型來尋找已購買特定項目至少一次的客戶，則 ATTRIBUTE_NAME 資料行可能包含屬性值配對來定義感興趣的項目，例如`Model = 'Water bottle'`，和 ATTRIBUTE_VALUE 資料行將只包含關鍵字`Existing`或`Missing`。  
+ 例如，如果已設定您的模型來尋找已購買某個特定項目至少一次的客戶，則 ATTRIBUTE_NAME 資料行可能會包含屬性-值配對來定義想要的項目 (例如 `Model = 'Water bottle'`)，而且 ATTRIBUTE_VALUE 資料行只會包含關鍵字 `Existing` 或 `Missing`。  
   
  SUPPORT  
  具有這個屬性-值配對或是包含此項目集或規則的案例數。  
@@ -214,7 +214,7 @@ ms.locfileid: "48120898"
   
 |VALUE_TYPE 識別碼|值標籤|值類型名稱|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|表示案例資料不包含這個屬性的值。 `Missing`狀態個別計算值的屬性。|  
+|1|Missing|表示案例資料不包含這個屬性的值。 在計算 `Missing` 狀態時，會與具有值的屬性分開。|  
 |2|Existing|表示案例資料包含這個屬性的值。|  
 |3|Continuous|表示屬性值是一個連續數值，因此可以由平均值連同變異數和標準差來表示。|  
 |4|Discrete|表示一個視為離散的值 (數值或文字)。<br /><br /> **注意** ：Discrete 值也可以是 missing 值；但是在計算時會以不同方式處理這兩個值。 如需相關資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。|  
@@ -273,15 +273,15 @@ ms.locfileid: "48120898"
   
 |演算法或模型類型|model content|查詢採礦模型|  
 |-----------------------------|-------------------|----------------------------|  
-|關聯規則模型|[關聯模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[關聯模型查詢範例](association-model-query-examples.md)|  
-|叢集模型|[決策樹模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[群集模型查詢範例](clustering-model-query-examples.md)|  
-|決策樹模型|[決策樹模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[決策樹模型查詢範例](decision-trees-model-query-examples.md)|  
-|線性迴歸模型|[線性迴歸模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
-|羅吉斯迴歸模型|[羅吉斯迴歸模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
-|貝氏機率分類模型|[貝氏機率分類模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[貝式機率分類模型查詢範例](naive-bayes-model-query-examples.md)|  
-|類神經網路模型|[類神經網路模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[類神經網路模型查詢範例](neural-network-model-query-examples.md)|  
-|時序群集|[時序群集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)|[時序群集模型查詢範例](sequence-clustering-model-query-examples.md)|  
-|時間序列模型|[時間序列模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[時間序列模型查詢範例](time-series-model-query-examples.md)|  
+|關聯規則模型|[關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[關聯模型查詢範例](association-model-query-examples.md)|  
+|叢集模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[群集模型查詢範例](clustering-model-query-examples.md)|  
+|決策樹模型|[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[決策樹模型查詢範例](decision-trees-model-query-examples.md)|  
+|線性迴歸模型|[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
+|羅吉斯迴歸模型|[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)|[線性迴歸模型查詢範例](linear-regression-model-query-examples.md)|  
+|貝氏機率分類模型|[貝氏機率分類模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](naive-bayes-model-query-examples.md)|  
+|類神經網路模型|[類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](neural-network-model-query-examples.md)|  
+|時序群集|[時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
+|時間序列模型|[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[時間序列模型查詢範例](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 檢視採礦模型內容的工具  
  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中瀏覽或探索模型時，可以在 **[Microsoft 一般內容樹狀檢視器]** 中檢視資訊，此工具在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供。  
@@ -304,7 +304,7 @@ SELECT * FROM [<mining model name>].CONTENT
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您也可以存取資料採礦結構描述資料列集中的資訊，其方式是開啟 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接及查詢系統資料表。 如需詳細資訊，請參閱 <<c0> [ 查詢資料採礦結構描述資料列&#40;Analysis Services-Data Mining&#41;](data-mining-schema-rowsets-ssas.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 一般內容樹狀檢視器&#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

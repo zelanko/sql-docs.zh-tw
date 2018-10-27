@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212088"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148453"
 ---
 # <a name="subselects-in-queries"></a>查詢中的子選擇
   子選擇運算式是巢狀 SELECT 運算式，用於限制評估外部 SELECT 的 Cube 空間。 子選擇可讓您定義評估所有計算的新空間。  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   axis 子句中不允許 HAVING 子句；請改用 [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) 函數運算式。  
   
--   預設的導出的成員不允許在子選擇;不過，這項限制可以變更，以每個工作階段為基礎，在指派值給`SubQueries`中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或是`DBPROP_MSMD_SUBQUERIES`中的屬性[支援的 XMLA 屬性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 請參閱[子選擇和 Subcube 中導出成員](calculated-members-in-subselects-and-subcubes.md)依據的值的導出成員行為的詳細說明`SubQueries`或`DBPROP_MSMD_SUBQUERIES`。  
+-   預設的導出的成員不允許在子選擇;不過，這項限制可以變更，以每個工作階段為基礎，在指派值給`SubQueries`中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或是`DBPROP_MSMD_SUBQUERIES`中的屬性[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). 請參閱[子選擇和 Subcube 中導出成員](calculated-members-in-subselects-and-subcubes.md)依據的值的導出成員行為的詳細說明`SubQueries`或`DBPROP_MSMD_SUBQUERIES`。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 採礦結構的鑽研 |Microsoft 文件
+title: 採礦結構的鑽研 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aadcc0025b8370d3827a9349ad577651121030de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6d2ea3d80496f84330802640ff99d951fd2416bb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015105"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146484"
 ---
 # <a name="drillthrough-on-mining-structures"></a>採礦結構的鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供兩個不同的鑽研案例資料的選項。 您可以鑽研用來建立採礦模型的資料，也可以鑽研採礦結構中的來源資料。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立採礦模型的資料，也可以鑽研採礦結構中的來源資料。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>鑽研模型案例和鑽研結構的比較  
  鑽研至**模型案例**對於尋找模型中規則、模式或叢集的額外詳細資料很有幫助。  
@@ -38,7 +38,7 @@ ms.locfileid: "34015105"
   
 -   鑽研藉由擷取處理採礦結構時快取之定型案例的相關資訊來運作。 因此，如果您要在處理結構之後，將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 **ClearAfterProcessing**來清除快取的資料，鑽研將不會運作。 若要啟用結構資料行的鑽研功能，您必須將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 **KeepTrainingCases** ，然後重新處理結構。  
   
--   請確認採礦結構和採礦模型都已將 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 屬性設定為 **True**。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。  
+-   請確認採礦結構和採礦模型都已將 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 屬性設定為 **True**。 此外，您必須是針對結構和模型同時擁有鑽研權限之角色的成員。  
   
 ## <a name="security-issues-for-drillthrough"></a>鑽研的安全性問題  
  鑽研權限是在結構和模型上分別設定的。 即使您沒有結構的權限，模型權限還是可以讓您從模型進行鑽研。 結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。  
@@ -55,7 +55,7 @@ ms.locfileid: "34015105"
 |-|-|  
 |從採礦模型檢視器對結構使用鑽研|[從模型檢視器使用鑽研](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |參閱特定模型類型的鑽研查詢範例。|[資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)|  
-|取得有關適用於特定採礦結構和採礦模型之權限的詳細資訊。|[授與權限的資料採礦結構和模型 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|取得有關適用於特定採礦結構和採礦模型之權限的詳細資訊。|[授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型的鑽研](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  

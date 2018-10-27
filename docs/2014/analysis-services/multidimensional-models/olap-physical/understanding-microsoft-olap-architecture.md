@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084478"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145043"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 架構
   使用這些主題可更加了解 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料庫，並規劃如何在商業智慧方案中實作多維度資料庫。  
@@ -41,11 +41,11 @@ ms.locfileid: "48084478"
  [其他...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![小型檔案資料夾圖示](../../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**程式設計架構**  
- [使用分析管理物件開發&#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [使用 Analysis Services 開發的指令碼語言&#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [使用 ADOMD.NET 來開發](../adomd-net/developing-with-adomd-net.md)  
+ [使用 ADOMD.NET 來開發](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![小型檔案資料夾圖示](../../../integration-services/media/filefolder-small.gif "小型檔案資料夾圖示")**國際化考量**  
  [Analysis Services 多維度的全球化案例](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  

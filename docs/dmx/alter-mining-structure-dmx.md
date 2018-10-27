@@ -1,5 +1,5 @@
 ---
-title: 改變採礦結構 (DMX) |Microsoft 文件
+title: 改變採礦結構 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842691"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145923"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  建立以現有採礦結構為基礎的新採礦模型。  當您使用**ALTER MINING STRUCTURE**陳述式來建立新的採礦模型，此結構必須已經存在。 相反地，當您使用這個陳述式， [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)，您建立模型，並自動產生其基礎採礦結構在相同的時間。  
+  建立以現有採礦結構為基礎的新採礦模型。  當您使用**ALTER MINING STRUCTURE**陳述式來建立新的採礦模型，結構必須已經存在。 相反地，當您使用陳述式[CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)，您建立模型，並自動產生其基礎採礦結構，在相同的時間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  提供者所定義的資料採礦演算法名稱。  
   
 > [!NOTE]  
->  可以擷取一份目前的提供者所支援的演算法使用[DMSCHEMA_MINING_SERVICES 資料列集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要檢視目前執行個體中支援的演算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，請參閱[資料採礦屬性](../analysis-services/server-properties/data-mining-properties.md)。  
+>  使用也可以擷取一份目前的提供者所支援的演算法[DMSCHEMA_MINING_SERVICES 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)。 若要檢視目前執行個體中支援的演算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 資料採礦屬性](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *參數清單*  
  選擇性。 提供者自訂之演算法參數的逗號分隔清單。  
@@ -69,13 +69,13 @@ USING <algorithm> [(<parameter list>)]
   
  如果模型不需要可預測資料行 (例如使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集與 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時序群集演算法建立的模型)，您就不必在陳述式中包含資料行定義。 產生之模型中的所有屬性都會當成輸入處理。  
   
- 在**WITH**子句套用至案例資料表中，您可以指定篩選和鑽研選項：  
+ 在  **WITH**子句套用至案例資料表中，您可以指定篩選和鑽研選項：  
   
 -   新增**篩選**關鍵字和篩選條件。 篩選器會套用到採礦模型中的案例。  
   
--   新增**鑽研**關鍵字來讓採礦模型的使用者向下鑽研從模型結果的案例資料。 在資料採礦延伸模組 (DMX) 中，只有在建立模型時才能啟用鑽研。  
+-   新增**鑽研**關鍵字來讓採礦模型的使用者從模型結果鑽研至案例資料。 在資料採礦延伸模組 (DMX) 中，只有在建立模型時才能啟用鑽研。  
   
- 若要同時使用案例篩選和鑽研，您結合在單一關鍵字**WITH**子句使用下列範例所示的語法：  
+ 同時使用案例篩選和鑽研，您可以結合在單一關鍵字**WITH**子句使用下列範例所示的語法：  
   
  `WITH DRILLTHROUGH, FILTER(Gender = 'Male')`  
   
@@ -88,7 +88,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   模型旗標  
   
--   預測要求，指出演算法是否資料行包含可預測的值，由**預測**或**PREDICT_ONLY**子句  
+-   預測要求，指出演算法是否該資料行包含可預測的值，由**PREDICT**或是**PREDICT_ONLY**子句  
   
  使用下列資料行定義清單的語法來定義單一資料行：  
   
@@ -97,9 +97,9 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>資料行名稱和別名  
- 在資料行定義清單中使用的資料行名稱，必須是採礦結構中所使用的資料行名稱。 不過，您也可以選擇定義別名來代表採礦模型中的結構資料行。 您也可以為相同的結構資料行建立多個資料行定義，然後為每個資料行副本指派不同的別名及預測使用方式。 根據預設，如果沒有定義別名，就會使用結構資料行名稱。 如需詳細資訊，請參閱[模型資料行建立別名](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)。  
+ 在資料行定義清單中使用的資料行名稱，必須是採礦結構中所使用的資料行名稱。 不過，您也可以選擇定義別名來代表採礦模型中的結構資料行。 您也可以為相同的結構資料行建立多個資料行定義，然後為每個資料行副本指派不同的別名及預測使用方式。 根據預設，如果沒有定義別名，就會使用結構資料行名稱。 如需詳細資訊，請參閱 <<c0> [ 模型資料行建立別名](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)。  
   
- 對於巢狀的資料表資料行，指定巢狀資料表的名稱、 資料類型指定為**資料表**，然後提供要包含在模型中，括號括住的巢狀資料行的清單。  
+ 對於巢狀的資料表資料行中，指定巢狀資料表的名稱、 資料類型指定為**資料表**，然後提供要包含在模型中，括號括住的巢狀資料行的清單。  
   
  您可以將篩選準則運算式加在巢狀資料表資料行定義之後，以定義套用至巢狀資料表的篩選運算式。  
   
@@ -130,12 +130,12 @@ USING <algorithm> [(<parameter list>)]
   
  篩選準則運算式是經過簡化的 DMX 述詞，與 WHERE 子句類似。 篩選運算式限於使用基本數學運算子、純量和資料行名稱的公式。 EXISTS 運算子則是例外；如果子查詢至少傳回一個資料列，該運算子就會評估為 True。 述詞可以使用常見的邏輯運算子 AND、OR 和 NOT 等來結合。  
   
- 如需有關搭配採礦模型的篩選器的詳細資訊，請參閱[採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
+ 如需有關搭配採礦模型的篩選條件的詳細資訊，請參閱[採礦模型的篩選&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  篩選中的資料行必須是採礦結構資料行。 您無法在模型資料行或別名資料行上建立篩選。  
   
- 如需有關 DMX 運算子和語法的詳細資訊，請參閱[採礦模型資料行](../analysis-services/data-mining/mining-model-columns.md)。  
+ 如需有關 DMX 運算子和語法的詳細資訊，請參閱 <<c0> [ 採礦模型資料行](../analysis-services/data-mining/mining-model-columns.md)。  
   
 ## <a name="parameter-definition-list"></a>參數定義清單  
  您可以將演算法參數加入至參數清單，以調整模型的效能和功能。 可以使用的參數是依照您在 USING 子句中指定的演算法而定。 如需每一種演算法相關聯的參數，請參閱[資料採礦演算法&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
@@ -147,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="example-1-add-a-model-to-a-structure"></a>範例 1：將模型加入至結構  
- 下列範例會將貝氏機率分類採礦模型來**New Mailing**採礦結構和限制為 50 狀態屬性的最大數目。  
+ 下列範例會將貝氏機率分類採礦模型來**New Mailing**採礦結構和限制為 50，指出屬性的最大數目。  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -162,7 +162,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>範例 2：將篩選模型加入至結構  
- 下列範例會將採礦模型，`Naive Bayes Women`至**New Mailing**採礦結構。 新模型的基本結構與在範例 1 中加入的採礦模型相同；不過這個模型將取自採礦結構的案例限制為年過 50 的女性客戶。  
+ 下列範例會將採礦模型時， `Naive Bayes Women`，以**New Mailing**採礦結構。 新模型的基本結構與在範例 1 中加入的採礦模型相同；不過這個模型將取自採礦結構的案例限制為年過 50 的女性客戶。  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  
@@ -178,7 +178,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
 ```  
   
 ## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>範例 3：將篩選模型加入至具有巢狀資料表的結構  
- 下列範例將採礦模型加入至購物籃採礦結構的修改版本中。 在範例中使用的採礦結構已修改成加入**區域**包含客戶地區的屬性，資料行和**Income Group**資料行，使用值將客戶收入分類**高**，**中等**，或**低**。  
+ 下列範例將採礦模型加入至購物籃採礦結構的修改版本中。 在範例中使用的採礦結構已經過修改，加入**區域**資料行，其中包含客戶地區的屬性，以及**Income Group**資料行中，將客戶收入分類使用值**高**，**中等**，或**低**。  
   
  此採礦結構也會包含列出客戶已購買之項目清單的巢狀資料表。  
   

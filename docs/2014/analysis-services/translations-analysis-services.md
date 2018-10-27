@@ -18,19 +18,19 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8454d379bcce879ed444a98bf5938e0736ea30e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153058"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145953"
 ---
 # <a name="translations-analysis-services"></a>翻譯 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
   
  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度資料模型中，您可以內嵌標題的多個翻譯，以根據 LCID 提供特定地區設定的字串。 您可以為資料庫名稱、Cube 物件和資料庫維度物件加入翻譯。  
   
- 定義翻譯會在模型內建立中繼資料和翻譯的標題，但若要在用戶端應用程式中轉譯當地語系化的字串，您必須在物件上設定 `Language` 屬性，或在連接字串上傳遞 `Locale Identifier` 參數 (例如，藉由設定 `LocaleIdentifier=1036` 以傳回法文字串)。 如果您想要支援相同物件之多個不同語言且同時的翻譯，請規劃使用 `Locale Identifier`。 設定`Language`屬性雖然有效，但它也會影響處理和查詢，而可能會有非預期的結果。 設定`Locale Identifier`是較佳的選擇，因為它只會用來傳回翻譯的字串。  
+ 定義翻譯會在模型內建立中繼資料和翻譯的標題，但若要在用戶端應用程式中轉譯當地語系化的字串，您必須在物件上設定 `Language` 屬性，或在連接字串上傳遞 `Locale Identifier` 參數 (例如，藉由設定 `LocaleIdentifier=1036` 以傳回法文字串)。 如果您想要支援相同物件之多個不同語言且同時的翻譯，請規劃使用 `Locale Identifier`。 設定 `Language` 屬性雖然有效，但也會影響處理和查詢，而可能會有非預期的結果。 設定 `Locale Identifier` 是較佳的選擇，因為它只會用來傳回翻譯的字串。  
   
  翻譯是由地區設定識別碼 (LCID)、物件的翻譯標題 (例如維度或屬性名稱)，以及 (選擇性) 以目標語言提供資料值的資料行繫結所組成。 您可以有多個翻譯，但任何一個指定的連接只能使用一個翻譯。 理論上，您可以內嵌在模型中的翻譯數目沒有限制，但每個翻譯都會增加測試的複雜性，且所有翻譯都必須共用相同的定序，因此當您設計方案時，請記住這些原本就有的條件約束。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48153058"
   
 4.  以滑鼠右鍵按一下任何欄位，然後選取 [瀏覽資料] 。 您會看到每個成員的英文、西班牙文和法文翻譯。  
   
- 日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 `FormatString` 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](scripting/properties/formatstring-element-assl.md)。  
+ 日期、時間和貨幣格式的實作未透過翻譯。 若要根據用戶端的地區設定，以動態方式提供特定文化特性的格式，請使用 [貨幣轉換精靈] 和 `FormatString` 屬性。 如需詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) 和 [FormatString 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
  Analysis Services 教學課程中的[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 將逐步引導您完成建立及測試翻譯的步驟。  
   
@@ -72,12 +72,12 @@ ms.locfileid: "48153058"
   
 4.  建立及部署專案。  
   
-5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱[全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)。  
+5.  使用用戶端應用程式 (例如 Excel) 連接至資料庫，並修改連接字串以使用地區設定識別碼。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>將翻譯加入維度和屬性  
  您可以將翻譯加入資料庫維度、屬性、階層和階層內的層級。  
   
- 您可以使用鍵盤或複製-貼上作業將翻譯的標題手動加入模型；至於維度屬性成員，則可以從外部資料庫取得翻譯值。 具體來說，`CaptionColumn`屬性的屬性可以繫結至資料來源檢視中的資料行。  
+ 您可以使用鍵盤或複製-貼上作業將翻譯的標題手動加入模型；至於維度屬性成員，則可以從外部資料庫取得翻譯值。 具體來說，屬性 (Attribute) 的 `CaptionColumn` 屬性 (Property) 可繫結至資料來源檢視中的資料行。  
   
  在屬性層級，您可以覆寫定序設定，例如您可能想要針對特定屬性調整區分全半形或使用二進位排序。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，會公開已定義資料繫結的定序。 由於您要將維度屬性翻譯繫結至 DSV 中的不同來源資料行，因此您可以使用定序設定，來指定來源資料行所使用的定序。 如需關聯式資料庫中資料行定序的詳細資訊，請參閱 [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) 。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48153058"
   
 2.  在 [翻譯] 中，指定目標語言 (解析成 LCID)、翻譯的標題和翻譯的描述。 不論您要在 Management Studio 中設定伺服器語言，或在單一屬性上加入翻譯覆寫，語言清單在整個 Analysis Services 中都是一致的。  
   
-3.  在 [屬性] 頁面的資料庫，設定`Language`至您為翻譯所指定的相同 LCID。 （選擇性） 設定`Collation`，如果預設值不再適用。  
+3.  在資料庫的 [屬性] 頁面中，將 `Language` 設為您為翻譯所指定的相同 LCID。 選擇性地另外設定 `Collation` (如果預設值不再適用)。  
   
 4.  建立及部署資料庫。  
   
@@ -119,8 +119,8 @@ ms.locfileid: "48153058"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 多維度的全球化案例](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [語言和定序&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
+ [語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [設定或變更資料行定序](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [全球化秘訣和最佳作法&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

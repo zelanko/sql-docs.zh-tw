@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4860230697f5a65ada594060b738793ebea6202
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143797"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146748"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 範本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組範本，協助您快速建立 XMLA 指令碼、DMX 或 MDX 查詢、在 Cube 或表格式模型中建立 KPI、編寫備份與還原作業的指令碼，以及執行許多其他工作。 範本位於 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的範本總管。  
@@ -109,7 +109,7 @@ ms.locfileid: "48143797"
 5.  按兩下內的文字\<檔案 > 項目。 輸入備份檔案的名稱，包括 .abf 副檔名。 如果您不使用預設的備份位置，請指定完整檔案路徑。 如需詳細資訊，請參閱[備份、還原和同步處理資料庫 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ##  <a name="bkmk_schemarowset"></a> 使用 XMLA 範本產生結構描述資料列集查詢  
- 範本總管只包含一個用於結構描述資料列集查詢的範本。 若要使用此範本，您必須熟悉所要使用之個別結構描述資料列集的需求，包括任何必要元素，以及可做為限制的資料行。 如需詳細資訊，請參閱 [Analysis Services 結構描述資料列集](../schema-rowsets/analysis-services-schema-rowsets.md)。  
+ 範本總管只包含一個用於結構描述資料列集查詢的範本。 若要使用此範本，您必須熟悉所要使用之個別結構描述資料列集的需求，包括任何必要元素，以及可做為限制的資料行。 如需詳細資訊，請參閱 [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。  
   
  請注意，為了簡單起見，許多結構描述資料列集也已公開做為動態管理檢視 (DMV)。 透過使用對應的 DMV，您可以使用類似 Transact-SQL 的語法來查詢結構描述資料列集。 例如，下列查詢傳回相同的結果，但一個是 XML 格式的查詢，一個是表格式查詢。 如需 DMV 的詳細資訊，請參閱[使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。  
   
@@ -144,7 +144,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  開啟範本總管，並將 [探索結構描述資料列集] 範本拖曳至空白查詢視窗中。  
   
-3.  在範本中，取代[RequestType 元素&#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md)項目包含下列文字： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  在範本中，取代[RequestType 元素&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)項目包含下列文字： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  按一下 **[執行]**。  
   
@@ -196,39 +196,39 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||巢狀單一預測|示範如何使用 DMX SELECT FROM *\<模型 >* NATURAL PREDICTION JOIN 子句來執行明確地指定在預測查詢中，資料行中的單一值在採礦模型預測查詢名稱會符合採礦模型中的資料行，其中包含一組巢狀資料表，建立名稱也會符合採礦模型中的巢狀資料行以 UNION 陳述式中的值。|  
 ||單一預測|示範如何使用 DMX SELECT FROM\<模型 > NATURAL PREDICTION JOIN 陳述式來執行預測查詢，針對採礦模型使用預測查詢，其名稱符合中的資料行的資料行中明確指定的單一值採礦模型。|  
 ||預存程序呼叫|示範如何使用 DMX CALL 陳述式來呼叫預存程序。|  
-|MDX\運算式|移動平均-固定|示範如何使用 MDX`ParallelPeriod`和`CurrentMember`函數搭配自然已排序的集合，建立導出量值，以提供 固定數目的時間維度階層所包含的時間週期上的 量值的移動平均。|  
-||移動平均-變動|示範如何使用 MDX`CASE`內的陳述式`Avg`函式來建立導出量值，以針對變動數目的時間維度階層所包含的時間週期中提供量值的移動平均。|  
+|MDX\運算式|移動平均-固定|展示如何使用 MDX `ParallelPeriod` 和 `CurrentMember` 函數搭配自然已排序集合，來建立導出量值，以提供量值在時間維度階層所包含之固定時間週期上的移動平均。|  
+||移動平均-變動|展示如何在 `CASE` 函數內使用 MDX `Avg` 陳述式，來建立導出量值，以提供量值在時間維度階層所包含之變動時間週期上的移動平均。|  
 ||至今的期間數|展示如何在導出成員中使用 MDX `PeriodsToDate` 函數。|  
-||對父系的比率|示範如何使用 MDX`Parent`函式來建立導出量值，代表指定階層中父成員的每個子系的量值比率百分比。|  
+||對父系的比率|展示如何使用 MDX `Parent` 函數來建立導出量值，該值代表指定階層中父成員之每一個子系的量值比率百分比。|  
 ||對總計的比率|展示如何使用所有成員來建立導出量值，該值代表指定階層中每一個成員的量值比率百分比。|  
 |MDX\查詢|基本查詢|展示可以用來建構 MDX 查詢的基本 MDX SELECT 陳述式。|  
-||KPI 查詢|示範如何使用 MDX`KPIValue`和`KPIGoal`函式來擷取 MDX 查詢中的關鍵效能指標 (KPI) 資訊。|  
+||KPI 查詢|展示如何在 MDX 查詢中使用 MDX `KPIValue` 和 `KPIGoal` 函數，來擷取關鍵效能指標 (KPI) 資訊。|  
 ||子 SELECT 查詢|展示如何建立 MDX SELECT 陳述式，該陳述式會從另一個 SELECT 陳述式所定義的 Subcube 中擷取資訊。|  
 ||使用導出成員|展示如何在 SELECT 陳述式中使用 MDX WITH 子句，來定義 MDX 查詢的導出成員。|  
 ||使用命名集|展示如何在 SELECT 陳述式中使用 MDX WITH 子句，來定義 MDX 查詢的命名集。|  
-|XMLA\管理|Backup|示範如何使用 XMLA`Backup`命令以備份[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫備份至檔案。|  
-||取消|示範如何使用 XMLA`Cancel`命令以取消所有執行的作業目前的工作階段上 （適用於系統管理員或伺服器管理員以外的使用者）、 資料庫 （適用於系統管理員），或執行個體 （適用於伺服器系統管理員。）|  
+|XMLA\管理|Backup|展示如何使用 XMLA `Backup` 命令，將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至檔案。|  
+||取消|展示如何使用 XMLA `Cancel` 命令，以取消在目前工作階段 (適用於管理員或伺服器管理員以外的使用者)、資料庫 (適用於管理員) 或執行個體 (適用於伺服器管理員) 上所有正在執行的作業。|  
 ||建立遠端資料分割資料庫|展示如何使用 XMLA `Create` 命令和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 資料庫元素，來建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫和資料來源以儲存遠端資料分割。|  
-||DELETE|示範如何使用 XMLA`Delete`命令來刪除現有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。|  
+||DELETE|展示如何使用 XMLA `Delete` 命令，來刪除現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
 ||處理維度|展示如何使用 XMLA `Batch` 命令並結合 `Parallel` 元素和 `Process` 命令，使用平行批次作業來更新維度的屬性。|  
-||處理資料分割|示範如何使用 XMLA`Batch`命令並結合`Parallel`項目和`Process`命令，完全處理的資料分割，使用平行批次作業。|  
-||Restore|示範如何使用 XMLA`Restore`命令，以還原[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]從現有的備份檔案的資料庫。|  
-||同步處理|示範如何使用 XMLA`Synchronize`命令，以同步處理另一個[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫與目前[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫使用，利用 SynchronizeSecurity 標記的 SkipMembership 選項。|  
+||處理資料分割|展示如何使用 XMLA `Batch` 命令並結合 `Parallel` 元素和 `Process` 命令，使用平行批次作業來完整處理資料分割。|  
+||Restore|展示如何使用 XMLA `Restore` 命令，從現有的備份檔案還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
+||同步處理|示範如何使用 XMLA `Synchronize` 命令，利用 SynchronizeSecurity 標記的 SkipMembership 選項將另一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫與目前的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫同步。|  
 |XMLA\結構描述資料列集|探索結構描述資料列集|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_SCHEMA_ROWSETS 結構描述資料列集的內容。|  
-|XMLA\伺服器狀態|連接|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_CONNECTIONS 結構描述資料列集的內容。|  
-||中稱為|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_JOBS 結構描述資料列集的內容。|  
-||位置|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_LOCATIONS 結構描述資料列集，指定位置備份檔案的路徑內容。|  
+|XMLA\伺服器狀態|連接|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_CONNECTIONS 結構描述資料列集的內容。|  
+||中稱為|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_JOBS 結構描述資料列集的內容。|  
+||位置|展示如何使用 XMLA `Discover` 方法，並指定位置備份檔案的路徑，來擷取 DISCOVER_LOCATIONS 結構描述資料列集的內容。|  
 ||鎖定|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_LOCKS 結構描述資料列集的內容。|  
 ||記憶體授權|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_MEMORYGRANT 結構描述資料列集的內容。|  
-||效能計數器|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_PERFORMANCE_COUNTERS 結構描述資料列集的內容。|  
+||效能計數器|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_PERFORMANCE_COUNTERS 結構描述資料列集的內容。|  
 ||工作階段|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_SESSIONS 結構描述資料列集的內容。|  
-||追蹤|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_TRACES 結構描述資料列集的內容。|  
-||交易|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_TRANSACTIONS 結構描述資料列集的內容。|  
+||追蹤|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_TRACES 結構描述資料列集的內容。|  
+||交易|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_TRANSACTIONS 結構描述資料列集的內容。|  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度運算式&#40;MDX&#41;參考](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services 指令碼語言&#40;ASSL&#41;參考](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 指令碼語言&#40;ASSL&#41;參考](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services 指令碼語言&#40;ASSL&#41;參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services 指令碼語言&#40;ASSL&#41;參考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

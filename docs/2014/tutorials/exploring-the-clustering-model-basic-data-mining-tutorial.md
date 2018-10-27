@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147768"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146738"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>瀏覽群集模型 (基本資料採礦教學課程)
   [!INCLUDE[msCoName](../includes/msconame-md.md)]群集演算法會將案例分成包含類似特性的群集。 這些群集對於瀏覽資料、識別資料的異常及建立預測很有幫助。  
@@ -89,7 +89,7 @@ ms.locfileid: "48147768"
  具有**群集特性**索引標籤上，您可以更詳細地檢查組成群集的特性。 您可以一次瀏覽一個群集，而不是比較所有群集的特性 (如同 [群集設定檔] 索引標籤上的處理方式)。 例如，如果您選取**Bike Buyers High**從**叢集** 清單中，您可以看到這個群集中客戶的特性。 雖然這個顯示與 [群集設定檔] 檢視器不同，但是找到的結果是相同的。  
   
 > [!NOTE]  
->  除非您設定的初始值**holdoutseed**，結果將會每次當您處理模型而有所不同。 如需詳細資訊，請參閱[HoldoutSeed 元素](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  除非您設定的初始值**holdoutseed**，結果將會每次當您處理模型而有所不同。 如需詳細資訊，請參閱[HoldoutSeed 元素](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

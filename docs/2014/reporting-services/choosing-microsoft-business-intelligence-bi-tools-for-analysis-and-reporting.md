@@ -11,19 +11,19 @@ ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1d70c3276c479de8d8f8d67256729ad9f2bce005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63cbcd4defa3840fc7fdb5c80340e5fd1ea1244e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099819"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>選擇 Microsoft 報告和分析工具
   下表會將資料分析與報告的工作負載對應到最適合這些工作負載的 Microsoft BI 工具。  
   
  其目的是為了協助您選擇最符合您需求的工具。 如需有關產品的詳細資訊，請按一下表格中的產品連結。  
   
- 如需這些工具的簡短概觀，以協助您決定適合您的工具，請參閱＜ [Microsoft Business Intelligence (BI) 工具簡介](http://msdn.microsoft.com/en-us/library/dn655131.aspx)＞。  
+ 如需這些工具的簡短概觀，以協助您決定適合您的工具，請參閱 [Introducing Microsoft Business Intelligence (BI) Tools](http://msdn.microsoft.com/library/dn655131.aspx)(Microsoft Business Intelligence (BI) 工具簡介)。  
   
 |工作負載|使用者|||BI 工具|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -37,7 +37,7 @@ ms.locfileid: "48223818"
 |使用行動裝置存取報表||||[HTML 5 (支援檢視 <10MB 檔案)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (支援檢視 < 250 MB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI for Windows 應用程式](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [Power BI 的 iPad 應用程式](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
 |共同作業和共用|||[SharePoint 網站](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint 團隊網站](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI 網站](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
 |**公司 BI**|IT 專業人員||||||  
-|建立多維度/表格式公司模型||||||[Analysis Services (英文)](../analysis-services/analysis-services.md)|  
+|建立多維度/表格式公司模型||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |建立特定資料視覺效果|||[Power View for SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |建立儀表板|||[SharePoint 儀表板](http://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [PerformancePoint 服務](http://technet.microsoft.com/library/ee424392.aspx)||||  
 |建立營運報表||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
