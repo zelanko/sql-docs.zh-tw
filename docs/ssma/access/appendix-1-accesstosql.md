@@ -10,12 +10,12 @@ ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d750afec53670a06b6e10cd654c114502e088169
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd380541c42e7e49434a0683609c3fb8dd6ae64a
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098981"
 ---
 # <a name="appendix---1-accesstosql"></a>附錄-1 (AccessToSQL)
 SSMA 主控台命令列選項的快速檢視：  
@@ -28,9 +28,9 @@ SSMA 主控台命令列選項的快速檢視：
 |4|-x/xmloutput|否|xmloutputfile|這個選項表示以 XML 格式的主控台輸出。 如果未指定此選項，預設的輸出是文字格式。<br /><br />如果未指定 xmloutputfile，XML 輸出會導向至 STDOUT。<br /><br />Xmloutputfile 是以 XML 格式的主控台輸出會寫入至其中之檔案的名稱。|  
 |5|-l/記錄檔|否|logfile|有效的檔案名稱。|  
 |6|-e/projectenvironment|否|projectenvironmentfolder|有效的資料夾名稱包含 SSMA 專案環境檔案。|  
-|7|-p/securepassword|否|-a/加入 {< server_id > [，...n]&#124;所有} – c&#124;serverconnection < 伺服器-連接-檔案 > [-v&#124;變數 < 變數-值-檔案 >] [-o/覆寫]<br /><br />中的多個<br /><br />-a/加入 {< server_id > [，...n]&#124;所有} – s&#124;指令碼 < 指令碼檔案 > [-v&#124;變數 < 變數-值-檔案 >] [-o/覆寫]<br /><br />– r/移除 {< server_id > [，...n]&#124;所有}<br /><br />-l/清單<br /><br />-e/匯出 {< 伺服器識別碼 > [，...n]&#124;所有} < 加密密碼-檔案 ><br /><br />– i / [匯入 {< 伺服器識別碼 > [，...n]&#124;所有} < 加密密碼-檔案 >|如果指定，此選項必須不與其他任何選項結合。<br /><br />伺服器識別碼: {string} 的伺服器提供的唯一識別碼<br /><br />伺服器連線檔案： 伺服器定義檔案 （serverconnectionfile 或指令碼檔案）。<br /><br />變數值檔案： 它是變數的定義檔案，並使用伺服器連線檔案中。<br /><br />加密密碼 – 檔案： 它是使用使用者指定的複雜密碼加密的伺服器密碼檔案。|  
+|7|-p/securepassword|否|-a/加入 {< server_id > [，...n]&#124;所有} – c&#124;serverconnection < 伺服器-連接-檔案 > [-v&#124;變數 < 變數-值-檔案 >] [-o/覆寫]<br /><br />中的多個<br /><br />-a/加入 {< server_id > [，...n]&#124;所有} – s&#124;指令碼 < 指令碼檔案 > [-v&#124;變數 < 變數-值-檔案 >] [-o/覆寫]<br /><br />– r/移除 {< server_id > [，...n]&#124;所有}<br /><br />-l/清單<br /><br />-e/匯出 {< 伺服器識別碼 > [，...n]&#124;所有} < 加密密碼-檔案 ><br /><br />– i / 匯入 {< 伺服器識別碼 > [，...n]&#124;所有} < 加密密碼-檔案 >|如果指定，此選項必須不與其他任何選項結合。<br /><br />伺服器識別碼: {string} 的伺服器提供的唯一識別碼<br /><br />伺服器連線檔案： 伺服器定義檔案 （serverconnectionfile 或指令碼檔案）。<br /><br />變數值檔案： 它是變數的定義檔案，並使用伺服器連線檔案中。<br /><br />加密密碼 – 檔案： 它是使用使用者指定的複雜密碼加密的伺服器密碼檔案。|  
 |8|-?|否|不適用|不適用|  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
