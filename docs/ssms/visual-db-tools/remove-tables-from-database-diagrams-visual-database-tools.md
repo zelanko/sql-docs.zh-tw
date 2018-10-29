@@ -15,12 +15,12 @@ ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60351ce3cdf50aa279ee88af3fffb3ed1afec8ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdd5407b13719451d960be51321f47bcc0dc4754
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766576"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100049"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>從資料庫圖表移除資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,5 +42,5 @@ ms.locfileid: "47766576"
   
 ## <a name="see-also"></a>另請參閱  
 [使用資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[如何：從資料庫刪除資料表 (Visual Database Tools)](http://msdn.microsoft.com/en-us/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[如何：從資料庫刪除資料表 (Visual Database Tools)](http://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

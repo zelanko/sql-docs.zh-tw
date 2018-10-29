@@ -13,12 +13,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de325b7b012b932b9c2b292d05d36bbd93adab66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7df43a5a6a0f00ec1f2bce13cf79f424265abf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797376"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098890"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>選項 (SQL Server 物件總管 - 命令)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,5 +45,5 @@ ms.locfileid: "47797376"
 指定在建立的查詢編輯器指令碼中所指定的傳回資料列數目。 預設為 1000 個資料列。  
   
 ## <a name="see-also"></a>另請參閱  
-[SQL Server Audit (Database Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[SQL Server Audit (Database Engine)](http://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

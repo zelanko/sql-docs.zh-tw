@@ -17,12 +17,12 @@ ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 408598a2aa90a039617a76605497812872ddae05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a593627965e006336b06a1afd1f391f3e175d46e
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660946"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098584"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>設定資料庫圖表設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,5 +62,5 @@ ms.locfileid: "47660946"
 ## <a name="see-also"></a>另請參閱  
 [了解資料庫圖表擁有權 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
 [升級舊版的資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
-[ALTER AUTHORIZATION (Transact-SQL)](http://msdn.microsoft.com/en-us/8c805ae2-91ed-4133-96f6-9835c908f373)  
+[ALTER AUTHORIZATION (Transact-SQL)](http://msdn.microsoft.com/8c805ae2-91ed-4133-96f6-9835c908f373)  
   

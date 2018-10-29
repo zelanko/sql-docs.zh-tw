@@ -38,7 +38,7 @@ ms.locfileid: "48178298"
   
 3.  在 [詳細資料] 窗格中，以滑鼠右鍵按一下 [MSSQLServer]，然後按一下 [屬性]。  
   
-4.  在  **SQL Server \< ***instancename***> 屬性**對話方塊中，於**屬性**方塊中，設定的值**啟動模式**要**手動**。  
+4.  在  **SQL Server \<***instancename***> 屬性**對話方塊中，於**屬性**方塊中，設定的值**啟動模式**要**手動**。  
   
 5.  按一下 [確定] 關閉 [SQL Server \<執行個體名稱> 屬性]**** 對話方塊，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員。  
   

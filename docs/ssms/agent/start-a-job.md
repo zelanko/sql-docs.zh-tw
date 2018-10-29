@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a64a49babfe377230bf3e17dc6a356afc46f1cdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5e43f4f9135d2891c772f001e88a6af42e3b062
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673206"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099489"
 ---
 # <a name="start-a-job"></a>啟動作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47673206"
   
 -   **若要使用下列項目啟動作業：**  
   
-    [Transact-SQL](#SSMS)  
+    [SQL Server Management Studio](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47673206"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_start_job (Transact-SQL)](http://msdn.microsoft.com/en-us/8a91df6a-eb84-4512-9a17-4a6e32a9538a)。  
+如需詳細資訊，請參閱 [sp_start_job (Transact-SQL)](http://msdn.microsoft.com/8a91df6a-eb84-4512-9a17-4a6e32a9538a)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要啟動作業**  
