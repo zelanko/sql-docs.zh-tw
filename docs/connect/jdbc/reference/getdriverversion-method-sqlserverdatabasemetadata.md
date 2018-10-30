@@ -36,7 +36,7 @@ public java.lang.String getDriverVersion()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 包含 JDBC 驅動程式版本的 。  
+ **String**，其中包含 JDBC 驅動程式版本。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,54 +1,53 @@
 ---
-title: 閒置連接恢復功能
+title: 閒置連線恢復功能
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 2e66db8c4f821d3401ab354f705cebb81c3b3b36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666796"
 ---
-# <a name="idle-connection-resiliency"></a>閒置連接恢復功能
+# <a name="idle-connection-resiliency"></a>閒置連線恢復功能
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[連接恢復功能](https://msdn.microsoft.com/library/dn632678.aspx)是，閒置中斷的連線可重新建立，在某些條件約束的原則。 如果在連接到 Microsoft SQL Server 失敗，連接恢復功能可讓用戶端自動嘗試重新建立連線。 連接恢復功能是資料來源; 的屬性只有 SQL Server 2014 及更新版本和 Azure SQL Database 支援連接恢復功能。
+[連接恢復功能](https://msdn.microsoft.com/library/dn632678.aspx)是，中斷閒置連接在重新建立，在某些條件約束的準則。 如果 Microsoft SQL Server 的連線失敗，連接恢復功能可讓用戶端嘗試自動重新建立連線。 連接恢復功能是資料來源的屬性只有 SQL Server 2014 及更新版本和 Azure SQL Database 支援連接恢復功能。
 
-連接恢復功能實作與兩個連接關鍵字可加入至連接字串： **ConnectRetryCount**和**ConnectRetryInterval**。
+連接恢復功能透過兩個連接關鍵字可加入至連接字串中實作： **ConnectRetryCount**並**ConnectRetryInterval**。
 
-|關鍵字|值|預設|描述|
+|關鍵字|值|預設|Description|
 |-|-|-|-|
-|**ConnectRetryCount**| 介於 0 和 255 之間 （含） 之間的整數|@shouldalert|嘗試重新建立後才放棄中斷的連線的數目上限。 根據預設，一次進行以重新建立連線時中斷。 值為 0 表示沒有重新連線將會嘗試。|
-|**ConnectRetryInterval**| 介於 1 到 60 （含） 之間的整數|@shouldalert| 時間 （秒），嘗試重新建立連線。 應用程式會嘗試立即重新連線，一旦偵測連線中斷，並將等候**ConnectRetryInterval**秒後再試一次。 這個關鍵字會被忽略，如果**ConnectRetryCount**等於 0。
+|**ConnectRetryCount**| 介於 0 和 255 之間 （含） 之間的整數|1|若要重新建立放棄之前中斷的連線的嘗試次數上限。 根據預設，單一嘗試重新建立連線時中斷。 值 0 表示沒有重新連線將會嘗試。|
+|**ConnectRetryInterval**| 介於 1 到 60 （含） 之間的整數|1| 時間 （秒），嘗試重新建立連線。 應用程式會嘗試立即重新連線，一旦偵測連線中斷，並接著將會等候**ConnectRetryInterval**秒後再試一次。 如果，則會忽略這個關鍵字**ConnectRetryCount**等於 0。
 
-如果產品的**ConnectRetryCount**乘以**ConnectRetryInterval**大於**LoginTimeout**，則用戶端會停止嘗試一次連接**LoginTimeout**為止; 否則它將會繼續嘗試重新連線，直到**ConnectRetryCount**為止。
+如果的乘積**ConnectRetryCount**乘以**ConnectRetryInterval**大於**LoginTimeout**，則用戶端將會停止嘗試一次連線**LoginTimeout**為止; 否則它會繼續嘗試重新連線到**ConnectRetryCount**為止。
 
-#### <a name="remarks"></a>備註
+#### <a name="remarks"></a>Remarks
 
-連線閒置時，適用於連接恢復功能。 執行交易，例如，不會觸發重新連線嘗試 – 時所發生的失敗會在失敗因為將會預期。 下列情況下，稱為非可復原的工作階段狀態，不會觸發重新連線嘗試次數：
+當連線處於閒置狀態時，適用於連接恢復功能。 失敗發生時執行的交易，例如，將不會觸發重新連線嘗試 – 它們會失敗，因為預期。 下列情況下，稱為無法復原的工作階段狀態，將不會觸發重新連線嘗試：
 
 * 暫存資料表
 * 全域和本機資料指標
-* 交易內容和工作階段層級的交易鎖定
+* 交易內容 」 和 「 工作階段層級的交易鎖定
 * 應用程式鎖定
 * EXECUTE AS / 還原的安全性內容
-* OLE automation 控點
-* 已備妥的 XML 控制代碼
+* OLE automation 的控制代碼
+* 備妥的 XML 控制代碼
 * 追蹤旗標
 
 ## <a name="example"></a>範例
 
-下列程式碼會連接到資料庫並執行查詢。 終止工作階段中斷連線，並新查詢時會使用中斷的連線。 這個範例會使用[AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx)範例資料庫。
+下列程式碼連接到資料庫，並執行查詢。 藉由刪除工作階段中斷連線，新的查詢會嘗試使用中斷的連線。 這個範例會使用 [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) 範例資料庫。
 
-在此範例中，我們會指定緩衝的資料指標之前中斷連接。 如果我們沒有指定的經緩衝處理的資料指標，會不會重新建立連線，因為有作用中的伺服器端資料指標，因此連線不會閒置時中斷。 不過，我們無法在此情況下呼叫 sqlsrv_free_stmt() 之前中斷連線 vacate 資料指標，而且連接會成功重新建立。
+在此範例中，我們會指定緩衝的資料指標之前中斷連接。 如果我們未指定緩衝的資料指標，就不會重新建立連線因為會有作用中的伺服器端資料指標，因此不會連線閒置時中斷。 不過，我們可以在此情況下呼叫 sqlsrv_free_stmt() 之前中斷連線 vacate 資料指標，而且連接會成功重新建立。
 
 ```php
 <?php
@@ -123,7 +122,7 @@ sqlsrv_close( $conn );
 sqlsrv_close( $conn_break );
 ?>
 ```
-預期的輸出：
+預期輸出：
 ```
 Statement 1 successful.
 290 rows in result set.

@@ -38,7 +38,7 @@ public void setDescription(java.lang.String description)
 #### <a name="parameters"></a>參數  
  *description*  
   
- 包含描述的字串。  
+ **String**，包含描述。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

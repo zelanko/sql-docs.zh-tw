@@ -1,5 +1,5 @@
 ---
-title: 步驟 1︰設定 PHP 開發的開發環境 | Microsoft Docs
+title: 步驟 1︰設定 Java 開發的開發環境 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

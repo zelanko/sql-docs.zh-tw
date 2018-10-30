@@ -1,13 +1,11 @@
 ---
-title: getHostNameInCertificate 方法 (SQLServerDataSource) |Microsoft 文件
+title: getHostNameInCertificate 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - getHostNameInCertificate Method (SQLServerDataSource)
@@ -15,16 +13,15 @@ apilocation:
 - getHostNameInCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd5ba2b9a98fedc7d2ebf47c3282cca839d59265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9d4873d1251f640f6347d844d46fcb94d63e3857
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835343"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615776"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>getHostNameInCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +36,12 @@ public java.lang.String getHostNameInCertificate()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**，其中包含主機名稱，或如果未不設定任何值則為 null。  
+ 包含主機名稱的 **String**，如果未設定任何值，則為 null。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  使用 SSL 加密通訊層時，便會使用主機名稱來驗證 SQL Server SSL 憑證值。  
   
- 如果未設定主機名稱， [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)方法會傳回 null。  
+ 如果未設定主機名稱，[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) 方法會傳回 null。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

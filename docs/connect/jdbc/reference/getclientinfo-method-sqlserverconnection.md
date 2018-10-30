@@ -27,8 +27,8 @@ ms.locfileid: "47837681"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getClientInfo 方法 ()](../../../connect/jdbc/reference/getclientinfo-method.md)|擷取清單，此清單包含 JDBC Driver 所支援之個別用戶端資訊的名稱和最新值。|  
-|[getClientInfo 方法 (java.lang.String)](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|擷取指定之用戶端資訊屬性的值。|  
+|[getClientInfo 方法 &#40;&#41;](../../../connect/jdbc/reference/getclientinfo-method.md)|擷取清單，此清單包含 JDBC Driver 所支援之個別用戶端資訊的名稱和最新值。|  
+|[getClientInfo 方法 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|擷取指定之用戶端資訊屬性的值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

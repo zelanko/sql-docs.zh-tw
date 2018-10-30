@@ -1,5 +1,5 @@
 ---
-title: 步驟 3︰使用 Java 連線到 SQL 的概念證明 | Microsoft Docs
+title: 步驟 3︰使用 Ruby 連線到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

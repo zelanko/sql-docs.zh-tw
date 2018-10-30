@@ -1,36 +1,33 @@
 ---
-title: SQLServerDataSourceObjectFactory 成員 |Microsoft 文件
+title: SQLServerDataSourceObjectFactory 成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e75b9b237288eb2b0f004b3716993bc86a467f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e850f15ab1e9e690c11c863e9719e1231c8f7201
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701986"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>SQLServerDataSourceObjectFactory 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出所公開的成員[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)類別。  
+  下表列出由 [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) 類別公開的成員。  
   
 ## <a name="constructors"></a>建構函式  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[SQLServerDataSourceObjectFactory （)](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|初始化的新執行個體[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)類別。|  
+|[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|初始化 [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) 類別的新執行個體。|  
   
 ## <a name="fields"></a>欄位  
  無。  
@@ -40,7 +37,7 @@ ms.locfileid: "32846783"
   
 ## <a name="methods"></a>方法  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|擷取指定之資料來源物件的執行個體。|  
   

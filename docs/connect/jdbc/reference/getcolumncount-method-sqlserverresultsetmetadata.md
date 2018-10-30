@@ -36,7 +36,7 @@ public int getColumnCount()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出資料行的數目。  
+ **int**，指出資料行的數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -21,7 +21,7 @@ ms.locfileid: "47800966"
 # <a name="truncate-method-sqlservernclob"></a>truncate 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  截斷 Clob 成為指定的長度。  
+  截斷 **NCLOB** 成為指定的長度。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ public void truncate(long len)
 #### <a name="parameters"></a>參數  
  *len*  
   
- 以字元為單位的長度，即應該要截斷的  值。  
+ 以字元為單位的長度，即應該將 **NCLOB** 值截斷成的長度。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

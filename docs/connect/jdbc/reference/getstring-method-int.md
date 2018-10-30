@@ -47,7 +47,7 @@ public java.lang.String getString(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getLong 方法由 java.sql.CallableStatement 介面中的 getLong 方法指定。  
+ 這個 getString 方法是由 java.sql.CallableStatement 介面中的 getString 方法指定。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的所有資料行都可以當作字串傳回。 這表示可以傳回所有數字和字元類型的字串表示法以及二進位資料行的十六進位字串表示法，例如 binary、varbinary、varbinary(max)、image、timestamp 和 uniqueidentifier。  
   

@@ -21,7 +21,7 @@ ms.locfileid: "47841496"
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>診斷 JDBC Driver 的問題
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  不論應用程式的設計與開發有多好，都無法避免發生問題。 因此，發生問題時，具備診斷這些問題的一些技術十分重要。 使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，部分可能會發生的常見問題是因為沒有正確的驅動程式版本，或無法連接到資料庫。  
+  不論應用程式的設計與開發有多好，都無法避免發生問題。 因此，發生問題時，具備診斷這些問題的一些技術十分重要。 使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 時，部分可能會發生的常見問題是因為沒有正確的驅動程式版本，或無法連線到資料庫。  
   
  本節中的主題討論診斷這些問題，以及包括錯誤處理、檢查驅動程式版本、追蹤和疑難排解連接問題之其他問題的多種技術。  
   

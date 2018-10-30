@@ -59,7 +59,7 @@ public boolean ownInsertsAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>傳回值  
- 如果可以看見插入則為 ， 否則為 **false**。  
+ 如果可以看見插入，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: 使用 OLE DB Driver for SQL Server 的時機 | Microsoft Docs
 description: 使用 OLE DB Driver for SQL Server 的時機
 ms.custom: ''
 ms.date: 06/14/2018

@@ -21,7 +21,7 @@ ms.locfileid: "47742736"
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 方法 (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根據指定的 java.sql.Timestamp 值以及指出位移 (以分鐘為單位) 的值，建立 **DateTimeOffset** 物件，這個物件表示從 GMT 特定位移的時間點。  
+  根據所指定 java.sql.Timestamp 值以及指出位移的 java.util.Calendar 值，建立 **DateTimeOffset** 物件，這個物件表示從 GMT 特定位移的時間點。  
   
 ## <a name="syntax"></a>語法  
   

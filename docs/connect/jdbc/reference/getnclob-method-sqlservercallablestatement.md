@@ -21,14 +21,14 @@ ms.locfileid: "47634621"
 # <a name="getnclob-method-sqlservercallablestatement"></a>getNClob 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取指定之 JDBC BLOB 參數的值當做  物件。  
+  使用 Java 程式設計語言，擷取指定 JDBC **NCLOB** 參數的值來作為 **NClob** 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getNClob 方法&#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|使用 Java 程式語言，擷取指定之 JDBC BLOB 參數的值當做  物件。|  
-|[getNClob 方法 (java.lang.String)](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|使用 Java 程式語言，擷取 JDBC  參數的值來當做  物件。|  
+|[getNClob 方法&#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|使用 Java 程式設計語言，擷取指定 JDBC **NCLOB** 參數的值來作為 **NClob** 物件。|  
+|[getNClob 方法 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|使用 Java 程式設計語言，擷取 JDBC **NCLOB** 參數的值來作為 **NClob** 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

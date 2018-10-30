@@ -36,9 +36,9 @@ public boolean supportsResultSetHoldability(int holdability)
 ```  
   
 #### <a name="parameters"></a>參數  
- 保留性  
+ *holdability*  
   
- 指出結果集保留性的 ，可能是下列其中一個值：  
+ 指出結果集保留性的 **int**，可能是下列其中一個值：  
   
  ResultSet.HOLD_CURSORS_OVER_COMMIT  
   

@@ -1,5 +1,5 @@
 ---
-title: 載入 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+title: 下載 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2018
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.locfileid: "47847336"
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=57163)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56729)
 - [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=55642)
-- [Microsoft Drivers 3.1 for PHP for SQL Server：](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
+- [Microsoft Drivers 4.0、3.2、3.1 和 3.0 for PHP for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=20098)
 
 ## <a name="linux-and-macos"></a>Linux 和 macOS
 

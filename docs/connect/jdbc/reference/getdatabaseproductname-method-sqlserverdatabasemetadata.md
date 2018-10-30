@@ -36,7 +36,7 @@ public java.lang.String getDatabaseProductName()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，包含資料庫產品名稱。  
+ **String**，其中包含資料庫產品名稱。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -52,7 +52,7 @@ public java.sql.Time getTime(java.lang.String colName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這項 getTime 方法由 java.sql.CallableStatement 介面中的 getTime 方法指定。  
+ 這個 getTime 方法是由 java.sql.ResultSet 介面中的 getTime 方法指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料型別中的有效時間部分，而日期部分是設定成 Java 基準日期 1970/01/01 (根據提供的日曆時區)。  
   

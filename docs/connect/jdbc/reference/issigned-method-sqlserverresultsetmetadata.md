@@ -41,7 +41,7 @@ public boolean isSigned(int column)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 如果資料行包含帶正負號的數值則為 ， 否則為 **false**。  
+ 如果資料行包含帶正負號的數值，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 屬性 (登入索引標籤) | Microsoft Docs
+title: 報表伺服器屬性 (登入索引標籤) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql

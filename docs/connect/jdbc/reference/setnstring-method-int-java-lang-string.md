@@ -21,7 +21,7 @@ ms.locfileid: "47650016"
 # <a name="setnstring-method-int-javalangstring"></a>setNString 方法 (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定指定的參數為指定的  物件。  
+  將指定的參數設定為所指定 **String** 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ public final void setNString(int parameterIndex,
   
  *value*  
   
- 物件，包含參數值。  
+ **String** 物件，包含參數值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -46,7 +46,7 @@ public final void setNString(int parameterIndex,
 ## <a name="remarks"></a>Remarks  
  這個方法應該用於**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**資料型別。  
   
- 此 setTime 方法由 java.sql.PreparedStatement 介面中的 setTime方法指定。  
+ 這個 setNString 方法是由 java.sql.PreparedStatement 介面中的 setNString 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  

@@ -26,7 +26,7 @@ ms.locfileid: "47683136"
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>getSendStringParametersAsUnicode 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  傳回 值，指出是否啟用以 UNICODE 格式傳送字串參數到伺服器。  
+  傳回 **boolean** 值，此值會指出是否啟用以 UNICODE 格式將字串參數傳送至伺服器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,10 +36,10 @@ public boolean getSendStringParametersAsUnicode()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果以 UNICODE 格式將字串參數傳送到伺服器則為 ， 否則為 **false**。  
+ 如果以 UNICODE 格式將字串參數傳送至伺服器，則為 **true**； 否則為 **false**。  
   
 ## <a name="remarks"></a>Remarks  
- 如果 sendStringParametersAsUnicode 屬性設定為預設的 ，則字串參數就會以 UNICODE 格式傳送至伺服器。 如果 sendStringParametersAsUnicode 屬性設定為 ，則字串參數就會以 ASCII/MBCS 格式而非 UNICODE 格式傳送至伺服器。 如果 sendStringParametersAsUnicode 未設定，getSendStringParametersAsUnicode 就會傳回預設值 。  
+ 如果 sendStringParametersAsUnicode 屬性設定為預設的 **true** 值，則字串參數就會以 UNICODE 格式傳送至伺服器。 如果 sendStringParametersAsUnicode 設定為 **false**，則字串參數就會以 ASCII/MBCS 格式而非 UNICODE 格式傳送至伺服器。 如果 sendStringParametersAsUnicode 未設定，getSendStringParametersAsUnicode 就會傳回預設值 **true**。  
   
  如需有關 sendStringParametersAsUnicode 連接屬性的詳細資訊，請[設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   

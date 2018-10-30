@@ -28,7 +28,7 @@ ms.locfileid: "47790606"
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-將參數資料流中的資料傳送至伺服器。 每次呼叫 sqlsrv_send_stream_data** 時最多可傳送 8K 的資料。  
+將參數資料流中的資料傳送至伺服器。 每次呼叫 **sqlsrv_send_stream_data** 時最多可傳送 8 K 的資料。  
   
 > [!NOTE]  
 > 根據預設，在查詢執行時，所有的資料流資料都會傳送至伺服器。 如果未變更此預設行為，您即無需使用 **sqlsrv_send_stream_data** 將資料流資料傳送至伺服器。 如需變更預設行為的相關資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)的「參數」一節。  

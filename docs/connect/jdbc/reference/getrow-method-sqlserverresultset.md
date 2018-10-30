@@ -36,7 +36,7 @@ public int getRow()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出目前的資料列數值，如果沒有任何資料列，則為 0。  
+ **int**，指出目前的資料列數值，如果沒有任何資料列，則為 0。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

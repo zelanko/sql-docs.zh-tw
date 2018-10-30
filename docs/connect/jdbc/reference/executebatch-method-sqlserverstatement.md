@@ -36,7 +36,7 @@ public int[] executeBatch()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 包含更新計數的 int 陣列。  
+ 包含更新計數的 **int** 陣列。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

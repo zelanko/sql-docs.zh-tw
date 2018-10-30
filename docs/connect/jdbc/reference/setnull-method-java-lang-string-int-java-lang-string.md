@@ -1,5 +1,5 @@
 ---
-title: setNull 方法 (java.lang.String, int, java.lang.String)
+title: setNull 方法 (java.lang.String, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -40,7 +40,7 @@ public void setNull(java.lang.String sCol,
 #### <a name="parameters"></a>參數  
  *sCol*  
   
- ，包含參數名稱。  
+ **String**，包含參數名稱。  
   
  *n*  
   
@@ -48,7 +48,7 @@ public void setNull(java.lang.String sCol,
   
  *sTypeName*  
   
- ，指出正在設定之參數的完整名稱。  
+ **String**，指出所設定參數的完整名稱。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

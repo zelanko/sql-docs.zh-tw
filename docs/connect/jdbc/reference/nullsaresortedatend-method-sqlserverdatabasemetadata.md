@@ -36,7 +36,7 @@ public boolean nullsAreSortedAtEnd()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果排在結尾則為 ， 否則為 **false**。  
+ 如果排在結尾，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

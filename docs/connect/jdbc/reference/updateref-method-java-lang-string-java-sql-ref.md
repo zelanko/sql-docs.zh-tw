@@ -1,5 +1,5 @@
 ---
-title: updateRef 方法 (java.lang.String, java.sql.Ref)
+title: updateRef 方法 (java.lang.String, java.sql.Ref) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

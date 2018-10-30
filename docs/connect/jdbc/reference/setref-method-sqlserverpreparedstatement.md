@@ -26,7 +26,7 @@ ms.locfileid: "47677922"
 # <a name="setref-method-sqlserverpreparedstatement"></a>setRef 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定指定的參數為給定的  物件。  
+  將指定的參數設定為所指定 Ref 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ public final void setRef(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTime 方法由 java.sql.PreparedStatement 介面中的 setTime方法指定。  
+ 這個 setRef 方法是由 java.sql.PreparedStatement 介面中的 setRef 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: updateNClob 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
+title: setClob 方法 (java.lang.String, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.locfileid: "47654938"
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>setClob 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為指定的  物件，該物件長度為指定的字元數。  
+  將指定的參數設定為所指定 Reader 物件，該物件長度為指定的字元數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,16 +43,16 @@ public final void setClob(java.lang.String parameterName,
   
  *length*  
   
- ，指出資料流中的字元數目。  
+ **long**，指出資料流中的字元數。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
+ 這個 setClob 方法是由 java.sql.CallableStatement 介面中的 setClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [setTime 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)   
+ [setClob 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

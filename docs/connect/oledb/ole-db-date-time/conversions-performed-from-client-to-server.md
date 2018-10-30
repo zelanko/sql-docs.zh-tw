@@ -25,7 +25,7 @@ ms.locfileid: "47827018"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  描述在使用 OLE DB Driver for SQL Server 和 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 撰寫之用戶端應用程式之間執行的日期/時間轉換。  
+  本文描述在使用 OLE DB Driver for SQL Server 撰寫的用戶端應用程式與 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 之間執行的日期/時間轉換。  
   
 ## <a name="conversions"></a>轉換  
  本文描述針對用戶端所進行的轉換。 如果用戶端針對參數所指定的小數秒有效位數與伺服器上所定義的小數秒有效位數不同，在伺服器允許作業成功的情況下，用戶端轉換可能會造成失敗。 特別是，用戶端會將任何截斷的小數秒視為錯誤，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將時間值捨去為最接近的整秒。  

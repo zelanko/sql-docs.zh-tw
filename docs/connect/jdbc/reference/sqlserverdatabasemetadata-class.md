@@ -27,7 +27,7 @@ ms.locfileid: "47618996"
   
  **擴充：** java.lang.Object  
   
- 實作：java.sql.DatabaseMetaData、java.io.Serializable  
+ **實作：** java.sql.DatabaseMetaData、java.io.Serializable  
   
 ## <a name="syntax"></a>語法  
   

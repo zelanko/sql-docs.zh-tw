@@ -1,13 +1,11 @@
 ---
-title: getPooledConnection 方法 (SQLServerConnectionPoolDataSource) |Microsoft 文件
+title: getPooledConnection 方法 (SQLServerConnectionPoolDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnectionPoolDataSource.getPooledConnection
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 030ad599-0431-4242-9428-e9ead7b75b1d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 840313f417111531d9d53d98fd11f9e279c92222
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 17a3f03292bee8d832a70ee4c1f7e72a20262417
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773646"
 ---
 # <a name="getpooledconnection-method-sqlserverconnectionpooldatasource"></a>getPooledConnection 方法 (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,10 +30,10 @@ ms.locfileid: "32837313"
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[getPooledConnection （)](../../../connect/jdbc/reference/getpooledconnection-method.md)|嘗試建立可用來當做共用連接的實體資料庫連接。|  
-|[getPooledConnection （java.lang.String，java.lang.String）](../../../connect/jdbc/reference/getpooledconnection-method-java-lang-string-java-lang-string.md)|嘗試建立可用來當做共用連接的實體資料庫連接 (根據給定的使用者名稱和密碼)。|  
+|[getPooledConnection ()](../../../connect/jdbc/reference/getpooledconnection-method.md)|嘗試建立可用來當做共用連接的實體資料庫連接。|  
+|[getPooledConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getpooledconnection-method-java-lang-string-java-lang-string.md)|嘗試建立可用來當做共用連接的實體資料庫連接 (根據給定的使用者名稱和密碼)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnectionPoolDataSource 方法](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

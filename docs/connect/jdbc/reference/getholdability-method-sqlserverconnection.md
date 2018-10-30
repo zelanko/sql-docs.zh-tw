@@ -1,13 +1,11 @@
 ---
-title: getHoldability 方法 (SQLServerConnection) |Microsoft 文件
+title: getHoldability 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getHoldability
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2aa0c83ab2fc5148194a402359e445984369cc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 932939a7302c58f59d018264bf73d7ae8019de99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835393"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611366"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取目前保留性[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)建立使用此物件[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。  
+  擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前保留性，這些物件是使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件所建立。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +36,7 @@ public int getHoldability()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **Int**包含下列保留性等級的其中一個值：  
+ **int** 值，包含下列其中一個保留性等級：  
   
  HOLD_CURSORS_OVER_COMMIT  
   
@@ -48,8 +45,8 @@ public int getHoldability()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- GetHoldability 方法 java.sql.Connection 介面中所指定此 getHoldability 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 getHoldability 方法是由 java.sql.Connection 介面中的 getHoldability 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

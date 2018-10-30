@@ -1,5 +1,5 @@
 ---
-title: 基本資料類型範例 | Microsoft Docs
+title: 空間資料類型範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql

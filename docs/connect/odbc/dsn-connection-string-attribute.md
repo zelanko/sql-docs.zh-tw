@@ -176,7 +176,7 @@ ms.locfileid: "47838176"
 
 | 關鍵字的值 | 屬性值| Description |
 |-|-|-|
-|是|SQL_IS_ON|停用透明網路 IP 解析。|
+|是|SQL_IS_ON|(預設) 啟用透明網路 IP 解析。|
 |否|SQL_IS_OFF|停用透明網路 IP 解析。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY

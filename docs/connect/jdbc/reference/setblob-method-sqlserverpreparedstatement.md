@@ -26,7 +26,7 @@ ms.locfileid: "47643526"
 # <a name="setblob-method-sqlserverpreparedstatement"></a>setBlob 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定指定的參數為給定的  物件。  
+  將指定的參數設定為所指定 Blob 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ public final void setBlob(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
+ 這個 setBlob 方法是由 java.sql.PreparedStatement 介面中的 setBlob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

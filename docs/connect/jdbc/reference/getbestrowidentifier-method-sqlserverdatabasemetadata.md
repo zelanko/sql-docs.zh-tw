@@ -1,13 +1,11 @@
 ---
-title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getBestRowIdentifier
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c36b69543f5253a4d62c1d4b149933febcf0b4b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832973"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730318"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,19 +42,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- A**字串**，其中包含目錄名稱。  
+ 包含目錄名稱的 **String**。  
   
  *schema*  
   
- A**字串**，其中包含結構描述名稱。  
+ 包含結構描述名稱的 **String**。  
   
  *table*  
   
- A**字串**，其中包含資料表名稱。  
+ 包含資料表名稱的 **String**。  
   
  *範圍 (scope)*  
   
- **Int** ，指出感興趣的範圍。 可能的值如下：  
+ **int**，指出感興趣的範圍。 可能的值如下：  
   
  bestRowTemporary (0)  
   
@@ -65,34 +62,34 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession (2)  
   
- *可為 null*  
+ *nullable*  
   
- **true**包含可為 null 的資料行。 否則為 **false**。  
+ **true** 表示包含可為 Null 的資料行。 否則為 **false**。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getBestRowIdentifier 方法是由 java.sql.DatabaseMetaData 介面中 getBestRowIdentifier 方法指定。  
   
- GetBestRowIdentifier 方法所傳回的結果集將包含下列資訊：  
+ getBestRowIdentifier 方法所傳回的結果集將包含下列資訊：  
   
-|名稱|型別|Description|  
+|[屬性]|類型|Description|  
 |----------|----------|-----------------|  
 |SCOPE|short|傳回之結果的範圍。 它可能是下列其中一個值：<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
-|COLUMN_NAME|字串|資料行的名稱。|  
+|COLUMN_NAME|String|資料行的名稱。|  
 |DATA_TYPE|short|來自 java.sql.Types 的 SQL 資料型別。|  
-|TYPE_NAME|字串|資料類型的名稱。|  
-|COLUMN_SIZE|int|資料行的有效位數。|  
-|BUFFER_LENGTH|int|緩衝區長度。|  
+|TYPE_NAME|String|資料類型的名稱。|  
+|COLUMN_SIZE|ssNoversion|資料行的有效位數。|  
+|BUFFER_LENGTH|ssNoversion|緩衝區長度。|  
 |DECIMAL_DIGITS|short|資料行的小數位數。|  
 |PSEUDO_COLUMN|short|指出資料行是否為虛擬資料行。 它可能是下列其中一個值：<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 getBestRowIdentifier 方法傳回的 Person.Contact 資料表中的最佳資料列識別碼的相關資訊[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。  
+ 下面範例示範如何使用 getBestRowIdentifier 方法來傳回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫內 Person.Contact 資料表中最佳資料列識別碼的相關資訊。  
   
 ```  
 public static void executeGetBestRowIdentifier(Connection con) {  

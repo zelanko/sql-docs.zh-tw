@@ -52,11 +52,11 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
   
  *typeNamePattern*  
   
- 包含資料表名稱模式的 **String**。  
+ **String**，其中包含類型名稱模式。  
   
  *attributePattern*  
   
- ，包含屬性名稱模式。  
+ **String**，其中包含屬性名稱模式。  
   
 ## <a name="return-value"></a>傳回值  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  

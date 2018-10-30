@@ -36,7 +36,7 @@ public int getDatabaseMinorVersion()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出資料庫的次要版本。  
+ **int**，指出資料庫的次要版本。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

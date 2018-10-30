@@ -1,13 +1,11 @@
 ---
-title: getFloat 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: getFloat 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getFloat
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 58a60767-655b-4c89-a44a-965b9fb9bcd6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f273cef6cf4eb42f91c0bb27a4dcc8f24ff2997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 613ed7984b5b036aae76020c2145b64c08d7a065
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796046"
 ---
 # <a name="getfloat-method-sqlservercallablestatement"></a>getFloat 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取所指定之參數的值**float**在 Java 程式語言。  
+  使用 Java 程式設計語言，擷取所指定參數的值來作為 **float**。  
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[getFloat (int)](../../../connect/jdbc/reference/getfloat-method-int.md)|擷取所指定之參數的值**float**在 Java 程式語言中使用給定的參數索引。|  
-|[getFloat (java.lang.String)](../../../connect/jdbc/reference/getfloat-method-java-lang-string.md)|擷取所指定之參數的值**float**在 Java 程式語言中使用給定的參數名稱。|  
+|[getFloat (int)](../../../connect/jdbc/reference/getfloat-method-int.md)|使用 Java 程式設計語言，並配合指定參數索引來擷取所指定參數值作為 **float**。|  
+|[getFloat (java.lang.String)](../../../connect/jdbc/reference/getfloat-method-java-lang-string.md)|使用 Java 程式設計語言，並配合指定參數名稱來擷取所指定參數的值作為 **float**。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

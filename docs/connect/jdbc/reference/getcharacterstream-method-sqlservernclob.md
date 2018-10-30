@@ -27,8 +27,8 @@ ms.locfileid: "47740446"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getCharacterStream 方法 () (SQLServerNClob)](../../../connect/jdbc/reference/getcharacterstream-method-braces-sqlservernclob.md)|擷取**NCLOB**做為資料**讀取器**物件或資料流的字元。|  
-|[getCharacterStream 方法&#40;long，long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|根據指定的位置和長度，擷取  資料當做  物件或字元資料流。|  
+|[getCharacterStream 方法 &#40;&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-braces-sqlservernclob.md)|擷取**NCLOB**做為資料**讀取器**物件或資料流的字元。|  
+|[getCharacterStream 方法&#40;long，long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long-sqlservernclob.md)|根據指定的位置和長度，擷取 **NCLOB** 資料作為 **Reader** 物件或字元資料流。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

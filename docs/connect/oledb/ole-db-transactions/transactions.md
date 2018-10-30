@@ -1,6 +1,6 @@
 ---
 title: 交易 |Microsoft Docs
-description: OLE DB Driver for SQL Server 中的工作階段
+description: OLE DB Driver for SQL Server 中的交易
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql

@@ -1,30 +1,27 @@
 ---
-title: unwrap 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: unwrap 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85f1e7364f5037817b4b49b31c387d3be83f7c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40a1072776d2f926d353012656c921f217528d92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666786"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  傳回物件，用於實作指定的介面，以允許存取[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特有的方法。  
+  傳回可實作指定介面的物件，此介面可允許存取 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +33,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>參數  
  *iface*  
   
- 類型的類別之**T**定義介面。  
+ **T** 類型的類別，可定義介面。  
   
 ## <a name="return-value"></a>傳回值  
  物件，可實作指定的介面。  
@@ -44,16 +41,16 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- [Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)方法由 JDBC 4.0 規格中導入的 java.sql.Wrapper 介面所定義。  
+## <a name="remarks"></a>Remarks  
+ [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) 方法是由 JDBC 4.0 規格中引進的 java.sql.Wrapper 介面所定義。  
   
- 應用程式可能需要存取特有的 JDBC api 延伸模組[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 Unwrap 方法支援解除包裝成為這個物件可延伸，公用類別，在類別公開供應商延伸模組。  
+ 應用程式可能必須存取 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的 JDBC API 延伸模組。 在類別公開供應商延伸模組的情況下，unwrap 方法支援解除包裝為這個物件可擴充的公用類別。  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)實作[ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)，這從擴充[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。 呼叫這個方法時，物件會解除包裝成為下列類別： [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)， [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)，和[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 會實作 [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)，後者是從 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 擴充而來。 當呼叫這個方法時，該物件會解除包裝成為下列類別：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
   
- 如需詳細資訊，請參閱[包裝函式和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 包裝函式和介面](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
- 下列程式碼範例示範如何使用 isWrapperFor 和 unwrap 方法來檢查驅動程式延伸模組，並叫用的廠商專屬的方法，例如[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)和[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)。  
+ 下面範例程式碼會示範如何使用 isWrapperFor 和 unwrap 方法來核取驅動程式延伸模組，以及叫用供應商特定方法，例如 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 和 [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)。  
   
 ```  
 public static void executeStoredProcedure(Connection con) {  
@@ -110,7 +107,7 @@ public static void executeStoredProcedure(Connection con) {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [isWrapperFor 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
+ [isWrapperFor 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

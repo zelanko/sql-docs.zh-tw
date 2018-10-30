@@ -21,7 +21,7 @@ ms.locfileid: "47834126"
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString 方法 (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  透過指定的資料行標籤，使用 **String** 值來更新指定的資料行。  
+  透過指定的資料行索引，使用 **String** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   

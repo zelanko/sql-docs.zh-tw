@@ -1,30 +1,27 @@
 ---
-title: isValid 方法 (SQLServerConnection) |Microsoft 文件
+title: isValid 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c1e65ecb40137e0da2de7abd8b5d40e7e744752
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 855a2fc8c6ff5a1cb9cee1db7504e0dd309113b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727446"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指出是否此[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件尚未關閉，而且仍然有效。  
+  指出這個 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件是否尚未關閉，而且仍然有效。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,16 +33,16 @@ public boolean isValid(int timeout)
 #### <a name="parameters"></a>參數  
  *timeout*  
   
- **Int** ，指定等候驗證連接的秒數。  
+ **int**，指定等候驗證連接的秒數。  
   
 ## <a name="return-value"></a>傳回值  
- **true**連線是否有效。**false**如果連接無效，或逾時到期前，無法判斷連線的有效性。  
+ 如果連接有效，則為 **true**；如果連接無效或在超過逾時之前無法判定連接是否有效，則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- IsValid 方法 java.sql.Connection 介面中所指定此 isValid 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 isValid 方法是由 java.sql.Connection 介面中的 isValid 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

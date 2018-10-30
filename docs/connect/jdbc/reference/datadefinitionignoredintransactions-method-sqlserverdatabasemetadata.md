@@ -36,7 +36,7 @@ public boolean dataDefinitionIgnoredInTransactions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果忽略交易中的 DDL 陳述式則為 ， 否則為 **false**。  
+ 如果忽略交易中的 DDL 陳述式，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

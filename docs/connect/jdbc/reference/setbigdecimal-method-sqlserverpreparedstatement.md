@@ -26,7 +26,7 @@ ms.locfileid: "47729586"
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數號碼設定為給定的  物件。  
+  將指定的參數號碼設定為所指定 BigDecimal 物件。  
   
 ## <a name="syntax"></a>語法  
   

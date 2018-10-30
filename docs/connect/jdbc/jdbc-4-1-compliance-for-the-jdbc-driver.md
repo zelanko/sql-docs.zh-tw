@@ -31,9 +31,9 @@ ms.locfileid: "47722876"
   
 |新的方法|Description|JDBC 驅動程式實作|  
 |----------------|-----------------|--------------------------------|  
-|void abort(Executor executor)|終止對 SQL Server 的開啟連接。|如 java.sql.Connection 介面中所述實作。 如需詳細資訊，請參閱 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
-|void setSchema(String schema)|設定目前連接的結構描述。|SQL Server 不支援目前工作階段的結構描述設定。 如果呼叫了此方法，則此驅動程式會以無訊息模式記錄警告訊息。 如需詳細資訊，請參閱 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
-|String getSchema()|傳回目前連接的結構描述名稱。|因為 SQL Server 不支援目前連接的結構描述設定，所以此驅動程式改為傳回該使用者的預設結構描述。 如需詳細資訊，請參閱 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
+|void abort(Executor executor)|終止對 SQL Server 的開啟連接。|如 java.sql.Connection 介面中所述實作。 如需詳細資料，請參閱 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
+|void setSchema(String schema)|設定目前連接的結構描述。|SQL Server 不支援目前工作階段的結構描述設定。 如果呼叫了此方法，則此驅動程式會以無訊息模式記錄警告訊息。 如需詳細資料，請參閱 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
+|String getSchema()|傳回目前連接的結構描述名稱。|因為 SQL Server 不支援目前連接的結構描述設定，所以此驅動程式改為傳回該使用者的預設結構描述。 如需詳細資料，請參閱 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
   
  **SQLServerDatabaseMetaData 類別**  
   

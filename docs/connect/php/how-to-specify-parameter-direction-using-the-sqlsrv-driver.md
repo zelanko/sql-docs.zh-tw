@@ -1,32 +1,29 @@
 ---
-title: 如何： 使用 SQLSRV 驅動程式指定參數方向 |Microsoft 文件
+title: 如何：使用 SQLSRV 驅動程式指定參數方向 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4738ce4f8071c5fc1485fad608e00f5e47d9abb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642366"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定參數方向
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題說明在呼叫預存程序時，如何使用 SQLSRV 驅動程式來指定參數方向。 參數方向指定當您建構傳遞至參數陣列 （步驟 3） [sqlsrv_query](../../connect/php/sqlsrv-query.md)或[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。  
+本主題說明在呼叫預存程序時，如何使用 SQLSRV 驅動程式來指定參數方向。 參數方向是在您建構傳遞至 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 的參數陣列 (步驟 3) 時指定。  
   
 ### <a name="to-specify-parameter-direction"></a>指定參數方向  
   
@@ -37,7 +34,7 @@ ms.locfileid: "35307837"
     ```  
   
     > [!NOTE]  
-    > 使用標準語法呼叫預存程序，是建議的做法。 如需關於標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
+    > 使用標準語法呼叫預存程序，是建議的做法。 如需標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
 2.  初始化或更新對應至 Transact-SQL 查詢中預留位置的 PHP 變數。 例如，下列程式碼會為 UpdateVacationHours 預存程序初始化兩個參數：  
   
@@ -49,7 +46,7 @@ ms.locfileid: "35307837"
     > [!NOTE]  
     > 初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法作為輸出參數。  
   
-3.  使用步驟 2 中的 PHP 變數來建立或更新依序對應至 Transact-SQL 字串中參數預留位置的參數值陣列。 指定陣列中每個參數的方向。 每個參數的方向由決定在兩種方式之一： 預設 （適用於輸入參數） 或使用**SQLSRV_PARAM_\*** 常數 （適用於輸出和雙向參數）。 例如，下列程式碼會將 *$employeeId* 參數指定為輸入參數，並將 *$usedVacationHours* 參數指定為雙向參數：  
+3.  使用步驟 2 中的 PHP 變數來建立或更新依序對應至 Transact-SQL 字串中參數預留位置的參數值陣列。 指定陣列中每個參數的方向。 每個參數的方向可由下列兩種方式之一來決定：根據預設 (適用於輸入參數)，或使用 **SQLSRV_PARAM_\*** 常數 (適用於輸出和雙向參數)。 例如，下列程式碼會將 *$employeeId* 參數指定為輸入參數，並將 *$usedVacationHours* 參數指定為雙向參數：  
   
     ```  
     $params = array(  
@@ -60,7 +57,7 @@ ms.locfileid: "35307837"
   
     為了大致了解指定參數方向的語法，我們假設 *$var1*、 *$var2*和 *$var3* 分別對應至輸入、輸出和雙向參數。 您可以透過下列其中一種方式來指定參數方向：  
   
-    -   隱含地指定輸入的參數、 明確指定輸出參數，以及明確指定雙向參數：  
+    -   隱含地指定輸入參數、明確地指定輸出參數及雙向參數：  
   
         ```  
         array(   
@@ -70,7 +67,7 @@ ms.locfileid: "35307837"
                );  
         ```  
   
-    -   明確指定輸入的參數、 明確指定輸出參數，以及明確指定雙向參數：  
+    -   明確地指定輸入參數、輸出參數及雙向參數：  
   
         ```  
         array(   
@@ -80,7 +77,7 @@ ms.locfileid: "35307837"
                );  
         ```  
   
-4.  執行與查詢[sqlsrv_query](../../connect/php/sqlsrv-query.md)或[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)和[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。 例如，下列程式碼會使用連接 *$conn* ，執行在 *$params* 中指定了參數值的查詢 *$tsql*：  
+4.  使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 執行查詢，或使用 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 和 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 來執行。 例如，下列程式碼會使用連接 *$conn* ，執行在 *$params* 中指定了參數值的查詢 *$tsql*：  
   
     ```  
     sqlsrv_query($conn, $tsql, $params);  

@@ -21,14 +21,14 @@ ms.locfileid: "47617076"
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>setNCharacterStream 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定參數設定為指定的 java.io.Reader 物件。  
+  將所指定參數設定為指定的 Reader 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[setNCharacterStream 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
-|[setNCharacterStream 方法 (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|將指定的參數設定為指定的  物件，該物件長度為指定的字元數。|  
+|[setNCharacterStream 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|將所指定參數設定為指定的 Reader 物件。|  
+|[setNCharacterStream 方法 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|將指定的參數設定為所指定 Reader 物件，該物件長度為指定的字元數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

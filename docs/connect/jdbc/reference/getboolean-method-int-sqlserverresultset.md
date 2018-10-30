@@ -26,7 +26,7 @@ ms.locfileid: "47598066"
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **Boolean**。  
+  使用 Java 程式設計語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列中所指定資料行索引值來作為 **boolean**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ public boolean getBoolean(int columnIndex)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 布林值。  
+ **boolean** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -41,7 +41,7 @@ public boolean isReadOnly(int column)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 如果資料行是唯讀的則為 ， 否則為 **false**。  
+ 如果資料行是唯讀，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

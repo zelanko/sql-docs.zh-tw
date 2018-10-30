@@ -1,5 +1,5 @@
 ---
-title: updateCharacterStream 文件 (int, java.io.Reader) | Microsoft Docs
+title: updateCharacterStream 方法 (java.io.Reader, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

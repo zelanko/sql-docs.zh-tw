@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_configure |Microsoft 文件
+title: sqlsrv_configure |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_configure
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fde39c9d64ec23e13c83c8c85a3de05c1417194a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 98c3848ad344fcbb964d1b3a5e9ec1a6afe8703f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308727"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618687"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,23 +43,23 @@ sqlsrv_configure( string $setting, mixed $value )
   
 |設定|$value 參數的可能值 (括號中的整數對等項目)|預設值|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
-|ClientBufferMaxKBSize<sup>1</sup>|不超過 PHP 記憶體限制的非負數。<br /><br />不允許零和負的數字。|10240 KB|  
+|ClientBufferMaxKBSize<sup>1</sup>|不超過 PHP 記憶體限制的非負數。<br /><br />不允許使用零和負數。|10240 KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL (-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN (2)<br /><br />SQLSRV_LOG_SYSTEM_INIT (1)<br /><br />SQLSRV_LOG_SYSTEM_OFF (0)<br /><br />SQLSRV_LOG_SYSTEM_STMT (4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL (8)|SQLSRV_LOG_SYSTEM_OFF (0)|  
-|WarningsReturnAsErrors<sup>3</sup>|**true** (1) 或**false** (0)|**true** (1)|  
+|WarningsReturnAsErrors<sup>3</sup>|**true** (1) 或 **false** (0)|**true** (1)|  
   
 ## <a name="return-value"></a>傳回值  
 如果以不受支援的設定或值呼叫 **sqlsrv_configure** ，函數會傳回 **false**。 否則，函數會傳回 **true**。  
   
-## <a name="remarks"></a>備註  
-（1） 如需有關用戶端查詢的詳細資訊，請參閱[資料指標類型&#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
+## <a name="remarks"></a>Remarks  
+(1) 如需用戶端查詢的詳細資訊，請參閱[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
-（2） 如需記錄活動的詳細資訊，請參閱[Logging Activity](../../connect/php/logging-activity.md)。  
+(2) 如需記錄活動的詳細資訊，請參閱[記錄活動](../../connect/php/logging-activity.md)。  
   
-（3） 如需有關設定錯誤和警告處理的詳細資訊，請參閱[How to： 設定錯誤和警告處理使用 SQLSRV 驅動程式](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
+(3) 如需設定錯誤和警告處理的詳細資訊，請參閱[如何：使用 SQLSRV 驅動程式設定錯誤和警告處理](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md) 
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md) 
   

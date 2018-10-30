@@ -36,7 +36,7 @@ public int getFetchSize()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出目前的提取大小。  
+ **int**，指出目前的提取大小。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

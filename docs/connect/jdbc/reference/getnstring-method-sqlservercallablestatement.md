@@ -28,7 +28,7 @@ ms.locfileid: "47633656"
 |[屬性]|Description|  
 |----------|-----------------|  
 |[getNString 方法&#40;int&#41;](../../../connect/jdbc/reference/getnstring-method-int.md)|擷取的指定值**NCHAR**， **NVARCHAR**，或**LONGNVARCHAR**參數做為在 Java 程式語言的字串。|  
-|[getNString 方法 (java.lang.String)](../../../connect/jdbc/reference/getnstring-method-java-lang-string.md)|擷取的指定值**NCHAR**， **NVARCHAR**，或**LONGNVARCHAR**參數做為在 Java 程式語言的字串。|  
+|[getNString 方法 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnstring-method-java-lang-string.md)|擷取的指定值**NCHAR**， **NVARCHAR**，或**LONGNVARCHAR**參數做為在 Java 程式語言的字串。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

@@ -21,7 +21,7 @@ ms.locfileid: "47800926"
 # <a name="setsqlxml-method-sqlservercallablestatement"></a>setSQLXML 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定指定的參數為指定的  物件。  
+  將指定的參數設定為所指定 SQLXML 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,17 +34,17 @@ public final void setSQLXML(java.lang.String parameterName,
 #### <a name="parameters"></a>參數  
  *parameterName*  
   
- 指出參數名稱的**字串**。  
+ **String**，指出參數名稱。  
   
  *xmlObject*  
   
- 物件，包含參數值。  
+ SQLXML 物件，包含參數值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setURL 方法由 java.sql.CallableStatement 介面中的 setURL 方法指定。  
+ 這個 setSQLXML 方法是由 java.sql.CallableStatement 介面中的 setSQLXML 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  

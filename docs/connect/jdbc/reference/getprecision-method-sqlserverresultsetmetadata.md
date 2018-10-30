@@ -41,7 +41,7 @@ public int getPrecision(int column)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- ，指出資料行的有效位數。  
+ **int**，指出資料行的有效位數。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

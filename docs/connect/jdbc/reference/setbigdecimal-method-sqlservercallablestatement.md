@@ -26,7 +26,7 @@ ms.locfileid: "47702016"
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>setBigDecimal 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數號碼設定為給定的  物件。  
+  將指定的參數號碼設定為所指定 BigDecimal 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ public void setBigDecimal(java.lang.String sCol,
   
  包含參數名稱的**字串**。  
   
- BD  
+ *bd*  
   
  BigDecimal 物件。  
   

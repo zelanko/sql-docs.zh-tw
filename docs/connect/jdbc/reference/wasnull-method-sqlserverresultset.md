@@ -42,7 +42,7 @@ public boolean wasNull()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 wasNull 方法由 java.sql.CallableStatement 介面中的 wasNull 方法指定。  
+ 這個 wasNull 方法是由 java.sql.ResultSet 介面中的 wasNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

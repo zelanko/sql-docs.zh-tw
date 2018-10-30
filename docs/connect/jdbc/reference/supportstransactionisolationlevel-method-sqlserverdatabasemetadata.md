@@ -36,9 +36,9 @@ public boolean supportsTransactionIsolationLevel(int level)
 ```  
   
 #### <a name="parameters"></a>參數  
- *Level*  
+ *level*  
   
- ，指出交易隔離等級。  
+ **int**，指出交易隔離等級。  
   
 ## <a name="return-value"></a>傳回值  
  **true**如果支援。 否則為 **false**。  

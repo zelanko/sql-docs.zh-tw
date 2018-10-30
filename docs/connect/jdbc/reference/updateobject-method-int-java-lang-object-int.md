@@ -1,5 +1,5 @@
 ---
-title: setObject 方法 (int, java.lang.Object, int, int) | Microsoft Docs
+title: updateObject 方法 (int, java.lang.Object, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

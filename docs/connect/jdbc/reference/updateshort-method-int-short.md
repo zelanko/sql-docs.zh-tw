@@ -26,7 +26,7 @@ ms.locfileid: "47771499"
 # <a name="updateshort-method-int-short"></a>updateShort 方法 (int, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根據指定的資料行名稱，使用 **short** 值來更新指定的資料行。  
+  透過指定的資料行索引，使用 **short** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   

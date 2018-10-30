@@ -1,5 +1,5 @@
 ---
-title: setObject 方法 (java.lang.String, java.lang.Object, int) | Microsoft Docs
+title: updateObject 方法 (java.lang.String, java.lang.Object, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47654908"
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject 方法 (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根據指定的資料行索引和小數位數，使用 **Object** 值來更新指定的資料行。  
+  透過指定的資料行名稱和小數位數，使用 **Object** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   

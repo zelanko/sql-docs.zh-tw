@@ -36,7 +36,7 @@ public java.lang.String getDatabaseName()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 包含資料庫名稱的 ，如果未設定任何值，則為 null。  
+ **String**，其中包含資料庫名稱，如果未設定任何值則為 null。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

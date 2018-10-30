@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697416"
 ---
 # <a name="understanding-ssl-support"></a>了解 SSL 支援
 
@@ -82,7 +79,7 @@ ms.locfileid: "42784024"
   
 - 憑證之主旨內的一般名稱 (CN) 或是主旨替代名稱 (SAN) 內的 DNS 名稱會完全符合連接字串內所指定的 **serverName** 值或是 **hostNameInCertificate** 屬性值 (如果指定的話)。  
   
-- DNS 名稱可包含萬用字元。 但是 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 不支援萬用字元比對。 也就是說，abc.com 不會符合 *.com；但是 \*.com 會符合 \*.com。  
+- DNS 名稱可包含萬用字元。 但是 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 不支援萬用字元比對。 也就是說，abc.com 不會符合 \*.com；但是 \*.com 會符合 \*.com。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,37 +1,34 @@
 ---
-title: SQLServerXAResource 成員 |Microsoft 文件
+title: SQLServerXAResource 成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36b5bc655f0ad54a8c326030aa123ef043920a13
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b9d55da45733e15a9b2aa98f7c6d8fa386b1e4e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850953"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682686"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出所公開的成員[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)類別。  
+  下表列出由 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 類別公開的成員。  
   
 ## <a name="constructors"></a>建構函式  
  無。  
   
 ## <a name="fields"></a>欄位  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|用來允許緊密結合的 XA 交易，這些交易擁有不同的 XA 分支交易識別碼 (XID)，但是擁有相同的全域交易識別碼 (GTRID)。|  
   
@@ -43,18 +40,18 @@ ms.locfileid: "32850953"
   
 ## <a name="methods"></a>方法  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[認可](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|認可給定 Xid 物件所指定的全域交易。|  
-|[結束](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|結束代表交易分支執行的工作。|  
-|[忘記](../../../connect/jdbc/reference/forget-method-sqlserverxaresource.md)|告知資源管理員要忘記以啟發方式完成的交易分支。|  
-|[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|取得這個設定的目前交易逾時值[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)物件。|  
-|[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|判斷目標物件所代表的資源管理員執行個體是否與給定 XAResource 物件所代表的資源管理員執行個體相同。|  
-|[準備](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|資源管理員準備給定 Xid 物件所指定之交易的交易認可的要求。|  
+|[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|認可指定 XID 物件所指定的全域交易。|  
+|[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|結束代表交易分支執行的工作。|  
+|[forget](../../../connect/jdbc/reference/forget-method-sqlserverxaresource.md)|告知資源管理員要忘記以啟發方式完成的交易分支。|  
+|[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|取得為這個 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 物件設定的目前交易逾時值。|  
+|[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|判斷目標物件所表示的資源管理員執行個體是否與指定 XAResource 物件所表示的資源管理員執行個體相同。|  
+|[prepare](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|要求資源管理員準備所指定 XID 物件指定交易的交易認可。|  
 |[復原 (recover)](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|從資源管理員取得備妥的交易分支清單。|  
-|[復原](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|要求資源管理員回復之前代表交易分支所完成的工作。|  
-|[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|設定這個目前的交易逾時值[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)物件。|  
-|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|代表 Xid 物件中指定的交易分支開始工作。|  
+|[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|要求資源管理員回復之前代表交易分支所完成的工作。|  
+|[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|設定這個 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 物件的目前交易逾時值。|  
+|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|代表 XID 物件中指定的交易分支開始工作。|  
   
 ## <a name="inherited-methods"></a>繼承的方法  
   

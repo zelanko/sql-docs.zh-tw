@@ -1,15 +1,12 @@
 ---
 title: sqlcmd 公用程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2017
+ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlcmd
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -28,22 +25,22 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 318ce145febf62b282c96560be91cc08b7de9ea8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42787371"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252115"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](sqlcmd-utility.md)。
+ > SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+)。
 
  > 使用 sqlcmd 在 Linux 上，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
@@ -64,7 +61,7 @@ ms.locfileid: "42787371"
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器] 中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時，**sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器]**** 中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時，**sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
 >   
   
  目前， **sqlcmd** 不需要在命令列選項與值之間保留一個空格。 但是在未來的版本中，可能會需要在命令列選項與值之間空一個空格。  
@@ -128,7 +125,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令列選項  
  **登入相關選項**  
   **-A**  
- 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 此連接只適用於支援 DAC 的伺服器電腦。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -G 選項不支援-A 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的使用。
+ 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 此連接只適用於支援 DAC 的伺服器電腦。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -G 選項不支援-A 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不適用於 Azure Active Directory 系統管理員。
   
  **-C**  
  這個參數由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.NET 選項 `TRUSTSERVERCERTIFICATE = true`。  
@@ -140,7 +137,7 @@ sqlcmd
  指定在您嘗試連接到伺服器時， **sqlcmd** 登入 ODBC 驅動程式逾時之前的秒數。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDLOGINTIMEOUT。 **sqlcmd** 的預設登入逾時值是 8 秒。 當使用 **-G** 連接到 SQL 資料庫或 SQL 資料倉儲，並使用 Azure Active Directory 進行驗證時，選項建議使用至少 30 秒的逾時值。 此登入逾時必須是介於 0 和 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。 0 值指定逾時值無限。
   
  **-E**  
- 使用信任連接登入 SQL Server，而不用使用者名稱和密碼。 根據預設，如果沒有指定 **-E** ， **sqlcmd** 會使用信任連接選項。  
+ 使用信任連線登入 SQL Server，而不用使用者名稱和密碼。 根據預設，如果沒有指定 **-E** ， **sqlcmd** 會使用信任連接選項。  
   
  **-E** 選項會忽略可能出現的使用者名稱與密碼環境變數設定，例如 SQLCMDPASSWORD。 如果同時使用 **-E** 選項和 **-U** 或 **-P** 選項，就會產生錯誤訊息。  
 
@@ -151,7 +148,8 @@ sqlcmd
  這個參數在連線到 SQL Database 或 SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDUSEAAD = true。 -G 參數至少需要 **sqlcmd** [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)版。 若要判斷您的版本，請執行 `sqlcmd -?`。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -G 選項不支援-A 選項。
 
 > [!IMPORTANT]
-> **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。 
+> **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。
+> AAD 整合式驗證目前不支援在 Linux 或 macOS 上。 
 
 - **Azure Active Directory 使用者名稱和密碼：** 
 
@@ -168,7 +166,8 @@ sqlcmd
 
 - **Azure Active Directory 整合式** 
  
-   若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼： 
+   若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼。
+   *AAD 整合式驗證目前不支援在 Linux 或 macOS 上*。
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
@@ -230,14 +229,14 @@ sqlcmd
   
  如果 **-P** 選項後面有多個引數，便會產生錯誤訊息，而且程式將會結束。  
   
- **-S** [*通訊協定*:]*server*[**\\***instance_name*] [**，* **連接埠*]  
+ **-S** [*通訊協定*:]*server*[**\\**_執行個體\_名稱_] [**，**_連接埠_]  
  指定要連線的 SQL Server 執行個體。 它會設定 **sqlcmd** 指令碼變數 SQLCMDSERVER。  
   
- 指定 *server_name*，即可連線至該伺服器電腦上之 SQL Server 的預設執行個體。 指定 *server_name* [ **\\***instance_name* ]，即可連線到該伺服器電腦的 SQL Server 具名執行個體。 如果未指定伺服器電腦，**sqlcmd** 會連線到本機電腦上 SQL Server 的預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
+ 指定 *server_name*，即可連線至該伺服器電腦上之 SQL Server 的預設執行個體。 指定 *server_name* [ **\\**_instance\_name_ ]，即可連線到該伺服器電腦上 SQL Server 的具名執行個體。 如果未指定伺服器電腦，**sqlcmd** 會連線到本機電腦上 SQL Server 的預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
   
  *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。  
   
- 如果您啟動 **sqlcmd** 時，並未指定 *server_name* [ **\\***instance_name* ]，SQL Server 會檢查並使用 SQLCMDSERVER 環境變數。  
+ 如果您啟動 **sqlcmd** 時，並未指定 *server_name* [ **\\**_instance\_name_ ]，SQL Server 會檢查並使用 SQLCMDSERVER 環境變數。  
   
 > [!NOTE]  
 >  保留 OSQLSERVER 環境變數的目的是為了與舊版相容。 SQLCMDSERVER 環境變數優先於 OSQLSERVER 環境變數；這表示您可以先後使用 **sqlcmd** 和 **osql** ，它們不會互相干擾，舊的指令碼仍能運作。  
@@ -250,7 +249,7 @@ sqlcmd
   
  如果沒有指定 **-U** 選項或 **-P** 選項，**sqlcmd** 便會嘗試使用 Microsoft Windows 驗證模式進行連線。 這項驗證以執行 **sqlcmd**之使用者的 Windows 帳戶為基礎。  
   
- 如果同時使用 **-U** 選項和 **-E** 選項 (本主題稍後將說明)，便會產生錯誤訊息。 如果 **–U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
+ 如果同時使用 **-U** 選項和 **-E** 選項 (稍後於本文中描述)，即會產生錯誤訊息。 如果 **–U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
   
  **-z** *new_password*  
  變更密碼：  
@@ -263,7 +262,7 @@ sqlcmd
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **輸入/輸出選項**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:*** codepage*]  
+  **-f** *codepage* | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  指定輸入和輸出字碼頁。 字碼頁碼是一個數值，指定已安裝的 Windows 字碼頁。  
   
  字碼頁轉換規則：  
@@ -278,7 +277,7 @@ sqlcmd
   
  在命令提示字元下輸入 **chcp** ，以驗證 Cmd.exe 的字碼頁。  
   
- **-i** *input_file*[**，* * * input_file2*...]  
+ **-i** *input_file*[**，**_輸入\_file2_...]  
  識別包含 SQL 陳述式或預存程序的批次之檔案。 您可以指定多個檔案，它們會依照順序加以讀取和處理。 檔案名稱之間不能有空格。 **sqlcmd** 會先檢查指定的檔案是否全部存在。 如果有一個或多個檔案不存在， **sqlcmd** 會結束作業。 -i 和 -Q/-q 為互斥選項。  
   
  路徑範例：  
@@ -291,7 +290,7 @@ sqlcmd
   
  包含空格的檔案路徑必須用引號括住。  
   
- 這個選項可以使用一次以上：**-i***input_file* **-I***I input_file。*  
+ 這個選項可以使用一次以上：**-i**_input\_file_ **-I**_I input_file_。  
   
  **-o** *output_file*  
  識別用來接收 **sqlcmd**輸出的檔案。  
@@ -323,7 +322,7 @@ sqlcmd
  **-I**  
  將 SET QUOTED_IDENTIFIER 連接選項設為 ON。 依預設，此選項設定為 OFF。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
- **-q"** *cmdline query* **"**  
+ **-q "** *cmdline query* **"**  
  當 **sqlcmd** 啟動時執行查詢，但查詢執行完成時不要結束 **sqlcmd** 。 可以執行多項以分號分隔的查詢。 請依照下列範例所示，利用引號來括住查詢。  
   
  在命令提示字元中，輸入：  
@@ -335,9 +334,9 @@ sqlcmd
 > [!IMPORTANT]  
 >  請勿在查詢中使用 GO 結束字元。  
   
- 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明 **-b**。  
+ 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本文稍後將描述 **-b**。  
   
- **-Q"** *cmdline query* **"**  
+ **-Q "** *cmdline query* **"**  
  啟動 **sqlcmd** 時執行查詢，然後立即結束 **sqlcmd**。 可以執行多項以分號分隔的查詢。  
   
  請依照下列範例所示，利用引號來括住查詢。  
@@ -351,7 +350,7 @@ sqlcmd
 > [!IMPORTANT]  
 >  請勿在查詢中使用 GO 結束字元。  
   
- 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本主題稍後將說明 **-b** 。  
+ 如果使用此選項時指定 **-b** ， **sqlcmd** 會發生錯誤，並結束作業。 本文稍後將描述 **-b**。  
   
  **-t** *query_timeout*  
  指定命令 (或 SQL 陳述式) 逾時之前的秒數。這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，命令不會逾時。*query**time_out* 必須是介於 1 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。  
@@ -360,7 +359,7 @@ sqlcmd
 >  實際逾時值可能與指定的 *time_out* 值之間有幾秒的差異。  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- 建立 **sqlcmd**指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個 ***var***=**"***values***"** 值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
+ 建立 **sqlcmd**指令碼中所能使用的 **sqlcmd** 指令碼變數。 如果值包含空格，請用引號括住該值。 您可以指定多個 _**var**_=**"**_values_**"** 值。 如果指定的任何值發生錯誤， **sqlcmd** 會產生一則錯誤訊息，並結束作業。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -371,7 +370,7 @@ sqlcmd
   
  **格式化選項**  
   **-h** *headers*  
- 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDHEADERS。 請利用 **-1** 來指定不列印標頭。 任何無效的值都會讓 **sqlcmd** 產生錯誤訊息，並結束作業。  
+ 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDHEADERS。 請使用 **-1** 來指定不列印標頭。 任何無效的值都會讓 **sqlcmd** 產生錯誤訊息，並結束作業。  
   
  **-k** [**1** | **2**]  
  從輸出中移除所有控制字元，如定位字元和新行字元。 此參數會在資料傳回時，保留資料行的格式。 如果指定 1，會用單一空格來取代控制字元。 如果指定 2，會用單一空格取代連續控制字元。 **-k** 與 **-k1**相同。  
@@ -497,7 +496,7 @@ sqlcmd
   
  傳回多項結果時， **sqlcmd** 會在批次的各結果集之間，列印一行空白行。 另外，當 `<x> rows affected` 的訊息不適合執行的陳述式時，便不會出現這則訊息。  
   
- 若要以互動方式使用 **sqlcmd** ，請在命令提示字元處輸入 **sqlcmd** ，並指定本主題稍早所述的一個或多個選項。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ 若要以互動方式使用 **sqlcmd**，請在命令提示字元處鍵入 **sqlcmd**，並指定本文稍早所述的一或多個選項。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
 >  **-L**、 **-Q**、 **-Z** 或 **-i** 選項造成 **sqlcmd** 在執行之後結束。  
@@ -517,7 +516,7 @@ sqlcmd
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
+>  若要檢視環境變數，請在 [控制台] **** 中開啟 [系統] ****，然後按一下 [進階] **** 索引標籤。  
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 指令碼變數  
   
@@ -541,7 +540,7 @@ sqlcmd
 |SQLCMDINI||R|""|
 |SQLCMDUSEAAD  | -G | R/W | "" |  
   
- * SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 會在使用 **:Connect** 時設定。  
+ SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER 會在使用 **:Connect** 時設定。  
   
  R 表示在程式初始化期間只能設定該值一次。  
   
@@ -567,7 +566,7 @@ sqlcmd
 -   除了 GO 之外的所有 **sqlcmd** 命令開頭都必須加上冒號 (:)。  
   
     > [!IMPORTANT]  
-    >  為了顧及與現有 **osql** 指令碼的回溯相容性，也會辨識部分沒有冒號的命令。 [**:**] 表示這一點。  
+    >  為了顧及與現有 **osql** 指令碼的回溯相容性，也會辨識部分沒有冒號的命令，其以 [**:**] 表示。
   
 -   **sqlcmd** 命令必須在行首，才能夠辨識。  
   
@@ -592,7 +591,7 @@ sqlcmd
  列印陳述式快取內容。  
   
  **變數**  
-  **: Setvar** \< **var**> [ **」***值***"** ]  
+  **: Setvar** \< **var**> [ **」**_值_**"** ]  
  定義 **sqlcmd** 指令碼變數。 指令碼變數的格式如下： `$(VARNAME)`。  
   
  變數名稱不區分大小寫。  
@@ -624,7 +623,7 @@ sqlcmd
   
  **輸出命令**  
   **:Error**   
- ***\<***  *filename*  ***>|* STDERR|STDOUT**  
+ _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
  將所有錯誤輸出重新導向至 *filename*所指定的檔案、 **stderr** 或 **stdout**。 在指令碼中， **Error** 命令可以重複出現。 根據預設，錯誤輸出會傳送到 **stderr**。  
   
  *file name*  
@@ -648,12 +647,12 @@ sqlcmd
   
  使用 **exit** 選項時， **sqlcmd** 會結束作業，並會出現適當的錯誤值。  
   
- 使用 **ignore** 選項時， **sqlcmd** 會忽略錯誤，並繼續執行批次或指令碼。 依預設，會列印一則錯誤訊息。  
+ 使用 **ignore** 選項時， **sqlcmd** 會忽略錯誤，並繼續執行批次或指令碼。 根據預設，會列印錯誤訊息。  
   
  [**:**] **QUIT**  
  導致 **sqlcmd** 結束。  
   
- [**:**] **EXIT**[ **(***statement***)** ]  
+ [**:**] **EXIT**[ **(**_statement_**)** ]  
  可讓您使用 SELECT 陳述式的結果作為 **sqlcmd**的傳回值。 如果為數值，最後一個結果資料列的第一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS 會將低位元組傳給父處理序或作業系統錯誤層級。 Windows 200x 會傳遞完整的 4 位元組整數。 語法如下：  
   
  `:EXIT(query)`  
@@ -702,13 +701,13 @@ sqlcmd
  GO 會發出批次結束及執行任何快取的 Transact-SQL 陳述式的信號。 批次當做個別批次執行多次。 您無法在單一批次中多次宣告變數。
   
  **其他命令**  
-  **:r \<** 檔名**>**  
- 將 **\<檔名>** 所指定檔案中的其他 Transact-SQL 陳述式與 **sqlcmd** 命令，剖析至陳述式快取中。  
+  **:r \<** 檔名****>**  
+ 將 **\<**_filename_**>** 所指定檔案中的其他 Transact-SQL 陳述式與 **sqlcmd** 命令，剖析至陳述式快取中。  
   
  如果檔案包含的 Transact-SQL 陳述式後面沒有緊接著 **GO**，您必須在 **:r** 之後的一行輸入 **GO**。  
   
 > [!NOTE]  
->  從執行 **sqlcmd** 之啟動目錄的相對目錄中讀取 **\<** *filename* **>**。  
+>  **\<** *之啟動目錄的相對目錄中讀取* **>** filename **** 。  
   
  在發現批次結束字元之後，便會讀取和執行這個檔案。 您可以發出多個 **:r** 命令。 這個檔案可包含任何 **sqlcmd** 命令。 其中包括批次結束字元 **GO**。  
   
@@ -718,7 +717,7 @@ sqlcmd
  **:Serverlist**  
  列出設定在本機的伺服器，以及在網路中進行廣播的伺服器名稱。  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *server_name*[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  連線到 SQL Server 的執行個體。 此外也會關閉目前的連接。  
   
  逾時選項：  
@@ -732,7 +731,7 @@ sqlcmd
   
  如果沒有指定 *timeout* ，預設值就是 SQLCMDLOGINTIMEOUT 變數的值。  
   
- 如果只指定 *user_name* (作為選項或作為環境變數)，則會提示使用者輸入密碼。 如果已設定 SQLCMDUSER 或 SQLCMDPASSWORD 環境變數，就不會提示。 如果既沒有提供選項，也沒有提供環境變數，就會利用 Windows 驗證模式來登入。 例如，若要使用整合式安全性連線到 SQL Server `myserver` 的執行個體 `instance1`，您將使用下列命令：  
+ 如果只指定 *user_name* (作為選項或作為環境變數)，則會提示使用者輸入密碼。 如果已設定 SQLCMDUSER 或 SQLCMDPASSWORD 環境變數，就不會提示使用者。 如果既沒有提供選項，也沒有提供環境變數，就會利用 Windows 驗證模式來登入。 例如，若要使用整合式安全性連線到 SQL Server `myserver` 的執行個體 `instance1`，您將使用下列命令：  
   
  `:connect myserver\instance1`  
   
@@ -753,7 +752,7 @@ sqlcmd
 >  這個命令會在執行 **sqlcmd** 的電腦上執行。  
   
  **:XML** [**ON** | **OFF**]  
- 如需詳細資訊，請參閱本主題中的 [XML 輸出格式](#OutputXML) 和 [JSON 輸出格式](#OutputJSON)  
+ 如需詳細資訊，請參閱本文中的 [XML 輸出格式](#OutputXML)和 [JSON 輸出格式](#OutputJSON)  
   
  **:Help**  
  列出 **sqlcmd** 命令及各命令的簡短描述。  
@@ -761,9 +760,9 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 檔案名稱  
  您可以使用**sqlcmd** 選項或 **sqlcmd** 命令指定 **sqlcmd** 輸入檔。 輸出檔則可以使用 **-o** 選項或 **:Error**、 **:Out** 和 **:Perftrace** 命令予以指定。 以下列出使用這些檔案的幾項指導方針：  
   
--   **:Error**、**:Out** 和 **:Perftrace** 應該使用不同的 **\<檔名>**。 如果使用相同的 **\<檔名>**，命令所產生的輸入可能會混合在一起。  
+-   **:Error**、**:Out** 和 **:Perftrace** 應該使用不同的 **\<**_filename_**>**。 如果使用相同的 **\<**_filename_**>** ，命令所產生的輸入可能會混合在一起。  
   
--   如果從本機電腦的 **sqlcmd** 呼叫位於遠端伺服器上的輸入檔，且檔案中包含磁碟機檔案路徑 (例如 :out c:\OutputFile.txt)， 便會在本機電腦建立輸出檔案，而不是在遠端伺服器建立。  
+-   如果從本機電腦的 **sqlcmd** 呼叫位於遠端伺服器上的輸入檔，且檔案中包含磁碟機檔案路徑 (例如 :Out c:\OutputFile.txt)， 即會在本機電腦建立輸出檔案，而不是在遠端伺服器建立。  
   
 -   有效的檔案路徑包括︰ `C:\<filename>`、 `\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路徑中有空格，請使用引號。  
   
@@ -773,7 +772,7 @@ sqlcmd
 
 **sqlcmd** 會列印伺服器所傳送的所有參考用訊息。 在下列範例中，執行 Transact-SQL 陳述式之後，會列印一則參考用訊息。
   
-在命令提示字元中，請輸入下列項目：
+於命令提示字元中，輸入命令：
 
 `sqlcmd`
   
@@ -790,7 +789,7 @@ sqlcmd
   
  這一行後面會接著一條由虛線字元組成的分隔線。 下列輸出顯示一個範例。  
   
- 啟動 **sqlcmd**。 在 **sqlcmd** 命令提示字元中，輸入下列命令：  
+ 啟動 **sqlcmd**。 在 **sqlcmd** 命令提示字元中，鍵入下列查詢：  
   
  `USE AdventureWorks2012;`  
   
@@ -812,7 +811,7 @@ sqlcmd
   
  `(2 row(s) affected)`  
   
- 雖然 `BusinessEntityID` 資料行的寬度只有 4 個字元，但它已擴充，能夠容納較長的資料行名稱。 依預設，輸出的長度最多為 80 個字元。 您可以利用 **-w** 選項或設定 SQLCMDCOLWIDTH 指令碼變數，變更此設定。  
+ 雖然 `BusinessEntityID` 資料行的寬度只有四個字元，但它已擴充，能夠容納較長的資料行名稱。 依預設，輸出的長度最多為 80 個字元。 您可以利用 **-w** 選項或設定 SQLCMDCOLWIDTH 指令碼變數，變更此設定。  
   
 ###  <a name="OutputXML"></a> XML 輸出格式  
  FOR XML 子句所產生的 XML 輸出，會在連續資料流中以未格式化的形式輸出。  
@@ -822,11 +821,11 @@ sqlcmd
 > [!NOTE]  
 >  **sqlcmd** 會以一般格式傳回錯誤訊息。 請注意，錯誤訊息也會以 XML 格式輸出至 XML 文字資料流。 如果使用 `:XML ON`， **sqlcmd** 就不會顯示參考用訊息。  
   
- 若要將 XML 模式設定為關閉，請使用下列命令： `:XML OFF`。  
+ 若要將 XML 模式設定為關閉，請使用下列命令：`:XML OFF`。  
   
  在發出 XML OFF 命令之前，不應出現 GO 命令，因為 XML OFF 命令會將 **sqlcmd** 切換回資料列導向的輸出。  
   
- XML (資料流) 資料和資料列集不能混合。 如果在執行輸出 XML 資料流的 Transact-SQL 陳述式之前發出 XML ON 命令，輸出會混亂。 如果已發出 XML ON 命令，您就不能執行輸出正規資料列集的 Transact-SQL 陳述式。  
+ XML (資料流) 資料和資料列集資料不能混合。 如果在執行輸出 XML 資料流的 Transact-SQL 陳述式之前發出 XML ON 命令，則輸出會混亂。 已發出 XML ON 命令之後，您就不能執行輸出正規資料列集的 Transact-SQL 陳述式。  
   
 > [!NOTE]  
 >  **:XML** 命令不支援 SET STATISTICS XML 陳述式。  
@@ -834,9 +833,9 @@ sqlcmd
 ###  <a name="OutputJSON"></a> JSON 輸出格式  
  當您希望產生 JSON 輸出時，請使用下列命令： `:XML ON`。 否則輸出會包含資料行名稱和 JSON 文字。 此輸出不是有效的 JSON。  
   
- 若要將 XML 模式設定為關閉，請使用下列命令： `:XML OFF`。  
+ 若要將 XML 模式設定為關閉，請使用下列命令：`:XML OFF`。  
   
- 如需詳細資訊，請參閱本主題的 [XML 輸出格式](#OutputXML) 。  
+ 如需詳細資訊，請參閱本文中的 [XML 輸出格式](#OutputXML)。  
 
 ### <a name="using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證  
 使用 Azure Active Directory 驗證的範例如下：

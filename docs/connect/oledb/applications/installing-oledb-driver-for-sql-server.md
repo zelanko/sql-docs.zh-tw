@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: 安裝 OLE DB Driver for SQL Server | Microsoft Docs
 description: 安裝和解除安裝適用於 SQL Server 的 OLE DB 驅動程式
 ms.custom: ''
 ms.date: 06/12/2018
@@ -48,7 +48,7 @@ OLE DB Driver for SQL Server 標頭和程式庫檔案 （msoledbsql.h 和 msoled
   
 X64 msoledbsql.msi 也安裝 32 位元版本的 OLE DB Driver for SQL Server。 如果您的應用程式的目標平台上開發以外，您可以下載 msoledbsql.msi x64 和 x86 版本。
 
-當您叫用 msoledbsql.msi 時，預設只會安裝用戶端元件。 用戶端元件是支援應用程式執行的檔案 (應用程式則是使用 OLE DB Driver for SQL Server 所開發)。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如：  
+當您叫用 msoledbsql.msi 時，預設只會安裝用戶端元件。 用戶端元件是支援應用程式執行的檔案，應用程式則是使用 OLE DB Driver for SQL Server 所開發。 如果也要安裝 SDK 元件，請在命令列上指定 `ADDLOCAL=All`。 例如：  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 

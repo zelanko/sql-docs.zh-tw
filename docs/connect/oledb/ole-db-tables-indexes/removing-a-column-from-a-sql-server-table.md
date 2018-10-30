@@ -30,9 +30,9 @@ ms.locfileid: "47711446"
 
   OLE DB Driver for SQL Server 會公開**itabledefinition:: Dropcolumn**函式。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中移除資料行。  
   
- 取用者會在 *pTableID* 參數中，將資料表名稱指定為 *uName* 聯集之 *pwszName* 成員中的 Unicode 字元字串。 *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
+ 取用者會在 *pTableID* 參數中，將資料表名稱指定為 *uName* 聯集 *pwszName* 成員中的 Unicode 字元字串。 *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
- 取用者表示中的資料行名稱*pwszName*隸屬*uName*聯集*Ekind*參數。 資料行名稱是一個 Unicode 字元字串。 *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
+ 取用者表示中的資料行名稱*pwszName*隸屬*uName*聯集*Ekind*參數。 資料行名稱是一個 Unicode 字元字串。 *pColumnID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
 ## <a name="example"></a>範例  
   

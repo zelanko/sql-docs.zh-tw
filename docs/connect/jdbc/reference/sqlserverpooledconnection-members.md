@@ -1,30 +1,27 @@
 ---
-title: SQLServerPooledConnection 成員 |Microsoft 文件
+title: SQLServerPooledConnection 成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f1d3d24d71f8764274de465d55ebae950a5f9d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ad4ee3752b321803b4d2c3e05bbf317775e859e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695842"
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出所公開的成員[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)類別。  
+  下表列出由 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 類別公開的成員。  
   
 ## <a name="constructors"></a>建構函式  
  無。  
@@ -37,10 +34,10 @@ ms.locfileid: "32847073"
   
 ## <a name="methods"></a>方法  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|註冊指定的事件接聽程式，如此，這在發生事件時將會通知[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)物件。|  
-|[關閉](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|關閉的實體連接此[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)物件表示。|  
+|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|註冊指定的事件接聽程式，如此一來，當這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件上發生事件時，它就可以收到通知。|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|關閉這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件所代表的實體連接。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|建立這個 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件所代表之實體連線的物件控制代碼。|  
 |[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|移除給定的事件接聽程式。|  
   

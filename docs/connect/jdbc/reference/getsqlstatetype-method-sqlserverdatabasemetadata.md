@@ -36,7 +36,7 @@ public int getSQLStateType()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 指出 SQLSTATE 類型的，可能是下列其中一個值：  
+ 指出 SQLSTATE 類型的 **int**，可能是下列其中一個值：  
   
 -   針對 Java Runtime Environment 5.0 版： 如果**xopenStates**連接屬性設定為 **，則為 true**，這個方法會傳回 DatabaseMetaData.sqlStateXOpen。 否則，DatabaseMetaData.sqlStateSQL99。  
   

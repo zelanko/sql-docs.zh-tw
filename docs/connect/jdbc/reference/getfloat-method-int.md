@@ -26,7 +26,7 @@ ms.locfileid: "47829746"
 # <a name="getfloat-method-int"></a>getFloat 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式設計語言，並配合指定參數索引來擷取指定參數值當作 **short**。  
+  使用 Java 程式設計語言，並配合指定參數索引來擷取所指定參數值作為 **float**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,12 +47,12 @@ public float getFloat(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getInt 方法由 java.sql.CallableStatement 介面中的 getInt 方法指定。  
+ 這個 getFloat 方法是由 java.sql.CallableStatement 介面中的 getFloat 方法指定。  
   
- 這個方法會傳回所有具有 Java 精確度的數字型別。  
+ 這個方法會傳回所有具有 Java **float** 精確度的數字類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [getInt 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   
+ [getFloat 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

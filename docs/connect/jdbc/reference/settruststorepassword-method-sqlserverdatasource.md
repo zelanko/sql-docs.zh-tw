@@ -1,13 +1,11 @@
 ---
-title: setTrustStorePassword 方法 (SQLServerDataSource) |Microsoft 文件
+title: setTrustStorePassword 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - setTrustStorePassword Method (SQLServerDataSource)
@@ -15,16 +13,15 @@ apilocation:
 - setTrustStorePassword Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dbd22d01c5c4523fdd04a12d68b9c716fd8643d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3ca07fcfe446b2bb4cb841ae0f0275fd7073c6e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658677"
 ---
 # <a name="settruststorepassword-method-sqlserverdatasource"></a>setTrustStorePassword 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,9 +38,9 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
 #### <a name="parameters"></a>參數  
  *trustStorePassword*  
   
- A**字串**其中包含用來檢查 trustStore 資料完整性的密碼。  
+ **String**，包含用來檢查 trustStore 資料完整性的密碼。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  trustStorePassword 屬性可以隨著 trustStore 屬性一起指定，而其值可用來檢查 trustStore 檔案的完整性。  
   
  如果有設定 trustStore 屬性，但是未設定 trustStorePassword 屬性，就不會檢查 trustStore 的完整性。  
@@ -52,9 +49,9 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
   
  如果未設定 trustStore 屬性，但是有設定 trustStorePassword 屬性，JDBC 驅動程式將會使用 "javax.net.ssl.trustStore" 指定的檔案做為信任存放區，並使用指定的 trustStorePassword，檢查信任存放區的完整性。 當用戶端應用程式不要在 JVM 系統屬性中儲存密碼時，可能需要這個動作。  
   
- 如需詳細資訊，請參閱[設定連接屬性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+ 如需詳細資訊，請參閱[設定連線屬性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 從 JDBC Driver 3.0 開始，如果您在繫結資料來源屬性之前設定 SQLServerDataSource.setTrustStorePassword，您必須先呼叫 SQLServerDataSource.setTrustStorePassword 才能取得連接。 如需詳細資訊，請參閱[SQLServerDataSource.getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md)。  
+ 從 JDBC Driver 3.0 開始，如果您在繫結資料來源屬性之前設定 SQLServerDataSource.setTrustStorePassword，您必須先呼叫 SQLServerDataSource.setTrustStorePassword 才能取得連接。 如需詳細資訊，請參閱 [SQLServerDataSource.getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

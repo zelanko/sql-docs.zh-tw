@@ -27,8 +27,8 @@ ms.locfileid: "47805046"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[updateSQLXML 方法 (int, java.sql.SQLXML)](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|使用 **SQLXML** 值，更新指定的資料行。|  
-|[updateSQLXML 方法 (java.lang.String, java.sql.SQLXML)](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|使用 **SQLXML** 值，更新指定的資料行。|  
+|[updateSQLXML 方法 &#40;int, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-int-java-sql-sqlxml.md)|使用 **SQLXML** 值，更新指定的資料行。|  
+|[updateSQLXML 方法 &#40;java.lang.String, java.sql.SQLXML&#41;](../../../connect/jdbc/reference/updatesqlxml-method-java-lang-string-java-sql-sqlxml.md)|使用 **SQLXML** 值，更新指定的資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

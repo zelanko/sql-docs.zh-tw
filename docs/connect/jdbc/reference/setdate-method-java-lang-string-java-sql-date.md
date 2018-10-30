@@ -49,7 +49,7 @@ public void setDate(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這項 getDate 方法由 java.sql.CallableStatement 介面中的 getDate 方法所指定。  
+ 這個 setDate 方法是由 java.sql.CallableStatement 介面中的 setDate 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

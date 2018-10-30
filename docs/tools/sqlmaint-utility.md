@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlmaint
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 12be5a2f822fb2b49100103032e7268f9f35b1cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625186"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +82,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name*，即可連線到該伺服器之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
+ **-S** *server_name*[ **\\**_instance\_name_]  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 _server\_name_，即可連接到該伺服器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 _server\_name_**\\**_instance\_name_，即可連線到該伺服器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
  **-U** *login_ID*  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  
@@ -209,8 +205,7 @@ dbname_log_yyyymmddhhmm.BAK
  對於磁碟備份，指定如果建立備份之後的時間間隔超出 \<*time_period*>，便會刪除備份目錄中的任何備份檔案。  
   
  **-CrBkSubDir**  
- 對於磁碟備份，指定如果也指定了 *-UseDefDir*，便會在 [ **backup_path** ] 目錄或預設備份目錄中建立一個子目錄。 子目錄的名稱是從 **-D**指定的資料庫名稱所產生。 
-  **-CrBkSubDir** 提供一種簡單的方式，讓您不需要變更 *backup_path* 參數，就能將不同資料庫的所有備份放在個別子目錄中。  
+ 對於磁碟備份，指定如果也指定了 *-UseDefDir*，便會在 [ **backup_path** ] 目錄或預設備份目錄中建立一個子目錄。 子目錄的名稱是從 **-D**指定的資料庫名稱所產生。 **-CrBkSubDir** 提供一種簡單的方式，讓您不需要變更 *backup_path* 參數，就能將不同資料庫的所有備份放在個別子目錄中。  
   
  **backup_path**  
  對於磁碟備份，指定在預設備份目錄中建立備份檔。 如果同時指定這兩者，則**UseDefDir** 會覆寫 *backup_path* 。 當採用預設的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝時，預設備份目錄是 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup。  

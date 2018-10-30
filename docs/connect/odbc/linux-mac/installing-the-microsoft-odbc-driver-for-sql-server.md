@@ -507,7 +507,7 @@ ODBC Driver on Linux 和 MacOS 是由下列元件所組成：
 
 |元件|Description|  
 |---------------|-----------------|  
-|libmsodbcsql 17。X.so.X.X 或 libmsodbcsql 13。X.so.X.X|動態連結程式庫 (`so`) 檔案，其中包含驅動程式的所有功能。 這個檔案會安裝在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 並在`/opt/microsoft/msodbcsql/lib64/`Driver 13 for。|  
+|libmsodbcsql 17。X.so.X.X 或 libmsodbcsql 13。X.so.X.X|共用物件 (`so`) 動態程式庫檔案，其中包含驅動程式的所有功能。 這個檔案會安裝在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 並在`/opt/microsoft/msodbcsql/lib64/`Driver 13 for。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 這個檔案會安裝在 `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 會安裝在`/opt/microsoft/msodbcsql17/include/`Driver 17 並在`/opt/microsoft/msodbcsql/include/`Driver 13 for。 |
 |LICENSE.txt|文字檔案，其中包含使用者授權合約的條款。 此檔案會置於`/usr/share/doc/msodbcsql17/`Driver 17 並在`/usr/share/doc/msodbcsql/`Driver 13 for。|

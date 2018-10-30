@@ -25,7 +25,7 @@ ms.locfileid: "47736466"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  描述在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 和使用 OLE DB Driver for SQL Server 撰寫之用戶端應用程式之間執行的日期/時間轉換。  
+  本文描述在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 和使用 OLE DB Driver for SQL Server 所撰寫用戶端應用程式之間執行的日期/時間轉換。  
   
 ## <a name="conversions"></a>轉換  
  下表描述傳回用戶端之類行與繫結中之類型之間的轉換。 對於輸出參數，如果已呼叫 icommandwithparameters:: Setparameterinfo，並在指定的型別*pwszDataSourceType*不的符合伺服器將會執行實際的型別，在伺服器上，隱含的轉換並傳回給用戶端的類型會比對 icommandwithparameters:: Setparameterinfo 透過指定的型別。 當伺服器的轉換規則與本文中描述的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非 1899-12-30。  

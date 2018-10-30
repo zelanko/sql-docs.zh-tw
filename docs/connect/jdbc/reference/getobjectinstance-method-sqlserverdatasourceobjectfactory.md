@@ -1,13 +1,11 @@
 ---
-title: getObjectInstance 方法 (SQLServerDataSourceObjectFactory) |Microsoft 文件
+title: getObjectInstance 方法 (SQLServerDataSourceObjectFactory) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSourceObjectFactory.getObjectInstance
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc3675a6df5fdfb5964d16d0d1e22bb3ecf428f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: aab186f41d494e9bddf7885ddf7d9f7b3ff65972
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849502"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance 方法 (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 #### <a name="parameters"></a>參數  
  *ref*  
   
- **物件**值。  
+ **Object** 值。  
   
  *name*  
   
@@ -54,17 +51,17 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
   
  相對於指定之名稱的內容。  
   
- *H*  
+ *h*  
   
  用於建立物件的環境。  
   
 ## <a name="return-value"></a>傳回值  
- **物件**值。  
+ **Object** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getObjectInstance 方法是由 javax.naming.spi.ObjectFactory 介面中的 getObjectInstance 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

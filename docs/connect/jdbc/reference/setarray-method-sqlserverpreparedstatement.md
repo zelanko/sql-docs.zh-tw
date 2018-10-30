@@ -26,7 +26,7 @@ ms.locfileid: "47811616"
 # <a name="setarray-method-sqlserverpreparedstatement"></a>setArray 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數號碼設定為給定的  物件。  
+  將指定的參數編號設定為所指定 Array 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ public final void setArray(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTime 方法由 java.sql.PreparedStatement 介面中的 setTime方法指定。  
+ 這個 setArray 方法是由 java.sql.PreparedStatement 介面中的 setArray 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

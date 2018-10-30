@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: osql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 683bffc470aba863d25b252c7e7d305976631da8
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847469"
 ---
 # <a name="osql-utility"></a>osql 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,8 +97,8 @@ C:\>osql
  **-E**  
  使用信任連接，不要求密碼。  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name*，即可連線到該伺服器之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
+ **-S** _伺服器\_名稱_[ **\\**_執行個體\_名稱_]  
+ 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 _server\_name_**\\**_instance\_name_，即可連線到該伺服器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
   
  **-H** *wksta_name*  
  這是一個工作站名稱。 工作站名稱儲存在 **sysprocesses.hostname** 中， **sp_who**會顯示它。 如果未指定這個選項，就會假設目前的電腦名稱。  
@@ -143,7 +139,7 @@ C:\>osql
  **-c** *cmd_end*  
  指定命令結束字元。 依預設，在一行中單獨輸入 GO，便會終止命令，並將命令傳給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 當您重設命令結束字元時，請勿使用對作業系統有特殊意義的 [!INCLUDE[tsql](../includes/tsql-md.md)] 保留字或字元，不論前面是否附加了反斜線，都是一樣。  
   
- **-q "查詢** **"**  
+ **-q "查詢** ****"**  
  啟動 **osql** 時便執行查詢，但查詢完成時 **osql** 不會結束。 (請注意，查詢陳述式不應包含 GO)。 如果您是從批次檔中發出查詢，請使用變數 (%variables) 或環境變數 (%variables%)。 例如：  
   
 ```  
@@ -153,7 +149,7 @@ osql -E -q "select name, object_id from %table%"
   
  請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。  
   
- **-Q"查詢** **"**  
+ **-Q"查詢** ****"**  
  執行查詢並立即結束 **osql**。 請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。  
   
  **-n**  
@@ -202,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  **osql** 公用程式會在已設定此處所列之區分大小寫選項的情況下，直接從作業系統中啟動。 啟動 **osql**後，其會接受 SQL 陳述式並以互動方式傳送至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 結果會格式化，顯示在畫面中 (**stdout**)。 使用 QUIT 或 EXIT 來結束 **osql**。  
   
- 若您在啟動 **osql** 時未指定使用者名稱，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會檢查及使用類似 **osqluser=(***user***)** 或 **osqlserver=(***server***)** 等環境變數。 如果未設定任何環境變數，就會使用工作站使用者名稱。 如果您沒有指定伺服器，就會使用工作站的名稱。  
+ 若您在啟動 **osql**時未指定使用者名稱，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會檢查及使用類似 **osqluser=(**_user_**)** 或 **osqlserver=(**_server_**)** 等環境變數。 如果未設定任何環境變數，就會使用工作站使用者名稱。 如果您沒有指定伺服器，就會使用工作站的名稱。  
   
  若 **-U** 或 **-P** 選項皆未使用，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證模式執行連接。 這項驗證是以執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **使用者的**Windows 帳戶為基礎。  
   
@@ -261,7 +257,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  可能的話，請使用 **-E**選項 (信任連接)。  
   
- 當以互動方式使用 **osql** 時，您可以使用 **:r***file_name*，將作業系統檔案讀到命令緩衝區中。 這會將 *file_name* 中的 SQL 指令碼當作單一批次直接傳給伺服器。  
+ 當以互動方式使用 **osql** 時，您可以使用 **:r**_file\_name_，將作業系統檔案讀入命令緩衝區中。 這會將 *file_name* 中的 SQL 指令碼當作單一批次直接傳給伺服器。  
   
 > [!NOTE]  
 >  當使用 **osql**時，如果批次分隔字元 GO 出現在 SQL 指令碼檔案中， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將其視為語法錯誤。  
@@ -302,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  執行批次之後，便結束作業，不傳回任何值。  
   
--   EXIT **(***query***)**  
+-   EXIT **(**_query_**)**  
   
 > [!NOTE]  
 >  執行包含查詢的批次，傳回查詢結果之後，便告結束。  

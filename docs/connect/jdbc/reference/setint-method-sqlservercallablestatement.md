@@ -26,7 +26,7 @@ ms.locfileid: "47811736"
 # <a name="setint-method-sqlservercallablestatement"></a>setInt 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為給定的  值。  
+  將指定的參數設定為所指定 **int** 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ public void setInt(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getInt 方法由 java.sql.CallableStatement 介面中的 getInt 方法指定。  
+ 這個 setInt 方法是由 java.sql.CallableStatement 介面中的 setInt 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

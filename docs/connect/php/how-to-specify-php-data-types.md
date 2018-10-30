@@ -28,7 +28,7 @@ ms.locfileid: "47691816"
   
 下列步驟概述如何在從伺服器擷取資料時使用 SQLSRV 驅動程式指定 PHP 資料類型：  
   
-1.  準備及執行使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或結合了 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 的 Transact-SQL 查詢。  
+1.  設定及執行使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或結合了 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 的 Transact-SQL 查詢。  
   
 2.  讓某個資料列可透過 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)來讀取。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47691816"
     如需用以指定 PHP 資料類型之常數的資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的＜PHPTYPE＞一節。  
   
 ## <a name="example"></a>範例  
-下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 在每個傳回的資料列中， *ReviewDate* 欄位會擷取為字串，而 *Comments* 欄位會擷取為串流。 串流資料可使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函數來顯示。  
+下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 在每個傳回的資料列中，*ReviewDate* 欄位會擷取為字串，而 *Comments* 欄位會擷取為資料流。 串流資料可使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函數來顯示。  
   
 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
@@ -98,9 +98,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-在範例中，將第二個欄位 ReviewDate 擷取為字串，可保留 SQL Server DATETIME 資料類型的毫秒精確度。 根據預設，SQL Server DATETIME 資料類型會擷取為 PHP DateTime 物件，因而失去毫秒精確度。  
+在範例中，將第二個欄位 (*ReviewDate*) 擷取為字串，可保留 SQL Server DATETIME 資料類型的毫秒精確度。 根據預設，SQL Server DATETIME 資料類型會擷取為 PHP DateTime 物件，因而失去毫秒精確度。  
   
-將第四個欄位 Comments 擷取為資料流是為了示範之用。 根據預設，SQL Server 資料類型 nvarchar(3850) 會擷取為字串，這在大多數的情況下是可接受的。  
+將第四個欄位 (*Comments*) 擷取為資料流是為了示範之用。 根據預設，SQL Server 資料類型 nvarchar(3850) 會擷取為字串，這在大多數的情況下是可接受的。  
   
 > [!NOTE]  
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 函數可用來在執行查詢之前取得欄位資訊，包括類型資訊。  

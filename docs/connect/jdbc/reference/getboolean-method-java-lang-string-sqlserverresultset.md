@@ -1,5 +1,5 @@
 ---
-title: getInt 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: getBoolean 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47839826"
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **Boolean**。  
+  使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行名稱的值來作為 **boolean**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ public boolean getBoolean(java.lang.String columnName)
  包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- 布林值。  
+ **boolean** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

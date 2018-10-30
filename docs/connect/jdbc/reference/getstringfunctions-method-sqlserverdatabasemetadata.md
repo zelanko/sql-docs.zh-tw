@@ -26,7 +26,7 @@ ms.locfileid: "47801846"
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取這個資料庫可用之系統函式的逗號分隔清單。  
+  擷取這個資料庫可用 **String** 函式的逗號分隔清單。  
   
 ## <a name="syntax"></a>語法  
   

@@ -21,7 +21,7 @@ ms.locfileid: "47619157"
 # <a name="createblob-method-sqlserverconnection"></a>createBlob 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  直接建立  物件，而不使用任何資料。  
+  直接建立 Blob 物件，而不使用任何資料。  
   
 ## <a name="syntax"></a>語法  
   

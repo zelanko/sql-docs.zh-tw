@@ -49,10 +49,10 @@ public final void setNull(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setNull 方法由 java.sql.CallableStatement 介面中的 setNull 方法指定。  
+ 這個 setNull 方法是由 java.sql.PreparedStatement 介面中的 setNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [setTime 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
+ [setNull 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

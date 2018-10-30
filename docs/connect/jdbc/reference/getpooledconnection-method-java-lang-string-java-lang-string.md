@@ -1,13 +1,11 @@
 ---
-title: getPooledConnection 方法 （java.lang.String，java.lang.String） |Microsoft 文件
+title: getPooledConnection 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 424ac4951ce4fd6f63644a154d7fd572dd5657be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5d6c21fa5df3545b641ccb935c53f6d7a689f580
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702946"
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>getPooledConnection 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,19 +39,19 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
 #### <a name="parameters"></a>參數  
  *user*  
   
- A**字串**，其中包含使用者名稱。  
+ 包含使用者名稱的**字串**。  
   
  *passwword*  
   
- A**字串**其中包含的密碼。  
+ 包含密碼的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)物件。  
+ [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getPooledConnection 方法是由 javax.sql.ConnectionPoolDataSource 介面中 getPooledConnection 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -26,7 +26,7 @@ ms.locfileid: "47621666"
 # <a name="setshort-method-sqlserverpreparedstatement"></a>setShort 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為指定的 Java 值。  
+  將指定的參數設定為所指定 **short** 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ public final void setShort(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setObject 方法由 java.sql.PreparedStatement 介面中的 setObject 方法指定。  
+ 這個 setShort 方法是由 java.sql.PreparedStatement 介面中的 setShort 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

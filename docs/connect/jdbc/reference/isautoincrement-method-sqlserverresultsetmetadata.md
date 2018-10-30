@@ -41,7 +41,7 @@ public boolean isAutoIncrement(int column)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 如果會自動將資料行編號則為 。 否則為 **false**。  
+ 如果會自動將資料行編號，則為 **true**。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

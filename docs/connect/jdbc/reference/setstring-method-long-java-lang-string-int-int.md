@@ -1,13 +1,11 @@
 ---
-title: setString 方法 (long，java.lang.String，int，int) |Microsoft 文件
+title: setString 方法 (long, java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setString (long, java.lang.String, int, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef844ff6d9ce4d9868345b56c6e0f39dceeb8839
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ba5046a2036b88c3ec55499a6e86609d8b050f7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611056"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 方法 (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,7 +61,7 @@ public int setString(long pos,
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setString 方法是由 java.sql.Clob 介面中 setString 方法指定。  
   
  字元資料會從指定的位置開始覆寫，而且可以覆寫 CLOB 的初始長度。 指定位置 + 1 的值將會附加字串。 指定位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。  

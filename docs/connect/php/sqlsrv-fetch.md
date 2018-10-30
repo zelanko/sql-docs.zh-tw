@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_fetch |Microsoft 文件
+title: sqlsrv_fetch |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309027"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604230"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-讓結果集的下一個資料列可供讀取。 使用[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)讀取的資料列的欄位。  
+讓結果集的下一個資料列可供讀取。 使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 讀取資料列的欄位。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > 陳述式必須在擷取結果之前執行。 如需執行陳述式的相關資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
   
-*資料列*[選用]: 下列的值，指定要在使用可捲動資料指標結果集內存取的資料列的其中一個：  
+*row* [選擇性]：下列其中一個值，指定要在使用可捲動資料指標之結果集內存取的資料列：  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -62,13 +59,13 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-*位移*[選用]: 與 SQLSRV_SCROLL_ABSOLUTE 和 sqlsrv_scroll_relative 搭配使用，用於指定要擷取的資料列。 結果集內的第一個記錄為 0。  
+*offset* [選擇性]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
   
 ## <a name="return-value"></a>傳回值  
 如果已成功擷取結果集的下一個資料列，將會傳回 **true** 。 如果結果集內已沒有其他結果，則會傳回 **Null** 。 如果發生錯誤，將會傳回 **false** 。  
   
 ## <a name="example"></a>範例  
-下列範例會使用 **sqlsrv_fetch** 來擷取包含產品評論和評論者名稱的資料列。 若要從結果集中，擷取資料[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)用。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會使用 **sqlsrv_fetch** 來擷取包含產品評論和評論者名稱的資料列。 若要從結果集內擷取資料，請使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

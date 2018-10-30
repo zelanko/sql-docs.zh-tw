@@ -1,13 +1,11 @@
 ---
-title: registerOutParameter 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: registerOutParameter 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.registerOutParameter
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 82f8d608-efc1-4af8-a985-ec25d19420aa
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 254e56350920d3dda2ac8b13a589cb7aaf22e946
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 15e04ab5c533cb4f32e54ec31998682667ff29d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732196"
 ---
 # <a name="registeroutparameter-method-sqlservercallablestatement"></a>registerOutParameter 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,14 +30,14 @@ ms.locfileid: "32842469"
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[registerOutParameter （int，int）](../../../connect/jdbc/reference/registeroutparameter-method-int-int.md)|在給定 JDBC 型別的指定序數位置中註冊 OUT 參數。|  
-|[registerOutParameter （int，int，int）](../../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)|在給定 JDBC 型別和小數位數的指定序數位置中註冊 OUT 參數。|  
-|[registerOutParameter （int，int，java.lang.String）](../../../connect/jdbc/reference/registeroutparameter-method-int-int-java-lang-string.md)|在給定 JDBC 型別和型別名稱的指定序數位置中註冊 OUT 參數。|  
-|[registerOutParameter （java.lang.String，int）](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int.md)|向給定 JDBC 型別的指定參數註冊 OUT 參數。|  
-|[registerOutParameter （java.lang.String，int，int）](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int-int.md)|向給定 JDBC 型別和小數位數的指定參數註冊 OUT 參數。|  
-|[registerOutParameter （java.lang.String，int，java.lang.String）](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int-java-lang-string.md)|向給定 JDBC 型別和型別名稱的指定名稱註冊 OUT 參數。|  
+|[registerOutParameter (int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int.md)|在給定 JDBC 型別的指定序數位置中註冊 OUT 參數。|  
+|[registerOutParameter (int, int, int)](../../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)|在給定 JDBC 型別和小數位數的指定序數位置中註冊 OUT 參數。|  
+|[registerOutParameter (int, int, java.lang.String)](../../../connect/jdbc/reference/registeroutparameter-method-int-int-java-lang-string.md)|在給定 JDBC 型別和型別名稱的指定序數位置中註冊 OUT 參數。|  
+|[registerOutParameter (java.lang.String, int)](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int.md)|向給定 JDBC 型別的指定參數註冊 OUT 參數。|  
+|[registerOutParameter (java.lang.String, int, int)](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int-int.md)|向給定 JDBC 型別和小數位數的指定參數註冊 OUT 參數。|  
+|[registerOutParameter (java.lang.String, int, java.lang.String)](../../../connect/jdbc/reference/registeroutparameter-method-java-lang-string-int-java-lang-string.md)|向給定 JDBC 型別和型別名稱的指定名稱註冊 OUT 參數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

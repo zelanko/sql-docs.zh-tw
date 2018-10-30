@@ -32,8 +32,8 @@ ms.locfileid: "47703916"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getArray 方法 (int)](../../../connect/jdbc/reference/getarray-method-int-sqlserverresultset.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作陣列物件。|  
-|[getArray 方法 (java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string-sqlserverresultset.md)|擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作陣列物件。|  
+|[getArray 方法 (int)](../../../connect/jdbc/reference/getarray-method-int-sqlserverresultset.md)|從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 Array 物件。|  
+|[getArray 方法 (java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string-sqlserverresultset.md)|從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行名稱的值來作為 Array 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

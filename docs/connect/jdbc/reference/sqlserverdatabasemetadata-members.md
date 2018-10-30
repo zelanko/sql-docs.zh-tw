@@ -1,30 +1,27 @@
 ---
-title: SQLServerDatabaseMetaData 成員 |Microsoft 文件
+title: SQLServerDatabaseMetaData 成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99e11d827cfc8e81f00a471b06521f33e872d64e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788073"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出所公開的成員[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)類別。  
+  下表列出由 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 類別公開的成員。  
   
 ## <a name="constructors"></a>建構函式  
  無。  
@@ -34,25 +31,25 @@ ms.locfileid: "32853243"
   
 ## <a name="inherited-fields"></a>繼承的欄位  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls, attributeNullable, attributeNullableUnknown, bestRowNotPseudo, bestRowPseudo, bestRowSession, bestRowTemporary, bestRowTransaction, bestRowUnknown, columnNoNulls, columnNullable, columnNullableUnknown, importedKeyCascade, importedKeyInitiallyDeferred, importedKeyInitiallyImmediate, importedKeyNoAction, importedKeyNotDeferrable, importedKeyRestrict, importedKeySetDefault, importedKeySetNull, procedureColumnIn, procedureColumnInOut, procedureColumnOut, procedureColumnResult, procedureColumnReturn, procedureColumnUnknown, procedureNoNulls, procedureNoResult, procedureNullable, procedureNullableUnknown, procedureResultUnknown, procedureReturnsResult, sqlStateSQL, sqlStateSQL99, sqlStateXOpen, tableIndexClustered, tableIndexHashed, tableIndexOther, tableIndexStatistic, typeNoNulls, typeNullable, typeNullableUnknown, typePredBasic, typePredChar, typePredNone, typeSearchable, versionColumnNotPseudo, versionColumnPseudo, versionColumnUnknown|  
   
 ## <a name="methods"></a>方法  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|擷取目前使用者是否有權限可以呼叫所傳回的所有程序[getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md)方法。|  
-|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|擷取目前使用者是否有權限來使用所傳回的所有資料表[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) SELECT 陳述式中的方法。|  
+|[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|擷取值，此值指出目前使用者是否有權限可以呼叫由 [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) 方法傳回的所有程序。|  
+|[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|擷取值，此值指出目前使用者是否有權限可以在 SELECT 陳述式中使用由 [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) 方法傳回的所有資料表。|  
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|指出當自動認可啟用且擲出例外狀況時，JDBC Driver 是否會關閉所有開啟的結果集，包括可保留資料的結果集。|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|擷取值，此值指出交易中的資料定義陳述式是否會強制交易進行認可。|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否會忽略交易中的資料定義陳述式。|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|可以呼叫來偵測可見資料列的刪除是否擷取[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)類別。|  
-|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|擷取是否傳回值[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)方法包括 SQL 資料類型 LONGVARCHAR 和 LONGVARBINARY。|  
-|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|擷取使用者定義類型的給定類型之給定屬性的描述，此類型可由給定結構描述和目錄提供。|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|擷取值，此值指出是否可呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法來偵測可見資料列刪除。|  
+|[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|擷取值，此值指出 [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) 方法的傳回值是否包括 SQL 資料類型 LONGVARCHAR 和 LONGVARBINARY。|  
+|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|擷取使用者定義類型的給定類型之給定屬性的描述，此類型可由給定結構描述和目錄提供。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|擷取資料表中最佳資料行集的描述，此資料行集可唯一識別資料列。|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|擷取已連接伺服器中所提供的目錄名稱。|  
-|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|擷取**字串**，這個資料庫會使用做為類別目錄和資料表名稱之間的分隔符號。|  
+|[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|擷取 **String**，這個資料庫會使用它來作為目錄和資料表名稱之間的分隔符號。|  
 |[getCatalogTerm](../../../connect/jdbc/reference/getcatalogterm-method-sqlserverdatabasemetadata.md)|擷取資料庫供應商的慣用詞彙做為「目錄」。|  
 |[getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)|擷取此驅動程式支援之用戶端資訊屬性的清單。|  
 |[getColumnPrivileges](../../../connect/jdbc/reference/getcolumnprivileges-method-sqlserverdatabasemetadata.md)|擷取資料表中資料行之存取權限的描述。|  
@@ -72,7 +69,7 @@ ms.locfileid: "32853243"
 |[getExtraNameCharacters](../../../connect/jdbc/reference/getextranamecharacters-method-sqlserverdatabasemetadata.md)|擷取可當做未加引號之識別碼名稱的所有額外字元，例如超過 a-z、A-Z、0-9 和 _ 以外的字元。|  
 |[getFunctions](../../../connect/jdbc/reference/getfunctions-method-sqlserverdatabasemetadata.md)|擷取系統和使用者函數的描述。|  
 |[getFunctionColumns](../../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)|擷取所指定目錄的系統函數或使用者函數之參數和傳回類型的描述。|  
-|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|擷取**字串**，用來引用 SQL 識別碼。|  
+|[getIdentifierQuoteString](../../../connect/jdbc/reference/getidentifierquotestring-method-sqlserverdatabasemetadata.md)|擷取用來引用 SQL 識別碼的**字串**。|  
 |[getImportedKeys](../../../connect/jdbc/reference/getimportedkeys-method-sqlserverdatabasemetadata.md)|擷取主索引鍵資料行的描述，這些資料行會由資料表的外部索引鍵資料行所參考。|  
 |[getIndexInfo](../../../connect/jdbc/reference/getindexinfo-method-sqlserverdatabasemetadata.md)|擷取給定資料表中的索引和統計資料的描述。|  
 |[getJDBCMajorVersion](../../../connect/jdbc/reference/getjdbcmajorversion-method-sqlserverdatabasemetadata.md)|擷取這個驅動程式的主要 JDBC 版本號碼。|  
@@ -90,7 +87,7 @@ ms.locfileid: "32853243"
 |[getMaxCursorNameLength](../../../connect/jdbc/reference/getmaxcursornamelength-method-sqlserverdatabasemetadata.md)|擷取這個資料庫允許在資料指標名稱中使用的最大字元數目。|  
 |[getMaxIndexLength](../../../connect/jdbc/reference/getmaxindexlength-method-sqlserverdatabasemetadata.md)|擷取這個資料庫允許用於索引 (包括索引的各個部分) 的最大位元組數目。|  
 |[getMaxProcedureNameLength](../../../connect/jdbc/reference/getmaxprocedurenamelength-method-sqlserverdatabasemetadata.md)|擷取這個資料庫允許在程序名稱中使用的最大字元數目。|  
-|[值指出 getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)|擷取這個資料庫允許在單一資料列中使用的最大位元組數目。|  
+|[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)|擷取這個資料庫允許在單一資料列中使用的最大位元組數目。|  
 |[getMaxSchemaNameLength](../../../connect/jdbc/reference/getmaxschemanamelength-method-sqlserverdatabasemetadata.md)|擷取這個資料庫允許在結構描述名稱中使用的最大字元數目。|  
 |[getMaxStatementLength](../../../connect/jdbc/reference/getmaxstatementlength-method-sqlserverdatabasemetadata.md)|擷取這個資料庫允許在 SQL 陳述式中使用的最大字元數目。|  
 |[getMaxStatements](../../../connect/jdbc/reference/getmaxstatements-method-sqlserverdatabasemetadata.md)|擷取這個資料庫可同時開啟的最大作用中陳述式數目。|  
@@ -104,12 +101,12 @@ ms.locfileid: "32853243"
 |[getProcedureTerm](../../../connect/jdbc/reference/getprocedureterm-method-sqlserverdatabasemetadata.md)|擷取慣用詞彙做為這個資料庫中的「程序」。|  
 |[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverdatabasemetadata.md)|擷取這個資料庫預設結果集保留性。|  
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|傳回狀態，此狀態會指出是否支援 SQL RowId 資料類型。 如果支援，將傳回 RowId 物件維持有效的存留期間。|  
-|[GetSchemas](../../../connect/jdbc/reference/getschemas-method.md)|擷取目前資料庫中所提供的結構描述名稱。|  
+|[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|擷取目前資料庫中所提供的結構描述名稱。|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|擷取慣用詞彙做為這個資料庫中的「目錄」。|  
-|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|擷取**字串**可用來逸出萬用字元。|  
+|[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|擷取可用來逸出萬用字元的 **String**。|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的非同時為 SQL92 關鍵字的其他所有 SQL 關鍵字的逗號分隔清單。|  
 |[getSQLStateType](../../../connect/jdbc/reference/getsqlstatetype-method-sqlserverdatabasemetadata.md)|指出由 SQLException.getSQLState 方法傳回的 SQLSTATE 是 X/Open (現在稱為 Open Group)、SQL CLI、SQL99 (JDBC 3.0) 或 SQL:2003 (JDBC 4.0)。|  
-|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|擷取的逗號分隔清單**字串**函式，可與這個資料庫。|  
+|[getStringFunctions](../../../connect/jdbc/reference/getstringfunctions-method-sqlserverdatabasemetadata.md)|擷取這個資料庫可用 **String** 函式的逗號分隔清單。|  
 |[getSuperTables](../../../connect/jdbc/reference/getsupertables-method-sqlserverdatabasemetadata.md)|擷取資料表階層的描述，這些階層會定義在這個資料庫內的特定結構描述中。|  
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|擷取使用者定義類型階層的描述，這些階層會定義在這個資料庫內的特定結構描述中。|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|擷取這個資料庫可用之系統函式的逗號分隔清單。|  
@@ -117,12 +114,12 @@ ms.locfileid: "32853243"
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|擷取可依給定目錄、結構描述或資料表名稱模式取得之資料表的描述。|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|擷取目前資料庫中所提供的資料表類型。|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|擷取這個資料庫可用之時間和日期函數的逗號分隔清單。|  
-|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|擷取目前資料庫支援之所有標準 SQL 類型的描述。|  
+|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|擷取目前資料庫支援之所有標準 SQL 類型的描述。|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|擷取使用者定義類型的描述，這些類型會定義在特定的結構描述中。|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的 URL。|  
-|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的已知使用者名稱。|  
+|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的已知使用者名稱。|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|擷取資料表的資料行描述，此資料表會在資料列中的任何值更新時自動跟著更新。|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|擷取是否可以呼叫方法來偵測可見資料列插入[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)類別。|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|擷取值，此值指出是否可呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 方法來偵測可見資料列插入。|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|擷取值，此值指出目錄是否會出現在完整資料表名稱的開頭。|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否處在唯讀模式。|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|指出對 LOB 進行的更新作業是作用於複本或是直接作用於 LOB。|  
@@ -174,8 +171,8 @@ ms.locfileid: "32853243"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否支援 ODBC Minimum SQL 文法。|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否會依不區分大小寫的方式來處理未加上引號的混合大小寫字母之 SQL 識別碼，並將它們儲存成混合大小寫字母。|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否會依不區分大小寫的方式來處理已加上引號的混合大小寫字母之 SQL 識別碼，並將它們儲存成混合大小寫字母。|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|擷取值，是否可能有多個[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)從傳回的物件[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)同時物件。|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|擷取這個資料庫是否支援取得多個[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件呼叫一次從[執行](../../../connect/jdbc/reference/execute-method.md)方法[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)類別。|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|擷取值，此值指出是否可以同時擁有多個從 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件傳回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否支援從單一呼叫 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的 [execute](../../../connect/jdbc/reference/execute-method.md) 方法，取得多個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否允許在不同連接上一次開啟多個交易。|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否支援在可呼叫陳述式中使用具名參數。|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫中的資料行是否可以定義成不可為 Null。|  
@@ -209,7 +206,7 @@ ms.locfileid: "32853243"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否支援交易。|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否支援 SQL UNION。|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否支援 SQL UNION ALL。|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|是否可以呼叫來偵測可見資料列更新擷取[rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)類別。|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|擷取值，此值指出是否可呼叫 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 方法來偵測可見資料列更新。|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否針對每個資料表個別使用檔案。|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否將資料表儲存在本機檔案中。|  
   

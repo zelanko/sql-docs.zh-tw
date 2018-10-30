@@ -36,7 +36,7 @@ public java.lang.String getDriverName()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 包含 JDBC 驅動程式名稱的 。  
+ **String**，包含 JDBC Driver名稱。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

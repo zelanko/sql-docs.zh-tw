@@ -36,7 +36,7 @@ public java.lang.String getSystemFunctions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，包含系統函式的清單。  
+ **String**，包含系統函式的清單。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

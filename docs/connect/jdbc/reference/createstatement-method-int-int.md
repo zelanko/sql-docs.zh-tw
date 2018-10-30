@@ -1,13 +1,11 @@
 ---
-title: createStatement 方法 （int，int） |Microsoft 文件
+title: createStatement 方法 （int，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.createStatement (int, int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fae1d8ed3aa008415d325b04f02f8e96adc519f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 58390bfd2310b1cae9ce7427106c88a8e38915df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645366"
 ---
 # <a name="createstatement-method-int-int"></a>createStatement 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  建立[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件，可產生[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)具有給定型的別和並行存取的物件。  
+  建立 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件，它會產生具有指定類型和並行的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,11 +39,11 @@ public java.sql.Statement createStatement(int resultSetType,
 #### <a name="parameters"></a>參數  
  *resultSetType*  
   
- **Int**值，表示結果集類型。  
+ 表示結果集類型的 **int** 值。  
   
  *resultSetConcurrency*  
   
- **Int**值，表示結果集並行類型。  
+ 表示結果集並行類型的 **int** 值。  
   
 ## <a name="return-value"></a>傳回值  
  陳述式物件。  
@@ -54,8 +51,8 @@ public java.sql.Statement createStatement(int resultSetType,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個的 createStatement 方法是由 java.sql.Connection 介面中的 createStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [createStatement 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

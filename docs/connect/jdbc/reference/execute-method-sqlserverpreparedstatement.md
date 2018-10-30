@@ -1,13 +1,11 @@
 ---
-title: execute 方法 (SQLServerPreparedStatement) |Microsoft 文件
+title: execute 方法 (SQLServerPreparedStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.execute
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71db3f2474ec64658d52d0960c26768433e1065d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6c6d6c3fe6b7e4b859ed26ecd171a9b1a9e02899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812276"
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  執行 SQL 陳述式中這[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)物件，它可以是任何類型的 SQL 陳述式。  
+  在這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件中執行可為任何類型的 SQL 陳述式。  
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[執行 （）](../../../connect/jdbc/reference/execute-method.md)|執行 SQL 陳述式中這[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)物件，它可以是任何類型的 SQL 陳述式。|  
-|[執行 (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|執行給定的 SQL 陳述式，此陳述式可傳回多個結果。|  
+|[execute ()](../../../connect/jdbc/reference/execute-method.md)|在這個 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件中執行可為任何類型的 SQL 陳述式。|  
+|[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|執行給定的 SQL 陳述式，此陳述式可傳回多個結果。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

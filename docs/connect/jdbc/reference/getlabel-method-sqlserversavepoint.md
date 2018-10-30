@@ -1,13 +1,11 @@
 ---
-title: getLabel 方法 (SQLServerSavepoint) |Microsoft 文件
+title: getLabel 方法 (SQLServerSavepoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerSavepoint.getLabel
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecd87347176b39384c586aca21a83fb332b68e16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d60050d25ee580bcebc91ac7aeb5396fe889a9b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806139"
 ---
 # <a name="getlabel-method-sqlserversavepoint"></a>getLabel 方法 (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +36,7 @@ public java.lang.String getLabel()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- A**字串**，其中包含儲存點標籤的名稱。  
+ **String**，包含此儲存點標籤的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerSavepoint 方法](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

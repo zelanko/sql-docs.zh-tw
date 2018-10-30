@@ -21,7 +21,7 @@ ms.locfileid: "47720916"
 # <a name="setcharacterstream-method-sqlservernclob"></a>setCharacterStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取資料流，此資料流將用於從指定位置開始，將 Unicode 字元資料流寫入到這個  物件所代表的  值。  
+  擷取資料流，此資料流將用於從指定位置開始，將 Unicode 字元資料流寫入到這個 **java.sql.NClob** 物件所代表的 **NCLOB** 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,10 +33,10 @@ public java.io.Writer setCharacterStream(long pos)
 #### <a name="parameters"></a>參數  
  *pos*  
   
- 開始寫入至  值的位置，第一個位置是 1。  
+ 開始寫入至 **NCLOB** 值的位置，第一個位置是 1。  
   
 ## <a name="return-value"></a>傳回值  
- 物件，表示 Unicode 編碼字元可寫入其中的資料流。  
+ Writer 物件，表示 Unicode 編碼字元可寫入其中的資料流。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

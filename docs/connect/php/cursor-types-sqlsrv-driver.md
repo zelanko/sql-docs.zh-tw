@@ -48,7 +48,7 @@ SQLSRV 驅動程式可讓您根據資料指標類型，建立能夠以任何順�
 |SQLSRV_SCROLL_NEXT|指定下一個資料列。 這是預設值，如果您未指定*資料列*可捲動的結果集的參數。|  
 |SQLSRV_SCROLL_PRIOR|指定目前的資料列之前的資料列。|  
 |SQLSRV_SCROLL_FIRST|指定結果集中的第一個資料列。|  
-|SQLSRV_SCROLL_LAST|指定結果集中的第一個資料列。|  
+|SQLSRV_SCROLL_LAST|指定結果集中的最後一個資料列。|  
 |SQLSRV_SCROLL_ABSOLUTE|指定使用指定的資料列*位移*參數。|  
 |SQLSRV_SCROLL_RELATIVE|指定使用指定的資料列*位移*目前資料列的參數。|  
   

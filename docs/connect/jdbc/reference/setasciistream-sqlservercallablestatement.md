@@ -27,9 +27,9 @@ ms.locfileid: "47621446"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[updateAsciiStream 方法 &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)|將指定的參數設定為指定的輸入資料流。|  
-|[setAsciiStream 方法 (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-int.md)|將指定的參數設定為指定的輸入資料流，其中將包含指定的位元組數目。|  
-|[updateAsciiStream 方法 &#40;java.lang.String, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-long.md)|設定指定的參數數值為指定的輸入資料流，其中將包含指定的位元組數目。|  
+|[setAsciiStream 方法 &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md)|將指定的參數設定為指定的輸入資料流。|  
+|[setAsciiStream 方法 &#40;java.lang.String, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-int.md)|將指定的參數設定為指定的輸入資料流，其中將包含指定的位元組數目。|  
+|[setAsciiStream 方法 &#40;java.lang.String, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream-long.md)|設定指定的參數數值為指定的輸入資料流，其中將包含指定的位元組數目。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

@@ -1,25 +1,20 @@
 ---
 title: 搭配使用 Always Encrypted 與 ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828266"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -57,7 +52,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 請注意，啟用 永遠加密不足，無法加密或解密成功;您也需要確定：
 
-- 應用程式要有 [檢視任何資料行的主要金鑰定義] 和 [檢視任何資料行的加密金鑰定義] 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資訊，請參閱 <<c0> [ 資料庫的權限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
+- 應用程式要有 [檢視任何資料行的主要金鑰定義]** 和 [檢視任何資料行的加密金鑰定義]** 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資訊，請參閱 <<c0> [ 資料庫的權限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
 
 - 應用程式可以存取用來保護查詢加密資料行的 Cek CMK。 這是相依於儲存 CMK 的金鑰儲存區提供者。 請參閱[使用 資料行主要金鑰存放區](#working-with-column-master-key-stores)如需詳細資訊。
 
@@ -99,7 +94,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 範例程式碼中沒有任何需要加密的特定項目。 驅動程式會自動偵測並加密的 SSN 和日期參數，其目標為加密的資料行的值。 這讓加密對應用程式變得透明化。
 
-- 插入至資料庫資料行，包括加密的資料行的值會當做繫結的參數傳遞 (請參閱[SQLBindParameter 函式](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx))。 雖然將值傳送到未加密的資料行時，使用參數是選擇性項目 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要項目。 如果插入 SSN 或 BirthDate 資料行中的值傳遞做為內嵌在查詢陳述式中的常值，則查詢會失敗，因為驅動程式不會嘗試加密，或處理查詢中的常值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
+- 插入至資料庫資料行的值，包括加密的資料行，會傳遞為繫結參數 (請參閱 [SQLBindParameter 函式](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx))。 雖然將值傳送到未加密的資料行時，使用參數是選擇性項目 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要項目。 如果插入 SSN 或 BirthDate 資料行中的值傳遞做為內嵌在查詢陳述式中的常值，則查詢會失敗，因為驅動程式不會嘗試加密，或處理查詢中的常值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
 
 - SQL 類型的插入 SSN 資料行的參數設定為 SQL_CHAR，這會對應到**char** SQL Server 資料類型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果參數的型別設定為 SQL_WCHAR，這會對應到**nchar**，則查詢會失敗，因為永遠加密 不支援加密的 nchar 值的伺服器端轉換成加密的 char 值。 請參閱[ODBC 程式設計人員參考-附錄 d： 資料類型](https://msdn.microsoft.com/library/ms713607.aspx)如需有關資料類型對應資訊。
 
@@ -144,9 +139,9 @@ CREATE TABLE [dbo].[Patients](
 
 下例示範根據加密值篩選資料，以及從加密資料行擷取純文字資料。 請注意下列事項：
 
-- 要傳遞使用 SQLBindParameter 等，讓驅動程式可以以透明方式加密它傳送到伺服器之前，先用在 WHERE 子句來篩選 SSN 資料行所需要的值。
+- 在 WHERE 子句中用來篩選 SSN 資料行的值，需要使用 SQLBindParameter 傳遞，如此驅動程式可以清晰簡明方式來加密它，再將它傳送至伺服器。
 
-- 列印程式的所有值都會以純文字，因為驅動程式會以透明的方式解密從 SSN 和 BirthDate 資料行擷取的資料。
+- 程式列印的所有值都是純文字格式，因為驅動程式會以清晰簡明方式來解密從 SSN 和 BirthDate 資料行擷取的資料。
 
 > [!NOTE]
 > 查詢可以加密資料行上執行相等比較，只有具決定性加密。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
@@ -574,7 +569,7 @@ ODBC Driver 17 for SQL Server 加密之前使用 SQLGetData 組件中不能擷�
 
 |[屬性]|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值為`Enabled` / `Disabled`。<br>`Enabled` -- 啟用連線的 Always Encrypted 功能。<br>`Disabled` -停用連接的一律加密功能。 <br><br>預設值為 `Disabled`。|  
+|`ColumnEncryption`|接受的值為`Enabled` / `Disabled`。<br>`Enabled` -- 啟用連線的 Always Encrypted 功能。<br>`Disabled` -- 停用連線的 Always Encrypted 功能。 <br><br>預設值為 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效的值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 當`KeyStoreAuthentication`  =  `KeyVaultPassword`，將此值設定為有效的 Azure Active Directory 使用者主體名稱。 <br>當`KeyStoreAuthetication`  =  `KeyVaultClientSecret`將此值設定為有效 Azure Active Directory 應用程式用戶端識別碼 |
 |`KeyStoreSecret` | 當`KeyStoreAuthentication`  =  `KeyVaultPassword`將此值設定為對應的使用者名稱的密碼。 <br>當`KeyStoreAuthentication`  =  `KeyVaultClientSecret`將此值設定為有效 Azure Active Directory 應用程式用戶端識別碼相關聯的應用程式祕密|

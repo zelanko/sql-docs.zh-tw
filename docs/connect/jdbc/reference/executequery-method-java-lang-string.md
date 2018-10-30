@@ -1,13 +1,11 @@
 ---
-title: executeQuery 方法 (java.lang.String) |Microsoft 文件
+title: executeQuery 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeQuery (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c336fa7b11186dfbc94f35daef99853175ffc86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4d266af1e09c457db4742d6aca06df65acfd505a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774359"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  執行給定的 SQL 陳述式，並傳回單一[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+  執行指定的 SQL 陳述式，並傳回單一 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,20 +41,19 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
  包含 SQL 陳述式的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
- 
-          SQLServerResultSet 物件。  
+ SQLServerResultSet 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 executeQuery 方法是由 java.sql.Statement 介面中的 executeQuery 方法來指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 executeQuery 方法是由 java.sql.Statement 介面中的 executeQuery 方法指定。  
   
- 這個方法會覆寫[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法中找到[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)類別。  
+ 這個方法會覆寫 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 類別中找到的 [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法。  
   
- 呼叫這個方法會導致例外狀況，因為在建立物件時指定 SQLServerPreparedStatement 物件的 SQL 陳述式。  
+ 呼叫這個方法將會產生例外狀況，因為當建立 SQLServerPreparedStatement 物件時，已指定此物件的 SQL 陳述式。  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)如果給定的 SQL 陳述式產生單一以外的任何項目，會擲回[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ 如果指定的 SQL 陳述式產生單一 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件以外的任何項目，則會擲回 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [executeQuery 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

@@ -41,10 +41,10 @@ public java.lang.String nativeSQL(java.lang.String sql)
 #### <a name="parameters"></a>參數  
  *sql*  
   
- $**：一個包含 SQL 陳述式的字串。  
+ **String**，包含 SQL 陳述式。  
   
 ## <a name="return-value"></a>傳回值  
- ，包含轉換過的 SQL 陳述式。  
+ **String**，包含轉換過的 SQL 陳述式。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

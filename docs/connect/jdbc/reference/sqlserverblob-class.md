@@ -32,7 +32,7 @@ ms.locfileid: "47812256"
   
  **擴充：** java.lang.Object  
   
- 實作： java.sql.Blob、java.io.Serializable  
+ **實作：** java.sql.Blob、java.io.Serializable  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ public class SQLServerBlob
 ```  
   
 ## <a name="remarks"></a>Remarks  
- BLOB 會當做 IMAGE 資料型別儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
+ BLOB 會作為 IMAGE 資料類型儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)   

@@ -36,7 +36,7 @@ public final int getUpdateCount()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，包含更新計數。 如果傳回的結果是結果集物件或者沒有其他結果，則會傳回 -1。  
+ **int**，包含更新計數。 如果傳回的結果是結果集物件或者沒有其他結果，則會傳回 -1。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

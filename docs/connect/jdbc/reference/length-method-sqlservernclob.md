@@ -21,7 +21,7 @@ ms.locfileid: "47713196"
 # <a name="length-method-sqlservernclob"></a>length 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取  中之字元的數目。  
+  擷取 **NClob** 中的字元數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +31,7 @@ public long length()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 中之字元數目的長度。  
+ **NClob** 中的字元數長度。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -21,15 +21,15 @@ ms.locfileid: "47706276"
 # <a name="setcharacterstream-method-sqlservercallablestatement"></a>setCharacterStream 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定參數設定為指定的 java.io.Reader 物件。  
+  將指定參數設定為所指定 java.io.Reader 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[setCharacterStream 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
-|[setCharacterStream 方法 (java.lang.String, java.io.Reader, int)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-int.md)|將指定的參數設定為指定的  物件，該物件長度為指定的字元數。|  
-|[setCharacterStream 方法 (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-long.md)|將指定的參數設定為指定的  物件，該物件長度為指定的字元數。|  
+|[setCharacterStream 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
+|[setCharacterStream 方法 &#40;java.lang.String, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-int.md)|將指定的參數設定為所指定 java.io.Reader 物件，該物件長度為指定的字元數。|  
+|[setCharacterStream 方法 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-long.md)|將指定的參數設定為所指定 java.io.Reader 物件，該物件長度為指定的字元數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

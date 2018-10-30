@@ -27,7 +27,7 @@ ms.locfileid: "47742996"
 
 其他問題會公佈於 [Microsoft ODBC 驅動程式團隊部落格](http://blogs.msdn.com/b/sqlnativeclient/)上。  
 
-- Windows、Linux 和 macOS 可能會以不同的方式轉換來自專用區 (PUA) 或使用者定義字元 (EUDC) 的字元。 透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在伺服器上執行的轉換，會使用 Windows 轉換程式庫。 驅動程式中的轉換使用的 Windows、 Linux 或 macOS 轉換程式庫。 執行這些轉換時，這兩個程式庫可能會產生不同的結果。 如需詳細資訊，請參閱 [使用者定義字元和專用區字元](/windows/desktop/Intl/end-user-defined-characters)。
+- Windows、Linux 和 macOS 可能會以不同的方式轉換來自專用區 (PUA) 或使用者定義字元 (EUDC) 的字元。 透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在伺服器上執行的轉換，會使用 Windows 轉換程式庫。 驅動程式中的轉換使用的 Windows、 Linux 或 macOS 轉換程式庫。 執行這些轉換時，這兩個程式庫可能會產生不同的結果。 如需詳細資訊，請參閱[終端使用者定義字元和專用區字元](/windows/desktop/Intl/end-user-defined-characters)。
 
 - 如果用戶端的編碼是 utf-8，驅動程式管理員不會不一定能夠正確轉換從 utf-8 為 utf-16。 目前，當字串中的一或多個字元並不是有效的 utf-8 字元時，就會發生資料損毀。 ASCII 字元都正確對應。 在呼叫 ODBC API 的 SQLCHAR 版本 (例如 SQLDriverConnectA) 時，驅動程式管理員會嘗試這項轉換。 在呼叫 ODBC API 的 SQLWCHAR 版本 (例如 SQLDriverConnectW) 時，驅動程式管理員將不會嘗試這項轉換。  
 

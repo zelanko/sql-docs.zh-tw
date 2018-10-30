@@ -1,13 +1,11 @@
 ---
-title: setResponseBuffering 方法 (SQLServerStatement) |Microsoft 文件
+title: setResponseBuffering 方法 (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 114bba1ad782a3cc14585267407386d30f4ac0b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 946792cc2f1d2f96f51785322e211ec959dc3722
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820776"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>setResponseBuffering 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定的回應緩衝模式，這個[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件以不區分大小寫**完整字串**或**適應性**。  
+  將這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的回應緩衝模式設定為 **String full** 或 **adaptive** (不區分大小寫)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,21 +38,21 @@ public final void setResponseBuffering(java.lang.String value)
 #### <a name="parameters"></a>參數  
  *value*  
   
- A**字串**包含回應緩衝模式。 有效的模式可以是下列的不區分大小寫字串的其中之一：**完整**或**適應性**。  
+ **String**，包含回應緩衝模式。 有效模式可能是下列其中一個區分大小寫的 String：**full** 或 **adaptive**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- **自動調整**指定最小可能的資料在必要時緩衝處理。  
+## <a name="remarks"></a>Remarks  
+ **adaptive** 值會指定在必要時緩衝處理可能的資料下限。  
   
- **完整**指定在執行階段從伺服器讀取整個結果。  
+ **full** 會指定在執行階段從伺服器讀取整個結果。  
   
  adaptive 是 JDBC Driver 2.0 和 3.0 版中的預設值。 full 是 JDBC Driver 2.0 版之前的預設值。  
   
- [SetResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法可讓您覆寫**responseBuffering**連接**字串**屬性目前[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。 如需使用回應緩衝模式的詳細資訊，請參閱[使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
+ [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 可讓您覆寫目前 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件的 **responseBuffering** 連線 **String** 屬性。 如需使用回應緩衝模式的詳細資訊，請參閱 <<c0> [ 使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
- 如果應用程式指定了無效的參數值來[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法， [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)就會擲回。  
+ 如果應用程式指定給 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法的參數值無效，則會擲回 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

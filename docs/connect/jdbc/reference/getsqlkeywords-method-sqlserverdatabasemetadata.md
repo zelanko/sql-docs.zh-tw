@@ -36,7 +36,7 @@ public java.lang.String getSQLKeywords()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 包含 SQL 陳述式的 **String**。  
+ **String**，包含 SQL 關鍵字。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

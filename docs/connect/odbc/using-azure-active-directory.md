@@ -5,21 +5,18 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b1e12a4586cc063f6f4e556894b5da1e7f99eff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983674"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634998"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,6 +24,9 @@ ms.locfileid: "38983674"
 ## <a name="purpose"></a>目的
 
 Microsoft ODBC Driver for SQL Server 使用 13.1 版或更新可讓 ODBC 應用程式連接到 SQL Azure 的執行個體使用 Azure Active Directory 中的同盟識別身分，使用使用者名稱/密碼、 Azure Active Directory 存取權杖或 Windows整合式驗證 (_Windows 驅動程式只_)。 ODBC driver 13.1 版，權杖驗證是 Azure Active Directory 存取權_只有 Windows_。 ODBC 驅動程式第 17 版和以上支援此驗證跨所有平台 （Windows、 Linux 和 Mac）。 新的 Azure Active Directory 互動式驗證與登入識別碼是 Windows 推出 17.1 版本的 ODBC 驅動程式。 所有這些是在透過使用新的 DSN 和連接字串關鍵字和連接屬性來完成。
+
+> [!NOTE]
+> ODBC Driver on Linux 和 macOS 不支援 Active Directory Federation Services。 如果您使用 Azure Active Directory 使用者名稱/密碼驗證，從 Linux 或 macOS 用戶端與您的 Active Directory 設定包含同盟服務，驗證可能會失敗。
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>新增和/或修改過的資料來源名稱和連接字串關鍵字
 
@@ -65,7 +65,7 @@ DSN 設定和連接 Ui 的驅動程式已增強，以使用與 Azure AD 的驗�
 
 ![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
 
-`Authentication=ActiveDirectoryInteractive` SQL Azure 的 Azure Active Directory 互動式驗證
+`Authentication=ActiveDirectoryInteractive` 表示對 SQL Azure 進行 Azure Active Directory 互動式驗證
 
 ![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
 

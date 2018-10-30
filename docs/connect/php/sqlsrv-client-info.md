@@ -48,17 +48,17 @@ sqlsrv_client_info( resource $conn)
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
-|DriverVer|ODBC Driver 11 for SQL Server DLL 版本：<br /><br />xx.yy.zzzz [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.2 或 3.1 版|  
-|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />3.2.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]適用於  3.2 版<br /><br />3.1.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]適用於  3.1 版|  
+|DriverVer|ODBC Driver 11 for SQL Server DLL 版本：<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.2 或 3.1 版)|  
+|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />3.2.xxxx.x (適用於 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.2 版)<br /><br />3.1.xxxx.x (適用於 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.1 版)|  
   
 **若是 SQL Server 3.0 和 2.0 版的 PHP**：  
   
 |索引鍵|Description|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10.DLL [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版|  
+|DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
-|DriverVer|SQL Server Native Client DLL 版本：<br /><br />10.50.xxx [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版|  
-|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />2.0.xxxx.x [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版|  
+|DriverVer|SQL Server Native Client DLL 版本：<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
+|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
   
 ## <a name="example"></a>範例  
 從命令列執行下列範例時，該範例會將用戶端資訊寫入至主控台。 此範例假設 SQL Server 安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  

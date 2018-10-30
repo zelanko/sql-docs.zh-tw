@@ -26,7 +26,7 @@ ms.locfileid: "47737146"
 # <a name="updateint-method-int-int"></a>updateInt 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  透過指定的資料行名稱，使用 **int** 值來更新指定的資料行。  
+  透過指定的資料行索引，使用 **int** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   

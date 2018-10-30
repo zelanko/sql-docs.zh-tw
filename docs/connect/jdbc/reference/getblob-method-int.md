@@ -26,7 +26,7 @@ ms.locfileid: "47619206"
 # <a name="getblob-method-int"></a>getBlob 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，並配合給定的參數索引來擷取指定之 JDBC BLOB 參數的值當做  物件。  
+  使用 Java 程式設計語言，並配合所指定參數索引來擷取指定 JDBC BLOB 參數的值作為 Blob 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,10 +47,10 @@ public java.sql.Blob getBlob(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這項 getDate 方法由 java.sql.CallableStatement 介面中的 getDate 方法所指定。  
+ 這個 getBlob 方法是由 java.sql.CallableStatement 介面中的 getBlob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [setTime 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
+ [getBlob 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: next 方法 (SQLServerResultSet) |Microsoft 文件
+title: 下一個方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.next
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa878b809af8dab927877f8af0db3d54a6a3eb30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c2b5611c9f925c95a49982f8f9c936a6d84952f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840823"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702838"
 ---
 # <a name="next-method-sqlserverresultset"></a>next 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,12 +41,12 @@ public boolean next()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個下一個的方法是由 java.sql.ResultSet 介面中的下一個方法所指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 next 方法是由 java.sql.ResultSet 介面中的 next 方法指定。  
   
- 結果集資料指標一開始位於第一個資料列的前面。 第一個呼叫下一個方法讓第一個資料列的目前資料列，第二次呼叫第二個資料列目前的資料列，依此類推。  
+ 結果集資料指標一開始位於第一個資料列的前面。 第一次呼叫 next 方法會讓第一個資料列成為目前的資料列，第二次呼叫會讓第二個資料列成為目前的資料列，依此類推。  
   
- 如果輸入資料流已開啟的目前資料列下, 一個方法的呼叫會以隱含方式關閉它。 警告鏈結[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)讀取新的資料列時，會清除物件。  
+ 如果已經針對目前的資料列開啟輸入資料流，則呼叫 next 方法將會以隱含的方式關閉它。 當讀取新的資料列時，將會清除 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的警告鏈結。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

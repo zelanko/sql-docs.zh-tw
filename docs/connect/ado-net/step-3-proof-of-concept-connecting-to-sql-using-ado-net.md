@@ -1,37 +1,34 @@
 ---
-title: 步驟 3： 使用 ADO.NET 的 sql 連接的概念證明 |Microsoft 文件
+title: 步驟 3︰使用 ADO.NET 連接到 SQL 的概念證明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6933fb1690b11d373974892672b43fe8df218860
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603966"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3： 使用 ADO.NET 的 sql 連接的概念證明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步驟 3︰使用 ADO.NET 連線到 SQL 的概念證明
 
-- 前一篇文章：&nbsp;&nbsp;&nbsp;[步驟 2： 建立 SQL database 的 ADO.NET 程式開發](step-2-create-a-sql-database-for-ado-net-development.md)  
-- 接下來文章：&nbsp;&nbsp;&nbsp;[步驟 4： 彈性地連接到使用 ADO.NET 的 SQL](step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- 前一篇文章：&nbsp;&nbsp;&nbsp;[步驟 2： 建立 ADO.NET 開發的 SQL 資料庫](step-2-create-a-sql-database-for-ado-net-development.md)  
+- 下一篇文章：&nbsp;&nbsp;&nbsp;[步驟 4︰使用 ADO.NET 彈性地連接到 SQL](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-這個 C# 程式碼範例都應該考慮只概念證明。 範例程式碼為了清楚起見，已簡化，並不一定代表由 Microsoft 所建議的最佳作法。  
+這個 C# 程式碼範例應該考慮只概念證明。 範例程式碼為了清楚起見，已簡化，並不一定代表 Microsoft 建議的最佳作法。  
   
-## <a name="step-1-connect"></a>步驟 1： 連接
+## <a name="step-1-connect"></a>步驟 1： 連線
   
-此方法**SqlConnection.Open**用來連接到您的 SQL 資料庫。  
+此方法**SqlConnection.Open**用來連接到您的 SQL database。  
 
 
 ```CSharp  
@@ -68,12 +65,12 @@ ms.locfileid: "35288887"
 ```  
 
 
-## <a name="step-2--execute-a-query"></a>步驟 2： 執行查詢  
+## <a name="step-2--execute-a-query"></a>步驟 2：執行查詢  
   
 SqlCommand.ExecuteReader 方法：  
   
-- SQL 系統會發出 SQL SELECT 陳述式。  
-- 傳回 SqlDataReader 提供存取的結果資料列的執行個體。  
+- SQL 系統發出 SQL SELECT 陳述式。  
+- 傳回 SqlDataReader，以提供存取權的結果資料列的執行個體。  
   
   
   
@@ -157,10 +154,10 @@ SqlCommand.ExecuteReader 方法：
 ## <a name="step-3-insert-a-row"></a>步驟 3： 插入資料列  
   
   
-這個範例會示範如何：  
+此範例示範如何：  
   
-- 安全地執行的 SQL INSERT 陳述式所傳遞的參數。  
-  - 使用參數可防止 SQL 資料隱碼攻擊。  
+- 透過將參數傳遞，安全地執行的 SQL INSERT 陳述式。  
+  - 使用參數可防止 SQL 插入式攻擊。  
 - 擷取自動產生的值。  
   
   

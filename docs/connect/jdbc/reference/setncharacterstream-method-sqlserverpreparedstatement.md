@@ -21,14 +21,14 @@ ms.locfileid: "47598465"
 # <a name="setncharacterstream-method-sqlserverpreparedstatement"></a>setNCharacterStream 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定參數設定為指定的 java.io.Reader 物件。  
+  將指定的參數設定為所指定 java.io.Reader 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[setNCharacterStream 方法 (int, java.io.Reader)](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
-|[setNCharacterStream 方法 (int, java.io.Reader, long)](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
+|[setNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
+|[setNCharacterStream 方法 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

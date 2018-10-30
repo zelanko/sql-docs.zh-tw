@@ -1,33 +1,30 @@
 ---
-title: SQLServerException 建構函式 (java.lang.Object，java.lang.String，java.lang.String，StreamError、 布林值) |Microsoft 文件
+title: SQLServerException 建構函式 (java.lang.Object、 java.lang.String、 java.lang.String、 StreamError、 boolean) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8c2f8664e7d97c7bc197b3053e515a6fb121ebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 89d156ca5024ed49cbc3b5256266c393c897ae12
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845753"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756386"
 ---
-# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException 建構函式 (java.lang.Object，java.lang.String，java.lang.String，StreamError、 布林值)
+# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException 建構函式 (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  初始化的新執行個體[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)類別時指定**物件**、**字串**物件**字串**物件、 **StreamError**物件，和**布林**。
+  初始化的新執行個體[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)類別，在給定**物件**，則**字串**物件，**字串**物件、 **StreamError**物件，並**布林**。
 
 ## <a name="syntax"></a>語法  
   
@@ -61,7 +58,7 @@ public SQLServerException(java.lang.Object obj,
  
  *bStack*  
   
- 布林值，指出是否應產生堆疊追蹤。
+ 布林值，指出是否會產生堆疊追蹤。
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerException 建構函式](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

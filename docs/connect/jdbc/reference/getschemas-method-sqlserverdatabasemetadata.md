@@ -27,7 +27,7 @@ ms.locfileid: "47811726"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getSchemas 方法 ()](../../../connect/jdbc/reference/getschemas-method.md)|擷取目前資料庫中所提供的結構描述名稱。|  
+|[getSchemas 方法 &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|擷取目前資料庫中所提供的結構描述名稱。|  
 |[getSchemas 方法&#40;String，String&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|使用指定的目錄名稱和結構描述名稱，擷取目前資料庫中所提供的結構描述名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

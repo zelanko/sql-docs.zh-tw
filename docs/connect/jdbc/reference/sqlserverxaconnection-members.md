@@ -1,30 +1,27 @@
 ---
-title: SQLServerXAConnection 成員 |Microsoft 文件
+title: SQLServerXAConnection 成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 188140965c0040f8454156555b71adbd2fe89ce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0b9dad3c76b8ffec130e41ab147a81439167de86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851063"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699890"
 ---
 # <a name="sqlserverxaconnection-members"></a>SQLServerXAConnection 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出所公開的成員[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)類別。  
+  下表列出由 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 類別公開的成員。  
   
 ## <a name="constructors"></a>建構函式  
  無。  
@@ -37,13 +34,13 @@ ms.locfileid: "32851063"
   
 ## <a name="methods"></a>方法  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(繼承自[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 註冊指定的事件接聽程式，以便將在此連接物件上發生事件時通知。|  
-|[關閉](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(繼承自[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 關閉這個連線物件所代表的實體連接。|  
-|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|(繼承自[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 建立這個連線物件所代表的實體連接的物件控制代碼。|  
-|[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)|擷取[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)物件的交易管理員將用來管理的參與[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)分散式交易中的物件。|  
-|[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|(繼承自[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 移除指定的事件接聽程式。|  
+|[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(繼承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 註冊指定的事件接聽程式，如此一來，當這個 Connection 物件上發生事件時，它就可以收到通知。|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(繼承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 關閉這個 Connection 物件所代表的實體連接。|  
+|[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|(繼承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 建立這個 Connection 物件所代表實體連接的物件控制代碼。|  
+|[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)|擷取 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 物件，交易管理員將會使用它來管理參與分散式交易中的這個 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 物件。|  
+|[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|(繼承自 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 移除指定的事件接聽程式。|  
   
 ## <a name="inherited-methods"></a>繼承的方法  
   

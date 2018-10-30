@@ -36,7 +36,7 @@ public boolean isCatalogAtStart()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果目錄名稱是第一個則為 ， 否則為 **false**。  
+ 如果目錄名稱是第一個，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

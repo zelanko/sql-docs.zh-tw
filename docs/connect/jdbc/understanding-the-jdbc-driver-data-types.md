@@ -39,7 +39,7 @@ JDBC 類型系統會調解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 | [了解資料類型轉換](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | 描述在使用 getter 和 setter 方法時，如何處理資料類型轉換。                                                                                                                                                                                  |
 | [國家字元集支援](../../connect/jdbc/national-character-set-support.md)                                                           | 描述國家字元集類型的支援。                                                                                                                                                                                                          |
 | [支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)                                                                                 | 描述 SQLXML 介面。 同時描述如何在具有 **SQLXML** Java 資料類型的關聯式資料庫中讀取和寫入 XML 資料。                                                                                                             |
-| [包裝函式與介面](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | 討論擁有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定方法與常數的介面，讓應用程式伺服器建立類別的 Proxy。同時討論 `java.sql.Wrapper` 介面的支援。 |
+| [包裝函式與介面](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | 討論具有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定方法與常數的介面，讓應用程式伺服器建立類別的 Proxy。同時討論 `java.sql.Wrapper` 介面的支援。 |
   
 ## <a name="see-also"></a>另請參閱
 

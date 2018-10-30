@@ -21,7 +21,7 @@ ms.locfileid: "47634966"
 # <a name="getnclob-method-int-sqlserverresultset"></a>getNClob 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 NClob 物件。  
+  使用 Java 程式設計語言，擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中所指定資料行的值來作為 NClob 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ public java.sql.NClob getNClob(int columnIndex)
  這個方法僅支援**nvarchar （max)**， **ntext**，並**xml**資料行。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   
+ [getNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

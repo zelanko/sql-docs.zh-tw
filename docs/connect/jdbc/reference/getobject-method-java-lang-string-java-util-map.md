@@ -55,7 +55,7 @@ public java.lang.Object getObject(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setObject 方法由 java.sql.CallableStatement 介面中的 setObject 方法指定。  
+ 這個 getObject 方法是由 java.sql.CallableStatement 介面中的 getObject 方法指定。  
   
  這個方法將傳回給定資料行的值來當做 Java 物件。 此 Java 物件將會是預設的 Java 物件類型，此種類型會對應到資料行的 SQL 類型，並且會對應於 JDBC 規格中所指定的內建類型。 如果該值為 SQL NULL，則驅動程式會傳回 Java null。  
   

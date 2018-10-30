@@ -36,7 +36,7 @@ public int getMaxBinaryLiteralLength()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出十六進位字元的最大數目。  
+ **int**，指出十六進位字元的最大數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

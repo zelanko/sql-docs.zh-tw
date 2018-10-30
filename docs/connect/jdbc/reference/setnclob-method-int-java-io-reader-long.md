@@ -21,7 +21,7 @@ ms.locfileid: "47639048"
 # <a name="setnclob-method-int-javaioreader-long"></a>setNClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為指定的  物件，該物件長度為指定的字元數。  
+  將指定的參數設定為所指定 Reader 物件，該物件長度為指定的字元數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,20 +39,20 @@ public final void setNClob(int parameterIndex,
   
  *reader*  
   
- 物件，指出參數值。  
+ Reader 物件，指出參數值。  
   
  *length*  
   
- 指出參數值中字元數的 **long**。  
+ **long**，指出參數值中的字元數。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個 setClob 方法由 java.sql.PreparedStatement 介面中的 setClob 方法指定。  
+ 這個 setNClob 方法是由 java.sql.PreparedStatement 介面中的 setNClob 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [setClob 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   
+ [setNClob 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

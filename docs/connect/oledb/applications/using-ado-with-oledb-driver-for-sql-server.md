@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: 搭配使用 ADO 與 OLE DB Driver for SQL Server | Microsoft Docs
 description: 利用 OLE DB Driver for SQL Server 使用 ADO
 ms.custom: ''
 ms.date: 06/12/2018

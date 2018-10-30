@@ -1,5 +1,5 @@
 ---
-title: 步驟 2︰建立供 PHP 開發使用的 SQL 資料庫 | Microsoft Docs
+title: 步驟 2︰建立 Node.js 開發的 SQL 資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

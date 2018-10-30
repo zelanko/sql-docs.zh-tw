@@ -27,9 +27,9 @@ ms.locfileid: "47624856"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[setClob 方法 (int, java.io.Reader)](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|指定的參數設定為 java.sql.Clob 物件。|  
-|[setClob 方法 (int, java.sql.Clob)](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|將指定的參數設定為指定的 Java 值。|  
-|[setClob 方法 (int, java.io.Reader, long)](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|設定指定的參數為  物件，該物件長度為指定的字元數。|  
+|[setClob 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|指定的參數設定為 java.sql.Clob 物件。|  
+|[setClob 方法 &#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|將指定的參數設定為所指定 java.sql.Clob 物件。|  
+|[setClob 方法 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|將指定的參數設定為 java.sql.Clob 物件，該物件長度為指定的字元數。|  
   
 ## <a name="remarks"></a>Remarks  
  無伺服器驅動程式行為。 如需詳細資訊，請參閱 JSE 6 API 規格。  

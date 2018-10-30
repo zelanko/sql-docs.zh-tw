@@ -27,10 +27,10 @@ ms.locfileid: "47675376"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[updateNCharacterStream 方法 (int, java.io.Reader)](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md)|使用字元資料流值，更新指定的資料行。|  
-|[updateNCharacterStream 方法 (int, java.io.Reader, long)](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader-long.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
-|[updateNCharacterStream 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md)|使用字元資料流值，更新指定的資料行。|  
-|[updateNCharacterStream 方法 (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader-long.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
+|[updateNCharacterStream 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md)|使用字元資料流值，更新指定的資料行。|  
+|[updateNCharacterStream 方法 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader-long.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
+|[updateNCharacterStream 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md)|使用字元資料流值，更新指定的資料行。|  
+|[updateNCharacterStream 方法 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader-long.md)|使用字元資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

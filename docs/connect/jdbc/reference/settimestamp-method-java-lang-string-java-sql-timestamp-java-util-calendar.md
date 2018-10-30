@@ -54,10 +54,10 @@ public void setTimestamp(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTime 方法由 java.sql.CallableStatement 介面中的 setTime方法指定。  
+ 這個 setTimestamp 方法是由 java.sql.CallableStatement 介面中的 setTimestamp方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [getTimestamp 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
+ [setTimestamp 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

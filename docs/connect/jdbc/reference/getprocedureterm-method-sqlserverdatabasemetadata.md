@@ -36,7 +36,7 @@ public java.lang.String getProcedureTerm()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，包含程序詞彙。  
+ **String**，包含程序詞彙。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

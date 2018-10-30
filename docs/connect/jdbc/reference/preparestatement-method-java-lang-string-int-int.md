@@ -1,13 +1,11 @@
 ---
-title: prepareStatement 方法 （java.lang.String，int，int） |Microsoft 文件
+title: prepareStatement 方法 (java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.prepareStatement (java.lang.String, int, int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd55769be660f3244f805af1b3ab5e06f94b069c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 95c3f823e230a51ada0f966c68a71b189eb482d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812386"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>prepareStatement 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  建立[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)物件，可產生[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)具有給定型的別和並行存取的物件。  
+  建立 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 物件，它會產生具有指定類型和並行的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,15 +40,15 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 #### <a name="parameters"></a>參數  
  *sSql*  
   
- A**字串**包含 SQL 陳述式。  
+ **String**，包含 SQL 陳述式。  
   
  *resultSetType*  
   
- **Int** ，指出結果集類型。  
+ **int**，指出結果集類型。  
   
  *resultSetConcurrency*  
   
- **Int** ，指出結果集並行類型。  
+ **int**，指出結果集的並行類型。  
   
 ## <a name="return-value"></a>傳回值  
  PreparedStatement 物件。  
@@ -59,7 +56,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 prepareStatement 方法是由 java.sql.Connection 介面中的 prepareStatement 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

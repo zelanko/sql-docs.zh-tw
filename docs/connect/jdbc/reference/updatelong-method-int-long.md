@@ -26,7 +26,7 @@ ms.locfileid: "47706156"
 # <a name="updatelong-method-int-long"></a>updateLong 方法 (int, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  透過給定的資料行索引，使用日期值來更新指定的資料行。  
+  透過指定的資料行索引，使用 **long** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   

@@ -13,7 +13,7 @@ ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: b50dcb3713ba92e000791a70cc6cb7c8100c36d1
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47674816"
@@ -82,7 +82,7 @@ OLE DB Driver for SQL Server 支援兩者**ApplicationIntent**並**MultiSubnetFa
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
   
- 如需連接字串關鍵字的詳細資訊，請參閱[在 OLE DB Driver for SQL Server 中使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 如需 OLE DB Driver for SQL Server 中連接字串關鍵字的詳細資訊，請參閱[利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
 
 ### <a name="application-intent"></a>應用程式的意圖 
 
@@ -103,7 +103,7 @@ OLE DB Driver for SQL Server 應用程式可以使用其中一個方法來指定
  -   **IDBProperties::SetProperties**  
  若要設定 **ApplicationIntent** 屬性值，請呼叫 **IDBProperties::SetProperties**，其傳入值為 "**ReadWrite**" 或 "**ReadOnly**" 的 **SSPROP_INIT_APPLICATIONINTENT** 屬性，或是值包含 "**ApplicationIntent=ReadOnly**" 或 "**ApplicationIntent=ReadWrite**" 的 **DBPROP_INIT_PROVIDERSTRING** 屬性。  
   
-您可以在 [資料連結屬性] 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
+您可以在 [資料連結屬性]**** 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
   
 當建立隱含連接時，隱含連接將會使用父連接的應用程式意圖設定。 同樣地，從相同資料來源建立的多個工作階段將會繼承資料來源的應用程式意圖設定。  
   

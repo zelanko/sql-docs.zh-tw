@@ -1,5 +1,5 @@
 ---
-title: setTime 方法 (int, java.sql.Time, java.util.Calendar) | Microsoft Docs
+title: getTime 方法 (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

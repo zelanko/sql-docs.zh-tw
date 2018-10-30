@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 424d15af41db2980b62c8ab8af6311889c67fb78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672564"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +64,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k 移除或取代控制字元。  
   
-- **-K * * * application_intent*  
+- **-K**_應用程式\_意圖_  
 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，`sqlcmd` 即不支援對 AlwaysOn 可用性群組中的次要複本進行連線。 如需詳細資訊，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -77,7 +74,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 - -m *error_level* 控制哪些錯誤訊息會傳送至 stdout。  
   
-- **-M * * * multisubnet_failover*  
+- **-M**_多重\_容錯移轉_  
 在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -101,7 +98,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char*指定資料行分隔符號字元。  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*protocol*:] *server*[**,**_port_]  
 指定的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連線，或如果-D 是使用，資料來源名稱。 ODBC driver on Linux 和 macOS 需要-s。 請注意， **tcp**是唯一有效的通訊協定。  
   
 - -t *query_timeout* 指定命令 (或 SQL 陳述式) 逾時之前的秒數。  
@@ -213,13 +210,13 @@ Linux 或 macOS 上的 DSN 支援下列項目：
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database = * * * database_name*  
+-   **Database =**_資料庫\_名稱_  
   
 -   **驅動程式 = ODBC Driver 11 for SQL Server**或**驅動程式 = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **伺服器 = * * * server_name_or_IP_address*  
+-   **Server =**_伺服器\_名稱\_或是\_IP\_位址_  
   
 -   **Trusted_Connection=yes**|**no**  
   

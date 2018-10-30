@@ -31,9 +31,9 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>參數  
-$class*name*：一個選擇性字串，指定要建立之類別的名稱。 預設值為 stdClass。  
+$*class_name*：一個選擇性字串，指定要建立之類別的名稱。 預設值為 stdClass。  
   
-$ctor*args*：一個選擇性陣列，內含自訂類別建構函式的引數。  
+$*ctor_args*：一個選擇性陣列，具有自訂類別建構函式的引數。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，會傳回具有類別執行個體的物件。 屬性會對應至資料行。 如果失敗，會傳回 false。  

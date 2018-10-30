@@ -1,5 +1,5 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 的系統需求
+title: Microsoft Drivers for PHP for SQL Server 的系統需求 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c01d4f6af72fdc487b559a12f31bfcb447971cb
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47603798"

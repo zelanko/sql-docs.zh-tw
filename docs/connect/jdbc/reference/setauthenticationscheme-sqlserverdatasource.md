@@ -30,9 +30,9 @@ public void setAuthenticationScheme(String authenticationScheme);
 ```  
   
 #### <a name="parameters"></a>參數  
- authenticationScheme  
+ *authenticationScheme*  
   
- 值為 **"JavaKerberos 」** ，預設值 **"NativeAuthentication"**。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連線到 SQL Server](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。  
+ 值為 **"JavaKerberos 」** ，預設值 **"NativeAuthentication"**。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,13 +1,11 @@
 ---
-title: insertRow 方法 (SQLServerResultSet) |Microsoft 文件
+title: insertRow 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.insertRow
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 363d1008-1396-4fc0-8e27-c9ba2499e7f1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 106743625ef17e733836ec9430f2f171af2b0d72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 611ba86c25f78cda15fcac53d8f31311d88e4840
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696867"
 ---
 # <a name="insertrow-method-sqlserverresultset"></a>insertRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將插入資料列的內容加入至這個[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件的資料庫。  
+  將插入列的內容新增到這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件和資料庫中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,8 +38,8 @@ public void insertRow()
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- InsertRow 方法 java.sql.ResultSet 介面中所指定此 insertRow 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 insertRow 方法是由 java.sql.ResultSet 介面中的 insertRow 方法指定。  
   
  呼叫這個方法時，資料指標必須位於插入列上。 呼叫這個方法之後，資料指標仍然會在插入列上，而且結果集仍然會在插入模式下。  
   

@@ -36,7 +36,7 @@ public int getJDBCMajorVersion()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出 JDBC 的主要版本。  
+ **int**，指出 JDBC 的主要版本。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

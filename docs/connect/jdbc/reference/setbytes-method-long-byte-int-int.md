@@ -1,13 +1,11 @@
 ---
-title: setBytes 方法 (long，byte、 int，int) |Microsoft 文件
+title: setBytes 方法 (long，byte，int，int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob.setBytes (long.byte[], int, int)
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b18005c16cd62358eb5f269504fc9d80eadb6de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 178c41970407e6104181207396a5baefb5ed282e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843723"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713426"
 ---
-# <a name="setbytes-method-long-byte-int-int"></a>setBytes 方法 (long，byte、 int，int)
+# <a name="setbytes-method-long-byte-int-int"></a>setBytes 方法 (long, byte, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   從給定的位置、位移和長度開始，將給定位元組陣列的全部或一部分寫入 BLOB，然後傳回寫入的位元組數目。  
@@ -46,28 +43,28 @@ public int setBytes(long pos,
   
  BLOB 中開始寫入資料的位置 (以 1 為基底)。  
   
- *位元組*  
+ *bytes*  
   
  要寫入 BLOB 中的位元組陣列。  
   
  *offset*  
   
- 以位元組為單位的位移陣列開始讀取資料來源位置**位元組**陣列。  
+ 位元組陣列中開始從 **byte** 陣列讀取資料的位移。  
   
  *len*  
   
  嘗試從位元組陣列讀到 BLOB 中的位元組數目。  
   
 ## <a name="return-value"></a>傳回值  
- **Int**包含寫入的位元組數目。  
+ **int**，其中包含寫入的位元組數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>備註  
- 這個 setBytes 方法是由 java.sql.Blob 介面中 setBytes 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 setBytes 方法是由 java.sql.Blob 介面中的 setBytes 方法指定。  
   
- 資料會從指定的位置開始覆寫，而且可以超過 BLOB 的初始長度。 指定位置 + 1 的值將會附加位元組。 傳遞位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。 傳遞長度為零**位元組**陣列會傳回零，因為未不寫入任何位元組。  
+ 資料會從指定的位置開始覆寫，而且可以超過 BLOB 的初始長度。 指定位置 + 1 的值將會附加位元組。 傳遞位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。 傳遞長度為零的 **byte** 陣列將會傳回零，因為未寫入任何位元組。  
   
 ## <a name="see-also"></a>另請參閱  
  [setBytes 方法&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   

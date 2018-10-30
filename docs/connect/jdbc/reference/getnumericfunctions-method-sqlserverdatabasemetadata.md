@@ -36,7 +36,7 @@ public java.lang.String getNumericFunctions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，包含可用的數學函數。  
+ **String**，其中包含可用的數學函式。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -64,7 +64,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="remarks"></a>Remarks  
  這個 getProcedureColumns 方法是由 java.sql.DatabaseMetaData 介面中 getProcedureColumns 方法指定。  
   
- 透過 getProcedures 方法所傳回的結果將包含下列資訊：  
+ 透過 getProcedureColumns 方法所傳回的結果集將包含下列資訊：  
   
 |[屬性]|類型|Description|  
 |----------|----------|-----------------|  

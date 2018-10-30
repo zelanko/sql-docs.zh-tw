@@ -26,7 +26,7 @@ ms.locfileid: "47733769"
 # <a name="setstring-method-sqlserverpreparedstatement"></a>setString 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為指定的 Java 值。  
+  將指定的參數設定為所指定 **String** 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ public final void setString(int index,
   
  **int**，指出參數編號。  
   
- *STR*  
+ *str*  
   
  **字串**值。  
   
@@ -49,7 +49,7 @@ public final void setString(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTime 方法由 java.sql.PreparedStatement 介面中的 setTime方法指定。  
+ 這個 setString 方法是由 java.sql.PreparedStatement 介面中的 setString 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

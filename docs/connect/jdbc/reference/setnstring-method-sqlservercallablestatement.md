@@ -21,7 +21,7 @@ ms.locfileid: "47833899"
 # <a name="setnstring-method-sqlservercallablestatement"></a>setNString 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定指定的參數為指定的  物件。  
+  將指定的參數設定為所指定 String 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
 ## <a name="remarks"></a>Remarks  
  這個方法應該用於**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**資料型別。  
   
- 此 setNull 方法由 java.sql.CallableStatement 介面中的 setNull 方法指定。  
+ 這個 setNString 方法是由 java.sql.CallableStatement 介面中的 setNString 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

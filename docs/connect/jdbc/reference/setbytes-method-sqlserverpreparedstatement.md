@@ -49,7 +49,7 @@ public final void setBytes(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setBytes 方法由 java.sql.CallableStatement 介面中的 setBytes 方法指定。  
+ 這個 setBytes 方法是由 java.sql.PreparedStatement 介面中的 setBytes 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

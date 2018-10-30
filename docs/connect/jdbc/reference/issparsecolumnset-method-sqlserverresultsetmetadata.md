@@ -35,7 +35,7 @@ public boolean isSparseColumnSet(int column)
  資料行的索引 (以一為基底)。  
   
 ## <a name="return-value"></a>傳回值  
- 如果結果集中的資料行為疏鬆資料行集，則為 ，否則為 。  
+ 若結果集中的資料行為疏鬆資料行集，即為 **true**；否則為 **false**。  
   
 ## <a name="remarks"></a>Remarks  
  此方法不會從資料庫中擷取資訊。  

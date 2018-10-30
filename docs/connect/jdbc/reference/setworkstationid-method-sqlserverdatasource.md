@@ -36,9 +36,9 @@ public void setWorkstationID(java.lang.String workstationID)
 ```  
   
 #### <a name="parameters"></a>參數  
- workstationID  
+ *workstationID*  
   
- ，包含用戶端電腦名稱。  
+ **String**，包含用戶端電腦名稱。  
   
 ## <a name="remarks"></a>Remarks  
  workstationID 是用戶端電腦或工作站的名稱。 如果未設定 workstationID 屬性，預設值是藉由呼叫 InetAddress.getLocalHost().getHostName() 方法建構。 如果 getHostName 傳回空白值時，會呼叫 getHostAddress().toString() 方法。  

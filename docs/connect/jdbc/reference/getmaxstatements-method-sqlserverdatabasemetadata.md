@@ -36,7 +36,7 @@ public int getMaxStatements()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出允許的最大作用中陳述式數目。  
+ **int**，指出允許的最大使用中陳述式數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

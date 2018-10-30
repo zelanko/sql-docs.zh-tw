@@ -27,8 +27,8 @@ ms.locfileid: "47615387"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[setClientInfo 方法 (java.util.Properties)](../../../connect/jdbc/reference/setclientinfo-method-java-util-properties.md)|設定連接用戶端資訊屬性的值。|  
-|[setClientInfo 方法 (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/setclientinfo-method-java-lang-string-java-lang-string.md)|設定指定之用戶端資訊屬性的值。|  
+|[setClientInfo 方法 &#40;java.util.Properties&#41;](../../../connect/jdbc/reference/setclientinfo-method-java-util-properties.md)|設定連接用戶端資訊屬性的值。|  
+|[setClientInfo 方法 &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/setclientinfo-method-java-lang-string-java-lang-string.md)|設定指定之用戶端資訊屬性的值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

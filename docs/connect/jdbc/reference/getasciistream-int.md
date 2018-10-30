@@ -26,7 +26,7 @@ ms.locfileid: "47726975"
 # <a name="getasciistream-int"></a>getAsciiStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  透過指定的參數名稱，擷取指定之參數的值來當作 **ASCII** 字元資料流。  
+  透過指定的參數索引，擷取所指定參數的值來作為 **ASCII** 字元資料流。  
   
 ## <a name="syntax"></a>語法  
   

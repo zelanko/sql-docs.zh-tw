@@ -28,7 +28,7 @@ ms.locfileid: "47612036"
 |[屬性]|Description|  
 |----------|-----------------|  
 |[setString 方法&#40;long，java.lang.String&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|寫入指定**字串**要**NCLOB**指定位置開始。|  
-|[setString 方法 (long, java.lang.String, int, int) (SQLServerNClob)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|依據指定的位移和長度，在指定位置的  開始位置寫入指定的字串。|  
+|[setString 方法 &#40;long, java.lang.String, int, int&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|依據指定的位移和長度，在指定位置的 NCLOB 開始位置寫入所指定字串。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

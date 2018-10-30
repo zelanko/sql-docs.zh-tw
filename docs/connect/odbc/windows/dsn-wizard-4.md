@@ -1,35 +1,32 @@
 ---
-title: 資料來源精靈畫面 4 (ODBC Driver for SQL Server) |Microsoft 文件
+title: 資料來源精靈畫面 4 (ODBC Driver for SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f53180976b3a4778f687ef8a83d9438ea858c05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32855886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724366"
 ---
 # <a name="data-source-wizard-screen-4"></a>資料來源精靈畫面 4
 
-指定要用於 SQL Server 訊息的語言、 字元集轉譯，以及 ODBC driver for SQL Server 是否應使用的地區設定。 您也可以控制長期執行查詢及驅動程式統計資料設定的記錄。
+指定 SQL Server 訊息所使用的語言、字元集轉譯，以及 ODBC Driver for SQL Server 是否應該使用區域設定。 您也可以控制長期執行查詢及驅動程式統計資料設定的記錄。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>變更 SQL Server 系統訊息的語言為
 
-每個 SQL Server 執行個體可以具有多組系統訊息，每一組不同的語言 （例如，英文、 西班牙文、 法文等）。 如果資料來源是針對具有多組系統訊息的伺服器而定義，則您可以指定您要用於系統訊息的語言。 在清單中，按一下語言。 如果只有一種語言安裝 SQL Server 上，則無法使用此選項。
+SQL Server 的每一個執行個體都可具有多組系統訊息，每一組都可使用不同的語言 (例如，英文、西班牙文、法文等)。 如果資料來源是針對具有多組系統訊息的伺服器而定義，則您可以指定您要用於系統訊息的語言。 在清單中，按一下語言。 如果在 SQL Server 上只安裝了一種語言，則此選項無法使用。
 
 ### <a name="use-strong-encryption-for-data"></a>使用高度加密資料
 
@@ -37,13 +34,13 @@ ms.locfileid: "32855886"
 
 ### <a name="trust-server-certificate"></a>信任伺服器憑證
 
-時，此選項時才適用**使用高度加密資料**已啟用。 選取時，伺服器的憑證會驗證伺服器的正確的主機名稱，然後再由受信任的憑證授權單位發出。 
+此功能時才適用**使用強式加密資料**已啟用。 選取時，將不會有正確的主機名稱的伺服器和受信任的憑證授權單位所發出驗證伺服器的憑證。 
 
 ### <a name="perform-translation-for-character-data"></a>為字元資料執行轉譯
 
-選取此核取方塊時，ODBC driver for SQL Server 會將使用 Unicode 用戶端電腦與 SQL Server 之間傳送的 ANSI 字串轉換。 ODBC 驅動程式有時的 SQL Server 字碼頁和 Unicode 之間轉換，用戶端電腦上。 這需要 SQL Server 所使用的字碼頁是其中一種用戶端電腦上可用的字碼頁。
+選取此核取方塊時，ODBC Driver for SQL Server 會使用 Unicode 來轉換在用戶端電腦與 SQL Server 之間傳送的 ANSI 字串。 ODBC 驅動程式有時會在用戶端電腦上的 SQL Server 字碼頁與 Unicode 之間轉換。 若要執行此作業，SQL Server 所使用字碼頁必須是用戶端電腦上可用的其中一個字碼頁。
 
-若清除此核取方塊，ANSI 字元字串中的延伸字元在用戶端應用程式與伺服器之間傳送時就不會進行任何轉譯。 如果用戶端電腦會使用 ANSI 字碼頁 (ACP) SQL Server 字碼頁不同，可能會被誤解 ANSI 字元字串中的擴充的字元。 如果用戶端電腦正在使用相同的字碼頁，SQL Server 使用的 acp，擴充的字元會正確解譯。
+若清除此核取方塊，ANSI 字元字串中的延伸字元在用戶端應用程式與伺服器之間傳送時就不會進行任何轉譯。 如果用戶端電腦正在使用與 SQL Server 字碼頁不同的 ANSI 字碼頁 (ACP)，則 ANSI 字元字串中的擴充字元可能會被錯誤解譯。 如果用戶端電腦正在使用的 ACP 字碼頁與 SQL Server 所使用字碼頁相同，則擴充字元會被正確解譯。
 
 ### <a name="use-regional-settings-when-outputting-currency-numbers-dates-and-times"></a>當輸出流通貨幣、數字、日期和時間時，請使用地區設定
 
@@ -51,7 +48,7 @@ ms.locfileid: "32855886"
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>將長時間執行的查詢儲存到記錄檔
 
-指定驅動程式記錄所花費的時間比任何查詢**長時間查詢的時間**值。 長期執行查詢會記錄在指定的檔案中。 若要指定記錄檔，請在方塊中，輸入完整路徑和檔案名稱，或按一下**瀏覽**來瀏覽現有檔案目錄來選取記錄檔。
+指定驅動程式記錄查詢時間長於 [長查詢時間]**** 值的任何查詢。 長期執行查詢會記錄在指定的檔案中。 若要指定記錄檔，請在方塊中鍵入完整路徑和檔案名稱，或按一下 [瀏覽]****，透過巡覽現有檔案目錄來選取記錄檔。
 
 ### <a name="long-query-time-milliseconds"></a>長時間查詢的時間 (毫秒)
 
@@ -59,7 +56,7 @@ ms.locfileid: "32855886"
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>記錄 ODBC 驅動程式統計資料至記錄檔
 
-指定要記錄統計資料。 將統計資料記錄至指定檔案。 若要指定記錄檔，請在方塊中輸入完整路徑和檔案名稱，或按一下**瀏覽**來瀏覽現有檔案目錄來選取記錄檔。
+指定要記錄統計資料。 將統計資料記錄至指定檔案。 若要指定記錄檔，請在方塊中鍵入完整路徑和檔案名稱，或按一下 [瀏覽]****，透過巡覽現有檔案目錄來選取記錄檔。
 
 統計資料記錄是以 Tab 分隔的檔案，可以在 Microsoft Excel 或其他任何支援以 Tab 分隔檔案的應用程式中進行分析。
 
@@ -67,18 +64,18 @@ ms.locfileid: "32855886"
 
 指定重試一次連線嘗試失敗次數。
 
-### <a name="connect-retry-interval-seconds"></a>連接重試間隔 （秒）
+### <a name="connect-retry-interval-seconds"></a>連接重試間隔 (秒)
 
-指定每個連接重試嘗試之間的秒的數。 如需有關這個操作和**連接重試計數**選項，請參閱[Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
+指定每個連接重試嘗試之間的秒的數。 如需有關這個作業而**連接重試計數**選項，請參閱[Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
 
 ### <a name="back"></a>上一頁
 
 按一下此按鈕以返回精靈的上一頁。
 
-### <a name="finish"></a>完成
+### <a name="finish"></a>[完成]
 
-如果在這個畫面上指定的資訊已完成，您可以按一下**完成**。 DSN 會使用這和在精靈的其他螢幕上指定的所有屬性所建立，您會獲得一個機會來測試新建立的資料來源名稱。
+如果指定此畫面上的資訊已完成，您可以按一下**完成**。 使用這和在精靈的其他螢幕上指定的所有屬性來建立 DSN，您會獲得一個機會，來測試新建立的 DSN。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [資料來源精靈畫面 3](../../../connect/odbc/windows/dsn-wizard-3.md)

@@ -1,13 +1,11 @@
 ---
-title: updateBoolean 方法 (SQLServerResultSet) |Microsoft 文件
+title: updateBoolean 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateBoolean
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40698a5b30d595a60a9bdac26feec590bef548f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f2e5f6c5b835c0f759fc2dd0a9ec6484f7e2cd67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827816"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>updateBoolean 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行與**布林**值。  
+  使用 **boolean** 值，更新指定的資料行。  
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[updateBoolean (int，布林值)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|更新指定的資料行與**布林**給定的資料行索引的值。|  
-|[updateBoolean (java.lang.String，boolean)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|更新指定的資料行與**布林**給定的資料行名稱的值。|  
+|[updateBoolean (int, boolean)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|透過指定的資料行索引，使用 **boolean** 值來更新指定的資料行。|  
+|[updateBoolean (java.lang.String, boolean)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|透過指定的資料行名稱，使用 **boolean** 值來更新指定的資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

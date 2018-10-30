@@ -21,7 +21,7 @@ ms.locfileid: "47754586"
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>setSQLXML 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  設定指定的參數為指定的  物件。  
+  將指定的參數設定為所指定 SQLXML 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,13 +38,13 @@ public final void setSQLXML(int parameterIndex,
   
  *xmlObject*  
   
- 物件，包含參數值。  
+ SQLXML 物件，其中包含參數值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTime 方法由 java.sql.PreparedStatement 介面中的 setTime方法指定。  
+ 這個 setSQLXML 方法是由 java.sql.PreparedStatement 介面中的 setSQLXML 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  

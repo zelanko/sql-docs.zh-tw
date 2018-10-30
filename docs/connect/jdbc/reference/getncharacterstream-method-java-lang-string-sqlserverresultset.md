@@ -1,5 +1,5 @@
 ---
-title: getNCharacterStream 方法 (java.lang.String) (SQLServerResultSet)
+title: getNCharacterStream 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -47,7 +47,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  這個方法可用來擷取值**nvarchar**， **nchar**， **nvarchar （max)**， **ntext**，或**xml**中目前的資料列，這個資料行[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。 如果嘗試使用這個方法來擷取其他資料類型的值，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- [getCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   
+ [getNCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

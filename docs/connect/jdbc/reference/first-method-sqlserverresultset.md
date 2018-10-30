@@ -36,13 +36,13 @@ public boolean first()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果將資料指標移到第一個資料列則為 ， 否則為 **false**。  
+ 如果將資料指標移到第一個資料列，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這個  方法是由 java.sql.ResultSet 介面中的  方法所指定。  
+ 這個 first 方法是由 java.sql.ResultSet 介面中的 first 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

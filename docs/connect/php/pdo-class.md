@@ -21,7 +21,7 @@ ms.locfileid: "47784736"
 # <a name="pdo-class"></a>PDO 類別
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO 類別包含可讓您的 PHP 應用程式連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的方法。  
+PDO 類別包含可讓您的 PHP 應用程式連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的方法。  
   
 ## <a name="syntax"></a>語法  
   

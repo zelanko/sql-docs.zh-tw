@@ -27,9 +27,9 @@ ms.locfileid: "47711326"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[setNClob 方法 (int, java.sql.NClob)](../../../connect/jdbc/reference/setnclob-method-int-java-sql-nclob.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
-|[setNClob 方法 (int, java.io.Reader)](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
-|[setNClob 方法 (int, java.io.Reader, long)](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader-long.md)|將指定的參數設定為指定的  物件，該物件長度為指定的字元數。|  
+|[setNClob 方法 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-sql-nclob.md)|將指定參數設定為所指定 java.sql.NClob 物件。|  
+|[setNClob 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|將指定參數設定為指定的 java.io.Reader 物件。|  
+|[setNClob 方法 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader-long.md)|將指定的參數設定為所指定 java.io.Reader 物件，該物件長度為指定的字元數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

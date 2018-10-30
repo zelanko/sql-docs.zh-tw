@@ -59,9 +59,9 @@ public boolean supportsResultSetConcurrency(int type,
   
  TYPE_SS_SCROLL_DYNAMIC  
   
- 並行 (concurrency)  
+ *concurrency*  
   
- 指出結果集並行等級的 ，可以是定義於 java.sql.ResultSet 或 SQLServerResultSet 中的下列其中一個值：  
+ 指出結果集並行等級的 **int**，可為定義於 java.sql.ResultSet 或 SQLServerResultSet 中的下列其中一個值：  
   
 ## <a name="javasqlresultset-types"></a>java.sql.ResultSet 型別  
  CONCUR_READ_ONLY  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 2︰建立供 PHP 開發使用的 SQL 資料庫 | Microsoft Docs
+title: 步驟 2︰建立供 Java 開發使用的 SQL 資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

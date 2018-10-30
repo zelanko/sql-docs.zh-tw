@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式擷取輸出參數
+title: 如何：使用 SQLSRV 驅動程式擷取輸出參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql

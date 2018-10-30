@@ -21,13 +21,13 @@ ms.locfileid: "47810556"
 # <a name="position-method-sqlservernclob"></a>position 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  依據指定的開始位置，擷取所指定  物件或  中之子字串的字元位置。  
+  依據指定的開始位置，擷取所指定 **NClob** 物件或 **NClob** 中子字串的字元位置。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[position 方法 (java.sql.NClob, long)](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|擷取的字元位置指定**NClob**物件*searchstr*會出現在此**NClob**物件。|  
+|[position 方法 &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|擷取的字元位置指定**NClob**物件*searchstr*會出現在此**NClob**物件。|  
 |[position 方法&#40;java.lang.String，long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|擷取的字元位置指定的子字串*searchstr*會出現在**NCLOB**所表示的值**NClob**物件。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -26,7 +26,7 @@ ms.locfileid: "47846906"
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定的參數設定為指定的 Java 值。  
+  將指定的參數設定為所指定 **long** 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ public void setLong(java.lang.String sCol,
   
  包含參數名稱的**字串**。  
   
- -l  
+ *l*  
   
  A**長**值。  
   
@@ -49,7 +49,7 @@ public void setLong(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getLong 方法由 java.sql.CallableStatement 介面中的 getLong 方法指定。  
+ 這個 setLong 方法是由 java.sql.CallableStatement 介面中的 setLong 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

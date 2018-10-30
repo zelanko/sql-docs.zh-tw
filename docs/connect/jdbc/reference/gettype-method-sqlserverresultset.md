@@ -36,7 +36,7 @@ public int getType()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 指出目前資料指標類型的 ，可能是下列其中一個值：  
+ 指出目前資料指標類型的 **int**，可能是下列其中一個值：  
   
  ResultSet.TYPE_FORWARD_ONLY  
   

@@ -27,12 +27,12 @@ ms.locfileid: "47677206"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[updateNClob 方法 (int, java.sql.NClob)](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|使用 **NClob** 值，更新指定的資料行。|  
-|[updateNClob 方法 (java.lang.String, java.sql.NClob)](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|使用 **NClob** 值，更新指定的資料行。|  
-|[updateNClob 方法 (int, java.io.Reader)](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader.md)|使用指定的 Reader 物件，更新指定的資料行。|  
-|[updateNClob 方法 (int, java.io.Reader, long)](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader-long.md)|使用指定的 Reader 物件更新指定的資料行，該物件長度為指定的字元數。|  
-|[updateNClob 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader.md)|使用指定的 Reader 物件，更新指定的資料行。|  
-|[updateNClob 方法 (java.lang.String, java.io.Reader, long)](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader-long.md)|使用指定的 Reader 物件更新指定的資料行，該物件長度為指定的字元數。|  
+|[updateNClob 方法 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|使用 **NClob** 值，更新所指定資料行。|  
+|[updateNClob 方法 &#40;java.lang.String, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|使用 **NClob** 值，更新所指定資料行。|  
+|[updateNClob 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader.md)|使用指定的 **Reader** 物件，更新所指定資料行。|  
+|[updateNClob 方法 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader-long.md)|使用指定的 **Reader** 物件更新所指定資料行，該物件長度為指定的字元數。|  
+|[updateNClob 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader.md)|使用指定的 **Reader** 物件，更新所指定資料行。|  
+|[updateNClob 方法 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader-long.md)|使用指定的 **Reader** 物件更新所指定資料行，該物件長度為指定的字元數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

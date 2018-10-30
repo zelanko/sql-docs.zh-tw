@@ -1,13 +1,11 @@
 ---
-title: setURL 方法 (SQLServerDataSource) |Microsoft 文件
+title: setURL 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setURL
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e13927cc02d9b995ac3c99a5b0a4b490328b8dbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29e1b67caaf566f04cf01c7c93a5e8d2445c31ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633946"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>setURL 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +36,15 @@ public void setURL(java.lang.String url)
 ```  
   
 #### <a name="parameters"></a>參數  
- *Url*  
+ *url*  
   
- A**字串**包含 URL。  
+ 包含 URL 的**字串**。  
   
-## <a name="remarks"></a>備註  
- 基於安全性理由，您不應該將密碼包含在提供給 setURL 方法的 URL。 原因是因為協力廠商 Java 應用程式伺服器會經常顯示其資料來源組態使用者介面中所設定的 URL 屬性值。 請改用[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)方法來設定密碼值。 這樣一來，Java 應用程式伺服器將不會顯示其資料來源組態使用者介面中所設定的密碼。  
+## <a name="remarks"></a>Remarks  
+ 基於安全性理由，您不應該在提供給 setURL 方法的 URL 中包含密碼。 原因是因為協力廠商 Java 應用程式伺服器會經常顯示其資料來源組態使用者介面中所設定的 URL 屬性值。 請改用 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 方法來設定密碼值。 這樣一來，Java 應用程式伺服器將不會顯示其資料來源組態使用者介面中所設定的密碼。  
   
 > [!NOTE]  
->  如果未呼叫 setURL 方法呼叫之前[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)方法，getURL 會傳回預設值"sqlserver: / /"。  
+>  如果在呼叫 [getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md) 方法之前未呼叫 setURL 方法，getURL 會傳回預設值 "jdbc:sqlserver://"。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

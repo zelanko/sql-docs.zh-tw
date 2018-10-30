@@ -47,7 +47,7 @@ public void updateClob(int columnIndex,
  UpdateClob 方法 java.sql.ResultSet 介面中所指定這個 updateClob 方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
+ [updateClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

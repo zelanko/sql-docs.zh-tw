@@ -41,7 +41,7 @@ public java.lang.String getColumnLabel(int column)
  指出資料行索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
- 字串，包含資料行來源。  
+ **String**，其中包含資料行的標題。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

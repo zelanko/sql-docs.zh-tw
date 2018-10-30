@@ -26,7 +26,7 @@ ms.locfileid: "47810656"
 # <a name="getfloat-method-int-sqlserverresultset"></a>getFloat 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **float**。  
+  使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 **float**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ public float getFloat(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  GetFloat 方法 java.sql.ResultSet 介面中所指定這個 getFloat 方法。  
   
- 這個方法會傳回所有具有 Java 精確度的數字型別。  
+ 這個方法會傳回所有具有 Java **float** 精確度的數字類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [getFloat 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   

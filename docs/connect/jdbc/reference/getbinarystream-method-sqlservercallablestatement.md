@@ -32,7 +32,7 @@ ms.locfileid: "47731086"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-int.md)|在給定參數索引時，擷取指定之參數的值來當做不中斷位元組的二進位資料流。|  
+|[getBinaryStream &#40;int&#41;](../../../connect/jdbc/reference/getbinarystream-int.md)|在給定參數索引時，擷取指定之參數的值來當做不中斷位元組的二進位資料流。|  
 |[getBinaryStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getbinarystream-java-lang-string.md)|在給定參數名稱時，擷取指定之參數的值來當做不中斷位元組的二進位資料流。|  
   
 ## <a name="see-also"></a>另請參閱  

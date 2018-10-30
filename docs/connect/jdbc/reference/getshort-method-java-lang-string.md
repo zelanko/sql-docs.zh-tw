@@ -47,7 +47,7 @@ public short getShort(java.lang.String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 getInt 方法由 java.sql.CallableStatement 介面中的 getInt 方法指定。  
+ 這個 getShort 方法是由 java.sql.CallableStatement 介面中的 getShort 方法指定。  
   
  只有可以安全傳回整數值 (如 smallint、tinyint 和 bit) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型才支援這個方法。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   

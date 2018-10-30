@@ -1,13 +1,11 @@
 ---
-title: setBinaryStream 方法 (SQLServerBlob) |Microsoft 文件
+title: setBinaryStream 方法 (SQLServerBlob) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob.setBinaryStream
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0c32868257eeebc4cfc24945d853e1440e34ee78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f56200ca5df9e0eca7cafc6c7a99ed9bf7ca019d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773666"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +46,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ## <a name="exceptions"></a>例外狀況  
  java.sql.SQLException  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 setBinaryStream 方法是由 java.sql.Blob 介面中 setBinaryStream 方法指定。  
   
  輸出資料流會從指定的位置開始覆寫 BLOB 中的資料，而且可以超過 BLOB 的初始長度。 指定位置 + 1 的值將會附加位元組。 傳遞位置 + 2 或更大 (或是零或零以下) 的值將會擲回位置錯誤。  

@@ -34,7 +34,7 @@ long position(java.sql.NClob searchstr,
 #### <a name="parameters"></a>參數  
  *searchstr*  
   
- 要搜尋的  物件。  
+ 要搜尋的 NClob 物件。  
   
  *start*  
   

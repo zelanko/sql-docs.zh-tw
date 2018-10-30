@@ -36,7 +36,7 @@ public boolean isReadOnly()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果資料庫為唯讀模式則為 ， 否則為 **false**。  
+ 如果資料庫為唯讀模式，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

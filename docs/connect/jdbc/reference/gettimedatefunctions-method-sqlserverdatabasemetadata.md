@@ -36,7 +36,7 @@ public java.lang.String getTimeDateFunctions()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，包含時間和日期函數清單。  
+ **String**，其中包含時間和日期函式清單。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

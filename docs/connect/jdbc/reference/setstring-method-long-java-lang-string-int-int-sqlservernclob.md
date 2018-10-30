@@ -21,7 +21,7 @@ ms.locfileid: "47810726"
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>setString 方法 (long, java.lang.String, int, int) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  依據指定的位移和長度，在指定位置的  開始位置寫入指定的字串。  
+  依據指定的位移和長度，在指定位置的 NCLOB 開始位置寫入指定的字串。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,15 +36,15 @@ int setString(long pos,
 #### <a name="parameters"></a>參數  
  *pos*  
   
- 開始寫入至  的位置，第一個位置是 1。  
+ 開始寫入至 **NCLOB** 的位置，第一個位置是 1。  
   
- *STR*  
+ *str*  
   
- 要寫入 CLOB 的字串。  
+ 要寫入至 **NCLOB** 的 String。  
   
  *offset*  
   
- 內的位移，要開始讀取要寫入的字元。  
+ *str* 內的位移，要開始讀取要寫入的字元。  
   
  *len*  
   

@@ -21,7 +21,7 @@ ms.locfileid: "47612116"
 # <a name="updatenclob-method-int-javaioreader"></a>updateNClob 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用指定的 Reader 物件，更新指定的資料行。  
+  使用指定的 **Reader** 物件，更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,5 +1,5 @@
 ---
-title: updateCharacterStream 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
+title: updateNCharacterStream 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

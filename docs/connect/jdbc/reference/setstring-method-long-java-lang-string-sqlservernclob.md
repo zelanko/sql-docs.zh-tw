@@ -34,11 +34,11 @@ public int setString(long pos,
 #### <a name="parameters"></a>參數  
  *pos*  
   
- 開始寫入至  的位置，第一個位置是 1。  
+ 開始寫入至 **NCLOB** 的位置，第一個位置是 1。  
   
- *STR*  
+ *str*  
   
- 要寫入 CLOB 的字串。  
+ 要寫入至 **NCLOB** 的 String。  
   
 ## <a name="return-value"></a>傳回值  
  寫入的字元數。  

@@ -101,7 +101,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 |msodbcdiag17.dll 或 <br> msodbcdiag13.dll 或 <br> msodbcdiag11.dll|動態連結程式庫 (DLL) 檔案，其中包含驅動程式的診斷 （追蹤） 介面。 此檔案會安裝在 %systemroot%\system32 中。|
 |msodbcsqlr17.rll 或 <br> msodbcsqlr13.rll 或 <br> msodbcsqlr11.rll|隨附驅動程式程式庫的資源檔。 此檔案會安裝在 %systemroot%\system32\1033 中。| 
 |s13ch_msodbcsql.chm 或 <br> s11ch_msodbcsql.chm |資料來源精靈說明檔，其中記載如何建立驅動程式的資料來源。 這個檔案會安裝在 %SYSTEMROOT%\System32\1033 <br /> <br /> **注意：** 沒有 ODBC Driver 17 for chm 檔案。 |  
-|msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> ODBC Driver 11 的 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。 <br /> ODBC Driver 11 的 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。| 
+|msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> ODBC Driver 17 或 13 的 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK 中。 <br /> ODBC Driver 11 的 msodbcsql.h 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。| 
 |msodbcsql17.lib 或 <br> msodbcsql13.lib 或 <br> msodbcsql11.lib|呼叫 **bcp** 公用程式函式 (屬於驅動程式的一部分) 所需的程式庫檔案。<br /><br /> **注意**：如果您在程式中參考這個程式庫檔，請確定它在您的系統路徑以及使用此應用程式之系統的系統路徑中。<br /><br /> msodbcsql17.lib 或 msodbcsql13.lib 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK 中。<br /> msodbcsql11.lib 會安裝在 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK 中。|
 
   

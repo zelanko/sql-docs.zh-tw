@@ -23,7 +23,7 @@ ms.locfileid: "47772600"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本主題提供 SQL Server 支援疏鬆資料行的 OLE DB 驅動程式的相關資訊。 如需有關疏鬆資料行的詳細資訊，請參閱 < [OLE DB Driver for SQL Server 中的疏鬆資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。 [顯示資料行與疏鬆資料行的目錄中繼資料 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+  本主題提供 SQL Server 支援疏鬆資料行的 OLE DB 驅動程式的相關資訊。 如需有關疏鬆資料行的詳細資訊，請參閱 < [OLE DB Driver for SQL Server 中的疏鬆資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行的目錄中繼資料 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB 陳述式中繼資料  
  從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 開始，提供新的 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。 此值應該針對 **column_set** 值的資料行設定。 可以透過擷取 DBCOLUMNFLAGS 旗標*dwFlags* icolumnsinfo:: Getcolumnsinfo 和 icolumnsrowset:: Getcolumnsrowset 所傳回的資料列集的 DBCOLUMN_FLAGS 資料行的參數。  

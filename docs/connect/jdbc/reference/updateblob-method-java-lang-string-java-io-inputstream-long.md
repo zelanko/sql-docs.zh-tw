@@ -1,5 +1,5 @@
 ---
-title: updateBlob 方法 (java.lang.String, java.io.InputStream, long)
+title: updateBlob 方法 (java.lang.String, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -37,7 +37,7 @@ public void updateBlob(java.lang.String columnLabel,
   
  **String**，包含資料行標籤。  
   
- InputStream  
+ *inputStream*  
   
  InputStream 物件。  
   
@@ -52,7 +52,7 @@ public void updateBlob(java.lang.String columnLabel,
  UpdateBlob 方法 java.sql.ResultSet 介面中所指定這個 updateBlob 方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+ [updateBlob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

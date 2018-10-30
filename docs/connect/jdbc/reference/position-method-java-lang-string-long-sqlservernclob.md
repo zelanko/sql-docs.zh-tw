@@ -1,5 +1,5 @@
 ---
-title: position 方法 (java.lang.String, long) (SQLServerNClob)
+title: position 方法 (java.lang.String, long) (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

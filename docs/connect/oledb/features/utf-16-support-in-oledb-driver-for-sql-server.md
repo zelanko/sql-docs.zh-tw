@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver for SQL Server 中的疏鬆資料行支援 | Microsoft Docs
+title: OLE DB Driver for SQL Server 中的 UTF-16 支援 | Microsoft Docs
 description: OLE DB Driver for SQL Server 中的 UTF-16 支援
 ms.custom: ''
 ms.date: 06/12/2018

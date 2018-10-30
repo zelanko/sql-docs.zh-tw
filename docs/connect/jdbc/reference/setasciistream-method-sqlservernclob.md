@@ -21,7 +21,7 @@ ms.locfileid: "47742966"
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取資料流，此資料流將用於從指定位置開始，將 ASCII 字元寫入到這個  物件所代表的  值。  
+  擷取資料流，此資料流將用於從指定位置開始，將 ASCII 字元寫入到這個 **java.sql.NClob** 物件所代表的 **NCLOB** 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,10 +33,10 @@ public java.io.OutputStream setAsciiStream(long pos)
 #### <a name="parameters"></a>參數  
  *pos*  
   
- 開始寫入至  物件的位置，第一個位置是 1。  
+ 開始寫入至 **NCLOB** 物件的位置，第一個位置是 1。  
   
 ## <a name="return-value"></a>傳回值  
- 物件，表示 ASCII 編碼字元可寫入其中的資料流。  
+ OutputStream 物件，表示 ASCII 編碼字元可寫入其中的資料流。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

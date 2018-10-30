@@ -32,7 +32,7 @@ Azure Active Directory 可讓使用者、 DBA 和應用程式設計人員做為 
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Windows 上的 Microsoft ODBC Driver 11 for SQL Server  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含隨附於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native Client ODBC 驅動程式的所有功能。 如需詳細資訊，請參閱 [SQL Server Native Client 程式設計](../../../relational-databases/native-client/sql-server-native-client-programming.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式以 Windows 作業系統中隨附的 ODBC 驅動程式作為基礎。 如需詳細資訊，請參閱 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含隨附於 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式的所有功能。 如需詳細資訊，請參閱 [SQL Server Native Client 程式設計](../../../relational-databases/native-client/sql-server-native-client-programming.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式以 Windows 作業系統中隨附的 ODBC 驅動程式作為基礎。 如需詳細資訊，請參閱 [Windows Data Access Components SDK](http://msdn.microsoft.com/library/aa968814(VS.85).aspx)。  
   
 此版本的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含下列新功能：  
   

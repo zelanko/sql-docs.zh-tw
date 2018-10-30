@@ -1,13 +1,11 @@
 ---
-title: getMaxRows 方法 (SQLServerStatement) |Microsoft 文件
+title: getMaxRows 方法 (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMaxRows
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d619f9505d9f6f5e9c2c6db7751ecb224fa2f5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8cb1c317930d97263038d09bd84e8836d5f6f4ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773636"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取資料列數目上限， [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)產生由此物件[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件可以包含。  
+  擷取最大資料列數目，即這個 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 物件產生 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件可以包含的資料列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,15 +36,15 @@ public final int getMaxRows()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **Int** ，指出資料列或 0 的最大數目，如果沒有任何限制。  
+ **int**，指出最大的資料列數目，如果沒有任何限制，則為 0。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 getMaxRows 方法是由 java.sql.Statement 介面中的 getMaxRows 方法指定。  
   
- 這個 getMaxRows 方法一律會傳回 0 代表動態的可捲動資料指標。  
+ 這個 getMaxRows 方法一律會針對動態的可捲動資料指標傳回 0。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

@@ -47,7 +47,7 @@ public java.sql.Date getDate(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這項 getDate 方法由 java.sql.CallableStatement 介面中的 getDate 方法所指定。  
+ 這個 getDate 方法是由 java.sql.ResultSet 介面中的 getDate 方法指定。  
   
  這個方法會傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 資料類型中的有效日期部分，而時間部分是設定成 Java 基準時間 00:00 (午夜)。  
   

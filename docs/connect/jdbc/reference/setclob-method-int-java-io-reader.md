@@ -21,7 +21,7 @@ ms.locfileid: "47604396"
 # <a name="setclob-method-int-javaioreader"></a>setClob 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定參數設定為指定的 java.io.Reader 物件。  
+  將所指定參數設定為指定的 Reader 物件。  
   
 ## <a name="syntax"></a>語法  
   

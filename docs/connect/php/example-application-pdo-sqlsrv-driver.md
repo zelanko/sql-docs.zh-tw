@@ -21,7 +21,7 @@ ms.locfileid: "47651976"
 # <a name="example-application-pdosqlsrv-driver"></a>範例應用程式 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-AdventureWorks Product Reviews 範例應用程式是使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]之 SQLSRV 驅動程式的 Web 應用程式。 此應用程式可讓使用者經由輸入關鍵字來搜尋產品、查看所選產品的評論、撰寫所選產品的評論，以及上傳所選產品的影像。  
+AdventureWorks Product Reviews 範例應用程式是一種 Web 應用程式，其使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 PDO_SQLSRV 驅動程式。 此應用程式可讓使用者經由輸入關鍵字來搜尋產品、查看所選產品的評論、撰寫所選產品的評論，以及上傳所選產品的影像。  
   
 ### <a name="running-the-example-application"></a>執行範例應用程式  
   
@@ -49,7 +49,7 @@ AdventureWorks Product Reviews 範例應用程式會示範下列工作：
 ## <a name="example"></a>範例  
 AdventureWorks Product Reviews 範例應用程式會針對名稱包含使用者所輸入字串的產品，從資料庫傳回產品資訊。 在傳回的產品清單中，使用者可以查看評論、查看影像、上傳影像，以及撰寫所選產品的評論。  
   
-將下列程式碼放入名為 adventureworks_demo.php 的檔案中：  
+將下列程式碼放入名為 adventureworks_demo_pdo.php 的檔案中：  
   
 ```  
 <!--=============  
@@ -455,7 +455,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>範例  
 photo.php 指令碼針對指定的 **ProductID**傳回產品相片。 此指令碼是從 adventureworks_demo.php 指令碼呼叫。  
   
-將下列程式碼放入名為 photo.php 的檔案中：  
+將下列程式碼放入名為 photo_pdo.php 的檔案中：  
   
 ```  
 <?php  

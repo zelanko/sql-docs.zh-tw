@@ -12,7 +12,7 @@ ms.author: broneill
 manager: craigg
 ms.openlocfilehash: ecefe3f1abe47a1a4f1af967cb1a15ee9f4dd52b
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47800256"
@@ -25,7 +25,7 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
 
 |平台|下載|發行日期|Version|建置|
 |:---|:---|:---|:---|:---|
-|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=875508)|2018 年 6 月 20 日|17.8|14.0.4079.2|
+|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=875508)|2018 年 6 月 22 日|17.8|14.0.4079.2|
 |macOS (預覽)|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
 |Linux (預覽)|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
 

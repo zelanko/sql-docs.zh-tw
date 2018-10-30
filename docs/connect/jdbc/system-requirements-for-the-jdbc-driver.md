@@ -41,7 +41,7 @@ ms.locfileid: "47724296"
   
 **Microsoft JDBC Driver 7.0 for SQL Server：**  
 
-  JDBC Driver 6.2 在每個安裝套件中包含兩個 JAR 類別庫：**mssql-jdbc-6.2.2.jre7.jar** 和 **mssql-jdbc-6.2.2.jre8.jar**。
+  JDBC Driver 7.0 在每個安裝套件中包含兩個 JAR 類別庫：**mssql-jdbc-7.0.0.jre8.jar** 和 **mssql-jdbc-7.0.0.jre10.jar**。
 
   JDBC 驅動程式 7.0 是設計用來與所有主要 Sun 對應的 Java 虛擬機器搭配使用並受其支援，但僅在 Sun JRE 8.0 與 10.0 上測試過。
   
@@ -65,7 +65,7 @@ ms.locfileid: "47724296"
   
 **Microsoft JDBC Driver 6.4 for SQL Server：**  
 
-  JDBC Driver 6.2 在每個安裝套件中包含兩個 JAR 類別庫：**mssql-jdbc-6.2.2.jre7.jar** 和 **mssql-jdbc-6.2.2.jre8.jar**。
+  JDBC Driver 6.4 在每個安裝套件中包含三個 JAR 類別庫：**mssql-jdbc-6.4.0.jre7.jar**、**mssql-jdbc-6.4.0.jre8.jar** 和 **mssql-jdbc-6.4.0.jre9.jar**。
 
   JDBC 驅動程式 6.4 是設計用來與所有主要 Sun 對應的 Java 虛擬機器搭配使用並受其支援，但僅在 Sun JRE 7.0、8.0 與 9.0 上測試過。
   

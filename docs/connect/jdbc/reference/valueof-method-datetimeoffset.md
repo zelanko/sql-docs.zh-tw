@@ -28,7 +28,7 @@ ms.locfileid: "47676606"
 |[屬性]|Description|  
 |----------|-----------------|  
 |[valueOf(java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|根據指定的 java.sql.Timestamp 值以及指出位移 (以分鐘為單位) 的值，建立 **DateTimeOffset** 物件，這個物件表示從 GMT 特定位移的時間點。|  
-|[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|根據指定的 java.sql.Timestamp 值以及指出位移 (以分鐘為單位) 的值，建立 **DateTimeOffset** 物件，這個物件表示從 GMT 特定位移的時間點。|  
+|[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|根據所指定 java.sql.Timestamp 值以及指出位移的 java.util.Calendar 值，建立 **DateTimeOffset** 物件，這個物件表示從 GMT 特定位移的時間點。|  
   
 ## <a name="see-also"></a>另請參閱  
  [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)   

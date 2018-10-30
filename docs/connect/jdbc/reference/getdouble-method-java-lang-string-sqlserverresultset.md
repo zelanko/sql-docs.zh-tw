@@ -1,5 +1,5 @@
 ---
-title: getTime 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: getDouble 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47812166"
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>getDouble 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **double**。  
+  使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行名稱的值來作為 **double**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,10 +49,10 @@ public double getDouble(java.lang.String columnName)
 ## <a name="remarks"></a>Remarks  
  GetDouble 方法 java.sql.ResultSet 介面中所指定這個 getDouble 方法。  
   
- 這個方法會傳回所有具有 Java 精確度的數字資料型別。  
+ 這個方法會傳回所有具有 Java **double** 精確度的數字資料類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateDouble 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
+ [getDouble 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

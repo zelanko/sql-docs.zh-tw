@@ -21,14 +21,14 @@ ms.locfileid: "47700106"
 # <a name="getsqlxml-method-sqlserverresultset"></a>getSQLXML 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 SQLXML 物件。  
+  擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來作為 SQLXML 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getSQLXML 方法&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-int-sqlserverresultset.md)|擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 SQLXML 物件。|  
-|[getSQLXML 方法 (java.lang.String)](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 SQLXML 物件。|  
+|[getSQLXML 方法&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-int-sqlserverresultset.md)|從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行的值來作為 SQLXML 物件。|  
+|[getSQLXML 方法 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行的值來作為 SQLXML 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

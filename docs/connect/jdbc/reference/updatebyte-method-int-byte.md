@@ -26,7 +26,7 @@ ms.locfileid: "47610726"
 # <a name="updatebyte-method-int-byte"></a>updateByte 方法 (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  透過給定的資料行索引，使用日期值來更新指定的資料行。  
+  透過指定的資料行索引，使用 **byte** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ public void updateByte(int index,
  這個 updateByte 方法是由 java.sql.ResultSet 介面中的 updateByte 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateBytes 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
+ [updateByte 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

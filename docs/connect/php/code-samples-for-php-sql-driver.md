@@ -1,5 +1,5 @@
 ---
-title: 載入 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 的程式碼範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

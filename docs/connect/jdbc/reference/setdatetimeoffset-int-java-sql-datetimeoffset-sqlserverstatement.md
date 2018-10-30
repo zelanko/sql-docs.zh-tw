@@ -35,7 +35,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
   
  要設定之資料行的索引。  
   
- *DateTimeOffset*  
+ *dateTimeOffset*  
   
  DateTimeOffset 物件。  
   
@@ -54,7 +54,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 |datetime2|只能插入："YYYY-MM-DD hh:mm:ss[.nnnnnnn]"|  
   
 ## <a name="see-also"></a>另請參閱  
- [updateDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
+ [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

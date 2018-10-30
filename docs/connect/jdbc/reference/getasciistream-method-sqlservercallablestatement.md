@@ -26,13 +26,13 @@ ms.locfileid: "47762259"
 # <a name="getasciistream-method-sqlservercallablestatement"></a>getAsciiStream 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取指定參數的值來當做  字元資料流。  
+  擷取所指定參數的值來作為 **ASCII** 字元資料流。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-int.md)|透過指定的參數名稱，擷取指定之參數的值來當作 **ASCII** 字元資料流。|  
+|[getAsciiStream &#40;int&#41;](../../../connect/jdbc/reference/getasciistream-int.md)|透過指定的參數索引，擷取所指定參數的值來作為 **ASCII** 字元資料流。|  
 |[getAsciiStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|透過指定的參數名稱，擷取指定之參數的值來當作 **ASCII** 字元資料流。|  
   
 ## <a name="see-also"></a>另請參閱  

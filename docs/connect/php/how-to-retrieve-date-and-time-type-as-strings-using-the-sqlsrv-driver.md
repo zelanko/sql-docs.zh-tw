@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型
+title: 使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -25,7 +25,7 @@ ms.locfileid: "47686986"
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 1.1 版已加入此功能，必須在使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驅動程式時才有效。 它是搭配使用 ReturnDatesAsStrings 連接選項與 PDO_SQLSRV 驅動程式時產生的錯誤。  
   
-您可以在連接字串中指定選項，以字串的形式擷取日期和時間類型 datetime **、** date **、** time **、** datetime2**和**datetimeoffset。  
+您可以在連接字串中指定選項，以字串的形式擷取日期和時間類型 (**datetime**、**date**、**time**、**datetime2** 和 **datetimeoffset**)。  
   
 ### <a name="to-retrieve-date-and-time-types-as-strings"></a>以字串的形式擷取日期和時間類型  
   

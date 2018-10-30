@@ -36,9 +36,9 @@ public void setDatabaseName(java.lang.String databaseName)
 ```  
   
 #### <a name="parameters"></a>參數  
- *DatabaseName*  
+ *databaseName*  
   
- 包含資料庫名稱的 ** 值。  
+ **String** 包含資料庫名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

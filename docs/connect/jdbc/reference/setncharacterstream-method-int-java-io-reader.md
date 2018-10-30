@@ -21,7 +21,7 @@ ms.locfileid: "47771316"
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  將指定參數設定為指定的 java.io.Reader 物件。  
+  將指定的參數設定為所指定 Reader 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  *value*  
   
- 物件，包含參數值。  
+ Reader 物件，包含參數值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +49,7 @@ public final void setNCharacterStream(int parameterIndex,
  這個方法應該用於**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**資料型別。  
   
 ## <a name="see-also"></a>另請參閱  
- [setCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
+ [setNCharacterStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

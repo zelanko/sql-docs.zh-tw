@@ -21,7 +21,7 @@ ms.locfileid: "47648956"
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  依據指定開始的位置和要複製的字元數目，擷取  中所指定子字串的副本。  
+  依據所指定開始位置和要複製的字元數，擷取 **NCLOB** 中所指定子字串的複本。  
   
 ## <a name="syntax"></a>語法  
   

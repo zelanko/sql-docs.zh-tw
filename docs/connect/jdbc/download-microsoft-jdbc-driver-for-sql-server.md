@@ -40,6 +40,6 @@ ms.locfileid: "47710552"
  * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>不支援的驅動程式  
-這裡不提供下載不支援的驅動程式版本。 因為我們會持續改進 Java 連線能力支援， 所以極力建議您使用最新版的 Microsoft JDBC 驅動程式。  
+這裡不提供下載不支援的驅動程式版本。 因為我們會持續改進 Java 連線能力支援， 所以強烈建議您使用最新版的 Microsoft JDBC 驅動程式。  
   
   

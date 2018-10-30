@@ -27,7 +27,7 @@ ms.locfileid: "47691704"
   
  **擴充：** java.lang.Object  
   
- 實作：javax.sql.PooledConnection  
+ **實作：** javax.sql.PooledConnection  
   
 ## <a name="syntax"></a>語法  
   

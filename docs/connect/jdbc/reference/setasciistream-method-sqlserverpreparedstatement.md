@@ -27,9 +27,9 @@ ms.locfileid: "47759376"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[updateAsciiStream 方法 &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|將指定的參數編號設定為指定的 java.io.InputStream 物件中。|  
-|[setAsciiStream 方法 (int, java.io.InputStream, int)](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|設定指定的參數編號為指定的  物件，該物件具有指定的位元組數。|  
-|[updateAsciiStream 方法 &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|設定指定的參數編號為指定的  物件，該物件具有指定的位元組數。|  
+|[setAsciiStream 方法 &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|將指定的參數編號設定為指定的 java.io.InputStream 物件中。|  
+|[setAsciiStream 方法 &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|將指定的參數號碼設定為所指定 java.io.InputStream 物件，該物件具有指定的位元組數。|  
+|[setAsciiStream 方法 &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|將指定的參數號碼設定為所指定 java.io.InputStream 物件，該物件具有指定的位元組數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

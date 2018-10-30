@@ -1,32 +1,29 @@
 ---
-title: 如何： 使用 Windows 驗證進行連接 |Microsoft 文件
+title: 如何： 使用 Windows 驗證進行連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70c2c0f9316384d831af7d7ce317d16bdc3c41a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c78506897432cdbfa4f4dd926e3f6035fb1881f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759939"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>如何：使用 Windows 驗證進行連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-根據預設， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 使用 Windows 驗證來連接 SQL Server。 請務必注意，在大部分情況下，這表示，將 Web 伺服器的處理序識別或執行緒識別 （如果 Web 伺服器使用模擬） 用來連接到伺服器，而不是使用者的身分識別。  
+根據預設， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 使用 Windows 驗證來連接 SQL Server。 請務必注意，在大部分情況下，這表示網頁伺服器的處理序身分識別或執行緒身分識別 (如果網頁伺服器使用模擬) 用來連接伺服器，而非使用者的身分識別。  
   
 當您使用 Windows 驗證來連接 SQL Server 時，必須考量下列幾點：  
   
@@ -48,7 +45,7 @@ ms.locfileid: "35307397"
 ## <a name="example"></a>範例  
 使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 SQLSRV 驅動程式，下列範例會使用 Windows 驗證來連接 SQL Server 的本機執行個體。 建立連接之後，會向伺服器查詢正在存取資料庫之使用者的登入。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
   
 ```  
 <?php  
@@ -111,17 +108,17 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ## <a name="see-also"></a>另請參閱  
 [如何：使用 SQL Server 驗證進行連線](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[如何： 建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
+[如何：建立 SQL Server 登入](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[如何： 建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[如何：建立資料庫使用者](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [管理使用者、角色和登入](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
 [使用者結構描述分隔](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Grant 物件權限 (TRANSACT-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+[授與物件權限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

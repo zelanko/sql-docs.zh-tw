@@ -1,29 +1,26 @@
 ---
-title: OLE DB Driver for SQL Server 的系統需求 | Microsoft Docs
+title: 系統需求 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - prerequisites
 - system requirements
 - requirements
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcac85e31f20d84377a2788e373892e05e8fddfa
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 997c952ed127005f23b57654f1c0b9da033c14f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609586"
 ---
 # <a name="system-requirements"></a>系統需求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -26,7 +26,7 @@ ms.locfileid: "47695676"
 
 本文章提供有關如何開發 PHP 應用程式使用的資訊[Always Encrypted （資料庫引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)並[PHP Driver for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md)。
 
-[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 ODBC Driver for SQL Server 等啟用了 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料來達成此目的。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 PHP Driver for SQL Server 使用 ODBC Driver for SQL Server 加密機密資料。
+[永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 ODBC Driver for SQL Server 等已啟用 Always Encrypted 的驅動程式，以清晰簡明的方式加密與解密用戶端應用程式中的敏感性資料。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 PHP Driver for SQL Server 使用 ODBC Driver for SQL Server 加密機密資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -153,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>純文字資料擷取範例
 
 下列範例會示範根據加密的值，以及擷取純文字資料，從使用 SQLSRV 和 PDO_SQLSRV 驅動程式的加密資料行篩選資料。 請注意下列幾點：
- -   在 WHERE 子句中用來篩選 SSN 資料行的值，需要以參數形式傳遞，如此 Microsoft JDBC Driver for SQL Server 可以清晰簡明的方式加密它，再將它傳送至資料庫。
+ -   在 WHERE 子句中用來篩選 SSN 資料行的值，需要使用繫結參數傳遞，如此驅動程式可以清晰簡明的方式加密它，再將它傳送至伺服器。
  -   執行具有繫結參數的查詢，PHP 驅動程式除非使用者明確指定的 SQL 型別，使用 SQLSRV 驅動程式時，會自動判斷使用者的 SQL 類型。
  -   程式列印的所有值都是純文字，因為驅動程式以透明的方式解密從 SSN 和 BirthDate 資料行擷取的資料。
  
@@ -265,7 +265,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 Microsoft driver 5.3.0 for PHP for SQL Server，只有 「 Windows 憑證存放區提供者 」 和 「 Azure 金鑰保存庫支援。 不支援 ODBC 驅動程式 （自訂金鑰存放區提供者） 所支援其他金鑰儲存區提供者。
 
-### <a name="using-the-windows-certificate-store-provider"></a>Windows 憑證存放區的提供者。
+### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
 
 Windows 上的 SQL Server ODBC 驅動程式包含內建的資料行主要金鑰存放區提供者的 Windows 憑證存放區、 名為`MSSQL_CERTIFICATE_STORE`。 （此提供者無法使用。 在 macOS 或 Linux）與此提供者，CMK 會儲存在本機用戶端電腦上，並由應用程式不需要額外組態，才能使用它來搭配此驅動程式。 不過，應用程式必須存取憑證和私密金鑰存放區中。 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 

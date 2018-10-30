@@ -1,5 +1,5 @@
 ---
-title: 步驟 1︰設定 PHP 開發的開發環境 | Microsoft Docs
+title: 步驟 1︰設定 Ruby 開發的開發環境 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -58,7 +58,7 @@ c. 按一下 [確定]，並接著 [擷取]，將檔案解壓縮。
 > gem inst tiny_tds
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux 17.10  
+## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
 1. **開啟終端機**  
   

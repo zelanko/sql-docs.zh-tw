@@ -26,7 +26,7 @@ ms.locfileid: "47798097"
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 Clob 物件。  
+  使用 Java 程式設計語言，從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 Clob 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +50,7 @@ public java.sql.Clob getClob(int columnIndex)
  GetClob 方法 java.sql.ResultSet 介面中所指定這個 getClob 方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   
+ [getClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

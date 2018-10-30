@@ -46,7 +46,7 @@ public void registerOutParameter(java.lang.String s,
   
  JDBC 型別程式碼，如 java.sql.Types 中所定義。  
   
- S1  
+ *s1*  
   
  **String**，包含完整的 SQL 類型名稱。  
   

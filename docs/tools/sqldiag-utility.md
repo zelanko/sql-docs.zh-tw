@@ -31,12 +31,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa181fba5468b88586a4d69f5a361a64112b2018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9644b055e57c3a08c551c2eb0544ca77b083456
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833116"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169158"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -297,7 +297,7 @@ SQLDIAG STOP /A Instance1
 >  請使用 **SQLDiag STOP** 或 **SQLDIAG STOP_ABORT** 停止 **SQLdiag** 服務。 請勿使用 Windows 服務主控台停止 **SQLdiag** 或其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>自動啟動和停止 SQLdiag  
- 若要在指定時間自動啟動及停止診斷資料收集，請使用 **/B***start_time* 和 **/E***stop_time* 引數，並採用 24 小時制標記法。 例如，如果您要針對大約在 02:00:00 一致出現的問題進行疑難排解，您可以將 **SQLdiag** 設定成在 01:00 自動開始收集診斷資料且在 03:00:00 自動停止。 請利用 **/B** 和 **/E** 引數來指定開始和停止時間。 請利用 24 小時標記法來指定開始和停止的確切日期和時間，格式為 YYYYMMDD_HH:MM:SS。 若要指定相對的開始或停止時間，請依照下列範例所示，在開始和停止時間之前附加 **+** ，並省略日期部分 (YYYYMMDD_)，如此會讓 **SQLdiag** 等候 1 小時再開始收集資訊，之後會收集 3 小時的資訊，再停止並結束：  
+ 若要在指定時間自動啟動及停止診斷資料收集，請使用 **/B**_start\_time_ 和 **/E**_stop\_time_ 引數，並採用 24 小時制標記法。 例如，如果您要針對大約在 02:00:00 一致出現的問題進行疑難排解，您可以將 **SQLdiag** 設定成在 01:00 自動開始收集診斷資料且在 03:00:00 自動停止。 請利用 **/B** 和 **/E** 引數來指定開始和停止時間。 請利用 24 小時標記法來指定開始和停止的確切日期和時間，格式為 YYYYMMDD_HH:MM:SS。 若要指定相對的開始或停止時間，請依照下列範例所示，在開始和停止時間之前附加 **+** ，並省略日期部分 (YYYYMMDD_)，如此會讓 **SQLdiag** 等候 1 小時再開始收集資訊，之後會收集 3 小時的資訊，再停止並結束：  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -358,7 +358,7 @@ SQLDIAG START /A Instance1
  不支援暫停 **SQLdiag** 服務。  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>執行 SQLdiag 的多個執行個體  
- 在相同電腦的命令列上指定 **/A***SQLdiag_application_name*，執行多個 **SQLdiag** 的執行個體。 這對於同時從相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體收集不同的診斷集很有幫助。 例如，您可以設定 **SQLdiag** 的具名執行個體，持續執行輕量型資料收集。 之後，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上發生特定的問題，您可以執行預設的 **SQLdiag** 執行個體來收集該問題的診斷資訊，或蒐集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務要求您搜尋的一組診斷來診斷問題。  
+ 在相同電腦的命令列上指定 **/A**_SQLdiag\_application\_name_ 來執行多個 **SQLdiag** 的執行個體。 這對於同時從相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體收集不同的診斷集很有幫助。 例如，您可以設定 **SQLdiag** 的具名執行個體，持續執行輕量型資料收集。 之後，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上發生特定的問題，您可以執行預設的 **SQLdiag** 執行個體來收集該問題的診斷資訊，或蒐集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務要求您搜尋的一組診斷來診斷問題。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>從叢集 SQL Server 執行個體收集診斷資料  
  **SQLdiag** 支援從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集診斷資料。 若要從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集診斷資料，請確定已在設定檔 SQLDiag.Xml 中，對 **\<Machine>** 項目的 **name** 屬性指定 **"."**，而且不要在命令列上指定 **/G** 引數。 預設會在組態檔中對 **name** 屬性指定 **"."** ，且會關閉 **/G** 引數。 通常，從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集時，您不需要編輯組態檔或變更命令列引數。  

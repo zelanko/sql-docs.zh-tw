@@ -1,5 +1,5 @@
 ---
-title: getInt 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: getSQLXML 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.locfileid: "47810756"
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>getSQLXML 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 SQLXML 物件。  
+  從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行的值來作為 SQLXML 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String columnLabel)
  這個 getSQLXML 方法是由 java.sql.ResultSet 介面中的 getSQLXML 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateSQLXML 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
+ [getSQLXML 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   

@@ -39,7 +39,7 @@ array PDO::errorInfo();
   
 -   驅動程式特有的錯誤訊息。  
   
-如果沒有發生錯誤，或如果未設定 SQLSTATE，則驅動程式特有的欄位會是 NULL。  
+如果沒有發生錯誤，或如果未設定 SQLSTATE，則驅動程式特定欄位會是 NULL。  
   
 ## <a name="remarks"></a>Remarks  
 PDO::errorInfo 只會針對直接在資料庫上執行的作業擷取錯誤資訊。 使用 PDO::prepare 或 PDO::query 建立 PDOStatement 執行個體時，請使用 PDOStatement::errorInfo。  

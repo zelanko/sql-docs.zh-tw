@@ -24,7 +24,7 @@ ms.locfileid: "47702226"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
-  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需 SPN 和 Kerberos 驗證的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式 Kerberos 驗證&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
+  本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需用戶端應用程式中 SPN 的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式 Kerberos 驗證&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>提供者初始化字串關鍵字  
  下列提供者初始化字串關鍵字可支援 OLE DB 應用程式內的 SPN。 在下表中，關鍵字欄中的值會用於 IDBInitialize::Initialize 的提供者字串。 當使用 ADO 或 IDataInitialize::GetDataSource 連接時，描述欄中的值會在初始化字串中使用。  

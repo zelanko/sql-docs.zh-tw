@@ -1,5 +1,5 @@
 ---
-title: 為 Microsoft Drivers for PHP for SQL Server 設定 IIS
+title: 為 Microsoft Drivers for PHP for SQL Server 設定 IIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql

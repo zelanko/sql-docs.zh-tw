@@ -26,7 +26,7 @@ ms.locfileid: "47694816"
 # <a name="getbyte-method-javalangstring"></a>getByte 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  透過給定的參數名稱，擷取指定之參數的值來當做  值。  
+  透過指定的參數名稱，擷取所指定參數的值來作為 **byte** 值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,10 +47,10 @@ public byte getByte(java.lang.String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 這項 getDate 方法由 java.sql.CallableStatement 介面中的 getDate 方法所指定。  
+ 這個 getByte 方法是由 java.sql.CallableStatement 介面中的 getByte 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [getDate 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
+ [getByte 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

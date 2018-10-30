@@ -27,8 +27,8 @@ ms.locfileid: "47795666"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getSQLXML 方法&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|透過給定的參數索引，擷取指定參數的值來當做  物件。|  
-|[getSQLXML 方法 (java.lang.String)](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|透過給定的參數名稱，擷取指定參數的值來當做  物件。|  
+|[getSQLXML 方法&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|透過指定的參數索引，擷取所指定參數的值來作為 SQLXML 物件。|  
+|[getSQLXML 方法 &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|透過指定的參數名稱，擷取所指定參數的值來作為 SQLXML 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

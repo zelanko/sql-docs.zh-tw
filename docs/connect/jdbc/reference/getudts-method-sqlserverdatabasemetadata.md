@@ -1,13 +1,11 @@
 ---
-title: getUDTs 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: getUDTs 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getUDTs
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f371dd21d1f64004d9e04c6e021ce6c67c269081
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f3cd97e796235e47ed1f3003ec5973fd6d6dda61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614908"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "32841993"
   擷取使用者定義類型的描述，這些類型會定義在特定的結構描述中。  
   
 > [!NOTE]  
->  這個方法目前不支援與[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 因此，使用這個方法時一定會傳回空的結果集。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。 因此，使用這個方法時一定會傳回空的結果集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,28 +44,28 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
 #### <a name="parameters"></a>參數  
  *catalog*  
   
- A**字串**，其中包含目錄名稱。  
+ 包含目錄名稱的 **String**。  
   
  *schemaPattern*  
   
- A**字串**，包含結構描述名稱模式。  
+ 包含結構描述名稱模式的 **String**。  
   
  *typeNamePattern*  
   
- A**字串**，包含型別名稱模式。  
+ **String**，包含類型名稱模式。  
   
- *型別*  
+ *types*  
   
  int 陣列，包含要納入的資料類型。 Null 表示應該納入所有類型。  
   
 ## <a name="return-value"></a>傳回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- 這個 getUDTs 方法是由 java.sql.DatabaseMetaData 介面中 getUDTs 方法指定。  
+## <a name="remarks"></a>Remarks  
+ 這個 getUDTs 方法是由 java.sql.DatabaseMetaData 介面中的 getUDTs 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: 步驟 2︰建立供 pymssql Python 開發使用的 SQL 資料庫 | Microsoft Docs
+title: 步驟 2︰建立用於 pyodbc Python 開發的 SQL 資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql

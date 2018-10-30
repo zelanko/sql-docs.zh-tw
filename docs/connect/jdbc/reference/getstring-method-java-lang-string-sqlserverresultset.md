@@ -1,5 +1,5 @@
 ---
-title: getLong 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
+title: getString 方法 (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.locfileid: "47642886"
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值當作 **String** 物件。  
+  使用 Java 程式設計語言，擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的目前資料列中所指定資料行名稱值來作為 **String** 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +53,7 @@ public java.lang.String getString(java.lang.String columnName)
   
  區分位置的型別 (例如 money、smallmoney、datetime、smalldatetime、float、real、decimal 和 numeric) 將會針對該型別的基礎值傳回標準 toString() 格式。  
   
- 使用者定義型別會當作十六進位**字串**值傳回。  
+ 使用者定義型別會作為十六進位 **String** 值傳回。  
   
 ## <a name="see-also"></a>另請參閱  
  [getString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   

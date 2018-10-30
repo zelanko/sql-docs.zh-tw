@@ -43,7 +43,7 @@ public void setBinaryStream(java.lang.String parameterName,
   
  *length*  
   
- ，指出位元組數目的長度。  
+ **long**，指出位元組數目的長度。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -25,9 +25,9 @@ ms.locfileid: "47798206"
   
  **套件：** com.microsoft.sqlserver.jdbc  
   
- 擴充：SQLServerClob  
+ **擴充：** SQLServerClob  
   
- 實作：java.sql.NClob  
+ **實作：** java.sql.NClob  
   
 ## <a name="syntax"></a>語法  
   

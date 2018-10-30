@@ -31,7 +31,7 @@ ms.locfileid: "47727486"
 |AttachDBFileName|String|指定伺服器所應附加的資料庫檔案。|未設定值。|  
 |驗證|下列字串之一：<br /><br />'SqlPassword'<br /><br />' ActiveDirectoryPassword'|指定驗證模式。|未設定。|  
 |CharacterSet<br /><br />(PDO_SQLSRV 驅動程式不支援)|String|指定用來將資料傳送至伺服器的字元集。<br /><br />可能的值為 SQLSRV_ENC_CHAR 和 UTF-8。 如需詳細資訊，請參閱 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
-|ColumnEncryption|[啟用] 或 [停用]|指定是否啟用了 Always Encrypted 功能。 |已停用|  
+|ColumnEncryption|[啟用]**** 或 [停用]****|指定是否啟用了 Always Encrypted 功能。 |已停用|  
 |ConnectionPooling|1 或 **true** 表示開啟連接共用。<br /><br />0 或 **false** 表示關閉連接共用。|指定要從連接集區指派連接 (1 或 **true**)，還是不要指派 (0 或 **false**)。<sup>1</sup>|**true** (1)|  
 |ConnectRetryCount|介於 0 和 255 之間 （含） 之間的整數|若要重新建立放棄之前中斷的連線的嘗試次數上限。 根據預設，單一嘗試重新建立連線時中斷。 值 0 表示沒有重新連線將會嘗試。|1|  
 |ConnectRetryInterval|介於 1 到 60 （含） 之間的整數|時間 （秒），嘗試重新建立連線。 應用程式會嘗試立即重新連線，一旦偵測連線中斷，而且會然後等到 ConnectRetryInterval 秒後再試一次。 如果 ConnectRetryCount 等於 0，則會忽略這個關鍵字。|1|  
@@ -49,11 +49,11 @@ ms.locfileid: "47727486"
 |QuotedId|1 或 **true** 會使用 SQL-92 規則。<br /><br />0 或 **false** 會使用傳統規則。|指定是對引號識別項使用 SQL-92 規則 (1 或 **true**)，還是使用傳統的 Transact-SQL 規則 (0 或 **false**)。|**true** (1)|  
 |ReturnDatesAsStrings<br /><br />(PDO_SQLSRV 驅動程式不支援)|1 或 **true** 會以字串的形式傳回日期和時間類型。<br /><br />0 或 **false** 會以 PHP **DateTime** 類型的形式傳回日期和時間類型。|以字串或 PHP 類型的形式擷取日期和時間類型 (datetime、date、time、datetime2 和 datetimeoffset)。 使用 PDO_SQLSRV 驅動程式時，會以字串的形式傳回日期。 PDO_SQLSRV 驅動程式沒有 **datetime** 類型。<br /><br />如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式，以字串的形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。|**false**|  
 |可捲動|String|「緩衝處理」表示您需要用戶端 (緩衝) 資料指標，它可讓您快取記憶體中的整個結果集。 如需詳細資訊，請參閱[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。|順向資料指標|  
-|[伺服器]<br /><br />(SQLSRV 驅動程式不支援)|String|要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。<br /><br />您也可以指定虛擬網路名稱，以連接到 AlwaysOn 可用性群組。 如需詳細資訊[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|伺服器是必要的關鍵字 (雖然它不一定是連接字串中的第一個關鍵字)。 如果未將伺服器名稱傳遞至關鍵字，會嘗試連接到本機執行個體。<br /><br />傳遞至伺服器的值可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱，或是執行個體的 IP 位址。 您可以選擇性地指定連接埠號碼 (例如 `sqlsrv:server=(local),1033`)。<br /><br />從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.0 版開始，您也可以透過 `server=(localdb)\instancename`指定 LocalDB 執行個體。 如需詳細資訊，請參閱 < [LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。|  
+|[伺服器]<br /><br />(SQLSRV 驅動程式不支援)|String|要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。<br /><br />您也可以指定虛擬網路名稱，以連接到 AlwaysOn 可用性群組。 如需詳細資訊[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|伺服器是必要的關鍵字 (雖然它不一定是連接字串中的第一個關鍵字)。 如果未將伺服器名稱傳遞至關鍵字，會嘗試連接到本機執行個體。<br /><br />傳遞至伺服器的值可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱，或是執行個體的 IP 位址。 您可以選擇性地指定連接埠號碼 (例如 `sqlsrv:server=(local),1033`)。<br /><br />從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.0 版開始，您也可以透過 `server=(localdb)\instancename`指定 LocalDB 執行個體。 如需詳細資訊，請參閱 < [LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。|  
 |TraceFile|String|為用於追蹤資料的檔案指定路徑。|未設定值。|  
 |TraceOn|1 或 **true** 會啟用追蹤。<br /><br />0 或 **false** 會停用追蹤。|指定對於要建立的連接是要啟用 ODBC 追蹤 (1 或 **true**)，還是加以停用 (0 或 **false**)。|**false** (0)|  
 |TransactionIsolation|SQLSRV 驅動程式會使用下列值：<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV 驅動程式會使用下列值：<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|指定交易隔離等級。<br /><br />如需交易隔離的詳細資訊，請參閱 SQL Server 文件中的[設定交易隔離等級](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。|SQLSRV_TXN_READ_COMMITTED<br /><br />中的多個<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|transparentNetworkIPResolution|[啟用] 或 [停用]|會影響與主機名稱，相關聯的連接順序，當第一個問題解決之後，主機名稱的 IP 沒有回應，而且有多個 Ip。<br /><br />它與 MultiSubnetFailover 提供不同的連接順序的互動。 如需詳細資訊，請參閱 <<c0> [ 透明網路 IP 解析](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)或是[使用無形網路 IP 解析](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)。|已啟用|
+|transparentNetworkIPResolution|[啟用]**** 或 [停用]****|會影響與主機名稱，相關聯的連接順序，當第一個問題解決之後，主機名稱的 IP 沒有回應，而且有多個 Ip。<br /><br />它與 MultiSubnetFailover 提供不同的連接順序的互動。 如需詳細資訊，請參閱 <<c0> [ 透明網路 IP 解析](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)或是[使用無形網路 IP 解析](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)。|已啟用|
 |TrustServerCertificate|1 或 **true** 會信任憑證。<br /><br />0 或 **false** 會不信任憑證。|指定用戶端應信任 (1 或 **true**) 還是拒絕 (0 或 **false**) 自我簽署的伺服器憑證。|**false** (0)|  
 |UID<br /><br />(PDO_SQLSRV 驅動程式不支援)|String|指定在使用 SQL Server 驗證進行連接時所要使用的使用者識別碼<sup>4</sup>。|未設定值。|  
 |WSID|String|指定用於追蹤之電腦的名稱。|未設定值。|  
@@ -62,9 +62,9 @@ ms.locfileid: "47727486"
 
 2. 所有在已建立的連接上執行的查詢，都會對 *Database* 屬性所指定的資料庫執行。 不過，如果使用者有適當的權限，則可以使用完整名稱來存取其他資料庫中的資料。 例如，如果 *master* 資料庫是使用 *Database* 連接屬性來設定，就仍然可以執行 Transact-SQL 查詢，以使用完整名稱存取 *AdventureWorks.HumanResources.Employee* 資料表。  
 
-3. 啟用 [加密]  後可能會影響某些應用程式的效能，因為加密資料需要額外的計算負荷。  
+3. 啟用 [加密] ** 後可能會影響某些應用程式的效能，因為加密資料需要額外的計算負荷。  
 
-4. 要連接的 *UID* 驗證進行連接時， *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬性都必須設定。  
+4. 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接時，*UID* 和 *PWD* 屬性都必須設定。  
 
 許多支援的索引鍵都是 ODBC 連接字串屬性。 如需 ODBC 連接字串的資訊，請參閱[搭配 SQL Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 

@@ -27,8 +27,8 @@ ms.locfileid: "47706086"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[updateNString 方法 (int, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|透過指定的資料行標籤，使用 **String** 值來更新指定的資料行。|  
-|[updateNString 方法 (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|透過指定的資料行標籤，使用 **String** 值來更新指定的資料行。|  
+|[updateNString 方法 &#40;int, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|透過指定的資料行索引，使用 **String** 值來更新指定的資料行。|  
+|[updateNString 方法 &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|透過指定的資料行標籤，使用 **String** 值來更新指定的資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

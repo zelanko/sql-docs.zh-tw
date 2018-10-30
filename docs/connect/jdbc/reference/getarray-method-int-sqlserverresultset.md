@@ -26,7 +26,7 @@ ms.locfileid: "47850506"
 # <a name="getarray-method-int-sqlserverresultset"></a>getArray 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  擷取這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作陣列物件。  
+  從這個 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行索引的值來作為 Array 物件。  
   
 ## <a name="syntax"></a>語法  
   

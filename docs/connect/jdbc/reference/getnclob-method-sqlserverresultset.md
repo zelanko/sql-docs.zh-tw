@@ -21,14 +21,14 @@ ms.locfileid: "47795517"
 # <a name="getnclob-method-sqlserverresultset"></a>getNClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **NClob** 物件。  
+  使用 Java 程式設計語言，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行的值來作為 **NClob** 物件。  
   
 ## <a name="overload-list"></a>多載清單  
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|[getNClob 方法&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-int-sqlserverresultset.md)|使用 Java 程式語言，擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **NClob** 物件。|  
-|[getNClob 方法&#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string-sqlserverresultset.md)|使用 Java 程式語言，擷取 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中目前資料列中所指定資料行的值來當作 **NClob** 物件。|  
+|[getNClob 方法&#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-int-sqlserverresultset.md)|使用 Java 程式設計語言，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行的值來作為 **NClob** 物件。|  
+|[getNClob 方法&#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string-sqlserverresultset.md)|使用 Java 程式設計語言，從 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件目前資料列中擷取所指定資料行的值來作為 **NClob** 物件。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

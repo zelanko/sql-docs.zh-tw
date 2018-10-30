@@ -21,7 +21,7 @@ ms.locfileid: "47756586"
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驅動程式 API 參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驅動程式的 API 名稱是 **sqlsrv**。 所有 **sqlsrv** 函數皆以 **sqlsrv** 開頭，後面再加上動詞或名詞。 後面接著動詞的會執行某些動作，後面接著名詞的則會傳回某種形式的中繼資料。  
+在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中，SQLSRV 驅動程式的 API 名稱是 **sqlsrv**。 所有 **sqlsrv** 函式皆以 **sqlsrv_** 開頭，後面再加上動詞或名詞。 後面接著動詞的會執行某些動作，後面接著名詞的則會傳回某種形式的中繼資料。  
   
 ## <a name="in-this-section"></a>本節內容  
 SQLSRV 驅動程式包含下列函數：  

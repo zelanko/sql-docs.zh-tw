@@ -38,12 +38,12 @@ public void setResponseBuffering(java.lang.String value)
 #### <a name="parameters"></a>參數  
  *value*  
   
- ，包含緩衝和資料流模式。 有效模式可能是下列其中一個區分大小寫的字串： 或 。  
+ **String**，包含緩衝和資料流模式。 有效模式可能是下列其中一個區分大小寫的 String：**full** 或 **adaptive**。  
   
 ## <a name="remarks"></a>Remarks  
- 值會指定在執行階段從伺服器讀取整個結果。  
+ **full** 值會指定在執行階段從伺服器讀取整個結果。  
   
- 值會指定在必要時緩衝處理可能的資料下限。 值是預設緩衝模式。  
+ **adaptive** 值會指定在必要時緩衝處理可能的資料下限。 **adaptive** 值是預設緩衝模式。  
   
  如需使用回應緩衝模式的詳細資訊，請參閱 <<c0> [ 使用適應性緩衝](../../../connect/jdbc/using-adaptive-buffering.md)。  
   

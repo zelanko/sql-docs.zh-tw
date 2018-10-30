@@ -28,7 +28,7 @@ ms.locfileid: "47598876"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 命令提示字元公用程式 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表列出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]隨附的命令提示字元公用程式清單。  
+  命令提示字元公用程式可編寫 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 作業指令碼。 下表包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 隨附的多個命令提示字元公用程式清單。  
 
 如需*主要*SQL gui 和命令列工具，請參閱[SQL 工具概觀](overview-sql-tools.md)。
 

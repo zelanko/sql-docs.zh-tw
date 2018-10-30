@@ -31,7 +31,7 @@ public boolean autoCommitFailureClosesAllResultSets()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果在自動認可啟用且擲出例外狀況情況下會關閉所有開啟的結果集 (包括可保留資料的結果集) 則為 ， 否則為 **false**。  
+ 如果在自動認可已啟用且擲出例外狀況情況下會關閉所有開啟的結果集 (包括可保留資料的結果集)，則為 **true**； 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

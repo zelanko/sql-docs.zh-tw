@@ -36,7 +36,7 @@ public int getMaxColumnsInTable()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- ，指出允許的最大資料行數目。  
+ **int**，指出允許的最大資料行數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

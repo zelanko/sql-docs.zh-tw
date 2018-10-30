@@ -26,7 +26,7 @@ ms.locfileid: "47617046"
 # <a name="geturl-method-javalangstring"></a>getURL 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  使用 Java 程式語言，並配合給定的參數名稱來擷取指定之參數的值當做  物件。  
+  使用 Java 程式設計語言，並配合指定的參數名稱來擷取指定參數的值作為 URL 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,10 +47,10 @@ public java.net.URL getURL(java.lang.String s)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setURL 方法由 java.sql.CallableStatement 介面中的 setURL 方法指定。  
+ 這個 getURL 方法是由 java.sql.CallableStatement 介面中的 getURL 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [setNull 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
+ [getURL 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
