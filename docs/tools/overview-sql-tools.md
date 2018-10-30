@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767366"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643936"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47767366"
 | 工具 | Description | 在上執行 |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 是免費、 輕量級工具，管理資料庫，只要它們執行。 此預覽版本中提供資料庫管理功能，包括擴充的 TRANSACT-SQL 編輯器和可自訂的深入了解您的資料庫的操作狀態。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上執行**。|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 您可以使用 SQL Server Management Studio (SSMS) 來查詢、 設計和管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 | **在 Windows 上執行 SSMS**。|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | 您可以使用 SQL Server Management Studio (SSMS) 來查詢、 設計和管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。 | **SSMS 在 Windows 上執行**。|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | 將 Visual Studio 打造為強大的開發環境，SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲。| **Windows 上執行的 SSDT**。|
 | [Visual Studio Code](https://code.visualstudio.com/)| 安裝 Visual Studio Code 之後, 安裝[mssql 擴充功能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)開發 Microsoft SQL Server、 Azure SQL Database 和 SQL 資料倉儲。| **在 Windows、 macOS 和 Linux 上的 visual Studio Code 執行**。|
 
@@ -72,6 +72,7 @@ ms.locfileid: "47767366"
 |:--|:--|
 | [組態管理員](../tools/configuration-manager/sql-server-configuration-manager-help.md) | 使用 SQL Server 組態管理員來設定 SQL Server 服務和設定網路連線。 Configuration Manager 在 Windows 上執行|
 | [SQL Server 移轉小幫手](../ssma/sql-server-migration-assistant.md) | 使用 SQL Server 移轉小幫手將從 Microsoft Access、DB2、MySQL、Oracle 及 Sybase 到 SQL Server 的資料庫移轉作業自動化。|
+| [資料庫測試助理](../dea/database-experimentation-assistant-overview.md) | 使用資料庫測試助理 來評估指定的工作負載的目標的版本的 SQL。 |
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | 使用 Distributed Replay 功能可協助您評估未來的 SQL Server 升級的影響。 也可以使用 Distributed Replay 幫助您評估硬體和作業系統升級，以及 SQL Server 微調的影響。 |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose 公用程式會報告 Service Broker 交談或 Service Broker 服務的組態中的問題。 |
 

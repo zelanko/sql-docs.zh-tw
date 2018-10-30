@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050850"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 版本資訊
 
 **[下載最新版本](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+發行日期： 2018 年 10 月 24 日  
+建置： 15.0.4200.1 
+
+版本包含下列功能和修正程式：
+
+- 已新增的支援資料庫相容性層級 150。
+- 新增受控執行個體的支援。
+- 已新增的 MaxParallelism 命令列參數來指定資料庫作業的平行處理原則程度。
+- 新增 AccessToken 的命令列參數，來連接到 SQL Server 時，指定驗證權杖。
+- 已新增的支援匯入的資料流 BLOB/CLOB 資料型別。
+- 已新增支援純量 UDF 'INLINE' 選項。
+- 新增的圖形資料表 'MERGE' 語法的支援。
+- 已修正無法解析虛擬資料行圖形資料表。
+- 已修正使用記憶體最佳化檔案群組時的記憶體最佳化資料表用來建立資料庫。
+- 已修正，包括外部資料表上的擴充的屬性。
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ ms.locfileid: "47754328"
 版本包含下列修正：
 
 - 改善的連線失敗，包括 SqlClient 例外狀況訊息的錯誤訊息。
-- 已新增的 MaxParallelism 命令列參數來指定資料庫作業的平行處理原則程度。
 - 匯入/匯出的單一分割區索引支援索引的壓縮。
 - 已修正 SQL 2017 和更新版本的 XML 資料行集的反向工程問題。
 - 已修正的問題，Azure SQL Database 指令碼的資料庫相容性層級 140 忽略。
