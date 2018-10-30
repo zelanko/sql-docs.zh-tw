@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7899c50bfcc5fe21b7482d5b3ddce35770d5c94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 518133fc1023683f5f15af50db6133c28db2cc17
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031563"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 連接類型 (SSRS)
   若要在報表中加入來自 SAP NetWeaver® Business Intelligence 外部資料來源的資料，您必須具有以 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型的建構基礎為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]的資料延伸模組。  
@@ -29,7 +29,7 @@ ms.locfileid: "47775306"
 DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需更多連接字串範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
   
 ##  <a name="Credentials"></a> 認證  
@@ -37,7 +37,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -49,7 +49,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  當您建立查詢時，查詢設計工具會自動將預設屬性加入 MDX 查詢中。 若要包含預設屬性以外的屬性，您必須手動修改 MDX 查詢。  
   
- 如需使用這個查詢設計工具的詳細資訊，請參閱 [SAP NetWeaver BI 查詢設計工具使用者介面 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce)。  
+ 如需使用這個查詢設計工具的詳細資訊，請參閱 [SAP NetWeaver BI 查詢設計工具使用者介面 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce)。  
   
   
 ##  <a name="Extended"></a> 擴充欄位屬性  
@@ -97,7 +97,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> 備註  
  這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
- 如需詳細資訊，請參閱 [搭配 SAP NetWeaver Business Intelligence 使用 SQL Server 2008 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=167352)。  
+ 如需詳細資訊，請參閱 [搭配 SAP NetWeaver Business Intelligence 使用 SQL Server 2008 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=167352)。  
   
   
 ##  <a name="HowTo"></a> 如何主題  
@@ -116,7 +116,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -125,7 +125,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da188b4259d12b8c40cdd8a229a7f316a0bc3a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698796"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028407"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>從外部資料來源加入資料 (SSRS)
   若要從外部資料來源擷取資料，可以使用資料連接。 資料連接資訊通常是由外部資料來源的擁有者提供，此擁有者負責授與權限和指定要使用的認證類型。 資料連接資訊會儲存為報表資料來源。 資料來源類型會指定要用來擷取資料的資料延伸模組。  
@@ -38,7 +38,7 @@ ms.locfileid: "47698796"
 -   **外部資料來源** ：擷取報表資料的來源，例如資料庫、檔案、Cube 或 Web 服務。  
   
 > [!NOTE]  
->  當您未連接至報表伺服器時，可以選擇隨報表產生器一併安裝的資料延伸模組。 您可以使用電腦上的認證，以單一使用者身分存取資料。 當您連接至報表伺服器時，可以選擇安裝在報表伺服器上的資料延伸模組。 您會以執行報表的其中一位使用者身分存取資料，而且您會使用報表伺服器上的認證。 如需詳細資訊，請參閱 [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+>  當您未連接至報表伺服器時，可以選擇隨報表產生器一併安裝的資料延伸模組。 您可以使用電腦上的認證，以單一使用者身分存取資料。 當您連接至報表伺服器時，可以選擇安裝在報表伺服器上的資料延伸模組。 您會以執行報表的其中一位使用者身分存取資料，而且您會使用報表伺服器上的認證。 如需詳細資訊，請參閱 [在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ##  <a name="ReportData"></a> 了解報表資料  
  報表會以最簡單的形式在報表頁面的資料區中，顯示報表資料集的資料，也就是使用單一資料表、圖表、矩陣或其他類型的報表資料區。 報表資料集的資料來自從單一查詢命令傳回的第一個結果集，該命令是以外部資料來源的唯讀存取權執行。 每一個資料區都會視需要展開，以顯示資料集中的所有資料。  
@@ -97,15 +97,15 @@ ms.locfileid: "47698796"
 |主題|Description|  
 |-----------|-----------------|  
 |[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|提供存取報表資料的概觀。|  
-|[報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|提供資料連接與資料來源的相關資訊。|  
+|[報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|提供資料連接與資料來源的相關資訊。|  
 |[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|提供內嵌與共用資料集的相關資訊。|  
 |[資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|提供查詢所產生之資料集欄位集合的相關資訊。|  
-|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|提供支援每一個資料延伸模組之平台與版本的深入資訊。|  
-|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的[資料處理延伸模組概觀](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)。|為進階使用者提供資料延伸模組的深入資訊。|  
+|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|提供支援每一個資料延伸模組之平台與版本的深入資訊。|  
+|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的[資料處理延伸模組概觀](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)。|為進階使用者提供資料延伸模組的深入資訊。|  
   
   
 ## <a name="see-also"></a>另請參閱  
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

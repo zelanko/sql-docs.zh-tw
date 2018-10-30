@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027947"
 ---
 # <a name="rendering-extensions-overview"></a>轉譯延伸模組概觀
   轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  
@@ -54,7 +54,7 @@ ms.locfileid: "47679336"
   
  撰寫自訂轉譯延伸模組是很困難的。 轉譯延伸模組通常必須支援所有可能的報表元素結合，並需要您實作數百個類別、介面和屬性。 如果您必須使用不包括在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的格式來轉譯報表，並決定撰寫自己的轉譯延伸模組之 Managed 程式碼實作，則轉譯延伸模組程式碼必須實作報表伺服所需的 **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** 介面。  
   
- 如需 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的補充文件與白皮書，請參閱 [Reporting Services 網站](http://go.microsoft.com/fwlink/?LinkId=19951)的最新技術資源。  
+ 如需 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的補充文件與白皮書，請參閱 [Reporting Services 網站](https://go.microsoft.com/fwlink/?LinkId=19951)的最新技術資源。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作轉譯延伸模組](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

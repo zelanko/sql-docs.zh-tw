@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029159"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
@@ -25,7 +25,7 @@ ms.locfileid: "47654316"
 完成本教學課程的估計時間：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
-本教學課程需要存取鑽研報表和主報表的 Contoso Sales Cube。 這個資料集包含 ContosoDW 資料倉儲和 Contoso_Retail 線上分析處理 (OLAP) 資料庫。 您將在此教學課程中建立的報表會從 Contoso Sales Cube 擷取報表資料。 Contoso_Retail OLAP 資料庫可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=191575)下載。 您只需要下載 ContosoBIdemoABF.exe 檔。 它包含 OLAP 資料庫。  
+本教學課程需要存取鑽研報表和主報表的 Contoso Sales Cube。 這個資料集包含 ContosoDW 資料倉儲和 Contoso_Retail 線上分析處理 (OLAP) 資料庫。 您將在此教學課程中建立的報表會從 Contoso Sales Cube 擷取報表資料。 Contoso_Retail OLAP 資料庫可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=191575)下載。 您只需要下載 ContosoBIdemoABF.exe 檔。 它包含 OLAP 資料庫。  
   
 另一個檔案 ContosoBIdemoBAK.exe 則是供 ContosoDW 資料倉儲使用，在此教學課程中不會使用這個檔案。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47654316"
 10. 按一下 **[認證類型]**。  
   
     > [!NOTE]  
-    > 根據如何設定資料來源的權限而定，您可能需要變更預設的驗證選項。 如需詳細資訊，請參閱[安全性 &#40;報表產生器&#41;](../reporting-services/report-builder/security-report-builder.md)。  
+    > 根據如何設定資料來源的權限而定，您可能需要變更預設的驗證選項。 如需詳細資訊，請參閱 [安全性 &#40;報表產生器&#41;](../reporting-services/report-builder/security-report-builder.md)中建立的行動報表。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

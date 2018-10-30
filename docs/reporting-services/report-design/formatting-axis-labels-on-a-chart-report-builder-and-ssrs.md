@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c66eb9c4f9636cd77d78fd8e77ddc8f6f0b5c3d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 263cd5cc24a293192c434c644c387f5678e120fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795426"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031417"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
   以座標為基礎的圖表類型 (直條圖、橫條圖、區域圖、點圖、折線圖和範圍圖) 具有兩個座標軸，可用來分類及顯示資料關聯性。 每個座標軸都會套用不同類型的格式設定。  
@@ -105,7 +105,7 @@ ms.locfileid: "47795426"
   
  有兩種方式可以設定純量軸：  
   
--   在 [軸屬性] 對話方塊中，選取 [純量軸] 選項。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)。  
+-   在 [軸屬性] 對話方塊中，選取 [純量軸] 選項。 這樣會在軸上沒有資料群組值存在的位置加入數值或日期/時間值。 如需詳細資訊，請參閱[軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)。  
   
 -   在 [數列屬性] 對話方塊中，針對 [類別目錄欄位] 選項選取欄位或鍵入運算式。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6c3f7551c731dd8be32918f8c4fab2628f0204e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c8ec6556a1883e9c677c3db96cb4431227544c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029147"
 ---
 # <a name="report-datasets-ssrs"></a>報表資料集 (SSRS)
   若要將資料加入至報表中，您要建立資料集。 每個資料集都表示從資料來源執行查詢命令而得到的結果集。 結果集中的資料行為欄位集合。 結果集中的資料列則為資料。 資料集不包含實際資料。 資料集包含從資料來源擷取一組特定資料所需的資訊。  
@@ -32,7 +32,7 @@ ms.locfileid: "47843918"
   
      ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 和[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)。  
+ 如需詳細資訊，請參閱[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 和[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)。  
   
  您也可以透過加入包含相依資料集的報表組件，將資料集加入至報表中。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -92,9 +92,9 @@ ms.locfileid: "47843918"
   
  在查詢設計工具中，您可以執行查詢來檢視範例資料並驗證查詢命令語法。 在結果集中的資料行名稱會變成您在 [報表資料] 窗格中看到的欄位名稱。 結果集必須是單一一組資料列和資料行，其中每個資料列都有相同數目的值。 不支援來自單一查詢的多個結果集。 不支援沒有固定資料行數目，而且每個資料列可能產生不同資料值數目的不完全階層。  
   
- 若要執行查詢，您必須要有設計階段的認證。 如需詳細資訊，請參閱[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和[資料連線、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 若要執行查詢，您必須要有設計階段的認證。 如需詳細資訊，請參閱[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和[資料連線、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
- 資料延伸模組和外部資料來源之間的通訊是由資料提供者處理。 查詢命令語法、查詢參數，以及結果集中之值資料類型的支援取決於每個資料提供者。 如需詳細資訊，請參閱特定資料延伸模組類型的主題和[查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
+ 資料延伸模組和外部資料來源之間的通訊是由資料提供者處理。 查詢命令語法、查詢參數，以及結果集中之值資料類型的支援取決於每個資料提供者。 如需詳細資訊，請參閱特定資料延伸模組類型的主題和[查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
   
   
 ##  <a name="HowTo"></a> 如何主題  
@@ -120,9 +120,9 @@ ms.locfileid: "47843918"
 ##  <a name="Section"></a> 本節內容  
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
- [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

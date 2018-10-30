@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8ba62b63324bb8aceeef976a482325af9248d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1385736df737044304649ddf5b17797d052f5a8e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029237"
 ---
 # <a name="previewing-reports"></a>預覽報表
   設計     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，在尚未發行至實際環境之前，您可能會想要先檢視該報表。 您可以利用數種方式進行檢視：在報表設計師中切換到 [預覽] 模式、使用報表設計師中的預覽視窗，以及在測試環境中將報表發行至報表伺服器。  
@@ -51,7 +51,7 @@ ms.locfileid: "47785436"
 ## <a name="see-also"></a>另請參閱  
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [發行報表](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+ [發行報表](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
  [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

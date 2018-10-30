@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 54529326e61d796d16b93e9bc0a6f20f0d5673a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845866"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031937"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教學課程的必要條件 (報表產生器)
 
@@ -35,14 +35,14 @@ ms.locfileid: "47845866"
   
 -   SQL Server 執行個體的名稱，和能夠以唯讀方式存取任何資料庫的認證。 教學課程中的資料集查詢會使用常值資料，但是每一個查詢都必須經過 SQL Server 執行個體處理，才能傳回報表資料集所需的中繼資料。 例如，下列連接字串僅指定伺服器： `data source=<servername>`。 您必須由授與您存取此伺服器之權限的系統管理員，指派具有預設資料庫的讀取存取權。 您也可以指定資料庫，如下列連接字串所示： `data source=<servername>;initial catalog=<database>`。  
   
--   針對[教學課程：地圖報表 (報表產生器)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
+-   針對[教學課程：地圖報表 (報表產生器)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
 
 -   [教學課程：建立鑽研及主報表 (報表產生器)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) 需要能夠存取 Contoso Sales Cube。 如需詳細資訊，請參閱教學課程。 
   
-報表伺服器管理員必須授與您報表伺服器的必要權限、設定 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 資料夾位置，以及設定報表產生器的預設選項。 如需詳細資訊，請參閱 [安裝和解除安裝報表產生器](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)。  
+報表伺服器管理員必須授與您報表伺服器的必要權限、設定 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 資料夾位置，以及設定報表產生器的預設選項。 如需詳細資訊，請參閱 [安裝和解除安裝報表產生器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)。  
 
 ## <a name="next-steps"></a>後續步驟
 
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d5e213506cfbf94191a5f055b9cd21cc851c0b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54fe4e8786bac599ab5e71b5109d5838f4ae13cf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707796"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029027"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services 回溯相容性
 了解 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的行為變更。 這涵蓋不能再使用或已排程在未來版本中移除的功能。
@@ -29,12 +29,12 @@ ms.locfileid: "47707796"
   
 |主題|Description|  
 |-----------|-----------------|  
-|[SQL Server 2016 中的 SQL Server Reporting Services 已中止功能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|描述存在於舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，但已在新版中移除的功能。|  
+|[SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|描述存在於舊版 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，但已在新版中移除的功能。|  
 |[SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](deprecated-features-in-sql-server-reporting-services-ssrs.md)|描述在這個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本中為了與舊版相容而保留，但將在 SQL Server 的未來版本中移除的功能。|  
 |[SQL Server 2016 中 SQL Server Reporting Services 的重大變更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|描述當升級 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時可能會遇到的問題。|  
-|[SQL Server 2016 中的 SQL Server Reporting Services 行為變更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中已變更的功能。|  
+|[SQL Server 2016 中 SQL Server Reporting Services 的行為變更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中已變更的功能。|  
   
 ## <a name="see-also"></a>另請參閱  
- [回溯相容性 | Analysis Services](http://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a) \(機器翻譯\)  
+ [回溯相容性 | Analysis Services](https://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   

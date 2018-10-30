@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c9eff9d11f56fac8b979f7ca96703c76497f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d94dfc03c090a871742999a821d1bfa0951add7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030927"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
   擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
@@ -173,7 +173,7 @@ rskeymgmt -r <installationID>
  如需加密金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 和[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [向外延展部署 - Reporting Services 原生模式 &#40;組態管理員&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [向外延展部署 - Reporting Services 原生模式 &#40;組態管理員&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  

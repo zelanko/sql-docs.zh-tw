@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91e4536925b37277f81ccafe41b6a30c6dc52504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c926fc1c7c7e2b01efade00997b955a6de6328b1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031477"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>將組件參考加入至報表 (SSRS)
   當您內嵌的自訂程式碼包含了不在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 或 <xref:System.Math> 中之 <xref:System.Convert>類別的參考時，您必須提供此報表的組件參考，好讓報表處理器可以解析名稱。 如需詳細資訊，請參閱[將程式碼加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)。  
@@ -41,6 +41,6 @@ ms.locfileid: "47657447"
   
 ## <a name="see-also"></a>另請參閱  
  [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [報表屬性對話方塊、參考](http://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
+ [報表屬性對話方塊、參考](https://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   
   

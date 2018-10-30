@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: baf7f555f7856422674f41f006cd02a4c730ba10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028191"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>安裝 SQL Server Reporting Services (2017 和更新版本)
 
@@ -130,6 +130,6 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 
 安裝好報表伺服器後，開始建立報表並將它們部署到報表伺服器。 如需如何開始何用報表產生器的資訊，請參閱[安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。
 
-若要建立使用 SQL Server Data Tools 的報表，請[下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。
+若要建立使用 SQL Server Data Tools 的報表，請[下載 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

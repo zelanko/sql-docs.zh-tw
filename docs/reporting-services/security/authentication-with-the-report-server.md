@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af92398373dbb3ff3afe8c05263ccf692937c705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676256"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030217"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
 
@@ -35,7 +35,7 @@ ms.locfileid: "47676256"
 |RSWindowsNegotiate|交涉|是|先嘗試使用 Windows 整合式驗證的 Kerberos 驗證，但是如果 Active Directory 無法將用戶端要求的票證授與報表伺服器，就會回到 NTLM。 只有當票證無法使用時，Negotiate 才會回到 NTLM。 如果第一次嘗試所產生的錯誤並不是遺失票證，報表伺服器不會進行第二次的嘗試。|  
 |EnableAuthPersistance|NTLM|是|使用 Windows 整合式驗證的 NTLM。<br /><br /> 將不會在其他要求上委派或模擬認證。 後續的要求將遵循新的挑戰-回應序列。 根據網路安全性設定，系統可能會提示使用者輸入認證，否則將會以透明的方式處理驗證要求。|  
 |RSWindowsKerberos|Kerberos|否|使用 Windows 整合式驗證的 Kerberos。 您必須藉由設定服務帳戶的安裝程式服務主要名稱 (SPN)，才能設定 Kerberos，而這需要具有網域管理員權限。 如果您使用 Kerberos 設定識別委派，要求報表之使用者的 Token 也可以用於提供資料給報表之外部資料來源的其他連接。<br /><br /> 在您指定 RSWindowsKerberos 之前，請確定您所使用的瀏覽器類型實際上可支援它。 如果您使用 Microsoft Edge 或 Internet Explorer，則只能透過 Negotiate 支援 Kerberos 驗證。 Microsoft Edge 或 Internet Explorer 不會構成一個直接指定 Kerberos 的驗證要求。|  
-|RSWindowsBasic|[基本]|否|基本驗證定義在 HTTP 通訊協定中，而且只能用於驗證報表伺服器的 HTTP 要求。<br /><br /> 認證會以 base64 編碼的形式傳入 HTTP 要求中。 如果您使用基本驗證，請利用安全通訊端層 (SSL) 來加密使用者帳戶資訊，然後再透過網路傳送這項資訊。 SSL 提供了透過 HTTP TCP/IP 連接將連接要求從用戶端傳送到報表伺服器的加密通道。 如需詳細資訊，請參閱 [TechNet 網站上的](http://go.microsoft.com/fwlink/?LinkId=71123) 使用 SSL 加密機密資料 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。|  
+|RSWindowsBasic|[基本]|否|基本驗證定義在 HTTP 通訊協定中，而且只能用於驗證報表伺服器的 HTTP 要求。<br /><br /> 認證會以 base64 編碼的形式傳入 HTTP 要求中。 如果您使用基本驗證，請利用安全通訊端層 (SSL) 來加密使用者帳戶資訊，然後再透過網路傳送這項資訊。 SSL 提供了透過 HTTP TCP/IP 連接將連接要求從用戶端傳送到報表伺服器的加密通道。 如需詳細資訊，請參閱 [TechNet 網站上的](https://go.microsoft.com/fwlink/?LinkId=71123) 使用 SSL 加密機密資料 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。|  
 |Custom|(Anonymous)|否|匿名驗證會指引報表伺服器忽略 HTTP 要求中的驗證標頭。 報表伺服器會接受所有的要求，但是會在您提供的自訂 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 表單驗證上呼叫來驗證使用者。<br /><br /> 只有當您部署自訂驗證模組來處理報表伺服器上的所有驗證要求時，才能指定 **Custom** 。 您不能搭配預設 Windows 驗證延伸模組來使用 Custom 驗證類型。|  
   
 ## <a name="unsupported-authentication-methods"></a>支援的驗證方法  
@@ -87,4 +87,4 @@ ms.locfileid: "47676256"
 [Reporting Services 中的驗證](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Reporting Services 中的授權](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

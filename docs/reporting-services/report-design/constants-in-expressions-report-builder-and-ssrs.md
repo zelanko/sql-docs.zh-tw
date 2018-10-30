@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d22880b4c0004a5a17e76ca04c6c42d22db2ec6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f17725fde71f3b1bb12e39f16308ca2ca024f57
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030647"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>運算式中的常數 (報表產生器及 SSRS)
   常數是由常值文字或預先定義的文字所組成。 報表處理器可以存取預先定義的常數，讓您在運算式中納入這些常數時，在系統評估運算式之前，就會將常數以其代表的值來取代。  
@@ -51,10 +51,10 @@ ms.locfileid: "47599900"
 |MistyRose|當您為以背景色彩為基礎的報表屬性建立運算式時，可以依名稱指定色彩。 有效的名稱會列在 **[運算式]** 對話方塊中。|  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式對話方塊](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [運算式對話方塊](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [運算式對話方塊 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
+ [運算式對話方塊 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

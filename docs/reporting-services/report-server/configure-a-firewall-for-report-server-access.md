@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 36e1de6d25715fdc807f5f07b8bd90279fd09b86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4044dc8ac56d7aad17f61f314e0536a08c6a8d6e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030107"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器應用程式和發行的報表是透過指定 IP 位址、通訊埠和虛擬目錄的 URL 來加以存取。 如果開啟了 Windows 防火牆，則設定報表伺服器使用的通訊埠很可能已關閉。 當您從遠端用戶端電腦嘗試開啟 **報表管理員** 時出現空白網頁，或要求報表之後出現空白網頁，即表示某個連接埠可能已關閉。  
@@ -71,7 +71,7 @@ ms.locfileid: "47850344"
 ## <a name="next-steps"></a>Next Steps  
  在您開啟此通訊埠之後，以及確認遠端使用者是否可以在您開啟的通訊埠上存取報表伺服器之前，您必須透過首頁和網站層級的角色指派，為使用者授與此報表伺服器的存取權。 如果使用者沒有足夠的權限，雖然您可以正確開啟通訊埠，不過報表伺服器連接仍然會失敗。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)。  
   
- 您也可以在另一部電腦上啟動報表管理員，以確認此通訊埠已正確開啟。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+ 您也可以在另一部電腦上啟動報表管理員，以確認此通訊埠已正確開啟。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

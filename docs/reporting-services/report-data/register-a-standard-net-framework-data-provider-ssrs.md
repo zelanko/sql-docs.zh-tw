@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcd1fae7282c03c739abb172304e69c9b1417a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a447d64711fb59aaa73183357acf39d90fd3ec
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030767"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>註冊標準的 .NET Framework Data Provider (SSRS)
   若要使用協力廠商的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者來擷取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表資料集的資料，您必須在兩個位置部署並註冊 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件：報表撰寫用戶端與報表伺服器。 在報表撰寫用戶端上，您必須註冊資料提供者做為資料來源類型，並將其與查詢設計工具產生關聯。 然後您可以在建立報表資料集時，選取此資料提供者做為資料來源的類型。 相關聯的查詢設計工具便會開啟，協助您建立此資料來源類型的查詢。 在報表伺服器上，您必須註冊資料提供者，做為資料來源類型。 然後您可以處理使用此資料提供者，從資料來源擷取資料的已發行報表。  
@@ -36,7 +36,7 @@ ms.locfileid: "47613046"
   
 1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表伺服器上，巡覽至 bin 目錄的預設位置。 報表伺服器 bin 目錄的預設位置是 \<磁碟機>:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin。  
   
-2.  將組件從您的臨時位置複製到報表伺服器的 bin 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](http://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
+2.  將組件從您的臨時位置複製到報表伺服器的 bin 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](https://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-server"></a>在報表伺服器上註冊 .NET 資料提供者  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47613046"
   
 1.  在您要使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表設計師用戶端上，巡覽至 PrivateAssemblies 目錄的預設位置。 PrivateAssemblies 目錄的預設位置為 \<磁碟機>:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies。  
   
-2.  將組件從您的臨時位置複製到報表設計師用戶端的 PrivateAssemblies 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](http://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
+2.  將組件從您的臨時位置複製到報表設計師用戶端的 PrivateAssemblies 目錄。 或者，您可以將組件載入至全域組件快取 (GAC)。 如需詳細資訊，請參閱 MSDN [SDK 文件集中的＜](https://go.microsoft.com/fwlink/?linkid=63912) 使用組件和全域組件快取 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ＞。  
   
 #### <a name="to-register-a-net-data-provider-on-the-report-designer-client"></a>在報表設計師用戶端上註冊 .NET 資料提供者  
   

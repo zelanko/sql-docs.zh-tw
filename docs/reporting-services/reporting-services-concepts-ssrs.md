@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8df4078262868615b9a6e28948b255f753384503
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780956"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031889"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -98,7 +98,7 @@ ms.locfileid: "47780956"
   
 -   **認證。** 認證是驗證資訊，您必須提供這項資訊才能存取外部資料。  
   
-     認證用於建立內嵌資料來源、執行查詢，或是在處理報表時擷取資料。 資料來源連線的擁有者會決定您必須用於存取資料的認證類型。 認證會與報表伺服器、SharePoint 網站或報表撰寫環境中本機電腦上的資料連接分開管理。 根據資料來源的類型而定，認證可加以儲存並避免提示，或者設定為提示每一位使用者。 您需要的認證可能會依據您從電腦或是報表伺服器連接到資料來源而有所不同。 如需詳細資訊，請參閱 [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+     認證用於建立內嵌資料來源、執行查詢，或是在處理報表時擷取資料。 資料來源連線的擁有者會決定您必須用於存取資料的認證類型。 認證會與報表伺服器、SharePoint 網站或報表撰寫環境中本機電腦上的資料連接分開管理。 根據資料來源的類型而定，認證可加以儲存並避免提示，或者設定為提示每一位使用者。 您需要的認證可能會依據您從電腦或是報表伺服器連接到資料來源而有所不同。 如需詳細資訊，請參閱 [在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ### <a name="report-datasets"></a>報表資料集 
  在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 資料集取決於包含外部資料來源之相關資訊的資料連接。 資料本身不會包含在報表定義中。 資料集包含查詢命令、欄位集合、參數、篩選，以及包含區分大小寫和定序的資料選項。 資料集有以下兩種不同的類型：  
@@ -120,13 +120,13 @@ ms.locfileid: "47780956"
   
  資料區可用於啟用一般資料視覺效果：資料表、矩陣或清單中的數字和文字；以圖形方式顯示在圖表或量測計中，也可以根據地圖的地理顯示。 資料表、矩陣與清單都是以 Tablix 資料區為基礎，可在需要時擴充以顯示資料集中的所有資料。 Tablix 資料區支援多個資料列與資料行群組，而且同時支援靜態與動態資料列和資料行。 圖表會使用各種圖表格式顯示多個數列和類別目錄群組。 量測計則會顯示資料集的單一值或彙總值。 地圖會將空間資料顯示為地圖元素，其外觀會隨著資料集中的彙總資料而改變。  
   
--   **資料表。** 資料表是逐一呈現資料列的資料區域。 資料表資料行是靜態的：您可以在設計報表時決定資料行的數目。 資料表資料列是動態的：它們會向下展開以容納資料。 您可以將群組加入至資料表，然後資料表就會依據選取的欄位或運算式組織資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **資料表。** 資料表是逐一呈現資料列的資料區域。 資料表資料行是靜態的：您可以在設計報表時決定資料行的數目。 資料表資料列是動態的：它們會向下展開以容納資料。 您可以將群組加入至資料表，然後資料表就會依據選取的欄位或運算式組織資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
   
--   **矩陣。** 「矩陣」(Matrix) 也稱為交叉資料表。 矩陣資料區域同時包含動態資料行和資料列：它們會展開以容納資料。 矩陣可以有動態資料行和資料列，以及靜態資料行和資料列。 資料行或資料列可以包含其他資料行或資料列，而且可用來分組資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **矩陣。** 「矩陣」(Matrix) 也稱為交叉資料表。 矩陣資料區域同時包含動態資料行和資料列：它們會展開以容納資料。 矩陣可以有動態資料行和資料列，以及靜態資料行和資料列。 資料行或資料列可以包含其他資料行或資料列，而且可用來分組資料。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
   
--   **清單。** 「清單」(List) 是呈現依自由形式來安排之資料的資料區域。 您可以安排報表項目來建立一份表單，將文字方塊、影像和其他資料區域放在清單內的任何位置。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **清單。** 「清單」(List) 是呈現依自由形式來安排之資料的資料區域。 您可以安排報表項目來建立一份表單，將文字方塊、影像和其他資料區域放在清單內的任何位置。 如需詳細資訊，請參閱 [資料表、矩陣和清單 (報表產生器及 SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
   
--   **圖表。** 圖表會以圖形方式來呈現資料。 橫條圖、圓形圖和折線圖都是圖表的範例，但另外還有許多其他支援的樣式。 如需詳細資訊，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
+-   **圖表。** 圖表會以圖形方式來呈現資料。 橫條圖、圓形圖和折線圖都是圖表的範例，但另外還有許多其他支援的樣式。 如需詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
 -   **量測計。** 量測計會將資料呈現成範圍，其中包含指向範圍內特定值的指標。 量測計是用來顯示關鍵效能指標 (KPI) 和其他標準。 量測計的範例包括線性和循環。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "47780956"
  完整處理過的報表會傳送至報表轉譯器，以結合每個具有目標轉譯格式之頁面上的資料及配置。 您可以自訂及擴充轉譯延伸模組。 報表的預設轉譯格式為 HTML 4.0。 如需詳細資訊，請參閱[頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md) 和[延伸模組 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)。  
   
 ### <a name="exported-report"></a>匯出的報表
- 匯出的報表是以特定檔案格式儲存的完整分頁報表。 匯出格式取決於已安裝的轉譯延伸模組，而且可以進行自訂。 匯出格式預設會包含 Excel、Word、XML、PDF、TIFF 及 CSV。 如需詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 匯出的報表是以特定檔案格式儲存的完整分頁報表。 匯出格式取決於已安裝的轉譯延伸模組，而且可以進行自訂。 匯出格式預設會包含 Excel、Word、XML、PDF、TIFF 及 CSV。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中之分頁的規則。  
   
   
 ## <a name="see-also"></a>另請參閱  

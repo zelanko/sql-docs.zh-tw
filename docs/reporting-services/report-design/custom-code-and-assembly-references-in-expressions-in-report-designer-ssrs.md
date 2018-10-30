@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5261e6943cb4044e4f47d63211b6f5e9d53922f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda4e064412a6607838e65d15ab27a0c6e238ba0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030407"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
   您可以加入內嵌於報表之自訂程式碼的參考，或是建置並儲存至電腦以及部署至報表伺服器之自訂組件的參考。 請將內嵌程式碼用在自訂常數、複雜函數或在單一報表內重複使用的函數上。 請使用自訂程式碼組件，將程式碼維護在單一位置並共用程式碼，讓多份報表使用。 自訂程式碼可能會包含新的自訂常數、變數、函數或副程式。 您可以包含內建集合 (例如 Parameters 集合) 的唯讀參考， 但是不能將報表資料值集傳遞至自訂函數 (尤其是不支援自訂彙總)。  
@@ -52,12 +52,12 @@ ms.locfileid: "47728636"
   
  若要使用內建函數，請在 [項目] 窗格中的函數名稱上按兩下。 函數的描述會顯示在 [描述] 窗格中，函數呼叫的範例則顯示在 [範例] 窗格中。 當您在程式碼窗格中輸入函數名稱，且其後接著左括號 **(** 時，IntelliSense 會協助顯示該函數呼叫的每個有效語法。 例如，若要計算資料表中名為 `Quantity` 欄位的最大值，請將簡單運算式 `=Max(` 加入至 [程式碼] 窗格，然後使用智慧標籤來檢視該函數呼叫的所有有效語法。 若要完成此範例，請輸入 `=Max(Fields!Quantity.Value)`。  
   
- 如需每個函數的詳細資訊，請參閱 <xref:System.Math>、 <xref:System.Convert>以及 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
+ 如需每個函數的詳細資訊，請參閱 <xref:System.Math>、 <xref:System.Convert>以及 MSDN 上的 [Visual Basic 執行階段程式庫成員](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
 ##  <a name="NotCommon"></a> 包含較少使用函數的參考  
  若要包含其他較少使用之 CLR 命名空間的參考，您必須使用完整的參考，例如， <xref:System.Text.StringBuilder>。 在這些較少使用函數的 **[運算式]** 對話方塊的程式碼窗格中，不支援 IntelliSense。  
   
- 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
+ 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
 ##  <a name="External"></a> 包含外部組件的參考  
  若要包含外部組件中類別的參考，您必須為報表處理器識別組件。 請使用 **[報表屬性]** 對話方塊的 **[參考]** 頁面來指定報表中要加入之組件的完整名稱。 您必須在運算式中使用組件中類別的完整名稱。 外部組件中的類別並不會顯示在 **[運算式]** 對話方塊中，您必須提供正確的類別名稱。 完整名稱包含命名空間、類別名稱和成員名稱。  
@@ -191,9 +191,9 @@ End Function
 ## <a name="see-also"></a>另請參閱  
  [將程式碼加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [將自訂組件與報表搭配使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [將組件參考新增至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [將組件參考加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [報表範例 (報表產生器和 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [報表範例 (報表產生器和 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

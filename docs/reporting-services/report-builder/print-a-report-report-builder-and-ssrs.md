@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 804caf76a061385c483515fc50e76ce078f81326
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1d0877c14b3ce34c69e667c074fd0c95dcb250d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816288"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031397"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
   將報表儲存至報表伺服器之後，您就可以從瀏覽器、 Reporting Services 入口網站或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
@@ -94,7 +94,7 @@ ms.locfileid: "47816288"
 ## <a name="see-also"></a>另請參閱  
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [報表屬性對話方塊、版面設定 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
+ [報表屬性對話方塊、版面設定 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/eb3b5d01-7b82-4808-a58b-9e096742f8c6)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
   
   

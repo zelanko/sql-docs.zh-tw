@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c7e880bee978cbd89a09dc375e7d11d108aab19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13c3fb54554387bdb74a478b5f1703645adb462
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742726"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029849"
 ---
 # <a name="implementing-a-data-processing-extension"></a>實作資料處理延伸模組
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的資料處理延伸模組，可讓您連接到資料來源並擷取資料。 它們也可當做資料來源與資料集之間的橋樑。 因為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組是依照 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面子集建立的。  
@@ -51,7 +51,7 @@ ms.locfileid: "47742726"
  [對資料處理延伸模組程式碼進行偵錯](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  描述如何在資料處理延伸模組中偵錯程式碼。  
   
- 如需完全實作的資料處理延伸模組的範例，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
+ 如需完全實作的資料處理延伸模組的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../../../reporting-services/extensions/reporting-services-extensions.md)   

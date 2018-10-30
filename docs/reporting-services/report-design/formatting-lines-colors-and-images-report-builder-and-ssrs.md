@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 123fa65378f9811be9991e5202d4cadc754a11d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4800b340a11f6bde2a45bfb60c3061f19c822177
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844576"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031672"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>格式化線條、色彩和影像 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 讓您能夠格式化線條、色彩、資料區、影像和其他報表項目。  
@@ -57,6 +57,6 @@ ms.locfileid: "47844576"
  [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [填滿對話方塊 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
+ [填滿對話方塊 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5fc7a284a00a60e637cddf04e6c02389de5dfa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 298864ba273d4558f411ce41595928a1d786506a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720296"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030897"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -282,4 +282,4 @@ ms.locfileid: "47720296"
 [Reporting Services 回溯相容性](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

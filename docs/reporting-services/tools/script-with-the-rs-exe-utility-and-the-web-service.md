@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bc9f71e2cec93ef3077f5cbd32ca1f4000ab275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816906"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028697"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>利用 rs.exe 公用程式與 Web 服務編寫指令碼
   開發人員與報表伺服器管理員可以在報表伺服器上，透過使用 **rs** 公用程式 (RS.exe) 來執行作業。 利用這個公用程式，您可以使用以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫的指令碼，透過程式設計方式管理報表伺服器。  
@@ -30,7 +30,7 @@ ms.locfileid: "47816906"
   
  [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
- [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="see-also"></a>另請參閱  
  [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   

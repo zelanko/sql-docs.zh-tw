@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2a5a77918b525bc0a406f8508187017853e093b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028234"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 
@@ -67,4 +67,4 @@ REST API 要求/回應配對可分成五個元件：
 
 這類的範例可從 [GitHub](https://github.com/Microsoft/Reporting-Services) 上取得。 此範例包含以 TypeScript、React 和 webpack 為建置基礎的 HTML5 應用程式，以及 PowerShell 範例。
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

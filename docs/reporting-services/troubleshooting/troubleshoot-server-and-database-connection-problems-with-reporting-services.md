@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aee90d29082f2c4ba3d6d609e0ea68e3e986d3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028837"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
 使用此主題，即可對在連接到報表伺服器時遇到的問題進行疑難排解。 此主題也提供有關「意外的錯誤」訊息的資訊。 如需資料來源組態和設定報表伺服器連接的詳細資訊，請參閱 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [設定報表伺服器資料庫連接 (SSRS 組態管理員)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "47699702"
 連接到 SQL Server 時，可能因為在預設的設定下 SQL Server 不允許遠端連接而引起此失敗。 (提供者：具名管道提供者，錯誤：40 - 無法開啟 SQL Server 的連接)。 這項錯誤是由主控報表伺服器資料庫的 Database Engine 執行個體所傳回。 在大部分情況下，發生這項錯誤的原因是 SQL Server 服務已停止。 或者，若您正在使用 SQL Server Express with Advanced Services 或具名執行個體，當報表伺服器 URL 或報表伺服器資料庫的連接字串不正確時，就會發生這項錯誤。 若要解決這些問題，請進行下列動作：  
   
 * 驗證 SQL Server (**MSSQLSERVER**) 服務已啟動。 在主控 Database Engine 執行個體的電腦上，依序按一下 [開始]、[系統管理工具] 和 [服務]，然後捲動至 [SQL Server (**MSSQLSERVER)**]。 若這項服務未啟動，請在此服務上按一下滑鼠右鍵，選取 [內容]，在 [啟動類型] 中選取 [自動]，然後依序按一下 [套用]、[啟動] 和 [確定]。   
-* 確認報表伺服器 URL 和報表伺服器資料庫的連接字串正確無誤。 若 Reporting Services 或 Database Engine 已安裝成具名執行個體，在安裝期間建立的預設連接字串將會包含執行個體名稱。 例如，若您在名為 DEVSRV01 的伺服器上安裝了 SQL Server Express with Advanced Services 的預設執行個體，報表管理員 URL 就是 DEVSRV01\Reports$SQLEXPRESS。 此外，連接字串中的資料庫伺服器名稱將類似於 DEVSRV01\SQLEXPRESS。 如需 SQL Server Express 的 URL 和資料來源連接字串的相關資訊，請參閱 [SQL Server Express with Advanced Services 中的 Reporting Services](http://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要驗證報表伺服器資料庫的連接字串，請啟動 Reporting Services 組態工具，然後檢視 [資料庫安裝] 頁面。  
+* 確認報表伺服器 URL 和報表伺服器資料庫的連接字串正確無誤。 若 Reporting Services 或 Database Engine 已安裝成具名執行個體，在安裝期間建立的預設連接字串將會包含執行個體名稱。 例如，若您在名為 DEVSRV01 的伺服器上安裝了 SQL Server Express with Advanced Services 的預設執行個體，報表管理員 URL 就是 DEVSRV01\Reports$SQLEXPRESS。 此外，連接字串中的資料庫伺服器名稱將類似於 DEVSRV01\SQLEXPRESS。 如需 SQL Server Express 的 URL 和資料來源連接字串的相關資訊，請參閱 [SQL Server Express with Advanced Services 中的 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要驗證報表伺服器資料庫的連接字串，請啟動 Reporting Services 組態工具，然後檢視 [資料庫安裝] 頁面。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>無法建立連接。 請確定該伺服器正在執行。  
 這是 ADOMD.NET 提供者傳回的錯誤。 發生這個錯誤的可能原因有幾個。 如果您已將伺服器指定為 "localhost"，請試著指定伺服器名稱來取代。 如果無法將記憶體配置給新連接，也會發生此錯誤。 如需詳細資訊，請參閱 [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](http://support.microsoft.com/kb/912017)(知識庫文章 912017 - 當您連接到 SQL Server 2005 Analysis Services 的執行個體時的錯誤訊息︰)。  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 419e1a3e6bf886625edd260f48afea9bcb4bc109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6a632c7d5bb1579f7fdee84d390b47bf0c863e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614846"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030430"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理
   有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 本主題中的方法涵蓋了停用訂閱、中斷資料來源連接等範圍。 並非所有的方法都適用於兩種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式。下表摘要說明這些方法和支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式：  
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint 文件庫 (只能從與 SharePoint 整合模式報表伺服器整合的 SharePoint 網站使用)  
   
- 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
+ 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
   
- 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊，請參閱 [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md) 和 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
+ 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊，請參閱 [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md) 和 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
  在您移除傳遞延伸模組之後，就無法再於報表管理員或 SharePoint 網站中使用它。 移除傳遞延伸模組可能會產生非使用中訂閱。 移除延伸模組之前，請務必刪除訂閱，或將它們設定為使用不同的傳遞延伸模組。  
   
@@ -167,7 +167,7 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [設定報表管理員 &#40;原生模式&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [安全性屬性頁面，項目 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [安全性屬性頁面，項目 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   

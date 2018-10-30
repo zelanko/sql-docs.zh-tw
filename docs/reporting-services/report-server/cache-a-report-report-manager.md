@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 19918059fad650d11bea68b7a0088c83f82be4b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9106fffcd2a66254acf5a47799fc8942ef3f0b38
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705926"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030687"
 ---
 # <a name="cache-a-report-report-manager"></a>快取報表 (報表管理員)
   改善效能的其中一種方式就是設定報表的快取屬性。 快取報表時，系統就會在一段短時間內儲存已轉譯報表的副本。 要求報表的第一位使用者必須等候所有處理都完成，然後才能檢視該報表。 在快取期間內要求該報表的後續使用者可以立即檢視報表，因為處理已經進行了。  
@@ -28,7 +28,7 @@ ms.locfileid: "47705926"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>若要排程快取報表的逾期  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您想要設定快取屬性的報表、將滑鼠停留在該項目上，然後按一下下拉箭號。  
   

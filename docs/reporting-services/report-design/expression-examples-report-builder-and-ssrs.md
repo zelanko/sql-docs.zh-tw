@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d93386e89797d75a2e8139f4f7edb558bc64c6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779756"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031867"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -69,9 +69,9 @@ ms.locfileid: "47779756"
  報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可撰寫運算式來使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫及 <xref:System.Convert> 和 <xref:System.Math> 命名空間中的函數。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的類別，包括 <xref:System.Text.RegularExpressions>。  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic 函數  
- 您可以利用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數來操作文字方塊所顯示的資料，或參數、屬性或報表的其他區域所用的資料。 此章節提供示範其中一些函數的範例。 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
+ 您可以利用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數來操作文字方塊所顯示的資料，或參數、屬性或報表的其他區域所用的資料。 此章節提供示範其中一些函數的範例。 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供許多自訂格式選項，例如特定的日期格式。 如需詳細資訊，請參閱 MSDN 上的 [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) 。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供許多自訂格式選項，例如特定的日期格式。 如需詳細資訊，請參閱 MSDN 上的 [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) 。  
   
 ### <a name="math-functions"></a>數學函數  
   
@@ -514,7 +514,7 @@ ms.locfileid: "47779756"
  您可以在報表中使用自訂程式碼， 自訂程式碼會內嵌在報表中，或是儲存在用於報表的自訂組件中。 如需自訂程式碼的詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用群組變數進行自訂彙總  
- 您可以初始化特定群組範圍本機之群組變數的值，然後在運算式中加入該變數的參考。 搭配自訂程式碼使用群組變數的其中一種方式是實作自訂彙總。 如需詳細資訊，請參閱 [在 Reporting Services 2008 中使用群組變數進行自訂彙總](http://go.microsoft.com/fwlink/?LinkId=128714)。  
+ 您可以初始化特定群組範圍本機之群組變數的值，然後在運算式中加入該變數的參考。 搭配自訂程式碼使用群組變數的其中一種方式是實作自訂彙總。 如需詳細資訊，請參閱 [在 Reporting Services 2008 中使用群組變數進行自訂彙總](https://go.microsoft.com/fwlink/?LinkId=128714)。  
   
  如需變數的詳細資訊，請參閱 [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。  
   

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 63fda18a7dce1b6cf27cc21f6decab18948e1209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c7a9e61ff2cda1d0760a1ae28ab7e79fbddf09e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028087"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>如何尋找 SQL Server 2017 Reporting Services 的產品金鑰
 
@@ -46,4 +46,4 @@ ms.locfileid: "47709116"
 ## <a name="next-steps"></a>後續步驟
 
 - [安裝 SQL Server 2017 Reporting Services](install-reporting-services.md)
-- 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+- 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

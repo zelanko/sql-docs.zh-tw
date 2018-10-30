@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/20/2017
-ms.openlocfilehash: eed0c630bca54b28e78f2c59c5a14fca6e77da54
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: 1353e388a2063c3d25df35d58a8a3f9c594b3ab1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031927"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>設定報表伺服器資料庫連接 (SSRS 組態管理員)
 
@@ -122,4 +122,4 @@ ms.locfileid: "48782317"
 [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [設定報表伺服器服務帳戶](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

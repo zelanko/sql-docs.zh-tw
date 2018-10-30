@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 624ca72c1cd63f0e830babe5f9ffff2af6726dad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 550459c3b261a42aa1b5be0ad37cd1681f566a02
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617266"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030777"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>將圖表加入至報表 (報表產生器及 SSRS)
   當您想要以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表的視覺格式摘要資料時，請使用圖表資料區域。 針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這會影響以圖表形式放入資料時可以解譯資料的程度。 如需詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
@@ -68,9 +68,9 @@ ms.locfileid: "47617266"
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [教學課程：將橫條圖新增至報表 (報表產生器)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教學課程：將橫條圖新增至報表 (報表設計工具)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [教學課程：將圓形圖新增至報表 (報表產生器)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [教學課程：將圓形圖新增至報表 (報表設計工具)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [教學課程：將橫條圖新增至報表 (報表產生器)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教學課程：將橫條圖新增至報表 (報表設計工具)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [教學課程：將圓形圖新增至報表 (報表產生器)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [教學課程：將圓形圖新增至報表 (報表設計工具)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e7f842e786f3c73bfbd0f03d7c15bba70d76b3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe40c87620bec778bda8a656bf403b03d17e2739
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027467"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>實作傳遞延伸模組的 IDeliveryExtension 介面
   您的傳遞延伸模組類別是用以根據通知的內容，將報告通知傳遞給使用者。 傳遞延伸模組類別也提供基礎結構，以驗證傳遞給傳遞延伸模組的使用者設定。 此外，您的傳遞延伸模組類別應該包含特定的屬性，讓用戶端可用以取得有關延伸模組的名稱、延伸模組支援的設定，以及可供傳遞延伸模組使用的轉譯格式。  
@@ -31,7 +31,7 @@ IDeliveryExtension 介面允許使用者資料的驗證以及供用戶端了解�
   
  您也可以使用傳遞延伸模組類別，來擷取和處理儲存在 RSReportServer.config 檔案中的自訂組態資料。 如需有關處理自訂組態資料的詳細資訊，請參閱＜<xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>＞方法。  
   
- 如需範例 **IDeliveryExtension** 類別實作，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
+ 如需範例 **IDeliveryExtension** 類別實作，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作傳遞延伸模組](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

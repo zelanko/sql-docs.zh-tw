@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085444"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029689"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
   在報表產生器中，您可以瀏覽報表伺服器或 SharePoint 網站上的資料夾，以便尋找報表、共用資料來源、模型，以及其他相關的報表項目，並瀏覽電腦以尋找本機報表。 為了更容易尋找報表，報表產生器會維護一份最近使用之伺服器及網站的清單，而且可以直接存取電腦檔案系統中的 [桌面]、[我的文件] 和 [我的電腦] 資料夾。  
@@ -77,7 +77,7 @@ ms.locfileid: "49085444"
  ![報表工具列](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "報表工具列")  
 報表工具列  
   
- 當您執行報表時，您可以將報表匯出成其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 您也可以使用資料轉譯延伸模組 (例如，逗號分隔值 (CSV) 轉譯延伸模組) 來匯出報表，然後使用 CSV 資料檔做為其他應用程式的輸入。 如需匯出報表的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 和[將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)。  
+ 當您執行報表時，您可以將報表匯出成其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 您也可以使用資料轉譯延伸模組 (例如，逗號分隔值 (CSV) 轉譯延伸模組) 來匯出報表，然後使用 CSV 資料檔做為其他應用程式的輸入。 如需匯出報表的詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 和[將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)。  
   
  選取和執行報表最簡單的方法，是開啟報表管理員，然後搜尋或瀏覽至您要檢視的報表。 如需開啟報表的逐步指示，請參閱[開啟及關閉報表 &#40;報表管理員&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "49085444"
   
  若要存取應用程式頁面，請從報表的下拉式功能表選取項目專屬的動作，或選取您先前加入到 SharePoint 文件庫的其他報表伺服器項目。 根據項目和權限，您也可能可以在報表產生器中建立報表、產生模型和設定模型項目安全性。  
   
- 如需 Reporting Services 和 SharePoint 技術的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?LinkId=154888)》中的[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
+ 如需 Reporting Services 和 SharePoint 技術的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?LinkId=154888)》中的[設定和管理報表伺服器 &#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 網站上尋找報表伺服器項目  
  您必須要先能找到項目，才能設定屬性。 報表伺服器項目一律儲存在程式庫或程式庫內的資料夾中。  
@@ -148,6 +148,6 @@ ms.locfileid: "49085444"
 ## <a name="see-also"></a>另請參閱  
  [儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [安裝和解除安裝報表產生器](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [安裝和解除安裝報表產生器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

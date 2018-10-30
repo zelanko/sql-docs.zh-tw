@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6e047ff8c5a6c898ed902fa4d52de6db797da3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030367"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>將書籤加入至報表 (報表產生器及 SSRS)
   當您想要在報表中提供自訂內容資料表或是提供自訂內部導覽連結時，請將書籤或書籤連結加入到報表中。 一般來說，您會在報表中想要引導使用者的位置上加入書籤，例如每一個資料表或圖表的書籤，或是資料表或矩陣內顯示之唯一群組值的標籤。 您可以建立自己的字串當做書籤使用，或是針對群組設定群組運算式的標籤。  
@@ -22,7 +22,7 @@ ms.locfileid: "47676996"
   
  例如，如果您的報表顯示依色彩分組的資料表，您會將根據群組運算式的書籤加入到群組首。 然後您會加入一個具有單一文字方塊的資料表 (此文字方塊位於顯示色彩值的報表開頭)，然後您會在該文字方塊上設定書籤連結。 當您按一下色彩時，報表會跳到頁面，此頁面顯示該色彩的群組首資料列。  
   
- 您可以將書籤加入到任何報表項目，並將書籤連結加入到具有 **Action** 屬性的任何項目，例如文字方塊、影像或是圖表中的導出數列。 如需詳細資訊，請參閱[動作屬性對話方塊 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)。  
+ 您可以將書籤加入到任何報表項目，並將書籤連結加入到具有 **Action** 屬性的任何項目，例如文字方塊、影像或是圖表中的導出數列。 如需詳細資訊，請參閱[動作屬性對話方塊 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

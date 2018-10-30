@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d02bcf4e91bdea5c4df59b7f850adbe5e5c2ce0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800986"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029797"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47800986"
 
  如需有關安裝及設定的詳細資訊，請參閱以下主題：  
   
--   [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
+-   [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
   
 -   [將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47800986"
   
 -   所有源自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式頁面、工具、錯誤、警告和訊息，都會由 Reporting Services 執行個體所使用的語言以其中一種 Reporting Services 語言來顯示。  
   
--   您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](http://msdn.microsoft.com/sql/downloads/)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
+-   您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](https://msdn.microsoft.com/sql/downloads/)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
   
 -   SharePoint 網站、SharePoint 管理中心、線上說明和訊息會以 Office Server 產品所支援的語言提供。  
   
@@ -128,16 +128,16 @@ ms.locfileid: "47800986"
   
 |**工作**|**連結**|  
 |--------------|--------------|  
-|安裝和設定 SharePoint 模式之 Reporting Services 的詳細步驟。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)和[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
-|新增額外的報表伺服器，藉以向外延展您的 Reporting Services SharePoint 部署。|[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和 [SharePoint 中 SQL Server BI 功能的部署拓撲](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。|  
+|安裝和設定 SharePoint 模式之 Reporting Services 的詳細步驟。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)和[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
+|新增額外的報表伺服器，藉以向外延展您的 Reporting Services SharePoint 部署。|[將其他報表伺服器新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和 [SharePoint 中 SQL Server BI 功能的部署拓撲](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)。|  
 |新增針對檢視和報表項目安裝之 Reporting Services 元件的其他 SharePoint Web 前端。|[將其他 Reporting Services Web 前端新增至伺服器陣列](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |在 SharePoint 內設定報表伺服器的電子郵件。|[設定 Reporting Services 服務應用程式的電子郵件](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|此版本的最新資訊位於 TechNet Wiki 上。|[SQL Server 2012 Reporting Services 提示、祕訣和疑難排解](http://go.microsoft.com/fwlink/?LinkId=221297)。|  
+|此版本的最新資訊位於 TechNet Wiki 上。|[SQL Server 2012 Reporting Services 提示、祕訣和疑難排解](https://go.microsoft.com/fwlink/?LinkId=221297)。|  
 
 ## <a name="next-steps"></a>後續步驟
 
 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[測驗：為 SharePoint 整合設定 SSRS 2012](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[測驗：為 SharePoint 整合設定 SSRS 2012](https://go.microsoft.com/fwlink/?LinkId=306443)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

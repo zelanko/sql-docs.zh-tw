@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff8806f690dab925f30befe2a01ec33e79edd960
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46345d27b35a1ed4697c4925990f41c4cdd58426
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029037"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 DataReader 類別
   **DataReader** 物件允許用戶端從資料來源擷取唯讀、順向的資料流。 執行查詢時會傳回結果，並一直儲存於用戶端上的網路緩衝區中，直到您使用 **DataReader** 類別的 **Read** 方法要求它們為止。 若要建立 **DataReader** 類別，請實作 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 並選擇性地實作 <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>。 使用 **DataReader** 物件可以提高應用程式的效能，方法是在資料可用時立即擷取它，而不是等待傳回查詢的整個結果，以及 (依預設) 一次只將一個資料列儲存到記憶體中，進而減少系統負擔。  
@@ -27,7 +27,7 @@ ms.locfileid: "47750636"
   
  在報表設計師中，**DataReader** 物件是用以擷取欄位清單以及有關結果集的結構描述資訊。 這是透過實作 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 介面的 **GetName**、**GetValue**、**GetFieldType** 和 **GetOrdinal** 方法來完成。  
   
- <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 介面可讓您提供有關結果集的特定彙總資訊。 如需範例 **DataReader** 類別實作，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 介面可讓您提供有關結果集的特定彙總資訊。 如需範例 **DataReader** 類別實作，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../../../reporting-services/extensions/reporting-services-extensions.md)   

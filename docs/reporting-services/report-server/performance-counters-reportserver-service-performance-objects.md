@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d17a873d3d2e6df6f5c69d6eab0e9b602c70304
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32e240e82c48777c19b2c1d731753ab450437f0f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028767"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>效能計數器 - ReportServer Service 效能物件
   本主題說明 **ReportServer:Service** 和 **ReportServerSharePoint:Service** 效能物件的效能計數器，這些效能物件是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 部署的一部分。  
@@ -23,7 +23,7 @@ ms.locfileid: "47816250"
 > [!NOTE]  
 >  效能物件是用來監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非整個向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
  本主題內容：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47816250"
   
 ## <a name="see-also"></a>另請參閱  
  [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 Web Service 和 MSRS 2011 Windows 服務效能物件的效能計數器 &#40;原生模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2011 Web 服務和 MSRS 2011 Windows 服務效能物件的效能計數器 &#40;原生模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

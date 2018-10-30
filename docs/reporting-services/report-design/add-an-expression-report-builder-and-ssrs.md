@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5bcebb2ad5ee184bf2506f028381b3806b15824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73e0921ada81c5424133aa535ce4f2782fe1d784
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030337"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>加入運算式 (報表產生器及 SSRS)
   運算式會在整個報表中用來定義報表項目屬性、篩選、群組、排序次序、連接字串和參數值。 運算式是以等號 (=) 當作開頭，而且是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫。 運算式是由報表處理器在執行階段加以評估，這樣會將評估結果與報表配置元素結合。  
@@ -39,8 +39,8 @@ ms.locfileid: "47783918"
  [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [運算式對話方塊 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [運算式對話方塊 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [將程式碼新增至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)  
+ [將程式碼加入至報表 &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)  
   
   

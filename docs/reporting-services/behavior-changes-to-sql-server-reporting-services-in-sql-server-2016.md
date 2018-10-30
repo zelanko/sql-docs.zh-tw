@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2959b333de3c183394a46e580101489f6eed87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0524ee3eab63c2be21ff4196a2c68a3c30bd13ba
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845666"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028467"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中的 SQL Server Reporting Services 行為變更
 
@@ -45,4 +45,4 @@ ms.locfileid: "47845666"
 [SQL Server 2016 中 SQL Server Reporting Services 已停止的功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [SQL Server 2016 中的 SQL Server Reporting Services 重大變更](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

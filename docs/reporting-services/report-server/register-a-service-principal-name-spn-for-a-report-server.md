@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 895a314c644dfa6ce217c2673cec2ded5e251471
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd8898bd56b140782b0df3d0abdcee56fb7a9b34
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030977"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
   如果您在使用 Kerberos 通訊協定進行相互驗證的網路中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，當您想要將報表伺服器服務設定為以網域使用者帳戶的身分執行時，必須為此服務建立服務主要名稱 (SPN)。  
@@ -23,7 +23,7 @@ ms.locfileid: "47763896"
   
  若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列內容：  
   
--   [Setspn](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (http://technet.microsoft.com/library/cc731241(WS.10).aspx)。  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx)。  
   
 -   [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)。  
   
@@ -67,7 +67,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 7.  新增 `<RSWindowsNegotiate/>` 當作此區段的第一個項目，以便啟用 Kerberos。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定服務帳戶 &#40;SSRS 組態管理員&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [設定服務帳戶 &#40;SSRS 組態管理員&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
  [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

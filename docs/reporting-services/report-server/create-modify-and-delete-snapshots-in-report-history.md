@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029617"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>建立、修改及刪除報表記錄中的快照集
   報表記錄是報表快照集的集合。 您可以加入和刪除快照集，或修改影響報表記錄儲存區的屬性，來維護報表記錄。 您可以用手動方式或依據排程來建立報表記錄。  
@@ -26,7 +26,7 @@ ms.locfileid: "47710596"
  報表記錄中的快照集可以由建立的日期及時間加以識別。 日期及時間是以查詢的執行時間為準。  
   
 ## <a name="creating-snapshots-in-report-history"></a>在報表記錄中建立快照集  
- 您可以用手動方式建立快照集，如果是可以自動執行的報表，就能夠依排定間隔建立快照集。 若要自動執行，報表必須使用預存認證，或完全不使用認證。 此外，若報表使用參數，您必須指定報表執行時使用的預設值。 您可以在報表的屬性頁面指定預存認證和參數值。 如需詳細資訊，請參閱[參數屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)。  
+ 您可以用手動方式建立快照集，如果是可以自動執行的報表，就能夠依排定間隔建立快照集。 若要自動執行，報表必須使用預存認證，或完全不使用認證。 此外，若報表使用參數，您必須指定報表執行時使用的預設值。 您可以在報表的屬性頁面指定預存認證和參數值。 如需詳細資訊，請參閱[參數屬性頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)。  
   
  當您在建立報表快照集時，下列元素會和報表快照集一起儲存在報表伺服器資料庫中：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47710596"
   
 ## <a name="see-also"></a>另請參閱  
  [建立報表記錄 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [將快照集加入報表記錄 &#40;報表管理員&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [限制報表記錄 &#40;報表管理員&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 97345e896dc3df2af8f6441fead1a0d9cd7ba617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a7823a0757cb4980a52b9ab9577829ce9d6102f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802628"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029977"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>將多值參數加入至報表
   您可以在報表中新增參數，好讓使用者可以為參數選取多個值。  
   
  您可以將多個參數值傳遞給報表 URL 中的報表。 如需包含多值參數的 URL 範例，請參閱 [在 URL 內傳遞報表參數](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
- 如需如何將多個參數值傳遞給預存程序的詳細資訊，請參閱 mssqltips.com 上的 [為 SSRS 報表處理複選參數](http://go.microsoft.com/fwlink/?LinkId=321529) 。  
+ 如需如何將多個參數值傳遞給預存程序的詳細資訊，請參閱 mssqltips.com 上的 [為 SSRS 報表處理複選參數](https://go.microsoft.com/fwlink/?LinkId=321529) 。  
   
 ## <a name="to-add-a-multi-value-parameter"></a>若要加入多值參數  
   
@@ -54,6 +54,6 @@ ms.locfileid: "47802628"
 
 ## <a name="see-also"></a>另請參閱  
  [將串聯參數加入至報表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [加入、變更或刪除報表參數 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

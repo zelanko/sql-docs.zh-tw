@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d570d67c1ecc43d04ffbfc748951b8cde2b3619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030607"
 ---
 # <a name="start-report-builder"></a>啟動報表產生器
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]是獨立報表撰寫環境。 您可以使用它來建立分頁報表，以及將它們發行到以原生或 SharePoint 整合模式安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是獨立報表撰寫環境。 您可以使用它來建立分頁報表，以及將它們發行到以原生或 SharePoint 整合模式安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
- 第一次從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站或處於 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 啟動[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]時，系統會提示您從 Microsoft 下載中心進行下載。 
+ 第一次從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 入口網站或處於 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，系統會提示您從 Microsoft 下載中心進行下載。 
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
- 您或系統管理員也可以 [從 Microsoft 下載中心將報表產生器安裝在電腦上](http://go.microsoft.com/fwlink/?LinkID=219138)。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md) 中的＜使用系統管理員伺服器安裝報表產生器＞。
+ 您或系統管理員也可以 [從 Microsoft 下載中心將報表產生器安裝在電腦上](https://go.microsoft.com/fwlink/?LinkID=219138)。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md) 中的＜使用系統管理員伺服器安裝報表產生器＞。
  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 不是在安裝 SQL Server Reporting Services 時安裝；您需要另外進行下載與安裝。  
   
  從 Web 入口網站或 SharePoint 網站啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 時，如果開啟舊版 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ，請連絡可更新 Web 入口網站或 SharePoint 網站上版本的系統管理員。  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 入口網站啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 入口網站啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 http://\<*伺服器名稱*>/reports。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47644416"
   
      第一次，系統會提示您 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。 
   
-     在第一次之後，[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 隨即開啟，而且您可以從報表伺服器中建立分頁報表或開啟報表。  
+     之後， [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 隨即開啟，而且您可以從報表伺服器中建立分頁報表或開啟報表。  
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>以 SharePoint 整合模式啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -67,4 +67,4 @@ ms.locfileid: "47644416"
 [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [設定報表產生器的預設選項](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ec5912fc9aff3777fe567461b98651d7e9a91a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6442c6993af76c3d5b14526eb56d237963375a0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030707"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "47744736"
   
  您可以在建立圖表類型之後再加以變更。 如需詳細資訊，請參閱[變更圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)。  
   
- 其中許多圖表類型的範例可從範例報表取得。 如需有關下載範例報表的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 其中許多圖表類型的範例可從範例報表取得。 如需有關下載範例報表的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 |圖表類型|顯示比例資料|顯示庫存資料|顯示線性資料|顯示多重值資料|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -52,4 +52,4 @@ ms.locfileid: "47744736"
 [圖表中的空白和 Null 資料點](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
 [將圖表新增至報表](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

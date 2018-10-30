@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030197"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>建立 Reporting Services 行動報表
 您可以使用 SQL Server 行動報表發行工具，在可調整格線列和格線欄且具有彈性行動報表項目的設計介面上，快速建立針對任何螢幕大小適當調整大小的 SQL Server 2016 Reporting Services 行動報表。  
   
-第一次建立行動報表時，您可以從 Reporting Services 入口網站，將 SQL Server 行動報表發行工具安裝在本機電腦上。 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=733527)進行安裝。 之後，您就可以從入口網站或本機啟動。   
+第一次建立行動報表時，您可以從 Reporting Services 入口網站，將 SQL Server 行動報表發行工具安裝在本機電腦上。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=733527)進行安裝。 之後，您就可以從入口網站或本機啟動。   
     
 1. 在 Reporting Services 入口網站的頂端列中，選取 [新增] > [行動報表]。  
   

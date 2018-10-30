@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a01fc40e8946c9d6b9620dc0c17e51d1dd0db6e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b0d32e2705b63ddc5f12af84e0589a9c940582d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620476"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029677"
 ---
 # <a name="upload-files-to-a-folder"></a>上傳檔案到資料夾
   您可以從檔案系統上傳檔案，並將其當成 Managed 項目儲存在報表伺服器資料庫中。 上傳檔案會有何狀況取決於檔案類型。  
@@ -57,7 +57,7 @@ ms.locfileid: "47620476"
 |檢視資料夾的內容|檢視資源、檢視報表|  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [工作和權限](../../reporting-services/security/tasks-and-permissions.md)   
  [上傳檔案或報表 &#40;報表管理員&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

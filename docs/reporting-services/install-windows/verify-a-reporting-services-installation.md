@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6373efd4d6bed20b823c931ea20041de5f7f05dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0303b080271ec85753d0f0f94eee970b3d7308a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027507"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器：原生或 SharePoint。 確認安裝所應遵循的步驟會視報表伺服器模式而定。  
@@ -64,7 +64,7 @@ ms.locfileid: "47828108"
   
 1.  在 SharePoint 文件庫中，建立只包含一個文字方塊 (例如標題) 的基本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表。 此報表不包含任何資料來源或資料集。 其目的是要確認您可以開啟報表產生器，而且基本報表將會進行預覽。  
   
-2.  將報表儲存至文件庫，然後從文件庫中執行報表。 如需使用報表產生器建立報表的詳細資訊，請參閱[啟動報表產生器](../report-builder/start-report-builder.md)。  
+2.  將報表儲存至文件庫，然後從文件庫中執行報表。 如需使用報表產生器建立報表的詳細資訊，請參閱 [啟動報表產生器](../report-builder/start-report-builder.md)。  
   
 ### <a name="reporting-services-samples"></a>Reporting Services 範例  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47828108"
   
 2.  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 來建立新資料夾，或上傳檔案來測試定義是否傳回至報表伺服器資料庫。 如果這些作業都成功，表示連接可運作。  
   
-     如需詳細資訊，請參閱[入口網站 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
+     如需詳細資訊，請參閱[入口網站 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>確認報表設計師已安裝及執行  
   

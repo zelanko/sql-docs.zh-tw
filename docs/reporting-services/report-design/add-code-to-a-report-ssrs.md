@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 521448c47efdb1ceebbc2f4b1efb0b80378920a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5411edfe1db31233bf987231871040abc4fe2ea1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030357"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>將程式碼加入至報表 (SSRS)
   在任何運算式中，您可以呼叫自己的自訂程式碼。 您可以透過下列兩個方法來提供程式碼：  
@@ -56,7 +56,7 @@ ms.locfileid: "47836146"
      如果您將此運算式加入至顯示類別目錄值的資料表資料格，則每當 "Bike" 一字位於該資料列的資料集欄位中時，此資料表資料格值就會改為顯示 "Bicycle" 一字。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表屬性對話方塊、程式碼](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
+ [報表屬性對話方塊、程式碼](https://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   

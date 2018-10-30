@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0cde0748588a56421e7577bf5f9a7d9d8348ccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75789117747794ce3eeb7a1b19bdeff6bfbd6d0c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027727"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
   您可以設定預存認證，讓 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器用來存取報表的外部資料。 如果報表會自動執行，便是使用預存認證 (例如以電子郵件形式發行報表的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱)。 排定或觸發報表處理時，報表伺服器會擷取和使用認證。 本主題會逐步引導您完成為原生模式和 SharePoint 模式報表伺服器設定預存認證的程序。  
@@ -30,11 +30,11 @@ ms.locfileid: "47832496"
 ##  <a name="bkmk_top"></a> 預存認證的安全性原則需求  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 您必須在報表伺服器上，為預存認證所使用的帳戶設定下列其中一項安全性原則。 建議您為您的環境選取具備需要的最低層級權限的原則。  
   
-1.  **允許本機登入**。 如需詳細資訊，請參閱 [允許本機登入](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。  
+1.  **允許本機登入**。 如需詳細資訊，請參閱 [允許本機登入](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。  
   
-2.  **以批次工作登入**。 如需詳細資訊，請參閱 [以批次工作登入](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)。  
+2.  **以批次工作登入**。 如需詳細資訊，請參閱 [以批次工作登入](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)。  
   
-3.  如需原則的一般資訊，請參閱 [編輯群組原則物件的安全性設定](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)。  
+3.  如需原則的一般資訊，請參閱 [編輯群組原則物件的安全性設定](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)。  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> 為報表特定的資料來源設定預存認證 (原生模式)  
   

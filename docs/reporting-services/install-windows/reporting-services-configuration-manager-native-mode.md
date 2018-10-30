@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dbb43ba4b8595a02e2132bf1670bbe06884aee5
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fec3d74b5b6d4d4387249ba3e4d5254aebfa1bed
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085404"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029017"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
 
@@ -94,4 +94,4 @@ ms.locfileid: "49085404"
 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)   
 [設定和管理報表伺服器](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

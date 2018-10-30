@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2abf45142444939264639779c1e1b232357c683c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ab251afd774e36f35a2c96e7519d3b799b33a9c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032067"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   報表伺服器 Web 服務透過網路使用簡易物件存取通訊協定 (SOAP) 訊息，傳送以文字為基礎的命令。 這些命令使用 XML 文字的格式，以 HTTP 透過全球資訊網來傳送文字。 透過使用 SOAP 做為其通訊協定，報表伺服器 Web 服務允許應用程式和元件使用開放且廣為接受的基礎結構，來與報表伺服器交換資料。 SOAP 標準是定義在 www.w3.org/TR/SOAP。  
@@ -59,7 +59,7 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>另請參閱  
  [存取 SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [報表伺服器 Web 服務](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

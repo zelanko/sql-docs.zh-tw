@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6df6dc9d5d22ae158830aee5418a28d92a8b758e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ee3c9ffa00fcb76f4b167b5f535099b9f8c57ae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686186"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029727"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
   您可以使用文字方塊來將從資料集的欄位所擷取的 HTML 格式文字插入至報表。 文字可以來自任何評估為正確格式之 HTML 的簡單或複雜運算式。 格式化的文字可以轉譯為所有受支援的輸出格式，包括 PDF 在內。  
@@ -64,7 +64,7 @@ ms.locfileid: "47686186"
   
     -   相對 CSS 長度單位會被忽略，而且不受支援。 不支援的單位包括 em、ex、px、%、rem。  
   
-     如需有關 CSS 單位的詳細資訊，請參閱： [CSS 值和單位參考](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx)。  
+     如需有關 CSS 單位的詳細資訊，請參閱： [CSS 值和單位參考](https://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (https://msdn.microsoft.com/library/ms531211(VS.85).aspx)。  
   
 -   色彩  
   

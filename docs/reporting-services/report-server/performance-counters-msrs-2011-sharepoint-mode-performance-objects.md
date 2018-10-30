@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a26c80da92e52c785ab247ce6ea6463d6e31886d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030187"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>效能計數器 MSRS 2011 SharePoint 模式效能物件
   本主題描述屬於 **SharePoint 模式部署一部分之** MSRS 2011 Web 服務 SharePoint 模式 **和** MSRS 2011 Windows 服務 SharePoint 模式 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  
@@ -28,7 +28,7 @@ ms.locfileid: "47670886"
 > [!NOTE]  
 >  此效能物件會監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非整個向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
  如需效能計數器和原生模式報表伺服器的資訊，請參閱 [MSRS 2011 Web Service 和 MSRS 2011 Windows 服務效能物件的效能計數器 &#40;原生模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) 和 [MSRS 2011 Web Service SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 (SharePoint 模式)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   

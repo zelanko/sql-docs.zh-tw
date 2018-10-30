@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cb60efd33fdcf0ad6a7ea67b5c6011b016fd682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef775e1474c38e95491388465d1010c23d64526
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027477"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>設定報表伺服器上的自訂或表單驗證
 
@@ -27,7 +27,7 @@ Reporting Services 提供可延伸的架構，可以讓您插入自訂或表單�
 > [!NOTE]
 >  建立自訂驗證延伸模組時，需要自訂的程式碼和 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 安全性的專業知識。 如果您不想要建立自訂驗證延伸模組，可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 群組與帳戶，但必須大幅縮減報表伺服器部署的範圍。 如需自訂驗證的詳細資訊，請參閱 [實作安全性延伸模組](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)。
 
-此外，如果想要在與 SharePoint 產品整合的 SQL Server Reporting Services 環境中，使用表單驗證或自訂驗證延伸模組，必須將 SharePoint 網站設定為使用您選擇的驗證方法。 如需在 SharePoint 中設定驗證的詳細資訊，請參閱 [Developer Network (MSDN) 上的](http://go.microsoft.com/fwlink/?LinkId=115575) 驗證範例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。
+此外，如果想要在與 SharePoint 產品整合的 SQL Server Reporting Services 環境中，使用表單驗證或自訂驗證延伸模組，必須將 SharePoint 網站設定為使用您選擇的驗證方法。 如需在 SharePoint 中設定驗證的詳細資訊，請參閱 [Developer Network (MSDN) 上的](https://go.microsoft.com/fwlink/?LinkId=115575) 驗證範例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。
 
 
 
@@ -83,4 +83,4 @@ Reporting Services 提供可延伸的架構，可以讓您插入自訂或表單�
 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [設定報表伺服器上的基本驗證](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
 [設定報表伺服器上的 Windows 驗證](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [試試 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

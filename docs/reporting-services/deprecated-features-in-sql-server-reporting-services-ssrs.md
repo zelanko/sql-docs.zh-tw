@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38401a47ecb5c14682e0866c32d62a873a52d773
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aee888aa086908ddbaf120bf4a62d1f23ce4948
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754756"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031267"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能
 
@@ -38,7 +38,7 @@ ms.locfileid: "47754756"
 
 ## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>舊版 SQL Server Reporting Services 不支援的功能
 
-- [SQL Server 2014 Reporting Services 已淘汰功能](deprecated-features-in-sql-server-reporting-services-ssrs.md)
+- [SQL Server 2014 Reporting Services 已被取代的功能](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
 - [SQL Server 2012 Reporting Services 已淘汰功能](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
@@ -48,4 +48,4 @@ ms.locfileid: "47754756"
  [SQL Server 2016 中的 SQL Server Reporting Services 行為變更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [SQL Server 2016 中的 SQL Server Reporting Services 已中止功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

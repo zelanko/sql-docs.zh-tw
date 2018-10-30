@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5acce2ed5c4720bc6a69eb0b0e83125b58b7db1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f980f4bb625fb0686911c7aa1cad28ca574faaf6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675546"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030947"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
   報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
@@ -164,7 +164,7 @@ ms.locfileid: "47675546"
  [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [啟動報表產生器](../../reporting-services/report-builder/start-report-builder.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [報表伺服器系統屬性](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

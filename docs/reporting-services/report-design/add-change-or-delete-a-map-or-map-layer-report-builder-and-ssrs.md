@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e34042bcaf265651f84a805ff383da3f1caed734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b84b6a3d89e1112bd7026909b7ff9bb6bae14902
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719526"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029827"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
@@ -114,9 +114,9 @@ ms.locfileid: "47719526"
   
 1.  選取 [地圖點屬性] 對話方塊上的 [一般] 來變更下列地圖元素的標籤、工具提示和標記類型選項：  
   
-    -   點圖層上的所有動態或內嵌的點。 點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定內嵌點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 頁面。  
+    -   點圖層上的所有動態或內嵌的點。 點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定內嵌點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 頁面。  
   
-    -   在多邊形圖層上，所有動態或內嵌之多邊形的中心點。 中心點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定中心點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 頁面。  
+    -   在多邊形圖層上，所有動態或內嵌之多邊形的中心點。 中心點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定中心點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 頁面。  
   
 ##  <a name="Embedded"></a> 將內嵌資料指定為空間資料的來源  
   
@@ -171,7 +171,7 @@ ms.locfileid: "47719526"
 2.  在工具列上，按一下 [加入圖層] 按鈕，然後從下拉式清單中按一下 [圖格圖層]。  
   
     > [!NOTE]  
-    >  如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371)。  
+    >  如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
 3.  以滑鼠右鍵按一下 [圖層] 窗格中的圖格圖層，然後按一下 [圖格屬性]。  
   

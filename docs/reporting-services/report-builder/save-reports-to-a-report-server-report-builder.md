@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8978a5ad1429890861c96238317b38189c144409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027813"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>將報表儲存到報表伺服器 (報表產生器)
   在報表產生器中，您可以將報表定義儲存至報表伺服器 (也稱為發行報表)。 當報表儲存至報表伺服器時，其他使用者就可以檢視此報表。 每當您執行已發行的報表時，您將會擷取最新的資料。 若要儲存已轉譯之報表的靜態複本，請將此報表匯出到另一個檔案格式並儲存起來，或是使用報表記錄功能來儲存已轉譯的報表版本。  
@@ -50,6 +50,6 @@ ms.locfileid: "47826716"
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS &#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   

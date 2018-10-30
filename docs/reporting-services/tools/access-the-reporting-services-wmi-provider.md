@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10ca19f7c728b172ffc06ac994932b2a07670429
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f793de9e36968021155387ce0f926899f81f753d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027777"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>存取 Reporting Services WMI 提供者
   Reporting Services WMI 提供者會公開兩個 WMI 類別，可透過指令碼管理原生模式報表伺服器執行個體：  
@@ -33,7 +33,7 @@ ms.locfileid: "47690049"
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_\<編碼執行個體名稱>\v13|提供用戶端連接至已安裝之報表伺服器所需的基本資訊。|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_\<編碼執行個體名稱>\v13\Admin|代表報表伺服器執行個體的安裝與執行階段參數。 這些參數是儲存在報表伺服器的組態檔中。<br /><br /> **\*\* 重要事項 \*\*** 這個類別只能透過管理權限存取。|  
   
- 針對每一個報表伺服器執行個體會建立上述每一個類別的執行個體。 您可以使用任何 Microsoft 或協力廠商工具來存取報表伺服器公開的 WMI 物件，包括 .NET Framework 本身公開的 WMI 程式開發介面。 本主題描述如何存取及使用 WMI 類別執行個體搭配 PowerShell 命令 [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx)。  
+ 針對每一個報表伺服器執行個體會建立上述每一個類別的執行個體。 您可以使用任何 Microsoft 或協力廠商工具來存取報表伺服器公開的 WMI 物件，包括 .NET Framework 本身公開的 WMI 程式開發介面。 本主題描述如何存取及使用 WMI 類別執行個體搭配 PowerShell 命令 [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)。  
   
 ## <a name="determine-the-instance-name-in-the-namespace-string"></a>判斷命名空間字串中的執行個體名稱  
  命名空間路徑中 Reporting Services WMI 類別的執行個體名稱，是您安裝具名 Reporting Services 執行個體時指定的執行個體名稱編碼。 也就是說，執行個體名稱中的特殊字元會經過編碼。 例如，底線 (_) 會編碼為 "_5f"，因此 "My_Instance" 這個執行個體名稱在 WMI 命名空間路徑中就會編碼為 "My_5fInstance"。  

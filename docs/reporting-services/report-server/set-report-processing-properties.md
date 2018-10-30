@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d4391fb3957c9b0d3529ebb51d038398786c15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838576"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031767"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
   
- 若要設定報表執行屬性，請在報表管理員中開啟報表，然後導覽到 [執行] 屬性頁面。 如需詳細資訊，請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 您也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
+ 若要設定報表執行屬性，請在報表管理員中開啟報表，然後導覽到 [執行] 屬性頁面。 如需詳細資訊，請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 您也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；請參閱[處理選項屬性頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
   
 ## <a name="report-execution-modes"></a>報表執行模式  
  您可以視需要或以快照集的形式執行報表。 下一節描述每一種方法。  
@@ -57,7 +57,7 @@ ms.locfileid: "47838576"
  [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表的執行屬性 &#40;報表管理員&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [如何：將快照集新增至報表記錄](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [如何：將快照集加入報表記錄](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [指定報表資料來源的認證及連線資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

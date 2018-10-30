@@ -12,12 +12,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79bf8462483347964fc1dece4486167d44f67d1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bd21f8be841437b15f780001221da72d9f665aa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030677"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 使用者的資料警示管理員
 
@@ -88,4 +88,4 @@ ms.locfileid: "47668708"
 [在資料警示設計工具中建立資料警示](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

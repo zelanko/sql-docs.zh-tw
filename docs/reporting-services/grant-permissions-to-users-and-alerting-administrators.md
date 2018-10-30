@@ -9,12 +9,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e3fccefab667aefae9f6b481a6e4f0ea73144bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98977f845f2226413c19b338dc15b11589231b98
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705756"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028067"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
 
@@ -29,7 +29,7 @@ ms.locfileid: "47705756"
 
 **警示系統管理員**：權限必須包含「管理警示」的 SharePoint 權限。 根據預設，只有「完整控制權」權限層級包含使用「小組網站」網站範本建立的這項網站權限。 如果您使用其他網站範本，則會看見不同的預設 SharePoint 群組清單。 您可以使用支援警示系統管理員檢視及刪除資料警示所需的權限，將「管理警示」權限加入其中一個內建權限等級或建立自訂權限等級。
 
-若要深入了解 SharePoint 權限，請參閱 [使用者權限與權限等級 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx)。
+若要深入了解 SharePoint 權限，請參閱 [使用者權限與權限等級 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)。
 
 ## <a name="grant-permissions"></a>[授與權限]
   
@@ -56,4 +56,4 @@ ms.locfileid: "47705756"
 [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

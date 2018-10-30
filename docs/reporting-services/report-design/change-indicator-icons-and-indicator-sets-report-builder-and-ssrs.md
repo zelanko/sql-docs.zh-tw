@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08391bc16552540005098e1a52cd96d1a30b021f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8459e46364c2c0e80940b59fa2a520f3e29c86f1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028857"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>變更指標圖示和指標集合 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 針對分頁報表所提供的預先設定指標集合，在已傳遞的報表中可能不一定會有效地描述您的資料，運作也不一定良好。 本主題提供變更指標圖示外觀，以及變更指標集合以加入不同、更多或更少之指標圖示的程序。  
@@ -30,7 +30,7 @@ ms.locfileid: "47738656"
   
      您可以選擇按一下 **「運算式」** \(*fx*) 按鈕來編輯設定 **[色彩]** 選項值的運算式。  
   
-     如果您按一下 [更多色彩]，[選取色彩] 對話方塊隨即開啟，讓您從中選擇色彩。 如需其選項的詳細資訊，請參閱[選取色彩對話方塊 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)。 按一下 [確定] 關閉 [選取色彩] 對話方塊。  
+     如果您按一下 [更多色彩]，[選取色彩] 對話方塊隨即開啟，讓您從中選擇色彩。 如需其選項的詳細資訊，請參閱[選取色彩對話方塊 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)。 按一下 [確定] 關閉 [選取色彩] 對話方塊。  
   
 4.  按一下 [確定] 。  
   

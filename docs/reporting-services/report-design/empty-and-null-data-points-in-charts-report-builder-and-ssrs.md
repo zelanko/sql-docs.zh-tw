@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b869739cd944ac96104044efc2c79e91f8e8a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f411a80acc72a582071a2ee1297f704ab22d42c1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848048"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030797"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>圖表中的空白和 Null 資料點 (報表產生器及 SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "47848048"
   
 -   形狀圖圖表類型中會省略 Null 值。  
   
- 具有空資料點的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)：  
+ 具有空資料點的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,4 +47,4 @@ ms.locfileid: "47848048"
 [圖表至報表](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)   
 [針對圖表進行疑難排解](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

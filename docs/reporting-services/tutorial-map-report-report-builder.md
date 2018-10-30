@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74d29eb991036979b37d3a527f7b323fb5ee1021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fc882093d13b366419015f058d6e889dfe4f05
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596382"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029387"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
@@ -32,7 +32,7 @@ ms.locfileid: "47596382"
 完成本教學課程的估計時間：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
-針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
+針對本教學課程，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。 
 
 如需其他需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   

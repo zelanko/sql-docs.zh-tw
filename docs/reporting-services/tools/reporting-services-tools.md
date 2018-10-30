@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdde81c9e1fc044bef965695158bf3fcb8aa5dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb425c4f9ec8ada6e5d2b7d6df88127f88762564
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028019"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組圖形和指令碼工具，支援在受管理的環境中開發與使用豐富的報表功能。 此工具集包含開發工具、組態與管理工具，以及報表檢視工具。 本主題提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中各個工具與其存取方式的簡短概觀。  
@@ -36,10 +36,10 @@ ms.locfileid: "47675516"
   
 |工具|Description|如何存取|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]|使用 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，您可以建立行動報表，動態調整內容以放入您的螢幕或瀏覽器視窗，並適當地縮放成任何螢幕大小。<br /><br /> 您可以在可調整格線列和欄，並具有彈性的行動報表元素的設計介面上，建立行動報表。<br /><br /> 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。|下載 [SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=733527)|  
+|[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]|使用 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]，您可以建立行動報表，以配合您的螢幕或瀏覽器視窗大小動態調整內容，並適當縮放成任何螢幕大小。<br /><br /> 您可以在可調整格線列和欄，並具有彈性的行動報表元素的設計介面上，建立行動報表。<br /><br /> 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。|下載 [SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkId=733527)|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|互動式的資料探索和視覺呈現體驗設計為可讓您建立以及與依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型的報表進行互動。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 SharePoint 模式中。 Sliverlight 瀏覽器|  
 |報表設計師|使用此工具設計報表。 包括下列功能：<br /><br /> 部署至原生模式或 SharePoint 模式報表伺服器。<br /><br /> 裝載於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 報表資料窗格可組織用於報表的資料<br /><br /> 互動式報表設計之 [設計] 和 [預覽] 的索引標籤式檢視<br /><br /> 查詢設計工具可協助您指定要從資料來源擷取的資料，且此資料來源與 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)中資料來源類型相關聯。<br /><br /> 使用智慧感知的運算式編輯器可建立自訂報表內容和外觀的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 運算式<br /><br /> 支援自訂報表項目和自訂查詢設計工具<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
-|報表產生器|使用此工具設計報表。 包括下列功能：<br /><br /> 部署至原生模式或 SharePoint 模式報表伺服器。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 Office 相似的製作環境[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> 將報表項目儲存為報表組件的能力<br /><br /> 建立地圖精靈<br /><br /> 彙總的彙總<br /><br /> 增強的運算式支援<br /><br /> 查詢設計工具可協助您指定要從內建資料來源類型擷取的資料<br /><br /> 如需詳細資訊，請參閱 [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)。|下載 [單機版報表產生器](http://go.microsoft.com/fwlink/?LinkID=219138)<br /><br /> 或從報表管理員/SharePoint 開啟|  
+|報表產生器|使用此工具設計報表。 包括下列功能：<br /><br /> 部署至原生模式或 SharePoint 模式報表伺服器。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 Office 相似的撰寫環境[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]<br /><br /> 將報表項目儲存為報表組件的能力<br /><br /> 建立地圖精靈<br /><br /> 彙總的彙總<br /><br /> 增強的運算式支援<br /><br /> 查詢設計工具可協助您指定要從內建資料來源類型擷取的資料<br /><br /> 如需詳細資訊，請參閱 [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)。|下載 [單機版報表產生器](https://go.microsoft.com/fwlink/?LinkID=219138)<br /><br /> 或從報表管理員/SharePoint 開啟|  
   
 ## <a name="tools-for-report-server-administration"></a>適用於報表伺服器管理的工具  
  一組圖形和指令碼工具可用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的報表伺服器。 所使用工具取決於報表伺服器的部署模式。  

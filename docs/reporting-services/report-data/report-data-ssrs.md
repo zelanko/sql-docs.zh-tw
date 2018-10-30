@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3df6da1da2786ede9dbde2ec417c5800046577fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f6ff834463d0379d9e93058344dde5a391362d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031387"
 ---
 # <a name="report-data-ssrs"></a>報表資料 (SSRS)
   報表資料可能是來自組織中的多個資料來源。 您設計報表的第一個步驟，就是建立資料來源，及代表基礎報表資料的資料集。 每個資料來源包含資料連接資訊。 每個資料集都包含將一組欄位定義使用為資料來源中資料的查詢命令。 若要視覺化每個資料集的資料，請加入資料區，例如資料表、矩陣、圖表或對應。 處理報表時，查詢會在資料來源上執行，且每個資料區會視需要展開，以顯示資料集的查詢結果。  
@@ -24,7 +24,7 @@ ms.locfileid: "47611552"
   
 -   **共用資料來源定義。** 包含報表資料來源之 XML 表示的檔案。 報表發行時，其資料來源會儲存到報表伺服器或 SharePoint 網站上做為資料來源定義，與報表定義分開。 例如，報表伺服器管理員可能會更新連接字串或認證。 在原生報表伺服器上，檔案類型為 .rds。 在 SharePoint 網站上，檔案類型為 .rsds。  
   
--   **連接字串。** 連接字串是連接到資料來源時所需之連接屬性的字串版本。 連接屬性會依資料連接類型而有所不同。 如需範例，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)＞。  
+-   **連接字串。** 連接字串是連接到資料來源時所需之連接屬性的字串版本。 連接屬性會依資料連接類型而有所不同。 如需範例，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)＞。  
   
 -   **共用資料來源。** 報表伺服器或 SharePoint 網站上提供的資料來源，可供多個報表使用。  
   

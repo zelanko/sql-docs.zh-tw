@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 168bd862f78b10726b3d62146fa41a6a3620d16d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619977"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030667"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  
@@ -87,7 +87,7 @@ ms.locfileid: "47619977"
 |只有 DateTimeOffset 值的 DateTime 部分|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |只有 DateTimeOffset 值的 Offset 部分|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- 您也可以使用 Format 函數來控制值的顯示格式。 如需詳細資訊，請參閱 [函式 (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)。  
+ 您也可以使用 Format 函數來控制值的顯示格式。 如需詳細資訊，請參閱 [函式 (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483)。  
   
 ## <a name="advanced-examples"></a>進階範例  
  當您連接至某個資料來源，但是所使用的資料提供者並未提供該資料來源之所有資料類型的轉換支援時，不支援之資料來源類型的預設資料類型就是 String。 下列範例會提供當做字串傳回之特定資料類型的解決方案。  
@@ -116,7 +116,7 @@ ms.locfileid: "47619977"
   
          如果 `MyDateTime.Value` 字串具有 UTC 時差， `DateTime.Parse` 函數會先針對 UTC 時差調整 (上午 7 點 - [`+08:00`] 調整成前一晚 11 點的 UTC 時間)。 然後， `DateTime.Parse` 函數會套用本機報表伺服器 UTC 時差，並在必要時，再次針對日光節約時間調整時間。 例如，在華盛頓州的雷德蒙市，針對日光節約時間調整的本地時間時差是 `[-07:00]`，或下午 11 點之前的 7 個小時。 結果就是下列 **DateTime** 值： `2007-07-06 04:07:07 PM` (2007 年 7 月 6 日下午 4:07)。  
   
- 如需將字串轉換成 **DateTime** 資料類型的詳細資訊，請參閱 MSDN 上的 [剖析日期和時間字串](http://go.microsoft.com/fwlink/?LinkId=89703)、 [格式化特定文化特性的日期和時間](http://go.microsoft.com/fwlink/?LinkId=89704)和 [在 DateTime、DateTimeOffset 和 TimeZoneInfo 之間選擇](http://go.microsoft.com/fwlink/?linkid=110652) 。  
+ 如需將字串轉換成 **DateTime** 資料類型的詳細資訊，請參閱 MSDN 上的 [剖析日期和時間字串](https://go.microsoft.com/fwlink/?LinkId=89703)、 [格式化特定文化特性的日期和時間](https://go.microsoft.com/fwlink/?LinkId=89704)和 [在 DateTime、DateTimeOffset 和 TimeZoneInfo 之間選擇](https://go.microsoft.com/fwlink/?linkid=110652) 。  
   
 -   將新的導出欄位加入至報表資料集，以便使用運算式來擷取部分字串。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64ce0bab0f99c0213e9ed18046d7e0215a6da5e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bdb765ec6e582d95d7a34b26c2324b381acc610
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031587"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>設定和管理 SQL Server Reporting Services (SSRS) 報表伺服器
 
@@ -58,4 +58,4 @@ SQL Server Reporting Services 是一種伺服器報表平台，提供齊全的�
   
 -   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

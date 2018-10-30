@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a57d7330dba6703b8cdcae264dc835113e4a0e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029047"
 ---
 # <a name="saving-reports-report-builder"></a>儲存報表 (報表產生器)
   在報表產生器中，您可以將分頁報表儲存至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表伺服器、SharePoint 文件庫、您具有寫入權限的檔案共用或您的電腦。 
@@ -62,7 +62,7 @@ ms.locfileid: "47594757"
    
 ## <a name="see-also"></a>另請參閱  
  [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [安裝和解除安裝報表產生器](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [安裝和解除安裝報表產生器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

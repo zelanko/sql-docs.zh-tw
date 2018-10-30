@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031407"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>將 Reporting Services 項目釘選到 Power BI 儀表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 讓使用者能夠將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表項目從報表檢視器工具列固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板，當成新的圖格。   若要固定，您的系統管理員必須先整合報表伺服器和 Azure Active Directory 及 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。  
@@ -61,7 +61,7 @@ ms.locfileid: "47710548"
   
 ##  <a name="bkmk_to_pin"></a> 固定報表項目  
   
-1. 確認您已登入 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，選取 [我的設定] 功能表項目並登入。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
+1. 確認您已登入 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，選取 [我的設定] 功能表項目並登入。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -107,13 +107,13 @@ ms.locfileid: "47710548"
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **儀表板中** 的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，但它確實已更新了一段時間。  使用者認證 Token 已過期，您需要再次登入。  向 Azure 註冊的使用者認證， [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的有效期為 90 天。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
+-   **儀表板中** 的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，但它確實已更新了一段時間。  使用者認證 Token 已過期，您需要再次登入。  向 Azure 註冊的使用者認證， [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的有效期為 90 天。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
   
 -   **儀表板中** 固定的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它根本沒有重新整理過。  問題在於報表未設定使用預存認證。 報表必須使用預存認證，因為固定報表項目的動作會建立 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱來管理圖格的重新整理排程。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱需要預存的認證。 如果您檢閱 [我的訂閱]  頁面，會看到類似下面的錯誤訊息：  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **過期的 Power BI 認證︰**  您嘗試固定項目，但看到下列錯誤訊息。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]，然後按一下 [我的設定] 頁面上的 [登入]。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
+-   **過期的 Power BI 認證︰**  您嘗試固定項目，但看到下列錯誤訊息。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]，然後按一下 [我的設定] 頁面上的 [登入]。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47710548"
   
      您也可以編輯訂閱內容，並將 [報表視覺效果名稱]  變更為適當的報表項目名稱。 ![變更用於 Power BI 重新整理的視覺效果](../reporting-services/media/ssrs-powerbi-subscription-visual.png "變更用於 Power BI 重新整理的視覺效果")  
   
--   **刪除圖格**。 如果您在 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 中刪除磚，就不會在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中刪除相關聯的訂閱，而在 [我的訂閱] 頁面上會看到類似下面的錯誤。 您可以刪除訂閱。  
+-   **刪除圖格**。 如果您在 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中刪除圖格，就不會在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中刪除相關聯的訂閱，而在 [我的訂閱] 頁面上會看到類似下面的錯誤。 您可以刪除訂閱。  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
 
@@ -140,7 +140,7 @@ ms.locfileid: "47710548"
 
 ## <a name="see-also"></a>另請參閱  
  [Power BI 報表伺服器整合 &#40;組態管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

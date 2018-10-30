@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c0d45b2b8931591688ece17e61427966c2cd795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681956"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028487"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 連接類型 (SSRS)
   若要在報表中包含來自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源的資料，您必須具有以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]類型之報表資料來源為基礎的資料集。 這種內建資料來源類型的建構基礎是 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的資料延伸模組，而這個延伸模組可以讓您從 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源擷取多維度資料。  
@@ -27,7 +27,7 @@ ms.locfileid: "47681956"
 Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
   
 ##  <a name="Credentials"></a> 認證  
@@ -35,7 +35,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -47,7 +47,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **查詢檢視** ：將維度、成員、成員屬性、量值和 KPI 從中繼資料瀏覽器拖曳到 [查詢] 窗格，以建立 MDX 查詢。 您可以在 [查詢] 窗格中直接編輯 MDX 文字。 請將導出成員從 [導出成員] 窗格拖曳到 [查詢] 窗格，以便定義其他資料集欄位。  
   
-     如需詳細資訊，請參閱 [Hyperion Essbase 查詢設計工具使用者介面 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696)。  
+     如需詳細資訊，請參閱 [Hyperion Essbase 查詢設計工具使用者介面 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696)。  
   
 -   從報表匯入現有的 MDX 查詢。 請使用 **[匯入查詢]** 按鈕來瀏覽到 .rdl 檔案，然後匯入查詢。 您可以從包含以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源為基礎之內嵌資料集的報表匯入查詢。 不支援直接從 .mdx 檔案匯入 MDX 查詢。  
   
@@ -104,9 +104,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> 備註  
- 這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
+ 這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
- 如需詳細資訊，請參閱＜ [使用 SQL Server 2005 Reporting Services 搭配 Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)＞。  
+ 如需詳細資訊，請參閱＜ [使用 SQL Server 2005 Reporting Services 搭配 Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)＞。  
   
   
 ##  <a name="HowTo"></a> 如何主題  
@@ -125,7 +125,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -134,10 +134,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供資料集查詢所產生之欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
- [使用 SQL Server 2005 Reporting Services 搭配 Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [使用 SQL Server 2005 Reporting Services 搭配 Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  提供有關使用這個資料延伸模組的詳細資訊。  
   
   

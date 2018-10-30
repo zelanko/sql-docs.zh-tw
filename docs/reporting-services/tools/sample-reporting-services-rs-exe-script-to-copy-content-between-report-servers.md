@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec2227925dcc8023a04c3993b2cecd32e89a4db4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b279c177a7e5b627c8ead3103cb2bd8ad6a58d78
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742946"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031437"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼
 
@@ -265,7 +265,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 > [!TIP]  
->  如需如何使用 Windows PowerShell 在 Windows Azure 虛擬機器上建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的詳細資訊，請參閱 [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/dn449661.aspx)(使用 PowerShell 建立具有原生模式報表伺服器的 Windows Azure VM)。  
+>  如需如何使用 Windows PowerShell 在 Windows Azure 虛擬機器上建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的詳細資訊，請參閱 [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/dn449661.aspx)(使用 PowerShell 建立具有原生模式報表伺服器的 Windows Azure VM)。  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 模式 – 'bi' 網站集合到 Windows Azure 虛擬機器上的原生模式伺服器  
  下列範例會移轉內容：  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b013748942c239c16a5265a2daa77a00936ff48a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da1568dfbdee3c772c583569d04d31cba65f6458
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028659"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>指令碼與 PowerShell 搭配 Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援透過指令碼進行各種開發和管理案例，包括 rs.exe 命令列公用程式、適用於 SharePoint 模式報表伺服器的 PowerShell Cmdlet，以及從原生和 SharePoint 模式的 PowerShell 運用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 物件模型。  
@@ -50,7 +50,7 @@ ms.locfileid: "47632536"
   
 -   [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
--   [透過原生模式報表伺服器使用 PowerShell 建立 Azure VM](http://msdn.microsoft.com/library/azure/dn449661.aspx)。  
+-   [透過原生模式報表伺服器使用 PowerShell 建立 Azure VM](https://msdn.microsoft.com/library/azure/dn449661.aspx)。  
   
 -   請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)中的「使用 PowerShell 存取 WMI 類別」一節。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47632536"
   
 -   [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
--   如需其他指令碼、應用程式及延伸模組範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+-   如需其他指令碼、應用程式及延伸模組範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="see-also"></a>另請參閱  
  [RS.exe 公用程式 &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

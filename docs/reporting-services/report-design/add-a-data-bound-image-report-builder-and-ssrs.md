@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a09992a4e4747550385e9c81c68a1fd9b8989ffb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a48d24c6250160fe5ade5a941c5591c358fc1908
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805386"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031679"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>加入資料繫結影像 (報表產生器及 SSRS)
   報表可以包含儲存在資料庫內之影像的參考。 這類影像稱為「資料繫結影像」。 出現在產品清單中產品名稱旁邊的圖片就是資料繫結影像的範例。  
@@ -49,6 +49,6 @@ ms.locfileid: "47805386"
  [影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [加入外部影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

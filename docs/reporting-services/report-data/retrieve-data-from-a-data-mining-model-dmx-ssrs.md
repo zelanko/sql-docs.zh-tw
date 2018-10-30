@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26c2a900a8e8e39ed6f7d89555dd040945bc57b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2754521a136369995bc0ba6ab93c2fe958dc9e5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031427"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>從資料採礦模型擷取資料 (DMX) (SSRS)
   若要在報表中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦模型內的資料，您必須定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源，並建立一或多個報表資料集。 當您建立資料來源定義時，您必須指定連接字串和認證，好讓您可以從用戶端電腦存取資料來源。  
   
- 您可以建立內嵌資料來源定義供單一報表使用，或是建立共用資料來源定義供多個報表使用。 本主題的程序描述如何建立內嵌資料來源。 如需共用資料來源的詳細資訊，請參閱[內嵌和共用資料連線或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 和[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
+ 您可以建立內嵌資料來源定義供單一報表使用，或是建立共用資料來源定義供多個報表使用。 本主題的程序描述如何建立內嵌資料來源。 如需共用資料來源的詳細資訊，請參閱[內嵌和共用資料連線或資料來源 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 和[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
  在您建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源之後，可以建立一或多個資料集。 您可針對每一個資料集使用資料採礦預測運算式 (DMX) 查詢設計工具，以建立一個指定欄位集合的 DMX 查詢。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47629496"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [資料連接、資料來源及連接字串 &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a590a8f0738a5717f7982cdd095d73bfcc18dc55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803756"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029207"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)
   您可以從對應資料區之 **[屬性]** 對話方塊的 **[數字]** 頁面選取一種格式，藉以格式化資料區中的數字和日期。  
@@ -44,7 +44,7 @@ ms.locfileid: "47803756"
   
 -   根據預設，數字會經過格式化以反映用戶端電腦上的文化特性設定。 使用格式字串來指定顯示數字的方式，因此不管檢視報表的人身在何處，格式都是一致的。  
   
--   在 **[數字]** 頁面上提供的格式為 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準數值格式字串的子集。 若要使用對話方塊中沒有顯示的自訂格式來格式化數字或日期，您可以針對數字或日期使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 如需有關自訂格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) ＞主題。  
+-   在 **[數字]** 頁面上提供的格式為 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準數值格式字串的子集。 若要使用對話方塊中沒有顯示的自訂格式來格式化數字或日期，您可以針對數字或日期使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 如需有關自訂格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) ＞主題。  
   
 -   如果已經指定自訂格式字串，其優先順序會高於文化專用的預設值。 例如，假設您設定 "#,###" 的自訂格式字串，將數字 1234 顯示為 1,234。 這對於美國的使用者與歐洲的使用者可能代表不同的意義。 在您指定自訂格式之前，請考慮您選擇的格式影響不同文化的使用者檢視報表的方式。  
   

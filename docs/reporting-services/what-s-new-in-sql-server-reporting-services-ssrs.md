@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "47639776"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029497"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -79,7 +79,7 @@ SQL Server vNext CTP 2.0 Reporting Services 不提供預覽。 安裝目前的�
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   您可以使用商標套件，以組織的標誌和色彩自訂 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 。  
   
-  如需自訂商標的詳細資訊，請參閱 [建立入口網站品牌形象](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
+  如需自訂商標的詳細資訊，請參閱 [建立入口網站品牌形象](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -87,7 +87,7 @@ SQL Server vNext CTP 2.0 Reporting Services 不提供預覽。 安裝目前的�
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- 如需詳細資訊，請參閱 [使用入口網站中的 KPI](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
+ 如需詳細資訊，請參閱 [使用入口網站中的 KPI](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
  ### <a name="mobile-reports"></a>行動報表
@@ -166,7 +166,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**檔案共用訂閱的共用認證**。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 檔案共用訂閱現在同時存有兩個工作流程：<br /><br /> 您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 系統管理員可以使用此版本的新功能，設定可供一到多個訂閱使用的單一檔案共用帳戶。 檔案共用帳戶是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式組態管理員的 [指定檔案共用帳戶] 中設定，而使用者接著要在訂閱組態頁面上選取 [使用檔案共用帳戶] 。<br /><br /> 針對目的檔案共用，使用特定認證設定個別訂閱。<br /><br /> 您也可以混用兩種方法，讓某些檔案共用訂閱使用中央檔案共用帳戶，而其他訂閱則使用特定認證。|原生模式|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- SSDT 的新版本包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的專案範本：[報表伺服器專案精靈] 與 [報表伺服器專案]。 如需下載 SSDT 的相關資訊，請參閱 [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542)(適用於 Visual Studio 2015 的 SQL Server Data Tools)。  
+ SSDT 的新版本包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的專案範本：[報表伺服器專案精靈] 與 [報表伺服器專案]。 如需下載 SSDT 的相關資訊，請參閱 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)(適用於 Visual Studio 2015 的 SQL Server Data Tools)。  
 
 ### <a name="report-builder-improvements"></a>報表產生器改進
 
@@ -186,14 +186,14 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Windows 8.1 DPI 縮放比例功能加強 (英文)](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
--   [高 DPI 與 Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
+-   [高 DPI 與 Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
 
 ## <a name="next-steps"></a>後續步驟
 
-[Analysis Services 的新功能](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Analysis Services 的新功能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [回溯相容性](reporting-services-backward-compatibility.md)   
-[SQL Server 2016 版本支援的 Reporting Services 功能](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[SQL Server 2016 版本支援的 Reporting Services 功能](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [升級和移轉 Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

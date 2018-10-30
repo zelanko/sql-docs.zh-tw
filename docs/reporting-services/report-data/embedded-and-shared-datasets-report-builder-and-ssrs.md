@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ed402cb5d781961eab44088a6ea43ffff9a6d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e019ee45eaffdd3a95bde64d284caa61e24788f3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713908"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028797"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>內嵌和共用資料集 (報表產生器及 SSRS)
   在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 資料集取決於包含外部資料來源之相關資訊的資料連接。 資料本身不會包含在報表定義中。 資料集包含查詢命令、欄位集合、參數、篩選，以及包含區分大小寫和定序的資料選項。 資料集有以下兩種不同的類型：  
@@ -57,11 +57,11 @@ ms.locfileid: "47713908"
  若要建立或編輯內嵌資料集，請使用 [報表資料] 窗格。 建立資料集之後，您可以在 **[資料集屬性]** 對話方塊中設定屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
- [資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

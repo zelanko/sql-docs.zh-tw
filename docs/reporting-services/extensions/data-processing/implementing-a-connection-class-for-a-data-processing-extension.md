@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0a9e5a7385239a68e23426e026ae477b7dccb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa0709d4bfde776221c5c5f234c1a3acb502406
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031807"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 Connection 類別
   **Connection** 物件代表資料庫連結或是類似的資源，而且是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之使用者的起點。 它代表資料庫伺服器的連接，不過任何具有類似行為的實體都可以公開成 **Connection**。  
@@ -44,7 +44,7 @@ ms.locfileid: "47700702"
 > [!NOTE]  
 >  若要隱含實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>，您必須實作 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 與 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 介面的成員。  
 >   
->  如需範例 **Connection** 類別的實作，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+>  如需範例 **Connection** 類別的實作，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 延伸模組](../../../reporting-services/extensions/reporting-services-extensions.md)   

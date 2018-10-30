@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032077"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
-  本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和報表設計師中建立的分頁報表，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
+  本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和報表設計師中建立的分頁報表中，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和原生模式|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和原生模式|  
   
  若要嘗試自行將參數加入報表，請參閱 [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)中建立的行動報表。  
     
@@ -159,7 +159,7 @@ ms.locfileid: "47681486"
   
 -   如果是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，不同的資料來源會支援不同的參數語法。 支援的範圍是查詢中依據位置或名稱識別的參數。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 中特定外部資料來源類型的主題。 在關聯式查詢設計工具中，您必須為篩選選取參數選項，才能建立參數化查詢。 如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)。  
   
--   針對依據多維資料來源 (例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase) 的查詢，您可以指定是否根據您在查詢設計工具中指定的篩選建立參數。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 中對應於資料延伸模組的查詢設計工具主題。  
+-   針對依據多維資料來源 (例如 Microsoft SQL Server Analysis Services、SAP NetWeaver BI 或 Hyperion Essbase) 的查詢，您可以指定是否根據您在查詢設計工具中指定的篩選建立參數。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 中對應於資料延伸模組的查詢設計工具主題。  
   
 ##  <a name="bkmk_Manage_Parameters"></a> 在發行的報表上管理參數  
  當您設計報表時，報表參數會儲存在報表定義中。 當您發行報表時，報表參數會儲存，並且與報表定義分開管理。  
@@ -233,13 +233,13 @@ ms.locfileid: "47681486"
   
 
 ##  <a name="bkmk_Related_Topics"></a> 相關章節  
- [設定 SSRS 報表參數 (測驗)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [設定 SSRS 報表參數 (測驗)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [報表範例 (報表產生器和 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [報表範例 (報表產生器和 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

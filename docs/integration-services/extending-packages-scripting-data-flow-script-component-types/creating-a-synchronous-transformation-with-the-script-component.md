@@ -17,12 +17,12 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36948de07892e24e0aabb1e4bb4ab948e58acfd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77b815ac5cf4a470570e458cd9702d64ebada5ce
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612276"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991271"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用指令碼元件建立同步轉換
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用轉換元件，以修改及分析從來源傳遞到目的地的資料。 具有同步輸出的轉換會處理通過該元件的每個輸入資料列。 具有非同步輸出的轉換會等到它收到所有的輸入資料列後，才完成其處理。 本主題討論同步轉換。 如需非同步轉換的資訊，請參閱[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -260,10 +260,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [了解同步和非同步轉換](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md   
- [使用指令碼元件建立非同步轉換](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md   
- [開發具有同步輸出的自訂轉換元件](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md  
-  
-  
-
-
+ [了解同步和非同步轉換](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
+ [使用指令碼元件建立非同步轉換](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [開發具有同步輸出的自訂轉換元件](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
+ 

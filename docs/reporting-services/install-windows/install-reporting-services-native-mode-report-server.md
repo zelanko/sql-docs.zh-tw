@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b70746e6bf466c3f6d5e7e22a4a09fd25a4e9fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676176"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029337"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
 
@@ -134,7 +134,7 @@ ms.locfileid: "47676176"
   
     -   `http://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **伺服器設定**：如果您打算使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能，請在 [伺服器設定] 頁面上設定 SQL Server Agent [自動] 啟動類型。   預設值是 [手動]。  
+6.  **伺服器組態**：如果您打算使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能，請在 [伺服器組態]  頁面上設定 SQL Server Agent [自動]  啟動類型。   預設值是 [手動]。  
   
 7.  在 [資料庫引擎組態]  頁面上加入 SQL Server 系統管理員。  
   
@@ -183,4 +183,4 @@ ms.locfileid: "47676176"
 [在原生模式報表伺服器上設定 SSL 連接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

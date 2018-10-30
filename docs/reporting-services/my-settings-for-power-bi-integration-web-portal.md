@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766b33607487a8dcc247402b16edd67ab86071ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a84d99a0b1da1257591714491424e6a634571f4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818966"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029627"
 ---
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Power BI 整合的我的設定 (入口網站)
 
@@ -42,8 +42,8 @@ ms.locfileid: "47818966"
 ## <a name="next-steps"></a>後續步驟
 
 [Power BI 報表伺服器整合](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
-[Power BI 儀表板的固定 Reporting Services 項目](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[將 Reporting Services 項目釘選到 Power BI 儀表板](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 [入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

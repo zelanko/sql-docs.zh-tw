@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b36a4528ac1a12ec1a59528e515530b1e009ba2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779662"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029567"
 ---
 # <a name="schedules"></a>[排程]
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供 **共用排程** 和 **報表特定排程** 來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。
@@ -54,7 +54,7 @@ ms.locfileid: "47779662"
  如需如何建立及管理排程的詳細資訊，請參閱＜ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)＞。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [Features Suppported by edition of SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)(SQL Server 2016 版本支援的功能)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [Features Suppported by edition of SQL Server 2016](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)(SQL Server 2016 版本支援的功能)。  
   
 ##  <a name="bkmk_compare"></a> 比較共用排程與報表特定排程  
  這兩種排程類型會產生相同的輸出：  
@@ -133,7 +133,7 @@ ms.locfileid: "47779662"
 ## <a name="see-also"></a>另請參閱  
  [建立、修改及刪除報表記錄中的快照集](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [快取多個報表 &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [快取共用資料集 &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  

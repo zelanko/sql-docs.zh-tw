@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dbd62baf7b4c9951357a5a206b42ebf87ee6661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426648f277ad5134a38dfa9cc7fb6948db6f918a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031637"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
 
@@ -32,9 +32,9 @@ ms.locfileid: "47824226"
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 。  
   
--   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫。  如需詳細資訊，請參閱 [Adventure Works 2014 Sample Databases](https://github.com/Microsoft/sql-server-samples/releases) (Adventure Works 2014 範例資料庫)。  
+-   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫。  如需詳細資訊，請參閱 [Adventure Works 2014 Sample Databases](https://github.com/Microsoft/sql-server-samples/releases)(Adventure Works 2014 範例資料庫)。  
   
- -   已安裝 "SQL Server Reporting Services" 元件的 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)，以便擁有報表設計師。    
+ -   已安裝 "SQL Server Reporting Services" 元件的[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) ，以便擁有 [報表設計師]。    
   
 另外，您也必須擁有從 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 資料庫擷取資料的唯讀權限。
 
@@ -57,4 +57,4 @@ ms.locfileid: "47824226"
 
 [Reporting Services 教學課程](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
