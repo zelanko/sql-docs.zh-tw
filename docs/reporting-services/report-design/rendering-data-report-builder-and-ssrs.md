@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06575e89f38905e496326c00bf174a7fe245c2f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4be086fc974ccb6338f75eed0cf10ccb0087edc0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617216"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031671"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>轉譯資料 (報表產生器及 SSRS)
   使用配置轉譯器 (例如 HTML、MHTML、Word、Excel、PDF 或影像) 時，資料及其組織會保持不變。 使用資料轉譯器格式 (例如，逗號分隔值 (CSV) 或 XML) 匯出時，不會轉譯任何視覺化配置元素。 轉譯報表時，CSV 和 XML 會將某些規則套用到報表主體及其內容。 這些規則決定了如何以這些格式轉譯資料。  
@@ -49,6 +49,6 @@ ms.locfileid: "47617216"
  [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Reporting Services 裝置資訊設定](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [Reporting Services 裝置資訊設定](https://go.microsoft.com/fwlink/?LinkId=102515)  
   
   

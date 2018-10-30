@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 803b1a72edb5a6c0a951eb9d199a4d7ff27526fe
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100289"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [常見的中繼資料查詢範例 (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [常見的中繼資料查詢範例 (SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

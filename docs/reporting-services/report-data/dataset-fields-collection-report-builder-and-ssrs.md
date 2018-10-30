@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853379"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031857"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
   資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。 範例包括銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像、空間資料及電子郵件地址。 在設計介面上，欄位會以報表項目 (如文字方塊、資料表和圖表) 中的運算式形式出現。  
@@ -76,9 +76,9 @@ ms.locfileid: "47853379"
   
 -   **資料來源** ：您所連接之資料來源類型版本所支援的資料類型。  
   
-     例如，適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的一般資料類型包括 **int**、 **datetime**和 **varchar**。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 所引進的資料類型新增了 **date**、 **time**、 **datetimetz**和 **datetime2**的支援。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362)。  
+     例如，適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的一般資料類型包括 **int**、 **datetime**和 **varchar**。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 所引進的資料類型新增了 **date**、 **time**、 **datetimetz**和 **datetime2**的支援。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362)。  
   
--   **資料提供者或資料處理延伸模組** ：當您連接到資料來源時，您所選取之資料處理延伸模組的資料提供者版本所支援的資料類型。 以 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 為基礎的資料提供者會使用 CLR 所支援的資料類型。 如需 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者資料類型的詳細資訊，請參閱 MSDN 上的 [資料類型對應 (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) 和 [使用基底類型](http://go.microsoft.com/fwlink/?LinkId=112177) 。  
+-   **資料提供者或資料處理延伸模組** ：當您連接到資料來源時，您所選取之資料處理延伸模組的資料提供者版本所支援的資料類型。 以 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 為基礎的資料提供者會使用 CLR 所支援的資料類型。 如需 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者資料類型的詳細資訊，請參閱 MSDN 上的 [資料類型對應 (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) 和 [使用基底類型](https://go.microsoft.com/fwlink/?LinkId=112177) 。  
   
      例如， [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 所支援的一般資料類型包括 **Int32** 和 **String**。 **DateTime** 結構支援日曆上的日期和時間。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 針對具有時區時差的日期引進了 **DateTimeOffset** 結構的支援。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47853379"
     |**DateTimeTZ**|**DateTimeOffset**|包含時區時差的日期和時間|  
     |**DateTime2**|**DateTime**|包含毫秒的日期和時間|  
   
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型的詳細資訊，請參閱 [資料類型 (Database Engine)](http://go.microsoft.com/fwlink/?linkid=98362) 和 [日期和時間資料類型與函數 (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360)。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫類型的詳細資訊，請參閱 [資料類型 (Database Engine)](https://go.microsoft.com/fwlink/?linkid=98362) 和 [日期和時間資料類型與函數 (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360)。  
   
  如需從運算式加入資料集欄位之參考的詳細資訊，請參閱[運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47853379"
   
   
 ## <a name="see-also"></a>另請參閱  
- [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [資料集屬性對話方塊、欄位 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

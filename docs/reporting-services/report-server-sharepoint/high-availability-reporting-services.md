@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d310371ce9b5f564b6cd48929bd3da39f68d828a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fb4216a0322a0d3f077f237b2ece3cdef7958b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696185"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030757"
 ---
 # <a name="high-availability-in-sql-server-reporting-services"></a>SQL Server Reporting Services 的高可用性
 
@@ -30,4 +30,4 @@ ms.locfileid: "47696185"
   
  報表伺服器 Web 服務與 Windows 服務會緊密整合而且一起當做單一報表伺服器執行個體執行。 您無法個別針對其中一項服務設定可用性。  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

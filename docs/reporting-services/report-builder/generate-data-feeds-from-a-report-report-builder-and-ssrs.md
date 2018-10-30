@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba4a53a667177fd4ecf7ad74198f543ad83524f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afdbd5657e40ee8061067f0dc3672120f102b9f1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729686"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020842"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
 
@@ -84,4 +84,4 @@ ms.locfileid: "47729686"
 
 [匯出報表](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

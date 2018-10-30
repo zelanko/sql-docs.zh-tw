@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776556"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150169"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776556"
 1.  卸離資料庫。 如需詳細資訊，請參閱 [卸離資料庫](../../relational-databases/databases/detach-a-database.md)。  
   
 2.  在 Windows 檔案總管或 Windows 的 [命令提示字元] 視窗中，將卸離的資料庫檔案和記錄檔移動到新位置。  
-  
-    > [!NOTE]  
-    >  若要移動單一檔案的資料庫，且檔案小到可以容納在電子郵件中，您可以利用電子郵件來移動。  
   
      即使您想要建立新的記錄檔，也應該一併移動記錄檔。 在某些情況下，重新附加資料庫需要其現有的記錄檔。 因此，一律保留所有卸離的記錄檔，直到資料庫在沒有這些檔案的情形下成功附加為止。  
   

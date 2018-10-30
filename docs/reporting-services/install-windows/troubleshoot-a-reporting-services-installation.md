@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf5f72629469de95ee5d6ce171fe26fbb5b747b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020322"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>針對 Reporting Services 安裝進行疑難排解
 
@@ -20,7 +20,7 @@ ms.locfileid: "47608347"
   
  如需與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關的其他錯誤和問題資訊，請參閱[針對 SSRS 問題和錯誤進行疑難排解](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
   
- 如果您碰到的問題在版本資訊中有描述，請檢閱 [線上版本資訊](http://go.microsoft.com/fwlink/?linkid=236893)。  
+ 如果您碰到的問題在版本資訊中有描述，請檢閱 [線上版本資訊](https://go.microsoft.com/fwlink/?linkid=236893)。  
   
 ##  <a name="bkmk_setuplogs"></a> 檢查安裝記錄檔  
  安裝錯誤會記錄在 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 資料夾的記錄檔中。 每當您執行安裝程式時，都會建立一個子資料夾， 此子資料夾的名稱就是您執行安裝程式的時間和日期。 如需如何檢視安裝記錄檔的指示，請參閱 [檢視與讀取 SQL Server 安裝記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  

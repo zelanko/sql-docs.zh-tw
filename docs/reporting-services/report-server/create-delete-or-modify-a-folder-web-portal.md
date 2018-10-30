@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f7e2565f5c2eaa493fe371b0f0a590618e06f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73bc8332e4a0c6d86e9ef57b5fc6c94d39cbafae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686026"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021653"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>建立、刪除或修改資料夾 (Web 入口網站)
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
   
 #### <a name="to-create-a-folder"></a>若要建立資料夾  
   
-1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動[報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在入口網站中，選取 [新增] 功能表下拉式清單下的 [資料夾]。 或者，若要在現有資料夾下建立資料夾，請巡覽到該資料夾，然後選取 [新增] 功能表下拉式清單下的 [資料夾]。  
   

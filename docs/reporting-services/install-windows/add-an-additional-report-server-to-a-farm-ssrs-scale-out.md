@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b5e42465bd2a0c4661709dd1a17a2b7de8c6b3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 530b37d346235f829c0ac1e8ccacd4cbcfb157cc
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051200"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展)
 
@@ -80,4 +81,4 @@ ms.locfileid: "47830836"
 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 27a2878ecd858d4cf9d749273ea40c1a8aceb95b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c391d200e5e992572b27e8d99c92498e0ba297e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703166"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031877"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。  
@@ -100,7 +100,7 @@ ms.locfileid: "47703166"
 |需求|Description|  
 |-----------------|-----------------|  
 |[權限]|您必須擁有報表存取權。 在訂閱報表之前，必須擁有檢視報表的權限。<br /><br /> 對於原生模式報表伺服器，下列角色指派會影響訂閱︰<br /><br /> -   「管理個別訂閱」工作可以讓使用者建立、修改及刪除特定報表的訂閱。 在預先定義的角色中，這項工作屬於瀏覽器和報表產生器角色的一部分。 包含這個工作的角色指派，允許使用者只管理自己所建立的訂閱。<br />-   「管理所有訂閱」工作可以讓使用者存取和修改所有的訂閱。 要建立資料驅動訂閱需要這個工作。 在預先定義的角色中，只有內容管理員角色包含這項工作。|  
-|預存認證|若要建立訂閱，報表必須使用預存認證或不使用認證，才能在執行階段擷取資料。 您無法訂閱設定為使用目前使用者之模擬或委派認證來連接至外部資料來源的報表。 預存認證可以是 Windows 帳戶或資料庫使用者帳戶。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必須擁有檢視報表和建立個別訂閱的權限。 報表伺服器必須啟用 **[排程的事件和報表傳遞]** 。 如需詳細資訊，請參閱 [old_建立及管理原生模式報表伺服器的訂閱](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。|  
+|預存認證|若要建立訂閱，報表必須使用預存認證或不使用認證，才能在執行階段擷取資料。 您無法訂閱設定為使用目前使用者之模擬或委派認證來連接至外部資料來源的報表。 預存認證可以是 Windows 帳戶或資料庫使用者帳戶。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必須擁有檢視報表和建立個別訂閱的權限。 報表伺服器必須啟用 **[排程的事件和報表傳遞]** 。 如需詳細資訊，請參閱 [old_建立及管理原生模式報表伺服器的訂閱](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。|  
 |報表中的使用者相依值|只有在標準訂閱中才可以建立報表的訂閱，將使用者帳戶資訊併入到篩選中，或是當做出現在報表中的文字來併入。 在報表中，使用者帳戶名稱是透過解析為目前使用者的 **User!UserID** 運算式來指定。 在您建立訂閱時，會將建立訂閱的使用者視為目前的使用者。|  
 |沒有模型項目安全性|如果「報表產生器」報表是使用模型當做資料來源，而該模型包含模型項目安全性設定，您便無法訂閱此報表。 這項限制中只包含使用模型項目安全性的報表。|  
 |參數值|如果報表使用參數，則參數值必須在報表本身、或您所定義的訂閱中指定。 如果在報表中定義了預設值，您就可以設定參數值以使用預設值。|  

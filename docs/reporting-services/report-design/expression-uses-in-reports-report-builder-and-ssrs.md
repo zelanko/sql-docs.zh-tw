@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733166"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100309"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，整個報表定義中都會使用運算式來指定或計算參數、查詢、篩選、報表項目屬性、群組和排序定義、文字方塊屬性、書籤、文件引導模式、動態頁首和頁尾內容、影像及動態資料來源定義的值。 本主題提供的範例將說明您可以在許多地方使用運算式來將報表的內容或外觀差異化。 這份清單並不是完整的清單。 您可以在顯示運算式 (**fx**) 按鈕的對話方塊中或在顯示 **\<運算式...>** 的下拉式清單中，為任何屬性設定運算式。  
@@ -53,7 +53,7 @@ ms.locfileid: "47733166"
 |-------------------|---------------------------------------|--------------------|  
 |計算資料集的彙總值。|文字方塊內的預留位置 Value 屬性。 使用 **[預留位置屬性對話方塊、一般]**。|`=First(Fields!Sales.Value,"DataSet1")`|  
 |串連相同文字方塊內的文字和運算式。|放置在頁首或頁尾之文字方塊內的預留位置值。 使用 **[預留位置屬性對話方塊、一般]**。|`="This report began processing at " & Globals!ExecutionTime`|  
-|計算不同範圍內資料集的彙總值。|放置在 Tablix 群組之文字方塊內的預留位置值。 使用 **[預留位置屬性對話方塊、一般]**。|`=Max(Fields!Total.Value,"DataSet2)`|  
+|計算不同範圍內資料集的彙總值。|放置在 Tablix 群組之文字方塊內的預留位置值。 使用 **[預留位置屬性對話方塊、一般]**。|`=Max(Fields!Total.Value,"DataSet2")`|  
 |根據值格式化文字方塊內的資料。|Tablix 的詳細資料資料列中，文字方塊內的預留位置色彩。 使用 **[文字方塊屬性對話方塊、字型]**。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |計算值一次，以便在整個報表中參考。|報表變數的值。 使用 **[報表屬性對話方塊、變數]**。|`=Variables!MyCalculation.Value`|  
 |從資料集中併入一個以上欄位的特定值。|Tablix 中群組的篩選方程式。 使用 **[Tablix 屬性對話方塊、篩選]**。|選取 **[布林值]** 做為資料類型。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

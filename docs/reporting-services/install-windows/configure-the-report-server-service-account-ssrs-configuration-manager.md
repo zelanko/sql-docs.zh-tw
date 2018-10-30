@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d343831a702a3301cdff7b6c18bcd39318cd6241
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021332"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會實作成單一服務，其中包含報表伺服器 Web 服務、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，以及用於排程報表處理和訂閱傳遞的背景處理應用程式。 本主題將說明如何在一開始設定服務帳戶，以及如何使用 Reporting Services 組態工具來修改此帳戶或密碼。  
@@ -88,7 +88,7 @@ ms.locfileid: "47603006"
   
 -   《SQL Server 線上叢書》中的[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
   
--   MSDN 上的《[Services and Service Accounts Security Planning Guide](http://go.microsoft.com/fwlink/?LinkId=69155) 》。  
+-   MSDN 上的《[Services and Service Accounts Security Planning Guide](https://go.microsoft.com/fwlink/?LinkId=69155) 》。  
   
 ## <a name="updating-an-expired-password"></a>更新已過期的密碼  
  如果報表伺服器服務是以網域帳戶執行，而且在您可以於 Reporting Services 組態管理員內更新密碼以前，密碼就已經過期，則要先指定新的密碼，才能啟動該服務。  

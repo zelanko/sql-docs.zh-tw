@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e18c097156162ce344909caf41912293a8040e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1ec33539e98a391c6de9cd61b5d2634c5f12187
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604546"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031147"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio (SSRS) 中的 Reporting Services
   報表伺服器管理員可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行下列作業：  
@@ -42,6 +42,6 @@ ms.locfileid: "47604546"
   
 ## <a name="see-also"></a>另請參閱  
  [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [SQL Server Management Studio 簡介](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [SQL Server Management Studio 簡介](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

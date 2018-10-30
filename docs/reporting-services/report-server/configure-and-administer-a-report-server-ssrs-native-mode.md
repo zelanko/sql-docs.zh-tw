@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5751b3b8c6a2c709a2793374c4a81f6224a7ea61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb493e4fbdbe32112c55b48d22642f4bb4836025
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031317"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>設定和管理報表伺服器 (SSRS 原生模式)
   本主題摘要列出您可以用來設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的方法， 也包含了主題清單，用來解釋如何設定特定的元件、功能或伺服器功能。 若要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，您可以：  
@@ -47,7 +47,7 @@ ms.locfileid: "47774146"
  [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  描述如何修改報表伺服器用來連接到報表伺服器資料庫的連接字串。  
   
- [為電子郵件傳遞設定報表伺服器 (SSRS 設定管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [為電子郵件傳遞設定報表伺服器 (SSRS 設定管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  描述如何設定報表伺服器，以支援電子郵件報表散發。  
   
  [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  

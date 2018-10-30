@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47da73089d622ca0dffc6f9cb9d92a1a1c8244dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1be128dd301e5f545d1e008c8710c6e738063595
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020463"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共用資料集設計檢視 (報表產生器)
   在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 共用資料集是在報表伺服器上發行，可供多個報表使用。 您可以建立資料集，以與其他人共用。 在 [Shared Dataset Design (共用資料集設計)] 視窗中，您可以選取共用資料來源、指定共用資料集的屬性，以及在查詢設計工具中建立查詢。  
@@ -31,7 +31,7 @@ ms.locfileid: "47800146"
 > [!NOTE]  
 >  共用資料集必須以共用資料來源為基礎。 如果您需要的資料來源無法使用，則需要在報表伺服器上建立一個資料來源。 如需詳細資訊，請參閱[建立、修改和刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 如需詳細資訊，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)＞。  
+ 如需詳細資訊，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)＞。  
   
 ### <a name="dataset"></a>資料集  
  使用 **[設定選項]** 按鈕可設定共用資料集屬性。 這些選項包括：  

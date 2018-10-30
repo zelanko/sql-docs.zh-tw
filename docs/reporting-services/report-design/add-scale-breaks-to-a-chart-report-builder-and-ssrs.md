@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4790e31cae973c2eaa16edb112fbd053217ba20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66dbdaad931b3d6978669a140f4d76dc3cd4ad49
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692326"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029257"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>將刻度斷層加入至圖表 (報表產生器及 SSRS)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47692326"
 > [!NOTE]  
 >  您無法指定刻度斷層在圖表上的放置位置。 圖表會根據資料集中的值，自行計算資料範圍之間是否有足夠的分隔，以在執行階段於值軸 (Y 軸) 上繪製刻度斷層。  
   
- 具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)：  
+ 具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,6 +49,6 @@ ms.locfileid: "47692326"
 
 [圖表](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [格式化圖表](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[軸屬性對話方塊、軸選項](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[軸屬性對話方塊、軸選項](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

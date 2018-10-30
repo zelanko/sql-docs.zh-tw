@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adebe82c29aff88167bd5c8e3cfa02f3f35785c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784866"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021582"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -107,4 +107,4 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
 [入口網站](../reporting-services/web-portal-ssrs-native-mode.md)  
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

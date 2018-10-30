@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5662157cebcc5cf66c8b30dee24028d24d58568a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031607"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>設定報表伺服器上的 Windows 驗證
   依預設， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會接受可指定交涉驗證或 NTLM 驗證的要求。 如果您的部署包括了使用這些安全性提供者的用戶端應用程式和瀏覽器，您可以使用預設值，而不需要進行額外的組態設定。 如果您想要針對 Windows 整合式安全性使用不同的安全性提供者 (例如，如果您想要直接使用 Kerberos)，或是您修改了預設值而且想要還原原始設定，您可以使用本主題的資訊來指定報表伺服器上的驗證設定。  
@@ -130,7 +130,7 @@ ms.locfileid: "47770896"
   
 -   使用網域使用者帳戶為報表伺服器服務註冊 SPN。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
--   變更服務帳戶，以便在類似網路服務的內建帳戶下執行。 內建帳戶會將 HTTP SPN 對應到主機 SPN (當您將電腦加入網路時會加以定義)。 如需詳細資訊，請參閱[設定服務帳戶 &#40;SSRS 設定管理員&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)。  
+-   變更服務帳戶，以便在類似網路服務的內建帳戶下執行。 內建帳戶會將 HTTP SPN 對應到主機 SPN (當您將電腦加入網路時會加以定義)。 如需詳細資訊，請參閱[設定服務帳戶 &#40;SSRS 設定管理員&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)。  
   
 -   使用 NTLM。 當 Kerberos 驗證失敗時，NTLM 通常會正常運作。 若要使用 NTLM，請從 RSReportServer.config 檔案中移除 **RSWindowsNegotiate** ，並確認只有指定 **RSWindowsNTLM** 。 如果您選擇這個方法，您可以繼續針對報表伺服器服務使用網域使用者帳戶，即使您未針對此帳戶定義 SPN。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "47770896"
   
 -   將此十進位值轉換成十六進位格式的一個選項是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 計算機。 Windows 計算機支援可顯示 'Dec' 選項和 'Hex' 選項的幾個模式。 選取 'Dec' 選項、貼上或輸入您在記錄檔中找到的十進位值，然後選取 'Hex' 選項。  
   
--   然後參考 [User-Account-Control Attribute](http://go.microsoft.com/fwlink/?LinkId=183366) (User-Account-Control 屬性) 主題來衍生服務帳戶的屬性。  
+-   然後參考 [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) (User-Account-Control 屬性) 主題來衍生服務帳戶的屬性。  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Active Directory 中針對 ssRSnoversion 服務帳戶所設定的 SPN。  
  若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務追蹤記錄檔中記錄 SPN，您可以暫時啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 擴充保護功能。  
@@ -202,7 +202,7 @@ ms.locfileid: "47770896"
   
 ## <a name="external-resources"></a>外部資源  
   
--   如需 Kerberos 和報表伺服器的其他資訊，請參閱 [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)(搭配 Kerberos 使用 SharePoint、Reporting Services 與 PerformancePoint 監控伺服器部署商業智慧方案)。  
+-   如需 Kerberos 和報表伺服器的其他資訊，請參閱 [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)(搭配 Kerberos 使用 SharePoint、Reporting Services 與 PerformancePoint 監控伺服器部署商業智慧方案)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   
@@ -210,6 +210,6 @@ ms.locfileid: "47770896"
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [設定報表伺服器上的基本驗證](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [設定報表伺服器上的自訂或表單驗證](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Reporting Services 的驗證擴充保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

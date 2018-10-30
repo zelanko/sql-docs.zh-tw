@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3198eef5cb9f4e405b1ee56f06de6301fa0e994
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5949cac74f857b6a696faa51c58e614176824a5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021932"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在報表中內嵌影像 (報表產生器及 SSRS)
   報表可以包含內嵌影像。 內嵌影像可確保影像隨時可供報表使用，但是可能會影響報表定義 (定義報表的檔案) 的大小。 內嵌在報表中的影像會列在 [報表資料] 窗格中。  
@@ -62,7 +62,7 @@ ms.locfileid: "47620516"
   
 ## <a name="see-also"></a>另請參閱  
  [影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [新增資料繫結影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
- [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [加入資料繫結影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

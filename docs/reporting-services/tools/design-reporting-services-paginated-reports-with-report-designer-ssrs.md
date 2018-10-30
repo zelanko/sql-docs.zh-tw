@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906ff754691e70bbaf9d3ccc641906411de4a76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031907"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
 使用報表設計師建立完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表和報表方案。 報表設計師提供一個圖形介面，您可以在此介面中定義資料來源、資料集與查詢、資料區域與欄位的報表配置位置，以及定義互動式功能，例如搭配使用的參數和報表集。  
 
-報表設計師是  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](建立商業智慧方案的 Microsoft Visual Studio 環境) 的功能。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
+報表設計師是  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](建立商業智慧方案的 Microsoft Visual Studio 環境) 的功能。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。 
   
 ## <a name="benefits-of-report-projects"></a>報表專案的優點  
 報表專案是做為報表定義與資源的容器。 使用專案以執行下列動作：  
@@ -69,7 +69,7 @@ ms.locfileid: "47739226"
   
 -   **加入現有項目。** 現有的報表定義 (.rdl) 隨即會在報表設計師中開啟。 在舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中開啟報表或專案可能會自動將專案升級成與目前版本相容，以及將報表升級成目前的結構描述。 如需詳細資訊，請參閱 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)。  
   
--   **匯入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 報表。** 從 Access 資料庫 (.mdb、.accdb) 或專案 (.adp) 檔案匯入所有報表。 報表設計師會將資料庫或專案檔案中的每一份報表，轉換成 RDL，並將其儲存在報表專案中。 並非所有 Access 報表的功能都會傳送至報表定義 (.rdl) 檔案。 如需詳細資訊，請參閱[從 Microsoft Access 匯入報表 &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 和[支援的 Access 報表功能 &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)。  
+-   **匯入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 報表。** 從 Access 資料庫 (.mdb、.accdb) 或專案 (.adp) 檔案匯入所有報表。 報表設計師會將資料庫或專案檔案中的每一份報表，轉換成 RDL，並將其儲存在報表專案中。 並非所有 Access 報表的功能都會傳送至報表定義 (.rdl) 檔案。 如需詳細資訊，請參閱[從 Microsoft Access 匯入報表 &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) 和[支援的 Access 報表功能 &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)。  
   
     > [!NOTE]  
     >  您必須將 Access 2002 或更新版本安裝在安裝報表設計師的相同電腦上，才能使用此匯入功能。 匯入報表時，必須能夠使用 Access 報表的資料來源。  
@@ -180,9 +180,9 @@ ms.locfileid: "47739226"
 
 ## <a name="next-steps"></a>後續步驟
 
-[下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[下載 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [SQL Server Data Tools 中的 reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [查詢設計工具](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [SQL Server 資料工具中的部署和版本支援](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

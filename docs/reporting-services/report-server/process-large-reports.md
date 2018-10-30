@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651876"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020182"
 ---
 # <a name="process-large-reports"></a>處理大型報表
   大型報表會造成一定的處理挑戰，若要正確執行，就需要特定的組態。 除非將大型報表設定成支援分頁，否則不應視需要執行大型報表。  
@@ -31,7 +31,7 @@ ms.locfileid: "47651876"
   
  針對包含動態資料的報表，每次執行報表之後，報表大小有可能會大幅變更。 在此情況下，您應監視資料來源以判斷資料的變動性對您的報表有何影響，以及您是否必須遵循本主題中所指定的步驟。  
   
- 如需如何診斷逾時錯誤和記憶體不足錯誤的詳細資訊和提示，請參閱 blogs.msdn.com 上的 [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) (如何在報表伺服器中執行報表時診斷錯誤) 文章。  
+ 如需如何診斷逾時錯誤和記憶體不足錯誤的詳細資訊和提示，請參閱 blogs.msdn.com 上的 [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) (如何在報表伺服器中執行報表時診斷錯誤) 文章。  
   
 ## <a name="configuration-recommendations"></a>組態建議  
  報表執行、報表轉譯與報表存取的建議包括下列項目：  

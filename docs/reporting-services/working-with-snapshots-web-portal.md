@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039d1bc435103800151a29c790f19584f3721603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c0ab1cae8f3b99cb148096e272a1fd38f91ca31
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021022"
 ---
 # <a name="working-with-snapshots-web-portal"></a>使用快照集 (入口網站)
 
@@ -76,4 +76,4 @@ ms.locfileid: "47595736"
 [使用分頁報表](working-with-paginated-reports-web-portal.md)  
 [使用共用資料集](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

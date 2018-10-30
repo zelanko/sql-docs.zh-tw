@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b409c88b60c774c37963b824e8f300231f9ce31d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e10a1cd7365825cfdee7d00552092f6d8023c4be
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021468"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>在 SharePoint 啟動報表伺服器檔案同步處理功能
 
@@ -49,9 +49,9 @@ ms.locfileid: "47659886"
 
 ## <a name="see-also"></a>另請參閱
 
- [針對報表組件進行疑難排解 (報表產生器及 SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [針對報表組件進行疑難排解 (報表產生器及 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [在 SharePoint 中啟用報表伺服器和 Power View 整合功能](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
  [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

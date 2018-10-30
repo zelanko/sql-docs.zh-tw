@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b5d4e324ba9911b78bab9a94e38a479d1cad5c27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 29b5ba7b28781351232ba1a51ad20b6b84fbfce7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050860"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>設定 Reporting Services 服務應用程式的電子郵件
 
@@ -85,4 +86,4 @@ ms.locfileid: "47812516"
     ```  
   
   
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

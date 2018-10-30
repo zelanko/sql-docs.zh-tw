@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c1280abde041d47e43fc1452f675e882e17ca68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0f09bb0b1a9e4abbcd462eb515f6832853d511e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021732"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>管理訂閱擁有者及執行訂閱
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "47624451"
 ### <a name="permissions"></a>[權限]  
  本節針對原生及 SharePoint 模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，摘要說明使用每個方法所需的權限等級。 本主題中的指令碼使用下列 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 方法：  
   
--   [ReportingService2010.ListSubscriptions 方法](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [ReportingService2010.ListSubscriptions 方法](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [ReportingService2010.ChangeSubscriptionOwner 方法](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [ReportingService2010.ChangeSubscriptionOwner 方法](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   觸發要執行的特訂訂閱時，才需要在最後一個指令碼中使用 [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) (機器翻譯) 方法。 若您不打算使用該指令碼，可以跳過 FireEvent 方法所需的權限需求。  
+-   觸發要執行的特訂訂閱時，才需要在最後一個指令碼中使用 [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) (機器翻譯) 方法。 若您不打算使用該指令碼，可以跳過 FireEvent 方法所需的權限需求。  
   
  **原生模式：**  
   
--   列出訂閱：(報表的 [ReportOperation Enumeration](http://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) ，且使用者是訂閱擁有者)，或是 ReadAnySubscription。  
+-   列出訂閱：(報表的 [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) ，且使用者是訂閱擁有者)，或是 ReadAnySubscription。  
   
 -   變更訂閱：使用者必須是 BUILTIN\Administrators 群組的成員  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47624451"
   
  **SharePoint 模式：**  
   
--   列出訂閱：ManageAlerts 或 (報表的 [CreateAlerts](http://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) ，且使用者是訂閱擁有者，同時訂閱為定時的訂閱)。  
+-   列出訂閱：ManageAlerts 或 (報表的 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) ，且使用者是訂閱擁有者，同時訂閱為定時的訂閱)。  
   
 -   變更訂閱：ManageWeb  
   
@@ -133,7 +133,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  若要以 SharePoint 模式確認網站 URL，請使用 SharePoint Cmdlet **Get-SPSite**。 如需詳細資訊，請參閱 [Get-SPSite](http://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx)。  
+>  若要以 SharePoint 模式確認網站 URL，請使用 SharePoint Cmdlet **Get-SPSite**。 如需詳細資訊，請參閱 [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx)。  
   
 ##  <a name="bkmk_list_all_one_user"></a> 指令碼：列出特定使用者擁有的所有訂閱  
  此指令碼會列出特定使用者所擁有的所有訂閱。 您可以使用此指令碼測試您的連接，或是確認其他指令碼中使用的報表路徑及訂閱識別碼。 當您組織中有人離開而您想要確認該人員擁有那些訂閱，好讓您變更擁有者或刪除訂閱時，此指令碼相當實用。  
@@ -381,12 +381,12 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ## <a name="see-also"></a>另請參閱  
  
-[ReportingService2010.ListSubscriptions 方法](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+[ReportingService2010.ListSubscriptions 方法](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 
-[ReportingService2010.ChangeSubscriptionOwner 方法](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+[ReportingService2010.ChangeSubscriptionOwner 方法](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
 
-[ReportingService2010.ListChildren](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+[ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
 
-[ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+[ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   

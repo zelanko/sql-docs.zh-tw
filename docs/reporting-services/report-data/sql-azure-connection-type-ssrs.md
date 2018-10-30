@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7737d99d37959e9670fb2c7473b20b715d576da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a18c690cc9d62310f25eafa1b323abae80c7bf9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790036"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021712"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 是運用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術所建立的雲端式主控關聯式資料庫。 若要在報表中包含來自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料，您必須具有以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料延伸模組為基礎。 使用此資料來源類型可連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]並從中擷取資料。  
@@ -40,7 +40,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  此外，您會使用 **[資料來源屬性]** 對話方塊提供認證，例如使用者名稱和密碼。 `User Id` 和 `Password` 選項會自動附加至連接字串；您不需要隨連接字串輸入這些選項。  
   
- 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需連接字串範例的詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
 ##  <a name="Credentials"></a> 認證  
  不支援 Windows 驗證 (整合式安全性)。 如果您嘗試使用 Windows 驗證連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，就會發生錯誤。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 僅支援 SQL Server 驗證 (使用者名稱和密碼)，而且使用者必須在每次連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]時提供認證 (登入和密碼)。  
@@ -51,9 +51,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   使用預存的使用者名稱和密碼。 為了交涉在資料庫包含的報表資料不同於報表伺服器時發生的雙躍點，請選取使用認證做為 Windows 認證的選項。 您也可以選擇在連接到資料來源之後模擬已驗證的使用者。  
   
--   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+-   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -75,7 +75,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  如需詳細資訊，請參閱[關聯式查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的圖形化查詢設計工具會為群組和彙總提供內建的支援，幫助您撰寫僅擷取摘要資料的查詢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言功能包括 GROUP BY 子句、DISTINCT 關鍵字以及如 SUM 和 COUNT 等彙總。 以文字為基礎的查詢設計工具提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言的完整支援，包括群組和彙總。 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 使用的圖形化查詢設計工具會為群組和彙總提供內建的支援，幫助您撰寫僅擷取摘要資料的查詢。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言功能包括 GROUP BY 子句、DISTINCT 關鍵字以及如 SUM 和 COUNT 等彙總。 以文字為基礎的查詢設計工具提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言的完整支援，包括群組和彙總。 如需 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](../../t-sql/transact-sql-reference-database-engine.md)。  
   
 ###  <a name="QueryText"></a> 使用 Text 查詢類型  
  在以文字為基礎的查詢設計工具中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來定義資料集內的資料。 例如，下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢會選取所有行銷助理員工的名字：  
@@ -144,7 +144,7 @@ WHERE EmployeeID = (@EmpID)
  如需詳細資訊，請參閱 [ODBC 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)。  
   
 ###### <a name="platform-and-version-information"></a>平台和版本資訊  
- 如需平台和版本支援的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ 線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 如需平台和版本支援的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ 線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
   
 ##  <a name="HowTo"></a> 如何主題  
@@ -163,7 +163,7 @@ WHERE EmployeeID = (@EmpID)
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -172,7 +172,7 @@ WHERE EmployeeID = (@EmpID)
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
   
@@ -181,6 +181,6 @@ WHERE EmployeeID = (@EmpID)
  [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
- 更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多問題嗎？ [試試 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

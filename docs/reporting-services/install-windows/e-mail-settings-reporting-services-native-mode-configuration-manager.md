@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccbf7b6e51cd3d58c309dd98ba0041049b76e760
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725076"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020392"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
 Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。
@@ -25,7 +25,7 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 
 ## <a name="configuration-requirements"></a>組態需求
 
-- 報表伺服器電子郵件傳遞是在 Collaboration Data Objects (CDO) 上實作，並需要本機或遠端 Simple Mail Transfer Protocol (SMTP) 伺服器或 SMTP 轉送器。 並非所有的 Windows 作業系統都支援 SMTP。 如果您是使用 Itanium 型版本的 Windows Server 2008，SMTP 將不受支援。 如需有關透過 CDO 提供之組態選項的詳細資訊，請參閱 MSDN 上的 [組態 CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) 。
+- 報表伺服器電子郵件傳遞是在 Collaboration Data Objects (CDO) 上實作，並需要本機或遠端 Simple Mail Transfer Protocol (SMTP) 伺服器或 SMTP 轉送器。 並非所有的 Windows 作業系統都支援 SMTP。 如果您是使用 Itanium 型版本的 Windows Server 2008，SMTP 將不受支援。 如需有關透過 CDO 提供之組態選項的詳細資訊，請參閱 MSDN 上的 [組態 CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) 。
 
 已設定驗證的帳戶在 SMTP 伺服器上必須擁有傳送郵件的權限。
 

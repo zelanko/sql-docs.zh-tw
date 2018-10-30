@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645166"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021052"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，[地圖精靈] 與 [地圖圖層精靈] 會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -128,13 +128,13 @@ ms.locfileid: "47645166"
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的報表設計師中，將 .shp 檔和 .dbf 檔同時加入至報表專案，然後將 .shp 檔案的名稱指定為空間資料來源。  
   
 ###  <a name="GetShapefiles"></a> 哪裡可以取得 ESRI 形狀檔？  
- ESRI 形狀檔可上網取得。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](http://go.microsoft.com/fwlink/?linkid=178814)。  
+ ESRI 形狀檔可上網取得。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](https://go.microsoft.com/fwlink/?linkid=178814)。  
   
 ###  <a name="SqlServerSpatial"></a> 何謂 SQL Server 空間查詢？  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間查詢是一種資料集查詢，可以指定來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫之 SQLGeometry 或 SQLGeography 資料類型的資料。  
   
 > [!NOTE]  
->  當您在精靈中定義資料來源時，您會在 [設計查詢] 頁面看到不同的查詢設計工具，端視您所連接的資料來源類型而定。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
+>  當您在精靈中定義資料來源時，您會在 [設計查詢] 頁面看到不同的查詢設計工具，端視您所連接的資料來源類型而定。 如需詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
   
  當您在查詢設計工具中執行查詢時，結果集會顯示一個資料行，其中包含顯示為文字的空間資料。 例如，一個資料列可能包含單一點的空間資料，而下一個資料列則可能包含定義一組點的空間資料。 每個資料列都會變成一個地圖元素。 您可以將每個地圖元素的顯示變更為個別的單位。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "47645166"
   
 -   **混合：** 顯示 **[路段圖]** 和 **[空照圖]** 檢視的組合。  
   
- 如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](http://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371)。  
+ 如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](https://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
  若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱 [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 和 [規劃地圖報表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   

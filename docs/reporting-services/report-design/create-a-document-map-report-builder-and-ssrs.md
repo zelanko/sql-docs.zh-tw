@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cfe1e96a0eb50723596b4bfbea5841a91b5d4233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658916"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020232"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
 
@@ -108,9 +108,9 @@ ms.locfileid: "47658916"
 4.  在 Web 入口網站中貼上此 URL，然後按 ENTER 鍵。 報表便會執行，而且文件引導模式會隱藏起來。  
   
 > [!NOTE]  
->  如需有關下載範例報表的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+>  如需有關下載範例報表的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
->  如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
+>  如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
 
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

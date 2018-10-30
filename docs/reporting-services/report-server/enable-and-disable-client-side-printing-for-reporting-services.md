@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e12399672c875368276e0322b2c16c860f64891
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728846"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030167"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
 
@@ -111,4 +111,4 @@ Dim rs As New ReportingService()
 End Class 'Sample  
 ```
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

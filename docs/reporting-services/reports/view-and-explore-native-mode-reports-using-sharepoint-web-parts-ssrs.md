@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 343c2d7a4bc712192ebd2989920a0114b969e45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cef5578bc23c7ac49dceedaac6dfb18049600ca5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032137"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -98,7 +98,7 @@ ms.locfileid: "47717486"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     如需深入了解 PowerShell 的應用，請參閱 [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
+     如需深入了解 PowerShell 的應用，請參閱 [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx)。  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安裝 Web 組件  
   
@@ -166,4 +166,4 @@ ms.locfileid: "47717486"
   
     3.  按一下 **[報表檢視器]**。  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

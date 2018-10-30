@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98acaa9f56b509a0894c9ec512f0df02c2cfd3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762376"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100179"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -118,7 +118,7 @@ ms.locfileid: "47762376"
  當條件導致訂閱變成非使用中，而報表伺服器執行訂閱時，該訂閱會反映出此事實。 如果訂閱已排程在每星期五的上午 2:00 傳遞報表，而其使用的傳遞延伸模組在星期一的上午 9:00 解除安裝，則直到星期五的上午 2:00，訂閱才會反映出其非使用中的狀態。  
   
 ## <a name="see-also"></a>另請參閱  
- [old_建立及管理原生模式報表伺服器的訂閱](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [old_建立及管理原生模式報表伺服器的訂閱](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

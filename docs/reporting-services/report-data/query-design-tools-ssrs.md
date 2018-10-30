@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae728cc402a036f59b43157e31a1a4536d14c8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0d20ddfbc872429ecf47d001067f1e7f2738c9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021232"
 ---
 # <a name="query-design-tools-ssrs"></a>查詢設計工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供各種查詢設計工具，您可以在報表設計師中利用這些工具來建立資料集查詢。 某些查詢設計工具還提供替代模式，讓您能夠選擇使用視覺化模式或直接使用查詢語言。 本主題簡介每個工具，並描述每個工具支援的資料來源類型。 本主題將描述下列工具：  
@@ -42,7 +42,7 @@ ms.locfileid: "47844116"
   
 -   [Hyperion Essbase 查詢設計工具](#Hyperion)  
   
- 當您使用報表伺服器專案範本或報表伺服器精靈專案範本時，所有的查詢設計工具都會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的資料設計環境中執行。 如需使用查詢設計工具的詳細資訊，請參閱 [Reporting Services 查詢設計工具](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)。  
+ 當您使用報表伺服器專案範本或報表伺服器精靈專案範本時，所有的查詢設計工具都會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的資料設計環境中執行。 如需使用查詢設計工具的詳細資訊，請參閱 [Reporting Services 查詢設計工具](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)。  
   
  您使用的資料來源類型會決定特定查詢設計工具的可用性。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47844116"
   
  ![關聯式資料查詢的一般查詢設計工具](../../reporting-services/report-data/media/rsqd-dsaw-sql-generic.gif "關聯式資料查詢的一般查詢設計工具")  
   
- 建議您利用以文字為基礎的查詢設計工具來建立複雜的查詢、使用預存程序、查詢 XML 資料，以及撰寫動態查詢。 根據資料來源，您可能可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。  
+ 建議您利用以文字為基礎的查詢設計工具來建立複雜的查詢、使用預存程序、查詢 XML 資料，以及撰寫動態查詢。 根據資料來源，您可能可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。  
   
 ##  <a name="Graphical"></a> 圖形化查詢設計工具  
  圖形化查詢設計工具用於建立或修改根據關聯式資料庫執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。 此查詢設計工具可用於數種 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 產品以及其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。 根據資料來源類型，它支援文字模式、StoredProcedure 模式和 TableDirect 模式。 下圖說明圖形化查詢設計工具。  
@@ -114,7 +114,7 @@ ms.locfileid: "47844116"
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [建立內嵌或共用資料來源 &#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
+ [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [建立內嵌或共用資料來源 &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

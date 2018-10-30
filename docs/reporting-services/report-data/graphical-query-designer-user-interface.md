@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eaa7c799c6897403b085eb55acf7de3e4247aa77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 025635208eea862fd43a05567a2d223d9ac7645c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844644"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020282"
 ---
 # <a name="graphical-query-designer-user-interface"></a>圖形化查詢設計工具使用者介面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同時提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具來建立查詢，以便從關聯式資料庫中擷取資料作為報表設計師中的報表資料集。 使用圖形化查詢設計工具，可透過互動方式建立查詢及檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 資料來源類型的結果。 使用以文字為基礎的查詢設計工具，可指定多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、複雜查詢或命令語法以及以運算式為基礎的查詢。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。 如需使用特定資料來源類型的詳細資訊，請參閱 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同時提供了圖形化查詢設計工具以及以文字為基礎的查詢設計工具來建立查詢，以便從關聯式資料庫中擷取資料作為報表設計師中的報表資料集。 使用圖形化查詢設計工具，可透過互動方式建立查詢及檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 資料來源類型的結果。 使用以文字為基礎的查詢設計工具，可指定多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、複雜查詢或命令語法以及以運算式為基礎的查詢。 如需詳細資訊，請參閱 [以文字為基礎的查詢設計工具使用者介面](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。 如需使用特定資料來源類型的詳細資訊，請參閱 [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)。  
   
  執行個體時提供 SQL Server 登入。  
   
 ## <a name="graphical-query-designer"></a>圖形化查詢設計工具  
- 此圖形化查詢設計工具支援三種查詢命令：**Text**、**StoredProcedure** 或 **TableDirect**。 在您為資料集建立查詢之前，您必須先在 [ [資料集屬性](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ] 對話方塊的 [查詢] 頁面上選取命令類型選項。  
+ 此圖形化查詢設計工具支援三種查詢命令：**Text**、**StoredProcedure** 或 **TableDirect**。 在您為資料集建立查詢之前，您必須先在 [ [資料集屬性](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ] 對話方塊的 [查詢] 頁面上選取命令類型選項。  
   
  下列選項可用於查詢類型：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47844644"
   
  當您在前三個窗格中的任何一個窗格內變更資訊時，那些變更將會出現在其他窗格中。 例如，如果您在 [圖表] 窗格中加入資料表，則也會將該資料表自動加入至 [SQL] 窗格中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。 如果將欄位加入至 [SQL] 窗格中的查詢，則也會將該欄位自動加入至 [方格] 窗格中的清單，以及更新 [圖表] 窗格中的資料表。  
   
- 如需詳細資訊，請參閱[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
+ 如需詳細資訊，請參閱[查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)。  
   
 #### <a name="toolbar-for-the-graphical-query-designer"></a>圖形化查詢設計工具工具列  
  圖形化查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
@@ -149,6 +149,6 @@ EXEC uspGetEmployeeManagers '1';
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Oracle 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
+ [設計查詢和檢視使用說明主題 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
   
   

@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 851451b025b28db88b7939511778c259b337dfd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f43b7dc312439d6ae9691caa86f8eb33f234949
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020192"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
   若要針對地理背景將商務資料視覺化，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表。 您選取的地圖類型取決於您想要在報表中傳達的資訊而定。 您可以加入只顯示位置的地圖，或是根據某區域住家數而變動泡泡大小的泡泡地圖，或者是根據每一家商店最有利潤的產品而變動標記樣式的標記地圖，或者是顯示商店之間之路線的線路地圖。  
@@ -29,7 +29,7 @@ ms.locfileid: "47785696"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- 若要立即開始使用地圖，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md) 或[報表範例 (報表產生器和 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 若要立即開始使用地圖，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md) 或[報表範例 (報表產生器和 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  您可以將地圖當做報表組件，與報表分開儲存。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "47785696"
     > [!NOTE]  
     >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局所免費提供。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 和 TIGER/Line 是美國人口普查局的註冊商標。  
   
--   **ESRI 形狀檔：** ESRI 形狀檔包含與環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI)形狀檔空間資料格式相容的資料。 ESRI 形狀檔指的是一組檔案。 .shp 檔案中的資料會指定地理或幾何圖案。 .dbf 檔案中的資料會提供這些圖案的屬性。 若要在設計檢視中檢視地圖或是從報表伺服器執行地圖，這兩種檔案必須位於相同的資料夾。 當您從本機檔案系統的 .shp 檔案加入空間資料時，空間資料會內嵌在您的報表中。 若要在執行階段動態擷取空間資料，請將形狀檔上傳至報表伺服器，然後將其指定為空間資料的來源。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](http://go.microsoft.com/fwlink/?linkid=178814)。  
+-   **ESRI 形狀檔：** ESRI 形狀檔包含與環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI)形狀檔空間資料格式相容的資料。 ESRI 形狀檔指的是一組檔案。 .shp 檔案中的資料會指定地理或幾何圖案。 .dbf 檔案中的資料會提供這些圖案的屬性。 若要在設計檢視中檢視地圖或是從報表伺服器執行地圖，這兩種檔案必須位於相同的資料夾。 當您從本機檔案系統的 .shp 檔案加入空間資料時，空間資料會內嵌在您的報表中。 若要在執行階段動態擷取空間資料，請將形狀檔上傳至報表伺服器，然後將其指定為空間資料的來源。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](https://go.microsoft.com/fwlink/?linkid=178814)。  
   
 -   **儲存在資料庫中的 SQL Server 空間資料：** 您可以使用查詢來指定 **關聯式資料庫中的** SQLGeometry **或** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱[空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47785696"
   
  如需逐步指示，請參閱 [加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 如需有關圖格的詳細資訊，請參閱 [Bing Maps 圖格系統](http://go.microsoft.com/fwlink/?linkid=147315)。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371)。  
+ 如需有關圖格的詳細資訊，請參閱 [Bing Maps 圖格系統](https://go.microsoft.com/fwlink/?linkid=147315)。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
 ##  <a name="MapLayers"></a> 了解地圖圖層與地圖元素  
  一個地圖可以擁有多個圖層。 圖層有三種類型。 每個圖層都會顯示一種空間資料類型：  

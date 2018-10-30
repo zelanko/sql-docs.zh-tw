@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b07cf939df0df0233ec0d7e91800eb1a16b4fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99dbf8f5a9ba634899360b86d7f778d73a30de80
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020602"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
   自訂報表項目設計階段元件是可用於 Visual Studio 報表設計工具環境的控制項。 自訂報表項目設計階段元件提供啟動的設計介面，這個介面與 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器相整合，可接受拖放作業，並能夠提供自訂屬性編輯器。  
@@ -25,9 +25,9 @@ ms.locfileid: "47644856"
  在程式開發環境中使用設計階段元件所設定的屬性，會由主設計環境序列化和還原序列化，然後儲存為報表定義語言 (RDL) 檔案中的元素。 當報表由報表處理器執行時，使用設計階段元件所設定的屬性會由報表處理器傳遞至自訂報表項目執行階段元件，這個元件會轉譯自訂報表項目，然後將其傳回給報表處理器。  
   
 > [!NOTE]  
->  自訂報表項目設計階段元件會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件。 本文件將描述自訂報表項目設計階段元件特定的實作詳細資料。 如需使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 來開發元件的詳細資訊，請參閱 MSDN Library 中的 [Visual Studio 中的元件](http://go.microsoft.com/fwlink/?LinkId=116576)。  
+>  自訂報表項目設計階段元件會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件。 本文件將描述自訂報表項目設計階段元件特定的實作詳細資料。 如需使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 來開發元件的詳細資訊，請參閱 MSDN Library 中的 [Visual Studio 中的元件](https://go.microsoft.com/fwlink/?LinkId=116576)。  
   
- 如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
+ 如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="implementing-a-design-time-component"></a>實作設計階段元件  
  自訂報表項目設計階段元件的主類別是繼承自 **Microsoft.ReportDesigner.CustomReportItemDesigner** 類別。 除了用於 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 控制項的標準屬性外，元件類別還應該定義 **CustomReportItem** 屬性。 這個屬性必須與定義於 reportserver.config 檔案中的自訂報表項目的名稱相對應。 如需 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 屬性的清單，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 文件集中的＜屬性＞。  
@@ -182,7 +182,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用裝飾  
- 自訂報表項目類別也可以實作 **Microsoft.ReportDesigner.Design.Adornment** 類別。 透過裝飾，自訂報表項目控制項可以在設計介面的主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。 定義於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** 命名空間中的 **Adornment** 類別，是 Windows Forms 中 <xref:System.Windows.Forms.Design.Behavior.Adorner> 類別的傳遞實作。 如需 **Adorner** 類別的完整文件集，請參閱 MSDN Library 中的[行為服務概觀](http://go.microsoft.com/fwlink/?LinkId=116673)。 如需實作 **Microsoft.ReportDesigner.Design.Adornment** 類別的範例程式碼，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 自訂報表項目類別也可以實作 **Microsoft.ReportDesigner.Design.Adornment** 類別。 透過裝飾，自訂報表項目控制項可以在設計介面的主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。 定義於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** 命名空間中的 **Adornment** 類別，是 Windows Forms 中 <xref:System.Windows.Forms.Design.Behavior.Adorner> 類別的傳遞實作。 如需 **Adorner** 類別的完整文件集，請參閱 MSDN Library 中的[行為服務概觀](https://go.microsoft.com/fwlink/?LinkId=116673)。 如需實作 **Microsoft.ReportDesigner.Design.Adornment** 類別的範例程式碼，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
  如需有關在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中進行程式開發和使用 Windows Form 的詳細資訊，請參閱 MSDN Library 中的下列主題：  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4974de9e79e277d15f4630720315687b9a712609
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdf1c0beb236084f3273a3a0fbf3d5a62a21a1ce
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810946"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021722"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>圖表圖例 - 隱藏項目 (報表產生器)
 根據預設，加入到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中非形狀圖的任何數列都會當做圖例中的項目加入。 至於圓形圖、環圈圖、漏斗圖與金字塔圖，加入到圖表中的任何數列則會在圖例中加入個別的資料點。  
@@ -37,6 +37,6 @@ ms.locfileid: "47810946"
  [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [將移動平均新增至圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
- [圖例屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
+ [圖例屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
   
   

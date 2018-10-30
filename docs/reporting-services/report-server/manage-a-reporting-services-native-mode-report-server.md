@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c945a601238c6ba110986c236d1079ec9ba99bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021592"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
   本節包含使用 Reporting Services 組態管理員來設定原生模式報表伺服器執行個體的程序。  
@@ -29,7 +29,7 @@ ms.locfileid: "47677856"
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  提供啟動 Reporting Services 組態工具的步驟。  
   
- [設定服務帳戶 &#40;SSRS 組態管理員&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [設定服務帳戶 &#40;SSRS 組態管理員&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
  說明如何指定報表伺服器服務的帳戶和密碼資訊。  
   
  [為報表伺服器註冊服務主要名稱 &#40;SPN&#41;](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "47677856"
  [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  提供設定多個報表伺服器來共用報表伺服器資料庫的步驟。  
   
- [為電子郵件傳遞設定報表伺服器 (SSRS 設定管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  提供有關為電子郵件散發設定報表伺服器的步驟。  
   
  [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

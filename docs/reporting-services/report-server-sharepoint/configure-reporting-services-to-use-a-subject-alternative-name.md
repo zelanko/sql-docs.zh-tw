@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: feb3a973ced242d52a6fda8e1bcb1222cb24ecae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade77624ec83c39d89cde2d5f98d5f01d15ceec4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635456"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020522"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>設定 Reporting Services 來使用主體別名
 
@@ -124,4 +124,4 @@ ms.locfileid: "47635456"
  [修改 Reporting Services 設定檔](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [設定報表伺服器 URL](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

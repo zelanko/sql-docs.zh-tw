@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 185e75f558d3af598806f9a1896186d352007b3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 638d4ccecba36eec60561b7d0418273e258df6ba
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732086"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099809"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS)
 建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表最簡單的方式，就是從報表組件庫將現有的報表組件 (例如資料表和圖表) 加入您的報表。 當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的所有報表組件都取決於資料集，也就是資料來源的查詢和連接。 當您將報表組件加入至報表之後，您可以盡量修改它。  
@@ -61,10 +61,10 @@ ms.locfileid: "47732086"
  您不需要重新啟動報表產生器，這項設定也會生效。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+ [檢查更新或關閉更新 (報表產生器及 SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [針對報表組件進行疑難排解 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [針對報表組件進行疑難排解 (報表產生器及 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [發行與重新發行報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

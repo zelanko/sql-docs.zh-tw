@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5710e60a5fec0577c3b36cc04c3d87d68f2ff80a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021312"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>移轉 Reporting Services 安裝 (SharePoint 模式)
 
@@ -28,17 +28,17 @@ ms.locfileid: "47826836"
 
 -   [升級到 SharePoint 2016 的程序概觀](https://technet.microsoft.com/library/cc262483\(v=office.16\))。
 
--   [升級到 SharePoint 2013 的程序概觀](http://go.microsoft.com/fwlink/p/?LinkId=256688)。
+-   [升級到 SharePoint 2013 的程序概觀](https://go.microsoft.com/fwlink/p/?LinkId=256688)。
   
--   [升級到 SharePoint 2013 之前的清除準備工作](http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [升級到 SharePoint 2013 之前的清除準備工作](https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
   
 -   [將資料庫從 SharePoint 2013 升級到 SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\))。
 
--   [將資料庫從 SharePoint 2010 升級到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690)。
+-   [將資料庫從 SharePoint 2010 升級到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690)。
   
 -   [在 SharePoint 2016 中移動內容資料庫](https://technet.microsoft.com/library/cc262792\(v=office.16\).aspx)。
 
--   [在 SharePoint 2013 中移動內容資料庫](http://technet.microsoft.com/library/cc262792.aspx)。
+-   [在 SharePoint 2013 中移動內容資料庫](https://technet.microsoft.com/library/cc262792.aspx)。
   
 ##  <a name="bkmk_prior_versions"></a> 從 SQL Server 2012 之前的 Reporting Services SharePoint 模式版本移轉  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中變更的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 模式架構，包括服務應用程式資料庫結構描述。 如果您想要從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之前的版本移轉到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]SharePoint 模式，請先安裝 SharePoint 和 SQL Server 2016 Reporting Services SharePoint 模式來建立新的 SharePoint 環境。 如需詳細資訊，請參閱 [安裝 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "47826836"
 ||物件|方法|注意|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰。|**Rskeymgmt.exe** 或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。|所指的工具可用於備份，但是在還原作業中，您將使用 Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式管理頁面或 PowerShell。|  
-|**2**|SharePoint 內容資料庫。||備份資料庫，並卸離資料庫。<br /><br /> 請參閱[決定升級方法 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)中的＜資料庫附加升級＞一節。|  
+|**2**|SharePoint 內容資料庫。||備份資料庫，並卸離資料庫。<br /><br /> 請參閱[決定升級方法 (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)中的＜資料庫附加升級＞一節。|  
 |**3**|屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]目錄資料庫的 SQL Server 資料庫。|SQL Server 資料庫備份和還原<br /><br /> 中的多個<br /><br /> SQL Server 資料庫卸離和附加。||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔。|簡單檔案複製。|只有當您對 rsreportserver.config 做了自訂之後，才需要複製這個檔案。 檔案的範例預設位置如下：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*：<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> 報表伺服器 ASP.NET 應用程式的 Web.config。<br /><br /> ASP.NET 的 Machine.config。|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47826836"
   
 ||物件|方法|注意|  
 |-|-------------|------------|-----------|  
-|**1**|將 SharePoint 內容資料庫還原到新的伺服器陣列。|SharePoint 的「資料庫附加升級」方法。|基本步驟：<br /><br /> 1) 在新的伺服器上還原資料庫。<br /><br /> 2) 藉由指示 URL 將內容資料庫附加到 Web 應用程式。<br /><br /> 3) Get-SPWebapplication 會列出所有 Web 應用程式和 URL。<br /><br /> <br /><br /> 請參閱[決定升級方法中的＜資料庫附加升級＞一節 (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) 和[附加資料庫以及升級至 SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx) \(英文\)。|  
+|**1**|將 SharePoint 內容資料庫還原到新的伺服器陣列。|SharePoint 的「資料庫附加升級」方法。|基本步驟：<br /><br /> 1) 在新的伺服器上還原資料庫。<br /><br /> 2) 藉由指示 URL 將內容資料庫附加到 Web 應用程式。<br /><br /> 3) Get-SPWebapplication 會列出所有 Web 應用程式和 URL。<br /><br /> <br /><br /> 請參閱[決定升級方法中的＜資料庫附加升級＞一節 (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx) 和[附加資料庫以及升級至 SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx) \(英文\)。|  
 |**2**|還原原本為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目錄資料庫 (ReportServer) 的 SQL Server 資料庫。|SQL 資料庫備份及還原。<br /><br /> **或**<br /><br /> 附加及卸離的 SQL Server 資料庫。|初次使用此資料庫時，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會視需要更新資料庫結構描述，好讓它能夠搭配 SQL Server 2016 環境使用。|  
 |**3**|建立新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|建立新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|當您建立新的服務應用程式時，請將它設定為使用複製的報表伺服器資料庫。<br /><br /> 如需使用 SharePoint 管理中心的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)中的＜步驟 3：建立 Reporting Services 服務應用程式＞一節。<br /><br /> 如需使用 PowerShell 的範例，請參閱 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)中的＜使用 PowerShell 建立 Reporting Services 服務應用程式＞一節。|  
 |**4**|還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔。|簡單檔案複製。|檔案的範例預設位置如下：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting。|  
@@ -103,7 +103,7 @@ ms.locfileid: "47826836"
   
 3.  如果您擁有自動執行帳戶 (UEA) 和 Windows 驗證，請記下認證，好讓您在還原程序中使用認證。  
   
-4.  如需詳細資訊，請參閱＜ [在 SharePoint 2013 中備份服務應用程式](http://technet.microsoft.com/library/ee428318.aspx)＞。  
+4.  如需詳細資訊，請參閱＜ [在 SharePoint 2013 中備份服務應用程式](https://technet.microsoft.com/library/ee428318.aspx)＞。  
   
 ### <a name="restore-operations"></a>還原作業  
   
@@ -115,17 +115,17 @@ ms.locfileid: "47826836"
   
 3.  在服務應用程式上設定 UEA 和 Windows 認證。  
   
-4.  如需詳細資訊，請參閱＜ [在 SharePoint 2013 中還原服務應用程式](http://technet.microsoft.com/library/ee428305.aspx)＞。  
+4.  如需詳細資訊，請參閱＜ [在 SharePoint 2013 中還原服務應用程式](https://technet.microsoft.com/library/ee428305.aspx)＞。  
   
 ##  <a name="bkmk_additional_resources"></a> 其他資源  
   
--   [開始升級到 SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx)。  
+-   [開始升級到 SharePoint 2013 (https://technet.microsoft.com/library/ee833948.aspx)](https://technet.microsoft.com/library/ee833948.aspx)。  
   
--   [升級到 SharePoint 2013 的程序概觀 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx) \(英文\)。  
+-   [升級到 SharePoint 2013 的程序概觀 (https://technet.microsoft.com/library/cc262483.aspx)](https://technet.microsoft.com/library/cc262483.aspx) \(英文\)。  
 
 ## <a name="next-steps"></a>後續步驟
 
 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [移轉 Reporting Services 安裝](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

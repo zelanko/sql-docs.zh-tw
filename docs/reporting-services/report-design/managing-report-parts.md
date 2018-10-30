@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dce1ca8367db90177d9a9093da2f7300d7409e45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1db5322685b4bddb0ec6b468365b5a4206e6e96a
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100349"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   報表組件可以由多個使用者在分頁報表中重複使用，也可以在多個報表中重複使用。 使用者可以搜尋伺服器上的報表組件，並將其加入至報表中。  使用者也可以收到伺服器上報表組件更新的通知，然後重新發行新版本的報表組件。 這些報表撰寫動作可能會受報表服務安全性權限影響及控制。  本主題會檢閱報表組件位於伺服器上之後的屬性和行為。  
@@ -89,7 +89,7 @@ ms.locfileid: "47614486"
 ## <a name="see-also"></a>另請參閱  
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [針對報表組件進行疑難排解 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [疑難排解報表組件 (報表產生器及 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

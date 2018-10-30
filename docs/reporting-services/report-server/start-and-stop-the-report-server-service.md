@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ddbd23aa9a37033c65115c02e49fde8bcedd5dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8329ef7eadc543a6672b88887a356da4e3c6daa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021484"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>啟動與停止 Report Server 服務
   報表伺服器會實作成一項 Windows 服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 如果您想要使用任何報表伺服器功能，就必須執行這項服務。 停止此服務會停止所有報表伺服器作業。  
@@ -51,6 +51,6 @@ ms.locfileid: "47738696"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [啟動、停止或暫停 SQL Server Agent 服務](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [啟動、停止或暫停 SQL Server Agent 服務](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

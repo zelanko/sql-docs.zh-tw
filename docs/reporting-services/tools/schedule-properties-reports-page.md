@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c485b98c50328510eeef35dcd67e2584e1e6f97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0cdfafa38ff35c2e469d9be9491133261983fb
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795356"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099188"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [ [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 排程屬性] 頁面來檢視使用特定共用排程的所有報表清單。 排程可用來重新整理報表快照集、產生報表記錄、觸發訂閱或使報表的快取副本過期。 若要了解如何使用排程，請檢視報表的屬性和訂閱資訊。  
@@ -43,10 +43,10 @@ ms.locfileid: "47795356"
   
 ## <a name="see-also"></a>另請參閱  
  [建立、修改和刪除共用排程](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [[排程]](../../reporting-services/subscriptions/schedules.md)   
+ [排程](../../reporting-services/subscriptions/schedules.md)   
  [Management Studio F1 說明中的報表伺服器](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [連接至 Management Studio 中的報表伺服器](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [設定報表的一般屬性 (報表管理員)](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [設定報表的一般屬性 (報表管理員)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
   
   
 

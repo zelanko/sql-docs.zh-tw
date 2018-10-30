@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eaada7d40896156dee1ba51b9a02b90b1ff9e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741386"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021042"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
@@ -29,7 +29,7 @@ ms.locfileid: "47741386"
  [報表設計師 F1 說明](../reporting-services/tools/report-designer-f1-help.md)  
  提供報表設計師與其相關對話方塊、報表精靈和影像精靈的說明。  
   
- [Reporting Services 組態管理員說明主題](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Reporting Services 組態管理員說明主題](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  提供用於部署及管理報表伺服器執行個體之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 組態工具的說明。  
   
  [Management Studio F1 說明中的報表伺服器](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -43,6 +43,6 @@ ms.locfileid: "47741386"
  [Reporting Services 報表 &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
  [開始使用報表產生器](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [使用報表產生器 1.0 來設計和實作報表](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [使用報表產生器 1.0 來設計和實作報表](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

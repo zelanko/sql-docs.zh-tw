@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 440d78222dff3bdbbc1918e563671f5735a76df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651619"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020372"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -146,11 +146,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  您可以下載用來讀取 ULS 記錄的工具。 例如，[SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer)，可在 GitHub 上取得。 
   
- 如需有關如何使用 PowerShell 來檢視記錄資料的詳細資訊，請參閱 [檢視診斷記錄 (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
+ 如需有關如何使用 PowerShell 來檢視記錄資料的詳細資訊，請參閱 [檢視診斷記錄 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
 ##  <a name="bkmk_trace"></a> 追蹤記錄位置  
  追蹤記錄檔通常位於 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 資料夾中，但是您可以從 SharePoint 管理中心的 **[診斷記錄]** 頁面中驗證或變更此路徑。  
   
- 如需詳細資訊以及在 SharePoint 2010 管理中心內設定 SharePoint 伺服器之診斷記錄的步驟，請參閱 [設定診斷記錄設定 (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)。  
+ 如需詳細資訊以及在 SharePoint 2010 管理中心內設定 SharePoint 伺服器之診斷記錄的步驟，請參閱 [設定診斷記錄設定 (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)。  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

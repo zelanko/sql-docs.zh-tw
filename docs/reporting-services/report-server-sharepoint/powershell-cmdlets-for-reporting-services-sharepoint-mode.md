@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3936b2918f9bc5dae127d44fe9001944ac7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799456"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031647"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
 
@@ -34,7 +34,7 @@ ms.locfileid: "47799456"
 
 ## <a name="cmdlet-summary"></a>指令程式摘要
 
- 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx)。 在下列 Cmdlet 摘要中，服務應用程式「資料庫」的參考是指 Reporting Services 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
+ 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx)。 在下列 Cmdlet 摘要中，服務應用程式「資料庫」的參考是指 Reporting Services 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47799456"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 如需詳細資訊，請參閱 [Use Windows PowerShell to administer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx)。  
+ 如需詳細資訊，請參閱 [Use Windows PowerShell to administer SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx)。  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>開啟 SharePoint 管理命令介面並執行 Cmdlet
   
@@ -293,4 +293,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [檢查清單：使用 PowerShell 驗證 Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [取得 SQL Server PowerShell 說明](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

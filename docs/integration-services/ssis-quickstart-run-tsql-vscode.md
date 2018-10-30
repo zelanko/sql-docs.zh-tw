@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 923134e3826e5a15bde47d9da475ee076b7054eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23e0bcefc098f0e70f5515cb12253c10446f846
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646806"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216702"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 執行 SSIS 套件
 此快速入門示範如何使用 Visual Studio Code 連線到 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式執行 SSIS 目錄中所儲存的 SSIS 套件。

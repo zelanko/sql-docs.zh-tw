@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86ddecfcc93f4efa6de2b329298d31a244b65e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801786"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021793"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 連接類型 (SSRS)
   若要在報表中包含來自 XML 資料來源的資料，您必須具有以 XML 類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 XML 資料延伸模組為基礎。 請使用此資料來源類型連接至 XML 文件、Web 服務或內嵌在查詢中的 XML，並從中擷取資料。  
@@ -44,11 +44,11 @@ ms.locfileid: "47801786"
   
 -   目前的 Windows 使用者 (也稱為整合式安全性)。  
   
--   不需要認證。 如果您未選取認證，則會使用匿名存取。 請確定您已為報表伺服器定義自動執行帳戶，以連接到外部資料來源。 XML 資料處理延伸模組不會將認證傳遞到目標 URL 或 Web 服務。除非您已定義自動執行帳戶，否則連接不會成功。 如需詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+-   不需要認證。 如果您未選取認證，則會使用匿名存取。 請確定您已為報表伺服器定義自動執行帳戶，以連接到外部資料來源。 XML 資料處理延伸模組不會將認證傳遞到目標 URL 或 Web 服務。除非您已定義自動執行帳戶，否則連接不會成功。 如需詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  不支援預存認證和提示認證。 請記住，如果您停用 Windows 整合式安全性，您就無法利用它擷取資料。 如果您指定預存認證或提示認證，執行階段中將會發生錯誤。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ##  <a name="Query"></a> 查詢  
  查詢會指定要為報表資料集擷取的資料。 查詢結果集中的資料行會填入資料集的欄位集合。 報表只會處理查詢所擷取的第一個結果集。  
@@ -113,9 +113,9 @@ ms.locfileid: "47801786"
   
          `<ElementPath IgnoreNamespaces="true">`  *元素路徑*  `</ElementPath>`  
   
- 如需查詢語法的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。  
+ 如需查詢語法的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)。  
   
- 如需範例，請參閱 [Reporting Services：使用 XML 與 Web 服務資料來源](http://go.microsoft.com/fwlink/?LinkId=81654)。  
+ 如需範例，請參閱 [Reporting Services：使用 XML 與 Web 服務資料來源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>擷取 XML Web 服務資料的需求  
  XML 資料處理延伸模組不會為您偵測結構描述。 因此，您必須有某個方式可以探索哪些 SOAP 方法將擷取您想要的資料， 您也必須了解 Web 服務用於其資料的定址配置或命名空間。  
@@ -129,12 +129,12 @@ ms.locfileid: "47801786"
   
  您可以使用類似於 XQuery 的 XML 語法提供元素路徑。  
   
- 如需詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [XML 報表資料的元素路徑語法 &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
+ 如需詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [XML 報表資料的元素路徑語法 &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
   
 ##  <a name="Parameters"></a> 參數  
  系統不會分析查詢來識別參數。  
   
- 若要加入參數，您必須透過 [[資料集屬性](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)] 對話方塊上的 [參數] 頁面手動建立參數。  
+ 若要加入參數，您必須透過 [[資料集屬性](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)] 對話方塊上的 [參數] 頁面手動建立參數。  
   
 ##  <a name="Remarks"></a> 備註  
  XML 資料延伸模組支援從表格式而非階層式 XML 資料進行報告的功能。 如需詳細資訊，請參閱[從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)。  
@@ -156,7 +156,7 @@ ms.locfileid: "47801786"
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -165,7 +165,7 @@ ms.locfileid: "47801786"
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
 ## <a name="see-also"></a>另請參閱  

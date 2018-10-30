@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 113fd8eb61880b8d04ba7e699be69e1576de1362
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 527a2c67a62328cc0e277bc3c45eebeb9167a804
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020222"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>效能計數器 MSRS 2011 Web Service、效能物件
   本主題描述 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 效能物件的效能計數器。 這些物件是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 原生模式部署的一部分。  
@@ -28,7 +28,7 @@ ms.locfileid: "47851516"
 > [!NOTE]  
 >  這些效能物件會監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](http://msdn.microsoft.com/library/w4bz2147.aspx)(http://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件，[執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
  如需 SharePoint 模式效能計數器的資訊，請參閱 [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)。  
   
@@ -124,7 +124,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>另請參閱  
  [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 Web Service SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [MSRS 2011 Web 服務 SharePoint 模式和 MSRS 2011 Windows 服務 SharePoint 模式效能物件的效能計數器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

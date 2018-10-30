@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96c7e313bea6d36d62267413618b4a90bfdd2d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021213"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
 
@@ -82,7 +82,7 @@ ms.locfileid: "47695905"
 
  **(+)** 最新的公開發行版本
 
- 如果您使用整合於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的 SharePoint 產品，請參閱  [Plan browser support in SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)(在 SharePoint 2016 中規劃瀏覽器支援)。
+ 如果您使用整合於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的 SharePoint 產品，請參閱  [Plan browser support in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)(在 SharePoint 2016 中規劃瀏覽器支援)。
 
 ### <a name="authentication-requirements"></a>驗證需求
 
@@ -142,15 +142,15 @@ ms.locfileid: "47695905"
 
  **(+)** 最新的公開發行版本
 
- 如需 SharePoint 2016 瀏覽器支援的詳細資訊，請參閱 [Plan browser support in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)(在 SharePoint 2013 中規劃瀏覽器支援)。
+ 如需 SharePoint 2016 瀏覽器支援的詳細資訊，請參閱 [Plan browser support in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)(在 SharePoint 2013 中規劃瀏覽器支援)。
 
 ## <a name="next-steps"></a>後續步驟
 
 [在入口網站中尋找和檢視報表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
-[入口網站 (SSRS 原生模式)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[入口網站 (SSRS 原生模式)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
 

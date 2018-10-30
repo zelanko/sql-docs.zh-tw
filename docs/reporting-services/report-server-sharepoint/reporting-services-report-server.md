@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cac4c0df7f995baa8445b639237c61e26a98856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe29406395b782b2bf25367e22f6f23f9bff0505
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837946"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021622"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 報表伺服器
 
@@ -136,9 +136,9 @@ Reporting Services 報表伺服器會在兩種部署模式的其中一種模式�
   
 |工作|連結|  
 |----------|----------|  
-|檢閱硬體及軟體需求。|第 1 課：建立 Windows Azure 儲存體物件[Hardware and Software Requirements for Reporting Services in SharePoint Mode](http://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)。|  
-|以 SharePoint 模式安裝 Reporting Services。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|如果您是 Web 開發者，或您有建立階層式樣式表的專業知識，您可以修改預設樣式 (自行負責風險)，來變更工具列或報表管理員的色彩、字型和配置。 此版本未收錄預設樣式表或樣式表的修改指示。|[自訂 HTML 檢視器及報表管理員的樣式表](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
+|檢閱硬體及軟體需求。|第 1 課：建立 Windows Azure 儲存體物件[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)。|  
+|以 SharePoint 模式安裝 Reporting Services。|[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|如果您是 Web 開發者，或您有建立階層式樣式表的專業知識，您可以修改預設樣式 (自行負責風險)，來變更工具列或報表管理員的色彩、字型和配置。 此版本未收錄預設樣式表或樣式表的修改指示。|[自訂 HTML 檢視器及報表管理員的樣式表](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |熟悉 HTML 樣式和階層式樣式表 (CSS) 的 Web 開發人員可以使用本主題的資訊來判斷哪些檔案可修改，以便自訂報表管理員的外觀。|[設定入口網站傳遞自訂驗證 Cookie](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |說明如何針對報表伺服器 Web 服務和 Windows 服務微調記憶體設定。|[設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |說明建議的設定步驟為遠端管理的報表伺服器。|[設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
@@ -153,6 +153,6 @@ Reporting Services 報表伺服器會在兩種部署模式的其中一種模式�
 [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [實作安全性延伸模組](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+[Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

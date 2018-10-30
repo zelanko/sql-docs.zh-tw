@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76448fc4a919b9931ea97712038be9ba0f2c2da2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020352"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>使用共用資料集 - Web 入口網站
 
@@ -104,4 +104,4 @@ ms.locfileid: "47747536"
   
 您接著可以 [編輯] 或 [刪除] 列出的計劃。 當只有選取一個快取重新整理計劃時，才會啟用 [從現有的新增] 選項。 這個選項會建立從原始計劃複製的新重新整理計劃。 [快取重新整理計劃] 頁面開啟時會預先填入所選取計劃的詳細資料。 接著，您就可以修改重新整理計劃選項，然後使用新的描述儲存該計劃。  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

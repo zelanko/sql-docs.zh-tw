@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3b3250b2862be52c09e09e8ea102847e355b276
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92cd029889d31229a34e549916f691230cb3dc50
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099831"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>發行與重新發行報表組件 (報表產生器及 SSRS)
   報表組件是指已經個別發行至報表伺服器，而且可以在其他分頁報表中重複使用的分頁報表項目。 您可以使用預設值在預設位置發行報表組件，或者您可以編輯報表組件中繼資料 (例如名稱和描述)，並將其儲存在報表伺服器的其他位置。 如果您有正確的權限，也可以將其儲存到與報表伺服器整合的 SharePoint 網站。  
@@ -57,8 +57,8 @@ ms.locfileid: "47612746"
 ## <a name="see-also"></a>另請參閱  
  [報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [針對報表組件進行疑難排解 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+ [針對報表組件進行疑難排解 (報表產生器及 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [檢查更新或關閉更新 (報表產生器及 SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [瀏覽報表組件及設定預設資料夾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2cc79176f0c52cd1fdceae0d04d46b4279e9d50
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030747"
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色指派 - 修改或刪除
   角色指派會將某個群組或使用者帳戶對應至包含可執行之工作的預先定義角色定義。 它會決定某位使用者可執行的作業類型，包括資料夾、報表、模型或其他內容類型。 若要建立、修改或刪除角色指派，您可以使用報表管理員。 針對特定使用者或群組建立角色指派之後，您之後可以透過選取不同的角色，修改此指派。 如果您想要撤銷報表伺服器的權限，可以從報表伺服器中刪除角色指派。  
@@ -34,7 +34,7 @@ ms.locfileid: "47699496"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>若要修改或刪除系統角色指派  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  按一下 **[站台設定]**。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47699496"
 ## <a name="see-also"></a>另請參閱  
  [建立和管理角色指派](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [角色指派](../../reporting-services/security/role-assignments.md)   
- [網站設定頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [新增系統角色指派：編輯系統角色指派頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [站台設定頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [新增系統角色指派：編輯系統角色指派頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

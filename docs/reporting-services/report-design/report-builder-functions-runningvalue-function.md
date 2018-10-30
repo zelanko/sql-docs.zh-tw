@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e779abdd10eb5b71fa7d7bbf7a6d6938bf469c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021512"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>報表產生器函式 - RunningValue 函式
   傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。  
@@ -46,7 +46,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** 不能用於篩選或排序運算式。  
   
- 評估執行值的資料集合必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 **CInt**、 **CDbl** 或 **CDec**等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](http://go.microsoft.com/fwlink/?LinkId=96142)。  
+ 評估執行值的資料集合必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 **CInt**、 **CDbl** 或 **CDec**等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](https://go.microsoft.com/fwlink/?LinkId=96142)。  
   
  *Scope* 不能是運算式。  
   

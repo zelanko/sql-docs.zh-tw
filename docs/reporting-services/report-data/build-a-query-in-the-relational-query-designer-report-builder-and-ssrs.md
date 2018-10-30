@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c0c484325309f40217de302b1d7f24eb253ec9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2e626cb890343f42095a1702942a5aefc37a75
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021661"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
   查詢設計工具可協助您針對報表資料集，指定要從外部資料來源擷取的資料。 當您在精靈中建置查詢或建立資料集查詢時，就會使用查詢設計工具。  
@@ -21,7 +21,7 @@ ms.locfileid: "47772646"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 資料集是以資料來源為基礎。 資料來源的類型以及撰寫環境會決定當您定義資料集查詢時開啟的查詢設計工具。 查詢設計工具功能會因基礎資料來源而異。 如需資料層的詳細資訊，請參閱[報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)或[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+ 資料集是以資料來源為基礎。 資料來源的類型以及撰寫環境會決定當您定義資料集查詢時開啟的查詢設計工具。 查詢設計工具功能會因基礎資料來源而異。 如需資料層的詳細資訊，請參閱[報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)或[資料連接、資料來源及連接字串 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
  您可以使用查詢設計工具進行下列工作：  
   
@@ -84,17 +84,17 @@ ms.locfileid: "47772646"
 1.  在查詢設計工具工具列上，按一下 [執行查詢 (!)]。  
   
     > [!NOTE]  
-    >  查詢設計工具會使用設計階段認證執行查詢和擷取結果集。 如需詳細資訊，請參閱 [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+    >  查詢設計工具會使用設計階段認證執行查詢和擷取結果集。 如需詳細資訊，請參閱 [在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
  查詢會在資料來源上執行，並將範例資料傳回 [查詢結果] 窗格。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [從外部資料來源新增資料 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [查詢設計工具 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [查詢設計工具 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [報表設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [共用資料集設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Reporting Services 查詢設計工具](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
+ [Reporting Services 查詢設計工具](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

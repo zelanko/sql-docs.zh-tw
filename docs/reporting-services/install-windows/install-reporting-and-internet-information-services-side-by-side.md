@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f28687ef3d4faa4feb10aac78bed8c1ee28bed85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020562"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>並存安裝 Reporting Services 和 Internet Information Services
 
@@ -82,4 +82,4 @@ ms.locfileid: "47743566"
 [設定 URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [安裝 Reporting Services 原生模式報表伺服器](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

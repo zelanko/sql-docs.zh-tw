@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4814359213649eb4bb7ed5a8d3b36c5b1dd8cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18b41757ada0d21136e5768eade88ecf8b2a7d40
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645116"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029757"
 ---
 # <a name="caching-reports-ssrs"></a>快取多個報表 (SSRS)
   報表伺服器可以快取已處理報表的副本，並在使用者開啟報表時還原該副本。 對使用者而言，能夠指出報表是快取副本的唯一證據是報表執行的日期和時間。 如果日期或時間不是目前的日期和時間，且報表不是快照集，則報表是從快取擷取而來。  
@@ -74,6 +74,6 @@ ms.locfileid: "47645116"
  [預先載入快取 &#40;報表管理員&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [[排程]](../../reporting-services/subscriptions/schedules.md)   
  [快取共用資料集 &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [快取重新整理選項 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [快取重新整理選項 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

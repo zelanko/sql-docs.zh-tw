@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717216"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021172"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
 逐步解說在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 入口網站透過 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
@@ -32,11 +32,11 @@ ms.locfileid: "47717216"
   
 * 若要建立資料來源和 KPI 並發佈資料集和行動報表，您需要存取 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)。  
 * 若要[建立共用資料集](../install-windows/install-report-builder.md)。  
-* 若要建立行動報表， [請安裝 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=717766)。  
+* 若要建立行動報表， [請安裝 SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。  
 *  或者：World Wide Importers 範例資料庫，可從 [Microsoft SQL Server 範例](../../sample/microsoft-sql-server-samples.md)頁面取得。
 * 若要檢視結果︰ 
-  *   [註冊 Power BI 服務](http://go.microsoft.com/fwlink/?LinkID=513879) ，並且
+  *   [註冊 Power BI 服務](https://go.microsoft.com/fwlink/?LinkID=513879) ，並且
   *  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
 
   
@@ -63,7 +63,7 @@ ms.locfileid: "47717216"
    
 ## <a name="shared-dataset">建立共用資料集</a>  
   
-使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](../install-windows/install-report-builder.md)，或從您的入口網站啟動報表產生器。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。     
+使用現有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的「報表設計師」) 建立共用資料集。  本逐步解說使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安裝報表產生器](../install-windows/install-report-builder.md)，或從您的入口網站啟動它。 您將建立三個資料集，分別針對：KPI 值、KPI 趨勢，以及 Reporting Services 行動報表 (含有更多欄位)。     
   
 1. 從您的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 入口網站，按一下 [新增] > [編頁報表] 以啟動[!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "47717216"
     
 ## <a name="create-mobile-report">建立 Reporting Services 行動報表</a>  
    
-若要建立 Reporting Services 行動報表， [請安裝 SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkId=717766)，或從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站啟動它。 
+若要建立 Reporting Services 行動報表， [請安裝 SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkId=717766)，或從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 入口網站啟動它。 
 
 當您第一次開啟 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]時，您會看到一個空白畫布，您可以在其中建立您的行動報表。 您可以先從建立視覺效果開始，或是以您的資料來開始。 如果您先建立視覺效果， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會自動產生繫結至報表的模擬資料，並在您變更視覺選取區時做出動態變更。 請您試試看。   
   
@@ -259,7 +259,7 @@ ms.locfileid: "47717216"
   
 若要檢視您的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表，您必須先︰
 
-*  [註冊 Power BI 服務](http://go.microsoft.com/fwlink/?LinkID=513879)(如果您還沒有帳戶)。
+*  [註冊 Power BI 服務](https://go.microsoft.com/fwlink/?LinkID=513879)(如果您還沒有帳戶)。
 *  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置。  
 
 ### <a name="view-your-mobile-report"></a>檢視您的行動報表

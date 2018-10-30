@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ecfaf0b343221885143e879256e724693e5da20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e49b55bb199ae64acb8cb12f87f06a2882a88f9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855096"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027809"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>加入及驗證資料連接 (報表產生器及 SSRS)
   在報表產生器中，您可以從報表伺服器加入共用資料來源，或是為您的報表建立內嵌資料來源。 在報表設計師中，您可以建立共用資料來源或內嵌資料來源，並將它部署至報表伺服器。  
@@ -22,7 +22,7 @@ ms.locfileid: "47855096"
   
  若要建立內嵌資料來源，您必須具有外部資料來源的連接資訊，而且必須知道存取資料必須擁有哪些權限。 這項資訊通常是來自於資料來源的擁有者。 您可以測試此連接，以確認指定的認證是否足夠。  
   
- 如需詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 和 [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 和 [在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,7 +56,7 @@ ms.locfileid: "47855096"
   
 5.  按一下 **[詳細資料]**，並使用該資訊來更正問題。  
   
-     如需詳細資訊，請參閱 [在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+     如需詳細資訊，請參閱 [在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -64,6 +64,6 @@ ms.locfileid: "47855096"
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
   

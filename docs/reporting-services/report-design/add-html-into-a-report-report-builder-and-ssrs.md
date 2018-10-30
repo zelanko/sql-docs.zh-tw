@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b467ce3172f631a5d8d49b35bcdb5c09c61ac5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06d9181358ddd8a3e9709787f6fe254ed913ea08
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659964"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032107"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 加入至報表 (報表產生器及 SSRS)
   您可以使用預留位置，從資料集的欄位匯入 HTML，以便用於報表中。 根據預設，預留位置代表純文字，所以您必須將預留位置標記類型變更為 HTML。 如需詳細資訊，請參閱[將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)。  
@@ -25,7 +25,7 @@ ms.locfileid: "47659964"
   
 1.  在 **[插入]** 索引標籤上，按一下 **[清單]**。 按一下設計介面，然後拖曳滑鼠來建立一個所需大小的方塊。  
   
-     **[資料集屬性]** 對話方塊隨即開啟。 您可以使用共用資料集或在報表中內嵌資料集。 如需詳細資訊，請按一下[資料集屬性對話方塊、查詢 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 或[資料集屬性對話方塊、查詢](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)。  
+     **[資料集屬性]** 對話方塊隨即開啟。 您可以使用共用資料集或在報表中內嵌資料集。 如需詳細資訊，請按一下[資料集屬性對話方塊、查詢 &#40;報表產生器&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 或[資料集屬性對話方塊、查詢](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)。  
   
 2.  在 **[插入]** 索引標籤上，按一下 **[文字方塊]**。 在清單中按一下，然後拖曳滑鼠來建立一個所需大小的方塊。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "47659964"
 ## <a name="see-also"></a>另請參閱  
  [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
- [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
+ [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1255f614972ef03858d3528f395e95797c192465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9662a3e69b7d870b7f376f7a0c699db75584ad62
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021082"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>將文件上傳到 SharePoint 文件庫 (SharePoint 模式的 Reporting Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47721498"
   
      如果報表定義使用共用資料來源 (.rsds) 檔案，將連接資訊儲存在外部資料來源中，您可以同時上傳 .rdl 和 .rsds 檔案。 若要這樣做，請按一下 [上傳多份文件]，指定要上傳的兩個檔案，然後按一下 [確定]。  
   
- 如果您上傳的報表包含共用資料來源、報表模型或子報表的參考，上傳檔案時，報表中的參考將會中斷。 如需如何重設參考的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 如果您上傳的報表包含共用資料來源、報表模型或子報表的參考，上傳檔案時，報表中的參考將會中斷。 如需如何重設參考的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
   
  上傳報表後，報表會在您開啟時視需要執行，以擷取資料來源中的即時資料。 您可以設定讓報表依排程擷取資料或使用快取資料。 如需詳細資訊，請參閱[設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)。  
   
@@ -55,4 +55,4 @@ ms.locfileid: "47721498"
  [將共用資料來源發行至 SharePoint 文件庫](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d22f07d4375d92dd49f18f5fe80653f1e401b744
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021832"
 ---
 # <a name="clickthrough-reports-ssrs"></a>點選連結報表 (SSRS)
   點選連結報表是一個提供有關主報表所含資料之詳細資訊的報表。 當使用者按一下出現在主報表中的互動式資料時，就會顯示點選連結報表。 報表伺服器會自動產生這些報表。 模型設計師必須設定指派給報表模型中實體的 **DefaultDetailAttribute** 和 **DefaultAggregateAttribute** 屬性，以決定要在點選連結報表中顯示的內容。  
@@ -47,6 +47,6 @@ ms.locfileid: "47855008"
 >  報表中使用的主要實體或基底實體，必須與連結報表的實體相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表連結至模型以做為點選連結報表](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
+ [將報表連結至模型以做為點選連結報表](https://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   

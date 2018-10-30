@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2610ac04f49ccfd39f1e752ecdc03376c05285fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bacd4064238b3f1e29da67ea8e72bac481939bf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021532"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
 
@@ -42,4 +42,4 @@ Reporting Services SharePoint 模式提供了三個 SharePoint 網站集合功�
 [Reporting Services 網站設定和網站功能 &#40;SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
 [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

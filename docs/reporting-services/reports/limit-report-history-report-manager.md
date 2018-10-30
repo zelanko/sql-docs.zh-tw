@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 752ea88b7b980ec27af03b60d9b8480f391b6114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8a6664802c9e0d893ae0e8c85a956fa4b324ddc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021882"
 ---
 # <a name="limit-report-history-report-manager"></a>限制報表記錄 (報表管理員)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 您可以視需要建立報表記錄，或是排程在報表記錄中建立和加入快照集的頻率。  
@@ -42,10 +42,10 @@ ms.locfileid: "47823148"
   
 3.  按一下 [記錄] 索引標籤。  
   
-4.  選取報表的選項，然後按一下 [套用]。 如需每個選項的詳細資訊，請參閱[快照集選項屬性頁 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。  
+4.  選取報表的選項，然後按一下 [套用]。 如需每個選項的詳細資訊，請參閱[快照集選項屬性頁 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將快照集加入報表記錄 &#40;報表管理員&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

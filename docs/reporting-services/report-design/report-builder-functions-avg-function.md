@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b02b21a0011fb838a697792955c56ac04d52ce32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c03f0d04b8fe643480817d25cef402b304ef862
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021742"
 ---
 # <a name="report-builder-functions---avg-function"></a>報表產生器函式 - Avg 函式
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，傳回運算式指定的所有非 Null 數值的平均值 (在給定範圍中評估)。  
@@ -42,7 +42,7 @@ Avg(expression, scope, recursive)
  十進位運算式會傳回 **Decimal** ，所有其他運算式都會傳回 **Double** 。  
   
 ## <a name="remarks"></a>Remarks  
- 運算式中指定的資料集必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 **CInt**、 **CDbl** 或 **CDec**等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](http://go.microsoft.com/fwlink/?LinkId=96142)。  
+ 運算式中指定的資料集必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 **CInt**、 **CDbl** 或 **CDec**等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](https://go.microsoft.com/fwlink/?LinkId=96142)。  
   
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  
   

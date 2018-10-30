@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da0269e8320f0822723ab42cbe765c6586d0f2d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 6b6abe93a63e24a2526da7b29caeb469db0c1750
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597907"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051170"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安裝或解除安裝 SharePoint 的 Reporting Services 增益集
 
@@ -271,4 +272,4 @@ Rssharepoint.msi /?
 [以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)   
 [Reporting Services 報表伺服器 &#40;SharePoint 模式&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

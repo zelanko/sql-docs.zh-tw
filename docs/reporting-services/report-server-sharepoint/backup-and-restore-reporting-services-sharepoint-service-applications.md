@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021242"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
 
@@ -71,9 +71,9 @@ ms.locfileid: "47817496"
   
  如需詳細資訊，請參閱 SharePoint 文件中的下列主題：  
   
- SharePoint 文件中的[備份服務應用程式 (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748601.aspx)。  
+ SharePoint 文件中的[備份服務應用程式 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)。  
   
- [備份服務應用程式 (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [備份服務應用程式 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>驗證執行帳戶和資料庫驗證
 
@@ -125,7 +125,7 @@ ms.locfileid: "47817496"
   
  如需詳細資訊，請參閱 SharePoint 文件中的下列主題：  
   
- [還原服務應用程式 (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)。  
+ [還原服務應用程式 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)。  
   
  [Restore a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)(還原服務應用程式 (SharePoint Server 2010))。  
 
@@ -161,4 +161,4 @@ ms.locfileid: "47817496"
   
 6.  選取 [確定]。
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

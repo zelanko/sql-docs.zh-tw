@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f1831bd4f089cd3c97706ba3efa6983a98b007a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41ffcac5b8824fbe30d85ad1c84cc46c4a8c5684
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098960"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>開啟或關閉 Reporting Services 功能
   您可以關閉鎖定策略中未使用的報表伺服器功能，以減少實際執行報表伺服器的攻擊面。 在大多數情況下，您會想要同時執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，以便能夠使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所提供的所有功能。 不過，根據部署模型而定，您可以停用不需要的功能。 例如，如果所有報表處理都設定為排程的作業，您就可以只啟用背景處理。 同樣地，如果只想要視需要執行的互動式報表，可以只執行報表伺服器 Web 服務。  
@@ -152,7 +152,7 @@ ms.locfileid: "47640696"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 (SSRS 原生模式)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
- 更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+ [Reporting Services 組態管理員 (SSRS 原生模式)](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+ 更多問題嗎？ [試試 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

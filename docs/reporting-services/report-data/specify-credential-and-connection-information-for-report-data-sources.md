@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031597"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
   報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。 您可以指定認證來使用 Windows 驗證、資料庫驗證、無驗證或自訂驗證。 透過網路傳送連接要求時，報表伺服器會模擬使用者帳戶或自動執行帳戶。 如需安全性內容 (連接要求會在其底下進行) 的詳細資訊，請參閱本主題之後的 [資料來源組態和網路連接](#DataSourceConfigurationConnections) 。  
@@ -48,7 +48,7 @@ ms.locfileid: "47756406"
   
      當您初次儲存、發佈或瀏覽至報表伺服器或 SharePoint 網站時，可能需要輸入您的認證。 您輸入的認證會持續使用到報表產生器工作階段結束為止。 如果您選擇儲存認證，這些認證會在電腦上與使用者設定安全地儲存在一起。 在後續報表產生器工作階段中，儲存的認證會用來連接至相同的報表伺服器或 SharePoint 網站。 報表伺服器管理員或 SharePoint 管理員會指定要使用的認證類型。  
   
--   您在[資料來源屬性對話方塊、認證 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) 頁面中針對內嵌資料來源輸入的資料來源認證。  
+-   您在[資料來源屬性對話方塊、認證 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) 頁面中針對內嵌資料來源輸入的資料來源認證。  
   
      報表伺服器會使用這些認證建立與外部資料來源的資料連接。 針對部分類型的資料來源，其認證可以安全地儲存在報表伺服器上。 這些認證可讓其他使用者執行報表，而不需提供基礎資料連接的認證。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47756406"
   
      如果是共用資料來源，請使用 **[儲存我的密碼]** 選項將認證與使用者設定一起儲存在本機電腦上。 報表產生器會在每次連接對應的外部資料來源時，使用儲存的認證。  
   
- 如需詳細資訊，請參閱[資料來源屬性對話方塊、一般 &#40;報表產生器&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) 和[在報表產生器中預覽報表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
+ 如需詳細資訊，請參閱[資料來源屬性對話方塊、一般 &#40;報表產生器&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) 和[在報表產生器中預覽報表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="using-remote-data-sources"></a>使用遠端資料來源  
  如果報表會從遠端資料庫伺服器擷取資料，請確認下列項目：  

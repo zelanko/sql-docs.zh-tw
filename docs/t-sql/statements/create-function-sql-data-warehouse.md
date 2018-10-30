@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a48d45c417217c446eba6c5c8bb4b73afe1c1204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb741485b28d050129c4a9d6acc673c69b874ab7
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100299"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -193,8 +193,8 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

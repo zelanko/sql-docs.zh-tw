@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8f075036f83ae12f3bede71c838e0a408836d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826127"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021092"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
@@ -149,7 +149,7 @@ ms.locfileid: "47826127"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 轉譯延伸模組已被取代。 如需詳細資訊，請參閱 [SQL Server 2016 中 SQL Server Reporting Services 已被取代的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- Word 轉譯器與已安裝 Word、Excel 和 PowerPoint 之 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 相容。 如需詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](http://go.microsoft.com/fwlink/?LinkID=205622)。  
+ Word 轉譯器與已安裝 Word、Excel 和 PowerPoint 之 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 相容。 如需詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](https://go.microsoft.com/fwlink/?LinkID=205622)。  
   
  與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版 Word 轉譯延伸模組已重新命名為 Word 2003。 根據預設，只能使用 Word 轉譯延伸模組。 您必須更新 Reporting Services 組態檔，才能使用 Word 2003 轉譯延伸模組。 Word 2003 轉譯器會產生 **application/vnd.ms-word** 內容類型的檔案，而檔案的副檔名為 .doc。  
   
@@ -195,4 +195,4 @@ ms.locfileid: "47826127"
 [轉譯報表項目](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [資料表、矩陣和清單](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

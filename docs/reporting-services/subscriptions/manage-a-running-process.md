@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74a041097f0bd4d8ac824fcb24a21f2ff19339ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c029b1d3964b508655091e87c8774e76e4cc2639
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021952"
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會監視在報表伺服器上執行之作業的狀態。 報表伺服器會以固定間隔執行進行中作業的掃描，並將狀態資訊寫入報表伺服器資料庫或服務應用程式資料庫 (如果是 SharePoint 模式)。 如果下列任一個處理序進行中，作業就是進行中：在遠端或本機資料庫伺服器上的查詢執行、報表處理，以及報表轉譯。  
@@ -121,7 +121,7 @@ ms.locfileid: "47699856"
  [作業屬性 &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [監視報表伺服器效能](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

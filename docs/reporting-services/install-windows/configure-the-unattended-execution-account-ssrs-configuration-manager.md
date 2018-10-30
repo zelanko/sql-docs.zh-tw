@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099909"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
@@ -101,6 +101,6 @@ ms.locfileid: "47643306"
  帳戶資訊會隨即從 RSReportServer.config 檔案中移除。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員 (SSRS 原生模式)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 組態管理員 (SSRS 原生模式)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

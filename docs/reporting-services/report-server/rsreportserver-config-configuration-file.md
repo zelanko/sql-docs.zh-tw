@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776076"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020342"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -57,7 +57,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  下表提供有關檔案第一個部分中顯示之一般組態設定的資訊。 設定會依其出現在組態檔的順序顯示。 資料表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 **(N)** 、SharePoint 模式的報表伺服器 **(S)** ，還是兩者。  
   
 > [!NOTE]  
->  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
   
 |設定|Description|[模式]|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  **URLReservations** 會針對目前的執行個體，定義報表伺服器 Web 服務及入口網站的 HTTP 存取。 當您設定報表伺服器時，URL 會保留並儲存在 HTTP.SYS 中。  
   
 > [!WARNING]  
->  如果是 SharePoint 模式，便會在 SharePoint 管理中心設定 URL 保留項目。 如需詳細資訊，請參閱[設定備用存取對應(http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
+>  如果是 SharePoint 模式，便會在 SharePoint 管理中心設定 URL 保留項目。 如需詳細資訊，請參閱[設定備用存取對應(https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
   
  請勿直接修改組態檔中的 URL 保留項目。 請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或報表伺服器 WMI 提供者建立或修改原生模式報表伺服器的 URL 保留項目。 如果您修改組態檔中的值，可能會損毀保留項目，因而導致執行階段發生伺服器錯誤，或將解除安裝本軟體時不會移除的遺棄保留項目留在 HTTP.SYS 中。 如需詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) 和[組態檔中的 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。  
   
@@ -236,7 +236,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**、 **RenderingExtension**|這些設定是用於刻意排除無法搭配檔案共用傳遞使用的匯出格式。 這些格式通常用於互動式報表、預覽或預先載入報表快取。 它們不會產生可輕易地從桌上型電腦應用程式中檢視的應用程式檔案。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> 報表伺服器電子郵件延伸模組組態設定  
- 報表伺服器電子郵件會使用 SMTP 網路裝置，將報表傳送至電子郵件地址。 您必須先設定這個傳遞延伸模組，然後才能使用它。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 和 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
+ 報表伺服器電子郵件會使用 SMTP 網路裝置，將報表傳送至電子郵件地址。 您必須先設定這個傳遞延伸模組，然後才能使用它。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 和 [Reporting Services 中的電子郵件傳遞](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 |設定|Description|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|  
 |**MaxConnections**|指定 Bing Maps Web 服務的連接數目上限。|  
 |**逾時**|指定等候 Bing Maps Web 服務回應的逾時 (以秒為單位)。|  
-|**AppID**|指定要用於 Bing Maps Web 服務的應用程式識別碼 (AppID)。 **(預設值)** 會指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設 AppID。<br /><br /> 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371)。<br /><br /> 除非您必須針對自己的 Bing Maps 授權合約指定自訂 AppID，否則請勿變更此值。 變更 AppID 時，您不需要重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，即可讓變更生效。|  
-|**CacheLevel**|根據 System.Net.Cache 的 HttpRequestCacheLevel 列舉型別指定值。 預設值為 **Default**。 如需詳細資訊，請參閱 [HttpRequestCacheLevel 列舉型別](http://go.microsoft.com/fwlink/?LinkId=153353)。|  
+|**AppID**|指定要用於 Bing Maps Web 服務的應用程式識別碼 (AppID)。 **(預設值)** 會指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設 AppID。<br /><br /> 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。<br /><br /> 除非您必須針對自己的 Bing Maps 授權合約指定自訂 AppID，否則請勿變更此值。 變更 AppID 時，您不需要重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，即可讓變更生效。|  
+|**CacheLevel**|根據 System.Net.Cache 的 HttpRequestCacheLevel 列舉型別指定值。 預設值為 **Default**。 如需詳細資訊，請參閱 [HttpRequestCacheLevel 列舉型別](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> 原生模式報表伺服器的預設組態檔  
  預設情況下，rsreportserver.config 檔案會安裝到以下位置：  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- 更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多問題嗎？ [試試 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

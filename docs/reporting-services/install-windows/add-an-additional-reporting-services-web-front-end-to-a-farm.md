@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09d930c7241a2fb0beb7c5455c5e2db7b6caeb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 603407cd0642a8fb3bb66826d89300ea0d8c7e0d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815606"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050930"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>將其他 Reporting Services Web 前端加入至伺服器陣列
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包含應用程式伺服器和 Web 前端 (WFE) 伺服器所需的元件。 本主題的重點在於安裝 WFE 伺服器的必要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能所使用的應用程式頁面，例如訂閱、資料警示和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。 WFE 所需的主要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝是安裝適用於 SharePoint 2016 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集。  
@@ -56,4 +57,4 @@ ms.locfileid: "47815606"
 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

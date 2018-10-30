@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db4bea93fb172bc47665e993e3185d29841be758
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cada882236484e5c7c7325f44b5633479a81f6e1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028665"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 的 URL 存取與 SOAP 之間選擇
 
@@ -45,6 +45,6 @@ ms.locfileid: "47783457"
   
  在大部分的情況下，將同時需要 URL 存取與 SOAP 呼叫，才能符合報表需求。 當初次連接到報表伺服器資料庫，並在使用者介面中提供可用的報表清單，而且使用 URL 存取來實際存取和導覽個別報表時，會使用 SOAP。  
   
- 如需結合 URL 存取與 Web 服務以提供整合報表的範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。
+ 如需結合 URL 存取與 Web 服務以提供整合報表的範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

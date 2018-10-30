@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e7fe8ed24590c924a6691834104eaf0d4e018312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa026182ac6001a9ca360dedba85dfc7ea8eafec
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737235"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020262"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>建立原生模式報表伺服器資料庫
 
@@ -151,4 +151,4 @@ ms.locfileid: "47737235"
 [管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

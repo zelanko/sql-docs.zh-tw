@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b818182169bc3b8ad0a9256621107552a3def04a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793676"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020382"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>報表內嵌資料集和共用資料集 (報表產生器及 SSRS)
   資料集會從資料連接指定您要使用的資料。 資料集是以報表中儲存為內嵌資料來源或報表伺服器上共用資料來源參考的資料連接為基礎。 資料集包含指定一組欄位的查詢。 當您將這些欄位拖曳至設計介面時，您可以建立報表執行時評估為實際資料的運算式。  
@@ -73,7 +73,7 @@ ms.locfileid: "47793676"
   
 -   來自任何已註冊並已設定之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的結果集。  
   
--   來自已針對特定資料來源設計之報表模型的資料，其中包含預先定義的實體、實體關聯性以及欄位。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜使用報表模型當做資料來源＞。  
+-   來自已針對特定資料來源設計之報表模型的資料，其中包含預先定義的實體、實體關聯性以及欄位。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜使用報表模型當做資料來源＞。  
   
  當報表在執行階段處理時，針對查詢傳回的實際結果集可能擁有零或多個資料列。 在查詢中定義的資料行也可能從資料來源遺失。 來自資料來源的 Null 值會對應到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 值 **System.DBNull.Value**。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "47793676"
 |欄位|來自查詢命令的欄位<br /><br /> 導出欄位不屬於資料集定義的一部分|檢視欄位，但是無法變更欄位<br /><br /> 根據您將共用資料集加入至報表時的查詢，欄位集合是靜態的。 若要更新，請按一下 **[資料集屬性]** 對話方塊中的 **[重新整理欄位]** 。 實際的欄位集合是定義中目前的查詢所傳回的任何內容。<br /><br /> 加入導出欄位|  
 |資料集|資料選項，例如區分大小寫|覆寫執行個體中的資料選項|  
   
- 如需建立資料集的詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)的[建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
+ 如需建立資料集的詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)的[建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
 ##  <a name="SortGroupFilter"></a> 篩選、排序及分組資料集中的資料  
  資料集中的資料是在外部資料來源上執行查詢命令而產生的。 資料延伸模組的查詢命令語法會決定是否可以排序或分組資料。 排序與分組要在擷取報表的資料前，於查詢中進行。 篩選則在擷取報表的資料之後進行。  
@@ -219,7 +219,7 @@ ms.locfileid: "47793676"
   
 ## <a name="see-also"></a>另請參閱  
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

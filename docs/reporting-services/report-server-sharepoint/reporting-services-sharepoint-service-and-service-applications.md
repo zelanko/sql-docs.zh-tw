@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cafcc36570f06bfd85b8b9579a9b7c9ec94f7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752526"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030627"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
 
@@ -28,7 +28,7 @@ ms.locfileid: "47752526"
   
 ## <a name="creating-a-reporting-services-service-application"></a>建立 Reporting Services 服務應用程式
 
- 您可以使用 SharePoint 管理中心或 PowerShell 指令碼建立 Reporting Services 服務應用程式。 如需使用 SharePoint 管理中心的詳細資訊，請參閱[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)中的＜建立 Reporting Services 服務應用程式＞一節。 如需建立服務應用程式的範例 PowerShell 指令碼，請參閱本主題稍後的＜PowerShell＞一節。  
+ 您可以使用 SharePoint 管理中心或 PowerShell 指令碼建立 Reporting Services 服務應用程式。 如需使用 SharePoint 管理中心的詳細資訊，請參閱[安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)中的＜建立 Reporting Services 服務應用程式＞一節。 如需建立服務應用程式的範例 PowerShell 指令碼，請參閱本主題稍後的＜PowerShell＞一節。  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>修改服務應用程式與 Proxy 群組的關聯
 
@@ -83,4 +83,4 @@ ms.locfileid: "47752526"
 |管理服務應用程式的設定。|[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
 |備份和還原服務應用程式及相關元件，例如加密金鑰和 Proxy。|[備份與還原 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

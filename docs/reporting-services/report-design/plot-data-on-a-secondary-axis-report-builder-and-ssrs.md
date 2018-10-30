@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60550310a391dfc1ed6dc03042b0d0b86b5152f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd9b806aefc53c644a5ee50799ba9bb60a194ff
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801256"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021192"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>繪製次要座標軸上的資料 (報表產生器及 SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "47801256"
   
  如果比較的數列超過兩個，請考慮不同的方法來在圖表中比較及顯示多個數列。 如需詳細資訊，請參閱[圖表上的多個數列](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)。  
   
- 此圖表的範例可從範例報表取得。 如需有關下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 此圖表的範例可從範例報表取得。 如需有關下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,4 +39,4 @@ ms.locfileid: "47801256"
 [格式化圖表上的軸標籤](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
 [指定軸間隔](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

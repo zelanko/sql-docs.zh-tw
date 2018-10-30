@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021262"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
   走勢圖和資料橫條是簡單的小圖表，在極小空間中傳達大量資訊，通常內嵌於文字。   
@@ -25,7 +25,7 @@ ms.locfileid: "47710816"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- 若要快速地開始使用走勢圖，請參閱 [教學課程：將走勢圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) ，以及 [How to: Create a Sparkline in a Table](http://go.microsoft.com/fwlink/?LinkId=197092) (如何：在資料表中建立走勢圖) 和 [Sparklines, Bar Charts, and Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) (報表產生器中的走勢圖、橫條圖與指標) 影片。  
+ 若要快速地開始使用走勢圖，請參閱 [教學課程：將走勢圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) ，以及 [How to: Create a Sparkline in a Table](https://go.microsoft.com/fwlink/?LinkId=197092) (如何：在資料表中建立走勢圖) 和 [Sparklines, Bar Charts, and Indicators in Report Builder](https://technet.microsoft.com/bi/video/ff877165) (報表產生器中的走勢圖、橫條圖與指標) 影片。  
   
 > [!NOTE]  
 >  走勢圖和資料橫條及其父資料表、矩陣或清單可以與報表分開發行當做報表組件。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -102,6 +102,6 @@ ms.locfileid: "47710816"
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [教學課程：將走勢圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [教學課程：將走勢圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   

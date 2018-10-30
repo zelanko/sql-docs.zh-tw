@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 808eec12b34da573959340fa5939cca77a590942
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d42e62b506f3c9d7c24007bf69bffae7916d474
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099919"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>設定報表或文字方塊的地區設定 (Reporting Services)
   報表或文字方塊上的 **[Language]** 屬性包含地區設定，地區設定會決定用來顯示依語言和地區而不同之報表資料的預設格式，例如日期、貨幣或數值。 文字方塊上的 **[Language]** 屬性會覆寫報表上的 **[Language]** 屬性。 如果 **[Language]** 未指定任何值，Reporting Services 會針對發行的報表使用報表伺服器上作業系統的地區設定，或是針對報表預覽使用報表撰寫電腦的地區設定。  
@@ -50,6 +50,6 @@ ms.locfileid: "47800083"
   
 ## <a name="see-also"></a>另請參閱  
  [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [適用於多語言或全域部署的解決方案設計考量 (Reporting Services)](http://msdn.microsoft.com/en-us/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
+ [適用於多語言或全域部署的解決方案設計考量 (Reporting Services)](https://msdn.microsoft.com/55630eca-d1e5-4ac6-93c7-9a3f15c0d08a)  
   
   

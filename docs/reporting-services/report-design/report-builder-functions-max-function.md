@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c68e3551e5519f2a2e00e20f071bfcdb74d6062b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea5c3c20feb94ba780caa9ffb736bb0158d9fa05
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772676"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021562"
 ---
 # <a name="report-builder-functions---max-function"></a>報表產生器函式 - Max 函式
   傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。  
@@ -42,7 +42,7 @@ Max(expression, scope, recursive)
  取決於運算式的類型。  
   
 ## <a name="remarks"></a>Remarks  
- 運算式中指定的資料集必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 **CInt**、 **CDbl** 或 **CDec**等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](http://go.microsoft.com/fwlink/?LinkId=96142)。  
+ 運算式中指定的資料集必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 **CInt**、 **CDbl** 或 **CDec**等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](https://go.microsoft.com/fwlink/?LinkId=96142)。  
   
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  
   

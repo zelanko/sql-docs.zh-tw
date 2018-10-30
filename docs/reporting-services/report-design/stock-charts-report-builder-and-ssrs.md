@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8fd78d37c9ae890fc2a5412916acc55b30487f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38412eabee8a497532e12e139294ee47a1c57165
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725476"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020702"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>股票圖 (報表產生器及 SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "47725476"
   
  ![股票圖](../../reporting-services/report-design/media/rs-stockchart.gif "股票圖")  
   
- 股票圖的例子可從範例報表產生器報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)：  
+ 股票圖的例子可從範例報表產生器報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,6 +43,6 @@ ms.locfileid: "47725476"
 [範圍圖表](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [圖表](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [格式化圖表](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[軸屬性對話方塊、軸選項](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[軸屬性對話方塊、軸選項](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

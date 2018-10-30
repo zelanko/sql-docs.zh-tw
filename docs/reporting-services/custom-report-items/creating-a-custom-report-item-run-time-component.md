@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceb6e3636665cf8084cc6473432014943812d5f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e26a45b7458e548535611af0ba19357f59eef54
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662866"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031977"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>建立自訂報表項目執行階段元件
   自訂報表項目執行階段元件會使用任何 CLS 相容語言而實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 元件，並在執行階段由報表處理器呼叫。 您可藉由修改自訂報表項目對應的設計階段元件，在設計環境中定義執行階段元件的屬性。  
   
- 如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
+ 如需完全實作的自訂報表項目的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="definition-and-instance-objects"></a>定義和執行個體物件  
  在實作自訂報表項目之前，了解「定義物件」和「執行個體物件」之間的差異很重要。 定義物件提供自訂報表項目的 RDL 表示法，而執行個體物件是定義物件的評估版本。 報表上每個項目只有一個定義物件。 在包含運算式的定義物件上存取屬性時，您會取得未評估過的運算式字串。 執行個體物件包含已評估的定義物件版本，而且與項目的定義物件可能具有一對多的關聯性。 例如，如果報表具有 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> 資料區，而該資料區在詳細資料列中包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem>，則只會有一個定義物件，但資料區中的每個資料列都會有一個執行個體物件。  

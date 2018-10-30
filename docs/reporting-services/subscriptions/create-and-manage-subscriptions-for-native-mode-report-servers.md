@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fc05bd786594cc70836bc6d39e86143d16089979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021682"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
   標準訂閱是希望能透過電子郵件傳遞報表，或傳遞到共用資料夾之個別使用者所建立的訂閱。 此主題提供有關由個別使用者建立或管理的標準訂閱資訊。 資料驅動訂閱有不同的需求和步驟，且會在另一個主題中討論。 如需詳細資訊，請參閱 [建立、修改和刪除資料驅動訂閱](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "47617436"
   
 -   若要使用電子郵件傳遞，您必須先針對 SMTP 伺服器或閘道連接設定報表伺服器，才可以建立訂閱。  
   
--   若要使用檔案共用傳遞，您必須已經定義目標資料夾。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
+-   若要使用檔案共用傳遞，您必須已經定義目標資料夾。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
  報表資料來源必須設定為使用預存認證或不使用認證，然後才能訂閱報表。 如需詳細資訊，請參閱 [在 Reporting Services 資料來源中儲存認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)。 否則的話， **[新增訂閱]** 按鈕便無法使用。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47617436"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> 若要建立檔案共用訂閱  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  瀏覽至您想要訂閱的報表。 按一下 [報表] 功能表及 [訂閱] 。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47617436"
   
 ###  <a name="bkmk_create_email_subscription"></a> 若要建立電子郵件訂閱  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  瀏覽至您想要訂閱的報表。 按一下 [報表] 功能表及 [訂閱] 。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "47617436"
   
 4.  **擁有者**︰擁有者欄位預設為目前的使用者，且在您建立訂閱時無法編輯。 不過，在儲存訂閱之後，您可以變更訂閱屬性，包括擁有者與描述。  
   
-5.  **傳遞者**：選取 [電子郵件]。 如果無法使用 [電子郵件]，表示您的報表伺服器尚未針對電子郵件訂用帳戶進行設定。 請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)  
+5.  **傳遞者**：選取 [電子郵件]。 如果無法使用 [電子郵件]，表示您的報表伺服器尚未針對電子郵件訂用帳戶進行設定。 請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)  
   
-6.  **收件者**：系統會使用您的網域使用者帳戶，自行處理 [收件者:] 欄位中的收件者名稱。 驗證格式為 [使用者名稱]@[網域.com] 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者] 欄位。 如需如何變更電子郵件地址組態設定的詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
+6.  **收件者**：系統會使用您的網域使用者帳戶，自行處理 [收件者:] 欄位中的收件者名稱。 驗證格式為 [使用者名稱]@[網域.com] 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者] 欄位。 如需如何變更電子郵件地址組態設定的詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
   
     > [!NOTE]  
     >  根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以在 [副本]、[密件副本] 和 [回覆至] 文字方塊中，鍵入其他電子郵件地址。 這需要您具有管理所有訂閱的權限。  
@@ -163,7 +163,7 @@ ms.locfileid: "47617436"
 ##  <a name="bkmk_delete_subscription"></a> 若要刪除訂閱  
  若要刪除訂閱  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，按一下工具列上的 [我的訂閱]  ，然後瀏覽至您要修改或刪除的訂閱。  
   
@@ -179,10 +179,10 @@ ms.locfileid: "47617436"
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理 SharePoint 模式報表伺服器的訂閱](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [使用我的訂用帳戶 &#40;原生模式報表伺服器&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [使用我的訂閱 &#40;原生模式報表伺服器&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

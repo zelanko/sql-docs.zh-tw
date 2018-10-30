@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021218"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "47624566"
 |#MAX|數列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|數列中所有 Y 值的第一個。|All|`=First(Fields!MyDataField.Value)`|  
   
- 若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
+ 若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
  如需將關鍵字新增至圖表的詳細資訊，請參閱[在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47624566"
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

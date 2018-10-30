@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d7c41d826b1dec0aca01080fb3482c03e5fa594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608327"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020642"
 ---
 # <a name="data-driven-subscriptions"></a>資料驅動訂閱
   資料驅動訂閱會提供一個方式來使用在執行階段擷取自外部資料來源的動態訂閱資料， 資料驅動訂閱也可以使用在定義訂閱時所指定的靜態文字和預設值； 您可以使用資料驅動訂閱來執行下列作業：  
@@ -42,7 +42,7 @@ ms.locfileid: "47608327"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>使用資料驅動訂閱的需求  
  並非所有版本中都可以使用資料驅動訂閱功能， 您在執行階段可用來擷取訂閱資料的資料來源種類也有一些限制； 下列清單提供有關這些需求的詳細資訊：  
   
--   如需支援資料驅動訂閱功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   如需支援資料驅動訂閱功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   如果是訂閱資料，請選擇可以提供結構描述資訊給報表伺服器的資料來源； 支援資料來源類型的範例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝資料、ODBC 資料來源和 OLE DB 資料來源。 如需訂閱者資料來源需求的詳細資訊，請參閱 [使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47608327"
   
 ## <a name="see-also"></a>另請參閱  
  [訂閱與傳遞 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [建立資料驅動訂閱頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [建立資料驅動訂閱頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [預先載入快取 &#40;報表管理員&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cec608dc1dd168ebfc86b1f8d945e5f90d9d7b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021703"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
 
-  在本教學課程中，您使用精靈在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 然後您會加入百分比，然後稍微修改圓形圖。 
+  在本教學課程中，您會使用精靈在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]分頁報表中建立圓形圖。 然後您會加入百分比，然後稍微修改圓形圖。 
   
 您可以採用兩種不同的方式進行此教學課程。 這兩種方法結果都一樣，這個示範的圓形圖會像這樣：  
   
  ![報表產生器快速圓形圖](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "報表產生器快速圓形圖")  
   
 ## <a name="prerequisites"></a>Prerequisites  
- 不論您使用的是 XML 資料或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，都需要具備報表產生器的存取權。 您可以在原生模式或 SharePoint 整合模式中從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器啟動 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，或者從 Microsoft 下載中心下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。  
+ 不論您使用的是 XML 資料或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，都需要具備報表產生器的存取權。 您可以在原生模式或 SharePoint 整合模式中從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 報表伺服器啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，或者從 Microsoft 下載中心下載 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 。 如需詳細資訊，請參閱 [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)。  
   
 ##  <a name="TwoWays"></a> 進行此教學課程的兩種方式  
   
@@ -220,7 +220,7 @@ ms.locfileid: "47850416"
  如需自訂圖表標籤和圖例的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ##  <a name="WhatsNext"></a> 下一步  
- 既然您已經在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中建立第一份報表，就可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，您需要有權使用「連接字串」存取資料來源 (例如資料庫)，以將您實際連線至資料來源。 系統管理員會提供這項資訊而且可能會為您設定。  
+ 既然您已經在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中建立第一份報表，就可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，您需要使用 *連接字串*(實際上會將您連接至資料來源) 來存取資料庫等資料來源的權限。 系統管理員會提供這項資訊而且可能會為您設定。  
   
  若要進行其他教學課程，您需要 SQL Server 執行個體的名稱，以及能夠以唯讀方式存取任何資料庫的認證。 系統管理員可能也會為您進行該設定。  
   
@@ -233,4 +233,4 @@ ms.locfileid: "47850416"
 [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

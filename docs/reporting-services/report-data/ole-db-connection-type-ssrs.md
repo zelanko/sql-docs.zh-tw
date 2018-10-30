@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a37f501c688ad8669a5adcde87cbc0b4b02f3b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d489b9d01d4d381294f387e1602e6edbfe23481
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611426"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030429"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 連接類型 (SSRS)
   若要加入來自 OLE DB 資料提供者的資料，您必須具有以 OLE DB 類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 資料處理延伸模組為基礎。  
@@ -31,7 +31,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  您使用的連接字串是依據您要連接的外部資料來源而定。 若要設定資料提供者所特有的連接字串屬性，請在 **[資料來源屬性]** 對話方塊的 **[一般]** 頁面上，按一下 **[建立]** 按鈕，以便開啟 **[連接屬性]** 對話方塊。 透過 **[資料連結屬性]** 對話方塊，設定延伸資料來源屬性。  
   
- 如需更多連接字串的範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 如需更多連接字串的範例，請參閱 [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
   
 ##  <a name="Credentials"></a> 認證  
@@ -39,7 +39,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ###### <a name="special-characters-in-a-password"></a>密碼中的特殊字元  
  如果您設定 OLE DB 資料來源來提示輸入密碼或是將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (如標點符號) 的密碼時，某些基礎資料來源驅動程式將無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。  
@@ -57,13 +57,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  若要成功擷取您想要的資料，您必須提供資料提供者支援的查詢語法。 參數支援會因資料提供者而異。 如需詳細資訊，請參閱所選取資料提供者的特定主題。 例如：  
   
--   [Analysis Services OLE DB 提供者 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
+-   [Analysis Services OLE DB 提供者 &#40;Analysis Services - 多維度資料&#41;](https://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
   
--   [使用 .NET Framework Data Provider for Oracle](http://go.microsoft.com/fwlink/?LinkId=112314)  
+-   [使用 .NET Framework Data Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
 -   [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
- 如需特定 OLE DB 資料提供者的詳細資訊，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 如需特定 OLE DB 資料提供者的詳細資訊，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
   
 ##  <a name="HowTo"></a> 如何主題  
@@ -82,7 +82,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
- [報表產生器中的資料連接、資料來源及連接字串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [報表產生器中的資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供資料連接與資料來源的相關資訊。  
   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -91,7 +91,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
   

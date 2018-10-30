@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfdddd3e263ef6f83f8ad12635c76c61fef6e284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603124"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021772"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 課：定義父報表的資料連接和資料表
 使用 Visual C# 的 ASP.NET 網站範本建立新的網站專案後，下一步是要建立父報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2014 資料庫。  
@@ -26,7 +26,7 @@ ms.locfileid: "47603124"
   
     這樣會將新的 XSD 檔 **DataSet1.xsd** 新增至專案，並開啟 DataSet 設計工具。  
   
-3.  從 [工具箱] 視窗將 **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** 控制項拖曳至設計介面。 這樣會啟動 [ **TableAdapter** 組態精靈]。  
+3.  從 [工具箱] 視窗將 **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** 控制項拖曳至設計介面。 這樣會啟動 [ **TableAdapter** 組態精靈]。  
   
 4.  在 [選擇資料連接] 頁面上，選取 [新增連接]。  
   

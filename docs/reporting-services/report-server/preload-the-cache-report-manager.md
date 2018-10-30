@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5f848443fbfcbbb1c45aadf910f6493f408bf59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021872"
 ---
 # <a name="preload-the-cache-report-manager"></a>預先載入快取 (報表管理員)
   您可以為共用資料集建立快取重新整理計劃，為共用資料集預先載入快取。  
@@ -37,7 +37,7 @@ ms.locfileid: "47849316"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>若要透過建立快取重新整理計劃以預先載入快取  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽到 **[內容]** 頁面，然後導覽到您要快取的項目。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47849316"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>若要透過使用資料驅動訂閱以預先載入含使用者專屬報表的快取  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在報表管理員中，導覽至 **[內容]** 頁面，然後導覽至您要建立訂閱的報表。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47849316"
      或者，若要建立自訂排程，請按一下 **[在為此訂閱建立的排程上]** ，然後按 **[下一步]**。 設定排程，然後按一下 **[完成]**。  
   
     > [!NOTE]  
-    >  為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+    >  為了讓訂閱者能夠接收到最新的報表，您設定的排程應該與您為訂閱者所定義的報表傳遞排程一致。 如需詳細資訊，請參閱[報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 14. 設定報表的執行選項，如下。 在報表頁面上，按一下 **[屬性]** 索引標籤。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47849316"
 18. 按一下 **[套用]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料驅動訂閱](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [效能、快照、快取 &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [設定報表處理屬性](../../reporting-services/report-server/set-report-processing-properties.md)   

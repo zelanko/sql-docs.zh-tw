@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75a595c5286de0dd050887ae28b95db5b724accc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee3a8e9576b38ee49dc5b562384d51c45f58c3fd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020252"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色工作與SharePoint 群組權限
   本主題會比較 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中的角色和工作型授權功能與 SharePoint 產品的安全性功能。 本主題會比較有關角色、工作、SharePoint 群組、權限等級和權限的詞彙與特性。  
@@ -51,7 +51,7 @@ ms.locfileid: "47778346"
 |---|**權限等級群組：** 例如 [檢視者] 群組的 [僅檢視]。|  
 |**工作：** 例如 [管理報表]。|**權限：** 例如，在 [僅檢視] 群組中有檢視項目、檢視版本和檢視應用程式頁面的清單相關權限。|  
   
- 如需有關 SharePoint 權限的詳細資訊，請參閱＜ [權限等級和權限](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) ＞和＜ [在 SharePoint 2013 中決定權限層級及群組](http://technet.microsoft.com/library/cc262690.aspx)＞。  
+ 如需有關 SharePoint 權限的詳細資訊，請參閱＜ [權限等級和權限](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) ＞和＜ [在 SharePoint 2013 中決定權限層級及群組](https://technet.microsoft.com/library/cc262690.aspx)＞。  
   
 ##  <a name="bkmk_compare_roles_groups"></a> 比較原生模式角色和 SharePoint 群組  
  下表會比較 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中的預先定義角色定義與標準 SharePoint 群組。 如果 SharePoint 群組不符合您所需要的特定角色，您可以在 SharePoint 中建立自訂群組，並指派權限等級。  

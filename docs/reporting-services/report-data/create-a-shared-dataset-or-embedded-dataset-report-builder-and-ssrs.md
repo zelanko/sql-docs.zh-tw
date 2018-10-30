@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ac6482cd88846218f996bda9f28bdbe9bd2232d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 950887481902b05de6fd1cd08894164c6818ac67
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029587"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
 內嵌資料集適用於單一 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表。 報表伺服器上的共用資料集可供多份報表使用，行動和分頁報表皆可。 若要建立資料集，您需要內嵌或共用的資料來源。  
@@ -116,7 +116,7 @@ ms.locfileid: "47690566"
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

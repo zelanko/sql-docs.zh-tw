@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 7d45e74b7d4079094c37b449eece3b62406ae13f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460983"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020592"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>對 Windows Token 服務 (C2WTS) 和 Reporting Services 的宣告
 
@@ -44,7 +44,7 @@ ms.locfileid: "49460983"
 
 C2WTS 建立的權杖只能與限制委派 (僅限於特定服務) 及設定選項 [使用任何驗證通訊協定] (通訊協定轉換) 搭配使用。
 
-如果您的環境會使用 Kerberos 限制委派，則 SharePoint Server 服務及外部資料來源必須位於相同的 Windows 網域。 相依於 Windows Token 服務之宣告 (c2WTS) 的任何服務，都必須使用 Kerberos **限制** 委派，才能讓 c2WTS 使用 Kerberos 通訊協定轉換將宣告轉譯成 Windows 認證。 這些需求對於所有 SharePoint Shared 服務都是如此。 如需詳細資訊，請參閱 [規劃 SharePoint 2013 的 Kerberos 驗證](http://technet.microsoft.com/library/ee806870.aspx)。  
+如果您的環境會使用 Kerberos 限制委派，則 SharePoint Server 服務及外部資料來源必須位於相同的 Windows 網域。 相依於 Windows Token 服務之宣告 (c2WTS) 的任何服務，都必須使用 Kerberos **限制** 委派，才能讓 c2WTS 使用 Kerberos 通訊協定轉換將宣告轉譯成 Windows 認證。 這些需求對於所有 SharePoint Shared 服務都是如此。 如需詳細資訊，請參閱 [規劃 SharePoint 2013 的 Kerberos 驗證](https://technet.microsoft.com/library/ee806870.aspx)。  
 
 1. 設定 C2WTS 服務網域帳戶。 
 
@@ -115,4 +115,4 @@ C2WTS 建立的權杖只能與限制委派 (僅限於特定服務) 及設定選�
 
 4. 從 SharePoint 管理中心的 Manage Services on Server (伺服器上的受控服務 頁面，啟動對 Windows Token 服務的宣告 (若已啟動，請先停止再啟動)。 您應在要執行動作的伺服器上啟動該服務。 例如您有一部 WFE 伺服器及另一部執行 SQL Server Reporting Services 共用服務的應用程式伺服器，就只需在應用程式伺服器上啟動 C2WTS。 如果在執行的是報表檢視器 Web 組件，WFE 伺服器上只需要 C2WTS。
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2eae41ae3230206800bd9ebf7ad3055e96d411e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05e0650c71c7f2ed8f9dc51bf01bbb33e325add5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845466"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030177"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
 了解如何藉由設定 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的軸間隔，在圖表中變更類別 (x) 軸中標籤及刻度的數目。
@@ -86,7 +86,7 @@ ms.locfileid: "47845466"
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表上的資料點 (報表產生器及 SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在資料區中排序資料 (報表產生器及 SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
  [指定對數刻度 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
  [繪製副座標軸上的資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
