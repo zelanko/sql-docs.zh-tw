@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c01d4f6af72fdc487b559a12f31bfcb447971cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603798"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461123"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的系統需求
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47603798"
 
 ## <a name="odbc-driver"></a>ODBC 驅動程式
 
-PHP 執行所在電腦上需要 Microsoft ODBC Driver for SQL Server 的正確版本。 您可以下載所有支援的版本的驅動程式支援的平台上[本頁](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017)。
+PHP 執行所在電腦上需要 Microsoft ODBC Driver for SQL Server 的正確版本。 您可以下載所有支援的版本的驅動程式支援的平台上[本頁](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017)。
 
 如果您要下載此驅動程式在 64 位元版本的 Windows 上的 Windows 版本，則 ODBC 64 位元安裝程式會安裝 32 位元和 64 位元 ODBC 驅動程式。 如果您使用 32 位元版本的 Windows，使用 ODBC x86 安裝程式。 非 Windows 平台上，只有 64 位元版本的驅動程式可用。
 

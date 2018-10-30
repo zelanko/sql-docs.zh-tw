@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600526"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383843"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > 如需舊版 SQL Server 的相關內容，請參閱 [bcp 公用程式](bcp-utility.md)。
 
  > Bcp 公用程式的最新版本，請參閱[適用於 SQL Server 的 Microsoft 命令列公用程式 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -255,7 +253,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   > **bcp** 現在會強制進行資料驗證與資料檢查，若針對資料檔案中無效的資料執行指令碼，這些資料驗證與檢查作業可能會導致指令碼失敗。
   
   > [!NOTE]
-  >  **-m** *max_errors* 參數不適用於條件約束檢查。
+  > **-m** *max_errors* 參數不適用於條件約束檢查。
   
 * **FIRE_TRIGGERS**  
 利用 **in** 引數加以指定，任何定義於目的地資料表上的插入觸發程序，都會在大量複製作業期間執行。 如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。 **out**、 **queryout**和 **format** 引數會略過 FIRE_TRIGGERS。  
@@ -345,13 +343,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 網路使用者的安全性認證、 *login_id*及 *password* 不是必要的選項。 如果未指定 **–T** ，則必須指定 **–U** 與 **–P** ，才能順利登入。
  
 > [!IMPORTANT]
-> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」** 和「密碼」** 的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。 
+> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。 
   
  **-U** _**login\_id**_<a name="U"></a>  
  指定用來連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的登入識別碼。  
   
 > [!IMPORTANT]
-> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」** 和「密碼」** 的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。
+> 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。
   
  **-v**<a name="v"></a>  
  報告 **bcp** 公用程式版本號碼和著作權。  
@@ -528,7 +526,7 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. 將資料表資料列複製到資料檔案中 (使用信任連接)  
-下列範例說明 `WideWorldImporters.Warehouse.StockItemTransactions` 資料表上的 **out** 選項。
+下列範例說明 **資料表上的** out `WideWorldImporters.Warehouse.StockItemTransactions` 選項。
 
 - **基本**  
 這個範例會建立一個名稱為 `StockItemTransactions_character.bcp` 的資料檔案，且會利用 **字元** 格式，將資料表的資料複製到這個資料檔案中。
@@ -559,7 +557,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 將檔案資料複製到資料表中  
-下列範例會使用上方建立的檔案說明 `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 資料表上的 **in** 選項。
+下列範例會使用上方建立的檔案說明 **資料表上的** in `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 選項。
   
 - **Basic**  
 這個範例會使用先前建立的 `StockItemTransactions_character.bcp` 資料檔案。

@@ -11,19 +11,19 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b50dcb3713ba92e000791a70cc6cb7c8100c36d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 36e98a03aed92c615d6b30b83f72337ef63f3560
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674816"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390870"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB Driver for SQL Server 的高可用性支援、災害復原
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  這篇文章討論 OLE DB Driver for SQL Server 的支援 (在中新增[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  這篇文章討論*OLE DB Driver for SQL Server*支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果 OLE DB Driver for SQL Server 應用程式已連線到可用性群組中容錯移轉的資料庫，則原始連線會中斷，而且應用程式必須在容錯移轉後開啟新連線，才能繼續工作。  
   
@@ -103,7 +103,7 @@ OLE DB Driver for SQL Server 應用程式可以使用其中一個方法來指定
  -   **IDBProperties::SetProperties**  
  若要設定 **ApplicationIntent** 屬性值，請呼叫 **IDBProperties::SetProperties**，其傳入值為 "**ReadWrite**" 或 "**ReadOnly**" 的 **SSPROP_INIT_APPLICATIONINTENT** 屬性，或是值包含 "**ApplicationIntent=ReadOnly**" 或 "**ApplicationIntent=ReadWrite**" 的 **DBPROP_INIT_PROVIDERSTRING** 屬性。  
   
-您可以在 [資料連結屬性]**** 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
+您可以在 [資料連結屬性] 對話方塊中，[全部] 索引標籤的 [應用程式的意圖屬性] 欄位內指定應用程式意圖。  
   
 當建立隱含連接時，隱含連接將會使用父連接的應用程式意圖設定。 同樣地，從相同資料來源建立的多個工作階段將會繼承資料來源的應用程式意圖設定。  
   

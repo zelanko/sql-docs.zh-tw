@@ -29,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
-ms.translationtype: HT
+ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252115"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461163"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+ > SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 )。
 
  > 使用 sqlcmd 在 Linux 上，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
@@ -61,7 +61,7 @@ ms.locfileid: "48252115"
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器]**** 中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時，**sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器] 中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時，**sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
 >   
   
  目前， **sqlcmd** 不需要在命令列選項與值之間保留一個空格。 但是在未來的版本中，可能會需要在命令列選項與值之間空一個空格。  
@@ -516,7 +516,7 @@ sqlcmd
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要檢視環境變數，請在 [控制台] **** 中開啟 [系統] ****，然後按一下 [進階] **** 索引標籤。  
+>  若要檢視環境變數，請在 [控制台] 中開啟 [系統] ，然後按一下 [進階]  索引標籤。  
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 指令碼變數  
   
@@ -701,13 +701,13 @@ sqlcmd
  GO 會發出批次結束及執行任何快取的 Transact-SQL 陳述式的信號。 批次當做個別批次執行多次。 您無法在單一批次中多次宣告變數。
   
  **其他命令**  
-  **:r \<** 檔名****>**  
+  **:r \<** 檔名**>**  
  將 **\<**_filename_**>** 所指定檔案中的其他 Transact-SQL 陳述式與 **sqlcmd** 命令，剖析至陳述式快取中。  
   
  如果檔案包含的 Transact-SQL 陳述式後面沒有緊接著 **GO**，您必須在 **:r** 之後的一行輸入 **GO**。  
   
 > [!NOTE]  
->  **\<** *之啟動目錄的相對目錄中讀取* **>** filename **** 。  
+>  **\<** *之啟動目錄的相對目錄中讀取* **>** filename  。  
   
  在發現批次結束字元之後，便會讀取和執行這個檔案。 您可以發出多個 **:r** 命令。 這個檔案可包含任何 **sqlcmd** 命令。 其中包括批次結束字元 **GO**。  
   
