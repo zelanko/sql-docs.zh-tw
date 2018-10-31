@@ -155,7 +155,7 @@ ms.locfileid: "47635016"
   
      完成資料來源並關閉 [資料來源精靈]。  
   
-6.  將 **MultiSubnetFailover=Yes** 加入連接字串，以提供更快的使用中伺服器偵測及連線。 如需有關這個屬性的詳細資訊，請參閱＜ [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
+6.  將 **MultiSubnetFailover=Yes** 加入連接字串，以提供更快的使用中伺服器偵測及連線。 如需有關這個屬性的詳細資訊，請參閱＜ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
   
      這個屬性不會在屬性方格中顯示。 若要新增屬性，請以滑鼠右鍵按一下資料來源，然後選擇 [檢視程式碼]。 將 `MultiSubnetFailover=Yes` 新增至連接字串。  
   

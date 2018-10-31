@@ -26,7 +26,7 @@ ms.locfileid: "48094020"
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立完整資料庫備份。  
   
 > [!NOTE]  
->  如需有關 SQL Server 備份至 Windows Azure Blob 儲存服務的詳細資訊，請參閱＜ [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)＞。  
+>  如需有關 SQL Server 備份至 Windows Azure Blob 儲存服務的詳細資訊，請參閱＜ [SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)＞。  
   
  **本主題內容**  
   
