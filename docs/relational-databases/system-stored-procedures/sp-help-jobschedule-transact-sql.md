@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|排程的識別碼。|  
 |**job_count**|**int**|傳回的作業計數。|  
   
-> **注意︰****sp_help_jobschedule**傳回的值**msdb**並**dbo.sysjobschedules**系統資料表的**msdb**.   **sysjobschedules**更新每隔 20 分鐘。 這可能會影響這個預存程序所傳回的值。  
+> **注意︰** **sp_help_jobschedule**傳回的值**msdb**並**dbo.sysjobschedules**系統資料表的**msdb**.   **sysjobschedules**更新每隔 20 分鐘。 這可能會影響這個預存程序所傳回的值。  
   
 ## <a name="remarks"></a>備註  
  參數**sp_help_jobschedule**可用只在特定組合。 如果*schedule_id*指定時，都不*job_id*也*job_name*可以指定。 否則，請*job_id*或是*job_name*參數可以搭配*schedule_name&lt*。  
