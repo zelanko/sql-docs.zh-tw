@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461063"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146053"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -89,7 +89,7 @@ ms.locfileid: "49461063"
 
 ![適用於文字](./media/sql-server-docs-contribute/applies-to.png)
 
-若要為文章尋找正確的 applies-to include，請使用下列祕訣：
+若要為文章尋找正確的 applies-to include 檔案，請使用下列祕訣：
 
 - 如需常用 include 檔案的清單，請參閱 [SQL Server 版本和 applies-to include 檔案](applies-to-includes.md)。
 - 查看其他涵蓋相同功能或相關工作的文章。 如果您要編輯這篇文章，可以複製 Markdown 以取得 applies-to include 連結 (您可以取消編輯而不送出)。
