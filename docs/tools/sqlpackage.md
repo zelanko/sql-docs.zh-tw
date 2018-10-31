@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 715839a584561c38fb08b3e217016ef3cc27e9b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051220"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -51,8 +51,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|指定要執行的動作。 |
+|**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
+|**/ MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/ OverwriteFiles:**|**/of**|{True&#124;，則為 False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage.exe /Action： 發行 /？。 |
 |**/Quiet:**|**/q**|{True&#124;，則為 False}|指定是否隱藏詳細的意見反應。 預設為 False。 |
@@ -65,7 +67,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/ SourceTrustServerCertificate:**|**/stsc**|{True&#124;，則為 False}|指定是否要使用 SSL 來加密來源資料庫連線並且略過驗證信任的憑證鏈結。 |
 |**/SourceUser:**|**/su**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的 SQL Server 使用者。 |
 |**/TargetFile:**|**/tf**|{string}| 指定要做為目標的動作，而不是資料庫的目標檔案 （亦即.dacpac 檔案）。 如果使用此參數，其他目標參數都應該無效。 此參數應僅支援資料庫目標的動作無效。| 
-|**/ TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 ### <a name="properties-specific-to-the-extract-action"></a>擷取動作特有的屬性
@@ -97,10 +99,12 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|發行|指定要執行的動作。 |
+|**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{互動式&#124;ClientIdSecret}|指定存取 Azure Key Vault 時要使用的驗證方法 |
 |**/ClientId:**|**/cid**|{string}|指定必要時驗證 Azure Key Vault 所要使用的用戶端識別碼 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
+|**/ MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/ OverwriteFiles:**|**/of**|{True&#124;，則為 False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生輸出時要使用之屬性及變數的集合。|
 |**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage.exe /Action： 發行 /？。|
@@ -123,7 +127,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/ TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 Azure AD 中，建議您使用這個值是大於或等於為 30 秒。|
 |**/ TargetTrustServerCertificate:**|**/ttsc**|{True&#124;，則為 False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**/ TargetUser:**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/ TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/Variables:**|**/v**|{PropertyName}={Value}|指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。 |
 
@@ -236,8 +240,10 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
 |參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|匯出|指定要執行的動作。 |
+|**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
+|**/ MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/ OverwriteFiles:**|**/of**|{True&#124;，則為 False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage.exe /Action： 發行 /？。|
 |**/Quiet:**|**/q**|{True&#124;，則為 False}|指定是否隱藏詳細的意見反應。 預設為 False。|
@@ -250,7 +256,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
 |**/ SourceTrustServerCertificate:**|**/stsc**|{True&#124;，則為 False}|指定是否要使用 SSL 來加密來源資料庫連線並且略過驗證信任的憑證鏈結。 |
 |**/SourceUser:**|**/su**|{string}|若為 SQL Server 驗證案例，則定義要用來存取來源資料庫的 SQL Server 使用者。 |
 |**/TargetFile:**|**/tf**|{string}| 指定要做為目標的動作，而不是資料庫的目標檔案 （亦即.dacpac 檔案）。 如果使用此參數，其他目標參數都應該無效。 此參數應僅支援資料庫目標的動作無效。|
-|**/ TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 ### <a name="properties-specific-to-the-export-action"></a>匯出動作特有的屬性
@@ -272,8 +278,10 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|匯入|指定要執行的動作。 |
+|**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
+|**/ MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/Properties:**|**/p**|{PropertyName}={Value}|指定動件特定屬性的名稱/值對：{PropertyName}={Value}。 請參閱特定動作的說明，以便查看該動作的屬性名稱。 範例： sqlpackage.exe /Action： 發行 /？。|
 |**/Quiet:**|**/q**|{True&#124;，則為 False}|指定是否隱藏詳細的意見反應。 預設為 False。|
 |**/Sourcefile:**|**/sf**|{string}|指定要當作動作來源使用的來源檔案。 如果使用了此參數，其他來源參數都應該無效。 |
@@ -285,7 +293,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |**/ TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 Azure AD 中，建議您使用這個值是大於或等於為 30 秒。|
 |**/ TargetTrustServerCertificate:**|**/ttsc**|{True&#124;，則為 False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**/ TargetUser:**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/ TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 匯入動作特有的屬性：
@@ -308,8 +316,10 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要執行的動作。 |
+|**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
+|**/ MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/OutputPath:**|**/op**|{string}|指定輸出檔案產生位置的檔案路徑。 |
 |**/ OverwriteFiles:**|**/of**|{True&#124;，則為 False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生輸出時要使用之屬性及變數的集合。 |
@@ -333,7 +343,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |**/ TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 Azure AD 中，建議您使用這個值是大於或等於為 30 秒。|
 |**/ TargetTrustServerCertificate:**|**/ttsc**|{True&#124;，則為 False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**/ TargetUser:**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/ TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/Variables:**|**/v**|{PropertyName}={Value}|指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。 |
 
@@ -438,8 +448,10 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|指定要執行的動作。 |
+|**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
+|**/ MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/OutputPath:**|**/op**|{string}|指定輸出檔案產生位置的檔案路徑。 |
 |**/ OverwriteFiles:**|**/of**|{True&#124;，則為 False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Quiet:**|**/q**|{True&#124;，則為 False}|指定是否隱藏詳細的意見反應。 預設為 False。|
@@ -451,7 +463,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |**/ TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 Azure AD 中，建議您使用這個值是大於或等於為 30 秒。|
 |**/ TargetTrustServerCertificate:**|**/ttsc**|{True&#124;，則為 False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**/ TargetUser:**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/ TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 ## <a name="script-parameters-and-properties"></a>指令碼參數與屬性
@@ -463,8 +475,10 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|指令碼|指定要執行的動作。 |
+|**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
 |**/ DiagnosticsFile:**|**/df**|{string}|指定要儲存診斷記錄的檔案。 |
+|**/ MaxParallelism:**|**/mp**|{int}| 指定針對資料庫執行之並行作業的平行處理原則的程度。 預設值為 8。 |
 |**/OutputPath:**|**/op**|{string}|指定輸出檔案產生位置的檔案路徑。 |
 |**/ OverwriteFiles:**|**/of**|{True&#124;，則為 False}|指定 sqlpackage.exe 是否應該覆寫現有的檔案。 指定 false 會導致 sqlpackage.exe 在遇到現有的檔案時中止動作。 預設值是 True。 |
 |**/Profile:**|**/pr**|{string}|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生輸出時要使用之屬性及變數的集合。|
@@ -488,7 +502,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |**/ TargetTimeout:**|**/tt**|{int}|指定建立目標資料庫連線的逾時 (以秒為單位)。 Azure AD 中，建議您使用這個值是大於或等於為 30 秒。|
 |**/ TargetTrustServerCertificate:**|**/ttsc**|{True&#124;，則為 False}|指定是否要使用 SSL 來加密目標資料庫連線並略過驗證信任的憑證鏈結。 |
 |**/ TargetUser:**|**/tu**|{string}|若為 SQL Server 驗證案例，則定義要用以存取目標資料庫的 SQL Server 使用者。 |
-|**/ TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
+|**/TenantId:**|**/tid**|{string}|代表 Azure AD 租用戶識別碼或網域名稱。 此選項，才可支援客體，或匯入 Azure AD 使用者，以及 Microsoft 帳戶，例如 outlook.com、 hotmail.com 或 live.com。 如果省略這個參數，則 Azure AD 的預設租用戶識別碼將用於，假設已驗證的使用者是此廣告的原生的使用者。 不過，在此情況下任何來賓或匯入的使用者和/或裝載於此 Azure AD 中的 Microsoft 帳戶不支援，而且作業會失敗。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 |**/Variables:**|**/v**|{PropertyName}={Value}|指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。 |
 
