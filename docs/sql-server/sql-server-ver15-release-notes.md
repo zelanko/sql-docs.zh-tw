@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 版本資訊 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 09/25/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c1c65ad5e2fc495479ec7801b779b242677c1c96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7c4447ce03c25eab91e62c03540906d29714d7f
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717586"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419095"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊
 

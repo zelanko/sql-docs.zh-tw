@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 68a872164528bec49b0342f603107fb86e31fe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678266"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461113"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
@@ -233,7 +233,7 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 也已經增強[稽核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)，在稱為 `data_sensitivity_information` 的稽核記錄中包含新欄位，其中記錄查詢所傳回的實際資料敏感度分類 (標籤)。 如需詳細資料和範例，請參閱[新增敏感度分類](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。
 
 >[!NOTE]
->啟用稽核方式沒有任何變更。 有一個新欄位新增至稽核記錄 `data_sensitivity_information`，以記錄查詢所傳回的實際資料敏感度分類 (標籤)。 請參閱[稽核存取敏感性資料](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)。
+>啟用稽核方式沒有任何變更。 有一個新欄位新增至稽核記錄 `data_sensitivity_information`，以記錄查詢所傳回的實際資料敏感度分類 (標籤)。 請參閱[稽核存取敏感性資料](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)。
 
 ### <a name="expanded-support-for-persistent-memory-devices"></a>持續性記憶體裝置的擴充支援
 

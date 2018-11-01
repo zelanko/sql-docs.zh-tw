@@ -18,12 +18,12 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56f4404e8e2fec82d60936a8f3add7d2d3007984
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb91a4603fa55fa967c51e25d24fcd33bc211218
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099989"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase 查詢情節
 
@@ -112,7 +112,7 @@ WITH (
 );  
   
 -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
-INSERT INTO dbo.FastCustomer2009  
+INSERT INTO dbo.FastCustomers2009  
 SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2  
 ON (T1.CustomerKey = T2.CustomerKey)  
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  

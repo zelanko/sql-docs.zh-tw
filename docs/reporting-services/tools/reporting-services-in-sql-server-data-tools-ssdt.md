@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905998"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030377"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境，可用於建立商務智慧解決方案。 SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境，可用於建立商務智慧解決方案。 SSDT 的主要功能之一是提供報表設計師的撰寫環境，讓您可以從中開啟、修改、預覽、儲存及部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 編頁報表定義、共用的資料來源、共用資料集與報表組件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]不會包含與 SQL Server。 下載 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。 
   
  此主題描述用於 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]方案、專案、專案範本和組態，以及您可以在 [報表設計師] 中使用的檢視、功能表、工具列和快速鍵。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48905998"
   
  您可以使用 [屬性] 窗格以：  
   
--   設定設計介面上目前所選取項目的屬性。 某些屬性會提供值的下拉式清單。 您也可以直接在資料格中輸入值。 某些屬性會包含值的集合，以 [(集合)] 值表示。 大部分屬性都可以接受運算式。複雜運算式會以 **\<運算式>** 值表示。 按一下 **\<運算式>** 開啟 [運算式] 對話方塊。 如需詳細資訊，請參閱＜ [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)＞。  
+-   設定設計介面上目前所選取項目的屬性。 某些屬性會提供值的下拉式清單。 您也可以直接在資料格中輸入值。 某些屬性會包含值的集合，以 [(集合)] 值表示。 大部分屬性都可以接受運算式。複雜運算式會以 **\<運算式>** 值表示。 按一下 **\<運算式>** 開啟 [運算式] 對話方塊。 如需詳細資訊，請參閱＜ [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)＞。  
   
 -   您可以使用 [屬性] 窗格工具列按鈕，將方格從類別目錄檢視變更為字母順序檢視。 在類別目錄檢視中，您可能必須展開類別目錄，才能看見底下的所有屬性。 若要開啟項目的 [屬性] 對話方塊，請按一下工具列上的 **[屬性頁]** 按鈕，或以滑鼠右鍵按一下項目，然後按一下 **[屬性]**。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48905998"
   
 
 ##  <a name="bkmk_SourceControl"></a> 原始檔控制  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 [選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
  若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
@@ -305,10 +305,10 @@ ms.locfileid: "48905998"
   
 ## <a name="next-steps"></a>後續步驟
 
-[下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
+[下載 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 [方案總管](../../ssms/solution/solution-explorer.md)   
 [Reporting Services 報表](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [報表定義語言](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server 資料工具中的部署和版本支援](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

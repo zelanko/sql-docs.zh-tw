@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759426"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029577"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47759426"
 
 除了使用中的網際網路連線，您還可以瀏覽至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服務，以下是完成 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]整合的需求。
 
-- **Azure Active Directory：** 貴組織必須使用 Azure Active Directory，為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱[什麼是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory：** 貴組織必須使用 Azure Active Directory，為 Azure 服務和 Web 應用程式提供目錄和身分識別管理。 如需詳細資訊，請參閱 [什麼是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **受管理的租用戶︰** 您要在其中釘選報表項目的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板必須是 Azure AD 受管理租用戶的一部分。  貴組織首次訂閱如 Office 365 和 Microsoft Intune 等 Azure 服務時，受管理的租用戶便會自動建立。   目前不支援病毒式租用戶。  如需詳細資訊，請參閱 [什麼是 Azure AD 目錄？](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的＜什麼是 Azure AD 租用戶＞和＜如何取得 Azure AD 目錄＞二節。
 
@@ -113,7 +113,7 @@ ms.locfileid: "47759426"
 
 1. 使用者在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中預覽報表，並首次按一下以從 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]釘選報表項目。
 
-2. 系統會將他們重新導向至 Azure AD 的登入頁面。 使用者也可以從[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] [我的設定] 頁面登入。 當使用者登入 Azure 受管理的租用戶時，其 Azure 帳戶與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限之間會建立關聯性。  如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
+2. 系統會將他們重新導向至 Azure AD 的登入頁面。 使用者也可以從[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] [我的設定] 頁面登入。 當使用者登入 Azure 受管理的租用戶時，其 Azure 帳戶與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 權限之間會建立關聯性。  如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
 
 3. 使用者安全性權杖會傳回到報表伺服器。
 
@@ -125,7 +125,7 @@ ms.locfileid: "47759426"
 
 7. 建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂用帳戶，以管理儀表板磚上報表項目排定的重新整理。 訂閱會採用使用者登入時所建立的安全性權杖。
 
-     權杖的期限為 **90 天**，使用者需在該期限過後再次登入以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 以取得詳細資訊。
+     權杖的期限為 **90 天**，使用者需在該期限過後再次登入以建立新的使用者權杖。 權杖到期時，已釘選的磚仍會顯示在儀表板上，但資料不會再重新整理。  為釘選的項目所使用的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱會發生錯誤，直到建立新的使用者權杖為止。 請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 以取得詳細資訊。
 
 使用者再次釘選項目時，會略過步驟 1-4，改為從 ReportServer 資料庫中擷取應用程式識別碼與 URL，然後接續執行步驟 5。
 
@@ -149,8 +149,8 @@ ms.locfileid: "47759426"
 
 ## <a name="next-steps"></a>後續步驟
 
-[Power BI 整合的我的設定](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Power BI 整合的我的設定](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

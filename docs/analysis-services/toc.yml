@@ -223,7 +223,7 @@ items:
   - name: 管理伺服器
     href: ../analysis-services/instances/analysis-services-instance-management.md
   - name: 追蹤事件
-    href: ../analysis-services/trace-events/analysis-services-trace-events.md
+    href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
 - name: Developer
   items:
   - name: Analysis Services Developer 文件
@@ -232,19 +232,19 @@ items:
     href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
     items:
     - name: 表格式模型指令碼語言 (TMSL)
-      href: tabular-model-scripting-language-tmsl-reference.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
     - name: 表格式模型指令碼語言 (TMSL) 命令
-      href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-commands
     - name: 表格式模型指令碼語言 (TMSL) 物件
-      href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
+      href: https://docs.microsoft.com/bi-reference/tmsl/tmsl-reference-tabular-objects
   - name: 相容性層級 1050 及 1103 的表格式模型程式設計
     href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
   - name: Analysis Services 指令碼語言 (ASSL) +
     href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
   - name: 分析管理物件 (AMO)+
-    href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
   - name: ADOMD.NET +
-    href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
+    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
   - name: OLAP 邏輯 +
     href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
   - name: OLAP 實體 +
@@ -252,9 +252,9 @@ items:
   - name: 擴充 OLAP +
     href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
   - name: 結構描述資料列集
-    href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
+    href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: Analysis Services 指令碼語言 (ASSL for XMLA)
-    href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+    href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
   - name: 資料採礦程式設計
     href: data-mining-programming.md
     items:
@@ -281,10 +281,10 @@ items:
   - name: 伺服器屬性
     href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
   - name: XML for Analysis (XMLA)
-    href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
-ms.openlocfilehash: 94648fae78dfe48ac8768407ae80d913c6d39bc7
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+    href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+ms.openlocfilehash: b70c3825382c6b008fd5db0ddf1c29356df72ddb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534040"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145363"

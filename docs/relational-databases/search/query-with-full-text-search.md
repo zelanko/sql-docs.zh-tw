@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92b2a975fbee89249850e4acfdf23f7f47e5bd23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70480cc1acbfe6e8a4a9f6c80fc57a9c8cfbd8
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652626"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216712"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -280,7 +280,7 @@ GO
   
 SELECT AddressLine1, KEY_TBL.RANK   
 FROM Person.Address AS Address INNER JOIN  
-CONTAINSTABLE(Person.Address, AddressLine1, 'ISABOUT ("Bay*,"   
+CONTAINSTABLE(Person.Address, AddressLine1, 'ISABOUT ("Bay*",   
          Street WEIGHT(0.9),   
          View WEIGHT(0.1)  
          ) ' ) AS KEY_TBL  

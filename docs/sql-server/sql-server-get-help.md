@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b3e6d4e898e00682a67084d70b6706af3951fa4
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336365"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384093"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Vo
 - [SQL Server 工具](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
 - [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [複寫](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
-- [TRANSACT-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Reporting Services (SSRS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreportingservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
@@ -77,10 +77,9 @@ SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Vo
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>我想要提供 SQL 文件內容的意見反應
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>我想要提供 SQL 文件內容的意見反應 
-
-### <a name="editing-content"></a>編輯內容
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![編輯內容](../includes/media/edit-topic-pencil.png) 編輯內容
 您是否發現我們文件的問題？ 您知道您可以自己編輯內容嗎？ 如果您這樣做，不只會改善我們的文件，而且您也會成為該頁面的貢獻者！ 如需詳細資訊，請參閱 [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs)。 
 
 ### <a name="surveys"></a>問卷

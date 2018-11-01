@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017 的新功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/19/2017
+ms.date: 10/20/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fd438c408b9719e4976b112c28f09e154e17339
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d7ac19ce57b32c550c73b3a5de8d8f7f016afa69
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120345"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419503"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

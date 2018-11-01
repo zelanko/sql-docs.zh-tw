@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS) | Microsoft Docs
-ms.date: 10/15/2018
+ms.date: 10/16/2018
 ms.prod: sql
 ms.technology: ssms
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f0594446d70ff739ec670645d8d28e12680ec84
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 6d3b144a29b098a7a98624c2ce4c12062064f7bb
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099939"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "49336077"
 
 ## <a name="next-steps"></a>後續步驟  
 [教學課程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
-[教學課程：撰寫國際性通用的 Transact-SQL 陳述式](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+[教學課程：撰寫國際性通用的 Transact-SQL 陳述式](http://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

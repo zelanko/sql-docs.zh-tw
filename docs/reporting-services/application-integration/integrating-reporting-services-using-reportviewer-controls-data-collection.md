@@ -8,18 +8,18 @@ ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68e5a4c9789a6c0485433a3199d8d6a03c2a90d5
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 69cc665274d7463982cdfddd32d2b979e25a156e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028147"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控制項整合 Reporting Services - 資料收集
 
 控制項會收集匿名使用方式資料，以深入了解客戶如何利用產品。 使用方式資料可讓您專注於與客戶最相關之增強功能的未來開發。
 
-[隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)提供 Microsoft SQL Server 和報表檢視器的資料收集和使用方式作法說明。
+[隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)提供 Microsoft SQL Server 和報表檢視器的資料收集和使用方式作法說明。
 
 ## <a name="opting-out-of-data-collection"></a>退出資料收集
 
