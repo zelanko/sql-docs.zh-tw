@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文件
-description: 了解如何使用 Microsoft Azure 雲端服務建置及管理強大的應用程式。 取得文件、範例程式碼、教學課程等等。
+title: SQL Server 教育中心
+description: 探索適用於 SQL Server 的教育資源編譯。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 59e087c88ca3addf6afc3425770de77c2a851f5e
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: a50d7112ca9f3e8ff9fa5d2a37a037a3322e2cf3
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878001"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336177"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -135,7 +135,7 @@ ms.locfileid: "48878001"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Database Engine Tuning Advisor</h3>
-                                                    <p>此教學課程將為您介紹如何使用此建議程式來檢查查詢的處理方式，然後檢閱改善查詢效能的建議。</p>
+                                                    <p>本教學課程將為您介紹如何使用此建議程式來檢查查詢的處理方式，然後檢閱改善查詢效能的建議。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -154,7 +154,7 @@ ms.locfileid: "48878001"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>使用 hierarchyid 資料類型</h3>
-                                                    <p>此教學課程將說明如何轉換資料表為階層結構，然後管理該資料表中的資料。</p>
+                                                    <p>本教學課程將說明如何轉換資料表為階層結構，然後管理該資料表中的資料。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -230,7 +230,7 @@ ms.locfileid: "48878001"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>使用原則式管理來管理伺服器</h3>
-                                                    <p>此教學課程將說明如何建立強制執行網站管理標準的原則。</p>
+                                                    <p>這個教學課程將說明如何建立強制執行網站管理標準的原則。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -249,7 +249,7 @@ ms.locfileid: "48878001"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>SQL Server 備份及還原至 Windows Azure Blob 儲存體服務</h3>
-                                                    <p>此教學課程將說明如何執行 SQL Server 備份及還原到 Windows Azure Blob 儲存體服務。</p>
+                                                    <p>本教學課程將說明如何執行 SQL Server 備份及還原到 Windows Azure Blob 儲存體服務。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -268,7 +268,7 @@ ms.locfileid: "48878001"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 </h3>
-                                                    <p>此教學課程可協助您了解如何直接將 SQL Server 資料檔案儲存在 Windows Azure Blob 儲存體服務中。</p>
+                                                    <p>本教學課程可協助您了解如何直接將 SQL Server 資料檔案儲存在 Windows Azure Blob 儲存體服務中。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -348,7 +348,7 @@ ms.locfileid: "48878001"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>頁面與範圍架構</h3>
-                                                    <p>此指南說明所有 SQL Server 版本中用於管理分頁與範圍的資料結構。 了解頁面與範圍的架構對於設計和開發有效執行的資料庫很重要。</p>
+                                                    <p>本指南說明所有 SQL Server 版本中用於管理分頁與範圍的資料結構。 了解頁面與範圍的架構對於設計和開發有效執行的資料庫很重要。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -405,7 +405,7 @@ ms.locfileid: "48878001"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>交易記錄架構與管理</h3>
-                                                    <p> 此指南提供有關交易記錄實體及邏輯架構的資訊。 了解此架構可提升交易記錄管理的效能。 </p>
+                                                    <p> 本指南提供有關交易記錄實體及邏輯架構的資訊。 了解此架構可提升交易記錄管理的效能。 </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -461,10 +461,16 @@ ms.locfileid: "48878001"
         <h2>與我們保持連絡</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">參與編輯 SQL 文件</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 參與 </a>
             </li>
            <li>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQjIxMzJORE1BTVk4WU9YSlNaWVVIRElPRC4u" data-linktype="external">SQL 文件意見反應</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 取得協助 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 意見反應 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 問卷 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">部落格</a>

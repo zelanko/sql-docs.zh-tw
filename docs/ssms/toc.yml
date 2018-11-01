@@ -40,49 +40,54 @@ items:
   href: build-database-projects-by-using-sql-server-management-studio.md
 - name: 了解 SSMS Windows 管理
   href: understand-sql-server-management-studio-windows-management.md
-- name: 外部工具對話方塊
-  href: external-tools-dialog-box.md
-- name: 引數對話方塊
-  href: arguments-dialog-box.md
 - name: 使用 SSMS 管理伺服器
   href: administer-servers-with-sql-server-management-studio.md
-- name: 授權條款
-  href: sql-server-management-studio-license-terms.md
 - name: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
   href: configure-wmi-to-show-server-status-in-sql-server-tools.md
 - name: SSMS 環境
   href: the-sql-server-management-studio-environment.md
-- name: SSMS 中的屬性頁
-  href: property-pages-in-sql-server-management-studio.md
-- name: SSMS 中的屬性視窗
-  href: properties-window-management-studio.md
-- name: SSMS 中的輸出視窗
-  href: output-window.md
-- name: 關於對話方塊
-  href: about-dialog-box.md
-- name: SSMS 網頁瀏覽器
-  href: sql-server-management-studio-web-browser.md
-- name: 一般使用者介面元素
-  href: general-user-interface-elements.md
-- name: SSMS 中的使用者協助
-  href: user-assistance-in-sql-server-management-studio.md
+  items:
+  - name: 一般使用者介面元素
+    href: general-user-interface-elements.md
+  - name: 引數對話方塊
+    href: arguments-dialog-box.md
+  - name: 關於對話方塊
+    href: about-dialog-box.md
+  - name: SSMS 網頁瀏覽器
+    href: sql-server-management-studio-web-browser.md
+  - name: 外部工具對話方塊
+    href: external-tools-dialog-box.md
+  - name: SSMS 中的屬性頁
+    href: property-pages-in-sql-server-management-studio.md
+  - name: SSMS 中的屬性視窗
+    href: properties-window-management-studio.md
+  - name: SSMS 中的輸出視窗
+    href: output-window.md
+  - name: SSMS 網頁瀏覽器
+    href: sql-server-management-studio-web-browser.md
+  - name: 使用工具箱
+    href: use-the-toolbox.md
 - name: 外部工具的引數
   href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
 - name: 將外部工具新增至工具功能表
   href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
 - name: 設定登入稽核
   href: configure-login-auditing-sql-server-management-studio.md
-- name: 使用工具箱
-  href: use-the-toolbox.md
-- name: Ssms 公用程式
+- name: SSMS 公用程式
   href: ssms-utility.md
 - name: SSMS 鍵盤快速鍵
   href: sql-server-management-studio-keyboard-shortcuts.md
-- name: 匿名的使用量資料
-  href: sql-server-management-studio-telemetry-ssms.md
-ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+- name: 資源
+  items:
+  - name: 授權條款
+    href: sql-server-management-studio-license-terms.md
+  - name: SSMS 中的使用者協助
+    href: user-assistance-in-sql-server-management-studio.md
+  - name: 匿名的使用量資料
+    href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: c7d5f4ba9328f7563efa3d95616e8636c88f6c66
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899687"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336117"

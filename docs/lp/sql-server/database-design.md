@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文件
-description: 了解如何使用 Microsoft Azure 雲端服務建置及管理強大的應用程式。 取得文件、範例程式碼、教學課程等等。
+title: SQL Server 資料庫設計
+description: 探索 SQL Server 功能，協助您設計最適合您商務需求的資料庫。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4e87c2ff5408394b3723083739c5fde0b5e5a771
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 3cae88b1597cc02fc87eeccc2300b7a1451d84bc
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797427"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336277"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -338,7 +338,7 @@ ms.locfileid: "48797427"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>檢視表</h3>
+                                                    <h3>檢視</h3>
                                                     <p>檢視表是一種虛擬資料表，是由查詢定義其內容。</p>
                                                 </div>
                                             </div>
@@ -395,10 +395,16 @@ ms.locfileid: "48797427"
         <h2>與我們保持連絡</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">參與編輯 SQL 文件</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 參與 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">SQL 文件意見反應</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 取得協助 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 意見反應 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 問卷 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">部落格</a>
@@ -414,4 +420,3 @@ ms.locfileid: "48797427"
             </li>
         </ul>
     </div>
-

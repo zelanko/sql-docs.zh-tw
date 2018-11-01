@@ -7,6 +7,8 @@ items:
     href: what-s-new-in-sql-server-2016.md
   - name: SQL Server 2017 的新功能
     href: what-s-new-in-sql-server-2017.md
+  - name: SQL Server 2019 中的新功能
+    href: what-s-new-in-sql-server-ver15.md
   - name: SQL Server 2016 的版本及支援功能
     href: editions-and-components-of-sql-server-2016.md
   - name: SQL Server 2017 的版本及支援功能
@@ -21,6 +23,8 @@ items:
     href: sql-server-customer-feedback.md
 - name: 版本資訊
   items:
+  - name: SQL Server 2019 資訊
+    href: sql-server-ver15-release-notes.md
   - name: SQL Server 2017 資訊
     href: sql-server-2017-release-notes.md
   - name: SQL Server 2016 資訊
@@ -57,6 +61,8 @@ items:
   href: ../ssma/sql-server-migration-assistant.md
 - name: Data Migration Assistant
   href: ../dma/dma-overview.md
+- name: 資料庫測試助理
+  href: ../dea/database-experimentation-assistant-overview.md
 - name: Stretch Database
   href: ../sql-server/stretch-database/stretch-database.md
 - name: 適用於 SQL Server 的教學課程
@@ -82,6 +88,7 @@ items:
     - name: SQL 在 Channel 9
       href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
   - name: 意見反應及說明
+    href: sql-server-get-help.md
     items:
     - name: 參與編輯 SQL 文件！
       href: sql-server-docs-contribute.md
@@ -107,9 +114,9 @@ items:
       href: partner-dev-sql-server.md
   - name: 使用 Help Viewer 的本機內容
     href: sql-server-help-installation.md
-ms.openlocfilehash: 7240a64139ace201d03a158abad3af87e42ef9b5
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: 1b550cacb7dbb5420ac02ccb016cfa3b3422f9b9
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899458"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336107"

@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文件
-description: 了解如何使用 Microsoft Azure 雲端服務建置及管理強大的應用程式。 取得文件、範例程式碼、教學課程等等。
+title: SQL Server 安全性
+description: 探索可讓 SQL Server 保持安全的功能。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 0fe2c1d3fcce22524b0c3ea39ea8ac617d82f082
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 4853dbec0799a808e8165601cd868ec07e71c216
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797415"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336147"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -111,7 +111,7 @@ ms.locfileid: "48797415"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Always Encrypted</h3>
+                                                    <h3>永遠加密</h3>
                                                     <p>可讓用戶端將用戶端應用程式內的敏感性資料加密，且絕對不會向資料庫引擎透露金鑰。 </p>
                                                 </div>
                                             </div>
@@ -149,7 +149,7 @@ ms.locfileid: "48797415"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>權限</h3>
+                                                    <h3>[權限]</h3>
                                                     <p>決定哪些人具有存取 SQL Server 內容的權限。 </p>
                                                 </div>
                                             </div>
@@ -225,10 +225,16 @@ ms.locfileid: "48797415"
         <h2>與我們保持連絡</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">參與編輯 SQL 文件</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 參與 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">SQL 文件意見反應</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 取得協助 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 意見反應 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 問卷 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">部落格</a>
@@ -244,4 +250,3 @@ ms.locfileid: "48797415"
             </li>
         </ul>
     </div>
-

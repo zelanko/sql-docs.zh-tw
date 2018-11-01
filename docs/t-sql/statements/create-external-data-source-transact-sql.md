@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dd5cf772bebf66f8d2a5e827badf4ef0981b66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d25cc0a5c4ae6bf549c5d6ac497017c06d555727
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708730"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100469"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -139,14 +139,14 @@ LOCATION = \<location_path> **HADOOP**
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI：Hadoop 叢集 Namenode 的電腦名稱或 IP 位址。  
 連接埠：Namenode IPC 連接埠。 這是以 Hadoop 中的 fs.default.name 組態參數表示。 如果未指定值，預設將會使用 8020。  
-範例：`LOCATION = 'hdfs://10.10.10.10:8020'`
+範例 `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 針對具有 Hadoop 的 Azure Blob 儲存體，指定用於連線到 Azure Blob 儲存體的 URI。  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb[s]：指定 Azure Blob 儲存體的通訊協定。 [s] 是選用的，而且會指定安全的 SSL 連線；從 SQL Server 傳送的資料會透過 SSL 通訊協定，安全地進行加密。 強烈建議您使用 'wasbs'，而不是 'wasb'。 請注意，此位置可以使用 asv[s]，而不是 wasb[s]。 asv[s] 語法已被取代，並將在未來的版本中移除。  
 容器：指定 Azure Blob 儲存體容器的名稱。 若要指定網域儲存體帳戶的根容器，請使用網域名稱而不是容器名稱。 根容器是唯讀的，因此無法將資料寫回至容器。  
 account_name：Azure 儲存體帳戶的完整網域名稱 (FQDN)。  
-範例：`LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
+範例 `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 針對 Azure Data Lake Store，location 會指定用於連線至 Azure Data Lake Store 的 URI。
 
@@ -194,8 +194,22 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 如需有關 RDBMS 的逐步教學課程，請參閱[跨資料庫查詢入門 (垂直資料分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/)。  
 
 **BLOB_STORAGE**   
-僅針對大量作業，`LOCATION` 必須是 Azure Blob 儲存體和容器的有效 URL。 請不要將 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。   
-使用的認證必須利用 `SHARED ACCESS SIGNATURE` 來建立，以作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需存取 Blob 儲存體的範例，請參閱 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的範例 F。 
+此類型僅用於大量作業，`LOCATION` 必須是 Azure Blob 儲存體和容器的有效 URL。 請不要將 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。 若 Blob 物件並非公用，則 `CREADENTIAL` 為必要項目。 例如： 
+```sql
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (  TYPE = BLOB_STORAGE, 
+        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
+);
+```
+使用的認證必須使用 `SHARED ACCESS SIGNATURE` 作為身分識別建立，SAS 權杖中不應具有前置 `?`，必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，並且到期時間必須有效 (所有日期都必須是 UTC 時間)。 例如：
+```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+```
+
+如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需存取 Blob 儲存體的範例，請參閱 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的範例 F。 
 >[!NOTE] 
 >若要從 Azure Blob 儲存體載入到 SQL DW 或平行處理資料倉儲，祕密必須是Azure 儲存體金鑰。
 
@@ -466,8 +480,12 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-bulk-operations"></a>範例：大量作業   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源。   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。   
-針對使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 的大量作業，請使用下列資料來源。 使用的認證必須利用 `SHARED ACCESS SIGNATURE` 來建立，以作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。   
+針對使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 的大量作業，請使用下列資料來源。 使用的認證必須使用 `SHARED ACCESS SIGNATURE` 作為身分識別來建立，SAS 權杖中不應具有前置 `?`，必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，並且到期時間必須有效 (所有日期都必須是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。   
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -475,7 +493,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
         CREDENTIAL = AccessAzureInvoices
     );   
 ```   
-若要查看使用中的這個範例，請參閱 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。
+若要查看使用中的這個範例，請參閱 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage)。
   
 ## <a name="see-also"></a>另請參閱
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  

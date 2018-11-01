@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文件
-description: 了解如何使用 Microsoft Azure 雲端服務建置及管理強大的應用程式。 取得文件、範例程式碼、教學課程等等。
+title: SQL Server - 安裝和升級
+description: 尋找可協助您安裝或升級 SQL Server 及相關服務的內容。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: a5f717bdf6b90bff892b70ae5861dc668dd86e53
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: b370d499deb1713667711c4b80b6bb0daa5bb958
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797418"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336167"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -305,10 +305,16 @@ ms.locfileid: "48797418"
         <h2>與我們保持連絡</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">參與編輯 SQL 文件</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 參與 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">SQL 文件意見反應</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 取得協助 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 意見反應 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 問卷 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">部落格</a>
@@ -324,4 +330,5 @@ ms.locfileid: "48797418"
             </li>
         </ul>
     </div>
+
 

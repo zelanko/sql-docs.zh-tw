@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/16/2018
-ms.openlocfilehash: f897c332130ece43357869972ff406ea79a6c21d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc4d8ec77fa0782fa2aa4f851a5d8f756cb0ecfa
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725017"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120055"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -55,7 +55,7 @@ ms.locfileid: "47725017"
 **StoredParametersLifetime** 指定可儲存預存參數的最大天數。 有效值是 **-1**、 **+1** 到 **2,147,483,647**。 預設值為 **180** 天。  
 
 **StoredParametersThreshold**  
-指定報表伺服器可儲存之參數值的最大數目。 有效值是 **-1**、 **+1** 到 **2,147,483,647**。 預設值是 **1500**秒。  
+指定報表伺服器可儲存的最大參數值數目。 有效值是 **-1**、 **+1** 到 **2,147,483,647**。 預設值是 **1500**秒。  
 
 **UseSessionCookies**  
 指出報表伺服器與用戶端瀏覽器通訊時是否應該使用工作階段 Cookie。 預設值為 **true**。  

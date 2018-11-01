@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文件
-description: 了解如何使用 Microsoft Azure 雲端服務建置及管理強大的應用程式。 取得文件、範例程式碼、教學課程等等。
+title: 管理、監視、微調 SQL Server
+description: 探索可協助您管理、監視及微調 SQL Server 的功能。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 28f96825ac65d398afbba3f71f9dc9b243d21e1e
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ea070c1fbdbeb372bdd04bafb1705e1ad7ea77c4
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797457"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336137"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -153,7 +153,7 @@ ms.locfileid: "48797457"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>原則型系統管理</h3>
+                                                    <h3>以原則為基礎的管理</h3>
                                                     <p>用於管理一或多個 SQL Server 執行個體的原則型系統。</p>
                                                 </div>
                                             </div>
@@ -370,7 +370,7 @@ ms.locfileid: "48797457"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>記憶體內部 OLTP</h3>
+                                                    <h3>In-Memory OLTP</h3>
                                                     <p>將整個資料表留在記憶體中的效能最佳化選項。</p>
                                                 </div>
                                             </div>
@@ -446,7 +446,7 @@ ms.locfileid: "48797457"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>統計資料</h3>
+                                                    <h3>Statistics</h3>
                                                     <p>告訴 SQL Server 引擎散發資料的方式，也會用於建立執行計畫。</p>
                                                 </div>
                                             </div>
@@ -465,10 +465,16 @@ ms.locfileid: "48797457"
         <h2>與我們保持連絡</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">參與編輯 SQL 文件</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 參與 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">SQL 文件意見反應</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 取得協助 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 意見反應 </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 問卷 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">部落格</a>
@@ -484,4 +490,3 @@ ms.locfileid: "48797457"
             </li>
         </ul>
     </div>
-
