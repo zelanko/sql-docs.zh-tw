@@ -193,7 +193,7 @@ ms.locfileid: "48140601"
  容錯移轉之後，用戶端必須重新連接到目前的主要資料庫。 如需詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)。  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> 維護升級期間的可用性  
- 升級硬體或軟體時，可用性群組的資料庫管理員可以使用手動容錯移轉維護資料庫可用性。 若要使用可用性群組進行軟體升級，裝載目標次要複本的伺服器執行個體和/或電腦節點必須已經獲得升級。 如需詳細資訊，請參閱 [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](upgrading-always-on-availability-group-replica-instances.md)。  
+ 升級硬體或軟體時，可用性群組的資料庫管理員可以使用手動容錯移轉維護資料庫可用性。 若要使用可用性群組進行軟體升級，裝載目標次要複本的伺服器執行個體和/或電腦節點必須已經獲得升級。 如需詳細資訊，請參閱 [在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器](upgrading-always-on-availability-group-replica-instances.md)。  
   
 ##  <a name="ForcedFailover"></a> 強制容錯移轉 (可能會遺失資料)  
  強制可用性群組容錯移轉 (可能會遺失資料) 是可將次要複本當做暖待命伺服器使用的災害復原方法。由於強制容錯移轉會面臨可能遺失資料的風險，所以應該小心並謹慎使用。 只有在您必須立即還原可用性資料庫的服務，並且願意承擔遺失資料的風險時，才建議使用強制容錯移轉。 如需強制容錯移轉之必要條件和建議的詳細資訊，以及使用強制容錯移轉從重大錯誤復原的範例案例，請參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)(Failover) 的程序中通常可以互換。  

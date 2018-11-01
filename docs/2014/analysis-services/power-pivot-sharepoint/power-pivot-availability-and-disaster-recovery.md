@@ -76,7 +76,7 @@ ms.locfileid: "48140252"
 -   **(6)** 某個形式的 SQL Server 資料庫備份或備援。  
   
 ##  <a name="bkmk_sql_server_technologies"></a> PowerPivot 服務應用程式資料庫及 SQL Server 可用性和復原技術  
- 在您的 SharePoint 高可用性規劃中包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式資料庫。 這個資料庫的預設名稱為 `DefaultPowerPivotServiceApplicationDB-<GUID>`。 以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用性技術的摘要和搭配使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 資料庫時的建議。 如需詳細資訊，請參閱 [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)(SharePoint 資料庫支援的高可用性和災害復原選項 (SharePoint 2013))。  
+ 在您的 SharePoint 高可用性規劃中包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式資料庫。 這個資料庫的預設名稱為 `DefaultPowerPivotServiceApplicationDB-<GUID>`。 以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用性技術的摘要和搭配使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 資料庫時的建議。 如需詳細資訊，請參閱 [SharePoint 資料庫支援的高可用性和災害復原選項 (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)(SharePoint 資料庫支援的高可用性和災害復原選項 (SharePoint 2013))。  
   
 ||註解|  
 |-|--------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "48140252"
   
 ##  <a name="bkmk_more_resources"></a> 詳細資訊連結  
   
--   [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   [支援的 SharePoint 資料庫 (SharePoint 2013) 的高可用性和災害復原選項](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [規劃嚴重損壞修復 (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   

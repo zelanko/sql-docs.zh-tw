@@ -60,7 +60,7 @@ ms.locfileid: "48163678"
   
  預覽圖像是以 Excel Services 轉譯活頁簿的方式為基礎。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的展示方式應該與您在瀏覽器中檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿時所看到的外觀相同。 不過，預覽的介面區有限。 活頁簿或報表的部分可以修整，以便符合可用空間。 您可能需要開啟活頁簿或報表來檢視完整的文件。  
   
- 重新整理來自外部的資料來源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿資料，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中受到完整支援，但需要額外的設定。 伺服器陣列或服務管理員必須將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Services 信任位置。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 重新整理來自外部的資料來源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿資料，在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中受到完整支援，但需要額外的設定。 伺服器陣列或服務管理員必須將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Services 信任位置。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="createlib"></a> 建立 PowerPivot 圖庫  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 時，將會為您建立 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 圖庫。 如果您將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 加入至現有的伺服器陣列，或是您想要其他的文件庫，則可以為應用程式或網站建立一個新的文件庫。  

@@ -101,7 +101,7 @@ ms.locfileid: "47852346"
 -   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計與 Replication Management Objects (RMO) 程式設計： [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) 和 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>互動解析程式  
- 複寫提供「互動解析程式」使用者介面，可與預設的優先權式衝突解析程式或發行項解析程式一起使用。 透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 執行視需要的同步處理時，「互動解析程式」會在執行階段顯示衝突資料，並讓您選擇如何解決衝突。 如需有關如何啟用互動式解決及啟動「互動解析程式」的詳細資訊，請參閱＜ [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)＞。  
+ 複寫提供「互動解析程式」使用者介面，可與預設的優先權式衝突解析程式或發行項解析程式一起使用。 透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 執行視需要的同步處理時，「互動解析程式」會在執行階段顯示衝突資料，並讓您選擇如何解決衝突。 如需有關如何啟用互動式解決及啟動「互動解析程式」的詳細資訊，請參閱＜ [互動式衝突解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)＞。  
   
 ## <a name="viewing-conflicts"></a>檢視衝突  
  檢視衝突最直接的方法是使用「複寫衝突檢視器」，該檢視器可從 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 取得 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也提供允許查詢衝突資料表的預存程序)。 「衝突檢視器」和「互動解析程式」是類似的工具，不過「互動解析程式」可讓您在同步處理發生時解決衝突，而「衝突解析程式」是設計用來在已解決衝突後檢視衝突。 如果系統資料表中仍有可用的衝突中繼資料 (衝突中繼資料依預設會保留 14 天)，您可以在「衝突檢視器」中覆寫衝突解決結果，不過如果經常需要直接介入，請考慮使用「互動解析程式」。  
@@ -129,7 +129,7 @@ ms.locfileid: "47852346"
   
  **若要檢視衝突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md) (檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
   
 -   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計：[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
