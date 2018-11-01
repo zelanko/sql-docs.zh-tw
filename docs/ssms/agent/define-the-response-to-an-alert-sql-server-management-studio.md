@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37ddfc40c4037174dde0967b2ae9687ee47c03cd
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c7d801e08c7426b0dda2bfe08d791a384d22a880
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845766"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>定義對警示的回應 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,9 +72,9 @@ ms.locfileid: "42775972"
   
 4.  在要定義回應的警示上按一下滑鼠右鍵，然後選取 [屬性]。  
   
-5.  在 [<警示名稱> 警示屬性] 對話方塊的 [選取頁面] 底下，選取 [回應]。  
+5.  在 [_alert\_name_ 警示屬性] 對話方塊中，選取 [選取頁面] 底下的 [回應]。  
   
-6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]** 來建立新作業。 您可以按一下 **[檢視作業]** 檢視作業的詳細資訊。 如需可以在 [新增作業] 與 [作業屬性 <作業名稱>] 對話方塊中使用的選項詳細資訊，請參閱[建立作業](../../ssms/agent/create-a-job.md)及[檢視作業](../../ssms/agent/view-a-job.md)。  
+6.  選取 **[執行作業]** 核取方塊，然後從 **[執行作業]** 核取方塊底下的清單中選取發生警示時要執行的作業。 您可以按一下 **[新增作業]** 來建立新作業。 您可以按一下 **[檢視作業]** 檢視作業的詳細資訊。 如需可以在 [新增作業] 與 [作業屬性 _job\_name_] 對話方塊中使用的選項詳細資訊，請參閱[建立作業](../../ssms/agent/create-a-job.md)及[檢視作業](../../ssms/agent/view-a-job.md)。  
   
 7.  如果您要在啟動警示時通知操作員，請選取 **[通知操作員]** 核取方塊。 在**運算子清單**中，選取下列一或多種方法通知操作員：[電子郵件]、[呼叫器] 或 [Net Send]。 您可以按一下 **[新增操作員]** 來建立新操作員。 您可以按一下 **[檢視操作員]** 檢視操作員的詳細資訊。 如需有關 **[新增操作員]** 和 **[檢視操作員屬性]** 對話方塊中之可用選項的詳細資訊，請參閱＜ [Create an Operator](../../ssms/agent/create-an-operator.md) ＞和＜ [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md)＞。  
   

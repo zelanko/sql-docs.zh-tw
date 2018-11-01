@@ -1,37 +1,321 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/04/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889794"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307142"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
 
-## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-180-preview-4download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (Preview 4)](download-sql-server-management-studio-ssms.md)
 
+組建編號：15.0.18040.0<br>
+發行日期：2018 年 9 月 24 日
+
+Preview 4 是 SSMS 18.0 的第一個公開預覽版。 如需 SSMS 的最新公開上市 (GA) 版本，請[下載並安裝 SSMS 17.9](#ssms-179-latest-ga-release)。
+
+### <a name="whats-new"></a>新功能
+
+**一般 SSMS**
+
+較小的下載大小：
+
+- 目前的組合大小不到 SSMS 17.x 大小的一半 (~400 MB)。 當您將 Integration Services (IS) 元件新增回去時，此大小最終會成長，但不應該像之前一樣大。
+
+SSMS 18.x 是以新的 Visual Studio 2017 獨立 Shell 為基礎：
+
+- 這表示一個新式 Shell (我們挑選了 Visual Studio 2107 15.6.4)。 新的 Shell 會解除鎖定所有修復 SSMS 和 Visual Studio 的協助工具修正程式。
+
+協助工具改善：
+
+- 為了解決所有工具 (SSMS、DTA 和 Profiler) 中的協助工具問題，我們進行了大量的工作。
+
+SSMS 可以安裝在自訂資料夾中：
+
+- 目前，這只適用於命令列安裝。 請將這個額外的引數傳遞給 SSMS-Setup-ENU.exe：
+
+  `SSMSInstallRoot=C:\MySSMS18`
+
+  根據預設，新的 SSMS 安裝位置是：`%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
+  
+  > [!NOTE]
+  > 這並不表示 SSMS 是多重執行個體。
+
+SSMS 不再與 SQL 引擎共用元件：
+
+- 我們下了許多工夫來避免與 SQL 引擎共用元件，共用時通常會導致 SQL 或 SSMS 安裝覆寫另一方所安裝檔案的服務性問題。
+
+SSMS 現在需要 NetFx 4.7.2 或更新版本：
+
+- 我們將最低需求從 NetFx4.6.1 升級至 NetFx4.7.2：這可讓我們善用新架構所公開的新功能。
+
+Windows 8 不支援 SSMS。 Windows 10/Windows Server 2016 需要版本 1607 (10.0.14393) 或更新版本：
+  
+- 由於 NetFx 4.7.2 的新相依性之故，SSMS 18.0 不會安裝在 Windows 8、舊版 Windows 10 和 Windows Server 2016 上。 這些作業系統將封鎖 SSMS 安裝程式。 Windows 8.1 仍然受到支援。
+
+SSMS 不會新增至 PATH 環境變數：
+
+- SSMS.EXE (和一般工具) 的路徑不再新增至路徑中。 使用者可以自行新增；或者，可以在新式 Windows 上仰賴 [開始] 功能表。
+
+支援 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+
+- 這是第一個完整「感知」 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150 等) 的 SSMS 版本。
+- 支援 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 中的 "BATCH_STARTED_GROUP" 和 "BATCH_COMPLETED_GROUP"，以及 SSMS 中的 SQL Database 受控執行個體。
+- GraphDB：在 Graph TC 序列的執行程序表中新增旗標。
+- Always Encrypted：新增[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) 支援。
+  - 當使用者按一下 [選項] 按鈕來啟用及設定記憶體保護區支援時，連線對話方塊會有新的 [Always Encrypted] 索引標籤。
+
+開發 SSMS 延伸模組不再需要套件識別碼：
+
+- SSMS 選擇性地只載入已知套件，並需要開發人員註冊他們自己的套件。 現已不再是如此。
+
+更好的 Azure SQL 支援：
+
+- SLO/Edition/MaxSize 資料庫屬性現在可接受自訂名稱，讓您更輕鬆地支援未來版本的 Azure SQL Database。
+- 新增虛擬核心 SKU (一般用途和商務關鍵) 的支援：Gen4_24 及所有 Gen5。
+
+SMO：
+
+- 擴充建立可繼續索引的 SMO 支援。
+- 在 SMO 物件 ("PropertyMissing") 上新增新事件，以協助應用程式作者更快偵測到 SMO 的效能問題。
+- 在設定物件上公開新的 *DefaultBackupChecksum* 屬性，該屬性對應至 [備份總和檢查碼預設] 伺服器設定。
+
+SSMS：
+
+- 在 SSMS 中公開檔案群組的 AUTOGROW_ALL_FILES 設定選項
+- 從 SSMS GUI (https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended) 移除具風險的 ''lightweight pooling' 和 'priority boost' 選項。
+- SQL 編輯器接受 **CTRL+D** 快速鍵來複製行 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)。
+- 新功能表和索引鍵繫結可建立檔案：**CTRL+ALT+N**。 **CTRL+N** 會繼續建立新的查詢。
+- [新增防火牆規則] 對話方塊現在可讓使用者指定規則名稱，而不是自動產生規則 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039)。
+- 資料分類：更新建議。
+- 專為 v140 T-SQL 改善了編輯器中的 IntelliSense。
+- 支援所有第 1 層語言。
+- 在 [定序] 對話方塊上新增 SSMS UI 的 UTF-8 支援。
+- 針對連線對話方塊的 MRU 密碼，切換到「Windows 認證管理員」。 這可解決密碼持續性向來不可靠的長時間待處理問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486)。
+- 預設會啟用對高 DPI 的支援。
+- 確保在預期的監視器上顯示越來越多的對話方塊和視窗，藉以改善對多個監視器系統的支援。
+- 在 [伺服器屬性] 對話方塊的新 [資料庫設定] 頁面中公開 [備份總和檢查碼預設] 伺服器設定。 (https://feedback.azure.com/forums/908035-sql-server/suggestions/34634974)。
+
+
+SSMS/執行程序表：
+
+- 在執行程序表運算子節點下新增實際經過時間、實際值與估計值的資料列 (若有)。 這會讓實際計劃看起來與即時查詢統計資料計劃一致。
+- 按一下執行程序表的 [編輯查詢] 按鈕時已修改工具提示並新增了註解，以指示使用者如果查詢超過 4000 個字元，則 SQL 引擎可能會截斷執行程序表。
+- 新增邏輯以顯示「具體化程式運算子 (外部 Select)」。
+- 新增新的執行程序表屬性 BatchModeOnRowStoreUsed，讓您輕鬆找出正在使用「資料列存放區批次模式掃描」功能的查詢。 只要查詢在資料列存放區上執行批次模式掃描，新的屬性 (BatchModeOnRowStoreUsed="true") 就會新增至 StmtSimple 元素。
+
+一律開啟：
+
+- 重新雜湊 SSMS Always on 儀表板中的 RTO (預估復原時間) 和 RPO (估計的資料遺失)。 如需詳細資料，請參閱[監視 Always On 可用性群組的效能](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md)。
+
+稽核檔案：
+
+- 將驗證方法從儲存體帳戶金鑰驗證變更為 Azure AD 驗證。
+AD 型 Always Encrypted：
+
+- 新增具有 [啟用 Always Encrypted] 核取方塊的 [Always Encrypted] 索引標籤 (在 [連線至伺服器] 對話方塊中)，該索引標籤現在提供簡單方法來啟用/停用資料庫連線的 Always Encrypted。
+- 已完成數個增強功能來支援具有安全記憶體保護區的 Always Encrypted：
+  - [連線至伺服器] 對話方塊中用於指定記憶體保護區證明 URL 的文字欄位 (新的 [Always Encrypted] 索引標籤)。
+  - [新增資料行主要金鑰] 對話方塊中用來控制新資料行主要金鑰是否允許記憶體保護區計算的新核取方塊。
+  - 其他 Always Encrypted 金鑰管理對話方塊現在會公開哪些資料行主要金鑰允許記憶體保護區計算的資訊。
+  - 如需詳細資料，請參閱[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+
+        
+### <a name="bug-fixes"></a>錯誤修正
+
+當機/停止回應：
+
+- 修正與 GDI 物件相關的常見 SSMS 當機來源
+- 修正選取「撰寫指令碼為 Create/Update/Drop」(已移除 SMO 物件的不必要提取) 時停止回應且效能不佳的常見來源
+- 修正啟用 ADAL 追蹤時，使用 MFA 連線至 Azure SQL DB 後造成的停止回應
+- 修正「即時查詢統計資料」從 [活動監視器] 叫用時的停止回應 (或發現到的停止回應) (使用 SQL Server 驗證但未設定 [保存安全性資訊] 時會列出此問題)。
+- 修正在 [物件總管] 中選取 [報表] 時的停止回應，而停止回應會出現高度延遲連線或暫時無法存取資源的情況。
+
+連線對話方塊：
+
+- 啟用按下 DEL 鍵從先前的使用者名稱清單移除使用者名稱的功能 (https://feedback.azure.com/forums/908035/suggestions/32897632)。
+
+XEvent：
+
+- 新增 "action_name" 和 "class_type_desc" 這兩個資料行，它們會將動作識別碼及類別類型欄位顯示為可讀取字串。
+- 移除事件 XEvent 檢視器 1,000,000 個事件的上限。
+
+外部資料表：
+
+- 新增範本、SMO、IntelliSense 和屬性方格對 `Rejected_Row_Location` 的支援。
+
+SSMS 選項：
+
+- 修正 [工具] > [選項] > [SQL Server 物件總管] > [命令] 頁面未正確調整大小的問題。
+
+
+SSMS 編輯器：
+
+- 修正在「SQL 系統資料表」中，還原預設色彩是將色彩變更為檸檬綠，而不是預設綠色，而令人難以在白色背景上進行閱讀的問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)。
+- 修正 Intellisense 在使用 AAD 驗證連線到 Azure SQL DW 時無法運作的問題。
+- 修正 Intellisense 在使用者缺少 master 存取權時於 Azure 中的體驗。
+- 修正用來建立「時態表」的程式碼片段，當目標資料庫的定序會區分大小寫時，此程式碼片段就會中斷。
+
+物件總管：
+
+- 修正當嘗試在 OE 中展開 [管理] 節點時，SSMS 可能會擲回「物件無法從 DBNull 轉換為其他類型」例外狀況 (設定錯誤的 DataCollector) 的問題
+- 修正當重新命名節點時 DEL 鍵無法運作的問題 (https://feedback.azure.com/forums/908035/suggestions/32910247 及其他重複項目)。
+- 修正 OE 在叫用「編輯前 N 個...」之前未逸出引號而造成設計混淆的問題
+- 修正 [匯入資料層應用程式精靈] 無法從 Azure 儲存體樹狀結構啟動的問題。
+- 修正「Database Mail 設定」中沒有保存 SSL 核取方塊狀態的問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)。
+- 修正 SSMS 在嘗試使用 is_auto_update_stats_async_on 還原資料庫時，現有連線關閉選項呈現灰色的問題
+- 修正以滑鼠右鍵按一下 OE 節點 (例如「資料表」，並想要執行動作，例如移至 [篩選] > [篩選設定] 來篩選資料表，篩選設定表單可能會出現在 SSMS 目前使用中畫面以外的其他畫面上) 的問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106)。
+- 修正當嘗試重新命名物件時，DELETE 鍵在 [物件總管] 中無法運作的長時間待處理問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510)。
+- 顯示現有資料庫檔案的屬性時，大小會出現在 [大小 (MB)] 資料行下方，而不是 [初始大小 (MB)]，後者是建立新資料庫時所顯示的項目 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024)。
+- 停用 [圖形資料表] 上的 [設計] 操作功能表項目，因為目前版本的 SSMS 並不支援此類型資料表。
+
+        
+說明檢視器：
+
+- 改善接受線上/離線模式的邏輯。
+- 修正 [檢視說明] 以接受線上/離線設定 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791)。
+    
+物件指令碼：
+
+- 整體效能改善 - 相較於 SSMS 17.7，產生 WideWorldImporters 指令碼只要一半的時間。
+- 當撰寫物件指令碼，會省略具有預設值的資料庫範圍設定。
+- 撰寫指令碼時，不要產生動態 T-SQL (https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391)。
+- 在 SQL Server 2016 及更早版本上撰寫資料表指令碼時，省略圖形語法 "as edge" 和 "as node"。
+
+
+資料表設計工具：
+
+- 修正「編輯 200 個資料列」的當機問題。
+- 修正設計工具在連線至 Azure SQL Database 時，允許新增至資料表的問題。
+
+SMO：
+
+- 修正 SMO/ServerConnection 不正確地處理 SqlCredential 連線的問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941)。
+
+AS：
+
+- 修正已裁剪 AS Xevent UI [進階設定] 的問題
+
+一般檔案匯入精靈：
+
+- 修正 [匯入一般檔案精靈] 不正確地處理雙引號 (逸出) 的問題。
+- 修正與浮點類型處理方式不正確 (在對浮點使用不同分隔符號的地區設定上) 相關的問題
+- 修正值為 0 或 1 時，與匯入位元相關的問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535)。
+- 修正浮點數輸入為 Null 的問題。
+        
+資料分類：
+
+- 修正導致資料分類建議組件不適用於全新安裝的安裝程式問題。
+
+備份/還原/附加/卸離資料庫：
+
+- 修正當 .mdf 檔案的實體檔案名稱與原始檔案名稱不相符時，使用者無法附加資料庫的問題。
+- 修正 SSMS 可能找不到有效的還原計畫，或者可能找到次佳還原計畫的問題 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752)。
+- 修正嘗試還原 URL 備份時的 SSMS 當機問題。
+
+作業活動監視器：
+
+- 修正使用作業活動監視器 (含篩選) 時的當機問題。
+        
+SSMS 中的受控執行個體支援：
+
+- 改善/完善對受控執行個體的支援：停用 UI 中不受支援的選項，並修正 [檢視稽核記錄] 選項來處理 URL 稽核目標。
+- [產生和發佈指令碼精靈] 會撰寫不受支援的 CREATE DATABASE 子句指令碼。
+- CL 執行個體已停用即時查詢統計資料。
+- [資料庫屬性] -> [檔案] 不正確地撰寫 ALTER DB ADD FILE 指令碼。
+- 修正使用 SQL Agent 排程器的迴歸問題，在其中即使選擇了其他某個排程類型，還是會選擇 ONIDLE 排程。
+- 調整 MAXTRANSFERRATE、MAXBLOCKSIZE，以便在 Azure 儲存體上執行備份。
+- 在 RESTORE 作業之前撰寫結尾記錄備份指令碼的問題 (CL 不支援此作業)。
+- [建立資料庫精靈] 不正確地撰寫 CREATE DATABASE 陳述式指令碼。
+- 修正在連線至受控執行個體的情況下，當嘗試使用「活動監視器」時顯示錯誤的問題。
+
+
+Azure SQL Database：
+
+- 修正當連線至 Azure SQL DB 中的使用者資料庫 (而非 master) 時，Azure SQL DB 查詢視窗的資料庫清單不正確地填入資料的問題。
+- 修正無法將「時態表」新增至 Azure SQL Database 的問題。
+
+
+一般 Azure SQL 支援：
+
+- 修正通用 Azure UI 控制項中防止使用者顯示 Azure 訂用帳戶 (若未超過 50 個) 的問題。 此外，排序已變更為依名稱，而不是依訂用帳戶識別碼。 例如，當使用者嘗試從 URL 還原備份時，可能遇到這個問題。
+- 修正通用 Azure UI 控制項在列舉訂用帳戶時發生的問題，當使用者在一些租用戶中沒有任何訂用帳戶時，這可能會引發「索引超出範圍。 必須為非負數且小於集合的大小。」 錯誤。 例如，當使用者嘗試從 URL 還原備份時，可能遇到這個問題。
+
+結果方格：
+
+- 修正造成高對比模式 (看不到選取的行號) 的問題。
+
+XEvent 分析工具：
+
+- 修正當連線至含 96 個核心的 SQL Server 時，XEvent 分析工具無法啟動的問題。
+
+
+### <a name="deprecated-features"></a>已被取代的功能
+
+SSMS 中不再提供下列功能：
+
+- T-SQL 偵錯工具
+- 資料庫圖表
+- OSQL.EXE
+- Dreplay 系統管理 UI
+- Configuration Manager 工具：
+  - SQL Server 組態管理員和 Reporting Server 設定管理員不再是 SSMS 安裝程式的一部分。
+
+- DMF 標準原則
+  - 這些原則不再與 SSMS 一起安裝。 它們將會移至 Git。 只要使用者想要，就能參與及下載/安裝這些原則。
+
+- 已移除 SSMS 命令列選項 -P
+  - 基於安全性考量，已移除命令列上指定純文字密碼的選項。
+
+- 已移除 [產生指令碼] | [發佈到 Web 服務] 已從 SSMS UI 中移除這個 (已淘汰) 功能。
+
+- 已移除 [物件總管] 中的「維護 |舊版」節點。 [產生和發佈指令碼] | [發佈到 Web 服務] 選項已移除。 您再也無法存取「真正舊的」「資料庫維護計畫」與 SQL Mail 節點。 新式的 Database Mail 和「維護計劃」節點會繼續如往常般運作。
+
+### <a name="known-issues"></a>已知問題
+
+下列為目前版本中的已知問題：
+
+> [!IMPORTANT]
+> 搭配 SQL 查詢編輯器使用「Active Directory – 與 MFA 通用支援」的驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會提供給連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
+
+SSMS
+
+- 按兩下 .sql 檔案會啟動 SSMS，但卻不會開啟實際指令碼。
+  - 因應措施：將 .sql 檔案拖放到 SSMS 編輯器。
+
+SSIS
+
+- 在瞄準舊版 SQL Server，且其中同時包含指令碼工作/指令碼元件時，無法成功部署或執行套件。
+- SSMS 無法連線到遠端 Integration Services。
+
+## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (最新的 GA 版本)
+
+![下載](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
 組建編號：14.0.17285.0<br>
 發行日期：2018 年 9 月 4 日
+
+> [!NOTE]
+> 非英文的 SSMS 17.x 語言版本如果安裝在 Windows 8、Windows 7、Windows Server 2012 及 Windows Server 2008 R2 上，就需要 [KB 2862966 安全性更新程式套件](https://support.microsoft.com/en-us/kb/2862966)。
+
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>新功能
 
@@ -62,7 +346,7 @@ Azure SQL：
 
 匯入/匯出資料層應用程式：
 
-- 修正 DacFx 中導致當處理具有已定義且在資料表上無索引的資料表時匯入 .bacpac 失敗並顯示「錯誤 SQL72014: .Net SqlClient 資料提供者: 訊息 9108、層級 16、狀態 10、行 1 此類型的統計資料不支援累加。」 訊息的問題。 
+- 修正 DacFx 中導致當處理具有已定義且在資料表上無索引的資料表時匯入 .bacpac 失敗並顯示「錯誤 SQL72014: .Net SqlClient 資料提供者: 訊息 9108、層級 16、狀態 10、行 1 此類型的統計資料不支援累加。」 訊息的問題。
 
 IntelliSense：
 
@@ -82,12 +366,12 @@ Azure SQL：
 
 活動監視器： 
 
-- 修正導致即時查詢統計資料從活動監視器啟動並使用 SQL 驗證時當機的問題。 
+- 修正導致「即時查詢統計資料」從活動監視器啟動並使用 SQL 驗證時停止回應的問題。 
 
 Microsoft Azure 整合： 
 
 - 修正 SSMS 只顯示前 50 的訂用帳戶 (Always Encrypted 對話、來自 URL 的備份/還原等…) 的問題。 
-- 修正 SSMS 在嘗試登入沒有任何儲存體帳戶的 Microsoft Azure 帳戶時擲回例外狀況 (「索引超出範圍」 ) 的問題 (在 [從 URL 還原備份] 對話方塊中)。 
+- 修正 SSMS 在嘗試登入沒有任何儲存體帳戶的 Microsoft Azure 帳戶時擲回例外狀況 (「索引超出範圍」) 的問題 (在 [從 URL 還原備份] 對話方塊中)。 
 
 物件指令碼： 
 
@@ -101,7 +385,10 @@ Microsoft Azure 整合：
 
 ### <a name="known-issues"></a>已知問題
 
-- 目前此版本中沒有已知問題。
+
+> [!IMPORTANT]
+> 搭配 SQL 查詢編輯器使用「Active Directory – 與 MFA 通用支援」的驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會提供給連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
+
 
 
 
@@ -124,7 +411,7 @@ Microsoft Azure 整合：
 
 資料庫屬性：
 
-- 此改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
+- 這項改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
     
 SQL 編輯器：
 
@@ -134,7 +421,7 @@ SQL 編輯器：
 
 - 一般效能改進，特別是透過高延遲連線的情況。
     
-**Analysis Servics (AS)**
+**Analysis Services (AS)**
 
 - Analysis Services 用戶端程式庫與資料提供者已更新至最新版本，其中加入了對新 Azure Government AAD 授權單位 (login.microsoftonline.us) 的支援。
 
@@ -196,7 +483,7 @@ Azure SQL 資料倉儲：
 
 **Integration Services (IS)**
 
-- 針對部署到 Azure SQL Database 的 SSIS 套件，新增排程功能。 不同於具有 SQL Server Agent 作為首要工作排程器的內部部署 SQL Server 和 SQL Database 受控執行個體 (預覽，SQL Database 並沒有內建排程器。 此新的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。 如果您使用 SQL Database 來裝載 SSIS 目錄資料庫 SSISDB，您可以使用此 SSMS 功能，產生排程 SSIS 套件所需的 Data Factory 管線、活動和觸發程序。 然後，您可以編輯並擴充 Data Factory 中的這些物件。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure SQL Database 上的 SSIS 套件執行](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)。 若要深入了解 Azure Data Factory 管線、活動和觸發程序，請參閱 [Azure Data Factory 中的管道及活動](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)和 [Azure Data Factory 中的管道執行和觸發程序](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)。
+- 針對部署到 Azure SQL Database 的 SSIS 套件，新增排程功能。 不同於具有 SQL Server Agent 作為首要工作排程器的內部部署 SQL Server 和 SQL Database 受控執行個體，SQL Database 並沒有內建排程器。 此新的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。 如果您使用 SQL Database 來裝載 SSIS 目錄資料庫 SSISDB，您可以使用此 SSMS 功能，產生排程 SSIS 套件所需的 Data Factory 管線、活動和觸發程序。 然後，您可以編輯並擴充 Data Factory 中的這些物件。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure SQL Database 上的 SSIS 套件執行](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)。 若要深入了解 Azure Data Factory 管線、活動和觸發程序，請參閱 [Azure Data Factory 中的管道及活動](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)和 [Azure Data Factory 中的管道執行和觸發程序](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)。
 - 支援在 SQL 受控執行個體上的 SQL Agent 中排程 SSIS 套件。 您現在可以建立 SQL Agent 工作，在受控執行個體上執行 SSIS 套件。 
 
 ### <a name="bug-fixes"></a>錯誤修正
@@ -259,7 +546,7 @@ SSMS 使用者設定：
 
 SQL Database 受控執行個體：
 
-- 針對 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)新增支援。 Azure SQL Database 受控執行個體 (預覽) 是 Azure SQL Database 的新功能，幾乎達到 100% 的 SQL Server 內部部署相容性、解決常見安全性問題的原生[虛擬網路 (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 實作、以及有利於內部部署 SQL Server 客戶的[商務模型](https://azure.microsoft.com/pricing/details/sql-database/)。
+- 針對 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)新增支援。 Azure SQL Database 受控執行個體幾乎達到 100% 的 SQL Server 內部部署相容性，這是解決常見安全性問題的原生[虛擬網路 (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 實作，也是有利於內部部署 SQL Server 客戶的[商務模型](https://azure.microsoft.com/pricing/details/sql-database/)。
 - 支援常見的管理案例，例如：
    - 建立和改變資料庫。
    - 備份及還原資料庫。
@@ -327,7 +614,7 @@ Database Mail：
 ### <a name="known-issues"></a>已知問題
 
 > [!WARNING]
-> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有此問題的影響，請降級至 SSMS 17.5。 
+> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有這項問題的影響，請降級至 SSMS 17.5。 
 
 
 
@@ -348,7 +635,7 @@ Database Mail：
 
 查詢編輯器：
 
-- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 此功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
+- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 這項功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
 
 執行程序表：
 
@@ -431,7 +718,7 @@ XE 分析工具：
 - 已加入 database\_name 與 client\_hostname 動作至 XEvent 分析工具工作階段中適當的事件。 若要讓變更生效，您可能需要刪除伺服器上現有的 QuickSessionStandard 或 QuickSessionTSQL 工作階段執行個體 - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 命令列：
-- 已加入新的命令列選項 ("-G")，可用來讓 SSMS 使用 Active Directory 驗證 (「整合式」或「密碼」)，自動連線至伺服器/資料庫。 如需詳細資訊，請參閱 [Ssms 公用程式](ssms-utility.md)。
+- 新增新的命令列選項 ("-G")，可用來讓 SSMS 使用 Active Directory 驗證 (「整合式」或「密碼」)，自動連線至伺服器/資料庫。 如需詳細資訊，請參閱 [Ssms 公用程式](ssms-utility.md)。
 
 匯入一般檔案精靈：
 - 已加入在建立資料表時可以挑選結構描述名稱的方法，而不是只能使用預設值 ("dbo")。
@@ -446,36 +733,26 @@ XE 分析工具：
 
 **一般 SSMS**
 
-- 物件總管：
-    - 已修正資料庫快照集未顯示「資料表值函式」節點的問題 - [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161)。
-    - 已改進當伺服器有 autoclose 資料庫時展開 *Databases* 節點的效能。
-- 查詢編輯器：
-    - 已修正 IntelliSense 針對沒有 master 資料庫存取權的使用者會失敗的問題。
-    - 已修正遠端電腦連線關閉時，在某些情況下會造成 SSMS 當機的問題 - [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557)。
-- XEvent 檢視器：
-    - 已重新啟用匯出到 XEL 的功能。
-    - 已修正某些情況下使用者無法載入整個 XEL 檔案的問題。
-- XEvent 分析工具：
-    - 已修正當使用者沒有 *VIEW SERVER STATE* 權限時，造成 SSMS 當機的問題。
-    - 已修正關閉 [XE 分析工具即時資料] 視窗無法停止底層工作階段的問題。
-- 已註冊的伺服器：
-    - 已修正 [移至…] 命令停止運作的問題 - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
-- SMO：
-    - 已修正 TransferData 方法在傳送物件上無法運作的問題。
-    - 已修正 Server 資料庫針對暫停的 SQL DW 資料庫擲回例外狀況的問題。
-    - 已修正針對 SQL DW 編寫 SQL 資料庫指令碼時，產生不正確 T-SQL 參數值的問題。
-    - 已修正編寫延伸資料庫指令碼時，不正確地發出 *DATA\_COMPRESSION* 選項的問題。
-- 作業活動監視器：
-    - 已修正使用者在嘗試依類別篩選時，出現「索引超出範圍。 必須為非負數且小於集合的大小。 
-        參數名稱：index (System.Windows.Forms)」錯誤的問題 - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)。
-- 連線對話方塊：
-    - 已修正網域使用者沒有讀取/寫入網域控制站存取權時，無法使用 SQL 驗證登入 SQL Server 的問題 - [Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381)。
-- 複寫：
-    - 已修正當查看 SQL Server 中提取訂閱的屬性時，顯示類似「無法將值 'null' 套用至 ServerInstance 屬性」錯誤的問題。
-- SSMS 安裝程式：
-    - 已修正 SSMS 安裝程式不正確地造成電腦上所有已安裝產品重新設定的問題。
+- 物件總管：修正資料庫快照集未顯示「資料表值函式」節點的問題 - [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161)。
+已改進當伺服器有 autoclose 資料庫時展開 *Databases* 節點的效能。
+- 查詢編輯器：修正 IntelliSense 針對沒有 master 資料庫存取權的使用者會失敗的問題。
+已修正遠端電腦連線關閉時，在某些情況下會造成 SSMS 當機的問題 - [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557)。
+- XEvent 檢視器：重新啟用匯出到 XEL 的功能。
+已修正某些情況下使用者無法載入整個 XEL 檔案的問題。
+- XEvent 分析工具：修正當使用者沒有 *VIEW SERVER STATE* 權限時，造成 SSMS 當機的問題。
+已修正關閉 [XE 分析工具即時資料] 視窗無法停止底層工作階段的問題。
+- 已註冊的伺服器：修正 [移至…] 命令停止運作的問題 - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+- SMO：修正 TransferData 方法在傳送物件上無法運作的問題。
+已修正 Server 資料庫針對暫停的 SQL DW 資料庫擲回例外狀況的問題。
+已修正針對 SQL DW 編寫 SQL 資料庫指令碼時，產生不正確 T-SQL 參數值的問題。
+已修正編寫延伸資料庫指令碼時，不正確地發出 *DATA\_COMPRESSION* 選項的問題。
+- 作業活動監視器：修正使用者收到「索引超出範圍」的問題。 必須為非負數且小於集合的大小。 
+      參數名稱：index (System.Windows.Forms)」錯誤的問題 - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691)。
+- 連線對話方塊：修正網域使用者沒有讀取/寫入網域控制站存取權時，無法使用 SQL 驗證登入 SQL Server 的問題 - [Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381)。
+- 複寫：修正當查看 SQL Server 中提取訂閱的屬性時，顯示類似「無法將值 'null' 套用至 ServerInstance 屬性」錯誤的問題。
+- SSMS 安裝程式：修正 SSMS 安裝程式不正確地造成電腦上所有已安裝產品重新設定的問題。
 - 使用者設定：
-   - 透過此修正，US Government 官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 ARM 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
+   - 藉由此修正，美國政府官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 Azure Resource Manager 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
 
 **Analysis Services (AS)**
 
@@ -528,11 +805,10 @@ XE 分析工具：
    - [Connect 項目 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
    - [Connect 項目 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
 - 已修正連接對話方塊未「清除」最近使用之資料庫的問題；當儲存的資訊包含具名資料庫且使用者選取 <default> 時，就會發生此問題。
-- 物件指令碼：
-    - 已修正「產生資料庫指令碼」無法運作並擲回錯誤的問題；當使用者在伺服器上有已暫停的 DW 資料庫，但選取了另一個非 DW 資料庫並嘗試對其進行指令碼處理時，就會發生此問題。
-    - 已修正指令碼預存程序的標頭不符合指令碼設定，而導致可能造成誤導之指令碼的問題 - [Connect 項目 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)。
-    - 已重新啟用目標為 SQL Azure 物件時的「指令碼按鈕」。
-    - 已修正 SSMS 不允許在某些物件 (UDF、檢視、SP、觸發程序) 上撰寫「改變」或「執行」指令碼的問題；當連接到 Azure SQL Database 時，就會發生此問題 - [Connect 項目 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)。
+- 物件指令碼：修正「產生資料庫指令碼」無法運作並擲回錯誤的問題；當使用者在伺服器上有已暫停的 DW 資料庫，但選取了另一個非 DW 資料庫並嘗試撰寫其指令碼時，就會發生此問題。
+修正指令碼預存程序的標頭不符合指令碼設定，而導致可能造成誤導的指令碼問題 - [Connect 項目 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)。
+已重新啟用目標為 SQL Azure 物件時的「指令碼按鈕」。
+  修正 SSMS 不允許在某些物件 (UDF、檢視、SP、觸發程序) 上撰寫「改變」或「執行」指令碼的問題；當連線到 Azure SQL Database 時，就會發生此問題 - [Connect 項目 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)。
 - 查詢編輯器：
   - 已改善目標為 Azure SQL Database 時的 IntelliSense。
   - 已修正查詢因驗證權杖 (通用驗證) 過期而失敗的問題。
@@ -543,7 +819,7 @@ XE 分析工具：
    - 已修正主要在 Windows 上時無法建立 Linux AG 的問題 - [Connect 項目 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856)。
 - 已修正執行查詢時 SSMS 中的數種「記憶體不足」問題 - [Connect 項目 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190)、[Connect 項目 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864)。
 - Profiler： 
-   - 已修正目標為 SQL 2005 時 Profiler 無法運作的問題。
+   - 修正目標為 SQL 2005 時 Profiler 無法運作的問題。
    - 已修正 Profiler 不允許 [信任伺服器憑證] 連接選項的問題。
 - 活動監視器：已修正活動監視器在指向 Linux 上執行的 SQL Server 時無法運作的問題。
 - 已修正 SMO 傳送類別無法傳送外部資料來源或外部檔案格式物件的問題，這些類型的物件現在應該可以正確地包含在傳送中。
@@ -617,12 +893,11 @@ XE 分析工具：
   - 在 SSMS 17.2 中，已新增一個新選項：[使指令碼設定與來源相符]。 設定為 True 時，產生的指令碼是以與從中編寫物件指令碼之伺服器相同的版本、引擎類型和引擎版本為目標。
   - [使指令碼設定與來源相符] 值預設為 *True*，讓新的 SSMS 安裝自動預設為一律將物件指令碼編寫成與原始伺服器相同的目標。
   - [使指令碼設定與來源相符] 值設定為 *False* 時，會啟用一般指令碼目標選項，並且運作方式與以前一樣。
-    - 此外，所有指令碼選項都已移至其專屬區段：[版本選項]。 它們不再位於 [一般指令碼選項] 下方。
+此外，所有指令碼選項都已移至其專屬區段：[版本選項]。 它們不再位於 [一般指令碼選項] 下方。
 
 - [從 URL 還原] 中已新增國內雲端支援
 - QueryStoreUI 報表現在支援來自 sys.query_store_runtime_stats 的其他計量 (RowCount、DOP、CLR 時間等)。
-- Azure SQL Database 現在支援 IntelliSense
-    - https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
+- Azure SQL Database 現在支援 IntelliSense https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
 - 安全性：連接對話方塊將會預設為不信任伺服器憑證，並要求加密 Azure SQL DB 連接
 - Linux 上 SQL Server 支援的一般改善：
  - 已回復 Database Mail 節點
@@ -687,10 +962,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 修正物件總管未排序錯誤新增之「原生編譯的預存程序」的問題。 http://connect.microsoft.com/SQLServer/feedback/details/3133365
 - 修正 [選取前 n 個資料列] 未包含 "TOP" 子句的問題。 適用於 Azure SQLDW。 https://connect.microsoft.com/SQLServer/feedback/details/3133551 和 https://connect.microsoft.com/SQLServer/feedback/details/3135874
 - QueryStoreUI：修正非自訂時間間隔未正確地作用於所有報表的問題。
-- Always Encrypted：
-    - 改善 [新增資料行主要金鑰] 對話方塊中 AKV 權限狀態的傳訊
-    - 將工具提示新增至 CEK 下拉式清單，以簡化可區別具有長名稱的 CEK
-    - 修正未針對 [Always Encrypted] 將某些 CNG 金鑰存放區提供者顯示在 [新增資料行主要金鑰] 對話方塊中的問題
+- Always Encrypted：改善 [新增資料行主要金鑰] 對話方塊中 AKV 權限狀態的傳訊。將工具提示新增至 CEK 下拉式清單，以簡化可區別具有長名稱的 CEK 修正未針對 Always Encrypted 將某些 CNG 金鑰存放區提供者顯示在 [新增資料行主要金鑰] 對話方塊中的問題
 - 修正 SSMS 連接的不一致「應用程式名稱」。 http://connect.microsoft.com/SQLServer/feedback/details/3135115
 - 修正 SSMS 未產生 SQL Azure 之正確指令碼的問題 (使用 DATA_COMPRESSIONS 選項的資料表和索引)。 https://connect.microsoft.com/SQLServer/feedback/details/3133148
 - 修正問題：使用者無法使用 CTRL+Q 快速鍵進行快速啟動 (注意：在 [查詢編輯器] 中切換 [IntelliSense 已啟用] 選項的新按鍵繫結關係現在是 CTRL+B、CTRL+I)。 https://connect.microsoft.com/SQLServer/feedback/details/3131968
@@ -698,7 +970,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 修正 [資料庫圖表] 中 SSMS 擲回「索引在陣列的界限之外」錯誤的問題；而且，使用者無法將 [資料表檢視] 變更為任何項目，只能變更為標準。 https://connect.microsoft.com/SQLServer/feedback/details/3133792 和 http://connect.microsoft.com/SQLServer/feedback/details/3135326
 - 修正 [備份/還原至 URL] 中 SSMS 未列舉傳統儲存體帳戶的問題。
 - 修正嘗試將結構描述繫結安全性實體新增至 DB 角色時擲回例外狀況的問題。 https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- 修正 SSMS 間歇地顯示下列錯誤的問題：「資料為 Null。 無法在值為 Null 的情況下呼叫這個方法或屬性。」 展開資料表節點時 http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- 修正 SSMS 間歇地顯示下列錯誤的問題：「資料為 Null」。 無法在值為 Null 的情況下呼叫這個方法或屬性。」 展開資料表節點時 http://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA：修正在評估具有特定界限值的資料分割函式時，DTAEngine.exe 因堆積損毀而終止的問題。
 
 
@@ -740,7 +1012,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 安裝程式：
   - 已修正下列問題：SSMS 17.0 已在 Visual Studio 2013 上中斷 SSDT [連接項目 3133479]
   - 已修正下列問題：按一下安裝程式結尾處的 [重新啟動]，並不會重新啟動電腦
-- 指令碼：透過停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
+- 指令碼：藉由停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
 - 物件總管：已修正下列問題：連接至使用 "AS COPY" 建立的 Azure 資料庫時，「資料庫」節點未展開
 
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![下載](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
@@ -750,12 +1022,9 @@ The connection is broken and recovery is not possible. The client driver attempt
 
 ### <a name="enhancements"></a>功能增強 
 
-- 升級封裝和 Windows Software Update Services (WSUS) 
-    - 未來的 17.X 版包含較小的累積更新封裝 
+- 升級套件和 Windows Software Update Services (WSUS) 未來的 17.X 版包含較小的累積更新套件 
   - 更新封裝也將發佈至 WSUS 目錄  
-- 圖示更新
-    - 圖示已更新為與 VS Shell 所提供圖示一致，且支援高 DPI 解析度
-    - 新的 SSMS 和分析工具程式圖示，以區分 16.X 和 17.X 版本
+- 圖示更新：圖示已更新為與 VS Shell 所提供圖示一致，而且支援高 DPI 解析度、新的 SSMS 和 Profiler 程式圖示，以區分 16.X 和 17.X 版
 - SQL PowerShell 模組
   - SQL Server PowerShell 模組已從 SSMS 中移除，現在是透過 PowerShell 資源庫 (目前需要有 PowerShell 5.0 才能支援模組版本設定) 提供
   - 針對某些 SMO 物件呈現方式 (格式化) 的其他改進 (例如，資料庫現在會顯示大小及可用空間，且資料表會顯示資料列計數和空間使用量)
@@ -765,8 +1034,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - 新增 Revoke-SqlAvailabilityGroupCreateAnyDatabase、Grant-SqlAvailabilityGroupCreateAnyDatabase 和 Set-SqlAvailabilityReplicaRoleToSecondary Cmdlet
   - 在 Set-SqlAvailabilityReplica 和 New-SqlAvailabilityReplica Cmdlet 中新增 -SeedingMode 參數
   - 在 Get-SqlDatabase 中新增 -ConnectionString 參數
-- Linux 上的 SQL Server
-    - 記錄傳送的一般改進和修正
+- Linux 上的 SQL Server：記錄傳送的一般改善和修正
   - 新增原生 Linux 路徑附加、還原和備份資料庫的支援
   - 新增原生 Linux 路徑對稽核記錄目的地資料夾的支援
 - Analysis Services
@@ -780,11 +1048,7 @@ The connection is broken and recovery is not possible. The client driver attempt
     - 結構化資料來源的指令碼可運作 
     - 在 PQ UI 中檢視及編輯結構化資料來源
 - 新的「加入唯一條件約束」範本
-- Showplan
-    - 在已耗用時間的屬性視窗中顯示所有執行緒的最大值，而非加總
-    - 公開新的記憶體授與運算子屬性
-    - 啟用「即時查詢統計資料」中的 [編輯查詢] 按鈕
-    - 支援交錯執行
+- 執行程序表：在已耗用時間的屬性視窗中顯示所有執行緒的最大值，而非加總、公開新的記憶體授與運算子屬性、啟用 [即時查詢統計資料] 中的 [編輯查詢] 按鈕、支援交錯執行
   - [分析實際執行計畫] 的新選項
   - 執行程序表比較的一般增強功能
   - 執行程序表比較功能中引進了功能，以找出兩個查詢計劃的相符節點之間，基數估計的顯著差異，並執行可能根本原因的基本分析
@@ -797,31 +1061,21 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 從 SSMS 移除公用程式控制點 UI
 - SSMS 現在可以建立 "PremiumRS" 版本的 SQL Azure 資料庫
 - AlwaysOn 可用性群組
-  - 新增新叢集類型的支援：EXTERNAL 和 NONE
-    - 新增 Linux 上的 SQL Server 支援
-    - 新增自動植入作為初始資料同步處理的選項
-    - 修正一些缺陷，例如端點 URL 處理、資料庫重新整理和 UI 配置
-    - 移除 Azure 複本相關功能
+  - 新增對新叢集類型的支援：EXTERNAL 和 NONE 新增 Linux 上的 SQL Server 支援、新增自動植入作為初始資料同步處理的選項、修正一些缺陷，例如端點 URL 處理、資料庫重新整理和 UI 配置、移除 Azure 複本相關功能
   - 改進 IntelliSense 的數個可用性群組關鍵字
 - 活動監視器
   - 在 [SSMS 輸出]視窗中新增新的 [活動監視器] 窗格
   - 變更連線錯誤/逾時訊息，將資訊記錄到輸出視窗，而不是快顯訊息
   - 移除 [概觀] 區段中的空白圖表 (第 5 個圖表)
   - 已暫停活動監視器資料收集時，在概觀標題中新增 (暫停)
-  - SQL Server 的圖形延伸模組 
-    - 圖形節點和邊緣資料表的新圖示
-    - 圖形節點和邊緣資料表將會顯示在 [圖形資料表] 資料夾下方
-    - 可建立圖形節點和邊緣資料表的範本
-- 簡報模式
-    - 3 個可透過快速啟動 (Ctr-Q) 使用的新工作
-    - PresentOn - 開啟簡報模式
-    - PresentEdit - 編輯簡報模式的簡報字型大小。  查詢編輯器的「文字編輯器字型」。  其他組件的「環境字型」。
-    - RestoreDefaultFonts - 還原至預設設定。
-    - *注意：目前沒有 PresentOff 命令。請使用 RestoreDefaultFonts 來關閉簡報模式*
+  - SQL Server 的圖形延伸模組：適用於圖形節點和邊緣資料表的新圖示、圖形節點和邊緣資料表將顯示在圖形資料表資料夾之下、用來建立圖形節點和邊緣資料表的範本
+- 簡報模式 3 個可透過快速啟動 (Ctr-Q) 使用的新工作 PresentOn - 開啟簡報模式 PresentEdit - 編輯簡報模式的簡報字型大小。  查詢編輯器的「文字編輯器字型」。  其他組件的「環境字型」。
+RestoreDefaultFonts - 還原至預設設定。
+*注意：目前沒有 PresentOff 命令。請使用 RestoreDefaultFonts 來關閉簡報模式*
 
 ### <a name="bug-fixes"></a>錯誤修正
 
-- 修正透過 surfacebook 觸控板捲動執行程序表時 SSMS 當機的問題
+- 修正透過 Surface Book 觸控板捲動執行程序表時 SSMS 當機的問題
 - 修正 SSMS 在取得所還原或離線資料庫的屬性時，長時間停止回應的問題 
 - 修正「說明檢視器」無法在 RC 組建中開啟的問題
 - 修正 SSMS 中可能遺失「維護計畫工作工具箱」項目的問題。
@@ -833,15 +1087,9 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 修正 SSMS 在編寫指令碼時會使 DB 離線的問題 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3118550)
 - SSMS 當地語系化 (非英文) 版本的其他 UI 修正。
 - 修正以 SQL 2016 SP1 Standard Edition 為目標時，[Always Encrypted 金鑰] 節點會遺失的問題。
-- 永遠加密
-    - 當以 SQL 2016 RTM Standard Edition 或任何 SQL 2014 (及以下) 伺服器為目標時，[Always Encrypted] 功能表會不正確地啟動
-    - 修正當使用 CREATE OR ALTER 語法時，IntelliSense 會報告錯誤的問題
-    - 修正當 CMK/CEK 中包含需要逸出 (以括弧括住) 的字元時，加密會失敗的問題
-    - 當 SSMS 中出現「記憶體不足」例外狀況時，使用者會看到建議使用原生 (64 位元) PowerShell 的錯誤。
-    - 修正當使用者使用資源群組管理員訂用帳戶，而不是使用傳統 Azure 訂用帳戶時，AE 精靈會失敗的問題
-    - 修正當使用者在訂用帳戶中沒有任何權限或 Azure 金鑰保存庫時，AE 精靈會顯示不正確錯誤的錯誤。
-    - 修正在 AE 精靈具有多個 AAD 的情況下，Azure 金鑰保存庫登入頁面不會顯示 Azure 訂用帳戶的問題
-    - 修正在 AE 精靈中，Azure 金鑰保存庫登入頁面不會顯示使用者具有讀取權限之 Azure 訂用帳戶的問題
+- Always Encrypted 當以 SQL 2016 RTM Standard Edition 或任何 SQL 2014 (及以下) 伺服器為目標時，[Always Encrypted] 功能表會不正確地啟動、修正當使用 CREATE OR ALTER 語法時，IntelliSense 會報告錯誤的問題、修正當 CMK/CEK 中包含需要逸出 (例如，以括弧括住) 的字元時，加密會失敗的問題、當 SSMS 中出現「記憶體不足」例外狀況時，使用者會看到建議使用原生 (64 位元) PowerShell 的錯誤。
+修正當使用者使用資源群組管理員訂用帳戶，而不是使用傳統 Azure 訂用帳戶時，AE 精靈會失敗的問題、修正當使用者在訂用帳戶中沒有任何權限或 Azure 金鑰保存庫時，AE 精靈會顯示不正確錯誤的問題。
+修正在 AE 精靈具有多個 AAD 的情況下，Azure Key Vault 登入頁面不會顯示 Azure 訂用帳戶的問題、修正在 AE 精靈中，Azure Key Vault 登入頁面不會顯示使用者具有讀取權限的 Azure 訂用帳戶問題
   - 修正目前可能不會載入資源檔，因此導致錯誤訊息不正確的問題
 - 改進 SSMS 安裝頁面上超連結的對比
 - 修正連線到 SQL Server Express (2016 SP1) 時不會顯示 Polybase 節點的問題
@@ -861,7 +1109,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 公用程式控制點 UI 已從 SSMS 移除。
 - AD 通用驗證連線在初始權杖過期後無法查詢資料。
 - 無法將 Rules from Azure SQL DB 編碼為 Azure SQL DB。
-- 修正 SQL PowerShell 無法連接舊版 SQL 執行個體 (2014 及更早版本) 的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
+- 修正 SQL PowerShell 無法連線舊版 SQL 執行個體 (2014 及更早版本) 的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
 - 修正在 SSMS 無法匯入註冊的伺服器時造成損毀的問題。
 - 修正如果使用者有資料庫的特定權限，會造成 SSMS 損毀的問題。 
 - SSMS - 在檢閱檢視時，資料表會從設計介面消失。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
@@ -883,10 +1131,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 即時查詢統計資料：修正其只顯示批次中第一個查詢的問題。 [Connect 項目] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - 執行程序表：在視窗中顯示執行緒的最大值，而非加總。
 - 查詢存放區：對具有高執行變化的查詢新增報表。
-- 物件總管效能問題：[Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
-    - 資料表的操作功能表會短暫停止回應
-    - SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 
-    - 避免發行依伺服器排序的資料表查詢
+- [物件總管] 效能問題：[Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114074) 資料表的操作功能表會短暫停止回應 SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 避免發行依伺服器排序的資料表查詢
 - 從 SSMS 移除 Azure 部署精靈 (將資料庫部署到 Azure VM)
 - 修正遺漏的索引未在 SSMS 中的執行計劃顯示的問題 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - 修正 SSMS 中常見的關機時當機問題
@@ -942,261 +1187,29 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * SSMS 2016 會損毀，並出現錯誤「處理序因位於 IP 71AF8579 (71AE0000) 的 .NET 執行階段發生內部錯誤而終止，錯誤碼為 80131506」
 
 
-## <a name="ssms-1651"></a>SSMS 16.5.1
-正式運作 | 組建編號：13.0.16100.1
+## <a name="uninstall-and-reinstall-ssms-17x"></a>解除並重新安裝 SSMS 17.x
 
-* 已修正 Invoke-Sqlcmd 在 CHECK 條件約束發生時錯誤插入多個資料列的問題。 [Microsoft Connect 項目：811560](https://connect.microsoft.com/SQLServer/feedback/details/811560)
+如果您的 SSMS 安裝遇到問題，而且無法經由標準的解除並重新安裝來解決，您可以先嘗試[修復](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell。 若修復 Visual Studio 2015 IsoShell 未解決問題，下列幾個步驟可以修正許多非特定的問題：
 
-* 已修正建立可用性群組時，非英文語言版本運作不完全的問題。
+1.  以您解除安裝任何應用程式的相同方式，解除安裝 SSMS (使用 [應用程式與功能]、[程式與功能] 等，取決於您的 Windows 版本)。
 
-* 已修正按一下查詢計劃 XML 未開啟適當 SSMS UI 的問題。
+2.  **從提升權限的命令提示字元**解除安裝 Visual Studio 2015 IsoShell：
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
 
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
 
-## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>![下載](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
-公開上市 |組建編號︰ 13.0.16000.28
+3.  以您解除安裝任何應用程式的相同方式，解除安裝 Microsoft Visual C++ 2015 可轉散發套件。 若電腦上有 x86 及 x64，則兩者都解除安裝。
 
+4.  **從提升權限的命令提示字元**重新安裝 Visual Studio 2015 IsoShell：  
 
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
-
-* 修正了當按一下名稱包含 ";:" 資料庫資料表時會發生當機的問題。
-* 修正了在 AS表格式資料庫之 [屬性] 視窗的 [模型] 頁面中執行變更時，會寫出原始定義的問題。 
-[Microsoft Connect 項目：3080744](https://connect.microsoft.com/SQLServer/feedback/details/3080744) 
-* 修正了暫存檔案會新增到 [最近使用的檔案] 清單。  
-[Microsoft Connect 項目：2558789](https://connect.microsoft.com/SQLServer/feedback/details/2558789)
-* 修正了物件總管樹狀目錄中，使用者資料表節點之 [管理壓縮] 功能表項目遭到停用的問題。  
-[Microsoft Connect 項目：3104616](https://connect.microsoft.com/SQLServer/feedback/details/3104616)
-
-* 修正了使用者無法設定物件總管、註冊後的伺服器總管、範本總管與物件總管詳細資料的字型大小問題。 這些總管會使用環境的字型。  
-[Microsoft Connect 項目：691432](https://connect.microsoft.com/SQLServer/feedback/details/691432)
-
-* 修正了 SSMS 在連線中斷後，一律時會重新連線到預設資料庫的問題。  
-[Microsoft Connect 項目：3102337](https://connect.microsoft.com/SQLServer/feedback/details/3102337)
-
-* 修正了原則管理與查詢編器視窗中許多 DPI 太高的問題，包括執行計畫圖示。
-
-* 修正了「擴充的事件」沒有選項可以設定字型與色彩的問題。
-
-* 修正了 SSMS 會在關閉應用程式時，或在嘗試顯示錯誤對話方塊時會損毀時的問題。
-
-
-## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![下載](../ssdt/media/download.png) [SSMS 16.4.1 (2016 年 9 月)](http://go.microsoft.com/fwlink/?LinkID=828615)
-正式運作 | 組建編號：13.0.15900.1
-
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
-
-*  修正了嘗試變更/修改預存程序失敗的問題︰  
-[Microsoft Connect 項目 #3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
-
-* 新增加 'Read-SqlTableData'、'Read-SqlViewData' 及 'Write-SqlTableData' Cmdlet，讓您可以使用 PowerShell 檢視及寫入資料。  
-[Trello Read-SqlTableData 卡](https://trello.com/c/FXVUNJ8x/131-read-sqltabledata)  
-[Microsoft Connect 項目 #2685363](https://connect.microsoft.com/SQLServer/feedback/details/2685363)
-    
-* 新增加 'Add-SqlLogin' Cmdlet 可讓您透過 PowerShell 執行一些新的登入管理工作。  
-[Microsoft Connect 項目 #2588952](https://connect.microsoft.com/SQLServer/feedback/details/2588952)
-    
-*  連線到境內不同雲端的使用者現在可享有更好的支援與使用經驗。
-    
-    
-*  修正了擲回記憶體不足例外狀況的問題。  
-[Microsoft Connect 項目 #3062914](https://connect.microsoft.com/SQLServer/feedback/details/3062914)  
-[Microsoft Connect 項目 #3074856](https://connect.microsoft.com/SQLServer/feedback/details/3074856)
-    
-*  修正了無法使用結構描述作為篩選選項的問題。  
-[Microsoft Connect 項目 #3058105](https://connect.microsoft.com/SQLServer/feedback/details/3058105)  
-[Microsoft Connect 項目 #3101136](https://connect.microsoft.com/SQLServer/feedback/details/3101136)
-    
-*  修正了無法存取延伸資料庫之 [監視器] 視窗的問題。
-    
-*  修正了 F1 說明一律會開啟線上內容的問題。 使用者現在可以透過 [說明] 功能表中的 [設定說明偏好]，選擇要使用線上說明或離線說明。   
-[Microsoft Connect 項目 #2826366](https://connect.microsoft.com/SQLServer/feedback/details/2826366)
-    
-*  修正了編寫 1200 相容性層級之 Analysis Services 表格式模型的指令碼，仍無法去除編寫指令碼的密碼，而且即使伺服器版本已經是「用戶端模型物件現在會在編寫指令碼之前先同步」亦是如此的問題。
-    
-*  修正了 'SELECT TOP N ROWS' 選項會為 TOP 運算子產生即將淘汰之語法的問題。  
-[Microsoft Connect 項目 #3065435](https://connect.microsoft.com/SQLServer/feedback/details/3065435)
-    
-*  修正 SSMS 中多項版面配置問題，包括 [登入屬性] 頁面及各項進階查詢執行選項的問題。   
-[Microsoft Connect 項目 #3058199](https://connect.microsoft.com/SQLServer/feedback/details/3058199)  
-[Microsoft Connect 項目 #3079122](https://connect.microsoft.com/SQLServer/feedback/details/3058199)  
-[Microsoft Connect 項目 #3071384](https://connect.microsoft.com/SQLServer/feedback/details/3071384)
-    
-*  修正了使用者一開啟新的查詢視窗，就會自動建立解決方案的問題。   
-[Microsoft Connect 項目 #2924667](https://connect.microsoft.com/SQLServer/feedback/details/2924667)    
-[Microsoft Connect 項目 #2917742](https://connect.microsoft.com/SQLServer/feedback/details/2917742)   
-[Microsoft Connect 項目 #2612635](https://connect.microsoft.com/SQLServer/feedback/details/2612635)
-    
-*  修正了當時態表位於系統資料庫時，在物件總管中無法擴充的問題。  
-[Microsoft Connect 項目 #2551649](https://connect.microsoft.com/SQLServer/feedback/details/2551649)
-    
-*  已修正 SSMS 在執行批次後對 SELECT @@trancount 執行查詢的問題。    
-[Microsoft Connect 項目 #3042364](https://connect.microsoft.com/SQLServer/feedback/details/3042364)
-    
-*  修正了 Analysis Services 在從伺服器的 [屬性] 頁面建立指令碼時，會產生隱藏的連線對話方塊的問題。
-    
-*  修正了 Ctrl + Q 不會選取 [快速啟動] 工具列的問題。
-    
-*  修正了使用 [伺服器屬性] 對話方塊，為大於 2 TB 之資料庫變更資料庫的 MaxSize 時，資料庫會中斷的問題。  
-[Microsoft Connect 項目 #1231091](https://connect.microsoft.com/SQLServer/feedback/details/1231091)
-    
-*  修正了 [還原資料庫精靈] 不接受包含前置空格之檔案名稱的問題︰   
-[Microsoft Connect 項目 #2395147](https://connect.microsoft.com/SQLServer/feedback/details/2395147)
-
-
-
-## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>![下載](../ssdt/media/download.png) [SSMS 16.3 (2016 年 8 月)](http://go.microsoft.com/fwlink/?LinkID=824938)
-正式推出 | 版本號碼：13.0.15700.28
-
-
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
-
-* SSMS 的每月版本現在將以數值標註。
-
-* [新驗證選項：「Active Directory 通用驗證」](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)。 這個一個由 Azure Active Directory 驅動的權杖型驗證機制，支援多因素、密碼及整合式驗證機制。
-
-* 符合 SQL Server Profiler 範本的新擴充事件範本 [(Microsoft Connect 項目 #2543925)](../tools/sql-server-profiler/sql-server-profiler-templates.md)。
-
-* 針對 Azure SQL 資料庫推出新的 [建立資料庫和資料庫屬性] 對話方塊。
-
-* 新的 'Get-SqlLogin' 和 'Remove-SqlLogin' Cmdlet 以協助使用 PowerShell 執行 SQL Server 登入管理。  
-*連結的客戶 Bug 要求：*   
-[Microsoft Connect 項目 #2588952。](https://connect.microsoft.com/SQLServer/feedback/details/2588952/)
-
-* 新的 PowerShell Cmdlet 'New-SqlColumnMasterKeySettings'，加入針對任意提供者和金鑰路徑建立資料行主要金鑰的支援。
-
-* 新的 [建立資料庫] 對話方塊以簡化在 SSMS 中建立 Azure SQL 資料庫的程序。
-
-* 支援在 SSMS 物件總管的 [資料庫] 節點中進行篩選援。 在物件總管中，瀏覽至 [資料庫] 節點，並按一下位於物件總管工具列中的篩選圖示，以篩選資料庫清單。
-
-* 在備份與還原精靈中支援 Azure Resource Manager (ARM) 類型的儲存體帳戶。
-
-* [針對高解析度顯示器的初始 Beta 支援](https://blogs.msdn.microsoft.com/sqlreleaseservices/ssms-highdpi-support/)。  
-*連結的客戶 Bug 要求：*   
-[Microsoft Connect 項目 #1129301](https://connect.microsoft.com/SQLServer/feedback/details/1129301/management-studio-is-unusable-on-a-4k-display)、 [Microsoft Connect 項目 #1858763](https://connect.microsoft.com/SQLServer/feedback/details/1858763/)、 [Microsoft Connect 項目 #1852671](https://connect.microsoft.com/SQLServer/feedback/details/1852671/)、 [Microsoft Connect 項目 #1487643](https://connect.microsoft.com/SQLServer/feedback/details/1487643/)、  [Microsoft Connect 項目 #1355641](https://connect.microsoft.com/SQLServer/feedback/details/1355641/)、 [Microsoft Connect 項目 #2161595](https://connect.microsoft.com/SQLServer/feedback/details/2161595/)、 [Microsoft Connect 項目 #1854041](https://connect.microsoft.com/SQLServer/feedback/details/1854041/)、 [Microsoft Connect 項目 #1055617](https://connect.microsoft.com/SQLServer/feedback/details/1055617/)、 [Microsoft Connect 項目 #2448774](https://connect.microsoft.com/SQLServer/feedback/details/2448774/)、 [Microsoft Connect 項目 #1521405](https://connect.microsoft.com/SQLServer/feedback/details/1521405/)、 [Microsoft Connect 項目 #2117853](https://connect.microsoft.com/SQLServer/feedback/details/2117853/)、 [Microsoft Connect 項目 #2014256](https://connect.microsoft.com/SQLServer/feedback/details/2014256/)、 [Microsoft Connect 項目 #2162218](https://connect.microsoft.com/SQLServer/feedback/details/2162218/)、 [Microsoft Connect 項目 #2344551](https://connect.microsoft.com/SQLServer/feedback/details/2344551/)、 [Microsoft Connect 項目 #1664436](https://connect.microsoft.com/SQLServer/feedback/details/1664436/)、 [Microsoft Connect 項目 #2554043](https://connect.microsoft.com/SQLServer/feedback/details/2554043/)、 [Microsoft Connect 項目 #2983216](https://connect.microsoft.com/SQLServer/feedback/details/2983216/)、 [Microsoft Connect 項目 #2021706](https://connect.microsoft.com/SQLServer/feedback/details/2021706/)
-
-* 改進 Database Engine Tuning Advisor (DTA)，以支援從 SQL Server 查詢存放區自動讀取工作負載。
-
-* 改進 Database Engine Tuning Advisor (DTA)，以針對叢集資料行存放區索引、非叢集資料行存放區索引，以及資料列存放區索引顯示索引建議。
-
-* 支援使用 SQL Server Analysis Services PowerShell Cmdlet 傳送資料庫主控台命令 (DBCC)。
-
-* 針對在 SSMS 中檢視加密的 AlwaysEncrypted 大型物件 (LOB) 資料行之純文字的錯誤修正。  
-*連結的客戶 Bug 要求：*   
-[Microsoft Connect 項目 #2413024](https://connect.microsoft.com/SQLServer/feedback/details/2413024/cannot-view-cleartext-of-alwaysencrypted-lob-columns-in-ssms)
-
-* 修正 [永遠加密] 對話方塊中的錯誤，以修正沒有啟用 Windows 視覺樣式 (例如啟用高對比顯示) 時所發生的當機問題。
-
-* 針對導致無法連線到 SQL Server 執行個體的「找不到方法」錯誤的錯誤修正。
-
-* 針對搭配 Datetime Offset 建立資料分割函數時會造成 SSMS 當機的錯誤修正。
-
-* 針對新增/移除啟動 Distributed Replay 管理工具 (DReplay.exe) 的 Microsoft .Net 3.5 需求的錯誤修正。
-
-* 修正 Analysis Services 部署精靈中的錯誤，以支援完整的伺服器名稱。
-
-* 修正 SSMS 中的錯誤，以在具有 2016 相容性模型的 Analysis Services 表格式模型中顯示資料分割。  
-*連結的客戶 Bug 要求：*   
-[Microsoft Connect 項目 #2845053](https://connect.microsoft.com/SQLServer/feedback/details/2845053/ssms-cannot-display-partitions-in-tabular-models-in-2016-compatibility-level) 
-
-* 針對 Analysis Services 表格式模型及 SQL Server 共用管理物件 (SMO) 的效能改進和錯誤修正。 
-
-
----
-## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![下載](../ssdt/media/download.png) [SSMS 2016 年 7 月 Hotfix 更新](http://go.microsoft.com/fwlink/?LinkID=822301)
-正式推出 | 版本號碼：13.0.15600.2
-
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
-
-* 修正 SSMS 中的錯誤，以啟用遺失的右鍵功能表項目。  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2883440](https://connect.microsoft.com/SQLServer/feedback/details/2883440/lost-table-design-and-edit-top-n-rows-in-tables-context-menu)  
-[Microsoft Connect 項目 #2909644](https://connect.microsoft.com/SQLServer/feedback/details/2909644/ssms-2016-is-missing-edit-options-against-sql-express-2014)  
-[Microsoft Connect 項目 #2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
-
----
-## <a name="ssms-july-2016-install-the-july-2016-hotfix"></a>SSMS 2016 年 7 月 (安裝 2016 年 7 月 Hotfix)
-正式推出 | 版本號碼：13.0.15500.91
-
-* 編輯，7 月 5 日：改善 SQL Server 2016 (1200 相容性層級) 表格式資料庫在 [Analysis Services 處理] 對話方塊及 Analysis Services 部署精靈中的支援。
-
-* 編輯，7 月 5 日：在 SSMS [查詢執行選項] 對話方塊中新增設定 'XACT_ABORT' 的選項。 此選項在這一版 SSMS 中會根據預設啟用，其指示 SQL Server 復原整個交易，並在執行階段錯誤發生時中止批次。
-
-* 在 SSMS 中支援 Azure SQL 資料倉儲。
-
-* SQL Server PowerShell 模組的重大更新。 這包括新的[SQL PowerShell 模組以及適用於永遠加密、SQL Agent 及 SQL 錯誤記錄檔的新 CMDLET](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update)。
-
-* 支援在 [永遠加密精靈] 中產生 PowerShell 指令碼。
-
-* 大幅改善 Azure SQL 資料庫的連線時間。
-
-* 新的 [備份至 URL] 對話方塊支援為 SQL Server 2016 資料庫備份建立 Azure 儲存體認證。 此對話方塊讓在 Azure 儲存體帳戶中儲存資料庫備份的體驗更為簡化。
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
  
-* 新增 [還原] 對話方塊以簡化從 Microsoft Azure 儲存體服務還原 SQL Server 2016 資料庫備份的作業。
- 
-* 修正 SSMS 查詢設計工具中的錯誤，讓沒有資料表 SELECT 權限的使用者也能將其加入設計工具中。
+    ```vs_isoshell.exe /PromptRestart```
 
-* 修正錯誤，以新增 'TRY_CAST()' 與 'TRY_CONVERT()' 函數的 IntelliSense 支援。  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2453461](https://connect.microsoft.com/SQLServer/feedback/details/2453461/sql-server-2012-issue-with-try-cast)。
+5.  重新安裝 SSMS。
 
-* 修正 PowerShell 模組中的錯誤，以啟用 ‘SQLAS’ Analysis Services 延伸模組的載入。  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2544902](https://connect.microsoft.com/SQLServer/feedback/details/2544902/ssms-march-2016-refresh-sqlps-failed-to-load-the-sqlas-extension)。
-
-* 修正 SSMS 編輯器視窗中的錯誤，以允許用拖放方式開啟 SQL 檔案。  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2690658](https://connect.microsoft.com/SQLServer/feedback/details/2690658/cannot-drag-sql-files-into-management-studios)。
-
-* 修正 Profiler 中的問題，以修正結束時 Profiler 當機的情況  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2616550](https://connect.microsoft.com/SQLServer/feedback/details/2616550/sql-server-2016-rc2-profiler-version-13-0-1300-275-wont-close-after-trace-is-started-even-after-trace-is-stopped)。  
-[Microsoft Connect 項目 #2319968](https://connect.microsoft.com/SQLServer/Feedback/Details/2319968)。
-
-* 修正 SSMS 中的問題，以防止在嘗試編輯 SSMS 資料表設計工具中的加入連結時發生當機。  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2721052](https://connect.microsoft.com/SQLServer/feedback/details/2721052/ssms-view-design-mode-right-click-on-join-crashes-ssms)。
-
-* 修正 SSMS 中的問題，允許 db_owner 角色成員產生資料庫指令碼  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2869241](https://connect.microsoft.com/SQLServer/feedback/details/2869241/error-with-script-database-as-create-to-in-ssms-2008r2-and-ssms-2016-june)。
-
-* 修正 SSMS 編輯器中的問題，以移除在伺服器離線時關閉查詢索引標籤的延遲問題。  
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2656058](https://connect.microsoft.com/SQLServer/feedback/details/2656058/ssms-2014-2016-query-tab-takes-significantly-longer-to-close-if-the-instance-it-was-connected-to-is-now-offline)。
-
-* 修正錯誤，以允許在 SQL Server Express 資料庫中使用 [備份] 選項。 
-*連結的客戶 Bug 要求：*  
-[Microsoft Connect 項目 #2801910](https://connect.microsoft.com/SQLServer/feedback/details/2801910/ssms-2016-backup-option-not-appearing-in-tasks)。  
-[Microsoft Connect 項目 #2874434](https://connect.microsoft.com/SQLServer/feedback/details/2874434/backup-missing-from-tasks-context-menu-in-ssms-2016-when-you-are-connected-to-an-express-instance)。
-
-* 修正 Analysis Services 的錯誤，為多維度 Analysis Services 模型正確顯示資料摘要提供者。
-
-----
-## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![下載](../ssdt/media/download.png) [SSMS 2016 年 6 月](http://go.microsoft.com/fwlink/?LinkID=799832)
-正式推出 | 版本號碼：13.0.15000.23
-
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
-
-* SSMS 從 2016 年 6 月版本後將為正式推出。
-
-* SSMS 中的新 [快速尋找] 對話方塊將能更好地與目前的文件整合，並允許透過規則運算式做出搜尋。 
-*連結的客戶 Bug 要求：*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2735513/quick-find-replace-in-ssms-2016-rc3/>
-
-* 改進 SSMS 安裝程式，以允許您追蹤安裝進度，並透過指令碼處理自動安裝的結束代碼。
-
-* 修正 SSMS 即時線上 F1 說明中的錯誤，以正確顯示說明文件和文章。
-
-* 修正查詢資料存放區 [迴歸查詢] 檢視中，因捲動而造成 SSMS 當機的錯誤。
-
-* 修正 Excel Analysis Services OLEDB 連接器中的錯誤，以允許從 Excel 2016 連線到 SQL Server Analysis Services。
-
-* 修正 SSMS [連線] 對話方塊中的錯誤，以在使用多重監視器的系統時，於主要 SSMS 視窗所在的監視器上顯示 [連線] 對話方塊。  
-*連結的客戶 Bug 要求：*  
-<https://connect.microsoft.com/SQLServer/feedback/details/724909/connection-dialog-appears-off-screen/>
-<https://connect.microsoft.com/SQLServer/feedback/details/755689/sql-server-management-studio-connect-to-server-popup-dialog/>  
-<https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays/>
-
-* 修正永遠加密體驗中的錯誤。 已修正 [永遠加密] 功能表選項沒有針對 Stretch Database 正確啟用的錯誤。 同時已修正永遠加密精靈沒有正確使用 SafeNet (Luna SA) HSM 提供者的錯誤。
+6.  若您目前不是最新狀態，請升級為[最新版的 Visual C++ 2015 可轉散發套件](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。
 
 
 ## <a name="additional-downloads"></a>其他下載  

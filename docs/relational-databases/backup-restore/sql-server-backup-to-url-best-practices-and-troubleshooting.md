@@ -5,21 +5,18 @@ ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7c962e1506de5de3b0f7b982a1047f37ca5bd00e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ca462fb27e854b31ffd5096b256dc711e2d965c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699726"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "32920703"
   
 -   [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>管理備份  
  下列清單包含管理備份的一般建議：  
@@ -93,7 +90,24 @@ ms.locfileid: "32920703"
         -   **VERIFYONLY**  
   
     -   您也可以透過檢閱 Windows 事件記錄檔 (在名為 `SQLBackupToUrl` 的應用程式記錄底下)，尋找相關資訊。  
+
+    -   備份大型資料庫時，請考慮 COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE 和多個 URL 引數。  請參閱[將 VLDB 備份至 Azure Blob 儲存體](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
   
+        ```
+        Msg 3202, Level 16, State 1, Line 1
+        Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
+        Msg 3013, Level 16, State 1, Line 1
+        BACKUP DATABASE is terminating abnormally.
+        ```
+
+        ```sql  
+        BACKUP DATABASE TestDb
+        TO URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_1.bak',
+        URL = 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_2.bak'
+        WITH COMPRESSION, MAXTRANSFERSIZE = 4194304, BLOCKSIZE = 65536;  
+        ```  
+
 -   從壓縮備份還原時，您可能會看見下列錯誤：  
   
     -   `SqlException 3284 occurred. Severity: 16 State: 5  

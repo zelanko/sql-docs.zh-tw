@@ -14,12 +14,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d162062b59ed52d95d7586e6f7a0c8331a896f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6e1315212c81cfb0bf5cc76c5f95a026462989
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687116"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168912"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47687116"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  若要建立或管理維護計畫，您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。 只有在使用者是 **sysadmin** 固定伺服器角色的成員時，[物件總管] 才會顯示 **[維護計畫]** 節點。  
   
 ##  <a name="SSMSProcedure"></a> 使用維護計畫設計介面  
@@ -218,7 +218,7 @@ ms.locfileid: "47687116"
   
         1.  如果您選取 **[產生文字檔報表]**，請選取 **[建立新檔案]** 或 **[附加至檔案]**。  
   
-        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **(...)**，然後從 [尋找資料夾 - <伺服器名稱>] 或 [尋找資料庫檔案 - <伺服器名稱>] 對話方塊中選取資料夾或檔案名稱的路徑。  
+        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **(...)**，然後從 [尋找資料夾 - <伺服器名稱>]_\__ 或 [尋找資料庫檔案 - <伺服器名稱>]_\__ 對話方塊中選取資料夾或檔案名稱的路徑。  
   
         3.  如果您選取 **[傳送報表至電子郵件收件者]**，請在 **[代理程式操作員]** 清單中選取電子郵件報表的收件者。  
   
@@ -233,7 +233,7 @@ ms.locfileid: "47687116"
   
 12. 若要在記錄檔檢視器中檢視結果，請在物件總管中以滑鼠右鍵按一下 [維護計畫] 資料夾或特定維護計畫，然後選取 [檢視記錄]。  
   
-     [記錄檔檢視器 - <伺服器名稱>] 對話方塊有下列選項。  
+     [記錄檔檢視器 - <伺服器名稱>]_\__ 對話方塊有下列選項。  
   
      **載入記錄**  
      開啟對話方塊供您指定所要載入的記錄檔。  
@@ -256,7 +256,7 @@ ms.locfileid: "47687116"
      **記錄檔摘要**  
      此資訊面板會顯示記錄檔篩選的摘要。 如果未篩選檔案，則會看到下列文字： **[未套用篩選]**。 若篩選已套用到記錄檔，則會看到下列文字：**篩選記錄項目的準則:** \<篩選準則>。  
   
-     **Date**  
+     **日期**  
      顯示事件的日期。  
   
      **Source**  

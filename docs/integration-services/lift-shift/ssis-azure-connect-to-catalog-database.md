@@ -1,23 +1,22 @@
 ---
 title: 連線至 Azure 中的 SSIS 目錄 (SSISDB) | Microsoft Docs
 description: 尋找連線至 Azure SQL Database 伺服器上裝載之 SSIS 目錄 (SSISDB) 所需的連線資訊。
-ms.date: 09/25/2017
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36798263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698116"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄 (SSISDB)
 
@@ -30,7 +29,7 @@ ms.locfileid: "36798263"
 > 目前，需要在 Azure Data Factory 中建立 Azure-SSIS Integration Runtime，才能在 Azure SQL Database 上建立 SSISDB 目錄資料庫。 Azure-SSIS IR 是在 Azure 上執行 SSIS 套件的執行階段環境。 如需處理序的逐步解說，請參閱[在 Azure 中部署和執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
 
 ## <a name="prerequisites"></a>Prerequisites
-開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio (SSMS)。 如果 SSISDB 目錄資料庫託管在 SQL Database 受控執行個體 (預覽) 上，請確定您具有 17.6 版或更新版本的 SSMS。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio (SSMS)。 如果 SSISDB 目錄資料庫託管在 SQL Database 受控執行個體上，請確定您具有 17.6 版或更新版本的 SSMS。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>從 Azure 入口網站取得連線資訊
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
@@ -46,7 +45,7 @@ ms.locfileid: "36798263"
 
 2. **連線至伺服器**。 在 [連線至伺服器] 對話方塊中，輸入下列資訊：
 
-   | 設定       | 建議值 | 描述 | 
+   | 設定       | 建議值 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 |

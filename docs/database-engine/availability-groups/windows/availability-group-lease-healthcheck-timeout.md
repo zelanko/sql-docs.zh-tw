@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a80cbbbca40a48c1469c84a5c7a4968770c5ee7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647856"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264898"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>租用、叢集和健全狀況檢查逾時的機制和方針 
 
@@ -151,7 +151,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
-  - SameSubnetDelay \<= SameSubnetDelay 
+  - SameSubnetDelay \<= CrossSubnetDelay 
 
 ## <a name="see-also"></a>另請參閱    
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f420f92cf6dd2099244a1f2bd782ee9b72e2aebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a35f7ea2e08caf851a24b8ab52b79f39a760024
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608726"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906158"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
   您可以控制是否要針對跨多個頁面的 Tablix 資料區 (資料表、矩陣或清單)，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的每個頁面上重複資料列和資料行標頭。
@@ -22,7 +22,7 @@ ms.locfileid: "47608726"
   
  ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
   
- 當您藉由使用「新增資料表或矩陣精靈」或「新增圖表精靈」、在 [群組] 窗格中加入欄位或使用操作功能表來加入群組時，會自動建立資料列和資料行的群組頁首。 如果 Tablix 資料區只有 Tablix 主體而沒有群組頁首，則資料行和資料列就是 Tablix 成員。  
+ 當您藉由使用 [新增資料表] 或 [矩陣精靈] 或 [新增圖表精靈]、在 [群組] 窗格中新增欄位或使用內容選單來新增群組時，會自動建立資料列和資料行的群組標頭。 如果 Tablix 資料區只有 Tablix 主體而沒有群組頁首，則資料行和資料列就是 Tablix 成員。  
   
  對靜態成員而言，您可以在多個頁面上顯示頂端相鄰的資料列或側邊相鄰的資料行。  
   

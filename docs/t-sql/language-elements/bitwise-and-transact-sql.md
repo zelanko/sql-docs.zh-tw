@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitwise
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44b9d4acd20051477779edd721089340114c7fb1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34c2bd981869095df9cb4b4e79c383a9c58fd479
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716808"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (位元 AND) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +59,7 @@ expression & expression
 ## <a name="remarks"></a>Remarks  
  **&** 位元運算子會在這兩個運算式之間執行位元邏輯 AND 運算，每個運算式各有一個對應的位元。 只有在輸入運算式的兩個位元 (針對目前所解析的位元) 的值都是 1 時，結果中的兩個位元才會都設為 1；否則，結果中的位元便設為 0。  
   
- 如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此案例中，會將 **smallint***expression* 轉換為 **int**。  
+ 如果左右運算式的整數資料類型不同 (例如，左邊的 *expression* 是 **smallint**，而右邊的 *expression* 是 **int**)，就會將較小資料類型的引數轉換為較大的資料類型。 在此案例中，會將 **smallint**_expression_ 轉換為 **int**。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用 **int** 資料類型建立資料表來儲存值，並在單一資料列中插入兩個值。  

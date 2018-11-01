@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7e189f7ed6735d9519900735e2fde9529c50e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6364a5c3aec5a96bfa3b05cdccc7e91da6f50b71
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723956"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905788"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
-在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。  
+在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。  
 
 KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子類別排列的銷售摘要便是 KPI。 KPI 的目前狀態會以色彩、量測計和指標顯示。
   

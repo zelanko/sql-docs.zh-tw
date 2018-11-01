@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b9796266ff1c5ff8d7e42ffbc3a94e44fd4b142
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3b84acd01f7291ad420cf2a643ffb9bc350e0a6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777966"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -153,7 +150,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  *max_degree_of_parallelism* 可以是：  
   
- @shouldalert  
+ 1  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -183,7 +180,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 支援以 "default" 為檔案群組名稱。  
   
  指定目前在叢集索引分葉層級之資料列所要移往的位置。 資料會以堆積的形式移至新位置。 您可以指定資料分割配置或檔案群組來作為新位置，但是這個資料分割配置或檔案群組必須已經存在。 MOVE TO 對於索引檢視表或非叢集索引無效。 如果未指定資料分割結構描述或檔案群組，結果資料表會放在定義給叢集索引的相同資料分割結構描述或檔案群組中。  
@@ -234,7 +231,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  當卸除索引檢視的叢集索引時，會自動卸除相同檢視的所有非叢集索引和自動建立的統計資料。 不會卸除手動建立的統計資料。  
   
- 語法 *table_or_view_name ***.*** index_name* 的目的是為了與舊版相容。 您無法利用與舊版相容的語法來卸除 XML 索引或空間索引。  
+ 語法 _table\_or\_view\_name_**.**_index\_name_ 的目的是要與舊版相容。 您無法利用與舊版相容的語法來卸除 XML 索引或空間索引。  
   
  當卸除含有 128 個 (含) 以上之範圍的索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面及其相關聯的鎖定，直到認可交易之後。  
   
@@ -264,10 +261,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 如果在離線狀態卸除叢集索引，則只會移除叢集索引的上層；因此，此作業的速度相當快。 線上卸除叢集索引時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重建堆積兩次，一次在步驟 1，另一次在步驟 2。 如需資料壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 ## <a name="xml-indexes"></a>XML 索引  
- 當您卸除 XML 索引時，無法指定選項。 此外，您無法使用 *table_or_view_name ***.*** index_name* 語法。 當卸除主要 XML 索引時，也會自動卸除所有相關聯的次要 XML 索引。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)。  
+ 當您卸除 XML 索引時，無法指定選項。 此外，您無法使用 _table\_or\_view\_name_**.**_index\_name_ 語法。 當卸除主要 XML 索引時，也會自動卸除所有相關聯的次要 XML 索引。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)。  
   
 ## <a name="spatial-indexes"></a>空間索引  
- 只有資料表上才支援空間索引。 當您卸除空間索引時，不能指定任何選項或使用 **.***index_name*。 正確的語法如下：  
+ 只有資料表上才支援空間索引。 當您卸除空間索引時，不能指定任何選項或使用 **.**_index\_name_。 正確的語法如下：  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

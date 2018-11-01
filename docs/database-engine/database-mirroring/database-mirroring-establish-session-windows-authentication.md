@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d3c44a31a25379e142b87428ad8ef3f2e60b8b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599096"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>資料庫鏡像 - 建立工作階段 - Windows 驗證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,15 +65,15 @@ ms.locfileid: "38020801"
   
 4.  若要設定主體伺服器做為鏡像資料庫上的夥伴，請連接到該鏡像伺服器，並執行以下陳述式：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
   
-     其中 <資料庫名稱> 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 <伺服器網路位址> 是主體伺服器的伺服器網路位址。  
+     其中 _\<database\_name\>_ 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 _\<server\_network\_address\>_ 是主體伺服器的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
   
-     其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+     其中 _系統位址>\<_ 是清楚識別目的地電腦系統的字串，_通訊埠>\<_ 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在鏡像伺服器執行個體上，下列 ALTER DATABASE 陳述式將夥伴設為原始主體伺服器執行個體。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER1 (夥伴系統的名稱)，而夥伴資料庫鏡像端點使用的通訊埠是 7022：  
   
@@ -89,7 +86,7 @@ ms.locfileid: "38020801"
   
 5.  若要設定鏡像伺服器做為主體資料庫上的夥伴，請連接到該主體伺服器，並發出以下陳述式：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
   
      如需詳細資訊，請參閱步驟 4。  
   

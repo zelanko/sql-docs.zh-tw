@@ -5,9 +5,7 @@ ms.date: 11/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LAG_TSQL
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 741ada1f2bb897f65387a6cc0c56f34e30cc7e36
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 175291dd5cfe4861e60d2393453cb2a44d63adf5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655706"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -54,7 +51,7 @@ LAG (scalar_expression [,offset] [,default])
  *default*  
  當 *scalar_expression* 在 *offset* 時，傳回的值為 NULL。 如果未指定預設值，會傳回 NULL。 *default* 可以是資料行、子查詢或其他運算式，但不能是分析函數。 *default* 的類型必須與 *scalar_expression* 相容。  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 在套用函數之前，*order_by_clause* 可指定資料順序。 如果指定 *partition_by_clause*，它會決定分割區中的資料次序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  

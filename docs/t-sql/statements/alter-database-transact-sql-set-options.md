@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動微調、加密、查詢存放區
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34dfaa1d241c015ed94bc21997d9e6a3c8254339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762626"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252195"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
 
@@ -43,7 +43,7 @@ ms.locfileid: "47762626"
 
 按一下下列其中一個索引標籤，以查看您所使用特定 SQL 版本的語法、引數、備註、權限和範例。
 
-如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-synt如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="click-a-product"></a>按一下產品！
 
@@ -51,23 +51,14 @@ ms.locfileid: "47762626"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />邏輯伺服器](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
-# <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>[SQL Server]
   
 資料庫鏡像、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 和相容性層級為 `SET` 選項，但是礙於篇幅的因素，將會在個別的文章中描述。 如需詳細資訊，請參閱 [ALTER DATABASE 資料庫鏡像](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)、[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 和 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
@@ -1285,24 +1276,15 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* SQL Database<br />邏輯伺服器 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
+## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
+
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。  
   
 > [!NOTE]  
@@ -2081,34 +2063,27 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|
+
+
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 相容性層級為 `SET` 選項，但在 [ALTER DATABASE 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中描述。  
   
 > [!NOTE]  
 > 目前工作階段的許多資料庫 SET 選項都可以使用 [SET 陳述式](../../t-sql/statements/set-statements-transact-sql.md)來設定，而且通常是在應用程式連線時由其加以設定。 工作階段層級 SET 選項會覆寫 **ALTER DATABASE SET** 值。 以下所述的資料庫選項皆為未明確提供其他 SET 選項值，因而可針對工作階段進行設定的值。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法
   
-```  
+```
 ALTER DATABASE { database_name | Current }  
-SET   
+SET
 {  
     <optionspec> [ ,...n ] 
 }  

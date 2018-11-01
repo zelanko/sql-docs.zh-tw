@@ -5,9 +5,7 @@ ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694984"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +120,7 @@ ms.locfileid: "43348569"
   
 -   [設定服務啟動類型](#Configure_services)  
   
--   [防火牆連接埠](#Firewall)  
+-   [防火牆通訊埠](#Firewall)  
   
 ###  <a name="Default_Accts"></a> 預設服務帳戶
 
@@ -246,9 +243,9 @@ ms.locfileid: "43348569"
 
  \*\*\*目前不支援單獨透過交換器設定 Launchpad 的帳戶。 請使用 SQL Server 設定管理員來變更帳戶及其他服務設定。
 
-###  <a name="Firewall"></a> 防火牆連接埠
+###  <a name="Firewall"></a> 防火牆通訊埠
 
-大部分情況下，在初始安裝時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以藉由像是與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 安裝在同一部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這類工具進行連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會在 Windows 防火牆中開啟連接埠。 除非將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為在 TCP 連接埠上接聽，而且已在 Windows 防火牆中開啟適當的連接埠進行連線，否則無法從其他電腦連線。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
+大部分情況下，在初始安裝時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以藉由像是與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 安裝在同一部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這類工具進行連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式不會在 Windows 防火牆中開啟通訊埠。 除非將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為在 TCP 通訊埠上接聽，而且已在 Windows 防火牆中開啟適當的通訊埠進行連接，否則無法從其他電腦連接。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 ##  <a name="Serv_Perm"></a> 服務權限
 
@@ -306,7 +303,8 @@ ms.locfileid: "43348569"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client：**|**以服務方式登入** (SeServiceLogonRight)|  
 |**PolyBase 引擎和 DMS**| **以服務方式登入** (SeServiceLogonRight)  |   
 |**Launchpad：**|**以服務方式登入** (SeServiceLogonRight) <br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br />**略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br />**調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|     
-|**R 服務：** **SQLRUserGroup**  |**允許本機登入** |   
+|**R 服務：****SQLRUserGroup** (SQL 2016 和 2017)  |**允許本機登入** |   
+|**機器學習** '**所有應用程式套件' [AppContainer]** (SQL 2019)  |SQL Server 'Binn'、R_Services 和 PYTHON_Services 目錄的**讀取和執行權限** |   
 
  \*[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的執行個體會停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 代理程式服務。  
   

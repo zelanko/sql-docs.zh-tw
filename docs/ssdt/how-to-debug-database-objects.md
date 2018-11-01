@@ -11,12 +11,12 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bda792731bbaf97732575453a284865bd243a84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636126"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071711"
 ---
 # <a name="how-to-debug-database-objects"></a>HOW TO：偵錯資料庫物件
 SQL Server 單元測試是由以下項目組成：  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/27/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088600"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100539"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 該資料表包含錯誤訊息編號和描述 (來自 sys.messages 目錄檢視的錯誤訊息文字)。 
@@ -849,7 +846,7 @@ ms.locfileid: "39088600"
 |   1732    |   16  |   否  |   無法在資料表 '%.* ls' 中建立疏鬆資料行集 '%.*ls'，因為資料表不能包含一個以上的疏鬆資料行集。 請修改陳述式，使得只有一個資料行指定為 COLUMN_SET FOR ALL_SPARSE_COLUMNS。   |
 |   1733    |   16  |   否  |   無法在資料表 '%.* ls' 中建立疏鬆資料行集 '%.*ls'，因為疏鬆資料行集必須是可為 Null 的 XML 資料行。 請修改資料行定義，以允許 Null 值。  |
 |   1734    |   16  |   否  |   無法在資料表 '%.* ls' 中建立疏鬆資料行集 ' '%.*ls'，因為資料表已經包含一個或多個疏鬆資料行。 如果資料表包含疏鬆資料行，就不能再加入疏鬆資料行集。   |
-|   1736    |   16  |   否  |   無法在 CHECK 條件約束或計算資料行定義中參考資料表 '%.* ls' 中的資料行 '%.*ls'，因為該資料行是疏鬆資料行集。 CHECK 條件約束或計算資料行定義中不能參考疏鬆資料行集。 |
+|   1736    |   16  |   否  |   無法在 CHECK 條件約束或計算資料行定義中參考資料表 '%.* ls' 中的資料行 '%.*ls'，因為該資料行是疏鬆資料行集。 CHECK 條件約束或計算資料行定義中不能參考疏鬆資料行集。   |
 |   1738    |   10  |   否  |   無法建立資料表中只有一個資料行集資料行，卻沒有任何非計算資料行的資料表 '%.*ls'。    |
 |   1750    |   10  |   否  |   無法建立條件約束。 請查看先前的錯誤。   |
 |   1752    |   16  |   否  |   資料表 '%.* ls' 中的資料行 '%.*ls' 對建立預設條件約束無效。   |
@@ -1139,7 +1136,7 @@ ms.locfileid: "39088600"
 |   2325    |   16  |   否  |   %s結束標記 '%ls' 與行 %u 的開頭標記 '%ls:%ls' 不相符    |
 |   2326    |   16  |   否  |   %s結束標記 '%ls:%ls' 與行 %u 的開頭標記 '%ls:%ls' 不相符    |
 |   2327    |   16  |   否  |   %s 遺漏 <%ls> 的內容或定義。    |
-|   2328    |   16  |   否  |   %s 結構描述命名空間 '%ls' 與 <include> 指示詞的 '%ls' 不相符  |
+|   2328    |   16  |   否  |   %s結構描述命名空間 '%ls' 不相符 <include> 指示詞為 '%ls'  |
 |   2329    |   16  |   否  |   %s字串 "%ls" 不是有效的持續時間值。  |
 |   2331    |   16  |   否  |   %s重新定義必須以其本身做為基底類型。 位置: '%ls'。    |
 |   2332    |   16  |   否  |   %s'%ls' 不能和 'empty' 運算元一起使用 |
@@ -1378,6 +1375,7 @@ ms.locfileid: "39088600"
 |   2812    |   16  |   否  |   找不到預存程序 '%.*ls'。    |
 |   2813    |   16  |   否  |   此版本的 SQL Server 不支援 %.*ls。   |
 |   [2814](mssqlserver-2814-database-engine-error.md)   |   10  |   否  |   偵測到 SQLHANDLE %hs、PlanHandle %hs、起始位移 %d、結尾位移 %d 可能發生無限重新編譯。 上次重新編譯的原因是 %d。   |
+|   2628    |   16  |   否  |   資料表 table '% 中的字串或二進位資料會被截斷。*ls', column '%.* ls'。 截斷的值：' %.* ls'。    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>錯誤 3000 到 3999

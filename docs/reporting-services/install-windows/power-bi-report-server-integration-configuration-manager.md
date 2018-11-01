@@ -1,22 +1,18 @@
 ---
 title: Power BI 報表伺服器整合 (設定管理員) | Microsoft Docs
-ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.suite: pro-bi
-ms.topic: conceptual
-f1_keywords:
-- pbi
-- power bi
-- power bi integration
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.topic: conceptual
+ms.date: 09/17/2017
+ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277794"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759426"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 
@@ -55,6 +51,9 @@ ms.locfileid: "43277794"
 1. 選取 [ [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合] 頁面。
 
 2. 選取 [向 Power BI 註冊]。
+
+    >[!Note]
+    > 確定未封鎖連接埠 443。
 
 3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登入對話方塊中，輸入您用來登入 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的認證。
 

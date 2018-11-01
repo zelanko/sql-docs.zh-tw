@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed5b430bfdd6f24e0942c72b4ce8d0cfce40d672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626996"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782327"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-當轉換來自 **datetime**，會複製日期和時間。  小數有效位數會延伸至 7 位數。  下列範例顯示將 `datetime` 值轉換成 `datetime2` 值的結果。
+當轉換來自 **datetime**，會複製日期和時間。 小數有效位數會延伸至 7 位數。 下列範例顯示將 `datetime` 值轉換成 `datetime2` 值的結果。
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -157,7 +157,10 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ------------------------- ---------------------------
 --2016-10-23 12:45:37.3333333 2016-10-23 12:45:37.333
 ```  
-  
+
+> [!NOTE]
+> 在資料庫相容性層級 130 下，藉由考量小數部分的毫秒從 datetime 隱含轉換至 datetime2 資料類型顯示改善的精確度，會導致不同的轉換值，如上面範例所示。 只要 datetime 和 datetime2 資料類型之間存在混合的比較案例，就明確轉換為 datetime2 資料類型。 如需詳細資訊，請參閱此篇 [Microsoft 支援服務文章](http://support.microsoft.com/help/4010261)。
+
 ### <a name="converting-string-literals-to-datetime2"></a>將字串常值轉換為 datetime2  
 如果整個字串皆是有效的格式，即可從字串常值轉換為日期與時間類型。 否則，就會引發執行階段錯誤。 從日期與時間類型轉換為字串常值的明確轉換不會指定樣式的隱含轉換，一律會採用目前工作階段的預設格式。 下表是字串常值轉換為 **datetime2** 資料類型的規則。
   

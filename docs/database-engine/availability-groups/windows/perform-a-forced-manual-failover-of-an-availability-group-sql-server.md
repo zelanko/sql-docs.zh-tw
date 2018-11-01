@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 883252a6b4c7e69c488a497308889db6f7f9ac05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b391f73ab498c2ad87406b5f3dd8fa3268a75774
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834646"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120395"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的強制手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47834646"
   
 -   **若要強制容錯移轉 (可能會遺失資料)，使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "47834646"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -160,7 +160,7 @@ ms.locfileid: "47834646"
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
-1.  連接到裝載需要容錯移轉之可用性群組中，其角色為 SECONDARY 或 RESOLVING 狀態之複本的伺服器執行個體。  
+1.  連線到裝載複本的伺服器執行個體，而在需要容錯移轉的可用性群組中，複本的角色為 SECONDARY 或 RESOLVING 狀態。  
   
 2.  使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 陳述式，如下所示：  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47834646"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要強制容錯移轉 (可能會遺失資料)**  
   
-1.  將目錄 (**cd**) 變更為裝載複本的伺服器執行個體 (其角色在需要容錯移轉之可用性群組中具有 SECONDARY 或 RESOLVING 的狀態)。  
+1.  將目錄 (**cd**) 變更為裝載複本的伺服器執行個體，而其角色在需要容錯移轉的可用性群組中具有 SECONDARY 或 RESOLVING 狀態。  
   
 2.  以下列其中一種形式，搭配 **AllowDataLoss** 參數使用 **Switch-SqlAvailabilityGroup** Cmdlet：  
   

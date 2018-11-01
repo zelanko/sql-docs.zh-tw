@@ -18,12 +18,12 @@ ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9108d6a7ec54e0c1fb7d4027fc77953f661f4b75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba9ea786496a427f02993ca1bfa9354eb3c32de7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835976"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905539"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 用來保護對稱金鑰的憑證識別碼。 *cert_ID* 具有 **int** 資料類型。  
   
 *cert_password*  
-用來加密憑證私密金鑰的密碼。 如果以資料庫主要金鑰保護私密金鑰，可以有 `NULL` 值。 *cert_password* 具有 **nvarchar** 資料類型。  
+用來加密憑證私密金鑰的密碼。 如果以資料庫主要金鑰來保護私密金鑰，則可以有 `NULL` 值。 *cert_password* 具有 **nvarchar** 資料類型。  
 
 '*ciphertext*'  
 以金鑰加密的資料字串。 *ciphertext* 具有 **varbinary** 資料類型。  

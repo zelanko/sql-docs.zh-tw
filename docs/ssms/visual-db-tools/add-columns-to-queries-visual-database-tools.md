@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - queries [SQL Server], columns
 - adding columns
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd6082b4014766a783b4ecfa35638972ab2ff0a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db9e0371282532c2ef70db963dfbb48b45cafa02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641456"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>將資料行加入查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +42,7 @@ ms.locfileid: "33050047"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>若要針對一個資料表或資料表值物件新增所有資料行  
   
--   在 [圖表] 窗格中，選取 [\&#42;(所有資料行)] 旁邊的核取方塊。  
+-   在 [圖表] 窗格中，選取 [&#42;(所有資料行)] 旁邊的核取方塊。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>若要針對所有資料表和表格化物件 (Table-Structured Object) 新增所有資料表  
   

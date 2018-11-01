@@ -1,13 +1,11 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -53,17 +51,16 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd2ee86fe01f568f6eb2a91800632f6f896ed3e5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777726"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +241,7 @@ CLUSTERED
  *column*  
  這是做為索引根據的資料行。 您可以指定兩個或兩個以上的資料行名稱，在指定之資料行的合計值上建立複合索引。 在 *table_or_view_name* 後面的括號內，依排序優先權順序列出要併入複合式索引的資料行。  
   
- 單一複合式索引鍵中最多只能結合 32 個資料行。 複合索引鍵中的所有資料行都必須在相同的資料表或檢視表中。 針對叢集索引，組合索引值的允許大小上限是 900 個位元組，非叢集索引則為 1,700 個位元組。 針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，限制為 16 個資料行與 900 個位元組。  
+ 單一複合式索引鍵中最多只能結合 32 個資料行。 複合索引鍵中的所有資料行都必須在相同的資料表或檢視表中。 針對叢集索引，組合索引值的允許大小上限是 900 個位元組，非叢集索引則為 1,700 個位元組。 針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，限制為 16 個資料行與 900 個位元組。  
   
  屬於大型物件 (LOB) 資料類型 **ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml** 或 **image** 的資料行無法指定為索引的索引鍵資料行。 此外，即使 CREATE INDEX 陳述式中未參考 **ntext**、**text** 或 **image** 資料行，檢視定義也不能包含這些資料行。  
   
@@ -253,7 +250,7 @@ CLUSTERED
  [ **ASC** | DESC ]  
  決定特定索引資料行的遞增或遞減排序方向。 預設值是 ASC。  
   
- INCLUDE **(***column* [ **,**... *n* ] **)**  
+ INCLUDE **(**_column_ [ **,**... *n* ] **)**  
  指定要加入至非叢集索引分葉層級的非索引鍵資料行。 非叢集索引可以是唯一或非唯一的。  
   
  資料行名稱在 INCLUDE 清單中不能重複，且不能同時做為索引鍵資料行和非索引鍵資料行。 如果資料表上有定義叢集索引，非叢集索引一定會包含叢集索引資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
@@ -337,9 +334,9 @@ ON *partition_scheme_name* **( *column_name* )**
   
  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此物件可以是與叢集資料行存放區索引一併儲存的資料表。  
   
- 當 *database_name* 是目前的資料庫或 *database_name* 是 tempdb，而且 *object_name* 的開頭為 # 時，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援三部分名稱格式 *database_name***.**[* schema_name *]**.***object_name*。  
+ 當 *database_name* 是目前的資料庫或 *database_name* 是 tempdb，而且 *object_name* 的開頭為 # 時，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援三部分名稱格式 _database\_name_**.**[*schema_name*]**.**_object\_name_。  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  指定當您建立索引時所需使用的選項。  
   
@@ -358,7 +355,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  在與舊版本相容的語法中，WITH PAD_INDEX 相當於 WITH PAD_INDEX = ON。  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *fillfactor* 必須是 1 到 100 之間的整數值。 如果 *fillfactor* 是 100，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用已填滿容量的分葉頁面來建立索引。  
@@ -465,7 +462,7 @@ ONLINE = { ON | **OFF** }
  
 RESUMABLE **=** { ON | **OFF**}
 
-**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 作為公開預覽功能
+**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
 
  指定線上索引作業是否為可繼續的作業。
 
@@ -475,7 +472,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**] 與 **RESUMABLE = ON** (需要 **ONLINE = ON**) 搭配使用。
  
-**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 作為公開預覽功能 
+**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
 
 指出可繼續的線上索引作業在暫停之前的執行時間 (以分鐘為單位指定的一個整數值)。 
 
@@ -522,7 +519,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  *max_degree_of_parallelism* 可以是：  
   
- @shouldalert  
+ 1  
  隱藏平行計畫的產生。  
   
  \>1  
@@ -647,7 +644,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  如需 XML 索引的相關資訊，請參閱 [CREATE XML INDEX &#40;Transact-SQL&#41; ](../../t-sql/statements/create-xml-index-transact-sql.md) 和 [XML 索引 &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)。  
   
 ## <a name="index-key-size"></a>索引鍵大小  
- 叢集索引的索引鍵大小上限為 900 個位元組，而非叢集索引為 1,700 個位元組 (在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，限制一律為 900 個位元組)。如果資料行中現有資料未超出建立索引時的限制，則可在 **varchar** 資料行上建立超過位元組限制的索引；但是，如果後續在資料行進行插入或更新動作時造成總計大小超過限制，則動作會失敗。 叢集索引的索引鍵所包含的 **varchar** 資料行不能在 ROW_OVERFLOW_DATA 配置單位中有現有的資料。 如果在 **varchar** 資料行上建立叢集索引，且現有的資料在 IN_ROW_DATA 配置單位中，則後續在可能發送資料非資料列的資料行上進行的插入或更新動作會失敗。  
+ 叢集索引的索引鍵大小上限為 900 個位元組，而非叢集索引為 1,700 個位元組 (在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，限制一律為 900 個位元組)。如果資料行中現有資料未超出建立索引時的限制，則可在 **varchar** 資料行上建立超過位元組限制的索引；但是，如果後續在資料行進行插入或更新動作時造成總計大小超過限制，則動作會失敗。 叢集索引的索引鍵所包含的 **varchar** 資料行不能在 ROW_OVERFLOW_DATA 配置單位中有現有的資料。 如果在 **varchar** 資料行上建立叢集索引，且現有的資料在 IN_ROW_DATA 配置單位中，則後續在可能發送資料非資料列的資料行上進行的插入或更新動作會失敗。  
   
  非叢集索引可將非索引鍵資料行併入索引的分葉層級中。 在計算索引鍵大小時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會考量這些資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
@@ -691,7 +688,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>指定索引選項  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入新的索引選項，並修改選項的指定方式。 在與舊版本相容的語法中，WITH *option_name* 相當於 WITH **(** \<option_name> **= ON )**。 當您設定索引選項時，適用下列規則： 
   
--   只能利用 WITH (***option_name* = ON | OFF**) 來指定新的索引選項。  
+-   只能使用 WITH (**_option\_name_ = ON | OFF**) 來指定新的索引選項。  
 -   不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH (**DROP_EXISTING, ONLINE = ON**) 會造成陳述式失敗。  
 -   當您建立 XML 索引時，必須搭配 WITH (***option_name*= ON | OFF**) 來指定選項。  
   
@@ -719,7 +716,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a> 可繼續的索引作業
 
-**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 作為公開預覽功能。
+**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
 
 可繼續索引作業適用下列方針：
 
@@ -731,14 +728,12 @@ INSERT INTO t1 VALUES (1, 0);
 - 重新執行可繼續索引的原始 CREATE INDEX 陳述式，會自動繼續已暫停索引的建立作業。
 - 可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項。 
 - RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是 TRAN … COMMIT 區塊的一部份)。
-- 若要繼續/中止建置/重建索引，請使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 語法
+- 若要繼續/中止建立/重建索引，請使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 語法
 
 > [!NOTE]
 > DDL 命令會執行，直到完成、暫停或失敗為止。 如果命令暫停，將會發出錯誤指出作業已暫停，而且沒有完成索引建立。 您可以從 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) 取得目前索引狀態的詳細資訊。 和以前一樣，如果發生失敗，也會發出錯誤。 
 
-若要指出索引建立是以可繼續的作業來執行，以及檢查其目前的執行狀態，請參閱 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)。 針對公開預覽版，此檢視中的下列資料行都會設定為 0：
-- total_execution_time
-- percent_complete 和 page_count
+若要指出索引建立是以可繼續的作業來執行，以及檢查其目前的執行狀態，請參閱 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)。 
 
 **資源** 可繼續的線上索引建立作業需要下列資源
 - 需要額外的空間以保留正在建立的索引，包括索引的暫停時間
@@ -748,17 +743,12 @@ INSERT INTO t1 VALUES (1, 0);
 
 **目前的功能限制**
 
-> [!IMPORTANT]
-> 目前僅非叢集索引支援**可繼續的線上索引建立**。
-
 已針對可繼續的索引建立作業停用下列功能
-- 處於公開預覽的叢集索引不支援可繼續的索引建立。
 - 在可繼續的線上索引建立作業暫停之後，即無法變更 MAXDOP 的初始值
-- 不支援 DROP EXISTING 子句
 - 建立的索引包含 
  - 作為索引鍵資料行的計算或 TIMESTAMP 資料行
  - LOB 資料行作為可繼續索引建立的內含資料行
-- 已篩選的索引
+ - 已篩選的索引
  
 ## <a name="row-and-page-locks-options"></a>資料列和頁面鎖定選項  
  如果 ALLOW_ROW_LOCKS = ON 且 ALLOW_PAGE_LOCK = ON，當您在存取索引時，允許使用資料列、頁面和資料表層級的鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會選擇適當的鎖定，且可以將鎖定從資料列或頁面鎖定擴大到資料表鎖定。  
@@ -1048,6 +1038,8 @@ GO
 ```  
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 建立、繼續、暫停及中止可繼續的索引作業
 
+**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1066,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### <a name="n-basic-syntax"></a>N. 基本語法  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>建立、繼續、暫停及中止可繼續的索引作業
+
+**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

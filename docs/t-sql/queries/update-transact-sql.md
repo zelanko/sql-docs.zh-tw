@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf48e61dd83eb7d0bc802a8b176c2bd91679336
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082041"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776966"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +121,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  另外，一般資料表運算式也可以搭配 SELECT、INSERT、DELETE 和 CREATE VIEW 等陳述式來使用。 如需詳細資訊，請參閱 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP **(** *expression***)** [ PERCENT ]  
+ TOP **(** _expression_**)** [ PERCENT ]  
  指定更新的資料列數目或百分比。 *expression* 可以是一個數字，也可以是資料列的百分比。  
   
  搭配 INSERT、UPDATE 或 DELETE 使用的 TOP 運算式所參考的資料列並不依照任何順序來排列。  
@@ -190,7 +187,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  這是 *udt_column_name* 有一或多個引數的非靜態公用 mutator 方法。  
   
- **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
  指定要修改 *column_name* 的值區段。 *expression* 會取代從 *column_name* 的 *@Offset* 算起的 *@Length* 個單位。 使用這個子句只能指定 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 的資料行。 *column_name* 不能是 NULL，也不能用資料表名稱或資料表別名來限定。  
   
  *expression* 是複製到 *column_name* 的值。 *expression* 必須評估為或能夠隱含轉換成 *column_name* 類型。 如果 *expression* 設定為 NULL，系統就會忽略 *@Length*，而且會在指定的 *@Offset* 截斷 *column_name* 中的值。  
@@ -204,7 +201,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@** *variable*  
  這是設定為 *expression* 傳回之值的宣告變數。  
   
- SET **@***variable* = *column* = *expression* 會將變數設成與資料行相同的值。 這有別於 SET **@***variable* = *column*, *column* = *expression*，它會將變數設成資料行更新之前的值。  
+ SET **@**_variable_ = *column* = *expression* 會將變數設成與資料行相同的值。 這有別於 SET **@**_variable_ = _column_, _column_ = _expression_，它會將變數設成資料行更新之前的值。  
   
  \<OUTPUT_Clause>  
  在 UPDATE 作業中，傳回更新資料或以更新資料為基礎的運算式。 任何目標是遠端資料表或檢視表的 DML 陳述式都不支援 OUTPUT 子句。 如需詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
@@ -334,7 +331,7 @@ GO
 >  未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會移除 **ntext**、**text** 和 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大數值資料類型  
- 使用 **.** WRITE (*expression***,** *@Offset ***,***@Length*) 子句可執行 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個字元，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，插入或附加新資料的 **.** WRITE 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 使用 **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 子句可執行 **varchar(max)**、**nvarchar(max)** 和 **varbinary(max)** 資料類型的部分或完整更新。 例如，部分更新 **varchar(max)** 資料行可能只刪除或修改資料行的前 200 個字元，完整更新則會刪除或修改資料行中的所有資料。 如果資料庫復原模式設為大量記錄或簡單模式，插入或附加新資料的 **.** WRITE 更新就會採用最低限度記錄。 當更新現有的值時，不會使用最低限度記錄。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  當 UPDATE 陳述式造成下列情況時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將部分更新轉換成完整更新：  
 -   變更資料分割檢視或資料表的索引鍵資料行。  
@@ -346,7 +343,7 @@ GO
   
 若要有最佳效能，建議您以 8040 個位元組倍數的片段大小來插入或更新資料。  
   
-如果在 OUTPUT 子句中參考 **.** WRITE 子句所修改的資料行，就會將資料行的完整值 (不論是在 **deleted.***column_name* 中的影像之前，或在 **inserted.***column_name* 中的影像之後) 傳回資料表變數中的指定資料行。 請參閱下面的 R 範例。  
+如果在 OUTPUT 子句中參考 **.** WRITE 子句所修改的資料行，就會將資料行的完整值 (不論是在 **deleted.**_column\_name_ 中的影像之前，或在 **inserted.**_column\_name_ 中的影像之後) 傳回資料表變數中的指定資料行。 請參閱下面的 R 範例。  
   
 若要利用其他字元或二進位資料類型來完成 **.** WRITE 的相同功能，請使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)。  
   

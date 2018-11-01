@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7409eb0c6c26b03309fbdbdd37b8d2255cfa5b75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa8fce2f2579f792abc78b8837e4a33e090f806e
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620426"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100479"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,9 +93,15 @@ BULK INSERT
  **'** *data_file* **'**  
  這是含有要匯入至指定的資料表或檢視表中之資料的資料檔案完整路徑。 BULK INSERT 可以從磁碟中匯入資料 (其中包括網路、磁碟片、硬碟等)。   
  
- *data_file* 必須指定執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器中的有效路徑。 如果 *data_file* 是一個遠端檔案，請指定「通用命名慣例」(UNC) 名稱。 UNC 名稱的格式為 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*。 例如， `\\SystemX\DiskZ\Sales\update.txt`。   
+ *data_file* 必須指定執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器中的有效路徑。 如果 *data_file* 是一個遠端檔案，請指定「通用命名慣例」(UNC) 名稱。 UNC 名稱的格式為 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*。 例如：   
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
+```
+
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
-從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 可位於 Azure Blob 儲存體中。
+從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 可位於 Azure Blob 儲存體中。 在此情況下，您必須指定 **data_source_name** 選項。
 
 > [!IMPORTANT]
 > Azure SQL Database 不支援從 Windows 檔案讀取。
@@ -104,7 +110,13 @@ BULK INSERT
 **'** *data_source_name* **'**   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 這是具名的外部資料來源，指向將匯入之檔案的 Azure Blob 儲存體位置。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。    
-  
+ 
+```sql
+BULK INSERT Sales.Orders
+FROM 'data/orders.dat'
+WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
+```
+
  BATCHSIZE **=***batch_size*  
  指定批次中的資料列數。 每個批次都會當做一筆交易複製到伺服器中。 如果失敗，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會認可或回復每個批次的交易。 依預設，指定之資料檔中的所有資料都是單一批次。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
@@ -123,6 +135,12 @@ BULK INSERT
   
  CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
  指定資料檔案中之資料的字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char**、**varchar** 或 **text** 資料行時，CODEPAGE 才會相關。  
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat'
+WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
+```
 
 > [!IMPORTANT]
 > 在 Linux 上，CODEPAGE 不是支援的選項。
@@ -215,6 +233,12 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
 FORMAT **=** 'CSV'   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 規範的逗點分隔值檔案。
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
+WITH ( FORMAT='CSV');
+```
 
 FIELDQUOTE **=** 'field_quote'   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
@@ -320,7 +344,7 @@ GO
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，CSV 檔案可用來當做資料檔案，以便將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關從 CSV 資料檔案匯入資料的需求資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- 如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱 [大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 ##  <a name="Limitations"></a> 限制  
  使用格式檔案搭配 BULK INSERT 時，最多只能指定 1024 個欄位。 這與資料表中允許的資料行數目上限相同。 如果您使用 BULK INSERT 搭配包含超過 1024 個欄位的資料檔案，則 BULK INSERT 會產生 4822 錯誤。 [bcp 公用程式](../../tools/bcp-utility.md)沒有此限制，因此，針對包含超過 1024 個欄位的資料檔案，請使用 **bcp** 命令。  
@@ -425,11 +449,15 @@ WITH
 > Azure SQL Database 不支援從 Windows 檔案讀取。
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. 從 CSV 檔案匯入資料   
-下列範例說明如何指定 CSV 檔案。   
-```
+下列範例示範如何指定 CSV 檔案，跳過標頭 (第一個資料列)，使用 `;` 作為欄位結束字元，以及使用 `0x0a` 作為行結束字元： 
+```sql
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
-WITH (FORMAT = 'CSV'); 
+WITH (FORMAT = 'CSV',
+      FIRSTROW=2,
+      FIELDQUOTE = '\',
+      FIELDTERMINATOR = ';', 
+      ROWTERMINATOR = '0x0a'); 
 ```
 
 > [!IMPORTANT]
@@ -440,10 +468,23 @@ WITH (FORMAT = 'CSV');
 下列範例說明如何從已設定為外部資料來源之 Azure Blob 儲存體位置中的 CSV 檔案載入資料。 這需要一個使用共用存取簽章的資料庫範圍認證。    
 
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ 
+ -- NOTE: Make sure that you don't have a leading ? in SAS token, and
+ -- that you have at least read permission on the object that should be loaded srt=o&sp=r, and
+ -- that expiration period is valid (all dates are in UTC time)
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (  TYPE = BLOB_STORAGE, 
+        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
+);
+
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
-WITH (DATA_SOURCE = 'MyAzureInvoices',
-     FORMAT = 'CSV'); 
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage'); 
 ```
 
 > [!IMPORTANT]
@@ -454,7 +495,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 
 ```sql
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
+FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV',
      ERRORFILE = 'MyErrorFile',

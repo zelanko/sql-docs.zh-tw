@@ -5,22 +5,19 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c8aa3a14937c0855b3cd91ba35dd4868af075f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 765e480e8fa01daf99036c2526ee9b5dc0dccfe2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679476"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>變更系統建立版本時態表的結構描述
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ ALTER TABLE dbo.Department
   
 -   在 **ALTER TABLE** 作業期間，系統會保留這兩個資料表的結構描述鎖定。  
   
--   指定的結構描述變更會以適當的方式 (視變更的類型而定) 傳播至記錄資料表  
+-   指定的結構描述變更會以適當的方式 (視變更的類型而定) 傳播至記錄資料表。  
   
 -   如果您加入不可為 Null 資料行，或改變現有資料行使其成為不可為 Null，則必須指定現有資料列的預設值。 系統會產生具有相同值的其他預設值，並將它套用到記錄資料表。 將 **DEFAULT** 加入非空白資料表，是所有版本的資料作業大小 (為中繼資料作業的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 除外)。  
   

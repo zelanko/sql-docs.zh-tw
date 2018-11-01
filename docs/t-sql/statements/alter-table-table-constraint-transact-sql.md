@@ -1,13 +1,11 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TSQL
@@ -16,16 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - table_constraint
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: ed7329979efebd35e9979fe0ea37e3651149a12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106724"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607906"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,6 +49,12 @@ ms.locfileid: "39106724"
         [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ NOT FOR REPLICATION ]   
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE NO ACTION]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -83,13 +86,13 @@ ms.locfileid: "39106724"
  [ **ASC** | DESC ]  
  指定一個或多個資料行參與資料表條件約束的排序順序。 預設值是 ASC。  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  指定用來儲存索引資料的每個索引頁面，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 所應加以填滿的程度。 使用者指定的 *fillfactor* 可以是從 1 到 100 的值。 如果未指定值，預設值為 0。  
   
 > [!IMPORTANT]  
 >  為了與舊版相容，我們保持將 WITH FILLFACTOR = *fillfactor* 記載為適用於 PRIMARY KEY 或 UNIQUE 條件約束的唯一索引選項，但未來版本的文件不會再依照這個方式來說明。 您可以在 ALTER TABLE 的 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中，指定其他索引選項。  
   
- ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup*| **"** default **"** }  
+ ON { _partition\_scheme\_name_**(**_partition\_column\_name_**)** | _filegroup_| **"** default **"** }  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定條件約束所建立之索引的儲存位置。 如果指定 *partition_scheme_name*，索引就會進行資料分割，這些資料分割會對應於 *partition_scheme_name* 所指定的檔案群組。 如果指定了 *filegroup*，就會在具名檔案群組中建立索引。 如果指定了 **"** default **"**，或完全未指定 ON，就會在與資料表相同的檔案群組中建立索引。 如果加入 PRIMARY KEY 或 UNIQUE 條件約束的叢集索引時指定了 ON，則建立叢集索引時，會將整份資料表移到指定的檔案群組中。  
@@ -159,7 +162,9 @@ ms.locfileid: "39106724"
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  可以指定給 FOREIGN KEY 條件約束和 CHECK 條件約束。 如果條件約束指定了這個子句，當複寫代理程式執行插入、更新或刪除作業時，不會強制執行這個條件約束。  
-  
+
+ CONNECTION 指定允許所指定邊緣條件約束連線的節點資料表配對。  
+ 
  DEFAULT  
  指定資料行的預設值。 您可以利用 DEFAULT 定義來提供現有資料列之新資料行的值。 您不能將 DEFAULT 定義新增至含 **timestamp** 資料類型、IDENTITY 屬性、現有的 DEFAULT 定義或繫結預設值的資料行。 如果資料行有現有的預設值，就必須先卸除預設值，才能加入新預設值。 如果使用者定義的類型資料行指定了預設值，該類型應該支援將 *constant_expression* 隱含地轉換成使用者定義的類型。 若要維護與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性，您可以將條件約束名稱指派給 DEFAULT。  
   

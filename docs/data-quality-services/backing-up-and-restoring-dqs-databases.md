@@ -12,12 +12,12 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86e7ba74fa6b5a3cfc1a551edf16ad91c1f2e5af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2ff315ef171a93a00c3e251b60ceb147e6637aa
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672646"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119815"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
 
@@ -29,7 +29,7 @@ ms.locfileid: "47672646"
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
--   您必須知道或記得您在 DQS 伺服器安裝期間所提供之資料庫主要金鑰的密碼。  
+-   您必須知道或記得您在 DQS 伺服器安裝期間所提供資料庫主要金鑰的密碼。  
   
 -   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需有關在此畫面工作的詳細資訊，請參閱＜ [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)＞。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47672646"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體上系統管理員 (sysadmin) 固定伺服器角色的成員，才能執行備份和還原作業。  
   

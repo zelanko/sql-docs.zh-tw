@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 172c7c1bfd6cf312ddf47d8d6e6eb8b34052a67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784446"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852093"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -273,8 +273,8 @@ ms.locfileid: "47784446"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必要**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的啟動帳戶。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必要](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務之啟動帳戶的密碼。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **選擇性**|指定 [的](#Accounts) 啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|Python/機器學習服務 (資料庫內)|MPYCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Sever (獨立式) 中 Python 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 Python 服務，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)時。|  
-|R/機器學習服務 (資料庫內)|MRCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Sever (獨立式) 中的 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)時。|  
+|Python/機器學習服務 (資料庫內)|MPYCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Server (獨立式) 中 Python 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 Python 服務，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)時。|  
+|R/機器學習服務 (資料庫內)|MRCACHEDIRECTORY|使用此參數來指定 SQL Server 2017 機器學習服務或 Machine Learning Server (獨立式) 中的 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (獨立式) 或 R 功能支援的快取目錄。 此設定通常用於[在電腦上從命令列安裝 R 元件，而沒有網際網路存取](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)時。|  
   
 ###### <a name="sample-syntax"></a>範例語法：  
  與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、複寫和全文檢索搜尋元件一起安裝新的獨立執行個體，並為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]啟用立即檔案初始化。 

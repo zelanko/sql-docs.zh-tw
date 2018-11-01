@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 12
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c62a0eb58db1a57d68ca1e43980f23a799fe277f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787176"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>為主體授與權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +68,7 @@ ms.locfileid: "43118085"
   
 4.  以滑鼠右鍵按一下預存程序，然後選取 [屬性]。  
   
-5.  在 [預存程序屬性] - *stored_procedure_name>* 對話方塊的 [選取頁面] 底下，選取 [權限]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
+5.  在 [預存程序屬性 - _stored\_procedure\_name_] 對話方塊的 [選取頁面] 下，選取 [權限]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
   
 6.  完成後，請按一下 **[確定]**。  
   

@@ -5,9 +5,7 @@ ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a9aa7006233437922fc15ac4fe811cbde75dff59
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618586"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,10 +59,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**2**|使用**以元素為主**的對應。 可以和 XML_ATTRIBUTES 合併使用。 在這個情況下，會先套用**以屬性為主**的對應，然後對所有尚未處理的資料行套用**以元素為主**的對應。|  
 |**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容中，這個旗標表示耗用的資料不應複製到溢位屬性 **\@mp:xmltext**。|  
   
- *SchemaDeclaration*  
- 這是表單的結構描述定義：*ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  
+ _SchemaDeclaration_  
+ 這是表單的結構描述定義：_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
- *ColName*  
+ _ColName_  
  這是資料列集中的資料行名稱。  
   
  *ColType*  

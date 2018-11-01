@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24e5cc8b801a80b754b7aaed9ab72b69ae9e93fc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a2799865b5c04403ac62f3ed3352d1f0b0d545b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849187"
 ---
 # <a name="contained-databases"></a>自主資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ ms.locfileid: "43107971"
   
      已授權的 Windows 使用者和已授權之 Windows 群組的成員可以直接連接至資料庫，而且不需要 **master** 資料庫的登入。 資料庫信任 Windows 驗證。  
   
- 以 **master** 資料庫中之登入為基礎的使用者可被授與自主資料庫的存取權，不過這樣做會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的相依性。 因此不建議建立以登入為基礎的使用者；請參閱部分自主資料庫的註解。  
+ 以 **master** 資料庫中之登入為基礎的使用者可被授與自主資料庫的存取權，不過這樣做會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的相依性。 因此，根據登入建立使用者需要部分內含項目。
   
 > [!IMPORTANT]  
 >  若啟用部分自主資料庫，會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取控制權委派給資料庫擁有者。 如需詳細資訊，請參閱 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  

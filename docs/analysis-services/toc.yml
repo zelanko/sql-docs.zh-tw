@@ -10,9 +10,11 @@ items:
   - name: 工具和應用程式
     href: tools-and-applications-used-in-analysis-services.md
   - name: 用戶端程式庫 (資料提供者)
-    href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
+    href: instances/data-providers-used-for-analysis-services-connections.md
   - name: 比較表格式和多維度解決方案
     href: comparing-tabular-and-multidimensional-solutions-ssas.md
+  - name: Analysis Services 功能及工作
+    href: analysis-services-features-and-tasks.md
   - name: 各種 SQL Server 版本支援的 Analysis Services 功能
     href: analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
   - name: 回溯相容性 (SQL Server 2016 Analysis Services)
@@ -216,12 +218,16 @@ items:
     href: ../analysis-services/data-mining/data-mining-ssas.md
   - name: Power Pivot for SharePoint
     href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+  - name: 監視 Analysis Services 執行個體
+    href: instances/monitor-an-analysis-services-instance.md
   - name: 管理伺服器
     href: ../analysis-services/instances/analysis-services-instance-management.md
   - name: 追蹤事件
     href: ../analysis-services/trace-events/analysis-services-trace-events.md
 - name: Developer
   items:
+  - name: Analysis Services Developer 文件
+    href: analysis-services-developer-documentation.md
   - name: 相容性層級 1200 及以上的表格式模型程式設計
     href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
     items:
@@ -249,6 +255,11 @@ items:
     href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
   - name: Analysis Services 指令碼語言 (ASSL for XMLA)
     href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+  - name: 資料採礦程式設計
+    href: data-mining-programming.md
+    items:
+    - name: 資料採礦程式設計 - OLE DB
+      href: data-mining-programming-ole-db.md
 - name: 範例
   items:
   - name: Analysis Services 範例
@@ -271,9 +282,9 @@ items:
     href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
   - name: XML for Analysis (XMLA)
     href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
-ms.openlocfilehash: 52e7b7a3fbf8958687305751b93ab04939dcc4a1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: 94648fae78dfe48ac8768407ae80d913c6d39bc7
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899298"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534040"

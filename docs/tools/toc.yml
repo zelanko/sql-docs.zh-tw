@@ -1,8 +1,8 @@
 items:
 - name: SQL Server 工具和公用程式概觀
   href: ../tools/overview-sql-tools.md
-- name: SQL Operations Studio (預覽)
-  href: ../sql-operations-studio/what-is.md
+- name: Azure Data Studio
+  href: ../azure-data-studio/what-is.md
 - name: SQL Server Management Studio (SSMS)
   href: ../ssms/download-sql-server-management-studio-ssms.md
 - name: SQL Server Data Tools (SSDT)
@@ -56,9 +56,9 @@ items:
     href: sqlpackage-release-notes.md
   - name: sqlpackage 參考
     href: sqlpackage.md
-ms.openlocfilehash: 9d141d9c690b017185f7cfd790fbf9b009ecf1e5
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: cf1db8ae43d16e06e8602ad8dfee6afbb0f298aa
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899548"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712100"

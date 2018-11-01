@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9dc5fcb6f7cb550d890d621f36fc79714c34edf
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 55588ba56d92ce282ff3dd4b0661248e0449beca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746026"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ ms.locfileid: "40008880"
   
  如需詳細資訊，請參閱[套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
- { *database_name* | **@***database_name_var*}  
+ { _database\_name_ | **@**_database\_name\_var_}  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- 這是記錄或完整資料庫要還原到其中的資料庫。 如果這個名稱是以變數 (**@***database_name_var*) 的形式提供，您還可以將這個名稱指定為字串常數 (**@***database_name_var* = *database*_* name*) ，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ 這是記錄或完整資料庫要還原到其中的資料庫。 如果這個名稱是以變數 (**@**_database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 (**@**_database\_name\_var_ = *database*\_*name*)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -84,10 +81,10 @@ ms.locfileid: "40008880"
   
 -   備份包含主要檔案群組，且正在執行部分還原。 在這個情況下，不需要還原記錄，因為此時會從備份組中自動還原記錄。  
   
-FILE **=** { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_var*}  
+FILE **=** { *logical_file_name_in_backup*| **@**_logical\_file\_name\_in\_backup\_var_}  
  命名要包括在資料庫還原中的檔案。  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
  命名要包括在資料庫還原中的檔案群組。  
   
  **注意：** 只有在指定的檔案群組是唯讀的，且這是部分還原 (也就是使用 WITH PARTIAL) 時，才能在簡單復原模式中使用 FILEGROUP。 任何未還原的讀寫檔案群組都會標示為已解除功能，且以後無法還原到結果資料庫中。  
@@ -95,7 +92,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  選取所有讀寫檔案群組。 如果您有唯讀檔案群組要在讀寫檔案群組之後，在唯讀檔案群組之前還原，這個選項特別有用。  
   
-PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
+PAGE = **'**_file_**:**_page* [ **,**...*n* ]**'**  
  指定要進行分頁還原 (只有使用完整或大量記錄復原模式的資料庫，才能支援分頁還原) 的一或多個頁面清單。 其值如下：  
   
 PAGE  
@@ -130,9 +127,11 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 通常指定要�
   
  \<backup_device>::= 指定備份作業要用的邏輯或實體備份裝置，如下所示：  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* } 這是用來還原資料庫的 **sp_addumpdevice** 所建立備份裝置的邏輯名稱，它必須遵照識別碼的規則。如果備份裝置名稱是以變數 (**@***logical_backup_device_name_var*) 的方式來提供，您可以將這個名稱指定為字串常數 (**@***logical_backup_device_name_var* = *logical_backup_device_name*)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ { _logical\_backup\_device\_name_ | **@**_logical\_backup\_device\_name\_var_ }  
+ 這是用來還原資料庫 **sp_addumpdevice** 所建立備份裝置的邏輯名稱，它必須遵循識別碼的規則。 如果備份裝置名稱是以變數 (**@**_logical\_backup\_device\_name\_var_) 的方式來提供，您可以將此名稱指定為字串常數 (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 可讓您從具名磁碟或磁帶裝置還原備份。您應該用裝置的實際名稱 (例如，完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 或 `TAPE ='\\\\.\TAPE0'`。如果備份裝置名稱是以變數 (**@***physical_backup_device_name_var*) 的方式來指定，您可以將這個名稱指定為字串常數 (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
+ 可讓您從指定的磁碟或磁帶裝置中還原備份。 您應該用裝置的實際名稱 (例如，完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 或 `TAPE ='\\\\.\TAPE0'`。 如果備份裝置名稱是以變數 (**@**_physical\_backup\_device\_name\_var_) 的方式來提供，您可以將此名稱指定為字串常數 (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  如果所用的網路伺服器是用 UNC 名稱 (必須包含機器名稱)，請指定磁碟裝置類型。 如需如何使用通用命名慣例 (UNC) 名稱的詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
@@ -155,7 +154,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 通常指定要�
 \<database_snapshot>::=  
 **支援者：**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-DATABASE_SNAPSHOT **=***database_snapshot_name*  
+DATABASE_SNAPSHOT **=**_database\_snapshot\_name_  
  將資料庫還原到 *database_snapshot_name* 所指定的資料庫快照集。 DATABASE_SNAPSHOT 選項只適用於完整的資料庫還原。 在還原作業中，資料庫快照集會取代完整資料庫備份。  
   
  還原作業需要指定的資料庫快照集是資料庫中的唯一資料庫快照集。 在還原作業期間，資料庫快照集和目的地資料庫都會標示為 `In restore`。 如需詳細資訊，請參閱 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 中的＜備註＞一節。  
@@ -201,7 +200,7 @@ DATABASE_SNAPSHOT **=***database_snapshot_name*
   
  在某些情況下，RESTORE WITH NORECOVERY 會將向前復原集向前捲動到足以與資料庫一致。 在這種情況下，並不會進行回復，資料會依照這個選項的預期，維持離線狀態。 不過，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會發出參考用訊息，說明此時可以利用 RECOVERY 選項來復原向前復原集。  
   
-STANDBY **=***standby_file_name*  
+STANDBY **=**_standby\_file\_name_  
  指定可供恢復復原效果的待命資料庫檔案。 離線還原可以使用 STANDBY 選項 (包括部分還原)。 線上還原不允許使用這個選項。 試圖指定線上還原的 STANDBY 選項，會使還原作業失敗。 當資料庫需要升級時，不允許使用 STANDBY。  
   
  待命資料庫檔案是用來保存 RESTORE WITH STANDBY 的恢復階段期間，所修改之分頁的「寫入時複製」前置影像。 待命資料庫檔案可讓您在各次交易記錄還原作業之間，呼叫資料庫來進行唯讀存取，且可以搭配暖待命伺服器狀況或特殊復原狀況來使用，在這個狀況下，在各次記錄還原之間檢查資料庫會很有用。 在 RESTORE WITH STANDBY 作業之後，下一項 RESTORE 作業會自動刪除恢復檔案。 如果在下一項 RESTORE 作業之前，自動刪除這個待命資料庫檔案，就必須重新還原整個資料庫。 當資料庫在 STANDBY 狀態中，您應該如同任何其他資料庫檔案一樣，小心處理這個待命資料庫檔案。 這個檔案不像其他資料庫檔案，只有在使用中的還原作業期間，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 才會將這個檔案保持為開啟狀態。  
@@ -226,7 +225,7 @@ LOADHISTORY
 ##### <a name="restore-operation-options"></a>還原作業選項  
  這些選項會影響還原作業的行為。  
   
-MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ ...*n* ]  
+MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_file\_name_**'** [ ...*n* ]  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 與 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  指定由 *logical_file_name_in_backup* 指定其邏輯名稱的資料或記錄檔，應該透過還原到 *operating_system_file_name* 所指定的位置來移動。 備份組中資料或記錄檔的邏輯檔案名稱，會與當初建立備份組時資料庫中的邏輯名稱相符。  
@@ -286,7 +285,7 @@ RESTRICTED_USER
 ##### <a name="backup-set-options"></a>備份組選項  
  這些選項會在包含要還原之備份的備份組上運作。  
   
-FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
+FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 與 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  識別要還原的備份組。 例如， *backup_set_file_number* 為 **1** ，表示備份媒體的第一個備份組； *backup_set_file_number* 為 **2** ，表示第二個備份組。 您可以使用 *RESTORE HEADERONLY* 陳述式來取得備份組的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
@@ -294,9 +293,9 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  當未指定時，預設值是 **1**，但 RESTORE HEADERONLY 除外，在此案例中會處理媒體集中的所有備份組。 如需詳細資訊，請參閱本主題稍後的「指定備份組」。  
   
 > [!IMPORTANT]  
->  這個 FILE 選項和用來指定資料庫檔案的 FILE 選項無關，FILE **=** { *logical_file_name_in_backup* | **@***logical_file_name_in_backup_var* }。  
+>  此 FILE 選項和用來指定資料庫檔案的 FILE 選項無關，FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }。  
   
- PASSWORD  **=** { *password* | **@***password_variable* }  
+ PASSWORD  **=** { *password* | **@**_password\_variable_ }  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 與 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供備份組的密碼。 備份組密碼是一個字元字串。  
@@ -312,7 +311,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="media-set-options"></a>媒體集選項  
  這些選項會處理整個媒體集。  
   
- MEDIANAME **=** { *media_name* | **@***media_name_variable*}  
+ MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_}  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 與 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  指定媒體的名稱。 如果提供的話，媒體名稱必須符合備份磁碟區中的媒體名稱；否則，還原作業會終止。 如果 RESTORE 陳述式中沒有媒體名稱，就不會檢查備份磁碟區中的相符媒體名稱。  
@@ -320,7 +319,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  在備份和還原作業中使用一致的媒體名稱，可以為還原作業所選的媒體提供額外的安全檢查。  
   
- MEDIAPASSWORD **=** { *mediapassword* | **@***mediapassword_variable* }  
+ MEDIAPASSWORD **=** { *mediapassword* | **@**_mediapassword\_variable_ }  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 與 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供媒體集的密碼。 媒體集密碼是一個字元字串。  
@@ -333,7 +332,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  這個密碼只為媒體集提供弱的保護。 如需詳細資訊，請參閱相關陳述式的＜權限＞一節。  
   
- BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+ BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  指定實體區塊大小 (以位元組為單位)。 支援的大小為 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 位元組。 磁帶裝置的預設值為 65536，其他裝置則為 512。 一般而言這個選項是不必要的，因為 RESTORE 會自動選取裝置適用的區塊大小。 明確指出區塊大小會覆寫自動選取的區塊大小。  
@@ -346,14 +345,14 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="data-transfer-options"></a>資料傳送選項  
  這些選項可讓您從備份裝置最佳化資料傳送。  
   
- BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  指定要用於還原作業的 I/O 緩衝區總數。 您可以指定任何正整數，不過，緩衝區的數目很大時，可能會因為 Sqlservr.exe 處理序中的虛擬位址空間不足而造成「記憶體不足」錯誤。  
   
- 緩衝區使用的總空間可由下列公式判斷：*buffercount***\**** maxtransfersize*。  
+ 緩衝區使用的總空間可由下列公式判斷：_buffercount_**\**_maxtransfersize_。  
   
- MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+ MAXTRANSFERSIZE **=** { _maxtransfersize_ | **@**_maxtransfersize\_variable_ }  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  以位元組為單位，指定要用於備份媒體與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的最大傳送單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
@@ -498,8 +497,8 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  { STOPAT | STOPATMARK | STOPBEFOREMARK }   
  
- STOPAT **=** { **'***datetime***'** | **@***datetime_var* }  
- 指定要將資料庫還原到 *datetime* 或 **@***datetime_var* 參數指定的日期和時間當時所處的狀態。 如需指定日期和時間的詳細資訊，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
+ STOPAT **=** { **'**_datetime_**'** | **@**_datetime\_var* }  
+ 指定要將資料庫還原到 *datetime* 或 **@**_datetime\_var_ 參數指定的日期和時間當時所處狀態。 如需指定日期和時間的詳細資訊，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  如果變數用於 STOPAT，這個變數必須是 **varchar**、**char**、**smalldatetime** 或 **datetime** 資料類型。 只有在指定日期和時間之前寫入的交易記錄會套用至資料庫上。  
   
@@ -508,7 +507,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
- STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
  指定復原至指定的復原點。 雖然指定的交易包含在復原中，但除非最初實際產生這項交易時已認可這項交易，否則便不會認可它。  
   
  RESTORE DATABASE 和 RESTORE LOG 都支援 *lsn_number* 參數。 這個參數會指定記錄序號。  
@@ -522,7 +521,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  如需詳細資訊，請參閱[使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) 和[復原到記錄序號 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)。  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
  指定復原至指定的復原點。 指定的交易不會包含在復原中，而且會在使用 WITH RECOVERY 時回復。  
   
  RESTORE DATABASE 和 RESTORE LOG 都支援 *lsn_number* 參數。 這個參數會指定記錄序號。  
@@ -561,7 +560,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  用於指定要還原之備份組的選項為：  
   
- FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
+ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
   
  其中，*backup_set_file_number* 表示媒體集中的備份位置。 *backup_set_file_number* 為 1 (FILE = 1)，表示備份媒體的第一個備份組；*backup_set_file_number* 為 2 (FILE = 2)，表示第二個備份組，依此類推。  
   
@@ -575,7 +574,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 |RESTORE VERIFYONLY|*backup_set_file_number* 預設值為 1。|  
   
 > [!NOTE]  
->  用來指定備份組的這個 FILE 選項和用來指定資料庫檔案的 FILE 選項無關，FILE **=** { *logical_file_name_in_backup* | **@***logical_file_name_in_backup_var* }。  
+>  用來指定備份組的這個 FILE 選項和用來指定資料庫檔案的 FILE 選項無關，FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }。  
   
 ## <a name="summary-of-support-for-with-options"></a>WITH 選項的支援摘要  
  只有 RESTORE 陳述式支援下列 WITH 選項：BLOCKSIZE、BUFFERCOUNT、MAXTRANSFERSIZE、PARTIAL、KEEP_REPLICATION、{ RECOVERY | NORECOVERY | STANDBY }、REPLACE、RESTART、RESTRICTED_USER 和 { STOPAT | STOPATMARK | STOPBEFOREMARK }  
@@ -599,7 +598,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 |STATS|√|—|—|—|—|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
- <sup>1</sup> FILE **=***backup_set_file_number*，這有別於 {FILE | FILEGROUP}。  
+ <sup>1</sup> FILE **=**_backup\_set\_file\_number_，這有別於 {FILE | FILEGROUP}。  
   
 ## <a name="permissions"></a>[權限]  
  如需權限的詳細資訊，請參閱下列主題：  

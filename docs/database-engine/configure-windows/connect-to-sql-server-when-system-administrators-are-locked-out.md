@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc4737358afc94629578b4b9a0bfa1031d075cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2b22a5a728ab5ca1e6f8ac5d06296ec338a869
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667786"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120045"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連接到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

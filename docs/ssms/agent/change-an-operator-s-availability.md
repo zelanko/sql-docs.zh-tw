@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - disabling operators
 - operators (users) [Database Engine], changing availability with Management Studio
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 10362775f63812fdf058fdd79b183af4b3d95403
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: d2fc718a0f03261268652a221d356b7b5bb3b23a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42774267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732096"
 ---
 # <a name="change-an-operator39s-availability"></a>變更操作員的可用性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ ms.locfileid: "42774267"
   
 4.  以滑鼠右鍵按一下要啟用或停用的操作員並選取 [屬性]，然後按一下 [一般] 索引標籤。  
   
-5.  在 [<操作員名稱> 屬性] 對話方塊中，選取或清除 [已啟用] 核取方塊。  
+5.  在 [_operator\_name_ 屬性] 對話方塊中，選取或清除 [已啟用] 核取方塊。  
   
 6.  按一下 [確定] 。  
   

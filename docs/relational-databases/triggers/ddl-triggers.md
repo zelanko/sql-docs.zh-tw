@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d61aff918ad1e8351bb514ff9b3b91be68643de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55084dc80880e09983ff36cbec25bffb07733c7d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702486"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071832"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47702486"
   
 ## <a name="types-of-ddl-triggers"></a>DDL 觸發程序的類型  
  ### <a name="transact-sql-ddl-trigger"></a>Transact-SQL DDL 觸發程序  
- 特殊類型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，可執行一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以回應伺服器範圍或資料庫範圍事件。 例如，如果執行陳述式 (例如 ALTER SERVER CONFIGURATION) 或使用 DROP TABLE 刪除資料表，則可能會引發 DDL 觸發程序。  
+ 特殊類型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，可執行一或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以回應伺服器範圍或資料庫範圍事件。 例如，如果執行陳述式 (例如 ALTER SERVER CONFIGURATION) 或使用 DROP TABLE 刪除資料表，則可能會引發 DDL 觸發程序。  
   
  ### <a name="clr-ddl-trigger"></a>CLR DDL 觸發程序  
  CLR 觸發程序不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而是執行以 Managed 程式碼撰寫的一個或多個方法，這些方法是在 .NET Framework 中建立並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中上傳的組件成員。  

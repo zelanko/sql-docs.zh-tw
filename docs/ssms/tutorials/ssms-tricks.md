@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020672"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864386"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
 本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
@@ -83,12 +82,19 @@ ms.locfileid: "40020672"
 7. 反白顯示除了 **Alter Database** 命令的所有項目，然後選取 [註解] 按鈕：
 
     ![註解所有項目](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > 加上文字註解的鍵盤快速鍵為 **CTRL + K、CTRL + C**。 
 
 8. 反白顯示文字中的 **Alter Database** 部分，然後選取 [取消註解] 按鈕，將它取消註解：
 
     ![取消註解文字](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > 取消文字註解的鍵盤快速鍵為 **CTRL + K、CTRL + U**。 
+    
 9. 選取 [執行] 來執行文字中未註解的部分。 
+
 
 ## <a name="indent-your-text"></a>縮排文字
 您可以使用工具列上的縮排按鈕，增加或減少文字的縮排。 

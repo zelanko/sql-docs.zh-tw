@@ -1,13 +1,11 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -39,17 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c37bc6aed288fd54e12839d5dd7f4f765e3eb823
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348369"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252155"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 還原利用 BACKUP 命令取得的 SQL 資料庫備份。 
@@ -65,22 +62,13 @@ ms.locfileid: "43348369"
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |**_\* SQL Server \*_**|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[平行處理<br />資料倉儲](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>[SQL Server]
 
 此命令可讓您執行以下還原案例：  
   
@@ -717,22 +705,13 @@ RESTORE DATABASE Sales
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />受控執行個體 \*_**|[平行處理<br />資料倉儲](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 此命令可讓您使用 Azure Blob 儲存體帳戶從完整資料庫備份還原整個資料庫 (完整還原)。
 
@@ -855,25 +834,16 @@ WHERE r.command = 'RESTORE DATABASE'
 > 此檢視可能會顯示兩個還原要求。 一個是由用戶端傳送的原始 RESTORE 陳述式，另一個則是即便用戶端連線失敗，也會持續執行的背景 RESTORE 陳述式。
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* 平行處理<br />資料倉儲\*_**
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
+## <a name="parallel-data-warehouse"></a>平行處理資料倉儲
 
 
 將[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]使用者資料庫從資料庫備份還原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 資料庫會從 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/backup-transact-sql.md) 命令先前所建立備份還原。 您可以使用備份和還原作業來建置災害復原計劃，或將資料庫從一個應用裝置移至另一個應用裝置。  

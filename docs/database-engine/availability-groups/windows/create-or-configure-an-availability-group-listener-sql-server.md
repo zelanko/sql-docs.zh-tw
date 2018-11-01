@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821986"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120235"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47821986"
   
 -   **若要建立或設定可用性群組接聽程式，使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47821986"
   
 -   未將 **MultiSubnetFailover** 設為 true 的連接字串  
   
-     `RegisterAllProvidersIP = 1`時，連接字串未使用 `MultiSubnetFailover = True`的任何用戶端將經歷嚴重的連線延遲。 這是因為這些用戶端嘗試循序連接到所有 IP。 相反地，如果 **RegisterAllProvidersIP** 變更為 0，則使用中 IP 位址會在 WSFC 叢集的用戶端存取點中註冊，因而減少舊版用戶端的延遲。 因此，如果您擁有的是無法使用 **MultiSubnetFailover** 屬性但需要連接到可用性群組接聽程式的舊版用戶端，建議您將 **RegisterAllProvidersIP** 變更為 0。  
+     `RegisterAllProvidersIP = 1`時，連接字串未使用 `MultiSubnetFailover = True`的任何用戶端將經歷嚴重的連線延遲。 這是因為這些用戶端嘗試循序連接到所有 IP。 相反地，如果 **RegisterAllProvidersIP** 變更為 0，則使用中 IP 位址會在 WSFC 叢集的用戶端存取點中註冊，因而減少舊版用戶端的延遲。 因此，如果您擁有的是無法使用 **MultiSubnetFailover** 屬性但需要連線到可用性群組接聽程式的舊版用戶端，建議您將 **RegisterAllProvidersIP** 變更為 0。  
   
     > [!IMPORTANT]  
     >  當您透過 WSFC 叢集 (容錯移轉叢集管理員 GUI) 建立可用性群組接聽程式時， **RegisterAllProvidersIP** 會預設為 0 (false)。  

@@ -33,12 +33,12 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40796cb658ba723e85a6d3e8c96a8eb531616493
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f042a38bf13c5c29fe75b525046eb1d1c9b527a5
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643978"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169098"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>引數  
- BEGIN CONVERSATION TIMER **(***conversation_handle***)**  
+ BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  指定要計時的交談。 *conversation_handle* 必須是 **uniqueidentifier** 型別。  
   
  TIMEOUT   

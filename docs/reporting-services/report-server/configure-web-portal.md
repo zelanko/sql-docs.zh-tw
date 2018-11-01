@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c2acade2ac4e0a4def5bc136d0faa5a11c4815a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99689619610e3237d9c57627229ba3eb3f1f62e1
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795296"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905732"
 ---
 # <a name="configure-the-web-portal"></a>設定入口網站
 
@@ -35,7 +35,7 @@ ms.locfileid: "47795296"
 
 入口網站是使用者在網頁瀏覽器中存取的 Web 應用程式。 您至少必須定義用來在瀏覽器視窗中開啟應用程式的 URL。 此 URL 包含主機名稱、通訊埠和虛擬目錄。 此 URL 的預設值包括您針對報表伺服器 Web 服務 URL 所定義的主機名稱和通訊埠值，再加上 **reports** 虛擬目錄名稱。 如果您擁有具名執行個體，此虛擬目錄就是 **reports_instance**，其中 **instance** 是您 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。
 
-根據預設，入口網站 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行之報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將入口網站設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中的 [入口網站 URL] 頁面。
+根據預設，入口網站 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將入口網站設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定工具中的 [入口網站 URL] 頁面。
 
 > [!TIP]
 > 如果您嘗試存取遠端電腦上的入口網站，但是在瀏覽器中收到連線錯誤訊息，常見的原因會是防火牆設定。 如需詳細資訊，請參閱 [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6fdf62f6fca674d6c4b3753e92e99f2e4f2cd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609736"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905998"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47609736"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 報表設計師視窗和窗格  
- 報表設計師支援兩種檢視： **[設計]** (可定義報表資料和報表配置) 和 **[預覽]** (可顯示報表的轉譯檢視)。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
+ 報表設計師支援兩種檢視：[設計] (可定義報表資料和報表配置) 和 [預覽] (可顯示報表的轉譯檢視)。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
   
 ###  <a name="bkmk_ReportDataPane"></a> 報表資料窗格  
  [報表資料] 窗格顯示內建欄位、資料來源、資料集、欄位集合、報表參數和影像。  
@@ -240,7 +240,7 @@ ms.locfileid: "47609736"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
- 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置：`<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
+ 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
   
  您也可以將自訂樣式加入報表精靈。  
   

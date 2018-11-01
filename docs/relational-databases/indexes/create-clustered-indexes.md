@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], clustered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d998ff74480ffebf0f77dd1deacd9efe2e305f9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703206"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +90,7 @@ ms.locfileid: "43069066"
   
 4.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
   
-5.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至叢集索引之資料表資料行的核取方塊。  
+5.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至叢集索引的資料表資料行核取方塊。  
   
 6.  按一下 [確定] 。  
   
@@ -119,7 +116,7 @@ ms.locfileid: "43069066"
   
 9. 按一下 [ **關閉**]。  
   
-10. 在 [檔案] 功能表上，按一下 [儲存 <資料表名稱>]。  
+10. 在 [檔案] 功能表上，按一下 [儲存 _table\_name_]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

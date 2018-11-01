@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ecb24406520b383d117046fee142cbfbbce7681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 913088e4dd3f132704642dba698ecfbe46e84754
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702196"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120077"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47702196"
   
  在上圖中，請注意：  
   
--   封裝物件與工作階段之間的對應是多對多對應，這表示物件可以出現在數個工作階段中，而且工作階段可以包含數個物件。  
+-   套件物件與工作階段之間的對應是多對多對應，這表示物件可以出現在數個工作階段中，且工作階段可以包含數個物件。  
   
 -   相同的事件 (事件 1) 或目標 (目標 1) 可以在一個以上的工作階段內啟用。  
   

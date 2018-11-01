@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/16/2018
-ms.openlocfilehash: dc4d8ec77fa0782fa2aa4f851a5d8f756cb0ecfa
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021692"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -160,4 +160,4 @@ ms.locfileid: "49120055"
 [編寫部署和管理工作的指令碼](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [啟用與停用我的報表](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

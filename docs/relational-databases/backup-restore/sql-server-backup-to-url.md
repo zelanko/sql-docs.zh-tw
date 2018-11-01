@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 71766cb569c2a9f6302783472f564636368e1bae
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175169"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072222"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +59,24 @@ ms.locfileid: "40175169"
   
  在您的 Azure 訂閱內建立 Windows Azure 儲存體帳戶是這個程序的第一個步驟。 這個儲存體帳戶是系統管理帳戶，有以儲存體帳戶建立之所有容器和物件的完整系統管理權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Windows Azure 儲存體帳戶名稱及其存取金鑰值來驗證和讀寫 Blob 至 Microsoft Azure Blob 儲存體服務，或使用針對特定容器產生的共用存取簽章 Token 授與它讀寫權限。 如需 Azure 儲存體帳戶的詳細資訊，請參閱 [關於 Azure 儲存體帳戶](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) ，如需共用存取簽章的詳細資訊，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。  
   
+###  <a name="blockbloborpageblob"></a> 備份至區塊 Blob 與分頁 Blob 
+ Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 SQL Server 備份可根據使用的 Transact-SQL 語法，使用任一種 Blob 類型：若在認證中使用儲存體金鑰，則會使用分頁 Blob；若使用共用存取簽章，則會使用區塊 Blob。
+ 
+ 備份至區塊 Blob 功能僅能在 SQL Server 2016 或更新版本中使用。 若您執行 SQL Server 2016 或更新版本，我們建議您改為備份至區塊 Blob，而非分頁 Blob。 主要的原因如下：
+- 相較於儲存體金鑰，共用存取簽章是授權 Blob 存取更安全的方式。
+- 您可以備份至多個區塊 Blob，以取得更佳的備份及還原效能，並支援更大的資料庫備份。
+- [區塊 Blob](https://azure.microsoft.com/pricing/details/storage/blobs/) 比[分頁 Blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/) 更便宜。 
+
+當您備份至區塊 Blob 時，您可以指定的最大區塊大小為 4 MB。 單一區塊 Blob 檔案的大小上限為 4 MB * 50000 = 195 GB。 若您的資料庫大小超過 195 GB，我們建議您：
+- 使用備份壓縮
+- 備份至多個區塊 Blob
+
 ###  <a name="Blob"></a> Microsoft Azure Blob 儲存體服務  
  **儲存體帳戶** ：儲存體帳戶是所有儲存體服務的起點。 若要存取 Microsoft Azure Blob 儲存體服務，請先建立 Microsoft Azure 儲存體帳戶。 如需詳細資訊，請參閱 [建立儲存體帳戶](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
   
  **容器** ：容器會提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Microsoft Azure Blob 服務，您至少必須建立根容器。 您可以針對容器產生共用存取簽章 Token，並僅對特定容器的物件授與存取權。  
   
- **Blob** ：任何類型和大小的檔案。 Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以使用這兩種 Blob 類型，視所用的 Transact-SQL 語法而定。 您可以使用下列 URL 格式來定址 Blob：https://\<儲存體帳戶>.blob.core.windows.net/\<容器>/\<Blob>。 如需 Microsoft Azure Blob 儲存體服務的詳細資訊，請參閱 [以 .NET 開始使用 Azure Blob 儲存體](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 如需分頁 Blob 的詳細資訊，請參閱 [了解區塊 Blob、附加 Blob 和分頁 Blob](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
+ **Blob** ：任何類型和大小的檔案。 Microsoft Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份可以使用這兩種 Blob 類型，視所用的 Transact-SQL 語法而定。 您可以使用下列 URL 格式來定址 Blob： https://\<儲存體帳戶>.blob.core.windows.net/\<容器>/\<Blob>。 如需 Microsoft Azure Blob 儲存體服務的詳細資訊，請參閱 [以 .NET 開始使用 Azure Blob 儲存體](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 如需分頁 Blob 的詳細資訊，請參閱 [了解區塊 Blob、附加 Blob 和分頁 Blob](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
   
  ![Azure Blob 儲存體](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob 儲存體")  
   
@@ -106,7 +115,7 @@ ms.locfileid: "40175169"
   
 -   不支援指定備份組選項 - **RETAINDAYS** 和 **EXPIREDATE** 。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL – ‘https://.blob.core.windows.net//.bak’，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL – ‘ https://.blob.core.windows.net//.bak’，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
   
 ###  <a name="Support"></a> 支援 Backup/Restore 陳述式  
   

@@ -18,12 +18,12 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f3b28d6c3b731a25103c950c784594325f095a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a05685d8bb2e71630f06f155b30e0bbaec7b44
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853316"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906008"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>邏輯函式 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,8 +55,11 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  CHOOSE 作用類似陣列中的索引，其中的陣列是由跟隨索引引數的引數所組成。 其中 time-precision 引數會決定傳回值的秒數有效位數。  
   
 ## <a name="examples"></a>範例  
+
+### <a name="a-simple-choose-example"></a>A. 簡易 CHOOSE 範例
+
  下列範例會從已提供的數值清單傳回第三個項目。  
-  
+ 
 ```  
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
@@ -70,7 +73,9 @@ Developer
   
 (1 row(s) affected)  
 ```  
-  
+
+### <a name="b-simple-choose-example-based-on-column"></a>B. 以資料行為基礎的簡易 CHOOSE 範例
+
  下列範例會根據 `ProductCategoryID` 資料行中的值傳回簡單的字元字串。  
   
 ```  
@@ -94,8 +99,10 @@ ProductCategoryID Expression1
 (4 row(s) affected)  
   
 ```  
+
+### <a name="c-choose-in-combination-with-month"></a>C. 搭配 MONTH 使用 CHOOSE
   
- 下列範例會傳回雇用員工的當季。 MONTH 函數用於從 `HireDate` 資料行傳回月份的值。  
+ 下列範例會傳回雇用員工的季節。 MONTH 函數用於從 `HireDate` 資料行傳回月份的值。  
   
 ```  
 USE AdventureWorks2012;  

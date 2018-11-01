@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - displaying dependences
 - viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e2e0ad779b9299538e99d16b6f91c6b668bebfe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bff2fbab16e2f087e0e670e91185aad7b817d3a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724586"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -59,7 +56,7 @@ ms.locfileid: "43099595"
   
 2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]。  
   
-3.  在 [物件相依性 \<<物件名稱>] 對話方塊中，選取 [相依於 \<物件名稱> 的物件] 或 [\<物件名稱> 所相依的物件]****。  
+3.  在 [物件相依性 _\<物件名稱\>_] 對話方塊中，選取 [相依於 _\<物件名稱\>_ 的物件] 或 [_\<物件名稱\>_ 所相依的物件]。  
   
 4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型] 方塊中。  
   

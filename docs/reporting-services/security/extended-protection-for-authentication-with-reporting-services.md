@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dec1019afa9363eafcc570e248736f518962abe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6397e574376e652217ec909a02a47e0c9c26eae
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681996"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851903"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
 
@@ -97,7 +97,7 @@ SSRS 支援並強制執行已在作業系統中啟用的擴充保護。 如果�
   
 |狀況|案例圖表|如何保護安全|  
 |--------------|----------------------|-------------------|  
-|在用戶端到 Proxy 或用戶端到報表伺服器連接沒有 SSL 的情況下，從用戶端到報表伺服器服務的間接和直接存取。|1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy<br /><br /> 4) 用戶端應用程式|將 **RSWindowsExtendedProtectionLevel** 設定為 **Allow** 或 **Require**。<br /><br /> 將 **RSWindowsExtendedProtectionScenario** 設定為 **Any**。<br /><br /> <br /><br /> - 可以強制執行從用戶端到報表伺服器的服務繫結。<br /><br /> - 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的 URL 保留項目，或在 Windows 登錄項目 **BackConnectionHostNames**中設定 Proxy 名稱。|  
+|在用戶端到 Proxy 或用戶端到報表伺服器連線沒有 SSL 的情況下，從用戶端到報表伺服器服務的間接和直接存取。|1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy<br /><br /> 4) 用戶端應用程式|將 **RSWindowsExtendedProtectionLevel** 設定為 **Allow** 或 **Require**。<br /><br /> 將 **RSWindowsExtendedProtectionScenario** 設定為 **Any**。<br /><br /> <br /><br /> - 可以強制執行從用戶端到報表伺服器的服務繫結。<br /><br /> - 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的 URL 保留項目，或在 Windows 登錄項目 **BackConnectionHostNames**中設定 Proxy 名稱。|  
 |在用戶端建立與 Proxy 或報表伺服器的 SSL 連接時，從用戶端到報表伺服器服務的間接和直接存取。|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy<br /><br /> 4) 用戶端應用程式|將 **RSWindowsExtendedProtectionLevel** 設定為 **Allow** 或 **Require**。<br /><br /> 將 **RSWindowsExtendedProtectionScenario** 設定為 **Proxy**。<br /><br /> <br /><br /> - 可以使用通道繫結。<br /><br /> - 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的 URL 保留項目，或在 Windows 登錄項目 **BackConnectionHostNames**中設定 Proxy 名稱。|  
   
 ## <a name="configuring-reporting-rervices-extended-protection"></a>設定 Reporting Services 擴充保護  

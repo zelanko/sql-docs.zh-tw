@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 8764d1e8b8ae4facebf49fa746740f69fb8148e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752749"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  這是登錄為 OLE DB 提供者之 PROGID 的名稱，以用來存取資料來源。 *provider_name* 為沒有預設值的 **char** 資料類型。  
   
  *init_string*  
- 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵-值組為基礎，例如：**'***keyword1*=* value***;***keyword2*=* value***'**。  
+ 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵值組為基礎，例如：**'**_keyword1_=_value_**;***keyword2*=* value***'**。  
   
  如需在提供者上支援的特定關鍵字-值配對，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 這份文件集定義基本語法。 下表列出 *init_string* 引數最常使用的關鍵字。  
   
@@ -68,7 +65,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |目錄|DBPROP_INIT_CATALOG|連接到資料來源的初始或預設目錄名稱。|  
 |整合式安全性|DBPROP_AUTH_INTEGRATED|SSPI，用來指定 Windows 驗證|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  唯有針對指定的提供者將 DisallowAdhocAccess 登錄選項明確設為 0 時，且已啟用 [特定分散式查詢] 進階組態選項時，才可使用 OPENDATASOURCE 來存取 OLE DB 資料來源的遠端資料。 若未設定這些選項，預設行為便不允許特定存取。  
   
  OPENDATASOURCE 函數可使用於與連結伺服器名稱相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法位置。 因此，OPENDATASOURCE 可做為四部分名稱的第一部分使用，來參考 SELECT、INSERT、UPDATE 或 DELETE 陳述式中的資料表或檢視名稱，或參考 EXECUTE 陳述式中的遠端預存程序。 執行遠端預存程序時，OPENDATASOURCE 應該參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一個執行個體。 OPENDATASOURCE 不接受變數做為其引數。  
@@ -82,7 +79,7 @@ OPENDATASOURCE ( provider_name, init_string )
   
  FROM 子句中 OPENDATASOURCE、OPENQUERY 或 OPENROWSET 的任何呼叫都會與當做更新目標使用之這些函數的任何呼叫進行個別且獨立的評估，即使完全相同的引數套用至這兩種呼叫也一樣。 尤其，針對其中一個呼叫結果所套用的篩選或聯結條件對於另一個呼叫的結果沒有作用。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  任何使用者都可以執行 OPENDATASOURCE。 您可以從連接字串判斷用來連接到遠端伺服器的權限。  
   
 ## <a name="examples"></a>範例  

@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801696"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874366"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801696"
 |-----------------------------------|--------------------|-----------------|  
 |**要遞增新商務規則的數目依據**|**BusinessRuleDefaultPriorityIncrement**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [系統管理] 功能區域中，每個新商務規則之優先順序遞增的數目。 預設值為 **10**。|  
 |**要套用商務規則的成員數目**|**BusinessRuleRealtimeMemberCount**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，方格中要套用商務規則的成員數目上限。 在 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 中，使用中工作表中要套用商務規則的成員數目上限。 預設值為 **10000**。|  
+|**商務規則的使用者指令碼優先執行**|**BusinessRuleUserScriptExecuteFirst**|一般來說，商務規則動作執行順序是 「預設值」、「變更值」、「驗證」、「外部動作」、「使用者定義的動作指令碼」。 如果此設定變更為 **1**，則「使用者定義的動作指令碼」是商務規則動作執行的第一個步驟。 此設定是隱藏的設定。 預設值是 **0**。|  
   
  如需詳細資訊，請參閱[商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)。  
   

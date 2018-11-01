@@ -3,21 +3,19 @@ title: SQL Server 隱私權補充 | Microsoft Docs
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40c6bfb24ea3e711ca6b14509921d5599b316ebf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975285"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878111"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +25,7 @@ ms.locfileid: "37975285"
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Data Migration Assistant
 - SQL Server 移轉小幫手
 - MS-SQL 延伸模組
@@ -130,6 +128,7 @@ ms.locfileid: "37975285"
 - 伺服器設定資料，例如 sp_configure 設定
 - 功能設定資料
 - 事件名稱和錯誤碼
+- 硬體設定和識別，例如 OEM 製造商
 
 Microsoft 會檢查其他程式使用 SQL Server 所設定的應用程式名稱值 (例如：Sharepoint 或協力廠商封裝程式，且會在使用方式資料啟用時在傳送給 Microsoft 的系統中繼資料中包含此資訊)。 客戶不應該放置個人資料 (例如，[系統中繼資料] 欄位中的終端使用者識別資訊)，或建立設計在這些欄位中儲存個人資料的應用程式。 
 

@@ -5,22 +5,19 @@ ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4171beb8274ab12235b435c7c7fc4a2eab048bb5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856716"
 ---
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  系統 datetime2 資料行中所記錄的時間是依據交易本身的開始時間。 例如，在單一交易中插入的所有資料列，在資料行中都會記錄相同的 UTC 時間，且對應到 **SYSTEM_TIME** 。  
   
 ## <a name="how-do-i-query-temporal-data"></a>如何查詢時態表？  
- **SELECT** 陳述式 **FROM***\<資料表>* 子句具有新子句 **FOR SYSTEM_TIME** 附帶五個時態特定的次子句，以在目前和歷程記錄資料表之間查詢資料。 這個新 **SELECT** 陳述式語法直接受到單一資料表支援，透過多個聯結以及在多個時態表上檢視進行傳播。  
+ **SELECT** 陳述式 **FROM**_\<table\>_ 子句具有新子句 **FOR SYSTEM_TIME** 並附帶五個時態特定的子子句，以在目前和歷程記錄資料表之間查詢資料。 這個新 **SELECT** 陳述式語法直接受到單一資料表支援，透過多個聯結以及在多個時態表上檢視進行傳播。  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -152,7 +149,7 @@ SELECT * FROM Employee
 |**ALL**|所有資料列|傳回屬於目前和歷程記錄資料表的資料列聯集。|  
   
 > [!NOTE]  
->  您可以選擇隱藏這些期間資料行，讓未明確參考這些期間資料行的查詢不會傳回這些資料行 (**SELECT \* FROM***\<資料表>* 案例)。 若要傳回隱藏的資料行，只需明確地參考查詢中的隱藏資料行。 同樣地， **INSERT** 和 **BULK INSERT** 陳述式將繼續進行，就如同這些新期間資料行不存在一般 (且資料行值將會自動填入)。 如需使用 **HIDDEN** 子句的詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)現在可加以支援。  
+>  您可以選擇隱藏這些期間資料行，讓未明確參考這些期間資料行的查詢不會傳回這些資料行 (**SELECT \* FROM**_\<資料表\>_ 情節)。 若要傳回隱藏的資料行，只需明確地參考查詢中的隱藏資料行。 同樣地， **INSERT** 和 **BULK INSERT** 陳述式將繼續進行，就如同這些新期間資料行不存在一般 (且資料行值將會自動填入)。 如需使用 **HIDDEN** 子句的詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)現在可加以支援。  
   
 ## <a name="see-also"></a>另請參閱  
  [開始使用系統建立版本的時態表](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

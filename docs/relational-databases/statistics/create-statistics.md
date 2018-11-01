@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672096"
 ---
 # <a name="create-statistics"></a>建立統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070841"
   
 4.  以滑鼠右鍵按一下 [統計資料] 資料夾，然後選取 [新增統計資料…]。  
   
-     下列屬性會在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [一般] 頁面中顯示。  
+     下列屬性會在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [一般] 頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -117,12 +115,12 @@ ms.locfileid: "43070841"
      **更新這些資料行的統計資料**  
      勾選即可在對話方塊關閉時更新統計資料。  
   
-     下列屬性會在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [篩選] 頁面中顯示。  
+     下列屬性會在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [篩選] 頁面中顯示。  
   
      **篩選運算式**  
      定義要在篩選統計資料中包含什麼資料列。 例如，使用 IPv4 位址的 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [一般] 頁面上，按一下 [新增]。  
+5.  在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [一般] 頁面上，按一下 [新增]。  
   
      下列屬性會在 **[選取資料行]** 對話方塊中顯示。 此資訊是唯讀的。  
   
@@ -143,7 +141,7 @@ ms.locfileid: "43070841"
   
 6.  在 **[選取資料行]** 對話方塊中，選取要為其建立統計資料的每個資料行的核取方塊，然後按一下 **[確定]**。  
   
-7.  在 [<資料表名稱> 資料表上的新統計資料] 對話方塊中，按一下 [確定]。  
+7.  在 [_table\_name_ 資料表上新統計資料] 對話方塊中，按一下 [確定]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

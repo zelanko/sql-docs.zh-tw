@@ -5,9 +5,7 @@ ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -36,16 +34,15 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713366"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 指定當查詢最佳化工具處理查詢時，不展開任何索引檢視表來存取基礎資料表。 查詢最佳化工具在處理檢視表時，會將它視為具有叢集索引的資料表。 NOEXPAND 只適用於索引檢視表。 如需詳細資訊，請參閱＜備註＞。  
   
-INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 INDEX() 語法會指定要由查詢最佳化工具在其處理陳述式時使用之一或多個索引的名稱或識別碼。 替代的 INDEX = 語法會指定單一索引值。 每份資料表只能指定一個索引提示。  
   
 如果有叢集索引存在，INDEX(0) 會強制執行叢集索引掃描，INDEX(1) 會強制執行叢集索引掃描或搜尋。 如果沒有叢集索引，INDEX(0) 會強制執行資料表掃描，INDEX(1) 會解譯為一則錯誤。  
@@ -183,7 +180,7 @@ KEEPDEFAULTS
   
 如需在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式中使用此提示的範例，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
-FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
 指定查詢最佳化工具只使用索引搜尋作業做為資料表或檢視表資料的存取路徑。 
 
 > [!NOTE]

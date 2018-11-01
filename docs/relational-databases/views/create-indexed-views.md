@@ -5,9 +5,7 @@ ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2983be97fa3d0f3ab33ed00fc98e48d155396912
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097301"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650966"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,11 +89,11 @@ ms.locfileid: "43097301"
   
 -   當您建立索引時，`IGNORE_DUP_KEY` 選項必須設定為 OFF (預設值)。    
   
--   在檢視表定義中，兩部分名稱 *schema ***.*** tablename* 必須參考資料表。    
+-   在檢視定義中，兩部分名稱 _schema_**.**_tablename_ 必須參考資料表。    
   
 -   檢視表中所參考的使用者定義函式，必須使用 `WITH SCHEMABINDING` 選項來建立。    
   
--   檢視表中所參考的任何使用者定義函式，必須透過 *\<結構描述>***.***\<函式>* 這兩部分名稱加以參考。   
+-   檢視表中所參考的任何使用者定義函式，必須透過 _\<結構描述\>_**.**_\<函式\>_ 這兩部分名稱加以參考。   
   
 -   使用者定義函式的資料存取屬性必須是 `NO SQL`，而外部存取屬性必須是 `NO`。   
   

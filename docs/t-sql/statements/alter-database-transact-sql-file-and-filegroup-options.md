@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -41,17 +39,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089998"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252145"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
 
@@ -69,6 +66,8 @@ ms.locfileid: "44089998"
 > |||
 > |-|-|-|
 > |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+&nbsp;
 
 # <a name="sql-server"></a>[SQL Server]
 
@@ -190,7 +189,7 @@ NEWNAME *new_logical_file_name*
 *new_logical_file_name*  
 這是要取代現有邏輯檔案名稱的名稱。 這個名稱在資料庫內必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 這個名稱可以是字元或 Unicode 常數、正規識別碼，或分隔的識別碼。  
   
-FILENAME { **'***os_file_name***'** | **'***filestream_path***'** | **'***memory_optimized_data_path***'**}  
+FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**}  
 指定作業系統 (實體) 檔案名稱。  
   
 ' *os_file_name* '  
@@ -260,7 +259,7 @@ OFFLINE
 將檔案設成離線，使檔案群組中的所有物件都無法存取。  
   
 > [!CAUTION]  
->  請只在檔案損毀且可以還原時，才使用這個選項。 設為 OFFLINE 的檔案，只能透過從備份中還原檔案來設成線上狀態。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
+>  請只在檔案損毀且可以還原時，才使用這個選項。 設為 OFFLINE 的檔案，只能藉由從備份中還原檔案來設成線上狀態。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
 > [!NOTE]  
 > 自主資料庫中無法使用 \<filespec> 選項。  
@@ -295,7 +294,7 @@ REMOVE FILEGROUP *filegroup_name*
 > [!NOTE]  
 > 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則移除 FILESTREAM 容器的 ALTER DATABASE REMOVE FILE 作業會失敗並傳回錯誤訊息。 請參閱本主題後面的＜備註＞中的＜移除 FILESTREAM 容器＞一節。  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。  
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。  
   
 \<filegroup_updatability_option>  
 將檔案群組的屬性設成唯讀或讀取/寫入。  
@@ -344,7 +343,7 @@ READ_WRITE | READWRITE
   
 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
 當 `BACKUP` 陳述式正在執行時，您不能新增或移除檔案。  
@@ -372,7 +371,7 @@ READ_WRITE | READWRITE
 - 增加現有檔案的大小。   
 - 還原資料庫或檔案群組。   
   
-資料檔可以立即初始化。 這可以加快這些檔案作業的執行速度。 如需詳細資訊，請參閱[資料庫檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。 
+資料檔可以立即初始化。 這可以加快這些檔案作業的執行速度。 如需詳細資訊，請參閱 [資料庫檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。 
   
 ## <a name="removing-a-filestream-container"></a>移除 FILESTREAM 容器  
 即使 FILESTREAM 容器已使用 "DBCC SHRINKFILE" 作業來清空，基於各種系統維護原因，資料庫可能仍然需要維護已刪除之檔案的參考。 [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) 會在可安全執行時，執行 FILESTREAM 記憶體回收行程來移除這些檔案。 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則 ALTER DATABASE REMOVE FILE 作業會無法移除 FILESTREAM 容器並傳回錯誤。 以下是移除 FILESTREAM 容器的建議處理序。  
@@ -674,20 +673,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
-> </tr>
-> </table>
+> |||
+> |-|-|-|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* SQL Database<br />受控執行個體 \*_**<br />&nbsp;|
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 在 Azure SQL Database 受控執行個體中，搭配資料庫使用此陳述式。
 
@@ -829,7 +821,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 REMOVE FILEGROUP *filegroup_name*  
 從資料庫中移除檔案群組。 除非檔案群組是空的，否則無法移除檔案群組。 請先移除檔案群組中的所有檔案。 如需詳細資訊，請參閱本主題中稍早的 "REMOVE FILE *logical_file_name*"。  
   
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。  
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。  
   
 \<filegroup_updatability_option>  
 將檔案群組的屬性設成唯讀或讀取/寫入。  
@@ -872,7 +864,7 @@ READ_WRITE | READWRITE
   
 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
 當 `BACKUP` 陳述式正在執行時，您不能新增或移除檔案。  

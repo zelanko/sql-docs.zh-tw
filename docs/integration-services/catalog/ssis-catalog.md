@@ -5,25 +5,22 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085770"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864296"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -602,7 +599,7 @@ ms.locfileid: "39085770"
 > -   將 SSISDB 新增至 Always On 群組之後，您必須啟用**適用於 Always On 的 SSIS 支援**。  
 
 > [!NOTE]
-> 如需此程序的詳細資訊，請參閱下列由 SQL Server MVP Marcos Freccia 提供的逐步解說與其他螢幕擷取畫面：[將 SSISDB 新增至 SQL Server 2016 的 AG](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) \(英文\)。
+> 如需此程序的詳細資訊，請參閱下列由 Data Platform MVP Marcos Freccia 提供的逐步解說與其他螢幕擷取畫面：[Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/) (將 SSISDB 新增至 SQL Server 2016 的 AG)。
 
 ####  <a name="Step1"></a> 步驟 1：建立 Integration Services 目錄  
   

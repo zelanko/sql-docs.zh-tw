@@ -32,12 +32,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db97dcaf1b8ad8833127fd5e4907d3c553629247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 995728047e02ccf2127ba8c85949bde3031007dd
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788046"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324621"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,6 +113,7 @@ ms.locfileid: "47788046"
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|提供一般伺服器範圍活動的相關資訊，例如目前連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的使用者數目。|  
 |[SQL Server:HADR 可用性複本](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性複本的相關資訊。|  
 |[SQL Server:HADR 資料庫複本](../../relational-databases/performance-monitor/sql-server-database-replica.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 資料庫複本的相關資訊。|  
+|[SQL Server:HTTP Storage](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|提供在使用 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)時，用來監視 Microsoft Azure 儲存體帳戶的資訊|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用之內部資源 (例如資料庫頁面) 的閂鎖，提供相關資訊。|  
 |[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所提出之個別鎖定要求的相關資訊，例如鎖定逾時和死結。 本物件中含有多項執行個體。|  
 |[SQLServer:LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|描述記錄集區內可用集區的統計資料。|

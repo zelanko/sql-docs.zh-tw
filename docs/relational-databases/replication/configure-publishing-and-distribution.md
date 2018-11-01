@@ -1,30 +1,26 @@
 ---
 title: 設定發行和散發 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7314f0938cc7ef97ad87a6777f9717d33cd2905a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c5d302195025be0d9ab1e19ac0227e427e7b4bbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087810"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832086"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +65,7 @@ ms.locfileid: "39087810"
 
 2. 在散發者 (同時也是發行者) 上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。
 
-   若是 SQL Database 受控執行個體 (預覽) 上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
+   若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 
 3. 在發行者上，執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 針對 `@dbname` 指定發行的資料庫、針對 `@optname` 指定複寫的類型，並針對 `@value` 指定 `true` 的值。
 
@@ -83,7 +79,7 @@ ms.locfileid: "39087810"
 
 2. 在散發者上執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，指定將作為 `@working_directory` 預設快照集資料夾使用的 UNC 共用。 如果散發者將在與發行者連接時使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」，則也必須針對 `@security_mode` 指定 `0` 的值，並針對 `@login` 和`@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入資訊。
 
-   若是 SQL Database 受控執行個體 (預覽) 上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
+   若是 SQL Database 受控執行個體上的散發者，請為 `@working_directory` 使用 Azure 儲存體帳戶，並為 `@storage_connection_string` 使用儲存體存取金鑰。 
 
 3. 在 master 資料庫的發行者上，執行 [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)。 針對 `@password` 指定步驟 1 中使用的強式密碼。 這個密碼將會由發行者連接到散發者時使用。
 

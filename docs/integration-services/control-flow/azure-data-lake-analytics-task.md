@@ -15,12 +15,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: b623989b19f37f24d3648bb44b58ce6f6c84de37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a43a9d8d3b5ecf3f9d28f46db0b354891b40b183
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665460"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906078"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 工作
 

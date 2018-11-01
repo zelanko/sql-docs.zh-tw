@@ -1,33 +1,47 @@
 ---
 title: SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743501"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072172"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+
+## <a name="ssdt-for-visual-studio-2017-1581"></a>適用於 Visual Studio 2017 (15.8.1) 的 SSDT
+組建編號：14.0.16179.0  
+發行日期：2018 年 9 月 27 日  
+
+### <a name="whats-new"></a>新功能
+
+**SSIS：**
+
+1. 新增 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的支援。
+2. 移除 SQL Server 2012 的支援。
+
+### <a name="known-issues"></a>已知問題：
+
+- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+- SSDT 15.8.1 目前不支援 Windows 7 SP1；因此，若您使用 Windows 7 SP1，請繼續使用 15.8.0
+
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
 組建編號：14.0.16174.0  
@@ -705,7 +719,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 - **Analysis Services - 表格式模型總管：** 表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
-    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援此功能。 未來版本中將會支援 SQL Server 物件總管。
+    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
 
 
 **更新和修正**
@@ -750,7 +764,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 * **資料庫工具︰**
     * 從現在起，SSDT 將永遠不會停用資料庫的「透明資料加密」(TDE)。 先前因為停用專案資料庫設定中的預設加密選項，所以會關閉加密。 透過此修正可啟用加密，但在發行期間永遠不會停用。 
     * 增加初始連線期間 Azure SQL DB 連線的重試計數和復原能力。
-    * 如果預設檔案群組不是 PRIMARY，匯入/發行至 Azure V12 將會失敗。 現在發行時會忽略此設定。
+    * 如果預設檔案群組不是 PRIMARY，匯入/發佈至 Azure V12 將會失敗。 現在發行時會忽略此設定。
     * 已修正當匯出的資料庫含有啟用「引號識別項」的物件時，匯出驗證可能會在某些情況下失敗的問題。
     * 已修正在建立 Hekaton 資料表時不正確加入 TEXTIMAGE_ON 選項的問題，這是不允許的動作。
     * 已修正匯出在資料階段完成之後因為寫入 model.xml 檔案而花費很長的時間匯出大量資料，造成要重新寫入 .bacpac 檔案內容的問題。

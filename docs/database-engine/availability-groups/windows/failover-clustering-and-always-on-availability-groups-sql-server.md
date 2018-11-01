@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864306"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
 
@@ -37,13 +34,6 @@ ms.locfileid: "40406681"
 > [!NOTE]  
 >  如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 概念的資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
- **本主題內容：**  
-  
--   [Windows Server 容錯移轉叢集](#WSFC)  
-  
--   [SQL Server 容錯移轉叢集](#SQLServerFC)  
-  
--   [WSFC 容錯移轉叢集管理員與可用性群組一起使用的限制](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server 容錯移轉叢集和可用性群組  
  部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要一個 Windows Server 容錯移轉叢集 (WSFC) 叢集。 若要啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須位於 WSFC 節點上，而且 WSFC 叢集和節點必須在線上。 此外，給定可用性群組的每個可用性複本都必須位在相同 WSFC 叢集的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。  
@@ -114,7 +104,10 @@ ms.locfileid: "40406681"
   
 -   請勿變更任何可用性群組屬性，例如可能的擁有者和慣用擁有者。 可用性群組會自動設定這些屬性。  
   
--   請勿使用容錯移轉叢集管理員來將可用性群組移到不同的節點或容錯移轉可用性群組。 容錯移轉叢集管理員不會察覺可用性複本的同步處理狀態，而且這樣做可能會造成停機時間延長。 您必須使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
+-   **請不要使用容錯移轉叢集管理員將可用性群組移至不同的節點或容錯移轉可用性群組。** 容錯移轉叢集管理員不會察覺可用性複本的同步處理狀態，而且這樣做可能會造成停機時間延長。 您必須使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
+
+  >[!WARNING]
+  > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」移至「已」裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
   
 ##  <a name="RelatedContent"></a> 相關內容  
   

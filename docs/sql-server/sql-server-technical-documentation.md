@@ -3,10 +3,8 @@ title: SQL Server 文件集 | Microsoft Docs
 ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
@@ -23,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 17598c6692ccb2b90a45fbee3d8cf5bae5245fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42775471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857306"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +46,26 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 ::: moniker range="= sqlallproducts-allversions"
 |新功能  | 版本資訊  |
 |---------|---------|
+|[SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 版本資訊](../sql-server/sql-server-ver15-release-notes.md)        |
 |[SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server **2014**文件可在[這裡](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)取得。
 ::: moniker-end
 
+::: moniker range="= sql-server-ver15"
+|新功能  | 版本資訊  |
+|---------|---------|
+|[SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 版本資訊](../sql-server/sql-server-ver15-release-notes.md)        |
+::: moniker-end
+
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)        |
+
+> [!NOTE]
+> SQL Server 2019 現已提供預覽。 如需詳細資訊，請參閱 [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"

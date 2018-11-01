@@ -1,13 +1,11 @@
 ---
 title: OData 來源 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401430"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692126"
 ---
 # <a name="odata-source"></a>OData 來源
-使用 SSIS 封裝中的 OData 來源元件，從開放式資料通訊協定 (OData) 服務取用資料。 此元件支援 OData v3 和 v4 通訊協定。  
+使用 SSIS 封裝中的 OData 來源元件，從開放式資料通訊協定 (OData) 服務取用資料。
+
+## <a name="supported-protocols-and-data-formats"></a>支援的通訊協定和資料格式
+
+此元件支援 OData v3 和 v4 通訊協定。  
   
 -   針對 OData V3 通訊協定，此元件支援 ATOM 和 JSON 資料格式。  
   
 -   針對 OData V4 通訊協定，此元件支援 JSON 資料格式。  
 
+## <a name="supported-data-sources"></a>支援的資料來源
+
 OData 來源包含下列資料來源的支援：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
--   SharePoint 清單。 若要查看 SharePoint 伺服器上的所有清單，請使用下列 URL：http://\<伺服器>/_vti_bin/ListData.svc。 如需 SharePoint URL 慣例的詳細資訊，請參閱 [SharePoint Foundation REST 介面](http://msdn.microsoft.com/library/ff521587.aspx)。
+-   SharePoint 清單。 若要查看 SharePoint 伺服器上的所有清單，請使用下列 URL： http://\<伺服器>/_vti_bin/ListData.svc。 如需 SharePoint URL 慣例的詳細資訊，請參閱 [SharePoint Foundation REST 介面](http://msdn.microsoft.com/library/ff521587.aspx)。
 
-> [!NOTE]
+## <a name="supported-data-types"></a>支援的資料類型
+
+OData 來源支援下列簡單資料類型：int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string 和 TimeSpan。
+
+若要探索您資料來源中資料行的資料類型，請檢查 `http://<OData feed endpoint>/$metadata` 頁面。
+
+> [!IMPORTANT]
 > OData 來源元件不支援 SharePoint 清單中的複雜類型，例如多重選擇項目。
 
 ## <a name="odata-format-and-performance"></a>OData 格式和效能
@@ -71,7 +80,7 @@ OData 來源包含下列資料來源的支援：
  **使用集合或資源路徑**  
  從來源中指定選取資料的方法。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |Collection|使用集合名稱從 OData 來源擷取資料。|  
 |資源路徑|使用資源路徑從 OData 來源擷取資料。|  

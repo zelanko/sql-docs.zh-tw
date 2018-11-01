@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], columns
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f0b6d69e4f351c422a76cf5a578703ca172205
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650366"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
+  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
   
- **本主題內容**  
+ **本文內容**  
   
 -   **開始之前：**  
   

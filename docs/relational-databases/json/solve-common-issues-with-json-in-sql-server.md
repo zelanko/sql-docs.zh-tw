@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dda4caf75529d2b3b5b18163cc2aef9331a1b49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06b05357db2ed700b9492cd003a65374c1ee81c0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688956"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905308"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解決 SQL Server 中的 JSON 常見問題
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47688956"
 ### <a name="create-a-nested-json-structure"></a>建立巢狀的 JSON 結構  
  **問：** 我想要在相同層級產生具有數個陣列的複雜 JSON。 FOR JSON PATH 可使用路徑建立巢狀物件，而 FOR JSON AUTO 會針對每個資料表建立額外巢狀層級。 這兩個選項都無法產生我想要的輸出。 如何建立現有選項未直接支援的自訂 JSON 格式？  
   
- **答：** 您可以新增 FOR JSON 查詢作為傳回 JSON 文字的資料行運算式，以建立任何資料結構。 您也可以使用 JSON_QUERY 函數手動建立 JSON。 下列範例示範這些技巧。  
+ **答：** 您可以新增 FOR JSON 查詢作為傳回 JSON 文字的資料行運算式，以建立任何資料結構。 您也可以使用 JSON_QUERY 函數手動建立 JSON。 下列範例會示範這些技術。  
   
 ```sql  
 SELECT col1, col2, col3,  

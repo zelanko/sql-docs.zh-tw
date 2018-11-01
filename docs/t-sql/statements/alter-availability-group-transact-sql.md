@@ -5,9 +5,7 @@ ms.date: 01/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 02ba00fe35a31237ddf86f0782f63f822a0f5935
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776956"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -276,7 +273,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL 在 ADD REPLICA ON 子句中是必要的，而在 MODIFY REPLICA ON 子句中則是選擇性。  如需詳細資訊，請參閱 [在加入或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)設定伺服器執行個體時常見的問題。  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  指定 URL 以指定端點 URL 或唯讀的路由 URL。 URL 參數如下所示：  
   
  *system-address*  
@@ -331,7 +328,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  指定手動植入 (預設值)。 此方法要求您必須在主要複本上建立資料庫的備份，並在次要複本上手動還原該備份。  
   
- BACKUP_PRIORITY **=***n*  
+ BACKUP_PRIORITY **=**_n_  
  指定在這個複本上執行備份的優先權 (相對於相同可用性群組中的其他複本)。 這個值是 0 到 100 範圍之間的整數。 這些值具有以下意義：  
   
 -   1..100 表示可以選擇可用性複本來執行備份。 1 表示最低優先權，100 表示最高優先權。 如果 BACKUP_PRIORITY = 1，則只有當目前沒有更高優先權的可用性複本可用時，才會選擇此可用性複本來執行備份。  
@@ -359,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
   
  如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。  
   
- READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  指定向此可用性複本路由傳送讀取意圖連接要求所使用的 URL。 這是 SQL Server Database Engine 接聽的 URL。 SQL Server Database Engine 的預設執行個體通常會接聽 TCP 通訊埠 1433。  
   
  針對具名執行個體，您可以查詢 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動態管理檢視的 **port** 和 **type_desc** 資料行來取得連接埠號碼。 伺服器執行個體會使用 Transact-SQL 接聽程式 (**type_desc='TSQL'**)。  
@@ -402,7 +399,7 @@ ALTER AVAILABILITY GROUP group_name
  無  
  指定當此可用性複本是主要複本時，將不支援唯讀路由。 這是預設行為。 搭配 MODIFY REPLICA ON 使用時，此值會停用現有的清單 (如果有的話)。  
   
- SESSION_TIMEOUT **=***seconds*  
+ SESSION_TIMEOUT **=**_seconds_  
  指定工作階段逾時期限 (以秒為單位)。 如果您沒有指定這個選項，依預設，這個期間是 10 秒。 最小值是 5 秒。  
   
 > [!IMPORTANT]  
@@ -453,7 +450,7 @@ ALTER AVAILABILITY GROUP group_name
   
  如需強制容錯移轉的限制、先決條件與建議，以及強制容錯移轉對可用性群組中先前主要資料庫之影響的詳細資訊，請參閱[執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
+ ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
  為這個可用性群組定義新的可用性群組接聽程式。 只有主要複本上才支援。  
   
 > [!IMPORTANT]  
@@ -480,12 +477,12 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  指定組成半組分散式可用性群組的可用性群組名稱。  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  指定與可用性群組相關聯之接聽程式的 URL 路徑。  
   
  LISTENER 子句是必要的。  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  指定與可用性群組相關聯之接聽程式的 URL。 URL 參數如下所示：  
   
  *system-address*  
@@ -537,7 +534,7 @@ ALTER AVAILABILITY GROUP group_name
  \<add_listener_option>  
  ADD LISTENER 可接受下列其中一個選項：  
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  指定可用性群組接聽程式將會使用動態主機設定通訊協定 (DHCP)。  或者，使用 ON 子句以識別將建立此接聽程式的網路。 DHCP 受限於單一子網路，這個子網路用於可用性群組中主控可用性複本的每個伺服器執行個體。  
   
 > [!IMPORTANT]  
@@ -547,7 +544,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  指定可用性群組接聽程式將使用一個或多個靜態 IP 位址，而不使用 DHCP。 若要建立跨多個子網路的可用性群組，接聽程式組態中每個子網路都需要一個靜態 IP 位址。 對於給定的子網路，靜態 IP 位址可以是 IPv4 位址或 IPv6 位址。 請與網路系統管理員連絡以取得將主控新可用性群組的可用性複本之每個子網路的靜態 IP 位址。  
   
  例如：  
@@ -570,22 +567,22 @@ ALTER AVAILABILITY GROUP group_name
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
+ MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
  修改這個可用性群組的現有可用性群組接聽程式。 只有主要複本上才支援。  
   
- \<modify_listener_option>  
+ \<modify\_listener\_option\>  
  MODIFY LISTENER 可接受下列其中一個選項：  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
- 將指定的 IP 位址加入至由 *dns_name* 所指定的可用性群組接聽程式。  
+ ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ 將所指定 IP 位址新增至由 *dns\_name* 所指定的可用性群組接聽程式。  
   
  PORT **=** *listener_port*  
  請參閱本節稍早有關這個引數的描述。  
   
- RESTART LISTENER **‘***dns_name***’**  
+ RESTART LISTENER **‘**_dns\_name_**’**  
  重新啟動與指定的 DNS 名稱關聯的接聽程式。 只有主要複本上才支援。  
   
- REMOVE LISTENER **‘***dns_name***’**  
+ REMOVE LISTENER **‘**_dns\_name_**’**  
  移除與指定的 DNS 名稱關聯的接聽程式。 只有主要複本上才支援。  
   
  OFFLINE  

@@ -5,9 +5,7 @@ ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_PROCEDURE_TSQL
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: 69
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0e1dc25af9d44de5b435ff99cd7f283e7b7e08d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9422b06b96f6fa3e6b6260c2d22a4ec7180315fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43086481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641472"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +95,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  **@** *parameter*  
  程序中的參數。 您最多可以指定 2,100 個參數。  
   
- [ *type_schema_name***.** ] *data_type*  
+ [ _type\_schema\_name_**.** ] _data\_type_  
  這是參數的資料類型及其所屬的結構描述。  
   
  如需有關資料類型限制的詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)。  
@@ -146,7 +143,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  包含程序主體的一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 您可以使用選用的 BEGIN 和 END 關鍵字來括住陳述式。 如需詳細資訊，請參閱 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md) 中的＜最佳作法＞、＜一般備註＞以及＜限制事項＞這幾節。  
   
- EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
+ EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定 CLR 預存程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別的名稱符合命名空間規定，且該名稱利用句點 (**.**) 來分隔命名空間的各個部分，您就必須使用方括號 (**[]**) 或引號 (**""**) 來分隔類別名稱。 指定的方法必須是類別的靜態方法。  

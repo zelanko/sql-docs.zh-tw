@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171870"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085534"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 >  
 > 主索引鍵條件約束中包含的資料行無法從 **NOT NULL** 變更為 **NULL**。  
   
-如果要修改的資料行已使用 `ENCRYPTED WITH` 進行加密，您可以將資料類型變更為相容的資料類型 (例如 BIGINT 變更為 INT)，但您無法變更任何加密設定。  
+當使用 Always Encrypted (不含安全記憶體保護區) 時，若遭修改的資料行已使用 'ENCRYPTED WITH' 加密，您可以將資料類型變更為相容資料類型 (例如將 INT 變更為 BIGINT)，但您無法變更加密設定。  
+
+當使用具有安全記憶體保護區的 Always Encrypted 時，只要保護資料行的資料行加密金鑰 (以及新的資料行加密金鑰 (若您有變更金鑰)) 支援記憶體保護區計算 (已使用啟用記憶體保護區的資料行主要金鑰進行加密)，您便可以變更任何加密設定。 如需詳細資料，請參閱[有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
   
  *column_name*  
  要改變、加入或卸除的資料欄名稱。 *column_name* 最多可有 128 個字元。 針對以 **timestamp** 資料類型建立的新資料行，可以省略 *column_name*。 如果沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  所改變之資料行的新資料類型，或是所加入之資料行的資料類型。 不可為資料分割資料表的現有資料行指定 *type_name*。 *type_name* 可以是下列其中之一：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。  
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  使用這個引數再加上 SET SYSTEM_VERSIONING 引數，在現有資料表上啟用系統版本設定。 如需詳細資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)和[開始使用 Azure SQL Database 中的時態表](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)。  
   
- 因為 [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 的原因所致，因此使用者將可以使用 **HIDDEN** 旗標來標註其中一個或兩個期間資料行，以便隱含地隱藏這些資料行，這樣 ***SELECT \* FROM***\<資料表>* 便不會傳回那些資料行的值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。  
+ 在 [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 中，使用者可以使用 **HIDDEN** 旗標來標記一或兩個期間資料行，隱含隱藏這些資料行，使 **SELECT \* FROM**_\<table/>_ 在查詢這些資料行時不會傳回任何值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。  
   
 DROP  
 指定卸除一個或多個資料行定義、計算資料行定義或資料表條件約束，或卸除系統將用於系統版本設定的資料行。  
@@ -716,7 +715,7 @@ COLUMN *column_name*
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定目前在叢集索引分葉層級中之資料列所要移往的位置。 資料表會移至新位置。 此選項只適用於建立叢集索引的條件約束。  
@@ -753,7 +752,7 @@ COLUMN *column_name*
   
  指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否追蹤哪些啟用變更追蹤的資料行已更新。 預設值是 OFF。  
   
- SWITCH [ PARTITION *source_partition_number_expression* ] TO [ *schema_name***.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  利用下列其中一種方式切換資料區塊：  
@@ -992,7 +991,7 @@ IF EXISTS
   
  只有在已經存在的情況下，才有條件地卸除資料行或條件約束。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  若要加入新的資料列，請使用 [INSERT](../../t-sql/statements/insert-transact-sql.md)。 若要移除資料列，請使用 [DELETE](../../t-sql/statements/delete-transact-sql.md) 或 [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)。 若要變更現有資料列中的值，請使用 [UPDATE](../../t-sql/queries/update-transact-sql.md)。  
   
  如果參考資料表的程序快取中有任何執行計畫，ALTER TABLE 會加以標示，以便在下一次執行時重新編譯。  
@@ -1026,7 +1025,7 @@ IF EXISTS
   
  若要移除某資料行，必須先移除以該資料行為基礎的所有索引和條件約束。  
   
- 刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再透過指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
+ 刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再藉由指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
   
 -   MOVE TO 對於索引檢視表或非叢集索引無效。  
 -   分割區配置或檔案群組必須已經存在。  
@@ -1047,7 +1046,7 @@ ONLINE **=** ON 有下列限制：
 > *\<drop_clustered_constraint_option>* 底下所列的選項可套用到資料表上的叢集索引，但不可套用到檢視表上的叢集索引或套用至非叢集索引。  
   
 ## <a name="replicating-schema-changes"></a>複寫結構描述變更  
- 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 此功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 這項功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="data-compression"></a>資料壓縮  
  系統資料表無法啟用壓縮。 如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
@@ -1077,7 +1076,7 @@ ONLINE **=** ON 有下列限制：
   
 若要解決此問題，請移除 4 部分前置詞的用法。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  需要資料表的 ALTER 權限。  
   
  ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料表。 所切換的任何資料，都會繼承目標資料表的安全性。  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>D. 加密資料行  
+ 下列範例示範如何使用[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 來加密資料行。 
+
+首先，會建立不含任何加密資料行的資料表。  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ 接著，資料行 'C2' 會使用名為 CEK1 的資料行加密金鑰，以及隨機加密進行加密。 請注意，若要讓以下陳述式成功執行：
+- 資料行加密金鑰必須已啟用安全記憶體保護區，表示它必須以允許記憶體保護區計算的資料行主要金鑰進行加密。
+- 目標 SQL Server 執行個體必須支援具有安全記憶體保護區的 Always Encrypted。
+- 陳述式必須是透過為具有安全記憶體保護區 Always Encrypted 設定的連線發出，並使用支援的用戶端驅動程式。
+- 進行呼叫的應用程式必須具備存取資料行主要金鑰的權限，以保護 CEK1。
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a> 修改資料表定義  
  本節中的範例示範如何修改資料表的定義。  
@@ -1481,7 +1507,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
  如需其他資料壓縮範例，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. 修改資料行存放區資料表來變更封存壓縮  
- 下列範例透過套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 這樣會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
+ 下列範例藉由套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 這樣會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
   
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1773,7 +1799,7 @@ ORDER BY p.partition_number;
 ```  
   
 ### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. 判斷資料分割資料表的資料分割資料行  
- 下列查詢會傳回資料表之分割區資料行的名稱。 `FactResellerSales`。  
+ 下列查詢會傳回資料表之分割區資料行的名稱。 `FactResellerSales`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
   
 ```sql  
 SELECT t.object_id AS Object_ID, t.name AS TableName, 

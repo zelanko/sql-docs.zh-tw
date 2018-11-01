@@ -1,13 +1,11 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0cdf8b03a5169d5067bdfc07dbd3f3cc99d2d58
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664046"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,9 +205,11 @@ SPARSE
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **確定性加密** 使用的方法一律會針對任何指定純文字值產生相同加密值。 使用確定性加密時，可允許使用相等比較來進行搜尋、使用以加密值為基礎的相等聯結來群組和聯結表格，但也可讓未經授權的使用者檢查加密資料行中的模式，以此猜測加密值的相關資訊。 只有這兩個資料行都是使用相同的資料行加密金鑰時，才有可能將確定性加密資料行上的兩個資料表聯結起來。 確定性加密必須針對字元資料行使用 binary2 排序次序的資料行定序。  
   
- **隨機加密** 使用的方法會以更難預測的方式來加密資料。 隨機加密較為安全，但會防止相等比較搜尋、群組和聯結加密的資料行。 使用隨機加密的資料行無法編製索引。  
+ **隨機加密** 使用的方法會以更難預測的方式來加密資料。 隨機化加密更為安全，但會防止任何對加密資料行的計算和編製索引，除非您的 SQL Server 執行個體支援[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
   
- 針對將作為搜尋或分組參數的資料行 (例如政府識別碼數字)，請使用確定性加密。 針對像是信用卡號碼這類未與其他記錄組成群組或被用來聯結資料表，也不會被搜尋 (因為您是使用其他資料行，例如交易號碼，來尋找哪一個資料列包含想找的加密資料行) 的資料，請使用隨機加密。  
+ 如果您使用 Always Encrypted (無安全記憶體保護區)，則請使用要使用參數或分組參數所搜尋的決定性加密 (例如政府識別碼)。 針對像是信用卡號碼這類未與其他記錄組成群組或被用來聯結資料表，也不會被搜尋 (因為您是使用其他資料行，例如交易號碼，來尋找哪一個資料列包含想找的加密資料行) 的資料，請使用隨機加密。  
+
+ 如果您使用具有安全記憶體保護區的 Always Encrypted，則隨機化加密是建議的加密類型。  
   
  資料行必須為合格的資料類型。  
   

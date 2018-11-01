@@ -14,12 +14,12 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 1cf9aed45c5cf0b6ff170059fd583fbb54ed161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 546d5052c2b97b40b4f7e979c0447c947fdf487a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773014"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906028"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Memory Broker Clerks 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

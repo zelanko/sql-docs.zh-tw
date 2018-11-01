@@ -16,12 +16,12 @@ ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d871b2a98458ca625752bb55743cd8825c73a97b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f0e34605946d00228ac3a5fed17e794f5f42abc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846986"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120126"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>SQL Server 的 Windows Server 容錯移轉叢集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

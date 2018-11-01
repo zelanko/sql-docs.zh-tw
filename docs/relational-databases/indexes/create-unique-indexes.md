@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unique indexes
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a075fbf585435cc449d120d7a96bd72e45399a0d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680486"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +128,7 @@ ms.locfileid: "43074275"
   
 13. 按一下 [ **關閉**]。  
   
-14. 在 [檔案] 功能表上，按一下 [儲存 <資料表名稱>]。  
+14. 在 [檔案] 功能表上，按一下 [儲存 _table\_name_]。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用物件總管建立唯一索引  
   
@@ -149,7 +146,7 @@ ms.locfileid: "43074275"
   
 7.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
   
-8.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的核取方塊。  
+8.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
 9. 按一下 [確定] 。  
   

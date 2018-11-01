@@ -3,10 +3,8 @@ title: 備份服務主要金鑰 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
@@ -14,18 +12,18 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: d5c8455e24d892be9a12d2ade2a8d2f88d0b97b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5eafe9bfc66dca1949d308b307addad059d3bef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856926"
 ---
 # <a name="back-up-the-service-master-key"></a>備份服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，備份 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的服務主要金鑰。 服務主要金鑰是加密階層的根。 應該將服務主要金鑰備份並儲存在安全且位於異地的位置。 建立這個備份，應該是必須在伺服器上執行的首要管理動作之一。  
+  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 備份 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的服務主要金鑰。 服務主要金鑰是加密階層的根。 應該將服務主要金鑰備份並儲存在安全且位於異地的位置。 建立這個備份，應該是必須在伺服器上執行的首要管理動作之一。  
   
- **本主題內容**  
+ **本文內容**  
   
 -   **開始之前：**  
   
@@ -50,7 +48,7 @@ ms.locfileid: "37237708"
   
 ##  <a name="Procedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-back-up-the-service-master-key"></a>若要備份服務主要金鑰  
+#### <a name="to-back-up-the-service-master-key"></a>備份服務主要金鑰  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，連接到含有您要備份的服務主要金鑰的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -58,7 +56,7 @@ ms.locfileid: "37237708"
   
 3.  取得抽取式備份媒體以便儲存備份金鑰的副本。  
   
-4.  識別要在其中建立金鑰備份的 NTFS 目錄。 這是建立下個步驟指定之檔案所在的位置。 這個目錄應該使用具有高度限制性的存取控制清單 (ACL) 加以保護。  
+4.  識別要在其中建立金鑰備份的 NTFS 目錄。 此目錄是建立下個步驟中指定檔案所在的位置。 這個目錄應該使用具有高度限制性的存取控制清單 (ACL) 加以保護。  
   
 5.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

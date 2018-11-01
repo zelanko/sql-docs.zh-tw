@@ -1,13 +1,11 @@
 ---
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -53,17 +51,17 @@ helpviewer_keywords:
 - MIN_GRANT_PERCENT query hint
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
+- QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 521a3a19ce2e1278d856cc3ade5feed67b4182c5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089988"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906308"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.locfileid: "44089988"
   | NO_PERFORMANCE_SPOOL   
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
-  | PARAMETERIZATION { SIMPLE | FORCED }  
+  | PARAMETERIZATION { SIMPLE | FORCED }   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -143,7 +141,7 @@ ms.locfileid: "44089988"
  指定查詢之 GROUP BY 或 DISTINCT 子句所描述的彙總使用雜湊或排序。  
   
  { MERGE | HASH | CONCAT } UNION  
- 指定所有 UNION 作業都是透過合併、雜湊或串連各個 UNION 集來執行的。 如果指定了多個 UNION 提示，查詢最佳化工具會從指定的提示中選取成本最低的策略。  
+ 指定所有 UNION 作業都是藉由合併、雜湊或串連各個 UNION 集來執行的。 如果指定了多個 UNION 提示，查詢最佳化工具會從指定的提示中選取成本最低的策略。  
   
  { LOOP | MERGE | HASH } JOIN  
  指定所有聯結作業都是由整個查詢中的 LOOP JOIN、MERGE JOIN 或 HASH JOIN 來執行的。 如果指定了多個聯結提示，最佳化工具會從允許使用的聯結提示中，選取成本最低的聯結策略。  
@@ -155,7 +153,7 @@ ms.locfileid: "44089988"
   
  這個查詢提示會虛擬地禁止直接在查詢計畫中使用索引檢視表及其索引。  
   
- 只有在查詢的 SELECT 部分直接參考索引檢視表，且已指定 WITH (NOEXPAND) 或 WITH (NOEXPAND, INDEX( *index_value* [ **,***...n* ] ) ) 時，才不展開這份索引檢視表。 如需有關查詢提示 WITH (NOEXPAND) 的詳細資訊，請參閱 [FROM](../../t-sql/queries/from-transact-sql.md)。  
+ 只有在查詢的 SELECT 部分直接參考索引檢視表，且已指定 WITH (NOEXPAND) 或 WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) ) 時，才不會展開這份索引檢視表。 如需有關查詢提示 WITH (NOEXPAND) 的詳細資訊，請參閱 [FROM](../../t-sql/queries/from-transact-sql.md)。  
   
  這個提示只會影響各陳述式 SELECT 部分中的檢視表，其中包括 INSERT、UPDATE、MERGE 和 DELETE 陳述式之 SELECT 部分中的檢視表。  
   
@@ -241,9 +239,9 @@ ms.locfileid: "44089988"
 > 如需詳細資訊，請參閱[使用計劃指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。
   
  SIMPLE 指示查詢最佳化工具嘗試簡單參數化。 FORCED 指示查詢最佳化工具嘗試使用強制參數化。 如需詳細資訊，請參閱[查詢處理架構指南中的強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查詢處理架構指南中的簡單參數化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
-  
+
  RECOMPILE  
- 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 針對查詢產生新的暫時計畫，並在查詢完成執行之後立即捨棄該計畫。 在沒有 RECOMPILE 提示的情況下執行相同的查詢時，產生的查詢計畫不會取代快取中儲存的計畫。 在未指定 RECOMPILE 的情況下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會快取查詢計劃並重複使用。 當編譯查詢計畫時，RECOMPILE 查詢提示會使用查詢中任何本機變數目前的值，如果查詢在預存程序內，就會將目前的值傳給任何參數。  
+ 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 針對查詢產生新的暫時計畫，並在查詢完成執行之後立即捨棄該計畫。 在沒有 RECOMPILE 提示的情況下執行相同查詢時，產生的查詢計劃不會取代快取中儲存的計畫。 在未指定 RECOMPILE 的情況下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會快取查詢計劃並重複使用。 當編譯查詢計畫時，RECOMPILE 查詢提示會使用查詢中任何本機變數目前的值，如果查詢在預存程序內，就會將目前的值傳給任何參數。  
   
  當不必編譯整個預存程序，只需要重新編譯預存程序內的部分查詢時，RECOMPILE 是非常有用的替代方案，可供您建立使用 WITH RECOMPILE 子句的預存程序。 如需詳細資訊，請參閱[重新編譯預存程序](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。 另外，當您建立計畫指南時，RECOMPILE 也非常有用。  
   
@@ -252,7 +250,7 @@ ms.locfileid: "44089988"
   
  如果不可能執行這類計畫，查詢最佳化工具會傳回錯誤，而不是將錯誤偵測延遲到查詢執行時。 資料列可能包含可變長度的資料行；[!INCLUDE[ssDE](../../includes/ssde-md.md)] 允許資料列定義成超出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力的最大潛在大小。 一般而言，雖然有最大潛在大小，但應用程式仍會儲存實際大小在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理能力限制之內的資料列。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 發現太長的資料列，便會傳回執行錯誤。  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 起) 與 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  提供一或多個額外的提示給**單引號內**之提示名稱所指定的查詢處理器。   
@@ -261,20 +259,16 @@ ms.locfileid: "44089988"
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  指示查詢處理器在產生查詢計劃時，不使用排序作業 (批次排序) 以取得最佳化巢狀迴圈聯結。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 相同。
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  
- 強制查詢最佳化工具使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及較早版本的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定相同。
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a> 強制查詢最佳化工具使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定相同。
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
  啟用查詢最佳化工具 Hotfix (在 SQL Server 累積更新和 Service Pack 中發佈的變更)。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON 設定相同。
 *  'DISABLE_PARAMETER_SNIFFING'  
  指示查詢最佳化工具在編譯有一或多個參數的查詢時使用平均資料分佈，讓查詢計劃與查詢在編譯時一開始使用的參數值無關。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF 設定相同。
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'  
- 導致 SQL Server 在評估篩選條件的 AND 述詞以計算相互關聯時，使用最小選擇性產生計劃。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 搭配 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本的基數估計模型使用時相同，而且當[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的基數估計模型使用時，有類似的效果。
-*  'DISABLE_OPTIMIZER_ROWGOAL'  
- 導致 SQL Server 產生的計劃不使用資料列目標調整來處理包含 TOP、OPTION (FAST N)、IN 或 EXISTS 關鍵字的查詢。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 相同。
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a> 會使 SQL Server 在評估篩選條件的 AND 述詞來說明相互關聯時，使用最小選擇性來產生計畫。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 搭配 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本的基數估計模型使用時相同，而且當[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的基數估計模型使用時，有類似的效果。
+*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a> 讓 SQL Server 產生的計畫不使用資料列目標調整來處理包含 TOP、OPTION (FAST N)、IN 或 EXISTS 關鍵字的查詢。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 相同。
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  為需要基數估計的任何開頭索引資料行，啟用自動產生的快速統計資料 (長條圖修正)。 在查詢編譯時會調整用來預估基數的長條圖，以計算此資料行的實際最大值或最小值。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 相同。 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設產生計畫，而不使用預設的基底內含項目假設。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a> 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設來產生查詢計畫，而不使用聯結的預設基底內含項目假設。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  強制查詢最佳化工具使用對應至目前資料庫相容性層級的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示可覆寫[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定或[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
@@ -284,13 +278,23 @@ ms.locfileid: "44089988"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  停用批次模式自適性聯結。 如需詳細資訊，請參閱[批次模式自適性聯結](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- 強制查詢層級的查詢最佳化工具行為，就像查詢是使用資料庫相容性層級 *n* 所編譯，其中 *n* 是支援的資料庫相容性層級。 請參閱 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 以取得目前支援之 *n* 值的清單。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 開始)。   
+ 強制查詢層級的查詢最佳化工具行為，就像查詢是使用資料庫相容性層級 *n* 所編譯，其中 *n* 是支援的資料庫相容性層級。 請參閱 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 以取得目前支援之 *n* 值的清單。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 開始)。    
  
-    > [!NOTE]
-    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不會覆寫預設值或舊版基數估計設定，若它是透過資料庫範圍設定所強制，追蹤旗標或另一個查詢提示，例如 QUERYTRACEON。   
-    > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，例如特定資料庫功能的可用性。   
-  
-  您可以使用動態管理檢視 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，來查詢所有支援的 USE HINT 名稱清單。    
+   > [!NOTE]
+   > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不會覆寫預設值或舊版基數估計設定，若它是透過資料庫範圍設定所強制，追蹤旗標或另一個查詢提示，例如 QUERYTRACEON。   
+   > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，例如特定資料庫功能的可用性。  
+   > 若要深入了解這項提示，請參閱 [Developer’s Choice: Hinting Query Execution model](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (開發人員選擇：提示查詢執行模型)。
+    
+*  'QUERY_PLAN_PROFILE'      
+ 為查詢啟用輕量分析。 當包含這個新提示的查詢完成時，便會發出一個新的擴充事件 (query_plan_profile)。 此擴充事件會公開執行統計資料和與 query_post_execution_showplan 擴充事件相似的執行計畫 XML，但僅限包含新提示的查詢。 **適用於**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始)。 
+ 
+  > [!NOTE]
+  > 若您啟用收集 query_post_execution_showplan 擴充事件，這會將標準分析基礎結構新增至每個正在伺服器上執行的查詢，並因此影響整體伺服器效能。      
+  > 若您啟用收集 *query_thread_profile* 擴充事件以改為使用輕量分析基礎結構，這會大幅減少效能額外負荷，但仍然會影響整體伺服器效能。       
+  > 若您啟用 query_plan_profile 擴充事件，這只會為使用 QUERY_PLAN_PROFILE 執行的查詢啟用輕量分析基礎結構，因此不會影響伺服器上的其他工作負載。 使用提示分析特定查詢，而不影響伺服器工作負載的其他部分。
+  > 若要深入了解輕量分析，請參閱 [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 – 隨時、隨地)。
+ 
+您可以使用動態管理檢視 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，來查詢所有支援的 USE HINT 名稱清單。    
 
 > [!TIP]
 > 提示名稱不區分大小寫。   
@@ -298,10 +302,10 @@ ms.locfileid: "44089988"
 > [!IMPORTANT] 
 > 一些 USE HINT 提示可能會與在全域或工作階段層級啟用的追蹤旗標發生衝突，或與資料庫範圍設定的設定發生衝突。 在此情況下，查詢層級提示 (USE HINT) 一律優先。 如果 USE HINT 與其他查詢提示或在查詢層級啟用的追蹤旗標 (例如由 QUERYTRACEON 啟用) 發生衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在嘗試執行查詢時會產生錯誤。 
 
- USE PLAN N **'***xml_plan***'**     
- 強制查詢最佳化工具針對 **'***xml_plan***'** 所指定的查詢使用現有的查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起使用。  
+ USE PLAN N **'**_xml\_plan_**'**     
+ 強制查詢最佳化工具針對 **'**_xml\_plan_**'** 所指定的查詢使用現有查詢計劃。 USE PLAN 無法搭配 INSERT、UPDATE、MERGE 或 DELETE 陳述式一起使用。  
   
-TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** 會將指定的資料表提示套用至與 *exposed_object_name* 對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** 將指定資料表提示套用到與 *exposed_object_name* 對應的資料表或檢視。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。  
   
  *exposed_object_name* 可以是下列其中一個參考：  
   
@@ -309,16 +313,16 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
 -   沒有使用別名時，*exposed_object_name* 就是 FROM 子句中所參考之資料表或檢視的完全相符項目。 例如，如果使用兩部分名稱參考資料表或檢視，*exposed_object_name* 就是相同的兩部分名稱。  
   
- 當指定 *exposed_object_name* 但沒有同時指定資料表提示時，在查詢中指定成物件之資料表提示一部分的任何索引都會被忽略，而且查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用此技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
+ 當指定 *exposed_object_name* 但沒有同時指定資料表提示時，在查詢中指定成物件之資料表提示一部分的任何索引都會被忽略，而且查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用這項技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 這是要套用至以查詢提示形式與 *exposed_object_name* 對應之資料表或檢視表的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 是要作為查詢提示，套用到與 *exposed_object_name* 對應資料表或檢視的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 如需詳細資訊，請參閱＜備註＞。  
   
 > [!CAUTION] 
 > 使用參數指定 FORCESEEK，會限制最佳化工具所能使用的計畫數目，其限制幅度將大於指定 FORCESEEK 而不指定參數時的限制。 這可能會導致在許多狀況下發生「無法產生計畫」錯誤。 在後續版本中，將會從內部修改最佳化工具，以擴大可使用的計畫範圍。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  除非是在陳述式內使用 SELECT 子句，否則無法在 INSERT 陳述式中指定查詢提示。  
   
  您只能在最上層查詢中指定查詢提示，不能在子查詢中指定查詢提示。 當資料表提示指定為查詢提示時，您可以在最上層查詢或子查詢中指定此提示。不過，在 TABLE HINT 子句中針對 *exposed_object_name* 所指定的值必須與查詢或子查詢中的公開名稱完全相符。  

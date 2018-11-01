@@ -14,16 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11dde12055fd45d78db1d55a15f6547798aa213a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a477f90842e7aa6c1fb9da5347e0555927a036
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689136"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874326"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  公開金鑰加密 (PKI) 是一種訊息加密形式，使用者可用此加密形式來建立「公開」(Public) 金鑰和「私密」(Private) 金鑰。 私密金鑰會保留在私密位置，而公開金鑰則可以散發給使用者。 雖然這些金鑰在數學上具有相關性，但是私密金鑰無法使用公開金鑰來輕鬆地衍生。 公開金鑰是用來加密資料，而私密金鑰則是用來解密資料。 使用公開金鑰加密的訊息只能使用正確的私密金鑰來加以解密。 由於有兩種不同的金鑰，所以這些金鑰為「非對稱」(Asymmetric)。  
+
+ 公開金鑰加密是一種訊息加密形式，使用者可用此加密形式來建立「公開」金鑰和「私密」金鑰。 私密金鑰會保留在私密位置，而公開金鑰則可以散發給使用者。 雖然這些金鑰在數學上具有相關性，但是私密金鑰無法使用公開金鑰來輕鬆地衍生。 您可以使用公開金鑰來加密資料，而只能透過對應的私密金鑰來解密。 這可用來加密傳給私密金鑰擁有者的訊息。 同樣地，私密金鑰的擁有者可以加密資料，而只能使用公開金鑰來解密。 這種使用方式構成數位憑證的基礎；憑證中所含資訊由私密金鑰的擁有者加密，以保護內容的作者。 因為加密和解密金鑰不同，因此稱為「非對稱」金鑰。
   
  憑證和非對稱金鑰是使用非對稱加密的兩種方式。 憑證經常當做非對稱金鑰的容器使用，因為它們可以包含類似到期日和簽發者等其他資訊。 密碼編譯演算法的兩個機制之間沒有任何差異，而且當提供相同的金鑰長度時，強度不會有任何差異。 一般來說，您可以使用憑證來加密資料庫中的其他加密金鑰類型，或是簽署程式碼模組。  
   

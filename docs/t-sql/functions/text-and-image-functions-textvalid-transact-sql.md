@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faccfb4456001f6a807e69cc69c89f31e8320955
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 01e165cf75dbb411507ead1bab3728cf4e142df9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799726"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Text 和 Image 函式 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |函數或陳述式|Description|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'*%pattern%**'***,** *expression***)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
-|DATALENGTH **(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|傳回指定字元字串在 **text** 和 **ntext** 資料行中的字元位置。|  
+|DATALENGTH **(**_expression_**)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
   
 ## <a name="examples"></a>範例  

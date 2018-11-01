@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8e214d201fb6cba77122062587f4ccddcad1c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe7960d68c43f7afe46ca518c84be58a60c6463
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732346"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120146"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
 
@@ -178,7 +178,7 @@ ms.locfileid: "47732346"
  如需如何產生電子郵件的詳細資訊，請參閱 [Reporting Services 資料警示](../reporting-services/reporting-services-data-alerts.md)。  
   
 ##  <a name="CreateAlert"></a> 建立資料警示定義  
- 如果您擁有「SharePoint 檢視項目」和「建立提醒」權限，只要報表使用預存認證或不使用認證，您就可以為任何可以檢視的報表建立資料警示定義。 您會從 SharePoint 文件庫執行報表。 您可在 [資料警示設計工具] 中使用的資料是來自該報表。 如果報表已參數化，您可能需要使用不同的參數值執行報表，以確保您想要的資料出現在報表中。 報表開啟之後，在報表工具列上按一下 [動作] 功能表上的 [新資料警示] 選項，開啟 [資料警示設計工具]。 下圖說明如何開啟 [資料警示設計工具]。  
+ 如果您擁有「SharePoint 檢視項目」和「建立提醒」權限，只要報表使用預存認證或不使用認證，您就可以為任何可以檢視的報表建立資料警示定義。 您會從 SharePoint 文件庫執行報表。 您可在 [資料警示設計工具] 中使用的資料是來自該報表。 如果報表已參數化，您可能需要使用不同的參數值來執行報表，以確保您想要的資料會出現在報表中。 報表開啟之後，在報表工具列上按一下 [動作] 功能表上的 [新資料警示] 選項，開啟 [資料警示設計工具]。 下圖說明如何開啟 [資料警示設計工具]。  
   
  ![從 SharePoint 文件庫開啟警示設計工具](../reporting-services/media/rs-openalertdesigneriw.gif "從 SharePoint 文件庫開啟警示設計工具")  
   

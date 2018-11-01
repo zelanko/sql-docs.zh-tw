@@ -1,7 +1,7 @@
 ---
 title: 使用 Windows 驗證連線至資料來源和檔案共用 | Microsoft Docs
 description: 了解如何在 Azure SQL Database 與 Azure-SSIS Integration Runtime 中設定 SSIS 目錄，以執行利用 Windows 驗證來連線至資料來源和檔案共用的套件。
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608632"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119975"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>在 Azure 中從 SSIS 套件使用 Windows 驗證來連線至資料來源和檔案共用
 無論是在內部部署/Azure 虛擬機器上及 Azure 檔案中，您都可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime (IR) 相同虛擬網路中的資料來源與檔案共用。 從在 Azure-SSIS IR 上執行的 SSIS 套件，使用 Windows 驗證連線至資料來源與檔案共用的方法有三種：
@@ -34,7 +34,7 @@ ms.locfileid: "47608632"
 本文的其餘部分描述如何在 Azure SQL Database 中設定 SSIS 目錄以執行套件，這些套件會使用 Windows 驗證來連線至資料來源和檔案共用。 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>您只能使用一組認證
-在此方法中，一個套件只能使用一組認證。 遵循本文步驟將所提供的網域認證套用於 Azure-SSIS IR 上的所有套件執行 (互動或排程)，直到您變更或移除這些認證為止。 如果您的套件必須使用不同組認證連線到多個資料來源與檔案共用，您可能必須考慮上述替代方法。
+當您在 SSIS 套件中使用 Windows 驗證時，您只能在套件中使用一組認證。 遵循本文步驟將所提供的網域認證套用於 Azure-SSIS IR 上的所有套件執行 (互動或排程)，直到您變更或移除這些認證為止。 如果您的套件必須使用不同組認證連線到多個資料來源與檔案共用，您可能必須考慮上述替代方法。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>提供 Windows 驗證的網域認證
 若要提供網域認證，讓套件使用 Windows 驗證以連線至內部部署資料來源/檔案共用，請執行下列動作：
@@ -100,7 +100,7 @@ ms.locfileid: "47608632"
 3.  若要使用 Windows 驗證進行連線，請確定 Azure-SSIS IR 屬於同時也包含內部部署 SQL Server 的虛擬網路。  如需詳細資訊，請參閱[將 Azure-SSIS Integration Runtime 加入虛擬網路](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)。 然後，如本文所述，使用 `catalog.set_execution_credential` 來提供認證。
 
 ## <a name="connect-to-an-on-premises-file-share"></a>連線至內部部署檔案共用
-若要檢查是否可以連線至內部部署檔案共用，請執行下列動作：
+若要測試是否可以連線至內部部署檔案共用，請執行下列動作：
 
 1.  若要執行這項測試，請尋找未加入網域的電腦。
 

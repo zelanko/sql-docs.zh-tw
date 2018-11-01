@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5cb959e6d82a5b16b4affc8b0de3256f4d1af8a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171890"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906468"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ CREATE TABLE
     ( {   <column_definition>   
         | <computed_column_definition>    
         | <column_set_definition>   
-        | [ <table_constraint> ]   
+        | [ <table_constraint> ] [ ,... n ] 
         | [ <table_index> ] }  
           [ ,...n ]    
           [ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name   
@@ -120,7 +117,7 @@ column_name <data_type>
           ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
           ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'  
         ) ]  
-    [ <column_constraint> [ ...n ] ]   
+    [ <column_constraint> [, ...n ] ]   
     [ <column_index> ]  
   
 <data type> ::=   
@@ -267,7 +264,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```  
   
 ```  
---Memory optimized CREATE TABLE Syntax  
+--Memory optimized 
+LE Syntax  
 CREATE TABLE  
     [database_name . [schema_name ] . | schema_name . ] table_name  
     ( { <column_definition>  
@@ -430,7 +428,7 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
   
  如需相關的 FILESTREAM 主題，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type\_schema\_name_**.** ] *type_name*  
  指定資料行的資料類型及其所屬的結構描述。 針對磁碟基礎的資料表，資料類型可以是下列其中一項：  
   
 -   系統資料類型。  
@@ -496,7 +494,7 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
   
  指定系統會使用規定的 datetime2 資料行來記載記錄會在什麼開始時間或結束時間算是有效的。 資料行必須定義為 NOT NULL。 如果您嘗試將其指定為 NULL，系統會擲回一個錯誤。 如果未明確指定的期間資料行的 NOT NULL，系統會將資料行預設為 NOT NULL 。 使用這個引數再加上 PERIOD FOR SYSTEM_TIME 和 SYSTEM_VERSIONING = ON 引數，在資料表上啟用系統版本設定。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
   
- 您可以使用 **HIDDEN** 旗標來標註其中一或兩個期間資料行，以便隱含地隱藏這些資料行，這樣 **SELECT \* FROM***`<table>`* 便不會傳回那些資料行的值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。 若要變更現有期間資料行的 **HIDDEN** 屬性，必須卸除 **PERIOD**，然後以不同的隱藏旗標重新建立。  
+ 您可以使用 **HIDDEN** 旗標來標註其中一個或兩個期間資料行，以便隱含地隱藏這些資料行，這樣 **SELECT \* FROM**_`<table>`_ 便不會傳回那些資料行的值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。 若要變更現有期間資料行的 **HIDDEN** 屬性，必須卸除 **PERIOD**，然後以不同的隱藏旗標重新建立。  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,8 +516,8 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
   
  非叢集資料行存放區索引會當作是叢集資料行存放區索引來加以排序和管理。 因為資料行可能會受到限制，而且以次要索引的形式存在於資料表上，因此被稱為非叢集資料行存放區索引。  
   
- ON *partition_scheme_name ***(*** column_name***)**  
- 指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 此限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
+ 指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。  
   
 > [!NOTE]  
 > 當您分割一個非唯一的叢集索引時，如果尚未指定分割區資料行，依預設，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它加入至叢集索引鍵清單。 當您分割一個非唯一的非叢集索引時，如果尚未指定分割區資料行，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它新增為索引的非索引鍵 (內含) 資料行。  
@@ -569,9 +567,11 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **確定性加密** 使用的方法一律會針對任何指定純文字值產生相同加密值。 使用確定性加密時，可允許使用相等比較來進行搜尋、使用以加密值為基礎的相等聯結來群組和聯結表格，但也可讓未經授權的使用者檢查加密資料行中的模式，以此猜測加密值的相關資訊。 只有這兩個資料行都是使用相同的資料行加密金鑰時，才有可能將確定性加密資料行上的兩個資料表聯結起來。 確定性加密必須針對字元資料行使用 binary2 排序次序的資料行定序。  
   
- **隨機加密** 使用的方法會以更難預測的方式來加密資料。 隨機加密較為安全，但會防止相等比較搜尋、群組和聯結加密的資料行。 使用隨機加密的資料行無法編製索引。  
+ **隨機加密** 使用的方法會以更難預測的方式來加密資料。 隨機化加密更為安全，但會防止任何對加密資料行的計算和編製索引，除非您的 SQL Server 執行個體支援具有安全記憶體保護區的 Always Encrypted。 請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 以取得詳細資料。
   
- 針對將作為搜尋或分組參數的資料行 (例如政府識別碼數字)，請使用確定性加密。 針對像是信用卡號碼這類未與其他記錄組成群組或被用來聯結資料表，也不會被搜尋 (因為您是使用其他資料行，例如交易號碼，來尋找哪一個資料列包含想找的加密資料行) 的資料，請使用隨機加密。  
+ 若您使用 Always Encrypted (不具有安全記憶體保護區)，請針對將使用參數或群組參數進行搜尋的資料行使用決定性加密，例如政府識別碼。 針對像是信用卡號碼這類未與其他記錄組成群組或被用來聯結資料表，也不會被搜尋 (因為您是使用其他資料行，例如交易號碼，來尋找哪一個資料列包含想找的加密資料行) 的資料，請使用隨機加密。
+
+ 如果您使用具有安全記憶體保護區的 Always Encrypted，則隨機化加密是建議的加密類型。
   
  資料行必須為合格的資料類型。  
   
@@ -653,7 +653,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  這是一個條件約束，它提供一個或多個資料行中之資料的參考完整性。 FOREIGN KEY 條件約束要求資料行中的每個值存在於所參考之資料表中的一個或多個對應的被參考資料行中。 FOREIGN KEY 條件約束所參考的資料行，必須是所參考的資料表中的 PRIMARY KEY 或 UNIQUE 條件約束，或是所參考的資料表之 UNIQUE INDEX 中所參考的資料行。 計算資料行的外部索引鍵也必須標示為 PERSISTED。  
   
- [ *schema_name***.**] *referenced_table_name*]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  這是 FOREIGN KEY 條件約束所參考之資料表的名稱，及其所屬的結構描述。  
   
  **(** *ref_column* [ **,**... *n* ] **)**  
@@ -710,7 +710,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  相反地，如果指定了 NO ACTION，且 **ProductVendor** 資料表中有至少一個資料列參考 **Vendor** 資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會產生一則錯誤，且會回復 Vendor 資料列的更新動作。  
   
  CHECK  
- 這是一個條件約束，透過限制可能輸入一個或多個資料行的值，強制執行範圍完整性。 計算資料行的 CHECK 條件約束也必須標示 PERSISTED。  
+ 這是一個條件約束，藉由限制可能輸入一個或多個資料行的值，強制執行範圍完整性。 計算資料行的 CHECK 條件約束也必須標示 PERSISTED。  
   
  *logical_expression*  
  這是一個傳回 TRUE 或 FALSE 的邏輯運算式。 這個運算式不能含有別名資料類型。  
@@ -724,13 +724,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *partition_scheme_name*  
  這是分割區配置的名稱，這個分割區配置定義了分割區資料表的分割區所對應的檔案群組。 分割區配置必須在資料庫內。  
   
- [ *partition_column_name***.** ]  
+ [ _partition\_column\_name_**.** ]  
  指定分割區資料表將進行分割的資料行。 資料行必須符合資料分割函數中指定的資料行，因為 *partition_scheme_name* 正在以資料類型、長度及有效位數使用這個資料分割函數。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。  
   
 > [!IMPORTANT]  
->  我們建議您在分割區資料表的分割資料行上指定 NOT NULL，以及在非分割區資料表 (ALTER TABLE...SWITCH 作業的來源或目標) 上進行此作業。 這樣做可以確保分割資料行上的任何 CHECK 條件約束都不需要檢查 Null 值。  
+>  我們建議您在分割區資料表的分割資料行上指定 NOT NULL，以及在非分割區資料表 (ALTER TABLE...SWITCH 作業的來源或目標) 上進行這項作業。 這樣做可以確保分割資料行上的任何 CHECK 條件約束都不需要檢查 Null 值。  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  指定用來儲存索引資料的每個索引頁面，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 所應加以填滿的程度。 使用者指定的 *fillfactor* 可以是從 1 到 100 的值。 如果未指定值，預設值為 0。 填滿因數值 0 和 100 在各方面都是一樣的。  
   
 > [!IMPORTANT]  
@@ -815,7 +815,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | **OFF** }  
  當設為 ON 時，便會在索引的中繼層級頁面上，套用 FILLFACTOR 所指定的可用空間百分比。 當設為 OFF 或未指定 FILLFACTOR 值時，考慮到中繼頁面的各組索引鍵，中繼層級頁面容量的填滿程度，會保留至少足以容納一個資料列的空間，且資料列是索引所能擁有的大小上限。 預設值為 OFF。  
   
- FILLFACTOR **=***fillfactor*  
+ FILLFACTOR **=**_fillfactor_  
  指定一個百分比來指出在建立或改變索引期間，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 應該使各索引頁面之分葉層級填滿的程度。 *fillfactor* 必須是 1 到 100 之間的整數值。 預設值是 0。 填滿因數值 0 和 100 在各方面都是一樣的。  
   
  IGNORE_DUP_KEY = { ON | **OFF** }  
@@ -964,7 +964,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  只有記憶體最佳化資料表才支援雜湊索引。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如需有關允許的資料表、資料行、條件約束及索引數目的詳細資訊，請參閱 [SQL Server 的最大容量規格](../../sql-server/maximum-capacity-specifications-for-sql-server.md)。  
   
  空間通常會以每次一個範圍的遞增方式配置給資料表及索引。 當 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 選項設定為 TRUE，或一律在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前、 則在建立資料表或索引時，會從混合範圍來配置頁面，直到有足夠的頁面填滿一個統一範圍為止。 在它有足以填滿統一範圍的頁面之後，每當目前配置的範圍已滿之後，便會配置另一個範圍。 如需資料表所配置和使用之空間量的報表，請執行 **sp_spaceused**。  
@@ -998,7 +998,7 @@ INSERT INTO #MyTempTable VALUES (1);
   
 -   當建立全域暫存資料表的工作階段結束，且所有其他工作也都停止參考這些資料表，便會自動卸除這些全域暫存資料表。 工作和資料表之間的關聯，只在單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的生命期間進行維護。 這表示當建立工作階段結束時，在最後一個主動參考這份資料表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式完成時，便會卸除這份全域暫存資料表。  
   
- 在預存程序或觸發程序內建立的本機暫存資料表，名稱可以和呼叫這個預存程序或觸發程序之前所建立的暫存資料表相同。 不過，如果查詢參考一份暫存資料表，且同時有兩份同名的暫存資料表存在，便不會定義要針對哪一份資料表來解析此查詢。 巢狀預存程序也可以建立與呼叫的預存程序所建立之暫存資料表同名的暫存資料表。 不過，若要將修正解析到巢狀程序中所建立的資料表，這份資料表與發出呼叫的程序所建立的資料表，必須有相同的結構和資料行名稱。 下列範例會顯示這一點。  
+ 在預存程序或觸發程序內建立的本機暫存資料表，名稱可以和呼叫這個預存程序或觸發程序之前所建立的暫存資料表相同。 不過，如果查詢參考一份暫存資料表，且同時有兩份同名的暫存資料表存在，便不會定義要針對哪一份資料表來解析這項查詢。 巢狀預存程序也可以建立與呼叫的預存程序所建立之暫存資料表同名的暫存資料表。 不過，若要將修正解析到巢狀程序中所建立的資料表，這份資料表與發出呼叫的程序所建立的資料表，必須有相同的結構和資料行名稱。 下列範例會顯示這一點。  
   
 ```sql  
 CREATE PROCEDURE dbo.Test2  
@@ -1060,7 +1060,7 @@ GO
 > [!NOTE]
 > 只有伺服器系統管理員可以存取 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的疑難排解 DMV。
   
-### <a name="permissions"></a>權限  
+### <a name="permissions"></a>[權限]  
 
  任何使用者都可以建立全域暫存物件。 除非收到其他權限，否則使用者只能存取自己的物件。  
   
@@ -1092,7 +1092,7 @@ SELECT * FROM ##test
 1,1
 ```
 
-- 工作階段 C 會連線至 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 中的另一個資料庫，並想要存取在 testdb1 中建立的 ##test。 因為全域暫存資料表的資料庫範圍所致，此選取會失敗 
+- 工作階段 C 會連線至 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 中的另一個資料庫，並想要存取在 testdb1 中建立的 ##test。 因為全域暫存資料表的資料庫範圍所致，這項選取會失敗 
 
 ```sql
 SELECT * FROM ##test
@@ -1110,7 +1110,7 @@ SELECT * FROM tempdb.sys.database_files
 ```
 
 ## <a name="partitioned-tables"></a>資料分割資料表  
- 在利用 CREATE TABLE 來建立分割區資料表之前，您必須先建立一個分割區函數來指定資料表分割區的方式。 資料分割函數是使用 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) 建立的。 其次，您必須建立一個分割區配置來指定保留分割區函數所指示之分割區的檔案群組。 分割區配置是使用 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 建立的。 您不能針對分割區資料表來指定將 PRIMARY KEY 或 UNIQUE 條件約束放在個別檔案群組中。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ 在利用 CREATE TABLE 來建立分割區資料表之前，您必須先建立一個分割區函數來指定資料表分割區的方式。 資料分割函數是使用 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) 建立的。 其次，您必須建立一個分割區配置來指定保留分割區函數所指示之分割區的檔案群組。 分割區配置是使用 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 建立的。 您不能針對分割區資料表來指定將 PRIMARY KEY 或 UNIQUE 條件約束放在個別檔案群組中。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
 ## <a name="primary-key-constraints"></a>PRIMARY KEY 條件約束  
   
@@ -1238,7 +1238,7 @@ SELECT * FROM tempdb.sys.database_files
   
  若要評估變更壓縮狀態如何影響資料表、索引或分割區，請使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 預存程序。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  需要資料庫的 CREATE TABLE 權限以及用以建立資料表之結構描述的 ALTER 權限。  
  
  如果將 CREATE TABLE 陳述式中的任何資料行定義成使用者定義型別，則需要使用者定義型別的 REFERENCES 權限。 
@@ -1282,7 +1282,7 @@ REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ```  
   
 ### <a name="c-using-unique-constraints"></a>C. 使用 UNIQUE 條件約束  
- UNIQUE 條件約束用來強制執行非主索引鍵資料行的唯一性。 下列範例會強制執行「`Name` 資料表的 `Product` 資料行必須是唯一的」的限制。  
+ UNIQUE 條件約束用來強制執行非主索引鍵資料行的唯一性。 下列範例會強制執行「`Name` 資料表的 `Product` 資料行必須是唯一的」這項限制。  
   
 ```sql  
 Name nvarchar(100) NOT NULL  

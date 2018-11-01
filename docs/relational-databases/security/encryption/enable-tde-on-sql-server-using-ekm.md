@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 04/15/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 26
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b70e78455aca3f25ba880d3a4fb8ad5bd8ed32c8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 62d910ed7b43d0334c8bf15c49c47d2214e81b85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627456"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上啟用 TDE
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過使用儲存在可延伸金鑰管理 (EKM) 模組中的非對稱金鑰，啟用透明資料加密 (TDE) 以保護資料庫加密金鑰。  
+  本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過使用可延伸金鑰管理 (EKM) 模組中所儲存的非對稱金鑰，啟用透明資料加密 (TDE) 以保護資料庫加密金鑰。  
   
  TDE 會使用稱為資料庫加密金鑰的對稱金鑰，將整個資料庫的儲存體加密。 也可以使用憑證來保護資料庫加密金鑰，該憑證是由 master 資料庫的資料庫主要金鑰所保護。 如需有關使用資料庫主要金鑰來保護資料庫加密金鑰的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)。 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上執行時設定 TDE 的相關資訊，請參閱[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。 如需使用 Azure 金鑰保存庫中的金鑰設定 TDE 的相關資訊，請參閱 [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。 
 
@@ -40,7 +37,7 @@ ms.locfileid: "43084204"
   
 -   您必須是高權限使用者 (如系統管理員) 才能建立資料庫加密金鑰及加密資料庫。 該使用者必須能夠由 EKM 模組來驗證。  
   
--   一啟動時， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 就必須開啟資料庫。 若要這樣做，您應該建立要由 EKM 所驗證的認證，並將它加入到根據非對稱金鑰的登入中。 使用者無法使用該登入來進行登入，但是 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 將能夠使用 EKM 裝置來驗證本身。  
+-   啟動時，[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 就必須開啟資料庫。 若要這樣做，您應該建立要由 EKM 所驗證的認證，並將它加入到根據非對稱金鑰的登入中。 使用者無法使用該登入來登入，但是 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 將能夠使用 EKM 裝置來驗證本身。  
   
 -   如果遺失了 EKM 模組內所儲存的非對稱金鑰， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]將無法開啟資料庫。 如果 EKM 提供者可讓您備份非對稱金鑰，您應該建立備份，並將它儲存在安全的位置。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "43084204"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 權限  
- 此主題會使用以下權限：  
+ 本文使用下列權限：  
   
 -   若要變更組態選項及執行 RECONFIGURE 陳述式，您必須取得 ALTER SETTINGS 伺服器層級的權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
@@ -70,7 +67,7 @@ ms.locfileid: "43084204"
 2.  依照 EKM 提供者的要求將憑證安裝到電腦上。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 未提供 EKM 提供者。 每一個 EKM 提供者都會有安裝、設定及授權使用者的不同程序。  請參閱 EKM 提供者文件集來完成這個步驟。  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 未提供 EKM 提供者。 每個 EKM 提供者都會有安裝、設定和授權使用者的不同程序。  請參閱 EKM 提供者文件集來完成這個步驟。  
   
 3.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   

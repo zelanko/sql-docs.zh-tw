@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4d4378091a58ac3f67704c4acff30196963b5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608606"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851783"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,10 @@ Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](../../sql
  
  ## <a name="try-it-out"></a>現在就試試看！ 
   
--   若要下載並安裝 SQL Server 2016 Express，請移至 **[SQL Server 下載](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 [Express Advanced] 或 [LocalDB] 套件。 
+-   若要下載並安裝 SQL Server 2016 Express，請移至 **[SQL Server 下載](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請透過 **Visual Studio 安裝程式**選擇 [Express Advanced] 或 [LocalDB] 套件。 在 Visual Studio 安裝程式中，您可以安裝 SQL Server Express LocalDB 作為 **.NET 桌面開發**工作負載的一部分，或是作為個別的元件。
+
+   > [!TIP]
+   > 您也可以安裝 LocalDB 作為 Visual Studio 2017 的一部分。 在 Visual Studio 安裝期間，選取 [.NET 桌面開發] 工作負載，它包含了 SQL Server Express LocalDB。
   
 -   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虛擬機器。  
   
@@ -129,6 +132,5 @@ REM Gather information about the instance of LocalDB
 >  **LocalDB** 永遠都會在使用者安全性內容之下執行，也就是說， **LocalDB** 絕對不會使用本機系統管理員群組的認證執行。 這表示， **LocalDB** 執行個體使用的所有資料庫檔案都必須可使用擁有使用者的 Windows 帳戶加以存取，而不必考量本機系統管理員群組的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [SqlLocalDB 公用程式](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[SqlLocalDB 公用程式](../../tools/sqllocaldb-utility.md)

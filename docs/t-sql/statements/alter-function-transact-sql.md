@@ -5,9 +5,7 @@ ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d24ea0f9548968723aa195211e268d97bde9788
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8ab29f84194e2f277c6a0b5843038e87a6211a30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643406"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -236,7 +233,7 @@ RETURNS return_data_type
   
 -   目前資料庫中的 **dbo** 結構描述。  
   
- [ **=***default* ]  
+ [ **=**_default_ ]  
  這是參數的預設值。 如果已定義 *default* 值，則不需為該參數指定值，即可執行函式。  
   
 > [!NOTE]  
@@ -258,11 +255,11 @@ RETURNS return_data_type
  指定純量函數傳回純量值。  
   
  TABLE  
- 指定資料表值函式的傳回值是資料表。 只有常數和 **@***local_variables* 才能傳遞給資料表值函式。  
+ 指定資料表值函式的傳回值是資料表。 只有常數和 **@**_local\_variables_ 才能傳遞給資料表值函式。  
   
  在內嵌資料表值函式中，TABLE 傳回值是利用單一 SELECT 陳述式所定義。 內嵌函數沒有相關聯的傳回變數。  
   
- 在多重陳述式資料表值函式中，**@***return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值來傳回的資料列。 **@***return_variable* 只能指定給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，但不能指定給 CLR 函式。  
+ 在多重陳述式資料表值函式中，**@**_return\_variable_ 是一個 TABLE 變數，可用來儲存及累積應作為函式值來傳回的資料列。 **@**_return\_variable_ 只能指定給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，但不能指定給 CLR 函式。  
   
  *select-stmt*  
  這是單一 SELECT 陳述式，可定義嵌入資料表值函式的傳回值。  
@@ -278,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- *\<* table_type_definition *>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
  定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([在某些地區為預覽版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([在某些區域為預覽版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
  定義 CLR 函數的資料表資料類型。 資料表宣告只包含資料行名稱和資料類型。  
   

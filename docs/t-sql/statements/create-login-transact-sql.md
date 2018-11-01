@@ -1,13 +1,11 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a5f2edc15c171a80c16ccc77f11bf7673571d53
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074471"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252105"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -53,11 +50,11 @@ ms.locfileid: "43074471"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[SQL 平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>[SQL Server]
 
 ## <a name="syntax"></a>語法 
   
@@ -91,27 +88,27 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 *login_name*  
 指定建立的登入名稱。 有四種類型的登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 根據 Active Directory 使用者的登入，僅限小於 21 個字元的名稱。 
 
-PASSWORD **='***password***'* 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 您應該使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從  SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。 
+PASSWORD **='**_password_**'* 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 您應該使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從  SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。 
   
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。 
   
-PASSWORD **=***hashed_password*  
+PASSWORD **=**_hashed\_password_  
 僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。 
   
 HASHED 僅適用於 SQL Server 登入。 指定在 PASSWORD 引數之後輸入的密碼已雜湊處理。 如果未選取這個選項，則輸入的密碼字串在儲存至資料庫之前會先雜湊處理。 只有要在兩部伺服器之間移轉資料庫時，才應使用這個選項。 請勿使用 HASHED 選項來建立新登入。 HASHED 選項無法與 SQL 7 或更早版本所建立的雜湊搭配使用。
 
 MUST_CHANGE 只適用於 SQL Server 登入。 如果有包含這個選項，第一次使用新登入時，SQL Server 會提示使用者輸入新密碼。 
   
-CREDENTIAL **=***credential_name*  
+CREDENTIAL **=**_credential\_name_  
 對應到新 SQL Server 登入的認證名稱。 認證必須已存在於伺服器中。 目前這個選項只會將認證連結到登入。 認證無法對應至系統管理員 (sa) 登入。 
   
 SID = *sid*  
 用來重新建立登入。 僅適用於 SQL Server 驗證登入，不適用於 Windows 驗證登入。 指定新 SQL Server 驗證登入的 SID。 如果未使用這個選項，SQL Server 將自動指派 SID。 SID 結構取決於 SQL Server 版本。 SQL Server 登入 SID：以 GUID 為基礎的 16 位元組 (**binary(16)**) 常值。 例如， `SID = 0x14585E90117152449347750164BA00A7`。 
   
-DEFAULT_DATABASE **=***database*  
+DEFAULT_DATABASE **=**_database_  
 指定要指派給登入的預設資料庫。 如果不包括這個選項，預設資料庫將設為 master。 
   
-DEFAULT_LANGUAGE **=***language*  
+DEFAULT_LANGUAGE **=**_language_  
 指定要指派給登入的預設語言。 如果不包括這個選項，預設語言將設為伺服器的目前預設語言。 如果伺服器的預設語言在未來有所變更，登入的預設語言會保持不變。 
   
 CHECK_EXPIRATION **=** { ON | **OFF** }  
@@ -263,26 +260,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>*SQL Database<br />邏輯伺服器 *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />邏輯伺服器 \*_**|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
+## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
   
 ## <a name="syntax"></a>語法 
   
@@ -392,26 +376,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><strong><em>*SQL Database<br />受控執行個體 *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 ## <a name="overview"></a>概觀
 
@@ -525,23 +496,13 @@ GO
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>>   <th><strong><em>* SQL 資料<br />倉儲 *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體]()|**_\* SQL 資料<br />倉儲 \*_**|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
   
 ## <a name="syntax"></a>語法 
   
@@ -644,27 +605,16 @@ GO
  [建立登入](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體]()|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* 平行處理<br />資料倉儲\*_**
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
+## <a name="parallel-data-warehouse"></a>平行處理資料倉儲
 
   
 ## <a name="syntax"></a>語法 
@@ -686,7 +636,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 *login_name*  
 指定建立的登入名稱。 有四種類型的登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 根據 Active Directory 使用者的登入，僅限小於 21 個字元的名稱。 
 
-PASSWORD **='***password***'* 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 您應該使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從  SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。 
+PASSWORD **='**_password_**'* 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 您應該使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從  SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。 
   
 密碼會區分大小寫。 密碼長度應該一律至少為 8 個字元，且不能超過 128 個字元。 密碼可以包含 a-z、A-Z、0-9 及大多數非英數字元。 密碼不能包含單引號或 *login_name*。 
   

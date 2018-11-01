@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0782f5739bb6ed86dfa2d58e0e84ce2ea496802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d93d1ea55e06e1ee6b1a36bc9f2e3a341db58cfe
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713889"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169049"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ SQLDUMPEREDUMPFLAGS
   
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
  將伺服器執行個體的 HADR 叢集內容切換至指定的 Windows Server 容錯移轉叢集 (WSFC)。 「HADR 叢集內容」可決定由哪個 WSFC 管理可用性複本 (由伺服器執行個體所裝載) 的中繼資料。 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 至新 WSFC 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本執行個體時，才使用 SET HADR CLUSTER CONTEXT 選項。  
   
  您只能將 HADR 叢集內容從本機 WSFC 切換至遠端 WSFC，然後從遠端 WSFC 切換回本機 WSFC。 HADR 叢集內容只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體未裝載任何可用性複本時，才能切換至遠端叢集。  

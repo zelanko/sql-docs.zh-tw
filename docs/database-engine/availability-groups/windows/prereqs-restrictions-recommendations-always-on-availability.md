@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37934900"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852023"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>必要條件、限制和建議 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  此主題描述部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的考量，包括對於主機電腦、Windows Server 容錯移轉叢集 (WSFC)、伺服器執行個體和可用性群組的必要條件、限制和建議。 它也會指出這些元件的安全性考量和必要權限 (如果有的話)。  
+  本文描述部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的考量，包括對於主機電腦、Windows Server 容錯移轉叢集 (WSFC)、伺服器執行個體和可用性群組的必要條件、限制和建議。 它也會指出這些元件的安全性考量和必要權限 (如果有的話)。  
   
 > [!IMPORTANT]  
 >  在您部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]之前，我們強烈建議您先閱讀本主題的每一節。  
@@ -44,19 +41,7 @@ ms.locfileid: "37934900"
 |------|-----------------------|------------|----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347： [適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的支援](http://go.microsoft.com/fwlink/?LinkId=242896)|  
   
-##  <a name="SystemReqsForAOAG"></a> Windows 系統需求和建議  
- **本節內容：**  
-  
--   [檢查清單：需求](#SystemRequirements)  
-  
--   [對裝載可用性複本之電腦的建議 (Windows 系統)](#ComputerRecommendations)  
-  
--   [Permissions](#PermissionsWindows)  
-  
--   [相關工作](#RelatedTasksWindows)  
-  
--   [相關內容](#RelatedContentWS)  
-  
+
 ###  <a name="SystemRequirements"></a> 檢查清單：需求 (Windows 系統)  
  若要支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能，請確定要參與一個或多個可用性群組的每部電腦都符合下列基礎需求：  
   
@@ -148,8 +133,8 @@ ms.locfileid: "37934900"
 |-|------------------|-----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|主機電腦必須是 WSFC 節點。 裝載給定可用性群組之可用性複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，位於叢集的不同節點上。 可用性群組在移轉至不同叢集時可以暫時跨兩個叢集。 SQL Server 2016 引進分散式的可用性群組。 在分散式可用性群組中，有兩個可用性群組位在不同的叢集中。|[SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分散式可用性群組 (AlwaysOn 可用性群組)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|若要讓可用性群組使用 Kerberos：<br /><br /> 裝載可用性群組之可用性複本的所有伺服器執行個體都必須使用相同的 SQL Server 服務帳戶。<br /><br /> 網域管理員需要針對可用性群組接聽程式之虛擬網路名稱 (VNN) 的 SQL Server 服務帳戶，在 Active Directory 中手動註冊伺服器主體名稱 (SPN)。 如果對 SQL Server 服務帳戶以外的帳戶註冊 SPN，驗證會失敗。<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> 如果您變更 SQL Server 服務帳戶，網域管理員需要手動重新註冊 SPN。|[註冊 Kerberos 連接的服務主體名稱](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡短說明：**<br /><br /> Kerberos 和 SPN 強制執行相互驗證。 SPN 對應到啟動 SQL Server 服務的 Windows 帳戶。 如果不正確地註冊 SPN 或註冊作業失敗，則 Windows 安全層無法判斷與 SPN 相關聯的帳戶，也無法使用 Kerberos 驗證。<br /><br /> <br /><br /> 注意：NTLM 沒有此需求。|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果您計劃使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載可用性複本，請務必了解 FCI 限制且符合 FCI 需求。|[使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制](#FciArLimitations) (本主題稍後)|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每個伺服器執行個體都必須執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Enterprise Edition。|[SQL Server 2016 的版本及支援功能](../../../sql-server/editions-and-supported-features-for-sql-server-2016.md)|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果您計劃使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載可用性複本，請務必了解 FCI 限制且符合 FCI 需求。|[使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制](#FciArLimitations) (本文稍後)|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每個伺服器執行個體必須執行相同版本的 SQL Server，才能參與 Always On 可用性群組。|[SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016)、[SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017)的版本及支援功能。|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|裝載可用性群組之可用性複本的所有伺服器執行個體都必須使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定序。|[設定或變更伺服器定序](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|在將要裝載任何可用性群組之可用性複本的每個伺服器執行個體上，啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在給定的電腦上，只要 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 安裝有支援，您就可以對多個伺服器執行個體啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。|[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> 如果您終結並重新建立 WSFC，則必須在原始叢集上已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的每個伺服器執行個體上，停用並重新啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|每一個伺服器執行個體都需要資料庫鏡像端點。 請注意，伺服器執行個體上的所有可用性複本、資料庫鏡像夥伴和見證都會共用此端點。<br /><br /> 如果您選取來裝載可用性複本的伺服器執行個體在網域使用者帳戶下執行，而且還沒有資料庫鏡像端點， [新增可用性群組精靈](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (或 [新增複本至可用性群組精靈](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 可以建立端點並授與伺服器執行個體服務帳戶 CONNECT 權限。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務是以內建帳戶 (例如本機系統、本機服務或網路服務) 或非網域帳戶的身分執行，您就必須將憑證用於端點驗證，而且精靈無法在此伺服器執行個體上建立資料庫鏡像端點。 在此情況下，我們建議您先手動建立資料庫鏡像端點，然後再啟動精靈。<br /><br /> <br /><br /> <b>\*\* 安全性注意事項 \*\*</b> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的傳輸安全性與資料庫鏡像相同。|[資料庫鏡像端點 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -188,12 +173,12 @@ ms.locfileid: "37934900"
   
 |工作|必要權限|  
 |----------|--------------------------|  
-|建立資料庫鏡像端點|需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。  也需要 CONTROL ON ENDPOINT 權限。 如需詳細資訊，請參閱 [GRANT 端點權限和 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。|  
+|建立資料庫鏡像端點|需要 CREATE ENDPOINT 權限或 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格。  也需要 CONTROL ON ENDPOINT 權限。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。|  
 |啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|需要本機電腦的 **Administrator** 群組成員資格和 WSFC 的完整控制。|  
   
 ###  <a name="RelatedTasksSI"></a> 相關工作 (伺服器執行個體)  
   
-|工作|主題|  
+|工作|發行項|  
 |----------|-----------|  
 |判斷資料庫鏡像端點是否存在|[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)|  
 |建立資料庫鏡像端點 (如果尚未存在)|[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [針對 AlwaysOn 可用性群組建立資料庫鏡像端點 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
@@ -227,9 +212,13 @@ ms.locfileid: "37934900"
 > [!NOTE]  
 > 容錯移轉叢集執行個體支援叢集共用磁碟區 (CSV)。 如需有關 CSV 的詳細資訊，請參閱 [了解容錯移轉叢集的叢集共用磁碟區](http://technet.microsoft.com/library/dd759255.aspx)。  
   
--   **FCI 的叢集節點只能針對給定的可用性群組裝載一個複本**：如果您在 FCI 上新增可用性複本，則可能是 FCI 擁有者的 WSFC 節點將無法針對相同的可用性群組裝載另一個複本。  
+-   **FCI 的叢集節點只能針對給定的可用性群組裝載一個複本**：如果您在 FCI 上新增可用性複本，則可能是 FCI 擁有者的 WSFC 節點將無法針對相同的可用性群組裝載另一個複本。  若要避免可能發生的衝突，建議為容錯移轉叢集執行個體設定可能的擁有者。 這樣可避免可能導致單一 WSFC 嘗試裝載同一個可用性群組的兩個可用性複本。
   
-     此外，其他每個複本都必須由相同 Windows Server 容錯移轉叢集之不同叢集節點上的 SQL Server 2016 執行個體進行裝載。 唯一的例外狀況是在移轉至另一個叢集期間，可用性群組可以暫時跨兩個叢集。  
+     此外，其他每個複本都必須由相同 Windows Server 容錯移轉叢集之不同叢集節點上的 SQL Server 2016 執行個體進行裝載。 唯一的例外狀況是在移轉至另一個叢集期間，可用性群組可以暫時跨兩個叢集。 
+
+  >[!WARNING]
+  > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」移至「已」裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
+
   
 -   **FCI 不支援依照可用性群組進行自動容錯移轉：**  FCI 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
   
@@ -243,7 +232,7 @@ ms.locfileid: "37934900"
   
 ###  <a name="RelatedTasksFCIs"></a> 相關工作 (FCI)  
   
-|工作|主題|  
+|工作|發行項|  
 |----------|-----------|  
 |安裝 SQL Server 容錯移轉叢集|[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |現有 SQL Server 容錯移轉叢集的就地升級|[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
@@ -290,9 +279,9 @@ ms.locfileid: "37934900"
 ###  <a name="RequirementsAG"></a> 必要條件 (可用性群組)  
  在建立或重新設定可用性群組組態時，請務必遵守下列需求。  
   
-||必要條件|描述|  
+||必要條件|Description|  
 |-|------------------|-----------------|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果您計劃使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載可用性複本，請務必了解 FCI 限制且符合 FCI 需求。|[使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制](#FciArLimitations) (本主題稍早所述)|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|如果您計劃使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 來裝載可用性複本，請務必了解 FCI 限制且符合 FCI 需求。|[使用 SQL Server 容錯移轉叢集執行個體 (FCI) 裝載可用性複本的必要條件和限制](#FciArLimitations) (本文稍早所述)|  
   
 ###  <a name="SecurityAG"></a> 安全性 (可用性群組)  
   
@@ -320,7 +309,7 @@ ms.locfileid: "37934900"
   
 ###  <a name="RelatedTasksAGs"></a> 相關工作 (可用性群組)  
   
-|工作|主題|  
+|工作|發行項|  
 |----------|-----------|  
 |建立可用性群組|[使用可用性群組 (新增可用性群組精靈)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [建立可用性群組 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [建立可用性群組 (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)<br /><br /> [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
 |修改可用性複本的數目|[將次要複本加入可用性群組中 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [將次要複本從可用性群組移除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -385,7 +374,7 @@ ms.locfileid: "37934900"
   
 ###  <a name="RelatedTasksADb"></a> 相關工作 (可用性資料庫)  
   
-|工作|主題|  
+|工作|發行項|  
 |----------|-----------|  
 |準備次要資料庫 (手動)|[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
 |將次要資料庫聯結至可用性群組 (手動)|[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  

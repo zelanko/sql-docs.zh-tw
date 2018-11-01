@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96b4d5bcf488d7c6825b4a2c15f853fbf50c18ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a99cfe0941bd96ed8d523ed85587f64c482791
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654816"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906148"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -5,9 +5,7 @@ ms.date: 05/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 407d5403784fa7ab5a0ce2f58c99a10690de8b87
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749376"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -76,7 +73,7 @@ AS select_statement
  加密 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 中包含 ALTER VIEW 陳述式文字的項目。 WITH ENCRYPTION 可防止在 SQL Server 複寫中發行檢視。  
   
  SCHEMABINDING  
- 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時，*select_statement* 必須包括所參考的資料表、檢視或使用者定義函式的兩部分名稱 (*schema ***.*** object*)。 所有參考的物件都必須在相同的資料庫中。  
+ 將檢視繫結於一或多份基礎資料表的結構描述。 當指定 SCHEMABINDING 時，無法依照會影響檢視定義的方式來修改基底資料表。 您必須先修改或卸除檢視定義來移除對於要修改之資料表的相依性。 當您使用 SCHEMABINDING 時，_select\_statement_ 必須包括參考的資料表、檢視表或使用者定義函式的兩部分名稱 (_schema_**.**_object_)。 所有參考的物件都必須在相同的資料庫中。  
   
  您無法卸除參與 SCHEMABINDING 子句所建立之檢視的檢視或資料表，除非這份檢視已經卸除或有了改變，不再擁有結構描述繫結。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤。 另外，如果 ALTER TABLE 陳述式會影響到檢視定義，在參與擁有結構描述繫結的檢視之資料表上執行這些陳述式也會失敗。  
   

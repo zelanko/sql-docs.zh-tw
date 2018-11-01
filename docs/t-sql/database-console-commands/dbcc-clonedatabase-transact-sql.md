@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CLONEDATABASE
@@ -37,16 +34,15 @@ helpviewer_keywords:
 - database cloning [SQL Server]
 - DBCC CLONEDATABASE statement
 ms.assetid: ''
-caps.latest.revision: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 00c1d492b8fd4b2315d825c2b74bac701781e9bd
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666676"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +110,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 如果您有資料行存放區索引，請參閱 [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) (在複製資料庫上使用資料行存放區索引調整查詢時的考量) 更新資料行存放區索引統計資料，再執行 **DBCC CLONEDATABASE** 命令。
+> 如果您有資料行存放區索引，請參閱 [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) (在複製資料庫上使用資料行存放區索引調整查詢時的考量) 更新資料行存放區索引統計資料，再執行 **DBCC CLONEDATABASE** 命令。  從 SQL Server 2019 開始，將不再需要上述文章中所述的手動步驟，因為 **DBCC CLONEDATABASE** 命令會自動收集此資訊。
 
 如需複製資料庫上資料安全性的相關資訊，請參閱 [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/) (了解複製資料庫中的資料安全性)。
 
@@ -175,7 +171,7 @@ DBCC CLONEDATABASE 使用來源資料庫的內部資料庫快照集，以取得�
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。
 
 ## <a name="error-log-messages"></a>錯誤記錄檔訊息

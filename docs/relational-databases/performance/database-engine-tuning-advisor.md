@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ab1458236e0b3a7002fc0058c2ecc43b5c6a7f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649446"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085254"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcc78ff386997d445d4bc23bb452179853565686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645227"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906170"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>使用鑽研建立索引標籤式的行動報表
 了解如何使用鑽研報表和參數建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，使其外觀和行為類似索引標籤式報表。
@@ -38,7 +38,7 @@ ms.locfileid: "47645227"
 
    ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. 將 Sales 量測計的 [輔色] 設成 [開啟]，以對照報表其餘部分--本例中為黑色上的白色。
+2. 將 Sales 量測計的 [輔色] 設為 [開啟]，以和報表其餘部分形成對比--本例中為黑色上的白色。
 
     ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
@@ -81,7 +81,7 @@ ms.locfileid: "47645227"
 
 1.  開啟 Transportation 報表，設定 Sales 量測計鑽研至銷售報表，並設定其他三個量測計鑽研至其個別報表。
 
-2. 仍然在 Transportation 報表中，將 Transportation 量測計的 [輔色] 設成 [開啟]，與報表的其餘部分對比。
+2. 仍然在 Transportation 報表中，將 Transportation 量測計的 [輔色] 設為 [開啟]，與報表的其餘部分對比。
 
 3. 針對 Fuel、Storage 和 Misc Expenses 報表，重複上述步驟。 
 

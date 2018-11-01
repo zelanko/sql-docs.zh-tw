@@ -1,12 +1,10 @@
 ---
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 09/11/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL RESOURCE POOL
@@ -23,22 +21,21 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-ms.openlocfilehash: 7e4ae3239332c004ad6ceda624b641b7bf7603be
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c74b693bb813970aa795837b568af66a04847c61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999290"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805556"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用對象**：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 建立外部集區，以用來定義外部處理序的資源。 資源集區代表資料庫引擎執行個體的實體資源 (記憶體和 CPU) 子集。 資源管理員可讓資料庫管理員在資源集區間散發伺服器資源，最多可達 64 個集區。
 
 + 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 
-+ 若是 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 中的 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部集區可管理針對 SQL Server 2016 所列出的 R 處理序，以及 `python.exe`、`BxlServer.exe` 及其所衍生的其他處理序。
++ 若是 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 中的 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部集區會掌管 `rterm.exe` 以及 `python.exe`、`BxlServer.exe` 和其衍生的其他處理序。
 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  

@@ -14,12 +14,12 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: c06b0b8a55be4d231ce6593538168fad440f08c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27d270866846b055c73eb5801c0a7aa8a41088b7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852169"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906258"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

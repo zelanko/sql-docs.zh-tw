@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Microsoft Docs
 description: 可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851416"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324631"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>記憶體授與意見反應、資源管理員和查詢提示
 實際的記憶體授與會接受由資源管理員或查詢提示所決定的查詢記憶體限制。
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>停用記憶體授與意見反應而不變更相容性層級
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>停用批次模式記憶體授與意見反應，而不變更相容性層級
 您可以在資料庫或陳述式的範圍停用記憶體授與意見反應，同時仍將資料庫相容性層級維持在 140 以上。 若要針對源自資料庫的所有查詢執行停用批次模式的記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory 會在查詢執行之前，顯示授與的記憶體 (KB)。 
 
 > [!NOTE]
 > 在 17.9 版與更新版本中，公開預覽版資料列模式記憶體授與回應方案屬性在 SQL Server Management Studio 圖形化查詢執行計劃中是可見的。 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>停用資料列模式記憶體授與意見反應，而不變更相容性層級
+您可以在資料庫或陳述式的範圍中停用資料列模式記憶體授與意見反應，同時仍將資料庫相容性層級維持在 150 以上。 若要針對源自資料庫的所有查詢執行停用資料列模式記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+若要針對源自資料庫的所有查詢執行重新啟用資料列模式記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+您也可以將 DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK 指定為 USE HINT 查詢提示，以針對特定查詢停用資料列模式記憶體授與意見反應。  例如：
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
+
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
 批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。

@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -35,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105909"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906018"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -312,19 +310,19 @@ NULL 值：
  
 -   下列範例產生 4097 (2<sup>12</sup> + 1) 個群組集合，因此將失敗。  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
 -   下列範例產生 4097 (2<sup>12</sup> + 1) 個群組，因此將失敗。 `CUBE ()` 和 `()` 群組集合都會產生總計資料列，而且不會刪除重複的群組集合。  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
 -   此範例使用回溯相容語法。 產生 8192 (2<sup>13</sup>) 個群組集合，因此將失敗。  
   
-    ```  
+    ```sql
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
@@ -346,7 +344,7 @@ GROUP BY 子句支援 SQL-2006 標準內包含的所有 GROUP BY 功能，但是
 |功能|SQL Server Integration Services|SQL Server 相容性層級 100 或更高層級|相容性層級 90 的 SQL Server 2008 或更新版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 彙總|不支援 WITH CUBE 或 WITH ROLLUP。|支援 WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP。|與相容性層級 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube(***arg1***,***...argN***)** 或 **dbo.rollup(***arg1***,**...*argN***)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|不允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube (***arg1***,**...argN **)** 或 **dbo.rollup(** arg1 **,***...argN***)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 傳回下列錯誤訊息：「關鍵字 'cube'&#124;'rollup' 附近的語法不正確」。<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 允許使用下列範例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube (***arg1***,***...argN*) 或 **dbo.rollup(***arg1***,***...argN***)**<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|不允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 傳回下列錯誤訊息：「關鍵字 'cube'&#124;'rollup' 附近的語法不正確」。<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 允許使用下列範例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)**<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|不支援|支援|支援|  
 |CUBE|不支援|支援|不支援|  
 |ROLLUP|不支援|支援|不支援|  

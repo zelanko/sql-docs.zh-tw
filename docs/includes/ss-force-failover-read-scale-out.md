@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 189ffb02217d85d77cee524658cd35a2d2cff034
+ms.sourcegitcommit: 677a75e7d149ff257ed8376a392806d17dca0640
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38069969"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488293"
 ---
 每個可用性群組只有一個主要複本。 主要複本允許讀取和寫入。 若要變更作為主要的複本，您可以進行容錯移轉。 在高可用性的可用性群組中，叢集管理員會自動化容錯移轉程序。 在叢集類型為 NONE 的可用性群組中，容錯移轉程序是手動的。 
 
@@ -29,6 +29,12 @@ ms.locfileid: "38069969"
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+```
+
+當先前的主要複本復原時，它也會假設主要角色。 若要確定先前的主要複本會轉換成次要角色，請在先前的主要複本上執行下列命令。
+
+```SQL
+ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 ```
 
 ### <a name="manual-failover-without-data-loss"></a>手動容錯移轉 (不會遺失資料)

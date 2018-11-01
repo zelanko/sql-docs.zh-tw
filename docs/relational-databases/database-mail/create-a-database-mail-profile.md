@@ -16,12 +16,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b14b806557049480816e0823a3253c26af1a8cd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57f76c157edf70e99ebd8b2b8917d460c83397aa
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703966"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071792"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47703966"
 ###  <a name="Security"></a> 安全性  
  公用設定檔可以讓任何可存取 **msdb** 資料庫的使用者使用該設定檔來傳送電子郵件。 使用者或角色可以使用私人設定檔。 為角色授與設定檔的存取權限時，會建立能夠更輕鬆維護的架構。 您必須是 **msdb** 資料庫中之 **DatabaseMailUserRole** 的成員，而且至少可以存取一個 Database Mail 設定檔，才能傳送郵件。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  建立設定檔帳戶以及執行預存程序的使用者，應該是系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 Database Mail 組態精靈  
@@ -191,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*預設設定檔狀態* '  
   
-     其中， *@profile_name* 是設定檔的名稱，而 *@principal_name* 指出這是公用設定檔，而 *@is_default* 可決定此設定檔是否為資料庫使用者或角色的預設值。  
+     其中，*@profile_name* 是設定檔的名稱，*@principal_name* 指出這是公用設定檔，而 *@is_default* 可決定此設定檔是否為資料庫使用者或角色的預設值。  
   
  下列範例會建立 Database Mail 帳戶、建立 Database Mail 私人設定檔，然後將帳戶加入設定檔，並授與設定檔的公用存取權。  
   

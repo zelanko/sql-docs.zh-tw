@@ -1,12 +1,10 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_TSQL
@@ -29,20 +27,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
-ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
+ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "42802567"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252135"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
 修改資料庫的特定組態選項。 
 
 本文提供適用於您所選擇之 SQL 產品的語法、引數、備註、權限和範例。
 
-如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="click-a-product"></a>按一下產品！
 
@@ -53,16 +51,16 @@ ms.locfileid: "42802567"
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL 平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>[SQL Server]
 
 ## <a name="overview"></a>概觀
 
 在 SQL Server 中，此陳述式可修改資料庫或與資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組、變更資料庫或其檔案和檔案群組的屬性、變更資料庫定序，以及設定資料庫選項。 無法修改資料庫快照集。 若要修改與複寫相關聯的資料庫選項，請使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
-   
+
 由於長度的關係，ALTER DATABASE 語法會分成多篇文章。  
 
 ALTER DATABASE  
@@ -85,7 +83,7 @@ ALTER DATABASE
   
 ## <a name="syntax"></a>語法  
   
-```  
+```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
 {  
@@ -105,20 +103,20 @@ ALTER DATABASE { database_name  | CURRENT }
   <filegroup_updatability_option>::=  
   
 <option_spec>::=  
-  <auto_option> ::=   
+  <auto_option> ::=
   <change_tracking_option> ::=  
-  <cursor_option> ::=   
-  <database_mirroring_option> ::=   
+  <cursor_option> ::=
+  <database_mirroring_option> ::=
   <date_correlation_optimization_option> ::=  
   <db_encryption_option> ::=  
   <db_state_option> ::=  
   <db_update_option> ::=  
   <db_user_access_option> ::=  <delayed_durability_option> ::=  <external_access_option> ::=  
   <FILESTREAM_options> ::=  
-  <HADR_options> ::=    
+  <HADR_options> ::=
   <parameterization_option> ::=  
   <query_store_options> ::=  
-  <recovery_option> ::=   
+  <recovery_option> ::=
   <service_broker_option> ::=  
   <snapshot_option> ::=  
   <sql_option> ::=   
@@ -276,27 +274,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />邏輯伺服器 *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />邏輯伺服器 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
+## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
 
 ## <a name="overview"></a>概觀
 
@@ -335,7 +320,7 @@ ALTER DATABASE { database_name | CURRENT }
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical'} 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) } 
@@ -355,8 +340,10 @@ ALTER DATABASE { database_name | CURRENT }
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       }
 
 <option_spec> ::= 
@@ -397,7 +384,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
 
 變更資料庫的服務層。 
 
@@ -412,8 +399,11 @@ ALTER DATABASE current
 
 MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
 
-指定資料庫的大小上限。 大小上限必須符合資料庫的有效 EDITION 屬性值集合。 變更資料庫的大小上限可能也會造成資料庫版本變更。 下表列出 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服務層支援的 MAXSIZE 值與預設值 (D)：  
-  
+指定資料庫的大小上限。 大小上限必須符合資料庫的有效 EDITION 屬性值集合。 變更資料庫的大小上限可能也會造成資料庫版本變更。 
+
+> [!NOTE]
+> **MAXSIZE** 引數不適用於超大規模服務層中的單一資料庫。 超大規模層資料庫會視需要成長，最多 100 TB。 SQL Database 服務會自動新增儲存體；您不需要設定大小上限。
+
 **以 DTU 為基礎的模型**
 
 |**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
@@ -484,7 +474,7 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-指定效能等級。 服務目標的可用值為：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`。  
+指定效能等級。 服務目標的可用值為：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`、`HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。  
 
 如需服務目標描述和大小、版本及服務目標組合的詳細資訊，請參閱 [Azure SQL Database 服務層和效能層級](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[以 DTU 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(英文\) 和[以 vCore 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(英文\)。 目前已移除對 PRS 服務目標的支援。 如有疑問，請使用此電子郵件別名： premium-rs@microsoft.com。 
   
@@ -492,9 +482,15 @@ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
 
 若要將現有的資料庫新增至彈性集區，請將資料庫的 SERVICE_OBJECTIVE 設定為 ELASTIC_POOL，並提供彈性集區的名稱。 您也可以使用此選項將資料庫變更至相同伺服器內的不同彈性集區。 如需詳細資訊，請參閱[建立和管理 SQL Database 彈性資料庫集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。 若要從彈性集區中移除資料庫，請使用 ALTER DATABASE 將 SERVICE_OBJECTIVE 設定為單一資料庫效能等級。  
 
+> [!NOTE]
+> 超大規模服務層中的資料庫不得新增至彈性集區。
+
 ADD SECONDARY ON SERVER \<partner_server_name>  
 
 在夥伴伺服器上使用相同名稱來建立異地複寫次要資料庫，其中將本機資料庫設定為異地複寫主要資料庫，然後開始以非同步方式將資料從主要端複寫到新的次要端。 如果次要端上已經有相同名稱的資料庫，命令就會失敗。 此命令會在伺服器的 master 資料庫上執行，該伺服器裝載了成為主要資料庫的本機資料庫。  
+
+> [!IMPORTANT]
+> 超大規模服務層目前不支援異地複寫。
   
 WITH ALLOW_CONNECTIONS { **ALL** | NO }  
 
@@ -640,27 +636,14 @@ ALTER DATABASE db1 FAILOVER
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 ## <a name="overview"></a>概觀
 
@@ -776,27 +759,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><strong><em>* SQL 資料<br />倉儲 *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
 
 ## <a name="overview"></a>概觀
 
@@ -903,29 +873,16 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 [SQL 資料倉儲參考文章清單](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 平行處理<br />資料倉儲\*_** &nbsp;|  
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
+## <a name="parallel-data-warehouse"></a>平行處理資料倉儲
 
 ## <a name="overview"></a>概觀
 

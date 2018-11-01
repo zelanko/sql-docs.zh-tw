@@ -1,13 +1,11 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -45,17 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 275
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 60fae479512b89afe2d9499716071a9376edd439
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40409466"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252205"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,23 +68,14 @@ ms.locfileid: "40409466"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|[平行處理<br />資料倉儲](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>[SQL Server]
 
 備份完整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫以建立資料庫備份，或備份資料庫的一或多個檔案或檔案群組以建立檔案備份 (BACKUP DATABASE)。 同時，可在完整復原模式或大量記錄復原模式下備份資料庫的交易記錄，以建立記錄備份 (BACKUP LOG)。 
   
@@ -213,7 +201,8 @@ LOG
 > [!NOTE]  
 >  建立典型的記錄備份之後，除非您指定 `WITH NO_TRUNCATE` 或 `COPY_ONLY`，否則有些交易記錄檔記錄會變成非使用中狀態。 當一個或多個虛擬記錄檔案中的所有記錄變成非使用中狀態之後，記錄會發生截斷。 如果記錄在例行的記錄備份之後並未截斷，可能會發生延遲記錄截斷。 如需詳細資訊，請參閱[可能會延遲記錄截斷的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。  
   
-{ *database_name* | **@***database_name_var* } 是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。如果這個名稱是以變數 (**@***database_name_var*) 提供，就可將它指定為字串常數 (**@***database_name_var***=***database name*) 或字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+{ _database\_name_ | **@**_database\_name\_var_ }   
+這是要備份交易記錄、部分資料庫或完整資料庫的來源資料庫。 如果這個名稱是以變數 (**@**_database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 (**@**_database\_name\_var_**=**_database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
 > [!NOTE]  
 > 資料庫鏡像合作關係中的鏡像資料庫無法備份。  
@@ -221,10 +210,10 @@ LOG
 \<file_or_filegroup> [ **,**...*n* ]  
 只能搭配 BACKUP DATABASE 使用，可用來指定要包含在檔案備份中的資料庫檔案或檔案群組，或是指定要包含在部分備份中的唯讀檔案或檔案群組。  
   
-FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
+FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }  
 這是指要包含在備份中的檔案邏輯名稱，或是其值等於該檔案邏輯名稱的變數。  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }  
 這是指要包含在備份中的檔案群組邏輯名稱，或是其值等於該檔案群組邏輯名稱的變數。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。  
   
 > [!NOTE]  
@@ -235,7 +224,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
   
 如需詳細資訊，請參閱[完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 與[備份檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。  
   
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]  
 指定部分備份。 部分備份包含資料庫中所有的讀取/寫入檔案：主要檔案群組和任何一種讀取/寫入次要檔案群組，以及任何指定的唯讀檔案或檔案群組。  
   
 READ_WRITE_FILEGROUPS  
@@ -244,7 +233,7 @@ READ_WRITE_FILEGROUPS
 > [!IMPORTANT]  
 > 使用 FILEGROUP 取代 READ_WRITE_FILEGROUPS 來明確列出讀取/寫入檔案群組，以建立檔案備份。  
   
-FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
 這是指要包含在部分備份中的唯讀檔案群組邏輯名稱，或是其值等於該唯讀檔案群組邏輯名稱的變數。 如需詳細資訊，請參閱本主題前面的 "\<file_or_filegroup>"。
   
 *n*  
@@ -258,9 +247,10 @@ TO \<backup_device> [ **,**...*n* ] 指出隨附的[備份裝置](../../relation
 
 指定備份作業要使用的邏輯或實體備份裝置。  
   
-{ *logical_device_name* | **@***logical_device_name_var* } **適用於：** SQL Server 是用來備份資料庫之備份裝置的邏輯名稱。邏輯名稱必須遵照識別碼的規則。如果備份裝置名稱是以變數 (@* logical_device_name_var *) 提供，就可將它指定為字串常數 (@* logical_device_name_var***=**) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Applies to:** SQL Server   
+這是用來備份資料庫之備份裝置的邏輯名稱。 邏輯名稱必須遵照識別碼的規則。 如果備份裝置名稱是以變數 (@*logical_device_name_var*) 提供，就可將它指定為字串常數 (@_logical\_device\_name\_var_**=** 邏輯備份裝置名稱) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
-{ DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **適用於：** 磁碟、磁帶和 URL 適用於 SQL Server。 
+{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **適用於：** DISK、TAPE 和 URL 適用於 SQL Server。 
 指定磁碟檔案或磁帶裝置，或是 Microsoft Azure Blob 儲存體服務。 URL 格式可用來建立備份至 Microsoft Azure 儲存體服務。 如需詳細資訊和範例，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程：SQL Server 備份及還原至 Microsoft Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
 
 > [!NOTE] 
@@ -371,13 +361,13 @@ COMPRESSION
 NO_COMPRESSION  
 明確停用備份壓縮。  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 指定描述備份組的自由形式文字。 這個字串最多可有 255 個字元。  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 指定備份組的名稱。 名稱最多可有 128 個字元。 如果未指定 NAME，它就是空白。  
   
-{ EXPIREDATE **='***date***'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
 指定何時可以覆寫這個備份的備份組。 如果同時使用這兩個選項，RETAINDAYS 會優先於 EXPIREDATE。  
   
 如果沒有指定任何選項，便會由 **mediaretention** 組態設定來決定到期日。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。   
@@ -385,9 +375,10 @@ NAME **=** { *backup_set_name* | **@***backup_set_var* }
 > [!IMPORTANT]  
 > 這些選項只會防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆寫檔案。 您可以利用其他方法來清除磁帶，並利用作業系統來刪除磁碟檔案。 如需有關期限驗證的詳細資訊，請參閱這個主題中的 SKIP 和 FORMAT。  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* } 指定備份組到期且可加以覆寫的時間。如果這個日期是以變數 (@* date_var*) 提供，則它必須遵照所設定的系統 **datetime** 格式，且必須指定為下列其中一項：  
+EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }  
+指定備份組到期且可加以覆寫的時間。 如果這個日期是以變數 (@_date\_var_) 提供，則它必須遵照所設定的系統 **datetime** 格式，且必須指定為下列其中一項：  
   
-- 字串常數 (@*date_var* **=** date)  
+- 字串常數 (@_date\_var_ **=** date)  
 - 字元字串資料類型的變數 (**ntext** 或 **text** 資料類型除外)  
 - **smalldatetime**  
 - **datetime** 變數  
@@ -402,7 +393,8 @@ EXPIREDATE **=** { **'***date***'** | **@***date_var* } 指定備份組到期且
 > [!NOTE]  
 > 若要忽略到期日，請使用 `SKIP` 選項。  
   
-RETAINDAYS **=** { *days* | **@***days_var* } 指定必須經過多少天之後，才能覆寫這個備份媒體集。如果是以變數 (**@***days_var*) 提供，就必須將它指定為整數。  
+RETAINDAYS **=** { *days* | **@**_days\_var_ }  
+指定必須經過多少天之後，才能覆寫這個備份媒體集。 如果是以變數 (**@**_days\_var_) 提供，就必須將它指定為整數。  
   
 **媒體集選項**  
   
@@ -456,13 +448,13 @@ FORMAT
   
 指定 FORMAT 意味著 `SKIP`；您不需要明確指示 `SKIP`。  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 指定媒體集自由形式的文字描述，最多 255 個字元。  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 指定整個備份媒體集的媒體名稱。 媒體名稱不能超出 128 個字元，如果指定 `MEDIANAME`，它必須符合先前所指定且已存在備份磁碟區的媒體名稱。 如果未指定或指定了 SKIP 選項，就不會進行媒體名稱的驗證檢查。  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 指定實體區塊大小 (以位元組為單位)。 支援的大小為 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 位元組。 磁帶裝置的預設值為 65536，其他裝置則為 512。 一般而言這個選項是不必要的，因為 BACKUP 會自動選取裝置適用的區塊大小。 明確指出區塊大小會覆寫自動選取的區塊大小。  
   
 如果採用的備份是要複製到 CD-ROM 然後再從中還原，請指定 BLOCKSIZE=2048。  
@@ -472,7 +464,7 @@ BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }
   
 **資料轉送選項**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 指定要用於備份作業的 I/O 緩衝區總數。 您可以指定任何正整數，不過，緩衝區的數目很大時，可能會因為 Sqlservr.exe 處理序中的虛擬位址空間不足而造成「記憶體不足」錯誤。  
   
 緩衝區所使用的總空間可由下列公式判斷：*buffercount/maxtransfersize*。  
@@ -480,7 +472,7 @@ BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }
 > [!NOTE]  
 > 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
 
 > [!NOTE]  
 > 使用 SQL 寫入器服務建立備份時，如果已為資料庫設定 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)，或該資料庫包含[記憶體最佳化檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)，則在還原期間的 `MAXTRANSFERSIZE` 應該大於或等於建立備份時所使用的 `MAXTRANSFERSIZE`。 
@@ -693,7 +685,7 @@ GO
 |鏡像|媒體家族 1|媒體家族 2|媒體家族 3|  
 |---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  媒體家族必須永遠備份到特定鏡像中的相同裝置。 因此，您每次使用現有媒體集時，都必須依照建立該媒體集時所指定的相同順序來列出每一個鏡像的裝置。  
   
@@ -945,23 +937,14 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[平行處理<br />資料倉儲](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 備份置於/裝載於 Azure SQL Databae 受控執行個體的 SQL 資料庫。 SQL Database [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)具有自動備份，並可讓使用者建立完整的資料庫 `COPY_ONLY` 備份。 不支援差異、記錄和檔案快照備份。  
 
@@ -1009,7 +992,8 @@ DATABASE
   
 當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱 [SQL Database 還原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
-{ *database_name* | **@***database_name_var* } 是要備份完整資料庫的來源資料庫。如果這個名稱是以變數 (**@***database_name_var*) 提供，就可將它指定為字串常數 (**@***database_name_var***=***database name*) 或字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+{ *database_name* | **@**_database\_name\_var_ }   
+是要備份完整資料庫的來源資料庫。 如果這個名稱是以變數 (**@**_database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 (**@**_database\_name\_var_**=**_database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
 如需詳細資訊，請參閱[完整檔案備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 與[備份檔案和檔案群組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。  
   
@@ -1061,24 +1045,24 @@ COMPRESSION
 NO_COMPRESSION  
 明確停用備份壓縮。  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 指定描述備份組的自由形式文字。 這個字串最多可有 255 個字元。  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 指定備份組的名稱。 名稱最多可有 128 個字元。 如果未指定 NAME，它就是空白。  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 指定媒體集自由形式的文字描述，最多 255 個字元。  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 指定整個備份媒體集的媒體名稱。 媒體名稱不能超出 128 個字元，如果指定 `MEDIANAME`，它必須符合先前所指定且已存在備份磁碟區的媒體名稱。 如果未指定或指定了 SKIP 選項，就不會進行媒體名稱的驗證檢查。  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 指定實體區塊大小 (以位元組為單位)。 支援的大小為 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 位元組。 磁帶裝置的預設值為 65536，其他裝置則為 512。 一般而言這個選項是不必要的，因為 BACKUP 會自動選取裝置適用的區塊大小。 明確指出區塊大小會覆寫自動選取的區塊大小。  
   
 **資料轉送選項**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 指定要用於備份作業的 I/O 緩衝區總數。 您可以指定任何正整數，不過，緩衝區的數目很大時，可能會因為 Sqlservr.exe 處理序中的虛擬位址空間不足而造成「記憶體不足」錯誤。  
   
 緩衝區所使用的總空間可由下列公式判斷：*buffercount/maxtransfersize*。  
@@ -1086,7 +1070,7 @@ BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }
 > [!NOTE]  
 > 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
 
 > [!NOTE]  
 > 針對含有單一資料檔案且已啟用[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的資料庫，預設的 `MAXTRANSFERSIZE` 為 65536 (64 KB)。 針對非 TDE 加密的資料庫，使用備份至 DISK 時，預設的 `MAXTRANSFERSIZE` 為 1048576 (1 MB)，而使用 VDI 或 TAPE 時為 65536 (64 KB)。
@@ -1159,25 +1143,16 @@ WITH STATS = 5;
 [還原資料庫](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* 平行處理<br />資料倉儲\*_** &nbsp;|  
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
+## <a name="parallel-data-warehouse"></a>平行處理資料倉儲
 
 建立[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]資料庫的備份，並將備份儲存在應用裝置外、使用者指定的網路位置中。 請搭配 [RESTORE DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 使用此陳述式來進行災害復原，或將資料庫從一個應用裝置複製到另一個應用裝置。  
   
@@ -1221,12 +1196,12 @@ TO DISK = '\\\\*UNC_path*\\*backup_directory*'
 - UNC 路徑和備份目錄名稱的長度上限是 200 個字元。  
 - 伺服器或主機必須以 IP 位址的形式指定。  您不能以主機或伺服器名稱的形式指定它。  
   
-DESCRIPTION = **'***text***'**  
+DESCRIPTION = **'**_text_**'**  
 指定備份的文字描述。 文字的長度上限為 255 個字元。  
   
 此描述會儲存在中繼資料中，並且會在使用 RESTORE HEADERONLY 來還原備份標頭時顯示。  
   
-NAME = **'***backup _name***'**  
+NAME = **'**_backup \_name_**'**  
 指定備份的名稱。 備份名稱可以與資料庫名稱不同。  
   
 - 名稱最多可有 128 個字元。  

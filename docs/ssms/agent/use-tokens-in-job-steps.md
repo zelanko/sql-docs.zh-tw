@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 942f13f947fad0692515ded169bb7bfccc3e0734
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42773925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675566"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "42773925"
 ## <a name="understanding-using-tokens"></a>了解如何使用 Token  
   
 > [!IMPORTANT]  
-> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG** 及 **WMI(<屬性>)**。 請注意在此版本中，Token 的使用擴充到所有警示。  
+> 對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括： **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**及 **WMI(**_&lt;屬性&gt;_**)**。 請注意在此版本中，Token 的使用擴充到所有警示。  
 >   
 > 如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]、選取 [屬性]，然後在 [警示系統] 頁面上選取 [取代回應警示之所有作業的 Token]，以啟用這些 Token。  
   
@@ -93,16 +89,16 @@ ms.locfileid: "42773925"
 |**(TIME)**|目前時間 (格式為 HHMMSS)。|  
 |**(STRTTM)**|開始執行作業的時間 (格式為 HHMMSS)。|  
 |**(STRTDT)**|開始執行作業的日期 (格式為 YYYYMMDD)。|  
-|**(WMI(<屬性>))**|對於回應 WMI 警示所執行的作業，這是 <屬性> 指定的屬性值。 例如，`$(WMI(DatabaseName))` 提供造成警示執行之 WMI 事件的 **DatabaseName** 屬性值。|  
+|**(WMI(**<屬性>**))**|對於回應 WMI 警示所執行的作業，這是 <屬性> 指定的屬性值。 例如，`$(WMI(DatabaseName))` 提供造成警示執行之 WMI 事件的 **DatabaseName** 屬性值。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server Agent 逸出巨集  
   
 |逸出巨集|Description|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(***token_name***))**|在 Token 取代字串中逸出單引號 (')。 使用兩個單引號來取代一個單引號。|  
-|**$(ESCAPE_DQUOTE(***token_name***))**|在 Token 取代字串中逸出雙引號 (")。 使用兩個雙引號來取代一個雙引號。|  
-|**$(ESCAPE_RBRACKET(***token_name***))**|在 Token 取代字串中逸出右方括號 (])。 使用兩個右方括號來取代一個右方括號。|  
-|**$(ESCAPE_NONE(***token_name***))**|取代 Token，但不逸出字串中的任何字元。 提供這個巨集的目的，是為了在 Token 取代字串只能由受信任使用者提供的環境下，支援回溯相容性。 如需詳細資訊，請參閱本主題後面的「將作業步驟更新成使用巨集」。|  
+|**$(ESCAPE_SQUOTE(**_token\_name_**))**|在 Token 取代字串中逸出單引號 (')。 使用兩個單引號來取代一個單引號。|  
+|**$(ESCAPE_DQUOTE(**_token\_name_**))**|在 Token 取代字串中逸出雙引號 (")。 使用兩個雙引號來取代一個雙引號。|  
+|**$(ESCAPE_RBRACKET(**_token\_name_**))**|在 Token 取代字串中逸出右方括號 (])。 使用兩個右方括號來取代一個右方括號。|  
+|**$(ESCAPE_NONE(**_token\_name_**))**|取代 Token，但不逸出字串中的任何字元。 提供這個巨集的目的，是為了在 Token 取代字串只能由受信任使用者提供的環境下，支援回溯相容性。 如需詳細資訊，請參閱本主題後面的「將作業步驟更新成使用巨集」。|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>將作業步驟更新成使用巨集  
 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 開始，包含 Token 但不含逸出巨集的作業步驟將會失敗，而且會傳回一則錯誤訊息，表示作業步驟含有一或多個在執行作業之前必須使用巨集更新的 Token。  
@@ -113,7 +109,7 @@ ms.locfileid: "42773925"
   
 |Token 語法|警示 Token 取代開啟|警示 Token 取代關閉|  
 |----------------|------------------------------|-------------------------------|  
-|使用 ESCAPE 巨集|作業中的所有 Token 都會順利被取代。|由警示啟動的 Token 不會被取代。 這些 Token 包括：**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG** 及 **WMI(<屬性>)**。 其他靜態 Token 則會順利被取代。|  
+|使用 ESCAPE 巨集|作業中的所有 Token 都會順利被取代。|由警示啟動的 Token 不會被取代。 這些 Token 包括： **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**及 **WMI(**_&lt;屬性&gt;_**)**。 其他靜態 Token 則會順利被取代。|  
 |不使用 ESCAPE 巨集|所有包含 Token 的作業都會失敗。|所有包含 Token 的作業都會失敗。|  
   
 ## <a name="token-syntax-update-examples"></a>Token 語法更新範例  

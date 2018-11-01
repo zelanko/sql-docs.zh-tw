@@ -18,12 +18,12 @@ ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d5605a133c4edb9a54b919522d17ffd65478a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f58f6859c57a16f5715d8a0f54c30775277b0c8d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652096"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071822"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -4,10 +4,8 @@ ms.date: 09/23/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9acf52409d656c7b1acdb37011427288c451aae
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd42cf79d99566f6d3d356d8b96bdb5415dc258c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673377"
 ---
 # <a name="database-checkpoints-sql-server"></a>資料庫檢查點 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,8 +47,8 @@ ms.locfileid: "43096780"
   
 |[屬性]|[!INCLUDE[tsql](../../includes/tsql-md.md)] 介面|Description|  
 |----------|----------------------------------|-----------------|  
-|Automatic|EXEC sp_configure **'** recovery interval **','***seconds***'**|在背景自動發出，以符合 **recovery interval** 伺服器組態選項所建議的時間上限。 自動檢查點會執行到完成為止。  自動檢查點的調節是根據未完成的寫入數目以及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否偵測到超過 50 毫秒的寫入延遲有增加。<br /><br /> 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
-|間接|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|在背景發出，以符合使用者對給定資料庫所指定的目標復原時間。 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]開始，預設值為 1 分鐘。 舊版的預設值為 0，指示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。<br /><br /> 如需詳細資訊，請參閱 [變更資料庫的目標復原時間 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)。|  
+|Automatic|EXEC sp_configure **'** recovery interval **','**_seconds_**'**|在背景自動發出，以符合 **recovery interval** 伺服器組態選項所建議的時間上限。 自動檢查點會執行到完成為止。  自動檢查點的調節是根據未完成的寫入數目以及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否偵測到超過 50 毫秒的寫入延遲有增加。<br /><br /> 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
+|間接|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=**_target\_recovery\_time_ { SECONDS &#124; MINUTES }|在背景發出，以符合使用者對給定資料庫所指定的目標復原時間。 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]開始，預設值為 1 分鐘。 舊版的預設值為 0，指示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。<br /><br /> 如需詳細資訊，請參閱 [變更資料庫的目標復原時間 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)。|  
 |手動|CHECKPOINT [*checkpoint_duration*]|當您執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 命令時發出。 手動檢查點會發生在連接的目前資料庫中。 根據預設，手動檢查點會執行到完成為止。 調節的運作方式與自動檢查點相同。  *checkpoint_duration* 參數可選擇性地指定要求的時間量 (以秒為單位)，好讓檢查點得以完成。<br /><br /> 如需詳細資訊，請參閱 [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)。|  
 |內部|無。|由各種伺服器作業 (例如備份和資料庫快照集建立) 發出，以保證磁碟映像符合目前的記錄檔狀態。|  
   

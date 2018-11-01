@@ -2,13 +2,11 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 建立 SQL Server、Azure SQL Database、Azure SQL 資料倉儲，以及平行處理資料倉儲的資料庫語法
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_TSQL
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a7e684df914684b48f9742aee5d67d6769973cb3
-ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
+ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43321248"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100519"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -65,10 +62,11 @@ ms.locfileid: "43321248"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL Database<br />邏輯伺服器](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [SQL 平行處理<br />資料倉儲](create-database-transact-sql.md?view=aps-pdw-2016) | 
+> |**_\* SQL Server \*_** | [SQL Database<br />邏輯伺服器](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [平行處理<br />資料倉儲](create-database-transact-sql.md?view=aps-pdw-2016) |
 
+&nbsp;
 
-# <a name="sql-server"></a>[SQL Server]
+## <a name="sql-server"></a>[SQL Server]
 
 ## <a name="overview"></a>概觀
 
@@ -359,7 +357,7 @@ CREATE DATABASE database_snapshot_name
  *logical_file_name*  
  這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。 *Logical_file_name* 在資料庫中必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 名稱可以是字元或 Unicode 常數，或是一般識別碼或分隔識別碼。  
   
- FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
+ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }  
  指定作業系統 (實體) 檔案名稱。  
   
  **'** *os_file_name* **'**  
@@ -444,7 +442,7 @@ CREATE DATABASE database_snapshot_name
  *database_snapshot_name*  
  這是新資料庫快照集的名稱。 資料庫快照集名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內必須是唯一的，且必須符合識別碼的規則。 *database_snapshot_name* 最多可有 128 個字元。  
   
- ON **(** NAME **=***logical_file_name***,** FILENAME **='***os_file_name***')** [ **,**... *n* ]  
+ ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]  
  若要建立資料庫快照集，請在來源資料庫中指定檔案清單。 必須個別指定所有資料檔案，快照集才能運作。 不過，記錄檔不能用在資料庫快照集。 資料庫快照集不支援 FILESTREAM 檔案群組。 如果 FILESTREAM 資料檔案包含在 CREATE DATABASE ON 子句中，此陳述式將會失敗，並引發錯誤。  
   
  如需 NAME 和 FILENAME 及其值的描述，請參閱對等之 \<filespec> 值的描述。  
@@ -859,7 +857,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
@@ -874,26 +872,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />邏輯伺服器 *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />邏輯伺服器 \*_**  | [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [平行處理<br />資料倉儲](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
+## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
 
 ## <a name="overview"></a>概觀
 
@@ -914,14 +899,16 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' } 
+  | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }
 ```  
@@ -935,8 +922,10 @@ CREATE DATABASE database_name
       {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
         | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
    ]  
 [;] 
@@ -964,14 +953,16 @@ EDITION
  
 指定資料庫的服務層。 
 
-- 邏輯伺服器上的單一和集區資料庫。 可用的值為：'basic'、'standard'、'premium'、'GeneralPurpose' 和 'BusinessCritical'。 已移除 'premiumrs' 的支援。 如有疑問，請使用此電子郵件別名： premium-rs@microsoft.com。
-- 受控執行個體中的資料庫：可用值是 'GeneralPurpose'。
+邏輯伺服器上的單一和集區資料庫。 可用的值為：'basic'、'standard'、'premium'、'GeneralPurpose'、'BusinessCritical' 和 'Hyperscale'。 
   
 若指定 EDITION 但未指定 MAXSIZE 時，MAXSIZE 會設定為版本支援的最高限制大小。  
   
 MAXSIZE
 
 指定資料庫的大小上限。 MAXSIZE 對於指定的 EDITION (服務層) 而言必須有效。下表列出服務層支援的 MAXSIZE 值與預設值 (D)：
+
+> [!NOTE]
+> **MAXSIZE** 引數不適用於超大規模服務層中的單一資料庫。 超大規模層資料庫會視需要成長，最多 100 TB。 SQL Database 服務會自動新增儲存體；您不需要設定大小上限。
 
 **邏輯伺服器上單一和集區資料庫以 DTU 為基礎的模型**
 
@@ -1025,8 +1016,8 @@ MAXSIZE
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |資料大小上限 (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-當使用 vCore 模型時，如果未設定 `MAXSIZE` 值，預設值為 32 GB。 針對以 vCore 為基礎的模型，如需資源限制的額外詳細資訊，請參閱[以 vCore 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(英文\)。
-  
+當使用 vCore 模型時，如果未設定 `MAXSIZE` 值，預設值為 32 GB。 如需 vCore 模型資源限制的其他詳細資訊，請參閱[以 vCore 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+
 **受控執行個體中資料庫以 vCore 為基礎的模型**
 
 **一般用途服務層 - 第 4 代計算平台**
@@ -1047,8 +1038,9 @@ SERVICE_OBJECTIVE
 
 - **用於邏輯伺服器上的單一和集區資料庫**
 
-  指定效能等級。 服務目標的可用值為：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`。 
-
+  - 指定效能等級。 服務目標的可用值為：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`。 
+ - **針對超大規模服務層中邏輯伺服器上的單一資料庫**，請指定效能層級。 服務目標的可用值為：`HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。 
+ 
 - **用於受控執行個體上的資料庫**
 
   指定效能等級。 服務目標的可用值為：`GP_GEN4_8`、`GP_GEN4_16`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`。 
@@ -1057,9 +1049,9 @@ SERVICE_OBJECTIVE
   
 ELASTIC_POOL (name = \<elastic_pool_name>)
  
-**適用於：** 僅單一和集區資料庫。
+**適用於：** 僅單一和集區資料庫。 不適用於超大規模服務層中的資料庫。
 
-若要在彈性資料庫集區中建立新資料庫，請將資料庫的 SERVICE_OBJECTIVE 設定為 ELASTIC_POOL 並提供集區的名稱。 如需詳細資訊，請參閱[建立和管理 SQL Database 彈性資料庫集區 (預覽)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。  
+若要在彈性資料庫集區中建立新資料庫，請將資料庫的 SERVICE_OBJECTIVE 設定為 ELASTIC_POOL 並提供集區的名稱。 如需詳細資訊，請參閱[建立和管理 SQL Database 彈性資料庫集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。  
   
 AS COPY OF [source_server_name.]source_database_name
 
@@ -1208,26 +1200,13 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><strong><em>* SQL Database<br />受控執行個體 *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />邏輯伺服器](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />受控執行個體 \*_**   | [SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest) | [平行處理<br />資料倉儲](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 ## <a name="overview"></a>概觀
 
@@ -1292,26 +1271,13 @@ CREATE DATABASE TestDB1;
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><strong><em>* SQL 資料<br />倉儲 *</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />邏輯伺服器](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL 資料<br />倉儲 \*_**    | [平行處理<br />資料倉儲](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
 
 ## <a name="overview"></a>概觀
 
@@ -1413,35 +1379,22 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL Database<br />邏輯伺服器</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />受控執行個體</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
->   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />邏輯伺服器](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />受控執行個體](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\*平行處理<br />資料倉儲\*_** |
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
+## <a name="parallel-data-warehouse"></a>平行處理資料倉儲
 
 ## <a name="overview"></a>概觀
 
 在平行處理資料倉儲中，此陳述式可用來在平行處理資料倉儲設備上建立新的資料庫。 使用此陳述式建立和設備資料庫關聯的所有檔案，以及設定資料庫表格和交易記錄的大小上限與自動成長選項。
 
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法
   
 ```  
 CREATE DATABASE database_name   
@@ -1453,7 +1406,8 @@ WITH (
 [;]  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+  
  *database_name*  
  新資料庫的名稱。 如需所允許資料庫名稱的詳細資訊，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「物件命名規則」和「保留的資料庫名稱」。  
   

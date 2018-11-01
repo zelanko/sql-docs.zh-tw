@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625516"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120005"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47625516"
 ##  <a name="Procedures"></a> 如何建立連結的伺服器  
  您可以使用下列任一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47625516"
     > [!NOTE]  
     >  如果 **[SQL Server]** 的執行個體是預設的執行個體，請輸入裝載 **[SQL Server]** 執行個體之電腦的名稱。 如果 **SQL Server** 是具名執行個體，請輸入電腦的名稱和執行個體的名稱，例如 **Accounting\SQLExpress**。  
   
-3.  在 **[伺服器類型]** 區域中，選取 **[SQL Server]** 表示連結的伺服器是 **[SQL Server]** 的另一個執行個體。  
+3.  在 [伺服器類型] 區域中，選取 [SQL Server] 表示連結的伺服器是 **SQL Server** 的另一個執行個體。  
   
 4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 **[使用登入的目前安全性內容建立]** 通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]**，然後提供所需的認證在連結的伺服器進行驗證。  
   

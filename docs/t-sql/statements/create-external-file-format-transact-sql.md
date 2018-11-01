@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719256"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
 ## <a name="performance"></a>效能
  使用壓縮檔案一律要在下列兩者間進行取捨：在外部資料來源和 SQL Server 之間傳送較少資料，同時要提高 CPU 使用量來壓縮和解壓縮資料。
   
- Gzip 壓縮文字檔不是可分割的。 若要提升 Gzip 壓縮文字檔的效能，我們建議產生多個檔案，並將它們全都儲存於外部資料來源內的相同目錄中。 這個檔案結構允許 PolyBase 使用多個讀取器和解壓縮程序，更快速地讀取及解壓縮資料。 壓縮檔案的理想數目是每個計算節點的資料讀取器處理序數目上限。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中，目前版本的資料讀取器處理序數目上限是每個節點 8 個。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，每個節點的資料讀取器處理序數目上限會因 SLO 而異。 如需詳細資訊，請參閱 [Azure SQL 資料倉儲載入模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) \(英文\)。  
+ Gzip 壓縮文字檔不是可分割的。 若要提升 Gzip 壓縮文字檔的效能，我們建議產生多個檔案，並將它們全都儲存於外部資料來源內的相同目錄中。 這個檔案結構允許 PolyBase 使用多個讀取器和解壓縮程序，更快速地讀取及解壓縮資料。 壓縮檔案的理想數目是每個計算節點的資料讀取器處理序數目上限。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，資料讀取器程序數目上限為每個節點 8 個，但每個節點 20 個讀取器的 Azure SQL Data Warehouse Gen2 除外。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，每個節點的資料讀取器處理序數目上限會因 SLO 而異。 如需詳細資訊，請參閱 [Azure SQL 資料倉儲載入模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) \(英文\)。  
   
 ## <a name="examples"></a>範例  
   

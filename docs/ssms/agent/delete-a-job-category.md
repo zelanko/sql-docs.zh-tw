@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e0ec3e7ae9771d4cb3f63e3f2bc9f670a47ac3b2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 77bb74d2337864e5a7542e3c9b1da44f5885380c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705148"
 ---
 # <a name="delete-a-job-category"></a>刪除作業類別目錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,13 +69,13 @@ ms.locfileid: "42775938"
   
 3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [管理作業類別目錄]。  
   
-4.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，選取所要刪除的作業類別目錄。  
+4.  在 [管理作業類別目錄 _server\_name_] 對話方塊中，選取要刪除的作業類別目錄。  
   
 5.  按一下 **[刪除]**。  
   
 6.  在 **[作業類別目錄]** 對話方塊中，按一下 **[是]**。  
   
-7.  關閉 [管理作業類別目錄 <伺服器名稱>] 對話方塊。  
+7.  關閉 [管理作業類別目錄 _server\_name_] 對話方塊。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

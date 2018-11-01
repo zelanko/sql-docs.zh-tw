@@ -1,9 +1,8 @@
 ---
 title: SQL Server 物件與版本的 DAC 支援 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/13/2018
 ms.prod: sql
-ms.component: data-tier-applications
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -14,19 +13,28 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a907b72d8e8433c3db7854e3e7c441cfb16525f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 708ffe100c9dae44fb96134a47981b3353e2626d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819244"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793016"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   資料層應用程式 (DAC) 支援最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 物件。  
   
  **本主題內容**  
-  
+
+
+> [!IMPORTANT]
+> 本文適用於 SQL Server 2012，但不適用於 SQL Server 2014 或更新版本。
+> 如需 SQL 2012 和更新版本的 DAC 文章，請參閱下列連結：
+>
+> - https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ee240739(v=sql.105)
+> - https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh753459(v=sql.110)
+
+
 -   [支援的 SQL Server 物件](#SupportedObjects)  
   
 -   [SQL Server 版本的資料層應用程式支援](#SupportByVersion)  

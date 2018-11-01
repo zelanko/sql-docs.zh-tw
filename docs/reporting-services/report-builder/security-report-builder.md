@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7237049744fe105c7570ed27790b930f935fef32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9831d45e62711a4fed958b13e12d44d53320a3f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755882"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906388"
 ---
 # <a name="security-report-builder"></a>安全性 (報表產生器)
   報表產生器是一種報表撰寫用戶端應用程式，專為搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器使用而設計。 該報表伺服器可以設定為以獨立伺服器的原生模式運作，或者以 SharePoint 整合模式運作以支援 SharePoint 網站上的報表。  
@@ -108,7 +108,7 @@ ms.locfileid: "47755882"
   
 -   除非您會提供有效的值，否則請不要使用依據查詢參數以及屬於 **[文字]** 類型的參數。 可用的值清單有助於使用者只選擇有效的值。 如果沒有有效的值清單，則您將無法限制使用者可以輸入的值。  
   
--   請不要使用全域 [&UserID] 來維護私用資料的安全性。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱《 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   請不要使用全域 [&UserID] 來維護私人資料的安全性。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱《 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  項目發行到報表伺服器後，報表伺服器管理員可以指定以角色為基礎的安全性或資料夾與項目層級安全性，藉此維護這些項目的安全。 如需詳細資訊，請參閱《 [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   

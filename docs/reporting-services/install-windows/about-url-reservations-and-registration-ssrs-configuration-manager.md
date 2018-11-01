@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8751dee05c58353d8c83954497bf934591a6f6b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc40029559843dfd520eb73aeda4653f910349dd
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701366"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905954"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
   Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和報表管理員定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
@@ -53,7 +53,7 @@ ms.locfileid: "47701366"
   
  如果您停止此服務或是回收此 Web 服務或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 應用程式定義域，URL 會取消註冊。 如果您在此服務執行時修改 URL 保留項目，報表伺服器將會立即回收應用程式定義域，好讓舊的 URL 可以取消註冊，並使用新的 URL。  
   
- 幾個簡單範例將可說明 URL 保留項目的概念，以及它如何與用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL 位址相關。 請注意一個要點，URL 保留項目的語法與用於存取此應用程式之 URL 的語法不同：  
+ 幾個簡單範例將可說明 URL 保留項目的概念，以及它如何與用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL 位址相關。 請注意一個要點，URL 保留項目的語法與用於存取此應用程式 URL 的語法不同：  
   
 |HTTP.SYS 中的 URL 保留項目|URL|說明|  
 |---------------------------------|---------|-----------------|  

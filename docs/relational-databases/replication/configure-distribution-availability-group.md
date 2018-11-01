@@ -1,7 +1,7 @@
 ---
 title: 設定可用性群組中的 SQL Server 散發資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615377"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817996"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>設定 Always On 可用性群組中的複寫散發資料庫
 
 本文說明如何在 Always On 可用性群組 (AG) 中設定 SQL Server 複寫散發資料庫。
 
-SQL Server 2017 CU 6 透過下列機制引進 AG 中的複寫散發資料庫支援：
+SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中複寫散發資料庫的支援：
 
 - 散發資料庫 AG 需要有接聽程式。 發行者新增散發者時，會使用接聽程式名稱作為散發者名稱。
 - 所建立的複寫作業是將接聽程式名稱當成散發者名稱。
@@ -190,13 +190,15 @@ SQL Server 2017 CU 6 透過下列機制引進 AG 中的複寫散發資料庫支�
    sp_adddistributiondb 'distribution'
    ```
 
-1. 在 DIST3 上，執行： 
+4. 在 DIST3 上，執行： 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    `@working_directory` 的值應該與針對 DIST1 和 DIST2 所指定的密碼相同。
+
+4. 在 DIST3 上，您必須重建與訂閱者的連結伺服器。
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>移除散發資料庫 AG 中的複本
 

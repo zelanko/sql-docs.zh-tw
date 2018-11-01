@@ -1,45 +1,44 @@
 ---
 title: 開始使用 ReportViewer 2016 控制項 | Microsoft Docs
-ms.date: 06/12/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33225be23805250df8b59f6d71f0a98dfb917294
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 67955e82dc7e0a9fa85b064ed27781ee7b546090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831126"
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>使用 ReportViewer 控制項整合 Reporting Services - 快速入門
+# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用報表檢視器控制項整合 Reporting Services - 入門
 
-了解開發人員如何透過 Reporting Services 2016 ReportViewer 控制項，內嵌 ASP.NET 網站的分頁報表以及 Windows Forms 應用程式。 您可以將控制項新增至新的專案，或更新現有的專案。
+報表檢視器控制項可以用來將 Reporting Services RDL 報表整合到 WebForms 和 WinForms 應用程式。 如需最新更新的詳細資料，請參閱[變更記錄](changelog.md)。
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>將 ReportViewer 控制項新增至新的 Web 專案
+## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>將報表檢視器控制項新增至新的 Web 專案
 
 1. 建立新的 **ASP.NET 空網站**或開啟現有的 ASP.NET 專案。
 
     ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. 透過 **Nuget 套件管理員主控台**安裝 ReportViewer 2016 控制項 Nuget 套件。
+2. 透過 **Nuget 套件管理員主控台**安裝報表檢視器控制項 Nuget 套件。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
-3. 在專案中新增新的 .aspx 頁面，並註冊 ReportViewer 控制項組件供頁面使用。
+3. 在專案中新增新的 .aspx 頁面，並註冊報表檢視器控制項組件供頁面使用。
 
     ```
-    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
 4. 將 **ScriptManagerControl** 新增至頁面。
 
-5. 將 ReportViewer 控制項新增至頁面。 您可以更新以下程式碼片段，以參考遠端報表伺服器上裝載的報表。
+5. 將報表檢視器控制項新增至頁面。 您可以更新以下程式碼片段，以參考遠端報表伺服器上裝載的報表。
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -52,7 +51,7 @@ ms.locfileid: "43268780"
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 
@@ -73,9 +72,9 @@ ms.locfileid: "43268780"
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>更新現有的專案以使用 ReportViewer 控制項
+## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>更新現有的專案以使用報表檢視器控制項
 
-若要在現有的專案中使用 ReportViewer 2016 控制項，請透過 Nuget 新增控制項並更新版本 *14.0.0.0* 的組件參考。 這包括更新專案的 web.config 和所有參考 ReportViewer 控制項的 .aspx 頁面。
+請務必更新版本 *15.0.0.0* 的任何組件參考 (包含專案的 web.config 以及參考檢視器控制項的所有 .aspx 頁面)。
 
 ### <a name="sample-webconfig-changes"></a>範例 web.config 變更
 
@@ -89,26 +88,26 @@ ms.locfileid: "43268780"
   <system.web>
     <compilation debug="true" targetFramework="4.5.2">
       <assemblies>
-        <!-- All assemblies updated to version 14.0.0.0. -->
-        <add assembly="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <!-- All assemblies updated to version 15.0.0.0. -->
+        <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </assemblies>
       <buildProviders>
-        <!-- Version updated to 14.0.0.0. -->
+        <!-- Version updated to 15.0.0.0. -->
         <add extension=".rdlc"
-          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
     <httpRuntime targetFramework="4.5.2"/>
     <httpHandlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
         validate="false"/>
     </httpHandlers>
   </system.web>
@@ -116,9 +115,9 @@ ms.locfileid: "43268780"
     <validation validateIntegratedModeConfiguration="false"/>
     <modules runAllManagedModulesForAllRequests="true"/>
     <handlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add name="ReportViewerWebControlHandler" verb="*" path="Reserved.ReportViewerWebControl.axd" preCondition="integratedMode"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
     </handlers>
   </system.webServer>
 </configuration>
@@ -129,19 +128,19 @@ ms.locfileid: "43268780"
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
 
-<!-- Update version to 14.0.0.0 -->
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<!-- Update version to 15.0.0.0 -->
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>將 ReportViewer 控制項新增至新的 Windows Forms 專案
+## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>將報表檢視器控制項新增至新的 Windows Forms 專案
 
 1. 建立新的 **Windows Forms 應用程式** 或開啟現有的專案。
 
     ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. 透過 **Nuget 套件管理員主控台**安裝 ReportViewer 2016 控制項 Nuget 套件。
+2. 透過 **Nuget 套件管理員主控台**安裝報表檢視器控制項 Nuget 套件。
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
@@ -170,13 +169,11 @@ ms.locfileid: "43268780"
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>如何在報表檢視器 2016 控制項上設定 100% 的高度
+## <a name="how-to-set-100-height-on-the-report-viewer-control"></a>如何在報表檢視器控制項上設定 100% 的高度
 
-新的報表檢視器 2016 控制項已針對 HTML5 標準模式頁面最佳化，適用於所有現代化瀏覽器。 過去使用舊的 RVC 控制項，當您設定 100 % 高度屬性時，即使沒有任何上階指定高度，它都會作用。 此行為在 HTML5 中已變更。 當您在新的 RVC 控制項上設定此屬性時，它只有在父項目有定義的高度 (亦即不是自動值)，或所有上階的 RVC 也有 100% 高度時，才會正確運作。
+如果將檢視器控制項的高度設定為 100%，則需要父項目具有定義的高度，或需要所有上階都具有高度百分比。
 
-以下為兩個示範範例。
-
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>將所有父項目的高度設為 100%
+### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>將所有上階的高度設定為 100%
 
 ```
 <!DOCTYPE html>
@@ -202,7 +199,7 @@ ms.locfileid: "43268780"
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>設定 reportviewer 控制項的父代樣式高度屬性
+### <a name="setting-the-parents-height-attribute"></a>設定父代的高度屬性
 
 如需檢視區百分比長度的詳細資訊，請參閱 [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths) (檢視區百分比長度)。
 
@@ -227,15 +224,15 @@ ms.locfileid: "43268780"
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>將控制項新增至 Visual Studio 工具列
 
-報表檢視器控制項現在隨附為 Nuget 套件。 因為這個緣故，Visual Studio 工具箱中預設不顯示報表檢視器控制項。 您可以執行下列動作，將控制項新增至工具箱。
+報表檢視器控制項現在隨附為 NuGet 套件，而且根據預設不再顯示於 Visual Studio 工具箱中。 您可以手動將控制項新增至工具箱。
 
 1. 依上述指示安裝 WinForms 或 WebForms 的 Nuget 套件。
 
-2. 移除 [工具箱] 中列出的 ReportViewer 控制項。 這是 12.x 版的控制項。
+2. 移除工具箱中所列出的報表檢視器控制項。
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 以滑鼠右鍵按一下 [工具箱] 的任何位置，然後選取 [選擇項目]。
+3. 以滑鼠右鍵按一下工具箱的任何位置，然後選取 [選擇項目...]。
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -252,27 +249,20 @@ ms.locfileid: "43268780"
 
     ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>注意事項
-
-- 這會在目前的專案中新增已安裝 Nuget 套件的參考。 [工具箱] 中的項目會保存至其他專案。 當您在新的解決方案/專案中安裝 Nuget 套件時，工具箱項目可能會參考較舊的版本。 
-
-- 即使組件無法再使用，[工具箱] 中仍保留控制項。 若已刪除該專案，當您嘗試從 [工具箱] 新增控制項時，Visual Studio 會擲回錯誤。 若要更正這個錯誤，請從 [工具箱] 移除控制項，使用上述步驟重新新增它。
-
-
 ## <a name="common-issues"></a>常見的問題
     
-- ReportViewer 2016 控制項旨在搭配新式瀏覽器使用。 如果瀏覽器以 IE 相容性模式呈現網頁，控制項可能無法運作。 內部網路網站可能需要中繼標籤覆寫設定，這會鼓勵以相容性模式轉譯內部網路頁面。
+檢視器控制項是為現代瀏覽器所設計。 如果瀏覽器使用 IE 相容性模式呈現頁面，則控制項可能無法正常運作。 內部網路網站可能需要中繼標籤覆寫預設瀏覽器行為。
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>提供意見反應
+## <a name="feedback"></a>意見反應
 
-在 [Reporting Services MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)或透過電子郵件 [RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com)，讓小組了解您遇到的控制項問題。
+讓小組了解 [Reporting Services 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices)上的問題。
 
 ## <a name="see-also"></a>另請參閱
 
-[2016 ReportingViewer 控制項中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
+[報表檢視器控制項中的資料收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 更多問題嗎？ [試試 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
 

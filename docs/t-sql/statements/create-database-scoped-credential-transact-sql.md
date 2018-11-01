@@ -5,9 +5,7 @@ ms.date: 02/28/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE SCOPED CREDENTIAL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e356fc4e62fb07cff0f08c375488a759d01712
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563994"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762416"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +51,10 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  指定要建立之資料庫範圍認證的名稱。 *credential_name* 的開頭不可以是編號 (#) 符號。 系統認證必須以 ## 為開頭。  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  指定連接到伺服器外部時所要使用的帳戶名稱。 若要使用共用金鑰從 Azure Blob 儲存體匯入檔案，身分識別名稱必須為 `SHARED ACCESS SIGNATURE`。 若要將資料載入 SQL DW，可以將任何有效值用於身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。  
   
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  指定外寄驗證所需的秘密。 從 Azure Blob 儲存體匯入檔案需要 `SECRET`。 若要從 Azure Blob 儲存體載入到 SQL DW 或平行處理資料倉儲，祕密必須是Azure 儲存體金鑰。  
 >  [!WARNING]
 >  SAS 金鑰值的開頭可能是 '?' (問號)。 當您使用 SAS 金鑰時，您必須移除前置字元 '?'。 否則您的工作可能會受阻。  

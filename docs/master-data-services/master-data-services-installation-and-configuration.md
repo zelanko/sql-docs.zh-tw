@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90107457214d5edec92c45620d70f4e48504ab6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672246"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072248"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -120,7 +120,7 @@ ms.locfileid: "47672246"
 
  
 > [!WARNING]  
-    >  您必須先[安裝 IIS](#InstallIIS)，再啟動 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 組態管理員。 否則，組態管理員會顯示 Internet Information Services 錯誤，並且無法建立 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式。  
+    >  您必須先[安裝 IIS](#InstallIIS)，再啟動 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 組態管理員。 否則，Configuration Manager 會顯示 Internet Information Services 錯誤，並且無法建立 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式。  
     
 > **瀏覽器需求**
 >>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式僅適用於 Internet Explorer (IE) 9 或更新版本。 不支援 IE 8 和更早版本、Microsoft Edge 和 Chrome。    

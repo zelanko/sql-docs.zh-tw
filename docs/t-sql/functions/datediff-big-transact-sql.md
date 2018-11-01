@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b309bb7411d3c75aa1c98a219123efffc5dbca3e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644846"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 + **smalldatetime**
 + **time**
 
-針對 *date*，`DATEDIFF_BIG` 會接受資料行運算式、運算式、字串常值或使用者定義變數。 字串常值必須解析成 **datetime**。 請使用四位數年份以避免模糊不清的問題。 `DATEDIFF_BIG` 會從 *startdate* 減去 *enddate*。 若要避免模糊不清，請使用四位數年份。 如需兩位數年份的資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
+針對 *date*，`DATEDIFF_BIG` 會接受資料行運算式、運算式、字串常值或使用者定義變數。 字串常值必須解析成 **datetime**。 請使用四位數年份以避免模糊不清的問題。 `DATEDIFF_BIG` 會從 *enddate* 減去 *startdate*。 若要避免模糊不清，請使用四位數年份。 如需兩位數年份的資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 *enddate*  
 請參閱＜*startdate*＞。
@@ -92,7 +89,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 傳回跨越指定 startdate 和 enddate 之指定 datepart 界限的計數 (作為帶正負號的 Bigint 值)。
 -   每個特定 *datepart* 和該 *datepart* 的縮寫會傳回相同的值。  
   
-針對超出 **bigint** 範圍 (-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807) 的傳回值，`DATEDIFF_BIG` 會傳回錯誤。 針對 **millisecond**，*startdate* 和 *enddate* 最大的差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年。
+針對超出 **bigint** 範圍 (-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807) 的傳回值，`DATEDIFF_BIG` 會傳回錯誤。 針對 **millisecond**，*enddate* 與 *startdate* 之間的最大差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年。
   
 如果 *startdate* 和 *enddate* 都只獲指派時間值，且 *datepart* 不是時間 *datepart*，`DATEDIFF_BIG` 會傳回 0。
   
@@ -121,7 +118,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Remarks  
-您可以在 SELECT <list>、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中使用 `DATEDIFF_BIG`。
+在 SELECT 中使用 `DATEDIFF_BIG` <list>、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
   
 `DATEDIFF_BIG` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF_BIG` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
   

@@ -1,0 +1,23 @@
+items:
+- name: 概觀
+  href: database-experimentation-assistant-overview.md
+- name: 開始使用
+  href: database-experimentation-assistant-get-started.md
+- name: 擷取追蹤
+  href: database-experimentation-assistant-capture-trace.md
+- name: 設定重新執行
+  href: database-experimentation-assistant-configure-replay.md
+- name: 重新執行追蹤
+  href: database-experimentation-assistant-replay-trace.md
+- name: 建立報表
+  href: database-experimentation-assistant-create-report.md
+- name: 檢視報表
+  href: database-experimentation-assistant-view-report.md
+- name: 在命令提示字元中執行
+  href: database-experimentation-assistant-run-command-prompt.md
+ms.openlocfilehash: 527112d5dc2679f92e8a5bc1083e24ef9be175e4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120486"

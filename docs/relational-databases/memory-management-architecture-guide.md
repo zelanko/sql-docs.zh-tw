@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623826"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +107,7 @@ ms.locfileid: "43073057"
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對 "memory_to_reserve" 所進行的變更
 舊版 SQL Server 中 ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)**、**CLR 配置器**、SQL Server 處理序中**執行緒堆疊**的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
 
-為這些配置保留的虛擬位址空間會依 ***memory_to_reserve*** 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]*-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
+為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]*-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
 
 因為從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，新的「任何大小」分頁配置器也會處理大於 8 KB 的配置，所以 *memory_to_reserve* 值不會包含多頁配置。 除此變更之外，此設定選項的其餘項目皆維持原狀。
 

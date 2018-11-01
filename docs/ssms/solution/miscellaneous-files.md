@@ -16,16 +16,16 @@ ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 842b6e8c91431152080055a09ef2627a03e99abc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecabdec464cb72cf5024feab83e547c95cafd9d6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839462"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119797"
 ---
 # <a name="miscellaneous-files"></a>其他檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-不在任何專案內的檔案稱為「其他檔案」(Miscellaneous file)。 您開啟了某個方案之後，便可以開啟和修改關聯於這個專案的其他檔案。 如果副檔名沒有相關的專案程式碼編輯器，這個檔案便會分類為其他檔案。 例如，在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，就會將副檔名為 .txt 或 .mdx 的檔案當作其他檔案來處理。 在 MDX 專案中，副檔名為 .txt 或 .sql 的檔案會當作其他檔案來處理。 若要使副檔名與程式碼編輯器相關聯，請參閱 [如何：使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+任何專案的外部檔案稱為「其他檔案」(Miscellaneous file)。 您開啟了某個方案之後，便可以開啟和修改關聯於這個專案的其他檔案。 如果副檔名沒有相關的專案程式碼編輯器，這個檔案便會分類為其他檔案。 例如，在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，就會將副檔名為 .txt 或 .mdx 的檔案當作其他檔案來處理。 在 MDX 專案中，副檔名為 .txt 或 .sql 的檔案會當作其他檔案來處理。 若要使副檔名與程式碼編輯器相關聯，請參閱 [如何：使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
   
 基於許多原因，能夠將其他檔案加入專案中非常有用。 您可能會有某個檔案不一定是已獲辨識的指令碼，但對於方案的開發而言，卻不可或缺。 常見的範例包括開發附註或指示、資料檔，以及程式碼片段。  
   

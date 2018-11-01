@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 041143d7b55876386e3384060e0da2b340646b76
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1acdb92933bfaaf73b68fa4101dd882d14f0dca1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764426"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,9 +78,9 @@ ms.locfileid: "42776605"
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，選取 **[SQL Server 服務]**。  
   
-6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (<伺服器名稱>)]，其中 <伺服器名稱> 是您要變更服務啟動帳戶之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的名稱，然後選取 [屬性]。  
+6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent _(server\_name)_]，其中 *server_name* 是您要變更服務啟動帳戶之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的名稱，然後選取 [屬性]。  
   
-7.  在 [SQL Server Agent (<伺服器名稱>) 屬性] 對話方塊的 [登入] 索引標籤中，選取 [登入身分] 底下的下列其中一個選項：  
+7.  在 [SQL Server Agent _(server\_name)_ 屬性] 對話方塊的 [登入] 索引標籤中，選取 [登入身分] 下的下列其中一個選項：  
   
     -   **內建帳戶**：如果您的作業僅需來自本機伺服器的資源，請選取此選項。 如需有關如何選擇 Windows 內建帳戶類型的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](http://msdn.microsoft.com/library/ms191543.aspx)。  
   

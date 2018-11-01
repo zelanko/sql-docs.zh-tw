@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2bb0f1a92ffd45e4929ed97a5f73f205d3ccf2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732416"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071752"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
@@ -110,7 +110,7 @@ ms.locfileid: "47732416"
   
      如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即非 Oracle) 上工作時選取了 [標記初始載入結束]，連接管理員中指定的使用者就必須是 **db_owner** 或**系統管理員**。  
   
--   **標記 CDC 開始**：此作業是在從快照集資料庫或靜止資料庫進行初始載入時使用。 系統會在初始載入封裝中的任何時間點叫用此作業。 此作業所接受的參數可以是快照集 LSN、快照集資料庫的名稱 (從中自動衍生快照集 LSN)，也可以保留空白 (在此情況中，目前資料庫 LSN 就會當做變更處理封裝的啟始 LSN 使用)。  
+-   **標記 CDC 開始**：此作業會在從快照集資料庫或靜止資料庫進行初始載入時使用。 系統會在初始載入封裝中的任何時間點叫用此作業。 此作業所接受的參數可以是快照集 LSN、快照集資料庫的名稱 (從中自動衍生快照集 LSN)，也可以保留空白 (在此情況中，目前資料庫 LSN 就會當做變更處理封裝的啟始 LSN 使用)。  
   
      此作業是用來取代「標記初始載入開始/結束」作業。  
   

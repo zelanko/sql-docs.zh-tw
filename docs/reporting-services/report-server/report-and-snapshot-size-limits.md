@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c402cbbf3dca4a34b8e60b9b5482dc63051b63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842876"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119936"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  

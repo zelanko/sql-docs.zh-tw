@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629146"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169268"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  這項交談會維持開啟狀態，直到卸除事件通知為止。 特定錯誤可能使交談提早關閉。 明確地結束部分或所有交談，可以防止目標服務接收其他訊息。  
   
- { **'***broker_instance_specifier***'** | **'current database'** }  
+ { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
  對已經解析的 *broker_service* 指定 Service Broker 執行個體。 您可以透過查詢 **sys.databases** 目錄檢視的 **service_broker_guid** 資料行，來取得特定 Service Broker 的值。 使用 **'current database'** 來指定目前資料庫中的 Service Broker 執行個體。 **'current database'** 是不區分大小寫的字串常值。  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  在底下的範例 A 和 B 中，`TO SERVICE 'NotifyService'` 子句 ('8140a771-3c4b-4479-8ac0-81008ab17984') 中的 GUID 是範例設定所在的電腦所特有。 對於該執行個體而言，這就是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 GUID。  
 >   
->  若要複製及執行這些範例，您需要使用電腦和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的 GUID 來取代這個 GUID。 如同上面的＜引數＞一節所說明，您可以透過查詢 sys.databases 目錄檢視的 service_broker_guid 資料行，以取得 **'***broker_instance_specifier***'**。  
+>  若要複製及執行這些範例，您需要使用電腦和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的 GUID 來取代這個 GUID。 如同上面的＜引數＞一節所說明，您可以透過查詢 sys.databases 目錄檢視的 service_broker_guid 資料行，以取得 **'**_broker\_instance\_specifier_**'**。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. 建立以伺服器為範圍的事件通知  
  下列範例會利用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 來建立設定目標服務所需要的物件。 目標服務會參考事件通知專用的起始服務之訊息類型和合約。 之後，每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發生 `Object_Created` 追蹤事件時，都會在這個傳送通知的目標服務上建立一項事件通知。  

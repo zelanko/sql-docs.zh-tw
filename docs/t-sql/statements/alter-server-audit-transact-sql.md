@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756558"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,13 +82,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > 在 Azure SQL Database 受控執行個體中，SQL Audit 會在伺服器層級執行並在 Azure Blob 儲存體中存放 `.xel` 檔案。
   
- FILEPATH **= '***os_file_path***'**  
+ FILEPATH **= '**_os\_file\_path_**'**  
  稽核記錄的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  
   
- MAXSIZE **=***max_size*  
+ MAXSIZE **=**_max\_size_  
  指定稽核檔案所能成長的大小上限。 *max_size* 值必須是整數，而且後面緊接著 **MB**、**GB**、**TB** 或 **UNLIMITED**。 您可以為 *max_size* 指定的大小下限為 2 **MB**，而上限則為 2,147,483,647 **TB**。 指定了 **UNLIMITED** 時，檔案會成長到磁碟已滿為止。 指定低於 2 MB 的值會引發 MSG_MAXSIZE_TOO_SMALL 錯誤。 預設值為 **UNLIMITED**。  
   
- MAX_ROLLOVER_FILES **=***integer* | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
  指定檔案系統中所要保留的最大檔案數目。 當設定 MAX_ROLLOVER_FILES=0 時，不會限制要建立的換用檔案數目。 預設值是 0。 可以指定的檔案數量上限為 2,147,483,647。  
   
  MAX_FILES =*integer*  
@@ -101,7 +98,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  這個選項會在磁碟上將檔案預先配置為 MAXSIZE 值。 只有當 MAXSIZE 不等於 UNLIMITED 時，才會套用它。 預設值是 OFF。  
   
- QUEUE_DELAY **=***integer*  
+ QUEUE_DELAY **=**_integer_  
  判斷在強制處理稽核動作之前經過的時間長度 (以毫秒為單位)。 值為 0 表示同步傳遞。 可設定的最小查詢延遲值為 1000 (1 秒)，這是預設值。 最大值為 2,147,483,647 (2,147,483.647 秒鐘或是 24 天 20 小時 31 分鐘又 23.647 秒鐘)。 指定無效的數字會引發 MSG_INVALID_QUEUE_DELAY 錯誤。  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -139,7 +136,7 @@ SHUTDOWN
  ANSI 或 Unicode 字串 (依述詞比較的需求而定)。 不會針對述詞比較函數執行隱含字串類型轉換。 傳遞錯誤的類型會產生錯誤。  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當您呼叫 ALTER AUDIT 時，您至少必須指定其中一個 TO、WITH 或 MODIFY NAME 子句。  
   
  您必須將稽核的狀態設定為 OFF 選項，才能變更稽核。 如果在設定 STATE=OFF 以外的任何選項時啟用稽核，而且執行 ALTER AUDIT，您會收到 MSG_NEED_AUDIT_DISABLED 錯誤訊息。  
@@ -148,7 +145,7 @@ SHUTDOWN
   
  在稽核已建立之後，就不能變更稽核的 GUID。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  若要建立、改變或卸除伺服器稽核主體，您必須具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

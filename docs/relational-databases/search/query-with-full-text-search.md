@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4e62ce63f377d085d8726f7b1ad187351f164cf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 92b2a975fbee89249850e4acfdf23f7f47e5bd23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652626"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -218,7 +214,7 @@ GO
   
  傳回的項目是與星號 (*) 前指定之文字相符的所有文字。 如果文字及星號未以雙引號 (") 分隔，例如 `CONTAINS (DESCRIPTION, 'top*')`，則全文檢索搜尋就不會將星號視為萬用字元。  
   
- 若前置詞彙為片語，每個組成片語的 Token 都會被視為個別的前置項目。 傳回的資料列均包含以前置詞彙開頭的單字。 例如，"light bread*" 這個前置詞彙找到的是包含 "light breaded"、"lightly breaded" 或 "light bread" 文字的資料列，而不會傳回如 "lightly toasted bread" 的資料列。
+ 若前置詞彙為片語，每個組成片語的 Token 都會被視為個別的前置項目。 傳回的資料列均包含以前置詞彙開頭的單字。 例如，"light bread\*" 這個前置詞彙找到的是包含 "light breaded"、"lightly breaded" 或 "light bread" 文字的資料列，而不會傳回如 "lightly toasted bread" 的資料列。
 
 #### <a name="more-info-about-prefix-searches"></a>前置詞搜尋的詳細資訊
 

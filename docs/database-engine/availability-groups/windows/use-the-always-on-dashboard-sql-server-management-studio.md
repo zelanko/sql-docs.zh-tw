@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4e526fb8b2bb72bd670b1c21d6734b23ad601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704511"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120195"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性群組儀表板 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -324,6 +324,10 @@ ms.locfileid: "47704511"
  **上次重做時間**  
  指出在次要資料庫上重做上一個記錄檔記錄的時間。 預設隱藏此值。  
  
+
+   > [!NOTE]  
+   >  大部分的資料是以 sys.dm_hadr_database_replica_states 為基礎，因此可能適用某些限制。 如需詳細資訊，請參閱 [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。
+
 
 ## <a name="always-on-availability-group-latency-reports"></a>Always On 可用性群組延遲報表
 可用性群組延遲報表是一種報表工具，內建於可用性群組儀表板且可用於 [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) 版。 此功能提供容易了解的報表，詳述記錄傳輸程序各種階段所花的時間。 這可用來縮小在同步處理程序期間可能造成延遲的原因。 

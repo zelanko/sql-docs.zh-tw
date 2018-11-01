@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670263"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169284"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,11 +91,11 @@ CREATE FULLTEXT INDEX ON table_name
   
  若已指定 *language_term*，其所表示的語言會用於編製儲存在 **char**、**nchar**、**varchar**、**nvarchar**、**text** 及 **ntext** 資料行中資料的索引。 這個語言是資料行的全文檢索述詞未指定 *language_term* 時，在查詢時所用的預設語言。  
   
- 當指定為字串時，*language_term* 會對應至 syslanguages 系統資料表中的 alias 資料行值。 字串必須以單引號括住，如 **'***language_term***'**。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
+ 當指定為字串時，*language_term* 會對應至 syslanguages 系統資料表中的 alias 資料行值。 字串必須以單引號括住，如 **'**_language\_term_**'**。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
  如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
   
- 您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
+ 您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
  請利用 sp_configure 預存程序來存取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之預設全文檢索語言的相關資訊。 如需詳細資訊，請參閱本主題稍後的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)的使用者閱讀。  
   
@@ -184,7 +184,7 @@ CREATE FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. 建立唯一的索引、全文檢索目錄及全文檢索索引  
- 下列範例會針對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中 `JobCandidateID` 資料表上的 `HumanResources.JobCandidate` 資料行建立唯一索引。 然後此範例會建立預設全文檢索目錄 `ft`。 最後，此範例會使用 `Resume` 目錄和系統停用字詞表，針對 `ft` 資料行建立全文檢索索引。  
+ 下列範例會針對 `JobCandidateID` 範例資料庫中 `HumanResources.JobCandidate` 資料表上的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行建立唯一索引。 然後此範例會建立預設全文檢索目錄 `ft`。 最後，此範例會使用 `Resume` 目錄和系統停用字詞表，針對 `ft` 資料行建立全文檢索索引。  
   
 ```  
 CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  

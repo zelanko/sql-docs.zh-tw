@@ -20,12 +20,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53849f61b723d3881716a4ef24e3f0054871eaf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323560bbca3b4914dd9f72bad6f781973d3a34e7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606598"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119702"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>檢視資料庫快照集的疏鬆檔案大小 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47606598"
 > [!NOTE]  
 >  疏鬆檔案是以每次遞增 64 KB 的方式成長；因此磁碟上的疏鬆檔案大小一律是 64 KB 的倍數。  
   
- 若要檢視目前在磁碟上使用的快照集之每個疏鬆檔案的位元組數，請查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 動態管理檢視的 **size_on_disk_bytes** 資料行。  
+ 若要檢視快照集的每個疏鬆檔案目前在磁碟上使用的位元組數，請查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 動態管理檢視的 **size_on_disk_bytes** 資料行。  
   
  若要檢視疏鬆檔案使用的磁碟空間，請以滑鼠右鍵按一下 Microsoft Windows 中的檔案，然後按一下 [內容]並查看 [磁碟大小] 值。  
   

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769006"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085174"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
@@ -27,7 +27,8 @@ ms.locfileid: "47769006"
 ## <a name="requirements"></a>需求
 
 > [!IMPORTANT]
-> 如果您已經設定 Reporting Services SharePoint 整合模式，則目前無法安裝此網頁組件。
+> 從版本 "15.X.X.X" 開始，您可以與您現有的 Reporting Services SharePoint 整合模式共用服務應用程式並存安裝 ReportViewerWebPart。
+> 透過這項 .wsp 解決方案的更新，我們引進了新的檔案。您必須分別使用 Uninstall-SPSolution 及 Install-SPSolution Cmdlet，來撤銷先前的解決方案並重新部署新 .wsp。
 >
 
 **支援的 SharePoint 伺服器版本：**
@@ -150,7 +151,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 * 在您已設定 SharePoint 整合模式時解除安裝 SSRS 時發生錯誤：
 
-    Install-SPRSService: [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService 無法轉換成 [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService。 類型 A 源自 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' 位置之 'Default' 內容中的 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'。 類型 B 源自 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' 位置之 'Default' 內容中的 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'。
+    Install-SPRSService：[A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService 無法轉換成 [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService。 類型 A 源自 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' 位置之 'Default' 內容中的 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'。 類型 B 源自 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' 位置之 'Default' 內容中的 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'。
     
     解決方案：
     1. 移除報表檢視器網頁組件

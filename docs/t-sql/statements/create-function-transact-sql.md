@@ -36,12 +36,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4e29041776bb0b4c9edde3d2e839b89b8e88100a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596877"
+ms.locfileid: "47864286"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -338,7 +338,7 @@ RETURNS return_data_type
  *select_stmt*  
  這是單一 SELECT 陳述式，可定義嵌入資料表值函式的傳回值。  
   
- ORDER (\<order_clause>) 指定從資料表值函式傳回結果的順序。 如需詳細資訊，請參閱本主題稍後的＜使用排序次序的指引＞一節。  
+ ORDER (\<order_clause>) 指定從資料表值函式傳回結果的順序。 如需詳細資訊，請參閱本主題稍後的[在 CLR 資料表值函式中使用排序次序](#using-sort-order-in-clr-table-valued-functions)。  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **適用於**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   

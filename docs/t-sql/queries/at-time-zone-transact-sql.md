@@ -16,12 +16,12 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14041ee22bc02bed6522b274e8281f3a7f58da41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721736"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072232"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

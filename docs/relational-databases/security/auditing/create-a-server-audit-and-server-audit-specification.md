@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.SQLAUDIT.FILTER.F1
@@ -20,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 71af9860ae7af711c9c8e1cac4132f0046d8e01c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845406"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +97,7 @@ ms.locfileid: "43023213"
      指定當 [稽核目的地] 為檔案時，要寫入稽核資料的資料夾位置。  
   
      **省略符號 (...)**  
-     開啟 [尋找資料夾] – *server_name* 對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
+     開啟 [尋找資料夾 - _server\_name_] 對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
   
      **稽核檔案最大限制:**  
      **輪用檔案數量上限**  

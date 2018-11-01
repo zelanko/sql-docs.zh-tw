@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JSON_VALUE
@@ -20,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 8a688156d1d31a7f3b0dfaa90390dc091eeea950
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b311660253d893673927966ffe6309d2f3530d79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023018"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687298"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ JSON_VALUE ( expression , path )
  *expression*  
  運算式。 通常為變數的名稱或包含 JSON 文字的資料行。  
  
- 若 **JSON_VALUE** 在找到 *path* 識別的值之前，先找到 *expression* 中無效的 JSON，函式便會傳回錯誤。 若 **JSON_VALUE* 找不到 *path* 識別的值，它會掃描整個文字，並在 *expression* 中任何一處找到無效的 JSON 時傳回錯誤。
+ 若 **JSON_VALUE** 在找到 *path* 識別的值之前，先找到 *expression* 中無效的 JSON，函式便會傳回錯誤。 如果 **JSON_VALUE** 找不到 *path* 所識別的值，則會掃描整個文字，並在 *expression* 中任何一處找到無效的 JSON 時傳回錯誤。
   
  *path*  
  指定要擷取之屬性的 JSON 路徑。 如需詳細資訊，請參閱 [JSON 路徑運算式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)。  

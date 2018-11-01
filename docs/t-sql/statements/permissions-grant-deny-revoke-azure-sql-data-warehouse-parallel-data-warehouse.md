@@ -5,24 +5,21 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 734d7558f8193879d13c4567d75a7ba269c114fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613126"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,7 +83,7 @@ REVOKE
   
  ON [ \<class_type> :: ] *securable* **ON** 子句描述要作為授與、拒絕或撤銷權限時之執行對象的 securable 參數。  
   
- \<class_type> 安全性實體的類別類型。 這可以是 **LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE** 或 **USER**。 您也可以將權限授與 **SERVER***class_type*，但針對這些權限不需指定 **SERVER**。 當權限包含 **DATABASE** 一字 (例如 **ALTER ANY DATABASE**) 時，不需指定 **DATABASE**。 未指定任何 *class_type* 且權限類型未限制為伺服器或資料庫類別時，會假設類別為 **OBJECT**。  
+ \<class_type> 安全性實體的類別類型。 這可以是 **LOGIN**、**DATABASE**、**OBJECT**、**SCHEMA**、**ROLE** 或 **USER**。 您也可以將權限授與 **SERVER**_class\_type_，但針對這些權限不需指定 **SERVER**。 當權限包含 **DATABASE** 一字 (例如 **ALTER ANY DATABASE**) 時，不需指定 **DATABASE**。 未指定任何 *class_type* 且權限類型未限制為伺服器或資料庫類別時，會假設類別為 **OBJECT**。  
   
  *securable*  
  要作為授與、拒絕或撤銷權限時之執行對象的登入、資料庫、資料表、檢視、結構描述、程序、角色或使用者的名稱。 指定物件名稱時，可以使用 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)中所述的三部分命名規則來指定。  

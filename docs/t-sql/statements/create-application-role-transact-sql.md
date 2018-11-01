@@ -24,12 +24,12 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b880607c133225a3dd85dc2f4abd6fc051ef931a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f434bd06f06071b61d037ce68f8a69edbb8c2977
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753376"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168933"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  指定應用程式角色的名稱。 這個名稱必須尚未用來參考資料庫中的任何主體。  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  指定資料庫使用者要用來啟動應用程式角色的密碼。 您一定要使用增強式密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。  
   
- DEFAULT_SCHEMA **=***schema_name*  
+ DEFAULT_SCHEMA **=**_schema\_name_  
  指定伺服器在解析這個角色的物件名稱時，將搜尋的第一個結構描述。 如果未定義 DEFAULT_SCHEMA，應用程式角色會將 DBO 用做它的預設結構描述。 *schema_name* 可以是資料庫中不存在的結構描述。  
   
 ## <a name="remarks"></a>Remarks  

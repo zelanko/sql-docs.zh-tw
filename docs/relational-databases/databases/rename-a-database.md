@@ -1,7 +1,7 @@
 ---
 title: 重新命名資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/20/2017
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,83 +16,103 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b040059f7ad2fd1b58998e2b29279b4125374076
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6b97d2d670754f8205ffe269883d6791f605f5b
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232532"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名使用者定義資料庫。 資料庫的名稱可以包含任何依照識別碼規則的字元。  
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 Azure SQL Database 中重新命名使用者定義的資料庫。 資料庫的名稱可以包含任何依照識別碼規則的字元。  
   
- **本主題內容**  
+## <a name="in-this-topic"></a>本主題內容
   
--   **開始之前：**  
+- 開始之前：  
   
-     [限制事項](#Restrictions)  
+     [限制事項](#limitations-and-restrictions)  
   
-     [Security](#Security)  
+     [Security](#security)  
   
--   **使用下列方法重新命名資料庫：**  
+- 使用下列方法重新命名資料庫：  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [Transact-SQL](#rename-a-database-using-sql-server-management-studio)  
   
-     [Transact-SQL](#TsqlProcedure)  
+     [Transact-SQL](#rename-a-database-using-transact-sql)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
-> 若要重新命名 Azure SQL Database 中的資料庫，請使用 [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 陳述式。 若要重新命名 Azure SQL 資料倉儲或平行處理資料倉儲中的資料庫，請使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 陳述式。
+> 若要重新命名 Azure SQL 資料倉儲或平行處理資料倉儲中的資料庫，請使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 陳述式。
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+## <a name="before-you-begin"></a>開始之前
   
-###  <a name="Restrictions"></a> 限制事項  
+### <a name="limitations-and-restrictions"></a>限制事項  
   
--   您無法重新命名系統資料庫。  
+- 您無法重新命名系統資料庫。
+- 其他使用者正在存取資料庫時，無法變更資料庫名稱。 
+  - 在 SQL Server 中，您可以設定單一使用者模式的資料庫，以關閉任何開啟的連線。 如需詳細資訊，請參閱[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。
+  - 在 Azure SQL Database 中，您必須確定沒有任何其他使用者有要重新命名之資料庫的開啟連線。
   
-###  <a name="Security"></a> 安全性  
+### <a name="security"></a>Security  
   
-####  <a name="Permissions"></a> 權限  
- 需要資料庫的 ALTER 權限。  
+#### <a name="permissions"></a>[權限]
+
+需要資料庫的 ALTER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+## <a name="rename-a-database-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 重新命名資料庫
+
+使用 SQL Server Management Studio，透過下列步驟重新命名 SQL Server 或 Azure SQL 資料庫。
   
-#### <a name="to-rename-a-database"></a>若要重新命名資料庫  
+1. 在 [物件總管] 中，連線至 SQL 執行個體。  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+2. 請確定資料庫沒有任何開啟的連線。 如果您使用 SQL Server，則可以[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)關閉任何開啟的連線，並防止其他使用者在您變更資料庫名稱時連線。  
   
-2.  確定沒有人使用此資料庫，然後[將資料庫設定為單一使用者模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。  
+3. 在 [物件總管] 中，展開 [資料庫]，並以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]。  
   
-3.  展開 [資料庫]，以滑鼠右鍵按一下要重新命名的資料庫，然後按一下 [重新命名]。  
+4. 輸入新的資料庫名稱，然後按一下 **[確定]**。  
   
-4.  輸入新的資料庫名稱，然後按一下 **[確定]**。  
+## <a name="rename-a-database-using-transact-sql"></a>使用 Transact-SQL 重新命名資料庫  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>讓 SQL Server 資料庫進入單一使用者模式以重新予以命名
+
+在 SQL Server Management Studio 中使用 T-SQL，透過下列步驟重新命名 SQL Server 資料庫，包括讓資料庫進入單一使用者模式的步驟，以及在重新命名之後，讓資料庫重新進入多使用者模式的步驟。
   
-#### <a name="to-rename-a-database"></a>若要重新命名資料庫  
+1. 連線至您執行個體的 `master` 資料庫。  
+2. 開啟查詢視窗。  
+3. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `MyTestDatabase` 資料庫的名稱變更為 `MyTestDatabaseCopy`。
   
-1.  連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+   ```sql
+   USE master;  
+   GO  
+   ALTER DATABASE MyTestDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+   GO
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   GO  
+   ALTER DATABASE MyTestDatabaseCopy SET MULTI_USER
+   GO
+   ```  
+
+### <a name="to-rename-an-azure-sql-database-database"></a>重新命名 Azure SQL Database 資料庫
+
+在 SQL Server Management Studio 中使用 T-SQL，透過下列步驟重新命名 Azure SQL 資料庫。
   
-2.  在標準列中，按一下 **[新增查詢]**。  
+1. 連線至您執行個體的 `master` 資料庫。  
+2. 開啟查詢視窗。
+3. 請確定沒有人正在使用資料庫。
+4. 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `MyTestDatabase` 資料庫的名稱變更為 `MyTestDatabaseCopy`。
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `AdventureWorks2012` 資料庫的名稱變更為 `Northwind`。  
+   ```sql
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   ```  
+
+## <a name="backup-after-renaming-a-database"></a>在重新命名資料庫之後備份  
+
+在 SQL Server 中重新命名資料庫之後，請備份 `master` 資料庫。 在 Azure SQL Database 中，不需要這麼做，因為會自動備份。  
   
-```sql  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012  
-Modify Name = Northwind ;  
-GO  
-```  
-  
-###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> 待處理：重新命名資料庫之後  
- 重新命名任何資料庫之後，請備份 **master** 資料庫。  
-  
-## <a name="see-also"></a>另請參閱  
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [資料庫識別碼](../../relational-databases/databases/database-identifiers.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [資料庫識別碼](../../relational-databases/databases/database-identifiers.md)  

@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11534581d2c9dfab36aa8b3a75d6f425f11a67d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26a078bd0e34344cfa84abc336a125e79af18bab
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776506"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336217"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,20 +40,12 @@ ms.locfileid: "47776506"
 ## <a name="syntax"></a>語法  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT_BIG ( { [ ALL | DISTINCT ] expression } | * )  
-   [ OVER ( [ partition_by_clause ] [ order_by_clause ] ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
   
 -- Analytic Function Syntax  
-COUNT_BIG ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT_BIG ( [ ALL ] { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -64,10 +56,10 @@ DISTINCT
 指定 `COUNT_BIG` 傳回唯一非 Null 值的數目。
   
 *expression*  
-任意類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 請注意，`COUNT_BIG` 不支援運算式中的彙總函數或子查詢。
+任意類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 `COUNT_BIG` 不支援運算式中的彙總函數或子查詢。
   
 *\**  
-指定 `COUNT_BIG` 應該計算所有資料列，以判斷要傳回的總資料表資料列計數。 `COUNT_BIG(*)` 不接受任何參數，而且不支援使用 DISTINCT。 `COUNT_BIG(*)` 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 `COUNT_BIG(*)` 會傳回指定資料表的資料列數，而且它會保留重複的資料列。 它會個別計算每個資料列。 其中包括含有 Null 值的資料列。
+指定 `COUNT_BIG` 應該計算所有資料列，以判斷要傳回的總資料表資料列計數。 `COUNT_BIG(*)` 不接受任何參數，而且不支援使用 DISTINCT。 `COUNT_BIG(*)` 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 `COUNT_BIG(*)` 會傳回指定資料表的資料列數，而且它會保留重複的資料列。 會分開計算每個資料列，包括含有 null 值的資料列。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
 *partition_by_clause* 會將 `FROM` 子句產生的結果集，分割成 `COUNT_BIG` 函數所要套用的資料分割。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 會決定作業的邏輯順序。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
@@ -82,7 +74,7 @@ COUNT_BIG (ALL *expression*) 會針對群組中的每個資料列來評估 *expr
   
 COUNT_BIG (DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回唯一且非 Null 值的數目。
   
-COUNT_BIG ***不搭配*** OVER 和 ORDER BY 子句使用時，是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+COUNT_BIG ***不搭配*** OVER 和 ORDER BY 子句使用時，是具決定性函數。 「搭配」 OVER 和 ORDER BY 子句時，COUNT_BIG 不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
 如需範例，請參閱 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)。

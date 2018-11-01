@@ -15,12 +15,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bcd22dedf4d70734098f0fac9886e99c89169eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f74904fe4e7576e7400c661a1523f6d29d64425e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806865"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120315"
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>啟用和停用 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47806865"
 ###  <a name="Security"></a> 安全性  
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體啟用 AlwaysOn 可用性群組之後，伺服器執行個體就會有 WSFC 叢集的完整控制。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要本機電腦的 **Administrator** 群組成員資格和 WSFC 叢集的完整控制。 透過使用 PowerShell 啟用 AlwaysOn 時，請使用 [以系統管理員身分執行] 選項開啟命令提示字元視窗。  
   
  需要 Active Directory 建立物件和管理物件權限。  
@@ -208,7 +208,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> 使用 SQL Server PowerShell  
  **停用 AlwaysOn**  
   
-1.  將目錄 (**cd**) 變更為要停用 AlwaysOn 可用性群組之目前啟用的伺服器執行個體。  
+1.  將目錄 (**cd**) 變更為要停用 Always On 可用性群組且目前已啟用的伺服器執行個體。  
   
 2.  使用 **Disable-SqlAlwaysOn** Cmdlet 啟用 AlwaysOn 可用性群組。  
   

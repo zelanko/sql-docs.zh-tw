@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - VAR
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical variance
 - VAR function [Transact-SQL]
 ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4195dce83fdb1c634990249ff997075c78b65ba
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: ae1dc46bc51b00a9b6b3cb4bc6980c39e395e765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794796"
 ---
 # <a name="var-transact-sql"></a>VAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,8 +55,8 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  這是精確數值或近似數值資料類型類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。 不允許彙總函式和子查詢。  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 _order\_by\_clause_ 可決定執行作業的邏輯順序。 需要 _order\_by\_clause_。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
  **float**  

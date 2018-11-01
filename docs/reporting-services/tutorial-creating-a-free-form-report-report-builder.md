@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 249025217a11483d1538c7fe0c72ee1cf0832f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17a6be9dcb025b1a7d654a954f8b42b817702223
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717246"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906278"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
 在本教學課程中，您會建立分頁報表，作為電子報。 每個頁面會顯示靜態文字、摘要的視覺效果，以及詳細的範例銷售資料。

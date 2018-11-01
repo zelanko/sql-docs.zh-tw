@@ -190,6 +190,21 @@ items:
       href: /sql/advanced-analytics/
       homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
       items:
+      - name: Java
+        href: /sql/advanced-analytics/java/
+        homepage: /sql/advanced-analytics/java/extension-java
+      - name: R
+        href: /sql/advanced-analytics/r/
+        homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+      - name: Python
+        href: /sql/advanced-analytics/python/
+        homepage: /sql/advanced-analytics/python/sql-server-python-services
+      - name: Install
+        href: /sql/advanced-analytics/install/
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+      - name: 學習
+        href: /sql/advanced-analytics/tutorials/
+        homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
       - name: Python
         href: /sql/advanced-analytics/python/
         homepage: /sql/advanced-analytics/python/dmvs-for-python
@@ -1104,9 +1119,9 @@ items:
       href: /sql/tools/
       homepage: /sql/tools/overview-sql-tools
       items:
-      - name: SQL Operations Studio
-        href: /sql/sql-operations-studio/
-        homepage: /sql/sql-operations-studio/what-is
+      - name: Azure Data Studio
+        href: /sql/azure-data-studio/
+        homepage: /sql/azure-data-studio/what-is
       - name: 組態管理員
         href: /sql/tools/configuration-manager/
         homepage: /sql/tools/configuration-manager/sql-server-configuration-manager-help
@@ -1213,9 +1228,9 @@ items:
       - name: SSMA Sybase
         href: /sql/ssma/sybase/
         homepage: /sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql
-ms.openlocfilehash: c0e3568a4b045c085a5e59ecdac9421c2b6b236e
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.openlocfilehash: 56b705384a519f652cba1d22a77f9f4135a134ba
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534080"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713621"

@@ -5,9 +5,7 @@ ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088360"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336287"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +134,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 這是一個明確的資料行參考。 若要參考所要修改的資料表，必須依據適用情況，以 INSERTED 或 DELETED 前置詞正確地限定該參考，例如：INSERTED**.***column_name*。  
+ 這是一個明確的資料行參考。 若要參考所要修改的資料表，必須依據適用情況，以 INSERTED 或 DELETED 前置詞正確地限定該參考，例如：INSERTED **.**_column\_name_。  
   
  $action  
  僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定 **nvarchar(10)** 類型的資料行，此陳述式會針對每個資料列傳回下列三個值其中之一：'INSERT'、'UPDATE' 或 'DELETE' (依據在該資料列上執行的動作而定)。  
   
 ## <a name="remarks"></a>Remarks  
- 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } 子句。  
+ 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 子句。  
   
 > [!NOTE]  
 >  除非另有指定，否則，指向 OUTPUT 子句的參考會同時參考 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -357,7 +354,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. 使用 OUTPUT INTO 搭配 UPDATE 陳述式  
- 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在於 `deleted.VacationHours` 資料行中套用 `UPDATE` 之前便已存在的 `VacationHours` 值，以及 `inserted.VacationHours` 資料行中已更新的值，傳回給 `@MyTableVar``table` 變數。  
+ 下列範例會將 `VacationHours` 資料表前 10 個資料列的 `Employee` 資料行更新 25%。 `OUTPUT` 子句會將在 `deleted.VacationHours` 資料行中套用 `UPDATE` 陳述式之前便已存在的 `VacationHours` 值，以及 `inserted.VacationHours` 資料行中更新的值傳回給 `@MyTableVar` 資料表變數。  
   
  之後的兩個 `SELECT` 陳述式會傳回 `@MyTableVar` 中的值，以及 `Employee` 資料表中更新作業的結果。  
   

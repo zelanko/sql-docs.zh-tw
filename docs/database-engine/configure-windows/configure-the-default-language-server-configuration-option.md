@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default language option
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d23377ab94d14be40be698089aea48b71b1ed906
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e15ad7915b33c67e09325a38b7975430c5c8ce85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784456"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>設定 default language 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +58,9 @@ ms.locfileid: "32866253"
   
 1.  在物件總管中，請以滑鼠右鍵按一下伺服器，然後選取 [屬性]。  
   
-2.  按一下 [一般設定] 節點。  
+2.  按一下 [進階] 索引標籤。  
   
-3.  在 **[使用者的預設語言]** 方塊中，選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應以哪種語言顯示系統訊息。  
+3.  在 [預設語言] 方塊中，選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應該以哪種語言顯示系統訊息。  
   
      預設語言為英文。  
   

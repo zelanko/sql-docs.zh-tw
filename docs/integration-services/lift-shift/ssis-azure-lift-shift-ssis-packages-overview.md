@@ -1,26 +1,25 @@
 ---
 title: 在 Azure 中部署和執行 SSIS 套件 | Microsoft Docs
 description: 了解您如何將 SQL Server Integration Services (SSIS) 專案、套件和工作負載移至 Microsoft Azure 雲端。
-ms.date: 07/01/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
-ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
+ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39482659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829669"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
-您現在可以將 SQL Server Integration Services (SSIS) 專案、套件和工作負載移至 Azure 雲端。 使用熟悉的工具 (例如 SQL Server Management Studio，SSMS)，在 Azure SQL Database 或 SQL Database 受控執行個體 (預覽) 的 SSIS 目錄 (SSISDB) 中，部署、執行及管理 SSIS 專案和套件。
+您現在可以將 SQL Server Integration Services (SSIS) 專案、套件和工作負載移至 Azure 雲端。 使用熟悉的工具 (例如 SQL Server Management Studio，SSMS)，在 Azure SQL Database 或 SQL Database 受控執行個體的 SSIS 目錄 (SSISDB) 中，部署、執行及管理 SSIS 專案和套件。
 
 ## <a name="benefits"></a>優點
 將內部部署 SSIS 工作負載移至 Azure 有下列優點：
@@ -36,7 +35,7 @@ ms.locfileid: "39482659"
 | 位置 | Storage | 執行階段 | 延展性 |
 |---|---|---|---|
 | 內部部署 | [SQL Server] | SQL Server 所裝載的 SSIS 執行階段 | SSIS Scale Out (在 SQL Server 2017 和更新版本中)<br/><br/>自訂解決方案 (在舊版 SQL Server 中) |
-| 在 Azure 上 | SQL Database 或 SQL Database 受控執行個體 (預覽) | Azure SSIS Integration Runtime，Azure Data Factory 的元件 | Azure SSIS Integration Runtime 的擴充選項 |
+| 在 Azure 上 | SQL Database 或 SQL Database 受控執行個體 | Azure SSIS Integration Runtime，Azure Data Factory 的元件 | Azure SSIS Integration Runtime 的擴充選項 |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>在 Azure 上佈建 SSIS

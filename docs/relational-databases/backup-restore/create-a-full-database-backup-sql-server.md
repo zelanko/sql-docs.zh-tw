@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 69d6721aae55102a9f48bd1a1bc4cb2d8540c71d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782416"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -266,7 +263,7 @@ ms.locfileid: "43348479"
     |選項|[描述]|  
     |------------|-----------------|  
     |*database*|為要備份的資料庫。|  
-    |*backup_device* [ **,**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
+    |*backup_device* [ **,**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
     |WITH *with_options* [ **,**...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
   
 2.  選擇性地指定一或多個 WITH 選項。 這裡描述的是一些基本的 WITH 選項。 如需所有 WITH 選項的資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  
@@ -279,10 +276,10 @@ ms.locfileid: "43348479"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          只有在 SQL Server 2014 或更新的版本中，才能指定要使用的加密演算法以及憑證或非對稱金鑰來維護加密的安全。  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
          指定描述備份組的自由形式文字。 這個字串最多可有 255 個字元。  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *backup_set_name* | **@**_backup\_set\_name\_var_ }  
          指定備份組的名稱。 名稱最多可有 128 個字元。 如果未指定 NAME，它就是空白。  
   
     -   基本備份組 WITH 選項：  
@@ -291,7 +288,7 @@ ms.locfileid: "43348479"
   
          另外，若要格式化備份媒體，請使用 FORMAT 選項：  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]  
          當您第一次使用媒體或是想要覆寫所有現有的資料時，請使用 FORMAT 子句。 選擇性地為新的媒體指派媒體名稱和描述。  
   
         > [!IMPORTANT]  

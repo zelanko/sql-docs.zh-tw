@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789852"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851873"
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47789852"
 > [!IMPORTANT]  
 >  如果運算式一定會針對指定的輸入集傳回相同的結果，這些運算式就具有決定性。 **COLUMNPROPERTY** 函數的 [IsDeterministic](../../t-sql/functions/columnproperty-transact-sql.md) 屬性會報告 *computed_column_expression* 是否具決定性。  
   
- *computed_column_expression* 必須具決定性。 若下列一或多種情況成立， *computed_column_expression* 就會具決定性：  
+ *computed_column_expression* 必須具決定性。 若下列全部情況成立，*computed_column_expression* 就會具決定性：  
   
 -   運算式所參考的所有函數都具有決定性而且是精確的。 這些函數包括使用者自訂函數與內建函數。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 如果計算的資料行是 PERSISTED，函數可能就不精確。 如需詳細資訊，請參閱本主題稍後的 [在保存的計算資料行上建立索引](#BKMK_persisted) 。  
   

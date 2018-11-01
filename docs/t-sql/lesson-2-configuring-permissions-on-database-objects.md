@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aca79a451c925b9c8c7734ecf3545152328a65f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683756"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878131"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>課程 2：設定資料庫物件的權限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ Mary 現在已具有此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]�
 ## <a name="create-views-and-stored-procedures"></a>建立檢視和預存程序
 如果是管理員，可以從 **Products** 資料表和 **vw_Names** 檢視中執行 SELECT，也可以執行 **pr_Names** 程序，但是 Mary 則無權這麼做。 若要授與 Mary 必要的權限，請使用 GRANT 陳述式。  
 
-### <a name="grant-permission-to-stored-prcoedure"></a>授與預存程序的權限  
+### <a name="grant-permission-to-stored-procedure"></a>將權限授與預存程序  
 執行下列陳述式，讓 `Mary` 具有 `EXECUTE` 預存程序的 `pr_Names` 權限。
   
   ```sql  

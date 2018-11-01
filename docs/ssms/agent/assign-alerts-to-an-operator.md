@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 167011e2b54b4cf06bbc627b20cd206fdd7f91f9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b065fd332f45898a728edf7abc2bafb814b6555d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708106"
 ---
 # <a name="assign-alerts-to-an-operator"></a>指派警示給操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -79,7 +75,7 @@ ms.locfileid: "42775971"
   
 4.  以滑鼠右鍵按一下要指派警示的操作員並選取 [屬性]，然後選取 [通知] 頁面。  
   
-5.  在 [<操作員名稱> 屬性] 對話方塊中，選取 [選取頁面] 底下的 [通知]。  
+5.  在 [_operator\_name_ 屬性] 對話方塊中，選取 [選取頁面] 下的 [通知]。  
   
 6.  在 **[檢視傳送給這名使用者的通知來源]** 下選取 **[警示]** ，以檢視傳送給這名操作員的警示清單；或選取 **[作業]** ，以檢視會傳送通知給這名操作員的作業清單。 選取下列一個或多個核取方塊，視需要定義每個通知的通知方法：[電子郵件]、[呼叫器] 或 [Net send]。  
   

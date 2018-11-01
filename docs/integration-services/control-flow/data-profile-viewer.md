@@ -16,12 +16,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd3a3c2b4461a08a9945af2536a572fb8369f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f47900bba2230acb18b5e5459c6849b5b9b2c7c8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733900"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905988"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
   檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱 [資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "47733900"
 > [!IMPORTANT]  
 >  資料設定檔檢視器所提供的向下鑽研功能會傳送即時查詢給原始資料來源。 這些查詢對於伺服器的效能可能會有負面影響。  
 >   
->  如果您從不是最近建立的輸出檔向下鑽研，則向下鑽研查詢傳回的資料列集可能與計算原始輸出的資料列集不同。  
+>  如果您從不是最近建立的輸出檔向下切入，則向下鑽研查詢傳回的資料列集可能與計算原始輸出的資料列集不同。  
   
  如需資料設定檔檢視器之使用者介面的詳細資訊，請參閱 [資料設定檔檢視器 F1 說明](../../integration-services/control-flow/data-profile-viewer-f1-help.md)。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47733900"
  **長度**  
  顯示在已分析資料行中找到的資料行長度。  
   
- **Count**  
+ **計數**  
  顯示已分析資料行的值具有 [長度] 資料行中所顯示之長度的資料列數目。  
   
  **百分比**  
@@ -170,7 +170,7 @@ ms.locfileid: "47733900"
  **ReplTest1**  
  顯示在已分析資料行中找到的相異值。  
   
- **Count**  
+ **計數**  
  顯示已分析資料行具有 [值] 資料行中所顯示之值的資料列數目。  
   
  **百分比**  
@@ -240,6 +240,6 @@ ms.locfileid: "47733900"
  **\<資料行1>、\<資料行2> 等等。**  
  顯示子集資料行中的值，但這些值在超集資料行中找不到。  
   
- **Count**  
+ **計數**  
  顯示指定之資料行具有第一個資料行中所顯示之值的資料列數目。  
   

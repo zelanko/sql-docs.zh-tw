@@ -11,12 +11,12 @@ ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e856bfbbcb8cba527d1f34f0f7bc99afadc023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792876"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336097"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>HOW TO：建立 SQL Server 資料庫單元測試的測試專案
 在您開始撰寫評估資料庫物件的單元測試之前，必須先建立測試專案。 這個專案會包含 SQL Server 單元測試，但是它可以包含其他類型的測試。  
@@ -35,7 +35,7 @@ ms.locfileid: "47792876"
   
 -   將測試專案加入至方案。 測試專案包含您可以刪除的標準單元測試。 這個專案不包含您必須加入的 SQL Server 單元測試類別。  
   
--   從 [測試] 功能表加入新的 SQL Server 單元測試。 當您加入單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 單元測試測試類別包含一個或多個單元測試。  
+-   從 [測試] 功能表加入新的 SQL Server 單元測試。 當您加入單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 單元測試類別包含一或多個單元測試。  
   
 -   從 SQL Server [物件總管] 中開啟的專案中，從預存程序、函式或觸發程序建立單元測試。 當您建立單元測試時，SQL Server Data Tools 也會建立測試專案 (如果您要求的話)。 此專案包含 SQL Server 單元測試類別。 SQL Server 測試類別包含一個或多個單元測試。  
   

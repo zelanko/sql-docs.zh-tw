@@ -5,8 +5,6 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
@@ -18,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444ef71d36018193cb05e0403883105d650c60e2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838956"
 ---
 # <a name="specify-parameters"></a>指定參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,10 +65,10 @@ GO
  明確為參數命名以及在程序呼叫中指定適當值給每個參數，就能以任何順序提供參數。 例如，如果 **my_proc** 程序預期有三個參數，名稱分別為 **\@first**、**\@second** 和 **\@third**，您可以將傳遞給程序的值指派給參數名稱，例如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  如果以 **\@parameter =***value* 形式提供一個參數值，所有後續的參數就必須按照此方式來提供。 如果不是以 **\@parameter =***value* 形式傳遞參數值，提供值的順序就必須與 CREATE PROCEDURE 陳述式中列出參數的順序一樣 (由左到右)。  
+>  如果以 **\@parameter =**_value_ 形式提供一個參數值，則所有後續的參數就必須按照此方式來提供。 如果不是以 **\@parameter =**_value_ 形式傳遞參數值，則提供值的順序就必須與 CREATE PROCEDURE 陳述式中列出參數的順序一樣 (由左到右)。  
   
 > [!WARNING]  
->  任何以 **\@parameter =***value* 形式傳遞的參數如果有拼字錯誤，將會使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生錯誤，並導致程序無法執行。  
+>  任何以 **\@parameter =**_value_ 形式傳遞的參數若有拼字錯誤，就會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生錯誤，並導致程序無法執行。  
   
 ## <a name="specifying-parameter-data-types"></a>指定參數資料類型  
  在 CREATE PROCEDURE 陳述式中宣告時，參數必須定義一種資料類型。 參數的資料類型將決定在呼叫程序時參數可接受的值類型和範圍。 例如，若將參數定義為 **tinyint** 資料類型，在傳遞數值至該參數時，只能接受 0 到 255 範圍內的數值。 執行程序時，如果值與資料類型不相容的話，就會傳回錯誤。  
@@ -130,7 +128,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- 雖然可以省略已提供預設值的參數，但只能截斷參數清單。 例如，如果程序有五個參數，第四個和第五個參數可以省略。 但除非是以 **\@parameter =***value* 形式提供參數，否則只要包含第五個參數，就不能省略第四個參數。  
+ 雖然可以省略已提供預設值的參數，但只能截斷參數清單。 例如，如果程序有五個參數，第四個和第五個參數可以省略。 但除非是以 **\@parameter =**_value_ 形式提供參數，否則只要包含第五個參數，就不能省略第四個參數。  
   
 ## <a name="specifying-parameter-direction"></a>指定參數方向  
  參數的方向可以是輸入或輸出，前者指將值傳入程序的主體，後者則指程序傳回值給呼叫端程式。 預設是輸入參數。  

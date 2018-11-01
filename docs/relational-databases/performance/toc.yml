@@ -1,3 +1,4 @@
+items:
 - name: SQL Server Database Engine 和 Azure SQL Database 的效能中心
   href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: 設定具有 NVDIMM-N 回寫式快取的儲存空間
@@ -9,105 +10,113 @@
 - name: 智慧查詢處理
   href: intelligent-query-processing.md
   items:
-    - name: 彈性查詢處理
-      href: adaptive-query-processing.md
+  - name: 彈性查詢處理
+    href: adaptive-query-processing.md
 - name: 效能的監視與微調
   href: monitor-and-tune-for-performance.md
   items:
-    - name: 監視 SQL Server 元件
-      href: monitor-sql-server-components.md
-    - name: 效能監視及微調工具
-      href: performance-monitoring-and-tuning-tools.md
-    - name: 建立效能基準
-      href: establish-a-performance-baseline.md
-    - name: 隔離效能問題
-      href: isolate-performance-problems.md
-    - name: 找出瓶頸
-      href: identify-bottlenecks.md
-    - name: 伺服器效能與活動監視
-      href: server-performance-and-activity-monitoring.md
-      items:
-        - name: 啟動系統監視器 (Windows)
-          href: start-system-monitor-windows.md
-        - name: 設定 SQL Server 資料庫警示 (Windows)
-          href: set-up-a-sql-server-database-alert-windows.md
-        - name: 檢視 Windows 應用程式記錄檔 (Windows)
-          href: view-the-windows-application-log-windows-10.md
-        - name: 檢視 SQL Server 錯誤記錄檔 (SQL Server Management Studio)
-          href: view-the-sql-server-error-log-sql-server-management-studio.md
-        - name: 儲存死結圖形 (SQL Server Profiler)
-          href: save-deadlock-graphs-sql-server-profiler.md
-        - name: 開啟、檢視及列印死結檔案 (SQL Server Management Studio)
-          href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
-        - name: 個別儲存 Showplan XML 事件 (SQL Server Profiler)
-          href: save-showplan-xml-events-separately-sql-server-profiler.md
-        - name: 個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
-          href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
-    - name: 顯示並儲存執行計畫
-      href: display-and-save-execution-plans.md
-      items:
-        - name: 顯示估計的執行計畫
-          href: display-the-estimated-execution-plan.md
-        - name: 顯示實際執行計畫
-          href: display-an-actual-execution-plan.md
-        - name: 以 XML 格式儲存執行計畫
-          href: save-an-execution-plan-in-xml-format.md
-    - name: 即時查詢統計資料
-      href: live-query-statistics.md
-    - name: Monitoring Performance By Using the Query Store
-      href: monitoring-performance-by-using-the-query-store.md
-    - name: 使用含有記憶體內部 OLTP 的查詢存放區
-      href: using-the-query-store-with-in-memory-oltp.md
-    - name: 使用查詢存放區的最佳作法
-      href: best-practice-with-the-query-store.md
-    - name: 查詢存放區使用案例
-      href: query-store-usage-scenarios.md
-    - name: 查詢存放區如何收集資料
-      href: how-query-store-collects-data.md
+  - name: 監視 SQL Server 元件
+    href: monitor-sql-server-components.md
+  - name: 效能監視及微調工具
+    href: performance-monitoring-and-tuning-tools.md
+  - name: 建立效能基準
+    href: establish-a-performance-baseline.md
+  - name: 隔離效能問題
+    href: isolate-performance-problems.md
+  - name: 找出瓶頸
+    href: identify-bottlenecks.md
+  - name: 使用 DMV 來判斷檢視表的使用方式和效能
+    href: use-dmvs-determine-usage-performance-views.md
+  - name: 伺服器效能與活動監視
+    href: server-performance-and-activity-monitoring.md
+    items:
+    - name: 啟動系統監視器 (Windows)
+      href: start-system-monitor-windows.md
+    - name: 設定 SQL Server 資料庫警示 (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: 檢視 Windows 應用程式記錄檔 (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: 檢視 SQL Server 錯誤記錄檔 (SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: 儲存死結圖形 (SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 開啟、檢視及列印死結檔案 (SQL Server Management Studio)
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: 個別儲存 Showplan XML 事件 (SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: 個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+  - name: 顯示並儲存執行計畫
+    href: display-and-save-execution-plans.md
+    items:
+    - name: 顯示估計的執行計畫
+      href: display-the-estimated-execution-plan.md
+    - name: 顯示實際執行計畫
+      href: display-an-actual-execution-plan.md
+    - name: 以 XML 格式儲存執行計畫
+      href: save-an-execution-plan-in-xml-format.md
+  - name: 即時查詢統計資料
+    href: live-query-statistics.md
+  - name: Monitoring Performance By Using the Query Store
+    href: monitoring-performance-by-using-the-query-store.md
+  - name: 使用含有記憶體內部 OLTP 的查詢存放區
+    href: using-the-query-store-with-in-memory-oltp.md
+  - name: 使用查詢存放區的最佳作法
+    href: best-practice-with-the-query-store.md
+  - name: 查詢存放區使用案例
+    href: query-store-usage-scenarios.md
+  - name: 查詢存放區如何收集資料
+    href: how-query-store-collects-data.md
 - name: Database Tuning Advisor
   href: database-engine-tuning-advisor.md
   items:
-    - name: 啟動及使用 Database Engine Tuning Advisor
-      href: start-and-use-the-database-engine-tuning-advisor.md
-    - name: 降低生產伺服器的微調負載
-      href: reduce-the-production-server-tuning-load.md
-      items:
-        - name: 使用測試伺服器的考量
-          href: considerations-for-using-test-servers.md
-    - name: 檢視及處理 Database Engine Tuning Advisor 的輸出
-      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-    - name: Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議
-      href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-    - name: 使用查詢存放區的工作負載調整資料庫
-      href: tuning-database-using-workload-from-query-store.md
-    - name: 使用 Database Engine Tuning Advisor (DTA) 建議的效能改善
-      href: performance-improvements-using-dta-recommendations.md
+  - name: 啟動及使用 Database Engine Tuning Advisor
+    href: start-and-use-the-database-engine-tuning-advisor.md
+  - name: 降低生產伺服器的微調負載
+    href: reduce-the-production-server-tuning-load.md
+    items:
+    - name: 使用測試伺服器的考量
+      href: considerations-for-using-test-servers.md
+  - name: 檢視及處理 Database Engine Tuning Advisor 的輸出
+    href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+  - name: Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議
+    href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+  - name: 使用查詢存放區的工作負載調整資料庫
+    href: tuning-database-using-workload-from-query-store.md
+  - name: 使用 Database Engine Tuning Advisor (DTA) 建議的效能改善
+    href: performance-improvements-using-dta-recommendations.md
 - name: 計畫指南
   href: plan-guides.md
   items:
-    - name: 建立新的計畫指南
-      href: create-a-new-plan-guide.md
-    - name: 建立參數化查詢的計畫指南
-      href: create-a-plan-guide-for-parameterized-queries.md
-    - name: 使用計畫指南指定查詢參數化行為
-      href: specify-query-parameterization-behavior-by-using-plan-guides.md
-    - name: 將固定的查詢計畫套用至計畫指南
-      href: apply-a-fixed-query-plan-to-a-plan-guide.md
-    - name: 將查詢提示附加至計畫指南
-      href: attach-query-hints-to-a-plan-guide.md
-    - name: 檢視計畫指南屬性
-      href: view-plan-guide-properties.md
-    - name: 使用 SQL Server Profiler 建立及測試計畫指南
-      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
-    - name: 升級之後驗證計畫指南
-      href: validate-plan-guides-after-upgrade.md
-    - name: 刪除計畫指南
-      href: delete-a-plan-guide.md
-    - name: 啟用或停用計畫指南
-      href: enable-or-disable-a-plan-guide.md
+  - name: 建立新的計畫指南
+    href: create-a-new-plan-guide.md
+  - name: 建立參數化查詢的計畫指南
+    href: create-a-plan-guide-for-parameterized-queries.md
+  - name: 使用計畫指南指定查詢參數化行為
+    href: specify-query-parameterization-behavior-by-using-plan-guides.md
+  - name: 將固定的查詢計畫套用至計畫指南
+    href: apply-a-fixed-query-plan-to-a-plan-guide.md
+  - name: 將查詢提示附加至計畫指南
+    href: attach-query-hints-to-a-plan-guide.md
+  - name: 檢視計畫指南屬性
+    href: view-plan-guide-properties.md
+  - name: 使用 SQL Server Profiler 建立及測試計畫指南
+    href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+  - name: 升級之後驗證計畫指南
+    href: validate-plan-guides-after-upgrade.md
+  - name: 刪除計畫指南
+    href: delete-a-plan-guide.md
+  - name: 啟用或停用計畫指南
+    href: enable-or-disable-a-plan-guide.md
 - name: 監視資源使用狀況 (系統監視器)
   href: ../performance-monitor/monitor-resource-usage-system-monitor.md
 - name: 聯結
   href: joins.md
 - name: 子查詢
   href: subqueries.md
+ms.openlocfilehash: 0860910f4e556d92a536fb45002f9c6180e2aab9
+ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47450279"

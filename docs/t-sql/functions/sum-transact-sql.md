@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUM
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - totals [SQL Server], SUM
 - summary values [SQL Server]
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d011f4af782c8d8a3d4af76a5f1b55f8743b3c0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a91969bcde67d7f316281c12ab80c85393ed06e3
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232592"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,16 +43,11 @@ ms.locfileid: "43068583"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SUM ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+-- Aggregate Function Syntax    
 SUM ( [ ALL | DISTINCT ] expression )  
+
+-- Analytic Function Syntax   
+SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -68,8 +60,8 @@ SUM ( [ ALL | DISTINCT ] expression )
  *expression*  
  常數、資料行或函數，或任何算術、位元和字串運算子的組合。 *expression* 為精確數值或近似數值資料類型類別的運算式，但是 **bit** 資料類型除外。 不允許彙總函式和子查詢。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 _order\_by\_clause_ 可決定執行作業的邏輯順序。 需要 _order\_by\_clause_。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
  以最精確的 *expression* 資料類型傳回所有 *expression* 值的總和。  
@@ -90,7 +82,7 @@ SUM ( [ ALL | DISTINCT ] expression )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-sum-to-return-summary-data"></a>A. 使用 SUM 傳回摘要資料  
- 下列範例示範如何使用 SUM 函數傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的摘要資料。  
+ 下列範例顯示如何使用 SUM 函式傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的摘要資料。  
   
 ```  
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
@@ -116,7 +108,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 下列範例搭配 OVER 子句使用 SUM 函數，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `Sales.SalesPerson` 資料表中各領域的年度銷售提供累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 SUM 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的累計銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
+ 下列範例搭配 OVER 子句使用 SUM 函數，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `Sales.SalesPerson` 資料表中各領域的年度銷售提供累計總和。 `TerritoryID` 負責分割資料，而 `SalesYTD` 會進行邏輯性地排序。 這表示，將會根據銷售年度來針對每一個領域計算 SUM 函數。 請注意，在 `TerritoryID` 1 中，2005 銷售年度有兩個資料列，分別表示在該年度有銷售業績的兩個銷售人員。 計算這兩個資料列的總累計銷售額，然後將表示 2006 年度銷售額的第三個資料列納入計算。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

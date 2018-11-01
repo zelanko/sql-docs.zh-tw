@@ -172,7 +172,7 @@ FCI 可用於災害復原。 與一般可用性群組一樣，基礎叢集機制
 
 如果目標是要移轉到新的伺服器且不變更組態 (包括作業系統或 SQL Server 版本)，這些伺服器就可以新增為現有基礎叢集的節點，並新增至可用性群組。 只要複本處於正確的狀態，即可手動容錯移轉至新的伺服器，從可用性群組中移除舊的伺服器，最終解除委任。 
 
-分散式 AG 也是移轉至新組態或升級 SQL Server 的另一種方法。 因為分散式 AG 支援不同架構上的不同基礎 AG；例如，您可以從在 Windows Server 2012 R2 上執行的 SQL Server 2016 變更成在 Windows Sever 2016 上執行的 SQL Server 2017。 
+分散式 AG 也是移轉至新組態或升級 SQL Server 的另一種方法。 因為分散式 AG 支援不同架構上的不同基礎 AG；例如，您可以從在 Windows Server 2012 R2 上執行的 SQL Server 2016 變更成在 Windows Server 2016 上執行的 SQL Server 2017。 
 
 ![分散式 AG][image10]
 

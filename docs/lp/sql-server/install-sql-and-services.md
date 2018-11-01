@@ -6,12 +6,12 @@ description: 尋找可協助您安裝或升級 SQL Server 及相關服務的內�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: b370d499deb1713667711c4b80b6bb0daa5bb958
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 6ca8f1acd90936c6f58a80543027731b6ada6451
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336167"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743143"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -288,6 +288,25 @@ ms.locfileid: "49336167"
                                                 <div class="cardText">
                                                     <h3>SQL Server 移轉小幫手 (SSMA)</h3>
                                                     <p>自動化將資料庫從 Microsoft Access、DB2、MySQL、Oracle 與 SAP ASE 移轉至 SQL Server 的作業。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/install-sql-and-services/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>資料庫測試助理 (DEA)</h3>
+                                                    <p>協助針對現有工作負載評估 SQL Server 的目標版本。</p>
                                                 </div>
                                             </div>
                                         </div>

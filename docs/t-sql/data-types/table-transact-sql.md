@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839756"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100459"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,6 +127,44 @@ SELECT select_list INTO table_variable;
 資料表變數延遲編譯 **不會增加重新編譯頻率**，  而是會在初始編譯的位置移位。 產生的快取計劃是根據初始延遲編譯資料表變數資料列計數所產生。 快取計劃會由後續查詢重複使用，直到計劃已收回或重新編譯。 
 
 若用於初始計劃編譯的資料表變數資料列計數代表一個與固定資料列計數猜測大幅相異的一般值，則下游作業將會受益。  若資料表變數資料列計數在每次執行時都大幅相異，則此功能可能無法改善效能。
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>停用資料表變數的延遲編譯，而無須變更相容性層級
+您可以在資料庫或陳述式的範圍停用資料表變數延遲編譯，同時仍將資料庫相容性層級維持在 150 以上。 若要針對源自資料庫的所有查詢執行停用資料表延遲編譯，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+若要針對源自資料庫的所有查詢執行重新啟用資料表延遲編譯，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+您也可以透過將 DISABLE_DEFERRED_COMPILATION_TV 指定為 USE HINT 查詢提示，來為特定查詢停用資料表變數延遲編譯。  例如：
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>範例  

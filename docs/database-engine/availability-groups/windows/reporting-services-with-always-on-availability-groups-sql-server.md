@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40410304"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120285"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "40410304"
     -   [進行容錯移轉時的報表伺服器行為](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性群組的需求  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用 .Net framework 4.0，並支援與資料來源搭配使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 報表伺服器使用 .Net framework 4.0，並支援與資料來源搭配使用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本時，您必須下載並安裝 .Net 3.5 SP1 的 Hotfix。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：  
   
@@ -121,7 +118,7 @@ ms.locfileid: "40410304"
 > **錯誤訊息** ：「不支援關鍵字 ‘applicationintent’」  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 報表伺服器資料庫和可用性群組  
- Reporting Services 對於使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配報表伺服器資料庫提供有限的支援。 您可以在 AG 中將報表伺服器資料庫設定為複本的一部分，但在容錯移轉時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不會自動為報表伺服器資料庫使用不同的複本。 不支援搭配報表伺服器資料庫使用 MultiSubnetFailover。  
+ Reporting Services 和 Power BI 報表伺服器針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 與報表伺服器資料庫搭配使用提供有限的支援。 您可以在 AG 中將報表伺服器資料庫設定為複本的一部分，但在容錯移轉時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不會自動為報表伺服器資料庫使用不同的複本。 不支援搭配報表伺服器資料庫使用 MultiSubnetFailover。  
   
  您必須使用手動操作或自訂自動化指令碼，才能完成容錯移轉和復原。 完成這些動作之前，報表伺服器的某些功能可能會在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 容錯移轉之後無法正確運作。  
   

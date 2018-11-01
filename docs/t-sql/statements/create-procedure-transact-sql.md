@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PROC
@@ -45,17 +43,16 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 180
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac2db40895cfc8690151b84beacb12f2fb8e3fac
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780806"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +178,7 @@ OR ALTER
   
  如果指定了 FOR REPLICATION，就不能宣告參數。  
   
- [ *type_schema_name***.** ] *data_type*  
+ [ _type\_schema\_name_**.** ] *data_type*  
  參數資料類型及該資料類型所屬的結構描述。  
   
 **[!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的指導方針**：  
@@ -245,7 +242,7 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  包含程序主體的一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 您可以使用選用的 BEGIN 和 END 關鍵字來括住陳述式。 如需詳細資訊，請參閱以下的＜最佳作法＞、＜一般備註＞以及＜限制事項＞這幾節。  
   
-EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
+EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定 CLR 程序所要參考之 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件的方法。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 (**.**) 來分隔命名空間的各個部分，您就必須使用方括弧 (**[]**) 或引號 (**""**) 來分隔類別名稱。 指定的方法必須是類別的靜態方法。  

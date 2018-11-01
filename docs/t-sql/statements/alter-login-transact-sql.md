@@ -5,9 +5,7 @@ ms.date: 04/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9faa9de82ed9b5db0ba2ccac071d038fb430f096
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c0097d1b2b6accad7283a1f97d4f28f9ec289c0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749084"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,12 +130,12 @@ ALTER LOGIN login_name
  ENABLE | DISABLE  
  啟用或停用這個登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。  
   
  持續作用中的 SQL Database 連線至少每 10 小時就需要授權 (由「資料庫引擎」執行)。 「資料庫引擎」會嘗試使用最初提交的密碼重新授權，而且不需要使用者輸入。 基於效能考量，當密碼在 SQL Database 中重設時時，不會重新驗證連線，即使連線因為連線共用而重設。 這和內部部署 SQL Server 的行為不同。 如果自從連線初始授權後密碼已經變更，則必須中斷該連線，然後使用新密碼建立新連線。 具有 KILL DATABASE CONNECTION 權限的使用者可以使用 KILL 命令明確地中斷對 SQL Database 的連線。 如需詳細資訊，請參閱 [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)。  
   
- PASSWORD **=***hashed_password*  
+ PASSWORD **=**_hashed\_password_  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。  
@@ -152,7 +149,7 @@ ALTER LOGIN login_name
   
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定在 PASSWORD 引數之後輸入的密碼已雜湊處理。 如果未選取這個選項，則密碼要儲存至資料庫之前會先雜湊處理。 只有針對兩部伺服器之間的登入同步處理，才應使用這個選項。 請勿使用 HASHED 選項進行例行性地變更密碼。  
   
- OLD_PASSWORD **='***oldpassword***'**  
+ OLD_PASSWORD **='**_oldpassword_**'**  
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。  
   
  MUST_CHANGE  
@@ -160,12 +157,12 @@ ALTER LOGIN login_name
   
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果包含這個選項，則在第一次使用變更後的登入時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示您輸入更新後的密碼。  
   
- DEFAULT_DATABASE **=***database*  
+ DEFAULT_DATABASE **=**_database_  
 **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要指派給登入的預設資料庫。  
   
- DEFAULT_LANGUAGE **=***language*  
+ DEFAULT_LANGUAGE **=**_language_  
  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -300,7 +297,7 @@ GO
 ```  
   
 ### <a name="f-unlocking-a-login"></a>F. 解除鎖定登入  
- 若要解除鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，請執行下列陳述式 (以您要的帳戶密碼取代其中的 ****)。  
+ 若要解除鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，請執行下列陳述式，並將 \*\*\*\* 取代為您要的帳戶密碼。  
   
   
 ```sql  

@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797352"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
@@ -118,7 +115,7 @@ ms.locfileid: "39087140"
   
 3.  以滑鼠右鍵按一下名為 [複本 - app.config] 的檔案，然後按一下 [重新命名]。  
   
-4.  輸入 *BuildComputer***.sqlunitttest.config** 並按 ENTER，其中 *BuildComputer* 是執行組建代理程式之電腦的名稱。  
+4.  輸入 _BuildComputer_**.sqlunitttest.config** 並按 ENTER，其中 *BuildComputer* 是執行組建代理程式的電腦名稱。  
   
 5.  按兩下 *BuildComputer*.sqlunitttest.config。  
   
@@ -277,7 +274,7 @@ ms.locfileid: "39087140"
   
 1.  在 [Team 總管] 中，展開 Team 專案節點、展開 [組建] 節點、以滑鼠右鍵按一下您想要執行的組建定義，然後按一下 [佇列新組建]。  
   
-    [佇列組建 {***TeamProjectName***}] 對話方塊隨即出現，並列出所有現有的組建類型。  
+    [佇列組建 {_TeamProjectName_}] 對話方塊隨即出現，並列出所有現有的組建類型。  
   
 2.  必要時，請在 [組建定義] 中按一下您的新組建定義。  
   

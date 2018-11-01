@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d215d34425012573455fc5a8d4c5615fb1ea749
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 18b9b09e5437889389f23b32c61b237ab65d3207
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764416"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +34,7 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 
 |SSDT 版本| Visual Studio 2017|
 |:---|:---|
+|15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
 |15.7.1|[SSDT for VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[SSDT for VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|

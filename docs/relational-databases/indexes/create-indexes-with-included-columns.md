@@ -5,9 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb3becf8e8bee70f9a06bd570094771fa6fcde20
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717936"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,13 +90,13 @@ ms.locfileid: "43074568"
   
 6.  按一下 **[索引鍵資料行]** 索引標籤底下的 **[加入]**。  
   
-7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的一或多個核取方塊。  
   
 8.  按一下 [確定] 。  
   
 9. 按一下 **[包含的資料行]** 索引標籤底下的 **[加入]**。  
   
-10. 在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
+10. 在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之一或多個資料表資料行的一或多個核取方塊。  
   
 11. 按一下 [確定] 。  
   

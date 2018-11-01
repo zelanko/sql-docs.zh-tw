@@ -1,7 +1,7 @@
 ---
 title: 使用指令碼元件建立 ODBC 目的地 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20cef2b6e736a54d92d18e2a63cf0db9be294b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816252"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100439"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用指令碼元件建立 ODBC 目的地
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常會使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC，將資料儲存到 ODBC 目的地。 不過，您也可以建立在單一封裝中要使用的特定 ODBC 目的地。 若要建立這個特定的 ODBC 目的地，可以使用如下列範例所示的指令碼元件。  
@@ -38,7 +38,7 @@ ms.locfileid: "47816252"
   
 -   **OdbcCommand** 應該是位置參數。 參數的位置由命令文字中的問號 (?) 指出  (相較之下，**SqlCommand** 應該是具名的參數)。  
   
- 此範例使用 **AdventureWorks** 範例資料庫中的 **Person.Address** 資料表。 此範例會透過資料流程傳遞此資料表的第一個資料行與第四個資料行：**int*AddressID*** 和 **nvarchar(30)City** 資料行。 在[開發特定類型的指令碼元件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主題中，這個相同的資料用於來源、轉換和目的地範例中。  
+ 此範例使用 **AdventureWorks** 範例資料庫中的 **Person.Address** 資料表。 此範例會透過資料流程傳遞此資料表的第一個資料行與第四個資料行：**int _AddressID_** 和 **nvarchar(30) _City_** 資料行。 在[開發特定類型的指令碼元件](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)主題中，這個相同的資料用於來源、轉換和目的地範例中。  
   
 #### <a name="to-configure-this-script-component-example"></a>設定此指令碼元件範例  
   
@@ -167,6 +167,6 @@ ms.locfileid: "47816252"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用指令碼元件建立目的地](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

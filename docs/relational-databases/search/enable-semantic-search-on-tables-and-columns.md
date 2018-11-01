@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00b487d0828d13d4905f609b2631b45b8c61802f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c046bbc7ac0b1da4c4e3be7c1eef0d7d47ccf9ec
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630496"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169316"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
 當您使用 **ALTER FULLTEXT INDEX** 陳述式來改變現有的全文檢索索引時，可以卸除語意索引。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的各種對話方塊來卸除語意索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 卸除語意索引  
-若只要從一或多個資料行卸除語意索引，請使用 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。 在單一 **ALTER** 陳述式中，您可以從多個資料行中卸除索引。  
+若只要從一或多個資料行卸除語意索引，請使用 **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。 在單一 **ALTER** 陳述式中，您可以從多個資料行中卸除索引。  
   
 ```sql  
 USE database_name  
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-若要從某個資料行同時卸除全文檢索和語意索引，請使用 **ALTER COLUMN***column_name***DROP**選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。  
+若要從某個資料行同時卸除全文檢索和語意索引，請使用 **ALTER COLUMN**_column\_name_**DROP** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。  
   
 ```sql  
 USE database_name  

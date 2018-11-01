@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66debf981b1a55dab1fb3b1b864782145d0c1f7f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703806"
 ---
 # <a name="configure-log-shipping-sql-server"></a>設定記錄傳送 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +99,8 @@ ms.locfileid: "40406622"
 16. 請注意 **[複製作業]** 之下 **[排程]** 方塊中所列的複製排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
 17. 在 **[還原]** 索引標籤上的 **[還原備份時的資料庫狀態]** 下，選擇 **[不復原模式]** 或 **[待命模式]** 選項。  
+    > [!IMPORTANT]  
+    > **待命模式**只是主要和次要伺服器版本相同時的選項。 次要伺服器的主要版本高於主要伺服器時，只允許 [No recovery mode] \(無復原模式\)
   
 18. 如果您選擇 **[待命模式]** 選項，請選擇是否要在還原作業進行時，中斷使用者與次要資料庫的連接。  
   

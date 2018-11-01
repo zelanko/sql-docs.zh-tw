@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603246"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065465"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   您無法在檢視上建立篩選索引； 不過，如果在檢視中參考的資料表上定義篩選索引，則可為查詢最佳化工具提供多項優點。 如果查詢結果會是正確的，則查詢最佳化工具會針對從檢視進行選取的查詢考慮篩選索引。  
+-   您無法在檢視上建立篩選索引； 不過，如果在檢視中參考的資料表上定義篩選索引，則可為查詢最佳化工具提供多項優點。 如果查詢結果會是正確的，則查詢最佳化工具會針對從檢視進行選取的查詢考慮篩選索引。
+
+-   篩選運算式中存取的資料行為 CLR 資料類型時，您無法在資料表上建立篩選過的索引。
   
 -   篩選索引具有索引檢視表所不及的下列優勢：  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065465"
   
 6.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
   
-7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
 8.  按一下 [確定] 。  
   

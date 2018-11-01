@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d9fc1cf8a82021363bd72faafdd14f4e47fd92d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27092b8bc1d52bd02c26653b1fec8f5e2f5c4af0
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794326"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085184"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>語法組的自動比對
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,4 +69,4 @@ ms.locfileid: "47794326"
 -   屬性上的開頭及結束引號。  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>MDX 和 DMX 編輯器的括號比對  
- 多維度運算式 (MDX) 和資料採礦運算式 (DMX) 編輯器會自動比對函數中的括號組。
+ 多維度運算式 (MDX) 和資料採礦運算式 (DMX) 編輯器會自動比對函式中的括號組。

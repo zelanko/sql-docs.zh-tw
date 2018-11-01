@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719636"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120435"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>最佳化 DML 觸發程序
  觸發程序適用於交易 (隱含或其他方式)，並且在開啟時，它們會鎖定資源。 鎖定會留在原處，直到確認 (使用 COMMIT) 或拒絕 (使用 ROLLBACK) 交易為止。 觸發程序執行時間越長，封鎖另一個處理序的機率越高。 因此，觸發程序的撰寫應該盡可能減少其持續時間。 達成此目的的方法之一，是在 DML 陳述式變更 0 個資料列時釋放觸發程序。 
 
-要針對不會變更任何資料列的命令釋放觸發程序，請使用系統變數 [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql)。 
+若要針對不會變更任何資料列的命令釋放觸發程序，請使用系統變數 [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md)。 
 
 下列 T-SQL 程式碼片段會達到這個目的，並且應該出現在每個 DML 觸發程序的開頭：
 
