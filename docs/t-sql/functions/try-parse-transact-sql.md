@@ -92,7 +92,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |全名|別名|LCID|專屬文化特性|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英文|1033|zh-TW|  
+|us_english|英文|1033|en-US|  
 |Deutsch|德文|1031|de-DE|  
 |Français|法文|1036|fr-FR|  
 |日本語|日文|1041|ja-JP|  
