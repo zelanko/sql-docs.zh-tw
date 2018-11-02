@@ -11,11 +11,9 @@ items:
     href: polybase-pushdown-computation.md
   - name: 向外延展群組
     href: polybase-scale-out-groups.md
-  - name: 類型對應
-    href: polybase-type-mapping.md
 - name: 使用說明指南
   items:
-  - name: Install
+  - name: 安裝
     items:
     - name: 在 Windows 上安裝
       href: polybase-installation.md
@@ -31,7 +29,7 @@ items:
         href: polybase-configuration.md
     - name: Azure Blob 儲存體
       href: polybase-configure-azure-blob-storage.md
-    - name: '[SQL Server]'
+    - name: SQL Server
       href: polybase-configure-sql-server.md
     - name: Oracle
       href: polybase-configure-oracle.md
@@ -39,6 +37,8 @@ items:
       href: polybase-configure-teradata.md
     - name: MongoDB
       href: polybase-configure-mongodb.md
+    - name: ODBC 泛型型別
+      href: polybase-configure-odbc-generic.md
   - name: 向外延展群組
     items:
     - name: 設定向外延展群組
@@ -71,9 +71,9 @@ items:
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: Reddit
     href: https://www.reddit.com/r/SQLServer
-ms.openlocfilehash: fce4843898ceda44353610afc960e9b55dbcb0f8
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 0213c240d1820e447c50cb63b6b36bf4298f417b
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264848"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806649"

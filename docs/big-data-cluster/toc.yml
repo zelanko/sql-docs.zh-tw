@@ -9,6 +9,18 @@ items:
   items:
   - name: 部署 SQL Server 巨量資料叢集
     href: quickstart-big-data-cluster-deploy.md
+- name: 教學課程
+  items:
+  - name: 1_查詢 HDFS 資料
+    href: tutorial-query-hdfs-storage-pool.md
+  - name: 2_查詢 Oracle 資料
+    href: tutorial-query-oracle.md
+  - name: 3_使用 SQL 載入資料集區
+    href: tutorial-data-pool-ingest-sql.md
+  - name: 4_使用 Spark 載入資料集區
+    href: tutorial-data-pool-ingest-spark.md
+  - name: 5_執行 Spark Notebook
+    href: tutorial-notebook-spark.md
 - name: 概念
   items:
   - name: 控制器
@@ -23,11 +35,11 @@ items:
     href: concept-compute-pool.md
   - name: 資料持續性
     href: concept-data-persistence.md
-  - name: Security
+  - name: 安全性
     href: concept-security.md
 - name: 做法指南
   items:
-  - name: Install
+  - name: 安裝
     items:
     - name: 部署指導
       href: deployment-guidance.md
@@ -35,6 +47,8 @@ items:
       href: deploy-on-minikube.md
     - name: 部署在 AKS 上
       href: deploy-on-aks.md
+    - name: 使用 Kubeadm 部署
+      href: deploy-with-kubeadm.md
     - name: 使用 Azure Data Studio 連線
       href: deploy-big-data-tools.md
   - name: 資料虛擬化
@@ -51,13 +65,17 @@ items:
     items:
     - name: 使用 PROSE 程式碼加速器的資料整頓
       href: use-prose-for-big-data-automation.md
+    - name: 使用 Spark 來定型及建立機器學習模型
+      href: train-and-create-machinelearning-models-with-spark.md
+    - name: 使用 Spark/Mleap 來匯出 ML 模型
+      href: export-model-with-spark-mleap.md
   - name: 管理 SQL Server 巨量資料叢集
     items:
     - name: 叢集系統管理入口網站
       href: cluster-admin-portal.md
     - name: Kubernetes 疑難排解
       href: cluster-troubleshooting-commands.md
-  - name: 筆記型電腦
+  - name: Notebook
     items:
     - name: Notebooks 概觀
       href: notebooks-guidance.md
@@ -77,9 +95,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 要求存取巨量資料叢集
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 9ec65a5d9312996be55ef57ca3bdbdd068d58b9e
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6e4a0480fa79a79f0e3b987bac5cf1fa1b000971
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356170"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411738"

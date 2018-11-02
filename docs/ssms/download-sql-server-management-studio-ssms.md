@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 09/25/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d22c89d40c423449af8fe1803ceea3a586f5b45
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 09b339293e7dff650a7c91850d745b9c580f856e
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906338"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419253"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 **[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.0 (預覽 4)](https://go.microsoft.com/fwlink/?linkid=2014662)**
 
-預覽 4 是 SSMS 18.0 的第一個公開預覽。
+Preview 4 是 SSMS 18.0 的第一個公開預覽版。
 
 **版本資訊**
 
@@ -157,6 +157,5 @@ SSIS
 - [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
 
 若您有意見或建議，或是要回報問題，連絡 SSMS 小組的最佳方式是透過 [UserVoice](https://aka.ms/sqlfeedback)。

@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100539"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384173"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 該資料表包含錯誤訊息編號和描述 (來自 sys.messages 目錄檢視的錯誤訊息文字)。 
@@ -1290,6 +1290,7 @@ ms.locfileid: "49100539"
 |   2597    |   10  |   否  |   忽略追蹤旗標 %d。 它可能是無效的追蹤旗標，或是只能在伺服器啟動期間指定的追蹤旗標。    |
 |   2599    |   16  |   否  |   無法切換到資料表 "%.*ls" 中的資料列文字。  |
 |   2601    |   14  |   否  |   無法以唯一索引 '%.* ls' 在物件 '%.*ls' 中插入重複的索引鍵資料列。    |
+|   2628    |   16  |   否  |   資料表 table '% 中的字串或二進位資料會被截斷。*ls', column '%.* ls'。 截斷的值：' %.* ls'。|
 |   2627    |   14  |   否  |   違反 %ls 條件約束 '%.*ls'。無法在物件 '%.* ls' 中插入重複的索引鍵。 |
 |   2701    |   10  |   否  |   忽略資料庫名稱 '%.*ls'，參考位於 tempdb 的物件。    |
 |   2702    |   16  |   否  |   資料庫 '%.*ls' 不存在。    |
