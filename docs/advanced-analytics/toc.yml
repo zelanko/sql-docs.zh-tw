@@ -71,7 +71,7 @@ items:
 - name: 教學課程
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: 資料
+  - name: data
     items:
     - name: 航空公司資料集
       href: tutorials/demo-data-airlinedemo-in-sql.md
@@ -260,6 +260,8 @@ items:
       href: r/managing-and-monitoring-r-solutions.md
     - name: 使用 SSMS 報告來監視
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+    - name: 使用 DMV 來監視
+      href: administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
     - name: 調整指令碼執行規模
       href: administration/modify-user-account-pool.md
     - name: 使用資源治理
@@ -270,8 +272,6 @@ items:
       href: r/extended-events-for-sql-server-r-services.md
     - name: 延伸的事件 PREDICT T-SQL
       href: xe-event-predict-tsql.md
-    - name: 資料管理檢視 (DMV)
-      href: r/dmvs-for-sql-server-r-services.md
     - name: R 程式碼分析函式
       href: r/using-r-code-profiling-functions.md
 - name: 參考
@@ -313,7 +313,7 @@ items:
       href: r-script-execution-errors.md
   - name: 部落格
     items:
-    - name: SQL Server
+    - name: '[SQL Server]'
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
     - name: R 伺服器
       href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
@@ -321,13 +321,13 @@ items:
       href: https://blogs.technet.microsoft.com/machinelearning/
   - name: 論壇
     items:
-    - name: SQL Server
+    - name: '[SQL Server]'
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 33a789dc8cfb6d632e5d2251c1c1105f677e9d3f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806778"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743213"
