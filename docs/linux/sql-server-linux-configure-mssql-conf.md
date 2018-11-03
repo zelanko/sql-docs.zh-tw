@@ -4,18 +4,18 @@ description: 本文說明如何在 Linux 上設定 SQL Server 設定時，用以
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694666"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753585"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具，設定在 Linux 上的 SQL Server
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694666"
 | [Database Mail 設定檔](#dbmail) | 在 Linux 上設定 SQL Server 預設 database mail 設定檔。 |
 | [預設資料目錄](#datadir) | 變更新的 SQL Server 資料庫資料檔案 (.mdf) 的預設目錄。 |
 | [預設記錄檔目錄](#datadir) | 預設會將目錄變更為新的 SQL Server 資料庫記錄檔 (.ldf) 檔案。 |
-| [預設 master 資料庫檔案目錄](#masterdatabasedir) | 變更現有的 SQL 安裝上的 master 資料庫檔案的預設目錄。|
+| [Master 資料庫的預設目錄](#masterdatabasedir) | 變更主要資料庫和記錄檔的預設目錄。|
 | [預設 master 資料庫檔案名稱](#masterdatabasename) | 變更 master 資料庫檔案的名稱。 |
 | [預設傾印目錄](#dumpdir) | 變更新的記憶體傾印和其他疑難排解檔案的預設目錄。 |
 | [預設錯誤記錄檔目錄](#errorlogdir) | 預設會將目錄變更為新的 SQL Server 錯誤記錄檔，預設的 Profiler 追蹤、 系統健全狀況工作階段 XE，Hekaton 工作階段 XE 檔案。 |
@@ -190,7 +190,7 @@ ms.locfileid: "47694666"
 
 ## <a id="masterdatabasedir"></a> 變更預設 master 資料庫檔案目錄位置
 
-**Filelocation.masterdatafile**並**filelocation.masterlogfile**設定變更 SQL Server 引擎從中尋找 master 資料庫檔案的位置。 根據預設，此位置會是 /var/opt/mssql/data。 
+**Filelocation.masterdatafile**並**filelocation.masterlogfile**設定變更 SQL Server 引擎從中尋找 master 資料庫檔案的位置。 根據預設，此位置會是 /var/opt/mssql/data。
 
 若要變更這些設定，請使用下列步驟：
 
@@ -214,13 +214,16 @@ ms.locfileid: "47694666"
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > 除了移動 master 資料與記錄檔，這也會移動所有其他系統資料庫的預設位置。
+
 1. 停止 SQL Server 服務：
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. 將 master.mdf 和 masterlog.ldf 移： 
+1. 將 master.mdf 和 masterlog.ldf 移：
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ ms.locfileid: "47694666"
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> 如果 SQL Server 指定的目錄中找不到 master.mdf 和 mastlog.ldf 檔、 樣板化系統資料庫的複本將會自動建立在指定的目錄中，而且 SQL Server 將成功啟動。 不過，中繼資料，例如使用者資料庫、 伺服器登入、 伺服器憑證、 加密金鑰、 SQL agent 作業或舊的 SA 登入密碼不會更新新的 master 資料庫中。 您必須停止 SQL Server 並將您的舊 master.mdf 和 mastlog.ldf 移至新的指定位置並啟動 SQL Server 以繼續使用現有的中繼資料。 
 
+   > [!NOTE]
+   > 如果 SQL Server 指定的目錄中找不到 master.mdf 和 mastlog.ldf 檔、 樣板化系統資料庫的複本將會自動建立在指定的目錄中，而且 SQL Server 將成功啟動。 不過，中繼資料，例如使用者資料庫、 伺服器登入、 伺服器憑證、 加密金鑰、 SQL agent 作業或舊的 SA 登入密碼不會更新新的 master 資料庫中。 您必須停止 SQL Server 並將您的舊 master.mdf 和 mastlog.ldf 移至新的指定位置並啟動 SQL Server 以繼續使用現有的中繼資料。
+ 
+## <a id="masterdatabasename"></a> 變更 master 資料庫檔案的名稱
 
-## <a id="masterdatabasename"></a> 變更主要資料庫檔案的名稱。
+**Filelocation.masterdatafile**並**filelocation.masterlogfile**設定變更 SQL Server 引擎從中尋找 master 資料庫檔案的位置。 您也可以使用此變更主要資料庫和記錄檔的名稱。 
 
-**Filelocation.masterdatafile**並**filelocation.masterlogfile**設定變更 SQL Server 引擎從中尋找 master 資料庫檔案的位置。 根據預設，此位置會是 /var/opt/mssql/data。 若要變更這些設定，請使用下列步驟：
+若要變更這些設定，請使用下列步驟：
 
 1. 停止 SQL Server 服務：
 
@@ -251,8 +255,11 @@ ms.locfileid: "47694666"
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > 您只能變更 master 資料庫的名稱和 SQL Server 已成功啟動之後，記錄檔。 初始回合中之前, SQL Server 會預期要 master.mdf 和 mastlog.ldf 命名的檔案。
 
 1. 變更 master 資料庫資料和記錄檔的名稱 
 
@@ -266,8 +273,6 @@ ms.locfileid: "47694666"
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> 變更預設傾印目錄位置
 

@@ -4,7 +4,7 @@ description: 本快速入門示範如何使用 Docker 來執行 SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/07/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085284"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753545"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>使用 Docker 的快速入門： 執行 SQL Server 容器映像
 
@@ -44,8 +44,9 @@ ms.locfileid: "49085284"
 ## <a id="requirements"></a> 必要條件
 
 - 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
-- 至少 2 GB 的磁碟空間
-- 至少 2 GB 的記憶體
+- Docker **overlay2**存放裝置驅動程式。 這是大部分使用者的預設值。 如果您發現您不使用此儲存體提供者，並且需要變更，請參閱指示和中的警告[docker 文件，以設定 overlay2](https://docs.docker.com/storage/storagedriver/overlayfs-driver/#configure-docker-with-the-overlay-or-overlay2-storage-driver)。
+- 至少 2 GB 的磁碟空間。
+- 至少 2 GB 的 RAM。
 - [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
 
 <!--The following H2 is versioned for 2017 and 2019. Much of the content is duplicated, so

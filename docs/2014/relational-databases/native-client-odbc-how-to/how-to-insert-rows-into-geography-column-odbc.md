@@ -10,12 +10,12 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae7a2aaed9c1555b890dca68cbfedf027e9e54f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137428"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753495"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入至 Geography 資料行 (ODBC)
   此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用 ::STAsText() 加以顯示。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且該應用程式會列印至主控台：POINT(56.4595 -2.9842)。  
@@ -37,7 +37,7 @@ ms.locfileid: "48137428"
   
  第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -48,7 +48,7 @@ CREATE TABLE SpatialSample (Name varchar(10), Geog Geography)
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -69,7 +69,7 @@ class direxec {
       HSTMT hstmt;   // Statement Handle  
       SQLHDESC hdesc;   // Descriptor handle  
       SQLCHAR szData[MAX_DATA];   // Returned Data Storage  
-      SDWORD cbData;   // Output Lenght of data   
+      SDWORD cbData;   // Output Length of data   
   
       SQLCHAR szConnStrOut[MAX_DATA + 1];  
       SWORD swStrLen;  
@@ -86,7 +86,7 @@ public:
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-      // Allocate the enviroment handle  
+      // Allocate the environment handle  
       rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
       check_rc(rc);  
   
@@ -211,7 +211,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use tempdb  
 GO  
   

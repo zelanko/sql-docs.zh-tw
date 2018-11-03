@@ -11,18 +11,18 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05314c09c64232c469b88e4522934d2a4d713dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168158"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753575"
 ---
 # <a name="modifying-the-date-dimension"></a>修改 Date 維度
   在這個主題的工作中，您會建立一個使用者定義階層，以及變更針對 [日期]、[月]、[日曆季] 和 [日曆半年] 屬性所顯示的成員名稱。 您也會定義屬性的複合索引鍵、控制維度成員的排序次序，以及定義屬性關聯性。  
   
 ## <a name="adding-a-named-calculation"></a>加入具名計算  
- 具名計算是以導出資料行表示的 SQL 運算式，您可以將它加入資料來源檢視的資料表中。 這個運算式以資料表的資料行呈現及運作。 具名計算可讓您延伸資料來源檢視中現有資料表的關聯式結構描述，而不必修改基礎資料來源中的資料表。 如需詳細資訊，請參閱[在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ 具名計算是以導出資料行表示的 SQL 運算式，您可以將它加入資料來源檢視的資料表中。 這個運算式以資料表的資料行呈現及運作。 具名計算可讓您延伸資料來源檢視中現有資料表的關聯式結構描述，而不必修改基礎資料來源中的資料表。 如需詳細資訊，請參閱 [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>加入具名計算  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48168158"
   
 5.  拖曳**日期索引鍵**屬性從**屬性**窗格將**\<新層級 >** 格中**階層**窗格下方**英文月份**層級。  
   
-6.  中**階層** 窗格中，以滑鼠右鍵按一下標題列**階層**階層、 按一下**重新命名**，然後輸入`Calendar Date`。  
+6.  中**階層**] 窗格中，以滑鼠右鍵按一下標題列**階層**階層中，按一下 [**重新命名**，然後輸入`Calendar Date`。  
   
 7.  以滑鼠右鍵按一下操作功能表中，使用中`Calendar Date`階層中，重新命名**英文月份**層級設`Calendar Month`，然後重新命名**日期索引鍵**層級`Date`。  
   

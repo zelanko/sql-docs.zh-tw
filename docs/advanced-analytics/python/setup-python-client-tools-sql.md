@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 326676d1be684b90784351de316590ebdb1ff29f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051150"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216622"
 ---
 # <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>設定用於 SQL Server Machine Learning Python 用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python 整合可啟動 SQL Server 2017 或更新版本，當您在 Machine Learning 服務 （資料庫） 安裝中包含 Python 選項。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)。
+Python 整合功能時包括中的 [Python] 選項啟動 SQL Server 2017 或更新版本[Machine Learning 服務 （資料庫） 安裝](../install/sql-machine-learning-services-windows-install.md)。 
 
-在這篇文章，了解如何設定用戶端開發工作站，以便您可以連接到遠端 SQL Server 進行機器學習服務和 Python 整合。 在結束時，您將會有相同的 Python 程式庫，為 SQL Server 上再加上能力將計算推送從 SQL Server 的遠端工作階段的本機工作階段。
+在這篇文章，了解如何設定 Python 用戶端開發工作站，以便您可以連接到遠端 SQL Server 進行機器學習服務和 Python 整合。 此練習會使用 Jupyter Notebook 來執行 Python 程式碼。 完成這篇文章中的步驟之後，您必須使用相同的 SQL Server 上的 Python 程式庫。 您也會知道如何將 SQL Server 上推送至遠端的 Python 工作階段的計算從本機 Python 工作階段。
 
 > [!Tip]
-> 如需影片示範，請參閱 <<c0> [ 執行的 R 和遠端 SQL Server 從 Jupyter Notebook 中的 Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
+> 如這篇文章中練習的示範影片，請參閱 <<c0> [ 執行的 R 和遠端 SQL Server 從 Jupyter Notebook 中的 Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
 > 只要用戶端程式庫安裝的替代方式使用獨立伺服器。 使用獨立豐富用戶端與伺服器是某些客戶偏好的更多的端對端案例工作的選項。 如果您有[獨立伺服器](../install/sql-machine-learning-standalone-windows-install.md)提供 SQL Server 安裝程式中，您必須是 SQL Server 資料庫引擎執行個體完全分離的 Python 伺服器。 Standalon 伺服器包含 Anaconda，再加上的 Microsoft 特定程式庫的開放原始碼基底散發。 您可以找到此位置的 Python 可執行檔： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 在豐富型用戶端安裝的驗證，以開啟[Jupyter notebook](#python-tools)伺服器上使用 Python.exe 來執行命令。
@@ -127,7 +127,7 @@ Anaconda 包含 Jupyter Notebook。 下一個步驟中，建立 notebook，並�
 
 在之前嘗試下一個步驟中，請確定您具有權限的連接字串和 SQL Server 執行個體[Iris 範例資料庫](../tutorials/demo-data-iris-in-sql.md)。 如果資料庫不存在，而且您有足夠的權限，您可以[建立資料庫，使用這些內嵌指示](#create-iris-remotely)。
 
-以有效的值取代連接字串。 範例程式碼使用`"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"`，但您的程式碼應該可能指定在遠端伺服器，以執行個體名稱。
+以有效的值取代連接字串。 範例程式碼使用`"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"`，但您的程式碼應該可能指定在遠端伺服器，執行個體名稱，與對應至資料庫使用者登入的認證選項。
 
 ### <a name="define-a-function"></a>定義函式
 
@@ -237,7 +237,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### <a name="3---use-recoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 RecoscalePy Api 來建立資料表，並將鳶尾花資料
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 Revoscalepy Api 來建立資料表，並將鳶尾花資料
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

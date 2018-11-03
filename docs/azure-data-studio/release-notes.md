@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411195"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237064"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 版本資訊
 
@@ -23,8 +23,8 @@ ms.locfileid: "49411195"
 
 ## <a name="october-2018-october-release"></a>2018 年 10 月起 （年 10 月發行）
 
-發行日期： 2018 年 10 月 18 日  
-版本： 1.1.3
+發行日期： 2018 年 10 月 29 日  
+版本： 1.1.4
 
 - 簡介 Azure 資源總管，瀏覽 Azure SQL Database
 - 改善 物件總管 和 查詢編輯器連線強固性
@@ -32,6 +32,12 @@ ms.locfileid: "49411195"
 - 若要更新[SQL Server 2019 Preview 延伸模組](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>錯誤修正
+- 修正[發出 # 2717年](https://github.com/Microsoft/azuredatastudio/issues/2717): XML 資料行結果按一下格式設定
+- 修正[發出 # 2993年](https://github.com/Microsoft/azuredatastudio/issues/2993)： 視窗寬度的結果不完整
+- 修正[發出 # 2999年](https://github.com/Microsoft/azuredatastudio/issues/2999)： 無法載入檔案 System.Diagnostics.Tracing Mac 上的，連接到資料庫時
+- 修正[發出 # 2851年](https://github.com/Microsoft/azuredatastudio/issues/2851): TimeSeries 圖表無法正確轉譯
+- 修正[發出 # 2996年](https://github.com/Microsoft/azuredatastudio/issues/2996)： 的暫存資料表遺失，由於突然出現的工作階段變更
+- ...
 
 如需詳細資訊，請參閱 <<c0> [ 變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，並[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 

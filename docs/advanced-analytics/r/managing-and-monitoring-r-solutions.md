@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169078"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743203"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理並整合 SQL Server 上的機器學習工作負載
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ R 和 Python 整合會變成可透過一連串的步驟。 第一個是安裝程
 
 > [!NOTE]
 > R 套件的伺服器管理員權限並不特別需要套件安裝如果您使用的替代方法。 請參閱[SQL Server 中的安裝 R 封裝](install-additional-r-packages-on-sql-server.md)如需詳細資訊。
+
+## <a name="monitoring-script-execution"></a>監視指令碼執行
+
+在中執行的 R 和 Python 指令碼[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]啟動[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]介面。 不過，[啟動列] 不是資源控管或分割區分開監視，因為它是適當方式管理資源的 Microsoft 所提供的安全服務。
+
+使用管理在 Launchpad 服務下執行的外部指令碼[Windows 作業物件](/windows/desktop/ProcThread/job-objects)。 作業物件可讓您將處理序群組當作一個單位來管理。 每個作業物件都是階層式物件，並控制與其關聯之所有處理序的屬性。 在作業物件上執行的作業會影響與該作業物件關聯的所有處理序。
+
+因此，如果您需要終止一個與某個物件關聯的作業，請注意，所有相關的處理序也將一併終止。 如果您正在執行指派給 Windows 作業物件的 R 指令碼，而該指令碼執行必須終止的相關 ODBC 作業，則父系 R 指令碼處理序也將一併終止。
+
+如果您開始使用平行處理外部指令碼時，單一的 Windows 工作物件會管理所有平行子處理程序。
+
+若要判斷處理序是否是在作業中執行，請使用 `IsProcessInJob` 函數。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643976"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965949"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>執行 SQL Server 移轉評估，使用 Data Migration Assistant
 
@@ -47,15 +47,13 @@ ms.locfileid: "49643976"
    當您要評估您的來源 SQL Server 執行個體移轉至內部部署 SQL Server 或 SQL Server 裝載於 Azure VM 的目標時，您可以選擇其中一個或多個下列的評估報告類型：
 
     -   **相容性問題**
-
     -   **新功能的建議**
 
     ![選取 SQL Server 目標評估報表類型](../dma/media/AssessmentTypes.png)
 
-   當您要評估您的來源 SQL Server 執行個體移轉到 Azure SQL Database 時，您可以選擇其中一個或多個下列的評估報告類型：
+   當評估您的來源 SQL Server 執行個體移轉到 Azure SQL Database，您可以選擇其中一個或多個下列的評估報告類型：
 
     -   **檢查資料庫相容性**
-
     -   **檢查功能同位**
 
     ![選取 SQL Database 目標的評估報告類型](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ ms.locfileid: "49643976"
 
 同樣地，您可以檢閱跨功能建議**效能**，**儲存體**，並**安全性**區域。
 
-功能建議涵蓋各種不同的功能，例如記憶體內部 OLTP 和資料行存放區、 Stretch Database、 Always Encrypted、 動態資料遮罩和透明資料加密。
+功能建議涵蓋各種不同的功能，例如記憶體內部 OLTP、 資料行存放區、 Stretch Database、 Always Encrypted、 動態資料遮罩和透明資料加密。
 
 ![檢視功能建議](../dma/media/FeatureRecommendations.png)
 
-針對 Azure SQL Database，評估會提供阻礙移轉的問題和功能同位問題。 選取特定的選項來檢閱這兩種類別的結果。
+針對 Azure SQL Database，評估會提供阻礙移轉的問題和功能同位問題。 選取特定的選項來檢閱這兩種類別的結果。
 
 - **SQL Server 功能同位**類別提供一組完整的建議，Azure，以及補救步驟中可用的替代方法。 它可協助您規劃在移轉專案中的這項工作。
 
   ![檢視 SQL Server 功能同位資訊](../dma/media/SQLFeatureParity.png)
 
-- **相容性問題**類別提供封鎖在內部部署 SQL Server 資料庫移轉至 Azure SQL database 的部分支援或不受支援的功能。 然後，它會提供建議來協助您解決這些問題。
+- **相容性問題**類別提供封鎖在內部部署 SQL Server 資料庫移轉至 Azure SQL database 的部分支援或不受支援的功能。 然後，它會提供建議來協助您解決這些問題。
 
   ![檢視相容性問題](../dma/media/CompatibilityIssues.png)
 

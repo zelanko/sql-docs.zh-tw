@@ -1,7 +1,7 @@
 ---
 title: 複寫記錄讀取器代理程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202428"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226340"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
   「複寫記錄讀取器代理程式」是一個可執行檔，它會監視針對異動複寫所設定之每個資料庫的交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。  
@@ -101,7 +101,10 @@ ms.locfileid: "48202428"
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
-  
+
+ > [!NOTE]  
+ >  SQL Server 的完整的網域名稱來定義有效的 SSL 憑證。 為了讓連接成功時將-EncryptionLevel 設定為 2 的代理程式，請在本機的 SQL Server 上建立別名。 ' 別名 Name' 參數應該是伺服器名稱，以及 「 伺服器 」 參數應該設定為 SQL Server 的完整名稱。
+ 
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../security/security-overview-replication.md)。  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  

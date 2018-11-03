@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 343e40cc0872c07d21d319717d33811a366a88b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750506"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753535"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用 Linux 上的環境變數來設定 SQL Server 設定
 
@@ -61,8 +61,8 @@ ms.locfileid: "47750506"
 | **MSSQL_DUMP_DIR** | 變更其中 SQL Server 會存入記憶體傾印和其他疑難排解的檔案預設的目錄。 |
 | **MSSQL_ENABLE_HADR** | 啟用可用性群組。 例如，'1' 已啟用，而 '0' 會停用 |
 | **MSSQL_AGENT_ENABLED** | 啟用 SQL Server 代理程式。 例如，啟用 'true' 和 'false' 的已停用。 根據預設，代理程式已停用。  |
-| **MSSQL_MASTER_DATA_FILE** | 設定 master 資料庫資料檔案的位置。 |
-| **MSSQL_MASTER_LOG_FILE** | 設定 master 資料庫記錄檔的位置。 |
+| **MSSQL_MASTER_DATA_FILE** | 設定 master 資料庫資料檔案的位置。 必須命名為**master.mdf**直到第一次執行的 SQL Server。 |
+| **MSSQL_MASTER_LOG_FILE** | 設定 master 資料庫記錄檔的位置。 必須命名為**mastlog.ldf**直到第一次執行的 SQL Server。 |
 | **MSSQL_ERROR_LOG_FILE** | 設定錯誤記錄檔的位置。 |
 
 ::: moniker-end
@@ -85,13 +85,13 @@ ms.locfileid: "47750506"
 | **MSSQL_DUMP_DIR** | 變更其中 SQL Server 會存入記憶體傾印和其他疑難排解的檔案預設的目錄。 |
 | **MSSQL_ENABLE_HADR** | 啟用可用性群組。 例如，'1' 已啟用，而 '0' 會停用 |
 | **MSSQL_AGENT_ENABLED** | 啟用 SQL Server 代理程式。 例如，啟用 'true' 和 'false' 的已停用。 根據預設，代理程式已停用。  |
-| **MSSQL_MASTER_DATA_FILE** | 設定 master 資料庫資料檔案的位置。 |
-| **MSSQL_MASTER_LOG_FILE** | 設定 master 資料庫記錄檔的位置。 |
+| **MSSQL_MASTER_DATA_FILE** | 設定 master 資料庫資料檔案的位置。 必須命名為**master.mdf**直到第一次執行的 SQL Server。 |
+| **MSSQL_MASTER_LOG_FILE** | 設定 master 資料庫記錄檔的位置。 必須命名為**mastlog.ldf**直到第一次執行的 SQL Server。 |
 | **MSSQL_ERROR_LOG_FILE** | 設定錯誤記錄檔的位置。 |
 
 ::: moniker-end
 
-## <a name="example-initial-setup"></a>範例： 初始設定
+## <a name="use-with-initial-setup"></a>使用初始設定
 
 這個範例會執行`mssql-conf setup`設定環境變數。 指定下列環境變數：
 
@@ -104,7 +104,7 @@ ms.locfileid: "47750506"
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="example-docker"></a>範例： Docker
+## <a name="use-with-docker"></a>搭配 Docker 使用
 
 此範例中的 docker 命令會使用下列環境變數，建立新的 SQL Server 容器：
 

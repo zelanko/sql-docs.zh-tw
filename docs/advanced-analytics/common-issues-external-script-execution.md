@@ -1,18 +1,18 @@
 ---
 title: Launchpad 服務和 SQL Server 中的外部指令碼執行常見 |Microsoft Docs
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: mlserver
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9a556a83e57dc41109914ff9da82405abd8b24e1
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: b480c400ae2068bb6701192e77d97672ddeb024e
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254444"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Launchpad 服務與 SQL Server 中的外部指令碼執行的一般問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

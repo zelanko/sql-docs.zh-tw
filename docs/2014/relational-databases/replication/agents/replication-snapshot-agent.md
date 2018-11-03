@@ -1,7 +1,7 @@
 ---
 title: 複寫快照集代理程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0914e0c2abea1ab4dc15b5d3410f6d717403ef27
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087158"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237004"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  
@@ -132,6 +132,9 @@ ms.locfileid: "48087158"
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
+
+ > [!NOTE]  
+ >  SQL Server 的完整的網域名稱來定義有效的 SSL 憑證。 為了讓連接成功時將-EncryptionLevel 設定為 2 的代理程式，請在本機的 SQL Server 上建立別名。 ' 別名 Name' 參數應該是伺服器名稱，以及 「 伺服器 」 參數應該設定為 SQL Server 的完整名稱。
   
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../security/security-overview-replication.md)。  
   

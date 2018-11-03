@@ -1,5 +1,5 @@
 ---
-title: 設定存取 Hadoop 中的外部資料的 PolyBase |Microsoft Docs
+title: 設定 PolyBase 存取 Hadoop 中的外部資料 | Microsoft Docs
 description: 說明如何設定連接至外部 Hadoop 的平行處理資料倉儲的 PolyBase。
 author: mzaman1
 manager: craigg
@@ -9,31 +9,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460874"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236934"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 以存取 Hadoop 中的外部資料
+# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
 本文說明如何使用 PolyBase 來查詢 Hadoop 中的外部資料的 APS 應用裝置上。
 
 ## <a name="prerequisites"></a>先決條件
 
-PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。 支援在支援的主要和次要版本內的所有版本和 Hadoop 遵循其新版本的"Major.Minor.Version"模式。 支援下列 Hadoop 提供者：
+PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。 Hadoop 的新版本遵循 "Major.Minor.Version" 模式，並且支援所支援主要和次要版本內的所有版本。 支援下列 Hadoop 提供者：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
  - Linux 上的 Hortonworks HDP 2.1 – 2.6
  - Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
  - Linux 上的 Cloudera CDH 4.3  
  - Linux 上的 Cloudera CDH 5.1 - 5.5、5.9 - 5.13
 
-### <a name="configure-hadoop-connectivity"></a>設定 Hadoop 連接
+### <a name="configure-hadoop-connectivity"></a>設定 Hadoop 連線
 
 首先，設定 AP，以使用特定的 Hadoop 提供者。
 
-1. 執行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' 並設定適當的值為您提供者使用。 若要找出您的提供者的值，請參閱[PolyBase 連線組態](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。 
+1. 同時執行 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 與 'hadoop connectivity'，並設定您提供者的適當值。 若要尋找您提供者的值，請參閱 [PolyBase 連線設定](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。 
 
    ```sql  
    -- Values map to various external data sources.  
@@ -48,9 +48,9 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
 
 2. 重新啟動使用服務狀態 頁面上的 APS 地區[設備 Configuration Manager](launch-the-configuration-manager.md)。
   
-## <a id="pushdown"></a> 將計算下推  
+## <a id="pushdown"></a> 啟用下推計算  
 
-若要改善查詢效能，讓計算下推到 Hadoop 叢集：  
+為改善查詢效能，請將計算下推到 Hadoop 叢集︰  
   
 1. 開啟 PDW 控制節點的遠端桌面連線。
 
@@ -68,7 +68,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
 
 ## <a name="configure-an-external-table"></a>設定外部資料表
 
-若要查詢 Hadoop 資料來源中的資料，您必須定義在 TRANSACT-SQL 查詢中使用外部資料表。 下列步驟說明如何設定外部資料表。
+若要查詢 Hadoop 資料來源中的資料，您必須定義要在 Transact-SQL 查詢中使用的外部資料表。 下列步驟描述如何設定外部資料表。
 
 1. 在資料庫上建立主要金鑰。 必須加密的認證密碼。
 
@@ -76,7 +76,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-2. 建立資料庫範圍認證的受 Kerberos 保護的 Hadoop 叢集。
+2. 針對 Kerberos 保護的 Hadoop 叢集建立資料庫範圍認證。
 
    ```sql
    -- IDENTITY: the Kerberos user name.  
@@ -85,7 +85,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. 建立與外部資料來源[CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)。
+3. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -99,7 +99,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
    );  
    ```
 
-4. 建立外部檔案格式[CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)。
+4. 使用 [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) 建立外部檔案格式。
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -109,7 +109,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. 建立指向儲存在 Hadoop 中資料的外部資料表[CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)。 在此範例中，外部資料包含車輛感應器資料。
+5. 使用 [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md) 建立外部資料表以指向 Hadoop 中儲存的資料。 在此範例中，外部資料包含車輛感應器資料。
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -126,7 +126,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
    );  
    ```
 
-6. 建立外部資料表的統計資料。
+6. 在外部資料表上建立統計資料。
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -140,7 +140,7 @@ PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Clo
 - 匯入資料。  
 - 匯出資料。  
 
-下列查詢會提供範例使用虛構的車輛感應器資料。
+下列查詢會提供具有虛構車輛感應器資料的範例。
 
 ### <a name="ad-hoc-queries"></a>特定查詢  
 
@@ -200,5 +200,6 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>後續步驟
 
-如需 PoliyBase 的詳細資訊，請參閱[什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
+針對 Hadoop 安全性設定，請參閱[設定 Hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
+如需有關 PolyBase 的詳細資訊，請參閱 <<c0> [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

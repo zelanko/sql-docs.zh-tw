@@ -9,15 +9,13 @@ ms.topic: article
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a32333836b8802198d59e4d978a5de625f2b8e3d
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: b3f05aa128aa8296d3860cf3ff81a642a0dc5d5a
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355959"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254305"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>設定透過共用的複寫快照集資料夾
 

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050909"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216674"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>設定 Azure Kubernetes Service 來進行 SQL Server 2019 （預覽） 部署
 
@@ -27,11 +27,8 @@ AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的
 
 ## <a name="prerequisites"></a>先決條件
 
-- AKS 環境中，最小的 VM 需求是至少兩個代理程式 Vm （在新增到主機） 的大小下限[Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)。 每個 VM 所需的最小資源是 4 個 Cpu 和 14 GB 記憶體。
+- AKS 環境中，最小的 VM 需求是記憶體的至少兩個代理程式 Vm （除了主版頁面），使用至少 4 個 Cpu 和 32 GB，每個。 Azure 基礎結構提供多個 Vm 的大小選項，請參閱 <<c0> [ 此處](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)針對您打算要部署的區域中選取項目。
   
-   > [!NOTE]
-   > 如果您打算執行巨量資料作業或多個 Spark 應用程式，最小的大小是[Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup)，而每個 VM 所需的最小資源 8 個 Cpu 及 32 GB 的記憶體。
-
 - 本節中，您必須執行 Azure CLI 2.0.4 版或更新版本。 如果您需要安裝或升級，請參閱[安裝 Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli)。 執行`az --version`以尋找版本，如有需要。
 
 - 安裝[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 巨量資料的 SQL Server 叢集的 Kubernetes、 伺服器和用戶端，需要 1.10 版本範圍內的任何次要版本。 若要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 您需要使用 aks`--kubernetes-version`參數來指定預設值不同的版本。 請注意，在 CTP2.0 發行時間範圍內，AKS 只支援 1.10.7 和 1.10.8 版本。 
@@ -81,7 +78,7 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_DS3_v2 \
+    --node-vm-size Standard_E4s_v3 \
     --node-count 2 \
     --kubernetes-version 1.10.7
     ```

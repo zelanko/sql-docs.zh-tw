@@ -1,7 +1,7 @@
 ---
 title: sys.dm_external_script_requests | Microsoft Docs
 ms.custom: ''
-ms.date: 06/24/2016
+ms.date: 10/28/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -19,27 +19,26 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb5597a9163ac87e9f6c08421025340cf8263b44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c572acac645146e3db18195a0dbe5b794effdc
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843466"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743186"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 逐資料列傳回正在執行外部指令碼的每個使用中背景工作帳戶。
- 
   
 > [!NOTE] 
 >  
->  只有安裝並啟用支援外部指令碼執行的功能，才能使用此 DMV。 如需如何針對 R 指令碼執行這項操作的資訊，請參閱[設定 SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)。  
+> 您已安裝並啟用支援外部指令碼執行的功能時，才可以使用此動態管理檢視 (DMV)。 如需詳細資訊，請參閱 < [SQL Server 2016 中的 R Services](../../advanced-analytics/r/sql-server-r-services.md)並[Machine Learning 服務 （R、 Python） 在 SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**唯一識別碼**|傳送外部指令碼要求的處理序識別碼。 這會對應至處理序 ID 所接收 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
-|language|**nvarchar**|代表支援的指令碼語言的關鍵字。 目前只支援 `R` 。|  
+|language|**nvarchar**|代表支援的指令碼語言的關鍵字。 |  
 |degree_of_parallelism|**int**|指出已建立之平行處理序數目的數字。 這個值可能與已要求的平行處理序數目不同。|  
 |external_user_name|**nvarchar**|用來執行指令碼的 Windows 背景工作帳戶。|  
   
@@ -54,12 +53,11 @@ ms.locfileid: "47843466"
 
 此檢視可使用指令碼語言識別碼進行篩選。
 
-此檢視也會傳回正在執行指令碼的背景工作帳戶。 如需 R 指令碼所使用之背景工作帳戶的資訊，請參閱[修改 R Services 的使用者帳戶集區](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md)。
+此檢視也會傳回正在執行指令碼的背景工作帳戶。 外部指令碼所使用的背景工作帳戶的相關資訊，請參閱處理 (SQLRUserGroup) 一節中的所使用的身分識別[SQL Server Machine Learning 服務的擴充性架構的安全性概觀](../../advanced-analytics/concepts/security.md#sqlrusergroup)。
 
-**external_script_request_id** 欄位中所傳回的 GUID 也代表暫存檔案儲存所在之安全目錄的檔案名稱。 每個背景工作帳戶 (例如 MSSQLSERVER01) 都代表單一 SQL 登入或 Windows 使用者，並且可能會用來執行多個指令碼要求。 根據預設，完成要求的指令碼之後，即會清除這些暫存檔案。 如果您為了進行偵錯而需要保留這些檔案一段時間，您可以變更清除旗標，如[設定及管理進階分析擴充功能](../../advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md)主題中所述。  
+**external_script_request_id** 欄位中所傳回的 GUID 也代表暫存檔案儲存所在之安全目錄的檔案名稱。 每個背景工作帳戶 (例如 MSSQLSERVER01) 都代表單一 SQL 登入或 Windows 使用者，並且可能會用來執行多個指令碼要求。 根據預設，完成要求的指令碼之後，即會清除這些暫存檔案。
  
 此 DMV 只會監視使用中處理序，而無法回報已完成的指令碼。 如果您需要追蹤指令碼的持續時間，建議您將計時資訊加入您的指令碼，然後當做指令碼執行的一部分來擷取該資訊。
-
 
 ## <a name="examples"></a>範例  
   
