@@ -9,17 +9,69 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461103"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237074"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新的 Microsoft® Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.2"></a>
+## <a name="aps-cu72"></a>APS CU7.2
+發行日期為 2018 年 10 月
+
+### <a name="support-for-tls-12"></a>Tls 1.2 支援
+APS CU7.2 支援 TLS 1.2。 用戶端電腦 APS 和 APS 內部節點通訊現在可以設定只透過 tls 1.2 進行通訊。 SSDT、 SSIS 和安裝設定為只透過 TLS 1.2 通訊的用戶端電腦上的 Dwloader 之類的工具現在可以連線至 AP 使用 TLS 1.2。 根據預設，APS 會回溯相容性支援 TLS （1.0、 1.1 及 1.2） 的所有版本。 如果您想要設定 AP 設備 stictly 以使用 TLS 1.2，則可以藉由變更登錄設定。 
+
+請參閱[AP 上設定 tls 1.2](configure-tls12-aps.md)如需詳細資訊。
+
+### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase 支援 Hadoop 加密區域
+現在 PolyBase 可以通訊 Hadoop 加密區域。 請參閱 APS 組態變更所需[設定 Hadoop 安全性](polybase-configure-hadoop-security.md#encryptionzone)。
+
+### <a name="insert-select-maxdop-options"></a>Insert-select maxdop 選項
+我們已新增[功能切換](appliance-feature-switch.md)，可讓您挑選大於 1 的 insert select 作業的 maxdop 設定。 您現在可以設定 maxdop 設定為 0、 1、 2 或 4。 預設值是 1。
+
+> [!IMPORTANT]  
+> 增加 maxdop 可能有時會導致較慢的作業或死結錯誤。 如果發生此情況，將設定變更回 maxdop 1，然後重試此作業。
+
+### <a name="columnstore-index-health-dmv"></a>資料行存放區索引健全狀況 DMV
+您可以檢視資料行存放區索引健全狀況資訊使用**dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv。 使用下列檢視，判斷片段，並決定何時要重建或重新組織資料行存放區索引。
+
+```sql
+create view dbo.vCS_rg_physical_stats
+as 
+with cte
+as
+(
+select   tb.[name]                    AS [logical_table_name]
+,        rg.[row_group_id]            AS [row_group_id]
+,        rg.[state]                   AS [state]
+,        rg.[state_desc]              AS [state_desc]
+,        rg.[total_rows]              AS [total_rows]
+,        rg.[trim_reason_desc]        AS trim_reason_desc
+,        mp.[physical_name]           AS physical_name
+FROM    sys.[schemas] sm
+JOIN    sys.[tables] tb               ON  sm.[schema_id]          = tb.[schema_id]                             
+JOIN    sys.[pdw_table_mappings] mp   ON  tb.[object_id]          = mp.[object_id]
+JOIN    sys.[pdw_nodes_tables] nt     ON  nt.[name]               = mp.[physical_name]
+JOIN    sys.[dm_pdw_nodes_db_column_store_row_group_physical_stats] rg      ON  rg.[object_id]     = nt.[object_id]
+                                                                            AND rg.[pdw_node_id]   = nt.[pdw_node_id]
+                                        AND rg.[pdw_node_id]    = nt.[pdw_node_id]                                          
+)
+select *
+from cte;
+```
+
+### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>PolyBase ORC 和 Parquet 檔案的日期範圍增加
+讀取、 匯入和匯出現在使用 PolyBase 的日期資料類型支援的日期 1970年-01-01 之前和之後 2038年-01-20 ORC 和 Parquet 檔案類型。
+
+### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>SQL Server 2017 為目標的 SSIS 目的地配接器
+新 AP SSIS 目的地配接器支援 SQL Server 2017，可以從下載部署目標[下載網站](https://www.microsoft.com/en-us/download/details.aspx?id=57472)。
+
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
 發行日期為 2018 年 7 月
@@ -85,7 +137,7 @@ APS AU6 支援這些 T-SQL 的相容性改進。  這些額外的語言項目，
 
 **資料類型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[varbinary （max)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp 公用程式][]。 Polybase 和 dwloader 目前不支援這些資料類型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[VARBINARY(MAX)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp 公用程式][]。 Polybase 和 dwloader 目前不支援這些資料類型。 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][]和十進位資料類型。
@@ -149,7 +201,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [在叢集資料行存放區索引上的非叢集索引]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY （MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [選取此項目...到]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
