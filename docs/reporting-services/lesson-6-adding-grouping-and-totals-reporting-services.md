@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720506"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051011"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教學課程中，您會將群組和總計新增至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表以組織和摘要資料。  
@@ -33,9 +33,9 @@ ms.locfileid: "47720506"
   
 4.  將 **Order** 欄位從 [報表資料]  窗格拖曳到 [資料列群組]  窗格。 將它放在 [日期] 下方和 [(詳細資料)] 上方。
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    請注意，資料列控制代碼中現在具有兩個方括號 (![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png))，用以顯示兩個群組。 資料表現在也有兩個 **[訂單]** 資料行。  
   
 5.  刪除雙線**右側**的原始 [日期] 和 [訂單] 資料行。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47720506"
   
 4.  在 **[格式]** 功能表上，依序按一下 **[背景色彩]**、 **[橙色]** 和 **[確定]**。  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![將背景色彩設定為橙色](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>在報表中加入總計  
   
@@ -113,9 +113,9 @@ ms.locfileid: "47720506"
 2.  按一下 [專案] 功能表，然後按一下 [Tutorial 屬性...]  
   
 3.  在 **TargetServerURL** 中，輸入報表伺服器的名稱，例如   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` 適用於在報表伺服器上設計報表時。  
+    - `http://localhost/reportserver` 適用於在報表伺服器上設計報表時。  
   
   
 4. 請記住，TargetReportFolder 是 tutorial (即專案名稱)。  這是下一步中將在其中部署報表的資料夾名稱。  
@@ -143,15 +143,15 @@ ms.locfileid: "47720506"
   
     瀏覽至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web入口網站 URL。   
     **注意︰入口網站** URL 是 "Reports"，而非 "Reportserver" 的報表伺服器 URL。  例如：   
-    - `http://<server name>/reports`。  
-     - `http://localhost/reports` 適用於在報表伺服器上設計報表時。  
+    `http://<server name>/reports`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+    在報表伺服器上設計報表時可用 `http://localhost/reports`。  
   
 8.  瀏覽至包含報表的資料夾。 預設名稱是 *tutorial*，即專案名稱或輸入專案屬性中 TargetReportFolder 欄位的名稱。   
 按一下 **Sales Orders** 報表的名稱，以在瀏覽器中檢視轉譯的報表。  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** 您已成功完成「建立基本資料表報表」教學課程。**  
+您已成功完成「建立基本資料表報表」教學課程。  
   
 ## <a name="see-also"></a>另請參閱  
 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

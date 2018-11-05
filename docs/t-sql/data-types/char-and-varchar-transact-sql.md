@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644006"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960792"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "49644006"
 ## <a name="arguments"></a>引數  
 **char** [ ( *n* ) ] 固定長度字串資料。 *n* 會定義字串長度 (單位為位元組)，而且必須是 1 到 8,000 之間的值。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組，但可儲存的字元數目可能小於 *n*。 **char** 的 ISO 同義字為 **character**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
-**varchar** [ ( *n* | **max** ) ] 可變長度的字串資料。 *n* 會定義字串長度 (單位為位元組)，而且必須是 1 到 8,000 之間的值。 **max** 表示儲存大小上限是 2^31-1 個位元組 (2 GB)。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
+**varchar** [ ( *n* | **max** ) ] 可變長度的字串資料。 *n* 會定義字串長度 (單位為位元組)，而且必須是 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
 ## <a name="remarks"></a>Remarks  
 當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 如果使用 CAST 和 CONVERT 函式時未指定 *n*，則預設長度為 30。
@@ -53,7 +53,7 @@ ms.locfileid: "49644006"
 
 若您的網站支援多種語言：
 - 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，請考慮使用支援 UTF-8 的定序來支援 Unicode 並將字元轉換問題降到最低。 
-- 若使用舊版 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，請考慮使用 Unicode **nchar** 或 **nvarchar** 資料類型，以將字元轉換問題降到最低。   
+- 若使用舊版 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，請考慮使用 Unicode **nchar** 或 **nvarchar** 資料類型，將字元轉換問題降到最低。   
 
 若使用 **char** 或 **varchar**，建議您：
 - 當資料行資料項目的大小一致時，請使用 **char**。  
@@ -64,12 +64,12 @@ ms.locfileid: "49644006"
   
 > [!WARNING]
 > 每個非 null 的 varchar(max) 或 nvarchar(max) 資料行都需要額外 24 位元組的固定配置，而不利於排序作業期間 8,060 位元組的資料列限制。 因此可能會對資料表中可建立的非 null varchar(max) 或 nvarchar(max) 資料行數目建立隱含限制。  
-建立資料表時 (高於最大資料列大小超過允許上限 8060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業 (如叢集索引鍵更新) 期間造成錯誤 (如錯誤 512)，或讓使用者直到執行作業前都無法預期多種完整資料行集。
+建立資料表時 (高於最大資料列大小超過允許上限 8,060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業 (如叢集索引鍵更新) 期間造成錯誤 (如錯誤 512)，或讓使用者直到執行作業前都無法預期多種完整資料行集。
   
 ##  <a name="_character"></a> 轉換字元資料  
 將字元運算式轉換成不同大小的字元資料類型時，對新資料類型而言太大的值會被截斷。 **uniqueidentifier** 類型會基於轉換字元運算式的用途，而被視為字元類型；因此會受到轉換成字元類型之截斷規則的影響。 請參閱稍後的＜範例＞一節。
   
-當字元運算式被轉換成不同資料類型或大小的字元運算式時，例如從 **char(5)** 轉換成 **varchar(5)**，或從 **char(20)** 轉換成 **char(15)**，輸入數值的定序會被指派至轉換的數值。 如果將非字元運算式轉換成字元資料類型，會將目前資料庫的預設定序指派給轉換的數值。 不論哪一種狀況，都可以使用 [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 子句指派特定的定序。
+當字元運算式被轉換成不同資料類型或大小的字元運算式時，例如從 **char(5)** 轉換成 **varchar(5)**，或從 **char(20)** 轉換成 **char(15)**，輸入數值的定序會被指派至轉換的數值。 如果將非字元運算式轉換成字元資料類型，會將目前資料庫的預設定序指派給轉換的數值。 不論哪一種狀況，都可以使用 [COLLATE](../../t-sql/statements/collations.md) 子句指派特定的定序。
   
 > [!NOTE]  
 > 支援 **char** 和 **varchar** 資料類型的字碼頁轉換，但不支援 **text** 資料類型的字碼頁轉換。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不會報告字碼頁翻譯期間的資料遺失。  
@@ -162,7 +162,7 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>另請參閱
 [nchar 和 nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)  
 [資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [估計資料庫的大小](../../relational-databases/databases/estimate-the-size-of-a-database.md)     

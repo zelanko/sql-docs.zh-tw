@@ -33,18 +33,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f289beef87a16f518e993b80045cd98c5828b5d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730306"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991092"
 ---
 # <a name="database-lifecycle-management"></a>資料庫生命週期管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   資料庫生命週期管理 (DLM) 是一種管理資料庫和資料資產的原則式方法。 DLM 不是產品而是一套針對資料庫應用程式管理資料庫結構描述、資料和中繼資料的完整方法。 周全且主動的 DLM 方法可讓組織根據適當的效能、保護、可用性和成本層級管理資料資源。  
   
- DLM 一開始會探討專案設計與意圖，接著探討資料庫開發、測試、建置、部署、維護、監視和備份活動，最後再探討資料封存。 本主題將提供 DLM 各階段的概觀：從資料庫開發開始，然後依序進行建置、部署和監視動作 (圖 1)。 同時也包含資料管理活動，以及資料可攜性作業，例如匯入/匯出、備份、移轉和同步。  
+ DLM 一開始會探討專案設計與意圖，接著探討資料庫開發、測試、建置、部署、維護、監視和備份活動，最後再探討資料封存。 本主題將提供 DLM 各階段的概觀：從資料庫開發開始，然後依序進行建置、部署和監視動作。 同時也包含資料管理活動，以及資料可攜性作業，例如匯入/匯出、備份、移轉和同步。  
   
  若要閱讀完整主題，請參閱 [Database Lifecycle Management (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949)(資料庫生命週期管理 (DLM))。  
   

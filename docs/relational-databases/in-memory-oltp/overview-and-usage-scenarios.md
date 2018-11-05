@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830736"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150189"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ ASP.NET 工作階段狀態是非常成功的記憶體內部 OLTP 使用案例。
 #### <a name="customer-case-studies"></a>客戶案例研究
 
 - 有一位客戶只是將傳統 TVP 替換為記憶體最佳化 TVP，就能提升 40% 的效能： [在 Azure 中使用記憶體內部 OLTP 高速擷取 IoT 資料](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne 在其企業延展性改善的過程中，藉由將 tempdb 中的資料表換成記憶體內部 OLTP 資料表，來大幅改善其監視解決方案中的資料擷取容量，幾乎沒有延遲：[Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (解決方案提供者藉資料監視創新之力突破效能限制)。
 
 ### <a name="etl-extract-transform-load"></a>ETL (擷取轉換載入)
 

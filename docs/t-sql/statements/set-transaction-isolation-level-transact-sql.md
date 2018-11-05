@@ -1,7 +1,7 @@
 ---
 title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c3176c1fbd331310ba3389f6884df139806e9af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e4b61fc79000e4977745a25e237004055f85247
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100279"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 的 READ COMMITTED 隔離等級。  
   
--   SNAPSHOT 隔離等級。  
+-   SNAPSHOT 隔離等級。 如需快照隔離的詳細資訊，請參閱 [SQL Server 中的快照隔離](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) 。 
   
  READ COMMITTED  
  指定陳述式不能讀取其他交易已修改而尚未認可的資料。 這個選項可避免中途讀取。 目前交易內個別陳述式之間的其他交易可以變更資料，這會產生不可重複的讀取或虛設項目資料。 這個選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設值。  
@@ -81,10 +81,13 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   如果 READ_COMMITTED_SNAPSHOT 設為 OFF (預設值)，當目前交易正在執行讀取作業時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 共用鎖定類型會決定釋放的時機。 資料列鎖定會在處理下一個資料列之前釋放。 頁面鎖定會在讀取下一個頁面時釋放，而資料表鎖定會在陳述式完成時釋放。  
   
-    > [!NOTE]  
-    >  如果 READ_COMMITTED_SNAPSHOT 設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。  
-    >   
-    >  快照集隔離支援 FILESTREAM 資料。 在快照集隔離模式下，交易中的任何陳述式所讀取之 FILESTREAM 資料，都會是交易啟動時就存在之資料的交易一致性版本。  
+-   如果 READ_COMMITTED_SNAPSHOT 設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。
+
+> [!IMPORTANT]  
+> 選擇交易隔離等級並不會影響為保護資料修改所取得的鎖定。 交易永遠都會取得它所修改之資料的獨佔鎖定，並保留該鎖定直到交易完成為止，不論為該交易所設定的隔離等級為何皆同。 此外，在 READ_COMMITTED 隔離等級所做的更新會於選取的資料列上使用更新鎖定，而在 SNAPSHOT 隔離等級所做的更新使用資料列版本來選取要更新的資料列。 對於讀取作業，交易隔離等級主要是定義對於其他交易所做修改之影響的保謢等級。 如需詳細資訊，請參閱[交易鎖定與資料列版本設定指南](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。
+
+> [!NOTE]  
+>  快照集隔離支援 FILESTREAM 資料。 在快照集隔離模式下，交易中的任何陳述式所讀取之 FILESTREAM 資料，都會是交易啟動時就存在之資料的交易一致性版本。  
   
  當 READ_COMMITTED_SNAPSHOT 資料庫選項是 ON 時，您可以利用 READCOMMITTEDLOCK 資料表提示來要求共用鎖定，而不用在執行 READ COMMITTED 隔離等級之交易的個別陳述式中設定資料列版本。  
   

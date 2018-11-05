@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 666ff4eeb05aa7dd913706cad19e8f3047453eb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739257"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031347"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中已取代的資料庫引擎功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |類別目錄|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |備份與還原|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD 繼續被取代。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD 已停用。|無。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|相容性層級|從 110 版升級 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])。|當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本不再受到[支援](http://aka.ms/sqllifecycle)時，相關聯的資料庫相容性層級會標示為已淘汰。 不過，為了讓升級更容易，我們會盡可能繼續支援任何支援資料庫相容性層級上已認證的應用程式。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|資料庫相容性層級 100|108|  
+|相容性層級|從 100 版升級 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])。|當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本不再受到[支援](http://aka.ms/sqllifecycle)時，相關聯的資料庫相容性層級會標示為已淘汰。 不過，為了讓升級更容易，我們會盡可能繼續支援任何支援資料庫相容性層級上已認證的應用程式。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|資料庫相容性層級 100|108|  
 |資料庫物件|從觸發程序傳回結果集的能力|None|從觸發程序傳回結果|12|  
 |加密|使用 RC4 或 RC4_128 的加密已被取代，並預計在下一版移除。 解密 RC4 和 RC4_128 的功能未被取代。|請使用其他加密演算法，例如 AES。|已被取代的加密演算法|253|  
 |遠端伺服器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|使用連結的伺服器取代遠端伺服器。 sp_addserver 只能搭配本機選項使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -67,7 +67,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |類別目錄|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |相容性層級|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|sp_dbcmptlevel|80|  
-|相容性層級|資料庫相容性層級 110 和 120。|請針對將來的版本規劃升級資料庫和應用程式。|資料庫相容性層級 110<br /><br /> 資料庫相容性層級 120||  
+|相容性層級|資料庫相容性層級 110 和 120。|請針對將來的版本規劃升級資料庫和應用程式。 不過，為了讓升級更容易，我們會盡可能繼續支援任何支援資料庫相容性層級上已認證的應用程式。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|資料庫相容性層級 110<br /><br /> 資料庫相容性層級 120||  
 |XML|內嵌 XDR 結構描述的產生|FOR XML 選項的 XMLDATA 指示詞已被取代。 在 RAW 和 AUTO 模式的情況下，請使用 XSD 產生。 EXPLICT 模式中沒有 XMLDATA 指示詞的替代項目。|XMLDATA|181|  
 |備份與還原|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *磁帶裝置*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *磁碟裝置*|BACKUP DATABASE 或 LOG TO TAPE|235|  
 |備份與還原|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
@@ -176,6 +176,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 中已停止的 Database Engine 功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
   
 

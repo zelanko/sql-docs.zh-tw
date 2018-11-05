@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1e144c70a1ceca4097597a8a87d639865f96b68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100219"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>將報表伺服器資料庫移至其他電腦 (SSRS 原生模式)
 
-  您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
+  您可以將安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 所使用的報表伺服器資料庫，移至不同電腦上的執行個體。 但是，您必須一起移動或複製 reportserver 和 reportservertempdb 資料庫。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝需要這兩個資料庫。reportservertempdb 資料庫的名稱必須與所移動的主要 reportserver 資料庫相關。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式  
   
@@ -226,4 +226,4 @@ GO
 [設定和管理加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [報表伺服器資料庫](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

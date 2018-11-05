@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87e226bcda148097be8f64a4defc065f758e51bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98d4a19731c8d54326346522ffe9a1d458543d10
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831576"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991231"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47831576"
 -   試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。 嘗試卸除定義了觸發程序且被計畫指南參考的資料表也會造成錯誤。  
  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  若要建立類型為 OBJECT 的計劃指南，您需要所參考物件的 ALTER 權限。 若要建立類型為 SQL 或 TEMPLATE 的計劃指南，您需要目前資料庫的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SSMS 建立計劃指南  

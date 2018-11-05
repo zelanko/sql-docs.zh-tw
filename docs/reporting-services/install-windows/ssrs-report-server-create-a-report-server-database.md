@@ -1,17 +1,17 @@
 ---
 title: 建立報表伺服器資料庫 (SSRS 設定管理員) | Microsoft Docs
-ms.date: 09/20/2017
+ms.date: 10/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050897"
 ---
 # <a name="create-a-report-server-database"></a>建立報表伺服器資料庫
 
@@ -66,10 +66,10 @@ ms.locfileid: "47768236"
 >  報表伺服器與主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，可以在不同的網域中。 針對網際網路部署，常會使用位於防火牆後方的伺服器。 如果您要設定供網際網路存取的報表伺服器，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，以連接到位於防火牆後方之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並使用 IPSEC 來保護連接的安全。  
   
 ## <a name="database-server-edition-requirements"></a>資料庫伺服器版本需求  
- 當您建立報表伺服器資料庫時，請注意，並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可以用來主控資料庫。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)的＜報表伺服器資料庫伺服器版本需求＞一節。  
+ 當您建立報表伺服器資料庫時，請注意，並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可以用來主控資料庫。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的 Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)的[報表伺服器資料庫伺服器版本需求](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)。  
 
 ## <a name="next-steps"></a>後續步驟
 
-[Reporting Services 組態管理員](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Reporting Services 組態管理員](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

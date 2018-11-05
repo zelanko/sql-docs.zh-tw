@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031627"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 行動報表發行工具建立行動報表
 深入了解有各種資料視覺效果的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，針對行動裝置最佳化並可連接到內部部署資料。 
 
 >[!NOTE]
->  您需要將儀表板和 KPI 等 Datazen 伺服器內容移轉至 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
+>  您需要將儀表板和 KPI 等 Datazen 伺服器內容移轉至 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "47739336"
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  行動報表  
   
 這些文件會協助您開始。
--  下載 [SQL Server 行動報表發行工具](http://go.microsoft.com/fwlink/?LinkID=733527)  
+-  下載 [SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [建立 Reporting Services 行動報表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [端對端逐步解說︰在 SQL Server 2016 Reporting Services 中建立行動報表及 KPI](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan 的部落格)  
 - [設計優先或資料優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：決定要先以模擬的資料來設計報表，或先以您自有的資料開始。  
