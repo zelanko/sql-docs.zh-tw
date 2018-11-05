@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 7ac57fa950442eac91af3ae8f2552b25585afade
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336267"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971049"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -235,7 +235,7 @@ ms.locfileid: "49336267"
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
-                                                          <h3>遷移、載入及移動資料</h3>
+                                                          <h3>移轉、載入及移動資料</h3>
                                                           <p><b>移轉小幫手、整合服務 (SSIS)、匯入匯出精靈、複寫 </b> </p>
                                                       </div>
                                                   </div>
@@ -255,7 +255,7 @@ ms.locfileid: "49336267"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>資料庫設計</h3>
-                                                          <p><b>Filestream、Filetable、空間資料、檢視、觸發程序、Graph、序號、預存程序、追蹤變更</b> </p>
+                                                          <p><b>Filestream、Filetable、Graph、序號、空間資料、預存程序、觸發程序、追蹤修訂、檢視 </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -274,7 +274,7 @@ ms.locfileid: "49336267"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>查詢資料</h3>
-                                                          <p><b>資料指標、同義字、指令碼、聯結、使用者定義函式、全文檢索搜尋</b></p>
+                                                          <p><b>全文檢索搜尋、聯結、指令碼、同義字、使用者定義函式</b></p>
                                                       </div>
                                                   </div>
                                               </div>
