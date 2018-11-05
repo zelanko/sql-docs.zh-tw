@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 677d076d912cc7b3926fdd8ae2ef9dcc79c7b350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762366"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806718"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何在 SQL Server 執行個體上使用 PolyBase 來查詢位於 Hadoop 中的外部資料。
+此文章說明如何在 SQL Server 執行個體上使用 PolyBase 來查詢位於 Hadoop 中的外部資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -88,12 +88,15 @@ ms.locfileid: "47762366"
 
 若要查詢 Hadoop 資料來源中的資料，您必須定義要在 Transact-SQL 查詢中使用的外部資料表。 下列步驟描述如何設定外部資料表。
 
-1. 在資料庫上建立主要金鑰。 這是加密認證祕密的必要項目。
+1. 在資料庫上建立主要金鑰 (如果還沒有任何主要金鑰存在)。 這是加密認證祕密的必要項目。
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>引數
+    PASSWORD ='password'
 
+    這是用以加密資料庫中主要金鑰的密碼。 password 必須符合裝載 SQL Server 執行個體之電腦的 Windows 密碼原則需求。
 1. 針對 Kerberos 保護的 Hadoop 叢集建立資料庫範圍認證。
 
    ```sql
@@ -175,7 +178,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)
 
 ### <a name="importing-data"></a>匯入資料  
 
-下列查詢會將外部資料匯入至 SQL Server。 此範例會將快速驅動程式的資料匯入至 SQL Server，以執行更深入的分析。 為了改善效能，它會利用資料行存放區技術。  
+下列查詢會將外部資料匯入至 SQL Server。 此範例會將快速驅動程式的資料匯入至 SQL Server，以執行更深入的分析。 為了改善效能，它利用資料行存放區技術。  
 
 ```sql
 SELECT DISTINCT
@@ -233,4 +236,4 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 在下列文章中，探索更多使用和監視 PolyBase 的方式：
 
 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
-[PolyBase 疑難排解](polybase-troubleshooting.md)。  
+[PolyBase 疑難排解](polybase-troubleshooting.md).  

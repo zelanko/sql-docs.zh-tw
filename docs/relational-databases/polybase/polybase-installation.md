@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874356"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806748"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -35,27 +35,28 @@ ms.locfileid: "48874356"
 - 最小記憶體︰4 GB  
    
 - 最小硬碟空間︰2 GB  
+- **建議：** 至少 16 GB RAM
    
 - 必須啟用 TCP/IP，Polybase 才能正常運作。 預設會在 SQL Server Developer 和 Express 版本以外的所有 SQL Server 版本上啟用 TCP/IP。 若要讓 Polybase 在 Developer 和 Express 版本上正常運作，您必須啟用 TCP/IP 連線 (請參閱[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md))。
 
-- 外部資料來源 (Azure Blob 或 Hadoop 叢集)。 如需支援的 Hadoop 版本，請參閱[設定 PolyBase](#supported)。 
-- MSVC++ 2012 安裝  
-
-> [!NOTE]
-> 如果您要針對 Hadoop 使用計算下推功能，則需要確定目標 Hadoop 叢集具有 HDFS 的核心元件：啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 如果沒有其中一個元件，則查詢會失敗。
+- MSVC++ 2012 
 
 **注意**  
 
-每部電腦只能在一個 SQL Server 執行個體上安裝 PolyBase。  
-   
+每部電腦只能在一個 SQL Server 執行個體上安裝 PolyBase。
+
+> **重要事項**
+>
+> 如果您要針對 Hadoop 使用計算下推功能，就必須確定目標 Hadoop 叢集具有 HDFS 的核心元件：已啟用 Jobhistory 伺服器的 Yarn/MapReduce。 PolyBase 透過 MapReduce 來提交下推查詢，並從 JobHistory Server 提取狀態。 如果沒有其中一個元件，則查詢會失敗。
+  
 ## <a name="single-node-or-polybase-scaleout-group"></a>單一節點或 PolyBase 向外延展群組
 
-在 SQL Server 執行個體上安裝 PolyBase 之前，建議您先規劃是要單一節點安裝還是 PolyBase 向外延展群組。 
+在開始於 SQL Server 執行個體上安裝 PolyBase 之前，建議您先規劃好所需的是單一節點安裝還是 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。
 
-若是 PolyBase 向外延展群組，您需要確定： 
+若是 PolyBase 向外延展群組，您需要確定：
 
-- 相同網域上的所有電腦。
-- 您可以在安裝期間使用相同的服務帳戶和密碼。
+- 所有機器都位於相同網域。
+- 您在進行 PolyBase 安裝期間使用相同的服務帳戶和密碼。
 - 您的 SQL Server 執行個體可透過網路彼此通訊。
 - SQL Server 執行個體皆為同一個 SQL server 版本。
 
@@ -63,7 +64,7 @@ PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無�
 
 ## <a name="install-using-the-installation-wizard"></a>使用安裝精靈安裝  
    
-1. 執行 [SQL Server 安裝中心]。 插入 SQL Server 安裝媒體，然後按兩下 [Setup.exe]。  
+1. 執行 SQL Server setup.exe。   
    
 2. 按一下 [安裝] ，然後按一下 [新的獨立 SQL Server 安裝或加入功能] 。  
    
@@ -71,31 +72,28 @@ PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無�
 
  ![PolyBase 服務](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服務")  
    
-4. 在 [伺服器組態] 頁面上，將 **SQL Server PolyBase 引擎服務** 和 SQL Server PolyBase 資料移動服務設定為在同一個帳戶下執行。  
+4. 在 [伺服器設定] 頁面上，將 [SQL Server PolyBase 引擎] 服務和 [SQL Server PolyBase 資料移動] 服務設定為在同一個網域帳戶下執行。  
    
-   > **重要！** 在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。  
-   > 請參閱＜向外擴充 PolyBase＞。  
+ > **重要！** 
+>
+>在 PolyBase 向外延展群組中，所有節點上的 PolyBase 引擎和 PolyBase 資料移動服務必須在同一個網域帳戶執行。 請參閱 [PolyBase 向外延展群組](#Enable)
    
 5. 在 [PolyBase 組態頁面] 上，選取兩個選項的其中一個。 如需詳細資訊，請參閱 [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
    
    - 使用 SQL Server 執行個體作為已啟用 PolyBase 的獨立執行個體。  
    
-     選擇此選項，將 SQL Server 執行個體當作獨立的前端節點使用。  
+     選擇此選項以使用 SQL Server 執行個體作為獨立「前端節點」。  
    
-   - 使用 SQL Server 執行個體做為 PolyBase 向外延展群組的一部分。  選取此選項會開啟防火牆，以允許連至 SQL Server Database Engine、SQL Server PolyBase Engine、SQL Server PolyBase Data Movement Service 及 SQL Browser 的連入連線。 開啟防火牆會允許從 PolyBase 向外延展群組中其他節點連入的連線。  
+   - 使用 SQL Server 執行個體做為 PolyBase 向外延展群組的一部分。  選取此選項會開啟防火牆，以允許連至「SQL Server 資料庫引擎」、「SQL Server PolyBase 引擎」、「SQL Server PolyBase 資料移動服務」及 SQL Browser 的連入連線。 開啟防火牆會允許從 PolyBase 向外延展群組中其他節點連入的連線。  
    
      選取此選項也會啟用 Microsoft Distributed Transaction Coordinator (MSDTC) 防火牆連線，並修改 MSDTC 登錄設定。  
    
 6. 在 [PolyBase 組態] 頁面上，指定含至少六個連接埠的連接埠範圍。 SQL Server 安裝程式將配置該範圍內前六個可用的連接埠。  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **重要！**
   >
   > 安裝完成後，您必須[啟用 PolyBase 功能](#enable)。
 
-::: moniker-end
 
 ##  <a name="installing"></a> 使用命令提示字元安裝  
 
@@ -134,12 +132,9 @@ PolyBase 一旦安裝為獨立項目或安裝於向外延展群組中，就無�
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 安裝完成後，您必須[啟用 PolyBase 功能](#enable)。
 
-::: moniker-end
+
 
 **範例**
 
@@ -156,10 +151,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> 啟用 PolyBase
-
 
 完成安裝之後，您必須啟用 Polybase 來存取其功能。 連接到 SQL Server 2019 CTP 2.0，您必須在安裝後使用下列 Transact-SQL 命令來啟用 PolyBase：
 
@@ -170,8 +162,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 然後，您必須**重新啟動**執行個體 
 
-
-::: moniker-end
 
 ## <a name="post-installation-notes"></a>安裝後注意事項  
 
@@ -195,7 +185,7 @@ SQL Server PolyBase 安裝程式會在電腦上建立下列防火牆規則。
 
 - SQL Server PolyBase - SQL Browser - (UDP-In)  
    
-進行安裝時，如果您選擇使用 SQL Server 執行個體做為 PolyBase 向外擴充群組的一部分，則這些規則會啟用並開啟防火牆以允許連入 SQL Server Database Engine、SQL Server PolyBase Engine、SQL Server PolyBase Data Movement Service 和 SQL Browser 的連線。 不過，如果安裝期間防火牆服務未在電腦上執行，SQL Server 安裝程式會無法啟用這些規則。 在這樣的情況下，安裝之後您必須啟動電腦上的防火牆服務並啟用這些規則。  
+安裝時，如果您選擇使用 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分，就會啟用這些規則並開啟防火牆，以允許連至「SQL Server 資料庫引擎」、「SQL Server PolyBase 引擎」、「SQL Server PolyBase 資料移動」服務及 SQL Browser 的連入連線。 不過，如果機器上的防火牆服務在安裝期間並未執行，SQL Server 安裝程式將無法啟用這些規則。 在這樣的情況下，安裝之後您必須啟動電腦上的防火牆服務並啟用這些規則。  
    
 #### <a name="to-enable-the-firewall-rules"></a>啟用防火牆規則  
 

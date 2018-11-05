@@ -11,16 +11,16 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307142"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226390"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
+此文章提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
 
 ## <a name="ssms-180-preview-4download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (Preview 4)](download-sql-server-management-studio-ssms.md)
@@ -40,7 +40,7 @@ Preview 4 是 SSMS 18.0 的第一個公開預覽版。 如需 SSMS 的最新公�
 
 SSMS 18.x 是以新的 Visual Studio 2017 獨立 Shell 為基礎：
 
-- 這表示一個新式 Shell (我們挑選了 Visual Studio 2107 15.6.4)。 新的 Shell 會解除鎖定所有修復 SSMS 和 Visual Studio 的協助工具修正程式。
+- 這表示是一個新式殼層 (我們挑選的是 Visual Studio 2017 15.6.4)。 新的 Shell 會解除鎖定所有修復 SSMS 和 Visual Studio 的協助工具修正程式。
 
 協助工具改善：
 
@@ -127,7 +127,8 @@ SSMS/執行程序表：
 稽核檔案：
 
 - 將驗證方法從儲存體帳戶金鑰驗證變更為 Azure AD 驗證。
-AD 型 Always Encrypted：
+
+Always Encrypted：
 
 - 新增具有 [啟用 Always Encrypted] 核取方塊的 [Always Encrypted] 索引標籤 (在 [連線至伺服器] 對話方塊中)，該索引標籤現在提供簡單方法來啟用/停用資料庫連線的 Always Encrypted。
 - 已完成數個增強功能來支援具有安全記憶體保護區的 Always Encrypted：
@@ -292,16 +293,16 @@ SSMS 中不再提供下列功能：
 下列為目前版本中的已知問題：
 
 > [!IMPORTANT]
-> 搭配 SQL 查詢編輯器使用「Active Directory – 與 MFA 通用支援」的驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會提供給連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
+> 搭配使用 SQL 查詢編輯器和 *支援 MFA 的 Active Directory – Universal* 驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會給予連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
 
 SSMS
 
-- 按兩下 .sql 檔案會啟動 SSMS，但卻不會開啟實際指令碼。
+- 按兩下 .sql 檔案啟動 SSMS，但不會開啟實際指令碼。
   - 因應措施：將 .sql 檔案拖放到 SSMS 編輯器。
 
 SSIS
 
-- 在瞄準舊版 SQL Server，且其中同時包含指令碼工作/指令碼元件時，無法成功部署或執行套件。
+- 當套件的目標為舊版 SQL Server 且同時包含指令碼工作/指令碼元件時，將無法成功部署或執行套件。
 - SSMS 無法連線到遠端 Integration Services。
 
 ## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (最新的 GA 版本)
@@ -387,7 +388,7 @@ Microsoft Azure 整合：
 
 
 > [!IMPORTANT]
-> 搭配 SQL 查詢編輯器使用「Active Directory – 與 MFA 通用支援」的驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會提供給連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
+> 搭配使用 SQL 查詢編輯器和 *支援 MFA 的 Active Directory – Universal* 驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會給予連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
 
 
 
@@ -411,7 +412,7 @@ Microsoft Azure 整合：
 
 資料庫屬性：
 
-- 這項改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
+- 此改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
     
 SQL 編輯器：
 
@@ -614,7 +615,7 @@ Database Mail：
 ### <a name="known-issues"></a>已知問題
 
 > [!WARNING]
-> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有這項問題的影響，請降級至 SSMS 17.5。 
+> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有此問題的影響，請降級至 SSMS 17.5。 
 
 
 
@@ -635,7 +636,7 @@ Database Mail：
 
 查詢編輯器：
 
-- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 這項功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
+- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 此功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
 
 執行程序表：
 
@@ -752,7 +753,7 @@ XE 分析工具：
 - 複寫：修正當查看 SQL Server 中提取訂閱的屬性時，顯示類似「無法將值 'null' 套用至 ServerInstance 屬性」錯誤的問題。
 - SSMS 安裝程式：修正 SSMS 安裝程式不正確地造成電腦上所有已安裝產品重新設定的問題。
 - 使用者設定：
-   - 藉由此修正，美國政府官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 Azure Resource Manager 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
+   - 透過此修正，美國政府官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 Azure Resource Manager 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
 
 **Analysis Services (AS)**
 
@@ -1012,7 +1013,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 安裝程式：
   - 已修正下列問題：SSMS 17.0 已在 Visual Studio 2013 上中斷 SSDT [連接項目 3133479]
   - 已修正下列問題：按一下安裝程式結尾處的 [重新啟動]，並不會重新啟動電腦
-- 指令碼：藉由停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
+- 指令碼：透過停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
 - 物件總管：已修正下列問題：連接至使用 "AS COPY" 建立的 Azure 資料庫時，「資料庫」節點未展開
 
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![下載](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
@@ -1128,7 +1129,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 已修正在 Azure SQL 資料庫中「產生指令碼...」會失敗的問題。
 - 修正 [編寫指令碼為] 及 [產生指令碼精靈]，不要在編寫預存程序等物件的指令碼時新增額外新行。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS PowerShell 提供者：將 LastProcessed 屬性新增到 Dimension 及 MeasureGroup 資料夾。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- 即時查詢統計資料：修正其只顯示批次中第一個查詢的問題。 [Connect 項目] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- 即時查詢統計資料：修正其只顯示批次中第一個查詢的問題。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - 執行程序表：在視窗中顯示執行緒的最大值，而非加總。
 - 查詢存放區：對具有高執行變化的查詢新增報表。
 - [物件總管] 效能問題：[Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114074) 資料表的操作功能表會短暫停止回應 SSMS 在以右鍵按一下資料表索引時 (透過遠端 (網際網路) 連線) 很緩慢。 避免發行依伺服器排序的資料表查詢
@@ -1139,8 +1140,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 修正 SSMS 可能在嘗試顯示資料庫權限時損毀的問題
 - 查詢存放區：在操作功能表項目中，為查詢存放區報表的結果方格進行一般功能增強
 - 為現有資料表設定 Always Encrypted 失敗，不相關的物件發生錯誤。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- 無法為具有多個結構描述的現有資料庫設定 Always Encrypted。 [Connect 項目] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- Always Encrypted、加密資料行精靈失敗，原因是資料庫包含參考系統檢視的檢視。 [Connect 項目] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- 無法為具有多個結構描述的現有資料庫設定 Always Encrypted。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- Always Encrypted、加密資料行精靈失敗，原因是資料庫包含參考系統檢視的檢視。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - 使用 Always Encrypted 進行加密時，未正確處理加密後來自重新整理模組的錯誤。
 - 修正 [新增伺服器註冊] 對話方塊上的 UI 截斷問題
 - 修正 DMF 條件 UI 未正確更新其字串常值中有引號的運算式

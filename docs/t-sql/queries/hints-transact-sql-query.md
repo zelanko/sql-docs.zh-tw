@@ -1,7 +1,7 @@
 ---
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 521a3a19ce2e1278d856cc3ade5feed67b4182c5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906308"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806828"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ ms.locfileid: "48906308"
  指定查詢之 GROUP BY 或 DISTINCT 子句所描述的彙總使用雜湊或排序。  
   
  { MERGE | HASH | CONCAT } UNION  
- 指定所有 UNION 作業都是藉由合併、雜湊或串連各個 UNION 集來執行的。 如果指定了多個 UNION 提示，查詢最佳化工具會從指定的提示中選取成本最低的策略。  
+ 指定所有 UNION 作業都是透過合併、雜湊或串連各個 UNION 集來執行的。 如果指定了多個 UNION 提示，查詢最佳化工具會從指定的提示中選取成本最低的策略。  
   
  { LOOP | MERGE | HASH } JOIN  
  指定所有聯結作業都是由整個查詢中的 LOOP JOIN、MERGE JOIN 或 HASH JOIN 來執行的。 如果指定了多個聯結提示，最佳化工具會從允許使用的聯結提示中，選取成本最低的聯結策略。  
@@ -257,37 +257,41 @@ ms.locfileid: "48906308"
 
  支援下列提示名稱：    
  
-*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
- 指示查詢處理器在產生查詢計劃時，不使用排序作業 (批次排序) 以取得最佳化巢狀迴圈聯結。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 相同。
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a> 強制查詢最佳化工具使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定相同。
-*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
- 啟用查詢最佳化工具 Hotfix (在 SQL Server 累積更新和 Service Pack 中發佈的變更)。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON 設定相同。
-*  'DISABLE_PARAMETER_SNIFFING'  
- 指示查詢最佳化工具在編譯有一或多個參數的查詢時使用平均資料分佈，讓查詢計劃與查詢在編譯時一開始使用的參數值無關。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF 設定相同。
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a> 會使 SQL Server 在評估篩選條件的 AND 述詞來說明相互關聯時，使用最小選擇性來產生計畫。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 搭配 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本的基數估計模型使用時相同，而且當[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的基數估計模型使用時，有類似的效果。
-*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a> 讓 SQL Server 產生的計畫不使用資料列目標調整來處理包含 TOP、OPTION (FAST N)、IN 或 EXISTS 關鍵字的查詢。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 相同。
-*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
- 為需要基數估計的任何開頭索引資料行，啟用自動產生的快速統計資料 (長條圖修正)。 在查詢編譯時會調整用來預估基數的長條圖，以計算此資料行的實際最大值或最小值。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 相同。 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a> 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設來產生查詢計畫，而不使用聯結的預設基底內含項目假設。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
- 強制查詢最佳化工具使用對應至目前資料庫相容性層級的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示可覆寫[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定或[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
-*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- 停用交錯執行多重陳述式資料表值函式。 如需詳細資訊，請參閱[交錯執行多重陳述式資料表值函式](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
-*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
- 停用批次模式記憶體授與意見反應。 如需詳細資訊，請參閱[批次模式記憶體授與意見反應](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
-*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
- 停用批次模式自適性聯結。 如需詳細資訊，請參閱[批次模式自適性聯結](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
-*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
+   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設產生計畫，而不使用預設的基底內含項目假設。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
+   導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在評估篩選條件的 AND 述詞以說明相互關聯時，使用最小選擇性來產生計劃。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 搭配 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本的基數估計模型使用時相同，而且當[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 搭配 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的基數估計模型使用時，有類似的效果。
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
+   停用批次模式自適性聯結。 如需詳細資訊，請參閱[批次模式自適性聯結](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
+   停用批次模式記憶體授與意見反應。 如需詳細資訊，請參閱[批次模式記憶體授與意見反應](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
+   停用交錯執行多重陳述式資料表值函式。 如需詳細資訊，請參閱[交錯執行多重陳述式資料表值函式](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'      
+   指示查詢處理器在產生查詢計劃時，不使用排序作業 (批次排序) 以取得最佳化巢狀迴圈聯結。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 相同。
+*  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
+   導致 SQL Server 產生的計劃不使用資料列目標調整來處理包含 TOP、OPTION (FAST N)、IN 或 EXISTS 關鍵字的查詢。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 相同。
+*  'DISABLE_PARAMETER_SNIFFING'      
+   指示查詢最佳化工具在編譯有一或多個參數的查詢時使用平均資料分佈，讓查詢計劃與查詢在編譯時一開始使用的參數值無關。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF 設定相同。
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
+   為需要基數估計的任何開頭索引資料行，啟用自動產生的快速統計資料 (長條圖修正)。 在查詢編譯時會調整用來預估基數的長條圖，以計算此資料行的實際最大值或最小值。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 相同。 
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
+   啟用查詢最佳化工具 Hotfix (在 SQL Server 累積更新和 Service Pack 中發佈的變更)。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON 設定相同。
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
+   強制查詢最佳化工具使用對應至目前資料庫相容性層級的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示可覆寫[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定或[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
+   強制查詢最佳化工具使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及較早版本的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定相同。
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  強制查詢層級的查詢最佳化工具行為，就像查詢是使用資料庫相容性層級 *n* 所編譯，其中 *n* 是支援的資料庫相容性層級。 請參閱 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 以取得目前支援之 *n* 值的清單。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 開始)。    
- 
+
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不會覆寫預設值或舊版基數估計設定，若它是透過資料庫範圍設定所強制，追蹤旗標或另一個查詢提示，例如 QUERYTRACEON。   
    > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，例如特定資料庫功能的可用性。  
-   > 若要深入了解這項提示，請參閱 [Developer’s Choice: Hinting Query Execution model](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (開發人員選擇：提示查詢執行模型)。
+   > 若要深入了解此提示，請參閱 [Developer’s Choice: Hinting Query Execution model](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (開發人員選擇：提示查詢執行模型)。
     
 *  'QUERY_PLAN_PROFILE'      
  為查詢啟用輕量分析。 當包含這個新提示的查詢完成時，便會發出一個新的擴充事件 (query_plan_profile)。 此擴充事件會公開執行統計資料和與 query_post_execution_showplan 擴充事件相似的執行計畫 XML，但僅限包含新提示的查詢。 **適用於**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始)。 
- 
+
   > [!NOTE]
   > 若您啟用收集 query_post_execution_showplan 擴充事件，這會將標準分析基礎結構新增至每個正在伺服器上執行的查詢，並因此影響整體伺服器效能。      
   > 若您啟用收集 *query_thread_profile* 擴充事件以改為使用輕量分析基礎結構，這會大幅減少效能額外負荷，但仍然會影響整體伺服器效能。       
@@ -313,7 +317,7 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
   
 -   沒有使用別名時，*exposed_object_name* 就是 FROM 子句中所參考之資料表或檢視的完全相符項目。 例如，如果使用兩部分名稱參考資料表或檢視，*exposed_object_name* 就是相同的兩部分名稱。  
   
- 當指定 *exposed_object_name* 但沒有同時指定資料表提示時，在查詢中指定成物件之資料表提示一部分的任何索引都會被忽略，而且查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用這項技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
+ 當指定 *exposed_object_name* 但沒有同時指定資料表提示時，在查詢中指定成物件之資料表提示一部分的任何索引都會被忽略，而且查詢最佳化工具會決定索引使用方式。 當您無法修改原始的查詢時，就可以使用此技巧來排除 INDEX 資料表提示的影響。 請參閱＜範例 J＞。  
   
 **\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 是要作為查詢提示，套用到與 *exposed_object_name* 對應資料表或檢視的資料表提示。 如需這些提示的說明，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   

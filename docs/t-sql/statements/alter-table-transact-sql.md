@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,138 +60,143 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: c92b931c8c55fbaeeb5e2ec839025fddc5ae231e
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085534"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636497"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  您可以利用改變、加入或卸除資料行與條件約束、重新指派和重建分割區，或是停用或啟用條件約束與觸發程序等方式來修改資料表定義。  
+  您可以利用改變、加入或卸除資料行與條件約束、重新指派和重建分割區，或是停用或啟用條件約束與觸發程序等方式來修改資料表定義。
 
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>語法  
-  
-```  
--- Disk-Based ALTER TABLE Syntax for SQL Server and Azure SQL Database
-  
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
-{   
-    ALTER COLUMN column_name   
-    {   
-        [ type_schema_name. ] type_name   
-            [ (   
-                {   
-                   precision [ , scale ]   
-                 | max   
-                 | xml_schema_collection   
-                }   
-            ) ]   
-        [ COLLATE collation_name ]   
+如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+
+> [!IMPORTANT]
+> 磁碟型資料表與記憶體最佳化資料表的 ALTER TABLE 語法不同。 請使用下列連結來直接前往適合您資料表類型的語法區塊，以及前往適當的語法範例：
+> - 磁碟型資料表：
+>    - [語法](#syntax-for-disk-based-tables)
+>    - [範例](#Example_Top)
+> - 記憶體最佳化的資料表
+>   - [語法](#syntax-for-memory-optimized-tables)
+>   - [範例](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+
+## <a name="syntax-for-disk-based-tables"></a>磁碟型資料表的語法  
+
+``` 
+ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+{
+    ALTER COLUMN column_name
+    {
+        [ type_schema_name. ] type_name
+            [ (
+                {
+                   precision [ , scale ]
+                 | max
+                 | xml_schema_collection
+                }
+            ) ]
+        [ COLLATE collation_name ]
         [ NULL | NOT NULL ] [ SPARSE ]  
-      | { ADD | DROP }   
+      | { ADD | DROP }
           { ROWGUIDCOL | PERSISTED | NOT FOR REPLICATION | SPARSE | HIDDEN }  
       | { ADD | DROP } MASKED [ WITH ( FUNCTION = ' mask_function ') ]  
-    }   
+    }
     [ WITH ( ONLINE = ON | OFF ) ]  
     | [ WITH { CHECK | NOCHECK } ]  
   
-    | ADD   
-    {   
+    | ADD
+    {
         <column_definition>  
       | <computed_column_definition>  
-      | <table_constraint>   
-      | <column_set_definition> 
+      | <table_constraint>
+      | <column_set_definition>
     } [ ,...n ]  
-      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
-                   [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-            system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END   
-                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-         ]  
+      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START
+                [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+                system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END
+                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+        ]  
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-       
-    | DROP   
+    | DROP
      [ {  
          [ CONSTRAINT ]  [ IF EXISTS ]  
-         {   
-              constraint_name   
-              [ WITH   
-               ( <drop_clustered_constraint_option> [ ,...n ] )   
-              ]   
+         {
+              constraint_name
+              [ WITH
+               ( <drop_clustered_constraint_option> [ ,...n ] )
+              ]
           } [ ,...n ]  
           | COLUMN  [ IF EXISTS ]  
           {  
-              column_name   
+              column_name
           } [ ,...n ]  
           | PERIOD FOR SYSTEM_TIME  
      } [ ,...n ]  
-    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT   
-        { ALL | constraint_name [ ,...n ] }   
+    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT
+        { ALL | constraint_name [ ,...n ] }
   
-    | { ENABLE | DISABLE } TRIGGER   
+    | { ENABLE | DISABLE } TRIGGER
         { ALL | trigger_name [ ,...n ] }  
   
-    | { ENABLE | DISABLE } CHANGE_TRACKING   
+    | { ENABLE | DISABLE } CHANGE_TRACKING
         [ WITH ( TRACK_COLUMNS_UPDATED = { ON | OFF } ) ]  
   
     | SWITCH [ PARTITION source_partition_number_expression ]  
-        TO target_table   
+        TO target_table
         [ PARTITION target_partition_number_expression ]  
         [ WITH ( <low_priority_lock_wait> ) ]  
-    
-    | SET   
+
+    | SET
         (  
-            [ FILESTREAM_ON =   
+            [ FILESTREAM_ON =
                 { partition_scheme_name | filegroup | "default" | "NULL" } ]  
-            | SYSTEM_VERSIONING =   
-                  {   
-                      OFF   
-                  | ON   
-                      [ ( HISTORY_TABLE = schema_name . history_table_name   
-                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
-                          [, HISTORY_RETENTION_PERIOD = 
-                          { 
-                               INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                 | MONTH | MONTHS | YEAR | YEARS } 
-                          } 
+            | SYSTEM_VERSIONING =
+                  {
+                      OFF
+                  | ON
+                      [ ( HISTORY_TABLE = schema_name . history_table_name
+                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ]
+                          [, HISTORY_RETENTION_PERIOD =
+                          {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }
                           ]  
                         )  
                       ]  
                   }  
           )  
-      
-    | REBUILD   
+
+    | REBUILD
       [ [PARTITION = ALL]  
-        [ WITH ( <rebuild_option> [ ,...n ] ) ]   
-      | [ PARTITION = partition_number   
+        [ WITH ( <rebuild_option> [ ,...n ] ) ]
+      | [ PARTITION = partition_number
            [ WITH ( <single_partition_rebuild_option> [ ,...n ] ) ]  
         ]  
       ]  
   
     | <table_option>  
-  
     | <filetable_option>  
-  
     | <stretch_configuration>  
 }  
 [ ; ]  
   
 -- ALTER TABLE options  
   
-<column_set_definition> ::=   
+<column_set_definition> ::=
     column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
 
-<drop_clustered_constraint_option> ::=    
-    {   
+<drop_clustered_constraint_option> ::=
+    {
         MAXDOP = max_degree_of_parallelism  
       | ONLINE = { ON | OFF }  
-      | MOVE TO   
+      | MOVE TO
          { partition_scheme_name ( column_name ) | filegroup | "default" }  
     }  
 <table_option> ::=  
@@ -208,7 +213,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 <stretch_configuration> ::=  
     {  
       SET (  
-        REMOTE_DATA_ARCHIVE   
+        REMOTE_DATA_ARCHIVE
         {  
             = ON (  <table_stretch_options>  )  
           | = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED )  
@@ -236,11 +241,11 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ], 
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }  
-```  
-  
-```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
-  
+```
+
+## <a name="syntax-for-memory-optimized-tables"></a>記憶體最佳化資料表的語法  
+
+```
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
     ALTER COLUMN column_name   
@@ -464,7 +469,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 當使用 Always Encrypted (不含安全記憶體保護區) 時，若遭修改的資料行已使用 'ENCRYPTED WITH' 加密，您可以將資料類型變更為相容資料類型 (例如將 INT 變更為 BIGINT)，但您無法變更加密設定。  
 
-當使用具有安全記憶體保護區的 Always Encrypted 時，只要保護資料行的資料行加密金鑰 (以及新的資料行加密金鑰 (若您有變更金鑰)) 支援記憶體保護區計算 (已使用啟用記憶體保護區的資料行主要金鑰進行加密)，您便可以變更任何加密設定。 如需詳細資料，請參閱[有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
+當使用具有安全記憶體保護區的 Always Encrypted 時，只要保護資料行的資料行加密金鑰 (以及新的資料行加密金鑰 (若您有變更金鑰)) 支援記憶體保護區計算 (已使用啟用記憶體保護區的資料行主要金鑰進行加密)，您便可以變更任何加密設定。 如需詳細資料，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
   
  *column_name*  
  要改變、加入或卸除的資料欄名稱。 *column_name* 最多可有 128 個字元。 針對以 **timestamp** 資料類型建立的新資料行，可以省略 *column_name*。 如果沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
@@ -617,14 +622,14 @@ ALTER INDEX *index_name* 指定要變更或改變之 *index_name* 的貯體計�
   
 語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
 
-> [!NOTE]
-> 不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就不支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。 
+> [!IMPORTANT]
+> 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
 
 ADD  
 指定加入一或多個資料行定義、計算資料行定義或資料表條件約束，或進行系統版本設定時，系統會用到的資料行。 可以對記憶體最佳化資料表新增索引。
 
-> [!NOTE]
-> 不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就不支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。 
+> [!IMPORTANT]
+> 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
 **適用於**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -649,8 +654,8 @@ INDEX *index_name* 指定從資料表移除的 *index_name*。
   
 語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
 
-> [!NOTE]
-> 不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就不支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。 
+> [!IMPORTANT]
+> 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
       
 COLUMN *column_name*  
 指定從資料表移除 *constraint_name* 或 *column_name*。 可以列出多個資料行。  
@@ -1025,7 +1030,7 @@ IF EXISTS
   
  若要移除某資料行，必須先移除以該資料行為基礎的所有索引和條件約束。  
   
- 刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再藉由指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
+ 刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再透過指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
   
 -   MOVE TO 對於索引檢視表或非叢集索引無效。  
 -   分割區配置或檔案群組必須已經存在。  
@@ -1046,7 +1051,7 @@ ONLINE **=** ON 有下列限制：
 > *\<drop_clustered_constraint_option>* 底下所列的選項可套用到資料表上的叢集索引，但不可套用到檢視表上的叢集索引或套用至非叢集索引。  
   
 ## <a name="replicating-schema-changes"></a>複寫結構描述變更  
- 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 這項功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 此功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="data-compression"></a>資料壓縮  
  系統資料表無法啟用壓縮。 如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
@@ -1076,7 +1081,8 @@ ONLINE **=** ON 有下列限制：
   
 若要解決此問題，請移除 4 部分前置詞的用法。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>[權限]
+
  需要資料表的 ALTER 權限。  
   
  ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料表。 所切換的任何資料，都會繼承目標資料表的安全性。  
@@ -1085,7 +1091,7 @@ ONLINE **=** ON 有下列限制：
   
  加入會更新資料表之資料列的資料行時，需要該資料表的 **UPDATE** 權限。 例如，當資料表非空白時，加入具有預設值的 **NOT NULL** 資料行或加入識別欄位。  
   
-##  <a name="Example_Top"></a> 範例  
+## <a name="Example_Top"></a> 範例
   
 |類別目錄|代表性語法元素|  
 |--------------|------------------------------|  
@@ -1095,10 +1101,12 @@ ONLINE **=** ON 有下列限制：
 |[修改資料表定義](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • 變更追蹤|  
 |[停用和啟用條件約束與觸發程序](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|  
   
-###  <a name="add"></a>加入資料行和條件約束  
+### <a name="add"></a>加入資料行和條件約束
+  
  本節中的範例示範如何將資料行和條件約束加入至資料表。  
   
-#### <a name="a-adding-a-new-column"></a>A. 加入新資料行  
+#### <a name="a-adding-a-new-column"></a>A. 加入新資料行
+
  下列範例會加入一個資料行，該資料行允許 Null 值，且不含利用 DEFAULT 定義提供的值。 在這個新資料行中，每一個資料列都會有 `NULL`。  
   
 ```sql  
@@ -1507,7 +1515,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
  如需其他資料壓縮範例，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. 修改資料行存放區資料表來變更封存壓縮  
- 下列範例藉由套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 這樣會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
+ 下列範例透過套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 這樣會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
   
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   

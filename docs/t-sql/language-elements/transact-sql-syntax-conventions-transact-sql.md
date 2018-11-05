@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13f8153d681ce4992726f17375cf98c8c5ab9cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7acbaa7d880abca786c995860dbc6d7068392619
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099899"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47605862"
 |{ } (大括號)|必要的語法項目。 不要鍵入大括號。|  
 |[**,**...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
 |[...*n*]|指出先前項目可以重複 *n* 次。 以空白分開各次出現項目。|  
-|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元。雖然這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的大部分陳述式都不需要使用分號，但是未來的版本可能會需要使用分號。|  
+|;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結束字元。 雖然在這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中大多數陳述式都不需要使用分號，但在未來的版本中將會需要。|  
 |\<label> ::=|語法區塊的名稱。 這個慣例可用來分組與標示冗長語法的區段，或分組與標示可用於陳述式中之多個位置的語法單位。 每個能夠使用語法區塊的位置，都使用括在＞形箭號內的標籤來指示：\<label>。<br /><br /> set 是運算式的集合，例如 \<grouping set>。而 list 則是 set 的集合，例如 \<composite element list>。|  
   
 ## <a name="multipart-names"></a>多部分名稱  

@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874346"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226260"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -62,15 +62,11 @@ ms.locfileid: "48874346"
 
 PolyBase 具有下列限制：
 
-- 在 SQL Server 中最大資料列大小 (包括變數長度資料行的完整長度) 不能超過 32 KB，在 Azure SQL 資料倉儲中則不能超過 1 MB。
-
-- PolyBase 不支援 Hive 0.12 以上的資料類型 (也就是 Char()、VarChar())
+- 在 SQL Server 中可能的最大資料列大小 (包括變數長度資料行的完整長度) 不能超過 32 KB，在「Azure SQL 資料倉儲」中則不能超過 1 MB。
 
 - 將資料從 SQL Server 或 Azure SQL 資料倉儲匯出為 ORC 檔案格式時，可以將具有大量文字的資料行限制為最少 50 個資料行，因為會發生 Java 記憶體不足錯誤。 若要解決這個問題，只需要匯出資料行的子集。
 
-- 無法讀取或寫入在 Hadoop 中靜止加密的資料， 包括 HDFS 加密區域或透明加密。
-
-- 如果已啟用 KNOX，PolyBase 就無法連接至 Hortonworks 執行個體。
+- 如果已啟用 Knox，PolyBase 就無法連線到 Hortonworks 執行個體。
 
 - 若您使用 Hive 資料表，且 transactional = true，PolyBase 就無法存取 Hive 資料表目錄中的資料。
 
@@ -80,13 +76,7 @@ PolyBase 具有下列限制：
 - [將節點新增至 SQL Server 2016 容錯移轉叢集時，不會安裝 PolyBase](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-- 不支援整合式驗證。 目前只支援使用者名稱和密碼。  
-- 我們預設會啟用加密。 若要停用加密，您必須...
-- [類型對應限制](polybase-type-mapping.md)
 
+## <a name="next-steps"></a>後續步驟
 
-## <a name="security-and-authentication"></a>安全性和驗證 
-
-## <a name="see-also"></a>另請參閱  
-
-[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  
+如需有關 PolyBase 的詳細資訊，請參閱[什麼是 PolyBase？](polybase-guide.md)。

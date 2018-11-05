@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc81d7a915a79af3406d5fc90ef9920d5e19055a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757047"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636477"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47757047"
     
 當[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式在各有不同定序設定的不同資料庫內容中執行時，陳述式的結果可能不同。 如果可能的話，請針對組織使用標準化定序。 這樣您就不需要在每一個字元或 Unicode 運算式中明確指定定序。 如果您必須使用有不同定序和字碼頁設定的物件，則在編寫查詢程式碼時，必須考量定序優先順序的規則。 如需詳細資訊，請參閱 [定序優先順序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
     
-與定序相關聯的選項是區分大小寫、區分腔調字、區分假名、區分全半形和區分變化選取器 (Variation Selector)。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進 UTF-8 編碼的額外選項。 這些選項的指定方式是將它們附加至定序名稱。 例如，此定序 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 區分大小寫、區分腔調字、區分假名、區分全半形和 UTF-8 編碼。 例如，此定序 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 不區分大小寫、不區分腔調字、區分假名、區分全半形和區分變化選取器，並使用非 Unicode 編碼。 下表描述與這些不同選項相關聯的行為。    
+與定序相關聯的選項是區分大小寫、區分腔調字、區分假名、區分全半形和區分變化選取器 (Variation Selector)。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進一個適用於 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 編碼的額外選項。 這些選項的指定方式是將它們附加至定序名稱。 例如，此定序 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 區分大小寫、區分腔調字、區分假名、區分全半形和 UTF-8 編碼。 例如，此定序 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 不區分大小寫、不區分腔調字、區分假名、區分全半形和區分變化選取器，並使用非 Unicode 編碼。 下表描述與這些不同選項相關聯的行為。    
     
 |選項|Description|    
 |------------|-----------------|    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> 地區設定    
-地區設定是一組與某個地點或文化特性相關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)。    
+地區設定是一組與某個地點或文化特性相關聯的資訊。 此資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  字碼頁是給定的指令碼的已排序字元集，其中每一個字元與數字索引或字碼指標值相關聯。 Windows 字碼頁一般稱為 *「字元集」* (Character set) 或 *charset*。 字碼頁是用來提供不同 Windows 系統地區設定所使用的字元集和鍵盤配置的支援。     

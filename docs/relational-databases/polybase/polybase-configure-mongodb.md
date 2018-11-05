@@ -10,28 +10,26 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a51842a1682b5e02db4ea216bddefbabbf0a7f56
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874306"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806738"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>設定 PolyBase 存取 MongoDB 中的外部資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 MongoDB 中的外部資料。
+此文章說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 MongoDB 中的外部資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](polybase-installation.md)。 安裝文章說明必要條件。
+如果您尚未安裝 PolyBase，請參閱 [PolyBase 安裝](polybase-installation.md)。
 
 ## <a name="configure-an-external-table"></a>設定外部資料表
 
 若要查詢來自 MongoDB 資料來源的資料，您必須建立外部資料表參考外部資料。 本節提供建立這些外部資料表的範例程式碼。
-
-我們建議在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)，以取得最佳查詢效能。
 
 在本節中，會建立這些物件：
 
@@ -40,52 +38,50 @@ ms.locfileid: "48874306"
 - CREATE EXTERNAL TABLE (Transact-SQL)
 - CREATE STATISTICS (Transact-SQL)
 
-1.    在資料庫上建立主要金鑰。 這是加密認證祕密的必要項目。
+1. 在資料庫上建立主要金鑰 (如果還沒有任何主要金鑰存在)。 這是加密認證祕密的必要項目。
 
-      ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-      ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>引數
+    PASSWORD ='password'
 
-1.   建立資料庫範圍認證。
+    這是用以加密資料庫中主要金鑰的密碼。 password 必須符合裝載 SQL Server 執行個體之電腦的 Windows 密碼原則需求。
+
+1.   建立資料庫範圍認證以存取 MongoDB 資料來源。
 
      ```sql
      /*  specify credentials to external data source
      *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-     CREATE DATABASE SCOPED CREDENTIAL MongoDBCredentials 
+     CREATE DATABASE SCOPED CREDENTIAL credential_name 
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
-1.  使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)建立外部資料來源。 指定 MongoDB 資料來源的外部資料來源位置和認證。
+1.  使用 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 建立外部資料來源。
 
      ```sql
-     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE MongoInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH (
-    LOCATION = mongodb://MongoServer,
+    LOCATION = mongodb://<server>[:<port>],
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = MongoDBCredentials
+      CREDENTIAL = credential_name
     );
      ```
 
-1. 建立外部資料結構描述
-
-     ```sql
-     CREATE SCHEMA MongoDB;
-     GO
-     ```
-
-1.  建立外部資料表，表示儲存在外部 MongoDB 系統的資料 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)。
+1.  使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 來建立代表外部 MongoDB 系統中所儲存資料的外部資料表。
 
      ```sql
      /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
      *  DATA_SOURCE: the external data source, created above.
      */
-     CREATE EXTERNAL TABLE MongoDB.orders(
+     CREATE EXTERNAL TABLE customers(
      [O_ORDERKEY] DECIMAL(38) NOT NULL,
      [O_CUSTKEY] DECIMAL(38) NOT NULL,
      [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
@@ -94,19 +90,22 @@ ms.locfileid: "48874306"
      [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
-     LOCATION='TPCH..ORDERS',
-     DATA_SOURCE= MongoDBInstance
+     LOCATION='customer',
+     DATA_SOURCE= external_data_source_name
      );
      ```
 
-1. 在外部資料表上建立統計資料，以取得最佳效能。
+1. **選擇性：** 在外部資料表上建立統計資料。
+
+    我們建議在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)，以取得最佳查詢效能。
 
      ```sql
-      CREATE STATISTICS OrdersOrderKeyStatistics ON MongoDB.orders(O_ORDERKEY) WITH FULLSCAN;
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
+
 ## <a name="flattening"></a>壓平合併
- 「壓平合併」用於來自 MongoDB 文件集合的巢狀及重複資料。 使用者必須啟用建立外部資料表，明確指定可能具有巢狀和/或重複資料的 MongoDB 文件集合關聯式結構描述。 我們會在未來的里程碑中針對 MongoDB 文件集合啟用自動結構描述偵測。
+ 針對來自 MongoDB 文件集合的巢狀及重複資料會啟用壓平合併。 使用者必須啟用 `create an external table`，並明確指定可能具有巢狀和/或重複資料之 MongoDB 文件集合的關聯式結構描述。 我們會在未來的里程碑中針對 MongoDB 文件集合啟用自動結構描述偵測。
 JSON 巢狀/重複資料類型會以下列方式壓平合併
 
 * 物件：未排序索引鍵/值集合會包圍在大括弧中 (巢狀)
@@ -150,6 +149,10 @@ JSON 巢狀/重複資料類型會以下列方式壓平合併
 |135898560000 |只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時， |10|
 |1322006400000|只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時， |9|
 |1299715200000 |B |14|
+
+## <a name="cosmos-db-connection"></a>Cosmos DB 連線
+
+使用 Cosmos DB Mongo API 和 Mongo DB PolyBase 連接器時，您可以建立 **Cosmos DB 執行個體**的外部資料表。 依照上面所列的相同步驟，即可完成此操作。 請確定資料庫範圍認證、伺服器位址、連接埠及位置字串皆反映 Cosmos DB 伺服器的對應設定。 
 
 ## <a name="next-steps"></a>後續步驟
 

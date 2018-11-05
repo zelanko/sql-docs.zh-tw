@@ -132,7 +132,7 @@ ms.locfileid: "48204628"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 下列範例會使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) ，將 `DataFile1` 資料庫中名為 `UserDB` 之資料檔大小壓縮成 7 MB。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 下列範例會使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) ，將 `UserDB` 資料庫中名為 `DataFile1` 之資料檔大小壓縮成 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   

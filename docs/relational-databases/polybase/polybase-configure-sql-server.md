@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874256"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806638"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於另一個 SQL Server 執行個體中的外部資料。
+此文章說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於另一個 SQL Server 執行個體中的外部資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -38,7 +38,7 @@ ms.locfileid: "48874256"
 - CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL)。
+- CREATE STATISTICS (Transact-SQL)
 
 1. 在資料庫上建立主要金鑰。 這是加密認證祕密的必要項目。
 
@@ -68,7 +68,7 @@ ms.locfileid: "48874256"
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -80,7 +80,7 @@ ms.locfileid: "48874256"
      GO
      ```
 
-1.  建立外部資料表，表示儲存在外部 SQL Server 的資料 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)。
+1.  使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 來建立代表外部 SQL Server 中所儲存資料的外部資料表。
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -107,6 +107,10 @@ ms.locfileid: "48874256"
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## <a name="sql-server-connector-compatible-types"></a>SQL Server 連接器相容類型
+
+您可以對可辨識 SQL Server 連線的其他資料來源建立連線。 使用 SQL Server PolyBase 連接器時，您可以建立 **Azure SQL 資料倉儲和 Azure SQL Database** 的外部資料表。 依照上面所列的相同步驟，即可完成此操作。 請確定資料庫範圍認證、伺服器位址、連接埠及位置字串皆與您想要連線之相容資料來源的對應設定相互關聯。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864386"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150179"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
-本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
+此教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 此文章示範如何： 
 
 > [!div class="checklist"]
 > * 註解與取消註解 TRANSACT-SQL (T-SQL) 文字
@@ -38,7 +38,7 @@ ms.locfileid: "47864386"
 > * 尋找您的 SQL Server 執行個體名稱
 
 ## <a name="prerequisites"></a>Prerequisites
-若要完成本教學課程，您需要 SQL Server Management Studio、SQL Server 存取權，以及 AdventureWorks 資料庫。 
+若要完成此 教學課程，您需要 SQL Server Management Studio、SQL Server 存取權，以及 AdventureWorks 資料庫。 
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
@@ -133,7 +133,7 @@ ms.locfileid: "47864386"
 
 
 ## <a name="filter-objects-in-object-explorer"></a>在 [物件總管] 中檢篩選物件
-您可以篩選物件以便於在有許多物件的資料庫中，尋找特定物件。 本節描述如何篩選資料表，但是您可以在 [物件總管] 中的任何其他節點使用下列步驟：
+在含有許多物件的資料庫中，您可以使用篩選來搜尋特定資料表、檢視等。本節描述如何篩選資料表，但是您可以在 [物件總管] 中的任何其他節點使用下列步驟：
 
 1. 連線到 SQL Server。
 2. 展開 [資料庫] > [AdventureWorks] > [資料表]。 資料庫中的所有資料表都會出現。

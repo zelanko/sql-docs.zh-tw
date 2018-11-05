@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4a453952dc67bdb572697b0d20de2c15fa034
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072172"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991301"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "49072172"
 ### <a name="known-issues"></a>已知問題：
 
 - 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
-- SSDT 15.8.1 目前不支援 Windows 7 SP1；因此，若您使用 Windows 7 SP1，請繼續使用 15.8.0
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
@@ -492,16 +491,16 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
     - 在 PowerQuery 中透過範例新增資料行
     - 1400 模型 (M 引擎所使用的模型層級屬性) 中的資料存取選項
         - 啟用快速合併 (預設值為 false - 設定為 true 時，交互式 Web 應用程式引擎會在合併資料時忽略資料來源的隱私權等級)
-        - 啟用舊版重新導向 (預設值為 false - 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
-        - 以 Null 傳回錯誤值 (預設值為 false - 設為 true 時，資料格層級的錯誤會以 null 傳回。 設為 false 時，所引發的例外狀況是資料格包含錯誤)  
+        - 啟用舊版重新導向 (預設值為 false - 設為 true 時，交互式 Web 應用程式引擎會遵循可能不安全的 HTTP 重新導向。  例如，從 HTTPS 至 HTTP URI 的重新導向)  
+        - 以 Null 傳回錯誤值 (預設值為 false - 設為 true 時，資料格層級的錯誤會以 null 傳回。 設為 false 時，所引發的例外狀況是資料格包含錯誤)  
     - 使用 PowerQuery 的額外資料來源 (檔案資料來源)
-        - [匯出] 
-        - 文字/CSV 
-        - XML 
-        - Json 
-        - 資料夾 
-        - Access 資料庫 
-        - Azure Blob 儲存體 
+        - [匯出] 
+        - 文字/CSV 
+        - XML 
+        - Json 
+        - 資料夾 
+        - Access 資料庫 
+        - Azure Blob 儲存體 
     - 當地語系化的 PowerQuery 使用者介面
 - DAX 編輯器工具視窗
     - 改善量值、導出資料行和詳細資料列運算式的 DAX 編輯體驗，可透過 SSDT 中的 [檢視]、其他 Windows 功能表存取
@@ -610,24 +609,24 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 DacFx 中已加入兩個新的 API：DacServices.Publish() 和 DacServices.Script()。 這些 API 也支援在單一作業中執行發行 + 編寫指令碼 + 報告的動作。 範例使用方式︰
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -662,7 +661,7 @@ Console.WriteLine(result.DeploymentReport);
 
 **整合服務**
 
-* 已修正連接錯誤 [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks)︰Move Multiple Integration Service Package Tasks (移動多個整合服務封裝工作)
+* 已修正 Connect Bug  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks)︰移動多個整合服務套件工作
 
 
 
@@ -675,7 +674,7 @@ Console.WriteLine(result.DeploymentReport);
 
 **新功能**
 
-SqlPackage.exe 和 Data-Tier Application Framework (DacFx) API 現在支援結構描述比較。 如需詳細資訊，請參閱 [SqlPackage 和 Data-Tier Application Framework 中的結構描述比較 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)。
+SqlPackage.exe 和 Data-Tier Application Framework (DacFx) API 現在支援結構描述比較。 如需詳細資料，請參閱  [SqlPackage 與 Data-Tier Application Framework 的結構描述比較](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) \(英文\)。
 
 **Analysis Services - SSDT 表格式 (SSAS) 的整合式工作區模式**
 
@@ -719,7 +718,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 - **Analysis Services - 表格式模型總管：** 表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
-    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
+    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援此功能。 未來版本中將會支援 SQL Server 物件總管。
 
 
 **更新和修正**

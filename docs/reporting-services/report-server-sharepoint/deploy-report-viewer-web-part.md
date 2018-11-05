@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085174"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030617"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
@@ -28,7 +28,7 @@ ms.locfileid: "49085174"
 
 > [!IMPORTANT]
 > 從版本 "15.X.X.X" 開始，您可以與您現有的 Reporting Services SharePoint 整合模式共用服務應用程式並存安裝 ReportViewerWebPart。
-> 透過這項 .wsp 解決方案的更新，我們引進了新的檔案。您必須分別使用 Uninstall-SPSolution 及 Install-SPSolution Cmdlet，來撤銷先前的解決方案並重新部署新 .wsp。
+> 透過這項 .wsp 解決方案的更新，我們引進了新的檔案，您必須分別使用 Uninstall-SPSolution 及 Install-SPSolution Cmdlet，來撤銷先前的解決方案並重新部署新的 .wsp。
 >
 
 **支援的 SharePoint 伺服器版本：**
@@ -171,4 +171,4 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 部署並啟動報表檢視器網頁組件後，您可以將網頁組件新增至 SharePoint 網頁。 如需詳細資訊，請參閱[將報表檢視器網頁組件新增到 SharePoint 頁面](add-report-viewer-web-part-to-page.md)。
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
