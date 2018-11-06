@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -17,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 33d2a7332bc4c096fcd53a8d37e16ff7698e89f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 893035b77ce51718011dd3b36e02371f2bb97215
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677767"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031905"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

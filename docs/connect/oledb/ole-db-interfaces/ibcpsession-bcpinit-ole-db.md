@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPInit (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: abf0bac72ae6d9beb27812684c69d6912b9396b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 858f6c810b2c6bd687ac6a1fe769d47fcd9fdef6
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835376"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031546"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

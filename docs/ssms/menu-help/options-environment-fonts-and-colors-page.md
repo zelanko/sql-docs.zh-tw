@@ -7,19 +7,16 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Fonts_And_Colors
-- VS.TOOLSOPTIONSPAGES.ENVIRONMENT.FONTS_AND_COLORS
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28b0db7c8232642f18859c6687afe81dcf8914f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ab479625b40665749111a7d3e0851a029c706edb
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100229"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032655"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>選項 (環境 - 字型和色彩頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

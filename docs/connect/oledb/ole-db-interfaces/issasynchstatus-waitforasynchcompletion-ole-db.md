@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d822a30f8b6a7894d02f5e190eb4600689decf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6df61043aae6f86ab4c632c58323e4d670cfcd7c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687986"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030025"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,8 +5,7 @@ ms.date: 03/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e6eb921d6ebee88ce14ad30b0d2071941ec5f007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c88406e1646b521b3f504b0a0252f8de9bcccd
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665546"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033125"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 外部指令碼物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

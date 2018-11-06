@@ -1,12 +1,10 @@
 ---
 title: 空間索引概觀 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -15,12 +13,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40464a10cd58e870070636919f6f570efac97aa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c335b8bcdc4bdb701c2f211875de32386d0989ce
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725166"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018553"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

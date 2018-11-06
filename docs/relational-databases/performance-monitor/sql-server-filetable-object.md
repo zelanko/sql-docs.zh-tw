@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:FileTable
@@ -14,12 +13,12 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 4588c8230d355fddddcc0f758b2be029db8e9cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd553a1b52aa5705837ece7f0265256c411edf0e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821196"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029752"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server 的 FileTable 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

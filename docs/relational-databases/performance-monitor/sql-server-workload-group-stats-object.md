@@ -5,8 +5,7 @@ ms.date: 12/04/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Workload Group Stats object
@@ -15,12 +14,12 @@ ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 38c6f791c6e7c5f247852737715afb63e2e2c67a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232ca39f7e9385500eb5b6d8816b560463047ded
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760496"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033525"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

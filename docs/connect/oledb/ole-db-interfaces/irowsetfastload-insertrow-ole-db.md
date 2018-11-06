@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IRowsetFastLoad::InsertRow (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 5921db914a79f852adfd4e2c8d9728d737ee7fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 780110a1d7a606a9277ae10fbd9260a5f587f6d7
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602236"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030885"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: bcc0382f7203f3b53ed78da075ae0fa4c4c2d9e9
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852093"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971119"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -196,7 +196,7 @@ ms.locfileid: "48852093"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 安裝程式控制|/IACCEPTPYTHONLICENSETERMS <br /><br /> **只有當您針對包含 Anaconda Python 套件的自動安裝指定 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安裝程式控制|/IACCEPTROPENLICENSETERMS <br /><br /> **只有當您針對包含 Microsoft R Open 套件的自動安裝指定 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateEnabled<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會包含找到的更新。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateEnabled<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateSource<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將取得產品更新的位置。 有效值為 "MU"，表示搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新、有效資料夾路徑、相對路徑 (例如 `.\MyUpdates`) 或 UNC 共用。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或透過 Windows Server Update Services 搜尋 Windows Update Service。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/CONFIGURATIONFILE<br /><br /> **選擇性**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ERRORREPORTING<br /><br /> **選擇性**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中沒有任何作用。 <br/><br/> 若要管理傳送錯誤意見反應給 Microsoft 的方式，請參閱[如何設定 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，將意見反應傳送給 Microsoft](http://support.microsoft.com/kb/3153756)。 <br/><br/>在較舊版本中，這會指定 SQL Server 的錯誤報告。<br /><br /> 如需詳細資訊，請參閱＜ [Microsoft 錯誤報告服務隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)＞。<br /><br /> 支援的值：<br /><br /> 0=停用<br /><br /> 1=啟用|  
@@ -879,10 +879,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |參數和值|Description| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|安裝不含複寫和全文檢索的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。|  
-|/FEATURES=SQLEngine, FullText|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文檢索。|  
-|/FEATURES=SQL, Tools|安裝完整的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和所有工具。|  
+|/FEATURES=SQLEngine,FullText|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文檢索。|  
+|/FEATURES=SQL,Tools|安裝完整的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和所有工具。|  
 |/FEATURES=BOL|安裝《SQL Server 線上叢書》元件，以檢視並管理說明內容。|  
-|/FEATURES=SQLEngine, PolyBase|安裝 PolyBase 引擎。|  
+|/FEATURES=SQLEngine,PolyBase|安裝 PolyBase 引擎。|  
   
 ##  <a name="RoleParameters"></a> 角色參數  
  安裝程式角色或 /Role 參數是用來安裝預先設定的功能選項。 SSAS 角色會在現有的 SharePoint 伺服器陣列或未設定的新伺服器陣列中安裝 SSAS 執行個體。 為支援每個狀況，提供兩個安裝程式角色。 您一次只能選擇一個要安裝的安裝程式角色。 如果您選擇安裝程式角色，安裝程式會安裝屬於該角色的功能與元件。 您無法改變為該角色所指定的功能與元件。 如需有關如何使用功能角色參數的詳細資訊，請參閱 [從命令提示字元安裝 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 

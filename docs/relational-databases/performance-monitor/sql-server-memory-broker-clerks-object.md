@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Broker Clerks
@@ -14,12 +13,12 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 546d5052c2b97b40b4f7e979c0447c947fdf487a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 32c12c07b5f5a410220557561e0f7eddc12f6c0e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906028"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030395"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Memory Broker Clerks 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

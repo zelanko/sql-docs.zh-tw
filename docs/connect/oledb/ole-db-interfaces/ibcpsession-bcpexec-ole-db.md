@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPExec (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 2b25bf87380370e6207e8c02f65d78a874950b95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a05400c4e15c5d96f806156565ab2e3e880b151
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808562"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032685"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

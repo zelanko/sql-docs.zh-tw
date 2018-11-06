@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPWriteFmt (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7d36d65f59bfffc72b71f9e09dbe8bc5aaeb34b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d26a74919341b5d5838b95d085bc658a31a2370
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651759"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030409"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 911b124bd4ae1bf36d2eb9278bf1841bb83b0236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7c1572e752801a8e1e122202ea8bd0e2677545
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749467"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030686"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server XTP 交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

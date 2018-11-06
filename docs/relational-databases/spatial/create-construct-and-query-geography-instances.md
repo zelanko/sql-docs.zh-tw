@@ -1,12 +1,10 @@
 ---
 title: 建立、建構並查詢 geography 執行個體 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
@@ -17,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc14368f5fc6e2c9b168fd17f31a103a22f46b4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f1a61507883ed6a583508f89d6d8cf7ba1a0be
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617886"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018412"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

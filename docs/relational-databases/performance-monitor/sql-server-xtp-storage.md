@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad892774f11ed4eab2f3809c0fce8805b268c107
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ec95b3be82da761292249616e0f81d9527d9f04
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730116"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033546"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server XTP 儲存體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server], memory
@@ -25,12 +24,12 @@ ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1978cd0ab26cfbd40ae943917c852b45578d071
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e51393cea321fe597047b671e604318664aec473
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637666"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030401"
 ---
 # <a name="monitor-memory-usage"></a>監視記憶體使用量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

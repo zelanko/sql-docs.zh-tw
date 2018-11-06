@@ -5,20 +5,19 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a624dfbd638f68d5d5782ac661341d5881d664e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 226129e3f72bb6339583194941e4f012353d9aca
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625403"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51017663"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

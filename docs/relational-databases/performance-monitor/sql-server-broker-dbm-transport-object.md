@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
@@ -15,12 +14,12 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f8ee36cc896afe72fe3f06fcb364524eeb89276c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cac576fd873853e848783762d7028f375b83c79d
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701246"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030565"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server 的 Broker─DBM Transport 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,6 +67,6 @@ ms.locfileid: "47701246"
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

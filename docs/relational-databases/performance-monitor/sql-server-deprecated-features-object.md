@@ -5,8 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -17,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9302e518ab06f4e7ac01d51e27bcdf7e6e6b5970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12e9df07ba16f7fd2bfe1ec13f6bdc85167d53db
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748398"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033705"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

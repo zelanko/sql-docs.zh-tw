@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Reosurce Pool Stats object
@@ -15,12 +14,12 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0866673feed877c1eb48d282ebb1cdef2edac50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd24eede3dff92b37bc5e8b8604433fbf2ad580a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802956"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033245"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, Resource Pool Stats 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,11 +2,9 @@
 title: SQL Server 次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.topic: article
 helpviewer_keywords:
 - connection access to availability replicas
@@ -19,14 +17,13 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ed23533850897e34e3411ac041585a351e2b287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f4a29f67c474ff30a7da0512d89b106769e90c
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840896"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018133"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

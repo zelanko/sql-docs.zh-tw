@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -17,12 +16,12 @@ ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27038f80f725078d51ab6c723c895a2718004f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be44a59ccca408c7d951e8eead4b7b7ed859bc56
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749517"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033265"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server、可用性複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -3,6 +3,7 @@ title: 子查詢 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/18/2018
 ms.prod: sql
+ms.technology: performance
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42ea4207746b3933c550ab1e93a3cc3666a060dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 487397681b993bc4995a422730d84aef5423f8c0
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835506"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033695"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e4ce18946f7ec5346ea67c3599736f493949fbd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae89a3572c0c9cc4a3329deb85a34eee16c869b6
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806656"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030517"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP 虛設項目處理器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

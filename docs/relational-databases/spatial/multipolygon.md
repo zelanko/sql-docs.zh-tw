@@ -1,12 +1,10 @@
 ---
 title: MultiPolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
@@ -16,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e44aecc1e9780b1b81ff38ebfd859892a15dcf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc6314ac1c24aa545e3f5c44749b755bf7e7174b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649496"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018953"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

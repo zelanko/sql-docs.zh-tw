@@ -5,8 +5,7 @@ ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: reference
 f1_keywords:
 - sql13.swb.ue.navigation.f1
@@ -21,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2bd5d38c0541a6e56b73cf5da321844eaa94fd5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 364c3ec544f0a019a81416b1b1c005e91601f94d
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702546"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031285"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

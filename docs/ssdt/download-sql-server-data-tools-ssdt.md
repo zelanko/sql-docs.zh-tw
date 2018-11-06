@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419195"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226300"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,16 +87,18 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 1. [下載 SSDT 的獨立安裝程式](#ssdt-for-vs-2017-standalone-installer)。
 2. [下載 vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe)。
-3. 在連線時，執行下列命令下載離線安裝所需的全部檔案。 使用 `--layout` 選項是關鍵。 使用用以儲存檔案的實際路徑取代 <filepath>。
+3. 在連線時，執行下列命令下載離線安裝所需的全部檔案。 使用 `--layout`選項是關鍵，這會為離線安裝下載實際檔案。 以實際配置路徑取代 <filepath> 來儲存檔案。
 
+   
    A.   若是使用特定語言，請傳遞地區設定：`vs_sql.exe --layout c:\<filepath> --lang en-us` (一種語言 ~1GB)  
    B. 若是使用所有語言，請省略 `--lang` 引數：`vs_sql.exe --layout c:\<filepath>` (所有語言 ~3.9GB)。
 
+4. 執行 `SSDT-Setup-ENU.exe /layout c:\<filepath>` 以將 SSDT 承載擷取至與所下載 VS2017 檔案相同的 `<filepath>` 位置。 這能確保兩者的所有檔案都會合併到同一個配置資料夾。
+
 完成前述步驟之後，就可以離線執行下列步驟：
 
-1. 將 VS2017 酬載複製到 SSDT 的酬載資料夾。 請務必將兩者的所有檔案合併到同一個配置資料夾。
-2. 執行 `vs_setup.exe --NoWeb`，以安裝 VS2017 Shell 及 SQL Server 資料專案。
-3. 執行 `SSDT-Setup-ENU.exe /install` 並選取 SSIS/SSRS/SSAS。
+1. 執行 `vs_setup.exe --NoWeb`，以安裝 VS2017 Shell 及 SQL Server 資料專案。
+2. 從配置資料夾執行 `SSDT-Setup-ENU.exe /install`，並選取 SSIS/SSRS/SSAS。
 
    - 若要自動安裝，請執行或 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 

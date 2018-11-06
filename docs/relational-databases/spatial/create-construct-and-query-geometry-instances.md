@@ -1,12 +1,10 @@
 ---
 title: 建立、建構及查詢 geometry 執行個體 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
@@ -16,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f311c0b605b745aeb274865863fc3e7b1cd098f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bf6da4396c89142a7143c9824916a69f57296e5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764736"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018383"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:General Statistics
@@ -15,12 +14,12 @@ ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a503e7bbfe3b611f852707e23900fece48282a7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87c62b36e4f6ce3a96b3f40447794e2a9273d66c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746916"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030345"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,6 +55,6 @@ ms.locfileid: "47746916"
 |**User Connections**|計算目前已連線到 SQL Server 的使用者數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55c80d333680e40645eab1f643f8a9140781f380
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9cc8a72709afd522c2bf54be9f324143b9f87d0
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677536"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029808"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, Memory Node
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -6,18 +6,17 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8965d6f15798ec1bbae29e00116ecbd06717af1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e545d7eaa0c861e5227ff69db56b0ac7b224db0
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704386"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033045"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

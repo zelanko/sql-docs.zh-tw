@@ -5,8 +5,7 @@ ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -32,12 +31,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 995728047e02ccf2127ba8c85949bde3031007dd
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: b50c9cf350d516c6262a777427d133f1cf3c92f2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324621"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031092"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

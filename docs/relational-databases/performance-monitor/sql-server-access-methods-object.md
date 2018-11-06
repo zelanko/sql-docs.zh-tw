@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
@@ -15,12 +14,12 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aad4951e60f45ae2b25fcaaac018a6671765390a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9458313f692f5a63db7524ef4bcf31cbf85064d
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776126"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033255"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server 的 Access Methods 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,6 +93,6 @@ ms.locfileid: "47776126"
 |**Worktables From Cache Ratio**|已建立的工作資料表百分比，尚未配置工作資料表的兩個初始頁面，但可從工作表快取立即取得。 卸除工作資料表後，可能會維持配置兩個頁面，而且它們會回到工作資料表快取。 這樣可以增加效能)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

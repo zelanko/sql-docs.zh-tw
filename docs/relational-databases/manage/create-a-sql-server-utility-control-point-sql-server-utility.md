@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.create.ucp.validation.F1
@@ -22,12 +21,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bec83e5fc33fe49541d234eafaae4c474e47b452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07729e6ad2593b5d2b7627f8e768064bfc285245
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638888"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033175"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -217,7 +216,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  若要顯示儀表板，請從 SSMS 功能表按一下 **[檢視]** ，然後選取 **[公用程式總管內容]** 。 若要重新整理資料，請以滑鼠右鍵按一下 [公用程式總管] 窗格中的公用程式名稱，然後選取 [重新整理]。  
   
- 如需如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中註冊其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除當做受管理執行個體的 UCP，請在 [公用程式總管] 窗格中選取 [受管理的執行個體] 來填入受管理執行個體的清單檢視，然後以滑鼠右鍵按一下 [公用程式總管內容] 清單檢視中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，再選取 [將執行個體設為未受管理]。  
+ 如需如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中註冊其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的詳細資訊，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。 若要從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中移除當做 受管理的執行個體的 UCP，請在 **[公用程式總管]** 窗格中選取 **[受管理的執行個體]** 來填入受管理的執行個體的清單檢視，然後以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [公用程式總管內容] **清單檢視中的** 執行個體名稱，再選取 **[將執行個體設為未受管理]**。  
   
 ##  <a name="PowerShell_create_UCP"></a> 使用 PowerShell 建立新的公用程式控制點  
  使用下列範例建立新的公用程式控制點：  

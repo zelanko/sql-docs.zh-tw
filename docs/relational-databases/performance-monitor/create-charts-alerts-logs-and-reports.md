@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], charts and reports
@@ -21,12 +20,12 @@ ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 193e486bcf31b5647ff66914cad8c10d2d930bfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e88d5e021d9c01ae77d2467e890cd8b5761cbfc
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601747"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033225"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>建立圖表、警示、記錄和報表
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +64,6 @@ ms.locfileid: "47601747"
  如需建立圖表、警示、記錄檔和報表的詳細資訊，以及 Windows 物件和計數器的詳細資訊，請參閱 Windows 文件集。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

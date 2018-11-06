@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Broker Activation
@@ -15,12 +14,12 @@ ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da3301e99c06d4eda52814f03150065036006971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2001aad47add2aabc547694f9673337ac250c9ec
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851471"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033604"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server 的 Broker Activation 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

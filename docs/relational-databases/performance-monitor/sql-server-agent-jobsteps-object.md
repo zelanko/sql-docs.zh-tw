@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - JobSteps object
@@ -15,12 +14,12 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87905d1c635111107649c965f11e941f8ed56a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fab5edc3dc09c29217cbe17b61bf5c180fee13c9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792006"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030005"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +54,6 @@ ms.locfileid: "47792006"
 ## <a name="see-also"></a>另請參閱  
  [管理作業步驟](../../ssms/agent/manage-job-steps.md)   
  [使用效能物件](../../ssms/agent/use-performance-objects.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server 2016 XTP Databases
@@ -14,12 +13,12 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: 27d270866846b055c73eb5801c0a7aa8a41088b7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: f2953db17247b885f339a3de585841935cfe83a8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906258"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033425"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

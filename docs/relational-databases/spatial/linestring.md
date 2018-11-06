@@ -1,12 +1,10 @@
 ---
 title: LineString | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -16,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9108abe23a0bccc703f9f1779cbd6a94f5b771f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604496"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018633"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

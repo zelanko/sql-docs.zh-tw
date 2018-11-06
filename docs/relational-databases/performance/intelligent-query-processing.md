@@ -6,7 +6,7 @@ ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c6d89b3ec3d01792578210caef8018d15b2d175
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072243"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030935"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

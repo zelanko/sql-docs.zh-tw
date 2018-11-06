@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -19,12 +18,12 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 79f58c6bdcff4e3f43a7ef61457de40e371ab025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47a917fc622bd8be46dd798b9adc787ad6a51e34
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686626"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030965"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

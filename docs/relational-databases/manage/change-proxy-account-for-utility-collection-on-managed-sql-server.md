@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ff37ba8b-a08c-4109-b6e2-5748c995a52c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 61bd35cd3aaf2f98cc8c0d4f06b8d03eb9c4cfd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45198f53e5f1a0e3fe48a3d56bd7ca5c01127334
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718436"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030305"
 ---
 # <a name="change-proxy-account-for-utility-collection-on--managed-sql-server"></a>變更 Proxy 帳戶以進行受管理 SQL Server 上的公用程式收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,12 +1,10 @@
 ---
 title: 空間參考識別碼 (SRID) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Spatial Reference Identifiers (SRIDs)
@@ -17,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d56b3cb3291d4b4d403d6a6983b58953aa49af5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2fee224c6ca940df7dacb0ee0f5a34a50628902
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779067"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51017553"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>空間參考識別碼 (SRID)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
@@ -15,12 +14,12 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98f0146139670b83970ca073391f23c688cc2b44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d5f5b960eeef40842add4f9832b7531b981e7a8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654786"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033295"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server 的 Buffer Manager 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

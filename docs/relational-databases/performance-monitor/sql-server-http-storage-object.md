@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 82b63a0ce8cdabc627ea6ec4730e43b2f6c4e0eb
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 056869665e5c5889d7c4a819a3deeddb696e551c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324541"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032675"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server、HTTP 儲存體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

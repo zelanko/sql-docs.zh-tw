@@ -1,7 +1,7 @@
 ---
 title: 複寫散發代理程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/23/2016
+ms.date: 10/29/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1864abc0cfa12e0b7ea60f5e080d372b9b50d989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf1431ab35afc336fb18ac5546d00336f97c1bc
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790286"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226350"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,10 @@ distrib [-?]
 |**0**|指定不使用 SSL。|  
 |**1**|指定要使用 SSL，但是代理程式不會驗證 SSL 伺服器憑證是否由受信任的簽發者簽署。|  
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
-  
+ 
+ > [!NOTE]  
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
+
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
   
  **-ErrorFile** *error_path_and_file_name*  

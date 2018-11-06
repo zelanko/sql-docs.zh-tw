@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance-monitor
 ms.topic: conceptual
 helpviewer_keywords:
 - Alerts object
@@ -15,12 +14,12 @@ ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3776ba97213564b36630c82845b0620b6d2cacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9f31ce84ae49ac40dccfd6ad20770492655e1f4
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852982"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032785"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server Agent、Alerts 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +38,6 @@ ms.locfileid: "47852982"
 ## <a name="see-also"></a>另請參閱  
  [警示](../../ssms/agent/alerts.md)   
  [使用效能物件](../../ssms/agent/use-performance-objects.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e41301df0559ac7cbcfc75c9fb90967e7ddfc4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665606"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226380"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
