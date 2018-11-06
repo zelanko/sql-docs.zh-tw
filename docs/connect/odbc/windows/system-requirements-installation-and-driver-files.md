@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
+ms.lasthandoff: 10/31/2018
 ms.locfileid: "49084926"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系統需求、安裝和驅動程式檔案

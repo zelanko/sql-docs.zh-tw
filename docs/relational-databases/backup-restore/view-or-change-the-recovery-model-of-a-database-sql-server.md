@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87152c60afce357cdf1ac63cdf2bd799f810c20a
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851953"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753508"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ GO
   
 ```sql  
 USE [master] ;  
-ALTER DATABASE [master] SET RECOVERY FULL ;  
+ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> 建議：變更復原模式之後  
@@ -129,7 +129,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
     -   確定已排程定期資料庫備份。 備份資料庫是必要的動作，才能保護資料及截斷交易記錄中非使用中的部分。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -137,7 +137,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
 -   [建立作業](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [啟用或停用作業](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   

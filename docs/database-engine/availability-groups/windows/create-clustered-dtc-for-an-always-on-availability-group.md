@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e2c03cecb508788e1852ee154d783a8f25320298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732226"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411778"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>建立 AlwaysOn 可用性群組的叢集 DTC
 
@@ -452,7 +452,7 @@ IF ($restart -eq 1)
 
 為了確保分散式交易使用叢集 DTC 資源，請停用這兩個節點上的本機 DTC。  下列指令碼將停用並停止每個節點上的本機 DTC 服務。  在 `SQLNODE1` 上執行下列 PowerShell 指令碼。
 ```powershell  
-# Disble local DTC service
+# Disable local DTC service
 
 \<#
 Script: 

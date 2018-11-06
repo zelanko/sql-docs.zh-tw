@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0093ef6c277198953a93c8f8f7ba21c17af3ebd
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383803"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237114"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ ms.locfileid: "49383803"
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT SERVICE\MSSQLSERVER**。 具名執行個體： **NT SERVICE\MSSQL$** InstanceName)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\SQLSERVERAGENT**。 具名執行個體： **NT Service\SQLAGENT$**_InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體： **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**。 具名執行個體： **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體： **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) – 其只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體： **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**。 具名執行個體： **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體： **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) – 其只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$**<執行個體名稱>)。|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體和具名執行個體： **NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)|  
 |**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\MSSQLFDLauncher**。 具名執行個體： **NT Service\ MSSQLFDLauncher$**_InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|  

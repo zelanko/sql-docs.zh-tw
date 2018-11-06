@@ -5,7 +5,7 @@ ms.date: 08/10/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql
+ms.component: design
 ms.topic: conceptual
 f1_keywords:
 - CREATE EXTERNAL TABLE AS SELECT
@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 664dde7b8626b0e2e85a9050e250e9cc9e5fc5ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ff275d2aad6d9ccf24ed632a8515e7ce8ea3fc2
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254454"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

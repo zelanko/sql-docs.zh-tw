@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b1bd34a017cc067a93e8b307adc5c8069ac8e0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8df74aceaf08bd030fe092d4c18cd38fc0559cb7
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831336"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970827"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>設定 PolyBase 存取 Azure Blob 儲存體中的外部資料
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 Hadoop 中的外部資料。
+本文說明如何在 SQL Server 執行個體上使用 PolyBase 來查詢位於 Hadoop 中的外部資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -88,7 +88,7 @@ ms.locfileid: "47831336"
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))  
    ```
 
 1. 使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 建立外部資料表以指向 Azure 儲存體中所儲存的資料。 在此範例中，外部資料會包含車輛感應器資料。
@@ -126,7 +126,7 @@ ms.locfileid: "47831336"
 
 ### <a name="ad-hoc-queries"></a>臨機操作查詢  
 
-下列臨機操作查詢會聯結與 Hadoop 資料的關聯式。 它會選取開車速度超過 35 mph 的客戶，並聯結 SQL Server 中所儲存的結構化客戶資料與 Hadoop 中所儲存的車輛感應器資料。  
+下列臨機操作查詢會聯結與 Hadoop 資料的關聯式。 它會選取開車速度超過 35 mph 的客戶，並聯結 SQL Server 中所儲存的結構化客戶資料與 Hadoop 中儲存的車輛感應器資料。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
