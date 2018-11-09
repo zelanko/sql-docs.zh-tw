@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991301"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216806"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>適用於 Visual Studio 2017 (15.8.2) 的 SSDT
+組建編號：14.0.16182.0  
+發行日期：2018 年 11 月 5 日  
+
+### <a name="whats-new"></a>新功能
+**SSIS：**
+
+修正了將內有包含指令碼工作/一般檔案目的地之套件的 SSIS 專案部署到 Azure-SSIS 時，會導致該套件無法在 Azure-SSIS 中執行的問題。 
+
+### <a name="known-issues"></a>已知問題：
+
+- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+- 適用於 Visual Studio 2017 (15.8.2) 的 SSDT 不支援設計包含 Oracle/Teradata 來源或目的地的套件。 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>適用於 Visual Studio 2017 (15.8.1) 的 SSDT
@@ -40,6 +55,8 @@ ms.locfileid: "49991301"
 ### <a name="known-issues"></a>已知問題：
 
 - 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+- 將套件包含指令碼工作/一般檔案目的地的 SSIS 專案部署至 Azure SSIS，會導致套件無法在 Azure-SSIS 中執行。
+- 適用於 Visual Studio 2017 (15.8.1) 的 SSDT 不支援設計包含 Oracle/Teradata 來源或目的地的套件。 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)
@@ -718,7 +735,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 - **Analysis Services - 表格式模型總管：** 表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
-    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援此功能。 未來版本中將會支援 SQL Server 物件總管。
+    - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
 
 
 **更新和修正**
