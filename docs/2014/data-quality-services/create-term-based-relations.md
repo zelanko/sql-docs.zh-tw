@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
@@ -13,12 +12,12 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524c0b4b875d8fc63cbd508c04032d7b50453c3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eca92d02eac642f48e64c15217fd6b354790bb97
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092838"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030315"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
   此主題描述如何針對 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的定義域建立以詞彙為主的關聯。 以詞彙為主的關聯 (TBR) 可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如，您可以設定某個以詞彙為主的關聯，將 “Inc.” 詞彙變更為 “Incorporated”。 每當在定義域中遇到 “Inc.” 詞彙時，都會加以變更。 出現 “Contoso, Inc.” 的地方將會變更為 “Contoso, Incorporated”，而且這兩個值會被視為完全相符的同義字。  
@@ -98,7 +97,7 @@ ms.locfileid: "48092838"
   
 6.  按一下 **[套用變更]** ，將以詞彙為主的關聯套用至定義域。  
   
-7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
+7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   
 ##  <a name="FollowUp"></a> 後續操作：建立以詞彙為主的關聯之後  
  在您建立以詞彙為主的關聯之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  

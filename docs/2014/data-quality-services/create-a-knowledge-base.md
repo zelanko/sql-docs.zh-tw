@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.selectkb.f1
@@ -14,12 +13,12 @@ ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f920d4aa9ddb3b8aa414c2d455fe496c8a68bd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41e4f8b200a113dc7f4c3bc6ba4edd94d341c523
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121431"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032995"
 ---
 # <a name="create-a-knowledge-base"></a>建立知識庫
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  

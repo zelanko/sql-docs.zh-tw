@@ -4,15 +4,15 @@ description: 本教學課程會示範如何將資料內嵌到具有 sp_data_pool
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c909379c92b2eb9a98c1c191987570946a8cc002
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644113"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221694"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程： 將資料內嵌至 SQL Server 資料集區使用 TRANSACT-SQL
 
@@ -66,7 +66,7 @@ ms.locfileid: "49644113"
       );
    ```
   
-1. 在 CTP 2.0 中，建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 2.1 中，建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="load-data"></a>載入資料
 

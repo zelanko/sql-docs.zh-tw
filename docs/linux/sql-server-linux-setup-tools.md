@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: da3730d162ecacc0f6559db578ebb124b2fdfa4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698246"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270171"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具在 Linux 上安裝
 
@@ -197,7 +197,7 @@ brew install --no-sandbox mssql-tools
 
 ## <a id="docker"></a> Docker
 
-從 SQL Server 2017 CTP 2.0 開始，Docker 映像中包含 SQL Server 命令列工具。 如果您附加至互動式命令提示字元使用映像，您可以在本機執行的工具。
+Docker 映像中包含 SQL Server 命令列工具。 如果您附加至互動式命令提示字元使用映像，您可以在本機執行的工具。
 
 ## <a name="offline-installation"></a>離線安裝
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.cdvaluerelations.f1
@@ -13,12 +12,12 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d26836ca62c4a86cfbfde5b7f29920911ac6efdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12689babd1fbb928e4ec086ef78d85d263ea17cb
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081858"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032865"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>使用複合定義域中的值關聯
   此主題描述如何檢視在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知識探索程序期間針對複合定義域找到的值組合。 這個頁面會顯示值組合出現的次數。 複合定義域不支援值管理，所以您無法針對這些值執行任何作業。  
@@ -39,7 +38,7 @@ ms.locfileid: "48081858"
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面上，開啟或建立知識庫。 選取 **[定義域管理]** 當做活動，然後按一下 **[開啟]** 或 **[建立]**。 如需相關資訊，請參閱 [建立知識庫](../../2014/data-quality-services/create-a-knowledge-base.md) 或 [開啟知識庫](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
-3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要建立定義域規則的複合定義域，或是建立新的複合定義域。 如果您有建立新的網域，請參閱[建立複合定義域](../../2014/data-quality-services/create-a-composite-domain.md)。  
+3.  從 **[定義域管理]** 頁面的 **[定義域清單]** 中，選取您想要建立定義域規則的複合定義域，或是建立新的複合定義域。 如果您必須建立新的定義域，請參閱＜ [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)＞。  
   
 4.  按一下 **[值關聯]** 索引標籤。  
   

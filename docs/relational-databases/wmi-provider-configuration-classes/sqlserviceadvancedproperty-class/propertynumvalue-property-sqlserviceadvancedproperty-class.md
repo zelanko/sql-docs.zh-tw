@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - PropertyNumValue Property (SqlServiceAdvancedProperty Class)
@@ -19,12 +18,12 @@ ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2652d676097dff1d146834f8139fec097a3e7655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43a055d7325421153abf8d3c4c165d1291bc5864
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738536"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217476"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

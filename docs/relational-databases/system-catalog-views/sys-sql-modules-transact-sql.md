@@ -1,7 +1,7 @@
 ---
 title: sys.sql_modules & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e5929ac379b4e20ee4f25bf7e3ede42e980082
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705596"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221534"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "47705596"
 |**null_on_null_input**|**bit**|模組宣告的目的不是為了因應任何 NULL 輸入而產生 NULL 輸出。|  
 |**execute_as_principal_id**|**整數**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 識別碼指定的主體如果 EXECUTE AS SELF 或 EXECUTE AS\<主體 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。<br /><br /> 0 = 不是原生編譯<br /><br /> 1 = 是原生編譯<br /><br /> 預設值是 0。|  
+|**is_inlineable**|**bit**|**適用於**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]及更新版本。<br/><br />指出模組是否為 inlineable。 Inlineability 根據指定的條件[此處](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)。<br /><br /> 0 = 未 inlineable<br /><br /> 1 = 是 inlineable。 <br /><br /> 純量 udf，值會是 1，如果 UDF 因 inlineable，和 0。 其永遠會包含內嵌 Tvf 和 0 代表所有其他的模組類型的值為 1。<br />|  
+|**inline_type**|**bit**|**適用於**:[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]及更新版本。<br /><br />指出是否內嵌已開啟模組目前。 <br /><br />0 = 內嵌已關閉<br /><br /> 1 = 內嵌已開啟。<br /><br /> 純量 Udf，值會是 1 如果內嵌 （明確或隱含） 已開啟。 值一律為 1 的內嵌 Tvf，以 0 代表其他模組類型。<br />|  
+
   
 ## <a name="remarks"></a>備註  
  預設條件約束，類型 D、 物件的 SQL 運算式中找到[sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)目錄檢視。 檢查條件約束，類型 C 中，物件的 SQL 運算式中找到[sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)目錄檢視。  

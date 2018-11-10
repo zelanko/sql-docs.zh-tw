@@ -16,15 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe4a2a137c55487203d3e2f55ea30cf1283fe595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238ce05661786893afcb8757bd56e4cc31f8dbe4
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641656"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970759"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 參考 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 本主題說明如何尋找及使用 Microsoft Transact-SQL (T-SQL) 參考主題的基本概念。 對於使用 Microsoft SQL 產品和服務而言，T-SQL 相當重要。 所有與 SQL 資料庫通訊的工具和應用程式都透過傳送 T-SQL 命令與 SQL 資料庫通訊。  
 
@@ -32,7 +35,7 @@ ms.locfileid: "47641656"
 
 發出 T-SQL 命令的一些 Microsoft 工具如下：
 
-- [Transact-SQL](../ssms/download-sql-server-management-studio-ssms.md)
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)。  
 - [sqlcmd](../tools/sqlcmd-utility.md).  
 - [Azure Data Studio (預覽)](../azure-data-studio/what-is.md)。  

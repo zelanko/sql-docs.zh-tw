@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - enable notifications
@@ -15,15 +14,15 @@ ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a464cbad0133ace275c7fd8574adc41496ea4456
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d43f68668681ff2f4ec3787917c64386dfaf1c5c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066058"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029429"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>在 DQS 中啟用或停用分析通知
-  此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中啟用或停用分析通知。 根據預設，DQS 中會啟用分析通知。 分析通知告訴您有關資料來源的重要事實，以及針對資料執行之目前活動的效用。 如需詳細資訊，請參閱 < [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+  此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中啟用或停用分析通知。 根據預設，DQS 中會啟用分析通知。 分析通知告訴您有關資料來源的重要事實，以及針對資料執行之目前活動的效用。 如需詳細資訊，請參閱 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

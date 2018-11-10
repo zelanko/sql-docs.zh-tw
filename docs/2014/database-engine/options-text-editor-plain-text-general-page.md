@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: fa8ab18d7ca4e44d3b30129c7353c24660cd0b3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090940"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030065"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>選項 (文字編輯器 - 純文字 - 一般頁面)
   使用這個對話方塊可變更文字編輯器的一般編輯行為，這個文字編輯器是用來編輯與特定開發語言沒有關聯的文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]**，展開 **[純文字]** ，然後按一下 **[一般]**。  

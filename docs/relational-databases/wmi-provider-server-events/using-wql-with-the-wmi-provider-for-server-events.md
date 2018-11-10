@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -18,12 +17,12 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d1a9861b25b34f6587a4b24a0a2f851ec0c33d9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dde7806e0485bc46ca9b9869e8856836006b9032
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784506"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216286"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>搭配伺服器事件的 WMI 提供者使用 WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +118,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-querying-for-events-at-the-server-scope"></a>A. 查詢伺服器範圍的事件  
- 下列 WQL 查詢會針對任何發生於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 `SERVER_MEMORY_CHANGE` 追蹤事件，擷取所有的事件屬性。  
+ 下列 WQL 查詢會針對任何發生於 `SERVER_MEMORY_CHANGE` 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤事件，擷取所有的事件屬性。  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  

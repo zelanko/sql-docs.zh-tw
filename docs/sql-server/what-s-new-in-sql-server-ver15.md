@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461113"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272616"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
@@ -28,6 +28,23 @@ ms.locfileid: "49461113"
 - [![從評估中心下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [下載 SQL Server 2019 以安裝於 Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
 - 安裝於 Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)。
 - [在 Docker 的 SQL Server 2019 上執行](../linux/quickstart-install-connect-docker.md)。
+
+## <a name="ctp-21"></a>CTP 2.1
+
+Community Technology Preview (CTP) 2.1 是 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的最新公開版本。 下列是針對 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1 所新增或強化的功能。
+
+- [巨量資料叢集](#bigdatacluster)
+  - 部署 Python 和 R 應用程式
+- [資料庫引擎](#databaseengine)
+  - 智慧查詢處理加入純量 UDF 內嵌功能
+  - 改善截斷錯誤訊息，以包含資料表和資料行名稱，以及被截斷的值
+  - 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式中支援 UTF-8 定序
+  - 在圖形比對查詢中使用衍生資料表或檢視別名
+  - 改善統計資料封鎖的診斷資料
+  - 混合式緩衝集區
+  - 靜態資料遮罩
+- [工具](#tools)
+  - Azure Data Studio
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
@@ -56,7 +73,7 @@ Community Technology Preview (CTP) 2.0 是第一個 [!INCLUDE[sql-server-2019](.
   - 新增至 `sp_estimate_data_compression_savings` 的新選項
   - SQL Server 機器學習服務容錯移轉叢集
   - 預設已啟用的輕量型查詢分析基礎結構
-  - 新的 Polybase 連接器
+  - 新的 PolyBase 連接器
   - 新的 `sys.dm_db_page_info` 系統函數會傳回頁面資訊
 
 - [Linux 上的 SQL Server](#sqllinux)
@@ -85,19 +102,56 @@ Community Technology Preview (CTP) 2.0 是第一個 [!INCLUDE[sql-server-2019](.
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)會啟用新的情節，包括下列：
 
-- 在 Kubernetes 上部署具有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 Spark Linux 容器的巨量資料叢集
-- 從 HDFS 中存取巨量資料
-- 使用 Spark 執行進階分析和機器學習
-- 使用 Spark 串流將資料串流至 SQL 資料集區
-- 在 [**Azure Data Studio**](../sql-operations-studio/what-is.md) 中執行可提供筆記型體驗的查詢活頁簿。
-  
+- [部署 Python 和 R 應用程式](../big-data-cluster/big-data-cluster-create-apps.md)。 (CTP 2.1)
+- 在 Kubernetes 上部署具有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 Spark Linux 容器的巨量資料叢集 (CTP 2.0)
+- 從 HDFS 中存取巨量資料 (CTP 2.0)
+- 使用 Spark 執行進階分析和機器學習 (CTP 2.0)
+- 使用 Spark 串流將資料串流至 SQL 資料集區 (CTP 2.0)
+- 在 [**Azure Data Studio**](../sql-operations-studio/what-is.md) 中執行可提供筆記型體驗的查詢活頁簿。 (CTP 2.0)
+ 
 [!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> 資料庫引擎
 
-CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion_md.md)] 新功能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進或增強下列適用於資料庫引擎的新功能
 
-### <a name="database-compatibility-level"></a>資料庫相容性層級
+### <a name="scalar-udf-inlining-ctp-21"></a>純量 UDF 內嵌 (CTP 2.1)
+
+純量 UDF 內嵌會將純量使用者定義函數 (UDF) 自動轉換成關聯運算式，並將它們內嵌在呼叫 SQL 查詢中，以改善運用純量 UDF 之工作負載的效能。 純量 UDF 內嵌有助於對 UDF 內的作業進行以成本為基礎的最佳化，以促成集合導向、平行且有效率的計畫，而不是無效率、反覆且連續的執行計畫。 根據預設，資料庫相容性層級 150 會啟用此功能。
+
+如需詳細資訊，請參閱[純量 UDF 內嵌](../relational-databases/user-defined-functions/scalar-udf-inlining.md)
+
+### <a name="truncation-error-message-improved-to-include-table-and-column-names-and-truncated-value-ctp-21"></a>改善截斷錯誤訊息，以包含資料表和資料行名稱，以及被截斷的值 (CTP 2.1)
+
+許多曾開發或維護資料移動工作負載的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 開發人員，都很熟悉錯誤訊息識別碼 8152 `String or binary data would be truncated`；此錯誤會在於結構描述不同的來源與目的地之間轉送資料，且來源資料太大而無法納入目的地資料類型的情況下發生。 對此錯誤訊息進行疑難排解，可能需要花費很多時間。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 針對此案例引進了更加特定的新錯誤訊息 (2628)：  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+新的錯誤訊息 2628 能針對資料截斷問題提供更多內容，以簡化疑難排解的程序。 針對 CTP 2.1，這是選擇加入的錯誤訊息，且需要啟用[追蹤旗標](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460。
+
+### <a name="utf-8-support-ctp-21"></a>UTF-8 支援 (CTP 2.1)
+
+新增在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安裝期間選取 UTF-8 定序作為預設設定的支援。
+
+### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>改善統計資料封鎖的診斷資料 (CTP 2.1)
+
+SQL Server 2019 預覽能針對會等候同步統計資料更新作業的長時間執行查詢，提供改善的診斷資料。 動態管理檢視 `sys.dm_exec_requests` 資料行 `command` 會在 `SELECT` 正在等候同步統計資料更新作業完成以繼續查詢執行的情況下，顯示 `SELECT (STATMAN)`。  此外，新的等候類型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 會顯示在 `sys.dm_os_wait_stats` 動態管理檢視中。 它會顯示花費在同步統計資料重新整理作業上的累積執行個體層級時間。
+
+### <a name="static-data-masking-ctp-21"></a>靜態資料遮罩 (CTP 2.1)
+
+SQL Server 2019 預覽引進靜態資料遮罩。 您可以使用靜態資料遮罩來處理 SQL Server 資料庫複本中的敏感性資料。 靜態資料遮罩可協助建立已處理的資料庫複本，其中的所有敏感性資訊都已經被更改為使該複本可與非生產使用者共用的形式。 靜態資料遮罩可用於開發、測試、分析與商務報告、合規性、疑難排解，以及任何其他無法將特定資料複製到不同環境的案例。
+
+靜態資料遮罩會在資料行層級運作。 請選取要進行遮罩的資料行，並針對每個選取的資料行指定遮罩功能。 靜態資料遮罩會複製資料庫，然後將指定的遮罩功能套用至資料行。
+
+#### <a name="static-data-masking-vs-dynamic-data-masking"></a>靜態資料遮罩與動態資料遮罩
+
+資料遮罩是將遮罩套用到資料庫上以隱藏敏感性資訊，並以新的或已刪除的資料取代它的程序。 Microsoft 提供兩個遮罩選項：靜態資料遮罩與動態資料遮罩。 動態資料遮罩是在 SQL Server 2017 中引進。 下表會比較這兩個解決方案：
+
+|靜態資料遮罩 |動態資料遮罩
+|:----|:----
+|在資料庫的複本上發生 <br/><br/>無法擷取原始資料<br/><br/>遮罩會在儲存體層級上發生<br/><br/>所有使用者都可以存取相同的已遮罩資料<br/><br/>適用於持續的全體小組存取|在原始資料庫上發生<br/><br/>原始資料保持不變<br/><br/>遮罩會在查詢階段即時發生<br/><br/>遮罩會視使用者權限而有所不同 <br/><br/>適用於精確的使用者特定存取
+
+### <a name="database-compatibility-level-ctp-20"></a>資料庫相容性層級 (CTP 2.0)
 
 新增資料庫 **COMPATIBILITY_LEVEL 150**。 若要針對特定使用者資料庫啟用，請執行：
 
@@ -105,15 +159,15 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
-### <a name="utf-8-support"></a>UTF-8 支援
+### <a name="utf-8-support-ctp-20"></a>UTF-8 支援 (CTP 2.0)
 
 完整支援廣泛使用 UTF-8 字元編碼作為匯入或匯出編碼，或作為文字資料的資料庫層級或資料行層級定序。 UTF-8 允許用於 `CHAR` 和 `VARCHAR` 資料類型，並且在建立物件定序或將其變更為具有 `UTF8` 尾碼的定序時啟用。 
 
 例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 僅適用於支援增補字元 (在 SQL Server 2012 中引進) 的 Windows 定序。 `NCHAR` 和 `NVARCHAR` 只允許 UTF-16 編碼，並維持不變。
 
-此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有 ASCII 字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)` 會翻譯為接近減少儲存體需求的 50%。 這項減少的原因是 `NCHAR(10)` 需要 22 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 12 個位元組。
+此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有拉丁文字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)` 會使儲存體需求減少接近 50%。 這項減少的原因是 `NCHAR(10)` 需要 22 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 12 個位元組。
 
-### <a name="resumable-online-index-create"></a>可繼續的線上索引建立
+### <a name="resumable-online-index-create-ctp-20"></a>可繼續的線上索引建立 (CTP 2.0)
 
 - **可繼續的線上索引建立**允許索引建立作業暫停並稍後可從作業暫停或失敗處繼續，而不是從頭重新啟動。
 
@@ -130,7 +184,7 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 
 如需詳細資訊，請參閱[可繼續的線上索引建立](../t-sql/statements/create-index-transact-sql.md#resumable-indexes)。
 
-### <a name="build-and-rebuild-clustered-columnstore-indexes-online"></a>線上建置和重建叢集資料行存放區索引
+### <a name="build-and-rebuild-clustered-columnstore-indexes-online-ctp-20"></a>線上建置和重建叢集資料行存放區索引 (CTP 2.0)
 
 將資料列存放區資料表轉換成資料行存放區格式。 建立叢集資料行存放區索引 (CCI) 是舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的離線程序；需要所有變更在建立 CCI 時停止。 使用 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]，您可以在線上建立或重新建立 CCI。 工作負載不會遭到封鎖，而且對基礎資料所做的所有變更都會以透明的方式新增至目標資料行存放區資料表。 可使用的新 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式範例如下：
 
@@ -146,7 +200,7 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
     REBUILD WITH (ONLINE = ON);
   ```
 
-### <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
+### <a name="always-encrypted-with-secure-enclaves-ctp-20"></a>具有安全記憶體保護區的 Always Encrypted (CTP 2.0)
 
 在具有就地加密和豐富計算的 Always Encrypted 時展開。 在伺服器端的安全記憶體保護區內，擴充來自啟用純文字資料的計算。
 
@@ -160,7 +214,7 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 > [!NOTE]
 > 只有在 Windows OS 上才能使用具有安全記憶體保護區的 Always Encrypted。
 
-### <a name="intelligent-query-processing"></a>智慧查詢處理
+### <a name="intelligent-query-processing-ctp-20"></a>智慧查詢處理 (CTP 2.0)
 
 - 藉由調整批次和資料列模式運算子的記憶體授與大小，以在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 引進的記憶體授與意見反應功能上展開**資料列模式記憶體授與意見反應**。  針對記憶體授與過多的狀況，如果授與的記憶體超過實際使用記憶體大小的兩倍，記憶體授與回饋便會重新計算記憶體授與。 連續執行接著會要求較少的記憶體。 針對記憶體授與大小不足以致磁碟溢出，記憶體授與意見反應會觸發記憶體授與的重新計算。 連續執行接著會要求更多的記憶體。 根據預設，資料庫相容性層級 150 會啟用此功能。
 
@@ -183,17 +237,20 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 
 若要使用智慧查詢處理功能，請設定資料庫 `COMPATIBILITY_LEVEL = 150`。
 
-### <a id="programmability"></a> Java 語言可程式性延伸模組
+### <a id="programmability"></a> Java 語言可程式性延伸模組 (CTP 2.0)
 
 - **Java 語言延伸模組 (預覽)**：使用 Java 語言延伸模組，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行 Java 程式碼。 在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，當您將「機器學習服務 (資料庫內)」功能新增至 SQL Server 執行個體時，會安裝此延伸模組。
 
 ### <a id="sqlgraph"></a> SQL Graph 功能
 
-- **`MERGE` DML 中的比對支援**可讓您在單一陳述式中指定圖形關聯性，而不是個別 `INSERT`、`UPDATE` 或 `DELETE` 陳述式。 在 `MERGE` 陳述式中使用 `MATCH` 述詞，以合併節點或邊緣資料表中的目前圖形資料與新資料。 此功能會在邊緣資料表上啟用 `UPSERT` 情節。 使用者現在可以使用單一合併陳述式來插入新的邊緣或更新兩個節點之間的現有邊緣。
+- **在圖表比對查詢中使用衍生資料表或檢視別名 (CTP 2.1)** SQL Server 2019 預覽上的圖表查詢，支援在 `MATCH` 語法中使用檢視和衍生資料表別名。 若要在 `MATCH` 中使用這些別名，檢視和衍生資料表必須是在節點集合或邊緣資料表集合上使用 `UNION ALL` 運算子建立。 節點或邊緣資料表上有可能會有，也有可能不會有篩選。 在 `MATCH` 查詢中使用衍生資料表和檢視別名的能力，對於您想要查詢圖形中兩個或多個實體之間的異質實體或異質連線的案例來說非常有用。
 
-- **邊緣條件約束**是針對 SQL Graph 中的邊緣資料表所引進。 邊緣資料表可以將任何節點連線至資料庫中的任何其他節點。 引進邊緣條件約束時，您現在可以對此行為套用一些限制。 新的 `CONNECTION` 條件約束可以用來指定將允許指定邊緣資料表連線至結構描述的節點類型。
 
-### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations"></a>線上和可繼續 DDL 作業的資料庫範圍預設設定 
+- **`MERGE` DML 中的比對支援 (CTP 2.0)** 可讓您在單一陳述式中指定圖形關聯性，而不必使用個別的 `INSERT`、`UPDATE` 或 `DELETE` 陳述式。 在 `MERGE` 陳述式中使用 `MATCH` 述詞，以合併節點或邊緣資料表中的目前圖形資料與新資料。 此功能會在邊緣資料表上啟用 `UPSERT` 情節。 使用者現在可以使用單一合併陳述式來插入新的邊緣或更新兩個節點之間的現有邊緣。
+
+- **邊緣條件約束 (CTP 2.0)** 是針對 SQL Graph 中的邊緣資料表所引進。 邊緣資料表可以將任何節點連線至資料庫中的任何其他節點。 引進邊緣條件約束時，您現在可以對此行為套用一些限制。 新的 `CONNECTION` 條件約束可以用來指定將允許指定邊緣資料表連線至結構描述的節點類型。
+
+### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations--ctp-20"></a>線上和可繼續 DDL 作業的資料庫範圍預設設定 (CTP 2.0)
 
 - **線上和可繼續 DDL 作業的資料庫範圍預設設定**允許資料庫層級 `ONLINE` 和 `RESUMABLE` 索引作業的預設行為設定，而不是針對每個個別索引 DDL 陳述式定義這些選項 (例如索引建立或重建)。
 
@@ -209,7 +266,7 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 
 詳細資訊：如需索引可繼續作業的詳細資訊，請參閱[可繼續的線上索引建立](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)。
 
-### <a id="ha"></a>Always On 可用性群組 - 更多同步複本 
+### <a id="ha"></a>Always On 可用性群組 - 更多同步複本 (CTP 2.0)
 
 - **最多五個同步複本**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 會將同步複本數目上限增加為 5，從 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中最多為 3。 您可以設定這個 5 個複本的群組在群組內具有自動容錯移轉。 有 1 個主要複本，再加上 4 個同步次要複本。
 
@@ -221,7 +278,7 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 
 如需詳細資料，請參閱[次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md)。
 
-### <a name="data-discovery-and-classification"></a>資料探索與分類
+### <a name="data-discovery-and-classification-ctp-20"></a>資料探索與分類 (CTP 2.0)
 
 資料探索與分類提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 原生內建的進階功能。 分類和標記您最敏感的資料具有下列優點：
 - 協助符合資料隱私權標準和法規合規性需求。
@@ -235,7 +292,7 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 >[!NOTE]
 >啟用稽核方式沒有任何變更。 有一個新欄位新增至稽核記錄 `data_sensitivity_information`，以記錄查詢所傳回的實際資料敏感度分類 (標籤)。 請參閱[稽核存取敏感性資料](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)。
 
-### <a name="expanded-support-for-persistent-memory-devices"></a>持續性記憶體裝置的擴充支援
+### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>持續性記憶體裝置的擴充支援 (CTP 2.0)
 
 任何放在持續性記憶體裝置上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案現在可在「已啟用」模式中操作。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會直接存取裝置，並使用有效率的 memcpy 作業來略過作業系統的儲存體堆疊。 此模式會改善效能，因為它允許這類裝置的低延遲輸入/輸出。
     - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案範例包含：
@@ -248,15 +305,21 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 > [!NOTE]
 > 在此預覽版本中，只有在 Linux 上才能在持續性記憶體裝置上啟用檔案。 從 SQL Server 2016 開始，Windows 上的 SQL Server 支援持續性記憶體裝置。
 
-### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase"></a>DBCC CLONEDATABASE 中資料行存放區統計資料的支援
+### <a name="hybrid-buffer-pool-ctp-21"></a>混合式緩衝集區 (CTP 2.1)
+
+混合式緩衝集區是 SQL Server 資料庫的新功能，其中坐落在置於持續性記憶體 (PMEM) 裝置上之資料庫檔案上的資料庫頁面，會在必要時被直接存取。 由於 PMEM 裝置能為資料存取提供非常低的延遲，引擎便能放棄為緩衝集區之「乾淨頁面」區域中的資料製作複本，而可以直接在 PMEM 上存取該頁面。 存取是使用記憶體對應的 I/O 來執行，與啟用檔案的情況相同。 這可透過避免針對 DRAM 複製頁面，以及透過避免作業系統的 I/O 堆疊以存取持續性儲存體上的頁面來提供效能優勢。 此功能已於 Windows 及 Linux 上的 SQL Server 提供使用。
+
+如需詳細資訊，請參閱[混合式緩衝集區](../database-engine/configure-windows/hybrid-buffer-pool.md)
+
+### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>DBCC CLONEDATABASE 中資料行存放區統計資料的支援 (CTP 2.0)
 
 `DBCC CLONEDATABASE` 會建立資料庫的僅限結構描述複本，其中包含為查詢效能問題進行疑難排解所需的所有項目，而不需要複製資料。  在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，此命令不會複製準確疑難排解資料行存放區索引查詢所需的統計資料，而且需要手動步驟才能擷取這項資訊。 現在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，DBCC CLONEDATABASE 會自動擷取資料行存放區索引的統計資料 Blob，因此不需要任何手動步驟。
 
-### <a name="new-options-added-to-spestimatedatacompressionsavings"></a>新增至 sp_estimate_data_compression_savings 的新選項
+### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>新增至 sp_estimate_data_compression_savings 的新選項 (CTP 2.0)
 
 `sp_estimate_data_compression_savings` 傳回所要求物件的目前大小，並針對所要求的壓縮狀態預估物件大小。  此程序目前支援三個選項：`NONE`、`ROW` 和 `PAGE`。 SQL Server 2019 引進兩個新選項：`COLUMNSTORE` 和 `COLUMNSTORE_ARCHIVE`。 如果在使用標準或封存資料行存放區壓縮的資料表上建立資料行存放區索引，則這些新選項可讓您估計節省的空間。
 
-### <a id="ml"></a> SQL Server 機器學習服務容錯移轉叢集和磁碟分割型模型
+### <a id="ml"></a> SQL Server 機器學習服務容錯移轉叢集和磁碟分割型模型 (CTP 2.0)
 
 - **資料分割型模型**：使用新增至 `sp_execute_external_script` 的新參數，處理您資料每個資料分割的外部指令碼。 此功能支援訓練許多小型模型 (每個資料的資料分割一個模型)，而不是一個大型模型。
 
@@ -264,17 +327,17 @@ CTP 2.0 引進或增強下列 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 
 如需詳細資訊，請參閱 [SQL Server 機器學習服務的新功能](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
-### <a name="lightweight-query-profiling-infrastructure-enabled-by-default"></a>預設已啟用的輕量型查詢分析基礎結構
+### <a name="lightweight-query-profiling-infrastructure-enabled-by-default-ctp-20"></a>預設已啟用的輕量型查詢分析基礎結構 (CTP 2.0)
 
 輕量型查詢分析基礎結構 (LWP) 所提供的查詢效能資料比標準分析技術更具效率。 根據預設，現在會啟用輕量型分析。 它已在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 中引進。 相較於標準查詢分析機制有最多 75% CPU 的額外負荷，輕量型查詢分析提供預期額外負荷為 2% CPU 的查詢執行統計資料收集機制。 在舊版中，根據預設，它為 OFF。 資料庫管理員可以使用[追蹤旗標 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 來啟用它。 
 
 如需輕量型分析的詳細資訊，請參閱 [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：隨時隨地查詢進度)。
 
-### <a id="polybase"></a>新的 Polybase 連接器
+### <a id="polybase"></a>新的 PolyBase 連接器
 
 - **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的新連接器**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Oracle、Teradata 和 MongoDB 的外部資料新連接器。
 
-### <a name="new-sysdmdbpageinfo-system-function-returns-page-information"></a>新的 sys.dm_db_page_info 系統函數會傳回頁面資訊
+### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>新的 sys.dm_db_page_info 系統函數會傳回頁面資訊 (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` 傳回資料庫中頁面的資訊。 此函式會傳回包含頁面中標頭資訊的資料列，包含 `object_id`、`index_id` 和 `partition_id`。 在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。  
 
@@ -289,6 +352,8 @@ FROM sys.dm_exec_requests AS d
 ```
 
 ## <a id="sqllinux"></a> Linux 上的 SQL Server
+
+### <a name="ctp-20"></a>CTP 2.0 
 
 - **複寫支援**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 Linux 上的 SQL Server 複寫。 具有 SQL Agent 的 Linux 虛擬機器可以是發行者、散發者或訂閱者。 
 
@@ -312,11 +377,11 @@ FROM sys.dm_exec_requests AS d
   - Microsoft 容器登錄：`mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - 認證的 RHEL 型容器映像：`mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (MDS)
+## <a id="mds"></a> Master Data Services (CTP 2.0) 
 
 - **已取代為 HTML 的 Silverlight 控制項**：Master Data Services (MDS) 入口網站不再相依於 Silverlight。 所有先前的 Silverlight 元件已取代為 HTML 控制項。
 
-## <a id="security"></a>安全性
+## <a id="security"></a>安全性 (CTP 2.0)
 
 - **SQL Server 組態管理員中的憑證管理**：SSL/TLS 憑證廣泛用來保護 SQL Server 執行個體的存取。 憑證管理現在整合至 SQL Server 組態管理員，並簡化一般工作，例如：
 
@@ -332,27 +397,27 @@ FROM sys.dm_exec_requests AS d
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md)：先前以 SQL Operations Studio 預覽名稱發行，Azure Data Studio 是輕量級、現代化、開放原始碼且跨平台的桌面工具，適用於資料開發和管理中的最常見工作。 使用 Azure Data Studio，您可以在 Windows、macOS 和 Linux 的內部部署上和雲端中連線至 SQL Server。 Azure Data Studio 可讓您：
 
-  - 在具有快速 Intellisense、程式碼片段和原始檔控制整合的新式開發環境中編輯和執行查詢。  
-  - 使用內建結果集圖表，將資料快速視覺化。  
-  - 使用可自訂的小工具建立伺服器和資料庫的自訂儀表板。  
-  - 輕鬆地管理更廣泛使用具有內建終端機的環境。  
-  - 分析建置在 Jupyter 上整合式筆記型體驗中的資料。  
-  - 使用自訂佈景主題和延伸模組來增強您的體驗。  
-  - 以及使用內建訂用帳戶和資源瀏覽器來探索 Azure 資源。
-  - 支援使用 SQL Server 巨量資料叢集的情節。
-
+  - 更新至 [SQL Server 2019 (預覽) 延伸模組](../azure-data-studio/sql-server-2019-extension.md)。 (CTP 2.1)
+  - 在具有快速 Intellisense、程式碼片段和原始檔控制整合的新式開發環境中編輯和執行查詢。 (CTP 2.0) 
+  - 使用內建結果集圖表，將資料快速視覺化。 (CTP 2.0)
+  - 使用可自訂的小工具建立伺服器和資料庫的自訂儀表板。 (CTP 2.0)  
+  - 輕鬆地管理更廣泛使用具有內建終端機的環境。 (CTP 2.0)
+  - 分析建置在 Jupyter 上整合式筆記型體驗中的資料。 (CTP 2.0)
+  - 使用自訂佈景主題和延伸模組來增強您的體驗。(CTP 2.0)
+  - 以及使用內建訂用帳戶和資源瀏覽器來探索 Azure 資源。 (CTP 2.0)
+  - 支援使用 SQL Server 巨量資料叢集的情節。 (CTP 2.0)
 
 - [**SQL Server Management Studio (SSMS) 18.0 (預覽)**](../ssms/sql-server-management-studio-ssms.md)
 
-  - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援。
-  - 具有安全記憶體保護區的 Always Encrypted 支援。
-  - 較小的下載大小。
-  - 現在根據 Visual Studio 2017 Isolated Shell。
-  - 如需完整清單，請參閱 [SSMS 變更記錄](../ssms/sql-server-management-studio-changelog-ssms.md)。
+  - 針對 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援。(CTP 2.0)
+  - 針對具有安全記憶體保護區之 Always Encrypted 的支援。(CTP 2.0)
+  - 較小的下載大小。(CTP 2.0)
+  - 現在根據 Visual Studio 2017 Isolated Shell。(CTP 2.0)
+  - 如需完整清單，請參閱 [SSMS 變更記錄](../ssms/sql-server-management-studio-changelog-ssms.md)。(CTP 2.0)
 
 ## <a name="other-services"></a>其他服務
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 未引進下列服務的新功能：
+從 CTP 2.1 開始，[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 已不會針對下列服務引進新功能：
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)

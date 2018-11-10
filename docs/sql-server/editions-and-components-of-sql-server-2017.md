@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cea5f9c80eb8fa6cba29c451b4b6b20e16d559c
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: de3eb008d9411c33a8c9559e2633236265c493b4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419533"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270231"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SQL Server Evaluation Edition 提供了 180 天的試用期。
   
 |伺服器元件|Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含 [!INCLUDE[ssDE](../includes/ssde-md.md)]；儲存、處理和保護資料用的核心服務；複寫；全文檢索搜尋；管理關聯式和 XML 資料用的工具；資料庫內分析整合，以及存取 Hadoop 與其他異質資料來源用的 Polybase 整合，和 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 伺服器。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含 [!INCLUDE[ssDE](../includes/ssde-md.md)]，這是適用於儲存、處理和保護資料；複寫；全文檢索搜尋；管理關聯式和 XML 資料用的工具；資料庫內分析整合，以及適用於存取 Hadoop 與其他異質資料來源的 PolyBase 整合，以及 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 伺服器的核心服務。|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 包括用來建立及管理線上分析處理 (OLAP) 和資料採礦應用程式的工具。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括伺服器和用戶端元件，可用來建立、管理和部署表格式、矩陣、圖形化和自由形式報表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 也是一個可延伸的平台，可讓您用來開發報表應用程式。|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一組圖形化工具和可程式化物件，用來移動、複製和轉換資料。 其中還包括 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) 元件。|  
@@ -299,8 +299,8 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |基本 Python 整合|是|是|是|是|否|
 |進階 Python 整合|是|否|否|否|否| 
 |Machine Learning 伺服器 (獨立式)|是|否|否|否|否|   
-|Polybase 計算節點|是|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup> | 
-|Polybase 前端節點|是|否|否|否|否| 
+|PolyBase 計算節點|是|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup> | 
+|PolyBase 前端節點|是|否|否|否|否| 
 |JSON|是|是|是|是|是|   
 |查詢存放區|是|是|是|是|是|   
 |Temporal|是|是|是|是|是|   

@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - ProtocolName Property (ClientNetLibInfo Class)
@@ -19,12 +18,12 @@ ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 36c4a92eb0f88bd70f6e98b03f81acebeb638e25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52647f8c9bf423ae1a2f72d0749663a78dfe6cb3
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724534"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217426"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 屬性 (ClientNetLibInfo 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

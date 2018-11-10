@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411788"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383763"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>使用結果傳回資料的範例 
   下列範例顯示的預存程序會針對也出現在 vEmployee 檢視中的所有 SalesPerson 資料列，傳回 LastName 和 SalesYTD 值。
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>輸出參數範例  
  下列範例示範的程序有一個輸入參數和一個輸出參數。 `@SalesPerson` 參數會接收呼叫端程式所指定的輸入值。 SELECT 陳述式使用傳入輸入參數的值，來取得正確的 `SalesYTD` 值。 SELECT 陳述式也會將值指派給 `@SalesYTD` 輸出參數，以便在程序結束時，將值傳回給呼叫端程式。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  下列範例會呼叫第一個範例中所建立的程序，並將被呼叫程序所傳回的輸出值儲存至呼叫端程式的區域變數 `@SalesYTD` 。  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  首先，建立在 Currency 資料表上宣告並隨後開啟資料指標的程序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  接下來，執行一個宣告區域資料指標變數的批次、執行此程序將資料指標指派給區域變數，再從資料指標擷取資料列。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,7 +177,7 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>使用傳回碼傳回資料  
  程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要為程序指定傳回碼，請使用 RETURN 陳述式。 就像使用 OUTPUT 參數一樣，若要在呼叫端程式中使用傳回碼，您必須在執行程序時將傳回碼儲存在變數中。 比方說，資料類型為 `@result` int **的指派變數** 會用於儲存來自程序 `my_proc`的傳回碼，例如：  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|取得銷售值時發生錯誤。|  
 |4|銷售人員有 NULL 銷售值。|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  下列範例會建立程式以處理從 `usp_GetSalesYTD` 程序傳回的傳回碼。  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 77d7d1616147a1461ac163a4a99e05c2b1c61e73
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904910"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029097"
 ---
 # <a name="options-text-editor---xml---general-page"></a>選項 (文字編輯器 - XML - 一般頁面)
   使用這個對話方塊可以變更 XML 編輯器的一般編輯行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請在 **[工具]** 功能表上按一下 **[選項]** ，展開 **[XML]** 子資料夾，然後按一下 **[一般]**。  

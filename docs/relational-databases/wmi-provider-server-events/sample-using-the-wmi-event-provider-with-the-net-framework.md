@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - WMI Provider for Server Events, samples
@@ -15,12 +15,12 @@ ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b4466eea2a765e47b55f6a5057a64e6dabec2c24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6660a5a2e53c5ff4959826a72b779876c27a67a9
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744386"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216966"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>範例：搭配 .NET Framework 使用 WMI 事件提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

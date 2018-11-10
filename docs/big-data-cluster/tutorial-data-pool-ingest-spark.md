@@ -4,15 +4,15 @@ description: 本教學課程會示範如何將資料內嵌到 Spark 作業在 St
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: d4ee9037e1762f11a569c94e416fcf5e45449d46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644130"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221474"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程： 將資料內嵌到 Spark 作業的 SQL Server 資料集區
 
@@ -61,7 +61,7 @@ ms.locfileid: "49644130"
       );
    ```
   
-1. 在 CTP 2.0 中，建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 2.1 中，建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="start-a-spark-streaming-job"></a>啟動 Spark 串流作業
 

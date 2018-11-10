@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c6d4165cc0cdedbef073ba950366265f4699d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f369185b2d7d5e5d65fc98bca40ba66029ceaa8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087138"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018663"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>安裝 SQL Server 2014 服務更新
   本主題提供有關安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新的資訊。 本節提供下列作業的相關資訊：  

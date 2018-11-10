@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798936"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031021"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性和資料保護
 
@@ -62,8 +62,8 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 | |讀取級別|高可用性 （& s) </br> 資料保護 | 資料保護
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。 
-|一個次要複本中斷  | 主要複本是 R / W 如果主要沒有自動容錯移轉會失敗。 |主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 
+|主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。 
+|一個次要複本中斷  | 主要複本是 R / W 如果主要沒有自動容錯移轉會失敗。 |主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 
 <sup>*</sup> 預設值
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W| 自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。
-|一個次要複本中斷  |主要複本是 R/W，執行時暴露資料遺失。 |主要不適用於使用者交易直到次要複本復原為止。
+|一個次要複本中斷  |主要複本是 R/W，執行時暴露資料遺失。 |主要不適用於使用者交易直到次要複本復原為止。
 <sup>*</sup> 預設值
 
 >[!NOTE]
@@ -108,9 +108,9 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |主要複本中斷 | 自動容錯移轉。 新的主要複本是 R / W | 自動容錯移轉。 新的主要不適用於使用者交易。 
-|次要複本中斷 | 主要複本是 R/W，公開執行資料遺失 （如果有主要失敗，且無法復原）。 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 如果主要複本也失敗，容錯移轉至沒有複本。 
-|設定唯一的複本中斷 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 
-|同步次要 + 組態只複本中斷| 主要不適用於使用者交易。 沒有自動容錯移轉。 | 主要不適用於使用者交易。 如果容錯移轉沒有任何複本主要也會失敗。 
+|次要複本中斷 | 主要複本是 R/W，公開執行資料遺失 （如果有主要失敗，且無法復原）。 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 如果主要複本也失敗，容錯移轉至沒有複本。 
+|設定唯一的複本中斷 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 
+|同步次要 + 組態只複本中斷| 主要不適用於使用者交易。 沒有自動容錯移轉。 | 主要不適用於使用者交易。 如果容錯移轉沒有任何複本主要也會失敗。 
 <sup>*</sup> 預設值
 
 >[!NOTE]

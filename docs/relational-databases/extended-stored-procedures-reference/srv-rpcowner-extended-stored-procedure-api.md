@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: stored-procedures
 ms.topic: reference
 apiname:
 - srv_rpcowner
@@ -21,12 +20,12 @@ ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 64ee7f8ad02c141a35cb3bc1cd2f5a599a229f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edff14a44a5ed284437513a42d3b5a9845edad3e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696286"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032475"
 ---
 # <a name="srvrpcowner-extended-stored-procedure-api"></a>srv_rpcowner (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

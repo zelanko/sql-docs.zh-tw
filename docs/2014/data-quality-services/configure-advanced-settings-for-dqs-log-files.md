@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - log files,advanced settings
@@ -14,12 +13,12 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2969547bdd20a8f65b5715dfe1acbfccbf13e3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d375857e0f2603814c6cf35a73b55a0a422b3e49
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054978"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030125"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
   本主題描述如何設定 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 記錄檔的進階設定，例如設定記錄檔的輪替檔案大小限制、設定事件的時間戳記模式等等。  

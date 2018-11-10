@@ -1,11 +1,9 @@
 ---
 title: 空間參考識別碼 (SRID) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Spatial Reference Identifiers (SRIDs)
@@ -15,12 +13,12 @@ ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba0aa0cb97d94eddf422d03cb1918940e915670a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cba308c746bd3cec33742cbdf8231371d18aab3
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229648"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018993"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>空間參考識別碼 (SRID)
   每一個空間執行個體都有空間參考識別碼 (SRID)， 此 SRID 會對應到空間參考系統，此系統是以用於扁平表面對應或圓形表面對應的特定橢圓體為根據。  

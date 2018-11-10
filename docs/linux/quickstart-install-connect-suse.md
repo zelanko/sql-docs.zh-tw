@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 988205e5f81b463d52bc2c2ec809e45c7d712856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833066"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269621"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門： 安裝 SQL Server 和 SUSE Linux Enterprise Server 上建立資料庫
 
@@ -24,13 +24,13 @@ ms.locfileid: "47833066"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入門中，您在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安裝 SQL Server 2017 或 SQL Server 2019 CTP 2.0。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在本快速入門中，您在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安裝 SQL Server 2017 或 SQL Server 2019 預覽。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入門中，您可以安裝 SQL Server 2019 CTP 2.0 在 SUSE Linux Enterprise Server (SLES) v12 SP2。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在本快速入門中中,，您可以安裝 SQL Server 2019 preview 在 SUSE Linux Enterprise Server (SLES) v12 SP2。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 ::: moniker-end
 
@@ -155,7 +155,7 @@ ms.locfileid: "47833066"
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-此時，SQL Server 2019 CTP 2.0 SLES 機器上執行，並可供使用 ！
+此時，SQL Server 2019 預覽 SLES 機器上執行，並可供使用 ！
 
 ::: moniker-end
 

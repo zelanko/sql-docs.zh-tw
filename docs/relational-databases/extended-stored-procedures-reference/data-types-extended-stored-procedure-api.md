@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: stored-procedures
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], data types
@@ -15,12 +14,12 @@ ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 770dfdb06d7f29019ee9583e2f37b2517ceb2c92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d00c9df73a0d6fa7ec0869673deb370fc516226
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671766"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029508"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>資料類型 (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

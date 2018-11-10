@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da1dd90bb9a6ed19ed7bcbffc7afdfd0298291e2
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4615707f7d3df5da90f8eea999ba290ae2ee0366
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419473"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269992"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

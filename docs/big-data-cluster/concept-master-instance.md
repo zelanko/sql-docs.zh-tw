@@ -4,15 +4,15 @@ description: 本文說明中的 SQL Server 2019 巨量資料叢集的主要執�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051060"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221594"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>什麼是 SQL Server 的巨量資料叢集主要執行個體嗎？
 
@@ -26,7 +26,7 @@ SQL Server 的主要執行個體提供叢集的外部可存取的 TDS 端點。 
 
 ## <a name="scale-out-query-management"></a>向外延展查詢管理
 
-SQL Server 的主要執行個體包含用來將查詢分散在節點上的 SQL Server 執行個體上的向外延展查詢引擎[計算集區](concept-compute-pool.md)。 向外延展查詢引擎也會提供所有的 Hive 資料表，而不需要任何額外的設定叢集中透過 Transact SQL 存取。 (Hive 在 CTP 2.0 中不支援的資料表)
+SQL Server 的主要執行個體包含用來將查詢分散在節點上的 SQL Server 執行個體上的向外延展查詢引擎[計算集區](concept-compute-pool.md)。 向外延展查詢引擎也會提供所有的 Hive 資料表，而不需要任何額外的設定叢集中透過 Transact SQL 存取。 (Hive CTP 2.1 中不支援的資料表)
 
 ## <a name="metadata-and-user-databases"></a>中繼資料和使用者資料庫
 

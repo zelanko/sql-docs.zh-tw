@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693546"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269443"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定存放庫進行安裝及升級 Linux 上的 SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693546"
 本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 已正式推出 ！ 若要試用，請使用本文來設定新**mssql server 預覽版**存放庫。 然後使用中的指示來安裝[安裝指南](sql-server-linux-setup.md)。
+> SQL Server 2019 預覽版已正式推出 ！ 若要試用，請使用本文來設定新**mssql server 預覽版**存放庫。 然後使用中的指示來安裝[安裝指南](sql-server-linux-setup.md)。
 
 ## <a id="repositories"></a> 存放庫
 
@@ -32,7 +32,7 @@ ms.locfileid: "47693546"
 | Repository | 名稱 | 描述 |
 |---|---|---|
 | **預覽 (2017)** | **mssql-server** | SQL Server 2017 CTP 和 RC 存放庫 （停止）。 |
-| **預覽 (2019)** | **mssql server 預覽版** | SQL Server 2019 CTP 和 RC 的存放庫。 |
+| **預覽 (2019)** | **mssql server 預覽版** | SQL Server 2019 預覽版，RC 的存放庫。 |
 | **CU** | **mssql-server-2017** | SQL Server 2017 累積更新 (CU) 存放庫。 |
 | **GDR** | **mssql-server-2017-gdr** | 只有重大更新的 SQL Server 2017 的 GDR 存放庫。 |
 

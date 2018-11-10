@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.rules.f1
@@ -14,12 +13,12 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73a11cf292ea71f8d754aa800be26316b6262e92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d839060147b31aef755498c1ea339ad5d88f76e4
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128368"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031925"
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域規則。 定義域規則是用來驗證、更正並標準化定義域值的條件。 定義域規則必須在定義域中成立，才能讓定義域值被視為正確且符合商務需求。 定義域規則所包含的驗證規則可用來驗證定義域值，但是無法用來更正資料品質專案中的資料。 此外，規則也包含針對有效資料套用以及用於資料更正的標準化規則。  

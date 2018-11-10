@@ -4,7 +4,7 @@ description: 本快速入門示範如何使用 Docker 來執行 SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f3388bdb66b27cb790079e103cdcf5583b406ad4
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: d48493cb2075f8b6961ed29a0f898055eeff7794
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753545"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272606"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>使用 Docker 的快速入門： 執行 SQL Server 容器映像
 
@@ -137,20 +137,20 @@ SELECT @@SERVERNAME,
 
 ## <a id="pullandrun2019"></a> 提取及執行容器映像
 
-1. 從 Docker Hub 提取 SQL Server 2019 CTP 2.0 Linux 容器映像。
+1. 從 Docker Hub 提取 SQL Server 2019 預覽 Linux 容器映像。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!TIP]
-   > 本快速入門使用 SQL Server 2019 CTP 2.0 Docker 映像。 如果您想要執行 SQL Server 2017 映像，請參閱[這篇文章的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
+   > 本快速入門使用 SQL Server 2019 預覽 Docker 映像。 如果您想要執行 SQL Server 2017 映像，請參閱[這篇文章的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
 
-   前一個命令會提取最新 Ubuntu 為基礎的 SQL Server 2019 CTP 2.0 容器映像。 若要改為使用 RedHat 為基礎的容器映像，請參閱[執行 RHEL 為基礎的容器映像](sql-server-linux-configure-docker.md#rhel)。 若要提取特定映像，您需要新增欄位與標籤名稱 (例如，`mcr.microsoft.com/mssql/server:2017-GA`)。 若要查看所有可用的映像，請參閱 [mssql-server-linux Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+   前一個命令會提取最新 SQL Server 2019 預覽容器映像 Ubuntu 為基礎。 若要改為使用 RedHat 為基礎的容器映像，請參閱[執行 RHEL 為基礎的容器映像](sql-server-linux-configure-docker.md#rhel)。 若要提取特定映像，您需要新增欄位與標籤名稱 (例如，`mcr.microsoft.com/mssql/server:2017-GA`)。 若要查看所有可用的映像，請參閱 [mssql-server-linux Docker Hub 頁面](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
 
    在本文中的 bash 命令`sudo`用。 在 MacOS 上，`sudo`可能不需要。 在 Linux 上，如果您不想要使用`sudo`若要執行 Docker，您可以設定**docker**群組，並將使用者新增至該群組。 如需詳細資訊，請參閱 <<c0> [ 後續安裝步驟適用於 Linux](https://docs.docker.com/install/linux/linux-postinstall/)。
 
@@ -159,20 +159,20 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
    ```
 
    > [!NOTE]
    > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼長度必須至少有 8 個字元，並包含下列四種字元組合中其中三種組合的字元：大寫字母、小寫字母、以 10 為底數的數字以及符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
 
    > [!NOTE]
-   > 根據預設，這會建立容器與 Developer 版本的 SQL Server 2019 CTP 2.0。
+   > 根據預設，這會建立容器與 Developer 版本的 SQL Server 2019 預覽。
 
    下表提供了前述 `docker run` 範例的參數描述：
 
@@ -182,7 +182,7 @@ SELECT @@SERVERNAME,
    | **-e ' SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 正在容器中的 TCP 1433 上接聽，這公開給連接埠 1433，在主機上。 |
    | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
-   | **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** | SQL Server 2019 CTP 2.0 Linux 容器映像。 |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu** | SQL Server 2019 CTP 2.1 Linux 容器映像。 |
 
 3. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 

@@ -25,6 +25,8 @@ items:
     href: isolate-performance-problems.md
   - name: 找出瓶頸
     href: identify-bottlenecks.md
+  - name: 純量使用者定義函式內嵌
+    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: 使用 DMV 來判斷檢視表的使用方式和效能
     href: use-dmvs-determine-usage-performance-views.md
   - name: 伺服器效能與活動監視
@@ -57,7 +59,7 @@ items:
       href: save-an-execution-plan-in-xml-format.md
   - name: 即時查詢統計資料
     href: live-query-statistics.md
-  - name: Monitoring Performance By Using the Query Store
+  - name: 使用查詢存放區監視效能
     href: monitoring-performance-by-using-the-query-store.md
   - name: 使用含有記憶體內部 OLTP 的查詢存放區
     href: using-the-query-store-with-in-memory-oltp.md
@@ -114,9 +116,9 @@ items:
   href: joins.md
 - name: 子查詢
   href: subqueries.md
-ms.openlocfilehash: 0860910f4e556d92a536fb45002f9c6180e2aab9
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450279"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221524"

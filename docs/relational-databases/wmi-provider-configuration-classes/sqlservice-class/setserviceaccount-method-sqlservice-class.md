@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SetServiceAccount Method (SqlService Class)
@@ -19,12 +18,12 @@ ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27985e94766a76efa755d05e81bce3ccb59ed6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f93c64c3ae4c4f8421792bf71bc7c5355cf73908
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664327"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51215637"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

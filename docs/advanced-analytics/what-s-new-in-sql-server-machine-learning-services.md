@@ -3,18 +3,18 @@ title: 什麼&#39;的新功能 SQL Server 機器學習服務 |Microsoft Docs
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712571"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269652"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,9 +103,9 @@ T-SQL 和 Python 整合透過支援[sp_execute_external_script](https://docs.mic
 
 <a name="azure-sql-database-roadmap"></a>
 
-## <a name="azure-sql-database-roadmap"></a>Azure SQL Database 的藍圖
+## <a name="machine-learning-services-in-azure-sql-database"></a>機器學習 Azure SQL Database 中的服務
 
-目前沒有 Machine Learning 服務 （R 和 Python） Azure SQL Database 中支援。 正在規劃支援，但這次沒有預訂的正式發行日期。  
+Machine Learning 服務 （使用 R) Azure SQL Database 中處於公開預覽狀態。 如需詳細資訊，請參閱 <<c0> [ 快速入門： 使用 Machine Learning 服務 （使用 R) Azure SQL Database （預覽） 中](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)。
 
 ## <a name="next-steps"></a>後續步驟
 

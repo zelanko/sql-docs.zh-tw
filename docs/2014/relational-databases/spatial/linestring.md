@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059748"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018473"
 ---
 # <a name="linestring"></a>LineString
   `LineString` 是代表一連串的點及連接這些點之線段的一維度物件。  
   
 ## <a name="linestring-instances"></a>LineString 執行個體  
- 下圖顯示的範例`LineString`執行個體。  
+ 下圖顯示 `LineString` 執行個體的範例。  
   
  ![幾何 LineString 執行個體的範例](../../database-engine/media/linestring.gif "幾何 LineString 執行個體的範例")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059748"
   
 -   圖 1 是簡單、非封閉的 `LineString` 執行個體。  
   
--   圖 2 是非簡單、 非封閉的`LineString`執行個體。  
+-   圖 2 是非簡單、非封閉的 `LineString` 執行個體。  
   
 -   圖 3 是簡單、封閉的 `LineString` 執行個體，因此它是環形。  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` 顯示 `LineString` 執行個體可被系統接受但卻無效。  
   
- 下列`LineString`不被接受，執行個體。 它將擲回 `System.FormatException`。  
+ 下面是無法接受的 `LineString` 執行個體。 它將擲回 `System.FormatException`。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- 針對`LineString`有效，它必須符合下列準則的執行個體。  
+ `LineString` 執行個體必須符合下列準則，才會是有效的。  
   
-1.  `LineString`必須接受的執行個體。  
+1.  系統必須接受 `LineString` 執行個體。  
   
 2.  如果 `LineString` 執行個體不是空的，則它至少必須包含兩個相異點。  
   
-3.  `LineString`執行個體不能重疊本身兩個或多個連續點的間隔上。  
+3.  `LineString` 執行個體本身不得在兩個或多個連續點的間隔上重疊。  
   
  下面是有效的 `LineString` 執行個體。  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- 下列`LineString`執行個體不是有效。  
+ 下面是無效的 `LineString` 執行個體。  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

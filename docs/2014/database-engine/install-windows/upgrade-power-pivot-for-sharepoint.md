@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197248"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019023"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升級 PowerPivot for SharePoint
   本主題概述將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署升級至 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步驟。 特定步驟取決於您環境目前所執行的 SharePoint 版本，並包含 PowerPivot for SharePoint 增益集 (**spPowerPivot.msi**)。  
@@ -48,9 +47,9 @@ ms.locfileid: "48197248"
   
  **SQL Server:**  
   
--   如果現有的 PowerPivot 安裝為[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，則[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Service Pack 2 (SP2)，才能升級至[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果現有的 PowerPivot 安裝為 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，則需要 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2)，才能升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
--   如果現有的 PowerPivot 安裝為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，則[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 1 (SP1)，才能升級至[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
+-   如果現有的 PowerPivot 安裝為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，則需要 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1)，才能升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。  
   
  **SharePoint 2010：**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48197248"
   
          或  
   
-         在上**開始**功能表上，指向**所有程式**，按一下  [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，按一下**組態工具**，然後按一下  **PowerPivot for SharePoint 2013設定太**。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
+         在 **[開始]** 功能表上，指向 **[所有程式]**，然後依序按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[PowerPivot for SharePoint 2013 組態工具]**。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
     2.  啟動時，組態工具會檢查 PowerPivot 伺服器陣列方案以及 PowerPivot Web 應用程式方案的狀態。 如果偵測到這些方案的舊版，您將看到「**偵測到較新版本的 PowerPivot 方案檔。請選取升級選項以升級您的伺服器陣列**」。 按一下 [確定]  以關閉系統驗證訊息。  
   
@@ -149,13 +148,13 @@ ms.locfileid: "48197248"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝程式**上執行的第一個 SharePoint 應用程式伺服器**SQL Server Analysis Services (PowerPivot)** 升級 POWERPIVOT 執行個體的 Windows 服務。 在 [SQL Server 安裝精靈] 的 [安裝] 頁面上，選擇升級選項。 如需詳細資訊，請參閱 <<c0> [ 升級到使用的 SQL Server 2014 安裝精靈&#40;安裝&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。</c0>  
+5.  **在以 SharePoint 模式執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SQL Server Analysis Services (PowerPivot)** Windows 服務的第一部 SharePoint 應用程式伺服器上， **SQL Server Analysis Services (PowerPivot)** ，以升級 POWERPIVOT 執行個體。 在 [SQL Server 安裝精靈] 的 [安裝] 頁面上，選擇升級選項。 如需詳細資訊，請參閱 <<c0> [ 升級到使用的 SQL Server 2014 安裝精靈&#40;安裝&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。</c0>  
   
 6.  在執行組態工具之前，請先**重新啟動伺服器** 。 此步驟可確保 SQL Server 安裝程式安裝的任何更新或必要條件完全在系統上設定。  
   
 7.  **執行 PowerPivot 組態工具**第一部 SharePoint 應用程式伺服器在 SharePoint 中執行 SQL Server Analysis Services (PowerPivot) 服務，若要升級方案和 Web 服務。 您無法使用管理中心進行此步驟。  
   
-    1.  在上**開始**功能表上，指向**所有程式**，按一下  [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，按一下**組態工具**，然後按一下  **PowerPivot 組態工具**. 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
+    1.  指向 **[開始]** 功能表上的 **[所有程式]**，按一下 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 **[組態工具]**，再按一下 **[PowerPivot 組態工具]**。 請注意，只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才會列出此工具。  
   
     2.  啟動時，組態工具會檢查 PowerPivot 伺服器陣列方案以及 PowerPivot Web 應用程式方案的狀態。 如果偵測到這些方案的舊版，您將看到「偵測到較新版本的 PowerPivot 方案檔。 請選取升級選項以升級您的伺服器陣列」。 按一下 **[確定]** 以關閉訊息。  
   
@@ -344,7 +343,7 @@ Get-PowerPivotSystemService
 |工作|連結|  
 |----------|----------|  
 |確認伺服器在執行 PowerPivot for SharePoint 的所有電腦上執行。|[啟動或停止 PowerPivot for SharePoint 伺服器](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
-|確認網站集合層級的功能啟用。|[為在 [管理中心] 的 [網站集合啟用 PowerPivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
+|確認網站集合層級的功能啟用。|[為在 [管理中心] 的 網站集合啟用 PowerPivot 功能整合](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |確認個別的 PowerPivot 活頁簿會透過開啟活頁簿，並按一下篩選與交叉分析篩選器起始查詢來正確載入。|檢查快取的檔案是否存在硬碟上。 快取的檔案可確認資料檔案已在實體伺服器上載入。 尋找 c:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\Backup 資料夾中的快取檔案。|  
 |在設定為資料重新整理的所選活頁簿上測試資料重新整理。|測試資料重新整理最簡單的方式就是修改資料重新整理排程，也就是選擇 **[並且盡快重新整理]** 核取方塊，讓資料重新整理立即執行。 此步驟將判斷目前活頁簿的資料重新整理是否成功。 針對其他常用的活頁簿重複這些步驟以確保資料重新整理運作正常。 如需有關排程資料重新整理，請參閱 <<c0> [ 排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)。</c0>|  
 |一段時間之後，監視 PowerPivot 管理儀表板中的資料重新整理報表以確認沒有資料重新整理錯誤。|[PowerPivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  

@@ -31,17 +31,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cf077f27e9b0023d1696ad72dd96478d3ad36f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4253de9ed6c538640762ac415acf4759ea83567c
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676082"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50969949"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  將目前資料庫的系統時間戳記以 **datetime** 值傳回 (不含資料庫時區位移)。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+將目前資料庫的系統時間戳記以 **datetime** 值傳回 (不含資料庫時區位移)。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。  
 
 > [!NOTE]  
 >  SYSDATETIME 和 SYSUTCDATETIME 比 GETDATE 和 GETUTCDATE 具有更多小數秒數有效位數。 SYSDATETIMEOFFSET 包含系統時區位移。 SYSDATETIME、SYSUTCDATETIME 和 SYSDATETIMEOFFSET 可指派給任何日期和時間類型的變數。  

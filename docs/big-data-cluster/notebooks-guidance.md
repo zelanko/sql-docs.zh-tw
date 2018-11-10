@@ -4,19 +4,19 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878011"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221634"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 預覽中使用 notebook
 
-本文說明如何啟動 SQL Server 2019 巨量資料叢集上的 notebook。 此外，它也會示範如何開始撰寫自己的 notebook，以及如何將針對叢集的作業提交。
+本文說明如何在叢集上啟動 Jupyter Notebook，並開始撰寫自己的 Notebook。 它也會示範如何將針對叢集的作業提交。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -28,15 +28,15 @@ ms.locfileid: "48878011"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>連接到 SQL Server 的巨量資料叢集端點
+## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>連接到 Hadoop 閘道 Knox 結束點
 
-您可以連接到叢集中的其他端點。 您可以連接到 Microsoft SQL Server 連接類型或 SQL Server 的巨量資料叢集端點。
-
-在 Azure Data Studio （預覽），鍵入**F1** > **新連線**，並連接到您的 SQL Server 巨量資料叢集端點。
+您可以連接到叢集中的不同結束點。 您可以連接到 Microsoft SQL Server 連接類型或 HDFS/Spark 閘道結束點。
+在 Azure 資料 Studio （預覽），請按 f1 鍵，，然後按一下**新的連線** 就可以連接到您的 HDFS/Spark 閘道結束點。
 
 ![image1](media/notebooks-guidance/image1.png)
 
 ## <a name="browse-hdfs"></a>瀏覽 HDFS
+
 連接之後，您將能夠瀏覽您的 HDFS 資料夾。 當部署完成，而且您會無法啟動 WebHDFS**重新整理**，新增**新目錄**，**上傳**檔案，和**刪除**.
 
 ![image2](media/notebooks-guidance/image2.png)
@@ -45,104 +45,116 @@ ms.locfileid: "48878011"
 
 ## <a name="launch-new-notebooks"></a>啟動新的 Notebook
 
+>[!NOTE]
+>如果您有多個部署環境中執行的 Python 處理序，先刪除`.scaleoutdata`安裝目錄下的資料夾。 這應該會觸發`Reinstall Notebook dependencies`在 Azure 資料 Studio 中的工作。 需要幾分鐘的時間安裝的所有相依性。
+
+如果有安裝 notebook 相依性的問題，請按 Ctrl + Shift + P 或 Macintosh Cmd + Shift + P，然後輸入`Reinstall Notebook dependencies`命令選擇區中。
+
+![image3](media/notebooks-guidance/image3.png)
+
 有多種方式可用來啟動新的 notebook。
 
-1. 從管理儀表板。 在進行新連線時，您會看到儀表板。 按一下新的 Notebook 工作儀表板上。
+1. 從**管理儀表板**。 新的連接後，您會看到儀表板。 按一下 **新的 Notebook**儀表板的工作。
 
-  ![image3](media/notebooks-guidance/image3.png)
+  ![image4](media/notebooks-guidance/image4.png)
 
-1. 以滑鼠右鍵按一下 HDFS/Spark 連接和快顯功能表中有新的 Notebook
+1. 以滑鼠右鍵按一下 HDFS/Spark 連接，然後按一下 **新的 Notebook**操作功能表中。
 
-![image4](media/notebooks-guidance/image4.png)
+  ![image5](media/notebooks-guidance/image5.png)
 
-提供 Notebook 的名稱 (範例： *Test.ipynb*)，按一下 **儲存**。
-
-![image5](media/notebooks-guidance/image5.png)
-
-## <a name="supported-kernels-and-attach-to-context"></a>支援的核心，並將附加至內容
-
-在 Notebook 安裝中，我們支援 PySpark 和 Spark，Spark Magic 的核心，可讓使用者撰寫使用 Spark 的 Python 和 Scala 程式碼。 我們也允許使用者選擇 Python 針對其本機開發用途。
+  提供您的 Notebook 的名稱，例如`Test.ipynb`。 按一下 **[儲存]**。
 
 ![image6](media/notebooks-guidance/image6.png)
 
-當您選取其中一個這些核心時，在虛擬環境中，我們將安裝該核心，以及您可以開始撰寫程式碼，以支援的語言。
+## <a name="supported-kernels-and-attach-to-context"></a>支援的核心，並將附加至內容
 
-| 核心 | 描述
-|---- |----
-|PySpark 核心| 撰寫使用 Spark 的 Python 程式碼，計算從叢集中。
-|Spark 核心|撰寫使用 Spark 的 Scala 程式碼，計算從叢集中。
-|Python 核心|撰寫適用於本機開發的 Python 程式碼。
-
-附加至選取項目提供的核心，以附加的內容。 當您連接到 SQL Server 的巨量資料叢集端點時，預設值附加至曾說: 「 選取項目會是叢集中的該端點。
+Notebook 安裝支援 PySpark 和 Spark，Spark Magic 的核心，可讓您撰寫使用 Spark 的 Python 和 Scala 程式碼。 （選擇性） 您可以選擇 Python 進行本機開發。
 
 ![image7](media/notebooks-guidance/image7.png)
 
-> [!NOTE]
-> 根據預設，Spark 應用程式已設定 1 的驅動程式，並將需要大約 8.5 GB 的記憶體的 3 個執行程式。 執行多個 spark 工作階段的建議的設定為至少 32 GB 的記憶體，將叢集中的每一部伺服器 (例如，在 AKS 環境中使用**Standard_D8_v3**有 32 GB 的記憶體的 VM 大小)。
+當您選取其中一個這些核心時，在虛擬環境中，我們將安裝該核心，以及您可以開始撰寫程式碼，以支援的語言。
 
-## <a name="hello-world-in-the-different-contexts"></a>不同的內容中的 hello world
+|核心|描述
+|:-----|:-----
+|PySpark 核心|撰寫使用從叢集的 Spark 計算的 Python 程式碼。
+|Spark 核心|撰寫使用 Spark 的計算，從叢集的 Scala 程式碼。
+|Python 核心|撰寫適用於本機開發的 Python 程式碼。
+
+`Attach to`提供核心以附加的內容。 當您連接到 HDFS/Spark 閘道 (Knox) 結束點上的預設`Attach to`叢集中的該結束點。
+
+![image8](media/notebooks-guidance/image8.png)
+
+## <a name="hello-world-in-different-contexts"></a>不同的內容中的 hello world
 
 ### <a name="pyspark-kernel"></a>Pyspark 核心
 
 選擇 PySpark 核心在下列程式碼中的資料格類型：
 
-![image8](media/notebooks-guidance/image8.png)
+![image9](media/notebooks-guidance/image9.png)
 
 按一下 [執行] 您應該啟動 Spark 應用程式，請參閱，您會看到下列輸出：
 
-![image9](media/notebooks-guidance/image9.png)
+![Image10](media/notebooks-guidance/image10.png)
 
 輸出看起來應該類似下列映像。
 
-![Image10](media/notebooks-guidance/image10.png)
-
-### <a name="spark-kernel"></a>Spark 核心
-加入新的程式碼儲存格，請按一下 + 程式碼在工具列中的命令。
-
 ![Image11](media/notebooks-guidance/image11.png)
 
-資料格類型/貼上和核心的下拉式清單中，選擇 Spark 核心 
+### <a name="spark-kernel"></a>Spark 核心
+加入新的程式碼儲存格，請按一下 **+ Code**工具列中的命令。
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-按一下 **執行**您應該會看到正在啟動 Spark 應用程式，而這會建立 Spark 工作階段**spark**並將定義**HelloWorld**物件。
-
-Notebook 看起來應該類似下圖。
+您也可以檢視 [資料格選項]，當您按一下下面的 – 的選項圖示
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-一旦您定義的物件然後在下列程式碼中的下一個 Notebook 資料格類型：
+以下是每個資料格-選項
 
-![Image14](media/notebooks-guidance/image14.png)
+![Image14](media/notebooks-guidance/image14.png)-
 
-按一下 **執行**Notebook 中，而且您應該會看到"Hello，world ！" 在輸出中。
+在下拉式清單中的核心和資料格類型/貼上 – 現在，請選擇 Spark 核心
 
 ![Image15](media/notebooks-guidance/image15.png)
 
-### <a name="local-python-kernel"></a>本機 python 核心
-選擇本機 Python 核心中的資料格類型在 * *
+按一下 **執行**和您應該會看到正在啟動 Spark 應用程式，這會建立做為 Spark 工作階段**spark**並將定義**HelloWorld**物件。
+
+Notebook 看起來應該類似下圖。
 
 ![Image16](media/notebooks-guidance/image16.png)
 
-您應該會看到下列輸出：
+一旦您定義的物件，然後在下一步 的 Notebook 資料格中，輸入下列程式碼：
 
 ![Image17](media/notebooks-guidance/image17.png)
 
-### <a name="markdown-text"></a>Markdown 文字
-加入新的文字儲存格，請按一下 + 工具列中的文字命令。
+按一下 **執行**Notebook 中，而且您應該會看到"Hello，world ！" 在輸出中。
 
 ![Image18](media/notebooks-guidance/image18.png)
 
-按一下以新增您的 markdown 預覽圖示
+### <a name="local-python-kernel"></a>本機 python 核心
+選擇本機 Python 核心和資料格類型:-
 
 ![Image19](media/notebooks-guidance/image19.png)
 
-按一下 [預覽] 圖示以切換為查看只 markdown
+您應該會看到下列輸出：
 
 ![Image20](media/notebooks-guidance/image20.png)
 
+### <a name="markdown-text"></a>Markdown 文字
+加入新的文字儲存格，請按一下 **+ 文字**工具列中的命令。
+
+![Image21](media/notebooks-guidance/image21.png)
+
+按一下以新增您的 markdown 預覽圖示
+
+![Image22](media/notebooks-guidance/image22.png)
+
+按一下 [預覽] 圖示以切換為查看只 markdown
+
+![Image23](media/notebooks-guidance/image23.png)
+
 ## <a name="manage-packages"></a>管理套件
-我們針對本機 Python 開發最佳化的事情之一是要包含的安裝套件，客戶就必須針對其案例能力。 根據預設，我們包含常見的套件像 pandas、 numpy 等等，但如果您預期封裝未包含然後撰寫下列程式碼中的 Notebook 資料格
+我們針對本機 Python 開發最佳化的事情之一是要包含的安裝套件，客戶就必須針對其案例能力。 根據預設，我們包含常見的套件像 pandas、 numpy 等等，但如果您預期封裝未包含然後撰寫下列程式碼中的 Notebook 資料格： 
 
 ```python
 import <package-name>
@@ -152,7 +164,7 @@ import <package-name>
 
 如果您發現`Module not Found`錯誤，然後按一下**管理套件**為識別您 Virtualenv 啟動終端機中的路徑。 您現在可以安裝在本機的套件。 使用下列命令來安裝封裝：
 
-```
+```bash
 ./pip install <package-name>
 ```
 
@@ -164,9 +176,9 @@ import <package-name>
 
 現在當您執行資料格時，您不應該取得`Module not found`時發生錯誤。
 
-如果您想要解除安裝套件，請使用下列命令，從您的終端機：
+若要解除安裝封裝，請使用下列命令，從您的終端機：
 
-```
+```bash
 ./pip uninstall <package-name>
 ```
 

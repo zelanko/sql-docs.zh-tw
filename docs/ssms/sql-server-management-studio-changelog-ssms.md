@@ -11,16 +11,16 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226390"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270271"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-此文章提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
+本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
 
 ## <a name="ssms-180-preview-4download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (Preview 4)](download-sql-server-management-studio-ssms.md)
@@ -412,7 +412,7 @@ Microsoft Azure 整合：
 
 資料庫屬性：
 
-- 此改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
+- 這項改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
     
 SQL 編輯器：
 
@@ -615,7 +615,7 @@ Database Mail：
 ### <a name="known-issues"></a>已知問題
 
 > [!WARNING]
-> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有此問題的影響，請降級至 SSMS 17.5。 
+> 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有這項問題的影響，請降級至 SSMS 17.5。 
 
 
 
@@ -636,7 +636,7 @@ Database Mail：
 
 查詢編輯器：
 
-- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 此功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
+- 已將 SkipRows 選項的支援新增至 Azure SQL DW 的分隔文字外部檔案格式。 這項功能可讓使用者在將分隔文字檔載入至 SQL DW 時略過指定數目的資料列。 也會新增 FIRST_ROW 關鍵字的對應 IntelliSense/SMO 支援。 
 
 執行程序表：
 
@@ -753,7 +753,7 @@ XE 分析工具：
 - 複寫：修正當查看 SQL Server 中提取訂閱的屬性時，顯示類似「無法將值 'null' 套用至 ServerInstance 屬性」錯誤的問題。
 - SSMS 安裝程式：修正 SSMS 安裝程式不正確地造成電腦上所有已安裝產品重新設定的問題。
 - 使用者設定：
-   - 透過此修正，美國政府官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 Azure Resource Manager 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
+   - 藉由此修正，美國政府官方雲端使用者將可透過通用驗證和 Azure Active Directory 登入，使用 SSMS 持續存取其 Azure SQL Database 和 Azure Resource Manager 資源。  舊版 SSMS 使用者需要開啟 [工具]|[選項]|[Azure 服務]，並在 [資源管理] 下將 [Active Directory 授權單位] 屬性的設定變更為 https://login.microsoftonline.us。
 
 **Analysis Services (AS)**
 
@@ -1013,7 +1013,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 安裝程式：
   - 已修正下列問題：SSMS 17.0 已在 Visual Studio 2013 上中斷 SSDT [連接項目 3133479]
   - 已修正下列問題：按一下安裝程式結尾處的 [重新啟動]，並不會重新啟動電腦
-- 指令碼：透過停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
+- 指令碼：藉由停用該選項，在嘗試指令碼刪除時防止 SSMS 意外刪除 Azure 資料庫物件。  正確的修復程式將位於即將發佈的 SSMS 版本中。
 - 物件總管：已修正下列問題：連接至使用 "AS COPY" 建立的 Azure 資料庫時，「資料庫」節點未展開
 
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![下載](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
@@ -1093,7 +1093,7 @@ RestoreDefaultFonts - 還原至預設設定。
 修正在 AE 精靈具有多個 AAD 的情況下，Azure Key Vault 登入頁面不會顯示 Azure 訂用帳戶的問題、修正在 AE 精靈中，Azure Key Vault 登入頁面不會顯示使用者具有讀取權限的 Azure 訂用帳戶問題
   - 修正目前可能不會載入資源檔，因此導致錯誤訊息不正確的問題
 - 改進 SSMS 安裝頁面上超連結的對比
-- 修正連線到 SQL Server Express (2016 SP1) 時不會顯示 Polybase 節點的問題
+- 修正連線到 SQL Server Express (2016 SP1) 時不會顯示 PolyBase 節點的問題
 - 修正 SSMS 無法將 Azure 資料庫的 [相容性層級] 變更為 [v140] 的問題
 - 改進 [物件總管] 在展開 Azure 資料庫清單時的效能 [Connect 項目 (英文)](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - 修正 [檢視 SQL Server 記錄檔] 操作功能表項目針對非關聯式伺服器類型 (AS\RS\IS) 會不正確顯示的問題 
@@ -1136,7 +1136,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 從 SSMS 移除 Azure 部署精靈 (將資料庫部署到 Azure VM)
 - 修正遺漏的索引未在 SSMS 中的執行計劃顯示的問題 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - 修正 SSMS 中常見的關機時當機問題
-- 修正物件總管中，在 Polybase|向外延展群組節點上帶出操作功能表時發生錯誤的問題 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- 修正在 [物件總管] 中於 PolyBase|向外延展群組節點上帶出操作功能表時發生錯誤的問題 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
 - 修正 SSMS 可能在嘗試顯示資料庫權限時損毀的問題
 - 查詢存放區：在操作功能表項目中，為查詢存放區報表的結果方格進行一般功能增強
 - 為現有資料表設定 Always Encrypted 失敗，不相關的物件發生錯誤。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3103181)

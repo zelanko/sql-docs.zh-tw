@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 2632b10aaf69701f93e51c1c945523300307789a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b37e3c27448f187b3c1717414599f2de120790d9
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656686"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269721"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門： 安裝 SQL Server，並在 Ubuntu 上建立資料庫
 
@@ -24,13 +24,13 @@ ms.locfileid: "47656686"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入門中，您在 Ubuntu 16.04 上安裝 SQL Server 2017 或 SQL Server 2019 CTP 2.0。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在本快速入門中，您在 Ubuntu 16.04 上安裝 SQL Server 2017 或 SQL Server 2019 預覽。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本快速入門中，您可以安裝 SQL Server 2019 CTP 2.0 在 Ubuntu 16.04 上。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在本快速入門中中,，您可以安裝 SQL Server 2019 preview Ubuntu 16.04 上。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 ::: moniker-end
 
@@ -147,7 +147,7 @@ ms.locfileid: "47656686"
 
 6. 如果您打算從遠端連線，您可能也需要開啟防火牆上的 SQL Server TCP 連接埠 （預設值 1433年）。
 
-此時，SQL Server 2019 CTP 2.0 在 Ubuntu 電腦上正在執行，而且可供使用 ！
+此時，SQL Server 2019 預覽 Ubuntu 電腦上執行，並可供使用 ！
 
 ::: moniker-end
 

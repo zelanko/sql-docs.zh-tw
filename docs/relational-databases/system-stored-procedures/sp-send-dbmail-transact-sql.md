@@ -158,7 +158,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  指定是否要在指定的查詢所傳回的錯誤時，傳送電子郵件**@query**引數。 **append_query_error**已**元**，預設值是 0。 當這個參數是 1 時，Database Mail 會傳送電子郵件，且會在電子郵件的主體中包含查詢錯誤訊息。 此參數為 0 時，Database Mail 不會傳送電子郵件訊息，並**sp_send_dbmail**結束，傳回碼 1，表示失敗。  
   
  [ **@query_no_truncate=** ] *query_no_truncate*  
- 指定是否要執行之查詢的選項來避免截斷大型變數長度資料類型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)****xml**，**文字**， **ntext**，**映像**，以及使用者定義資料類型)。 若有設定，查詢結果不包含資料行標頭。 *Query_no_truncate*的值為類型**元**。 當此值是 0 或未指定時，查詢中的資料行會截斷為 256 個字元。 當此值是 1 時，不會截斷查詢中的資料行。 這個參數的預設值是 0。  
+ 指定是否要執行之查詢的選項來避免截斷大型變數長度資料類型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)** **xml**，**文字**， **ntext**，**映像**，以及使用者定義資料類型)。 若有設定，查詢結果不包含資料行標頭。 *Query_no_truncate*的值為類型**元**。 當此值是 0 或未指定時，查詢中的資料行會截斷為 256 個字元。 當此值是 1 時，不會截斷查詢中的資料行。 這個參數的預設值是 0。  
   
 > [!NOTE]  
 >  當搭配大量資料，@**query_no_truncate**選項會耗用其他資源並減慢伺服器效能。  

@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050832"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221604"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>在 Azure 資料 Studio 中的 SQL Server 巨量資料叢集上提交 Spark 作業
 
-其中一個重要的案例是針對 SQL Server 2019 CTP 2.0 提交 Spark 作業的能力。 Spark 作業提交功能可讓您提交參考 SQL Server 2019 巨量資料叢集的 Jar 或 Py 本機檔案。 它也可讓您執行 Jar 或 Py 檔案，其中已經位於 HDFS 檔案系統。 
+重要的案例之一是 SQL Server 2019 CTP 2.1 提交 Spark 作業的功能。 Spark 作業提交功能可讓您提交參考 SQL Server 2019 巨量資料叢集的 Jar 或 Py 本機檔案。 它也可讓您執行 Jar 或 Py 檔案，其中已經位於 HDFS 檔案系統。 
 
 ## <a name="prerequisite"></a>必要條件 
 安裝 SQL Server 的巨量資料工具並連線至巨量資料叢集，才能提交 Spark 作業。 安裝的詳細資訊，請參閱連結[部署巨量資料工具](deploy-big-data-tools.md)。

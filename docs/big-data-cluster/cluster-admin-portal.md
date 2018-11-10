@@ -4,15 +4,15 @@ description: 了解如何使用叢集系統管理入口網站來監視 SQL Serve
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 764e1689b4b793e3a993c058517a892f93d6d439
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356049"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221464"
 ---
 # <a name="introduction-to-the-cluster-administration-portal"></a>叢集系統管理入口網站簡介
 
@@ -32,7 +32,7 @@ ms.locfileid: "49356049"
 當控制器 pod 執行時，您可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`service-proxy-lb`(例如： **https://\<ip 位址\>: 30777**)。 認證為存取管理員入口網站的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的環境變數。
 
 > [!NOTE]
-> CTP 2.0 沒有安全性警告時存取網頁，因為它使用自動產生的 SSL 憑證。
+> 對於 CTP 2.1 中，沒有安全性警告時存取網頁，因為它使用自動產生的 SSL 憑證。
 
 ## <a name="overview"></a>總覽
 

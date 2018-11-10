@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 09e46e999b63054d52000cdd7c0613272e242d21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4acb72fe8ac0a5f8a85427fbcec5e1a657a1788
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705436"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032325"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 

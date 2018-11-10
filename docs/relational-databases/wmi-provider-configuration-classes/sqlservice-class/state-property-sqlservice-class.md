@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - State Property (SqlService Class)
@@ -19,12 +18,12 @@ ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bed08f87e3d93eb3d18a86fd0931a4359a67ffea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7351f0b341a652ff7616bde788581caa087a7e9
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644166"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216026"
 ---
 # <a name="state-property-sqlservice-class"></a>State 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

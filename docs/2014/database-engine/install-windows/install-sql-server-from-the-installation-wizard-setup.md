@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
@@ -15,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c423da52c8604fa31fd510894ec97d8410443994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361b672fa6185bb5c119491128118de8f7030a8c
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053558"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018373"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2014 (安裝程式)
   本主題提供使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需有關可安裝的各種元件的詳細資訊，請參閱[安裝 SQL Server 2014](installation-for-sql-server.md)。  如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件個別，請參閱 <<c2> [ 安裝 SQL Server 2014](install-sql-server.md)。  
@@ -43,7 +42,7 @@ ms.locfileid: "48053558"
 > [!NOTE]  
 >  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
   
-### <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]若要安裝   
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "48053558"
   
      使用 [伺服器組態 - 定序] 頁面，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](../../sql-server/install/server-configuration-collation.md)。  
   
-14. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 伺服器組態] 頁面指定以下項目：  
+14. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - 伺服器組態] 頁面指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   

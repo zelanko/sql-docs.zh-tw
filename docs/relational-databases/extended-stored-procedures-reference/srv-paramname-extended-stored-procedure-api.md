@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: stored-procedures
 ms.topic: reference
 apiname:
 - srv_paramname
@@ -21,12 +20,12 @@ ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1de8d618500832ecdee16494cb1c0fa231d672f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb5a880720650376eda717bd4adf824d75be699f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724226"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032297"
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237074"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269751"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新的 Microsoft® Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
@@ -137,7 +137,7 @@ APS AU6 支援這些 T-SQL 的相容性改進。  這些額外的語言項目，
 
 **資料類型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[VARBINARY(MAX)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp 公用程式][]。 Polybase 和 dwloader 目前不支援這些資料類型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[VARBINARY(MAX)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp 公用程式][]。 PolyBase 和 dwloader 目前不支援這些資料類型。 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][]和十進位資料類型。

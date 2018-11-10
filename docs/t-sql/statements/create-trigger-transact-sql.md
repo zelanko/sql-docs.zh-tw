@@ -29,17 +29,20 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fe248d0be41ab6b88196a0db627851e9d31afa50
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411205"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970509"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  建立 DML、DDL 或登入觸發程序。 觸發程序是一種在資料庫伺服器發生事件時，會自動執行的特殊預存程序。 當使用者試圖透過資料操作語言 (DML) 事件來修改資料時，便會執行 DML 觸發程序。 DML 事件包括資料表或檢視的 INSERT、UPDATE 或 DELETE 陳述式。 無論資料表的資料列有無受到影響，這些觸發程序皆會在引發有效的事件時引發。 如需詳細資訊，請參閱 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+建立 DML、DDL 或登入觸發程序。 觸發程序是一種在資料庫伺服器發生事件時，會自動執行的特殊預存程序。 當使用者試圖透過資料操作語言 (DML) 事件來修改資料時，便會執行 DML 觸發程序。 DML 事件包括資料表或檢視的 INSERT、UPDATE 或 DELETE 陳述式。 無論資料表的資料列有無受到影響，這些觸發程序皆會在引發有效的事件時引發。 如需詳細資訊，請參閱 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
  DDL 觸發程序會根據各種資料定義語言 (DDL) 事件的不同而執行。 這些事件主要是對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE、ALTER 和 DROP 陳述式，以及執行類似 DDL 作業的特定系統預存程序。 登入觸發程序會引發以回應在建立使用者工作階段時引發的 LOGON 事件。 您可以直接從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式建立觸發程序，也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 通用語言執行平台 (CLR) 所建立的組件方法來建立觸發程序，再將其上傳到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許針對任何特定陳述式建立多個觸發程序。  
   

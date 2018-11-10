@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  這是執行個體名稱。 *instance_name*已**sysname**和預設為本機執行個體，如果是 NULL。  
   
-> **注意︰***instance_name*必須是完整的執行個體名稱，其中包含電腦名稱和執行個體名稱格式*computerName* \\ *instanceName*。    
+> **注意︰** *instance_name*必須是完整的執行個體名稱，其中包含電腦名稱和執行個體名稱格式*computerName* \\ *instanceName*。    
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 481a75c420ece410f4b7489013c6297dc7b84869
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211278"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018973"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
-  啟動[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，系統資料庫 （Master、 模型、 MSDB 和 TempDB） 與[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用者資料庫可以與伺服器訊息區塊 (SMB) 檔案伺服器做為儲存選項一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
+  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，系統資料庫 (Master、Model、MSDB 和 TempDB) 與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用者資料庫可以當做儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
   
 > [!NOTE]  
 >  SMB 檔案共用目前不支援檔案資料流。  
@@ -119,7 +118,7 @@ ms.locfileid: "48211278"
   
      若是 NTFS，此錯誤不會有影響；  但若是 ReFS，則可能導致效能大幅降低。  
   
--   如果 SMB 檔案共用當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]叢集執行個體的儲存選項使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集診斷記錄預設將無法寫入檔案共用，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源 DLL 缺少此檔案共用的讀取/寫入權限。 若要解決這個問題，請嘗試下列其中一個方法：  
+-   如果 SMB 檔案共用當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集執行個體的儲存選項使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集診斷記錄預設將無法寫入檔案共用，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源 DLL 缺少此檔案共用的讀取/寫入權限。 若要解決這個問題，請嘗試下列其中一個方法：  
   
     1.  授與檔案共用的讀取/寫入權限給叢集中的所有電腦物件。  
   

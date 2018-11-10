@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aecfa5c0c46e061c28479ebc244dc8d0c30ca72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f109dcab6d7cf6280e15cdfb1bb2f5ad3b2f041
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089438"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018143"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve` 是零個或多個屬於 geometry 或 geography 類型之連續 `CircularString` 或 `LineString` 執行個體的集合。  
@@ -26,14 +25,14 @@ ms.locfileid: "48089438"
   
  您可以具現化空的 `CompoundCurve` 執行個體，但是若要讓 `CompoundCurve` 有效，它就必須符合下列準則：  
   
-1.  它必須包含至少一個`CircularString`或`LineString`執行個體。  
+1.  它至少必須包含一個 `CircularString` 或 `LineString` 執行個體。  
   
-2.  將一連串`CircularString`或`LineString`執行個體必須是連續。  
+2.  `CircularString` 或 `LineString` 執行個體的序列必須是連續的。  
   
- 如果`CompoundCurve`包含多個一連串`CircularString`和`LineString`執行個體，結束端點除了最後一個執行個體的每個執行個體必須是序列中下一個執行個體的開始端點。 這表示，如果序列中前一個執行個體的結束點為 (4 3 7 2)，則序列中下一個執行個體的開始點就必須是 (4 3 7 2)。 請注意，點的 Z (高度) 和 M (測量) 值也必須相同。 如果兩個點存在差異，就會擲回 `System.FormatException` 。 中的點`CircularString`不需要具有 Z 或 M 值。 如果沒有針對前一個執行個體的結束點給定 Z 或 M 值，下一個執行個體的開始點就不得包括 Z 或 M 值。 如果前一個序列的結束點為 (4 3)，下一個序列的開始點就必須是 (4 3)，不得為 (4 3 7 2)。 中的所有點`CompoundCurve`執行個體必須沒有 Z 值或相同的 Z 值。  
+ 如果`CompoundCurve`包含多個一連串`CircularString`和`LineString`執行個體，結束端點除了最後一個執行個體的每個執行個體必須是序列中下一個執行個體的開始端點。 這表示，如果序列中前一個執行個體的結束點為 (4 3 7 2)，則序列中下一個執行個體的開始點就必須是 (4 3 7 2)。 請注意，點的 Z (高度) 和 M (測量) 值也必須相同。 如果兩個點存在差異，就會擲回 `System.FormatException` 。 `CircularString` 中的點不需要具有 Z 或 M 值。 如果沒有針對前一個執行個體的結束點給定 Z 或 M 值，下一個執行個體的開始點就不得包括 Z 或 M 值。 如果前一個序列的結束點為 (4 3)，下一個序列的開始點就必須是 (4 3)，不得為 (4 3 7 2)。 `CompoundCurve` 執行個體中的所有點都必須沒有 Z 值或具有相同的 Z 值。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 執行個體  
- 下圖顯示有效`CompoundCurve`型別。  
+ 下圖顯示有效的 `CompoundCurve` 類型。  
   
  ![](../../database-engine/media/f278742e-b861-4555-8b51-3d972b7602bf.png "f278742e-b861-4555-8b51-3d972b7602bf")  
   
@@ -42,14 +41,14 @@ ms.locfileid: "48089438"
   
 1.  `CompoundCurve` 執行個體所包含的所有執行個體都是已接受的圓弧線段執行個體。 如需已接受之圓弧線段執行個體的詳細資訊，請參閱 [LineString](linestring.md) 和 [CircularString](circularstring.md)。  
   
-2.  中的所有圓弧線段`CompoundCurve`連接執行個體。 每個後續圓弧線段的第一個點都與先前圓弧線段的最後一個點相同。  
+2.  `CompoundCurve` 執行個體中的所有圓弧線段都已連接。 每個後續圓弧線段的第一個點都與先前圓弧線段的最後一個點相同。  
   
     > [!NOTE]  
     >  這包括 Z 和 M 座標。 因此，X、Y、Z 和 M 這四個座標都必須相同。  
   
 3.  所有包含的執行個體都不是空的執行個體。  
   
- 下列範例會顯示已接受`CompoundCurve`執行個體。  
+ 下列範例會顯示已接受的 `CompoundCurve` 執行個體。  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -64,13 +63,13 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- A`CompoundCurve`例項是否符合下列準則時才有效。  
+ 如果 `CompoundCurve` 執行個體符合下列準則，它就是有效的執行個體。  
   
-1.  `CompoundCurve`接受執行個體。  
+1.  系統已接受 `CompoundCurve` 執行個體。  
   
 2.  `CompoundCurve` 執行個體所包含的所有圓弧線段執行個體都是有效的執行個體。  
   
- 下列範例示範有效`CompoundCurve`執行個體。  
+ 下列範例會顯示有效的 `CompoundCurve` 執行個體。  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -127,7 +126,7 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');
 SELECT @g1.STLength(), @g2.STLength();  
 ```  
   
- `@g1` 和 `@g2` 的長度都相同。 請注意，範例中的，`CompoundCurve`執行個體可以儲存的一或多個執行個體`LineString`。  
+ `@g1` 和 `@g2` 的長度都相同。 在此範例中，請注意 `CompoundCurve` 執行個體可以儲存一個或多個 `LineString` 執行個體。  
   
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. 使用 CompoundCurve 搭配多個 CircularString 來具現化 geometry 執行個體  
  下列範例會示範如何使用兩個不同的 `CircularString` 執行個體來初始化 `CompoundCurve`執行個體。  

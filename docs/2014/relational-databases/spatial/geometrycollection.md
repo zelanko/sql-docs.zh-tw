@@ -1,11 +1,9 @@
 ---
 title: GeometryCollection | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eea9758d3411c242ade8293a8a52f7c22bd845ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228888"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018513"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  A`GeometryCollection`是零或多個集合`geometry`或`geography`執行個體。 A`GeometryCollection`可以是空的。  
+  `GeometryCollection` 是零或多個 `geometry` 或 `geography` 執行個體的集合。 `GeometryCollection` 可以是空的。  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 執行個體  
   
@@ -35,14 +33,14 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- 下列範例會擲回`System.FormatException`因為`LinesString`執行個體中`GeometryCollection`不被接受，執行個體。  
+ 下列範例會擲回 `System.FormatException`，因為不接受 `LinesString` 執行個體中的 `GeometryCollection` 執行個體。  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- 當組成 `GeometryCollection` 執行個體的所有執行個體都有效時，`GeometryCollection` 執行個體是有效的。 下列範例示範三個有效`GeometryCollection`執行個體和一個無效的執行個體。  
+ 當組成 `GeometryCollection` 執行個體的所有執行個體都有效時，`GeometryCollection` 執行個體是有效的。 下列範例示範三個有效的 `GeometryCollection` 執行個體和一個無效的執行個體。  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  

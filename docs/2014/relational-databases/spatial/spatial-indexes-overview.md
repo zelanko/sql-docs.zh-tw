@@ -1,11 +1,9 @@
 ---
 title: 空間索引概觀 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113627"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018673"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援空間資料和空間索引。 *「空間索引」* (Spatial Index) 是一種類型的擴充索引，可讓您建立空間資料行的索引。 空間資料行是包含空間資料類型資料的資料表資料行，例如 `geometry` 或 `geography`。  
@@ -123,7 +121,7 @@ ms.locfileid: "48113627"
 >  空間索引的 **tessellation_scheme** 設定可以在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目錄檢視中看到。  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>幾何方格鑲嵌式配置  
- GEOMETRY_AUTO_GRID 鑲嵌是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本之 `geometry` 資料類型的預設鑲嵌式配置。  GEOMETRY_GRID 鑲嵌是唯一適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 geometry 資料類型的鑲嵌式配置。 本章節討論與處理空間索引相關之幾何方格鑲嵌的層面：支援的方法及週框方塊。  
+ GEOMETRY_AUTO_GRID 鑲嵌是 `geometry` 和更新版本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型的預設鑲嵌式配置。  GEOMETRY_GRID 鑲嵌是唯一適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 geometry 資料類型的鑲嵌式配置。 本章節討論與處理空間索引相關之幾何方格鑲嵌的層面：支援的方法及週框方塊。  
   
 > [!NOTE]  
 >  您可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句來明確指定這個鑲嵌式配置。  
@@ -156,7 +154,7 @@ ms.locfileid: "48113627"
 >  空間索引的方格密度可以在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目錄檢視的 bounding_box_xmin、bounding_box_ymin、bounding_box_xmax 和 bounding_box_ymax 資料行中看到。  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>地理位置方格鑲嵌式配置  
- 此鑲嵌式配置只適用於`geography`資料行。 本章節摘要說明地理位置方格鑲嵌式配置所支援的方法，並討論測量的空間如何投射到平面上，然後將其分解成方格階層。  
+ 此鑲嵌式配置只會套用到 `geography` 資料行。 本章節摘要說明地理位置方格鑲嵌式配置所支援的方法，並討論測量的空間如何投射到平面上，然後將其分解成方格階層。  
   
 > [!NOTE]  
 >  您可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 子句來明確指定這個鑲嵌式配置。  
@@ -223,7 +221,7 @@ ms.locfileid: "48113627"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>使用空間索引的查詢  
- 包含索引空間運算子中的查詢才支援空間索引`WHERE`子句。 例如，類似以下的語法：  
+ 空間索引只有在 `WHERE` 子句中包含索引空間運算子的查詢中才受到支援。 例如，類似以下的語法：  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

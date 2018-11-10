@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 7ac57fa950442eac91af3ae8f2552b25585afade
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 5ed3d7edbe277d8a39bbf9003810632a2c34a2c7
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971049"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272576"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -235,7 +235,7 @@ ms.locfileid: "50971049"
                                                           </div>
                                                       </div>
                                                       <div class="cardText">
-                                                          <h3>移轉、載入及移動資料</h3>
+                                                          <h3>遷移、載入及移動資料</h3>
                                                           <p><b>移轉小幫手、整合服務 (SSIS)、匯入匯出精靈、複寫 </b> </p>
                                                       </div>
                                                   </div>
@@ -407,8 +407,8 @@ ms.locfileid: "50971049"
                                                   <div class="cardText">
                                                         <h3>AI 與機器學習</h3>
                                                         <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL 機器學習服務</a></li>
-                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server 機器學習服務 (R 與 Python)</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R 服務</a></li>
                                                             <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
                                                        </ul>
                                                     </div>

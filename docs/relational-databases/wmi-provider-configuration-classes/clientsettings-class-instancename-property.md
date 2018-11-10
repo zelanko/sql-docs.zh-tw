@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - InstanceName Property (ClientSettings Class)
@@ -19,12 +18,12 @@ ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e587c7a087c2a93ef4a697c5d17d8bc0a61b7155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae187e69973a53ffb0afd7ee972fbb9817527e3
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694026"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51215126"
 ---
 # <a name="clientsettings-class---instancename-property"></a>ClientSettings 類別 - InstanceName 屬性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

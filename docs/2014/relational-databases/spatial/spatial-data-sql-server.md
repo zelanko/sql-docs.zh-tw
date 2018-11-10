@@ -1,11 +1,9 @@
 ---
 title: 空間資料 (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server], spatial storage design
@@ -19,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f25de7e1aa60d482d5256470d3fb2e1ada08f356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222168"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018093"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
   空間資料代表有關幾何物件之實體位置與形狀的資訊。 這些物件可以是點位置或更為複雜的物件，例如鄉村、道路或湖泊。  
@@ -33,7 +31,7 @@ ms.locfileid: "48222168"
   
 -   `geometry` 類型代表 Euclidean (平面) 座標系統中的資料。  
   
--   `geography`類型代表圓形表面座標系統中的資料。  
+-   `geography` 類型代表圓形表面座標系統中的資料。  
   
  這兩種資料類型都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中實作為 .NET Common Language Runtime (CLR) 資料類型。  
   

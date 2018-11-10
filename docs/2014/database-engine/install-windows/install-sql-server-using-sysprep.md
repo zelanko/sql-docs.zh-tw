@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1e1ce15df4a6d26c572284e3694608f09b188ed7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200988"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018263"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 及 完成備妥的 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)＞。  
@@ -90,7 +89,7 @@ ms.locfileid: "48200988"
   
 2.  加入 Windows 容錯移轉叢集。  
   
-3.  執行 setup.exe 與`/ACTION=AddNode`所有節點上：  
+3.  以 `/ACTION=AddNode` 的所有節點執行 setup.exe。  
   
     ```  
     setup.exe /q /ACTION=AddNode /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  

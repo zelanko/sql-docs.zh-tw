@@ -1,11 +1,9 @@
 ---
 title: 空間資料類型概觀 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -16,17 +14,17 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af836875b6427663a7d6006243445d716ab4e862
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157718"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018203"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
   空間資料有兩種類型： `geometry` 資料類型支援平面或 Euclidean (扁平表面) 資料。 `geometry` 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。  
   
- 颾魤 ㄛ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援`geography`資料類型，它會儲存橢圓體 （圓形地球） 資料，例如 GPS 經緯度座標。  
+ 此外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也支援 `geography` 資料類型，它會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。  
   
 > [!IMPORTANT]  
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。  
@@ -34,7 +32,7 @@ ms.locfileid: "48157718"
 ##  <a name="objects"></a> 空間資料物件  
  `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從其區分為其父資料類型衍生某些屬性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或多個`geometry`或是`geography`執行個體在`GeometryCollection`。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。  
   
- 下圖說明`geometry`賴以階層`geometry`和`geography`資料型別為基礎。 可具現化的類型`geometry`和`geography`以藍色標示。  
+ 下圖說明 `geometry` 和 `geometry` 資料類型所根據的 `geography` 階層。 可具現化的類型`geometry`和`geography`以藍色標示。  
   
  ![Geometry 類型的階層](../../database-engine/media/geom-hierarchy.gif "geometry 類型的階層")  
   
@@ -77,14 +75,14 @@ ms.locfileid: "48157718"
  geometry 類型的圓弧線段定義於 XY 笛卡兒座標平面上 (忽略 Z 值)。 geography 類型的圓弧線段則由參考球面的曲線線段定義。 參考球面上的任何緯線都可由兩個互補的圓弧定義，其中這兩個弧形的點都具有固定緯度角度。  
   
 ### <a name="measurements-in-spatial-data-types"></a>空間資料類型的度量  
- 在平面或扁平表面系統中，系統會使用與座標相同的度量單位來測量距離和區域。 使用`geometry`資料型別、 之間的距離 （2，2） 和 （5，6） 是 5 單位，不論所使用的單位。  
+ 在平面或扁平表面系統中，系統會使用與座標相同的度量單位來測量距離和區域。 使用 `geometry` 資料類型時，(2, 2) 與 (5, 6) 之間的距離就是 5 單位 (不論所用的單位為何)。  
   
- 在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 不過，長度和面積通常會測量公尺和平方公尺，還是的測量可能取決的空間參考識別碼 (SRID) 的`geography`執行個體。 最常見的度量單位`geography`資料型別是公尺。  
+ 在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 但是，長度和區域通常會使用公尺和平方公尺來測量，但是這樣的測量可能取決於 `geography` 執行個體的空間參考識別碼 (SRID)。 `geography` 資料類型最常見的度量單位是公尺。  
   
 ### <a name="orientation-of-spatial-data"></a>空間資料的方向  
  在平面系統中，多邊形的環形方向不是重要的因素。 例如，((0, 0), (10, 0), (0, 20), (0, 0)) 描述的多邊形與 ((0, 0), (0, 20), (10, 0), (0, 0)) 描述的多邊形相同。 OGC 的 SQL 簡單特徵規格並未指示環形順序，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並未強制使用環形順序。  
   
- 在橢圓體系統中，多邊形如果沒有方向的話，將沒有任何意義或是會模稜兩可。 例如，包圍赤道的環形是要描述北半球還是南半球？ 如果我們使用`geography`資料類型來儲存空間的執行個體，就必須指定此環形的方向，並正確描述執行個體的位置。 在橢圓體系統中，多邊形的內部是由左側規則定義。  
+ 在橢圓體系統中，多邊形如果沒有方向的話，將沒有任何意義或是會模稜兩可。 例如，包圍赤道的環形是要描述北半球還是南半球？ 如果我們使用 `geography` 資料類型來儲存空間執行個體，就必須指定此環形的方向，並正確描述此執行個體的位置。 在橢圓體系統中，多邊形的內部是由左側規則定義。  
   
  當相容性層級為 100 或低於在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]則`geography`資料型別具有下列限制：  
   
@@ -107,7 +105,7 @@ ms.locfileid: "48157718"
   
   
 ##  <a name="circular"></a> 圓弧線段  
- 三種可具現化的類型可以採用圓弧線段： `CircularString`， `CompoundCurve`，和`CurvePolygon`。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
+ 三種可具現化的類型可以採用圓弧線段：`CircularString`、`CompoundCurve` 和 `CurvePolygon`。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
   
  圖 A 和 B 顯示一般圓弧線段。 請注意，這三個點如何分別位於圓形的圓周上。  
   
@@ -123,7 +121,7 @@ ms.locfileid: "48157718"
   
  ![](../../database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
   
- 此範例示範如何儲存上述等腰三角形使用這兩個`LineString`執行個體和`CircularString`執行個體：  
+ 此範例會示範如何使用 `LineString` 執行個體和 `CircularString` 執行個體來儲存上述等腰三角形：  
   
 ```tsql  
 DECLARE @g1 geometry;  
@@ -158,10 +156,10 @@ LS LengthCS Length
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
- 如上所示，圖`CircularString`執行個體使用較少的點來儲存曲線界限，而精確度卻高於`LineString`執行個體。 `CircularString` 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 `LineString` 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
+ 如上圖所示，`CircularString` 執行個體會使用較少的點來儲存曲線界限，而精確度卻高於 `LineString` 執行個體。 `CircularString` 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 `LineString` 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比較  
- 下列程式碼範例示範如何儲存相同的圖使用`LineString`和`CompoundCurve`執行個體：  
+ 下列程式碼範例會示範如何使用 `LineString` 和 `CompoundCurve` 執行個體來儲存相同的圖形：  
   
 ```tsql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
@@ -171,13 +169,13 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  中的多個  
   
- 在上述範例中`LineString`執行個體或`CompoundCurve`執行個體可以儲存此圖形。  下一個範例會使用`CompoundCurve`來儲存圓形圖配量：  
+ 在上述範例中，`LineString` 執行個體或 `CompoundCurve` 執行個體都可以儲存此圖形。  下一個範例會使用 `CompoundCurve` 來儲存圓形圖配量：  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
- A`CompoundCurve`執行個體可以直接儲存圓弧線段 （2 2，1 3，0 2），而`LineString`執行個體則必須將曲線轉換成許多較小的直線線段。  
+ `CompoundCurve` 執行個體可以直接儲存圓弧線段 (2 2, 1 3, 0 2)，而 `LineString` 執行個體則必須將曲線轉換成許多較小的直線線段。  
   
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 和 CompoundCurve 的比較  
  下列程式碼範例會示範如何將圓形圖配量儲存在 `CircularString` 執行個體中：  
@@ -194,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` 執行個體同時允許`LineString`和`CircularString`元件因此只需要兩個點的圓形圖配量之直線線段為已知。  此程式碼範例示範如何使用`CompoundCurve`來儲存相同的圖形：  
+ `CompoundCurve` 執行個體同時允許 `LineString` 和 `CircularString` 元件，因此只需要知道圓形圖配量之直線線段的兩個點。  此程式碼範例會示範如何使用 `CompoundCurve` 來儲存相同的圖形：  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -203,7 +201,7 @@ SELECT @g.ToString(), @g.STLength();
 ```  
   
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon 和 CurvePolygon 的比較  
- `CurvePolygon` 執行個體可以使用`CircularString`和`CompoundCurve`定義其外部與內部環形時，執行個體。  `Polygon` 執行個體無法使用圓弧線段類型：`CircularString`和`CompoundCurve`。  
+ `CurvePolygon` 執行個體可以在定義其外部與內部環形時，使用 `CircularString` 和 `CompoundCurve` 執行個體。  `Polygon` 執行個體無法使用圓弧線段類型：`CircularString` 和 `CompoundCurve`。  
   
   
 ## <a name="see-also"></a>另請參閱  

@@ -6,19 +6,19 @@ ms.author: mikeray
 manager: craigg
 ms.date: 03/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58cbcb648d6318b1b013082fc621c48e278f9186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ad9b87f701a1f1de4f13a7788bba13543056e8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793576"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030015"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>在 Linux 上設定 SQL Server 複寫
 

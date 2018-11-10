@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190958"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030868"
 ---
 # <a name="set-domain-properties"></a>設定定義域屬性
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中設定定義域屬性。  
@@ -35,9 +34,9 @@ ms.locfileid: "48190958"
   
 ##  <a name="Set"></a> 設定定義域屬性  
   
-1.  設定現有定義域的屬性，藉由在 定義域管理活動開啟知識庫 (請參閱[開啟知識庫](../../2014/data-quality-services/open-a-knowledge-base.md))，然後選取適當的網域中**網域**清單。 預設會顯示 [定義域屬性] 頁面。  
+1.  若要設定現有定義域的屬性，請在 [定義域管理] 活動中開啟知識庫 (請參閱＜ [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)＞)，然後在 **[定義域]** 清單中選取適當的定義域。 預設會顯示 [定義域屬性] 頁面。  
   
-2.  設定新的定義域屬性中所述，請建立它之後[建立網域](../../2014/data-quality-services/create-a-domain.md)。  
+2.  在建立新的定義域之後設定其屬性，如＜ [Create a Domain](../../2014/data-quality-services/create-a-domain.md)＞中所述。  
   
 3.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)＞中所述。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48190958"
 ###  <a name="Speller"></a> 啟用拼字檢查  
  如果資料類型是 **[字串]**，按一下此選項可為定義域啟用 DQS 拼字檢查。 拼字檢查只適用於資料類型為字串的定義域。 **[啟用拼字檢查]** 核取方塊只會針對與此核取方塊相關聯的單一定義域來啟用拼字檢查。 此核取方塊不適用於複合定義域。  
   
- 拼字檢查會針對定義域中的值來建議語法和驗證更正。 如需詳細資訊，請參閱 < [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md)。  
+ 拼字檢查會針對定義域中的值來建議語法和驗證更正。 如需詳細資訊，請參閱＜ [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md)＞。  
   
 ###  <a name="Syntax"></a> 停用語法錯誤演算法  
  如果資料類型是 **[字串]**，選取此選項可指定定義域中的 DQS 在清理期間將不會識別語法錯誤。 當識別該定義域的語法錯誤無關緊要時，請選取這個核取方塊。 例如，對序號識別語法錯誤可能無關緊要。 此控制項只適用於字串資料類型。 DQS 將不會檢查非字串資料類型的語法錯誤。  

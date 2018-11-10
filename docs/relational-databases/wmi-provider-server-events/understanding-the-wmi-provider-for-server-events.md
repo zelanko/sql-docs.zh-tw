@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - architecture [WMI]
@@ -15,12 +15,12 @@ ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a98694eb5eeb080002ec828351ccf3bd22199e0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 047c28b82d37da578ed492d42547dd42dcb037ea
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675266"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217386"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>了解伺服器事件的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- 在此範例中，`SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` 是由前置詞 `SQLWEP_` 和 GUID 構成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼。 `SQLWEP` 會為每個識別碼建立一個新的 GUID。 該值`A7E5521A-1CA6-4741-865D-826F804E5135`中`TO SERVICE`子句會識別中的 broker 執行個體的 GUID **msdb**資料庫。  
+ 在此範例中，`SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` 是由前置詞 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 GUID 構成的 `SQLWEP_` 識別碼。 `SQLWEP` 會為每個識別碼建立一個新的 GUID。 該值`A7E5521A-1CA6-4741-865D-826F804E5135`中`TO SERVICE`子句會識別中的 broker 執行個體的 GUID **msdb**資料庫。  
   
  如需如何使用 WQL 的詳細資訊，請參閱[搭配伺服器事件的 WMI 提供者使用 WQL](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)。  
   

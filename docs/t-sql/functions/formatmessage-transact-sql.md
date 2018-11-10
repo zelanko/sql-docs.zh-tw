@@ -22,12 +22,12 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ff7d823f232dfbb766c60ad528980f3b910526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7710885efe84c8d917fd120c667221fd9e531cc9
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752506"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970959"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,6 +95,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);  
 SELECT FORMATMESSAGE('Signed int with leading zero %020i', 5);  
 SELECT FORMATMESSAGE('Signed int with leading zero 0 %020i', -55);  
+SELECT FORMATMESSAGE('Bigint %I64d', 3000000000);
 SELECT FORMATMESSAGE('Unsigned int %u, %u', 50, -50);  
 SELECT FORMATMESSAGE('Unsigned octal %o, %o', 50, -50);  
 SELECT FORMATMESSAGE('Unsigned hexadecimal %x, %X, %X, %X, %x', 11, 11, -11, 50, -50);  
@@ -103,7 +104,6 @@ SELECT FORMATMESSAGE('Unsigned hexadecimal with prefix: %#x, %#X, %#X, %X, %x', 
 SELECT FORMATMESSAGE('Hello %s!', 'TEST');  
 SELECT FORMATMESSAGE('Hello %20s!', 'TEST');  
 SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');  
-SELECT FORMATMESSAGE('Hello %20s!', 'TEST');  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

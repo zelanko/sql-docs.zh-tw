@@ -25,15 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: c6bba11fe5be282ad804fc6dee03229312ec1d37
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960792"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970910"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 固定長度 **char** 或變動長度 **varchar** 的字元資料型別。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，當使用支援 UTF-8 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 字元編碼。 若指定非 UTF-8 定序，則這些資料類型只會存放該定序對應之字碼頁所支援的字元子集。
   

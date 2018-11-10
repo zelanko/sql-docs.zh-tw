@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
@@ -13,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8db84e6e3a2de3133a933de755edbd14da62f15f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21a74ca2a57186727aac79d3111b71e93f5d1443
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087438"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018113"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>升級為 SQL Server 2014
   您可以將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式以升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，查看《 [SQL Server 2014 升級技術指南](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) 》(PDF 下載)、檢閱本節中關於升級程序的主題，並閱讀 [SQL Server 2014 版本資訊](http://go.microsoft.com/fwlink/?LinkID=296445)。  

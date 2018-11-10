@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - ProtocolName Property (ServerNetworkProtocolIPAddress Class)
@@ -19,12 +18,12 @@ ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4388bf4a36078428537927cc6f96a8a533e8fd79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251516a8b0fa2bc0e10f104e98479739adb70846
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749046"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217746"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName 屬性 (ServerNetworkProtocolIPAddress 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

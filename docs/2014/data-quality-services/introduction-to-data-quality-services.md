@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -13,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076d2ab9b8c542594c4a13043f591dc679a269ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178758"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030978"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的資料品質方案可讓資料管理人或 IT 專業人員維護其資料的品質，並確保資料適合其商業用途。 DQS 是知識驅動方案，可同時提供電腦輔助和互動式方法來管理資料來源的完整性和品質。 DQS 可讓您探索、建立以及管理資料的相關知識。 然後您可以使用該知識執行資料清理、比對和分析。 您也可以在 DQS 資料品質專案中使用參考資料提供者的雲端式服務。  
@@ -41,7 +40,7 @@ ms.locfileid: "48178758"
   
 -   **Reference Data Services** ：使用參考資料提供者的服務驗證資料的品質。 您可以使用 Windows Azure Marketplace DataMarket 中的 Reference Data Services 輕鬆清理、驗證、比對與充實資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
--   **分析** ：分析資料來源，讓您得以深入了解在知識探索、定義域管理、比對以及資料清理程序每個階段的資料品質。 分析在 DQS 資料品質方案中是一個功能強大的工具。 您可以建立資料品質方案，其中分析就如同知識管理、比對或資料清理一樣重要。 如需詳細資訊，請參閱 < [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+-   **分析** ：分析資料來源，讓您得以深入了解在知識探索、定義域管理、比對以及資料清理程序每個階段的資料品質。 分析在 DQS 資料品質方案中是一個功能強大的工具。 您可以建立資料品質方案，其中分析就如同知識管理、比對或資料清理一樣重要。 如需詳細資訊，請參閱 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
 -   **監控** ：追蹤並判斷資料品質活動的狀態。 監控可讓您確認您的資料品質方案如您設計般運作。 如需詳細資訊，請參閱 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)。  
   

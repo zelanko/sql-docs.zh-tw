@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.log.f1
@@ -19,12 +18,12 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 331502f69f176a7d0cb08c6dff2ad3a8b3e54fcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f038772f5a65b3f2eb3433fc0c996b84679a9a56
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110318"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030175"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
   此主題描述如何使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 來針對 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的各種不同活動和模組設定嚴重性層級。 嚴重性層級會定義 DQS 中發生之事件的強度。 DQS 事件具有以下的嚴重性層級 (依照嚴重性的遞減順序排列)：  

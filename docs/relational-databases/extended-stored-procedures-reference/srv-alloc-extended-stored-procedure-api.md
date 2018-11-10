@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: stored-procedures
 ms.topic: reference
 apiname:
 - srv_alloc
@@ -21,12 +20,12 @@ ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee7717dc86a73fa822a19e64eae588f6ecd88012
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b7f2627c61b96bb0efa5c19886c554268c2cd2f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676676"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030945"
 ---
 # <a name="srvalloc-extended-stored-procedure-api"></a>srv_alloc (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

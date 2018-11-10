@@ -23,17 +23,20 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4ccb4805575d0d7285797525ebef9f14e3a242e0
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: d9ff472bed80096f0d7e10da2cc5019b3b31c399
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798546"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970749"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  允許將明確的值插入資料表的識別欄位中。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+允許將明確的值插入資料表的識別欄位中。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

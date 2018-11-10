@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8bc0155747591a9125a6333cbca1ac10dec1d70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 412744c2bd1ea88e3a85f0cacad5267b1d341969
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192318"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033375"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>將知識庫匯出到 .dqs 檔案
   此主題描述如何將整個知識庫匯出到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔。 您可以將定義域或整個知識庫匯出到資料檔。 如需匯出定義域的資訊，請參閱[將定義域匯出為 .dqs 檔案](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)。  

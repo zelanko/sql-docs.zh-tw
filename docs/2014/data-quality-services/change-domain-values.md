@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
@@ -13,12 +12,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 086d66a1503c988c8962203681b58706ec5281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4162f2d0bd4662221fe8a9d32f3eb741155a302
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200528"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033355"
 ---
 # <a name="change-domain-values"></a>變更定義域值
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中變更及增加知識庫內的中繼資料。 在您藉由知識探索產生知識、將知識匯入知識庫或定義域，或是讓知識庫根據另一個知識庫之後，您可以互動方式變更資料值。 知識庫產生不但會利用電腦輔助程序，也會提供您使用自己知識的方式，依照以下方式驗證資料值並加以變更：  
@@ -86,7 +85,7 @@ ms.locfileid: "48200528"
   
     -   **將選取的定義域值設為群組的前置值**：若要變更群組的前置值，請在群組中選取未指定為前置值的某個值，然後按一下 **[將選取的定義域值設為群組的前置值]** 按鈕。 這樣會將前置值設定為其他值的取代值。 只有在您已經設定兩個或多個群組在一起的值，而且要變更 DQS 所指定的前置值時，才能執行這項作業。 請注意，前置值是由藍色資料列中的粗體值所指定。  
   
-7.  **拼字檢查**：如果某個值有波浪式紅色底線，則表示拼字檢查建議此值的更正。 以滑鼠右鍵按一下有底線的值，然後選取適用的更正。 值類型會變成 (或維持) 錯誤，而且更正將會加入至 **[更正為]** 資料行。 按一下向下箭號，以查看其他建議的更正。 手動輸入更正，將其加入至拼字檢查字典，而且能夠將其選取為更正。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../../2014/data-quality-services/set-domain-properties.md)。  
+7.  **拼字檢查**：如果某個值有波浪式紅色底線，則表示拼字檢查建議此值的更正。 以滑鼠右鍵按一下有底線的值，然後選取適用的更正。 值類型會變成 (或維持) 錯誤，而且更正將會加入至 **[更正為]** 資料行。 按一下向下箭號，以查看其他建議的更正。 手動輸入更正，將其加入至拼字檢查字典，而且能夠將其選取為更正。 如需相關資訊，請參閱 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
     >  若要使用拼字檢查，您可以在 **[定義域屬性]** 頁面中啟用此功能，或者如果 **[定義域屬性]** 頁面中已停用此功能，您可以按一下 **[定義域值]** 頁面上的 **[啟用/停用拼字檢查]** 圖示，在此頁面上啟用此功能。  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SetDefaults Method (ClientSettings Class)
@@ -19,12 +18,12 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5f9bbff0853b3ba1b466b4a46c2c3ea016619614
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b9c411ccf96fe85043dea932221ce3212d1367f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774786"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217666"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 類別 - SetDefaults 方法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

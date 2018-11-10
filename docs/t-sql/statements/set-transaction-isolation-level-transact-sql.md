@@ -28,17 +28,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e4b61fc79000e4977745a25e237004055f85247
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9d49e9c7b8b567ff4628e4e2353a6ce0a7a4adc4
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100279"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970559"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  控制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 連接所發出之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的鎖定和資料列版本設定行為。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+控制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 連接所發出之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的鎖定和資料列版本設定行為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 

@@ -18,17 +18,21 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57b5d8aa37d5d7b3b3f4cb06add95b44a361e010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4511437b4d4c18fa7834cf7e61af4eda6a74d46a
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654176"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971079"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  傳回以 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定的格式與選用文化特性格式化的值。 將 FORMAT 函數用於將日期/時間與數值視為字串的地區設定感知格式化作業。 針對一般資料類型轉換，請使用 CAST 或 CONVERT。  
+> [!div class="nextstepaction"]
+> [請協助我們改進 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+
+傳回以 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定的格式與選用文化特性格式化的值。 將 FORMAT 函數用於將日期/時間與數值視為字串的地區設定感知格式化作業。 針對一般資料類型轉換，請使用 CAST 或 CONVERT。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

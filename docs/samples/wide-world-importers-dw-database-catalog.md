@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627109"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270161"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 資料庫目錄
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ WideWorldImportersDW 有以下的事實資料表。 描述會包含來源資料�
 |Configuration_ApplyPartitionedColumnstoreIndexing|適用於事實資料表的資料分割和資料行存放區索引。|
 |Configuration_ConfigureForEnterpriseEdition|適用於資料分割資料行存放區索引和記憶體中。|
 |Configuration_EnableInMemory|取代改善 ETL performance SCHEMA_ONLY 記憶體最佳化資料表中的接移資料表中整合。|
-|Configuration_ApplyPolybase|設定外部資料來源、 檔案格式和資料表。|
+|Configuration_ApplyPolyBase|設定外部資料來源、 檔案格式和資料表。|
 |Configuration_PopulateLargeSaleTable|適用於企業版的變更，則會大量的資料填入 2012年日曆年度為額外的記錄。|
 |Configuration_ReseedETL|移除現有的資料，並重新啟動的 ETL 種子。 這可讓重新擴展 OLAP 資料庫來比對 OLTP 資料庫中更新的資料列。|
 

@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2338ab3c9648af64e772f93639635abf504dafac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411768"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>設定分散式交易的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47595842"
 為確保分散式交易，必須設定可用性群組，將資料庫註冊為分散式交易資源管理員。  
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 和更新版本提供對於可用性群組中之分散式交易的完整支援。 在 Service Pack 2 之前的 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 版本中，不支援牽涉到可用性群組中之資料庫的跨資料庫分散式交易 (也就是使用相同 SQL Server 執行個體上之資料庫的交易)。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 沒有這項限制。 
+>[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] Service Pack 2 和更新版本提供對於可用性群組中分散式交易的完整支援。 在 Service Pack 2 之前的 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 版本中，不支援牽涉到可用性群組中資料庫的跨資料庫分散式交易 (也就是使用相同 SQL Server 執行個體上資料庫的交易)。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 沒有這項限制。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 的組態步驟相同。
 
@@ -147,10 +147,10 @@ RMID 變更期間存在的使用中交易結果，無法在容錯移轉之後復
 Microsoft Distributed Transaction Coordinator (MS DTC) 
 failed to reenlist citing that the database RMID does 
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
-associated with the transaction.  Please manually resolve
+associated with the transaction.  Please manually resolve
 the transaction.
     
-SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.
 ```

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060568"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018313"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安裝精靈升級為 SQL Server 2014 (安裝程式)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈提供了升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的單一功能樹狀目錄。 您也可以將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與舊版並存安裝，或是從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉現有的資料庫和組態設定，然後將它們套用至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體。  
@@ -125,7 +124,7 @@ ms.locfileid: "48060568"
   
 -   **註冊伺服器** ：升級會移除先前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的登錄設定。 在升級之後，您必須重新註冊伺服器。  
   
--   **更新統計資料** ：若要協助最佳化查詢效能，我們建議您在升級之後，更新所有資料庫的統計資料。 使用`sp_updatestats`預存程序來更新統計資料中使用者定義資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
+-   **更新統計資料** ：若要協助最佳化查詢效能，我們建議您在升級之後，更新所有資料庫的統計資料。 請使用 `sp_updatestats` 預存程序更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中使用者定義資料表的統計資料。  
   
 -   **設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝**：為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會選擇性地安裝及啟用主要服務和功能。 如需有關介面區組態的詳細資訊，請參閱這一版的讀我檔案。  
   

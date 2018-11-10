@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: stored-procedures
 ms.topic: reference
 apiname:
 - srv_paramstatus
@@ -21,12 +20,12 @@ ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d52baab232751bcd0d797a551091b2ed682ab950
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a7198bcff88c27634b606f6a8ea22a0174e47c6
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761626"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031585"
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

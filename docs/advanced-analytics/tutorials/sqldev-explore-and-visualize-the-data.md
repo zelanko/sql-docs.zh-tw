@@ -3,17 +3,17 @@ title: 課程 1 的瀏覽和使用 R 和 T-SQL (SQL Server Machine Learning) 將
 description: 教學課程示範如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461984"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032215"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課： 瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "49461984"
 
 在這一課，您將檢閱範例資料，並接著產生使用一些繪圖[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)從[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)及 泛型[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基底函式中已包含這些 R 函數[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。
 
-索引鍵的目標示範如何呼叫 R 函數，從[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序，並儲存應用程式檔案格式中的結果：
+本課程的主要目標示範如何呼叫 R 函數，從[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序，並儲存應用程式檔案格式中的結果：
 
 + 建立預存程序，使用**RxHistogram**產生 R 繪圖做為 varbinary 資料。 使用**bcp**匯出至影像檔的二進位資料流。
 + 建立預存程序，使用**Hist**來產生繪圖，將結果儲存為 JPG 和 PDF 的輸出。
@@ -34,7 +34,7 @@ ms.locfileid: "49461984"
 
 開發資料科學方案通常會包含大量資料瀏覽和資料視覺化。 因此先花點時間檢閱範例資料，如果您還沒有這麼做。
 
-在原始資料集中，計程車識別碼和車程記錄會提供在不同的檔案中。 不過，若要讓您更輕鬆地使用的範例資料，兩個原始資料集已加入的資料行_medallion_， _hack\_授權_，和_pickup\_datetime_。  也會對記錄進行抽樣，只取得 1% 的原始記錄數目。 產生的向下取樣資料集有 1,703,957 個資料列和 23 個資料行。
+在原始的公用資料集中，計程車識別碼和車程記錄已提供在不同的檔案。 不過，若要讓您更輕鬆地使用的範例資料，兩個原始資料集已加入的資料行_medallion_， _hack\_授權_，和_pickup\_datetime_。  也會對記錄進行抽樣，只取得 1% 的原始記錄數目。 產生的向下取樣資料集有 1,703,957 個資料列和 23 個資料行。
 
 **計程車識別碼**
   
@@ -61,16 +61,14 @@ ms.locfileid: "49461984"
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>建立預存程序使用 rxHistogram 繪製資料
 
-若要建立繪圖，請使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，其中一個增強型 R 函數中提供[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。 此步驟中繪製的長條圖，根據資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 您可以將此函式包裝在預存程序中， **PlotHistogram**。
+若要建立繪圖，請使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，其中一個增強型 R 函數中提供[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。 此步驟中繪製的長條圖，根據資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 您可以將此函式包裝在預存程序中， **PlotRxHistogram**。
 
-1. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管 中以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫中，展開**可程式性**，然後展開**預存程序**檢視在第 2 課建立的程序。
+1. 在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管] 中以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫，然後選取**新查詢**。
 
-2. 以滑鼠右鍵按一下**PlotHistogram** ，然後選取**修改**檢視的來源。 您可以執行此程序來呼叫**rxHistogram** nyctaxi_sample 資料表已支付小費資料行中包含的資料。
-
-3. 選擇性地學習練習中，建立您自己的複本，此預存程序，使用下列的範例。 開啟新的查詢視窗並貼上下列指令碼建立預存程序繪製的長條圖。 此範例中名為**PlotHistogram2**以避免命名衝突的既有的程序。
+2. 貼上下列程式碼以建立預存程序繪製的長條圖。 此範例中名為 **RPlotRxHistogram*。
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram2]
+    CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -92,13 +90,15 @@ ms.locfileid: "49461984"
     GO
     ```
 
-預存程序**PlotHistogram2**等同於預先存在的預存程序**PlotHistogram** NYCTaxi_sample 資料庫中找到。 
+若要了解在這個指令碼的重點包括： 
   
-+ `@query` 變數會定義查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，以當成指令碼輸入變數 `@input_data_1`的引數傳遞給 R 指令碼。
++ `@query` 變數會定義查詢文字 (`'SELECT tipped FROM nyctaxi_sample'`)，以當成指令碼輸入變數 `@input_data_1`的引數傳遞給 R 指令碼。 針對 R 指令碼當做外部處理序執行，您應該為您的指令碼的輸入和輸入之間的一對一對應[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系統預存程序，啟動 SQL Server 上的 R 工作階段。
   
-+ R 指令碼是相當簡單： R 變數 (`image_file`) 來定義映像，然後**rxHistogram**函式呼叫來產生繪圖。
++ 在 R 指令碼，而變數 (`image_file`) 定義來儲存映像。 
+
++ **RxHistogram** RevoScaleR 程式庫函式呼叫來產生繪圖。
   
-+ R 裝置設定為**關閉**因為您以 SQL Server 中的外部指令碼來執行此命令。 通常在 R 中，當您發出高階繪製命令時，R 會開啟 [圖形] 視窗中，呼叫*裝置*。 您可以變更視窗的大小、色彩和其他層面，也可以在寫入至檔案或透過其他方法處理輸出時關閉裝置。
++ R 裝置設定為**關閉**因為您以 SQL Server 中的外部指令碼來執行此命令。 通常在 R 中，當您發出高階繪製命令時，R 會開啟 [圖形] 視窗中，呼叫*裝置*。 如果您要寫入檔案或處理其他方法的輸出，您可以開啟的裝置。
   
 + R 圖形物件會序列化為 R data.frame 以進行輸出。
 
@@ -109,7 +109,7 @@ ms.locfileid: "49461984"
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，執行下列陳述式：
   
     ```SQL
-    EXEC [dbo].[PlotHistogram]
+    EXEC [dbo].[RxPlotHistogram]
     ```
   
     **結果**
@@ -120,7 +120,7 @@ ms.locfileid: "49461984"
 2.  開啟 PowerShell 命令提示字元並執行下列命令，並提供適當的執行個體名稱、 資料庫名稱、 使用者名稱和認證做為引數。 對於使用 Windows 身分識別，您可以取代 **-U**並 **-P**具有 **-T**。
   
      ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
+     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
     > [!NOTE]
@@ -162,16 +162,16 @@ ms.locfileid: "49461984"
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>建立預存程序使用 Hist 和多個輸出格式
 
-一般而言，資料科學家會產生多個資料視覺效果，以取得深入了解資料從不同的角度。 在此範例中，預存程序會使用 Hist 函式建立的長條圖，例如將二進位資料匯出至熱門的格式。JPG、。PDF、 和。PNG。 
+一般而言，資料科學家會產生多個資料視覺效果，以取得深入了解資料從不同的角度。 在此範例中，您將建立呼叫預存程序**RPlotHist**撰寫長條圖、 散佈和其他 R 圖形。JPG 和。PDF 格式。
 
-1. 使用現有的預存程序， **PlotInOutputFiles**、 長條圖、 散佈和其他 R 圖形來撰寫。JPG 和。PDF 格式。 使用滑鼠右鍵按一下**修改**檢視的來源。
+這個預存程序會使用**Hist**函式來建立長條圖，例如將二進位資料匯出至熱門的格式。JPG、。PDF、 和。PNG。 
 
-2. 選擇性地學習練習中，建立您自己的程序的複本**PlotInOutputFiles2**，以避免命名衝突的唯一名稱。
+1. 在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管] 中以滑鼠右鍵按一下**NYCTaxi_Sample**資料庫，然後選取**新查詢**。
 
-    在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，開啟新**查詢**視窗中，並貼上下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。
+2. 貼上下列程式碼以建立預存程序繪製的長條圖。 此範例中名為**RPlotHist** 。
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
+    CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -236,7 +236,7 @@ ms.locfileid: "49461984"
   
 + 預存程序內 SELECT 查詢的輸出會儲存在預設 R 資料框架 `InputDataSet`中。 接著可以呼叫各種 R 繪製函數，以產生實際圖形檔。 大部分的內嵌 R 指令碼代表這些圖形函數的選項 (例如 `plot` 或 `hist`)。
   
-+ 所有檔案都會儲存至本機資料夾 _C:\temp\Plots\\_。 目的地資料夾是透過執行預存程序時提供給 R 指令碼的引數所定義。  變更 `mainDir`變數的值，即可變更目的地資料夾。
++ 所有檔案都會都儲存到本機資料夾 C:\temp\Plots。 目的地資料夾是透過執行預存程序時提供給 R 指令碼的引數所定義。  變更 `mainDir`變數的值，即可變更目的地資料夾。
 
 + 若要將檔案輸出至不同的資料夾，請變更預存程序中所內嵌 R 指令碼內的 `mainDir` 變數值。 您也可以修改指令碼來輸出不同的格式、多個檔案等。
 
@@ -245,7 +245,7 @@ ms.locfileid: "49461984"
 執行下列陳述式，將二進位繪圖資料匯出至 JPEG 和 PDF 檔案格式。
 
 ```SQL
-EXEC PlotInOutputFiles
+EXEC RPlotHist
 ```
 
 **結果**

@@ -1,6 +1,6 @@
 ---
 title: 支援 SQL Server Analysis Services 表格式 1200年模型中的資料來源 |Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38017526"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269681"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>支援 SQL Server Analysis Services 中表格式 1200年模型的資料來源
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
 |||||  
 |-|-|-|-|  
 |來源|版本|檔案類型|提供者|  
-|Access 資料庫|Microsoft Access 2010 及更新版本。|.accdb 或 .mdb|ACE 14 OLE DB 提供者|  
+|Access 資料庫|Microsoft Access 2010 及更新版本。|.accdb 或 .mdb|ACE 14 OLE DB 提供者<sup> [1](#dnu)</sup>|  
 |SQL Server 關聯式資料庫|SQL Server 2008 及更新版本、 SQL Server 資料倉儲 2008年及更新版本中，Azure SQL Database，Azure SQL 資料倉儲、 Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) 過去被稱為 「 為 SQL Server Parallel Data Warehouse (PDW)。 從 Analysis Services 連接至 PDW 原本需要特殊資料提供者。 此提供者在 SQL Server 2012 中被取代。 從 SQL Server 2012 開始，將使用 SQL Server Native Client 連接至 PDW/AP。 |(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 10.0 Client OLE DB 提供者<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle 關聯式資料庫|Oracle 9i 和更新版本。|(不適用)|Oracle OLE DB Provider<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 關聯式資料庫|Teradata V2R6 和更新版本|(不適用)|TDOLEDB OLE DB 提供者<br /><br /> .Net Data Provider for Teradata|  
@@ -39,14 +39,16 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
 |IBM DB2 關聯式資料庫|8.1|(不適用)|DB2OLEDB|  
 |Sybase Adaptive Server Enterprise (ASE) 關聯式資料庫|15.0.2|(不適用)|Sybase OLE DB 提供者|  
 |其他關聯式資料庫|(不適用)|(不適用)|OLE DB 提供者或 ODBC 驅動程式|  
-|文字檔|(不適用)|.txt、.tab、.csv|Microsoft Access 的 ACE 14 OLE DB 提供者|  
-|Microsoft Excel 檔案|Excel 2010 及更新版本|.xlsx、xlsm、.xlsb、.xltx、.xltm|ACE 14 OLE DB 提供者|  
+|文字檔|(不適用)|.txt、.tab、.csv|ACE 14 OLE DB 提供者<sup> [1](#dnu)</sup> |  
+|Microsoft Excel 檔案|Excel 2010 及更新版本|.xlsx、xlsm、.xlsb、.xltx、.xltm|ACE 14 OLE DB 提供者<sup> [1](#dnu)</sup>|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿|Microsoft SQL Server 2008 和更新版本的 Analysis Services|.xlsx、xlsm、.xlsb、.xltx、.xltm|ASOLEDB 10.5<br /><br /> (僅搭配發行至已安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 之 SharePoint 伺服陣列的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 活頁簿使用)|  
 |Analysis Services Cube|Microsoft SQL Server 2008 和更新版本的 Analysis Services|(不適用)|ASOLEDB 10|  
 |資料摘要<br /><br /> (用來匯入 Reporting Services 報表、Atom 服務文件、Microsoft Azure Marketplace DataMarket 和單一資料摘要的資料)|Atom 1.0 格式<br /><br /> 任何公開為 Windows Communication Foundation (WCF) Data Service (先前稱為 ADO.NET Data Services) 的資料庫或文件。|`.atomsvc` 服務文件，定義一個或多個摘要<br /><br /> Atom Web 摘要文件的 .atom|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> 適用於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office 資料庫連線檔案||.odc||  
-  
-  
+ 
+<a name="dnu">[1]</a> Using **ACE 14 OLE DB 提供者**連接到檔案資料類型**建議您不要**。 如果您必須保留您的表格式 1200年和較低的相容性層級模型，將資料匯出到 csv 檔案類型、 匯入到 SQL database，然後連接到並從資料庫匯入。 不過，建議您升級至表格式 1400年相容性層級 (SQL Server 2017 和更新版本)，並用**取得資料**SSDT 來選取並匯入您的檔案資料來源中。 取得資料使用結構化的資料來源連接提供的 Power Query 資料引擎，也就是比 ACE 14 OLE DB 提供者的連接更穩定。  
+
+
 ##  <a name="bkmk_supported_ds_dq"></a> DirectQuery 模型的支援的資料來源  
  DirectQuery 是記憶體內部儲存模式的替代方式，直接從後端資料系統路由傳送查詢和傳回結果，而非在模型內 (和 RAM 中，一旦載入模型) 儲存所有資料。 因為 Analysis Services 必須編寫的原生資料庫查詢語法中的查詢，此模式支援較小的資料來源子集。  
   

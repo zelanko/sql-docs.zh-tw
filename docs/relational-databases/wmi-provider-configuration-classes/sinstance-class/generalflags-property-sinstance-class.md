@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - GeneralFlags Property (SInstance Class)
@@ -19,12 +18,12 @@ ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f358c6a33f7ae4823cadfae1fe4b7c932b4529ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6df791e7adf3d563f63c3ce39511b717250f1a4
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757776"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216716"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags 屬性 (SInstance 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

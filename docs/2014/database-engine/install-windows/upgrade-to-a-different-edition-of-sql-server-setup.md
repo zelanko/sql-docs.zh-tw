@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088278"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019043"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升級為不同的 SQL Server 2014 版本 (安裝程式)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援各種不同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本之間的版本升級。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](supported-version-and-edition-upgrades.md)。 在您起始 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的版本升級之前，請檢閱以下主題：  
@@ -64,7 +63,7 @@ ms.locfileid: "48088278"
   
 11. [完成] 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。  
   
-12. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](view-and-read-sql-server-setup-log-files.md)。  
+12. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](view-and-read-sql-server-setup-log-files.md)。  
   
 13. 如果您是從 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]升級，就必須執行一些額外的步驟，然後才能使用升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體：  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48088278"
   
  除了上述步驟以外，如果您是從 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]升級，可能必須進行下列動作：  
   
--   在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中提供的使用者會在升級之後維持已提供的狀態。 更明確地說，BUILTIN\Users 群組會維持已提供的狀態。 您可以視需要停用、移除或重新提供這些帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
+-   在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中提供的使用者會在升級之後維持已提供的狀態。 更明確地說，BUILTIN\Users 群組會維持已提供的狀態。 您可以視需要停用、移除或重新提供這些帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 -   tempdb 和 model 系統資料庫的大小和復原模式在升級之後會維持不變。 您可以視需要重新設定這些設定。 如需詳細資訊，請參閱[系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   

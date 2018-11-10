@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 697f0d59cb912aef549288073922d555c3c21057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050014"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018593"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫資料庫。升級節點時，不需要停止其他節點上的活動。 請確定您遵守有關拓撲中支援之版本的規則：  
@@ -70,7 +69,7 @@ ms.locfileid: "48050014"
   
 -   [建立和套用初始快照集](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [複寫代理程式可執行檔概念](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  如需有關執行合併代理程式的詳細資訊，請參閱下列主題：  
   

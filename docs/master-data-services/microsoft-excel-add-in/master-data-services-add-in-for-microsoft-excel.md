@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 436fc2d07406bd76939dcbe4d6012b5b0bce297e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753938"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965966"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
 
@@ -30,8 +30,7 @@ ms.locfileid: "47753938"
 
 ## <a name="downloads"></a>下載 
 >*  從[此 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=836866)下載適用於 Excel 的 SQL Server 2016 SP1 Master Data Services 增益集。 
->* 從[此 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=836867)下載適用於 SQL Server 2017 CTP1 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。 此增益集也適用於 SQL Server 2017 RC1。
-
+>* 從[此 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=836867)下載適用於 SQL Server 2017 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。
  
   
 ## <a name="terms"></a>詞彙  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - ProtocolName Property (ServerNetworkProtocolProperty Class)
@@ -19,12 +18,12 @@ ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4ddd659c1417c715d227e0cdb847143a256aa257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ada7cd653c4f9a7b99b4585c6b89ee44d0f6ff40
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823417"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216106"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>ProtocolName 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

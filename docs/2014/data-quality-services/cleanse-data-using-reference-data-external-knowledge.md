@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d561f608b1a69f3872d66c8f454853ffeee5b82b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c556fb02eaad5a97a3f844991ba64440ac65f7b3
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149798"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029656"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用參考資料 (外部) 知識清理資料
   本主題描述如何使用參考資料提供者的知識來清理資料。 對於使用參考資料提供者的知識來清理資料而言，雖然執行清理活動的所有步驟仍與[使用 DQS &#40;內部&#41; 知識清理資料](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中所說明的步驟相同，不過本主題將針對在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用 Reference Data Service 進行資料清理提供特定資訊。  
@@ -53,7 +52,7 @@ ms.locfileid: "48149798"
 ##  <a name="Cleanse"></a> 使用參考資料知識清理您的資料  
  我們會繼續使用相同的範例，我們在上一個主題中，對應之定義域[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)，與在 Windows Azure Marketplace 的 Melissa Data 服務。 現在，我們將會使用相同的定義域來清理一些美國地址樣本。 清理資料的步驟一如[使用 DQS &#40;內部&#41; 知識清理資料](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中所述。 不過，我們會在此程序中視需要吸引您的注意。  
   
-1.  建立資料品質專案，然後選取 **[清理]** 活動。 請參閱[建立資料品質專案](../../2014/data-quality-services/create-a-data-quality-project.md)。  
+1.  建立資料品質專案，然後選取 **[清理]** 活動。 請參閱 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。  
   
 2.  在 **[對應]** 頁面上，將下列 4 定義域對應至來源資料中的適當資料行： **[地址行]**、 **[縣/市]**、 **[省/市]** 和 **[郵遞區號]**。 按 [下一步] 。  
   

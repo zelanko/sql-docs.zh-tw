@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb8371e848ae1975f0c37942070bff09c839af7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e71d3ad41b708208962678f48704d2f9f11ac2a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179934"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032971"
 ---
 # <a name="managing-a-domain"></a>管理定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用定義域。 定義域包含要分析之資料來源中特定欄位內之資料的語意表示法。 定義域是您為資料來源建立之知識庫的一部分，而且您藉由分析取樣資料來源或匯入資料所建立的知識會加入至知識庫中所定義的定義域。 之後會使用這些定義域中的知識，於資料品質專案中執行清理和比對。 定義域位於 Data Quality Services 中所有活動的核心。  

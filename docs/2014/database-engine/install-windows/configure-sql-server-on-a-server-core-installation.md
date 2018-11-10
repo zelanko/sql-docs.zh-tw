@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,17 +13,17 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101728"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018433"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
   本主題涵蓋有關在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 的 Server Core 安裝上設定 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的詳細資料。 請參考下列章節：  
   
--   [設定及管理 Windows Server 上的 Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
+-   [在 Windows Server 上設定及管理 Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
 -   [安裝 SQL Server 更新](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "48101728"
   
 -   [啟用 AlwaysOn 可用性群組](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [設定在 Server Core 上執行 SQL Server 的遠端的存取](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [設定在 Server Core 上執行之 SQL Server 的遠端存取](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
@@ -117,7 +116,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  啟用 AlwaysOn 可用性群組是伺服器執行個體將可用性群組做為高可用性和災害復原方案的必要條件。 如需有關管理 AlwaysOn 可用性群組的詳細資訊，請參閱[啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>在遠端使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員  
- 這些步驟為了要執行的電腦上執行的用戶端版本[!INCLUDE[win7](../../includes/win7-md.md)]或更新版本，或已安裝伺服器圖形化介面的另一部伺服器 (也就是完整安裝的[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]或與伺服器的 Windows Server 8 安裝啟用圖形化殼層功能）。  
+ 這些步驟是為了在執行用戶端版的 [!INCLUDE[win7](../../includes/win7-md.md)] 或更新版本的電腦上以及已安裝伺服器圖形化介面的另一部伺服器上執行 (也就是 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的完整安裝，或是已啟用伺服器圖形化介面功能的 Windows Server 8 安裝)。  
   
 1.  開啟 [電腦管理]。 若要開啟 [電腦管理]，請執行下列其中一項作業：  
   
@@ -141,7 +140,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  按兩下 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
   
-6.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員] 中，按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，以滑鼠右鍵按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<執行個體名稱 >)，其中\<執行個體名稱 > 是您要啟用 AlwaysOn 的本機伺服器執行個體的名稱可用性群組，然後按一下 內容。  
+6.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員] 中，按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，以滑鼠右鍵按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<執行個體名稱 >)，其中\<執行個體名稱 > 是您要啟用 AlwaysOn 的本機伺服器執行個體的名稱可用性群組，然後按一下 內容。  
   
 7.  選取 [AlwaysOn 高可用性] 索引標籤。  
   

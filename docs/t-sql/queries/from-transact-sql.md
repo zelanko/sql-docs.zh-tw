@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753426"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966036"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>使用 APPLY  
  APPLY 運算子的左運算元和右運算元都是資料表運算式。 這些運算元的主要差異在於 *right_table_source* 可以使用資料表值函數，從 *left_table_source* 取得資料行來作為該函數的其中一個引數。 *left_table_source* 可以包含資料表值函數，但不能包含由 *right_table_source*.的資料行所構成的引數。  
   
- APPLY 運算子利用下列方式來產生 FROM 子句的資料表來源：  
+APPLY 運算子利用下列方式來產生 FROM 子句的資料表來源：  
   
 1.  針對 *left_table_source* 的每個資料列評估 *right_table_source* 以產生資料列集。  
   
-     *right_table_source* 中的值取決於 *left_table_source*。 *right_table_source* 大致上可以下列方式表示：`TVF(left_table_source.row)`，其中 `TVF` 是資料表值函數。  
+    *right_table_source* 中的值取決於 *left_table_source*。 *right_table_source* 大致上可以下列方式表示：`TVF(left_table_source.row)`，其中 `TVF` 是資料表值函數。  
   
 2.  執行 UNION ALL 作業，將針對 *right_table_source* 之評估中每個資料列產生的結果集與 *left_table_source* 結合在一起。  
   
-     APPLY 運算子結果所產生的資料行清單就是與 *right_table_source*資料行清單結合的 *left_table_source* 資料行集。  
+    APPLY 運算子結果所產生的資料行清單就是與 *right_table_source*資料行清單結合的 *left_table_source* 資料行集。  
   
 ## <a name="using-pivot-and-unpivot"></a>使用 PIVOT 和 UNPIVOT  
  *pivot_column* 和 *value_column* 是 PIVOT 運算子所使用的群組資料行。 PIVOT 會遵照下列處理序來取得輸出結果集：  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. 使用 APPLY  
- 下列範例假設資料庫中存在含有下列結構描述的下列資料表：  
+下列範例假設資料庫中存在下列資料表和資料表值函式：  
+
+|Object Name|資料行名稱|      
+|---|---|   
+|Departments|DeptID、DivisionID、DeptName、DeptMgrID|      
+|EmpMgr|MgrID、EmpID|     
+|Employees|EmpID、EmpLastName、EmpFirstName、EmpSalary|  
+|GetReports(MgrID)|EmpID、EmpLastName、EmpSalary|     
   
--   `Departments`：`DeptID`、`DivisionID`、`DeptName`、`DeptMgrID`  
+`GetReports` 資料表值函式會傳回直接或間接向指定 `MgrID` 報告的所有員工清單。  
   
--   `EmpMgr`：`MgrID`、`EmpID`  
-  
--   `Employees`：`EmpID`、`EmpLastName`、`EmpFirstName`、`EmpSalary`  
-  
- 另外還有一個資料表值函式 `GetReports(MgrID)`，它會傳回所有員工的清單 ( `EmpID`、`EmpLastName`、`EmpSalary` - 這些項目會直接或間接向指定的 `MgrID` 報告)。  
-  
- 這個範例利用 `APPLY` 來傳回所有部門和各部門中的所有員工。 如果某特定部門沒有員工，就不會針對該部門傳回任何資料列。  
+這個範例利用 `APPLY` 來傳回所有部門和各部門中的所有員工。 如果某特定部門沒有員工，就不會針對該部門傳回任何資料列。  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- 如果您想讓查詢產生沒有員工的部門資料列 (這些資料列會針對 `EmpID`、`EmpLastName` 及 `EmpSalary` 資料行產生 Null 值)，請改用 `OUTER APPLY`。  
+如果您想讓查詢產生沒有員工的部門資料列 (這些資料列會針對 `EmpID`、`EmpLastName` 及 `EmpSalary` 資料行產生 Null 值)，請改用 `OUTER APPLY`。  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. 使用 CROSS APPLY  
- 下列範例會查詢 `sys.dm_exec_cached_plans` 動態管理檢視來擷取快取中所有查詢計畫的計畫控制代碼，藉以擷取位於計畫快取中所有查詢計畫的快照集。 然後，指定 `CROSS APPLY` 運算子，以便將計畫控制代碼傳遞給 `sys.dm_exec_query_plan`。 目前在計畫快取中的每項計畫之 XML 顯示計畫輸出，都是在傳回的資料表之 `query_plan` 資料行中。  
+下列範例會查詢 `sys.dm_exec_cached_plans` 動態管理檢視來擷取快取中所有查詢計畫的計畫控制代碼，藉以擷取位於計畫快取中所有查詢計畫的快照集。 然後，指定 `CROSS APPLY` 運算子，以便將計畫控制代碼傳遞給 `sys.dm_exec_query_plan`。 目前在計畫快取中的每項計畫之 XML 顯示計畫輸出，都是在傳回的資料表之 `query_plan` 資料行中。  
   
 ```sql
 USE master;  

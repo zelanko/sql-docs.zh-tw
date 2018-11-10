@@ -1,6 +1,6 @@
 ---
-title: 課程 2 建立的資料功能，使用 T-SQL 函式 （SQL Server 機器學習服務） |Microsoft Docs
-description: 教學課程示範如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
+title: 課程 2 的建立資料功能，使用 T-SQL 函式 (SQL Server Machine Learning 中的 R) |Microsoft Docs
+description: 本教學課程示範如何將計算加入至用於 R 機器學習服務模型中的預存程序。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462094"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031495"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 課： 建立使用 R 和 T-SQL 的資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

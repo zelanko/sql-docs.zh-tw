@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686616"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033625"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
 
@@ -101,7 +101,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
    | **[選用] 輸入此設定檔的名稱** | 連線設定檔名稱。 例如，您可將設定檔命名為**本機主機設定檔**。 
 
    > [!Tip] 
-   > 您可以建立和編輯使用者設定檔 (settings.json) 中的連線設定檔。 開啟選取的設定檔**喜好設定**，然後**使用者設定**VS Code 功能表。 如需詳細資訊，請參閱 <<c0> [ 管理連線設定檔]。
+   > 您可以建立和編輯使用者設定檔 (settings.json) 中的連線設定檔。 開啟選取的設定檔**喜好設定**，然後**使用者設定**VS Code 功能表。 如需詳細資訊，請參閱 [管理連線設定檔]。
 
 6. 按 **ESC** 鍵關閉資訊訊息，通知您已建立並連線設定檔。
 
@@ -250,7 +250,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 在真實世界案例中，您所建立的指令碼，可能會先儲存之後再執行 (無論用於系統管理或做為更大型的開發專案的一部分)。 在此情況下，您可以使用 **.sql** 為副檔名的方式儲存指令碼。
 
-如果您還不熟悉 T-SQL，請參閱[教學課程：撰寫國際性通用的 Transact-SQL 陳述式]並[TRANSACT-SQL 參考 (Database Engine)]。
+如果您不熟悉 T-SQL，請參閱[教學課程：撰寫 Transact-SQL 陳述式]和 [Transact-SQL 參考 (Database Engine)]。
 
 如需有關使用或促成 mssql 擴充功能的詳細資訊，請參閱 < [mssql 擴充功能專案 wiki]。
 
@@ -259,11 +259,11 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 [**mssql** VS Code 擴充功能]:https://aka.ms/mssql-marketplace
 [下載並安裝 VS Code]:https://code.visualstudio.com/Download
 [.Net Core 指示]:https://www.microsoft.com/net/core
-[ 管理連線設定檔]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
+[管理連線設定檔]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [連線疑難排解建議]:./sql-server-linux-troubleshooting-guide.md#connection
 [自訂快速鍵]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[教學課程：撰寫國際性通用的 Transact-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
-[TRANSACT-SQL 參考 (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
+[教學課程：撰寫 Transact-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
+[Transact-SQL 參考 (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 通用 C 執行階段]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [自訂延伸模組選項]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options

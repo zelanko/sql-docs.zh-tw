@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb28c4116e4708a5381c68b117c4f7a014b409a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9f53d3878ec6f5eb9c0996d7162fed792bf4930
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170668"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033365"
 ---
 # <a name="end-the-domain-management-activity"></a>結束定義域管理活動
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中完成、關閉或取消定義域管理活動。 定義域管理不是由精靈執行，所以可以從定義域管理活動的任何頁面使用底下所述的控制項。  

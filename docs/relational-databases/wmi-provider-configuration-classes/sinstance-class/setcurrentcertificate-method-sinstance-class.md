@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SetCurrentCertificate Method (SInstance Class)
@@ -19,12 +18,12 @@ ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3e14d2f85962d1e03f7c2d9e72f616861638cd68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a2b87fbab99fb20a2ecfa846dd523f038e64be2
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621816"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51215386"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate 方法 (SInstance 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

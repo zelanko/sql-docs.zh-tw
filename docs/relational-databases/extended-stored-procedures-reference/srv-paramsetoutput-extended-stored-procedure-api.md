@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: stored-procedures
 ms.topic: reference
 apiname:
 - srv_paramsetoutput
@@ -21,12 +20,12 @@ ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4a189509bd2868925d3fd7890702594758e824a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6bd0247da9244d6a0754e437f2c71b2105fd03b
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769441"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031765"
 ---
 # <a name="srvparamsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

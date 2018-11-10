@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - PropertyValType Property (ServerNetworkProtocolProperty Class)
@@ -19,12 +18,12 @@ ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 54ecc89bf7c2674c8913627b0292b267fce9d571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bd01cf25ebd7b38e1a1fc486ddfd29c10e36c1e
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836406"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51215136"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>PropertyValType 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

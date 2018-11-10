@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205540"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030165"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>將知識加入至知識庫
   此主題描述您可以在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中將知識加入至知識庫的方式。 在您可以執行資料品質作業之前，您必須擁有資料的相關知識。 您取得該項知識的方式是建立及維護資料品質知識庫，並將與特定類型之資料來源相關的知識加入至知識庫。 知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。  
@@ -40,14 +39,14 @@ ms.locfileid: "48205540"
 ##  <a name="Discovery"></a> 執行知識探索  
  知識探索會針對資料品質準則分析資料取樣，然後將它取得的知識加入至知識庫。 這是電腦輔助的程序，可識別資料不一致和語法錯誤，並向資料建議變更。 知識探索活動是一個精靈，其中包括您可以互動方式在其上管理定義域值的頁面。  
   
--   如需詳細文件中的詳細資訊，請參閱[Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
+-   如需文件集中的詳細資訊，請參閱＜ [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)＞。  
   
 -   如需示範如何執行知識探索的影片，請按一下 [這裡](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。  
   
 ##  <a name="ManageDomain"></a> 管理定義域中的資料值  
  DQS 可讓您以互動方式變更及增加電腦輔助的知識探索活動所產生的中繼資料。 您會在 [定義域管理] 活動中執行這項作業，您可以在此活動中將變更套用至特定資料值。  
   
--   如需詳細文件中的詳細資訊，請參閱[Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
+-   如需文件集中的詳細資訊，請參閱＜ [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)＞。  
   
 -   如需示範如何執行定義域管理的影片，請按一下 [這裡](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。 請注意，在此影片中，您會在知識探索精靈的 [管理定義域值] 頁面中變更定義域值。 您也可以在 [定義域管理] 活動的 [定義域值] 頁面中執行這些步驟。  
   
@@ -69,6 +68,6 @@ ms.locfileid: "48205540"
 ##  <a name="Default"></a> 使用預設 DQS 知識庫  
  DQS 隨附在預先建立的知識庫 (稱為 DQS 資料) 中，其中包含美國公司和地址資料。 這個知識庫可用來快速啟動專案，不需要建立新的知識庫。 「DQS 資料」知識庫是唯讀的，但是資料監管可將它做為基礎建立新的知識庫。  
   
--   如需詳細文件中的詳細資訊，請參閱[使用 DQS 預設知識庫](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)。  
+-   如需文件集中的詳細資訊，請參閱＜ [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)＞。  
   
   

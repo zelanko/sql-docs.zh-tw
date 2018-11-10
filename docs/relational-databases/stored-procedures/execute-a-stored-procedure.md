@@ -20,17 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 7077b950a6039a9c123cc991c00f5f28e23ff6ca
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419273"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970309"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
   
  有兩種不同的方法可執行預存程序。 第一種是最常用的方法，可讓應用程式或使用者呼叫程序。 第二種方法是設定讓程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟動時自動執行。 當應用程式或使用者呼叫程序時， [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 或 EXEC 關鍵字會在呼叫中明確陳述。 如果程序是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的第一個陳述式，則呼叫和執行程序時也可以不用關鍵字。  
   
@@ -212,6 +215,6 @@ EXEC sp_procoption @ProcName = '<procedure name>'
  [設定 scan for startup procs 伺服器組態選項](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [預存程序 &#40;資料庫引擎&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+ [預存程序 &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
   
   

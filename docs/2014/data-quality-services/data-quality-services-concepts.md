@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170978"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032117"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本主題將提供知識管理、資料品質專案和資料品質管理中 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念的簡短摘要。  
@@ -34,13 +33,13 @@ ms.locfileid: "48170978"
   
  **比對原則**  
   
- 比對原則會包含用來執行刪除重複資料作業的比對規則。 比對原則處理序可讓您建立比對規則、根據比對結果和分析資料進行微調，以及將原則加入至知識庫。 如需詳細資訊，請參閱 [Data Matching](../../2014/data-quality-services/data-matching.md)。  
+ 比對原則會包含用來執行刪除重複資料作業的比對規則。 比對原則處理序可讓您建立比對規則、根據比對結果和分析資料進行微調，以及將原則加入至知識庫。 如需詳細資訊，請參閱 [資料比對](../../2014/data-quality-services/data-matching.md)。  
   
  **Reference Data Services**  
   
  您可以使用參考資料來驗證、更正和充實資料，並運用保證其參考資料品質之公司的服務。 您可以使用 Windows Azure Marketplace 的服務來連接到參考資料提供者，也可以使用提供者的直接連接。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
- 如需有關 DQS 中知識管理的詳細資訊，請參閱 < [DQS 知識庫與定義域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
+ 如需有關 DQS 中知識管理的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
 ##  <a name="Projects"></a> 資料品質專案概念  
  資料管理人會在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中使用資料品質專案來執行資料品質作業 (清理和比對)。  
@@ -61,7 +60,7 @@ ms.locfileid: "48170978"
   
  **分析與通知**  
   
- 執行資料品質專案時，資料分析會為資料管理人提供有關 DQS 正在針對清理或比對活動處理之資料的即時統計資料和資訊。 資料分析可協助您評估資料品質專案中之清理和比對活動的效用，而通知可協助使用者採取動作以強化資料清理和資料比對活動。 如需詳細資訊，請參閱 < [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+ 執行資料品質專案時，資料分析會為資料管理人提供有關 DQS 正在針對清理或比對活動處理之資料的即時統計資料和資訊。 資料分析可協助您評估資料品質專案中之清理和比對活動的效用，而通知可協助使用者採取動作以強化資料清理和資料比對活動。 如需詳細資訊，請參閱 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
  如需有關 DQS 中資料品質專案的詳細資訊，請參閱[資料品質專案 &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)。  
   
@@ -70,25 +69,25 @@ ms.locfileid: "48170978"
   
  **活動監控**  
   
- 活動監控會顯示在某個資料範圍內執行之每項活動的狀態、提供每項活動的資料，並且讓 DQS 系統管理員控制活動。 如需詳細資訊，請參閱 < [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
+ 活動監控會顯示在某個資料範圍內執行之每項活動的狀態、提供每項活動的資料，並且讓 DQS 系統管理員控制活動。 如需詳細資訊，請參閱 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
   
  **Configuration**  
   
  [組態] 選項可讓您：  
   
--   設定參考資料服務設定。 如需詳細資訊，請參閱 <<c0> [ 設定 DQS 使用參考資料](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)。  
+-   設定參考資料服務設定。 如需詳細資訊，請參閱 [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
 -   設定清理與比對活動的臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
 -   啟用/停用分析通知。 如需詳細資訊，請參閱[啟用或停用 DQS 中的分析通知](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)。  
   
--   在活動層級或更進階的模組層級設定 DQS 記錄檔的嚴重性層級。 如需詳細資訊，請參閱 < [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)。  
+-   在活動層級或更進階的模組層級設定 DQS 記錄檔的嚴重性層級。 如需詳細資訊，請參閱 [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)。  
   
  **DQS 安全性**  
   
- 您可以使用 SQL Server 安全性機制中的角色來確保 DQS 安全。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式具有三個決定使用者存取層級的 DQS 角色：dqs_administrator、dqs_kb_editor 和 dqs_kb_operator。 您無法使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式，將角色授與使用者。這項作業是使用 SQL Server Management Studio 來完成的。 如需詳細資訊，請參閱 < [DQS 安全性](../../2014/data-quality-services/dqs-security.md)。  
+ 您可以使用 SQL Server 安全性機制中的角色來確保 DQS 安全。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式具有三個決定使用者存取層級的 DQS 角色：dqs_administrator、dqs_kb_editor 和 dqs_kb_operator。 您無法使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式，將角色授與使用者。這項作業是使用 SQL Server Management Studio 來完成的。 如需詳細資訊，請參閱 [DQS Security](../../2014/data-quality-services/dqs-security.md)。  
   
- 如需有關 DQS 管理的詳細資訊，請參閱 < [DQS 管理](../../2014/data-quality-services/dqs-administration.md)。  
+ 如需有關 DQS 管理的詳細資訊，請參閱＜ [DQS Administration](../../2014/data-quality-services/dqs-administration.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

@@ -125,7 +125,7 @@ SQLRETURN SQLBindParameter(
  如果*Sqlbindparameter*呼叫中**SQLBindParameter** SQL_DESC_COUNT，值大於**SQLSetDescField**呼叫以增加 SQL_DESC_ 值若要計算*Sqlbindparameter*。  
   
 ## <a name="inputoutputtype-argument"></a>了引數  
- *了*引數會指定參數的型別。 這個引數會設定 IPD SQL_DESC_PARAMETER_TYPE 欄位。 不會呼叫程序，例如 SQL 陳述式中的所有參數**插入**陳述式，都是*輸入 * * 參數*。 程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 (應用程式呼叫**SQLProcedureColumns**判斷程序呼叫; 中的參數類型無法判斷其類型的參數會假設為輸入的參數。)  
+ *了*引數會指定參數的型別。 這個引數會設定 IPD SQL_DESC_PARAMETER_TYPE 欄位。 不會呼叫程序，例如 SQL 陳述式中的所有參數**插入**陳述式，都是*輸入 參數*。 程序呼叫中的參數可以輸入、 輸入/輸出或輸出參數。 (應用程式呼叫**SQLProcedureColumns**判斷程序呼叫; 中的參數類型無法判斷其類型的參數會假設為輸入的參數。)  
   
  *了*引數可以是下列值之一：  
   

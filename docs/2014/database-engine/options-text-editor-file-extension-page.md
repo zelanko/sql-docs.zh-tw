@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076852"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031785"
 ---
 # <a name="options-text-editor---file-extension-page"></a>選項 (文字編輯器 - 副檔名頁面)
   使用 [選項] 對話方塊，以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何處理具有特定副檔名的所有檔案。 針對您輸入的每個副檔名，都可以選取一個編輯器。 因此，您可以選擇要用來開啟特定文件類型的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器。 若要開啟副檔名選項，請按一下 [工具] 功能表上的 [選項]，並展開 [文字編輯器]，然後按一下 [副檔名]。  

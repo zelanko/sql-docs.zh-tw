@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing logs
@@ -19,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91a3f00b2aeba382b31713104839d0f2fa2d8821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6017cadea0039613f7e97dc6e78665e47c9e2575
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101638"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018503"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
   每次執行安裝程式會建立的記錄檔都會建立與新時間戳記記錄檔資料夾，位於 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 % temp%\sqlsetup*.log 建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  

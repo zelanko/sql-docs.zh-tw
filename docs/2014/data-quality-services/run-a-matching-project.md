@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
@@ -15,19 +14,19 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091748"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031505"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行資料比對。 比對程序會根據比對原則中的比對規則來識別比對記錄叢集、根據存活規則將每一個叢集中的一筆記錄指定為存活者，然後匯出結果。 DQS 會在電腦輔助的程序中執行比對程序 (也稱為刪除重複作業)，但是您可以互動方式建立比對規則，而且您會從數個選擇中選取存活規則，好讓您控制比對程序。  
   
  比對作業會在三個階段執行：識別資料來源並將定義域對應至資料來源的對應程序、執行比對分析的比對程序，以及指定存活規則並匯出比對結果的生存與匯出程序。 以上每一個程序都是在比對活動精靈的個別頁面中執行，好讓您來回移到不同的頁面、重新執行此程序，並退出特定比對程序，然後返回該程序的相同階段。 DQS 會提供有關來源資料、比對規則和比對結果的統計資料，好讓您做出有關比對的明智決定，並精簡比對程序。  
   
- 您必須做好比對的準備，方法是建立包含一個或多個比對規則的比對原則，並針對取樣資料執行此原則。 比對專案程序與比對原則程序不同，而且不會使用取自比對專案的相符知識來擴展知識庫。 如需建立比對原則的詳細資訊，請參閱 < [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)。  
+ 您必須做好比對的準備，方法是建立包含一個或多個比對規則的比對原則，並針對取樣資料執行此原則。 比對專案程序與比對原則程序不同，而且不會使用取自比對專案的相符知識來擴展知識庫。 如需有關建立比對原則的詳細資訊，請參閱＜ [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)＞。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -166,7 +165,7 @@ ms.locfileid: "48091748"
     >  如果您已完成比對專案，然後再次使用它，此專案將會在之前發行它的地方使用知識庫。 它不會使用您在完成專案之後對知識庫所做的任何變更。 若要使用這些變更或是使用新的知識庫，您必須建立新的比對專案。 在另一方面，如果您已經建立但是尚未完成比對專案，而且如果您在專案中執行比對，將會使用您已發行至比對原則的任何變更。  
   
 ##  <a name="FollowUp"></a> 後續操作：在執行比對專案之後  
- 在您執行比對專案之後，您可以變更知識庫中的比對原則，並根據更新的比對原則來建立及執行另一個比對專案。 如需相關資訊，請參閱 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)。  
+ 在您執行比對專案之後，您可以變更知識庫中的比對原則，並根據更新的比對原則來建立及執行另一個比對專案。 如需詳細資訊，請參閱 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Profiler"></a> 分析工具和結果索引標籤  
  [分析工具] 和 [結果] 索引標籤包含比對程序的統計資料。  

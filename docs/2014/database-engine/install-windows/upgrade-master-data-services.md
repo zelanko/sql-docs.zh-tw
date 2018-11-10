@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079669"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019013"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
   升級至 Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 的情況有四種。 請選擇最適合您情況的情況。  
@@ -34,7 +33,7 @@ ms.locfileid: "48079669"
 > -   在執行任何升級之前備份您的資料庫。  
 > -   升級程序會重新建立預存程序，並升級 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]使用的資料表。 您對這些元件所做的任何自訂可能會遺失。  
 > -   模型部署封裝只能在之前建立這些封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 您無法部署中建立的模型部署封裝[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-> -   您可以繼續使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Master Data Services 和 Data Quality Services，若要在升級後的 SP1 版的 Master Data Services 增益集適用於 Excel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 您可以下載[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版的 Master Data Services 增益集適用於 Excel[這裡](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+> -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 將 Master Data Services 和 Data Quality Services 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 之後，您可以繼續使用  SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以在 [這裡](http://go.microsoft.com/fwlink/?LinkId=328664)下載  SP1 版適用於 Excel 的 Master Data Services 增益集。  
   
 ##  <a name="noengine"></a> 升級但不包含 Database Engine 升級  
  這個情況可視為是並排顯示安裝，因為兩者[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]以平行方式，在同一部電腦或不同的電腦上安裝。  

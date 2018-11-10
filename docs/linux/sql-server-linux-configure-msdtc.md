@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b32b3465184d5a8be1ef07f42b6b764b0600940d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815546"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269671"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文說明如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSTDC)。 Linux 上的 MSDTC 支援是在 SQL Server 2019 CTP 2.0 引進。
+本文說明如何在 Linux 上設定 Microsoft 分散式交易協調器 (MSTDC)。 Linux 上的 MSDTC 支援是在 SQL Server 2019 預覽引進。
 
 ## <a name="overview"></a>總覽
 
@@ -44,7 +44,7 @@ SQL Server 2019 導入了 「 mssql conf 公用程式的兩個組態參數。
 - 針對 Linux 上使用 JDBC 的提供者的 SQL Server 的 XA 分散式交易。
 - 在 連結的伺服器上的分散式的交易。
 
-MSDTC 在 CTP 2.0 中的已知的問題和限制，請參閱[release notes for Linux 上的 SQL Server 2019 CTP 版本](sql-server-linux-release-notes-2019.md#msdtc)。
+如為 MSDTC preview 的已知的問題和限制，請參閱 <<c0> [ 在 Linux 上的 SQL Server 2019 預覽的版本資訊](sql-server-linux-release-notes-2019.md#msdtc)。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC 組態步驟
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,12 +15,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076048"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032465"
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
   此主題描述如何透過知識探索來建立知識庫。 在探索程序中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 會透過電腦輔助的程序來分析範例資料來源中的資料，並將它所獲得的知識加入至知識庫。 您可以在知識探索活動或定義域管理活動的 **[管理定義域值]** 步驟中修改及增強這項知識。  
@@ -67,12 +66,12 @@ ms.locfileid: "48076048"
   
 4.  在 **[對應]** 資料表中，將您想要執行知識探索的每一個來源資料行對應到知識庫中的定義域，如下所示：  
   
-    1.  若要建立對應，請先從空資料列的 **[來源資料行]** 資料行的下拉式清單中選取來源資料行，然後從相同資料列的 **[定義域]** 資料行的下拉式清單中選取定義域 (如果定義域存在的話)。 如果定義域不存在，請按一下 **[建立定義域]** 或 **[建立複合定義域]** 來建立定義域。 如需相關資訊，請參閱 [建立定義域規則](../../2014/data-quality-services/create-a-domain-rule.md) 或 [建立複合定義域](../../2014/data-quality-services/create-a-composite-domain.md)。  
+    1.  若要建立對應，請先從空資料列的 **[來源資料行]** 資料行的下拉式清單中選取來源資料行，然後從相同資料列的 **[定義域]** 資料行的下拉式清單中選取定義域 (如果定義域存在的話)。 如果定義域不存在，請按一下 **[建立定義域]** 或 **[建立複合定義域]** 來建立定義域。 如需相關資訊，請參閱 [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) 或 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)。  
   
     2.  針對每一個對應重複以上步驟。 若要變更資料表中的資料列數，請按一下 **[加入資料行對應]**，或是選取資料列並按一下 **[移除選取的資料行對應]**。 如果您在選取擴展的資料列時按一下 **[移除選取的資料行對應]** ，即使有未擴展的資料列，也會刪除選取的資料列。  
   
         > [!NOTE]  
-        >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域，以便執行知識探索。 如需有關支援之資料類型的資訊，請參閱＜ [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
+        >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域，以便執行知識探索。 如需有關支援之資料類型的資訊，請參閱＜ [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
   
     3.  按一下 **[檢視/選取複合定義域]** ，顯示已經定義的複合定義域。 如果沒有已經定義的複合定義域，將無法使用此控制項。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "48076048"
   
     -   **將選取的定義域值設為群組的前置值**：變更群組的前置值，方法是在群組中選取未指定為前置值的某個值，然後按一下 **[將選取的定義域值設為群組的前置值]** 按鈕。  
   
-6.  **拼字檢查**：如果您已經在 [定義域屬性] 頁面中啟用拼字檢查，請尋找具有波浪式紅色底線的任何值，表示拼字檢查有建議更正。 以滑鼠右鍵按一下有底線的值，然後選取適用的更正。 值類型會變成 (或維持) 錯誤，而且更正將會加入至 **[更正為]** 資料行。 按一下向下箭號，以查看其他建議的更正。 手動輸入更正，將其加入至拼字檢查字典，而且能夠將其選取為更正。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../../2014/data-quality-services/set-domain-properties.md)。  
+6.  **拼字檢查**：如果您已經在 [定義域屬性] 頁面中啟用拼字檢查，請尋找具有波浪式紅色底線的任何值，表示拼字檢查有建議更正。 以滑鼠右鍵按一下有底線的值，然後選取適用的更正。 值類型會變成 (或維持) 錯誤，而且更正將會加入至 **[更正為]** 資料行。 按一下向下箭號，以查看其他建議的更正。 手動輸入更正，將其加入至拼字檢查字典，而且能夠將其選取為更正。 如需相關資訊，請參閱 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 及 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
     >  若要使用拼字檢查，您可以在 **[定義域屬性]** 頁面中啟用此功能，或者如果 **[定義域屬性]** 頁面中已停用此功能，您可以按一下 **[管理資料探索結果]** 頁面上的 **[啟用/停用拼字檢查]** 圖示，在此頁面上啟用此功能。  

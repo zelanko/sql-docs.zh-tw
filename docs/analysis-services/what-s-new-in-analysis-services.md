@@ -139,7 +139,7 @@ refresh|處理物件。 ASSL 對等項目為 PROCESS。
 ### <a name="dax-variables"></a>DAX 變數    
 此版本現在會在 DAX 中包含變數的支援。 變數現在可以將運算式的結果儲存為具名變數，然後做為引數傳遞至其他量值運算式。 一旦計算變數運算式的結果值，這些值就不會變更，即使另一個運算式中參考的此變數。 如需詳細資訊，請參閱 [VAR 函數](http://msdn.microsoft.com/library/mt243785.aspx)。    
 ### <a name="new-dax-functions"></a>新的 DAX 函數
-在此版本中，DAX 引進了超過&50; 個新函數，以在 Power BI 中支援更快速的計算和增強的視覺效果。 如需詳細資訊，請參閱 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)(新的 DAX 函數)。
+在此版本中，DAX 引進了超過 50 個新函數，以在 Power BI 中支援更快速的計算和增強的視覺效果。 如需詳細資訊，請參閱 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)(新的 DAX 函數)。
 ### <a name="save-incomplete-measures"></a>儲存不完整的量值
 您現在可以直接在表格式 1200 模型專案中儲存不完整的 DAX 量值，然後在您準備好繼續進行時再次取用。
 ### <a name="additional-dax-enhancements"></a>其他 DAX 增強功能

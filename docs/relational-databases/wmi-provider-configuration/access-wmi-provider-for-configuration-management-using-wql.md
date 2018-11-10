@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,12 +16,12 @@ ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21a18dc77a8ab1b714676cc299d26797ba0d41bd
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692826"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51215483"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>使用 WQL 存取組態管理的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

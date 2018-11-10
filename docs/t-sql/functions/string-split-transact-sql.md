@@ -18,17 +18,20 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91e56555e83afdb97745bc180bbba4b2bb2b0921
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b14bf08c311ba39ed1a3d232e60f24dff72cfa55
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169148"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970219"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  使用指定的分隔符號來分割字元運算式。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+使用指定的分隔符號來分割字元運算式。  
   
 > [!NOTE]  
 > **STRING_SPLIT** 函式僅適用於相容性層級 130 及以上。 如果您的資料庫相容性層級低於 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將找不到且無法執行 **STRING_SPLIT** 函式。 若要變更資料庫的相容性層級，請參閱[檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。

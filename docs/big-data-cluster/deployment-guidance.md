@@ -4,15 +4,15 @@ description: 了解如何部署在 Kubernetes 上的 SQL Server 2019 巨量資�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051180"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269861"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>如何部署巨量資料叢集的 Kubernetes 的 SQL Server
 
@@ -26,7 +26,7 @@ SQL Server 的巨量資料叢集可以部署為 docker 容器的 Kubernetes 叢�
 
 ## <a id="prereqs"></a> Kubernetes 叢集的先決條件
 
-SQL Server 的巨量資料叢集需要最小 v1.10 版本，如 Kubernetes、 伺服器和用戶端。 若要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。  最新版的 minikube 和 AKS 是至少 1.10。 Aks，您必須使用`--kubernetes-version`參數來指定預設值不同的版本。
+SQL Server 的巨量資料叢集需要最小 v1.10 版本，如 Kubernetes、 伺服器和用戶端。 若要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 最新版的 minikube 和 AKS 是至少 1.10。 Aks，您必須使用`--kubernetes-version`參數來指定預設值不同的版本。
 
 > [!NOTE]
 > 請注意，用戶端和伺服器的 Kubernetes 版本應該是 + 1，則為-1 的次要版本。 如需詳細資訊，請參閱 < [Kubernetes 支援的版本和元件扭曲](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
@@ -54,7 +54,12 @@ SQL Server 的巨量資料叢集需要最小 v1.10 版本，如 Kubernetes、 �
 
 ## <a id="deploy"></a> 部署 SQL Server 的巨量資料叢集
 
-您已設定您的 Kubernetes 叢集之後，您可以繼續使用巨量資料的 SQL Server 叢集的部署。 若要部署的開發/測試環境的所有預設設定在 Azure 中的巨量資料叢集，請遵循這篇文章中的指示：
+您已設定您的 Kubernetes 叢集之後，您可以繼續使用巨量資料的 SQL Server 叢集的部署。 
+
+> [!NOTE]
+> 如果您要從舊版升級，請參閱[升級一節](#upgrade)。
+
+若要部署的開發/測試環境的所有預設設定在 Azure 中的巨量資料叢集，請遵循這篇文章中的指示：
 
 [快速入門： 部署 Kubernetes 上的 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> 安裝 mssqlctl
 
 **mssqlctl**是命令列公用程式，可讓叢集系統管理員啟動及管理巨量資料叢集，透過 REST Api 以 Python 所撰寫。 最小所需的 Python 版本為 3.5 版。 您也必須擁有`pip`用來下載並安裝**mssqlctl**工具。 
+
+> [!IMPORTANT]
+> 如果您已安裝舊版，您必須刪除叢集*之前*升級**mssqlctl**並安裝新的版本。 如需詳細資訊，請參閱 <<c0> [ 升級至新版](deployment-guidance.md#upgrade)。
 
 ### <a name="windows-mssqlctl-installation"></a>Windows mssqlctl 安裝
 
@@ -89,7 +97,7 @@ kubectl config view
 1. 安裝**mssqlctl**使用下列命令：
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Linux mssqlctl 安裝
@@ -105,17 +113,10 @@ kubectl config view
    sudo -H pip3 install --upgrade pip
    ```
 
-1. 請確定您有最新**要求**封裝。
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. 安裝**mssqlctl**使用下列命令：
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>定義環境變數
@@ -224,7 +225,7 @@ export STORAGE_CLASS_NAME=standard
 
 如果您使用您自己的實體或虛擬機器上的 kubeadm 部署，您必須預先佈建 Kubernetes 儲存體類別，並將它傳遞到使用`STORAGE_CLASS_NAME`。 或者，您可以隱藏使用永續性磁碟區，藉由設定`USE_PERSISTENT_VOLUME=false`。 如需永續性儲存體的詳細資訊，請參閱[巨量資料叢集的 Kubernetes 上的 SQL server 的資料持續性](concept-data-persistence.md)。
 
-## <a name="deploy-sql-server-big-data-cluster"></a>部署 SQL Server 的巨量資料叢集
+## <a name="deploy-sql-server-big-data-cluster"></a>部署 SQL Server 巨量資料叢集
 
 建立叢集 API 用來初始化 Kubernetes 命名空間，並部署到命名空間的所有應用程式 pod。 若要部署 Kubernetes 叢集上的 SQL Server 巨量資料叢集，請執行下列命令：
 
@@ -275,6 +276,29 @@ minikube ip
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> 升級至新的版本
+
+目前，巨量資料叢集升級至新版本的唯一方式是以手動方式移除並重新建立叢集。 每個版本具有的唯一版本**mssqlctl**不與舊版相容。 此外，如果較舊的叢集，就必須下載新的節點上的影像，最新的映像可能無法相容於舊叢集上的映像。 若要升級至最新版本時，使用下列步驟：
+
+1. 然後再刪除舊的叢集，請 HDFS 和 SQL Server 的主要執行個體上備份資料。 SQL Server 的主要執行個體，您可以使用[SQL Server 備份及還原](data-ingestion-restore-databse.md)。 HDFS 中，為您[可以複製的資料與**curl**](data-ingestion-curl.md)。
+
+1. 刪除舊的叢集使用`mssqlctl delete cluster`命令。
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. 安裝最新版**mssqlctl**。
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > 每個發行的路徑**mssqlctl**變更。 即使您先前已安裝**mssqlctl**，您必須建立新的叢集之前重新安裝最新的路徑。
+
+1. 安裝最新版的使用中的指示[部署區段](#deploy)這篇文章。 
 
 ## <a name="next-steps"></a>後續步驟
 

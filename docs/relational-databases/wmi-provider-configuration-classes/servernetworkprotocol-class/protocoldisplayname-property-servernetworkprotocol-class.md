@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - ProtocolDisplayName Property (ServerNetworkProtocol Class)
@@ -19,12 +18,12 @@ ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2afbefad076ec47a6ecdf6735763627975f8a79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b48054ea448f6e686bed40404402966d8adb690
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853926"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217926"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>ProtocolDisplayName 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

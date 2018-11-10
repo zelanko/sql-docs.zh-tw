@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
@@ -13,12 +12,12 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 358e0f9718ee6e301b0cf4257d3bda5bea5ae084
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 249e0195d02f0b157e818a0525b0170b0b817b3c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051298"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031598"
 ---
 # <a name="create-a-domain"></a>建立定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域。 定義域中的值是欄位中資料的語意表示法。 如需定義域的詳細資訊，請參閱[管理定義域](../../2014/data-quality-services/managing-a-domain.md)。  
@@ -43,7 +42,7 @@ ms.locfileid: "48051298"
   
 3.  選取 **[知識探索]** 當做活動，然後按一下 **[建立]** 建立新的知識庫，或按一下 **[開啟]** 開啟現有的知識庫。  
   
-4.  在 **[對應]** 頁面上，指定資料來源的連接。 如需詳細資訊，請參閱 < [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
+4.  在 **[對應]** 頁面上，指定資料來源的連接。 如需詳細資訊，請參閱＜ [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)＞。  
   
 5.  在 **[對應]** 資料表中，從空白資料列之 **[來源資料行]** 資料行的下拉式清單中選取來源資料行。 如果沒有對應的定義域存在，請按一下 **[建立定義域]** 圖示。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48051298"
 1.  在 **[建立定義域]** 對話方塊中，輸入知識庫特有的名稱以及最多 256 個字元的描述。  
   
     > [!NOTE]  
-    >  如需有關定義域屬性的詳細資訊，請參閱 < [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)。  
+    >  如需有關定義域屬性的詳細資訊，請參閱＜ [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)＞。  
   
 2.  為定義域中的值，從 **[資料類型]** 清單選取資料類型。 資料類型可以是 **[字串]** (預設值)、 **[日期]**、 **[整數]** 或 **[十進位]**。  
   

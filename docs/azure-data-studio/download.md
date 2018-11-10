@@ -2,7 +2,7 @@
 title: 下載並安裝 Azure Data Studio |Microsoft Docs
 description: 下載並為 Windows 安裝 Azure 資料 Studio、 macOS 或 Linux
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,27 +10,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965948"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217806"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本中，*年 10 月發行*:
+下載並安裝最新版本中， *11 月發行*:
 
 > [!NOTE]
 > 如果您正在從 SQL Operations Studio 更新，且想要保留您的設定、 鍵盤快速鍵或程式碼片段，請參閱[移動使用者設定](#move-user-settings)。
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 年 10 月 30日日 |1.1.4|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 年 10 月 30日日 |1.1.4|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 年 10 月 30日日 |1.1.4|
+|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|2018 年 11 月 6日日 |1.2.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|2018 年 11 月 6日日 |1.2.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|2018 年 11 月 6日日 |1.2.4|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -40,20 +40,20 @@ ms.locfileid: "50965948"
 
 **安裝程式**
 
-1. 下載並執行[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=2030731)。
+1. 下載並執行[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=2038320)。
 1. 啟動[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]應用程式。
 
 
 **壓縮檔**
 
-1. 下載[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=2030736)。
+1. 下載[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=2038323)。
 2. 瀏覽至下載的檔案，並將它解壓縮。
 3. 執行 `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 macOS](https://go.microsoft.com/fwlink/?linkid=2030738)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 macOS](https://go.microsoft.com/fwlink/?linkid=2038327)。
 2. 若要展開的 zip 的內容，請按兩下它。
 3. 若要讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]中可用*Launchpad*，拖曳*Azure 資料 Studio.app*來*應用程式*資料夾。
 
@@ -61,9 +61,9 @@ ms.locfileid: "50965948"
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure 資料 Studio
 
 1. 下載[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux 使用其中一種安裝程式或.tar.gz 下載封存：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2030750)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2038405)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
 1. 擷取檔案，並啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]，開啟新的終端機視窗，並輸入下列命令：
 
    **Debian 安裝：**
@@ -183,6 +183,7 @@ ms.locfileid: "50965948"
 
 4. 新版本的 Azure Data Studio，請遵循的步驟 1-2，然後針對步驟 3 將您儲存的內容貼到資料夾。 您可以手動複製設定、 按鍵繫結關係或在其各自的位置中的程式碼片段。
 
+5. 如果覆寫現有的安裝，請刪除舊的安裝目錄，才能進行安裝，以避免資源總管 連接到您的 Azure 帳戶時發生錯誤。
 
 ## <a name="next-steps"></a>後續步驟
 

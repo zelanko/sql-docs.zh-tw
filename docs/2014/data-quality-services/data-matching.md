@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4bfeaa97f395ea62d27ddb7831f5a0102488369
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 759c2eb56bb437f17c06229b7b6a85f22b040319
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051548"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031795"
 ---
 # <a name="data-matching"></a>資料比對
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 資料比對程序可讓您減少資料重複，並提高資料來源中的資料精確度。 比對會分析單一資料來源之所有記錄中的重複程度，傳回每一組比較之記錄之間相符的加權機率。 然後您可以決定哪些記錄相符，並針對來源資料採取適當的動作。  

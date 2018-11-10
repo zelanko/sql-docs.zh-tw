@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94085ce3faefb9eb4086a83bc569beb7474c223b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de1f3e5e63784585ce82805bc392ec0d5f6b7e15
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179128"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032525"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能及工作
   尋找任何人 (資料監管、Data Quality Services 管理員或 SQL Server 管理員) 準備及執行資料品質專案所需的資訊。  

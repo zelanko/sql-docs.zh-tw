@@ -22,17 +22,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32984277ce15362335bcf528e0946914986ba382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f962317b7695d705d64652d6a5fa43db774802d2
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793616"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970470"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的執行上強加條件。 如果 IF 關鍵字的條件獲得滿足，就會執行在 IF 關鍵字及其條件之後的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：布林運算式會傳回 TRUE。 選擇性的 ELSE 關鍵字導入了另一個在 IF 條件未獲滿足時所執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：布林運算式會傳回 FALSE。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的執行上強加條件。 如果 IF 關鍵字的條件獲得滿足，就會執行在 IF 關鍵字及其條件之後的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：布林運算式會傳回 TRUE。 選擇性的 ELSE 關鍵字導入了另一個在 IF 條件未獲滿足時所執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：布林運算式會傳回 FALSE。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

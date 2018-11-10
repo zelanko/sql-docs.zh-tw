@@ -4,15 +4,15 @@ description: 了解如何設定 Minikube 適用於在單一機器上的 SQL Serv
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050780"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221566"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集部署的 Minikube
 
@@ -20,7 +20,7 @@ ms.locfileid: "50050780"
 
 ## <a name="prerequisites"></a>先決條件
 
-- 若要執行的 SQL Server 2019 CTP 2.0 的 Minikube 叢集 SQL 巨量資料叢集組態中，建議您的電腦必須至少 32 GB 的 RAM。
+- 若要執行 Minikube 叢集 SQL Server 2019 CTP 2.1 SQL 巨量資料叢集組態，建議您的電腦必須至少 32 GB 的 RAM。
 
    > [!TIP] 
    > 如果機器有建議的記憶體最小值，然後設定叢集有 1 個計算集區執行個體、 1 個資料集區執行個體和 1 個儲存體集區執行個體的部署。 這項設定應該只用於評估環境，持久性和可用性的資料不重要。 請參閱[部署文件](deployment-guidance.md#define-environment-variables)如需有關設定來設定資料集區的複本數目的環境變數的詳細資訊，請計算集區和儲存體集區。
@@ -44,7 +44,7 @@ ms.locfileid: "50050780"
 
 ## <a name="install-minikube"></a>安裝 Minikube
 
-根據的指示安裝 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 SQL Server 2019 CTP 2.0 版本 v0.24.1 與設定，僅適用於巨量資料叢集。
+根據的指示安裝 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 SQL Server 2019 CTP 2.1 版本 v0.24.1 與設定，僅適用於巨量資料叢集。
 
 ## <a name="create-a-minikube-cluster"></a>建立 Minikube 叢集
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 這篇文章中的步驟設定 Minikube 叢集。 下一個步驟是將 SQL Server 2019 巨量資料叢集部署。 如需指示，請參閱下列文章：
 
-[將 SQL Server 2019 CTP 2.0 在 Kubernetes 上部署](deployment-guidance.md#deploy)
+[將 SQL Server 2019 CTP 2.1 在 Kubernetes 上部署](deployment-guidance.md#deploy)

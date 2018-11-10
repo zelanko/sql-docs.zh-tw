@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a393a77951d28b8960c268745b3f02f500d563b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 063b286b1addf62b226fc075299dbabd119d3764
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168318"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032055"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
   在之前設定的 DQS 執行個體上安裝 SQL Server 更新 (修補、Hotfix 或累計更新) 之後，您可能必須使用 **upgrade** 命令列參數執行 DQSInstaller.exe 檔案來升級 DQS 資料庫結構描述。 否則，當您嘗試使用 Data Quality Client 連接至資料品質伺服器時，您可能會收到以下錯誤：  
@@ -54,7 +53,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
     dqsinstaller.exe -upgrade  
     ```  
   
-5.  安裝程式會提示您先備份 DQS 資料庫後再繼續。 如果您已經備份 DQS 資料庫，鍵入`Y`或`Yes`並按 ENTER 鍵以繼續進行升級。  
+5.  安裝程式會提示您先備份 DQS 資料庫後再繼續。 如果您已經備份 DQS 資料庫，請輸入 `Y` 或 `Yes` 然後按 ENTER 繼續升級。  
   
 6.  在成功升級 DQS 資料庫結構描述之後，將會顯示完成訊息。  
   

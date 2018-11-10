@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
@@ -14,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6362196706e3c37ffbd325aeb8ff5576ca897c02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105368"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030325"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域。 複合定義域是由套用至單一資料欄位的一個或多個單一定義域所組成。 如需複合定義域的詳細資訊，請參閱[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)。  
@@ -46,7 +45,7 @@ ms.locfileid: "48105368"
   
 3.  選取 **[知識探索]** 當做活動，然後按一下 **[建立]** 建立新的知識庫，或按一下 **[開啟]** 開啟現有的知識庫。  
   
-4.  在 **[對應]** 頁面上，指定資料來源的連接。 如需詳細資訊，請參閱 < [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
+4.  在 **[對應]** 頁面上，指定資料來源的連接。 如需詳細資訊，請參閱＜ [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)＞。  
   
 5.  在 **[對應]** 資料表中，從空白資料列之 **[來源資料行]** 資料行的下拉式清單中選取來源資料行。 請確定來源資料行包含由兩個現有單一定義域所定址的複合定義域。 如果沒有對應的單一定義域存在，請按一下 **[建立定義域]** 圖示。  
   

@@ -32,15 +32,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a00e189b7c96276f1b582d2f1b4f9fcb1c6b27f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40e1027474bc84f3e30862ee43a61b3d199e8549
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733596"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970452"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 此函式會傳回跨越指定 *startdate* 和 *enddate* 之指定 datepart 界限的計數 (作為帶正負號的整數值)。
   
@@ -124,7 +127,7 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Remarks  
-將 `DATEDIFF` 用於 SELECT <list>、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
+在 SELECT 中使用 `DATEDIFF` <list>、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
   
 `DATEDIFF` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
   

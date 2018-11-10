@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675566"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743223"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ ms.locfileid: "47675566"
 |**(A-ERR)**|錯誤號碼。 若作業是由警示執行，則錯誤號碼值會自動取代作業步驟中的此 Token。|  
 |**(A-SEV)**|錯誤的重要性。 若作業是由警示執行，則錯誤嚴重性值會自動取代作業步驟中的此 Token。|  
 |**(A-MSG)**|訊息文字。 若作業是由警示執行，則訊息文字值會自動取代作業步驟中的此 Token。|  
-|**(JOBNAME)**|作業的名稱。|  
-|**(STEPNAME)**|步驟的名稱。|  
+|**(JOBNAME)**|作業的名稱。 此權杖僅適用於 SQL Server 2016 和更新版本。|  
+|**(STEPNAME)**|步驟的名稱。 此權杖僅適用於 SQL Server 2016 和更新版本。|  
 |**(DATE)**|目前日期 (格式為 YYYYMMDD)。|  
 |**(INST)**|執行個體名稱。 如果是預設執行個體，此 Token 將具有預設執行個體名稱：MSSQLSERVER。|  
 |**(JOBID)**|作業識別碼。|  

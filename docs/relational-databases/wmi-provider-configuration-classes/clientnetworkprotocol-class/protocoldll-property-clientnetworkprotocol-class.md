@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - ProtocolDLL Property (ClientNetworkProtocol Class)
@@ -19,12 +18,12 @@ ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a0bb9defd7b5a9d296f848a1e6c4c01a4e405d2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e5de2fac6c8a8d78c02d474c7c68aef6587c90b
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754696"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216006"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

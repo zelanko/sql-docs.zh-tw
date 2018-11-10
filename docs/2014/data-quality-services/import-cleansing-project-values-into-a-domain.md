@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
@@ -13,12 +12,12 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ea2419549f2ce0cd83423400cbecf02cf4c6751
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4239776908aaca1f6f925baa6ce412dcc71bc343
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068070"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032355"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以將清理程序期間，於資料品質清理專案或 Integration Services 封裝 (包含 DQS 清理元件) 中所收集的資料品質知識，匯入定義域中。 如此可確保可靠的知識不會遺失，而且會持續改良知識庫。  
@@ -70,7 +69,7 @@ ms.locfileid: "48068070"
 10. 按一下 **[完成]**。  
   
     > [!NOTE]  
-    >  如需有關使用中的值**定義域值**索引標籤上，請參閱[Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
+    >  如需有關使用 **[定義域值]** 索引標籤中之值的詳細資訊，請參閱＜ [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)＞。  
   
 ##  <a name="FollowUp"></a> 後續操作：將專案值匯入定義域之後  
  在您將清理程序期間所收集的資料品質知識匯入定義域之後，您可以針對定義域和值執行其他定義域管理工作。 如需詳細資訊，請參閱[管理定義域](../../2014/data-quality-services/managing-a-domain.md)。  

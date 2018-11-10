@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - InstanceName Property (CInstance Class)
@@ -19,12 +18,12 @@ ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 602eb57382b335fdec3a4019d185e8f3b67aea84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29e271c03174f6a62842c3a5e473b1861fb6ee68
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707661"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216986"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance 類別 - InstanceName 屬性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

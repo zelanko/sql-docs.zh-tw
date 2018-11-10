@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a7140e26bfb228234e692c3f1665aba070a32e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f502259f3de895a674a1fd26d94436277cbaed
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107878"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031835"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知識庫
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中針對知識庫執行管理功能。 您可以刪除知識庫、解除鎖定知識庫、捨棄知識庫工作、重新命名知識庫，以及顯示其屬性。  
@@ -43,9 +42,9 @@ ms.locfileid: "48107878"
   
     1.  **開啟**：按一下即可開啟 **[選取活動]** 窗格中選取之活動內的知識庫。  
   
-    2.  **解除鎖定**：如果您是原本正在處理知識庫的使用者、進行了定義域管理、知識探索和比對原則活動的其中一個步驟，而且已關閉知識庫，就可以解除鎖定知識庫。 如果您解除鎖定知識庫，另一位人員就能夠開啟並處理知識庫。 如果知識庫並未處於活動的狀態，您就無法使用此命令。 如需詳細資訊，請參閱 <<c0> [ 開啟知識庫](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+    2.  **解除鎖定**：如果您是原本正在處理知識庫的使用者、進行了定義域管理、知識探索和比對原則活動的其中一個步驟，而且已關閉知識庫，就可以解除鎖定知識庫。 如果您解除鎖定知識庫，另一位人員就能夠開啟並處理知識庫。 如果知識庫並未處於活動的狀態，您就無法使用此命令。 如需詳細資訊，請參閱 [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
-    3.  **捨棄工作**：當知識庫處於正在處理的狀態 (如資料表中 [狀態] 欄位的項目所示) 時，請按一下此命令。 如果知識庫並未處於活動的狀態，您就無法使用此命令。如果知識庫已鎖定，您也無法使用此命令。 如需詳細資訊，請參閱 <<c0> [ 開啟知識庫](../../2014/data-quality-services/open-a-knowledge-base.md)。  
+    3.  **捨棄工作**：當知識庫處於正在處理的狀態 (如資料表中 [狀態] 欄位的項目所示) 時，請按一下此命令。 如果知識庫並未處於活動的狀態，您就無法使用此命令。如果知識庫已鎖定，您也無法使用此命令。 如需詳細資訊，請參閱 [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)。  
   
     4.  **重新命名**：按一下即可針對您以滑鼠右鍵按一下的知識庫，讓其資料表的 [知識庫] 欄位變成可編輯狀態。 請變更名稱，然後按一下該知識庫和欄位中的另一個知識庫，接受名稱變更。  
   

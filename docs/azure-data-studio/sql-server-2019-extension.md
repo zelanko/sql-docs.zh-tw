@@ -2,7 +2,7 @@
 title: Azure 資料 Studio SQL Server 2019 擴充功能 （預覽） |Microsoft Docs
 description: Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: tools|sos
-ms.date: 10/11/2018
+ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411165"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269811"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
@@ -30,9 +30,9 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
    |平台|下載|發行日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031539)|2018 年 10 月 18日日|0.7.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031717)|2018 年 10 月 18日日 |0.7.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?LinkId=2031538)|2018 年 10 月 18日日 |0.7.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6日日 |0.8.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6日日 |0.8.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6日日 |0.8.0
 
 1. 在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。
 
@@ -42,6 +42,27 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
 1. 重新載入後，擴充功能會安裝相依性。 您可以看到在 [輸出] 視窗中，進度，並可能需要幾分鐘的時間。
 
+## <a name="release-notes-v080"></a>版本資訊 (0.8.0)
+*Notebook*:
+* 加入儲存格前 / 後現有的資料格現在支援依序按一下 [更多動作] 資料格按鈕
+* **加入新的連接**選項已新增至 [附加至] 下拉式清單中的連線
+* A**重新安裝 Notebook 相依性**協助 Python 套件更新，並解決其中安裝已暫止中途關閉應用程式的情況下已新增命令。 這可以從命令選擇區中執行 (使用`Ctrl/Cmd+Shift+P`並輸入`Reinstall Notebook Dependencies`)
+* 已更新為 1.1.0 PROSE python 套件，並包含數個 bug 修正。 使用**重新安裝 Notebook 相依性**命令來更新此套件
+* A**清除輸出**現在支援按一下命令**其他動作**資料格按鈕
+* 已修正下列客戶回報問題：
+  * 筆記本工作階段無法啟動 Windows 上因為路徑相關問題
+  * 在根資料夾的磁碟機，例如 C:\ 或 D:\，無法啟動 notebook
+  * [# 2820年](https://github.com/Microsoft/azuredatastudio/issues/2820)無法編輯從廣告在 VS Code 中建立的 notebook
+  * 執行 Spark 核心時，現在適用於 Spark UI 連結
+  * 重新命名為 「 受管理的套件 」 來 [安裝套件]
+
+*建立外部資料*:
+
+* 複製的錯誤訊息和已分隔成摘要和詳細的檢視，以更容易
+* 經過改良的 UI 配置大幅改善的可靠性和錯誤處理
+* 已修正下列客戶回報問題：
+  * 具有無效的資料行對應的資料表會顯示為已停用，並警告說明此錯誤
+
 ## <a name="release-notes-v072"></a>版本資訊 (v0.7.2)
 * Azure 資源總管現在內建 Azure Data Studio，並已經移除了此延伸模組。 您的意見反應，在此感謝您 ！
 * 使用 Markdown 格 notebook 的提升的效能。
@@ -50,7 +71,7 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 * 重新安裝 Notebook 相依性的支援。 這非常有用，如果使用者先前會關閉 Azure Data Studio 中途完成安裝。
 * 取消在 Notebook 中的資料格執行的支援。
 * 使用精靈建立外部資料時更高的可靠性，特別是連線發生錯誤時。
-* 如果 Polybase 不啟用或未在目標伺服器中執行，請封鎖使用建立外部資料精靈。
+* 如果 PolyBase 不啟用或未在目標伺服器中執行，請封鎖使用建立外部資料精靈。
 * 拼字檢查，並命名與 SQL Server 2019 和建立外部資料相關的修正程式。
 * 從 Azure Data Studio 偵錯主控台中移除大量錯誤。
 
@@ -83,7 +104,7 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 * 在 notebook 標頭加入透過按鈕的程式碼或 markdown 資料格。 移除資源回收筒可以圖示，左邊的每個資料格的資料格。
 * [播放] 按鈕的程式碼儲存格，以執行資料格和切換 markdown 編輯和預覽的眼睛圖示
 
-## <a name="polybase-create-external-table-wizard"></a>Polybase 建立外部資料表精靈
+## <a name="polybase-create-external-table-wizard"></a>PolyBase 建立外部資料表精靈
 
 * 從 SQL Server 2019 的執行個體*建立外部資料表精靈*可以開啟下列三種方法：
   * 以滑鼠右鍵按一下 在伺服器上，選擇**管理**，按一下索引標籤上的 SQL Server 2019 （預覽），然後選擇**Create External Table**。
@@ -106,3 +127,5 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
 * 如果建立的連接時，不會儲存密碼，例如將提交 Spark 作業的某些動作可能會失敗。
 * 現有.ipynb notebook 必須升級為 4 或更新版本，才能載入內容檢視器中的版本。
+* 執行**重新安裝 Notebook 相依性**命令可能會顯示 2 個工作，在 [工作] 檢視，其中會失敗。 這不會造成安裝失敗
+* 選擇**加入新連接**Notebook，然後按一下 [取消] 會使**選取連接**顯示，即使您已連線。

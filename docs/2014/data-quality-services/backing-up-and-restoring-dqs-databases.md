@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacaab21574c3cf70e1c3ee358094dd212462441
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9ff06a230ea00af78b98e561f3fe4ae69886b5ff
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119205"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029856"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
   此主題描述如何備份及還原 DQS 資料庫。  
@@ -25,7 +24,7 @@ ms.locfileid: "49119205"
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
--   您必須知道或記得您在 DQS 伺服器安裝期間提供的資料庫主要金鑰的密碼。  
+-   您必須知道或記得您在 DQS 伺服器安裝期間所提供資料庫主要金鑰的密碼。  
   
 -   請確定 DQS 中沒有任何執行中的活動或處理序。 這可以使用 **[活動監控]** 畫面加以確認。 如需有關在此畫面工作的詳細資訊，請參閱＜ [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)＞。  
   

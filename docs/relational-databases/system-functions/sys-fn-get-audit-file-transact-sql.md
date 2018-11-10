@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679372"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018333"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn_get_audit_file ( file_pattern,
  *file_pattern*  
  針對要讀取的稽核檔案集合指定目錄或路徑及檔案名稱。 型別是**nvarchar(260)**。 
  
- - **SQL Server**:
+ - **SQL Server**：
     
     這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 單一星號 （*） 可用來收集多個檔案從稽核檔案集合。 例如：  
   
@@ -107,8 +107,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|目標登入的 SID。 可為 Null。 如果不適用則傳回 NULL。|  
 |target_database_principal_name|**sysname**|動作的目標使用者。 可為 Null。 如果不適用則傳回 NULL。|  
 |server_instance_name|**sysname**|稽核發生所在的伺服器執行個體名稱。 使用標準的 server\instance 格式。|  
-|database_name|**sysname**|動作發生所在的資料庫環境。 可為 Null。 如果是伺服器層級所發生的稽核，則會傳回 NULL。|  
-|schema_name|**sysname**|動作發生所在的結構描述環境。 可為 Null。 如果是發生在結構描述外部的稽核，則傳回 NULL。|  
+|database_name|**sysname**|動作發生所在的資料庫環境。 可為 Null。 發生在伺服器層級的稽核，會傳回 NULL。|  
+|schema_name|**sysname**|動作發生所在的結構描述環境。 可為 Null。 發生在結構描述外部的稽核，會傳回 NULL。|  
 |object_name|**sysname**|稽核發生所在之實體的名稱。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。|  
 |陳述式|**nvarchar(4000)**|TSQL 陳述式 (如果存在的話)。 可為 Null。 如果不適用則傳回 NULL。|  
 |additional_information|**nvarchar(4000)**|只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會剖析為逸出無效的 xml 字元，例如`'\<'`， `'>'`， `'/'`， `'_x'`。 它們會逸出為`_xHHHH\_`。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。|  

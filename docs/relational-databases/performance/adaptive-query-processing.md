@@ -6,7 +6,7 @@ ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324631"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031195"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "49324631"
 ![彈性查詢處理功能](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>如何啟用彈性查詢處理
-您可以啟用資料庫的相容性層級 140，讓工作負載自動符合使用彈性查詢處理。  您可以使用 Transact-SQL 設定此項目。 例如：  
+您可以啟用資料庫的相容性層級 140，讓工作負載自動符合使用彈性查詢處理。  您可以使用 Transact-SQL 設定此項目。 例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## <a name="batch-mode-memory-grant-feedback"></a>批次模式記憶體授與意見反應
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的查詢後續執行計劃，包含執行所需的最小記憶體，以及能將所有資料列納入記憶體的理想記憶體授與大小。 當調整的記憶體授與大小不正確時，就會降低效能。 授與過多會浪費記憶體並降低並行。 記憶體授與不足會佔用大量磁碟資源。 透過處理重複的工作負載，批次模式記憶體授與意見反應會重新計算查詢實際所需的記憶體，然後更新快取計劃的授與值。  執行相同的查詢陳述式時，此查詢會使用修訂過的記憶體授權大小，減少影響並行的過多記憶體授與，並修正導致佔用大量磁碟資源的記憶體授與低估。
-下圖顯示使用批次模式調整記憶體授與意見反應的一個範例。 由於高溢出，第一次執行查詢的持續時間為「88 秒」：   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的查詢後續執行計劃，包含執行所需的最小記憶體，以及能將所有資料列納入記憶體的理想記憶體授與大小。 當調整的記憶體授與大小不正確時，就會降低效能。 授與過多會浪費記憶體並降低並行。 記憶體授與不足會佔用大量磁碟資源。 透過處理重複的工作負載，批次模式記憶體授與意見反應會重新計算查詢實際所需的記憶體，然後更新快取計劃的授與值。  執行相同的查詢陳述式時，此查詢會使用修訂過的記憶體授權大小，減少影響並行的過多記憶體授與，並修正導致佔用大量磁碟資源的記憶體授與低估。
+下圖顯示使用批次模式調整記憶體授與意見反應的一個範例。 由於高溢出的緣故，第一次執行查詢的期間為  **88 秒** ：   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -60,7 +60,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![高溢出](./media/2_AQPGraphHighSpills.png)
 
-啟用記憶體授與意見反應後，第二次執行的持續時間是「1 秒」 (從 88 秒降下)，溢出全部移除，且授與較高： 
+啟用記憶體授與回饋後，第二次執行的期間為  **1 秒**  (低於 88 秒)，溢出完全移除且授與變高： 
 
 ![沒有溢出](./media/3_AQPGraphNoSpills.png)
 
@@ -69,14 +69,14 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 針對會導致批次模式運算子磁碟溢出的記憶體授與大小不足狀況，記憶體授與回饋會觸發記憶體授與的重新計算。 溢出事件會報告到記憶體授與回饋，且可以透過 *spilling_report_to_memory_grant_feedback* xEvent 顯示。 此事件會傳回計劃的節點識別碼和該節點溢出的資料大小。
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>記憶體授與意見反應與參數敏感的情況
-不同的參數值可能也需要不同的查詢計劃，以維持最佳狀態。 這類型的查詢即定義為「參數敏感」。 凡是參數敏感的計劃，如果記憶體授與意見反應有不穩定的記憶體需求，就會在查詢上自行停用。 計劃會在查詢重複數輪後停用，透過監視 *memory_grant_feedback_loop_disabled* xEvent 可觀察到此狀況。 如需參數探查和參數敏感性的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
+不同的參數值可能也需要不同的查詢計劃，以維持最佳狀態。 這類型的查詢即定義為「參數敏感」。 凡是參數敏感的計劃，如果記憶體授與意見反應有不穩定的記憶體需求，就會在查詢上自行停用。 計劃會在查詢重複數輪後停用，透過監視 *memory_grant_feedback_loop_disabled* xEvent 可觀察到此狀況。 如需參數探查和參數敏感性的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
 
 ### <a name="memory-grant-feedback-caching"></a>記憶體授與意見反應快取
-意見反應可以儲存在快取計劃中供單次執行之用。 這是該陳述式的連續執行，但得益自記憶體授與意見反應的調整。 此功能適用於重複執行的陳述式。 記憶體授與意見反應僅會變更快取的計劃。 查詢存放區目前並未擷取變更。
-如已從快取收回計劃，則不保存意見反應。 如有容錯移轉，也會遺失意見反應。 使用 `OPTION (RECOMPILE)` 的陳述式會建立新的計劃，而不會對它進行快取。 因為它不是快取而來，所以不會產生記憶體授與意見反應，也不會儲存供編譯及執行。  不過，如果有快取並重複執行**沒有**使用 `OPTION (RECOMPILE)` 的對等陳述式 (亦即使用相同的查詢雜湊)，則連續的陳述式可得益於記憶體授與回饋。
+意見反應可以儲存在快取計劃中供單次執行之用。 這是該陳述式的連續執行，但得益自記憶體授與意見反應的調整。 此功能適用於重複執行的陳述式。 記憶體授與意見反應僅會變更快取的計劃。 查詢存放區目前並未擷取變更。
+如已從快取收回計劃，則不保存意見反應。 如有容錯移轉，也會遺失意見反應。 使用 `OPTION (RECOMPILE)` 的陳述式會建立新的計劃，而不會對它進行快取。 因為它不是快取而來，所以不會產生記憶體授與意見反應，也不會儲存供編譯及執行。  不過，如果有快取並重複執行**沒有**使用 `OPTION (RECOMPILE)` 的對等陳述式 (亦即使用相同的查詢雜湊)，則連續的陳述式可得益於記憶體授與回饋。
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>追蹤記憶體授與意見反應活動
-您可以使用 *memory_grant_updated_by_feedback* xEvent 來追蹤記憶體授與回饋事件。 此事件會追蹤目前的執行計數記錄、記憶體授與意見反應更新計劃的次數，以及記憶體授與意見反應修改快取計劃前後的理想額外記憶體授權。
+您可以使用 *memory_grant_updated_by_feedback* xEvent 來追蹤記憶體授與回饋事件。 此事件會追蹤目前的執行計數記錄、記憶體授與意見反應更新計劃的次數，以及記憶體授與意見反應修改快取計劃前後的理想額外記憶體授權。
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>記憶體授與意見反應、資源管理員和查詢提示
 實際的記憶體授與會接受由資源管理員或查詢提示所決定的查詢記憶體限制。
@@ -158,7 +158,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
-批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
+批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
 運作方式：
 -  如果組建聯結輸入的資料列計數小到巢狀迴圈聯結會比雜湊聯結更佳的情況，則您的計劃就會切換成巢狀迴圈演算法。
 -  如果組建聯結輸入超過特定的資料列計數閾值，則不會切換，且您的計劃會繼續執行雜湊聯結。
@@ -166,34 +166,34 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 下列查詢用來說明自適性聯結範例：
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-此查詢會傳回 336 個資料列。 透過啟用[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.MD)，我們會看到下列計劃：
+此查詢會傳回 336 個資料列。 透過啟用[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.MD)，我們會看到下列計劃：
 
 ![查詢結果 336 個資料列](./media/4_AQPStats336Rows.png)
 
 我們在計劃中看到：
 1. 我們使用了資料行存放區索引掃描，為雜湊聯結建置階段提供資料列。
-1. 我們有新的自適性聯結運算子。 此運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 本例中的閾值是 78 個資料列。 凡是 &gt;= 78 個資料列的計劃都會使用雜湊聯結。 如果小於該閾值，則會使用巢狀迴圈聯結。
+1. 我們有新的自適性聯結運算子。 此運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 本例中的閾值是 78 個資料列。 凡是 &gt;= 78 個資料列的計劃都會使用雜湊聯結。 如果小於該閾值，則會使用巢狀迴圈聯結。
 1. 因為我們傳回 336 個資料列 (超過閾值)，所以第二個分支會表示標準雜湊聯結作業的探查階段。 請注意，即時查詢統計資料會顯示流經運算子的資料列，本例中為 “672 of 672”。
 1. 而最後一個分支是我們的叢集索引搜尋，供未超過閾值的巢狀迴圈聯結所使用。 請注意，我們看到的顯示是 “0 of 336” 資料列 (分支未使用)。
  現在對比使用相同查詢的計劃，但這次的 *Quantity* 值在資料表中只有一個資料列：
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
 [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-查詢會傳回一個資料列。 啟用我們在以下計劃中看到的即時查詢統計資料：
+查詢會傳回一個資料列。 啟用我們在以下計劃中看到的即時查詢統計資料：
 
 ![查詢結果一個資料列](./media/5_AQPStatsOneRow.png)
 
@@ -205,7 +205,7 @@ WHERE [fo].[Quantity] = 361;
 經常在小型和大型聯結輸入掃描間變動的工作負載，由此功能獲益最大。
 
 ### <a name="adaptive-join-overhead"></a>自適性聯結的負擔
-自調性聯結導入的記憶體需求，會比索引巢狀的迴圈聯結相等計劃更高。 系統會以巢狀迴圈有如雜湊聯結一般的方式要求額外的記憶體。 在時快時慢作業的建置階段與巢狀迴圈資料流相等聯結的比較中，會另外產生額外負荷。 加上額外的成本，隨組建輸入資料列計數浮動的案例而變動。
+自調性聯結導入的記憶體需求，會比索引巢狀的迴圈聯結相等計劃更高。 系統會以巢狀迴圈有如雜湊聯結一般的方式要求額外的記憶體。 在時快時慢作業的建置階段與巢狀迴圈資料流相等聯結的比較中，會另外產生額外負荷。 加上額外的成本，隨組建輸入資料列計數浮動的案例而變動。
 
 ### <a name="adaptive-join-caching-and-re-use"></a>自適性聯結快取和重複使用
 批次模式自適性聯結適合初次執行的陳述式使用，而且一旦編譯，連續執行仍會根據編譯的自適性聯結閾值和流經外部輸入建置階段的執行階段資料列聯結自動調整。
@@ -236,7 +236,7 @@ WHERE [fo].[Quantity] = 361;
 如果自適性聯結切換成巢狀迴圈作業，便會使用已由雜湊聯結組建讀取的資料列。 運算子「不會」再次重新讀取外部參考資料列。
 
 ### <a name="adaptive-threshold-rows"></a>自適性閾值資料列
-下圖顯示雜湊聯結成本與巢狀迴圈聯結替代方案成本之間的交集範例。  在此交集點決定的閾值，會隨之決定用於聯結作業的實際演算法。
+下圖顯示雜湊聯結成本與巢狀迴圈聯結替代方案成本之間的交集範例。  在此交集點決定的閾值，會隨之決定用於聯結作業的實際演算法。
 
 ![聯結閾值](./media/6_AQPJoinThreshold.png)
 

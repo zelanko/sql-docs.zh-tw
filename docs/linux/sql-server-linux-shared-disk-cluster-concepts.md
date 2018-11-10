@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 14d54a9e004364db783a4462d9e941f0e513a292
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659806"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032665"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體-在 Linux 上的 SQL Server
 

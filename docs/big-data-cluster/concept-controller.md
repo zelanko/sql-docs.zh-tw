@@ -4,15 +4,15 @@ description: 本文說明 SQL Server 2019 巨量資料叢集的控制站。
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050870"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221514"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>什麼是 SQL Server 的巨量資料叢集控制站？
 
@@ -26,8 +26,8 @@ ms.locfileid: "50050870"
 - 若要觀察的叢集狀態的監視工具公開 （expose)
 - 公開 （expose) 來偵測並修復未預期的問題的疑難排解工具
 - 管理叢集安全性： 確保安全的叢集端點、 管理使用者和角色、 設定叢集間通訊的認證
-- 管理升級的工作流程，以便安全地實作 （不適用於 CTP 2.0）
-- （不適用於 CTP 2.0） 叢集中具狀態服務的管理高可用性和 DR
+- 管理升級的工作流程，以便安全地實作 （不適用於 CTP 2.1）
+- （不適用於 CTP 2.1） 叢集中具狀態服務的管理高可用性和 DR
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服務
 

@@ -22,19 +22,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa1dc96a026a08aa66218f0a30ca580fb524e9d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537a2da418940ef267305078f0375d6c51716677
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653462"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970339"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回結果集分割區內，每個資料列的次序。 資料列的次序等於一加上前述資料列之前的次序數目。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-  ROW_NUMBER 和 RANK 很類似。 ROW_NUMBER 會依序為所有資料列編號 (例如 1、2、3、4、5)。 RANK 則為繫結提供相同的數值 (例如 1、2、2、4、5)。   
+傳回結果集分割區內，每個資料列的次序。 資料列的次序等於一加上前述資料列之前的次序數目。  
+
+ROW_NUMBER 和 RANK 很類似。 ROW_NUMBER 會依序為所有資料列編號 (例如 1、2、3、4、5)。 RANK 則為繫結提供相同的數值 (例如 1、2、2、4、5)。   
   
 > [!NOTE]
 > RANK 是查詢在執行時所計算的暫存值。 若要將數字保存在資料表中，請參閱 [IDENTITY 屬性](../../t-sql/statements/create-table-transact-sql-identity-property.md)和 [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。 

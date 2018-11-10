@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6155be9338f7d7c04c7ecfd5312d38d909065e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628142"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269731"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用 SQL Server 功能和功能
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ WideWorldImportersDW 被設計來展示支援許多 SQL server 適用於資料�
 
 若要啟用範例資料庫中的使用 PolyBase，請確定它已安裝，並在資料庫中執行下列預存程序：
 
-    EXEC [Application].[Configuration_ApplyPolybase]
+    EXEC [Application].[Configuration_ApplyPolyBase]
 
 這會建立外部資料表`dbo.CityPopulationStatistics`參考包含在美國境內，裝載於 Azure blob 儲存體中的城市的人口資料的公用資料集。 您可以建議檢閱預存程序，以了解設定程序中的程式碼。 如果您想要裝載您自己在 Azure blob 儲存體中的資料，並確保其安全的一般公用存取權，您必須進行其他設定步驟。 下列查詢會傳回資料，從外部資料集：
 
