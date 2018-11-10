@@ -47,17 +47,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72a1972d6824b30ac97fedc2652fe89620a96ff3
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780806"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970689"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 資料倉儲和平行處理資料倉儲中，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或通用語言執行平台 (CLR) 預存程序。 預存程序類似於其他程式設計語言中的程序，這些程序可以：  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 資料倉儲和平行處理資料倉儲中，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或通用語言執行平台 (CLR) 預存程序。 預存程序類似於其他程式設計語言中的程序，這些程序可以：  
   
 -   接受輸入參數，並以輸出參數的形式將多個數值傳回呼叫程序或批次處理。  
   

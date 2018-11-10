@@ -55,15 +55,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777726"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971029"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 在資料表或檢視上建立關聯式索引。 也稱為資料列存放區索引，因為它是叢集或非叢集的 B 型樹狀結構索引。 您可以在資料表中含有資料之前，先建立資料列存放區索引。 特別是在查詢會從特定資料行中選取，或需要以特定順序排序值時，使用資料列存放區索引來改善查詢效能。  
   
@@ -828,7 +832,7 @@ WITH ( DROP_EXISTING = ON );
 ## <a name="examples-sql-server-azure-sql-database"></a>範例：SQL Server、Azure SQL Database  
   
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 建立唯一的非叢集索引  
- 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Name` 資料表的 `Production.UnitMeasure` 資料行上建立唯一非叢集索引。 索引會強制將資料上的唯一性插入 `Name` 資料行中。  
+ 下列範例會在 `Name` 資料庫中 `Production.UnitMeasure` 資料表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行上建立唯一非叢集索引。 索引會強制將資料上的唯一性插入 `Name` 資料行中。  
   
 ```sql  
 CREATE UNIQUE INDEX AK_UnitMeasure_Name   
@@ -914,7 +918,7 @@ Number of rows
  請注意，即便 `Production.UnitMeasure` 資料表只有一個資料列違反 `UNIQUE` 索引條件約束，皆會導致資料表中所有的資料列無法插入資料表。  
   
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. 使用 DROP_EXISTING 卸除及重新建立索引  
- 下列範例會利用 `ProductID` 選項，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Production.WorkOrder` 資料表的 `DROP_EXISTING` 資料行上卸除及重新建立現有的索引。 也會設定 `FILLFACTOR` 和 `PAD_INDEX` 選項。  
+ 下列範例會利用 `ProductID` 選項，在 `Production.WorkOrder` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的 `DROP_EXISTING` 資料行上卸除及重新建立現有的索引。 也會設定 `FILLFACTOR` 和 `PAD_INDEX` 選項。  
   
 ```sql  
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID  
@@ -988,7 +992,7 @@ GO
 ```  
   
 ### <a name="j-create-a-partitioned-index"></a>J. 建立資料分割索引  
- 下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中現有的分割區配置 `TransactionsPS1` 上建立非叢集分割區索引。 此範例假設您已安裝分割區索引範例。  
+ 下列範例會在 `TransactionsPS1` 資料庫中現有的分割區配置 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 上建立非叢集分割區索引。 此範例假設您已安裝分割區索引範例。  
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   

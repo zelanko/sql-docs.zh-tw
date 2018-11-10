@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806628"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757953"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>設定 PolyBase 存取 Teradata 中的外部資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此文章說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 Teradata 中的外部資料。
+本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 Teradata 中的外部資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -40,15 +40,16 @@ ms.locfileid: "49806628"
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. 在資料庫上建立主要金鑰 (如果還沒有任何主要金鑰存在)。 這是加密認證祕密的必要項目。
+1. 在資料庫上建立主要金鑰 (如果還沒有任何主要金鑰存在)。 加密認證祕密時需要主要金鑰。
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>引數
+    **引數**
+
     PASSWORD ='password'
 
-    這是用以加密資料庫中主要金鑰的密碼。 password 必須符合裝載 SQL Server 執行個體之電腦的 Windows 密碼原則需求。
+    這是用以加密資料庫中主要金鑰的密碼嗎？ 該密碼必須符合裝載 SQL Server 執行個體之電腦的 Windows 密碼原則需求。
 
 1. 建立資料庫範圍認證。
  
@@ -78,7 +79,7 @@ ms.locfileid: "49806628"
 
      ```
 
-1.  建立外部資料表，表示儲存在外部 Teradata 系統的資料 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)。
+1.  使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 來建立代表外部 Teradata 系統中所儲存資料的外部資料表。
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -108,9 +109,9 @@ ms.locfileid: "49806628"
      );
      ```
 
-1. **選擇性：** 在外部資料表上建立統計資料。
+1. *選擇性：* 在外部資料表上建立統計資料。
 
-    我們建議在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)，以取得最佳查詢效能。
+    如需最佳查詢效能，請在外部資料表資料行上建立統計資料 (尤其是用於聯結、篩選和彙總的資料行)。
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

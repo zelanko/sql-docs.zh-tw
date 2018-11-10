@@ -47,17 +47,20 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461153"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970839"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立新的資料表。  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立新的資料表。  
   
 > [!NOTE]   
 >  如需了解 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 語法，請參閱 [CREATE TABLE (Azure SQL 資料倉儲)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)。
@@ -1048,7 +1051,7 @@ GO
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援儲存在 tempdb 中且只限於資料庫層級範圍的全域暫存資料表。 這表示在同一 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 資料庫中的所有使用者工作階段，會共用全域暫存資料表。 其他資料庫的使用者工作階段無法存取全域暫存資料表。
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的全域暫存資料表遵循的語法和語意，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於暫存資料表的相同。 同樣地，全域暫存預存程序的範圍會被限制為 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的資料庫層級。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 也支援區域暫存資料表 (資料表名稱開頭為 #)，且遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的相同語法和語意。  請參閱上述的 [暫存資料表](#temporary-tables)相關章節。  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的全域暫存資料表遵循的語法和語意，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於暫存資料表的相同。 同樣地，全域暫存預存程序的範圍會被限制為 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的資料庫層級。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 也支援區域暫存資料表 (資料表名稱開頭為 #)，且遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的相同語法和語意。  請參閱上述的 [暫存資料表](#temporary-tables)相關章節。  
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 提供此項功能。

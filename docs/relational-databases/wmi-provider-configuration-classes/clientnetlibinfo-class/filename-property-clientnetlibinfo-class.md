@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - FileName Property (ClientNetLibInfo Class)
@@ -19,12 +18,12 @@ ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a35fd9c414d793f112df0f4602857905d5f11ee3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79ad2450ac0eb3a1f00c92642872ff52e8eebbc2
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722046"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214722"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName 屬性 (ClientNetLibInfo 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

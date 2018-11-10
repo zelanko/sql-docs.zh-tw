@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666676"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965976"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ DBCC CLONEDATABASE
 NO_STATISTICS  
 指定是否需要從複本排除資料表/索引統計資料。 如果未指定此選項，則會自動包含資料表/索引統計資料。 此選項從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始提供。
 
-NO_QUERYSTORE 指定是否需要從複本排除查詢存放區資料。 如果未指定此選項，且已啟用來源資料庫中的查詢存放區，則會將查詢存放區資料複製到複本。 此選項從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始提供。
+NO_QUERYSTORE<br>
+指定是否需要從複本排除查詢存放區資料。 如果未指定此選項，且已啟用來源資料庫中的查詢存放區，則會將查詢存放區資料複製到複本。 此選項從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始提供。
 
 VERIFY_CLONEDB  
-驗證新資料庫的一致性。  如果複製資料庫要用於生產環境，則需要此選項。  啟用 VERIFY_CLONEDB 也會停用統計資料和查詢存放區集合，因此相當於執行 WITH VERIFY_CLONEDB、NO_STATISTICS、NO_QUERYSTORE。  此選項從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始提供。
+驗證新資料庫的一致性。  如果複製資料庫要用於生產環境，則需要此選項。  啟用 VERIFY_CLONEDB 也會停用統計資料和查詢存放區集合，因此相當於執行 WITH VERIFY_CLONEDB、NO_STATISTICS、NO_QUERYSTORE。  此選項從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 開始提供。
 
 > [!NOTE]  
 > 下列命令可用來確認複製資料庫已準備好用於生產環境： <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+指定 Service Broker 相關系統目錄是否應該包含在複本中。  SERVICEBROKER 選項無法與 VERIFY_CLONEDB 搭配使用。  此選項從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 開始提供。
+
 BACKUP_CLONEDB  
-建立並驗證複製資料庫的備份。  如果搭配 VERIFY_CLONEDB 使用，則會驗證複製資料庫，再進行備份。  此選項從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始提供。
+建立並驗證複製資料庫的備份。  如果搭配 VERIFY_CLONEDB 使用，則會驗證複製資料庫，再進行備份。  此選項從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 開始提供。
   
 ## <a name="remarks"></a>Remarks
 DBCC CLONEDATABASE 會執行下列驗證。 如果任一項驗證失敗，則命令會失敗。

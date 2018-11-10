@@ -94,7 +94,7 @@ ms.locfileid: "50100379"
   
 -   **使用 TRANSACT-SQL:**  
   
-     如果您要啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]第一次，需要的參數包括： *@database_name*， *@credential_name*， *@encryption_algorithm*， *@enable_backup**@storage_url*參數是選擇性的。 如果您未提供的值@storage_url參數，此值衍生使用 SQL 認證的儲存體帳戶資訊。 如有提供儲存體 URL，應只提供儲存體帳戶根目錄的 URL，而且必須符合所指定之 SQL 認證中的資訊。  
+     如果您要啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]第一次，需要的參數包括： *@database_name*， *@credential_name*， *@encryption_algorithm*， *@enable_backup* *@storage_url*參數是選擇性的。 如果您未提供的值@storage_url參數，此值衍生使用 SQL 認證的儲存體帳戶資訊。 如有提供儲存體 URL，應只提供儲存體帳戶根目錄的 URL，而且必須符合所指定之 SQL 認證中的資訊。  
   
     1.  連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   

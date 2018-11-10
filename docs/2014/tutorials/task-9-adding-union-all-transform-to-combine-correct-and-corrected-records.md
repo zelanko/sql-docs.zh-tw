@@ -37,7 +37,7 @@ ms.locfileid: "48180908"
   
 5.  將標題為連接器移**更正**向左拖放至左的連接器結尾的點。  
   
-     ![正確] 連接至 [結合正確與更正](../../2014/tutorials/media/et-addinguattocombinecacrecords-03.jpg "正確] 連接至 [結合正確與更正]")  
+     ![正確 連接至 結合正確與更正](../../2014/tutorials/media/et-addinguattocombinecacrecords-03.jpg "正確 連接至 結合正確與更正")  
   
 6.  如果您選取**挑選正確和已更正的記錄**轉換，您應該會看到另一個藍色的連接器。 將以該藍色連接器拖曳**結合正確和已更正的記錄**。  
   

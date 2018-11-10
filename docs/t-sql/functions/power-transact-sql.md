@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea72540271302223a35538e3c97e9f01c47e8d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838986"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743173"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,18 @@ POWER ( float_expression , y )
  為 *float_expression* 相乘的乘冪。 *y*　可為精確數值或近似數值資料類型類別目錄的運算式，但 **bit** 資料類型除外。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回的類型與 *float_expression* 中所提交的類型相同。 例如，若將 **decimal**(2,0) 作為 *float_expression* 提交，則結果便會以 **decimal**(2,0) 傳回。  
+ 傳回型別取決於 *float_expression* 的輸入類型：
+ 
+|輸入類型|傳回類型|  
+|----------|-----------|  
+|**float**、**real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**、**smallint**、**tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**、 **smallmoney**|**money**|
+|**bit**、**char**、**nchar**、**varchar**、**nvarchar**|**float**|
+ 
+如果結果不符合傳回型別，就會發生算術溢位錯誤。
   
 ## <a name="examples"></a>範例  
   

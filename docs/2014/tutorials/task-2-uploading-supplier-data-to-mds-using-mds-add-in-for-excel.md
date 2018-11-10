@@ -31,7 +31,7 @@ ms.locfileid: "48101208"
   
 4.  按一下 **建立實體**功能區上的按鈕。  
   
-     ![Excel-主要資料] 索引標籤-[建立實體] 按鈕](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel-主要資料] 索引標籤-[建立實體] 按鈕")  
+     ![Excel-主要資料 索引標籤-建立實體 按鈕](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel-主要資料 索引標籤-建立實體 按鈕")  
   
 5.  在**管理連線** 對話方塊中，如果您看不到連接**本機 MDS 伺服器**之下**現有連接**，執行下列動作：  
   

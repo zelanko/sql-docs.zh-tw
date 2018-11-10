@@ -53,7 +53,7 @@ ms.locfileid: "48106380"
 |IColumsRowset::GetColumnsRowset|在 DBCOLUMN_FLAGS 中，系統會設定 `column_set` 資料行的新 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。<br /><br /> DBCOLUMN_COMPUTEMODE 會針對 `column_set` 資料行，設定為 DBCOMPUTEMODE_DYNAMIC。|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 會傳回兩個新的資料行：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 僅會傳回不屬於疏鬆 `column_set` 成員的資料行。<br /><br /> 系統已加入兩個新的結構描述資料列集：DBSCHEMA_COLUMNS_EXTENDED 將會傳回所有資料行，而不管 `column_set` 成員資格的疏鬆度。 DBSCHEMA_SPARSE_COLUMN_SET 僅會傳回屬於 `column_set` 成員的資料行。 這些新的資料列集與 DBSCHEMA_COLUMNS 的資料行和限制相同。|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas 在可用結構描述資料列集的清單中，包含用於新資料列集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 GUID。|  
-|ICommand::Execute|如果**選取 \*從***表格*是使用，它會傳回所有不屬於疏鬆的資料行`column_set`，再加上包含的所有非 null 資料行值的 XML 資料行成員的疏鬆`column_set`，如果有的話。|  
+|ICommand::Execute|如果**選取 \*從** *表格*是使用，它會傳回所有不屬於疏鬆的資料行`column_set`，再加上包含的所有非 null 資料行值的 XML 資料行成員的疏鬆`column_set`，如果有的話。|  
 |IOpenRowset::OpenRowset|傳回使用 icommand:: Execute，相同的資料行的資料列集 iopenrowset:: Openrowset**選取  \*** 相同資料表上的查詢。|  
 |ITableDefinition|對於疏鬆資料行或 `column_set` 資料行的這個介面，則沒有任何變更。 需要修改結構描述的應用程式必須直接執行適當的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
