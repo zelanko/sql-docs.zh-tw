@@ -54,13 +54,13 @@ where <server_info> is any combination of the following:
  **-Server** *_ n a*  
  指定要分析之電腦的名稱。 這可以是本機電腦 (預設值) 或遠端電腦。  
   
- **-執行個體***執行個體名稱*  
+ **-執行個體** *執行個體名稱*  
  指定要分析之執行個體的名稱。 沒有預設值。 如果您沒有指定這個參數，就不會掃描 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體的值為 MSSQLSERVER。 若為具名執行個體，請使用執行個體名稱。  
   
- **-ASInstance***AS_instance_name*   
+ **-ASInstance**  *AS_instance_name*   
  指定要分析之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體的值為 MSSQLServerOLAPService。 若為具名執行個體，請使用執行個體名稱。  
   
- **-RSInstance***RS_instance_name*   
+ **-RSInstance**  *RS_instance_name*   
  指定要分析之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 代表 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設執行個體的值為 ReportServer。 若為具名執行個體，請使用執行個體名稱。  
   
  **-SqlUser** *login_id*  
