@@ -35,7 +35,7 @@ ms.locfileid: "48124068"
   
 -   需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並`EXECUTE`的權限**sp_delete_backuphistory**預存程序。  
   
--   需要**選取 **權限**smart_admin.fn_get_current_xevent_settings**函式。  
+-   需要**選取 ** 權限 **smart_admin.fn_get_current_xevent_settings** 函式。  
   
 -   需要`EXECUTE`權限**smart_admin.sp_get_backup_diagnostics**預存程序。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48124068"
   
 -   需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並`EXECUTE`的權限**sp_delete_backuphistory**預存程序。  
   
--   需要**選取 **權限**smart_admin.fn_get_current_xevent_settings**函式。  
+-   需要**選取 ** 權限 **smart_admin.fn_get_current_xevent_settings** 函式。  
   
 -   需要`EXECUTE`權限**smart_admin.sp_get_backup_diagnostics**預存程序。 除此之外，因為它會從內部呼叫其他需要此權限的系統物件，所以還需要 `VIEW SERVER STATE` 權限。  
 

@@ -119,7 +119,7 @@ ms.locfileid: "48108728"
      此區段與 [還原資料庫 (一般頁面)](../../integration-services/general-page-of-integration-services-designers-options.md) 上的 **[還原至]** 執行相同功能。  
   
      **[資料庫備份]**  
-     指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
+     指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master** 和 tempdb。  
   
     > [!WARNING]  
     >  若要還原受密碼保護的備份，必須使用 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式。  
