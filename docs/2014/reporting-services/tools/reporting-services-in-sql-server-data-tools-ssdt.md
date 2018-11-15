@@ -252,7 +252,7 @@ ms.locfileid: "48906298"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> 原始檔控制  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 [選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
  若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 根據預設，此資料夾位於\<磁碟機 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
